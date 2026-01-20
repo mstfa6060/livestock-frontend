@@ -19,7 +19,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"],
+      "@/api/*": ["./common/livestock-api/src/*"],
+      "@config/*": ["./common/livestock-api/src/config/*"],
+      "@services/*": ["./common/livestock-api/src/services/*"],
+      "@errors/*": ["./common/livestock-api/src/errors/*"]
     }
   },
   "include": [
@@ -30,5 +34,5 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "common/livestock-api"]
 }
