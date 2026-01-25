@@ -19,8 +19,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@/api/*": ["./common/livestock-api/src/*"],
+      "@/*": ["./*"],
+      "@/config/*": ["./common/livestock-api/src/config/*"],
+      "@/services/*": ["./common/livestock-api/src/services/*"],
+      "@/errors/*": ["./common/livestock-api/src/errors/*"],
+      "@/api/*": ["./common/livestock-api/src/api/*"],
       "@config/*": ["./common/livestock-api/src/config/*"],
       "@services/*": ["./common/livestock-api/src/services/*"],
       "@errors/*": ["./common/livestock-api/src/errors/*"]
@@ -32,7 +35,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    "common/livestock-api/src/**/*.ts"
   ],
-  "exclude": ["node_modules", "common/livestock-api"]
+  "exclude": ["node_modules"]
 }

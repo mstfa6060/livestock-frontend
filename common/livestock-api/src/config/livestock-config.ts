@@ -5,10 +5,10 @@ import axios, { AxiosInstance } from 'axios';
 // Environment configuration
 const isDevelopment = process.env.NEXT_PUBLIC_ENVIRONMENT === 'development';
 
-// API Configuration matching mobile app structure
+// API Configuration
 const baseURL = isDevelopment
-  ? 'https://dev-api.besilik.com'
-  : 'https://api.besilik.com';
+  ? 'https://dev-api.livestock-trading.com'
+  : 'https://api.livestock-trading.com';
 
 export const AppConfig = {
   // Base API URL
