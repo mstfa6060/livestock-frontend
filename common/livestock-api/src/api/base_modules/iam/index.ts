@@ -392,6 +392,28 @@ export namespace IAMAPI {
 
 	}
 
+	export namespace Countries {
+
+		export namespace All {
+			export const RequestPath = AppConfig.IAMUrl + '/Countries/All';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				keyword: string;
+			}
+			export interface IResponseModel {
+				id: number;
+				code: string;
+				code3: string;
+				name: string;
+				nativeName: string;
+				phoneCode: string;
+				defaultCurrencyCode: string;
+				defaultCurrencySymbol: string;
+			}
+		}
+
+	}
+
 	export namespace Auth {
 
 		export namespace VerifyOtp {

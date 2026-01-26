@@ -5,7 +5,12 @@
       "Bash(npm run build:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(npx tsc:*)",
+      "Bash(node -e:*)",
+      "Bash(./node_modules/.bin/tsc:*)",
+      "Bash(npm ls:*)",
+      "Bash(npx shadcn@latest add:*)"
     ]
   }
 }
