@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -14,12 +14,22 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { IAMAPI } from "@/api/base_modules/iam";
+
+type Country = IAMAPI.Countries.All.IResponseModel;
 
 export default function RegisterPage() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [countries, setCountries] = useState<Country[]>([]);
   const [formData, setFormData] = useState({
     firstName: "",
     surname: "",
@@ -27,7 +37,24 @@ export default function RegisterPage() {
     phoneNumber: "",
     password: "",
     confirmPassword: "",
+    countryId: "",
   });
+
+  useEffect(() => {
+    const fetchCountries = async () => {
+      try {
+        const response = await IAMAPI.Countries.All.Request({ keyword: "" });
+        setCountries(response);
+      } catch (err) {
+        console.error("Ülkeler yüklenemedi:", err);
+      }
+    };
+    fetchCountries();
+  }, []);
+
+  const selectedCountry = countries.find(
+    (c) => c.id.toString() === formData.countryId
+  );
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,6 +67,11 @@ export default function RegisterPage() {
 
     if (formData.password.length < 6) {
       setError("Şifre en az 6 karakter olmalıdır.");
+      return;
+    }
+
+    if (!formData.countryId) {
+      setError("Lütfen ülke seçiniz.");
       return;
     }
 
@@ -56,9 +88,9 @@ export default function RegisterPage() {
         userSource: IAMAPI.Enums.UserSources.Manual,
         description: "",
         phoneNumber: formData.phoneNumber,
-        countryId: 1, // Turkey
+        countryId: parseInt(formData.countryId),
         language: "tr",
-        preferredCurrencyCode: "TRY",
+        preferredCurrencyCode: selectedCountry?.defaultCurrencyCode || "TRY",
       });
 
       router.push("/login?registered=true");
@@ -115,6 +147,26 @@ export default function RegisterPage() {
               </div>
             </div>
             <div className="space-y-2">
+              <Label htmlFor="country">Ülke</Label>
+              <Select
+                value={formData.countryId}
+                onValueChange={(value: string) =>
+                  setFormData({ ...formData, countryId: value })
+                }
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Ülke seçiniz" />
+                </SelectTrigger>
+                <SelectContent>
+                  {countries.map((country) => (
+                    <SelectItem key={country.id} value={country.id.toString()}>
+                      {country.nativeName || country.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="space-y-2">
               <Label htmlFor="email">E-posta</Label>
               <Input
                 id="email"
@@ -129,16 +181,24 @@ export default function RegisterPage() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="phoneNumber">Telefon Numarası</Label>
-              <Input
-                id="phoneNumber"
-                type="tel"
-                placeholder="05XX XXX XX XX"
-                value={formData.phoneNumber}
-                onChange={(e) =>
-                  setFormData({ ...formData, phoneNumber: e.target.value })
-                }
-                required
-              />
+              <div className="flex gap-2">
+                <div className="w-24 flex items-center justify-center border rounded-md bg-muted text-sm">
+                  {selectedCountry?.phoneCode
+                    ? `+${selectedCountry.phoneCode}`
+                    : "+90"}
+                </div>
+                <Input
+                  id="phoneNumber"
+                  type="tel"
+                  placeholder="5XX XXX XX XX"
+                  className="flex-1"
+                  value={formData.phoneNumber}
+                  onChange={(e) =>
+                    setFormData({ ...formData, phoneNumber: e.target.value })
+                  }
+                  required
+                />
+              </div>
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Şifre</Label>

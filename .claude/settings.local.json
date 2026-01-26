@@ -10,7 +10,9 @@
       "Bash(node -e:*)",
       "Bash(./node_modules/.bin/tsc:*)",
       "Bash(npm ls:*)",
-      "Bash(npx shadcn@latest add:*)"
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(npm install:*)",
+      "Bash(npx next build)"
     ]
   }
 }
