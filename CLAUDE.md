@@ -41,6 +41,16 @@ This is a **Next.js 16 App Router** web application for a livestock trading plat
 
 **DO NOT EDIT** files in `common/livestock-api/src/api/` - they are auto-generated from the backend.
 
+**IMPORTANT**: Read `common/API-INTEGRATION.md` for detailed API integration documentation. This file is maintained by the backend team and contains:
+- Authentication flows (login, register, logout, password reset)
+- Token management (JWT, refresh tokens)
+- API usage patterns (CRUD operations, pagination, filtering)
+- Error handling
+- File upload
+- Example code (AuthContext, Protected routes)
+
+Always consult this documentation when implementing API integrations.
+
 Structure:
 - `src/api/business_modules/` - Business module endpoints (e.g., `livestocktrading`)
 - `src/api/base_modules/` - Core module endpoints (e.g., `iam`, `FileProvider`)
@@ -78,6 +88,8 @@ const user = await IAMAPI.Users.Detail.Request({ userId: 'xxx' });
 - Tokens stored in localStorage: `jwt`, `accessToken`, `refreshToken`
 - Automatic token refresh on 401 responses
 - Redirects to `/auth/login` when session expires
+- Login providers: `native` (email/password), `google`, `apple`
+- See `common/API-INTEGRATION.md` for complete auth flow documentation
 
 ## Tech Stack
 

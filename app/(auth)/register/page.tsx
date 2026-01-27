@@ -44,7 +44,9 @@ export default function RegisterPage() {
     const fetchCountries = async () => {
       try {
         const response = await IAMAPI.Countries.All.Request({ keyword: "" });
-        setCountries(response);
+        if (Array.isArray(response)) {
+          setCountries(response);
+        }
       } catch (err) {
         console.error("Ülkeler yüklenemedi:", err);
       }
@@ -52,7 +54,7 @@ export default function RegisterPage() {
     fetchCountries();
   }, []);
 
-  const selectedCountry = countries.find(
+  const selectedCountry = countries?.find(
     (c) => c.id.toString() === formData.countryId
   );
 
@@ -94,8 +96,8 @@ export default function RegisterPage() {
       });
 
       router.push("/login?registered=true");
-    } catch (err) {
-      setError("Kayıt başarısız. Lütfen bilgilerinizi kontrol edin.");
+    } catch (err: any) {
+      setError(err.message || "Kayıt başarısız. Lütfen bilgilerinizi kontrol edin.");
       console.error(err);
     } finally {
       setIsLoading(false);

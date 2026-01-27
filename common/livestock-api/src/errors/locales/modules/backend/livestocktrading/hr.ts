@@ -5,7 +5,7 @@ export default {
       NAME_NOT_VALID: "Isim gecersiz.",
       PAGE_NOT_VALID: "Sayfa numarasi gecersiz.",
       PAGE_SIZE_NOT_VALID: "Sayfa boyutu gecersiz.",
-      UNAUTHORIZED_ACCESS: "Yetkisiz erişim.",
+      UNAUTHORIZED_ACCESS: "Yetkisiz erisim.",
       INVALID_ENUM: "Enum degeri gecersiz.",
       ACTOR_REQUIRED: "Aktor bilgisi gereklidir.",
       INVALID_NUMBER: "Sayisal deger gecersiz.",
