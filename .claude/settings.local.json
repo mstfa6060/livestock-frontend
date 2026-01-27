@@ -13,7 +13,8 @@
       "Bash(npx shadcn@latest add:*)",
       "Bash(npm install:*)",
       "Bash(npx next build)",
-      "Bash(git status:*)"
+      "Bash(git status:*)",
+      "Bash(git push:*)"
     ]
   }
 }
