@@ -6893,6 +6893,7 @@ export namespace LivestockTradingAPI {
 				selectedIds: Guid[];
 				keyword: string;
 				limit: number;
+				languageCode: string;
 			}
 			export interface IResponseModel {
 				id: Guid;
@@ -6906,6 +6907,7 @@ export namespace LivestockTradingAPI {
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
 				id: Guid;
+				languageCode: string;
 			}
 			export interface IResponseModel {
 				id: Guid;
@@ -6938,6 +6940,7 @@ export namespace LivestockTradingAPI {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Categories/All';
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
+				languageCode: string;
 				sorting: IXSorting;
 				filters: IXFilterItem[];
 				pageRequest: IXPageRequest;

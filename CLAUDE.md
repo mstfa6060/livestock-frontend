@@ -5,10 +5,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Build and Development Commands
 
 ```bash
-npm run dev      # Start development server (localhost:3000)
-npm run build    # Production build
-npm run start    # Start production server
-npm run lint     # Run ESLint
+npm run dev              # Start development server (localhost:3000)
+npm run build            # Production build
+npm run start            # Start production server
+npm run lint             # Run ESLint
+npm run translate:all    # Translate tr.json to all 50 languages
+npm run translate:missing # Translate only missing languages
+npm run translate -- en  # Translate to a specific language
 ```
 
 ## Architecture Overview
@@ -17,10 +20,13 @@ This is a **Next.js 16 App Router** web application for a livestock trading plat
 
 ### Directory Structure
 
-- `app/` - Next.js App Router pages and layouts
+- `app/[locale]/` - Next.js App Router pages with i18n routing
 - `components/` - React components (organized by `features/` and `layout/`)
 - `lib/` - Utility functions (`cn()` for Tailwind class merging)
 - `common/livestock-api/` - Shared API layer (auto-generated, shared with mobile app)
+- `messages/` - Translation JSON files (tr.json, en.json, de.json, etc.)
+- `i18n/` - Internationalization configuration
+- `scripts/` - Utility scripts (translation, etc.)
 
 ### Path Aliases (tsconfig.json)
 
@@ -91,6 +97,48 @@ const user = await IAMAPI.Users.Detail.Request({ userId: 'xxx' });
 - Login providers: `native` (email/password), `google`, `apple`
 - See `common/API-INTEGRATION.md` for complete auth flow documentation
 
+## Internationalization (i18n)
+
+The app supports **50 languages** using `next-intl`. Turkish (tr) is the source language for development.
+
+### Configuration Files
+- `i18n/config.ts` - Supported locales and default locale (en)
+- `i18n/request.ts` - next-intl server configuration
+- `middleware.ts` - Locale routing middleware
+
+### Translation Files
+Located in `messages/` folder:
+- `tr.json` - Turkish (SOURCE - develop in this file)
+- `en.json` - English
+- `de.json` - German
+- ... (50 languages total)
+
+### Using Translations in Components
+```typescript
+"use client";
+import { useTranslations } from "next-intl";
+
+export default function MyComponent() {
+  const t = useTranslations("auth.login");  // Namespace
+  const tc = useTranslations("common");     // Common translations
+
+  return <h1>{t("title")}</h1>;  // Accesses auth.login.title
+}
+```
+
+### URL Structure
+- `/` or `/en` - English (default)
+- `/tr` - Turkish
+- `/de/login` - German login page
+
+### Adding New Translations
+1. Add Turkish text to `messages/tr.json`
+2. Run `npm run translate:all` to generate other languages
+3. Or run `npm run translate -- en` for specific language
+
+### Translation Script
+`scripts/translate-all.js` uses Google Cloud Translation API to auto-translate from Turkish to all supported languages.
+
 ## Tech Stack
 
 - **UI**: Tailwind CSS v4, shadcn/ui (new-york style), Lucide icons
@@ -98,9 +146,12 @@ const user = await IAMAPI.Users.Detail.Request({ userId: 'xxx' });
 - **Forms**: React Hook Form + Zod validation
 - **Notifications**: Sonner (toasts)
 - **Real-time**: SignalR
+- **i18n**: next-intl (50 languages)
 
 ## Conventions
 
-- Error messages displayed to users are in Turkish (see `common/livestock-api/src/errors/locales/`)
+- **UI Development Language**: Turkish - Add new UI text to `messages/tr.json`, then run translation script
+- **API Error Messages**: Turkish (see `common/livestock-api/src/errors/locales/`)
 - Use `cn()` from `lib/utils` for conditional Tailwind classes
 - Follow shadcn/ui patterns for new components (add via `npx shadcn@latest add <component>`)
+- All user-facing text must use `useTranslations()` hook - no hardcoded strings
