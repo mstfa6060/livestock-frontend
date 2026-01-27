@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Indlæser...",
+    "error": "Fejl",
+    "success": "Vellykket",
+    "email": "E-mail",
+    "password": "Adgangskode",
+    "submit": "Sende",
+    "cancel": "Ophæve",
+    "save": "Spare",
+    "back": "Tilbage",
+    "next": "Forward",
+    "close": "Tæt",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Log ind",
+      "description": "Fortsæt ved at logge ind på din konto.",
+      "submit": "Log ind",
+      "submitting": "Logger ind...",
+      "rememberMe": "Husk mig",
+      "forgotPassword": "Jeg har glemt min adgangskode.",
+      "noAccount": "Har du ikke en konto?",
+      "register": "Register",
+      "errorDefault": "Login mislykkedes. Tjek venligst dine oplysninger."
+    },
+    "register": {
+      "title": "Register",
+      "description": "Start med at oprette en ny konto.",
+      "firstName": "Navn",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Efternavn",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Brugernavn",
+      "usernamePlaceholder": "Ahmetyilmaz",
+      "confirmPassword": "Bekræft adgangskode",
+      "submit": "Register",
+      "submitting": "Kontoen oprettes...",
+      "hasAccount": "Har du allerede en konto?",
+      "login": "Log ind",
+      "passwordMismatch": "Adgangskoderne stemmer ikke overens.",
+      "passwordTooShort": "Adgangskoden skal være mindst 6 tegn lang.",
+      "errorDefault": "Registreringen mislykkedes. Prøv igen."
+    },
+    "forgotPassword": {
+      "title": "Jeg har glemt min adgangskode.",
+      "description": "Indtast din e-mailadresse, så sender vi dig et link til nulstilling af adgangskode.",
+      "submit": "Send nulstillingslink",
+      "submitting": "Sender...",
+      "backToLogin": "Tilbage til hjemmesiden",
+      "successTitle": "E-mail sendt",
+      "successDescription": "Linket til nulstilling af adgangskode er blevet sendt til din e-mailadresse. Tjek venligst din indbakke.",
+      "errorDefault": "Der opstod en fejl. Tjek venligst din e-mailadresse."
+    },
+    "resetPassword": {
+      "title": "Indstil en ny adgangskode",
+      "description": "Indstil en ny adgangskode til din konto.",
+      "newPassword": "Ny adgangskode",
+      "confirmPassword": "Bekræft adgangskode",
+      "submit": "Opdater adgangskode",
+      "submitting": "Opdaterer...",
+      "successTitle": "Adgangskode opdateret",
+      "successDescription": "Din adgangskode er blevet opdateret. Du kan logge ind med din nye adgangskode.",
+      "goToLogin": "Log ind",
+      "invalidLinkTitle": "Ugyldig forbindelse",
+      "invalidLinkDescription": "Linket til nulstilling af adgangskode er ugyldigt eller ufuldstændigt. Tjek venligst linket i din e-mail igen.",
+      "requestNewLink": "Anmod om en ny forbindelse",
+      "passwordMismatch": "Adgangskoderne stemmer ikke overens.",
+      "passwordTooShort": "Adgangskoden skal være mindst 6 tegn lang.",
+      "errorDefault": "Nulstilling af adgangskode mislykkedes. Forbindelsen er muligvis ugyldig eller udløbet."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Velkommen, {navn}!",
+    "accountInfo": "Dine kontooplysninger vises nedenfor.",
+    "username": "Brugernavn",
+    "email": "E-mail",
+    "id": "ID",
+    "logout": "Log ud"
+  },
+  "settings": {
+    "title": "Indstillinger",
+    "updatePassword": {
+      "title": "Opdater adgangskode",
+      "description": "Opdater din adgangskode regelmæssigt af hensyn til din kontos sikkerhed.",
+      "currentPassword": "Nuværende adgangskode",
+      "newPassword": "Ny adgangskode",
+      "confirmPassword": "Ny adgangskode igen",
+      "submit": "Opdater adgangskode",
+      "submitting": "Opdaterer...",
+      "success": "Din adgangskode er blevet opdateret.",
+      "passwordMismatch": "De nye adgangskoder stemmer ikke overens.",
+      "passwordTooShort": "Den nye adgangskode skal være mindst 6 tegn lang.",
+      "sessionError": "Sessionsoplysninger kunne ikke findes.",
+      "errorDefault": "Adgangskoden kunne ikke opdateres. Kontroller venligst din nuværende adgangskode."
+    }
+  },
+  "navigation": {
+    "home": "Hjem",
+    "dashboard": "Dashboard",
+    "settings": "Indstillinger",
+    "profile": "Profil",
+    "logout": "Log ud"
+  },
+  "language": {
+    "select": "Valg af sprog",
+    "current": "Nuværende sprog"
+  }
+}

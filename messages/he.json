@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "טְעִינָה...",
+    "error": "טָעוּת",
+    "success": "מוּצלָח",
+    "email": "אֶלֶקטרוֹנִי",
+    "password": "סִיסמָה",
+    "submit": "לִשְׁלוֹחַ",
+    "cancel": "לְבַטֵל",
+    "save": "לְהַצִיל",
+    "back": "בְּחֲזָרָה",
+    "next": "קָדִימָה",
+    "close": "לִסְגוֹר",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "התחברות",
+      "description": "המשך על ידי כניסה לחשבונך.",
+      "submit": "התחברות",
+      "submitting": "מתחבר...",
+      "rememberMe": "זכור אותי",
+      "forgotPassword": "שכחתי את הסיסמה שלי.",
+      "noAccount": "אין לך חשבון?",
+      "register": "לִרְשׁוֹם",
+      "errorDefault": "הכניסה נכשלה. אנא בדוק את המידע שלך."
+    },
+    "register": {
+      "title": "לִרְשׁוֹם",
+      "description": "התחל על ידי יצירת חשבון חדש.",
+      "firstName": "שֵׁם",
+      "firstNamePlaceholder": "אחמט",
+      "surname": "שֵׁם מִשׁפָּחָה",
+      "surnamePlaceholder": "יילמז",
+      "username": "שֵׁם מִשׁתַמֵשׁ",
+      "usernamePlaceholder": "אחמטילמז",
+      "confirmPassword": "אשר סיסמה",
+      "submit": "לִרְשׁוֹם",
+      "submitting": "חשבון נוצר...",
+      "hasAccount": "האם כבר יש לך חשבון?",
+      "login": "התחברות",
+      "passwordMismatch": "הסיסמאות אינן תואמות.",
+      "passwordTooShort": "הסיסמה חייבת להיות באורך של לפחות 6 תווים.",
+      "errorDefault": "ההרשמה נכשלה. אנא נסה שוב."
+    },
+    "forgotPassword": {
+      "title": "שכחתי את הסיסמה שלי.",
+      "description": "הזן את כתובת הדוא\"ל שלך ונשלח לך קישור לאיפוס סיסמה.",
+      "submit": "שלח קישור לאיפוס",
+      "submitting": "שְׁלִיחָה...",
+      "backToLogin": "חזרה לדף הבית",
+      "successTitle": "אימייל נשלח",
+      "successDescription": "קישור איפוס הסיסמה נשלח לכתובת הדוא\"ל שלך. אנא בדוק את תיבת הדואר הנכנס שלך.",
+      "errorDefault": "אירעה שגיאה. אנא בדוק את כתובת הדוא\"ל שלך."
+    },
+    "resetPassword": {
+      "title": "הגדר סיסמה חדשה",
+      "description": "הגדר סיסמה חדשה לחשבונך.",
+      "newPassword": "סיסמה חדשה",
+      "confirmPassword": "אשר סיסמה",
+      "submit": "עדכון סיסמה",
+      "submitting": "עִדכּוּן...",
+      "successTitle": "סיסמה עודכנה",
+      "successDescription": "הסיסמה שלך עודכנה בהצלחה. אתה יכול להתחבר עם הסיסמה החדשה שלך.",
+      "goToLogin": "התחברות",
+      "invalidLinkTitle": "חיבור לא חוקי",
+      "invalidLinkDescription": "קישור איפוס הסיסמה אינו תקין או אינו שלם. אנא בדוק שוב את הקישור באימייל שלך.",
+      "requestNewLink": "בקשת חיבור חדש",
+      "passwordMismatch": "הסיסמאות אינן תואמות.",
+      "passwordTooShort": "הסיסמה חייבת להיות באורך של לפחות 6 תווים.",
+      "errorDefault": "איפוס הסיסמה נכשל. ייתכן שהחיבור אינו תקין או פג תוקפו."
+    }
+  },
+  "dashboard": {
+    "title": "לוּחַ מַחווָנִים",
+    "welcome": "ברוך הבא, {שם}!",
+    "accountInfo": "פרטי החשבון שלך מוצגים למטה.",
+    "username": "שֵׁם מִשׁתַמֵשׁ",
+    "email": "אֶלֶקטרוֹנִי",
+    "id": "תְעוּדַת זֶהוּת",
+    "logout": "התנתק"
+  },
+  "settings": {
+    "title": "הגדרות",
+    "updatePassword": {
+      "title": "עדכון סיסמה",
+      "description": "עדכן את הסיסמה שלך באופן קבוע למען אבטחת חשבונך.",
+      "currentPassword": "סיסמה נוכחית",
+      "newPassword": "סיסמה חדשה",
+      "confirmPassword": "סיסמה חדשה שוב",
+      "submit": "עדכון סיסמה",
+      "submitting": "עִדכּוּן...",
+      "success": "הסיסמה שלך עודכנה בהצלחה.",
+      "passwordMismatch": "הסיסמאות החדשות אינן תואמות.",
+      "passwordTooShort": "הסיסמה החדשה חייבת להיות באורך של לפחות 6 תווים.",
+      "sessionError": "לא ניתן היה למצוא את פרטי הישיבה.",
+      "errorDefault": "לא ניתן היה לעדכן את הסיסמה. אנא בדוק את הסיסמה הנוכחית שלך."
+    }
+  },
+  "navigation": {
+    "home": "בַּיִת",
+    "dashboard": "לוּחַ מַחווָנִים",
+    "settings": "הגדרות",
+    "profile": "פּרוֹפִיל",
+    "logout": "התנתק"
+  },
+  "language": {
+    "select": "בחירת שפה",
+    "current": "שפה נוכחית"
+  }
+}

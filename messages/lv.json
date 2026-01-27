@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Notiek ielāde...",
+    "error": "Kļūda",
+    "success": "Veiksmīgi",
+    "email": "E-pasts",
+    "password": "Parole",
+    "submit": "Sūtīt",
+    "cancel": "Atcelt",
+    "save": "Saglabāt",
+    "back": "Atpakaļ",
+    "next": "Uz priekšu",
+    "close": "Aizvērt",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Pieslēgties",
+      "description": "Turpiniet, piesakoties savā kontā.",
+      "submit": "Pieslēgties",
+      "submitting": "Pieteikšanās...",
+      "rememberMe": "Atceries mani",
+      "forgotPassword": "Es aizmirsu savu paroli.",
+      "noAccount": "Vai jums nav konta?",
+      "register": "Reģistrēties",
+      "errorDefault": "Pieteikšanās neizdevās. Lūdzu, pārbaudiet savu informāciju."
+    },
+    "register": {
+      "title": "Reģistrēties",
+      "description": "Sāciet, izveidojot jaunu kontu.",
+      "firstName": "Vārds",
+      "firstNamePlaceholder": "Ahmets",
+      "surname": "Uzvārds",
+      "surnamePlaceholder": "Jilmazs",
+      "username": "Lietotājvārds",
+      "usernamePlaceholder": "ahmetilmaz",
+      "confirmPassword": "Apstiprināt paroli",
+      "submit": "Reģistrēties",
+      "submitting": "Konts tiek veidots...",
+      "hasAccount": "Vai jums jau ir konts?",
+      "login": "Pieslēgties",
+      "passwordMismatch": "Paroles nesakrīt.",
+      "passwordTooShort": "Parolei jābūt vismaz 6 rakstzīmes garai.",
+      "errorDefault": "Reģistrācija neizdevās. Lūdzu, mēģiniet vēlreiz."
+    },
+    "forgotPassword": {
+      "title": "Es aizmirsu savu paroli.",
+      "description": "Ievadiet savu e-pasta adresi, un mēs nosūtīsim jums paroles atiestatīšanas saiti.",
+      "submit": "Sūtīt atiestatīšanas saiti",
+      "submitting": "Sūtīšana...",
+      "backToLogin": "Atgriezties sākumlapā",
+      "successTitle": "E-pasts nosūtīts",
+      "successDescription": "Paroles atiestatīšanas saite ir nosūtīta uz jūsu e-pasta adresi. Lūdzu, pārbaudiet savu iesūtni.",
+      "errorDefault": "Radās kļūda. Lūdzu, pārbaudiet savu e-pasta adresi."
+    },
+    "resetPassword": {
+      "title": "Iestatīt jaunu paroli",
+      "description": "Iestatiet savam kontam jaunu paroli.",
+      "newPassword": "Jauna parole",
+      "confirmPassword": "Apstiprināt paroli",
+      "submit": "Atjaunināt paroli",
+      "submitting": "Notiek atjaunināšana...",
+      "successTitle": "Parole atjaunināta",
+      "successDescription": "Jūsu parole ir veiksmīgi atjaunināta. Varat pieteikties ar savu jauno paroli.",
+      "goToLogin": "Pieslēgties",
+      "invalidLinkTitle": "Nederīgs savienojums",
+      "invalidLinkDescription": "Paroles atiestatīšanas saite ir nederīga vai nepilnīga. Lūdzu, vēlreiz pārbaudiet saiti savā e-pastā.",
+      "requestNewLink": "Pieprasīt jaunu savienojumu",
+      "passwordMismatch": "Paroles nesakrīt.",
+      "passwordTooShort": "Parolei jābūt vismaz 6 rakstzīmes garai.",
+      "errorDefault": "Paroles atiestatīšana neizdevās. Savienojums, iespējams, nav derīgs vai ir beidzies derīguma termiņš."
+    }
+  },
+  "dashboard": {
+    "title": "Informācijas panelis",
+    "welcome": "Sveicināti, {vārds}!",
+    "accountInfo": "Jūsu konta informācija ir redzama zemāk.",
+    "username": "Lietotājvārds",
+    "email": "E-pasts",
+    "id": "ID",
+    "logout": "Izrakstīties"
+  },
+  "settings": {
+    "title": "Iestatījumi",
+    "updatePassword": {
+      "title": "Atjaunināt paroli",
+      "description": "Regulāri atjauniniet savu paroli sava konta drošībai.",
+      "currentPassword": "Pašreizējā parole",
+      "newPassword": "Jauna parole",
+      "confirmPassword": "Atkal jauna parole",
+      "submit": "Atjaunināt paroli",
+      "submitting": "Notiek atjaunināšana...",
+      "success": "Jūsu parole ir veiksmīgi atjaunināta.",
+      "passwordMismatch": "Jaunās paroles nesakrīt.",
+      "passwordTooShort": "Jaunajai parolei jābūt vismaz 6 rakstzīmes garai.",
+      "sessionError": "Sesijas informāciju nevarēja atrast.",
+      "errorDefault": "Paroli nevarēja atjaunināt. Lūdzu, pārbaudiet savu pašreizējo paroli."
+    }
+  },
+  "navigation": {
+    "home": "Sākums",
+    "dashboard": "Informācijas panelis",
+    "settings": "Iestatījumi",
+    "profile": "Profils",
+    "logout": "Izrakstīties"
+  },
+  "language": {
+    "select": "Valodas izvēle",
+    "current": "Pašreizējā valoda"
+  }
+}

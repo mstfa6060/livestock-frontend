@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Terhelés...",
+    "error": "Hiba",
+    "success": "Sikeres",
+    "email": "Email",
+    "password": "Jelszó",
+    "submit": "Elküld",
+    "cancel": "Mégsem",
+    "save": "Megtakarítás",
+    "back": "Vissza",
+    "next": "Előre",
+    "close": "Közeli",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Bejelentkezés",
+      "description": "Folytassa a fiókjába való bejelentkezéssel.",
+      "submit": "Bejelentkezés",
+      "submitting": "Bejelentkezés...",
+      "rememberMe": "Emlékezz rám",
+      "forgotPassword": "Elfelejtettem a jelszavamat.",
+      "noAccount": "Nincs fiókod?",
+      "register": "Nyilvántartás",
+      "errorDefault": "Sikertelen bejelentkezés. Kérjük, ellenőrizze az adatait."
+    },
+    "register": {
+      "title": "Nyilvántartás",
+      "description": "Kezdje egy új fiók létrehozásával.",
+      "firstName": "Név",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Vezetéknév",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Felhasználónév",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Jelszó megerősítése",
+      "submit": "Nyilvántartás",
+      "submitting": "Fiók létrehozása folyamatban...",
+      "hasAccount": "Már van fiókod?",
+      "login": "Bejelentkezés",
+      "passwordMismatch": "A jelszavak nem egyeznek.",
+      "passwordTooShort": "A jelszónak legalább 6 karakter hosszúnak kell lennie.",
+      "errorDefault": "A regisztráció sikertelen. Kérjük, próbálja újra."
+    },
+    "forgotPassword": {
+      "title": "Elfelejtettem a jelszavamat.",
+      "description": "Add meg az e-mail címed, és küldünk neked egy jelszó-visszaállító linket.",
+      "submit": "Link visszaállítása",
+      "submitting": "Küldés...",
+      "backToLogin": "Vissza a kezdőlapra",
+      "successTitle": "E-mail elküldve",
+      "successDescription": "A jelszó-visszaállító linket elküldtük az e-mail címedre. Kérjük, ellenőrizd a beérkező leveleidet.",
+      "errorDefault": "Hiba történt. Kérjük, ellenőrizze az e-mail címét."
+    },
+    "resetPassword": {
+      "title": "Új jelszó beállítása",
+      "description": "Állítson be új jelszót a fiókjához.",
+      "newPassword": "Új jelszó",
+      "confirmPassword": "Jelszó megerősítése",
+      "submit": "Jelszó frissítése",
+      "submitting": "Frissítés...",
+      "successTitle": "Jelszó frissítve",
+      "successDescription": "Jelszava sikeresen frissült. Bejelentkezhet új jelszavával.",
+      "goToLogin": "Bejelentkezés",
+      "invalidLinkTitle": "Érvénytelen kapcsolat",
+      "invalidLinkDescription": "A jelszó-visszaállító link érvénytelen vagy hiányos. Kérjük, ellenőrizze az e-mailben található linket.",
+      "requestNewLink": "Új kapcsolat kérése",
+      "passwordMismatch": "A jelszavak nem egyeznek.",
+      "passwordTooShort": "A jelszónak legalább 6 karakter hosszúnak kell lennie.",
+      "errorDefault": "A jelszó visszaállítása sikertelen. Lehetséges, hogy a kapcsolat érvénytelen vagy lejárt."
+    }
+  },
+  "dashboard": {
+    "title": "Műszerfal",
+    "welcome": "Üdvözlünk, {név}!",
+    "accountInfo": "Fiókod adatai alább láthatók.",
+    "username": "Felhasználónév",
+    "email": "Email",
+    "id": "azonosító",
+    "logout": "Kijelentkezés"
+  },
+  "settings": {
+    "title": "Beállítások",
+    "updatePassword": {
+      "title": "Jelszó frissítése",
+      "description": "Fiókod biztonsága érdekében rendszeresen frissítsd jelszavadat.",
+      "currentPassword": "Jelenlegi jelszó",
+      "newPassword": "Új jelszó",
+      "confirmPassword": "Új jelszó újra",
+      "submit": "Jelszó frissítése",
+      "submitting": "Frissítés...",
+      "success": "Jelszavad sikeresen frissítve.",
+      "passwordMismatch": "Az új jelszavak nem egyeznek.",
+      "passwordTooShort": "Az új jelszónak legalább 6 karakter hosszúnak kell lennie.",
+      "sessionError": "Nem találhatók a munkamenet adatai.",
+      "errorDefault": "A jelszó frissítése sikertelen volt. Kérjük, ellenőrizze a jelenlegi jelszavát."
+    }
+  },
+  "navigation": {
+    "home": "Otthon",
+    "dashboard": "Műszerfal",
+    "settings": "Beállítások",
+    "profile": "Profil",
+    "logout": "Kijelentkezés"
+  },
+  "language": {
+    "select": "Nyelvválasztás",
+    "current": "Jelenlegi nyelv"
+  }
+}

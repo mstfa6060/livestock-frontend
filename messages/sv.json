@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Belastning...",
+    "error": "Misstag",
+    "success": "Framgångsrik",
+    "email": "E-post",
+    "password": "Lösenord",
+    "submit": "Skicka",
+    "cancel": "Avboka",
+    "save": "Spara",
+    "back": "Tillbaka",
+    "next": "Fram",
+    "close": "Nära",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Logga in",
+      "description": "Fortsätt genom att logga in på ditt konto.",
+      "submit": "Logga in",
+      "submitting": "Loggar in...",
+      "rememberMe": "Kom ihåg mig",
+      "forgotPassword": "Jag har glömt mitt lösenord.",
+      "noAccount": "Har du inget konto?",
+      "register": "Register",
+      "errorDefault": "Inloggningen misslyckades. Kontrollera dina uppgifter."
+    },
+    "register": {
+      "title": "Register",
+      "description": "Börja med att skapa ett nytt konto.",
+      "firstName": "Namn",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Efternamn",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Användarnamn",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Bekräfta lösenord",
+      "submit": "Register",
+      "submitting": "Konto skapas...",
+      "hasAccount": "Har du redan ett konto?",
+      "login": "Logga in",
+      "passwordMismatch": "Lösenorden matchar inte.",
+      "passwordTooShort": "Lösenordet måste vara minst 6 tecken långt.",
+      "errorDefault": "Registreringen misslyckades. Försök igen."
+    },
+    "forgotPassword": {
+      "title": "Jag har glömt mitt lösenord.",
+      "description": "Ange din e-postadress så skickar vi en länk för återställning av lösenord.",
+      "submit": "Skicka återställningslänk",
+      "submitting": "Sändning...",
+      "backToLogin": "Återgå till startsidan",
+      "successTitle": "E-post skickad",
+      "successDescription": "Länken för återställning av lösenord har skickats till din e-postadress. Kontrollera din inkorg.",
+      "errorDefault": "Ett fel uppstod. Kontrollera din e-postadress."
+    },
+    "resetPassword": {
+      "title": "Ange ett nytt lösenord",
+      "description": "Ange ett nytt lösenord för ditt konto.",
+      "newPassword": "Nytt lösenord",
+      "confirmPassword": "Bekräfta lösenord",
+      "submit": "Uppdatera lösenord",
+      "submitting": "Uppdaterar...",
+      "successTitle": "Lösenord uppdaterat",
+      "successDescription": "Ditt lösenord har uppdaterats. Du kan logga in med ditt nya lösenord.",
+      "goToLogin": "Logga in",
+      "invalidLinkTitle": "Ogiltig anslutning",
+      "invalidLinkDescription": "Länken för återställning av lösenord är ogiltig eller ofullständig. Kontrollera länken i ditt e-postmeddelande noggrant.",
+      "requestNewLink": "Begär en ny anslutning",
+      "passwordMismatch": "Lösenorden matchar inte.",
+      "passwordTooShort": "Lösenordet måste vara minst 6 tecken långt.",
+      "errorDefault": "Lösenordsåterställning misslyckades. Anslutningen kan vara ogiltig eller ha upphört att gälla."
+    }
+  },
+  "dashboard": {
+    "title": "Instrumentpanel",
+    "welcome": "Välkommen, {namn}!",
+    "accountInfo": "Din kontoinformation visas nedan.",
+    "username": "Användarnamn",
+    "email": "E-post",
+    "id": "ID",
+    "logout": "Logga ut"
+  },
+  "settings": {
+    "title": "Inställningar",
+    "updatePassword": {
+      "title": "Uppdatera lösenord",
+      "description": "Uppdatera ditt lösenord regelbundet för ditt kontos säkerhet.",
+      "currentPassword": "Nuvarande lösenord",
+      "newPassword": "Nytt lösenord",
+      "confirmPassword": "Nytt lösenord igen",
+      "submit": "Uppdatera lösenord",
+      "submitting": "Uppdaterar...",
+      "success": "Ditt lösenord har uppdaterats.",
+      "passwordMismatch": "De nya lösenorden matchar inte.",
+      "passwordTooShort": "Det nya lösenordet måste vara minst 6 tecken långt.",
+      "sessionError": "Sessionsinformationen kunde inte hittas.",
+      "errorDefault": "Lösenordet kunde inte uppdateras. Kontrollera ditt nuvarande lösenord."
+    }
+  },
+  "navigation": {
+    "home": "Hem",
+    "dashboard": "Instrumentpanel",
+    "settings": "Inställningar",
+    "profile": "Profil",
+    "logout": "Logga ut"
+  },
+  "language": {
+    "select": "Språkval",
+    "current": "Nuvarande språk"
+  }
+}

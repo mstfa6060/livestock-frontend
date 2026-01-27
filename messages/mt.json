@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Qed jitgħabba...",
+    "error": "Żball",
+    "success": "Suċċess",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Ibgħat",
+    "cancel": "Ikkanċella",
+    "save": "Issejvja",
+    "back": "Lura",
+    "next": "'Il Quddiem",
+    "close": "Agħlaq",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Idħol",
+      "description": "Kompli billi tidħol fil-kont tiegħek.",
+      "submit": "Idħol",
+      "submitting": "Qed tidħol...",
+      "rememberMe": "Ftakar fija",
+      "forgotPassword": "Insejt il-password tiegħi.",
+      "noAccount": "M'għandekx kont?",
+      "register": "Reġistru",
+      "errorDefault": "Il-login falla. Jekk jogħġbok iċċekkja l-informazzjoni tiegħek."
+    },
+    "register": {
+      "title": "Reġistru",
+      "description": "Ibda billi toħloq kont ġdid.",
+      "firstName": "Isem",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Kunjom",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Isem tal-utent",
+      "usernamePlaceholder": "aħmetyilmaz",
+      "confirmPassword": "Ikkonferma l-Password",
+      "submit": "Reġistru",
+      "submitting": "Il-kont qed jinħoloq...",
+      "hasAccount": "Diġà għandek kont?",
+      "login": "Idħol",
+      "passwordMismatch": "Il-passwords ma jaqblux.",
+      "passwordTooShort": "Il-password trid tkun twila mill-inqas 6 karattri.",
+      "errorDefault": "Ir-reġistrazzjoni falliet. Jekk jogħġbok erġa' pprova."
+    },
+    "forgotPassword": {
+      "title": "Insejt il-password tiegħi.",
+      "description": "Daħħal l-indirizz elettroniku tiegħek u aħna nibagħtulek link biex tirrisettja l-password.",
+      "submit": "Ibgħat Link ta' Irrisettjar",
+      "submitting": "Qed nibgħat...",
+      "backToLogin": "Erġa' lura għall-paġna ewlenija",
+      "successTitle": "Email Mibgħuta",
+      "successDescription": "Il-link għar-reset tal-password intbagħat lill-indirizz elettroniku tiegħek. Jekk jogħġbok iċċekkja l-inbox tiegħek.",
+      "errorDefault": "Seħħ żball. Jekk jogħġbok iċċekkja l-indirizz elettroniku tiegħek."
+    },
+    "resetPassword": {
+      "title": "Issettja Password Ġdida",
+      "description": "Issettja password ġdida għall-kont tiegħek.",
+      "newPassword": "Password Ġdida",
+      "confirmPassword": "Ikkonferma l-Password",
+      "submit": "Aġġorna l-Password",
+      "submitting": "Aġġornament...",
+      "successTitle": "Il-Password Aġġornata",
+      "successDescription": "Il-password tiegħek ġiet aġġornata b'suċċess. Tista' tidħol bil-password il-ġdida tiegħek.",
+      "goToLogin": "Idħol",
+      "invalidLinkTitle": "Konnessjoni Invalida",
+      "invalidLinkDescription": "Il-link għar-reset tal-password mhuwiex validu jew mhux komplut. Jekk jogħġbok iċċekkja l-link fl-email tiegħek.",
+      "requestNewLink": "Itlob Konnessjoni Ġdida",
+      "passwordMismatch": "Il-passwords ma jaqblux.",
+      "passwordTooShort": "Il-password trid tkun twila mill-inqas 6 karattri.",
+      "errorDefault": "Ir-reset tal-password falla. Il-konnessjoni tista' tkun invalida jew skadiet."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Merħba, {isem}!",
+    "accountInfo": "L-informazzjoni tal-kont tiegħek tidher hawn taħt.",
+    "username": "Isem tal-utent",
+    "email": "Email",
+    "id": "ID",
+    "logout": "Oħroġ"
+  },
+  "settings": {
+    "title": "Issettjar",
+    "updatePassword": {
+      "title": "Aġġorna l-Password",
+      "description": "Aġġorna l-password tiegħek regolarment għas-sigurtà tal-kont tiegħek.",
+      "currentPassword": "Password Attwali",
+      "newPassword": "Password Ġdida",
+      "confirmPassword": "Password Ġdida Għal darb'oħra",
+      "submit": "Aġġorna l-Password",
+      "submitting": "Aġġornament...",
+      "success": "Il-password tiegħek ġiet aġġornata b'suċċess.",
+      "passwordMismatch": "Il-passwords il-ġodda ma jaqblux.",
+      "passwordTooShort": "Il-password il-ġdida trid tkun twila mill-inqas 6 karattri.",
+      "sessionError": "Ma setgħetx tinstab informazzjoni dwar is-sessjoni.",
+      "errorDefault": "Il-password ma setgħetx tiġi aġġornata. Jekk jogħġbok iċċekkja l-password attwali tiegħek."
+    }
+  },
+  "navigation": {
+    "home": "Dar",
+    "dashboard": "Dashboard",
+    "settings": "Issettjar",
+    "profile": "Profil",
+    "logout": "Oħroġ"
+  },
+  "language": {
+    "select": "Għażla tal-Lingwa",
+    "current": "Lingwa Kurrenti"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "በመጫን ላይ...",
+    "error": "ስህተት",
+    "success": "ስኬታማ",
+    "email": "ኢሜይል",
+    "password": "የይለፍ ቃል",
+    "submit": "ላክ",
+    "cancel": "ሰርዝ",
+    "save": "አስቀምጥ",
+    "back": "ተመለስ",
+    "next": "ወደፊት",
+    "close": "ገጠመ",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "ግባ",
+      "description": "ወደ መለያዎ በመግባት ይቀጥሉ።",
+      "submit": "ግባ",
+      "submitting": "በመግባት ላይ...",
+      "rememberMe": "አስታውሰኝ",
+      "forgotPassword": "የይለፍ ቃሉን እረሳሁ።",
+      "noAccount": "አካውንት የለህም?",
+      "register": "መዝገብ",
+      "errorDefault": "መግባት አልተሳካም። እባክዎ መረጃዎን ያረጋግጡ።"
+    },
+    "register": {
+      "title": "መዝገብ",
+      "description": "አዲስ መለያ በመፍጠር ይጀምሩ።",
+      "firstName": "ስም",
+      "firstNamePlaceholder": "አህሜት",
+      "surname": "የአያት ስም",
+      "surnamePlaceholder": "ይልማዝ",
+      "username": "የተጠቃሚ ስም",
+      "usernamePlaceholder": "አህመቲልማዝ",
+      "confirmPassword": "የይለፍ ቃል አረጋግጥ",
+      "submit": "መዝገብ",
+      "submitting": "መለያ እየተፈጠረ ነው...",
+      "hasAccount": "አስቀድመህ መለያ አለህ?",
+      "login": "ግባ",
+      "passwordMismatch": "የይለፍ ቃሎቹ አይዛመዱም።",
+      "passwordTooShort": "የይለፍ ቃሉ ቢያንስ 6 ቁምፊዎች ርዝመት ሊኖረው ይገባል።",
+      "errorDefault": "ምዝገባ አልተሳካም። እባክዎ እንደገና ይሞክሩ።"
+    },
+    "forgotPassword": {
+      "title": "የይለፍ ቃሉን እረሳሁ።",
+      "description": "የኢሜይል አድራሻዎን ያስገቡ እና የይለፍ ቃል ዳግም ማስጀመሪያ አገናኝ እንልክልዎታለን።",
+      "submit": "የዳግም ማስጀመሪያ አገናኝ ላክ",
+      "submitting": "በመላክ ላይ...",
+      "backToLogin": "ወደ መነሻ ገጹ ተመለስ",
+      "successTitle": "ኢሜይል ተልኳል",
+      "successDescription": "የይለፍ ቃል ዳግም ማስጀመሪያ አገናኝ ወደ ኢሜይል አድራሻዎ ተልኳል። እባክዎ የገቢ መልእክት ሳጥንዎን ያረጋግጡ።",
+      "errorDefault": "ስህተት ተከስቷል። እባክዎ የኢሜይል አድራሻዎን ያረጋግጡ።"
+    },
+    "resetPassword": {
+      "title": "አዲስ የይለፍ ቃል ያዘጋጁ",
+      "description": "ለመለያዎ አዲስ የይለፍ ቃል ያዘጋጁ።",
+      "newPassword": "አዲስ የይለፍ ቃል",
+      "confirmPassword": "የይለፍ ቃል አረጋግጥ",
+      "submit": "የይለፍ ቃል አዘምን",
+      "submitting": "በማዘመን ላይ...",
+      "successTitle": "የይለፍ ቃል ተዘምኗል",
+      "successDescription": "የይለፍ ቃልዎ በተሳካ ሁኔታ ተዘምኗል። በአዲሱ የይለፍ ቃልዎ መግባት ይችላሉ።",
+      "goToLogin": "ግባ",
+      "invalidLinkTitle": "ልክ ያልሆነ ግንኙነት",
+      "invalidLinkDescription": "የይለፍ ቃል ዳግም ማስጀመሪያ አገናኙ ልክ ያልሆነ ወይም ያልተሟላ ነው። እባክዎ በኢሜልዎ ውስጥ ያለውን አገናኝ ደግመው ያረጋግጡ።",
+      "requestNewLink": "አዲስ ግንኙነት ይጠይቁ",
+      "passwordMismatch": "የይለፍ ቃሎቹ አይዛመዱም።",
+      "passwordTooShort": "የይለፍ ቃሉ ቢያንስ 6 ቁምፊዎች ርዝመት ሊኖረው ይገባል።",
+      "errorDefault": "የይለፍ ቃል ዳግም ማስጀመር አልተሳካም። ግንኙነቱ ልክ ያልሆነ ወይም ጊዜው ያለፈበት ሊሆን ይችላል።"
+    }
+  },
+  "dashboard": {
+    "title": "ዳሽቦርድ",
+    "welcome": "እንኳን ደህና መጡ፣ {ስም}!",
+    "accountInfo": "የመለያዎ መረጃ ከዚህ በታች ይታያል።",
+    "username": "የተጠቃሚ ስም",
+    "email": "ኢሜይል",
+    "id": "መታወቂያ",
+    "logout": "ውጣ"
+  },
+  "settings": {
+    "title": "ቅንብሮች",
+    "updatePassword": {
+      "title": "የይለፍ ቃል አዘምን",
+      "description": "የመለያዎን ደህንነት ለማረጋገጥ የይለፍ ቃልዎን በየጊዜው ያዘምኑ።",
+      "currentPassword": "የአሁኑ ሚስጥራዊ ማለፊያ ቁልፍ",
+      "newPassword": "አዲስ የይለፍ ቃል",
+      "confirmPassword": "አዲስ የይለፍ ቃል እንደገና",
+      "submit": "የይለፍ ቃል አዘምን",
+      "submitting": "በማዘመን ላይ...",
+      "success": "የይለፍ ቃልዎ በተሳካ ሁኔታ ተዘምኗል።",
+      "passwordMismatch": "አዲሶቹ የይለፍ ቃላት አይዛመዱም።",
+      "passwordTooShort": "አዲሱ የይለፍ ቃል ቢያንስ 6 ቁምፊዎች ርዝመት ሊኖረው ይገባል።",
+      "sessionError": "የክፍለ ጊዜ መረጃ ሊገኝ አልቻለም።",
+      "errorDefault": "የይለፍ ቃሉ ሊዘመን አልቻለም። እባክዎ የአሁኑን የይለፍ ቃልዎን ያረጋግጡ።"
+    }
+  },
+  "navigation": {
+    "home": "መነሻ",
+    "dashboard": "ዳሽቦርድ",
+    "settings": "ቅንብሮች",
+    "profile": "መገለጫ",
+    "logout": "ውጣ"
+  },
+  "language": {
+    "select": "የቋንቋ ምርጫ",
+    "current": "የአሁኑ ቋንቋ"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Načítání...",
+    "error": "Chyba",
+    "success": "Úspěšný",
+    "email": "E-mail",
+    "password": "Heslo",
+    "submit": "Poslat",
+    "cancel": "Zrušit",
+    "save": "Uložit",
+    "back": "Zadní",
+    "next": "Vpřed",
+    "close": "Blízko",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Přihlásit se",
+      "description": "Pokračujte přihlášením ke svému účtu.",
+      "submit": "Přihlásit se",
+      "submitting": "Přihlašování...",
+      "rememberMe": "Zapamatuj si mě",
+      "forgotPassword": "Zapomněl/a jsem heslo.",
+      "noAccount": "Nemáte účet?",
+      "register": "Rejstřík",
+      "errorDefault": "Přihlášení se nezdařilo. Zkontrolujte prosím své údaje."
+    },
+    "register": {
+      "title": "Rejstřík",
+      "description": "Začněte vytvořením nového účtu.",
+      "firstName": "Jméno",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Příjmení",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Uživatelské jméno",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Potvrzení hesla",
+      "submit": "Rejstřík",
+      "submitting": "Účet se vytváří...",
+      "hasAccount": "Už máte účet?",
+      "login": "Přihlásit se",
+      "passwordMismatch": "Hesla se neshodují.",
+      "passwordTooShort": "Heslo musí mít alespoň 6 znaků.",
+      "errorDefault": "Registrace se nezdařila. Zkuste to prosím znovu."
+    },
+    "forgotPassword": {
+      "title": "Zapomněl/a jsem heslo.",
+      "description": "Zadejte svou e-mailovou adresu a my vám zašleme odkaz pro obnovení hesla.",
+      "submit": "Odeslat odkaz pro resetování",
+      "submitting": "Odesílání...",
+      "backToLogin": "Zpět na domovskou stránku",
+      "successTitle": "E-mail odeslán",
+      "successDescription": "Odkaz pro obnovení hesla byl odeslán na vaši e-mailovou adresu. Zkontrolujte si prosím doručenou poštu.",
+      "errorDefault": "Došlo k chybě. Zkontrolujte prosím svou e-mailovou adresu."
+    },
+    "resetPassword": {
+      "title": "Nastavit nové heslo",
+      "description": "Nastavte si pro svůj účet nové heslo.",
+      "newPassword": "Nové heslo",
+      "confirmPassword": "Potvrzení hesla",
+      "submit": "Aktualizovat heslo",
+      "submitting": "Aktualizace...",
+      "successTitle": "Heslo aktualizováno",
+      "successDescription": "Vaše heslo bylo úspěšně aktualizováno. Můžete se přihlásit s novým heslem.",
+      "goToLogin": "Přihlásit se",
+      "invalidLinkTitle": "Neplatné připojení",
+      "invalidLinkDescription": "Odkaz pro obnovení hesla je neplatný nebo neúplný. Zkontrolujte prosím odkaz ve vašem e-mailu.",
+      "requestNewLink": "Požádat o nové připojení",
+      "passwordMismatch": "Hesla se neshodují.",
+      "passwordTooShort": "Heslo musí mít alespoň 6 znaků.",
+      "errorDefault": "Reset hesla selhal. Připojení je pravděpodobně neplatné nebo vypršelo."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Vítej, {name}!",
+    "accountInfo": "Informace o vašem účtu jsou zobrazeny níže.",
+    "username": "Uživatelské jméno",
+    "email": "E-mail",
+    "id": "Průkaz totožnosti",
+    "logout": "Odhlásit se"
+  },
+  "settings": {
+    "title": "Nastavení",
+    "updatePassword": {
+      "title": "Aktualizovat heslo",
+      "description": "Pravidelně aktualizujte heslo pro zabezpečení svého účtu.",
+      "currentPassword": "Aktuální heslo",
+      "newPassword": "Nové heslo",
+      "confirmPassword": "Nové heslo znovu",
+      "submit": "Aktualizovat heslo",
+      "submitting": "Aktualizace...",
+      "success": "Vaše heslo bylo úspěšně aktualizováno.",
+      "passwordMismatch": "Nová hesla se neshodují.",
+      "passwordTooShort": "Nové heslo musí mít alespoň 6 znaků.",
+      "sessionError": "Informace o relaci se nepodařilo nalézt.",
+      "errorDefault": "Heslo se nepodařilo aktualizovat. Zkontrolujte prosím své aktuální heslo."
+    }
+  },
+  "navigation": {
+    "home": "Domov",
+    "dashboard": "Dashboard",
+    "settings": "Nastavení",
+    "profile": "Profil",
+    "logout": "Odhlásit se"
+  },
+  "language": {
+    "select": "Výběr jazyka",
+    "current": "Aktuální jazyk"
+  }
+}

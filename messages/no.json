@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Laster inn...",
+    "error": "Feil",
+    "success": "Vellykket",
+    "email": "E-post",
+    "password": "Passord",
+    "submit": "Sende",
+    "cancel": "Kansellere",
+    "save": "Spare",
+    "back": "Tilbake",
+    "next": "Framover",
+    "close": "Lukke",
+    "emailPlaceholder": "ornek@epost.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Logg inn",
+      "description": "Fortsett ved å logge inn på kontoen din.",
+      "submit": "Logg inn",
+      "submitting": "Logger inn...",
+      "rememberMe": "Husk meg",
+      "forgotPassword": "Jeg har glemt passordet mitt.",
+      "noAccount": "Har du ikke en konto?",
+      "register": "Register",
+      "errorDefault": "Innlogging mislyktes. Vennligst sjekk informasjonen din."
+    },
+    "register": {
+      "title": "Register",
+      "description": "Start med å opprette en ny konto.",
+      "firstName": "Navn",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Etternavn",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Brukernavn",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Bekreft passord",
+      "submit": "Register",
+      "submitting": "Kontoen opprettes ...",
+      "hasAccount": "Har du allerede en konto?",
+      "login": "Logg inn",
+      "passwordMismatch": "Passordene stemmer ikke overens.",
+      "passwordTooShort": "Passordet må være minst 6 tegn langt.",
+      "errorDefault": "Registreringen mislyktes. Prøv på nytt."
+    },
+    "forgotPassword": {
+      "title": "Jeg har glemt passordet mitt.",
+      "description": "Skriv inn e-postadressen din, så sender vi deg en lenke for tilbakestilling av passord.",
+      "submit": "Send tilbakestillingslenke",
+      "submitting": "Sender...",
+      "backToLogin": "Gå tilbake til hjemmesiden",
+      "successTitle": "E-post sendt",
+      "successDescription": "Lenken for tilbakestilling av passord er sendt til e-postadressen din. Sjekk innboksen din.",
+      "errorDefault": "Det oppsto en feil. Vennligst sjekk e-postadressen din."
+    },
+    "resetPassword": {
+      "title": "Angi et nytt passord",
+      "description": "Angi et nytt passord for kontoen din.",
+      "newPassword": "Nytt passord",
+      "confirmPassword": "Bekreft passord",
+      "submit": "Oppdater passord",
+      "submitting": "Oppdaterer...",
+      "successTitle": "Passord oppdatert",
+      "successDescription": "Passordet ditt er oppdatert. Du kan logge inn med det nye passordet ditt.",
+      "goToLogin": "Logg inn",
+      "invalidLinkTitle": "Ugyldig tilkobling",
+      "invalidLinkDescription": "Lenken for tilbakestilling av passord er ugyldig eller ufullstendig. Dobbeltsjekk lenken i e-posten din.",
+      "requestNewLink": "Be om en ny tilkobling",
+      "passwordMismatch": "Passordene stemmer ikke overens.",
+      "passwordTooShort": "Passordet må være minst 6 tegn langt.",
+      "errorDefault": "Tilbakestilling av passord mislyktes. Tilkoblingen kan være ugyldig eller utløpt."
+    }
+  },
+  "dashboard": {
+    "title": "Dashbord",
+    "welcome": "Velkommen, {navn}!",
+    "accountInfo": "Kontoinformasjonen din vises nedenfor.",
+    "username": "Brukernavn",
+    "email": "E-post",
+    "id": "ID",
+    "logout": "Logg ut"
+  },
+  "settings": {
+    "title": "Innstillinger",
+    "updatePassword": {
+      "title": "Oppdater passord",
+      "description": "Oppdater passordet ditt regelmessig for å ivareta sikkerheten til kontoen din.",
+      "currentPassword": "Nåværende passord",
+      "newPassword": "Nytt passord",
+      "confirmPassword": "Nytt passord igjen",
+      "submit": "Oppdater passord",
+      "submitting": "Oppdaterer...",
+      "success": "Passordet ditt er oppdatert.",
+      "passwordMismatch": "De nye passordene samsvarer ikke.",
+      "passwordTooShort": "Det nye passordet må være minst 6 tegn langt.",
+      "sessionError": "Finner ikke øktinformasjon.",
+      "errorDefault": "Passordet kunne ikke oppdateres. Vennligst sjekk det nåværende passordet ditt."
+    }
+  },
+  "navigation": {
+    "home": "Hjem",
+    "dashboard": "Dashbord",
+    "settings": "Innstillinger",
+    "profile": "Profil",
+    "logout": "Logg ut"
+  },
+  "language": {
+    "select": "Språkvalg",
+    "current": "Nåværende språk"
+  }
+}

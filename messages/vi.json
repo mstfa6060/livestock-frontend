@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Sai lầm",
+    "success": "Thành công",
+    "email": "E-mail",
+    "password": "Mật khẩu",
+    "submit": "Gửi",
+    "cancel": "Hủy bỏ",
+    "save": "Cứu",
+    "back": "Mặt sau",
+    "next": "Phía trước",
+    "close": "Đóng",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Đăng nhập",
+      "description": "Tiếp tục bằng cách đăng nhập vào tài khoản của bạn.",
+      "submit": "Đăng nhập",
+      "submitting": "Đang đăng nhập...",
+      "rememberMe": "Hãy nhớ đến tôi",
+      "forgotPassword": "Tôi quên mật khẩu.",
+      "noAccount": "Bạn không có tài khoản à?",
+      "register": "Đăng ký",
+      "errorDefault": "Đăng nhập không thành công. Vui lòng kiểm tra lại thông tin của bạn."
+    },
+    "register": {
+      "title": "Đăng ký",
+      "description": "Hãy bắt đầu bằng cách tạo một tài khoản mới.",
+      "firstName": "Tên",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Họ",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Tên người dùng",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Xác nhận mật khẩu",
+      "submit": "Đăng ký",
+      "submitting": "Tài khoản đang được tạo...",
+      "hasAccount": "Bạn đã có tài khoản chưa?",
+      "login": "Đăng nhập",
+      "passwordMismatch": "Mật khẩu không khớp.",
+      "passwordTooShort": "Mật khẩu phải có ít nhất 6 ký tự.",
+      "errorDefault": "Đăng ký không thành công. Vui lòng thử lại."
+    },
+    "forgotPassword": {
+      "title": "Tôi quên mật khẩu.",
+      "description": "Nhập địa chỉ email của bạn và chúng tôi sẽ gửi cho bạn đường dẫn đặt lại mật khẩu.",
+      "submit": "Gửi liên kết đặt lại",
+      "submitting": "Đang gửi...",
+      "backToLogin": "Trở lại trang chủ",
+      "successTitle": "Email đã được gửi",
+      "successDescription": "Liên kết đặt lại mật khẩu đã được gửi đến địa chỉ email của bạn. Vui lòng kiểm tra hộp thư đến.",
+      "errorDefault": "Đã xảy ra lỗi. Vui lòng kiểm tra lại địa chỉ email của bạn."
+    },
+    "resetPassword": {
+      "title": "Đặt mật khẩu mới",
+      "description": "Hãy đặt mật khẩu mới cho tài khoản của bạn.",
+      "newPassword": "Mật khẩu mới",
+      "confirmPassword": "Xác nhận mật khẩu",
+      "submit": "Cập nhật mật khẩu",
+      "submitting": "Đang cập nhật...",
+      "successTitle": "Mật khẩu đã được cập nhật",
+      "successDescription": "Mật khẩu của bạn đã được cập nhật thành công. Bạn có thể đăng nhập bằng mật khẩu mới.",
+      "goToLogin": "Đăng nhập",
+      "invalidLinkTitle": "Kết nối không hợp lệ",
+      "invalidLinkDescription": "Liên kết đặt lại mật khẩu không hợp lệ hoặc không đầy đủ. Vui lòng kiểm tra lại liên kết trong email của bạn.",
+      "requestNewLink": "Yêu cầu kết nối mới",
+      "passwordMismatch": "Mật khẩu không khớp.",
+      "passwordTooShort": "Mật khẩu phải có ít nhất 6 ký tự.",
+      "errorDefault": "Đặt lại mật khẩu không thành công. Kết nối có thể không hợp lệ hoặc đã hết hạn."
+    }
+  },
+  "dashboard": {
+    "title": "Bảng điều khiển",
+    "welcome": "Chào mừng, {name}!",
+    "accountInfo": "Thông tin tài khoản của bạn được hiển thị bên dưới.",
+    "username": "Tên người dùng",
+    "email": "E-mail",
+    "id": "NHẬN DẠNG",
+    "logout": "Đăng xuất"
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "updatePassword": {
+      "title": "Cập nhật mật khẩu",
+      "description": "Hãy thường xuyên thay đổi mật khẩu để đảm bảo an toàn cho tài khoản của bạn.",
+      "currentPassword": "Mật khẩu hiện tại",
+      "newPassword": "Mật khẩu mới",
+      "confirmPassword": "Mật khẩu mới",
+      "submit": "Cập nhật mật khẩu",
+      "submitting": "Đang cập nhật...",
+      "success": "Mật khẩu của bạn đã được cập nhật thành công.",
+      "passwordMismatch": "Mật khẩu mới không khớp.",
+      "passwordTooShort": "Mật khẩu mới phải có ít nhất 6 ký tự.",
+      "sessionError": "Không tìm thấy thông tin phiên.",
+      "errorDefault": "Không thể cập nhật mật khẩu. Vui lòng kiểm tra mật khẩu hiện tại của bạn."
+    }
+  },
+  "navigation": {
+    "home": "Trang chủ",
+    "dashboard": "Bảng điều khiển",
+    "settings": "Cài đặt",
+    "profile": "Hồ sơ",
+    "logout": "Đăng xuất"
+  },
+  "language": {
+    "select": "Lựa chọn ngôn ngữ",
+    "current": "Ngôn ngữ hiện tại"
+  }
+}

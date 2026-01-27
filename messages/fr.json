@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Réussi",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "submit": "Envoyer",
+    "cancel": "Annuler",
+    "save": "Sauvegarder",
+    "back": "Dos",
+    "next": "Avant",
+    "close": "Fermer",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Se connecter",
+      "description": "Poursuivez en vous connectant à votre compte.",
+      "submit": "Se connecter",
+      "submitting": "Connexion en cours...",
+      "rememberMe": "Souviens-toi de moi",
+      "forgotPassword": "J'ai oublié mon mot de passe.",
+      "noAccount": "Vous n'avez pas de compte ?",
+      "register": "Registre",
+      "errorDefault": "Échec de la connexion. Veuillez vérifier vos informations."
+    },
+    "register": {
+      "title": "Registre",
+      "description": "Commencez par créer un nouveau compte.",
+      "firstName": "Nom",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Nom de famille",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Nom d'utilisateur",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Confirmez le mot de passe",
+      "submit": "Registre",
+      "submitting": "Création du compte en cours...",
+      "hasAccount": "Avez-vous déjà un compte ?",
+      "login": "Se connecter",
+      "passwordMismatch": "Les mots de passe ne correspondent pas.",
+      "passwordTooShort": "Le mot de passe doit comporter au moins 6 caractères.",
+      "errorDefault": "L'inscription a échoué. Veuillez réessayer."
+    },
+    "forgotPassword": {
+      "title": "J'ai oublié mon mot de passe.",
+      "description": "Saisissez votre adresse e-mail et nous vous enverrons un lien de réinitialisation de mot de passe.",
+      "submit": "Envoyer le lien de réinitialisation",
+      "submitting": "Envoi...",
+      "backToLogin": "Retour à la page d'accueil",
+      "successTitle": "Courriel envoyé",
+      "successDescription": "Le lien de réinitialisation du mot de passe a été envoyé à votre adresse courriel. Veuillez consulter votre boîte de réception.",
+      "errorDefault": "Une erreur s'est produite. Veuillez vérifier votre adresse courriel."
+    },
+    "resetPassword": {
+      "title": "Définir un nouveau mot de passe",
+      "description": "Définissez un nouveau mot de passe pour votre compte.",
+      "newPassword": "Nouveau mot de passe",
+      "confirmPassword": "Confirmez le mot de passe",
+      "submit": "Mettre à jour le mot de passe",
+      "submitting": "Mise à jour en cours...",
+      "successTitle": "Mot de passe mis à jour",
+      "successDescription": "Votre mot de passe a bien été mis à jour. Vous pouvez vous connecter avec votre nouveau mot de passe.",
+      "goToLogin": "Se connecter",
+      "invalidLinkTitle": "Connexion invalide",
+      "invalidLinkDescription": "Le lien de réinitialisation du mot de passe est invalide ou incomplet. Veuillez vérifier le lien dans votre courriel.",
+      "requestNewLink": "Demander une nouvelle connexion",
+      "passwordMismatch": "Les mots de passe ne correspondent pas.",
+      "passwordTooShort": "Le mot de passe doit comporter au moins 6 caractères.",
+      "errorDefault": "La réinitialisation du mot de passe a échoué. La connexion est peut-être invalide ou a expiré."
+    }
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bienvenue, {name} !",
+    "accountInfo": "Les informations relatives à votre compte sont affichées ci-dessous.",
+    "username": "Nom d'utilisateur",
+    "email": "E-mail",
+    "id": "IDENTIFIANT",
+    "logout": "Déconnexion"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "updatePassword": {
+      "title": "Mettre à jour le mot de passe",
+      "description": "Mettez à jour régulièrement votre mot de passe pour la sécurité de votre compte.",
+      "currentPassword": "Mot de passe actuel",
+      "newPassword": "Nouveau mot de passe",
+      "confirmPassword": "Nouveau mot de passe",
+      "submit": "Mettre à jour le mot de passe",
+      "submitting": "Mise à jour en cours...",
+      "success": "Votre mot de passe a été mis à jour avec succès.",
+      "passwordMismatch": "Les nouveaux mots de passe ne correspondent pas.",
+      "passwordTooShort": "Le nouveau mot de passe doit comporter au moins 6 caractères.",
+      "sessionError": "Impossible de trouver les informations de session.",
+      "errorDefault": "Impossible de mettre à jour le mot de passe. Veuillez vérifier votre mot de passe actuel."
+    }
+  },
+  "navigation": {
+    "home": "Maison",
+    "dashboard": "Tableau de bord",
+    "settings": "Paramètres",
+    "profile": "Profil",
+    "logout": "Déconnexion"
+  },
+  "language": {
+    "select": "Sélection de la langue",
+    "current": "Langue actuelle"
+  }
+}

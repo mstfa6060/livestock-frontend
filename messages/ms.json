@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Memuatkan...",
+    "error": "Kesilapan",
+    "success": "Berjaya",
+    "email": "E-mel",
+    "password": "Kata Laluan",
+    "submit": "Hantar",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "back": "Kembali",
+    "next": "Ke hadapan",
+    "close": "Tutup",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Log masuk",
+      "description": "Teruskan dengan log masuk ke akaun anda.",
+      "submit": "Log masuk",
+      "submitting": "Log masuk...",
+      "rememberMe": "Ingat saya",
+      "forgotPassword": "Saya terlupa kata laluan saya.",
+      "noAccount": "Awak tak ada akaun ke?",
+      "register": "Daftar",
+      "errorDefault": "Log masuk gagal. Sila semak maklumat anda."
+    },
+    "register": {
+      "title": "Daftar",
+      "description": "Mulakan dengan membuat akaun baharu.",
+      "firstName": "Nama",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Nama keluarga",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Nama pengguna",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Sahkan Kata Laluan",
+      "submit": "Daftar",
+      "submitting": "Akaun sedang dibuat...",
+      "hasAccount": "Adakah anda sudah mempunyai akaun?",
+      "login": "Log masuk",
+      "passwordMismatch": "Kata laluan tidak sepadan.",
+      "passwordTooShort": "Kata laluan mestilah sekurang-kurangnya 6 aksara.",
+      "errorDefault": "Pendaftaran gagal. Sila cuba lagi."
+    },
+    "forgotPassword": {
+      "title": "Saya terlupa kata laluan saya.",
+      "description": "Masukkan alamat e-mel anda dan kami akan menghantar pautan tetapan semula kata laluan kepada anda.",
+      "submit": "Hantar Pautan Tetapan Semula",
+      "submitting": "Menghantar...",
+      "backToLogin": "Kembali ke laman utama",
+      "successTitle": "E-mel Dihantar",
+      "successDescription": "Pautan penetapan semula kata laluan telah dihantar ke alamat e-mel anda. Sila semak peti masuk anda.",
+      "errorDefault": "Ralat telah berlaku. Sila semak alamat e-mel anda."
+    },
+    "resetPassword": {
+      "title": "Tetapkan Kata Laluan Baharu",
+      "description": "Tetapkan kata laluan baharu untuk akaun anda.",
+      "newPassword": "Kata Laluan Baharu",
+      "confirmPassword": "Sahkan Kata Laluan",
+      "submit": "Kemas Kini Kata Laluan",
+      "submitting": "Mengemas kini...",
+      "successTitle": "Kata Laluan Dikemas kini",
+      "successDescription": "Kata laluan anda telah berjaya dikemas kini. Anda boleh log masuk dengan kata laluan baharu anda.",
+      "goToLogin": "Log masuk",
+      "invalidLinkTitle": "Sambungan Tidak Sah",
+      "invalidLinkDescription": "Pautan penetapan semula kata laluan tidak sah atau tidak lengkap. Sila semak semula pautan dalam e-mel anda.",
+      "requestNewLink": "Minta Sambungan Baharu",
+      "passwordMismatch": "Kata laluan tidak sepadan.",
+      "passwordTooShort": "Kata laluan mestilah sekurang-kurangnya 6 aksara.",
+      "errorDefault": "Penetapan semula kata laluan gagal. Sambungan mungkin tidak sah atau tamat tempoh."
+    }
+  },
+  "dashboard": {
+    "title": "Papan Pemuka",
+    "welcome": "Selamat datang, {nama}!",
+    "accountInfo": "Maklumat akaun anda dipaparkan di bawah.",
+    "username": "Nama pengguna",
+    "email": "E-mel",
+    "id": "ID",
+    "logout": "Log Keluar"
+  },
+  "settings": {
+    "title": "Tetapan",
+    "updatePassword": {
+      "title": "Kemas Kini Kata Laluan",
+      "description": "Kemas kini kata laluan anda secara berkala untuk keselamatan akaun anda.",
+      "currentPassword": "Kata Laluan Semasa",
+      "newPassword": "Kata Laluan Baharu",
+      "confirmPassword": "Kata Laluan Baharu Semula",
+      "submit": "Kemas Kini Kata Laluan",
+      "submitting": "Mengemas kini...",
+      "success": "Kata laluan anda telah berjaya dikemas kini.",
+      "passwordMismatch": "Kata laluan baharu tidak sepadan.",
+      "passwordTooShort": "Kata laluan baharu mestilah sekurang-kurangnya 6 aksara.",
+      "sessionError": "Maklumat sesi tidak dapat ditemui.",
+      "errorDefault": "Kata laluan tidak dapat dikemas kini. Sila semak kata laluan semasa anda."
+    }
+  },
+  "navigation": {
+    "home": "Laman Utama",
+    "dashboard": "Papan Pemuka",
+    "settings": "Tetapan",
+    "profile": "Profil",
+    "logout": "Log Keluar"
+  },
+  "language": {
+    "select": "Pemilihan Bahasa",
+    "current": "Bahasa Semasa"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Kraunama...",
+    "error": "Klaida",
+    "success": "Sėkmingas",
+    "email": "El. paštas",
+    "password": "Slaptažodis",
+    "submit": "Siųsti",
+    "cancel": "Atšaukti",
+    "save": "Išsaugoti",
+    "back": "Atgal",
+    "next": "Pirmyn",
+    "close": "Uždaryti",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Prisijungti",
+      "description": "Tęskite prisijungdami prie savo paskyros.",
+      "submit": "Prisijungti",
+      "submitting": "Prisijungiama...",
+      "rememberMe": "Prisiminti mane",
+      "forgotPassword": "Pamiršau slaptažodį.",
+      "noAccount": "Neturite paskyros?",
+      "register": "Registruotis",
+      "errorDefault": "Prisijungti nepavyko. Patikrinkite savo informaciją."
+    },
+    "register": {
+      "title": "Registruotis",
+      "description": "Pradėkite sukurdami naują paskyrą.",
+      "firstName": "Vardas",
+      "firstNamePlaceholder": "Ahmetas",
+      "surname": "Pavardė",
+      "surnamePlaceholder": "Yilmazas",
+      "username": "Vartotojo vardas",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Patvirtinkite slaptažodį",
+      "submit": "Registruotis",
+      "submitting": "Paskyra kuriama...",
+      "hasAccount": "Ar jau turite paskyrą?",
+      "login": "Prisijungti",
+      "passwordMismatch": "Slaptažodžiai nesutampa.",
+      "passwordTooShort": "Slaptažodis turi būti bent 6 simbolių ilgio.",
+      "errorDefault": "Registracija nepavyko. Bandykite dar kartą."
+    },
+    "forgotPassword": {
+      "title": "Pamiršau slaptažodį.",
+      "description": "Įveskite savo el. pašto adresą ir mes atsiųsime jums slaptažodžio atkūrimo nuorodą.",
+      "submit": "Siųsti Atstatyti nuorodą",
+      "submitting": "Siunčiama...",
+      "backToLogin": "Grįžti į pagrindinį puslapį",
+      "successTitle": "El. laiškas išsiųstas",
+      "successDescription": "Slaptažodžio atkūrimo nuoroda išsiųsta į jūsų el. pašto adresą. Patikrinkite savo el. pašto dėžutę.",
+      "errorDefault": "Įvyko klaida. Patikrinkite savo el. pašto adresą."
+    },
+    "resetPassword": {
+      "title": "Nustatyti naują slaptažodį",
+      "description": "Nustatykite naują slaptažodį savo paskyrai.",
+      "newPassword": "Naujas slaptažodis",
+      "confirmPassword": "Patvirtinkite slaptažodį",
+      "submit": "Atnaujinti slaptažodį",
+      "submitting": "Atnaujinama...",
+      "successTitle": "Slaptažodis atnaujintas",
+      "successDescription": "Jūsų slaptažodis sėkmingai atnaujintas. Galite prisijungti naudodami naują slaptažodį.",
+      "goToLogin": "Prisijungti",
+      "invalidLinkTitle": "Neteisingas ryšys",
+      "invalidLinkDescription": "Slaptažodžio atkūrimo nuoroda negalioja arba yra nepilna. Dar kartą patikrinkite nuorodą el. laiške.",
+      "requestNewLink": "Užklausa dėl naujo ryšio",
+      "passwordMismatch": "Slaptažodžiai nesutampa.",
+      "passwordTooShort": "Slaptažodis turi būti bent 6 simbolių ilgio.",
+      "errorDefault": "Nepavyko atkurti slaptažodžio. Ryšys gali būti negaliojantis arba pasibaigęs."
+    }
+  },
+  "dashboard": {
+    "title": "Prietaisų skydelis",
+    "welcome": "Sveiki atvykę, {vardas}!",
+    "accountInfo": "Jūsų paskyros informacija rodoma žemiau.",
+    "username": "Vartotojo vardas",
+    "email": "El. paštas",
+    "id": "ID",
+    "logout": "Atsijungti"
+  },
+  "settings": {
+    "title": "Nustatymai",
+    "updatePassword": {
+      "title": "Atnaujinti slaptažodį",
+      "description": "Reguliariai atnaujinkite slaptažodį, kad užtikrintumėte savo paskyros saugumą.",
+      "currentPassword": "Dabartinis slaptažodis",
+      "newPassword": "Naujas slaptažodis",
+      "confirmPassword": "Vėl naujas slaptažodis",
+      "submit": "Atnaujinti slaptažodį",
+      "submitting": "Atnaujinama...",
+      "success": "Jūsų slaptažodis sėkmingai atnaujintas.",
+      "passwordMismatch": "Nauji slaptažodžiai nesutampa.",
+      "passwordTooShort": "Naujas slaptažodis turi būti bent 6 simbolių ilgio.",
+      "sessionError": "Nepavyko rasti sesijos informacijos.",
+      "errorDefault": "Nepavyko atnaujinti slaptažodžio. Patikrinkite dabartinį slaptažodį."
+    }
+  },
+  "navigation": {
+    "home": "Pradžia",
+    "dashboard": "Prietaisų skydelis",
+    "settings": "Nustatymai",
+    "profile": "Profilis",
+    "logout": "Atsijungti"
+  },
+  "language": {
+    "select": "Kalbos pasirinkimas",
+    "current": "Dabartinė kalba"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Fout",
+    "success": "Succesvol",
+    "email": "E-mail",
+    "password": "Wachtwoord",
+    "submit": "Versturen",
+    "cancel": "Annuleren",
+    "save": "Redden",
+    "back": "Rug",
+    "next": "Vooruit",
+    "close": "Dichtbij",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Inloggen",
+      "description": "Ga verder door in te loggen op uw account.",
+      "submit": "Inloggen",
+      "submitting": "Inloggen...",
+      "rememberMe": "Herinner je me nog?",
+      "forgotPassword": "Ik ben mijn wachtwoord vergeten.",
+      "noAccount": "Heb je geen account?",
+      "register": "Register",
+      "errorDefault": "Inloggen mislukt. Controleer uw gegevens."
+    },
+    "register": {
+      "title": "Register",
+      "description": "Begin met het aanmaken van een nieuw account.",
+      "firstName": "Naam",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Achternaam",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Gebruikersnaam",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Bevestig wachtwoord",
+      "submit": "Register",
+      "submitting": "Er wordt een account aangemaakt...",
+      "hasAccount": "Heb je al een account?",
+      "login": "Inloggen",
+      "passwordMismatch": "De wachtwoorden komen niet overeen.",
+      "passwordTooShort": "Het wachtwoord moet minimaal 6 tekens lang zijn.",
+      "errorDefault": "Registratie is mislukt. Probeer het opnieuw."
+    },
+    "forgotPassword": {
+      "title": "Ik ben mijn wachtwoord vergeten.",
+      "description": "Voer uw e-mailadres in en wij sturen u een link om uw wachtwoord opnieuw in te stellen.",
+      "submit": "Resetlink verzenden",
+      "submitting": "Verzenden...",
+      "backToLogin": "Terug naar de homepage",
+      "successTitle": "E-mail verzonden",
+      "successDescription": "De link om uw wachtwoord opnieuw in te stellen is naar uw e-mailadres verzonden. Controleer uw inbox.",
+      "errorDefault": "Er is een fout opgetreden. Controleer uw e-mailadres."
+    },
+    "resetPassword": {
+      "title": "Stel een nieuw wachtwoord in",
+      "description": "Stel een nieuw wachtwoord in voor uw account.",
+      "newPassword": "Nieuw wachtwoord",
+      "confirmPassword": "Bevestig wachtwoord",
+      "submit": "Wachtwoord bijwerken",
+      "submitting": "Bezig met bijwerken...",
+      "successTitle": "Wachtwoord bijgewerkt",
+      "successDescription": "Je wachtwoord is succesvol bijgewerkt. Je kunt nu inloggen met je nieuwe wachtwoord.",
+      "goToLogin": "Inloggen",
+      "invalidLinkTitle": "Ongeldige verbinding",
+      "invalidLinkDescription": "De link voor het opnieuw instellen van uw wachtwoord is ongeldig of onvolledig. Controleer de link in uw e-mail.",
+      "requestNewLink": "Een nieuwe verbinding aanvragen",
+      "passwordMismatch": "De wachtwoorden komen niet overeen.",
+      "passwordTooShort": "Het wachtwoord moet minimaal 6 tekens lang zijn.",
+      "errorDefault": "Het opnieuw instellen van het wachtwoord is mislukt. De verbinding is mogelijk ongeldig of verlopen."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welkom, {naam}!",
+    "accountInfo": "Uw accountgegevens worden hieronder weergegeven.",
+    "username": "Gebruikersnaam",
+    "email": "E-mail",
+    "id": "ID",
+    "logout": "Uitloggen"
+  },
+  "settings": {
+    "title": "Instellingen",
+    "updatePassword": {
+      "title": "Wachtwoord bijwerken",
+      "description": "Wijzig uw wachtwoord regelmatig voor de beveiliging van uw account.",
+      "currentPassword": "Huidig wachtwoord",
+      "newPassword": "Nieuw wachtwoord",
+      "confirmPassword": "Nieuw wachtwoord opnieuw",
+      "submit": "Wachtwoord bijwerken",
+      "submitting": "Bezig met bijwerken...",
+      "success": "Je wachtwoord is succesvol bijgewerkt.",
+      "passwordMismatch": "De nieuwe wachtwoorden komen niet overeen.",
+      "passwordTooShort": "Het nieuwe wachtwoord moet minimaal 6 tekens lang zijn.",
+      "sessionError": "Sessie-informatie kon niet worden gevonden.",
+      "errorDefault": "Het wachtwoord kon niet worden gewijzigd. Controleer uw huidige wachtwoord."
+    }
+  },
+  "navigation": {
+    "home": "Thuis",
+    "dashboard": "Dashboard",
+    "settings": "Instellingen",
+    "profile": "Profiel",
+    "logout": "Uitloggen"
+  },
+  "language": {
+    "select": "Taalselectie",
+    "current": "Huidige taal"
+  }
+}

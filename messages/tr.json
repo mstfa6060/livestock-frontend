@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Yukleniyor...",
+    "error": "Hata",
+    "success": "Basarili",
+    "email": "E-posta",
+    "password": "Sifre",
+    "submit": "Gonder",
+    "cancel": "Iptal",
+    "save": "Kaydet",
+    "back": "Geri",
+    "next": "Ileri",
+    "close": "Kapat",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Giris Yap",
+      "description": "Hesabiniza giris yaparak devam edin",
+      "submit": "Giris Yap",
+      "submitting": "Giris yapiliyor...",
+      "rememberMe": "Beni hatirla",
+      "forgotPassword": "Sifremi unuttum",
+      "noAccount": "Hesabiniz yok mu?",
+      "register": "Kayit Ol",
+      "errorDefault": "Giris basarisiz. Lutfen bilgilerinizi kontrol edin."
+    },
+    "register": {
+      "title": "Kayit Ol",
+      "description": "Yeni bir hesap olusturarak baslayin",
+      "firstName": "Ad",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Soyad",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Kullanici Adi",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Sifre Tekrar",
+      "submit": "Kayit Ol",
+      "submitting": "Hesap olusturuluyor...",
+      "hasAccount": "Zaten hesabiniz var mi?",
+      "login": "Giris Yap",
+      "passwordMismatch": "Sifreler eslesmiyor.",
+      "passwordTooShort": "Sifre en az 6 karakter olmalidir.",
+      "errorDefault": "Kayit basarisiz. Lutfen tekrar deneyin."
+    },
+    "forgotPassword": {
+      "title": "Sifremi Unuttum",
+      "description": "E-posta adresinizi girin, sifre sifirlama baglantisi gonderecegiz.",
+      "submit": "Sifirlama Baglantisi Gonder",
+      "submitting": "Gonderiliyor...",
+      "backToLogin": "Giris sayfasina don",
+      "successTitle": "E-posta Gonderildi",
+      "successDescription": "Sifre sifirlama baglantisi e-posta adresinize gonderildi. Lutfen gelen kutunuzu kontrol edin.",
+      "errorDefault": "Bir hata olustu. Lutfen e-posta adresinizi kontrol edin."
+    },
+    "resetPassword": {
+      "title": "Yeni Sifre Belirle",
+      "description": "Hesabiniz icin yeni bir sifre belirleyin.",
+      "newPassword": "Yeni Sifre",
+      "confirmPassword": "Sifre Tekrar",
+      "submit": "Sifreyi Guncelle",
+      "submitting": "Guncelleniyor...",
+      "successTitle": "Sifre Guncellendi",
+      "successDescription": "Sifreniz basariyla guncellendi. Yeni sifrenizle giris yapabilirsiniz.",
+      "goToLogin": "Giris Yap",
+      "invalidLinkTitle": "Gecersiz Baglanti",
+      "invalidLinkDescription": "Sifre sifirlama baglantisi gecersiz veya eksik. Lutfen e-postanizdaki baglantıyı tekrar kontrol edin.",
+      "requestNewLink": "Yeni Baglanti Iste",
+      "passwordMismatch": "Sifreler eslesmiyor.",
+      "passwordTooShort": "Sifre en az 6 karakter olmalidir.",
+      "errorDefault": "Sifre sifirlama basarisiz. Baglanti gecersiz veya suresi dolmus olabilir."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Hos geldiniz, {name}!",
+    "accountInfo": "Hesap bilgileriniz asagida goruntulenmektedir.",
+    "username": "Kullanici Adi",
+    "email": "E-posta",
+    "id": "ID",
+    "logout": "Cikis Yap"
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "updatePassword": {
+      "title": "Sifre Guncelle",
+      "description": "Hesap guvenliginiz icin sifrenizi duzenli olarak guncelleyin.",
+      "currentPassword": "Mevcut Sifre",
+      "newPassword": "Yeni Sifre",
+      "confirmPassword": "Yeni Sifre Tekrar",
+      "submit": "Sifreyi Guncelle",
+      "submitting": "Guncelleniyor...",
+      "success": "Sifreniz basariyla guncellendi.",
+      "passwordMismatch": "Yeni sifreler eslesmiyor.",
+      "passwordTooShort": "Yeni sifre en az 6 karakter olmalidir.",
+      "sessionError": "Oturum bilgisi bulunamadi.",
+      "errorDefault": "Sifre guncellenemedi. Mevcut sifrenizi kontrol edin."
+    }
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "dashboard": "Dashboard",
+    "settings": "Ayarlar",
+    "profile": "Profil",
+    "logout": "Cikis Yap"
+  },
+  "language": {
+    "select": "Dil Sec",
+    "current": "Mevcut Dil"
+  }
+}

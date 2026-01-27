@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Načítava sa...",
+    "error": "Chyba",
+    "success": "Úspešné",
+    "email": "E-mail",
+    "password": "Heslo",
+    "submit": "Odoslať",
+    "cancel": "Zrušiť",
+    "save": "Uložiť",
+    "back": "Späť",
+    "next": "Vpred",
+    "close": "Zatvoriť",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Prihlásiť sa",
+      "description": "Pokračujte prihlásením sa do svojho účtu.",
+      "submit": "Prihlásiť sa",
+      "submitting": "Prihlasovanie...",
+      "rememberMe": "Zapamätaj si ma",
+      "forgotPassword": "Zabudol/a som heslo.",
+      "noAccount": "Nemáte účet?",
+      "register": "Registrovať",
+      "errorDefault": "Prihlásenie zlyhalo. Skontrolujte si, prosím, svoje informácie."
+    },
+    "register": {
+      "title": "Registrovať",
+      "description": "Začnite vytvorením nového účtu.",
+      "firstName": "Meno",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Priezvisko",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Používateľské meno",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Potvrdiť heslo",
+      "submit": "Registrovať",
+      "submitting": "Účet sa vytvára...",
+      "hasAccount": "Už máte účet?",
+      "login": "Prihlásiť sa",
+      "passwordMismatch": "Heslá sa nezhodujú.",
+      "passwordTooShort": "Heslo musí mať dĺžku aspoň 6 znakov.",
+      "errorDefault": "Registrácia zlyhala. Skúste to znova."
+    },
+    "forgotPassword": {
+      "title": "Zabudol/a som heslo.",
+      "description": "Zadajte svoju e-mailovú adresu a my vám pošleme odkaz na obnovenie hesla.",
+      "submit": "Odoslať odkaz na obnovenie",
+      "submitting": "Odosielanie...",
+      "backToLogin": "Späť na domovskú stránku",
+      "successTitle": "E-mail odoslaný",
+      "successDescription": "Odkaz na obnovenie hesla bol odoslaný na vašu e-mailovú adresu. Skontrolujte si, prosím, svoju doručenú poštu.",
+      "errorDefault": "Vyskytla sa chyba. Skontrolujte si svoju e-mailovú adresu."
+    },
+    "resetPassword": {
+      "title": "Nastaviť nové heslo",
+      "description": "Nastavte si nové heslo pre svoj účet.",
+      "newPassword": "Nové heslo",
+      "confirmPassword": "Potvrdiť heslo",
+      "submit": "Aktualizovať heslo",
+      "submitting": "Aktualizácia...",
+      "successTitle": "Heslo aktualizované",
+      "successDescription": "Vaše heslo bolo úspešne aktualizované. Môžete sa prihlásiť s novým heslom.",
+      "goToLogin": "Prihlásiť sa",
+      "invalidLinkTitle": "Neplatné pripojenie",
+      "invalidLinkDescription": "Odkaz na obnovenie hesla je neplatný alebo neúplný. Skontrolujte odkaz vo vašom e-maile ešte raz.",
+      "requestNewLink": "Vyžiadať si nové pripojenie",
+      "passwordMismatch": "Heslá sa nezhodujú.",
+      "passwordTooShort": "Heslo musí mať dĺžku aspoň 6 znakov.",
+      "errorDefault": "Obnovenie hesla zlyhalo. Pripojenie môže byť neplatné alebo jeho platnosť vypršala."
+    }
+  },
+  "dashboard": {
+    "title": "Prístrojová doska",
+    "welcome": "Vitaj, {name}!",
+    "accountInfo": "Informácie o vašom účte sú zobrazené nižšie.",
+    "username": "Používateľské meno",
+    "email": "E-mail",
+    "id": "Identifikácia",
+    "logout": "Odhlásiť sa"
+  },
+  "settings": {
+    "title": "Nastavenia",
+    "updatePassword": {
+      "title": "Aktualizovať heslo",
+      "description": "Pravidelne aktualizujte svoje heslo pre bezpečnosť vášho účtu.",
+      "currentPassword": "Aktuálne heslo",
+      "newPassword": "Nové heslo",
+      "confirmPassword": "Nové heslo znova",
+      "submit": "Aktualizovať heslo",
+      "submitting": "Aktualizácia...",
+      "success": "Vaše heslo bolo úspešne aktualizované.",
+      "passwordMismatch": "Nové heslá sa nezhodujú.",
+      "passwordTooShort": "Nové heslo musí mať dĺžku aspoň 6 znakov.",
+      "sessionError": "Informácie o relácii sa nepodarilo nájsť.",
+      "errorDefault": "Heslo sa nepodarilo aktualizovať. Skontrolujte si svoje aktuálne heslo."
+    }
+  },
+  "navigation": {
+    "home": "Domov",
+    "dashboard": "Prístrojová doska",
+    "settings": "Nastavenia",
+    "profile": "Profil",
+    "logout": "Odhlásiť sa"
+  },
+  "language": {
+    "select": "Výber jazyka",
+    "current": "Aktuálny jazyk"
+  }
+}

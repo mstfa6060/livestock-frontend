@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Učitavanje...",
+    "error": "Pogreška",
+    "success": "Uspješno",
+    "email": "E-pošta",
+    "password": "Lozinka",
+    "submit": "Poslati",
+    "cancel": "Otkazati",
+    "save": "Uštedjeti",
+    "back": "Nazad",
+    "next": "Naprijed",
+    "close": "Zatvoriti",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Prijava",
+      "description": "Nastavite prijavom na svoj račun.",
+      "submit": "Prijava",
+      "submitting": "Prijava...",
+      "rememberMe": "Zapamti me",
+      "forgotPassword": "Zaboravio/la sam lozinku.",
+      "noAccount": "Nemate račun?",
+      "register": "Registar",
+      "errorDefault": "Prijava nije uspjela. Molimo provjerite svoje podatke."
+    },
+    "register": {
+      "title": "Registar",
+      "description": "Započnite stvaranjem novog računa.",
+      "firstName": "Ime",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Prezime",
+      "surnamePlaceholder": "Jilmaz",
+      "username": "Korisničko ime",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Potvrdite lozinku",
+      "submit": "Registar",
+      "submitting": "Račun se kreira...",
+      "hasAccount": "Već imate račun?",
+      "login": "Prijava",
+      "passwordMismatch": "Lozinke se ne podudaraju.",
+      "passwordTooShort": "Lozinka mora biti dugačka najmanje 6 znakova.",
+      "errorDefault": "Registracija nije uspjela. Pokušajte ponovno."
+    },
+    "forgotPassword": {
+      "title": "Zaboravio/la sam lozinku.",
+      "description": "Unesite svoju adresu e-pošte i poslat ćemo vam poveznicu za resetiranje lozinke.",
+      "submit": "Pošalji poveznicu za resetiranje",
+      "submitting": "Slanje...",
+      "backToLogin": "Povratak na početnu stranicu",
+      "successTitle": "E-pošta poslana",
+      "successDescription": "Veza za resetiranje lozinke poslana je na vašu adresu e-pošte. Molimo provjerite pristiglu poštu.",
+      "errorDefault": "Došlo je do pogreške. Molimo provjerite svoju adresu e-pošte."
+    },
+    "resetPassword": {
+      "title": "Postavite novu lozinku",
+      "description": "Postavite novu lozinku za svoj račun.",
+      "newPassword": "Nova lozinka",
+      "confirmPassword": "Potvrdite lozinku",
+      "submit": "Ažuriraj lozinku",
+      "submitting": "Ažuriranje...",
+      "successTitle": "Lozinka ažurirana",
+      "successDescription": "Vaša je lozinka uspješno ažurirana. Možete se prijaviti s novom lozinkom.",
+      "goToLogin": "Prijava",
+      "invalidLinkTitle": "Nevažeća veza",
+      "invalidLinkDescription": "Veza za resetiranje lozinke nije važeća ili je nepotpuna. Molimo vas da dvaput provjerite vezu u svojoj e-pošti.",
+      "requestNewLink": "Zahtjev za novu vezu",
+      "passwordMismatch": "Lozinke se ne podudaraju.",
+      "passwordTooShort": "Lozinka mora biti dugačka najmanje 6 znakova.",
+      "errorDefault": "Poništavanje lozinke nije uspjelo. Veza je možda nevažeća ili istekla."
+    }
+  },
+  "dashboard": {
+    "title": "Nadzorna ploča",
+    "welcome": "Dobrodošao/la, {name}!",
+    "accountInfo": "Podaci o vašem računu prikazani su u nastavku.",
+    "username": "Korisničko ime",
+    "email": "E-pošta",
+    "id": "ID",
+    "logout": "Odjava"
+  },
+  "settings": {
+    "title": "Postavke",
+    "updatePassword": {
+      "title": "Ažuriraj lozinku",
+      "description": "Redovito ažurirajte lozinku radi sigurnosti vašeg računa.",
+      "currentPassword": "Trenutna lozinka",
+      "newPassword": "Nova lozinka",
+      "confirmPassword": "Opet nova lozinka",
+      "submit": "Ažuriraj lozinku",
+      "submitting": "Ažuriranje...",
+      "success": "Vaša lozinka je uspješno ažurirana.",
+      "passwordMismatch": "Nove lozinke se ne podudaraju.",
+      "passwordTooShort": "Nova lozinka mora imati najmanje 6 znakova.",
+      "sessionError": "Podaci o sesiji nisu pronađeni.",
+      "errorDefault": "Lozinka se nije mogla ažurirati. Molimo provjerite svoju trenutnu lozinku."
+    }
+  },
+  "navigation": {
+    "home": "Dom",
+    "dashboard": "Nadzorna ploča",
+    "settings": "Postavke",
+    "profile": "Profil",
+    "logout": "Odjava"
+  },
+  "language": {
+    "select": "Odabir jezika",
+    "current": "Trenutni jezik"
+  }
+}

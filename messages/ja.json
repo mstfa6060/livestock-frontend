@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "読み込み中...",
+    "error": "間違い",
+    "success": "成功",
+    "email": "メール",
+    "password": "パスワード",
+    "submit": "送信",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "back": "戻る",
+    "next": "フォワード",
+    "close": "近い",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "ログイン",
+      "description": "アカウントにログインして続行してください。",
+      "submit": "ログイン",
+      "submitting": "ログイン中...",
+      "rememberMe": "私を覚えてますか",
+      "forgotPassword": "パスワードを忘れてしまいました。",
+      "noAccount": "アカウントをお持ちではありませんか？",
+      "register": "登録する",
+      "errorDefault": "ログインに失敗しました。情報をご確認ください。"
+    },
+    "register": {
+      "title": "登録する",
+      "description": "まず新しいアカウントを作成してください。",
+      "firstName": "名前",
+      "firstNamePlaceholder": "アフメット",
+      "surname": "姓",
+      "surnamePlaceholder": "ユルマズ",
+      "username": "ユーザー名",
+      "usernamePlaceholder": "アフメティルマズ",
+      "confirmPassword": "パスワードを認証する",
+      "submit": "登録する",
+      "submitting": "アカウントを作成しています...",
+      "hasAccount": "すでにアカウントをお持ちですか?",
+      "login": "ログイン",
+      "passwordMismatch": "パスワードが一致しません。",
+      "passwordTooShort": "パスワードは6文字以上である必要があります。",
+      "errorDefault": "登録に失敗しました。もう一度お試しください。"
+    },
+    "forgotPassword": {
+      "title": "パスワードを忘れてしまいました。",
+      "description": "メールアドレスを入力すると、パスワードリセットリンクが送信されます。",
+      "submit": "リセットリンクを送信",
+      "submitting": "送信中...",
+      "backToLogin": "ホームページに戻る",
+      "successTitle": "メール送信",
+      "successDescription": "パスワードリセットリンクをメールアドレスに送信しました。受信トレイをご確認ください。",
+      "errorDefault": "エラーが発生しました。メールアドレスをご確認ください。"
+    },
+    "resetPassword": {
+      "title": "新しいパスワードを設定する",
+      "description": "アカウントに新しいパスワードを設定します。",
+      "newPassword": "新しいパスワード",
+      "confirmPassword": "パスワードを認証する",
+      "submit": "パスワードを更新",
+      "submitting": "更新中...",
+      "successTitle": "パスワードを更新しました",
+      "successDescription": "パスワードが更新されました。新しいパスワードでログインできます。",
+      "goToLogin": "ログイン",
+      "invalidLinkTitle": "無効な接続",
+      "invalidLinkDescription": "パスワードリセットリンクが無効または不完全です。メール内のリンクをもう一度ご確認ください。",
+      "requestNewLink": "新しい接続をリクエストする",
+      "passwordMismatch": "パスワードが一致しません。",
+      "passwordTooShort": "パスワードは6文字以上である必要があります。",
+      "errorDefault": "パスワードのリセットに失敗しました。接続が無効または期限切れである可能性があります。"
+    }
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "welcome": "ようこそ、{name}さん！",
+    "accountInfo": "あなたのアカウント情報は以下に表示されます。",
+    "username": "ユーザー名",
+    "email": "メール",
+    "id": "ID",
+    "logout": "ログアウト"
+  },
+  "settings": {
+    "title": "設定",
+    "updatePassword": {
+      "title": "パスワードを更新",
+      "description": "アカウントのセキュリティを確保するため、パスワードを定期的に更新してください。",
+      "currentPassword": "現在のパスワード",
+      "newPassword": "新しいパスワード",
+      "confirmPassword": "新しいパスワードをもう一度",
+      "submit": "パスワードを更新",
+      "submitting": "更新中...",
+      "success": "パスワードが正常に更新されました。",
+      "passwordMismatch": "新しいパスワードが一致しません。",
+      "passwordTooShort": "新しいパスワードは 6 文字以上である必要があります。",
+      "sessionError": "セッション情報が見つかりませんでした。",
+      "errorDefault": "パスワードを更新できませんでした。現在のパスワードを確認してください。"
+    }
+  },
+  "navigation": {
+    "home": "家",
+    "dashboard": "ダッシュボード",
+    "settings": "設定",
+    "profile": "プロフィール",
+    "logout": "ログアウト"
+  },
+  "language": {
+    "select": "言語の選択",
+    "current": "現在の言語"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolgreich",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "submit": "Schicken",
+    "cancel": "Stornieren",
+    "save": "Speichern",
+    "back": "Zurück",
+    "next": "Nach vorne",
+    "close": "Schließen",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Einloggen",
+      "description": "Melden Sie sich anschließend in Ihrem Konto an, um fortzufahren.",
+      "submit": "Einloggen",
+      "submitting": "Anmeldung...",
+      "rememberMe": "Erinnere dich an mich",
+      "forgotPassword": "Ich habe mein Passwort vergessen.",
+      "noAccount": "Hast du kein Konto?",
+      "register": "Registrieren",
+      "errorDefault": "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Ihre Angaben."
+    },
+    "register": {
+      "title": "Registrieren",
+      "description": "Erstellen Sie zunächst ein neues Konto.",
+      "firstName": "Name",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Nachname",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Benutzername",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Passwort bestätigen",
+      "submit": "Registrieren",
+      "submitting": "Das Konto wird erstellt...",
+      "hasAccount": "Haben Sie bereits ein Konto?",
+      "login": "Einloggen",
+      "passwordMismatch": "Die Passwörter stimmen nicht überein.",
+      "passwordTooShort": "Das Passwort muss mindestens 6 Zeichen lang sein.",
+      "errorDefault": "Die Registrierung ist fehlgeschlagen. Bitte versuchen Sie es erneut."
+    },
+    "forgotPassword": {
+      "title": "Ich habe mein Passwort vergessen.",
+      "description": "Geben Sie Ihre E-Mail-Adresse ein, und wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts.",
+      "submit": "Link zum Zurücksetzen senden",
+      "submitting": "Senden...",
+      "backToLogin": "Zurück zur Startseite",
+      "successTitle": "E-Mail gesendet",
+      "successDescription": "Der Link zum Zurücksetzen Ihres Passworts wurde an Ihre E-Mail-Adresse gesendet. Bitte überprüfen Sie Ihren Posteingang.",
+      "errorDefault": "Es ist ein Fehler aufgetreten. Bitte überprüfen Sie Ihre E-Mail-Adresse."
+    },
+    "resetPassword": {
+      "title": "Neues Passwort festlegen",
+      "description": "Legen Sie ein neues Passwort für Ihr Konto fest.",
+      "newPassword": "Neues Passwort",
+      "confirmPassword": "Passwort bestätigen",
+      "submit": "Passwort aktualisieren",
+      "submitting": "Aktualisierung...",
+      "successTitle": "Passwort aktualisiert",
+      "successDescription": "Ihr Passwort wurde erfolgreich aktualisiert. Sie können sich mit Ihrem neuen Passwort anmelden.",
+      "goToLogin": "Einloggen",
+      "invalidLinkTitle": "Ungültige Verbindung",
+      "invalidLinkDescription": "Der Link zum Zurücksetzen des Passworts ist ungültig oder unvollständig. Bitte überprüfen Sie den Link in Ihrer E-Mail.",
+      "requestNewLink": "Neue Verbindung anfordern",
+      "passwordMismatch": "Die Passwörter stimmen nicht überein.",
+      "passwordTooShort": "Das Passwort muss mindestens 6 Zeichen lang sein.",
+      "errorDefault": "Das Zurücksetzen des Passworts ist fehlgeschlagen. Die Verbindung ist möglicherweise ungültig oder abgelaufen."
+    }
+  },
+  "dashboard": {
+    "title": "Armaturenbrett",
+    "welcome": "Willkommen, {name}!",
+    "accountInfo": "Ihre Kontoinformationen werden unten angezeigt.",
+    "username": "Benutzername",
+    "email": "E-Mail",
+    "id": "AUSWEIS",
+    "logout": "Abmelden"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "updatePassword": {
+      "title": "Passwort aktualisieren",
+      "description": "Aktualisieren Sie Ihr Passwort regelmäßig, um die Sicherheit Ihres Kontos zu gewährleisten.",
+      "currentPassword": "Aktuelles Passwort",
+      "newPassword": "Neues Passwort",
+      "confirmPassword": "Neues Passwort erneut",
+      "submit": "Passwort aktualisieren",
+      "submitting": "Aktualisierung...",
+      "success": "Ihr Passwort wurde erfolgreich aktualisiert.",
+      "passwordMismatch": "Die neuen Passwörter stimmen nicht überein.",
+      "passwordTooShort": "Das neue Passwort muss mindestens 6 Zeichen lang sein.",
+      "sessionError": "Sitzungsinformationen konnten nicht gefunden werden.",
+      "errorDefault": "Das Passwort konnte nicht aktualisiert werden. Bitte überprüfen Sie Ihr aktuelles Passwort."
+    }
+  },
+  "navigation": {
+    "home": "Heim",
+    "dashboard": "Armaturenbrett",
+    "settings": "Einstellungen",
+    "profile": "Profil",
+    "logout": "Abmelden"
+  },
+  "language": {
+    "select": "Sprachauswahl",
+    "current": "Aktuelle Sprache"
+  }
+}

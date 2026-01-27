@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Exitoso",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "save": "Ahorrar",
+    "back": "Atrás",
+    "next": "Adelante",
+    "close": "Cerca",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Acceso",
+      "description": "Continúe iniciando sesión en su cuenta.",
+      "submit": "Acceso",
+      "submitting": "Iniciando sesión...",
+      "rememberMe": "Acuérdate de mí",
+      "forgotPassword": "Olvidé mi contraseña.",
+      "noAccount": "¿No tienes una cuenta?",
+      "register": "Registro",
+      "errorDefault": "Error al iniciar sesión. Por favor, revise su información."
+    },
+    "register": {
+      "title": "Registro",
+      "description": "Comience creando una nueva cuenta.",
+      "firstName": "Nombre",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Apellido",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Nombre de usuario",
+      "usernamePlaceholder": "Ahmetyilmaz",
+      "confirmPassword": "confirmar Contraseña",
+      "submit": "Registro",
+      "submitting": "Se está creando la cuenta...",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "login": "Acceso",
+      "passwordMismatch": "Las contraseñas no coinciden.",
+      "passwordTooShort": "La contraseña debe tener al menos 6 caracteres.",
+      "errorDefault": "Error en el registro. Inténtalo de nuevo."
+    },
+    "forgotPassword": {
+      "title": "Olvidé mi contraseña.",
+      "description": "Ingrese su dirección de correo electrónico y le enviaremos un enlace para restablecer su contraseña.",
+      "submit": "Enviar enlace de restablecimiento",
+      "submitting": "Envío...",
+      "backToLogin": "Regresar a la página de inicio",
+      "successTitle": "Correo electrónico enviado",
+      "successDescription": "El enlace para restablecer tu contraseña se ha enviado a tu correo electrónico. Revisa tu bandeja de entrada.",
+      "errorDefault": "Se ha producido un error. Por favor, comprueba tu dirección de correo electrónico."
+    },
+    "resetPassword": {
+      "title": "Establecer una nueva contraseña",
+      "description": "Establezca una nueva contraseña para su cuenta.",
+      "newPassword": "Nueva contraseña",
+      "confirmPassword": "confirmar Contraseña",
+      "submit": "Actualizar contraseña",
+      "submitting": "Actualizando...",
+      "successTitle": "Contraseña actualizada",
+      "successDescription": "Tu contraseña se ha actualizado correctamente. Puedes iniciar sesión con tu nueva contraseña.",
+      "goToLogin": "Acceso",
+      "invalidLinkTitle": "Conexión inválida",
+      "invalidLinkDescription": "El enlace para restablecer la contraseña no es válido o está incompleto. Por favor, revise el enlace en su correo electrónico.",
+      "requestNewLink": "Solicitar una nueva conexión",
+      "passwordMismatch": "Las contraseñas no coinciden.",
+      "passwordTooShort": "La contraseña debe tener al menos 6 caracteres.",
+      "errorDefault": "Error al restablecer la contraseña. La conexión podría no ser válida o estar caducada."
+    }
+  },
+  "dashboard": {
+    "title": "Panel",
+    "welcome": "¡Bienvenido, {nombre}!",
+    "accountInfo": "La información de su cuenta se muestra a continuación.",
+    "username": "Nombre de usuario",
+    "email": "Correo electrónico",
+    "id": "IDENTIFICACIÓN",
+    "logout": "Finalizar la sesión"
+  },
+  "settings": {
+    "title": "Ajustes",
+    "updatePassword": {
+      "title": "Actualizar contraseña",
+      "description": "Actualice su contraseña periódicamente para la seguridad de su cuenta.",
+      "currentPassword": "Contraseña actual",
+      "newPassword": "Nueva contraseña",
+      "confirmPassword": "Nueva contraseña de nuevo",
+      "submit": "Actualizar contraseña",
+      "submitting": "Actualizando...",
+      "success": "Su contraseña ha sido actualizada exitosamente.",
+      "passwordMismatch": "Las nuevas contraseñas no coinciden.",
+      "passwordTooShort": "La nueva contraseña debe tener al menos 6 caracteres.",
+      "sessionError": "No se pudo encontrar la información de la sesión.",
+      "errorDefault": "No se pudo actualizar la contraseña. Por favor, verifique su contraseña actual."
+    }
+  },
+  "navigation": {
+    "home": "Hogar",
+    "dashboard": "Panel",
+    "settings": "Ajustes",
+    "profile": "Perfil",
+    "logout": "Finalizar la sesión"
+  },
+  "language": {
+    "select": "Selección de idioma",
+    "current": "Idioma actual"
+  }
+}

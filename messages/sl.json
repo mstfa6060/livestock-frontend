@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Nalaganje ...",
+    "error": "Napaka",
+    "success": "Uspešno",
+    "email": "E-pošta",
+    "password": "Geslo",
+    "submit": "Pošlji",
+    "cancel": "Prekliči",
+    "save": "Shrani",
+    "back": "Nazaj",
+    "next": "Naprej",
+    "close": "Zapri",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Prijava",
+      "description": "Nadaljujte s prijavo v svoj račun.",
+      "submit": "Prijava",
+      "submitting": "Prijava ...",
+      "rememberMe": "Zapomni si me",
+      "forgotPassword": "Pozabil/a sem geslo.",
+      "noAccount": "Nimate računa?",
+      "register": "Registracija",
+      "errorDefault": "Prijava ni uspela. Prosimo, preverite svoje podatke."
+    },
+    "register": {
+      "title": "Registracija",
+      "description": "Začnite z ustvarjanjem novega računa.",
+      "firstName": "Ime",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Priimek",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Uporabniško ime",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Potrdite geslo",
+      "submit": "Registracija",
+      "submitting": "Račun se ustvarja ...",
+      "hasAccount": "Ali že imate račun?",
+      "login": "Prijava",
+      "passwordMismatch": "Gesli se ne ujemata.",
+      "passwordTooShort": "Geslo mora biti dolgo vsaj 6 znakov.",
+      "errorDefault": "Registracija ni uspela. Poskusite znova."
+    },
+    "forgotPassword": {
+      "title": "Pozabil/a sem geslo.",
+      "description": "Vnesite svoj e-poštni naslov in poslali vam bomo povezavo za ponastavitev gesla.",
+      "submit": "Pošlji povezavo za ponastavitev",
+      "submitting": "Pošiljanje ...",
+      "backToLogin": "Nazaj na domačo stran",
+      "successTitle": "E-pošta poslana",
+      "successDescription": "Povezava za ponastavitev gesla je bila poslana na vaš e-poštni naslov. Preverite svoj nabiralnik.",
+      "errorDefault": "Prišlo je do napake. Preverite svoj e-poštni naslov."
+    },
+    "resetPassword": {
+      "title": "Nastavite novo geslo",
+      "description": "Nastavite novo geslo za svoj račun.",
+      "newPassword": "Novo geslo",
+      "confirmPassword": "Potrdite geslo",
+      "submit": "Posodobi geslo",
+      "submitting": "Posodabljanje ...",
+      "successTitle": "Geslo posodobljeno",
+      "successDescription": "Vaše geslo je bilo uspešno posodobljeno. Lahko se prijavite z novim geslom.",
+      "goToLogin": "Prijava",
+      "invalidLinkTitle": "Neveljavna povezava",
+      "invalidLinkDescription": "Povezava za ponastavitev gesla je neveljavna ali nepopolna. Prosimo, dvakrat preverite povezavo v vašem e-poštnem sporočilu.",
+      "requestNewLink": "Zahtevajte novo povezavo",
+      "passwordMismatch": "Gesli se ne ujemata.",
+      "passwordTooShort": "Geslo mora biti dolgo vsaj 6 znakov.",
+      "errorDefault": "Ponastavitev gesla ni uspela. Povezava je morda neveljavna ali potekla."
+    }
+  },
+  "dashboard": {
+    "title": "Nadzorna plošča",
+    "welcome": "Dobrodošel/dobrodošla, {name}!",
+    "accountInfo": "Podatki o vašem računu so prikazani spodaj.",
+    "username": "Uporabniško ime",
+    "email": "E-pošta",
+    "id": "Osebna izkaznica",
+    "logout": "Odjava"
+  },
+  "settings": {
+    "title": "Nastavitve",
+    "updatePassword": {
+      "title": "Posodobi geslo",
+      "description": "Redno posodabljajte geslo za varnost svojega računa.",
+      "currentPassword": "Trenutno geslo",
+      "newPassword": "Novo geslo",
+      "confirmPassword": "Novo geslo znova",
+      "submit": "Posodobi geslo",
+      "submitting": "Posodabljanje ...",
+      "success": "Vaše geslo je bilo uspešno posodobljeno.",
+      "passwordMismatch": "Nova gesla se ne ujemata.",
+      "passwordTooShort": "Novo geslo mora biti dolgo vsaj 6 znakov.",
+      "sessionError": "Podatkov o seji ni bilo mogoče najti.",
+      "errorDefault": "Gesla ni bilo mogoče posodobiti. Preverite svoje trenutno geslo."
+    }
+  },
+  "navigation": {
+    "home": "Domov",
+    "dashboard": "Nadzorna plošča",
+    "settings": "Nastavitve",
+    "profile": "Profil",
+    "logout": "Odjava"
+  },
+  "language": {
+    "select": "Izbira jezika",
+    "current": "Trenutni jezik"
+  }
+}

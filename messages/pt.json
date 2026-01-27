@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Bem-sucedido",
+    "email": "E-mail",
+    "password": "Senha",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "back": "Voltar",
+    "next": "Avançar",
+    "close": "Fechar",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Conecte-se",
+      "description": "Para continuar, faça login na sua conta.",
+      "submit": "Conecte-se",
+      "submitting": "Entrando...",
+      "rememberMe": "Lembre de mim",
+      "forgotPassword": "Esqueci minha senha.",
+      "noAccount": "Você não tem uma conta?",
+      "register": "Cadastre-se",
+      "errorDefault": "Falha no login. Por favor, verifique suas informações."
+    },
+    "register": {
+      "title": "Cadastre-se",
+      "description": "Comece criando uma nova conta.",
+      "firstName": "Nome",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Sobrenome",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Nome de usuário",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Confirme sua senha",
+      "submit": "Cadastre-se",
+      "submitting": "A conta está sendo criada...",
+      "hasAccount": "Você já possui uma conta?",
+      "login": "Conecte-se",
+      "passwordMismatch": "As senhas não coincidem.",
+      "passwordTooShort": "A senha deve ter pelo menos 6 caracteres.",
+      "errorDefault": "O cadastro falhou. Tente novamente."
+    },
+    "forgotPassword": {
+      "title": "Esqueci minha senha.",
+      "description": "Insira seu endereço de e-mail e enviaremos um link para redefinir sua senha.",
+      "submit": "Enviar link de redefinição",
+      "submitting": "Enviando...",
+      "backToLogin": "Voltar à página inicial",
+      "successTitle": "E-mail enviado",
+      "successDescription": "O link para redefinir a senha foi enviado para o seu endereço de e-mail. Por favor, verifique sua caixa de entrada.",
+      "errorDefault": "Ocorreu um erro. Por favor, verifique seu endereço de e-mail."
+    },
+    "resetPassword": {
+      "title": "Defina uma nova senha",
+      "description": "Defina uma nova senha para sua conta.",
+      "newPassword": "Nova Senha",
+      "confirmPassword": "Confirme sua senha",
+      "submit": "Atualizar senha",
+      "submitting": "Atualizando...",
+      "successTitle": "Senha atualizada",
+      "successDescription": "Sua senha foi atualizada com sucesso. Você pode fazer login com sua nova senha.",
+      "goToLogin": "Conecte-se",
+      "invalidLinkTitle": "Conexão inválida",
+      "invalidLinkDescription": "O link para redefinição de senha é inválido ou está incompleto. Verifique novamente o link no seu e-mail.",
+      "requestNewLink": "Solicitar uma nova conexão",
+      "passwordMismatch": "As senhas não coincidem.",
+      "passwordTooShort": "A senha deve ter pelo menos 6 caracteres.",
+      "errorDefault": "A redefinição de senha falhou. A conexão pode estar inválida ou expirada."
+    }
+  },
+  "dashboard": {
+    "title": "Painel",
+    "welcome": "Bem-vindo(a), {name}!",
+    "accountInfo": "As informações da sua conta são exibidas abaixo.",
+    "username": "Nome de usuário",
+    "email": "E-mail",
+    "id": "EU IA",
+    "logout": "Sair"
+  },
+  "settings": {
+    "title": "Configurações",
+    "updatePassword": {
+      "title": "Atualizar senha",
+      "description": "Atualize sua senha regularmente para garantir a segurança da sua conta.",
+      "currentPassword": "Senha atual",
+      "newPassword": "Nova Senha",
+      "confirmPassword": "Nova senha novamente",
+      "submit": "Atualizar senha",
+      "submitting": "Atualizando...",
+      "success": "Sua senha foi atualizada com sucesso.",
+      "passwordMismatch": "As novas senhas não coincidem.",
+      "passwordTooShort": "A nova senha deve ter pelo menos 6 caracteres.",
+      "sessionError": "Não foi possível encontrar informações sobre a sessão.",
+      "errorDefault": "Não foi possível atualizar a senha. Verifique sua senha atual."
+    }
+  },
+  "navigation": {
+    "home": "Lar",
+    "dashboard": "Painel",
+    "settings": "Configurações",
+    "profile": "Perfil",
+    "logout": "Sair"
+  },
+  "language": {
+    "select": "Seleção de idioma",
+    "current": "Idioma atual"
+  }
+}

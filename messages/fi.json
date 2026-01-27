@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Ladataan...",
+    "error": "Virhe",
+    "success": "Onnistunut",
+    "email": "Sähköposti",
+    "password": "Salasana",
+    "submit": "Lähetä",
+    "cancel": "Peruuttaa",
+    "save": "Tallentaa",
+    "back": "Takaisin",
+    "next": "Eteenpäin",
+    "close": "Lähellä",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Kirjaudu sisään",
+      "description": "Jatka kirjautumalla tilillesi.",
+      "submit": "Kirjaudu sisään",
+      "submitting": "Kirjautuminen sisään...",
+      "rememberMe": "Muista minut",
+      "forgotPassword": "Unohdin salasanani.",
+      "noAccount": "Eikö sinulla ole tiliä?",
+      "register": "Rekisteröidy",
+      "errorDefault": "Kirjautuminen epäonnistui. Tarkista tietosi."
+    },
+    "register": {
+      "title": "Rekisteröidy",
+      "description": "Aloita luomalla uusi tili.",
+      "firstName": "Nimi",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Sukunimi",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Käyttäjänimi",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Vahvista salasana",
+      "submit": "Rekisteröidy",
+      "submitting": "Tiliä luodaan...",
+      "hasAccount": "Onko sinulla jo tili?",
+      "login": "Kirjaudu sisään",
+      "passwordMismatch": "Salasanat eivät täsmää.",
+      "passwordTooShort": "Salasanan on oltava vähintään 6 merkkiä pitkä.",
+      "errorDefault": "Rekisteröinti epäonnistui. Yritä uudelleen."
+    },
+    "forgotPassword": {
+      "title": "Unohdin salasanani.",
+      "description": "Anna sähköpostiosoitteesi, niin lähetämme sinulle salasanan palautuslinkin.",
+      "submit": "Lähetä nollauslinkki",
+      "submitting": "Lähetetään...",
+      "backToLogin": "Palaa kotisivulle",
+      "successTitle": "Sähköposti lähetetty",
+      "successDescription": "Salasanan palautuslinkki on lähetetty sähköpostiosoitteeseesi. Tarkista sähköpostisi.",
+      "errorDefault": "Tapahtui virhe. Tarkista sähköpostiosoitteesi."
+    },
+    "resetPassword": {
+      "title": "Aseta uusi salasana",
+      "description": "Aseta tilillesi uusi salasana.",
+      "newPassword": "Uusi salasana",
+      "confirmPassword": "Vahvista salasana",
+      "submit": "Päivitä salasana",
+      "submitting": "Päivitetään...",
+      "successTitle": "Salasana päivitetty",
+      "successDescription": "Salasanasi on päivitetty onnistuneesti. Voit kirjautua sisään uudella salasanallasi.",
+      "goToLogin": "Kirjaudu sisään",
+      "invalidLinkTitle": "Virheellinen yhteys",
+      "invalidLinkDescription": "Salasanan palautuslinkki on virheellinen tai puutteellinen. Tarkista sähköpostissasi oleva linkki.",
+      "requestNewLink": "Pyydä uutta yhteyttä",
+      "passwordMismatch": "Salasanat eivät täsmää.",
+      "passwordTooShort": "Salasanan on oltava vähintään 6 merkkiä pitkä.",
+      "errorDefault": "Salasanan palautus epäonnistui. Yhteys voi olla virheellinen tai vanhentunut."
+    }
+  },
+  "dashboard": {
+    "title": "Kojelauta",
+    "welcome": "Tervetuloa, {nimi}!",
+    "accountInfo": "Tilisi tiedot näkyvät alla.",
+    "username": "Käyttäjänimi",
+    "email": "Sähköposti",
+    "id": "Henkilöllisyystodistus",
+    "logout": "Kirjaudu ulos"
+  },
+  "settings": {
+    "title": "Asetukset",
+    "updatePassword": {
+      "title": "Päivitä salasana",
+      "description": "Päivitä salasanasi säännöllisesti tilisi turvallisuuden takaamiseksi.",
+      "currentPassword": "Nykyinen salasana",
+      "newPassword": "Uusi salasana",
+      "confirmPassword": "Uusi salasana uudelleen",
+      "submit": "Päivitä salasana",
+      "submitting": "Päivitetään...",
+      "success": "Salasanasi on päivitetty onnistuneesti.",
+      "passwordMismatch": "Uudet salasanat eivät täsmää.",
+      "passwordTooShort": "Uuden salasanan on oltava vähintään 6 merkkiä pitkä.",
+      "sessionError": "Istuntotietoja ei löytynyt.",
+      "errorDefault": "Salasanaa ei voitu päivittää. Tarkista nykyinen salasanasi."
+    }
+  },
+  "navigation": {
+    "home": "Kotiin",
+    "dashboard": "Kojelauta",
+    "settings": "Asetukset",
+    "profile": "Profiili",
+    "logout": "Kirjaudu ulos"
+  },
+  "language": {
+    "select": "Kielen valinta",
+    "current": "Nykyinen kieli"
+  }
+}

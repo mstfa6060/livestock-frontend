@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Laai tans...",
+    "error": "Fout",
+    "success": "Suksesvol",
+    "email": "E-pos",
+    "password": "Wagwoord",
+    "submit": "Stuur",
+    "cancel": "Kanselleer",
+    "save": "Stoor",
+    "back": "Terug",
+    "next": "Vorentoe",
+    "close": "Maak toe",
+    "emailPlaceholder": "ornek@epos.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Teken aan",
+      "description": "Gaan voort deur by jou rekening aan te meld.",
+      "submit": "Teken aan",
+      "submitting": "Aanmeld tans...",
+      "rememberMe": "Onthou my",
+      "forgotPassword": "Ek het my wagwoord vergeet.",
+      "noAccount": "Het jy nie 'n rekening nie?",
+      "register": "Registreer",
+      "errorDefault": "Aanmelding het misluk. Kontroleer asseblief u inligting."
+    },
+    "register": {
+      "title": "Registreer",
+      "description": "Begin deur 'n nuwe rekening te skep.",
+      "firstName": "Naam",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Van",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Gebruikersnaam",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Bevestig wagwoord",
+      "submit": "Registreer",
+      "submitting": "Rekening word geskep...",
+      "hasAccount": "Het jy reeds 'n rekening?",
+      "login": "Teken aan",
+      "passwordMismatch": "Die wagwoorde stem nie ooreen nie.",
+      "passwordTooShort": "Die wagwoord moet ten minste 6 karakters lank wees.",
+      "errorDefault": "Registrasie het misluk. Probeer asseblief weer."
+    },
+    "forgotPassword": {
+      "title": "Ek het my wagwoord vergeet.",
+      "description": "Voer jou e-posadres in en ons sal vir jou 'n skakel vir wagwoordherstel stuur.",
+      "submit": "Stuur Herstelskakel",
+      "submitting": "Stuur tans...",
+      "backToLogin": "Keer terug na die tuisblad",
+      "successTitle": "E-pos gestuur",
+      "successDescription": "Die skakel vir wagwoordherstel is na jou e-posadres gestuur. Gaan asseblief jou inboks na.",
+      "errorDefault": "'n Fout het voorgekom. Kontroleer asseblief u e-posadres."
+    },
+    "resetPassword": {
+      "title": "Stel 'n nuwe wagwoord",
+      "description": "Stel 'n nuwe wagwoord vir jou rekening.",
+      "newPassword": "Nuwe Wagwoord",
+      "confirmPassword": "Bevestig wagwoord",
+      "submit": "Wagwoord opdateer",
+      "submitting": "Opdatering...",
+      "successTitle": "Wagwoord Opgedateer",
+      "successDescription": "Jou wagwoord is suksesvol opgedateer. Jy kan met jou nuwe wagwoord aanmeld.",
+      "goToLogin": "Teken aan",
+      "invalidLinkTitle": "Ongeldige verbinding",
+      "invalidLinkDescription": "Die skakel vir wagwoordherstel is ongeldig of onvolledig. Kontroleer asseblief die skakel in jou e-pos.",
+      "requestNewLink": "Versoek 'n Nuwe Verbinding",
+      "passwordMismatch": "Die wagwoorde stem nie ooreen nie.",
+      "passwordTooShort": "Die wagwoord moet ten minste 6 karakters lank wees.",
+      "errorDefault": "Wagwoordherstel het misluk. Die verbinding is dalk ongeldig of het verval."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welkom, {naam}!",
+    "accountInfo": "Jou rekeninginligting word hieronder vertoon.",
+    "username": "Gebruikersnaam",
+    "email": "E-pos",
+    "id": "ID",
+    "logout": "Meld af"
+  },
+  "settings": {
+    "title": "Instellings",
+    "updatePassword": {
+      "title": "Wagwoord opdateer",
+      "description": "Dateer jou wagwoord gereeld op vir die sekuriteit van jou rekening.",
+      "currentPassword": "Huidige Wagwoord",
+      "newPassword": "Nuwe Wagwoord",
+      "confirmPassword": "Nuwe Wagwoord Weer",
+      "submit": "Wagwoord opdateer",
+      "submitting": "Opdatering...",
+      "success": "Jou wagwoord is suksesvol opgedateer.",
+      "passwordMismatch": "Die nuwe wagwoorde stem nie ooreen nie.",
+      "passwordTooShort": "Die nuwe wagwoord moet ten minste 6 karakters lank wees.",
+      "sessionError": "Sessie-inligting kon nie gevind word nie.",
+      "errorDefault": "Die wagwoord kon nie opgedateer word nie. Kontroleer asseblief jou huidige wagwoord."
+    }
+  },
+  "navigation": {
+    "home": "Tuis",
+    "dashboard": "Dashboard",
+    "settings": "Instellings",
+    "profile": "Profiel",
+    "logout": "Meld af"
+  },
+  "language": {
+    "select": "Taalkeuse",
+    "current": "Huidige taal"
+  }
+}

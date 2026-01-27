@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Laadimine...",
+    "error": "Viga",
+    "success": "Edukas",
+    "email": "E-post",
+    "password": "Parool",
+    "submit": "Saada",
+    "cancel": "Tühista",
+    "save": "Salvesta",
+    "back": "Tagasi",
+    "next": "Edasi",
+    "close": "Sule",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Logi sisse",
+      "description": "Jätkake oma kontole sisse logides.",
+      "submit": "Logi sisse",
+      "submitting": "Sisselogimine...",
+      "rememberMe": "Pea mind meeles",
+      "forgotPassword": "Ma unustasin oma parooli.",
+      "noAccount": "Kas sul pole kontot?",
+      "register": "Registreeru",
+      "errorDefault": "Sisselogimine ebaõnnestus. Palun kontrollige oma andmeid."
+    },
+    "register": {
+      "title": "Registreeru",
+      "description": "Alusta uue konto loomisega.",
+      "firstName": "Nimi",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Perekonnanimi",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Kasutajanimi",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Kinnita parool",
+      "submit": "Registreeru",
+      "submitting": "Konto luuakse...",
+      "hasAccount": "Kas sul on juba konto?",
+      "login": "Logi sisse",
+      "passwordMismatch": "Paroolid ei sobi kokku.",
+      "passwordTooShort": "Parool peab olema vähemalt 6 tähemärki pikk.",
+      "errorDefault": "Registreerimine ebaõnnestus. Palun proovige uuesti."
+    },
+    "forgotPassword": {
+      "title": "Ma unustasin oma parooli.",
+      "description": "Sisesta oma e-posti aadress ja me saadame sulle parooli lähtestamise lingi.",
+      "submit": "Saada Lähtesta link",
+      "submitting": "Saadetakse...",
+      "backToLogin": "Tagasi avalehele",
+      "successTitle": "E-kiri saadetud",
+      "successDescription": "Parooli lähtestamise link on saadetud teie e-posti aadressile. Palun kontrollige oma postkasti.",
+      "errorDefault": "Tekkis viga. Palun kontrollige oma e-posti aadressi."
+    },
+    "resetPassword": {
+      "title": "Määrake uus parool",
+      "description": "Määrake oma kontole uus parool.",
+      "newPassword": "Uus parool",
+      "confirmPassword": "Kinnita parool",
+      "submit": "Parooli värskendamine",
+      "submitting": "Värskendamine...",
+      "successTitle": "Parool uuendatud",
+      "successDescription": "Teie parool on edukalt uuendatud. Saate oma uue parooliga sisse logida.",
+      "goToLogin": "Logi sisse",
+      "invalidLinkTitle": "Vigane ühendus",
+      "invalidLinkDescription": "Parooli lähtestamise link on kehtetu või mittetäielik. Palun kontrollige oma e-kirjas olevat linki üle.",
+      "requestNewLink": "Taotle uut ühendust",
+      "passwordMismatch": "Paroolid ei sobi kokku.",
+      "passwordTooShort": "Parool peab olema vähemalt 6 tähemärki pikk.",
+      "errorDefault": "Parooli lähtestamine ebaõnnestus. Ühendus võib olla kehtetu või aegunud."
+    }
+  },
+  "dashboard": {
+    "title": "Armatuurlaud",
+    "welcome": "Tere tulemast, {nimi}!",
+    "accountInfo": "Teie konto andmed kuvatakse allpool.",
+    "username": "Kasutajanimi",
+    "email": "E-post",
+    "id": "ID-kaart",
+    "logout": "Logi välja"
+  },
+  "settings": {
+    "title": "Seaded",
+    "updatePassword": {
+      "title": "Parooli värskendamine",
+      "description": "Oma konto turvalisuse tagamiseks uuenda oma parooli regulaarselt.",
+      "currentPassword": "Praegune parool",
+      "newPassword": "Uus parool",
+      "confirmPassword": "Uus parool uuesti",
+      "submit": "Parooli värskendamine",
+      "submitting": "Värskendamine...",
+      "success": "Teie parool on edukalt uuendatud.",
+      "passwordMismatch": "Uued paroolid ei sobi kokku.",
+      "passwordTooShort": "Uus parool peab olema vähemalt 6 tähemärki pikk.",
+      "sessionError": "Seansi infot ei leitud.",
+      "errorDefault": "Parooli ei õnnestunud uuendada. Palun kontrollige oma praegust parooli."
+    }
+  },
+  "navigation": {
+    "home": "Avaleht",
+    "dashboard": "Armatuurlaud",
+    "settings": "Seaded",
+    "profile": "Profiil",
+    "logout": "Logi välja"
+  },
+  "language": {
+    "select": "Keele valik",
+    "current": "Praegune keel"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Ag lódáil...",
+    "error": "Botún",
+    "success": "Rathúil",
+    "email": "Ríomhphost",
+    "password": "Pasfhocal",
+    "submit": "Seol",
+    "cancel": "Cealaigh",
+    "save": "Sábháil",
+    "back": "Ar ais",
+    "next": "Ar Aghaidh",
+    "close": "Dún",
+    "emailPlaceholder": "ornek@ríomhphost.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Logáil isteach",
+      "description": "Lean ar aghaidh trí logáil isteach i do chuntas.",
+      "submit": "Logáil isteach",
+      "submitting": "Ag logáil isteach...",
+      "rememberMe": "Cuimhnigh orm",
+      "forgotPassword": "Dhearmad mé mo phasfhocal.",
+      "noAccount": "Nach bhfuil cuntas agat?",
+      "register": "Cláraigh",
+      "errorDefault": "Theip ar an logáil isteach. Seiceáil do chuid faisnéise le do thoil."
+    },
+    "register": {
+      "title": "Cláraigh",
+      "description": "Tosaigh trí chuntas nua a chruthú.",
+      "firstName": "Ainm",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Sloinne",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Ainm úsáideora",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Deimhnigh Pasfhocal",
+      "submit": "Cláraigh",
+      "submitting": "Tá cuntas á chruthú...",
+      "hasAccount": "An bhfuil cuntas agat cheana féin?",
+      "login": "Logáil isteach",
+      "passwordMismatch": "Ní hionann na pasfhocail.",
+      "passwordTooShort": "Ní mór don phasfhocal a bheith 6 charachtar ar a laghad.",
+      "errorDefault": "Theip ar an gclárú. Déan iarracht arís."
+    },
+    "forgotPassword": {
+      "title": "Dhearmad mé mo phasfhocal.",
+      "description": "Cuir isteach do sheoladh ríomhphoist agus cuirfimid nasc athshocraithe pasfhocail chugat.",
+      "submit": "Seol Nasc Athshocraithe",
+      "submitting": "Ag seoladh...",
+      "backToLogin": "Fill ar ais chuig an leathanach baile",
+      "successTitle": "Ríomhphost Seolta",
+      "successDescription": "Tá an nasc athshocraithe pasfhocail seolta chuig do sheoladh ríomhphoist. Seiceáil do bhosca isteach le do thoil.",
+      "errorDefault": "Tharla earráid. Seiceáil do sheoladh ríomhphoist le do thoil."
+    },
+    "resetPassword": {
+      "title": "Socraigh Pasfhocal Nua",
+      "description": "Socraigh pasfhocal nua do do chuntas.",
+      "newPassword": "Pasfhocal Nua",
+      "confirmPassword": "Deimhnigh Pasfhocal",
+      "submit": "Nuashonraigh Pasfhocal",
+      "submitting": "Ag nuashonrú...",
+      "successTitle": "Pasfhocal Nuashonraithe",
+      "successDescription": "Tá do phasfhocal nuashonraithe go rathúil. Is féidir leat logáil isteach le do phasfhocal nua.",
+      "goToLogin": "Logáil isteach",
+      "invalidLinkTitle": "Ceangal Neamhbhailí",
+      "invalidLinkDescription": "Tá an nasc athshocraithe pasfhocail neamhbhailí nó neamhiomlán. Seiceáil an nasc i do ríomhphost faoi dhó le do thoil.",
+      "requestNewLink": "Iarr Ceangal Nua",
+      "passwordMismatch": "Ní hionann na pasfhocail.",
+      "passwordTooShort": "Ní mór don phasfhocal a bheith 6 charachtar ar a laghad.",
+      "errorDefault": "Theip ar athshocrú an phasfhocail. Seans go bhfuil an nasc neamhbhailí nó imithe in éag."
+    }
+  },
+  "dashboard": {
+    "title": "Painéal Rialaithe",
+    "welcome": "Fáilte romhat, a {ainm}!",
+    "accountInfo": "Tá faisnéis do chuntais le feiceáil thíos.",
+    "username": "Ainm úsáideora",
+    "email": "Ríomhphost",
+    "id": "Aitheantas",
+    "logout": "Logáil Amach"
+  },
+  "settings": {
+    "title": "Socruithe",
+    "updatePassword": {
+      "title": "Nuashonraigh Pasfhocal",
+      "description": "Nuashonraigh do phasfhocal go rialta ar mhaithe le slándáil do chuntais.",
+      "currentPassword": "Pasfhocal Reatha",
+      "newPassword": "Pasfhocal Nua",
+      "confirmPassword": "Pasfhocal Nua Arís",
+      "submit": "Nuashonraigh Pasfhocal",
+      "submitting": "Ag nuashonrú...",
+      "success": "Tá do phasfhocal nuashonraithe go rathúil.",
+      "passwordMismatch": "Ní hionann na pasfhocail nua.",
+      "passwordTooShort": "Ní mór don phasfhocal nua a bheith 6 charachtar ar a laghad.",
+      "sessionError": "Níorbh fhéidir faisnéis an tseisiúin a fháil.",
+      "errorDefault": "Níorbh fhéidir an focal faire a nuashonrú. Seiceáil do phasfhocal reatha le do thoil."
+    }
+  },
+  "navigation": {
+    "home": "Baile",
+    "dashboard": "Painéal Rialaithe",
+    "settings": "Socruithe",
+    "profile": "Próifíl",
+    "logout": "Logáil Amach"
+  },
+  "language": {
+    "select": "Rogha Teanga",
+    "current": "Teanga Reatha"
+  }
+}

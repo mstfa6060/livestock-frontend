@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Załadunek...",
+    "error": "Błąd",
+    "success": "Udany",
+    "email": "E-mail",
+    "password": "Hasło",
+    "submit": "Wysłać",
+    "cancel": "Anulować",
+    "save": "Ratować",
+    "back": "Z powrotem",
+    "next": "Do przodu",
+    "close": "Zamknąć",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Zaloguj się",
+      "description": "Kontynuuj logując się na swoje konto.",
+      "submit": "Zaloguj się",
+      "submitting": "Logowanie...",
+      "rememberMe": "Pamiętaj mnie",
+      "forgotPassword": "Zapomniałem hasła.",
+      "noAccount": "Nie masz konta?",
+      "register": "Rejestr",
+      "errorDefault": "Logowanie nieudane. Sprawdź swoje dane."
+    },
+    "register": {
+      "title": "Rejestr",
+      "description": "Zacznij od utworzenia nowego konta.",
+      "firstName": "Nazwa",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Nazwisko",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Nazwa użytkownika",
+      "usernamePlaceholder": "Ahmetyilmaz",
+      "confirmPassword": "Potwierdź hasło",
+      "submit": "Rejestr",
+      "submitting": "Konto jest tworzone...",
+      "hasAccount": "Czy masz już konto?",
+      "login": "Zaloguj się",
+      "passwordMismatch": "Hasła nie są takie same.",
+      "passwordTooShort": "Hasło musi mieć co najmniej 6 znaków.",
+      "errorDefault": "Rejestracja nie powiodła się. Spróbuj ponownie."
+    },
+    "forgotPassword": {
+      "title": "Zapomniałem hasła.",
+      "description": "Podaj swój adres e-mail, a my wyślemy Ci link umożliwiający zresetowanie hasła.",
+      "submit": "Wyślij link resetujący",
+      "submitting": "Przesyłka...",
+      "backToLogin": "Powrót do strony głównej",
+      "successTitle": "E-mail wysłany",
+      "successDescription": "Link do resetowania hasła został wysłany na Twój adres e-mail. Sprawdź skrzynkę odbiorczą.",
+      "errorDefault": "Wystąpił błąd. Sprawdź swój adres e-mail."
+    },
+    "resetPassword": {
+      "title": "Ustaw nowe hasło",
+      "description": "Ustaw nowe hasło do swojego konta.",
+      "newPassword": "Nowe hasło",
+      "confirmPassword": "Potwierdź hasło",
+      "submit": "Aktualizuj hasło",
+      "submitting": "Aktualizowanie...",
+      "successTitle": "Zaktualizowano hasło",
+      "successDescription": "Twoje hasło zostało pomyślnie zaktualizowane. Możesz się zalogować, używając nowego hasła.",
+      "goToLogin": "Zaloguj się",
+      "invalidLinkTitle": "Nieprawidłowe połączenie",
+      "invalidLinkDescription": "Link do resetowania hasła jest nieprawidłowy lub niekompletny. Sprawdź dokładnie link w swojej wiadomości e-mail.",
+      "requestNewLink": "Poproś o nowe połączenie",
+      "passwordMismatch": "Hasła nie są takie same.",
+      "passwordTooShort": "Hasło musi mieć co najmniej 6 znaków.",
+      "errorDefault": "Resetowanie hasła nie powiodło się. Połączenie może być nieprawidłowe lub wygasło."
+    }
+  },
+  "dashboard": {
+    "title": "Panel",
+    "welcome": "Witaj, {name}!",
+    "accountInfo": "Poniżej wyświetlane są informacje o Twoim koncie.",
+    "username": "Nazwa użytkownika",
+    "email": "E-mail",
+    "id": "ID",
+    "logout": "Wyloguj się"
+  },
+  "settings": {
+    "title": "Ustawienia",
+    "updatePassword": {
+      "title": "Aktualizuj hasło",
+      "description": "Aby zapewnić bezpieczeństwo swojego konta, regularnie aktualizuj hasło.",
+      "currentPassword": "Aktualne hasło",
+      "newPassword": "Nowe hasło",
+      "confirmPassword": "Nowe hasło ponownie",
+      "submit": "Aktualizuj hasło",
+      "submitting": "Aktualizowanie...",
+      "success": "Twoje hasło zostało pomyślnie zaktualizowane.",
+      "passwordMismatch": "Nowe hasła nie są takie same.",
+      "passwordTooShort": "Nowe hasło musi mieć co najmniej 6 znaków.",
+      "sessionError": "Nie można znaleźć informacji o sesji.",
+      "errorDefault": "Nie udało się zaktualizować hasła. Sprawdź swoje obecne hasło."
+    }
+  },
+  "navigation": {
+    "home": "Dom",
+    "dashboard": "Panel",
+    "settings": "Ustawienia",
+    "profile": "Profil",
+    "logout": "Wyloguj się"
+  },
+  "language": {
+    "select": "Wybór języka",
+    "current": "Aktualny język"
+  }
+}

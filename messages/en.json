@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Mistake",
+    "success": "Successful",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Send",
+    "cancel": "Cancel",
+    "save": "Save",
+    "back": "Back",
+    "next": "Forward",
+    "close": "Close",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Log in",
+      "description": "Continue by logging into your account.",
+      "submit": "Log in",
+      "submitting": "Logging in...",
+      "rememberMe": "Remember me",
+      "forgotPassword": "I forgot my password.",
+      "noAccount": "Don't you have an account?",
+      "register": "Register",
+      "errorDefault": "Login failed. Please check your information."
+    },
+    "register": {
+      "title": "Register",
+      "description": "Start by creating a new account.",
+      "firstName": "Name",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Surname",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "User name",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Confirm Password",
+      "submit": "Register",
+      "submitting": "Account is being created...",
+      "hasAccount": "Do you already have an account?",
+      "login": "Log in",
+      "passwordMismatch": "The passwords don't match.",
+      "passwordTooShort": "The password must be at least 6 characters long.",
+      "errorDefault": "Registration failed. Please try again."
+    },
+    "forgotPassword": {
+      "title": "I forgot my password.",
+      "description": "Enter your email address and we will send you a password reset link.",
+      "submit": "Send Reset Link",
+      "submitting": "Sending...",
+      "backToLogin": "Return to the homepage",
+      "successTitle": "Email Sent",
+      "successDescription": "The password reset link has been sent to your email address. Please check your inbox.",
+      "errorDefault": "An error occurred. Please check your email address."
+    },
+    "resetPassword": {
+      "title": "Set a New Password",
+      "description": "Set a new password for your account.",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Update Password",
+      "submitting": "Updating...",
+      "successTitle": "Password Updated",
+      "successDescription": "Your password has been successfully updated. You can log in with your new password.",
+      "goToLogin": "Log in",
+      "invalidLinkTitle": "Invalid Connection",
+      "invalidLinkDescription": "The password reset link is invalid or incomplete. Please double-check the link in your email.",
+      "requestNewLink": "Request a New Connection",
+      "passwordMismatch": "The passwords don't match.",
+      "passwordTooShort": "The password must be at least 6 characters long.",
+      "errorDefault": "Password reset failed. The connection may be invalid or expired."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome, {name}!",
+    "accountInfo": "Your account information is displayed below.",
+    "username": "User name",
+    "email": "Email",
+    "id": "ID",
+    "logout": "Log Out"
+  },
+  "settings": {
+    "title": "Settings",
+    "updatePassword": {
+      "title": "Update Password",
+      "description": "Update your password regularly for the security of your account.",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "New Password Again",
+      "submit": "Update Password",
+      "submitting": "Updating...",
+      "success": "Your password has been successfully updated.",
+      "passwordMismatch": "The new passwords don't match.",
+      "passwordTooShort": "The new password must be at least 6 characters long.",
+      "sessionError": "Session information could not be found.",
+      "errorDefault": "The password could not be updated. Please check your current password."
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "profile": "Profile",
+    "logout": "Log Out"
+  },
+  "language": {
+    "select": "Language Selection",
+    "current": "Current Language"
+  }
+}

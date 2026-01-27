@@ -3389,6 +3389,7 @@ export namespace LivestockTradingAPI {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/All';
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
+				countryCode: string;
 				sorting: IXSorting;
 				filters: IXFilterItem[];
 				pageRequest: IXPageRequest;
@@ -3426,6 +3427,9 @@ export namespace LivestockTradingAPI {
 				stockQuantity: number;
 				isInStock: boolean;
 				sellerId: Guid;
+				locationId: Guid;
+				locationCountryCode: string;
+				locationCity: string;
 				status: number;
 				condition: number;
 				viewCount: number;

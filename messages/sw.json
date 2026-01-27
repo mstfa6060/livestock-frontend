@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Inapakia...",
+    "error": "Kosa",
+    "success": "Imefanikiwa",
+    "email": "Barua pepe",
+    "password": "Nenosiri",
+    "submit": "Tuma",
+    "cancel": "Ghairi",
+    "save": "Hifadhi",
+    "back": "Rudi",
+    "next": "Mbele",
+    "close": "Funga",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Ingia",
+      "description": "Endelea kwa kuingia kwenye akaunti yako.",
+      "submit": "Ingia",
+      "submitting": "Inaingia...",
+      "rememberMe": "Nikumbuke",
+      "forgotPassword": "Nimesahau nenosiri langu.",
+      "noAccount": "Huna akaunti?",
+      "register": "Sajili",
+      "errorDefault": "Imeshindwa kuingia. Tafadhali angalia taarifa zako."
+    },
+    "register": {
+      "title": "Sajili",
+      "description": "Anza kwa kuunda akaunti mpya.",
+      "firstName": "Jina",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Jina la ukoo",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Jina la mtumiaji",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Thibitisha Nenosiri",
+      "submit": "Sajili",
+      "submitting": "Akaunti inaundwa...",
+      "hasAccount": "Je, tayari una akaunti?",
+      "login": "Ingia",
+      "passwordMismatch": "Manenosiri hayalingani.",
+      "passwordTooShort": "Nenosiri lazima liwe na angalau herufi 6.",
+      "errorDefault": "Usajili umeshindwa. Tafadhali jaribu tena."
+    },
+    "forgotPassword": {
+      "title": "Nimesahau nenosiri langu.",
+      "description": "Ingiza anwani yako ya barua pepe nasi tutakutumia kiungo cha kuweka upya nenosiri.",
+      "submit": "Tuma Kiungo cha Kuweka Upya",
+      "submitting": "Inatuma...",
+      "backToLogin": "Rudi kwenye ukurasa wa nyumbani",
+      "successTitle": "Barua Pepe Imetumwa",
+      "successDescription": "Kiungo cha kuweka upya nenosiri kimetumwa kwa anwani yako ya barua pepe. Tafadhali angalia kikasha chako.",
+      "errorDefault": "Hitilafu imetokea. Tafadhali angalia anwani yako ya barua pepe."
+    },
+    "resetPassword": {
+      "title": "Weka Nenosiri Jipya",
+      "description": "Weka nenosiri jipya kwa akaunti yako.",
+      "newPassword": "Nenosiri Jipya",
+      "confirmPassword": "Thibitisha Nenosiri",
+      "submit": "Sasisha Nenosiri",
+      "submitting": "Inasasisha...",
+      "successTitle": "Nenosiri Limesasishwa",
+      "successDescription": "Nenosiri lako limesasishwa kwa mafanikio. Unaweza kuingia ukitumia nenosiri lako jipya.",
+      "goToLogin": "Ingia",
+      "invalidLinkTitle": "Muunganisho Batili",
+      "invalidLinkDescription": "Kiungo cha kuweka upya nenosiri si sahihi au hakijakamilika. Tafadhali angalia kiungo kilicho kwenye barua pepe yako.",
+      "requestNewLink": "Omba Muunganisho Mpya",
+      "passwordMismatch": "Manenosiri hayalingani.",
+      "passwordTooShort": "Nenosiri lazima liwe na angalau herufi 6.",
+      "errorDefault": "Uwekaji upya wa nenosiri umeshindwa. Muunganisho unaweza kuwa batili au muda wake umeisha."
+    }
+  },
+  "dashboard": {
+    "title": "Dashibodi",
+    "welcome": "Karibu, {jina}!",
+    "accountInfo": "Taarifa za akaunti yako zinaonyeshwa hapa chini.",
+    "username": "Jina la mtumiaji",
+    "email": "Barua pepe",
+    "id": "Kitambulisho",
+    "logout": "Toka"
+  },
+  "settings": {
+    "title": "Mipangilio",
+    "updatePassword": {
+      "title": "Sasisha Nenosiri",
+      "description": "Sasisha nenosiri lako mara kwa mara kwa ajili ya usalama wa akaunti yako.",
+      "currentPassword": "Nenosiri la Sasa",
+      "newPassword": "Nenosiri Jipya",
+      "confirmPassword": "Nenosiri Jipya Tena",
+      "submit": "Sasisha Nenosiri",
+      "submitting": "Inasasisha...",
+      "success": "Nenosiri lako limesasishwa kwa ufanisi.",
+      "passwordMismatch": "Manenosiri mapya hayalingani.",
+      "passwordTooShort": "Nenosiri jipya lazima liwe na angalau herufi 6.",
+      "sessionError": "Taarifa za kipindi hazikupatikana.",
+      "errorDefault": "Nenosiri halikuweza kusasishwa. Tafadhali angalia nenosiri lako la sasa."
+    }
+  },
+  "navigation": {
+    "home": "Nyumbani",
+    "dashboard": "Dashibodi",
+    "settings": "Mipangilio",
+    "profile": "Wasifu",
+    "logout": "Toka"
+  },
+  "language": {
+    "select": "Uteuzi wa Lugha",
+    "current": "Lugha ya Sasa"
+  }
+}

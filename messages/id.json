@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Memuat...",
+    "error": "Kesalahan",
+    "success": "Berhasil",
+    "email": "E-mail",
+    "password": "Kata sandi",
+    "submit": "Mengirim",
+    "cancel": "Membatalkan",
+    "save": "Menyimpan",
+    "back": "Kembali",
+    "next": "Maju",
+    "close": "Menutup",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Masuk",
+      "description": "Lanjutkan dengan masuk ke akun Anda.",
+      "submit": "Masuk",
+      "submitting": "Sedang masuk...",
+      "rememberMe": "Ingatlah aku",
+      "forgotPassword": "Saya lupa kata sandi saya.",
+      "noAccount": "Apakah Anda tidak punya akun?",
+      "register": "Daftar",
+      "errorDefault": "Login gagal. Silakan periksa informasi Anda."
+    },
+    "register": {
+      "title": "Daftar",
+      "description": "Mulailah dengan membuat akun baru.",
+      "firstName": "Nama",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Nama belakang",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Nama belakang",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Konfirmasi Kata Sandi",
+      "submit": "Daftar",
+      "submitting": "Akun sedang dibuat...",
+      "hasAccount": "Apakah Anda sudah memiliki akun?",
+      "login": "Masuk",
+      "passwordMismatch": "Kata sandinya tidak cocok.",
+      "passwordTooShort": "Kata sandi harus memiliki panjang minimal 6 karakter.",
+      "errorDefault": "Pendaftaran gagal. Silakan coba lagi."
+    },
+    "forgotPassword": {
+      "title": "Saya lupa kata sandi saya.",
+      "description": "Masukkan alamat email Anda dan kami akan mengirimkan tautan pengaturan ulang kata sandi kepada Anda.",
+      "submit": "Kirim Tautan Reset",
+      "submitting": "Mengirim...",
+      "backToLogin": "Kembali ke halaman utama",
+      "successTitle": "Email Terkirim",
+      "successDescription": "Tautan pengaturan ulang kata sandi telah dikirim ke alamat email Anda. Silakan periksa kotak masuk Anda.",
+      "errorDefault": "Terjadi kesalahan. Silakan periksa alamat email Anda."
+    },
+    "resetPassword": {
+      "title": "Atur Kata Sandi Baru",
+      "description": "Buat kata sandi baru untuk akun Anda.",
+      "newPassword": "Kata Sandi Baru",
+      "confirmPassword": "Konfirmasi Kata Sandi",
+      "submit": "Perbarui Kata Sandi",
+      "submitting": "Sedang memperbarui...",
+      "successTitle": "Kata Sandi Diperbarui",
+      "successDescription": "Kata sandi Anda telah berhasil diperbarui. Anda dapat masuk menggunakan kata sandi baru Anda.",
+      "goToLogin": "Masuk",
+      "invalidLinkTitle": "Koneksi Tidak Valid",
+      "invalidLinkDescription": "Tautan pengaturan ulang kata sandi tidak valid atau tidak lengkap. Harap periksa kembali tautan di email Anda.",
+      "requestNewLink": "Ajukan Permohonan Koneksi Baru",
+      "passwordMismatch": "Kata sandinya tidak cocok.",
+      "passwordTooShort": "Kata sandi harus memiliki panjang minimal 6 karakter.",
+      "errorDefault": "Reset kata sandi gagal. Koneksi mungkin tidak valid atau telah kedaluwarsa."
+    }
+  },
+  "dashboard": {
+    "title": "Dasbor",
+    "welcome": "Selamat datang, {nama}!",
+    "accountInfo": "Informasi akun Anda ditampilkan di bawah ini.",
+    "username": "Nama belakang",
+    "email": "E-mail",
+    "id": "PENGENAL",
+    "logout": "Keluar"
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "updatePassword": {
+      "title": "Perbarui Kata Sandi",
+      "description": "Perbarui kata sandi Anda secara berkala demi keamanan akun Anda.",
+      "currentPassword": "Kata Sandi Saat Ini",
+      "newPassword": "Kata Sandi Baru",
+      "confirmPassword": "Kata Sandi Baru Lagi",
+      "submit": "Perbarui Kata Sandi",
+      "submitting": "Sedang memperbarui...",
+      "success": "Kata sandi Anda telah berhasil diperbarui.",
+      "passwordMismatch": "Kata sandi baru tersebut tidak cocok.",
+      "passwordTooShort": "Kata sandi baru harus memiliki panjang minimal 6 karakter.",
+      "sessionError": "Informasi sesi tidak dapat ditemukan.",
+      "errorDefault": "Kata sandi tidak dapat diperbarui. Silakan periksa kata sandi Anda saat ini."
+    }
+  },
+  "navigation": {
+    "home": "Rumah",
+    "dashboard": "Dasbor",
+    "settings": "Pengaturan",
+    "profile": "Profil",
+    "logout": "Keluar"
+  },
+  "language": {
+    "select": "Pemilihan Bahasa",
+    "current": "Bahasa Saat Ini"
+  }
+}

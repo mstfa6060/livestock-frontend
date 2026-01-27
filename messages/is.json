@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Hleður...",
+    "error": "Mistök",
+    "success": "Vel heppnað",
+    "email": "Tölvupóstur",
+    "password": "Lykilorð",
+    "submit": "Senda",
+    "cancel": "Hætta við",
+    "save": "Vista",
+    "back": "Til baka",
+    "next": "Áfram",
+    "close": "Loka",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Innskráning",
+      "description": "Haltu áfram með því að skrá þig inn á reikninginn þinn.",
+      "submit": "Innskráning",
+      "submitting": "Innskráning...",
+      "rememberMe": "Mundu eftir mér",
+      "forgotPassword": "Ég gleymdi lykilorðinu mínu.",
+      "noAccount": "Ertu ekki með aðgang?",
+      "register": "Skráning",
+      "errorDefault": "Innskráning mistókst. Vinsamlegast athugaðu upplýsingarnar þínar."
+    },
+    "register": {
+      "title": "Skráning",
+      "description": "Byrjaðu á að stofna nýjan reikning.",
+      "firstName": "Nafn",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Eftirnafn",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Notandanafn",
+      "usernamePlaceholder": "Ahmetyilmaz",
+      "confirmPassword": "Staðfesta lykilorð",
+      "submit": "Skráning",
+      "submitting": "Aðgangur er að verða búinn til...",
+      "hasAccount": "Ertu nú þegar með aðgang?",
+      "login": "Innskráning",
+      "passwordMismatch": "Lykilorðin stemma ekki.",
+      "passwordTooShort": "Lykilorðið verður að vera að minnsta kosti 6 stafir að lengd.",
+      "errorDefault": "Skráning mistókst. Reyndu aftur."
+    },
+    "forgotPassword": {
+      "title": "Ég gleymdi lykilorðinu mínu.",
+      "description": "Sláðu inn netfangið þitt og við sendum þér tengil til að endurstilla lykilorðið.",
+      "submit": "Senda endurstillingartengil",
+      "submitting": "Sendi...",
+      "backToLogin": "Til baka á forsíðuna",
+      "successTitle": "Tölvupóstur sendur",
+      "successDescription": "Tengill til að endurstilla lykilorðið hefur verið sendur á netfangið þitt. Vinsamlegast athugaðu pósthólfið þitt.",
+      "errorDefault": "Villa kom upp. Vinsamlegast athugaðu netfangið þitt."
+    },
+    "resetPassword": {
+      "title": "Settu nýtt lykilorð",
+      "description": "Settu nýtt lykilorð fyrir reikninginn þinn.",
+      "newPassword": "Nýtt lykilorð",
+      "confirmPassword": "Staðfesta lykilorð",
+      "submit": "Uppfæra lykilorð",
+      "submitting": "Uppfærir...",
+      "successTitle": "Lykilorð uppfært",
+      "successDescription": "Lykilorðið þitt hefur verið uppfært. Þú getur skráð þig inn með nýja lykilorðinu.",
+      "goToLogin": "Innskráning",
+      "invalidLinkTitle": "Ógild tenging",
+      "invalidLinkDescription": "Tengillinn til að endurstilla lykilorðið er ógildur eða ófullkominn. Vinsamlegast athugaðu tengilinn í tölvupóstinum þínum.",
+      "requestNewLink": "Óska eftir nýrri tengingu",
+      "passwordMismatch": "Lykilorðin stemma ekki.",
+      "passwordTooShort": "Lykilorðið verður að vera að minnsta kosti 6 stafir að lengd.",
+      "errorDefault": "Endurstilling lykilorðs mistókst. Tengingin gæti verið ógild eða útrunnin."
+    }
+  },
+  "dashboard": {
+    "title": "Mælaborð",
+    "welcome": "Velkomin(n), {nafn}!",
+    "accountInfo": "Upplýsingar um reikninginn þinn birtast hér að neðan.",
+    "username": "Notandanafn",
+    "email": "Tölvupóstur",
+    "id": "Auðkenni",
+    "logout": "Útskráning"
+  },
+  "settings": {
+    "title": "Stillingar",
+    "updatePassword": {
+      "title": "Uppfæra lykilorð",
+      "description": "Uppfærðu lykilorðið þitt reglulega til að tryggja öryggi reikningsins.",
+      "currentPassword": "Núverandi lykilorð",
+      "newPassword": "Nýtt lykilorð",
+      "confirmPassword": "Nýtt lykilorð aftur",
+      "submit": "Uppfæra lykilorð",
+      "submitting": "Uppfærir...",
+      "success": "Lykilorðið þitt hefur verið uppfært.",
+      "passwordMismatch": "Nýju lykilorðin stemma ekki.",
+      "passwordTooShort": "Nýja lykilorðið verður að vera að minnsta kosti 6 stafir að lengd.",
+      "sessionError": "Upplýsingar um fund fundust ekki.",
+      "errorDefault": "Ekki var hægt að uppfæra lykilorðið. Vinsamlegast athugaðu núverandi lykilorð."
+    }
+  },
+  "navigation": {
+    "home": "Heim",
+    "dashboard": "Mælaborð",
+    "settings": "Stillingar",
+    "profile": "Prófíll",
+    "logout": "Útskráning"
+  },
+  "language": {
+    "select": "Tungumálaval",
+    "current": "Núverandi tungumál"
+  }
+}

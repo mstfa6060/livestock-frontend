@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Încărcare...",
+    "error": "Greşeală",
+    "success": "De succes",
+    "email": "E-mail",
+    "password": "Parolă",
+    "submit": "Trimite",
+    "cancel": "Anula",
+    "save": "Salva",
+    "back": "Spate",
+    "next": "Redirecţiona",
+    "close": "Aproape",
+    "emailPlaceholder": "ornek@email.com"
+  },
+  "auth": {
+    "login": {
+      "title": "Log in",
+      "description": "Continuați conectându-vă la contul dvs.",
+      "submit": "Log in",
+      "submitting": "Conectare...",
+      "rememberMe": "Ține-mă minte",
+      "forgotPassword": "Mi-am uitat parola.",
+      "noAccount": "Nu ai un cont?",
+      "register": "Registru",
+      "errorDefault": "Conectarea a eșuat. Vă rugăm să vă verificați informațiile."
+    },
+    "register": {
+      "title": "Registru",
+      "description": "Începeți prin a crea un cont nou.",
+      "firstName": "Nume",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Nume de familie",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Nume de utilizator",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Confirmați parola",
+      "submit": "Registru",
+      "submitting": "Contul este în curs de creare...",
+      "hasAccount": "Ai deja un cont?",
+      "login": "Log in",
+      "passwordMismatch": "Parolele nu se potrivesc.",
+      "passwordTooShort": "Parola trebuie să aibă cel puțin 6 caractere.",
+      "errorDefault": "Înregistrarea a eșuat. Vă rugăm să încercați din nou."
+    },
+    "forgotPassword": {
+      "title": "Mi-am uitat parola.",
+      "description": "Introdu adresa ta de e-mail și îți vom trimite un link de resetare a parolei.",
+      "submit": "Trimite link de resetare",
+      "submitting": "Se trimite...",
+      "backToLogin": "Reveniți la pagina principală",
+      "successTitle": "E-mail trimis",
+      "successDescription": "Linkul de resetare a parolei a fost trimis la adresa dvs. de e-mail. Vă rugăm să verificați căsuța poștală.",
+      "errorDefault": "A apărut o eroare. Vă rugăm să verificați adresa de e-mail."
+    },
+    "resetPassword": {
+      "title": "Setați o parolă nouă",
+      "description": "Setați o parolă nouă pentru contul dvs.",
+      "newPassword": "Parolă Nouă",
+      "confirmPassword": "Confirmați parola",
+      "submit": "Actualizați parola",
+      "submitting": "Se actualizează...",
+      "successTitle": "Parolă actualizată",
+      "successDescription": "Parola dumneavoastră a fost actualizată cu succes. Vă puteți autentifica cu noua parolă.",
+      "goToLogin": "Log in",
+      "invalidLinkTitle": "Conexiune nevalidă",
+      "invalidLinkDescription": "Linkul de resetare a parolei este invalid sau incomplet. Vă rugăm să verificați din nou linkul din e-mail.",
+      "requestNewLink": "Solicitați o conexiune nouă",
+      "passwordMismatch": "Parolele nu se potrivesc.",
+      "passwordTooShort": "Parola trebuie să aibă cel puțin 6 caractere.",
+      "errorDefault": "Resetarea parolei a eșuat. Conexiunea poate fi invalidă sau expirată."
+    }
+  },
+  "dashboard": {
+    "title": "Bord",
+    "welcome": "Bun venit, {name}!",
+    "accountInfo": "Informațiile contului dvs. sunt afișate mai jos.",
+    "username": "Nume de utilizator",
+    "email": "E-mail",
+    "id": "ID-ul",
+    "logout": "Deconectare"
+  },
+  "settings": {
+    "title": "Setări",
+    "updatePassword": {
+      "title": "Actualizați parola",
+      "description": "Actualizați-vă parola în mod regulat pentru securitatea contului dumneavoastră.",
+      "currentPassword": "Parola actuală",
+      "newPassword": "Parolă Nouă",
+      "confirmPassword": "Parolă nouă din nou",
+      "submit": "Actualizați parola",
+      "submitting": "Se actualizează...",
+      "success": "Parola dumneavoastră a fost actualizată cu succes.",
+      "passwordMismatch": "Noile parole nu se potrivesc.",
+      "passwordTooShort": "Noua parolă trebuie să aibă cel puțin 6 caractere.",
+      "sessionError": "Informațiile despre sesiune nu au putut fi găsite.",
+      "errorDefault": "Parola nu a putut fi actualizată. Vă rugăm să verificați parola curentă."
+    }
+  },
+  "navigation": {
+    "home": "Acasă",
+    "dashboard": "Bord",
+    "settings": "Setări",
+    "profile": "Profil",
+    "logout": "Deconectare"
+  },
+  "language": {
+    "select": "Selectarea limbii",
+    "current": "Limba curentă"
+  }
+}
