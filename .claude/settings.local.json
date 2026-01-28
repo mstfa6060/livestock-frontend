@@ -14,7 +14,17 @@
       "Bash(npm install:*)",
       "Bash(npx next build)",
       "Bash(git status:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(npm run dev:*)",
+      "Bash(cmd /c \"npm run dev\")",
+      "Bash(cmd /c \"timeout /t 5 >nul && type C:\\\\Users\\\\NAGEHA~1.YAZ\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--git-livestock-frontend\\\\tasks\\\\b9fa1cb.output\")",
+      "Bash(powershell -Command \"& {npm --version}\")",
+      "Bash(powershell -Command \"Get-Command node -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\")",
+      "Bash(powershell -Command:*)",
+      "Bash(powershell -File - <<'PS1'\n[Environment]::GetEnvironmentVariable\\('PATH', 'Machine'\\) + ';' + [Environment]::GetEnvironmentVariable\\('PATH', 'User'\\)\nPS1)",
+      "Bash(powershell -File:*)",
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run dev)",
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\npx.cmd\" next dev)"
     ]
   }
 }
