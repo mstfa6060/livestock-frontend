@@ -612,6 +612,158 @@ function ProductActions({ productId }: { productId: string }) {
 }
 ```
 
+### Moderasyon API Endpoint'leri (Admin/Moderator)
+
+Asagidaki endpoint'ler sadece Admin ve Moderator rolleri icin erisime aciktir:
+
+#### Urun Moderasyonu
+
+```typescript
+// Urunu onayla
+const approveProduct = async (productId: string) => {
+  const response = await LivestockTradingAPI.Products.Approve.Request({
+    id: productId,
+  });
+  return response; // { success: true, status: 'Approved' }
+};
+
+// Urunu reddet
+const rejectProduct = async (productId: string, reason: string) => {
+  const response = await LivestockTradingAPI.Products.Reject.Request({
+    id: productId,
+    reason: reason, // Zorunlu: Red sebebi
+  });
+  return response; // { success: true, status: 'Rejected' }
+};
+```
+
+#### Satici Moderasyonu
+
+```typescript
+// Saticiyi dogrula
+const verifySeller = async (sellerId: string) => {
+  const response = await LivestockTradingAPI.Sellers.Verify.Request({
+    id: sellerId,
+  });
+  return response; // { success: true, status: 'Verified' }
+};
+
+// Saticiyi askiya al
+const suspendSeller = async (sellerId: string, reason: string) => {
+  const response = await LivestockTradingAPI.Sellers.Suspend.Request({
+    id: sellerId,
+    reason: reason, // Zorunlu: Askiya alma sebebi
+  });
+  return response; // { success: true, status: 'Suspended' }
+};
+```
+
+#### Tasiyici Moderasyonu
+
+```typescript
+// Tasiyiciyi dogrula
+const verifyTransporter = async (transporterId: string) => {
+  const response = await LivestockTradingAPI.Transporters.Verify.Request({
+    id: transporterId,
+  });
+  return response; // { success: true, status: 'Verified' }
+};
+
+// Tasiyiciyi askiya al
+const suspendTransporter = async (transporterId: string, reason: string) => {
+  const response = await LivestockTradingAPI.Transporters.Suspend.Request({
+    id: transporterId,
+    reason: reason, // Zorunlu: Askiya alma sebebi
+  });
+  return response; // { success: true, status: 'Suspended' }
+};
+```
+
+#### Moderasyon Paneli Ornegi
+
+```typescript
+// components/admin/ModerationActions.tsx
+import { useRoles } from '@/hooks/useRoles';
+import { Roles } from '@/constants/roles';
+import { LivestockTradingAPI } from '@common/livestock-api/src/api/business_modules/livestocktrading';
+
+interface ModerationActionsProps {
+  entityType: 'product' | 'seller' | 'transporter';
+  entityId: string;
+  onSuccess: () => void;
+}
+
+export const ModerationActions = ({ entityType, entityId, onSuccess }: ModerationActionsProps) => {
+  const { hasAnyRole } = useRoles();
+  const [reason, setReason] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Sadece Admin/Moderator gorebilir
+  if (!hasAnyRole([Roles.Admin, Roles.Moderator])) {
+    return null;
+  }
+
+  const handleApprove = async () => {
+    setIsLoading(true);
+    try {
+      if (entityType === 'product') {
+        await LivestockTradingAPI.Products.Approve.Request({ id: entityId });
+      } else if (entityType === 'seller') {
+        await LivestockTradingAPI.Sellers.Verify.Request({ id: entityId });
+      } else {
+        await LivestockTradingAPI.Transporters.Verify.Request({ id: entityId });
+      }
+      toast.success('Onaylandi!');
+      onSuccess();
+    } catch (error: any) {
+      toast.error(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleReject = async () => {
+    if (!reason.trim()) {
+      toast.error('Red sebebi zorunludur');
+      return;
+    }
+    setIsLoading(true);
+    try {
+      if (entityType === 'product') {
+        await LivestockTradingAPI.Products.Reject.Request({ id: entityId, reason });
+      } else if (entityType === 'seller') {
+        await LivestockTradingAPI.Sellers.Suspend.Request({ id: entityId, reason });
+      } else {
+        await LivestockTradingAPI.Transporters.Suspend.Request({ id: entityId, reason });
+      }
+      toast.success('Reddedildi!');
+      onSuccess();
+    } catch (error: any) {
+      toast.error(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div className="moderation-actions">
+      <button onClick={handleApprove} disabled={isLoading}>
+        Onayla
+      </button>
+      <input
+        type="text"
+        value={reason}
+        onChange={(e) => setReason(e.target.value)}
+        placeholder="Red sebebi..."
+      />
+      <button onClick={handleReject} disabled={isLoading || !reason.trim()}>
+        Reddet
+      </button>
+    </div>
+  );
+};
+```
+
 ### Rol API Endpoint'leri (Yakin Zamanda)
 
 Asagidaki endpoint'ler yakin zamanda eklenecektir:
