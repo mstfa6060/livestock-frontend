@@ -1243,7 +1243,7 @@ export namespace LivestockTradingAPI {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/Verify';
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
-				transporterId: Guid;
+				id: Guid;
 			}
 			export interface IResponseModel {
 				success: boolean;
@@ -1308,8 +1308,8 @@ export namespace LivestockTradingAPI {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/Suspend';
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
-				transporterId: Guid;
-				suspensionReason: string;
+				id: Guid;
+				reason: string;
 			}
 			export interface IResponseModel {
 				success: boolean;
@@ -2217,7 +2217,7 @@ export namespace LivestockTradingAPI {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/Verify';
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
-				sellerId: Guid;
+				id: Guid;
 			}
 			export interface IResponseModel {
 				success: boolean;
@@ -2280,8 +2280,8 @@ export namespace LivestockTradingAPI {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/Suspend';
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
-				sellerId: Guid;
-				suspensionReason: string;
+				id: Guid;
+				reason: string;
 			}
 			export interface IResponseModel {
 				success: boolean;
@@ -3566,7 +3566,7 @@ export namespace LivestockTradingAPI {
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
 				id: Guid;
-				rejectionReason: string;
+				reason: string;
 			}
 			export interface IResponseModel {
 				success: boolean;
