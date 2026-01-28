@@ -9,9 +9,10 @@ Bu dokuman, GlobalLivestock backend API'si ile frontend entegrasyonunu aciklar.
 3. [Kimlik Dogrulama (Authentication)](#kimlik-dogrulama)
 4. [API Kullanimi](#api-kullanimi)
 5. [Token Yonetimi](#token-yonetimi)
-6. [Hata Yonetimi](#hata-yonetimi)
-7. [Dosya Yukleme](#dosya-yukleme)
-8. [Ornek Kullanim](#ornek-kullanim)
+6. [Rol Tabanli Yetkilendirme (RBAC)](#rol-tabanli-yetkilendirme)
+7. [Hata Yonetimi](#hata-yonetimi)
+8. [Dosya Yukleme](#dosya-yukleme)
+9. [Ornek Kullanim](#ornek-kullanim)
 
 ---
 
@@ -356,6 +357,272 @@ const isTokenExpired = (): boolean => {
   }
 };
 ```
+
+---
+
+## Rol Tabanli Yetkilendirme
+
+### Rol Yapisi
+
+Platform 7 farklı rol destekler:
+
+| Rol | Kod | Aciklama |
+|-----|-----|----------|
+| Admin | `LivestockTrading.Admin` | Tam yetki |
+| Moderator | `LivestockTrading.Moderator` | Icerik ve satis yonetimi |
+| Support | `LivestockTrading.Support` | Musteri destegi |
+| Seller | `LivestockTrading.Seller` | Urun satis yetkisi |
+| Transporter | `LivestockTrading.Transporter` | Nakliye hizmeti |
+| Buyer | `LivestockTrading.Buyer` | Alici (varsayilan) |
+| Veterinarian | `LivestockTrading.Veterinarian` | Veteriner hekimler |
+
+### JWT'deki Rol Claim'leri
+
+Login sonrasi gelen JWT token'da `role` claim'i kullanicinin rollerini icerir:
+
+```json
+{
+  "nameid": "user-uuid",
+  "given_name": "username",
+  "unique_name": "John Doe",
+  "email": "user@example.com",
+  "role": ["LivestockTrading.Seller", "LivestockTrading.Buyer"],
+  "platform": "0",
+  "exp": 1234567890
+}
+```
+
+**Onemli:** Bir kullanici birden fazla role sahip olabilir (ornegin hem Seller hem Buyer).
+
+### JWT'den Rolleri Okuma
+
+```typescript
+// utils/jwt.ts
+export interface JwtPayload {
+  nameid: string;
+  given_name: string;
+  unique_name: string;
+  email: string;
+  role: string | string[];
+  platform: string;
+  exp: number;
+}
+
+export const decodeJwt = (): JwtPayload | null => {
+  const token = localStorage.getItem('jwt');
+  if (!token) return null;
+
+  try {
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(
+      atob(base64)
+        .split('')
+        .map((c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
+        .join('')
+    );
+    return JSON.parse(jsonPayload);
+  } catch {
+    return null;
+  }
+};
+
+export const getUserRoles = (): string[] => {
+  const payload = decodeJwt();
+  if (!payload) return [];
+
+  // role tek string veya array olabilir
+  if (Array.isArray(payload.role)) {
+    return payload.role;
+  }
+  return payload.role ? [payload.role] : [];
+};
+
+export const hasRole = (role: string): boolean => {
+  const roles = getUserRoles();
+  return roles.includes(role);
+};
+
+export const hasAnyRole = (requiredRoles: string[]): boolean => {
+  const roles = getUserRoles();
+  return requiredRoles.some((r) => roles.includes(r));
+};
+```
+
+### Rol Sabitleri
+
+```typescript
+// constants/roles.ts
+export const Roles = {
+  Admin: 'LivestockTrading.Admin',
+  Moderator: 'LivestockTrading.Moderator',
+  Support: 'LivestockTrading.Support',
+  Seller: 'LivestockTrading.Seller',
+  Transporter: 'LivestockTrading.Transporter',
+  Buyer: 'LivestockTrading.Buyer',
+  Veterinarian: 'LivestockTrading.Veterinarian',
+} as const;
+
+// Rol grupları
+export const AdminRoles = [Roles.Admin];
+export const StaffRoles = [Roles.Admin, Roles.Moderator, Roles.Support];
+export const SellerRoles = [Roles.Admin, Roles.Moderator, Roles.Seller];
+export const TransporterRoles = [Roles.Admin, Roles.Moderator, Roles.Transporter];
+```
+
+### useRoles Hook
+
+```typescript
+// hooks/useRoles.ts
+import { useState, useEffect, useMemo } from 'react';
+import { getUserRoles, hasRole, hasAnyRole } from '@/utils/jwt';
+import { Roles } from '@/constants/roles';
+
+export const useRoles = () => {
+  const [roles, setRoles] = useState<string[]>([]);
+
+  useEffect(() => {
+    setRoles(getUserRoles());
+  }, []);
+
+  const permissions = useMemo(() => ({
+    isAdmin: hasRole(Roles.Admin),
+    isModerator: hasRole(Roles.Moderator),
+    isSupport: hasRole(Roles.Support),
+    isSeller: hasRole(Roles.Seller),
+    isTransporter: hasRole(Roles.Transporter),
+    isBuyer: hasRole(Roles.Buyer),
+    isVeterinarian: hasRole(Roles.Veterinarian),
+    isStaff: hasAnyRole([Roles.Admin, Roles.Moderator, Roles.Support]),
+    canManageProducts: hasAnyRole([Roles.Admin, Roles.Moderator, Roles.Seller]),
+    canManageOrders: hasAnyRole([Roles.Admin, Roles.Moderator]),
+    canManageUsers: hasRole(Roles.Admin),
+  }), [roles]);
+
+  return {
+    roles,
+    ...permissions,
+    hasRole,
+    hasAnyRole,
+  };
+};
+```
+
+### Rol Korumalı Componentler
+
+```typescript
+// components/RoleProtectedRoute.tsx
+import { useAuth } from '@/contexts/AuthContext';
+import { useRoles } from '@/hooks/useRoles';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+
+interface RoleProtectedRouteProps {
+  children: React.ReactNode;
+  allowedRoles: string[];
+  fallbackUrl?: string;
+}
+
+export const RoleProtectedRoute = ({
+  children,
+  allowedRoles,
+  fallbackUrl = '/unauthorized',
+}: RoleProtectedRouteProps) => {
+  const { isAuthenticated, isLoading } = useAuth();
+  const { hasAnyRole } = useRoles();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!isLoading) {
+      if (!isAuthenticated) {
+        router.push('/auth/login');
+      } else if (!hasAnyRole(allowedRoles)) {
+        router.push(fallbackUrl);
+      }
+    }
+  }, [isAuthenticated, isLoading, allowedRoles, hasAnyRole, router, fallbackUrl]);
+
+  if (isLoading) {
+    return <div>Yukleniyor...</div>;
+  }
+
+  if (!isAuthenticated || !hasAnyRole(allowedRoles)) {
+    return null;
+  }
+
+  return <>{children}</>;
+};
+
+// Kullanim ornegi
+// pages/admin/dashboard.tsx
+import { RoleProtectedRoute } from '@/components/RoleProtectedRoute';
+import { Roles } from '@/constants/roles';
+
+export default function AdminDashboard() {
+  return (
+    <RoleProtectedRoute allowedRoles={[Roles.Admin, Roles.Moderator]}>
+      <div>Admin Dashboard</div>
+    </RoleProtectedRoute>
+  );
+}
+```
+
+### Kosullu UI Gosterimi
+
+```typescript
+// components/ConditionalRender.tsx
+import { useRoles } from '@/hooks/useRoles';
+
+interface ShowForRolesProps {
+  roles: string[];
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+}
+
+export const ShowForRoles = ({ roles, children, fallback = null }: ShowForRolesProps) => {
+  const { hasAnyRole } = useRoles();
+
+  if (!hasAnyRole(roles)) {
+    return <>{fallback}</>;
+  }
+
+  return <>{children}</>;
+};
+
+// Kullanim
+import { Roles } from '@/constants/roles';
+
+function ProductActions({ productId }: { productId: string }) {
+  return (
+    <div>
+      {/* Herkes gorebilir */}
+      <button>Detay</button>
+
+      {/* Sadece seller ve admin */}
+      <ShowForRoles roles={[Roles.Seller, Roles.Admin]}>
+        <button>Duzenle</button>
+      </ShowForRoles>
+
+      {/* Sadece admin */}
+      <ShowForRoles roles={[Roles.Admin]}>
+        <button>Sil</button>
+      </ShowForRoles>
+    </div>
+  );
+}
+```
+
+### Rol API Endpoint'leri (Yakin Zamanda)
+
+Asagidaki endpoint'ler yakin zamanda eklenecektir:
+
+| Endpoint | Aciklama | Durum |
+|----------|----------|-------|
+| `GET /iam/Users/Me` | Mevcut kullanici bilgileri + roller | Planlanıyor |
+| `GET /iam/Roles/All` | Tum roller listesi | Planlanıyor |
+| `GET /iam/Roles/Permissions` | Rol bazli izinler | Planlanıyor |
+
+Bu endpoint'ler aktif olana kadar JWT'deki `role` claim'ini kullanin.
 
 ---
 

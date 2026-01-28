@@ -1239,6 +1239,19 @@ export namespace LivestockTradingAPI {
 			}
 		}
 
+		export namespace Verify {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/Verify';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				transporterId: Guid;
+			}
+			export interface IResponseModel {
+				success: boolean;
+				transporterId: Guid;
+				verifiedAt: Date;
+			}
+		}
+
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/Update';
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
@@ -1288,6 +1301,20 @@ export namespace LivestockTradingAPI {
 				certifications: string;
 				documentUrls: string;
 				updatedAt?: Date;
+			}
+		}
+
+		export namespace Suspend {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/Suspend';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				transporterId: Guid;
+				suspensionReason: string;
+			}
+			export interface IResponseModel {
+				success: boolean;
+				transporterId: Guid;
+				suspendedAt: Date;
 			}
 		}
 
@@ -2186,6 +2213,19 @@ export namespace LivestockTradingAPI {
 			}
 		}
 
+		export namespace Verify {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/Verify';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				sellerId: Guid;
+			}
+			export interface IResponseModel {
+				success: boolean;
+				sellerId: Guid;
+				verifiedAt: Date;
+			}
+		}
+
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/Update';
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
@@ -2233,6 +2273,20 @@ export namespace LivestockTradingAPI {
 				shippingPolicy: string;
 				socialMediaLinks: string;
 				updatedAt?: Date;
+			}
+		}
+
+		export namespace Suspend {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/Suspend';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				sellerId: Guid;
+				suspensionReason: string;
+			}
+			export interface IResponseModel {
+				success: boolean;
+				sellerId: Guid;
+				suspendedAt: Date;
 			}
 		}
 
@@ -3507,6 +3561,22 @@ export namespace LivestockTradingAPI {
 			}
 		}
 
+		export namespace Reject {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/Reject';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				id: Guid;
+				rejectionReason: string;
+			}
+			export interface IResponseModel {
+				success: boolean;
+				productId: Guid;
+				newStatus: number;
+				rejectionReason: string;
+				rejectedAt: Date;
+			}
+		}
+
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/Delete';
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
@@ -3582,6 +3652,20 @@ export namespace LivestockTradingAPI {
 				metaDescription: string;
 				metaKeywords: string;
 				createdAt: Date;
+			}
+		}
+
+		export namespace Approve {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/Approve';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				id: Guid;
+			}
+			export interface IResponseModel {
+				success: boolean;
+				productId: Guid;
+				newStatus: number;
+				approvedAt: Date;
 			}
 		}
 
