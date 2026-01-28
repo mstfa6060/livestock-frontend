@@ -376,6 +376,35 @@ Platform 7 farklı rol destekler:
 | Buyer | `LivestockTrading.Buyer` | Alici (varsayilan) |
 | Veterinarian | `LivestockTrading.Veterinarian` | Veteriner hekimler |
 
+### Otomatik Rol Atamasi
+
+Kullanicilar kayit oldugunda veya ilk kez sosyal giris yaptiginda otomatik olarak rol atanir:
+
+**Varsayilan Rol:** Tum yeni kullanicilar `Buyer` rolu alir.
+
+**Admin Rolleri:** Asagidaki email adresleri otomatik olarak `Admin` rolu alir:
+- `nagehanyazici13@gmail.com`
+- `m.mustafaocak@gmail.com`
+
+Bu email adresleri ile kayit olan veya Google/Apple ile giris yapan kullanicilar otomatik olarak Admin yetkisine sahip olur.
+
+> **Not:** Kullanici rolleri JWT token icinde saklanir. Rol degisikligi icin kullanicinin tekrar giris yapmasi gerekir.
+
+### Rol Yetki Hiyerarsisi
+
+Backend'de rol kontrolleri asagidaki hiyerarsiyi takip eder:
+
+| Islem | Gerekli Roller |
+|-------|----------------|
+| **Moderasyon** (Onayla/Reddet/Askiya Al) | Admin, Moderator |
+| **Urun Yonetimi** (Olustur/Guncelle/Sil) | Admin, Moderator, Seller |
+| **Nakliye Yonetimi** | Admin, Moderator, Transporter |
+| **Kullanici Yonetimi** | Admin |
+| **Urun Satin Alma** | Buyer, Seller (herkes) |
+| **Yorum/Degerlendirme** | Buyer, Seller |
+
+**Onemli:** Admin rolu tum islemlere erisim saglar. Moderator rolu icerik yonetimi islemlerine erisim saglar.
+
 ### JWT'deki Rol Claim'leri
 
 Login sonrasi gelen JWT token'da `role` claim'i kullanicinin rollerini icerir:
