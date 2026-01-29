@@ -12,7 +12,8 @@ Bu dokuman, GlobalLivestock backend API'si ile frontend entegrasyonunu aciklar.
 6. [Rol Tabanli Yetkilendirme (RBAC)](#rol-tabanli-yetkilendirme)
 7. [Hata Yonetimi](#hata-yonetimi)
 8. [Dosya Yukleme](#dosya-yukleme)
-9. [Ornek Kullanim](#ornek-kullanim)
+9. [Real-Time Mesajlasma (SignalR)](#real-time-mesajlasma-signalr)
+10. [Ornek Kullanim](#ornek-kullanim)
 
 ---
 
@@ -1017,6 +1018,440 @@ const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
   console.log('Yuklenen dosya URL:', result.url);
 };
 ```
+
+---
+
+## Real-Time Mesajlasma (SignalR)
+
+Platform, kullanicilar arasi gercek zamanli mesajlasma icin SignalR kullanir. Bu sistem asagidaki ozellikleri destekler:
+- Anlik mesaj iletimi
+- "Yaziyor..." gostergesi (Typing Indicator)
+- Mesaj okundu bildirimi
+- Online/Offline durum takibi (Presence)
+- Push notification (mobil)
+
+### SignalR Hub Baglantisi
+
+```typescript
+// services/ChatService.ts
+import * as signalR from '@microsoft/signalr';
+
+class ChatService {
+  private connection: signalR.HubConnection | null = null;
+  private static instance: ChatService;
+
+  public static getInstance(): ChatService {
+    if (!ChatService.instance) {
+      ChatService.instance = new ChatService();
+    }
+    return ChatService.instance;
+  }
+
+  public async connect(): Promise<void> {
+    const token = localStorage.getItem('jwt');
+    if (!token) {
+      throw new Error('JWT token bulunamadi');
+    }
+
+    // Hub URL - API Gateway uzerinden
+    const hubUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL}/livestocktrading/hubs/chat`;
+
+    this.connection = new signalR.HubConnectionBuilder()
+      .withUrl(hubUrl, {
+        accessTokenFactory: () => token,
+      })
+      .withAutomaticReconnect([0, 2000, 5000, 10000, 30000]) // Yeniden baglanti denemeleri
+      .configureLogging(signalR.LogLevel.Information)
+      .build();
+
+    // Baglanti durumu degisikliklerini dinle
+    this.connection.onreconnecting((error) => {
+      console.log('SignalR yeniden baglanıyor...', error);
+    });
+
+    this.connection.onreconnected((connectionId) => {
+      console.log('SignalR yeniden baglandi:', connectionId);
+    });
+
+    this.connection.onclose((error) => {
+      console.log('SignalR baglantisi kapandi:', error);
+    });
+
+    await this.connection.start();
+    console.log('SignalR baglantisi kuruldu');
+  }
+
+  public async disconnect(): Promise<void> {
+    if (this.connection) {
+      await this.connection.stop();
+      this.connection = null;
+    }
+  }
+
+  public getConnection(): signalR.HubConnection | null {
+    return this.connection;
+  }
+}
+
+export const chatService = ChatService.getInstance();
+```
+
+### Conversation'a Katilma/Ayrilma
+
+```typescript
+// Bir conversation'a katil (mesajlari almak icin)
+const joinConversation = async (conversationId: string) => {
+  const connection = chatService.getConnection();
+  if (connection) {
+    await connection.invoke('JoinConversation', conversationId);
+  }
+};
+
+// Conversation'dan ayril
+const leaveConversation = async (conversationId: string) => {
+  const connection = chatService.getConnection();
+  if (connection) {
+    await connection.invoke('LeaveConversation', conversationId);
+  }
+};
+```
+
+### Mesaj Dinleme (Real-Time)
+
+```typescript
+// hooks/useChat.ts
+import { useEffect, useCallback, useState } from 'react';
+import { chatService } from '@/services/ChatService';
+
+interface Message {
+  messageId: string;
+  conversationId: string;
+  senderUserId: string;
+  senderName: string;
+  content: string;
+  attachmentUrls: string | null;
+  sentAt: string;
+}
+
+interface TypingIndicator {
+  conversationId: string;
+  userId: string;
+  userName: string;
+  isTyping: boolean;
+}
+
+export const useChat = (conversationId: string) => {
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [typingUsers, setTypingUsers] = useState<Map<string, string>>(new Map());
+
+  useEffect(() => {
+    const connection = chatService.getConnection();
+    if (!connection) return;
+
+    // Yeni mesaj geldiginde
+    const handleNewMessage = (message: Message) => {
+      if (message.conversationId === conversationId) {
+        setMessages((prev) => [...prev, message]);
+      }
+    };
+
+    // Typing indicator
+    const handleTypingIndicator = (indicator: TypingIndicator) => {
+      if (indicator.conversationId === conversationId) {
+        setTypingUsers((prev) => {
+          const newMap = new Map(prev);
+          if (indicator.isTyping) {
+            newMap.set(indicator.userId, indicator.userName);
+          } else {
+            newMap.delete(indicator.userId);
+          }
+          return newMap;
+        });
+      }
+    };
+
+    // Mesaj okundu bildirimi
+    const handleMessageRead = (data: { messageId: string; readAt: string }) => {
+      setMessages((prev) =>
+        prev.map((m) =>
+          m.messageId === data.messageId ? { ...m, isRead: true, readAt: data.readAt } : m
+        )
+      );
+    };
+
+    // Event listener'lari ekle
+    connection.on('ReceiveMessage', handleNewMessage);
+    connection.on('TypingIndicator', handleTypingIndicator);
+    connection.on('MessageRead', handleMessageRead);
+
+    // Conversation'a katil
+    connection.invoke('JoinConversation', conversationId);
+
+    return () => {
+      // Cleanup
+      connection.off('ReceiveMessage', handleNewMessage);
+      connection.off('TypingIndicator', handleTypingIndicator);
+      connection.off('MessageRead', handleMessageRead);
+      connection.invoke('LeaveConversation', conversationId);
+    };
+  }, [conversationId]);
+
+  return { messages, typingUsers, setMessages };
+};
+```
+
+### Typing Indicator Gonderme
+
+```typescript
+// Typing indicator gonder (debounced olmali)
+import { LivestockTradingAPI } from '@common/livestock-api/src/api/business_modules/livestocktrading';
+import { useCallback, useRef } from 'react';
+
+const useTypingIndicator = (conversationId: string) => {
+  const typingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const sendTypingIndicator = useCallback(async (isTyping: boolean) => {
+    try {
+      await LivestockTradingAPI.Messages.SendTypingIndicator.Request({
+        conversationId,
+        isTyping,
+      });
+    } catch (error) {
+      console.error('Typing indicator gonderilemedi:', error);
+    }
+  }, [conversationId]);
+
+  const handleTyping = useCallback(() => {
+    // Typing basladiginda
+    sendTypingIndicator(true);
+
+    // Onceki timeout'u temizle
+    if (typingTimeoutRef.current) {
+      clearTimeout(typingTimeoutRef.current);
+    }
+
+    // 2 saniye sonra typing'i durdur
+    typingTimeoutRef.current = setTimeout(() => {
+      sendTypingIndicator(false);
+    }, 2000);
+  }, [sendTypingIndicator]);
+
+  return { handleTyping };
+};
+```
+
+### Online Kullanicilari Kontrol Etme
+
+```typescript
+// Online kullanicilari kontrol et
+const checkOnlineUsers = async (userIds: string[]): Promise<string[]> => {
+  const connection = chatService.getConnection();
+  if (!connection) return [];
+
+  try {
+    const onlineUsers = await connection.invoke<string[]>('GetOnlineUsers', userIds);
+    return onlineUsers;
+  } catch (error) {
+    console.error('Online kullanicilar alinamadi:', error);
+    return [];
+  }
+};
+```
+
+### Mesaj Okundu Olarak Isaretle
+
+```typescript
+// Hub uzerinden (real-time bildirim icin)
+const markMessageAsReadViaHub = async (messageId: string) => {
+  const connection = chatService.getConnection();
+  if (connection) {
+    await connection.invoke('MarkMessageAsRead', messageId);
+  }
+};
+
+// REST API uzerinden (kalici kayit icin)
+const markMessageAsRead = async (messageId: string) => {
+  await LivestockTradingAPI.Messages.Update.Request({
+    id: messageId,
+    isRead: true,
+  });
+};
+```
+
+### Mesajlasma Sayfasi Ornegi
+
+```typescript
+// pages/messages/[conversationId].tsx
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import { LivestockTradingAPI } from '@common/livestock-api/src/api/business_modules/livestocktrading';
+import { chatService } from '@/services/ChatService';
+import { useChat } from '@/hooks/useChat';
+
+export default function ConversationPage() {
+  const router = useRouter();
+  const { conversationId } = router.query as { conversationId: string };
+  const [newMessage, setNewMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const { messages, typingUsers, setMessages } = useChat(conversationId);
+  const { handleTyping } = useTypingIndicator(conversationId);
+
+  // Sayfa yuklendiginde SignalR baglan ve mevcut mesajlari yukle
+  useEffect(() => {
+    const initializeChat = async () => {
+      // SignalR baglantisi
+      await chatService.connect();
+
+      // Mevcut mesajlari yukle
+      const response = await LivestockTradingAPI.Messages.All.Request({
+        filters: [
+          {
+            key: 'conversationId',
+            type: 'equal',
+            isUsed: true,
+            values: [conversationId],
+            min: null,
+            max: null,
+            conditionType: 'and',
+          },
+        ],
+        sorting: { key: 'sentAt', direction: 1 }, // Ascending
+        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
+      });
+
+      setMessages(response.data || []);
+    };
+
+    if (conversationId) {
+      initializeChat();
+    }
+
+    return () => {
+      chatService.disconnect();
+    };
+  }, [conversationId]);
+
+  // Mesaj gonder
+  const sendMessage = async () => {
+    if (!newMessage.trim()) return;
+    setIsLoading(true);
+
+    try {
+      await LivestockTradingAPI.Messages.Create.Request({
+        conversationId,
+        content: newMessage.trim(),
+        attachmentUrls: null,
+      });
+      setNewMessage('');
+    } catch (error: any) {
+      console.error('Mesaj gonderilemedi:', error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div className="conversation-page">
+      {/* Mesaj Listesi */}
+      <div className="messages-list">
+        {messages.map((msg) => (
+          <div key={msg.messageId} className="message">
+            <strong>{msg.senderName}</strong>
+            <p>{msg.content}</p>
+            <small>{new Date(msg.sentAt).toLocaleString('tr-TR')}</small>
+          </div>
+        ))}
+      </div>
+
+      {/* Typing Indicator */}
+      {typingUsers.size > 0 && (
+        <div className="typing-indicator">
+          {Array.from(typingUsers.values()).join(', ')} yaziyor...
+        </div>
+      )}
+
+      {/* Mesaj Girisi */}
+      <div className="message-input">
+        <input
+          type="text"
+          value={newMessage}
+          onChange={(e) => {
+            setNewMessage(e.target.value);
+            handleTyping();
+          }}
+          placeholder="Mesajinizi yazin..."
+          onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
+        />
+        <button onClick={sendMessage} disabled={isLoading || !newMessage.trim()}>
+          Gonder
+        </button>
+      </div>
+    </div>
+  );
+}
+```
+
+### Push Notification (Mobil)
+
+Mobil uygulamada push notification almak icin:
+
+1. **Token Kaydi**: Uygulama acildiginda push token'i backend'e kaydedin:
+
+```typescript
+// Firebase/OneSignal token'i kaydet
+import { IAMAPI } from '@common/livestock-api/src/api/base_modules/iam';
+
+const registerPushToken = async (pushToken: string, platform: 'android' | 'ios') => {
+  await IAMAPI.Push.RegisterToken.Request({
+    pushToken,
+    platform: platform === 'android' ? 1 : 2, // Android=1, iOS=2
+    deviceInfo: 'Device model info',
+  });
+};
+```
+
+2. **Notification Handler**: Gelen push notification'lari handle edin:
+
+```typescript
+// React Native / Expo ornegi
+import messaging from '@react-native-firebase/messaging';
+
+messaging().onMessage(async (remoteMessage) => {
+  const { type, conversationId, messageId } = remoteMessage.data;
+
+  if (type === 'new_message') {
+    // Yeni mesaj bildirimi goster
+    // veya ilgili conversation'a yonlendir
+  }
+});
+```
+
+### SignalR Event'leri
+
+| Event | Yön | Açıklama |
+|-------|-----|----------|
+| `ReceiveMessage` | Server → Client | Yeni mesaj geldi |
+| `TypingIndicator` | Server → Client | Kullanici yaziyor/durdu |
+| `MessageRead` | Server → Client | Mesaj okundu |
+| `UserOnline` | Server → Client | Kullanici cevrimici oldu |
+| `UserOffline` | Server → Client | Kullanici cevrimdisi oldu |
+| `JoinConversation` | Client → Server | Conversation'a katil |
+| `LeaveConversation` | Client → Server | Conversation'dan ayril |
+| `SendTypingIndicator` | Client → Server | Typing durumu gonder |
+| `MarkMessageAsRead` | Client → Server | Mesaji okundu olarak isaretle |
+| `GetOnlineUsers` | Client → Server | Online kullanicilari sorgula |
+
+### Mesajlasma REST Endpoint'leri
+
+| Endpoint | Aciklama |
+|----------|----------|
+| `POST /livestocktrading/Conversations/Create` | Yeni konusma baslat |
+| `POST /livestocktrading/Conversations/All` | Konusma listesi |
+| `POST /livestocktrading/Conversations/Detail` | Konusma detayi |
+| `POST /livestocktrading/Messages/Create` | Mesaj gonder |
+| `POST /livestocktrading/Messages/All` | Mesaj listesi |
+| `POST /livestocktrading/Messages/Update` | Mesaji guncelle (okundu) |
+| `POST /livestocktrading/Messages/SendTypingIndicator` | Yaziyor gostergesi |
 
 ---
 
