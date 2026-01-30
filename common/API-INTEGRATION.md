@@ -14,6 +14,7 @@ Bu dokuman, GlobalLivestock backend API'si ile frontend entegrasyonunu aciklar.
 8. [Dosya Yukleme](#dosya-yukleme)
 9. [Real-Time Mesajlasma (SignalR)](#real-time-mesajlasma-signalr)
 10. [Ornek Kullanim](#ornek-kullanim)
+11. [API Referansi - Tum Endpoint'ler](#api-referansi---tum-endpointler)
 
 ---
 
@@ -1758,3 +1759,487 @@ Frontend uygulamalarinda:
 ### "hasError: true" Response
 
 Backend is mantigi hatasi. `error.message` icinde Turkce aciklama bulunur.
+
+---
+
+## API Referansi - Tum Endpoint'ler
+
+Bu bolum, platformdaki tum API endpoint'lerini, amaclarini ve kullanim senaryolarini icerir.
+
+### Modul Yapisi
+
+| Modul | Base URL | Amac |
+|-------|----------|------|
+| IAM | `/iam/` | Kimlik ve erisim yonetimi |
+| FileProvider | `/fileprovider/` | Dosya yukleme/indirme |
+| LivestockTrading | `/livestocktrading/` | Is mantigi (urunler, saticilar, mesajlasma vb.) |
+
+---
+
+## IAM Modulu (Kimlik Yonetimi)
+
+### Auth (Kimlik Dogrulama)
+
+| Endpoint | Amac | Public |
+|----------|------|--------|
+| `POST /iam/Auth/Login` | Kullanici girisi (native, google, apple) | ✓ |
+| `POST /iam/Auth/Logout` | Cikis yap, refresh token'i sil | |
+| `POST /iam/Auth/RefreshToken` | JWT token yenile | ✓ |
+| `POST /iam/Auth/RevokeRefreshToken` | Refresh token'i iptal et | |
+| `POST /iam/Auth/SendOtp` | OTP kodu gonder (telefon dogrulama) | ✓ |
+| `POST /iam/Auth/VerifyOtp` | OTP kodunu dogrula | ✓ |
+
+### User (Kullanici)
+
+| Endpoint | Amac | Public |
+|----------|------|--------|
+| `POST /iam/User/Create` | Yeni kullanici kaydi | ✓ |
+| `POST /iam/User/All` | Kullanici listesi (Admin) | |
+| `POST /iam/User/Detail` | Kullanici detayi | |
+| `POST /iam/User/Delete` | Kullanici sil | |
+| `POST /iam/User/ForgotPassword` | Sifre sifirlama emaili gonder | ✓ |
+| `POST /iam/User/ResetPassword` | Yeni sifre belirle (token ile) | ✓ |
+| `POST /iam/User/UpdatePassword` | Mevcut sifreyi degistir | |
+
+### Lokasyon
+
+| Endpoint | Amac | Public |
+|----------|------|--------|
+| `POST /iam/Countries/All` | Ulke listesi | ✓ |
+| `POST /iam/Provinces/All` | Il listesi | |
+| `POST /iam/Districts/ByProvince` | Ilce listesi (il'e gore) | |
+| `POST /iam/Neighborhoods/ByDistrict` | Mahalle listesi (ilce'ye gore) | |
+
+### Push Notification
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /iam/Push/RegisterToken` | Push token kaydet (Firebase/APNs) |
+
+---
+
+## FileProvider Modulu (Dosya Yonetimi)
+
+### Dosya Islemleri
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /fileprovider/File/Upload` | Dosya yukle |
+| `POST /fileprovider/File/Delete` | Dosya sil |
+| `POST /fileprovider/Bucket/Detail` | Bucket detayi |
+| `POST /fileprovider/Bucket/Copy` | Bucket kopyala |
+
+---
+
+## LivestockTrading Modulu (Is Mantigi)
+
+### Products (Urunler/Ilanlar)
+
+**Amac:** Hayvan, yem, tohum, makine vb. urun ilanlari yonetimi.
+
+| Endpoint | Amac | Rol |
+|----------|------|-----|
+| `POST /Products/Create` | Yeni ilan olustur | Seller |
+| `POST /Products/Update` | Ilani guncelle | Seller (sahibi) |
+| `POST /Products/Delete` | Ilani sil | Seller (sahibi) |
+| `POST /Products/All` | Ilan listesi (sayfalama, filtreleme) | Herkes |
+| `POST /Products/Detail` | Ilan detayi | Herkes |
+| `POST /Products/Pick` | Dropdown icin ilan listesi | Herkes |
+| `POST /Products/Approve` | Ilani onayla | Moderator |
+| `POST /Products/Reject` | Ilani reddet (sebep ile) | Moderator |
+
+**Ornek Kullanim:**
+```typescript
+// Ilan listesi - ulkeye gore filtreleme
+const products = await LivestockTradingAPI.Products.All.Request({
+  countryCode: 'TR', // Turkiye ilanlari
+  sorting: { key: 'createdAt', direction: 0 }, // En yeni
+  filters: [
+    { key: 'status', type: 'equal', isUsed: true, values: [1] } // Aktif
+  ],
+  pageRequest: { currentPage: 1, perPageCount: 20, listAll: false }
+});
+```
+
+### Categories (Kategoriler)
+
+**Amac:** Urun kategorileri (Buyukbas, Kucukbas, Yem, Tohum vb.)
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /Categories/All` | Kategori listesi (coklu dil destekli) |
+| `POST /Categories/Detail` | Kategori detayi |
+| `POST /Categories/Pick` | Dropdown icin kategoriler |
+| `POST /Categories/Create` | Kategori olustur (Moderator) |
+| `POST /Categories/Update` | Kategori guncelle (Moderator) |
+| `POST /Categories/Delete` | Kategori sil (Moderator) |
+
+**Ornek Kullanim:**
+```typescript
+// Kategorileri Turkce olarak getir
+const categories = await LivestockTradingAPI.Categories.All.Request({
+  languageCode: 'tr',
+  pageRequest: { currentPage: 1, perPageCount: 100, listAll: true }
+});
+```
+
+### Sellers (Saticilar)
+
+**Amac:** Satis yapan kullanicilarin profilleri, ciftlik bilgileri.
+
+| Endpoint | Amac | Rol |
+|----------|------|-----|
+| `POST /Sellers/Create` | Satici profili olustur | Buyer -> Seller |
+| `POST /Sellers/Update` | Profil guncelle | Seller (sahibi) |
+| `POST /Sellers/All` | Satici listesi | Herkes |
+| `POST /Sellers/Detail` | Satici detayi | Herkes |
+| `POST /Sellers/Verify` | Saticiyi dogrula | Moderator |
+| `POST /Sellers/Suspend` | Saticiyi askiya al | Moderator |
+
+### Transporters (Nakliyeciler)
+
+**Amac:** Hayvan tasimaciligi yapan kullanicilarin profilleri.
+
+| Endpoint | Amac | Rol |
+|----------|------|-----|
+| `POST /Transporters/Create` | Nakliyeci profili olustur | |
+| `POST /Transporters/Update` | Profil guncelle | Transporter (sahibi) |
+| `POST /Transporters/All` | Nakliyeci listesi | Herkes |
+| `POST /Transporters/Detail` | Nakliyeci detayi | Herkes |
+| `POST /Transporters/Verify` | Nakliyeciyi dogrula | Moderator |
+| `POST /Transporters/Suspend` | Nakliyeciyi askiya al | Moderator |
+
+### Farms (Ciftlikler)
+
+**Amac:** Saticilarin ciftlik bilgileri (konum, kapasite vb.)
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /Farms/Create` | Ciftlik ekle |
+| `POST /Farms/Update` | Ciftlik guncelle |
+| `POST /Farms/Delete` | Ciftlik sil |
+| `POST /Farms/All` | Ciftlik listesi |
+| `POST /Farms/Detail` | Ciftlik detayi |
+
+### Conversations & Messages (Mesajlasma)
+
+**Amac:** Alici-satici arasi mesajlasma sistemi.
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /Conversations/Create` | Yeni konusma baslat |
+| `POST /Conversations/All` | Konusma listesi |
+| `POST /Conversations/Detail` | Konusma detayi |
+| `POST /Messages/Create` | Mesaj gonder |
+| `POST /Messages/All` | Mesaj listesi |
+| `POST /Messages/Update` | Mesaji guncelle (okundu) |
+| `POST /Messages/SendTypingIndicator` | "Yaziyor..." gostergesi |
+
+**Ornek - Konusma Baslatma:**
+```typescript
+// Ilan sahibine mesaj gondermek icin konusma baslat
+const conversation = await LivestockTradingAPI.Conversations.Create.Request({
+  participantUserId2: sellerId, // Ilan sahibi
+  productId: productId,         // Ilgili ilan
+  subject: 'Ilan hakkinda soru'
+});
+
+// Mesaj gonder
+await LivestockTradingAPI.Messages.Create.Request({
+  conversationId: conversation.id,
+  content: 'Merhaba, bu ilan hala gecerli mi?',
+  attachmentUrls: null
+});
+```
+
+### Offers (Teklifler)
+
+**Amac:** Urunler icin fiyat teklifi sistemi.
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /Offers/Create` | Teklif ver |
+| `POST /Offers/Update` | Teklifi guncelle (kabul/red) |
+| `POST /Offers/All` | Teklif listesi |
+| `POST /Offers/Detail` | Teklif detayi |
+
+### Favorite Products (Favoriler)
+
+**Amac:** Kullanicilarin favori ilanlari.
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /FavoriteProducts/Create` | Favorilere ekle |
+| `POST /FavoriteProducts/Delete` | Favorilerden cikar |
+| `POST /FavoriteProducts/All` | Favori listesi |
+
+**Ornek:**
+```typescript
+// Favorilere ekle
+await LivestockTradingAPI.FavoriteProducts.Create.Request({
+  productId: 'product-uuid'
+});
+
+// Favorileri listele
+const favorites = await LivestockTradingAPI.FavoriteProducts.All.Request({
+  pageRequest: { currentPage: 1, perPageCount: 20, listAll: false }
+});
+```
+
+### Product Reviews (Urun Degerlendirmeleri)
+
+**Amac:** Urunler icin yorum ve puanlama.
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /ProductReviews/Create` | Degerlendirme yaz |
+| `POST /ProductReviews/Update` | Degerlendirme guncelle |
+| `POST /ProductReviews/Delete` | Degerlendirme sil |
+| `POST /ProductReviews/All` | Degerlendirme listesi |
+
+### Seller Reviews (Satici Degerlendirmeleri)
+
+**Amac:** Saticilara puan ve yorum.
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /SellerReviews/Create` | Satici degerlendirmesi yaz |
+| `POST /SellerReviews/All` | Satici degerlendirmeleri |
+
+### Transport System (Nakliye Sistemi)
+
+**Amac:** Hayvan nakli talep ve teklif sistemi.
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /TransportRequests/Create` | Nakliye talebi olustur |
+| `POST /TransportRequests/All` | Talepler listesi |
+| `POST /TransportOffers/Create` | Nakliye teklifi ver |
+| `POST /TransportOffers/All` | Teklifler listesi |
+| `POST /TransportTrackings/All` | Nakliye takip |
+
+### Product Media (Urun Medyalari)
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /ProductImages/Create` | Urun resmi ekle |
+| `POST /ProductImages/All` | Resim listesi |
+| `POST /ProductVideos/Create` | Urun videosu ekle |
+| `POST /ProductDocuments/Create` | Urun dokumani ekle |
+
+### Product Details (Urun Detaylari)
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /AnimalInfos/Create` | Hayvan bilgisi (irk, yas, kilo vb.) |
+| `POST /HealthRecords/Create` | Saglik kaydi |
+| `POST /Vaccinations/Create` | Asi kaydi |
+| `POST /VeterinaryInfos/Create` | Veteriner bilgisi |
+| `POST /FeedInfos/Create` | Yem bilgisi |
+| `POST /SeedInfos/Create` | Tohum bilgisi |
+| `POST /MachineryInfos/Create` | Makine bilgisi |
+| `POST /ChemicalInfos/Create` | Kimyasal bilgisi |
+
+### System (Sistem Verileri)
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /Currencies/All` | Para birimi listesi |
+| `POST /Languages/All` | Dil listesi |
+| `POST /TaxRates/All` | Vergi oranlari |
+| `POST /Banners/All` | Ana sayfa banner'lari |
+| `POST /FAQs/All` | Sikca sorulan sorular |
+| `POST /Locations/All` | Konum listesi |
+| `POST /ShippingCarriers/All` | Kargo firmalari |
+| `POST /ShippingZones/All` | Kargo bolgeleri |
+| `POST /ShippingRates/All` | Kargo ucretleri |
+| `POST /PaymentMethods/All` | Odeme yontemleri |
+
+### User Activity (Kullanici Aktiviteleri)
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /ProductViewHistories/Create` | Urun goruntulemesi kaydet |
+| `POST /SearchHistories/Create` | Arama gecmisi kaydet |
+| `POST /UserPreferences/Update` | Kullanici tercihleri guncelle |
+| `POST /Notifications/All` | Bildirim listesi |
+
+---
+
+## Endpoint Turleri ve Kullanim Kaliplari
+
+### 1. All (Listeleme)
+
+Sayfalama, siralama ve filtreleme destekler.
+
+```typescript
+const response = await API.Entity.All.Request({
+  countryCode: 'TR',                    // Ulke filtresi (opsiyonel)
+  languageCode: 'tr',                   // Dil (opsiyonel)
+  sorting: {
+    key: 'createdAt',                   // Siralama alani
+    direction: 0                        // 0: Descending, 1: Ascending
+  },
+  filters: [
+    {
+      key: 'status',
+      type: 'equal',                    // equal, contains, range
+      isUsed: true,
+      values: [1],                      // Degerler
+      min: null,
+      max: null,
+      conditionType: 'and'              // and, or
+    }
+  ],
+  pageRequest: {
+    currentPage: 1,
+    perPageCount: 20,
+    listAll: false                      // true: tum kayitlar
+  }
+});
+
+// Response
+const items = response.data;            // Kayit listesi
+const page = response.page;             // Sayfa bilgisi
+```
+
+### 2. Detail (Tekil Kayit)
+
+```typescript
+const response = await API.Entity.Detail.Request({
+  id: 'entity-uuid'
+});
+```
+
+### 3. Pick (Dropdown)
+
+Arama ve secili deger destekler.
+
+```typescript
+const response = await API.Entity.Pick.Request({
+  selectedIds: ['uuid1', 'uuid2'],      // Onceden secili degerler
+  keyword: 'ara',                        // Arama metni
+  limit: 10                              // Maksimum sonuc
+});
+```
+
+### 4. Create (Olusturma)
+
+```typescript
+const response = await API.Entity.Create.Request({
+  // Entity alanlari
+  name: 'Yeni Kayit',
+  // ...
+});
+
+console.log(response.id);               // Olusturulan kayit ID'si
+```
+
+### 5. Update (Guncelleme)
+
+```typescript
+const response = await API.Entity.Update.Request({
+  id: 'entity-uuid',
+  // Guncellenecek alanlar
+  name: 'Yeni Isim'
+});
+```
+
+### 6. Delete (Silme)
+
+```typescript
+const response = await API.Entity.Delete.Request({
+  id: 'entity-uuid'
+});
+```
+
+---
+
+## Ozel Endpoint'ler
+
+### Moderasyon (Admin/Moderator)
+
+```typescript
+// Urunu onayla
+await LivestockTradingAPI.Products.Approve.Request({ id: productId });
+
+// Urunu reddet
+await LivestockTradingAPI.Products.Reject.Request({
+  id: productId,
+  reason: 'Uygunsuz icerik'
+});
+
+// Saticiyi dogrula
+await LivestockTradingAPI.Sellers.Verify.Request({ id: sellerId });
+
+// Saticiyi askiya al
+await LivestockTradingAPI.Sellers.Suspend.Request({
+  id: sellerId,
+  reason: 'Kural ihlali'
+});
+```
+
+### Typing Indicator (Yaziyor Gostergesi)
+
+```typescript
+await LivestockTradingAPI.Messages.SendTypingIndicator.Request({
+  conversationId: 'conv-uuid',
+  isTyping: true
+});
+```
+
+---
+
+## Enum Degerleri
+
+### Product Status
+| Deger | Anlam |
+|-------|-------|
+| 0 | Draft (Taslak) |
+| 1 | Active (Aktif) |
+| 2 | Sold (Satildi) |
+| 3 | Expired (Suresi Doldu) |
+| 4 | PendingApproval (Onay Bekliyor) |
+| 5 | Approved (Onaylandi) |
+| 6 | Rejected (Reddedildi) |
+
+### Seller/Transporter Status
+| Deger | Anlam |
+|-------|-------|
+| 0 | Pending (Onay Bekliyor) |
+| 1 | Verified (Dogrulandi) |
+| 2 | Suspended (Askiya Alindi) |
+
+### Offer Status
+| Deger | Anlam |
+|-------|-------|
+| 0 | Pending (Beklemede) |
+| 1 | Accepted (Kabul Edildi) |
+| 2 | Rejected (Reddedildi) |
+| 3 | Countered (Karsi Teklif) |
+| 4 | Expired (Suresi Doldu) |
+
+### Conversation Status
+| Deger | Anlam |
+|-------|-------|
+| 0 | Active (Aktif) |
+| 1 | Archived (Arsivlendi) |
+| 2 | Blocked (Engellendi) |
+
+### Client Platform
+| Deger | Anlam |
+|-------|-------|
+| 0 | Web |
+| 1 | Mobile (Android/iOS) |
+| 2 | Service |
+
+---
+
+## API Istatistikleri
+
+| Modul | Endpoint Sayisi |
+|-------|-----------------|
+| IAM | 23 |
+| FileProvider | 7 |
+| LivestockTrading | 200+ |
+| **Toplam** | **230+** |
