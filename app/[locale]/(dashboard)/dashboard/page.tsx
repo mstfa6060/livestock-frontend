@@ -1,88 +1,141 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { DashboardLayout } from "@/components/layout/dashboard-layout";
+import { useAuth } from "@/contexts/AuthContext";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Settings } from "lucide-react";
-import { LanguageSwitcher } from "@/components/layout/language-switcher";
-
-interface User {
-  id: string;
-  username: string;
-  displayName: string;
-  email: string;
-}
+  Package,
+  Heart,
+  Eye,
+  MessageSquare,
+  TrendingUp,
+  PlusCircle,
+} from "lucide-react";
 
 export default function DashboardPage() {
-  const router = useRouter();
   const t = useTranslations("dashboard");
-  const tc = useTranslations("common");
-  const [user, setUser] = useState<User | null>(null);
+  const tn = useTranslations("dashboardNav");
+  const { user } = useAuth();
 
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (!storedUser) {
-      router.push("/login");
-      return;
-    }
-    setUser(JSON.parse(storedUser));
-  }, [router]);
-
-  const handleLogout = () => {
-    localStorage.removeItem("jwt");
-    localStorage.removeItem("accessToken");
-    localStorage.removeItem("refreshToken");
-    localStorage.removeItem("user");
-    router.push("/login");
+  // Mock stats - in production, fetch from API
+  const stats = {
+    totalListings: 5,
+    activeListings: 3,
+    totalViews: 234,
+    totalFavorites: 12,
+    unreadMessages: 3,
   };
 
-  if (!user) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p>{tc("loading")}</p>
-      </div>
-    );
-  }
-
   return (
-    <div className="min-h-screen bg-background p-6">
-      <div className="max-w-4xl mx-auto space-y-6">
-        <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-bold">{t("title")}</h1>
-          <div className="flex gap-2">
-            <LanguageSwitcher />
-            <Link href="/settings">
-              <Button variant="outline" size="icon">
-                <Settings className="w-5 h-5" />
-              </Button>
-            </Link>
-            <Button variant="outline" onClick={handleLogout}>
-              {t("logout")}
-            </Button>
-          </div>
-        </div>
+    <DashboardLayout
+      title={t("welcome", { name: user?.displayName || "" })}
+      description={t("accountInfo")}
+    >
+      {/* Quick Actions */}
+      <div className="mb-8">
+        <Button asChild>
+          <Link href="/dashboard/listings/new">
+            <PlusCircle className="h-4 w-4 mr-2" />
+            {tn("newListing")}
+          </Link>
+        </Button>
+      </div>
+
+      {/* Stats Grid */}
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-8">
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium">
+              {t("stats.totalListings")}
+            </CardTitle>
+            <Package className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{stats.totalListings}</div>
+            <p className="text-xs text-muted-foreground">
+              {stats.activeListings} {t("stats.active")}
+            </p>
+          </CardContent>
+        </Card>
 
         <Card>
-          <CardHeader>
-            <CardTitle>{t("welcome", { name: user.displayName })}</CardTitle>
-            <CardDescription>{t("accountInfo")}</CardDescription>
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium">
+              {t("stats.totalViews")}
+            </CardTitle>
+            <Eye className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
-          <CardContent className="space-y-2">
-            <p><strong>{t("username")}:</strong> {user.username}</p>
-            <p><strong>{t("email")}:</strong> {user.email}</p>
-            <p><strong>{t("id")}:</strong> {user.id}</p>
+          <CardContent>
+            <div className="text-2xl font-bold">{stats.totalViews}</div>
+            <p className="text-xs text-muted-foreground flex items-center">
+              <TrendingUp className="h-3 w-3 mr-1 text-green-500" />
+              +12% {t("stats.thisWeek")}
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium">
+              {t("stats.favorites")}
+            </CardTitle>
+            <Heart className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{stats.totalFavorites}</div>
+            <p className="text-xs text-muted-foreground">
+              {t("stats.onYourListings")}
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium">
+              {t("stats.messages")}
+            </CardTitle>
+            <MessageSquare className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{stats.unreadMessages}</div>
+            <p className="text-xs text-muted-foreground">{t("stats.unread")}</p>
           </CardContent>
         </Card>
       </div>
-    </div>
+
+      {/* Recent Activity */}
+      <div className="grid gap-4 md:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">{t("recentListings")}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-sm text-muted-foreground text-center py-8">
+              {t("noListings")}
+            </div>
+            <Button variant="outline" className="w-full" asChild>
+              <Link href="/dashboard/my-listings">{t("viewAllListings")}</Link>
+            </Button>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">{t("recentMessages")}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-sm text-muted-foreground text-center py-8">
+              {t("noMessages")}
+            </div>
+            <Button variant="outline" className="w-full" asChild>
+              <Link href="/dashboard/messages">{t("viewAllMessages")}</Link>
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    </DashboardLayout>
   );
 }

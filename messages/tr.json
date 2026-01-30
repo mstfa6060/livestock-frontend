@@ -11,7 +11,17 @@
     "back": "Geri",
     "next": "Ileri",
     "close": "Kapat",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Giris Yap",
+    "register": "Kayit Ol"
+  },
+  "header": {
+    "products": "Urunler",
+    "sellers": "Saticilar",
+    "about": "Hakkimizda",
+    "dashboard": "Panel",
+    "settings": "Ayarlar",
+    "logout": "Cikis Yap"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Dashboard",
     "welcome": "Hos geldiniz, {name}!",
-    "accountInfo": "Hesap bilgileriniz asagida goruntulenmektedir.",
+    "accountInfo": "Hesabinizin ozeti asagidadir.",
     "username": "Kullanici Adi",
     "email": "E-posta",
     "id": "ID",
-    "logout": "Cikis Yap"
+    "logout": "Cikis Yap",
+    "stats": {
+      "totalListings": "Toplam Ilan",
+      "active": "aktif",
+      "totalViews": "Toplam Goruntulenme",
+      "thisWeek": "bu hafta",
+      "favorites": "Favori",
+      "onYourListings": "ilanlarinizda",
+      "messages": "Mesaj",
+      "unread": "okunmamis"
+    },
+    "recentListings": "Son Ilanlariniz",
+    "recentMessages": "Son Mesajlar",
+    "noListings": "Henuz ilan eklemediniz",
+    "noMessages": "Henuz mesajiniz yok",
+    "noNotifications": "Henuz bildiriminiz yok",
+    "viewAllListings": "Tum Ilanlari Gor",
+    "viewAllMessages": "Tum Mesajlari Gor"
+  },
+  "dashboardNav": {
+    "overview": "Genel Bakis",
+    "myListings": "Ilanlarim",
+    "favorites": "Favorilerim",
+    "messages": "Mesajlar",
+    "notifications": "Bildirimler",
+    "profile": "Profil",
+    "settings": "Ayarlar",
+    "newListing": "Yeni Ilan Ekle"
+  },
+  "myListings": {
+    "title": "Ilanlarim",
+    "description": "Tum ilanlarinizi buradan yonetin",
+    "noListings": "Henuz ilan eklemediniz",
+    "createFirst": "Ilk Ilaninizi Olusturun",
+    "filters": {
+      "all": "Tumu",
+      "active": "Aktif",
+      "draft": "Taslak",
+      "pending": "Onay Bekliyor",
+      "sold": "Satildi"
+    },
+    "actions": {
+      "edit": "Duzenle",
+      "delete": "Sil",
+      "activate": "Aktif Et",
+      "deactivate": "Pasif Yap"
+    }
+  },
+  "favorites": {
+    "title": "Favorilerim",
+    "description": "Begendigniz urunleri buradan takip edin",
+    "noFavorites": "Henuz favori urun eklemediniz",
+    "browseProducts": "Urunlere Goz At"
   },
   "settings": {
     "title": "Ayarlar",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Dil Sec",
     "current": "Mevcut Dil"
+  },
+  "home": {
+    "hero": {
+      "title": "Canli Hayvan Ticaret Platformu",
+      "subtitle": "En guvenilir canli hayvan ticaret platformu. Buyukbas ve kucukbas hayvanlarinizi guvenle alin ve satin.",
+      "cta": "Hemen Basla",
+      "viewListings": "Ilanlari Gor"
+    },
+    "features": {
+      "secure": {
+        "title": "Guvenli Alisveris",
+        "description": "Tum islemler koruma altindadir. Satici ve alici bilgileri dogrulanmistir."
+      },
+      "variety": {
+        "title": "Genis Urun Yelpazesi",
+        "description": "Buyukbas, kucukbas ve daha fazlasi. Aradiginiz hayvani kolayca bulun."
+      },
+      "support": {
+        "title": "7/24 Destek",
+        "description": "Sorulariniz icin her zaman buradayiz. Canli destek hattimiz aktif."
+      }
+    },
+    "categories": {
+      "title": "Kategoriler",
+      "cattle": "Buyukbas",
+      "sheep": "Kucukbas",
+      "poultry": "Kumes Hayvanlari",
+      "other": "Diger"
+    },
+    "featured": {
+      "title": "One Cikan Ilanlar",
+      "viewAll": "Tumunu Gor"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Livestock Trading. Tum haklari saklidir.",
+    "about": "Hakkimizda",
+    "contact": "Iletisim",
+    "terms": "Kullanim Sartlari",
+    "privacy": "Gizlilik Politikasi"
+  },
+  "products": {
+    "title": "Urunler",
+    "search": "Urun ara...",
+    "filters": "Filtreler",
+    "sort": "Sirala",
+    "sortOptions": {
+      "newest": "En Yeni",
+      "oldest": "En Eski",
+      "priceAsc": "Fiyat (Dusukten Yuksege)",
+      "priceDesc": "Fiyat (Yuksekten Dusuge)",
+      "popular": "En Populer"
+    },
+    "status": {
+      "draft": "Taslak",
+      "active": "Aktif",
+      "sold": "Satildi",
+      "pending": "Onay Bekliyor"
+    },
+    "condition": {
+      "new": "Yeni",
+      "likeNew": "Az Kullanilmis",
+      "good": "Iyi",
+      "fair": "Orta"
+    },
+    "outOfStock": "Stokta Yok",
+    "inStock": "Stokta Var",
+    "noResults": "Urun bulunamadi",
+    "loading": "Urunler yukleniyor...",
+    "perPage": "Sayfa basina",
+    "showing": "{from}-{to} arasi, toplam {total} urun"
+  },
+  "productDetail": {
+    "addToFavorites": "Favorilere Ekle",
+    "removeFromFavorites": "Favorilerden Cikar",
+    "share": "Paylas",
+    "report": "Sikayet Et",
+    "description": "Aciklama",
+    "specifications": "Ozellikler",
+    "location": "Konum",
+    "shipping": "Kargo",
+    "shippingAvailable": "Kargo ile gonderilebilir",
+    "noShipping": "Sadece elden teslim",
+    "internationalShipping": "Uluslararasi kargo mevcut",
+    "weight": "Agirlik",
+    "stock": "Stok",
+    "inStock": "{count} adet stokta",
+    "minOrder": "Minimum siparis",
+    "maxOrder": "Maksimum siparis",
+    "publishedAt": "Yayinlanma tarihi",
+    "views": "Goruntulenme",
+    "similarProducts": "Benzer Urunler",
+    "sellerProducts": "Saticinin Diger Urunleri"
+  },
+  "seller": {
+    "title": "Satici Bilgileri",
+    "verified": "Dogrulanmis",
+    "reviews": "degerlendirme",
+    "products": "ilan",
+    "memberSince": "{year}'den beri uye",
+    "contact": "Mesaj Gonder",
+    "call": "Ara",
+    "viewProfile": "Profili Goruntule"
+  },
+  "newListing": {
+    "title": "Yeni Ilan Olustur",
+    "saveDraft": "Taslak Kaydet",
+    "publish": "Yayinla",
+    "basicInfo": "Temel Bilgiler",
+    "categoryAndCondition": "Kategori ve Durum",
+    "pricing": "Fiyatlandirma",
+    "shipping": "Kargo",
+    "images": "Gorseller",
+    "addImage": "Gorsel Ekle",
+    "maxImages": "En fazla 10 gorsel yukleyebilirsiniz",
+    "imageHint": "Minimum 1, maksimum 10 gorsel. PNG, JPG veya WEBP formatinda.",
+    "fields": {
+      "title": "Ilan Basligi",
+      "shortDescription": "Kisa Aciklama",
+      "description": "Detayli Aciklama",
+      "category": "Kategori",
+      "condition": "Urun Durumu",
+      "price": "Fiyat",
+      "stock": "Stok Adedi",
+      "unit": "Birim",
+      "shippingAvailable": "Kargo ile gonderim yapilabilir",
+      "shippingCost": "Kargo Ucreti",
+      "weight": "Agirlik",
+      "weightUnit": "Agirlik Birimi"
+    },
+    "placeholders": {
+      "title": "Ornek: 2 Yasinda Holstein Inek",
+      "shortDescription": "Urunun kisa tanimi (max 200 karakter)",
+      "description": "Urun hakkinda detayli bilgi verin...",
+      "category": "Kategori secin"
+    },
+    "success": "Ilan basariyla olusturuldu",
+    "error": "Ilan olusturulurken bir hata olustu"
   }
 }

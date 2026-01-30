@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
@@ -17,11 +17,21 @@ import {
 } from "@/components/ui/card";
 import { Eye, EyeOff } from "lucide-react";
 import { IAMAPI } from "@/api/base_modules/iam";
+import { useSelectedCountry } from "@/components/layout/country-switcher";
+
+interface Country {
+  id: number;
+  code: string;
+  name: string;
+  defaultCurrencyCode: string;
+}
 
 export default function RegisterPage() {
   const router = useRouter();
   const t = useTranslations("auth.register");
   const tc = useTranslations("common");
+  const selectedCountry = useSelectedCountry();
+  const [defaultCountry, setDefaultCountry] = useState<Country | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -34,6 +44,23 @@ export default function RegisterPage() {
     password: "",
     confirmPassword: "",
   });
+
+  // Load default country if none selected
+  useEffect(() => {
+    if (!selectedCountry) {
+      const loadDefaultCountry = async () => {
+        try {
+          const countries = await IAMAPI.Countries.All.Request({ keyword: "" });
+          // Find Turkey or use first country
+          const turkey = countries.find((c) => c.code === "TR");
+          setDefaultCountry(turkey || countries[0]);
+        } catch (error) {
+          console.error("Failed to load countries:", error);
+        }
+      };
+      loadDefaultCountry();
+    }
+  }, [selectedCountry]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -62,9 +89,9 @@ export default function RegisterPage() {
         userSource: IAMAPI.Enums.UserSources.Manual,
         description: "",
         phoneNumber: "",
-        countryId: 0,
-        language: "en",
-        preferredCurrencyCode: "USD",
+        countryId: selectedCountry?.id || defaultCountry?.id || 1,
+        language: "tr",
+        preferredCurrencyCode: selectedCountry?.defaultCurrencyCode || defaultCountry?.defaultCurrencyCode || "TRY",
       });
 
       router.push("/login");

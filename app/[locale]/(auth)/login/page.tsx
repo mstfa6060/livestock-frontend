@@ -17,12 +17,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Eye, EyeOff } from "lucide-react";
-import { IAMAPI } from "@/api/base_modules/iam";
+import { useAuth, getRememberedEmail } from "@/contexts/AuthContext";
 
 export default function LoginPage() {
   const router = useRouter();
   const t = useTranslations("auth.login");
   const tc = useTranslations("common");
+  const { login, isAuthenticated, isLoading: authLoading } = useAuth();
+
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -32,8 +34,16 @@ export default function LoginPage() {
     password: "",
   });
 
+  // Redirect if already authenticated
   useEffect(() => {
-    const savedEmail = localStorage.getItem("rememberedEmail");
+    if (!authLoading && isAuthenticated) {
+      router.push("/dashboard");
+    }
+  }, [isAuthenticated, authLoading, router]);
+
+  // Load remembered email
+  useEffect(() => {
+    const savedEmail = getRememberedEmail();
     if (savedEmail) {
       setFormData((prev) => ({ ...prev, email: savedEmail }));
       setRememberMe(true);
@@ -46,36 +56,29 @@ export default function LoginPage() {
     setError("");
 
     try {
-      const response = await IAMAPI.Auth.Login.Request({
-        provider: "native",
-        userName: formData.email,
+      await login({
+        email: formData.email,
         password: formData.password,
-        token: "",
-        platform: IAMAPI.Enums.ClientPlatforms.Web,
-        firstName: "",
-        surname: "",
-        phoneNumber: "",
-        externalProviderUserId: "",
+        rememberMe,
       });
-
-      localStorage.setItem("jwt", response.jwt);
-      localStorage.setItem("refreshToken", response.refreshToken);
-      localStorage.setItem("user", JSON.stringify(response.user));
-
-      if (rememberMe) {
-        localStorage.setItem("rememberedEmail", formData.email);
-      } else {
-        localStorage.removeItem("rememberedEmail");
-      }
-
-      router.push("/dashboard");
-    } catch (err: any) {
-      setError(err.message || t("errorDefault"));
+    } catch (err: unknown) {
+      const errorMessage =
+        err instanceof Error ? err.message : t("errorDefault");
+      setError(errorMessage);
       console.error(err);
     } finally {
       setIsLoading(false);
     }
   };
+
+  // Show loading while checking auth
+  if (authLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
@@ -134,7 +137,10 @@ export default function LoginPage() {
                   checked={rememberMe}
                   onCheckedChange={(checked) => setRememberMe(checked === true)}
                 />
-                <Label htmlFor="rememberMe" className="text-sm font-normal cursor-pointer">
+                <Label
+                  htmlFor="rememberMe"
+                  className="text-sm font-normal cursor-pointer"
+                >
                   {t("rememberMe")}
                 </Label>
               </div>
