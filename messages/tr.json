@@ -307,5 +307,29 @@
     },
     "success": "Ilan basariyla olusturuldu",
     "error": "Ilan olusturulurken bir hata olustu"
+  },
+  "fileUpload": {
+    "dragDrop": "Fotograf veya video yukleyin",
+    "dragDropHint": "Surukle-birak veya tiklayarak secin",
+    "dropHere": "Birakin...",
+    "imageLimit": "Fotograf: max 10MB",
+    "videoLimit": "Video: max 50MB",
+    "uploadCount": "{current} / {max} yuklendi",
+    "maxFilesError": "En fazla {max} medya yukleyebilirsiniz",
+    "imageTooLarge": "Fotograf 10MB'dan kucuk olmali",
+    "videoTooLarge": "Video 50MB'dan kucuk olmali",
+    "optimizing": "Optimize ediliyor...",
+    "uploading": "Yukleniyor...",
+    "queued": "Sirada bekliyor...",
+    "uploadSuccess": "{count} medya yuklendi",
+    "uploadError": "Yukleme hatasi",
+    "uploadFailed": "Yukleme basarisiz",
+    "deleted": "Medya basariyla kaldirildi",
+    "deleteError": "Medya silinemedi",
+    "setCover": "Kapak Yap",
+    "coverBadge": "KAPAK",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Kapak fotografı basariyla ayarlandi",
+    "optimizationInfo": "Fotograflar web standartlarina uygun sekilde optimize edildi"
   }
 }
