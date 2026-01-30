@@ -24,7 +24,12 @@
       "Bash(powershell -File - <<'PS1'\n[Environment]::GetEnvironmentVariable\\('PATH', 'Machine'\\) + ';' + [Environment]::GetEnvironmentVariable\\('PATH', 'User'\\)\nPS1)",
       "Bash(powershell -File:*)",
       "Bash(\"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run dev)",
-      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\npx.cmd\" next dev)"
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\npx.cmd\" next dev)",
+      "Bash(npm run translate:all:*)",
+      "Bash(git fetch:*)",
+      "Bash(git stash push:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)"
     ]
   }
 }
