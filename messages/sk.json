@@ -11,7 +11,17 @@
     "back": "Späť",
     "next": "Vpred",
     "close": "Zatvoriť",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Prihlásiť sa",
+    "register": "Registrovať"
+  },
+  "header": {
+    "products": "Produkty",
+    "sellers": "Predajcovia",
+    "about": "O nás",
+    "dashboard": "Panel",
+    "settings": "Nastavenia",
+    "logout": "Odhlásiť sa"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Prístrojová doska",
     "welcome": "Vitaj, {name}!",
-    "accountInfo": "Informácie o vašom účte sú zobrazené nižšie.",
+    "accountInfo": "Súhrn vášho účtu je uvedený nižšie.",
     "username": "Používateľské meno",
     "email": "E-mail",
     "id": "Identifikácia",
-    "logout": "Odhlásiť sa"
+    "logout": "Odhlásiť sa",
+    "stats": {
+      "totalListings": "Celkový počet reklám",
+      "active": "aktívny",
+      "totalViews": "Celkový počet zobrazení",
+      "thisWeek": "tento týždeň",
+      "favorites": "Obľúbené",
+      "onYourListings": "vo vašich reklamách",
+      "messages": "Správa",
+      "unread": "neprečítané"
+    },
+    "recentListings": "Vaše najnovšie ponuky",
+    "recentMessages": "Nedávne správy",
+    "noListings": "Zatiaľ ste nepridali žiadne reklamy.",
+    "noMessages": "Zatiaľ ste nedostali žiadne správy.",
+    "noNotifications": "Zatiaľ ste nedostali žiadne upozornenia.",
+    "viewAllListings": "Zobraziť všetky ponuky",
+    "viewAllMessages": "Zobraziť všetky správy"
+  },
+  "dashboardNav": {
+    "overview": "Prehľad",
+    "myListings": "Moje reklamy",
+    "favorites": "Moje obľúbené",
+    "messages": "Správy",
+    "notifications": "Upozornenia",
+    "profile": "Profil",
+    "settings": "Nastavenia",
+    "newListing": "Pridať nový záznam"
+  },
+  "myListings": {
+    "title": "Moje reklamy",
+    "description": "Spravujte všetky svoje záznamy odtiaľto.",
+    "noListings": "Zatiaľ ste nepridali žiadne reklamy.",
+    "createFirst": "Vytvorte si svoj prvý záznam.",
+    "filters": {
+      "all": "Všetky z nich",
+      "active": "Aktívne",
+      "draft": "Návrh",
+      "pending": "Čaká sa na schválenie",
+      "sold": "Predané"
+    },
+    "actions": {
+      "edit": "Upraviť",
+      "delete": "Odstrániť",
+      "activate": "Aktivovať",
+      "deactivate": "Pasívna štruktúra"
+    }
+  },
+  "favorites": {
+    "title": "Moje obľúbené",
+    "description": "Sledujte tu produkty, ktoré sa vám páčia.",
+    "noFavorites": "Zatiaľ ste nepridali žiadne obľúbené produkty.",
+    "browseProducts": "Prehliadať produkty"
   },
   "settings": {
     "title": "Nastavenia",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Výber jazyka",
     "current": "Aktuálny jazyk"
+  },
+  "home": {
+    "hero": {
+      "title": "Platforma pre obchodovanie so živými zvieratami",
+      "subtitle": "Najspoľahlivejšia platforma na obchodovanie so živými zvieratami. Bezpečne nakupujte a predávajte svoj dobytok a ovce.",
+      "cta": "Začať teraz",
+      "viewListings": "Zobraziť reklamy"
+    },
+    "features": {
+      "secure": {
+        "title": "Bezpečné nakupovanie",
+        "description": "Všetky transakcie sú zabezpečené. Informácie o predajcovi a kupujúcom boli overené."
+      },
+      "variety": {
+        "title": "Široký sortiment produktov",
+        "description": "Hovädzí dobytok, ovce a ďalšie. Ľahko nájdite zviera, ktoré hľadáte."
+      },
+      "support": {
+        "title": "Podpora 24 hodín denne, 7 dní v týždni",
+        "description": "Sme tu vždy pre vaše otázky. Naša linka podpory je aktívna."
+      }
+    },
+    "categories": {
+      "title": "Kategórie",
+      "cattle": "Dobytok",
+      "sheep": "Malé hospodárske zvieratá",
+      "poultry": "Hydina",
+      "other": "Iné"
+    },
+    "featured": {
+      "title": "Odporúčané reklamy",
+      "viewAll": "Zobraziť všetko"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Obchod s hospodárskymi zvieratami. Všetky práva vyhradené.",
+    "about": "O nás",
+    "contact": "Komunikácia",
+    "terms": "Podmienky používania",
+    "privacy": "Zásady ochrany osobných údajov"
+  },
+  "products": {
+    "title": "Produkty",
+    "search": "Hľadať produkty...",
+    "filters": "Filtre",
+    "sort": "Zoradiť",
+    "sortOptions": {
+      "newest": "Najnovšie",
+      "oldest": "Najstaršie",
+      "priceAsc": "Cena (od najnižšej po najvyššiu)",
+      "priceDesc": "Cena (od najvyššej po najnižšiu)",
+      "popular": "Najobľúbenejšie"
+    },
+    "status": {
+      "draft": "Návrh",
+      "active": "Aktívne",
+      "sold": "Predané",
+      "pending": "Čaká sa na schválenie"
+    },
+    "condition": {
+      "new": "Nové",
+      "likeNew": "Ľahko používané",
+      "good": "Dobré",
+      "fair": "Stred"
+    },
+    "outOfStock": "Nie je na sklade",
+    "inStock": "Na sklade",
+    "noResults": "Produkt sa nenašiel.",
+    "loading": "Produkty sa načítavajú...",
+    "perPage": "Na stránku",
+    "showing": "Celkový počet produktov {total} medzi {from} a {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Pridať k obľúbeným",
+    "removeFromFavorites": "Odstrániť z obľúbených",
+    "share": "Zdieľať",
+    "report": "Nahlásiť problém",
+    "description": "Vysvetlenie",
+    "specifications": "Funkcie",
+    "location": "Poloha",
+    "shipping": "Náklad",
+    "shippingAvailable": "Môže byť prepravené nákladom.",
+    "noShipping": "Iba ručné doručenie.",
+    "internationalShipping": "Medzinárodná doprava k dispozícii.",
+    "weight": "Hmotnosť",
+    "stock": "Sklad",
+    "inStock": "{count} položiek na sklade",
+    "minOrder": "Minimálna objednávka",
+    "maxOrder": "Maximálna objednávka",
+    "publishedAt": "Dátum vydania",
+    "views": "Zobrazené",
+    "similarProducts": "Podobné produkty",
+    "sellerProducts": "Ďalšie produkty predajcu"
+  },
+  "seller": {
+    "title": "Informácie o predajcovi",
+    "verified": "Overené",
+    "reviews": "hodnotenie",
+    "products": "reklama",
+    "memberSince": "Člen od {rok}",
+    "contact": "Odoslať správu",
+    "call": "Hľadať",
+    "viewProfile": "Zobraziť profil"
+  },
+  "newListing": {
+    "title": "Vytvoriť nový záznam",
+    "saveDraft": "Uložiť koncept",
+    "publish": "Publikovať",
+    "basicInfo": "Základné informácie",
+    "categoryAndCondition": "Kategória a stav",
+    "pricing": "Cenník",
+    "shipping": "Náklad",
+    "images": "Obrázky",
+    "addImage": "Pridať obrázok",
+    "maxImages": "Môžete nahrať maximálne 10 obrázkov.",
+    "imageHint": "Minimálne 1, maximálne 10 obrázkov. Vo formáte PNG, JPG alebo WEBP.",
+    "fields": {
+      "title": "Názov reklamy",
+      "shortDescription": "Stručný popis",
+      "description": "Podrobné vysvetlenie",
+      "category": "Kategória",
+      "condition": "Stav produktu",
+      "price": "Cena",
+      "stock": "Množstvo na sklade",
+      "unit": "Jednotka",
+      "shippingAvailable": "Doprava je k dispozícii.",
+      "shippingCost": "Poplatok za dopravu",
+      "weight": "Hmotnosť",
+      "weightUnit": "Jednotka hmotnosti"
+    },
+    "placeholders": {
+      "title": "Príklad: 2-ročná holštajnská krava",
+      "shortDescription": "Popis produktu (max. 200 znakov)",
+      "description": "Poskytnite podrobné informácie o produkte...",
+      "category": "Vyberte kategóriu."
+    },
+    "success": "Reklama bola úspešne vytvorená.",
+    "error": "Pri vytváraní reklamy sa vyskytla chyba."
   }
 }

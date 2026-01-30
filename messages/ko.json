@@ -11,7 +11,17 @@
     "back": "뒤쪽에",
     "next": "앞으로",
     "close": "닫다",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "로그인",
+    "register": "등록하다"
+  },
+  "header": {
+    "products": "제품",
+    "sellers": "판매자",
+    "about": "회사 소개",
+    "dashboard": "패널",
+    "settings": "설정",
+    "logout": "로그아웃"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "계기반",
     "welcome": "{name}님, 환영합니다!",
-    "accountInfo": "계정 정보는 아래에 표시됩니다.",
+    "accountInfo": "계정 요약 정보는 아래와 같습니다.",
     "username": "사용자 이름",
     "email": "이메일",
     "id": "ID",
-    "logout": "로그아웃"
+    "logout": "로그아웃",
+    "stats": {
+      "totalListings": "총 광고 수",
+      "active": "활동적인",
+      "totalViews": "총 조회수",
+      "thisWeek": "이번 주",
+      "favorites": "가장 좋아하는",
+      "onYourListings": "귀사의 광고에서",
+      "messages": "메시지",
+      "unread": "읽히지 않는"
+    },
+    "recentListings": "최근 등록하신 상품 목록",
+    "recentMessages": "최근 메시지",
+    "noListings": "아직 광고를 추가하지 않으셨습니다.",
+    "noMessages": "아직 메시지를 받지 못하셨습니다.",
+    "noNotifications": "아직 알림을 받지 못하셨습니다.",
+    "viewAllListings": "모든 매물 보기",
+    "viewAllMessages": "모든 메시지 보기"
+  },
+  "dashboardNav": {
+    "overview": "개요",
+    "myListings": "내 광고",
+    "favorites": "내가 좋아하는 것들",
+    "messages": "메시지",
+    "notifications": "알림",
+    "profile": "윤곽",
+    "settings": "설정",
+    "newListing": "새 상품 등록하기"
+  },
+  "myListings": {
+    "title": "내 광고",
+    "description": "여기에서 모든 상품 목록을 관리하세요.",
+    "noListings": "아직 광고를 추가하지 않으셨습니다.",
+    "createFirst": "첫 번째 상품 등록을 하세요.",
+    "filters": {
+      "all": "그들 모두",
+      "active": "활동적인",
+      "draft": "초안",
+      "pending": "승인 대기 중",
+      "sold": "판매된"
+    },
+    "actions": {
+      "edit": "편집하다",
+      "delete": "삭제",
+      "activate": "활성화",
+      "deactivate": "수동 구조"
+    }
+  },
+  "favorites": {
+    "title": "내가 좋아하는 것들",
+    "description": "마음에 드는 제품을 여기에서 팔로우하세요.",
+    "noFavorites": "아직 즐겨찾는 제품을 추가하지 않으셨습니다.",
+    "browseProducts": "제품 둘러보기"
   },
   "settings": {
     "title": "설정",
@@ -107,5 +169,143 @@
   "language": {
     "select": "언어 선택",
     "current": "현재 언어"
+  },
+  "home": {
+    "hero": {
+      "title": "살아있는 동물 거래 플랫폼",
+      "subtitle": "가장 신뢰할 수 있는 생축 거래 플랫폼. 소와 양을 안전하게 사고팔아 보세요.",
+      "cta": "지금 시작하세요",
+      "viewListings": "광고 보기"
+    },
+    "features": {
+      "secure": {
+        "title": "안전한 쇼핑",
+        "description": "모든 거래는 안전합니다. 판매자와 구매자 정보는 검증되었습니다."
+      },
+      "variety": {
+        "title": "다양한 제품군",
+        "description": "소, 양 등 다양한 동물을 쉽게 찾아보세요."
+      },
+      "support": {
+        "title": "연중무휴 24시간 지원",
+        "description": "궁금한 점이 있으시면 언제든지 문의해 주세요. 실시간 고객 지원 라인이 운영 중입니다."
+      }
+    },
+    "categories": {
+      "title": "카테고리",
+      "cattle": "가축",
+      "sheep": "소형 가축",
+      "poultry": "가금류",
+      "other": "다른"
+    },
+    "featured": {
+      "title": "추천 광고",
+      "viewAll": "모두 보기"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Livestock Trading. 모든 권리 보유.",
+    "about": "회사 소개",
+    "contact": "의사소통",
+    "terms": "이용약관",
+    "privacy": "개인정보 보호정책"
+  },
+  "products": {
+    "title": "제품",
+    "search": "제품을 검색하세요...",
+    "filters": "필터",
+    "sort": "종류",
+    "sortOptions": {
+      "newest": "최신",
+      "oldest": "가장 나이 많은",
+      "priceAsc": "가격 (낮은 가격부터 높은 가격 순)",
+      "priceDesc": "가격 (높은 가격순)",
+      "popular": "가장 인기 있는"
+    },
+    "status": {
+      "draft": "초안",
+      "active": "활동적인",
+      "sold": "판매된",
+      "pending": "승인 대기 중"
+    },
+    "condition": {
+      "new": "새로운",
+      "likeNew": "약간 사용됨",
+      "good": "좋은",
+      "fair": "가운데"
+    },
+    "outOfStock": "품절",
+    "inStock": "재고 있음",
+    "noResults": "제품을 찾을 수 없습니다.",
+    "loading": "제품을 로딩하는 중입니다...",
+    "perPage": "페이지당",
+    "showing": "{from}부터 {to}까지의 제품 총 개수는 {total}개입니다."
+  },
+  "productDetail": {
+    "addToFavorites": "즐겨찾기에 추가",
+    "removeFromFavorites": "즐겨찾기에서 제거",
+    "share": "공유하다",
+    "report": "문제 신고하기",
+    "description": "설명",
+    "specifications": "특징",
+    "location": "위치",
+    "shipping": "뱃짐",
+    "shippingAvailable": "화물로 배송 가능합니다.",
+    "noShipping": "직접 전달만 가능합니다.",
+    "internationalShipping": "국제 배송 가능합니다.",
+    "weight": "무게",
+    "stock": "재고",
+    "inStock": "{count}개 재고 있음",
+    "minOrder": "최소 주문 금액",
+    "maxOrder": "최대 주문",
+    "publishedAt": "출판일",
+    "views": "조회됨",
+    "similarProducts": "유사 제품",
+    "sellerProducts": "판매자의 다른 상품"
+  },
+  "seller": {
+    "title": "판매자 정보",
+    "verified": "확인됨",
+    "reviews": "평가",
+    "products": "광고",
+    "memberSince": "{년}년도에 회원으로 가입했습니다.",
+    "contact": "메시지 보내기",
+    "call": "찾다",
+    "viewProfile": "프로필 보기"
+  },
+  "newListing": {
+    "title": "새 상품 등록하기",
+    "saveDraft": "초안 저장",
+    "publish": "게시",
+    "basicInfo": "기본 정보",
+    "categoryAndCondition": "범주 및 상태",
+    "pricing": "가격",
+    "shipping": "뱃짐",
+    "images": "이미지",
+    "addImage": "이미지 추가",
+    "maxImages": "최대 10개의 이미지를 업로드할 수 있습니다.",
+    "imageHint": "최소 1개, 최대 10개의 이미지를 제출해 주세요. PNG, JPG 또는 WEBP 형식이어야 합니다.",
+    "fields": {
+      "title": "광고 제목",
+      "shortDescription": "간략한 설명",
+      "description": "상해",
+      "category": "범주",
+      "condition": "제품 상태",
+      "price": "가격",
+      "stock": "재고 수량",
+      "unit": "단위",
+      "shippingAvailable": "배송 가능합니다.",
+      "shippingCost": "배송비",
+      "weight": "무게",
+      "weightUnit": "무게 단위"
+    },
+    "placeholders": {
+      "title": "예시: 2살 홀스타인 암소",
+      "shortDescription": "제품 설명 (최대 200자)",
+      "description": "제품에 대한 자세한 정보를 제공해 주세요...",
+      "category": "카테고리를 선택하세요."
+    },
+    "success": "광고 제작이 성공적으로 완료되었습니다.",
+    "error": "광고 제작 중 오류가 발생했습니다."
   }
 }

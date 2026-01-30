@@ -11,7 +11,17 @@
     "back": "Tilbage",
     "next": "Forward",
     "close": "Tæt",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Log ind",
+    "register": "Register"
+  },
+  "header": {
+    "products": "Produkter",
+    "sellers": "Sælgere",
+    "about": "Om os",
+    "dashboard": "Panel",
+    "settings": "Indstillinger",
+    "logout": "Log ud"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Dashboard",
     "welcome": "Velkommen, {navn}!",
-    "accountInfo": "Dine kontooplysninger vises nedenfor.",
+    "accountInfo": "Dit kontooverblik er vist nedenfor.",
     "username": "Brugernavn",
     "email": "E-mail",
     "id": "ID",
-    "logout": "Log ud"
+    "logout": "Log ud",
+    "stats": {
+      "totalListings": "Samlede annoncer",
+      "active": "aktiv",
+      "totalViews": "Samlede visninger",
+      "thisWeek": "denne uge",
+      "favorites": "Favorit",
+      "onYourListings": "i dine annoncer",
+      "messages": "Besked",
+      "unread": "ulæst"
+    },
+    "recentListings": "Dine seneste annoncer",
+    "recentMessages": "Seneste beskeder",
+    "noListings": "Du har ikke tilføjet nogen annoncer endnu.",
+    "noMessages": "Du har ikke modtaget en besked endnu.",
+    "noNotifications": "Du har endnu ikke modtaget nogen notifikationer.",
+    "viewAllListings": "Se alle annoncer",
+    "viewAllMessages": "Se alle beskeder"
+  },
+  "dashboardNav": {
+    "overview": "Oversigt",
+    "myListings": "Mine annoncer",
+    "favorites": "Mine favoritter",
+    "messages": "Beskeder",
+    "notifications": "Notifikationer",
+    "profile": "Profil",
+    "settings": "Indstillinger",
+    "newListing": "Tilføj ny fortegnelse"
+  },
+  "myListings": {
+    "title": "Mine annoncer",
+    "description": "Administrer alle dine annoncer herfra.",
+    "noListings": "Du har ikke tilføjet nogen annoncer endnu.",
+    "createFirst": "Opret din første annonce.",
+    "filters": {
+      "all": "Alle af dem",
+      "active": "Aktiv",
+      "draft": "Udkast",
+      "pending": "Venter på godkendelse",
+      "sold": "Solgt"
+    },
+    "actions": {
+      "edit": "Redigere",
+      "delete": "Slet",
+      "activate": "Aktivér",
+      "deactivate": "Passiv struktur"
+    }
+  },
+  "favorites": {
+    "title": "Mine favoritter",
+    "description": "Følg de produkter, du kan lide her.",
+    "noFavorites": "Du har ikke tilføjet nogen favoritprodukter endnu.",
+    "browseProducts": "Gennemse produkter"
   },
   "settings": {
     "title": "Indstillinger",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Valg af sprog",
     "current": "Nuværende sprog"
+  },
+  "home": {
+    "hero": {
+      "title": "Platform til handel med levende dyr",
+      "subtitle": "Den mest pålidelige platform til handel med levende dyr. Køb og sælg dit kvæg og får sikkert.",
+      "cta": "Start nu",
+      "viewListings": "Se annoncer"
+    },
+    "features": {
+      "secure": {
+        "title": "Sikker shopping",
+        "description": "Alle transaktioner er sikre. Sælger- og køberoplysninger er blevet verificeret."
+      },
+      "variety": {
+        "title": "Bredt produktsortiment",
+        "description": "Kvæg, får og meget mere. Find nemt det dyr, du leder efter."
+      },
+      "support": {
+        "title": "24/7 support",
+        "description": "Vi er altid her for dine spørgsmål. Vores live supportlinje er aktiv."
+      }
+    },
+    "categories": {
+      "title": "Kategorier",
+      "cattle": "Kvæg",
+      "sheep": "Små husdyr",
+      "poultry": "Fjerkræ",
+      "other": "Andre"
+    },
+    "featured": {
+      "title": "Fremhævede annoncer",
+      "viewAll": "Se alle"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Husdyrhandel. Alle rettigheder forbeholdes.",
+    "about": "Om os",
+    "contact": "Meddelelse",
+    "terms": "Brugsbetingelser",
+    "privacy": "Privatlivspolitik"
+  },
+  "products": {
+    "title": "Produkter",
+    "search": "Søg efter produkter...",
+    "filters": "Filtre",
+    "sort": "Sortere",
+    "sortOptions": {
+      "newest": "Seneste",
+      "oldest": "Ældste",
+      "priceAsc": "Pris (fra lav til høj)",
+      "priceDesc": "Pris (høj til lav)",
+      "popular": "Mest populære"
+    },
+    "status": {
+      "draft": "Udkast",
+      "active": "Aktiv",
+      "sold": "Solgt",
+      "pending": "Venter på godkendelse"
+    },
+    "condition": {
+      "new": "Ny",
+      "likeNew": "Let brugt",
+      "good": "God",
+      "fair": "Midt"
+    },
+    "outOfStock": "Udsolgt",
+    "inStock": "På lager",
+    "noResults": "Produktet blev ikke fundet.",
+    "loading": "Indlæser produkter...",
+    "perPage": "Pr. side",
+    "showing": "Det samlede antal produkter fra {total} mellem {from} og {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Føj til favoritter",
+    "removeFromFavorites": "Fjern fra favoritter",
+    "share": "Dele",
+    "report": "Rapportér et problem",
+    "description": "Forklaring",
+    "specifications": "Funktioner",
+    "location": "Beliggenhed",
+    "shipping": "Last",
+    "shippingAvailable": "Kan sendes med fragt.",
+    "noShipping": "Kun håndlevering.",
+    "internationalShipping": "International forsendelse tilgængelig.",
+    "weight": "Vægt",
+    "stock": "Lager",
+    "inStock": "{count} varer på lager",
+    "minOrder": "Minimumsbestilling",
+    "maxOrder": "Maksimal ordre",
+    "publishedAt": "Udgivelsesdato",
+    "views": "Set",
+    "similarProducts": "Lignende produkter",
+    "sellerProducts": "Sælgers andre produkter"
+  },
+  "seller": {
+    "title": "Sælgeroplysninger",
+    "verified": "Bekræftet",
+    "reviews": "evaluering",
+    "products": "annonce",
+    "memberSince": "Medlem siden {år}",
+    "contact": "Send besked",
+    "call": "Søge",
+    "viewProfile": "Se profil"
+  },
+  "newListing": {
+    "title": "Opret ny fortegnelse",
+    "saveDraft": "Gem kladde",
+    "publish": "Offentliggøre",
+    "basicInfo": "Grundlæggende oplysninger",
+    "categoryAndCondition": "Kategori og status",
+    "pricing": "Priser",
+    "shipping": "Last",
+    "images": "Billeder",
+    "addImage": "Tilføj billede",
+    "maxImages": "Du kan maksimalt uploade 10 billeder.",
+    "imageHint": "Minimum 1, maksimum 10 billeder. I PNG-, JPG- eller WEBP-format.",
+    "fields": {
+      "title": "Annoncetitel",
+      "shortDescription": "Kort beskrivelse",
+      "description": "Detaljeret forklaring",
+      "category": "Kategori",
+      "condition": "Produktstatus",
+      "price": "Pris",
+      "stock": "Lagerbeholdning",
+      "unit": "Enhed",
+      "shippingAvailable": "Forsendelse er tilgængelig.",
+      "shippingCost": "Forsendelsesgebyr",
+      "weight": "Vægt",
+      "weightUnit": "Vægtenhed"
+    },
+    "placeholders": {
+      "title": "Eksempel: 2-årig Holstein-ko",
+      "shortDescription": "Produktbeskrivelse (maks. 200 tegn)",
+      "description": "Giv detaljerede oplysninger om produktet...",
+      "category": "Vælg en kategori."
+    },
+    "success": "Annoncen blev oprettet.",
+    "error": "Der opstod en fejl under oprettelsen af annoncen."
   }
 }

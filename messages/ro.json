@@ -11,7 +11,17 @@
     "back": "Spate",
     "next": "Redirecţiona",
     "close": "Aproape",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Log in",
+    "register": "Registru"
+  },
+  "header": {
+    "products": "Produse",
+    "sellers": "Vânzători",
+    "about": "Despre noi",
+    "dashboard": "Panou",
+    "settings": "Setări",
+    "logout": "Deconectare"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Bord",
     "welcome": "Bun venit, {name}!",
-    "accountInfo": "Informațiile contului dvs. sunt afișate mai jos.",
+    "accountInfo": "Rezumatul contului dvs. este mai jos.",
     "username": "Nume de utilizator",
     "email": "E-mail",
     "id": "ID-ul",
-    "logout": "Deconectare"
+    "logout": "Deconectare",
+    "stats": {
+      "totalListings": "Total anunțuri",
+      "active": "activ",
+      "totalViews": "Vizualizări totale",
+      "thisWeek": "în această săptămână",
+      "favorites": "Favorit",
+      "onYourListings": "în reclamele dvs.",
+      "messages": "Mesaj",
+      "unread": "necitit"
+    },
+    "recentListings": "Ultimele tale anunțuri",
+    "recentMessages": "Mesaje recente",
+    "noListings": "Nu ați adăugat încă nicio reclamă.",
+    "noMessages": "Nu ai primit încă un mesaj.",
+    "noNotifications": "Nu ai primit încă nicio notificare.",
+    "viewAllListings": "Vezi toate anunțurile",
+    "viewAllMessages": "Vizualizați toate mesajele"
+  },
+  "dashboardNav": {
+    "overview": "Prezentare generală",
+    "myListings": "Anunțurile mele",
+    "favorites": "Preferatele mele",
+    "messages": "Mesaje",
+    "notifications": "Notificări",
+    "profile": "Profil",
+    "settings": "Setări",
+    "newListing": "Adăugați o listă nouă"
+  },
+  "myListings": {
+    "title": "Anunțurile mele",
+    "description": "Gestionează toate anunțurile tale de aici.",
+    "noListings": "Nu ați adăugat încă nicio reclamă.",
+    "createFirst": "Creează-ți prima listare.",
+    "filters": {
+      "all": "Toți",
+      "active": "Activ",
+      "draft": "Proiect",
+      "pending": "În așteptarea aprobării",
+      "sold": "Vândut"
+    },
+    "actions": {
+      "edit": "Edita",
+      "delete": "Şterge",
+      "activate": "Activa",
+      "deactivate": "Structură pasivă"
+    }
+  },
+  "favorites": {
+    "title": "Preferatele mele",
+    "description": "Urmărește produsele care îți plac aici.",
+    "noFavorites": "Nu ați adăugat încă niciun produs preferat.",
+    "browseProducts": "Răsfoiți produsele"
   },
   "settings": {
     "title": "Setări",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Selectarea limbii",
     "current": "Limba curentă"
+  },
+  "home": {
+    "hero": {
+      "title": "Platformă de comercializare a animalelor vii",
+      "subtitle": "Cea mai fiabilă platformă de tranzacționare cu animale vii. Cumpără și vinde-ți bovinele și oile în siguranță.",
+      "cta": "Începeți acum",
+      "viewListings": "Vizualizați anunțurile"
+    },
+    "features": {
+      "secure": {
+        "title": "Cumpărături securizate",
+        "description": "Toate tranzacțiile sunt securizate. Informațiile vânzătorului și cumpărătorului au fost verificate."
+      },
+      "variety": {
+        "title": "Gamă largă de produse",
+        "description": "Bovine, ovine și multe altele. Găsiți cu ușurință animalul pe care îl căutați."
+      },
+      "support": {
+        "title": "Asistență 24/7",
+        "description": "Suntem mereu aici pentru întrebările dumneavoastră. Linia noastră de asistență live este activă."
+      }
+    },
+    "categories": {
+      "title": "Categorii",
+      "cattle": "Bovine",
+      "sheep": "Animale mici",
+      "poultry": "Păsări de curte",
+      "other": "Alte"
+    },
+    "featured": {
+      "title": "Anunțuri recomandate",
+      "viewAll": "Vezi tot"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Livestock Trading. Toate drepturile rezervate.",
+    "about": "Despre noi",
+    "contact": "Comunicare",
+    "terms": "Termeni de utilizare",
+    "privacy": "Politica de confidențialitate"
+  },
+  "products": {
+    "title": "Produse",
+    "search": "Căutați produse...",
+    "filters": "Filtre",
+    "sort": "Sorta",
+    "sortOptions": {
+      "newest": "Cele mai recente",
+      "oldest": "Cel mai vechi",
+      "priceAsc": "Preț (de la mic la mare)",
+      "priceDesc": "Preț (de la cel mare la cel mic)",
+      "popular": "Cele mai populare"
+    },
+    "status": {
+      "draft": "Proiect",
+      "active": "Activ",
+      "sold": "Vândut",
+      "pending": "În așteptarea aprobării"
+    },
+    "condition": {
+      "new": "Nou",
+      "likeNew": "Ușor folosit",
+      "good": "Bun",
+      "fair": "Mijloc"
+    },
+    "outOfStock": "Epuizat",
+    "inStock": "În stoc",
+    "noResults": "Produs negăsit.",
+    "loading": "Produsele sunt încărcate...",
+    "perPage": "Pe pagină",
+    "showing": "Totalul de {total} produse între {from} și {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Adaugă la favorite",
+    "removeFromFavorites": "Eliminare din Favorite",
+    "share": "Distribuie",
+    "report": "Raportați o problemă",
+    "description": "Explicaţie",
+    "specifications": "Caracteristici",
+    "location": "Locaţie",
+    "shipping": "Marfă",
+    "shippingAvailable": "Poate fi transportat prin cargo.",
+    "noShipping": "Doar livrare personală.",
+    "internationalShipping": "Livrare internațională disponibilă.",
+    "weight": "Greutate",
+    "stock": "Stoc",
+    "inStock": "{count} articole în stoc",
+    "minOrder": "Comandă minimă",
+    "maxOrder": "Comandă maximă",
+    "publishedAt": "Data publicării",
+    "views": "Vizualizat",
+    "similarProducts": "Produse similare",
+    "sellerProducts": "Alte produse ale vânzătorului"
+  },
+  "seller": {
+    "title": "Informații despre vânzător",
+    "verified": "Verificat",
+    "reviews": "evaluare",
+    "products": "reclamă",
+    "memberSince": "Membru din {anul}",
+    "contact": "Trimite mesaj",
+    "call": "Căutare",
+    "viewProfile": "Vizualizare profil"
+  },
+  "newListing": {
+    "title": "Creați o listă nouă",
+    "saveDraft": "Salvați schița",
+    "publish": "Publica",
+    "basicInfo": "Informații de bază",
+    "categoryAndCondition": "Categorie și statut",
+    "pricing": "Prețuri",
+    "shipping": "Marfă",
+    "images": "Imagini",
+    "addImage": "Adăugați o imagine",
+    "maxImages": "Puteți încărca maximum 10 imagini.",
+    "imageHint": "Minim 1, maxim 10 imagini. În format PNG, JPG sau WEBP.",
+    "fields": {
+      "title": "Titlul reclamei",
+      "shortDescription": "Scurtă descriere",
+      "description": "Explicație detaliată",
+      "category": "Categorie",
+      "condition": "Starea produsului",
+      "price": "Preţ",
+      "stock": "Cantitate stoc",
+      "unit": "Unitate",
+      "shippingAvailable": "Livrarea este disponibilă.",
+      "shippingCost": "Taxă de livrare",
+      "weight": "Greutate",
+      "weightUnit": "Unitate de greutate"
+    },
+    "placeholders": {
+      "title": "Exemplu: Vacă Holstein de 2 ani",
+      "shortDescription": "Descrierea produsului (maxim 200 de caractere)",
+      "description": "Furnizați informații detaliate despre produs...",
+      "category": "Selectați o categorie."
+    },
+    "success": "Reclama a fost creată cu succes.",
+    "error": "A apărut o eroare la crearea reclamei."
   }
 }

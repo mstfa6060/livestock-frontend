@@ -11,7 +11,17 @@
     "back": "Takaisin",
     "next": "Eteenpäin",
     "close": "Lähellä",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Kirjaudu sisään",
+    "register": "Rekisteröidy"
+  },
+  "header": {
+    "products": "Tuotteet",
+    "sellers": "Myyjät",
+    "about": "Tietoa meistä",
+    "dashboard": "Paneeli",
+    "settings": "Asetukset",
+    "logout": "Kirjaudu ulos"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Kojelauta",
     "welcome": "Tervetuloa, {nimi}!",
-    "accountInfo": "Tilisi tiedot näkyvät alla.",
+    "accountInfo": "Tilisi yhteenveto on alla.",
     "username": "Käyttäjänimi",
     "email": "Sähköposti",
     "id": "Henkilöllisyystodistus",
-    "logout": "Kirjaudu ulos"
+    "logout": "Kirjaudu ulos",
+    "stats": {
+      "totalListings": "Mainoksia yhteensä",
+      "active": "aktiivinen",
+      "totalViews": "Katselukertoja yhteensä",
+      "thisWeek": "tällä viikolla",
+      "favorites": "Suosikki",
+      "onYourListings": "mainoksissasi",
+      "messages": "Viesti",
+      "unread": "lukematon"
+    },
+    "recentListings": "Viimeisimmät ilmoituksesi",
+    "recentMessages": "Viimeisimmät viestit",
+    "noListings": "Et ole vielä lisännyt mainoksia.",
+    "noMessages": "Et ole vielä saanut viestiä.",
+    "noNotifications": "Et ole vielä saanut ilmoituksia.",
+    "viewAllListings": "Näytä kaikki ilmoitukset",
+    "viewAllMessages": "Näytä kaikki viestit"
+  },
+  "dashboardNav": {
+    "overview": "Yleiskatsaus",
+    "myListings": "Mainokseni",
+    "favorites": "Suosikkini",
+    "messages": "Viestit",
+    "notifications": "Ilmoitukset",
+    "profile": "Profiili",
+    "settings": "Asetukset",
+    "newListing": "Lisää uusi ilmoitus"
+  },
+  "myListings": {
+    "title": "Mainokseni",
+    "description": "Hallinnoi kaikkia ilmoituksiasi täältä.",
+    "noListings": "Et ole vielä lisännyt mainoksia.",
+    "createFirst": "Luo ensimmäinen ilmoituksesi.",
+    "filters": {
+      "all": "Kaikki ne",
+      "active": "Aktiivinen",
+      "draft": "Luonnos",
+      "pending": "Odotetaan hyväksyntää",
+      "sold": "Myyty"
+    },
+    "actions": {
+      "edit": "Muokata",
+      "delete": "Poistaa",
+      "activate": "Aktivoida",
+      "deactivate": "Passiivinen rakenne"
+    }
+  },
+  "favorites": {
+    "title": "Suosikkini",
+    "description": "Seuraa täällä tuotteita, joista pidät.",
+    "noFavorites": "Et ole vielä lisännyt suosikkituotteita.",
+    "browseProducts": "Selaa tuotteita"
   },
   "settings": {
     "title": "Asetukset",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Kielen valinta",
     "current": "Nykyinen kieli"
+  },
+  "home": {
+    "hero": {
+      "title": "Elävien eläinten kauppapaikka",
+      "subtitle": "Luotettavin elävien eläinten kauppapaikka. Osta ja myy nautoja ja lampaita turvallisesti.",
+      "cta": "Aloita nyt",
+      "viewListings": "Näytä mainokset"
+    },
+    "features": {
+      "secure": {
+        "title": "Turvallinen ostaminen",
+        "description": "Kaikki tapahtumat ovat turvallisia. Myyjän ja ostajan tiedot on vahvistettu."
+      },
+      "variety": {
+        "title": "Laaja tuotevalikoima",
+        "description": "Nautakarja, lampaat ja paljon muuta. Löydä etsimäsi eläin helposti."
+      },
+      "support": {
+        "title": "24/7-tuki",
+        "description": "Olemme aina valmiita vastaamaan kysymyksiisi. Live-tukilinjamme on aktiivinen."
+      }
+    },
+    "categories": {
+      "title": "Luokat",
+      "cattle": "Nautakarja",
+      "sheep": "Pienet karjaeläimet",
+      "poultry": "Siipikarja",
+      "other": "Muut"
+    },
+    "featured": {
+      "title": "Mainosten esittely",
+      "viewAll": "Katso kaikki"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Karjakauppa. Kaikki oikeudet pidätetään.",
+    "about": "Tietoa meistä",
+    "contact": "Viestintä",
+    "terms": "Käyttöehdot",
+    "privacy": "Tietosuojakäytäntö"
+  },
+  "products": {
+    "title": "Tuotteet",
+    "search": "Hae tuotteita...",
+    "filters": "Suodattimet",
+    "sort": "Järjestellä",
+    "sortOptions": {
+      "newest": "Uusin",
+      "oldest": "Vanhin",
+      "priceAsc": "Hinta (alhaisesta korkeimpaan)",
+      "priceDesc": "Hinta (korkeimmasta matalimmaiseen)",
+      "popular": "Suosituimmat"
+    },
+    "status": {
+      "draft": "Luonnos",
+      "active": "Aktiivinen",
+      "sold": "Myyty",
+      "pending": "Odotetaan hyväksyntää"
+    },
+    "condition": {
+      "new": "Uusi",
+      "likeNew": "Vähällä käytöllä",
+      "good": "Hyvä",
+      "fair": "Keskimmäinen"
+    },
+    "outOfStock": "Loppu varastosta",
+    "inStock": "Varastossa",
+    "noResults": "Tuotetta ei löytynyt.",
+    "loading": "Tuotteita ladataan...",
+    "perPage": "Sivua kohden",
+    "showing": "Tuotteiden kokonaismäärä {total} välillä {from} ja {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Lisää suosikkeihin",
+    "removeFromFavorites": "Poista suosikeista",
+    "share": "Jakaa",
+    "report": "Ilmoita ongelmasta",
+    "description": "Selitys",
+    "specifications": "Ominaisuudet",
+    "location": "Sijainti",
+    "shipping": "Rahti",
+    "shippingAvailable": "Voidaan kuljettaa rahtina.",
+    "noShipping": "Vain käsintoimitus.",
+    "internationalShipping": "Kansainvälinen toimitus saatavilla.",
+    "weight": "Paino",
+    "stock": "Varasto",
+    "inStock": "{count} tuotetta varastossa",
+    "minOrder": "Minimitilaus",
+    "maxOrder": "Maksimitilaus",
+    "publishedAt": "Julkaisupäivämäärä",
+    "views": "Katsottu",
+    "similarProducts": "Samankaltaisia tuotteita",
+    "sellerProducts": "Myyjän muut tuotteet"
+  },
+  "seller": {
+    "title": "Myyjän tiedot",
+    "verified": "Vahvistettu",
+    "reviews": "arviointi",
+    "products": "mainos",
+    "memberSince": "Jäsen vuodesta {year}",
+    "contact": "Lähetä viesti",
+    "call": "Haku",
+    "viewProfile": "Näytä profiili"
+  },
+  "newListing": {
+    "title": "Luo uusi ilmoitus",
+    "saveDraft": "Tallenna luonnos",
+    "publish": "Julkaista",
+    "basicInfo": "Perustiedot",
+    "categoryAndCondition": "Luokka ja tila",
+    "pricing": "Hinnoittelu",
+    "shipping": "Rahti",
+    "images": "Kuvat",
+    "addImage": "Lisää kuva",
+    "maxImages": "Voit ladata enintään 10 kuvaa.",
+    "imageHint": "Vähintään 1, enintään 10 kuvaa. PNG-, JPG- tai WEBP-muodossa.",
+    "fields": {
+      "title": "Mainoksen otsikko",
+      "shortDescription": "Lyhyt kuvaus",
+      "description": "Yksityiskohtainen selitys",
+      "category": "Kategoria",
+      "condition": "Tuotteen tila",
+      "price": "Hinta",
+      "stock": "Varastomäärä",
+      "unit": "Yksikkö",
+      "shippingAvailable": "Toimitus on saatavilla.",
+      "shippingCost": "Toimitusmaksu",
+      "weight": "Paino",
+      "weightUnit": "Painoyksikkö"
+    },
+    "placeholders": {
+      "title": "Esimerkki: 2-vuotias holsteinlehmä",
+      "shortDescription": "Tuotekuvaus (enintään 200 merkkiä)",
+      "description": "Anna tarkempia tietoja tuotteesta...",
+      "category": "Valitse kategoria."
+    },
+    "success": "Mainos luotiin onnistuneesti.",
+    "error": "Mainoksen luomisessa tapahtui virhe."
   }
 }

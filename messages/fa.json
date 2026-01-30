@@ -11,7 +11,17 @@
     "back": "برگشت",
     "next": "به جلو",
     "close": "بستن",
-    "emailPlaceholder": "ornek@mail.com"
+    "emailPlaceholder": "ornek@mail.com",
+    "login": "ورود",
+    "register": "ثبت نام"
+  },
+  "header": {
+    "products": "محصولات",
+    "sellers": "فروشندگان",
+    "about": "درباره ما",
+    "dashboard": "پنل",
+    "settings": "تنظیمات",
+    "logout": "خروج"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "داشبورد",
     "welcome": "خوش آمدید، {name}!",
-    "accountInfo": "اطلاعات حساب شما در زیر نمایش داده می‌شود.",
+    "accountInfo": "خلاصه حساب شما در زیر آمده است.",
     "username": "نام کاربری",
     "email": "ایمیل",
     "id": "شناسه",
-    "logout": "خروج"
+    "logout": "خروج",
+    "stats": {
+      "totalListings": "کل تبلیغات",
+      "active": "فعال",
+      "totalViews": "کل بازدیدها",
+      "thisWeek": "این هفته",
+      "favorites": "مورد علاقه",
+      "onYourListings": "در تبلیغات شما",
+      "messages": "پیام",
+      "unread": "خوانده نشده"
+    },
+    "recentListings": "آخرین آگهی‌های شما",
+    "recentMessages": "پیام‌های اخیر",
+    "noListings": "شما هنوز هیچ تبلیغی اضافه نکرده‌اید.",
+    "noMessages": "هنوز پیامی دریافت نکرده‌اید.",
+    "noNotifications": "شما هنوز هیچ اعلانی دریافت نکرده‌اید.",
+    "viewAllListings": "مشاهده همه آگهی‌ها",
+    "viewAllMessages": "مشاهده همه پیام‌ها"
+  },
+  "dashboardNav": {
+    "overview": "نمای کلی",
+    "myListings": "آگهی‌های من",
+    "favorites": "مورد علاقه‌های من",
+    "messages": "پیام‌ها",
+    "notifications": "اعلان‌ها",
+    "profile": "پروفایل",
+    "settings": "تنظیمات",
+    "newListing": "افزودن آگهی جدید"
+  },
+  "myListings": {
+    "title": "آگهی‌های من",
+    "description": "تمام آگهی‌های خود را از اینجا مدیریت کنید.",
+    "noListings": "شما هنوز هیچ تبلیغی اضافه نکرده‌اید.",
+    "createFirst": "اولین فهرست خود را ایجاد کنید.",
+    "filters": {
+      "all": "همه آنها",
+      "active": "فعال",
+      "draft": "پیش نویس",
+      "pending": "در انتظار تأیید",
+      "sold": "فروخته شد"
+    },
+    "actions": {
+      "edit": "ویرایش",
+      "delete": "حذف",
+      "activate": "فعال کردن",
+      "deactivate": "ساختار غیرفعال"
+    }
+  },
+  "favorites": {
+    "title": "مورد علاقه‌های من",
+    "description": "محصولاتی که دوست دارید را اینجا دنبال کنید.",
+    "noFavorites": "شما هنوز هیچ محصول مورد علاقه‌ای اضافه نکرده‌اید.",
+    "browseProducts": "مرور محصولات"
   },
   "settings": {
     "title": "تنظیمات",
@@ -107,5 +169,143 @@
   "language": {
     "select": "انتخاب زبان",
     "current": "زبان فعلی"
+  },
+  "home": {
+    "hero": {
+      "title": "پلتفرم معاملات حیوانات زنده",
+      "subtitle": "مطمئن‌ترین پلتفرم خرید و فروش حیوانات زنده. گاو و گوسفند خود را با خیال راحت بخرید و بفروشید.",
+      "cta": "همین حالا شروع کنید",
+      "viewListings": "مشاهده تبلیغات"
+    },
+    "features": {
+      "secure": {
+        "title": "خرید امن",
+        "description": "تمام تراکنش‌ها امن هستند. اطلاعات فروشنده و خریدار تأیید شده است."
+      },
+      "variety": {
+        "title": "طیف گسترده محصولات",
+        "description": "گاو، گوسفند و غیره. به راحتی حیوان مورد نظر خود را پیدا کنید."
+      },
+      "support": {
+        "title": "پشتیبانی 24 ساعته",
+        "description": "ما همیشه برای سوالات شما اینجا هستیم. خط پشتیبانی زنده ما فعال است."
+      }
+    },
+    "categories": {
+      "title": "دسته‌ها",
+      "cattle": "گاو",
+      "sheep": "دام‌های کوچک",
+      "poultry": "مرغداری",
+      "other": "دیگر"
+    },
+    "featured": {
+      "title": "آگهی‌های ویژه",
+      "viewAll": "همه را ببینید"
+    }
+  },
+  "footer": {
+    "copyright": "© ۲۰۲۵ تجارت دام. تمامی حقوق محفوظ است.",
+    "about": "درباره ما",
+    "contact": "ارتباطات",
+    "terms": "شرایط استفاده",
+    "privacy": "سیاست حفظ حریم خصوصی"
+  },
+  "products": {
+    "title": "محصولات",
+    "search": "جستجوی محصولات ...",
+    "filters": "فیلترها",
+    "sort": "مرتب سازی",
+    "sortOptions": {
+      "newest": "جدیدترین‌ها",
+      "oldest": "قدیمی‌ترین",
+      "priceAsc": "قیمت (از پایین به بالا)",
+      "priceDesc": "قیمت (از بالا به پایین)",
+      "popular": "محبوب‌ترین‌ها"
+    },
+    "status": {
+      "draft": "پیش نویس",
+      "active": "فعال",
+      "sold": "فروخته شد",
+      "pending": "در انتظار تأیید"
+    },
+    "condition": {
+      "new": "جدید",
+      "likeNew": "کم استفاده شده",
+      "good": "خوب",
+      "fair": "میانه"
+    },
+    "outOfStock": "موجود نیست",
+    "inStock": "موجود در انبار",
+    "noResults": "محصول یافت نشد.",
+    "loading": "در حال بارگیری محصولات...",
+    "perPage": "به ازای هر صفحه",
+    "showing": "مجموع {total} محصولات بین {from} و {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "افزودن به علاقه‌مندی‌ها",
+    "removeFromFavorites": "حذف از موارد دلخواه",
+    "share": "اشتراک گذاری",
+    "report": "گزارش مشکل",
+    "description": "توضیح",
+    "specifications": "ویژگی‌ها",
+    "location": "مکان",
+    "shipping": "محموله",
+    "shippingAvailable": "قابل ارسال با باربری.",
+    "noShipping": "فقط تحویل حضوری.",
+    "internationalShipping": "حمل و نقل بین المللی موجود است.",
+    "weight": "وزن",
+    "stock": "سهام",
+    "inStock": "{count} اقلام موجود در انبار",
+    "minOrder": "حداقل سفارش",
+    "maxOrder": "حداکثر سفارش",
+    "publishedAt": "تاریخ انتشار",
+    "views": "مشاهده شده",
+    "similarProducts": "محصولات مشابه",
+    "sellerProducts": "سایر محصولات فروشنده"
+  },
+  "seller": {
+    "title": "اطلاعات فروشنده",
+    "verified": "تأیید شده",
+    "reviews": "ارزیابی",
+    "products": "آگهی",
+    "memberSince": "عضو از {سال}",
+    "contact": "ارسال پیام",
+    "call": "جستجو",
+    "viewProfile": "مشاهده پروفایل"
+  },
+  "newListing": {
+    "title": "ایجاد آگهی جدید",
+    "saveDraft": "ذخیره پیش‌نویس",
+    "publish": "منتشر کردن",
+    "basicInfo": "اطلاعات پایه",
+    "categoryAndCondition": "دسته بندی و وضعیت",
+    "pricing": "قیمت‌گذاری",
+    "shipping": "محموله",
+    "images": "تصاویر",
+    "addImage": "افزودن تصویر",
+    "maxImages": "شما می‌توانید حداکثر ۱۰ تصویر آپلود کنید.",
+    "imageHint": "حداقل ۱، حداکثر ۱۰ تصویر. با فرمت PNG، JPG یا WEBP.",
+    "fields": {
+      "title": "عنوان آگهی",
+      "shortDescription": "شرح مختصر",
+      "description": "توضیح مفصل",
+      "category": "دسته بندی",
+      "condition": "وضعیت محصول",
+      "price": "قیمت",
+      "stock": "مقدار موجودی",
+      "unit": "واحد",
+      "shippingAvailable": "ارسال موجود است.",
+      "shippingCost": "هزینه ارسال",
+      "weight": "وزن",
+      "weightUnit": "واحد وزن"
+    },
+    "placeholders": {
+      "title": "مثال: گاو هلشتاین ۲ ساله",
+      "shortDescription": "توضیحات محصول (حداکثر ۲۰۰ کاراکتر)",
+      "description": "ارائه اطلاعات دقیق در مورد محصول ...",
+      "category": "یک دسته بندی انتخاب کنید."
+    },
+    "success": "آگهی با موفقیت ایجاد شد.",
+    "error": "هنگام ایجاد آگهی خطایی رخ داد."
   }
 }

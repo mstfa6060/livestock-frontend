@@ -11,7 +11,17 @@
     "back": "خلف",
     "next": "إلى الأمام",
     "close": "يغلق",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "تسجيل الدخول",
+    "register": "يسجل"
+  },
+  "header": {
+    "products": "منتجات",
+    "sellers": "البائعون",
+    "about": "معلومات عنا",
+    "dashboard": "لوحة",
+    "settings": "إعدادات",
+    "logout": "تسجيل الخروج"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "لوحة التحكم",
     "welcome": "أهلاً وسهلاً، {الاسم}!",
-    "accountInfo": "معلومات حسابك معروضة أدناه.",
+    "accountInfo": "ملخص حسابك موجود أدناه.",
     "username": "اسم المستخدم",
     "email": "بريد إلكتروني",
     "id": "بطاقة تعريف",
-    "logout": "تسجيل الخروج"
+    "logout": "تسجيل الخروج",
+    "stats": {
+      "totalListings": "إجمالي الإعلانات",
+      "active": "نشيط",
+      "totalViews": "إجمالي المشاهدات",
+      "thisWeek": ".هذا الاسبوع",
+      "favorites": "مفضل",
+      "onYourListings": "في إعلاناتك",
+      "messages": "رسالة",
+      "unread": "غير مقروء"
+    },
+    "recentListings": "أحدث قوائمك",
+    "recentMessages": "الرسائل الأخيرة",
+    "noListings": "لم تقم بإضافة أي إعلانات حتى الآن.",
+    "noMessages": "لم تتلق رسالة بعد.",
+    "noNotifications": "لم تتلق أي إشعارات حتى الآن.",
+    "viewAllListings": "عرض جميع القوائم",
+    "viewAllMessages": "عرض جميع الرسائل"
+  },
+  "dashboardNav": {
+    "overview": "ملخص",
+    "myListings": "إعلاناتي",
+    "favorites": "مفضلاتي",
+    "messages": "رسائل",
+    "notifications": "إشعارات",
+    "profile": "حساب تعريفي",
+    "settings": "إعدادات",
+    "newListing": "إضافة إعلان جديد"
+  },
+  "myListings": {
+    "title": "إعلاناتي",
+    "description": "يمكنك إدارة جميع قوائمك من هنا.",
+    "noListings": "لم تقم بإضافة أي إعلانات حتى الآن.",
+    "createFirst": "أنشئ أول إعلان لك.",
+    "filters": {
+      "all": "جميعهم",
+      "active": "نشيط",
+      "draft": "مسودة",
+      "pending": "في انتظار الموافقة",
+      "sold": "مُباع"
+    },
+    "actions": {
+      "edit": "يحرر",
+      "delete": "يمسح",
+      "activate": "فعل",
+      "deactivate": "البنية المبنية للمجهول"
+    }
+  },
+  "favorites": {
+    "title": "مفضلاتي",
+    "description": "تابع المنتجات التي تعجبك هنا.",
+    "noFavorites": "لم تقم بإضافة أي منتجات مفضلة حتى الآن.",
+    "browseProducts": "تصفح المنتجات"
   },
   "settings": {
     "title": "إعدادات",
@@ -107,5 +169,143 @@
   "language": {
     "select": "اختيار اللغة",
     "current": "اللغة الحالية"
+  },
+  "home": {
+    "hero": {
+      "title": "منصة تداول الحيوانات الحية",
+      "subtitle": "المنصة الأكثر موثوقية لتجارة الحيوانات الحية. اشترِ وبِع أبقارك وأغنامك بأمان.",
+      "cta": "ابدأ الآن",
+      "viewListings": "عرض الإعلانات"
+    },
+    "features": {
+      "secure": {
+        "title": "تسوق آمن",
+        "description": "جميع المعاملات آمنة. تم التحقق من معلومات البائع والمشتري."
+      },
+      "variety": {
+        "title": "مجموعة منتجات واسعة",
+        "description": "الماشية والأغنام وغيرها. اعثر بسهولة على الحيوان الذي تبحث عنه."
+      },
+      "support": {
+        "title": "دعم متوفر على مدار الساعة طوال أيام الأسبوع",
+        "description": "نحن هنا دائماً للإجابة على استفساراتكم. خط الدعم المباشر لدينا متاح."
+      }
+    },
+    "categories": {
+      "title": "فئات",
+      "cattle": "الماشية",
+      "sheep": "الماشية الصغيرة",
+      "poultry": "دواجن",
+      "other": "آخر"
+    },
+    "featured": {
+      "title": "الإعلانات المميزة",
+      "viewAll": "عرض الكل"
+    }
+  },
+  "footer": {
+    "copyright": "© ٢٠٢٥ تجارة المواشي. جميع الحقوق محفوظة.",
+    "about": "معلومات عنا",
+    "contact": "تواصل",
+    "terms": "شروط الاستخدام",
+    "privacy": "سياسة الخصوصية"
+  },
+  "products": {
+    "title": "منتجات",
+    "search": "ابحث عن المنتجات...",
+    "filters": "الفلاتر",
+    "sort": "نوع",
+    "sortOptions": {
+      "newest": "أحدث",
+      "oldest": "الأقدم",
+      "priceAsc": "السعر (من الأدنى إلى الأعلى)",
+      "priceDesc": "السعر (من الأعلى إلى الأدنى)",
+      "popular": "الأكثر شعبية"
+    },
+    "status": {
+      "draft": "مسودة",
+      "active": "نشيط",
+      "sold": "مُباع",
+      "pending": "في انتظار الموافقة"
+    },
+    "condition": {
+      "new": "جديد",
+      "likeNew": "مستعمل استعمالاً خفيفاً",
+      "good": "جيد",
+      "fair": "وسط"
+    },
+    "outOfStock": "إنتهى من المخزن",
+    "inStock": "في الأوراق المالية",
+    "noResults": "المنتج غير موجود.",
+    "loading": "يتم تحميل المنتجات...",
+    "perPage": "لكل صفحة",
+    "showing": "إجمالي المنتجات {الإجمالي} بين {من} و {إلى}."
+  },
+  "productDetail": {
+    "addToFavorites": "أضف إلى المفضلة",
+    "removeFromFavorites": "إزالة من المفضلة",
+    "share": "يشارك",
+    "report": "الإبلاغ عن مشكلة",
+    "description": "توضيح",
+    "specifications": "سمات",
+    "location": "موقع",
+    "shipping": "شحنة",
+    "shippingAvailable": "يمكن شحنها عن طريق الشحن الجوي.",
+    "noShipping": "التسليم باليد فقط.",
+    "internationalShipping": "تتوفر خدمة الشحن الدولي.",
+    "weight": "وزن",
+    "stock": "مخزون",
+    "inStock": "{count} عنصرًا متوفرًا في المخزون",
+    "minOrder": "الحد الأدنى للطلب",
+    "maxOrder": "الحد الأقصى للطلب",
+    "publishedAt": "تاريخ النشر",
+    "views": "تمت المشاهدة",
+    "similarProducts": "منتجات مماثلة",
+    "sellerProducts": "منتجات أخرى للبائع"
+  },
+  "seller": {
+    "title": "معلومات البائع",
+    "verified": "تم التحقق",
+    "reviews": "تقييم",
+    "products": "إعلان",
+    "memberSince": "عضو منذ {year}",
+    "contact": "إرسال رسالة",
+    "call": "يبحث",
+    "viewProfile": "عرض الملف الشخصي"
+  },
+  "newListing": {
+    "title": "إنشاء قائمة جديدة",
+    "saveDraft": "حفظ المسودة",
+    "publish": "انشر",
+    "basicInfo": "معلومات أساسية",
+    "categoryAndCondition": "الفئة والحالة",
+    "pricing": "التسعير",
+    "shipping": "شحنة",
+    "images": "صور",
+    "addImage": "إضافة صورة",
+    "maxImages": "يمكنك تحميل 10 صور كحد أقصى.",
+    "imageHint": "الحد الأدنى صورة واحدة، والحد الأقصى عشر صور. بصيغة PNG أو JPG أو WEBP.",
+    "fields": {
+      "title": "عنوان الإعلان",
+      "shortDescription": "وصف موجز",
+      "description": "شرح مفصل",
+      "category": "فئة",
+      "condition": "حالة المنتج",
+      "price": "سعر",
+      "stock": "كمية المخزون",
+      "unit": "وحدة",
+      "shippingAvailable": "تتوفر خدمة الشحن.",
+      "shippingCost": "رسوم الشحن",
+      "weight": "وزن",
+      "weightUnit": "وحدة الوزن"
+    },
+    "placeholders": {
+      "title": "مثال: بقرة هولشتاين عمرها سنتان",
+      "shortDescription": "وصف المنتج (بحد أقصى 200 حرف)",
+      "description": "قدّم معلومات مفصلة عن المنتج...",
+      "category": "اختر فئة."
+    },
+    "success": "تم إنشاء الإعلان بنجاح.",
+    "error": "حدث خطأ أثناء إنشاء الإعلان."
   }
 }

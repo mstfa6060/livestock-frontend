@@ -11,7 +11,17 @@
     "back": "Nazaj",
     "next": "Naprej",
     "close": "Zapri",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Prijava",
+    "register": "Registracija"
+  },
+  "header": {
+    "products": "Izdelki",
+    "sellers": "Prodajalci",
+    "about": "O nas",
+    "dashboard": "Panel",
+    "settings": "Nastavitve",
+    "logout": "Odjava"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Nadzorna plošča",
     "welcome": "Dobrodošel/dobrodošla, {name}!",
-    "accountInfo": "Podatki o vašem računu so prikazani spodaj.",
+    "accountInfo": "Povzetek vašega računa je spodaj.",
     "username": "Uporabniško ime",
     "email": "E-pošta",
     "id": "Osebna izkaznica",
-    "logout": "Odjava"
+    "logout": "Odjava",
+    "stats": {
+      "totalListings": "Skupaj oglasov",
+      "active": "aktiven",
+      "totalViews": "Skupno število ogledov",
+      "thisWeek": "ta teden",
+      "favorites": "Priljubljeno",
+      "onYourListings": "v vaših oglasih",
+      "messages": "Sporočilo",
+      "unread": "neprebrano"
+    },
+    "recentListings": "Vaši najnovejši oglasi",
+    "recentMessages": "Nedavna sporočila",
+    "noListings": "Še niste dodali nobenega oglasa.",
+    "noMessages": "Še niste prejeli sporočila.",
+    "noNotifications": "Še niste prejeli nobenih obvestil.",
+    "viewAllListings": "Ogled vseh oglasov",
+    "viewAllMessages": "Ogled vseh sporočil"
+  },
+  "dashboardNav": {
+    "overview": "Pregled",
+    "myListings": "Moji oglasi",
+    "favorites": "Moji favoriti",
+    "messages": "Sporočila",
+    "notifications": "Obvestila",
+    "profile": "Profil",
+    "settings": "Nastavitve",
+    "newListing": "Dodaj nov oglas"
+  },
+  "myListings": {
+    "title": "Moji oglasi",
+    "description": "Upravljajte vse svoje oglase od tukaj.",
+    "noListings": "Še niste dodali nobenega oglasa.",
+    "createFirst": "Ustvarite svoj prvi vnos.",
+    "filters": {
+      "all": "Vsi oni",
+      "active": "Aktivno",
+      "draft": "Osnutek",
+      "pending": "Čaka na odobritev",
+      "sold": "Prodano"
+    },
+    "actions": {
+      "edit": "Uredi",
+      "delete": "Izbriši",
+      "activate": "Aktiviraj",
+      "deactivate": "Pasivna struktura"
+    }
+  },
+  "favorites": {
+    "title": "Moji favoriti",
+    "description": "Sledite izdelkom, ki so vam všeč, tukaj.",
+    "noFavorites": "Še niste dodali nobenega priljubljenega izdelka.",
+    "browseProducts": "Brskaj po izdelkih"
   },
   "settings": {
     "title": "Nastavitve",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Izbira jezika",
     "current": "Trenutni jezik"
+  },
+  "home": {
+    "hero": {
+      "title": "Platforma za trgovanje z živimi živalmi",
+      "subtitle": "Najbolj zanesljiva platforma za trgovanje z živimi živalmi. Varno kupujte in prodajajte svoje govedo in ovce.",
+      "cta": "Začni zdaj",
+      "viewListings": "Ogled oglasov"
+    },
+    "features": {
+      "secure": {
+        "title": "Varno nakupovanje",
+        "description": "Vse transakcije so varne. Podatki o prodajalcu in kupcu so bili preverjeni."
+      },
+      "variety": {
+        "title": "Široka paleta izdelkov",
+        "description": "Govedo, ovce in drugo. Z lahkoto poiščite žival, ki jo iščete."
+      },
+      "support": {
+        "title": "Podpora 24/7",
+        "description": "Vedno smo vam na voljo za vaša vprašanja. Naša linija za podporo v živo je aktivna."
+      }
+    },
+    "categories": {
+      "title": "Kategorije",
+      "cattle": "Govedo",
+      "sheep": "Majhna živina",
+      "poultry": "Perutnina",
+      "other": "Drugo"
+    },
+    "featured": {
+      "title": "Izbrani oglasi",
+      "viewAll": "Prikaži vse"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Trgovanje z živino. Vse pravice pridržane.",
+    "about": "O nas",
+    "contact": "Komunikacija",
+    "terms": "Pogoji uporabe",
+    "privacy": "Pravilnik o zasebnosti"
+  },
+  "products": {
+    "title": "Izdelki",
+    "search": "Iskanje izdelkov ...",
+    "filters": "Filtri",
+    "sort": "Razvrsti",
+    "sortOptions": {
+      "newest": "Najnovejše",
+      "oldest": "Najstarejši",
+      "priceAsc": "Cena (od najnižje do najvišje)",
+      "priceDesc": "Cena (od najvišje do najnižje)",
+      "popular": "Najbolj priljubljeno"
+    },
+    "status": {
+      "draft": "Osnutek",
+      "active": "Aktivno",
+      "sold": "Prodano",
+      "pending": "Čaka na odobritev"
+    },
+    "condition": {
+      "new": "Novo",
+      "likeNew": "Malo rabljeno",
+      "good": "Dobro",
+      "fair": "Srednji"
+    },
+    "outOfStock": "Ni na zalogi",
+    "inStock": "Na zalogi",
+    "noResults": "Izdelka ni bilo mogoče najti.",
+    "loading": "Nalaganje izdelkov ...",
+    "perPage": "Na stran",
+    "showing": "Skupno število izdelkov {total} med {from} in {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Dodaj med priljubljene",
+    "removeFromFavorites": "Odstrani iz priljubljenih",
+    "share": "Deli",
+    "report": "Prijavi težavo",
+    "description": "Razlaga",
+    "specifications": "Značilnosti",
+    "location": "Lokacija",
+    "shipping": "Tovor",
+    "shippingAvailable": "Lahko se pošlje s tovorom.",
+    "noShipping": "Samo osebna dostava.",
+    "internationalShipping": "Na voljo mednarodna dostava.",
+    "weight": "Teža",
+    "stock": "Zaloga",
+    "inStock": "{count} artiklov na zalogi",
+    "minOrder": "Minimalno naročilo",
+    "maxOrder": "Največje naročilo",
+    "publishedAt": "Datum objave",
+    "views": "Ogledano",
+    "similarProducts": "Podobni izdelki",
+    "sellerProducts": "Drugi izdelki prodajalca"
+  },
+  "seller": {
+    "title": "Podatki o prodajalcu",
+    "verified": "Preverjeno",
+    "reviews": "vrednotenje",
+    "products": "oglas",
+    "memberSince": "Član od {year}",
+    "contact": "Pošlji sporočilo",
+    "call": "Iskanje",
+    "viewProfile": "Ogled profila"
+  },
+  "newListing": {
+    "title": "Ustvari nov oglas",
+    "saveDraft": "Shrani osnutek",
+    "publish": "Objavi",
+    "basicInfo": "Osnovne informacije",
+    "categoryAndCondition": "Kategorija in stanje",
+    "pricing": "Cenik",
+    "shipping": "Tovor",
+    "images": "Slike",
+    "addImage": "Dodaj sliko",
+    "maxImages": "Naložite lahko največ 10 slik.",
+    "imageHint": "Najmanj 1, največ 10 slik. V formatu PNG, JPG ali WEBP.",
+    "fields": {
+      "title": "Naslov oglasa",
+      "shortDescription": "Kratek opis",
+      "description": "Podrobna razlaga",
+      "category": "Kategorija",
+      "condition": "Stanje izdelka",
+      "price": "Cena",
+      "stock": "Količina zaloge",
+      "unit": "Enota",
+      "shippingAvailable": "Dostava je na voljo.",
+      "shippingCost": "Stroški pošiljanja",
+      "weight": "Teža",
+      "weightUnit": "Enota teže"
+    },
+    "placeholders": {
+      "title": "Primer: 2-letna holštajnska krava",
+      "shortDescription": "Opis izdelka (največ 200 znakov)",
+      "description": "Navedite podrobne informacije o izdelku ...",
+      "category": "Izberite kategorijo."
+    },
+    "success": "Oglas je bil uspešno ustvarjen.",
+    "error": "Pri ustvarjanju oglasa je prišlo do napake."
   }
 }

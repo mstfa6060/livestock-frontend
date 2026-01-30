@@ -11,7 +11,17 @@
     "back": "Zurück",
     "next": "Nach vorne",
     "close": "Schließen",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Einloggen",
+    "register": "Registrieren"
+  },
+  "header": {
+    "products": "Produkte",
+    "sellers": "Verkäufer",
+    "about": "Über uns",
+    "dashboard": "Panel",
+    "settings": "Einstellungen",
+    "logout": "Abmelden"
   },
   "auth": {
     "login": {
@@ -47,7 +57,7 @@
       "title": "Ich habe mein Passwort vergessen.",
       "description": "Geben Sie Ihre E-Mail-Adresse ein, und wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts.",
       "submit": "Link zum Zurücksetzen senden",
-      "submitting": "Senden...",
+      "submitting": "Wird gesendet...",
       "backToLogin": "Zurück zur Startseite",
       "successTitle": "E-Mail gesendet",
       "successDescription": "Der Link zum Zurücksetzen Ihres Passworts wurde an Ihre E-Mail-Adresse gesendet. Bitte überprüfen Sie Ihren Posteingang.",
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Armaturenbrett",
     "welcome": "Willkommen, {name}!",
-    "accountInfo": "Ihre Kontoinformationen werden unten angezeigt.",
+    "accountInfo": "Ihre Kontoübersicht finden Sie unten.",
     "username": "Benutzername",
     "email": "E-Mail",
     "id": "AUSWEIS",
-    "logout": "Abmelden"
+    "logout": "Abmelden",
+    "stats": {
+      "totalListings": "Gesamtanzeigen",
+      "active": "aktiv",
+      "totalViews": "Gesamtaufrufe",
+      "thisWeek": "diese Woche",
+      "favorites": "Favorit",
+      "onYourListings": "in Ihren Anzeigen",
+      "messages": "Nachricht",
+      "unread": "ungelesen"
+    },
+    "recentListings": "Ihre neuesten Angebote",
+    "recentMessages": "Neueste Nachrichten",
+    "noListings": "Sie haben noch keine Anzeigen hinzugefügt.",
+    "noMessages": "Sie haben noch keine Nachricht erhalten.",
+    "noNotifications": "Sie haben noch keine Benachrichtigungen erhalten.",
+    "viewAllListings": "Alle Angebote ansehen",
+    "viewAllMessages": "Alle Nachrichten anzeigen"
+  },
+  "dashboardNav": {
+    "overview": "Überblick",
+    "myListings": "Meine Anzeigen",
+    "favorites": "Meine Favoriten",
+    "messages": "Nachrichten",
+    "notifications": "Benachrichtigungen",
+    "profile": "Profil",
+    "settings": "Einstellungen",
+    "newListing": "Neuen Eintrag hinzufügen"
+  },
+  "myListings": {
+    "title": "Meine Anzeigen",
+    "description": "Verwalten Sie alle Ihre Angebote von hier aus.",
+    "noListings": "Sie haben noch keine Anzeigen hinzugefügt.",
+    "createFirst": "Erstellen Sie Ihren ersten Eintrag.",
+    "filters": {
+      "all": "Alle",
+      "active": "Aktiv",
+      "draft": "Entwurf",
+      "pending": "Genehmigung ausstehend",
+      "sold": "Verkauft"
+    },
+    "actions": {
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "activate": "Aktivieren",
+      "deactivate": "Passive Struktur"
+    }
+  },
+  "favorites": {
+    "title": "Meine Favoriten",
+    "description": "Folgen Sie hier den Produkten, die Ihnen gefallen.",
+    "noFavorites": "Sie haben noch keine Lieblingsprodukte hinzugefügt.",
+    "browseProducts": "Produkte durchsuchen"
   },
   "settings": {
     "title": "Einstellungen",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Sprachauswahl",
     "current": "Aktuelle Sprache"
+  },
+  "home": {
+    "hero": {
+      "title": "Plattform für den Handel mit lebenden Tieren",
+      "subtitle": "Die zuverlässigste Plattform für den Handel mit lebenden Tieren. Kaufen und verkaufen Sie Ihre Rinder und Schafe sicher.",
+      "cta": "Jetzt starten",
+      "viewListings": "Anzeigen ansehen"
+    },
+    "features": {
+      "secure": {
+        "title": "Sicher einkaufen",
+        "description": "Alle Transaktionen sind sicher. Die Angaben von Verkäufer und Käufer wurden überprüft."
+      },
+      "variety": {
+        "title": "Breites Produktsortiment",
+        "description": "Rinder, Schafe und mehr. Finden Sie ganz einfach das Tier, das Sie suchen."
+      },
+      "support": {
+        "title": "24/7-Support",
+        "description": "Wir sind jederzeit für Ihre Fragen da. Unsere Live-Support-Hotline ist aktiv."
+      }
+    },
+    "categories": {
+      "title": "Kategorien",
+      "cattle": "Vieh",
+      "sheep": "Kleinvieh",
+      "poultry": "Geflügel",
+      "other": "Andere"
+    },
+    "featured": {
+      "title": "Hervorgehobene Anzeigen",
+      "viewAll": "Alle anzeigen"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Viehhandel. Alle Rechte vorbehalten.",
+    "about": "Über uns",
+    "contact": "Kommunikation",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutzrichtlinie"
+  },
+  "products": {
+    "title": "Produkte",
+    "search": "Produkte suchen...",
+    "filters": "Filter",
+    "sort": "Sortieren",
+    "sortOptions": {
+      "newest": "Letzte",
+      "oldest": "Älteste",
+      "priceAsc": "Preis (von niedrig nach hoch)",
+      "priceDesc": "Preis (höchster bis niedrigster Wert)",
+      "popular": "Am beliebtesten"
+    },
+    "status": {
+      "draft": "Entwurf",
+      "active": "Aktiv",
+      "sold": "Verkauft",
+      "pending": "Genehmigung ausstehend"
+    },
+    "condition": {
+      "new": "Neu",
+      "likeNew": "Leicht gebraucht",
+      "good": "Gut",
+      "fair": "Mitte"
+    },
+    "outOfStock": "Nicht vorrätig",
+    "inStock": "Auf Lager",
+    "noResults": "Produkt nicht gefunden.",
+    "loading": "Produkte werden geladen...",
+    "perPage": "Pro Seite",
+    "showing": "Die Summe aller Produkte zwischen {von} und {bis}."
+  },
+  "productDetail": {
+    "addToFavorites": "Zu Favoriten hinzufügen",
+    "removeFromFavorites": "Aus Favoriten entfernen",
+    "share": "Aktie",
+    "report": "Problem melden",
+    "description": "Erläuterung",
+    "specifications": "Merkmale",
+    "location": "Standort",
+    "shipping": "Ladung",
+    "shippingAvailable": "Kann per Fracht versendet werden.",
+    "noShipping": "Nur persönliche Zustellung.",
+    "internationalShipping": "Internationaler Versand möglich.",
+    "weight": "Gewicht",
+    "stock": "Aktie",
+    "inStock": "{count} Artikel auf Lager",
+    "minOrder": "Mindestbestellwert",
+    "maxOrder": "Maximale Ordnung",
+    "publishedAt": "Veröffentlichungsdatum",
+    "views": "Angesehen",
+    "similarProducts": "Ähnliche Produkte",
+    "sellerProducts": "Weitere Produkte des Verkäufers"
+  },
+  "seller": {
+    "title": "Angaben zum Verkäufer",
+    "verified": "Bestätigt",
+    "reviews": "Auswertung",
+    "products": "Anzeige",
+    "memberSince": "Mitglied seit {Jahr}",
+    "contact": "Nachricht senden",
+    "call": "Suchen",
+    "viewProfile": "Profil ansehen"
+  },
+  "newListing": {
+    "title": "Neuen Eintrag erstellen",
+    "saveDraft": "Entwurf speichern",
+    "publish": "Veröffentlichen",
+    "basicInfo": "Grundlegende Informationen",
+    "categoryAndCondition": "Kategorie und Status",
+    "pricing": "Preisgestaltung",
+    "shipping": "Ladung",
+    "images": "Bilder",
+    "addImage": "Bild hinzufügen",
+    "maxImages": "Sie können maximal 10 Bilder hochladen.",
+    "imageHint": "Mindestens 1, maximal 10 Bilder. Im PNG-, JPG- oder WEBP-Format.",
+    "fields": {
+      "title": "Werbetitel",
+      "shortDescription": "Kurzbeschreibung",
+      "description": "Detaillierte Erklärung",
+      "category": "Kategorie",
+      "condition": "Produktstatus",
+      "price": "Preis",
+      "stock": "Lagerbestand",
+      "unit": "Einheit",
+      "shippingAvailable": "Versand ist möglich.",
+      "shippingCost": "Versandkosten",
+      "weight": "Gewicht",
+      "weightUnit": "Gewichtseinheit"
+    },
+    "placeholders": {
+      "title": "Beispiel: 2-jährige Holstein-Kuh",
+      "shortDescription": "Produktbeschreibung (max. 200 Zeichen)",
+      "description": "Geben Sie detaillierte Informationen zum Produkt an...",
+      "category": "Wählen Sie eine Kategorie."
+    },
+    "success": "Die Anzeige wurde erfolgreich erstellt.",
+    "error": "Beim Erstellen der Anzeige ist ein Fehler aufgetreten."
   }
 }

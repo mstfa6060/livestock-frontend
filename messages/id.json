@@ -11,7 +11,17 @@
     "back": "Kembali",
     "next": "Maju",
     "close": "Menutup",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Masuk",
+    "register": "Daftar"
+  },
+  "header": {
+    "products": "Produk",
+    "sellers": "Penjual",
+    "about": "Tentang Kami",
+    "dashboard": "Panel",
+    "settings": "Pengaturan",
+    "logout": "Keluar"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Dasbor",
     "welcome": "Selamat datang, {nama}!",
-    "accountInfo": "Informasi akun Anda ditampilkan di bawah ini.",
+    "accountInfo": "Ringkasan akun Anda ada di bawah ini.",
     "username": "Nama belakang",
     "email": "E-mail",
     "id": "PENGENAL",
-    "logout": "Keluar"
+    "logout": "Keluar",
+    "stats": {
+      "totalListings": "Total Iklan",
+      "active": "aktif",
+      "totalViews": "Jumlah Tayangan Total",
+      "thisWeek": "minggu ini",
+      "favorites": "Favorit",
+      "onYourListings": "dalam iklan Anda",
+      "messages": "Pesan",
+      "unread": "belum dibaca"
+    },
+    "recentListings": "Daftar Terbaru Anda",
+    "recentMessages": "Pesan Terbaru",
+    "noListings": "Anda belum menambahkan iklan apa pun.",
+    "noMessages": "Anda belum menerima pesan.",
+    "noNotifications": "Anda belum menerima notifikasi apa pun.",
+    "viewAllListings": "Lihat Semua Daftar",
+    "viewAllMessages": "Lihat semua pesan"
+  },
+  "dashboardNav": {
+    "overview": "Ringkasan",
+    "myListings": "Iklan saya",
+    "favorites": "Favoritku",
+    "messages": "Pesan",
+    "notifications": "Pemberitahuan",
+    "profile": "Profil",
+    "settings": "Pengaturan",
+    "newListing": "Tambahkan Daftar Baru"
+  },
+  "myListings": {
+    "title": "Iklan saya",
+    "description": "Kelola semua daftar properti Anda dari sini.",
+    "noListings": "Anda belum menambahkan iklan apa pun.",
+    "createFirst": "Buat daftar properti pertama Anda.",
+    "filters": {
+      "all": "Mereka semua",
+      "active": "Aktif",
+      "draft": "Draf",
+      "pending": "Menunggu Persetujuan",
+      "sold": "Terjual"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Menghapus",
+      "activate": "Mengaktifkan",
+      "deactivate": "Struktur Pasif"
+    }
+  },
+  "favorites": {
+    "title": "Favoritku",
+    "description": "Ikuti produk yang Anda sukai di sini.",
+    "noFavorites": "Anda belum menambahkan produk favorit apa pun.",
+    "browseProducts": "Telusuri Produk"
   },
   "settings": {
     "title": "Pengaturan",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Pemilihan Bahasa",
     "current": "Bahasa Saat Ini"
+  },
+  "home": {
+    "hero": {
+      "title": "Platform Perdagangan Hewan Hidup",
+      "subtitle": "Platform perdagangan hewan hidup paling andal. Beli dan jual sapi dan domba Anda dengan aman.",
+      "cta": "Mulai Sekarang",
+      "viewListings": "Lihat Iklan"
+    },
+    "features": {
+      "secure": {
+        "title": "Belanja Aman",
+        "description": "Semua transaksi aman. Informasi penjual dan pembeli telah diverifikasi."
+      },
+      "variety": {
+        "title": "Ragam Produk yang Luas",
+        "description": "Sapi, domba, dan lainnya. Temukan hewan yang Anda cari dengan mudah."
+      },
+      "support": {
+        "title": "Dukungan 24/7",
+        "description": "Kami selalu siap menjawab pertanyaan Anda. Layanan dukungan langsung kami selalu aktif."
+      }
+    },
+    "categories": {
+      "title": "Kategori",
+      "cattle": "Ternak",
+      "sheep": "Hewan ternak kecil",
+      "poultry": "Unggas",
+      "other": "Lainnya"
+    },
+    "featured": {
+      "title": "Iklan Unggulan",
+      "viewAll": "Lihat semua"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Perdagangan Ternak. Semua hak dilindungi undang-undang.",
+    "about": "Tentang Kami",
+    "contact": "Komunikasi",
+    "terms": "Syarat Penggunaan",
+    "privacy": "Kebijakan Privasi"
+  },
+  "products": {
+    "title": "Produk",
+    "search": "Cari produk...",
+    "filters": "Filter",
+    "sort": "Menyortir",
+    "sortOptions": {
+      "newest": "Terbaru",
+      "oldest": "Tertua",
+      "priceAsc": "Harga (Dari Terendah ke Tertinggi)",
+      "priceDesc": "Harga (Tinggi ke Rendah)",
+      "popular": "Paling Populer"
+    },
+    "status": {
+      "draft": "Draf",
+      "active": "Aktif",
+      "sold": "Terjual",
+      "pending": "Menunggu Persetujuan"
+    },
+    "condition": {
+      "new": "Baru",
+      "likeNew": "Bekas Pakai Ringan",
+      "good": "Bagus",
+      "fair": "Tengah"
+    },
+    "outOfStock": "Stok Habis",
+    "inStock": "Tersedia",
+    "noResults": "Produk tidak ditemukan.",
+    "loading": "Produk sedang dimuat...",
+    "perPage": "Per halaman",
+    "showing": "Jumlah total produk {total} antara {from} dan {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Tambahkan ke Favorit",
+    "removeFromFavorites": "Hapus dari Favorit",
+    "share": "Membagikan",
+    "report": "Laporkan masalah",
+    "description": "Penjelasan",
+    "specifications": "Fitur",
+    "location": "Lokasi",
+    "shipping": "Muatan",
+    "shippingAvailable": "Dapat dikirim melalui jasa pengiriman kargo.",
+    "noShipping": "Hanya pengiriman langsung.",
+    "internationalShipping": "Pengiriman internasional tersedia.",
+    "weight": "Berat",
+    "stock": "Saham",
+    "inStock": "{count} barang dalam stok",
+    "minOrder": "Pesanan minimum",
+    "maxOrder": "Pesanan maksimum",
+    "publishedAt": "Tanggal penerbitan",
+    "views": "Dilihat",
+    "similarProducts": "Produk Serupa",
+    "sellerProducts": "Produk Lain dari Penjual"
+  },
+  "seller": {
+    "title": "Informasi Penjual",
+    "verified": "Terverifikasi",
+    "reviews": "evaluasi",
+    "products": "iklan",
+    "memberSince": "Anggota sejak {tahun}",
+    "contact": "Kirim Pesan",
+    "call": "Mencari",
+    "viewProfile": "Lihat Profil"
+  },
+  "newListing": {
+    "title": "Buat Daftar Baru",
+    "saveDraft": "Simpan Draf",
+    "publish": "Menerbitkan",
+    "basicInfo": "Informasi Dasar",
+    "categoryAndCondition": "Kategori dan Status",
+    "pricing": "Harga",
+    "shipping": "Muatan",
+    "images": "Gambar",
+    "addImage": "Tambahkan Gambar",
+    "maxImages": "Anda dapat mengunggah maksimal 10 gambar.",
+    "imageHint": "Minimal 1, maksimal 10 gambar. Dalam format PNG, JPG, atau WEBP.",
+    "fields": {
+      "title": "Judul Iklan",
+      "shortDescription": "Deskripsi Singkat",
+      "description": "Penjelasan Terperinci",
+      "category": "Kategori",
+      "condition": "Status Produk",
+      "price": "Harga",
+      "stock": "Jumlah Stok",
+      "unit": "Satuan",
+      "shippingAvailable": "Pengiriman tersedia.",
+      "shippingCost": "Biaya Pengiriman",
+      "weight": "Berat",
+      "weightUnit": "Satuan Berat"
+    },
+    "placeholders": {
+      "title": "Contoh: Sapi Holstein Berumur 2 Tahun",
+      "shortDescription": "Deskripsi produk (maksimal 200 karakter)",
+      "description": "Berikan informasi detail tentang produk tersebut...",
+      "category": "Pilih kategori."
+    },
+    "success": "Iklan tersebut berhasil dibuat.",
+    "error": "Terjadi kesalahan saat membuat iklan."
   }
 }

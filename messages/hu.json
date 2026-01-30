@@ -11,7 +11,17 @@
     "back": "Vissza",
     "next": "Előre",
     "close": "Közeli",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Bejelentkezés",
+    "register": "Nyilvántartás"
+  },
+  "header": {
+    "products": "Termékek",
+    "sellers": "Eladók",
+    "about": "Rólunk",
+    "dashboard": "Panel",
+    "settings": "Beállítások",
+    "logout": "Kijelentkezés"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Műszerfal",
     "welcome": "Üdvözlünk, {név}!",
-    "accountInfo": "Fiókod adatai alább láthatók.",
+    "accountInfo": "Fiókod összefoglalója alább található.",
     "username": "Felhasználónév",
     "email": "Email",
     "id": "azonosító",
-    "logout": "Kijelentkezés"
+    "logout": "Kijelentkezés",
+    "stats": {
+      "totalListings": "Összes hirdetés",
+      "active": "aktív",
+      "totalViews": "Összes megtekintés",
+      "thisWeek": "ezen a héten",
+      "favorites": "Kedvenc",
+      "onYourListings": "a hirdetéseidben",
+      "messages": "Üzenet",
+      "unread": "nem olvasott"
+    },
+    "recentListings": "Legújabb hirdetéseid",
+    "recentMessages": "Legutóbbi üzenetek",
+    "noListings": "Még nem adtál hozzá hirdetéseket.",
+    "noMessages": "Még nem kaptál üzenetet.",
+    "noNotifications": "Még nem kaptál értesítéseket.",
+    "viewAllListings": "Összes hirdetés megtekintése",
+    "viewAllMessages": "Az összes üzenet megtekintése"
+  },
+  "dashboardNav": {
+    "overview": "Áttekintés",
+    "myListings": "Hirdetéseim",
+    "favorites": "A kedvenceim",
+    "messages": "Üzenetek",
+    "notifications": "Értesítések",
+    "profile": "Profil",
+    "settings": "Beállítások",
+    "newListing": "Új hirdetés hozzáadása"
+  },
+  "myListings": {
+    "title": "Hirdetéseim",
+    "description": "Kezelje az összes hirdetését innen.",
+    "noListings": "Még nem adtál hozzá hirdetéseket.",
+    "createFirst": "Hozd létre az első hirdetésedet.",
+    "filters": {
+      "all": "Mindegyikük",
+      "active": "Aktív",
+      "draft": "Vázlat",
+      "pending": "Jóváhagyásra vár",
+      "sold": "Eladott"
+    },
+    "actions": {
+      "edit": "Szerkesztés",
+      "delete": "Töröl",
+      "activate": "Aktiválás",
+      "deactivate": "Passzív szerkezet"
+    }
+  },
+  "favorites": {
+    "title": "A kedvenceim",
+    "description": "Kövesd az itt található termékeket, amiket szeretsz.",
+    "noFavorites": "Még nem adtál hozzá kedvenc termékeket.",
+    "browseProducts": "Termékek böngészése"
   },
   "settings": {
     "title": "Beállítások",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Nyelvválasztás",
     "current": "Jelenlegi nyelv"
+  },
+  "home": {
+    "hero": {
+      "title": "Élő Állat Kereskedelmi Platform",
+      "subtitle": "A legmegbízhatóbb élőállat-kereskedési platform. Vásároljon és adjon el szarvasmarháit és juhait biztonságosan.",
+      "cta": "Kezdés most",
+      "viewListings": "Hirdetések megtekintése"
+    },
+    "features": {
+      "secure": {
+        "title": "Biztonságos vásárlás",
+        "description": "Minden tranzakció biztonságos. Az eladó és a vevő adatait ellenőriztük."
+      },
+      "variety": {
+        "title": "Széles termékválaszték",
+        "description": "Szarvasmarha, juh és egyebek. Könnyen megtalálhatja a keresett állatot."
+      },
+      "support": {
+        "title": "24/7-es ügyfélszolgálat",
+        "description": "Mindig itt vagyunk, ha kérdései vannak. Élő ügyfélszolgálatunk aktív."
+      }
+    },
+    "categories": {
+      "title": "Kategóriák",
+      "cattle": "Marha",
+      "sheep": "Kisállatok",
+      "poultry": "Baromfi",
+      "other": "Más"
+    },
+    "featured": {
+      "title": "Kiemelt hirdetések",
+      "viewAll": "Összes megtekintése"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Élőállat-kereskedelem. Minden jog fenntartva.",
+    "about": "Rólunk",
+    "contact": "Kommunikáció",
+    "terms": "Felhasználási feltételek",
+    "privacy": "Adatvédelmi irányelvek"
+  },
+  "products": {
+    "title": "Termékek",
+    "search": "Termékek keresése...",
+    "filters": "Szűrők",
+    "sort": "Fajta",
+    "sortOptions": {
+      "newest": "Legújabb",
+      "oldest": "Legrégebbi",
+      "priceAsc": "Ár (alacsonytól a magasig)",
+      "priceDesc": "Ár (magastól a legalacsonyabbig)",
+      "popular": "Legnépszerűbb"
+    },
+    "status": {
+      "draft": "Vázlat",
+      "active": "Aktív",
+      "sold": "Eladott",
+      "pending": "Jóváhagyásra vár"
+    },
+    "condition": {
+      "new": "Új",
+      "likeNew": "Keveset használt",
+      "good": "Jó",
+      "fair": "Középső"
+    },
+    "outOfStock": "Nincs raktáron",
+    "inStock": "Raktáron",
+    "noResults": "A termék nem található.",
+    "loading": "Termékek betöltése...",
+    "perPage": "Oldalanként",
+    "showing": "A {from} és {to} közötti {total} termékek összege."
+  },
+  "productDetail": {
+    "addToFavorites": "Hozzáadás a kedvencekhez",
+    "removeFromFavorites": "Eltávolítás a kedvencek közül",
+    "share": "Részesedés",
+    "report": "Probléma jelentése",
+    "description": "Magyarázat",
+    "specifications": "Jellemzők",
+    "location": "Elhelyezkedés",
+    "shipping": "Rakomány",
+    "shippingAvailable": "Rakományként szállítható.",
+    "noShipping": "Csak személyes átvétel.",
+    "internationalShipping": "Nemzetközi szállítás elérhető.",
+    "weight": "Súly",
+    "stock": "Készlet",
+    "inStock": "{count} tétel raktáron",
+    "minOrder": "Minimális rendelési mennyiség",
+    "maxOrder": "Maximális rendelési érték",
+    "publishedAt": "Megjelenés dátuma",
+    "views": "Megtekintve",
+    "similarProducts": "Hasonló termékek",
+    "sellerProducts": "Az eladó egyéb termékei"
+  },
+  "seller": {
+    "title": "Eladó adatai",
+    "verified": "Ellenőrzött",
+    "reviews": "értékelés",
+    "products": "hirdetés",
+    "memberSince": "Tag {év} óta",
+    "contact": "Üzenet küldése",
+    "call": "Keresés",
+    "viewProfile": "Profil megtekintése"
+  },
+  "newListing": {
+    "title": "Új hirdetés létrehozása",
+    "saveDraft": "Vázlat mentése",
+    "publish": "Közzététel",
+    "basicInfo": "Alapvető információk",
+    "categoryAndCondition": "Kategória és állapot",
+    "pricing": "Árazás",
+    "shipping": "Rakomány",
+    "images": "Képek",
+    "addImage": "Kép hozzáadása",
+    "maxImages": "Maximum 10 képet tölthetsz fel.",
+    "imageHint": "Minimum 1, maximum 10 kép. PNG, JPG vagy WEBP formátumban.",
+    "fields": {
+      "title": "Hirdetés címe",
+      "shortDescription": "Rövid leírás",
+      "description": "Részletes magyarázat",
+      "category": "Kategória",
+      "condition": "Termék állapota",
+      "price": "Ár",
+      "stock": "Készletmennyiség",
+      "unit": "Egység",
+      "shippingAvailable": "Szállítás elérhető.",
+      "shippingCost": "Szállítási díj",
+      "weight": "Súly",
+      "weightUnit": "Súlyegység"
+    },
+    "placeholders": {
+      "title": "Példa: 2 éves holstein tehén",
+      "shortDescription": "Termékleírás (maximum 200 karakter)",
+      "description": "Adjon meg részletes információkat a termékről...",
+      "category": "Válasszon egy kategóriát."
+    },
+    "success": "A hirdetés sikeresen létrejött.",
+    "error": "Hiba történt a hirdetés létrehozásakor."
   }
 }

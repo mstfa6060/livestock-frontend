@@ -11,7 +11,17 @@
     "back": "Atpakaļ",
     "next": "Uz priekšu",
     "close": "Aizvērt",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Pieslēgties",
+    "register": "Reģistrēties"
+  },
+  "header": {
+    "products": "Produkti",
+    "sellers": "Pārdevēji",
+    "about": "Par mums",
+    "dashboard": "Panelis",
+    "settings": "Iestatījumi",
+    "logout": "Izrakstīties"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Informācijas panelis",
     "welcome": "Sveicināti, {vārds}!",
-    "accountInfo": "Jūsu konta informācija ir redzama zemāk.",
+    "accountInfo": "Jūsu konta kopsavilkums ir sniegts zemāk.",
     "username": "Lietotājvārds",
     "email": "E-pasts",
     "id": "ID",
-    "logout": "Izrakstīties"
+    "logout": "Izrakstīties",
+    "stats": {
+      "totalListings": "Kopējais reklāmu skaits",
+      "active": "aktīvs",
+      "totalViews": "Kopējais skatījumu skaits",
+      "thisWeek": "šonedēļ",
+      "favorites": "Iecienītākais",
+      "onYourListings": "jūsu reklāmās",
+      "messages": "Ziņojums",
+      "unread": "nelasīts"
+    },
+    "recentListings": "Jūsu jaunākie sludinājumi",
+    "recentMessages": "Jaunākie ziņojumi",
+    "noListings": "Jūs vēl neesat pievienojis nevienu reklāmu.",
+    "noMessages": "Jūs vēl neesat saņēmis ziņojumu.",
+    "noNotifications": "Jūs vēl neesat saņēmis nevienu paziņojumu.",
+    "viewAllListings": "Skatīt visus sludinājumus",
+    "viewAllMessages": "Skatīt visus ziņojumus"
+  },
+  "dashboardNav": {
+    "overview": "Pārskats",
+    "myListings": "Manas reklāmas",
+    "favorites": "Mani favorīti",
+    "messages": "Ziņojumi",
+    "notifications": "Paziņojumi",
+    "profile": "Profils",
+    "settings": "Iestatījumi",
+    "newListing": "Pievienot jaunu ierakstu"
+  },
+  "myListings": {
+    "title": "Manas reklāmas",
+    "description": "Pārvaldiet visus savus sludinājumus šeit.",
+    "noListings": "Jūs vēl neesat pievienojis nevienu reklāmu.",
+    "createFirst": "Izveidojiet savu pirmo sludinājumu.",
+    "filters": {
+      "all": "Visi no viņiem",
+      "active": "Aktīvs",
+      "draft": "Melnraksts",
+      "pending": "Gaida apstiprinājumu",
+      "sold": "Pārdots"
+    },
+    "actions": {
+      "edit": "Rediģēt",
+      "delete": "Dzēst",
+      "activate": "Aktivizēt",
+      "deactivate": "Pasīvā struktūra"
+    }
+  },
+  "favorites": {
+    "title": "Mani favorīti",
+    "description": "Sekojiet līdzi produktiem, kas jums patīk šeit.",
+    "noFavorites": "Jūs vēl neesat pievienojis nevienu iecienītāko produktu.",
+    "browseProducts": "Pārlūkot produktus"
   },
   "settings": {
     "title": "Iestatījumi",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Valodas izvēle",
     "current": "Pašreizējā valoda"
+  },
+  "home": {
+    "hero": {
+      "title": "Dzīvu dzīvnieku tirdzniecības platforma",
+      "subtitle": "Visuzticamākā dzīvu dzīvnieku tirdzniecības platforma. Pērciet un pārdodiet savus liellopus un aitas droši.",
+      "cta": "Sākt tūlīt",
+      "viewListings": "Skatīt reklāmas"
+    },
+    "features": {
+      "secure": {
+        "title": "Droša iepirkšanās",
+        "description": "Visi darījumi ir droši. Pārdevēja un pircēja informācija ir pārbaudīta."
+      },
+      "variety": {
+        "title": "Plašs produktu klāsts",
+        "description": "Liellopi, aitas un citi. Viegli atrodiet meklēto dzīvnieku."
+      },
+      "support": {
+        "title": "Atbalsts visu diennakti, 7 dienas nedēļā",
+        "description": "Mēs vienmēr esam gatavi atbildēt uz jūsu jautājumiem. Mūsu tiešsaistes atbalsta līnija ir aktīva."
+      }
+    },
+    "categories": {
+      "title": "Kategorijas",
+      "cattle": "Liellopi",
+      "sheep": "Mazi mājlopi",
+      "poultry": "Mājputni",
+      "other": "Citi"
+    },
+    "featured": {
+      "title": "Piedāvātās reklāmas",
+      "viewAll": "Skatīt visu"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Lopkopības tirdzniecība. Visas tiesības aizsargātas.",
+    "about": "Par mums",
+    "contact": "Komunikācija",
+    "terms": "Lietošanas noteikumi",
+    "privacy": "Privātuma politika"
+  },
+  "products": {
+    "title": "Produkti",
+    "search": "Meklēt produktus...",
+    "filters": "Filtri",
+    "sort": "Kārtot",
+    "sortOptions": {
+      "newest": "Jaunākais",
+      "oldest": "Vecākais",
+      "priceAsc": "Cena (no zemākās uz augstāko)",
+      "priceDesc": "Cena (no augstākās uz zemāko)",
+      "popular": "Populārākie"
+    },
+    "status": {
+      "draft": "Melnraksts",
+      "active": "Aktīvs",
+      "sold": "Pārdots",
+      "pending": "Gaida apstiprinājumu"
+    },
+    "condition": {
+      "new": "Jauns",
+      "likeNew": "Viegli lietots",
+      "good": "Labi",
+      "fair": "Vidējais"
+    },
+    "outOfStock": "Nav noliktavā",
+    "inStock": "Noliktavā",
+    "noResults": "Produkts nav atrasts.",
+    "loading": "Produkti tiek ielādēti...",
+    "perPage": "Katrā lapā",
+    "showing": "Kopējais produktu skaits {total} no {from} līdz {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Pievienot izlasei",
+    "removeFromFavorites": "Noņemt no izlases",
+    "share": "Kopīgot",
+    "report": "Ziņot par problēmu",
+    "description": "Paskaidrojums",
+    "specifications": "Funkcijas",
+    "location": "Atrašanās vieta",
+    "shipping": "Krava",
+    "shippingAvailable": "Var piegādāt ar kravu.",
+    "noShipping": "Tikai piegāde klātienē.",
+    "internationalShipping": "Pieejama starptautiskā piegāde.",
+    "weight": "Svars",
+    "stock": "Krājums",
+    "inStock": "{count} preces noliktavā",
+    "minOrder": "Minimālais pasūtījums",
+    "maxOrder": "Maksimālais pasūtījums",
+    "publishedAt": "Publicēšanas datums",
+    "views": "Skatīts",
+    "similarProducts": "Līdzīgi produkti",
+    "sellerProducts": "Pārdevēja citi produkti"
+  },
+  "seller": {
+    "title": "Pārdevēja informācija",
+    "verified": "Verificēts",
+    "reviews": "novērtējums",
+    "products": "reklāma",
+    "memberSince": "Dalībnieks kopš {gads}",
+    "contact": "Sūtīt ziņojumu",
+    "call": "Meklēt",
+    "viewProfile": "Skatīt profilu"
+  },
+  "newListing": {
+    "title": "Izveidot jaunu ierakstu",
+    "saveDraft": "Saglabāt melnrakstu",
+    "publish": "Publicēt",
+    "basicInfo": "Pamatinformācija",
+    "categoryAndCondition": "Kategorija un statuss",
+    "pricing": "Cenu noteikšana",
+    "shipping": "Krava",
+    "images": "Attēli",
+    "addImage": "Pievienot attēlu",
+    "maxImages": "Varat augšupielādēt ne vairāk kā 10 attēlus.",
+    "imageHint": "Minimāli 1, ne vairāk kā 10 attēli. PNG, JPG vai WEBP formātā.",
+    "fields": {
+      "title": "Reklāmas nosaukums",
+      "shortDescription": "Īss apraksts",
+      "description": "Detalizēts skaidrojums",
+      "category": "Kategorija",
+      "condition": "Produkta statuss",
+      "price": "Cena",
+      "stock": "Noliktavas daudzums",
+      "unit": "Vienība",
+      "shippingAvailable": "Piegāde ir pieejama.",
+      "shippingCost": "Piegādes maksa",
+      "weight": "Svars",
+      "weightUnit": "Svara mērvienība"
+    },
+    "placeholders": {
+      "title": "Piemērs: 2 gadus veca Holšteinas šķirnes govs",
+      "shortDescription": "Produkta apraksts (maksimums 200 rakstzīmes)",
+      "description": "Sniedziet detalizētu informāciju par produktu...",
+      "category": "Izvēlieties kategoriju."
+    },
+    "success": "Reklāma ir veiksmīgi izveidota.",
+    "error": "Veidojot reklāmu, radās kļūda."
   }
 }

@@ -11,7 +11,17 @@
     "back": "Zadní",
     "next": "Vpřed",
     "close": "Blízko",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Přihlásit se",
+    "register": "Rejstřík"
+  },
+  "header": {
+    "products": "Produkty",
+    "sellers": "Prodejci",
+    "about": "O nás",
+    "dashboard": "Panel",
+    "settings": "Nastavení",
+    "logout": "Odhlásit se"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Dashboard",
     "welcome": "Vítej, {name}!",
-    "accountInfo": "Informace o vašem účtu jsou zobrazeny níže.",
+    "accountInfo": "Souhrn vašeho účtu je uveden níže.",
     "username": "Uživatelské jméno",
     "email": "E-mail",
     "id": "Průkaz totožnosti",
-    "logout": "Odhlásit se"
+    "logout": "Odhlásit se",
+    "stats": {
+      "totalListings": "Celkový počet reklam",
+      "active": "aktivní",
+      "totalViews": "Celkový počet zhlédnutí",
+      "thisWeek": "tento týden",
+      "favorites": "Oblíbený",
+      "onYourListings": "ve vašich reklamách",
+      "messages": "Zpráva",
+      "unread": "nepřečtený"
+    },
+    "recentListings": "Vaše nejnovější nabídky",
+    "recentMessages": "Nedávné zprávy",
+    "noListings": "Zatím jste nepřidali žádné reklamy.",
+    "noMessages": "Zatím jste neobdrželi žádné zprávy.",
+    "noNotifications": "Zatím jste neobdrželi žádná oznámení.",
+    "viewAllListings": "Zobrazit všechny nabídky",
+    "viewAllMessages": "Zobrazit všechny zprávy"
+  },
+  "dashboardNav": {
+    "overview": "Přehled",
+    "myListings": "Moje reklamy",
+    "favorites": "Moje oblíbené",
+    "messages": "Zprávy",
+    "notifications": "Oznámení",
+    "profile": "Profil",
+    "settings": "Nastavení",
+    "newListing": "Přidat nový záznam"
+  },
+  "myListings": {
+    "title": "Moje reklamy",
+    "description": "Spravujte všechny své inzeráty odtud.",
+    "noListings": "Zatím jste nepřidali žádné reklamy.",
+    "createFirst": "Vytvořte si svůj první inzerát.",
+    "filters": {
+      "all": "Všechny z nich",
+      "active": "Aktivní",
+      "draft": "Návrh",
+      "pending": "Čeká na schválení",
+      "sold": "Prodáno"
+    },
+    "actions": {
+      "edit": "Upravit",
+      "delete": "Vymazat",
+      "activate": "Aktivovat",
+      "deactivate": "Pasivní struktura"
+    }
+  },
+  "favorites": {
+    "title": "Moje oblíbené",
+    "description": "Sledujte zde produkty, které se vám líbí.",
+    "noFavorites": "Zatím jste nepřidali žádné oblíbené produkty.",
+    "browseProducts": "Procházet produkty"
   },
   "settings": {
     "title": "Nastavení",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Výběr jazyka",
     "current": "Aktuální jazyk"
+  },
+  "home": {
+    "hero": {
+      "title": "Platforma pro obchodování s živými zvířaty",
+      "subtitle": "Nejspolehlivější platforma pro obchodování s živými zvířaty. Bezpečně nakupujte a prodávejte svůj dobytek a ovce.",
+      "cta": "Začít hned",
+      "viewListings": "Zobrazit reklamy"
+    },
+    "features": {
+      "secure": {
+        "title": "Bezpečné nakupování",
+        "description": "Všechny transakce jsou zabezpečené. Informace o prodávajícím a kupujícím byly ověřeny."
+      },
+      "variety": {
+        "title": "Široký sortiment produktů",
+        "description": "Skot, ovce a další. Snadno najděte zvíře, které hledáte."
+      },
+      "support": {
+        "title": "Podpora 24/7",
+        "description": "Jsme tu vždy pro vaše dotazy. Naše linka podpory je aktivní."
+      }
+    },
+    "categories": {
+      "title": "Kategorie",
+      "cattle": "Dobytek",
+      "sheep": "Drobná hospodářská zvířata",
+      "poultry": "Drůbež",
+      "other": "Ostatní"
+    },
+    "featured": {
+      "title": "Doporučené reklamy",
+      "viewAll": "Zobrazit vše"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Obchod s hospodářskými zvířaty. Všechna práva vyhrazena.",
+    "about": "O nás",
+    "contact": "Sdělení",
+    "terms": "Podmínky použití",
+    "privacy": "Zásady ochrany osobních údajů"
+  },
+  "products": {
+    "title": "Produkty",
+    "search": "Hledat produkty...",
+    "filters": "Filtry",
+    "sort": "Seřadit",
+    "sortOptions": {
+      "newest": "Nejnovější",
+      "oldest": "Nejstarší",
+      "priceAsc": "Cena (od nejnižší po nejvyšší)",
+      "priceDesc": "Cena (od nejvyšší po nejnižší)",
+      "popular": "Nejoblíbenější"
+    },
+    "status": {
+      "draft": "Návrh",
+      "active": "Aktivní",
+      "sold": "Prodáno",
+      "pending": "Čeká na schválení"
+    },
+    "condition": {
+      "new": "Nový",
+      "likeNew": "Lehce používané",
+      "good": "Dobrý",
+      "fair": "Střední"
+    },
+    "outOfStock": "Není skladem",
+    "inStock": "Skladem",
+    "noResults": "Produkt nenalezen.",
+    "loading": "Produkty se načítají...",
+    "perPage": "Na stránku",
+    "showing": "Celkový počet produktů ({total}) mezi {from} a {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Přidat k oblíbeným",
+    "removeFromFavorites": "Odebrat z oblíbených",
+    "share": "Podíl",
+    "report": "Nahlásit problém",
+    "description": "Vysvětlení",
+    "specifications": "Funkce",
+    "location": "Umístění",
+    "shipping": "Náklad",
+    "shippingAvailable": "Lze přepravit nákladem.",
+    "noShipping": "Pouze osobní doručení.",
+    "internationalShipping": "Mezinárodní doprava k dispozici.",
+    "weight": "Hmotnost",
+    "stock": "Sklad",
+    "inStock": "{count} položek skladem",
+    "minOrder": "Minimální objednávka",
+    "maxOrder": "Maximální objednávka",
+    "publishedAt": "Datum vydání",
+    "views": "Zobrazeno",
+    "similarProducts": "Podobné produkty",
+    "sellerProducts": "Další produkty prodejce"
+  },
+  "seller": {
+    "title": "Informace o prodejci",
+    "verified": "Ověřeno",
+    "reviews": "hodnocení",
+    "products": "reklama",
+    "memberSince": "Člen od {year}",
+    "contact": "Odeslat zprávu",
+    "call": "Vyhledávání",
+    "viewProfile": "Zobrazit profil"
+  },
+  "newListing": {
+    "title": "Vytvořit nový inzerát",
+    "saveDraft": "Uložit koncept",
+    "publish": "Publikovat",
+    "basicInfo": "Základní informace",
+    "categoryAndCondition": "Kategorie a stav",
+    "pricing": "Ceny",
+    "shipping": "Náklad",
+    "images": "Obrázky",
+    "addImage": "Přidat obrázek",
+    "maxImages": "Můžete nahrát maximálně 10 obrázků.",
+    "imageHint": "Minimálně 1, maximálně 10 obrázků. Ve formátu PNG, JPG nebo WEBP.",
+    "fields": {
+      "title": "Název reklamy",
+      "shortDescription": "Stručný popis",
+      "description": "Podrobné vysvětlení",
+      "category": "Kategorie",
+      "condition": "Stav produktu",
+      "price": "Cena",
+      "stock": "Množství zásob",
+      "unit": "Jednotka",
+      "shippingAvailable": "Doprava je k dispozici.",
+      "shippingCost": "Poplatek za dopravu",
+      "weight": "Hmotnost",
+      "weightUnit": "Jednotka hmotnosti"
+    },
+    "placeholders": {
+      "title": "Příklad: Dvouletá kráva holštýnského plemene",
+      "shortDescription": "Popis produktu (max. 200 znaků)",
+      "description": "Poskytněte podrobné informace o produktu...",
+      "category": "Vyberte kategorii."
+    },
+    "success": "Reklama byla úspěšně vytvořena.",
+    "error": "Při vytváření reklamy došlo k chybě."
   }
 }

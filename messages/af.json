@@ -11,7 +11,17 @@
     "back": "Terug",
     "next": "Vorentoe",
     "close": "Maak toe",
-    "emailPlaceholder": "ornek@epos.com"
+    "emailPlaceholder": "ornek@epos.com",
+    "login": "Teken aan",
+    "register": "Registreer"
+  },
+  "header": {
+    "products": "Produkte",
+    "sellers": "Verkopers",
+    "about": "Oor Ons",
+    "dashboard": "Paneel",
+    "settings": "Instellings",
+    "logout": "Meld af"
   },
   "auth": {
     "login": {
@@ -54,7 +64,7 @@
       "errorDefault": "'n Fout het voorgekom. Kontroleer asseblief u e-posadres."
     },
     "resetPassword": {
-      "title": "Stel 'n nuwe wagwoord",
+      "title": "Stel 'n Nuwe Wagwoord",
       "description": "Stel 'n nuwe wagwoord vir jou rekening.",
       "newPassword": "Nuwe Wagwoord",
       "confirmPassword": "Bevestig wagwoord",
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Dashboard",
     "welcome": "Welkom, {naam}!",
-    "accountInfo": "Jou rekeninginligting word hieronder vertoon.",
+    "accountInfo": "Jou rekeningopsomming is hieronder.",
     "username": "Gebruikersnaam",
     "email": "E-pos",
     "id": "ID",
-    "logout": "Meld af"
+    "logout": "Meld af",
+    "stats": {
+      "totalListings": "Totale advertensies",
+      "active": "aktief",
+      "totalViews": "Totale kyke",
+      "thisWeek": "hierdie week",
+      "favorites": "Gunsteling",
+      "onYourListings": "in jou advertensies",
+      "messages": "Boodskap",
+      "unread": "ongelees"
+    },
+    "recentListings": "Jou Nuutste Lysinskrywings",
+    "recentMessages": "Onlangse Boodskappe",
+    "noListings": "Jy het nog geen advertensies bygevoeg nie.",
+    "noMessages": "Jy het nog nie 'n boodskap ontvang nie.",
+    "noNotifications": "Jy het nog geen kennisgewings ontvang nie.",
+    "viewAllListings": "Bekyk alle lyste",
+    "viewAllMessages": "Bekyk alle boodskappe"
+  },
+  "dashboardNav": {
+    "overview": "Oorsig",
+    "myListings": "My advertensies",
+    "favorites": "My gunstelinge",
+    "messages": "Boodskappe",
+    "notifications": "Kennisgewings",
+    "profile": "Profiel",
+    "settings": "Instellings",
+    "newListing": "Voeg Nuwe Lysinskrywing by"
+  },
+  "myListings": {
+    "title": "My advertensies",
+    "description": "Bestuur al jou lyste van hier af.",
+    "noListings": "Jy het nog geen advertensies bygevoeg nie.",
+    "createFirst": "Skep jou eerste lysinskrywing.",
+    "filters": {
+      "all": "Almal van hulle",
+      "active": "Aktief",
+      "draft": "Konsep",
+      "pending": "Wag vir goedkeuring",
+      "sold": "Verkoop"
+    },
+    "actions": {
+      "edit": "Wysig",
+      "delete": "Vee uit",
+      "activate": "Aktiveer",
+      "deactivate": "Passiewe Struktuur"
+    }
+  },
+  "favorites": {
+    "title": "My gunstelinge",
+    "description": "Volg die produkte waarvan jy hier hou.",
+    "noFavorites": "Jy het nog geen gunstelingprodukte bygevoeg nie.",
+    "browseProducts": "Blaai deur produkte"
   },
   "settings": {
     "title": "Instellings",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Taalkeuse",
     "current": "Huidige taal"
+  },
+  "home": {
+    "hero": {
+      "title": "Lewende Diere Handelsplatform",
+      "subtitle": "Die mees betroubare platform vir die verhandeling van lewende diere. Koop en verkoop jou beeste en skape veilig.",
+      "cta": "Begin Nou",
+      "viewListings": "Bekyk advertensies"
+    },
+    "features": {
+      "secure": {
+        "title": "Veilige inkopies",
+        "description": "Alle transaksies is veilig. Verkoper- en koperinligting is geverifieer."
+      },
+      "variety": {
+        "title": "Wye produkreeks",
+        "description": "Beeste, skape en meer. Vind maklik die dier waarna jy soek."
+      },
+      "support": {
+        "title": "24/7 Ondersteuning",
+        "description": "Ons is altyd hier vir u vrae. Ons regstreekse ondersteuningslyn is aktief."
+      }
+    },
+    "categories": {
+      "title": "Kategorieë",
+      "cattle": "Beeste",
+      "sheep": "Kleinvee",
+      "poultry": "Pluimvee",
+      "other": "Ander"
+    },
+    "featured": {
+      "title": "Aanbevole advertensies",
+      "viewAll": "Sien alles"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Veehandel. Alle regte voorbehou.",
+    "about": "Oor Ons",
+    "contact": "Kommunikasie",
+    "terms": "Gebruiksvoorwaardes",
+    "privacy": "Privaatheidsbeleid"
+  },
+  "products": {
+    "title": "Produkte",
+    "search": "Soek vir produkte...",
+    "filters": "Filters",
+    "sort": "Sorteer",
+    "sortOptions": {
+      "newest": "Nuutste",
+      "oldest": "Oudste",
+      "priceAsc": "Prys (Van Laag na Hoog)",
+      "priceDesc": "Prys (Hoog na Laag)",
+      "popular": "Mees gewild"
+    },
+    "status": {
+      "draft": "Konsep",
+      "active": "Aktief",
+      "sold": "Verkoop",
+      "pending": "Wag vir goedkeuring"
+    },
+    "condition": {
+      "new": "Nuut",
+      "likeNew": "Liggies Gebruik",
+      "good": "Goed",
+      "fair": "Middel"
+    },
+    "outOfStock": "Uit voorraad",
+    "inStock": "In voorraad",
+    "noResults": "Produk nie gevind nie.",
+    "loading": "Laai produkte...",
+    "perPage": "Per bladsy",
+    "showing": "Die totaal van {total} produkte tussen {from} en {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Voeg by gunstelinge",
+    "removeFromFavorites": "Verwyder van Gunstelinge",
+    "share": "Deel",
+    "report": "Rapporteer 'n probleem",
+    "description": "Verduideliking",
+    "specifications": "Kenmerke",
+    "location": "Ligging",
+    "shipping": "Vrag",
+    "shippingAvailable": "Kan per vrag gestuur word.",
+    "noShipping": "Slegs handaflewering.",
+    "internationalShipping": "Internasionale versending beskikbaar.",
+    "weight": "Gewig",
+    "stock": "Voorraad",
+    "inStock": "{count} items in voorraad",
+    "minOrder": "Minimum bestelling",
+    "maxOrder": "Maksimum bestelling",
+    "publishedAt": "Publikasiedatum",
+    "views": "Bekyk",
+    "similarProducts": "Soortgelyke Produkte",
+    "sellerProducts": "Verkoper se Ander Produkte"
+  },
+  "seller": {
+    "title": "Verkoperinligting",
+    "verified": "Geverifieer",
+    "reviews": "evaluering",
+    "products": "advertensie",
+    "memberSince": "Lid sedert {jaar}",
+    "contact": "Stuur boodskap",
+    "call": "Soek",
+    "viewProfile": "Bekyk Profiel"
+  },
+  "newListing": {
+    "title": "Skep Nuwe Lys",
+    "saveDraft": "Stoor konsep",
+    "publish": "Publiseer",
+    "basicInfo": "Basiese Inligting",
+    "categoryAndCondition": "Kategorie en Status",
+    "pricing": "Pryse",
+    "shipping": "Vrag",
+    "images": "Beelde",
+    "addImage": "Voeg prent by",
+    "maxImages": "Jy kan 'n maksimum van 10 beelde oplaai.",
+    "imageHint": "Minimum 1, maksimum 10 beelde. In PNG-, JPG- of WEBP-formaat.",
+    "fields": {
+      "title": "Advertensietitel",
+      "shortDescription": "Kort beskrywing",
+      "description": "Gedetailleerde Verduideliking",
+      "category": "Kategorie",
+      "condition": "Produkstatus",
+      "price": "Prys",
+      "stock": "Voorraadhoeveelheid",
+      "unit": "Eenheid",
+      "shippingAvailable": "Versending is beskikbaar.",
+      "shippingCost": "Versendingsfooi",
+      "weight": "Gewig",
+      "weightUnit": "Eenheid van Gewig"
+    },
+    "placeholders": {
+      "title": "Voorbeeld: 2-jarige Holstein-koei",
+      "shortDescription": "Produkbeskrywing (maks. 200 karakters)",
+      "description": "Verskaf gedetailleerde inligting oor die produk...",
+      "category": "Kies 'n kategorie."
+    },
+    "success": "Die advertensie is suksesvol geskep.",
+    "error": "'n Fout het voorgekom tydens die skep van die advertensie."
   }
 }

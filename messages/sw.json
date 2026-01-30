@@ -11,7 +11,17 @@
     "back": "Rudi",
     "next": "Mbele",
     "close": "Funga",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Ingia",
+    "register": "Sajili"
+  },
+  "header": {
+    "products": "Bidhaa",
+    "sellers": "Wauzaji",
+    "about": "Kuhusu Sisi",
+    "dashboard": "Paneli",
+    "settings": "Mipangilio",
+    "logout": "Toka"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Dashibodi",
     "welcome": "Karibu, {jina}!",
-    "accountInfo": "Taarifa za akaunti yako zinaonyeshwa hapa chini.",
+    "accountInfo": "Muhtasari wa akaunti yako uko hapa chini.",
     "username": "Jina la mtumiaji",
     "email": "Barua pepe",
     "id": "Kitambulisho",
-    "logout": "Toka"
+    "logout": "Toka",
+    "stats": {
+      "totalListings": "Jumla ya Matangazo",
+      "active": "hai",
+      "totalViews": "Jumla ya Mitazamo",
+      "thisWeek": "wiki hii",
+      "favorites": "Kipendwa",
+      "onYourListings": "katika matangazo yako",
+      "messages": "Ujumbe",
+      "unread": "haijasomwa"
+    },
+    "recentListings": "Orodha Zako za Hivi Karibuni",
+    "recentMessages": "Ujumbe wa Hivi Karibuni",
+    "noListings": "Hujaongeza matangazo yoyote bado.",
+    "noMessages": "Bado hujapokea ujumbe wowote.",
+    "noNotifications": "Hujapokea arifa zozote bado.",
+    "viewAllListings": "Tazama Orodha Zote",
+    "viewAllMessages": "Tazama jumbe zote"
+  },
+  "dashboardNav": {
+    "overview": "Muhtasari",
+    "myListings": "Matangazo yangu",
+    "favorites": "Vipendwa vyangu",
+    "messages": "Ujumbe",
+    "notifications": "Arifa",
+    "profile": "Wasifu",
+    "settings": "Mipangilio",
+    "newListing": "Ongeza Orodha Mpya"
+  },
+  "myListings": {
+    "title": "Matangazo yangu",
+    "description": "Dhibiti matangazo yako yote kutoka hapa.",
+    "noListings": "Hujaongeza matangazo yoyote bado.",
+    "createFirst": "Unda orodha yako ya kwanza.",
+    "filters": {
+      "all": "Wote",
+      "active": "Inayotumika",
+      "draft": "Rasimu",
+      "pending": "Inasubiri Idhini",
+      "sold": "Imeuzwa"
+    },
+    "actions": {
+      "edit": "Hariri",
+      "delete": "Futa",
+      "activate": "Washa",
+      "deactivate": "Muundo Tulivu"
+    }
+  },
+  "favorites": {
+    "title": "Vipendwa vyangu",
+    "description": "Fuata bidhaa unazopenda hapa.",
+    "noFavorites": "Bado hujaongeza bidhaa zozote unazopenda.",
+    "browseProducts": "Vinjari Bidhaa"
   },
   "settings": {
     "title": "Mipangilio",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Uteuzi wa Lugha",
     "current": "Lugha ya Sasa"
+  },
+  "home": {
+    "hero": {
+      "title": "Jukwaa la Biashara ya Wanyama Hai",
+      "subtitle": "Jukwaa la biashara ya wanyama hai linaloaminika zaidi. Nunua na uza ng'ombe na kondoo wako kwa usalama.",
+      "cta": "Anza Sasa",
+      "viewListings": "Tazama Matangazo"
+    },
+    "features": {
+      "secure": {
+        "title": "Ununuzi Salama",
+        "description": "Miamala yote ni salama. Taarifa za muuzaji na mnunuzi zimethibitishwa."
+      },
+      "variety": {
+        "title": "Aina Mbalimbali za Bidhaa",
+        "description": "Ng'ombe, kondoo, na zaidi. Pata mnyama unayemtafuta kwa urahisi."
+      },
+      "support": {
+        "title": "Usaidizi wa saa 24 kwa siku, siku 7 kwa wiki",
+        "description": "Tuko hapa kila wakati kwa maswali yako. Huduma yetu ya moja kwa moja ya usaidizi inafanya kazi."
+      }
+    },
+    "categories": {
+      "title": "Aina",
+      "cattle": "Ng'ombe",
+      "sheep": "Mifugo midogo",
+      "poultry": "Kuku",
+      "other": "Nyingine"
+    },
+    "featured": {
+      "title": "Matangazo Yaliyoangaziwa",
+      "viewAll": "Tazama zote"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Biashara ya Mifugo. Haki zote zimehifadhiwa.",
+    "about": "Kuhusu Sisi",
+    "contact": "Mawasiliano",
+    "terms": "Masharti ya Matumizi",
+    "privacy": "Sera ya Faragha"
+  },
+  "products": {
+    "title": "Bidhaa",
+    "search": "Tafuta bidhaa...",
+    "filters": "Vichujio",
+    "sort": "Panga",
+    "sortOptions": {
+      "newest": "Hivi karibuni",
+      "oldest": "Kongwe zaidi",
+      "priceAsc": "Bei (Kuanzia Chini hadi Juu)",
+      "priceDesc": "Bei (Juu hadi Chini)",
+      "popular": "Maarufu Zaidi"
+    },
+    "status": {
+      "draft": "Rasimu",
+      "active": "Inayotumika",
+      "sold": "Imeuzwa",
+      "pending": "Inasubiri Idhini"
+    },
+    "condition": {
+      "new": "Mpya",
+      "likeNew": "Imetumika Kidogo",
+      "good": "Nzuri",
+      "fair": "Kati"
+    },
+    "outOfStock": "Haipo",
+    "inStock": "Inapatikana",
+    "noResults": "Bidhaa haipatikani.",
+    "loading": "Bidhaa zinapakiwa...",
+    "perPage": "Kwa kila ukurasa",
+    "showing": "Jumla ya bidhaa {jumla} kati ya {from} na {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Ongeza kwenye Vipendwa",
+    "removeFromFavorites": "Ondoa kwenye Vipendwa",
+    "share": "Shiriki",
+    "report": "Ripoti tatizo",
+    "description": "Maelezo",
+    "specifications": "Vipengele",
+    "location": "Mahali",
+    "shipping": "Mizigo",
+    "shippingAvailable": "Inaweza kusafirishwa kwa mizigo.",
+    "noShipping": "Uwasilishaji kwa mkono pekee.",
+    "internationalShipping": "Usafirishaji wa kimataifa unapatikana.",
+    "weight": "Uzito",
+    "stock": "Hisa",
+    "inStock": "Bidhaa {count} zipo",
+    "minOrder": "Agizo la chini kabisa",
+    "maxOrder": "Agizo la juu zaidi",
+    "publishedAt": "Tarehe ya kuchapishwa",
+    "views": "Imetazamwa",
+    "similarProducts": "Bidhaa Zinazofanana",
+    "sellerProducts": "Bidhaa Nyingine za Muuzaji"
+  },
+  "seller": {
+    "title": "Taarifa za Muuzaji",
+    "verified": "Imethibitishwa",
+    "reviews": "tathmini",
+    "products": "tangazo",
+    "memberSince": "Mwanachama tangu {mwaka}",
+    "contact": "Tuma Ujumbe",
+    "call": "Tafuta",
+    "viewProfile": "Tazama Wasifu"
+  },
+  "newListing": {
+    "title": "Unda Orodha Mpya",
+    "saveDraft": "Hifadhi Rasimu",
+    "publish": "Chapisha",
+    "basicInfo": "Taarifa za Msingi",
+    "categoryAndCondition": "Kategoria na Hali",
+    "pricing": "Bei",
+    "shipping": "Mizigo",
+    "images": "Picha",
+    "addImage": "Ongeza Picha",
+    "maxImages": "Unaweza kupakia picha zisizozidi 10.",
+    "imageHint": "Angalau 1, picha 10 za juu zaidi. Katika umbizo la PNG, JPG, au WEBP.",
+    "fields": {
+      "title": "Kichwa cha Tangazo",
+      "shortDescription": "Maelezo Mafupi",
+      "description": "Maelezo ya Kina",
+      "category": "Kategoria",
+      "condition": "Hali ya Bidhaa",
+      "price": "Bei",
+      "stock": "Kiasi cha Hisa",
+      "unit": "Kitengo",
+      "shippingAvailable": "Usafirishaji unapatikana.",
+      "shippingCost": "Ada ya Usafirishaji",
+      "weight": "Uzito",
+      "weightUnit": "Kipimo cha Uzito"
+    },
+    "placeholders": {
+      "title": "Mfano: Ng'ombe wa Holstein wa Miaka 2",
+      "shortDescription": "Maelezo ya bidhaa (isizidi herufi 200)",
+      "description": "Toa maelezo ya kina kuhusu bidhaa...",
+      "category": "Chagua kategoria."
+    },
+    "success": "Tangazo liliundwa kwa mafanikio.",
+    "error": "Hitilafu imetokea wakati wa kuunda tangazo."
   }
 }

@@ -11,7 +11,17 @@
     "back": "戻る",
     "next": "フォワード",
     "close": "近い",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "ログイン",
+    "register": "登録する"
+  },
+  "header": {
+    "products": "製品",
+    "sellers": "売り手",
+    "about": "私たちについて",
+    "dashboard": "パネル",
+    "settings": "設定",
+    "logout": "ログアウト"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "ダッシュボード",
     "welcome": "ようこそ、{name}さん！",
-    "accountInfo": "あなたのアカウント情報は以下に表示されます。",
+    "accountInfo": "アカウントの概要は以下の通りです。",
     "username": "ユーザー名",
     "email": "メール",
     "id": "ID",
-    "logout": "ログアウト"
+    "logout": "ログアウト",
+    "stats": {
+      "totalListings": "総広告数",
+      "active": "アクティブ",
+      "totalViews": "総視聴回数",
+      "thisWeek": "今週",
+      "favorites": "お気に入り",
+      "onYourListings": "あなたの広告で",
+      "messages": "メッセージ",
+      "unread": "未読"
+    },
+    "recentListings": "最新のリスト",
+    "recentMessages": "最近のメッセージ",
+    "noListings": "まだ広告を追加していません。",
+    "noMessages": "まだメッセージを受け取っていません。",
+    "noNotifications": "まだ通知を受け取っていません。",
+    "viewAllListings": "すべてのリストを表示",
+    "viewAllMessages": "すべてのメッセージを表示"
+  },
+  "dashboardNav": {
+    "overview": "概要",
+    "myListings": "私の広告",
+    "favorites": "お気に入り",
+    "messages": "メッセージ",
+    "notifications": "通知",
+    "profile": "プロフィール",
+    "settings": "設定",
+    "newListing": "新しいリストを追加"
+  },
+  "myListings": {
+    "title": "私の広告",
+    "description": "ここからすべてのリストを管理します。",
+    "noListings": "まだ広告を追加していません。",
+    "createFirst": "最初のリストを作成します。",
+    "filters": {
+      "all": "全員",
+      "active": "アクティブ",
+      "draft": "下書き",
+      "pending": "承認待ち",
+      "sold": "販売済み"
+    },
+    "actions": {
+      "edit": "編集",
+      "delete": "消去",
+      "activate": "活性化",
+      "deactivate": "パッシブ構造"
+    }
+  },
+  "favorites": {
+    "title": "お気に入り",
+    "description": "気に入った商品をここでフォローしてください。",
+    "noFavorites": "お気に入りの製品はまだ追加されていません。",
+    "browseProducts": "製品を見る"
   },
   "settings": {
     "title": "設定",
@@ -107,5 +169,143 @@
   "language": {
     "select": "言語の選択",
     "current": "現在の言語"
+  },
+  "home": {
+    "hero": {
+      "title": "生きた動物の取引プラットフォーム",
+      "subtitle": "最も信頼できる生きた動物の取引プラットフォーム。牛や羊を安全に売買できます。",
+      "cta": "今すぐ始める",
+      "viewListings": "広告を表示"
+    },
+    "features": {
+      "secure": {
+        "title": "安全なショッピング",
+        "description": "すべての取引は安全です。売り手と買い手の情報は確認済みです。"
+      },
+      "variety": {
+        "title": "幅広い製品ラインナップ",
+        "description": "牛、羊など、お探しの動物が簡単に見つかります。"
+      },
+      "support": {
+        "title": "24時間365日サポート",
+        "description": "ご質問はいつでもお気軽にお問い合わせください。ライブサポートラインもご利用いただけます。"
+      }
+    },
+    "categories": {
+      "title": "カテゴリー",
+      "cattle": "牛",
+      "sheep": "小型家畜",
+      "poultry": "家禽",
+      "other": "他の"
+    },
+    "featured": {
+      "title": "注目の広告",
+      "viewAll": "すべてを見る"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Livestock Trading. All rights reserved.",
+    "about": "私たちについて",
+    "contact": "コミュニケーション",
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー"
+  },
+  "products": {
+    "title": "製品",
+    "search": "製品を検索...",
+    "filters": "フィルター",
+    "sort": "選別",
+    "sortOptions": {
+      "newest": "最新",
+      "oldest": "最古",
+      "priceAsc": "価格（安いものから高いものまで）",
+      "priceDesc": "価格（高から安）",
+      "popular": "最も人気のある"
+    },
+    "status": {
+      "draft": "下書き",
+      "active": "アクティブ",
+      "sold": "販売済み",
+      "pending": "承認待ち"
+    },
+    "condition": {
+      "new": "新しい",
+      "likeNew": "軽く使用",
+      "good": "良い",
+      "fair": "真ん中"
+    },
+    "outOfStock": "在庫切れ",
+    "inStock": "在庫あり",
+    "noResults": "商品が見つかりません。",
+    "loading": "製品を読み込んでいます...",
+    "perPage": "ページあたり",
+    "showing": "{from} から {to} までの間の {total} 個の商品の合計。"
+  },
+  "productDetail": {
+    "addToFavorites": "お気に入りに追加",
+    "removeFromFavorites": "お気に入りから削除",
+    "share": "共有",
+    "report": "問題を報告する",
+    "description": "説明",
+    "specifications": "特徴",
+    "location": "位置",
+    "shipping": "貨物",
+    "shippingAvailable": "貨物便での発送も可能です。",
+    "noShipping": "手渡しのみとなります。",
+    "internationalShipping": "海外配送も承ります。",
+    "weight": "重さ",
+    "stock": "ストック",
+    "inStock": "在庫数: {count} 個",
+    "minOrder": "最小注文数",
+    "maxOrder": "最大注文数",
+    "publishedAt": "発行日",
+    "views": "閲覧済み",
+    "similarProducts": "類似製品",
+    "sellerProducts": "出品者のその他の商品"
+  },
+  "seller": {
+    "title": "販売者情報",
+    "verified": "検証済み",
+    "reviews": "評価",
+    "products": "広告",
+    "memberSince": "{year}からのメンバー",
+    "contact": "メッセージを送信",
+    "call": "検索",
+    "viewProfile": "プロフィールを見る"
+  },
+  "newListing": {
+    "title": "新しいリストを作成する",
+    "saveDraft": "下書きを保存",
+    "publish": "公開",
+    "basicInfo": "基本情報",
+    "categoryAndCondition": "カテゴリーとステータス",
+    "pricing": "価格",
+    "shipping": "貨物",
+    "images": "画像",
+    "addImage": "画像を追加",
+    "maxImages": "最大10枚の画像をアップロードできます。",
+    "imageHint": "最低1枚、最大10枚の画像。PNG、JPG、またはWEBP形式。",
+    "fields": {
+      "title": "広告タイトル",
+      "shortDescription": "簡単な説明",
+      "description": "詳細な説明",
+      "category": "カテゴリ",
+      "condition": "製品ステータス",
+      "price": "価格",
+      "stock": "在庫数量",
+      "unit": "ユニット",
+      "shippingAvailable": "配送も可能です。",
+      "shippingCost": "送料",
+      "weight": "重さ",
+      "weightUnit": "重量の単位"
+    },
+    "placeholders": {
+      "title": "例: 2歳のホルスタイン牛",
+      "shortDescription": "製品の説明（最大200文字）",
+      "description": "製品に関する詳細な情報を提供します...",
+      "category": "カテゴリを選択してください。"
+    },
+    "success": "広告は正常に作成されました。",
+    "error": "広告の作成中にエラーが発生しました。"
   }
 }

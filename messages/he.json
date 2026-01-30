@@ -11,7 +11,17 @@
     "back": "בְּחֲזָרָה",
     "next": "קָדִימָה",
     "close": "לִסְגוֹר",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "התחברות",
+    "register": "לִרְשׁוֹם"
+  },
+  "header": {
+    "products": "מוצרים",
+    "sellers": "מוכרים",
+    "about": "אודותינו",
+    "dashboard": "לוּחַ",
+    "settings": "הגדרות",
+    "logout": "התנתק"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "לוּחַ מַחווָנִים",
     "welcome": "ברוך הבא, {שם}!",
-    "accountInfo": "פרטי החשבון שלך מוצגים למטה.",
+    "accountInfo": "סיכום החשבון שלך מופיע למטה.",
     "username": "שֵׁם מִשׁתַמֵשׁ",
     "email": "אֶלֶקטרוֹנִי",
     "id": "תְעוּדַת זֶהוּת",
-    "logout": "התנתק"
+    "logout": "התנתק",
+    "stats": {
+      "totalListings": "סך כל המודעות",
+      "active": "פָּעִיל",
+      "totalViews": "סך כל הצפיות",
+      "thisWeek": "השבוע",
+      "favorites": "מוּעֲדָף",
+      "onYourListings": "בפרסומות שלך",
+      "messages": "הוֹדָעָה",
+      "unread": "לא נקרא"
+    },
+    "recentListings": "המודעות האחרונות שלך",
+    "recentMessages": "הודעות אחרונות",
+    "noListings": "עדיין לא הוספת מודעות.",
+    "noMessages": "עדיין לא קיבלת הודעה.",
+    "noNotifications": "עדיין לא קיבלת התראות.",
+    "viewAllListings": "הצג את כל הרישומים",
+    "viewAllMessages": "הצג את כל ההודעות"
+  },
+  "dashboardNav": {
+    "overview": "סקירה כללית",
+    "myListings": "המודעות שלי",
+    "favorites": "המועדפים שלי",
+    "messages": "הודעות",
+    "notifications": "התראות",
+    "profile": "פּרוֹפִיל",
+    "settings": "הגדרות",
+    "newListing": "הוסף רישום חדש"
+  },
+  "myListings": {
+    "title": "המודעות שלי",
+    "description": "נהל את כל המודעות שלך מכאן.",
+    "noListings": "עדיין לא הוספת מודעות.",
+    "createFirst": "צור את המודעה הראשונה שלך.",
+    "filters": {
+      "all": "כולם",
+      "active": "פָּעִיל",
+      "draft": "טְיוּטָה",
+      "pending": "ממתין לאישור",
+      "sold": "נמכר"
+    },
+    "actions": {
+      "edit": "לַעֲרוֹך",
+      "delete": "לִמְחוֹק",
+      "activate": "לְהַפְעִיל",
+      "deactivate": "מבנה פסיבי"
+    }
+  },
+  "favorites": {
+    "title": "המועדפים שלי",
+    "description": "עקבו אחרי המוצרים שאתם אוהבים כאן.",
+    "noFavorites": "עדיין לא הוספת מוצרים מועדפים.",
+    "browseProducts": "עיין במוצרים"
   },
   "settings": {
     "title": "הגדרות",
@@ -107,5 +169,143 @@
   "language": {
     "select": "בחירת שפה",
     "current": "שפה נוכחית"
+  },
+  "home": {
+    "hero": {
+      "title": "פלטפורמת מסחר בבעלי חיים",
+      "subtitle": "פלטפורמת המסחר האמינה ביותר בבעלי חיים. קנו ומכרו את הבקר והכבשים שלכם בבטחה.",
+      "cta": "התחל עכשיו",
+      "viewListings": "הצג מודעות"
+    },
+    "features": {
+      "secure": {
+        "title": "קניות מאובטחות",
+        "description": "כל העסקאות מאובטחות. פרטי המוכר והקונה אומתו."
+      },
+      "variety": {
+        "title": "מגוון מוצרים רחב",
+        "description": "בקר, כבשים ועוד. מצא בקלות את בעל החיים שאתה מחפש."
+      },
+      "support": {
+        "title": "תמיכה 24/7",
+        "description": "אנחנו תמיד כאן לשאלות שלכם. קו התמיכה החי שלנו פעיל."
+      }
+    },
+    "categories": {
+      "title": "קטגוריות",
+      "cattle": "בָּקָר",
+      "sheep": "בעלי חיים קטנים",
+      "poultry": "עוֹפוֹת",
+      "other": "אַחֵר"
+    },
+    "featured": {
+      "title": "מודעות נבחרות",
+      "viewAll": "ראה הכל"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 מסחר בעלי חיים. כל הזכויות שמורות.",
+    "about": "אודותינו",
+    "contact": "תִקשׁוֹרֶת",
+    "terms": "תנאי שימוש",
+    "privacy": "מדיניות פרטיות"
+  },
+  "products": {
+    "title": "מוצרים",
+    "search": "חיפוש מוצרים...",
+    "filters": "מסננים",
+    "sort": "סוּג",
+    "sortOptions": {
+      "newest": "אחרון",
+      "oldest": "הישן ביותר",
+      "priceAsc": "מחיר (מהנמוך לגבוה)",
+      "priceDesc": "מחיר (גבוה לנמוך)",
+      "popular": "הכי פופולרי"
+    },
+    "status": {
+      "draft": "טְיוּטָה",
+      "active": "פָּעִיל",
+      "sold": "נמכר",
+      "pending": "ממתין לאישור"
+    },
+    "condition": {
+      "new": "חָדָשׁ",
+      "likeNew": "בשימוש קל",
+      "good": "טוֹב",
+      "fair": "אֶמצַע"
+    },
+    "outOfStock": "אזל מהמלאי",
+    "inStock": "בִּמלַאִי",
+    "noResults": "המוצר לא נמצא.",
+    "loading": "טוען מוצרים...",
+    "perPage": "לכל עמוד",
+    "showing": "סך כל המוצרים של {total} בין {from} ל-{to}."
+  },
+  "productDetail": {
+    "addToFavorites": "הוסף למועדפים",
+    "removeFromFavorites": "הסר מהמועדפים",
+    "share": "לַחֲלוֹק",
+    "report": "דווח על בעיה",
+    "description": "הֶסבֵּר",
+    "specifications": "תכונות",
+    "location": "מִקוּם",
+    "shipping": "מִטְעָן",
+    "shippingAvailable": "ניתן לשלוח באמצעות מטען.",
+    "noShipping": "מסירה ידנית בלבד.",
+    "internationalShipping": "משלוח בינלאומי זמין.",
+    "weight": "מִשׁקָל",
+    "stock": "מְנָיוֹת",
+    "inStock": "פריטים במלאי ({count})",
+    "minOrder": "הזמנה מינימלית",
+    "maxOrder": "הזמנה מקסימלית",
+    "publishedAt": "תאריך פרסום",
+    "views": "נצפה",
+    "similarProducts": "מוצרים דומים",
+    "sellerProducts": "מוצרים אחרים של המוכר"
+  },
+  "seller": {
+    "title": "פרטי המוכר",
+    "verified": "מְאוּמָת",
+    "reviews": "הַעֲרָכָה",
+    "products": "פרסומת",
+    "memberSince": "חבר מאז {year}",
+    "contact": "שלח הודעה",
+    "call": "לְחַפֵּשׂ",
+    "viewProfile": "הצג פרופיל"
+  },
+  "newListing": {
+    "title": "צור רישום חדש",
+    "saveDraft": "שמור טיוטה",
+    "publish": "לְפַרְסֵם",
+    "basicInfo": "מידע בסיסי",
+    "categoryAndCondition": "קטגוריה וסטטוס",
+    "pricing": "תמחור",
+    "shipping": "מִטְעָן",
+    "images": "תמונות",
+    "addImage": "הוסף תמונה",
+    "maxImages": "ניתן להעלות מקסימום 10 תמונות.",
+    "imageHint": "מינימום תמונה אחת, מקסימום 10. בפורמט PNG, JPG או WEBP.",
+    "fields": {
+      "title": "כותרת הפרסומת",
+      "shortDescription": "תיאור קצר",
+      "description": "הסבר מפורט",
+      "category": "קָטֵגוֹרִיָה",
+      "condition": "סטטוס המוצר",
+      "price": "מְחִיר",
+      "stock": "כמות במלאי",
+      "unit": "יְחִידָה",
+      "shippingAvailable": "משלוח זמין.",
+      "shippingCost": "דמי משלוח",
+      "weight": "מִשׁקָל",
+      "weightUnit": "יחידת משקל"
+    },
+    "placeholders": {
+      "title": "דוגמה: פרה הולשטיין בת שנתיים",
+      "shortDescription": "תיאור מוצר (מקסימום 200 תווים)",
+      "description": "ספק מידע מפורט על המוצר...",
+      "category": "בחר קטגוריה."
+    },
+    "success": "הפרסומת נוצרה בהצלחה.",
+    "error": "אירעה שגיאה בעת יצירת המודעה."
   }
 }

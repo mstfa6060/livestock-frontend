@@ -11,7 +11,17 @@
     "back": "Lura",
     "next": "'Il Quddiem",
     "close": "Agħlaq",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Idħol",
+    "register": "Reġistru"
+  },
+  "header": {
+    "products": "Prodotti",
+    "sellers": "Bejjiegħa",
+    "about": "Dwarna",
+    "dashboard": "Panel",
+    "settings": "Issettjar",
+    "logout": "Oħroġ"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Dashboard",
     "welcome": "Merħba, {isem}!",
-    "accountInfo": "L-informazzjoni tal-kont tiegħek tidher hawn taħt.",
+    "accountInfo": "Is-sommarju tal-kont tiegħek jinsab hawn taħt.",
     "username": "Isem tal-utent",
     "email": "Email",
     "id": "ID",
-    "logout": "Oħroġ"
+    "logout": "Oħroġ",
+    "stats": {
+      "totalListings": "Reklami Totali",
+      "active": "attiv",
+      "totalViews": "Veduti Totali",
+      "thisWeek": "din il-ġimgħa",
+      "favorites": "Favorit",
+      "onYourListings": "fir-reklami tiegħek",
+      "messages": "Messaġġ",
+      "unread": "mhux moqri"
+    },
+    "recentListings": "L-Aħħar Listings Tiegħek",
+    "recentMessages": "Messaġġi Riċenti",
+    "noListings": "Għadek ma żidt l-ebda reklam.",
+    "noMessages": "Għadek ma rċevejt l-ebda messaġġ.",
+    "noNotifications": "Għadek ma rċevejt l-ebda notifika.",
+    "viewAllListings": "Ara l-Listings Kollha",
+    "viewAllMessages": "Ara l-messaġġi kollha"
+  },
+  "dashboardNav": {
+    "overview": "Ħarsa ġenerali",
+    "myListings": "Ir-reklami tiegħi",
+    "favorites": "Il-favoriti tiegħi",
+    "messages": "Messaġġi",
+    "notifications": "Notifiki",
+    "profile": "Profil",
+    "settings": "Issettjar",
+    "newListing": "Żid Lista Ġdida"
+  },
+  "myListings": {
+    "title": "Ir-reklami tiegħi",
+    "description": "Immaniġġja l-listi kollha tiegħek minn hawn.",
+    "noListings": "Għadek ma żidt l-ebda reklam.",
+    "createFirst": "Oħloq l-ewwel lista tiegħek.",
+    "filters": {
+      "all": "Kollha kemm huma",
+      "active": "Attiv",
+      "draft": "Abbozz",
+      "pending": "Qed Nistennew l-Approvazzjoni",
+      "sold": "Mibjugħ"
+    },
+    "actions": {
+      "edit": "Editja",
+      "delete": "Ħassar",
+      "activate": "Attiva",
+      "deactivate": "Struttura Passiva"
+    }
+  },
+  "favorites": {
+    "title": "Il-favoriti tiegħi",
+    "description": "Segwi l-prodotti li jogħġbuk hawn.",
+    "noFavorites": "Għadek ma żidt l-ebda prodott favorit.",
+    "browseProducts": "Fittex Prodotti"
   },
   "settings": {
     "title": "Issettjar",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Għażla tal-Lingwa",
     "current": "Lingwa Kurrenti"
+  },
+  "home": {
+    "hero": {
+      "title": "Pjattaforma tal-Kummerċ tal-Annimali Ħajjin",
+      "subtitle": "L-aktar pjattaforma affidabbli għall-kummerċ tal-annimali ħajjin. Ixtri u bigħ il-baqar u n-nagħaġ tiegħek b'mod sigur.",
+      "cta": "Ibda Issa",
+      "viewListings": "Ara r-Reklami"
+    },
+    "features": {
+      "secure": {
+        "title": "Xiri Sikur",
+        "description": "It-tranżazzjonijiet kollha huma siguri. L-informazzjoni tal-bejjiegħ u x-xerrej ġiet verifikata."
+      },
+      "variety": {
+        "title": "Firxa Wiesgħa ta' Prodotti",
+        "description": "Baqar, nagħaġ, u aktar. Sib faċilment l-annimal li qed tfittex."
+      },
+      "support": {
+        "title": "Appoġġ 24/7",
+        "description": "Aħna dejjem qegħdin hawn għall-mistoqsijiet tiegħek. Il-linja ta' appoġġ diretta tagħna hija attiva."
+      }
+    },
+    "categories": {
+      "title": "Kategoriji",
+      "cattle": "Baqar",
+      "sheep": "Bhejjem żgħar",
+      "poultry": "Tjur",
+      "other": "Oħrajn"
+    },
+    "featured": {
+      "title": "Reklami Dehru",
+      "viewAll": "Ara kollox"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Livestock Trading. Id-drittijiet kollha riżervati.",
+    "about": "Dwarna",
+    "contact": "Komunikazzjoni",
+    "terms": "Termini ta' Użu",
+    "privacy": "Politika tal-Privatezza"
+  },
+  "products": {
+    "title": "Prodotti",
+    "search": "Fittex għal prodotti...",
+    "filters": "Filtri",
+    "sort": "Issortja",
+    "sortOptions": {
+      "newest": "L-Aħħar",
+      "oldest": "L-eqdem",
+      "priceAsc": "Prezz (Minn Baxx għal Għoli)",
+      "priceDesc": "Prezz (Għoli għal Baxx)",
+      "popular": "L-Aktar Popolari"
+    },
+    "status": {
+      "draft": "Abbozz",
+      "active": "Attiv",
+      "sold": "Mibjugħ",
+      "pending": "Qed Nistennew l-Approvazzjoni"
+    },
+    "condition": {
+      "new": "Ġdid",
+      "likeNew": "Użat Ħafif",
+      "good": "Tajjeb",
+      "fair": "Nofsani"
+    },
+    "outOfStock": "Mhux fl-Istokk",
+    "inStock": "Fl-Istokk",
+    "noResults": "Prodott ma nstabx.",
+    "loading": "Il-prodotti qed jiġu mgħobbija...",
+    "perPage": "Għal kull paġna",
+    "showing": "It-total ta' prodotti {total} bejn {from} u {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Żid mal-Favoriti",
+    "removeFromFavorites": "Neħħi mill-Favoriti",
+    "share": "Aqsam",
+    "report": "Irrapporta problema",
+    "description": "Spjegazzjoni",
+    "specifications": "Karatteristiċi",
+    "location": "Post",
+    "shipping": "Merkanzija",
+    "shippingAvailable": "Jista' jintbagħat bil-merkanzija.",
+    "noShipping": "Kunsinna bl-idejn biss.",
+    "internationalShipping": "Tbaħħir internazzjonali disponibbli.",
+    "weight": "Piż",
+    "stock": "Stokk",
+    "inStock": "{count} oġġetti fl-istokk",
+    "minOrder": "Ordni minima",
+    "maxOrder": "Ordni massima",
+    "publishedAt": "Data tal-pubblikazzjoni",
+    "views": "Meqjusa",
+    "similarProducts": "Prodotti Simili",
+    "sellerProducts": "Prodotti Oħra tal-Bejjiegħ"
+  },
+  "seller": {
+    "title": "Informazzjoni dwar il-Bejjiegħ",
+    "verified": "Verifikat",
+    "reviews": "evalwazzjoni",
+    "products": "reklam",
+    "memberSince": "Membru minn {sena}",
+    "contact": "Ibgħat Messaġġ",
+    "call": "Fittex",
+    "viewProfile": "Ara l-Profil"
+  },
+  "newListing": {
+    "title": "Oħloq Lista Ġdida",
+    "saveDraft": "Salva l-Abbozz",
+    "publish": "Ippubblika",
+    "basicInfo": "Informazzjoni Bażika",
+    "categoryAndCondition": "Kategorija u Status",
+    "pricing": "Prezzijiet",
+    "shipping": "Merkanzija",
+    "images": "Stampi",
+    "addImage": "Żid Immaġni",
+    "maxImages": "Tista' ttella' massimu ta' 10 immaġini.",
+    "imageHint": "Minimu 1, massimu 10 immaġni. Fil-format PNG, JPG, jew WEBP.",
+    "fields": {
+      "title": "Titlu tar-Reklamar",
+      "shortDescription": "Deskrizzjoni qasira",
+      "description": "Spjegazzjoni Dettaljata",
+      "category": "Kategorija",
+      "condition": "Status tal-Prodott",
+      "price": "Prezz",
+      "stock": "Kwantità tal-Istokk",
+      "unit": "Unità",
+      "shippingAvailable": "It-tbaħħir huwa disponibbli.",
+      "shippingCost": "Ħlas tat-Tbaħħir",
+      "weight": "Piż",
+      "weightUnit": "Unità tal-Piż"
+    },
+    "placeholders": {
+      "title": "Eżempju: Baqra Holstein ta' sentejn",
+      "shortDescription": "Deskrizzjoni tal-prodott (massimu ta' 200 karattru)",
+      "description": "Agħti informazzjoni dettaljata dwar il-prodott...",
+      "category": "Agħżel kategorija."
+    },
+    "success": "Ir-riklam inħoloq b'suċċess.",
+    "error": "Seħħ żball waqt il-ħolqien tar-riklam."
   }
 }

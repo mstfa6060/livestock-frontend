@@ -11,7 +11,17 @@
     "back": "Atgal",
     "next": "Pirmyn",
     "close": "Uždaryti",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Prisijungti",
+    "register": "Registruotis"
+  },
+  "header": {
+    "products": "Produktai",
+    "sellers": "Pardavėjai",
+    "about": "Apie mus",
+    "dashboard": "Skydelis",
+    "settings": "Nustatymai",
+    "logout": "Atsijungti"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Prietaisų skydelis",
     "welcome": "Sveiki atvykę, {vardas}!",
-    "accountInfo": "Jūsų paskyros informacija rodoma žemiau.",
+    "accountInfo": "Jūsų paskyros santrauka pateikiama žemiau.",
     "username": "Vartotojo vardas",
     "email": "El. paštas",
     "id": "ID",
-    "logout": "Atsijungti"
+    "logout": "Atsijungti",
+    "stats": {
+      "totalListings": "Iš viso skelbimų",
+      "active": "aktyvus",
+      "totalViews": "Iš viso peržiūrų",
+      "thisWeek": "šią savaitę",
+      "favorites": "Mėgstamiausias",
+      "onYourListings": "jūsų reklamose",
+      "messages": "Žinutė",
+      "unread": "neskaitytas"
+    },
+    "recentListings": "Jūsų naujausi skelbimai",
+    "recentMessages": "Naujausi pranešimai",
+    "noListings": "Dar nepridėjote jokių skelbimų.",
+    "noMessages": "Dar negavote žinutės.",
+    "noNotifications": "Dar negavote jokių pranešimų.",
+    "viewAllListings": "Peržiūrėti visus skelbimus",
+    "viewAllMessages": "Peržiūrėti visus pranešimus"
+  },
+  "dashboardNav": {
+    "overview": "Apžvalga",
+    "myListings": "Mano skelbimai",
+    "favorites": "Mano mėgstamiausi",
+    "messages": "Žinutės",
+    "notifications": "Pranešimai",
+    "profile": "Profilis",
+    "settings": "Nustatymai",
+    "newListing": "Pridėti naują skelbimą"
+  },
+  "myListings": {
+    "title": "Mano skelbimai",
+    "description": "Tvarkykite visus savo skelbimus čia.",
+    "noListings": "Dar nepridėjote jokių skelbimų.",
+    "createFirst": "Sukurkite savo pirmąjį skelbimą.",
+    "filters": {
+      "all": "Visi jie",
+      "active": "Aktyvus",
+      "draft": "Juodraštis",
+      "pending": "Laukiama patvirtinimo",
+      "sold": "Parduota"
+    },
+    "actions": {
+      "edit": "Redaguoti",
+      "delete": "Ištrinti",
+      "activate": "Aktyvuoti",
+      "deactivate": "Pasyvi struktūra"
+    }
+  },
+  "favorites": {
+    "title": "Mano mėgstamiausi",
+    "description": "Sekite jums patinkančius produktus čia.",
+    "noFavorites": "Dar nepridėjote jokių mėgstamiausių produktų.",
+    "browseProducts": "Naršyti produktus"
   },
   "settings": {
     "title": "Nustatymai",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Kalbos pasirinkimas",
     "current": "Dabartinė kalba"
+  },
+  "home": {
+    "hero": {
+      "title": "Gyvų gyvūnų prekybos platforma",
+      "subtitle": "Patikimiausia gyvų gyvūnų prekybos platforma. Saugiai pirkite ir parduokite savo galvijus ir avis.",
+      "cta": "Pradėti dabar",
+      "viewListings": "Peržiūrėti skelbimus"
+    },
+    "features": {
+      "secure": {
+        "title": "Saugus apsipirkimas",
+        "description": "Visos operacijos yra saugios. Pardavėjo ir pirkėjo informacija buvo patikrinta."
+      },
+      "variety": {
+        "title": "Platus produktų asortimentas",
+        "description": "Galvijai, avys ir kita. Lengvai raskite ieškomą gyvūną."
+      },
+      "support": {
+        "title": "Palaikymas visą parą",
+        "description": "Mes visada pasiruošę atsakyti į jūsų klausimus. Mūsų tiesioginė pagalbos linija veikia."
+      }
+    },
+    "categories": {
+      "title": "Kategorijos",
+      "cattle": "Galvijai",
+      "sheep": "Smulkūs gyvuliai",
+      "poultry": "Paukštiena",
+      "other": "Kita"
+    },
+    "featured": {
+      "title": "Rekomenduojami skelbimai",
+      "viewAll": "Žiūrėti visus"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Gyvulių prekyba. Visos teisės saugomos.",
+    "about": "Apie mus",
+    "contact": "Bendravimas",
+    "terms": "Naudojimo sąlygos",
+    "privacy": "Privatumo politika"
+  },
+  "products": {
+    "title": "Produktai",
+    "search": "Ieškoti produktų...",
+    "filters": "Filtrai",
+    "sort": "Rūšiuoti",
+    "sortOptions": {
+      "newest": "Naujausi",
+      "oldest": "Seniausias",
+      "priceAsc": "Kaina (nuo žemiausios iki aukščiausios)",
+      "priceDesc": "Kaina (nuo didžiausios iki mažiausios)",
+      "popular": "Populiariausi"
+    },
+    "status": {
+      "draft": "Juodraštis",
+      "active": "Aktyvus",
+      "sold": "Parduota",
+      "pending": "Laukiama patvirtinimo"
+    },
+    "condition": {
+      "new": "Naujas",
+      "likeNew": "Mažai naudotas",
+      "good": "Gerai",
+      "fair": "Vidurys"
+    },
+    "outOfStock": "Nėra sandėlyje",
+    "inStock": "Sandėlyje",
+    "noResults": "Produktas nerastas.",
+    "loading": "Įkeliami produktai...",
+    "perPage": "Puslapyje",
+    "showing": "Bendras produktų skaičius nuo {from} iki {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Pridėti prie mėgstamiausių",
+    "removeFromFavorites": "Pašalinti iš mėgstamiausių",
+    "share": "Bendrinti",
+    "report": "Pranešti apie problemą",
+    "description": "Paaiškinimas",
+    "specifications": "Savybės",
+    "location": "Vieta",
+    "shipping": "Krovinys",
+    "shippingAvailable": "Galima gabenti krovininiu transportu.",
+    "noShipping": "Tik rankinis pristatymas.",
+    "internationalShipping": "Galimas tarptautinis siuntimas.",
+    "weight": "Svoris",
+    "stock": "Atsargos",
+    "inStock": "{count} prekės sandėlyje",
+    "minOrder": "Minimalus užsakymas",
+    "maxOrder": "Maksimalus užsakymas",
+    "publishedAt": "Išleidimo data",
+    "views": "Peržiūrėta",
+    "similarProducts": "Panašūs produktai",
+    "sellerProducts": "Pardavėjo kiti produktai"
+  },
+  "seller": {
+    "title": "Pardavėjo informacija",
+    "verified": "Patvirtinta",
+    "reviews": "vertinimas",
+    "products": "skelbimas",
+    "memberSince": "Narys nuo {year}",
+    "contact": "Siųsti žinutę",
+    "call": "Paieška",
+    "viewProfile": "Peržiūrėti profilį"
+  },
+  "newListing": {
+    "title": "Sukurti naują skelbimą",
+    "saveDraft": "Išsaugoti juodraštį",
+    "publish": "Paskelbti",
+    "basicInfo": "Pagrindinė informacija",
+    "categoryAndCondition": "Kategorija ir būsena",
+    "pricing": "Kainodara",
+    "shipping": "Krovinys",
+    "images": "Vaizdai",
+    "addImage": "Pridėti paveikslėlį",
+    "maxImages": "Galite įkelti daugiausia 10 paveikslėlių.",
+    "imageHint": "Mažiausiai 1, daugiausiai 10 paveikslėlių. PNG, JPG arba WEBP formatu.",
+    "fields": {
+      "title": "Reklamos pavadinimas",
+      "shortDescription": "Trumpas aprašymas",
+      "description": "Išsamus paaiškinimas",
+      "category": "Kategorija",
+      "condition": "Produkto būsena",
+      "price": "Kaina",
+      "stock": "Atsargų kiekis",
+      "unit": "Vienetas",
+      "shippingAvailable": "Siuntimas galimas.",
+      "shippingCost": "Siuntimo mokestis",
+      "weight": "Svoris",
+      "weightUnit": "Svorio vienetas"
+    },
+    "placeholders": {
+      "title": "Pavyzdys: 2 metų Holšteino veislės karvė",
+      "shortDescription": "Produkto aprašymas (daugiausia 200 simbolių)",
+      "description": "Pateikite išsamią informaciją apie produktą...",
+      "category": "Pasirinkite kategoriją."
+    },
+    "success": "Reklama sėkmingai sukurta.",
+    "error": "Kuriant skelbimą įvyko klaida."
   }
 }

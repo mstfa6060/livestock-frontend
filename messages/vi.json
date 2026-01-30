@@ -11,7 +11,17 @@
     "back": "Mặt sau",
     "next": "Phía trước",
     "close": "Đóng",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Đăng nhập",
+    "register": "Đăng ký"
+  },
+  "header": {
+    "products": "Các sản phẩm",
+    "sellers": "Người bán",
+    "about": "Về chúng tôi",
+    "dashboard": "Bảng",
+    "settings": "Cài đặt",
+    "logout": "Đăng xuất"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Bảng điều khiển",
     "welcome": "Chào mừng, {name}!",
-    "accountInfo": "Thông tin tài khoản của bạn được hiển thị bên dưới.",
+    "accountInfo": "Tóm tắt tài khoản của bạn như sau.",
     "username": "Tên người dùng",
     "email": "E-mail",
     "id": "NHẬN DẠNG",
-    "logout": "Đăng xuất"
+    "logout": "Đăng xuất",
+    "stats": {
+      "totalListings": "Tổng số quảng cáo",
+      "active": "tích cực",
+      "totalViews": "Tổng lượt xem",
+      "thisWeek": "tuần này",
+      "favorites": "Yêu thích",
+      "onYourListings": "trong quảng cáo của bạn",
+      "messages": "Tin nhắn",
+      "unread": "chưa đọc"
+    },
+    "recentListings": "Danh sách mới nhất của bạn",
+    "recentMessages": "Tin nhắn gần đây",
+    "noListings": "Bạn chưa thêm bất kỳ quảng cáo nào.",
+    "noMessages": "Bạn chưa nhận được tin nhắn nào.",
+    "noNotifications": "Bạn chưa nhận được bất kỳ thông báo nào.",
+    "viewAllListings": "Xem tất cả tin đăng",
+    "viewAllMessages": "Xem tất cả tin nhắn"
+  },
+  "dashboardNav": {
+    "overview": "Tổng quan",
+    "myListings": "Quảng cáo của tôi",
+    "favorites": "Những món tôi yêu thích",
+    "messages": "Tin nhắn",
+    "notifications": "Thông báo",
+    "profile": "Hồ sơ",
+    "settings": "Cài đặt",
+    "newListing": "Thêm tin đăng mới"
+  },
+  "myListings": {
+    "title": "Quảng cáo của tôi",
+    "description": "Quản lý tất cả tin đăng của bạn từ đây.",
+    "noListings": "Bạn chưa thêm bất kỳ quảng cáo nào.",
+    "createFirst": "Tạo bài đăng đầu tiên của bạn.",
+    "filters": {
+      "all": "Tất cả bọn họ",
+      "active": "Tích cực",
+      "draft": "Bản nháp",
+      "pending": "Đang chờ phê duyệt",
+      "sold": "Đã bán"
+    },
+    "actions": {
+      "edit": "Biên tập",
+      "delete": "Xóa bỏ",
+      "activate": "Kích hoạt",
+      "deactivate": "Cấu trúc thụ động"
+    }
+  },
+  "favorites": {
+    "title": "Những món tôi yêu thích",
+    "description": "Theo dõi những sản phẩm bạn thích tại đây.",
+    "noFavorites": "Bạn chưa thêm sản phẩm yêu thích nào.",
+    "browseProducts": "Xem sản phẩm"
   },
   "settings": {
     "title": "Cài đặt",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Lựa chọn ngôn ngữ",
     "current": "Ngôn ngữ hiện tại"
+  },
+  "home": {
+    "hero": {
+      "title": "Nền tảng giao dịch động vật sống",
+      "subtitle": "Nền tảng giao dịch động vật sống đáng tin cậy nhất. Mua và bán gia súc, cừu một cách an toàn.",
+      "cta": "Bắt đầu ngay",
+      "viewListings": "Xem quảng cáo"
+    },
+    "features": {
+      "secure": {
+        "title": "Mua sắm an toàn",
+        "description": "Tất cả các giao dịch đều an toàn. Thông tin người bán và người mua đã được xác minh."
+      },
+      "variety": {
+        "title": "Dòng sản phẩm đa dạng",
+        "description": "Gia súc, cừu và nhiều loài khác. Dễ dàng tìm thấy con vật bạn đang tìm kiếm."
+      },
+      "support": {
+        "title": "Hỗ trợ 24/7",
+        "description": "Chúng tôi luôn sẵn sàng giải đáp mọi thắc mắc của bạn. Đường dây hỗ trợ trực tuyến của chúng tôi luôn hoạt động."
+      }
+    },
+    "categories": {
+      "title": "Thể loại",
+      "cattle": "Gia súc",
+      "sheep": "Gia súc nhỏ",
+      "poultry": "Gia cầm",
+      "other": "Khác"
+    },
+    "featured": {
+      "title": "Quảng cáo nổi bật",
+      "viewAll": "Xem tất cả"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Livestock Trading. Mọi quyền được bảo lưu.",
+    "about": "Về chúng tôi",
+    "contact": "Giao tiếp",
+    "terms": "Điều khoản sử dụng",
+    "privacy": "Chính sách bảo mật"
+  },
+  "products": {
+    "title": "Các sản phẩm",
+    "search": "Tìm kiếm sản phẩm...",
+    "filters": "Bộ lọc",
+    "sort": "Loại",
+    "sortOptions": {
+      "newest": "Mới nhất",
+      "oldest": "Cũ nhất",
+      "priceAsc": "Giá (Từ thấp đến cao)",
+      "priceDesc": "Giá (Từ cao đến thấp)",
+      "popular": "Phổ biến nhất"
+    },
+    "status": {
+      "draft": "Bản nháp",
+      "active": "Tích cực",
+      "sold": "Đã bán",
+      "pending": "Đang chờ phê duyệt"
+    },
+    "condition": {
+      "new": "Mới",
+      "likeNew": "Đã qua sử dụng nhẹ",
+      "good": "Tốt",
+      "fair": "Ở giữa"
+    },
+    "outOfStock": "Hết hàng",
+    "inStock": "Còn hàng",
+    "noResults": "Không tìm thấy sản phẩm.",
+    "loading": "Đang tải sản phẩm...",
+    "perPage": "Mỗi trang",
+    "showing": "Tổng số sản phẩm {total} nằm trong khoảng thời gian từ {from} đến {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Thêm vào mục yêu thích",
+    "removeFromFavorites": "Xóa khỏi mục yêu thích",
+    "share": "Chia sẻ",
+    "report": "Báo cáo sự cố",
+    "description": "Giải thích",
+    "specifications": "Đặc trưng",
+    "location": "Vị trí",
+    "shipping": "Hàng hóa",
+    "shippingAvailable": "Có thể vận chuyển bằng đường hàng hóa.",
+    "noShipping": "Chỉ giao hàng tận tay.",
+    "internationalShipping": "Có dịch vụ vận chuyển quốc tế.",
+    "weight": "Cân nặng",
+    "stock": "Cổ phần",
+    "inStock": "Số lượng hàng trong kho: {count}",
+    "minOrder": "Đơn hàng tối thiểu",
+    "maxOrder": "Đơn hàng tối đa",
+    "publishedAt": "Ngày xuất bản",
+    "views": "Đã xem",
+    "similarProducts": "Sản phẩm tương tự",
+    "sellerProducts": "Các sản phẩm khác của người bán"
+  },
+  "seller": {
+    "title": "Thông tin người bán",
+    "verified": "Đã xác minh",
+    "reviews": "sự đánh giá",
+    "products": "quảng cáo",
+    "memberSince": "Thành viên từ năm {year}",
+    "contact": "Gửi tin nhắn",
+    "call": "Tìm kiếm",
+    "viewProfile": "Xem hồ sơ"
+  },
+  "newListing": {
+    "title": "Tạo tin đăng mới",
+    "saveDraft": "Lưu bản nháp",
+    "publish": "Xuất bản",
+    "basicInfo": "Thông tin cơ bản",
+    "categoryAndCondition": "Hạng mục và trạng thái",
+    "pricing": "Giá cả",
+    "shipping": "Hàng hóa",
+    "images": "Hình ảnh",
+    "addImage": "Thêm hình ảnh",
+    "maxImages": "Bạn có thể tải lên tối đa 10 hình ảnh.",
+    "imageHint": "Tối thiểu 1, tối đa 10 hình ảnh. Định dạng PNG, JPG hoặc WEBP.",
+    "fields": {
+      "title": "Tiêu đề quảng cáo",
+      "shortDescription": "Mô tả ngắn gọn",
+      "description": "Giải thích chi tiết",
+      "category": "Loại",
+      "condition": "Trạng thái sản phẩm",
+      "price": "Giá",
+      "stock": "Số lượng hàng tồn kho",
+      "unit": "Đơn vị",
+      "shippingAvailable": "Có dịch vụ giao hàng.",
+      "shippingCost": "Phí vận chuyển",
+      "weight": "Cân nặng",
+      "weightUnit": "Đơn vị trọng lượng"
+    },
+    "placeholders": {
+      "title": "Ví dụ: Bò Holstein 2 tuổi",
+      "shortDescription": "Mô tả sản phẩm (tối đa 200 ký tự)",
+      "description": "Cung cấp thông tin chi tiết về sản phẩm...",
+      "category": "Chọn một danh mục."
+    },
+    "success": "Quảng cáo đã được tạo thành công.",
+    "error": "Đã xảy ra lỗi trong quá trình tạo quảng cáo."
   }
 }

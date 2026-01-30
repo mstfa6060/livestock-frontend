@@ -11,7 +11,17 @@
     "back": "Rug",
     "next": "Vooruit",
     "close": "Dichtbij",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Inloggen",
+    "register": "Register"
+  },
+  "header": {
+    "products": "Producten",
+    "sellers": "Verkopers",
+    "about": "Over ons",
+    "dashboard": "Paneel",
+    "settings": "Instellingen",
+    "logout": "Uitloggen"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Dashboard",
     "welcome": "Welkom, {naam}!",
-    "accountInfo": "Uw accountgegevens worden hieronder weergegeven.",
+    "accountInfo": "Uw rekeningoverzicht vindt u hieronder.",
     "username": "Gebruikersnaam",
     "email": "E-mail",
     "id": "ID",
-    "logout": "Uitloggen"
+    "logout": "Uitloggen",
+    "stats": {
+      "totalListings": "Totaal aantal advertenties",
+      "active": "actief",
+      "totalViews": "Totaal aantal weergaven",
+      "thisWeek": "deze week",
+      "favorites": "Favoriet",
+      "onYourListings": "in uw advertenties",
+      "messages": "Bericht",
+      "unread": "ongelezen"
+    },
+    "recentListings": "Uw nieuwste aanbiedingen",
+    "recentMessages": "Recente berichten",
+    "noListings": "Je hebt nog geen advertenties toegevoegd.",
+    "noMessages": "Je hebt nog geen bericht ontvangen.",
+    "noNotifications": "Je hebt nog geen meldingen ontvangen.",
+    "viewAllListings": "Bekijk alle advertenties",
+    "viewAllMessages": "Bekijk alle berichten"
+  },
+  "dashboardNav": {
+    "overview": "Overzicht",
+    "myListings": "Mijn advertenties",
+    "favorites": "Mijn favorieten",
+    "messages": "Berichten",
+    "notifications": "Meldingen",
+    "profile": "Profiel",
+    "settings": "Instellingen",
+    "newListing": "Nieuwe advertentie toevoegen"
+  },
+  "myListings": {
+    "title": "Mijn advertenties",
+    "description": "Beheer al uw advertenties vanaf hier.",
+    "noListings": "Je hebt nog geen advertenties toegevoegd.",
+    "createFirst": "Maak je eerste advertentie aan.",
+    "filters": {
+      "all": "Allemaal",
+      "active": "Actief",
+      "draft": "Voorlopige versie",
+      "pending": "In afwachting van goedkeuring",
+      "sold": "Verkocht"
+    },
+    "actions": {
+      "edit": "Bewerking",
+      "delete": "Verwijderen",
+      "activate": "Activeren",
+      "deactivate": "Passieve structuur"
+    }
+  },
+  "favorites": {
+    "title": "Mijn favorieten",
+    "description": "Volg hier de producten die je leuk vindt.",
+    "noFavorites": "Je hebt nog geen favoriete producten toegevoegd.",
+    "browseProducts": "Producten bekijken"
   },
   "settings": {
     "title": "Instellingen",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Taalselectie",
     "current": "Huidige taal"
+  },
+  "home": {
+    "hero": {
+      "title": "Handelsplatform voor levende dieren",
+      "subtitle": "Het meest betrouwbare platform voor de handel in levende dieren. Koop en verkoop uw runderen en schapen veilig.",
+      "cta": "Begin nu",
+      "viewListings": "Bekijk advertenties"
+    },
+    "features": {
+      "secure": {
+        "title": "Veilig winkelen",
+        "description": "Alle transacties zijn beveiligd. De gegevens van verkoper en koper zijn geverifieerd."
+      },
+      "variety": {
+        "title": "Breed productassortiment",
+        "description": "Runderen, schapen en meer. Vind eenvoudig het dier dat u zoekt."
+      },
+      "support": {
+        "title": "24/7 ondersteuning",
+        "description": "Wij staan altijd klaar om uw vragen te beantwoorden. Onze live helpdesk is bereikbaar."
+      }
+    },
+    "categories": {
+      "title": "Categorieën",
+      "cattle": "Vee",
+      "sheep": "Kleinvee",
+      "poultry": "Gevogelte",
+      "other": "Ander"
+    },
+    "featured": {
+      "title": "Uitgelichte advertenties",
+      "viewAll": "Alles bekijken"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Livestock Trading. Alle rechten voorbehouden.",
+    "about": "Over ons",
+    "contact": "Mededeling",
+    "terms": "Gebruiksvoorwaarden",
+    "privacy": "Privacybeleid"
+  },
+  "products": {
+    "title": "Producten",
+    "search": "Producten zoeken...",
+    "filters": "Filters",
+    "sort": "Soort",
+    "sortOptions": {
+      "newest": "Laatste",
+      "oldest": "Oudste",
+      "priceAsc": "Prijs (van laag naar hoog)",
+      "priceDesc": "Prijs (van hoog naar laag)",
+      "popular": "Meest populair"
+    },
+    "status": {
+      "draft": "Voorlopige versie",
+      "active": "Actief",
+      "sold": "Verkocht",
+      "pending": "In afwachting van goedkeuring"
+    },
+    "condition": {
+      "new": "Nieuw",
+      "likeNew": "Licht gebruikt",
+      "good": "Goed",
+      "fair": "Midden"
+    },
+    "outOfStock": "Niet op voorraad",
+    "inStock": "Op voorraad",
+    "noResults": "Product niet gevonden.",
+    "loading": "Producten laden...",
+    "perPage": "Per pagina",
+    "showing": "Het totaal van {total} producten tussen {from} en {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Toevoegen aan favorieten",
+    "removeFromFavorites": "Verwijderen uit favorieten",
+    "share": "Deel",
+    "report": "Een probleem melden",
+    "description": "Uitleg",
+    "specifications": "Functies",
+    "location": "Locatie",
+    "shipping": "Lading",
+    "shippingAvailable": "Kan per vrachtschip worden verzonden.",
+    "noShipping": "Alleen afleveren aan de hand.",
+    "internationalShipping": "Internationale verzending mogelijk.",
+    "weight": "Gewicht",
+    "stock": "Voorraad",
+    "inStock": "{count} artikelen op voorraad",
+    "minOrder": "Minimale bestelling",
+    "maxOrder": "Maximale bestelling",
+    "publishedAt": "Publicatiedatum",
+    "views": "Bekeken",
+    "similarProducts": "Vergelijkbare producten",
+    "sellerProducts": "Overige producten van de verkoper"
+  },
+  "seller": {
+    "title": "Verkopersinformatie",
+    "verified": "Geverifieerd",
+    "reviews": "evaluatie",
+    "products": "advertentie",
+    "memberSince": "Lid sinds {jaar}",
+    "contact": "Bericht verzenden",
+    "call": "Zoekopdracht",
+    "viewProfile": "Profiel bekijken"
+  },
+  "newListing": {
+    "title": "Nieuwe advertentie aanmaken",
+    "saveDraft": "Concept opslaan",
+    "publish": "Publiceren",
+    "basicInfo": "Basisgegevens",
+    "categoryAndCondition": "Categorie en status",
+    "pricing": "Prijzen",
+    "shipping": "Lading",
+    "images": "Afbeeldingen",
+    "addImage": "Afbeelding toevoegen",
+    "maxImages": "Je kunt maximaal 10 afbeeldingen uploaden.",
+    "imageHint": "Minimaal 1, maximaal 10 afbeeldingen. In PNG-, JPG- of WEBP-formaat.",
+    "fields": {
+      "title": "Advertentietitel",
+      "shortDescription": "Korte beschrijving",
+      "description": "Gedetailleerde uitleg",
+      "category": "Categorie",
+      "condition": "Productstatus",
+      "price": "Prijs",
+      "stock": "Voorraadhoeveelheid",
+      "unit": "Eenheid",
+      "shippingAvailable": "Verzending is mogelijk.",
+      "shippingCost": "Verzendkosten",
+      "weight": "Gewicht",
+      "weightUnit": "Gewichtseenheid"
+    },
+    "placeholders": {
+      "title": "Voorbeeld: een 2-jarige Holstein-koe",
+      "shortDescription": "Productomschrijving (max. 200 tekens)",
+      "description": "Geef gedetailleerde informatie over het product...",
+      "category": "Selecteer een categorie."
+    },
+    "success": "De advertentie is succesvol gemaakt.",
+    "error": "Er is een fout opgetreden tijdens het maken van de advertentie."
   }
 }

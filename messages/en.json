@@ -11,7 +11,17 @@
     "back": "Back",
     "next": "Forward",
     "close": "Close",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Log in",
+    "register": "Register"
+  },
+  "header": {
+    "products": "Products",
+    "sellers": "Sellers",
+    "about": "About Us",
+    "dashboard": "Panel",
+    "settings": "Settings",
+    "logout": "Log Out"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Dashboard",
     "welcome": "Welcome, {name}!",
-    "accountInfo": "Your account information is displayed below.",
+    "accountInfo": "Your account summary is below.",
     "username": "User name",
     "email": "Email",
     "id": "ID",
-    "logout": "Log Out"
+    "logout": "Log Out",
+    "stats": {
+      "totalListings": "Total Ads",
+      "active": "active",
+      "totalViews": "Total Views",
+      "thisWeek": "this week",
+      "favorites": "Favorite",
+      "onYourListings": "in your advertisements",
+      "messages": "Message",
+      "unread": "unread"
+    },
+    "recentListings": "Your Latest Listings",
+    "recentMessages": "Recent Messages",
+    "noListings": "You haven't added any ads yet.",
+    "noMessages": "You haven't received a message yet.",
+    "noNotifications": "You haven't received any notifications yet.",
+    "viewAllListings": "View All Listings",
+    "viewAllMessages": "View all messages"
+  },
+  "dashboardNav": {
+    "overview": "Overview",
+    "myListings": "My ads",
+    "favorites": "My favorites",
+    "messages": "Messages",
+    "notifications": "Notifications",
+    "profile": "Profile",
+    "settings": "Settings",
+    "newListing": "Add New Listing"
+  },
+  "myListings": {
+    "title": "My ads",
+    "description": "Manage all your listings from here.",
+    "noListings": "You haven't added any ads yet.",
+    "createFirst": "Create your first listing.",
+    "filters": {
+      "all": "All of them",
+      "active": "Active",
+      "draft": "Draft",
+      "pending": "Awaiting Approval",
+      "sold": "Sold"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "activate": "Activate",
+      "deactivate": "Passive Structure"
+    }
+  },
+  "favorites": {
+    "title": "My favorites",
+    "description": "Follow the products you like here.",
+    "noFavorites": "You haven't added any favorite products yet.",
+    "browseProducts": "Browse Products"
   },
   "settings": {
     "title": "Settings",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Language Selection",
     "current": "Current Language"
+  },
+  "home": {
+    "hero": {
+      "title": "Live Animal Trading Platform",
+      "subtitle": "The most reliable live animal trading platform. Buy and sell your cattle and sheep safely.",
+      "cta": "Start Now",
+      "viewListings": "View Ads"
+    },
+    "features": {
+      "secure": {
+        "title": "Secure Shopping",
+        "description": "All transactions are secure. Seller and buyer information has been verified."
+      },
+      "variety": {
+        "title": "Wide Product Range",
+        "description": "Cattle, sheep, and more. Easily find the animal you're looking for."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "We are always here for your questions. Our live support line is active."
+      }
+    },
+    "categories": {
+      "title": "Categories",
+      "cattle": "Cattle",
+      "sheep": "Small livestock",
+      "poultry": "Poultry",
+      "other": "Other"
+    },
+    "featured": {
+      "title": "Featured Ads",
+      "viewAll": "See all"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Livestock Trading. All rights reserved.",
+    "about": "About Us",
+    "contact": "Communication",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy"
+  },
+  "products": {
+    "title": "Products",
+    "search": "Search for products...",
+    "filters": "Filters",
+    "sort": "Sort",
+    "sortOptions": {
+      "newest": "Latest",
+      "oldest": "Oldest",
+      "priceAsc": "Price (From Low to High)",
+      "priceDesc": "Price (High to Low)",
+      "popular": "Most Popular"
+    },
+    "status": {
+      "draft": "Draft",
+      "active": "Active",
+      "sold": "Sold",
+      "pending": "Awaiting Approval"
+    },
+    "condition": {
+      "new": "New",
+      "likeNew": "Lightly Used",
+      "good": "Good",
+      "fair": "Middle"
+    },
+    "outOfStock": "Out of Stock",
+    "inStock": "In Stock",
+    "noResults": "Product not found.",
+    "loading": "Products are being loaded...",
+    "perPage": "Per page",
+    "showing": "The total of {total} products between {from} and {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites",
+    "share": "Share",
+    "report": "Report a problem",
+    "description": "Explanation",
+    "specifications": "Features",
+    "location": "Location",
+    "shipping": "Cargo",
+    "shippingAvailable": "Can be shipped by cargo.",
+    "noShipping": "Hand delivery only.",
+    "internationalShipping": "International shipping available.",
+    "weight": "Weight",
+    "stock": "Stock",
+    "inStock": "{count} items in stock",
+    "minOrder": "Minimum order",
+    "maxOrder": "Maximum order",
+    "publishedAt": "Publication date",
+    "views": "Viewed",
+    "similarProducts": "Similar Products",
+    "sellerProducts": "Seller's Other Products"
+  },
+  "seller": {
+    "title": "Seller Information",
+    "verified": "Verified",
+    "reviews": "evaluation",
+    "products": "advert ",
+    "memberSince": "Member since {year}",
+    "contact": "Send Message",
+    "call": "Search",
+    "viewProfile": "View Profile"
+  },
+  "newListing": {
+    "title": "Create New Listing",
+    "saveDraft": "Save Draft",
+    "publish": "Publish",
+    "basicInfo": "Basic Information",
+    "categoryAndCondition": "Category and Status",
+    "pricing": "Pricing",
+    "shipping": "Cargo",
+    "images": "Images",
+    "addImage": "Add Image",
+    "maxImages": "You can upload a maximum of 10 images.",
+    "imageHint": "Minimum 1, maximum 10 images. In PNG, JPG, or WEBP format.",
+    "fields": {
+      "title": "Advertisement Title",
+      "shortDescription": "Brief Description",
+      "description": "Detailed Explanation",
+      "category": "Category",
+      "condition": "Product Status",
+      "price": "Price",
+      "stock": "Stock Quantity",
+      "unit": "Unit",
+      "shippingAvailable": "Shipping is available.",
+      "shippingCost": "Shipping Fee",
+      "weight": "Weight",
+      "weightUnit": "Unit of Weight"
+    },
+    "placeholders": {
+      "title": "Example: 2-Year-Old Holstein Cow",
+      "shortDescription": "Product description (max 200 characters)",
+      "description": "Provide detailed information about the product...",
+      "category": "Select a category."
+    },
+    "success": "The advertisement was successfully created.",
+    "error": "An error occurred while creating the advertisement."
   }
 }

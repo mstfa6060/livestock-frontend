@@ -11,7 +11,17 @@
     "back": "Til baka",
     "next": "Áfram",
     "close": "Loka",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Innskráning",
+    "register": "Skráning"
+  },
+  "header": {
+    "products": "Vörur",
+    "sellers": "Seljendur",
+    "about": "Um okkur",
+    "dashboard": "Spjald",
+    "settings": "Stillingar",
+    "logout": "Útskráning"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Mælaborð",
     "welcome": "Velkomin(n), {nafn}!",
-    "accountInfo": "Upplýsingar um reikninginn þinn birtast hér að neðan.",
+    "accountInfo": "Yfirlit yfir reikninginn þinn er hér að neðan.",
     "username": "Notandanafn",
     "email": "Tölvupóstur",
     "id": "Auðkenni",
-    "logout": "Útskráning"
+    "logout": "Útskráning",
+    "stats": {
+      "totalListings": "Heildarauglýsingar",
+      "active": "virkur",
+      "totalViews": "Heildarfjöldi áhorfa",
+      "thisWeek": "í þessari viku",
+      "favorites": "Uppáhalds",
+      "onYourListings": "í auglýsingum þínum",
+      "messages": "Skilaboð",
+      "unread": "ólesið"
+    },
+    "recentListings": "Nýjustu skráningar þínar",
+    "recentMessages": "Nýleg skilaboð",
+    "noListings": "Þú hefur ekki bætt við neinum auglýsingum ennþá.",
+    "noMessages": "Þú hefur ekki fengið skilaboð ennþá.",
+    "noNotifications": "Þú hefur ekki fengið neinar tilkynningar ennþá.",
+    "viewAllListings": "Skoða allar skráningar",
+    "viewAllMessages": "Skoða öll skilaboð"
+  },
+  "dashboardNav": {
+    "overview": "Yfirlit",
+    "myListings": "Auglýsingarnar mínar",
+    "favorites": "Uppáhalds mínir",
+    "messages": "Skilaboð",
+    "notifications": "Tilkynningar",
+    "profile": "Prófíll",
+    "settings": "Stillingar",
+    "newListing": "Bæta við nýrri skráningu"
+  },
+  "myListings": {
+    "title": "Auglýsingarnar mínar",
+    "description": "Stjórnaðu öllum skráningum þínum héðan.",
+    "noListings": "Þú hefur ekki bætt við neinum auglýsingum ennþá.",
+    "createFirst": "Búðu til þína fyrstu skráningu.",
+    "filters": {
+      "all": "Öll þau",
+      "active": "Virk",
+      "draft": "Drög",
+      "pending": "Bíður eftir samþykki",
+      "sold": "Selt"
+    },
+    "actions": {
+      "edit": "Breyta",
+      "delete": "Eyða",
+      "activate": "Virkja",
+      "deactivate": "Óvirk uppbygging"
+    }
+  },
+  "favorites": {
+    "title": "Uppáhalds mínir",
+    "description": "Fylgdu vörunum sem þér líkar hér.",
+    "noFavorites": "Þú hefur ekki bætt neinum uppáhaldsvörum ennþá.",
+    "browseProducts": "Skoða vörur"
   },
   "settings": {
     "title": "Stillingar",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Tungumálaval",
     "current": "Núverandi tungumál"
+  },
+  "home": {
+    "hero": {
+      "title": "Viðskiptavettvangur fyrir lifandi dýr",
+      "subtitle": "Áreiðanlegasti vettvangurinn fyrir viðskipti með lifandi dýr. Kauptu og seldu nautgripi og sauðfé á öruggan hátt.",
+      "cta": "Byrjaðu núna",
+      "viewListings": "Skoða auglýsingar"
+    },
+    "features": {
+      "secure": {
+        "title": "Örugg innkaup",
+        "description": "Allar færslur eru öruggar. Upplýsingar um seljanda og kaupanda hafa verið staðfestar."
+      },
+      "variety": {
+        "title": "Breitt vöruúrval",
+        "description": "Nautgripir, sauðfé og fleira. Finndu auðveldlega dýrið sem þú ert að leita að."
+      },
+      "support": {
+        "title": "Stuðningur allan sólarhringinn",
+        "description": "Við erum alltaf til staðar fyrir spurningar þínar. Lifandi þjónustuver okkar er virk."
+      }
+    },
+    "categories": {
+      "title": "Flokkar",
+      "cattle": "Nautgripir",
+      "sheep": "Smábúfénaður",
+      "poultry": "Alifuglar",
+      "other": "Annað"
+    },
+    "featured": {
+      "title": "Valdar auglýsingar",
+      "viewAll": "Sjá allt"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Viðskipti með búfénað. Allur réttur áskilinn.",
+    "about": "Um okkur",
+    "contact": "Samskipti",
+    "terms": "Notkunarskilmálar",
+    "privacy": "Persónuverndarstefna"
+  },
+  "products": {
+    "title": "Vörur",
+    "search": "Leita að vörum...",
+    "filters": "Síur",
+    "sort": "Raða",
+    "sortOptions": {
+      "newest": "Nýjasta",
+      "oldest": "Elsta",
+      "priceAsc": "Verð (frá lægsta til hæsta)",
+      "priceDesc": "Verð (hár til lágur)",
+      "popular": "Vinsælast"
+    },
+    "status": {
+      "draft": "Drög",
+      "active": "Virk",
+      "sold": "Selt",
+      "pending": "Bíður eftir samþykki"
+    },
+    "condition": {
+      "new": "Nýtt",
+      "likeNew": "Lítið notað",
+      "good": "Gott",
+      "fair": "Miðja"
+    },
+    "outOfStock": "Uppselt",
+    "inStock": "Á lager",
+    "noResults": "Vara fannst ekki.",
+    "loading": "Hleður vörur...",
+    "perPage": "Á hverri síðu",
+    "showing": "Heildarfjöldi vara frá {from} til {to} (fjöldi vara í heild sinni)."
+  },
+  "productDetail": {
+    "addToFavorites": "Bæta við uppáhalds",
+    "removeFromFavorites": "Fjarlægja úr uppáhalds",
+    "share": "Deila",
+    "report": "Tilkynna vandamál",
+    "description": "Útskýring",
+    "specifications": "Eiginleikar",
+    "location": "Staðsetning",
+    "shipping": "Farmur",
+    "shippingAvailable": "Hægt að flytja með farmi.",
+    "noShipping": "Aðeins handafhending.",
+    "internationalShipping": "Alþjóðleg sending í boði.",
+    "weight": "Þyngd",
+    "stock": "Hlutabréf",
+    "inStock": "{count} vörur á lager",
+    "minOrder": "Lágmarkspöntun",
+    "maxOrder": "Hámarkspöntun",
+    "publishedAt": "Útgáfudagur",
+    "views": "Skoðað",
+    "similarProducts": "Líkar vörur",
+    "sellerProducts": "Aðrar vörur seljanda"
+  },
+  "seller": {
+    "title": "Upplýsingar um seljanda",
+    "verified": "Staðfest",
+    "reviews": "mat",
+    "products": "auglýsing",
+    "memberSince": "Meðlimur síðan {ár}",
+    "contact": "Senda skilaboð",
+    "call": "Leita",
+    "viewProfile": "Skoða prófíl"
+  },
+  "newListing": {
+    "title": "Búa til nýja skráningu",
+    "saveDraft": "Vista drög",
+    "publish": "Birta",
+    "basicInfo": "Grunnupplýsingar",
+    "categoryAndCondition": "Flokkur og staða",
+    "pricing": "Verðlagning",
+    "shipping": "Farmur",
+    "images": "Myndir",
+    "addImage": "Bæta við mynd",
+    "maxImages": "Þú getur hlaðið inn allt að 10 myndum.",
+    "imageHint": "Lágmark 1, hámark 10 myndir. Í PNG, JPG eða WEBP sniði.",
+    "fields": {
+      "title": "Titill auglýsingar",
+      "shortDescription": "Stutt lýsing",
+      "description": "Ítarleg útskýring",
+      "category": "Flokkur",
+      "condition": "Staða vöru",
+      "price": "Verð",
+      "stock": "Magn á lager",
+      "unit": "Eining",
+      "shippingAvailable": "Sending er í boði.",
+      "shippingCost": "Sendingargjald",
+      "weight": "Þyngd",
+      "weightUnit": "Þyngdareining"
+    },
+    "placeholders": {
+      "title": "Dæmi: Tveggja ára Holstein kýr",
+      "shortDescription": "Vörulýsing (hámark 200 stafir)",
+      "description": "Gefðu ítarlegar upplýsingar um vöruna...",
+      "category": "Veldu flokk."
+    },
+    "success": "Auglýsingin var búin til með góðum árangri.",
+    "error": "Villa kom upp við að búa til auglýsinguna."
   }
 }

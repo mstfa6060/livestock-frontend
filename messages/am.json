@@ -11,7 +11,17 @@
     "back": "ተመለስ",
     "next": "ወደፊት",
     "close": "ገጠመ",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "ግባ",
+    "register": "መዝገብ"
+  },
+  "header": {
+    "products": "ምርቶች",
+    "sellers": "ሻጮች",
+    "about": "ስለ እኛ",
+    "dashboard": "ፓነል",
+    "settings": "ቅንብሮች",
+    "logout": "ውጣ"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "ዳሽቦርድ",
     "welcome": "እንኳን ደህና መጡ፣ {ስም}!",
-    "accountInfo": "የመለያዎ መረጃ ከዚህ በታች ይታያል።",
+    "accountInfo": "የመለያዎ ማጠቃለያ ከዚህ በታች ቀርቧል።",
     "username": "የተጠቃሚ ስም",
     "email": "ኢሜይል",
     "id": "መታወቂያ",
-    "logout": "ውጣ"
+    "logout": "ውጣ",
+    "stats": {
+      "totalListings": "ጠቅላላ ማስታወቂያዎች",
+      "active": "ንቁ",
+      "totalViews": "ጠቅላላ እይታዎች",
+      "thisWeek": "በዚህ ሳምንት",
+      "favorites": "ተወዳጅ",
+      "onYourListings": "በማስታወቂያዎችዎ ውስጥ",
+      "messages": "መልእክት",
+      "unread": "ያልተነበበ"
+    },
+    "recentListings": "የቅርብ ጊዜ ዝርዝሮችዎ",
+    "recentMessages": "የቅርብ ጊዜ መልዕክቶች",
+    "noListings": "እስካሁን ምንም አይነት ማስታወቂያ አላከልክም።",
+    "noMessages": "እስካሁን ምንም አይነት መልዕክቶችን አልተቀበሉም።",
+    "noNotifications": "እስካሁን ምንም ማሳወቂያዎችን አልተቀበሉም።",
+    "viewAllListings": "ሁሉንም ዝርዝሮች ይመልከቱ",
+    "viewAllMessages": "ሁሉንም መልዕክቶች ይመልከቱ"
+  },
+  "dashboardNav": {
+    "overview": "አጠቃላይ እይታ",
+    "myListings": "የእኔ ማስታወቂያዎች",
+    "favorites": "የእኔ ተወዳጆች",
+    "messages": "መልዕክቶች",
+    "notifications": "ማሳወቂያዎች",
+    "profile": "መገለጫ",
+    "settings": "ቅንብሮች",
+    "newListing": "አዲስ ዝርዝር ያክሉ"
+  },
+  "myListings": {
+    "title": "የእኔ ማስታወቂያዎች",
+    "description": "ሁሉንም ዝርዝሮችዎን ከዚህ ያስተዳድሩ።",
+    "noListings": "እስካሁን ምንም አይነት ማስታወቂያ አላከልክም።",
+    "createFirst": "የመጀመሪያ ዝርዝርዎን ይፍጠሩ።",
+    "filters": {
+      "all": "ሁሉም",
+      "active": "ንቁ",
+      "draft": "ረቂቅ",
+      "pending": "ማጽደቅን በመጠባበቅ ላይ",
+      "sold": "ተሸጧል"
+    },
+    "actions": {
+      "edit": "አርትዕ",
+      "delete": "ሰርዝ",
+      "activate": "አግብር",
+      "deactivate": "ተገብሮ መዋቅር"
+    }
+  },
+  "favorites": {
+    "title": "የእኔ ተወዳጆች",
+    "description": "የሚወዷቸውን ምርቶች እዚህ ይከተሉ።",
+    "noFavorites": "እስካሁን ምንም ተወዳጅ ምርቶችን አላከሉም።",
+    "browseProducts": "ምርቶችን ያስሱ"
   },
   "settings": {
     "title": "ቅንብሮች",
@@ -107,5 +169,143 @@
   "language": {
     "select": "የቋንቋ ምርጫ",
     "current": "የአሁኑ ቋንቋ"
+  },
+  "home": {
+    "hero": {
+      "title": "የቀጥታ የእንስሳት ንግድ መድረክ",
+      "subtitle": "በጣም አስተማማኝ የሆነው የቀጥታ የእንስሳት ግብይት መድረክ። ከብቶችዎን እና በጎቻችሁን ደህንነቱ በተጠበቀ ሁኔታ ይግዙ እና ይሽጡ።",
+      "cta": "አሁን ጀምር",
+      "viewListings": "ማስታወቂያዎችን ይመልከቱ"
+    },
+    "features": {
+      "secure": {
+        "title": "ደህንነቱ የተጠበቀ ግብይት",
+        "description": "ሁሉም ግብይቶች ደህንነታቸው የተጠበቀ ነው። የሻጭ እና የገዢ መረጃ ተረጋግጧል።"
+      },
+      "variety": {
+        "title": "ሰፊ የምርት ክልል",
+        "description": "ከብቶች፣ በጎች እና ሌሎችም። የሚፈልጉትን እንስሳ በቀላሉ ያግኙ።"
+      },
+      "support": {
+        "title": "24/7 ድጋፍ",
+        "description": "ለጥያቄዎችዎ ሁልጊዜ እዚህ ነን። የቀጥታ የድጋፍ መስመራችን ንቁ ነው።"
+      }
+    },
+    "categories": {
+      "title": "ምድቦች",
+      "cattle": "ከብቶች",
+      "sheep": "ትናንሽ ከብቶች",
+      "poultry": "የዶሮ እርባታ",
+      "other": "ሌላ"
+    },
+    "featured": {
+      "title": "ተለይተው የቀረቡ ማስታወቂያዎች",
+      "viewAll": "ሁሉንም ይመልከቱ"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 የእንስሳት ንግድ። መብቱ በህግ የተጠበቀ ነው።",
+    "about": "ስለ እኛ",
+    "contact": "ኮሙኒኬሽን",
+    "terms": "የአጠቃቀም ውል",
+    "privacy": "የግላዊነት መመሪያ"
+  },
+  "products": {
+    "title": "ምርቶች",
+    "search": "ምርቶችን ይፈልጉ...",
+    "filters": "ማጣሪያዎች",
+    "sort": "ደርድር",
+    "sortOptions": {
+      "newest": "የቅርብ ጊዜ",
+      "oldest": "በጣም ጥንታዊው",
+      "priceAsc": "ዋጋ (ከዝቅተኛ እስከ ከፍተኛ)",
+      "priceDesc": "ዋጋ (ከከፍተኛ እስከ ዝቅተኛ)",
+      "popular": "በጣም ተወዳጅ"
+    },
+    "status": {
+      "draft": "ረቂቅ",
+      "active": "ንቁ",
+      "sold": "ተሸጧል",
+      "pending": "ማጽደቅን በመጠባበቅ ላይ"
+    },
+    "condition": {
+      "new": "አዲስ",
+      "likeNew": "በቀላሉ ጥቅም ላይ የዋለ",
+      "good": "ጥሩ",
+      "fair": "መካከለኛ"
+    },
+    "outOfStock": "በክምችት አልቋል",
+    "inStock": "ለሽያጭ የቀረበ እቃ",
+    "noResults": "ምርቱ አልተገኘም።",
+    "loading": "ምርቶች እየተጫኑ ነው...",
+    "perPage": "በገጽ",
+    "showing": "በ{from} እና {to} መካከል የ{total} ምርቶች ድምር።"
+  },
+  "productDetail": {
+    "addToFavorites": "ወደ ተወዳጆች አክል",
+    "removeFromFavorites": "ከተወዳጆች አስወግድ",
+    "share": "አጋራ",
+    "report": "ችግር ሪፖርት ያድርጉ",
+    "description": "ማብራሪያ",
+    "specifications": "ባህሪያት",
+    "location": "አካባቢ",
+    "shipping": "ጭነት",
+    "shippingAvailable": "በጭነት ሊላክ ይችላል።",
+    "noShipping": "በእጅ ብቻ ማድረስ።",
+    "internationalShipping": "ዓለም አቀፍ መላኪያ ይገኛል።",
+    "weight": "ክብደት",
+    "stock": "አክሲዮን",
+    "inStock": "{count} እቃዎች በክምችት ውስጥ",
+    "minOrder": "ዝቅተኛው ትዕዛዝ",
+    "maxOrder": "ከፍተኛው ትዕዛዝ",
+    "publishedAt": "የታተመበት ቀን",
+    "views": "ታይቷል",
+    "similarProducts": "ተመሳሳይ ምርቶች",
+    "sellerProducts": "የሻጩ ሌሎች ምርቶች"
+  },
+  "seller": {
+    "title": "የሻጭ መረጃ",
+    "verified": "የተረጋገጠ",
+    "reviews": "ግምገማ",
+    "products": "ማስታወቂያ",
+    "memberSince": "አባል ከ {year} ጀምሮ",
+    "contact": "መልእክት ላክ",
+    "call": "ፈልግ",
+    "viewProfile": "መገለጫ ይመልከቱ"
+  },
+  "newListing": {
+    "title": "አዲስ ዝርዝር ይፍጠሩ",
+    "saveDraft": "ረቂቅ አስቀምጥ",
+    "publish": "አትም",
+    "basicInfo": "መሰረታዊ መረጃ",
+    "categoryAndCondition": "ምድብ እና ሁኔታ",
+    "pricing": "የዋጋ አወጣጥ",
+    "shipping": "ጭነት",
+    "images": "ምስሎች",
+    "addImage": "ምስል ያክሉ",
+    "maxImages": "ቢበዛ 10 ምስሎችን መስቀል ይችላሉ።",
+    "imageHint": "ቢያንስ 1፣ ቢበዛ 10 ምስሎች። በPNG፣ JPG ወይም WEBP ቅርጸት።",
+    "fields": {
+      "title": "የማስታወቂያ ርዕስ",
+      "shortDescription": "አጭር መግለጫ",
+      "description": "ዝርዝር ማብራሪያ",
+      "category": "ምድብ",
+      "condition": "የምርት ሁኔታ",
+      "price": "ዋጋ",
+      "stock": "የአክሲዮን ብዛት",
+      "unit": "ዩኒት",
+      "shippingAvailable": "መላኪያ ይገኛል።",
+      "shippingCost": "የማጓጓዣ ክፍያ",
+      "weight": "ክብደት",
+      "weightUnit": "የክብደት አሃድ"
+    },
+    "placeholders": {
+      "title": "ምሳሌ፡ የ2 ዓመት ሆልስቴይን ላም",
+      "shortDescription": "የምርት መግለጫ (ቢበዛ 200 ቁምፊዎች)",
+      "description": "ስለ ምርቱ ዝርዝር መረጃ ያቅርቡ…",
+      "category": "ምድብ ይምረጡ።"
+    },
+    "success": "ማስታወቂያው በተሳካ ሁኔታ ተፈጥሯል።",
+    "error": "ማስታወቂያውን በሚፈጥሩበት ጊዜ ስህተት ተከስቷል።"
   }
 }

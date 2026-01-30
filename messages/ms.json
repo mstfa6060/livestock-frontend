@@ -11,7 +11,17 @@
     "back": "Kembali",
     "next": "Ke hadapan",
     "close": "Tutup",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Log masuk",
+    "register": "Daftar"
+  },
+  "header": {
+    "products": "Produk",
+    "sellers": "Penjual",
+    "about": "Tentang Kami",
+    "dashboard": "Panel",
+    "settings": "Tetapan",
+    "logout": "Log Keluar"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Papan Pemuka",
     "welcome": "Selamat datang, {nama}!",
-    "accountInfo": "Maklumat akaun anda dipaparkan di bawah.",
+    "accountInfo": "Ringkasan akaun anda ada di bawah.",
     "username": "Nama pengguna",
     "email": "E-mel",
     "id": "ID",
-    "logout": "Log Keluar"
+    "logout": "Log Keluar",
+    "stats": {
+      "totalListings": "Jumlah Iklan",
+      "active": "aktif",
+      "totalViews": "Jumlah Paparan",
+      "thisWeek": "minggu ini",
+      "favorites": "Kegemaran",
+      "onYourListings": "dalam iklan anda",
+      "messages": "Mesej",
+      "unread": "belum dibaca"
+    },
+    "recentListings": "Penyenaraian Terkini Anda",
+    "recentMessages": "Mesej Terkini",
+    "noListings": "Anda belum menambah sebarang iklan lagi.",
+    "noMessages": "Anda belum menerima mesej lagi.",
+    "noNotifications": "Anda belum menerima sebarang pemberitahuan lagi.",
+    "viewAllListings": "Lihat Semua Penyenaraian",
+    "viewAllMessages": "Lihat semua mesej"
+  },
+  "dashboardNav": {
+    "overview": "Gambaran Keseluruhan",
+    "myListings": "Iklan saya",
+    "favorites": "Kegemaran saya",
+    "messages": "Mesej",
+    "notifications": "Pemberitahuan",
+    "profile": "Profil",
+    "settings": "Tetapan",
+    "newListing": "Tambah Penyenaraian Baharu"
+  },
+  "myListings": {
+    "title": "Iklan saya",
+    "description": "Urus semua penyenaraian anda dari sini.",
+    "noListings": "Anda belum menambah sebarang iklan lagi.",
+    "createFirst": "Cipta penyenaraian pertama anda.",
+    "filters": {
+      "all": "Kesemua mereka",
+      "active": "Aktif",
+      "draft": "Draf",
+      "pending": "Menunggu Kelulusan",
+      "sold": "Dijual"
+    },
+    "actions": {
+      "edit": "Sunting",
+      "delete": "Padam",
+      "activate": "Aktifkan",
+      "deactivate": "Struktur Pasif"
+    }
+  },
+  "favorites": {
+    "title": "Kegemaran saya",
+    "description": "Ikuti produk yang anda suka di sini.",
+    "noFavorites": "Anda belum menambah sebarang produk kegemaran lagi.",
+    "browseProducts": "Layari Produk"
   },
   "settings": {
     "title": "Tetapan",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Pemilihan Bahasa",
     "current": "Bahasa Semasa"
+  },
+  "home": {
+    "hero": {
+      "title": "Platform Perdagangan Haiwan Hidup",
+      "subtitle": "Platform perdagangan haiwan hidup yang paling boleh dipercayai. Beli dan jual lembu dan biri-biri anda dengan selamat.",
+      "cta": "Mula Sekarang",
+      "viewListings": "Lihat Iklan"
+    },
+    "features": {
+      "secure": {
+        "title": "Membeli-belah Selamat",
+        "description": "Semua transaksi adalah selamat. Maklumat penjual dan pembeli telah disahkan."
+      },
+      "variety": {
+        "title": "Julat Produk yang Luas",
+        "description": "Lembu, biri-biri dan banyak lagi. Cari haiwan yang anda cari dengan mudah."
+      },
+      "support": {
+        "title": "Sokongan 24/7",
+        "description": "Kami sentiasa sedia membantu anda. Talian sokongan langsung kami aktif."
+      }
+    },
+    "categories": {
+      "title": "Kategori",
+      "cattle": "Lembu",
+      "sheep": "Ternakan kecil",
+      "poultry": "Ayam",
+      "other": "Lain-lain"
+    },
+    "featured": {
+      "title": "Iklan Pilihan",
+      "viewAll": "Lihat semua"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Perdagangan Ternakan. Hak cipta terpelihara.",
+    "about": "Tentang Kami",
+    "contact": "Komunikasi",
+    "terms": "Syarat Penggunaan",
+    "privacy": "Dasar Privasi"
+  },
+  "products": {
+    "title": "Produk",
+    "search": "Cari produk...",
+    "filters": "Penapis",
+    "sort": "Isih",
+    "sortOptions": {
+      "newest": "Terkini",
+      "oldest": "Tertua",
+      "priceAsc": "Harga (Dari Rendah ke Tinggi)",
+      "priceDesc": "Harga (Tinggi ke Rendah)",
+      "popular": "Paling Popular"
+    },
+    "status": {
+      "draft": "Draf",
+      "active": "Aktif",
+      "sold": "Dijual",
+      "pending": "Menunggu Kelulusan"
+    },
+    "condition": {
+      "new": "Baru",
+      "likeNew": "Digunakan Secara Ringan",
+      "good": "Bagus",
+      "fair": "Tengah"
+    },
+    "outOfStock": "Kehabisan Stok",
+    "inStock": "Dalam Stok",
+    "noResults": "Produk tidak dijumpai.",
+    "loading": "Produk sedang dimuatkan...",
+    "perPage": "Setiap halaman",
+    "showing": "Jumlah {total} produk antara {from} dan {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Tambah ke Kegemaran",
+    "removeFromFavorites": "Alih keluar daripada Kegemaran",
+    "share": "Kongsi",
+    "report": "Laporkan masalah",
+    "description": "Penjelasan",
+    "specifications": "Ciri-ciri",
+    "location": "Lokasi",
+    "shipping": "Kargo",
+    "shippingAvailable": "Boleh dihantar melalui kargo.",
+    "noShipping": "Penghantaran serahan tangan sahaja.",
+    "internationalShipping": "Penghantaran antarabangsa disediakan.",
+    "weight": "Berat",
+    "stock": "Stok",
+    "inStock": "{count} barang dalam stok",
+    "minOrder": "Pesanan minimum",
+    "maxOrder": "Pesanan maksimum",
+    "publishedAt": "Tarikh penerbitan",
+    "views": "Dilihat",
+    "similarProducts": "Produk Serupa",
+    "sellerProducts": "Produk Lain Penjual"
+  },
+  "seller": {
+    "title": "Maklumat Penjual",
+    "verified": "Disahkan",
+    "reviews": "penilaian",
+    "products": "iklan",
+    "memberSince": "Ahli sejak {year}",
+    "contact": "Hantar Mesej",
+    "call": "Carian",
+    "viewProfile": "Lihat Profil"
+  },
+  "newListing": {
+    "title": "Cipta Penyenaraian Baharu",
+    "saveDraft": "Simpan Draf",
+    "publish": "Terbitkan",
+    "basicInfo": "Maklumat Asas",
+    "categoryAndCondition": "Kategori dan Status",
+    "pricing": "Penentuan harga",
+    "shipping": "Kargo",
+    "images": "Imej",
+    "addImage": "Tambah Imej",
+    "maxImages": "Anda boleh memuat naik maksimum 10 imej.",
+    "imageHint": "Minimum 1, maksimum 10 imej. Dalam format PNG, JPG atau WEBP.",
+    "fields": {
+      "title": "Tajuk Iklan",
+      "shortDescription": "Penerangan Ringkas",
+      "description": "Penjelasan Terperinci",
+      "category": "Kategori",
+      "condition": "Status Produk",
+      "price": "Harga",
+      "stock": "Kuantiti Stok",
+      "unit": "Unit",
+      "shippingAvailable": "Penghantaran disediakan.",
+      "shippingCost": "Yuran Penghantaran",
+      "weight": "Berat",
+      "weightUnit": "Unit Berat"
+    },
+    "placeholders": {
+      "title": "Contoh: Lembu Holstein Berusia 2 Tahun",
+      "shortDescription": "Penerangan produk (maksimum 200 aksara)",
+      "description": "Berikan maklumat terperinci tentang produk...",
+      "category": "Pilih kategori."
+    },
+    "success": "Iklan itu berjaya dihasilkan.",
+    "error": "Ralat telah berlaku semasa membuat iklan."
   }
 }

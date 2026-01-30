@@ -11,7 +11,17 @@
     "back": "Dos",
     "next": "Avant",
     "close": "Fermer",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Se connecter",
+    "register": "Registre"
+  },
+  "header": {
+    "products": "Produits",
+    "sellers": "Vendeurs",
+    "about": "À propos de nous",
+    "dashboard": "Panneau",
+    "settings": "Paramètres",
+    "logout": "Déconnexion"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Tableau de bord",
     "welcome": "Bienvenue, {name} !",
-    "accountInfo": "Les informations relatives à votre compte sont affichées ci-dessous.",
+    "accountInfo": "Vous trouverez ci-dessous le récapitulatif de votre compte.",
     "username": "Nom d'utilisateur",
     "email": "E-mail",
     "id": "IDENTIFIANT",
-    "logout": "Déconnexion"
+    "logout": "Déconnexion",
+    "stats": {
+      "totalListings": "Publicités totales",
+      "active": "actif",
+      "totalViews": "Nombre total de vues",
+      "thisWeek": "cette semaine",
+      "favorites": "Préféré",
+      "onYourListings": "dans vos publicités",
+      "messages": "Message",
+      "unread": "non lu"
+    },
+    "recentListings": "Vos dernières annonces",
+    "recentMessages": "Messages récents",
+    "noListings": "Vous n'avez pas encore ajouté de publicités.",
+    "noMessages": "Vous n'avez pas encore reçu de message.",
+    "noNotifications": "Vous n'avez encore reçu aucune notification.",
+    "viewAllListings": "Voir toutes les annonces",
+    "viewAllMessages": "Afficher tous les messages"
+  },
+  "dashboardNav": {
+    "overview": "Aperçu",
+    "myListings": "Mes annonces",
+    "favorites": "Mes favoris",
+    "messages": "Messages",
+    "notifications": "Notifications",
+    "profile": "Profil",
+    "settings": "Paramètres",
+    "newListing": "Ajouter une nouvelle annonce"
+  },
+  "myListings": {
+    "title": "Mes annonces",
+    "description": "Gérez toutes vos annonces depuis ici.",
+    "noListings": "Vous n'avez pas encore ajouté de publicités.",
+    "createFirst": "Créez votre première annonce.",
+    "filters": {
+      "all": "Tous",
+      "active": "Actif",
+      "draft": "Brouillon",
+      "pending": "En attente d'approbation",
+      "sold": "Vendu"
+    },
+    "actions": {
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "activate": "Activer",
+      "deactivate": "Structure passive"
+    }
+  },
+  "favorites": {
+    "title": "Mes favoris",
+    "description": "Suivez ici les produits qui vous plaisent.",
+    "noFavorites": "Vous n'avez pas encore ajouté de produits favoris.",
+    "browseProducts": "Parcourir les produits"
   },
   "settings": {
     "title": "Paramètres",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Sélection de la langue",
     "current": "Langue actuelle"
+  },
+  "home": {
+    "hero": {
+      "title": "Plateforme de commerce d'animaux vivants",
+      "subtitle": "La plateforme la plus fiable pour le commerce d'animaux vivants. Achetez et vendez vos bovins et ovins en toute sécurité.",
+      "cta": "Commencez maintenant",
+      "viewListings": "Voir les annonces"
+    },
+    "features": {
+      "secure": {
+        "title": "Achats sécurisés",
+        "description": "Toutes les transactions sont sécurisées. Les informations du vendeur et de l'acheteur ont été vérifiées."
+      },
+      "variety": {
+        "title": "Large gamme de produits",
+        "description": "Bovins, ovins et bien plus encore. Trouvez facilement l'animal que vous recherchez."
+      },
+      "support": {
+        "title": "Assistance 24h/24 et 7j/7",
+        "description": "Nous sommes toujours disponibles pour répondre à vos questions. Notre assistance téléphonique en direct est active."
+      }
+    },
+    "categories": {
+      "title": "Catégories",
+      "cattle": "Bétail",
+      "sheep": "Petit bétail",
+      "poultry": "Volaille",
+      "other": "Autre"
+    },
+    "featured": {
+      "title": "Annonces en vedette",
+      "viewAll": "Voir tout"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Commerce de bétail. Tous droits réservés.",
+    "about": "À propos de nous",
+    "contact": "Communication",
+    "terms": "Conditions d'utilisation",
+    "privacy": "politique de confidentialité"
+  },
+  "products": {
+    "title": "Produits",
+    "search": "Recherche de produits...",
+    "filters": "Filtres",
+    "sort": "Trier",
+    "sortOptions": {
+      "newest": "Dernier",
+      "oldest": "Le plus ancien",
+      "priceAsc": "Prix (du plus bas au plus haut)",
+      "priceDesc": "Prix (du plus élevé au plus bas)",
+      "popular": "Les plus populaires"
+    },
+    "status": {
+      "draft": "Brouillon",
+      "active": "Actif",
+      "sold": "Vendu",
+      "pending": "En attente d'approbation"
+    },
+    "condition": {
+      "new": "Nouveau",
+      "likeNew": "Peu utilisé",
+      "good": "Bien",
+      "fair": "Milieu"
+    },
+    "outOfStock": "En rupture de stock",
+    "inStock": "En stock",
+    "noResults": "Produit introuvable.",
+    "loading": "Les produits sont en cours de chargement...",
+    "perPage": "Par page",
+    "showing": "Le total des produits {total} entre {from} et {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Ajouter aux favoris",
+    "removeFromFavorites": "Retirer des favoris",
+    "share": "Partager",
+    "report": "Signaler un problème",
+    "description": "Explication",
+    "specifications": "Caractéristiques",
+    "location": "Emplacement",
+    "shipping": "Cargaison",
+    "shippingAvailable": "Peut être expédié par fret.",
+    "noShipping": "Livraison en main propre uniquement.",
+    "internationalShipping": "Livraison internationale disponible.",
+    "weight": "Poids",
+    "stock": "Action",
+    "inStock": "{count} articles en stock",
+    "minOrder": "Commande minimale",
+    "maxOrder": "Commande maximale",
+    "publishedAt": "Date de publication",
+    "views": "Consulté",
+    "similarProducts": "Produits similaires",
+    "sellerProducts": "Autres produits du vendeur"
+  },
+  "seller": {
+    "title": "Informations sur le vendeur",
+    "verified": "Vérifié",
+    "reviews": "évaluation",
+    "products": "publicité",
+    "memberSince": "Membre depuis {année}",
+    "contact": "Envoyer un message",
+    "call": "Recherche",
+    "viewProfile": "Voir le profil"
+  },
+  "newListing": {
+    "title": "Créer une nouvelle annonce",
+    "saveDraft": "Enregistrer le brouillon",
+    "publish": "Publier",
+    "basicInfo": "Informations de base",
+    "categoryAndCondition": "Catégorie et statut",
+    "pricing": "Tarification",
+    "shipping": "Cargaison",
+    "images": "Images",
+    "addImage": "Ajouter une image",
+    "maxImages": "Vous pouvez télécharger un maximum de 10 images.",
+    "imageHint": "De 1 à 10 images. Au format PNG, JPG ou WEBP.",
+    "fields": {
+      "title": "Titre de l'annonce",
+      "shortDescription": "Brève description",
+      "description": "Explication détaillée",
+      "category": "Catégorie",
+      "condition": "État du produit",
+      "price": "Prix",
+      "stock": "Quantité en stock",
+      "unit": "Unité",
+      "shippingAvailable": "Livraison possible.",
+      "shippingCost": "Frais d'expédition",
+      "weight": "Poids",
+      "weightUnit": "Unité de poids"
+    },
+    "placeholders": {
+      "title": "Exemple : Vache Holstein de 2 ans",
+      "shortDescription": "Description du produit (200 caractères maximum)",
+      "description": "Fournissez des informations détaillées sur le produit...",
+      "category": "Sélectionnez une catégorie."
+    },
+    "success": "La publicité a été créée avec succès.",
+    "error": "Une erreur s'est produite lors de la création de l'annonce."
   }
 }

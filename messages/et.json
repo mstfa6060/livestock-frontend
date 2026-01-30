@@ -11,7 +11,17 @@
     "back": "Tagasi",
     "next": "Edasi",
     "close": "Sule",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Logi sisse",
+    "register": "Registreeru"
+  },
+  "header": {
+    "products": "Tooted",
+    "sellers": "Müüjad",
+    "about": "Meist",
+    "dashboard": "Paneel",
+    "settings": "Seaded",
+    "logout": "Logi välja"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Armatuurlaud",
     "welcome": "Tere tulemast, {nimi}!",
-    "accountInfo": "Teie konto andmed kuvatakse allpool.",
+    "accountInfo": "Teie konto kokkuvõte on allpool.",
     "username": "Kasutajanimi",
     "email": "E-post",
     "id": "ID-kaart",
-    "logout": "Logi välja"
+    "logout": "Logi välja",
+    "stats": {
+      "totalListings": "Reklaamide koguarv",
+      "active": "aktiivne",
+      "totalViews": "Vaatamiste koguarv",
+      "thisWeek": "sel nädalal",
+      "favorites": "Lemmik",
+      "onYourListings": "oma reklaamides",
+      "messages": "Sõnum",
+      "unread": "lugemata"
+    },
+    "recentListings": "Teie uusimad kuulutused",
+    "recentMessages": "Hiljutised sõnumid",
+    "noListings": "Sa pole veel ühtegi reklaami lisanud.",
+    "noMessages": "Sa pole veel sõnumit saanud.",
+    "noNotifications": "Te pole veel ühtegi märguannet saanud.",
+    "viewAllListings": "Kuva kõik kuulutused",
+    "viewAllMessages": "Kuva kõik sõnumid"
+  },
+  "dashboardNav": {
+    "overview": "Ülevaade",
+    "myListings": "Minu reklaamid",
+    "favorites": "Minu lemmikud",
+    "messages": "Sõnumid",
+    "notifications": "Teavitused",
+    "profile": "Profiil",
+    "settings": "Seaded",
+    "newListing": "Lisa uus kuulutus"
+  },
+  "myListings": {
+    "title": "Minu reklaamid",
+    "description": "Halda kõiki oma kuulutusi siit.",
+    "noListings": "Sa pole veel ühtegi reklaami lisanud.",
+    "createFirst": "Loo oma esimene kuulutus.",
+    "filters": {
+      "all": "Kõik nad",
+      "active": "Aktiivne",
+      "draft": "Mustand",
+      "pending": "Ootab kinnitust",
+      "sold": "Müüdud"
+    },
+    "actions": {
+      "edit": "Redigeeri",
+      "delete": "Kustuta",
+      "activate": "Aktiveeri",
+      "deactivate": "Passiivne struktuur"
+    }
+  },
+  "favorites": {
+    "title": "Minu lemmikud",
+    "description": "Jälgige siin tooteid, mis teile meeldivad.",
+    "noFavorites": "Sa pole veel ühtegi lemmiktoodet lisanud.",
+    "browseProducts": "Sirvi tooteid"
   },
   "settings": {
     "title": "Seaded",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Keele valik",
     "current": "Praegune keel"
+  },
+  "home": {
+    "hero": {
+      "title": "Elusloomade kauplemisplatvorm",
+      "subtitle": "Kõige usaldusväärsem elusloomadega kauplemise platvorm. Ostke ja müüge oma veiseid ja lambaid turvaliselt.",
+      "cta": "Alusta kohe",
+      "viewListings": "Vaata reklaame"
+    },
+    "features": {
+      "secure": {
+        "title": "Turvaline ostlemine",
+        "description": "Kõik tehingud on turvalised. Müüja ja ostja andmed on kontrollitud."
+      },
+      "variety": {
+        "title": "Lai tootevalik",
+        "description": "Veised, lambad ja palju muud. Leidke hõlpsalt otsitav loom."
+      },
+      "support": {
+        "title": "24/7 tugi",
+        "description": "Oleme alati teie küsimustele vastamiseks olemas. Meie reaalajas tugiliin on aktiivne."
+      }
+    },
+    "categories": {
+      "title": "Kategooriad",
+      "cattle": "Veised",
+      "sheep": "Väikesed kariloomad",
+      "poultry": "Linnuliha",
+      "other": "Muu"
+    },
+    "featured": {
+      "title": "Esiletõstetud reklaamid",
+      "viewAll": "Vaata kõiki"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Loomakaubandus. Kõik õigused kaitstud.",
+    "about": "Meist",
+    "contact": "Suhtlus",
+    "terms": "Kasutustingimused",
+    "privacy": "Privaatsuspoliitika"
+  },
+  "products": {
+    "title": "Tooted",
+    "search": "Otsi tooteid...",
+    "filters": "Filtrid",
+    "sort": "Sorteeri",
+    "sortOptions": {
+      "newest": "Uusim",
+      "oldest": "Vanim",
+      "priceAsc": "Hind (madalamast kõrgeimani)",
+      "priceDesc": "Hind (kõrgemast madalamani)",
+      "popular": "Kõige populaarsem"
+    },
+    "status": {
+      "draft": "Mustand",
+      "active": "Aktiivne",
+      "sold": "Müüdud",
+      "pending": "Ootab kinnitust"
+    },
+    "condition": {
+      "new": "Uus",
+      "likeNew": "Kergelt kasutatud",
+      "good": "Hea",
+      "fair": "Keskmine"
+    },
+    "outOfStock": "Laost otsas",
+    "inStock": "Laos",
+    "noResults": "Toodet ei leitud.",
+    "loading": "Tooteid laaditakse...",
+    "perPage": "Lehe kohta",
+    "showing": "Toodete koguarv vahemikus {from} kuni {to} on {total}."
+  },
+  "productDetail": {
+    "addToFavorites": "Lisa lemmikutesse",
+    "removeFromFavorites": "Eemalda lemmikutest",
+    "share": "Jaga",
+    "report": "Teata probleemist",
+    "description": "Selgitus",
+    "specifications": "Omadused",
+    "location": "Asukoht",
+    "shipping": "Lasti",
+    "shippingAvailable": "Võib kaubaga saata.",
+    "noShipping": "Ainult käest kättetoimetamine.",
+    "internationalShipping": "Rahvusvaheline saatmine saadaval.",
+    "weight": "Kaal",
+    "stock": "Laos",
+    "inStock": "{count} eset laos",
+    "minOrder": "Minimaalne tellimus",
+    "maxOrder": "Maksimaalne tellimus",
+    "publishedAt": "Avaldamiskuupäev",
+    "views": "Vaadatud",
+    "similarProducts": "Sarnased tooted",
+    "sellerProducts": "Müüja muud tooted"
+  },
+  "seller": {
+    "title": "Müüja andmed",
+    "verified": "Kinnitatud",
+    "reviews": "hindamine",
+    "products": "reklaam",
+    "memberSince": "Liikmeks alates {aasta}",
+    "contact": "Saada sõnum",
+    "call": "Otsi",
+    "viewProfile": "Vaata profiili"
+  },
+  "newListing": {
+    "title": "Loo uus kuulutus",
+    "saveDraft": "Salvesta mustand",
+    "publish": "Avalda",
+    "basicInfo": "Põhiteave",
+    "categoryAndCondition": "Kategooria ja staatus",
+    "pricing": "Hinnakujundus",
+    "shipping": "Lasti",
+    "images": "Pildid",
+    "addImage": "Lisa pilt",
+    "maxImages": "Saate üles laadida maksimaalselt 10 pilti.",
+    "imageHint": "Vähemalt 1, maksimaalselt 10 pilti. PNG-, JPG- või WEBP-vormingus.",
+    "fields": {
+      "title": "Reklaami pealkiri",
+      "shortDescription": "Lühike kirjeldus",
+      "description": "Üksikasjalik selgitus",
+      "category": "Kategooria",
+      "condition": "Toote staatus",
+      "price": "Hind",
+      "stock": "Laoseisu kogus",
+      "unit": "Ühik",
+      "shippingAvailable": "Saatmine on saadaval.",
+      "shippingCost": "Saatmistasu",
+      "weight": "Kaal",
+      "weightUnit": "Kaaluühik"
+    },
+    "placeholders": {
+      "title": "Näide: 2-aastane holsteini lehm",
+      "shortDescription": "Tootekirjeldus (maksimaalselt 200 tähemärki)",
+      "description": "Esitage toote kohta üksikasjalikku teavet...",
+      "category": "Valige kategooria."
+    },
+    "success": "Reklaam on edukalt loodud.",
+    "error": "Kuulutuse loomisel ilmnes viga."
   }
 }

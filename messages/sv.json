@@ -11,7 +11,17 @@
     "back": "Tillbaka",
     "next": "Fram",
     "close": "Nära",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Logga in",
+    "register": "Register"
+  },
+  "header": {
+    "products": "Produkter",
+    "sellers": "Säljare",
+    "about": "Om oss",
+    "dashboard": "Panel",
+    "settings": "Inställningar",
+    "logout": "Logga ut"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Instrumentpanel",
     "welcome": "Välkommen, {namn}!",
-    "accountInfo": "Din kontoinformation visas nedan.",
+    "accountInfo": "Din kontosammanfattning finns nedan.",
     "username": "Användarnamn",
     "email": "E-post",
     "id": "ID",
-    "logout": "Logga ut"
+    "logout": "Logga ut",
+    "stats": {
+      "totalListings": "Totalt antal annonser",
+      "active": "aktiv",
+      "totalViews": "Totalt antal visningar",
+      "thisWeek": "den här veckan",
+      "favorites": "Favorit",
+      "onYourListings": "i dina annonser",
+      "messages": "Meddelande",
+      "unread": "oläst"
+    },
+    "recentListings": "Dina senaste listningar",
+    "recentMessages": "Senaste meddelanden",
+    "noListings": "Du har inte lagt till några annonser än.",
+    "noMessages": "Du har inte fått något meddelande än.",
+    "noNotifications": "Du har inte fått några aviseringar än.",
+    "viewAllListings": "Visa alla listningar",
+    "viewAllMessages": "Visa alla meddelanden"
+  },
+  "dashboardNav": {
+    "overview": "Översikt",
+    "myListings": "Mina annonser",
+    "favorites": "Mina favoriter",
+    "messages": "Meddelanden",
+    "notifications": "Aviseringar",
+    "profile": "Profil",
+    "settings": "Inställningar",
+    "newListing": "Lägg till ny annons"
+  },
+  "myListings": {
+    "title": "Mina annonser",
+    "description": "Hantera alla dina annonser härifrån.",
+    "noListings": "Du har inte lagt till några annonser än.",
+    "createFirst": "Skapa din första annons.",
+    "filters": {
+      "all": "Alla av dem",
+      "active": "Aktiv",
+      "draft": "Förslag",
+      "pending": "Väntar på godkännande",
+      "sold": "Såld"
+    },
+    "actions": {
+      "edit": "Redigera",
+      "delete": "Radera",
+      "activate": "Aktivera",
+      "deactivate": "Passiv struktur"
+    }
+  },
+  "favorites": {
+    "title": "Mina favoriter",
+    "description": "Följ de produkter du gillar här.",
+    "noFavorites": "Du har inte lagt till några favoritprodukter än.",
+    "browseProducts": "Bläddra bland produkter"
   },
   "settings": {
     "title": "Inställningar",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Språkval",
     "current": "Nuvarande språk"
+  },
+  "home": {
+    "hero": {
+      "title": "Plattform för handel med levande djur",
+      "subtitle": "Den mest pålitliga plattformen för handel med levande djur. Köp och sälj dina nötkreatur och får säkert.",
+      "cta": "Börja nu",
+      "viewListings": "Visa annonser"
+    },
+    "features": {
+      "secure": {
+        "title": "Säker shopping",
+        "description": "Alla transaktioner är säkra. Säljarens och köparens information har verifierats."
+      },
+      "variety": {
+        "title": "Brett produktsortiment",
+        "description": "Nötkreatur, får och mer. Hitta enkelt djuret du letar efter."
+      },
+      "support": {
+        "title": "Support dygnet runt",
+        "description": "Vi finns alltid här för dina frågor. Vår supportlinje är aktiv."
+      }
+    },
+    "categories": {
+      "title": "Kategorier",
+      "cattle": "Nötkreatur",
+      "sheep": "Småboskap",
+      "poultry": "Fjäderfän",
+      "other": "Andra"
+    },
+    "featured": {
+      "title": "Utvalda annonser",
+      "viewAll": "Se alla"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Boskapshandel. Alla rättigheter förbehållna.",
+    "about": "Om oss",
+    "contact": "Kommunikation",
+    "terms": "Användarvillkor",
+    "privacy": "Integritetspolicy"
+  },
+  "products": {
+    "title": "Produkter",
+    "search": "Sök efter produkter...",
+    "filters": "Filter",
+    "sort": "Sortera",
+    "sortOptions": {
+      "newest": "Senast",
+      "oldest": "Äldst",
+      "priceAsc": "Pris (från lågt till högt)",
+      "priceDesc": "Pris (högst till lågt)",
+      "popular": "Mest populära"
+    },
+    "status": {
+      "draft": "Förslag",
+      "active": "Aktiv",
+      "sold": "Såld",
+      "pending": "Väntar på godkännande"
+    },
+    "condition": {
+      "new": "Ny",
+      "likeNew": "Lätt använd",
+      "good": "Bra",
+      "fair": "Mitten"
+    },
+    "outOfStock": "Slut i lager",
+    "inStock": "I lager",
+    "noResults": "Produkten hittades inte.",
+    "loading": "Produkter laddas...",
+    "perPage": "Per sida",
+    "showing": "Totalt antal {total} produkter mellan {from} och {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Lägg till i favoriter",
+    "removeFromFavorites": "Ta bort från favoriter",
+    "share": "Dela",
+    "report": "Rapportera ett problem",
+    "description": "Förklaring",
+    "specifications": "Drag",
+    "location": "Plats",
+    "shipping": "Frakt",
+    "shippingAvailable": "Kan fraktas med gods.",
+    "noShipping": "Endast handleverans.",
+    "internationalShipping": "Internationell frakt tillgänglig.",
+    "weight": "Vikt",
+    "stock": "Stock",
+    "inStock": "{count} artiklar i lager",
+    "minOrder": "Minsta beställning",
+    "maxOrder": "Maximal beställning",
+    "publishedAt": "Publiceringsdatum",
+    "views": "Visad",
+    "similarProducts": "Liknande produkter",
+    "sellerProducts": "Säljarens övriga produkter"
+  },
+  "seller": {
+    "title": "Säljarinformation",
+    "verified": "Verifierad",
+    "reviews": "utvärdering",
+    "products": "annons",
+    "memberSince": "Medlem sedan {år}",
+    "contact": "Skicka meddelande",
+    "call": "Söka",
+    "viewProfile": "Visa profil"
+  },
+  "newListing": {
+    "title": "Skapa ny annons",
+    "saveDraft": "Spara utkast",
+    "publish": "Publicera",
+    "basicInfo": "Grundläggande information",
+    "categoryAndCondition": "Kategori och status",
+    "pricing": "Prissättning",
+    "shipping": "Frakt",
+    "images": "Bilder",
+    "addImage": "Lägg till bild",
+    "maxImages": "Du kan ladda upp maximalt 10 bilder.",
+    "imageHint": "Minst 1, högst 10 bilder. I PNG-, JPG- eller WEBP-format.",
+    "fields": {
+      "title": "Annonstitel",
+      "shortDescription": "Kort beskrivning",
+      "description": "Detaljerad förklaring",
+      "category": "Kategori",
+      "condition": "Produktstatus",
+      "price": "Pris",
+      "stock": "Lagerkvantitet",
+      "unit": "Enhet",
+      "shippingAvailable": "Frakt är tillgänglig.",
+      "shippingCost": "Fraktavgift",
+      "weight": "Vikt",
+      "weightUnit": "Viktenhet"
+    },
+    "placeholders": {
+      "title": "Exempel: 2-årig Holsteinko",
+      "shortDescription": "Produktbeskrivning (max 200 tecken)",
+      "description": "Ge detaljerad information om produkten...",
+      "category": "Välj en kategori."
+    },
+    "success": "Annonsen skapades.",
+    "error": "Ett fel uppstod när annonsen skapades."
   }
 }

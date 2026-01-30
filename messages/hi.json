@@ -11,7 +11,17 @@
     "back": "पीछे",
     "next": "आगे",
     "close": "बंद करना",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "लॉग इन करें",
+    "register": "पंजीकरण करवाना"
+  },
+  "header": {
+    "products": "उत्पादों",
+    "sellers": "सेलर्स",
+    "about": "हमारे बारे में",
+    "dashboard": "पैनल",
+    "settings": "सेटिंग्स",
+    "logout": "लॉग आउट"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "डैशबोर्ड",
     "welcome": "स्वागत है, {नाम}!",
-    "accountInfo": "आपकी खाता जानकारी नीचे प्रदर्शित है।",
+    "accountInfo": "आपके खाते का सारांश नीचे दिया गया है।",
     "username": "उपयोगकर्ता नाम",
     "email": "ईमेल",
     "id": "पहचान",
-    "logout": "लॉग आउट"
+    "logout": "लॉग आउट",
+    "stats": {
+      "totalListings": "कुल विज्ञापन",
+      "active": "सक्रिय",
+      "totalViews": "कुल दृश्य",
+      "thisWeek": "इस सप्ताह",
+      "favorites": "पसंदीदा",
+      "onYourListings": "आपके विज्ञापनों में",
+      "messages": "संदेश",
+      "unread": "अपठित ग"
+    },
+    "recentListings": "आपकी नवीनतम लिस्टिंग",
+    "recentMessages": "हाल के संदेश",
+    "noListings": "आपने अभी तक कोई विज्ञापन नहीं जोड़ा है।",
+    "noMessages": "आपको अभी तक कोई संदेश प्राप्त नहीं हुआ है।",
+    "noNotifications": "आपको अभी तक कोई सूचना प्राप्त नहीं हुई है।",
+    "viewAllListings": "सभी लिस्टिंग देखें",
+    "viewAllMessages": "सभी संदेश देखें"
+  },
+  "dashboardNav": {
+    "overview": "अवलोकन",
+    "myListings": "मेरे विज्ञापन",
+    "favorites": "मेरे प्रिय",
+    "messages": "संदेशों",
+    "notifications": "सूचनाएं",
+    "profile": "प्रोफ़ाइल",
+    "settings": "सेटिंग्स",
+    "newListing": "नई लिस्टिंग जोड़ें"
+  },
+  "myListings": {
+    "title": "मेरे विज्ञापन",
+    "description": "आप अपनी सभी लिस्टिंग को यहीं से मैनेज कर सकते हैं।",
+    "noListings": "आपने अभी तक कोई विज्ञापन नहीं जोड़ा है।",
+    "createFirst": "अपनी पहली लिस्टिंग बनाएं।",
+    "filters": {
+      "all": "उन सभी को",
+      "active": "सक्रिय",
+      "draft": "मसौदा",
+      "pending": "मंजूरी का इंतजार",
+      "sold": "बिका हुआ"
+    },
+    "actions": {
+      "edit": "संपादन करना",
+      "delete": "मिटाना",
+      "activate": "सक्रिय करें",
+      "deactivate": "निष्क्रिय संरचना"
+    }
+  },
+  "favorites": {
+    "title": "मेरे प्रिय",
+    "description": "यहां आपको पसंद आने वाले उत्पाद मिलेंगे।",
+    "noFavorites": "आपने अभी तक कोई पसंदीदा उत्पाद नहीं जोड़ा है।",
+    "browseProducts": "उत्पाद ब्राउज़ करें"
   },
   "settings": {
     "title": "सेटिंग्स",
@@ -107,5 +169,143 @@
   "language": {
     "select": "भाषा चयन",
     "current": "वर्तमान भाषा"
+  },
+  "home": {
+    "hero": {
+      "title": "जीवित पशु व्यापार मंच",
+      "subtitle": "जीवित पशुओं के व्यापार का सबसे विश्वसनीय मंच। अपने मवेशियों और भेड़ों को सुरक्षित रूप से खरीदें और बेचें।",
+      "cta": "शुरू करें",
+      "viewListings": "विज्ञापन देखें"
+    },
+    "features": {
+      "secure": {
+        "title": "सुरक्षित खरीदारी",
+        "description": "सभी लेन-देन सुरक्षित हैं। विक्रेता और खरीदार की जानकारी सत्यापित कर ली गई है।"
+      },
+      "variety": {
+        "title": "उत्पादों की विस्तृत श्रृंखला",
+        "description": "मवेशी, भेड़ें, और भी बहुत कुछ। आप जिस जानवर को ढूंढ रहे हैं, उसे आसानी से पा सकते हैं।"
+      },
+      "support": {
+        "title": "चौबीसों घंटे सहायता",
+        "description": "हम आपके सवालों के लिए हमेशा मौजूद हैं। हमारी लाइव सपोर्ट लाइन हमेशा चालू है।"
+      }
+    },
+    "categories": {
+      "title": "श्रेणियाँ",
+      "cattle": "पशु",
+      "sheep": "छोटे पशुधन",
+      "poultry": "मुर्गी पालन",
+      "other": "अन्य"
+    },
+    "featured": {
+      "title": "सुविधाजनक विज्ञापन",
+      "viewAll": "सभी देखें"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 लाइवस्टॉक ट्रेडिंग। सर्वाधिकार सुरक्षित।",
+    "about": "हमारे बारे में",
+    "contact": "संचार",
+    "terms": "उपयोग की शर्तें",
+    "privacy": "गोपनीयता नीति"
+  },
+  "products": {
+    "title": "उत्पादों",
+    "search": "उत्पादों की खोज करें...",
+    "filters": "फिल्टर",
+    "sort": "क्रम से लगाना",
+    "sortOptions": {
+      "newest": "नवीनतम",
+      "oldest": "सबसे पुराने",
+      "priceAsc": "मूल्य नीचे से ऊपर)",
+      "priceDesc": "कीमत (उच्च से निम्न)",
+      "popular": "सबसे लोकप्रिय"
+    },
+    "status": {
+      "draft": "मसौदा",
+      "active": "सक्रिय",
+      "sold": "बिका हुआ",
+      "pending": "मंजूरी का इंतजार"
+    },
+    "condition": {
+      "new": "नया",
+      "likeNew": "कम इस्तेमाल किया हुआ",
+      "good": "अच्छा",
+      "fair": "मध्य"
+    },
+    "outOfStock": "स्टॉक ख़त्म",
+    "inStock": "स्टॉक में",
+    "noResults": "उत्पाद नहीं मिला।",
+    "loading": "सामान लोड किया जा रहा है...",
+    "perPage": "प्रति पृष्ठ",
+    "showing": "{from} और {to} के बीच {total} उत्पादों का कुल योग।"
+  },
+  "productDetail": {
+    "addToFavorites": "पसंदीदा में जोड़े",
+    "removeFromFavorites": "पसंदीदा से हटाएं",
+    "share": "शेयर करना",
+    "report": "एक समस्या का आख्या",
+    "description": "स्पष्टीकरण",
+    "specifications": "विशेषताएँ",
+    "location": "जगह",
+    "shipping": "माल",
+    "shippingAvailable": "इसे कार्गो द्वारा भेजा जा सकता है।",
+    "noShipping": "केवल हाथ से डिलीवरी।",
+    "internationalShipping": "अंतर्राष्ट्रीय शिपिंग उपलब्ध है।",
+    "weight": "वज़न",
+    "stock": "भंडार",
+    "inStock": "स्टॉक में {count} आइटम हैं",
+    "minOrder": "न्यूनतम ऑर्डर",
+    "maxOrder": "अधिकतम ऑर्डर",
+    "publishedAt": "प्रकाशन तिथि",
+    "views": "देखा गया",
+    "similarProducts": "मिलते-जुलते उत्पाद",
+    "sellerProducts": "विक्रेता के अन्य उत्पाद"
+  },
+  "seller": {
+    "title": "विक्रेता की जानकारी",
+    "verified": "सत्यापित",
+    "reviews": "मूल्यांकन",
+    "products": "विज्ञापन",
+    "memberSince": "सदस्य बनने की तिथि {वर्ष}",
+    "contact": "मेसेज भेजें",
+    "call": "खोज",
+    "viewProfile": "प्रोफ़ाइल देखें"
+  },
+  "newListing": {
+    "title": "नई लिस्टिंग बनाएं",
+    "saveDraft": "मसौदा सेव करें",
+    "publish": "प्रकाशित करना",
+    "basicInfo": "मूल जानकारी",
+    "categoryAndCondition": "श्रेणी और स्थिति",
+    "pricing": "मूल्य निर्धारण",
+    "shipping": "माल",
+    "images": "इमेजिस",
+    "addImage": "छवि जोड़ें",
+    "maxImages": "आप अधिकतम 10 तस्वीरें अपलोड कर सकते हैं।",
+    "imageHint": "कम से कम 1, अधिकतम 10 चित्र। PNG, JPG या WEBP प्रारूप में।",
+    "fields": {
+      "title": "विज्ञापन शीर्षक",
+      "shortDescription": "संक्षिप्त विवरण",
+      "description": "विस्तृत व्याख्या",
+      "category": "वर्ग",
+      "condition": "उत्पाद की स्थिति",
+      "price": "कीमत",
+      "stock": "स्टॉक मात्रा",
+      "unit": "इकाई",
+      "shippingAvailable": "शिपिंग की सुविधा उपलब्ध है।",
+      "shippingCost": "शिपिंग शुल्क",
+      "weight": "वज़न",
+      "weightUnit": "वजन की इकाई"
+    },
+    "placeholders": {
+      "title": "उदाहरण: 2 साल की होल्स्टीन गाय",
+      "shortDescription": "उत्पाद का विवरण (अधिकतम 200 अक्षर)",
+      "description": "उत्पाद के बारे में विस्तृत जानकारी प्रदान करें...",
+      "category": "एक श्रेणी चुनें।"
+    },
+    "success": "विज्ञापन सफलतापूर्वक तैयार हो गया।",
+    "error": "विज्ञापन बनाते समय एक त्रुटि उत्पन्न हुई।"
   }
 }

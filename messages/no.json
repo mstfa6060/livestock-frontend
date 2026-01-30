@@ -11,7 +11,17 @@
     "back": "Tilbake",
     "next": "Framover",
     "close": "Lukke",
-    "emailPlaceholder": "ornek@epost.com"
+    "emailPlaceholder": "ornek@epost.com",
+    "login": "Logg inn",
+    "register": "Register"
+  },
+  "header": {
+    "products": "Produkter",
+    "sellers": "Selgere",
+    "about": "Om oss",
+    "dashboard": "Panelet",
+    "settings": "Innstillinger",
+    "logout": "Logg ut"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Dashbord",
     "welcome": "Velkommen, {navn}!",
-    "accountInfo": "Kontoinformasjonen din vises nedenfor.",
+    "accountInfo": "Kontosammendraget ditt er nedenfor.",
     "username": "Brukernavn",
     "email": "E-post",
     "id": "ID",
-    "logout": "Logg ut"
+    "logout": "Logg ut",
+    "stats": {
+      "totalListings": "Totalt antall annonser",
+      "active": "aktiv",
+      "totalViews": "Totalt antall visninger",
+      "thisWeek": "denne uken",
+      "favorites": "Favoritt",
+      "onYourListings": "i annonsene dine",
+      "messages": "Beskjed",
+      "unread": "ulest"
+    },
+    "recentListings": "Dine nyeste oppføringer",
+    "recentMessages": "Nylige meldinger",
+    "noListings": "Du har ikke lagt til noen annonser ennå.",
+    "noMessages": "Du har ikke mottatt en melding ennå.",
+    "noNotifications": "Du har ikke mottatt noen varsler ennå.",
+    "viewAllListings": "Se alle oppføringer",
+    "viewAllMessages": "Vis alle meldinger"
+  },
+  "dashboardNav": {
+    "overview": "Oversikt",
+    "myListings": "Mine annonser",
+    "favorites": "Mine favoritter",
+    "messages": "Meldinger",
+    "notifications": "Varsler",
+    "profile": "Profil",
+    "settings": "Innstillinger",
+    "newListing": "Legg til ny oppføring"
+  },
+  "myListings": {
+    "title": "Mine annonser",
+    "description": "Administrer alle oppføringene dine herfra.",
+    "noListings": "Du har ikke lagt til noen annonser ennå.",
+    "createFirst": "Opprett din første oppføring.",
+    "filters": {
+      "all": "Alle av dem",
+      "active": "Aktiv",
+      "draft": "Utkast",
+      "pending": "Venter på godkjenning",
+      "sold": "Solgt"
+    },
+    "actions": {
+      "edit": "Redigere",
+      "delete": "Slett",
+      "activate": "Aktiver",
+      "deactivate": "Passiv struktur"
+    }
+  },
+  "favorites": {
+    "title": "Mine favoritter",
+    "description": "Følg produktene du liker her.",
+    "noFavorites": "Du har ikke lagt til noen favorittprodukter ennå.",
+    "browseProducts": "Bla gjennom produkter"
   },
   "settings": {
     "title": "Innstillinger",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Språkvalg",
     "current": "Nåværende språk"
+  },
+  "home": {
+    "hero": {
+      "title": "Plattform for handel med levende dyr",
+      "subtitle": "Den mest pålitelige plattformen for handel med levende dyr. Kjøp og selg storfe og sauer trygt.",
+      "cta": "Start nå",
+      "viewListings": "Vis annonser"
+    },
+    "features": {
+      "secure": {
+        "title": "Sikker shopping",
+        "description": "Alle transaksjoner er sikre. Selger- og kjøperinformasjon er bekreftet."
+      },
+      "variety": {
+        "title": "Bredt produktutvalg",
+        "description": "Kveg, sauer og mer. Finn enkelt dyret du leter etter."
+      },
+      "support": {
+        "title": "Døgnåpen support",
+        "description": "Vi er alltid her for spørsmålene dine. Vår live supportlinje er aktiv."
+      }
+    },
+    "categories": {
+      "title": "Kategorier",
+      "cattle": "Kveg",
+      "sheep": "Smådyr",
+      "poultry": "Fjærfe",
+      "other": "Annen"
+    },
+    "featured": {
+      "title": "Utvalgte annonser",
+      "viewAll": "Se alle"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Husdyrhandel. Alle rettigheter forbeholdt.",
+    "about": "Om oss",
+    "contact": "Kommunikasjon",
+    "terms": "Bruksvilkår",
+    "privacy": "Personvernerklæring"
+  },
+  "products": {
+    "title": "Produkter",
+    "search": "Søk etter produkter...",
+    "filters": "Filtre",
+    "sort": "Sortere",
+    "sortOptions": {
+      "newest": "Siste",
+      "oldest": "Eldste",
+      "priceAsc": "Pris (fra lav til høy)",
+      "priceDesc": "Pris (høy til lav)",
+      "popular": "Mest populær"
+    },
+    "status": {
+      "draft": "Utkast",
+      "active": "Aktiv",
+      "sold": "Solgt",
+      "pending": "Venter på godkjenning"
+    },
+    "condition": {
+      "new": "Ny",
+      "likeNew": "Lett brukt",
+      "good": "God",
+      "fair": "Midt"
+    },
+    "outOfStock": "Utsolgt",
+    "inStock": "På lager",
+    "noResults": "Produktet ble ikke funnet.",
+    "loading": "Produktene lastes inn ...",
+    "perPage": "Per side",
+    "showing": "Totalt antall {total} produkter mellom {from} og {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Legg til i favoritter",
+    "removeFromFavorites": "Fjern fra favoritter",
+    "share": "Dele",
+    "report": "Rapporter et problem",
+    "description": "Forklaring",
+    "specifications": "Funksjoner",
+    "location": "Sted",
+    "shipping": "Last",
+    "shippingAvailable": "Kan sendes med gods.",
+    "noShipping": "Kun håndlevering.",
+    "internationalShipping": "Internasjonal frakt tilgjengelig.",
+    "weight": "Vekt",
+    "stock": "Lager",
+    "inStock": "{count} varer på lager",
+    "minOrder": "Minimumsbestilling",
+    "maxOrder": "Maksimal bestilling",
+    "publishedAt": "Publikasjonsdato",
+    "views": "Sett",
+    "similarProducts": "Lignende produkter",
+    "sellerProducts": "Selgers andre produkter"
+  },
+  "seller": {
+    "title": "Selgerinformasjon",
+    "verified": "Verifisert",
+    "reviews": "evaluering",
+    "products": "annonse",
+    "memberSince": "Medlem siden {år}",
+    "contact": "Send melding",
+    "call": "Søk",
+    "viewProfile": "Vis profil"
+  },
+  "newListing": {
+    "title": "Opprett ny oppføring",
+    "saveDraft": "Lagre utkast",
+    "publish": "Utgi",
+    "basicInfo": "Grunnleggende informasjon",
+    "categoryAndCondition": "Kategori og status",
+    "pricing": "Prissetting",
+    "shipping": "Last",
+    "images": "Bilder",
+    "addImage": "Legg til bilde",
+    "maxImages": "Du kan laste opp maksimalt 10 bilder.",
+    "imageHint": "Minimum 1, maksimum 10 bilder. I PNG-, JPG- eller WEBP-format.",
+    "fields": {
+      "title": "Annonsetittel",
+      "shortDescription": "Kort beskrivelse",
+      "description": "Detaljert forklaring",
+      "category": "Kategori",
+      "condition": "Produktstatus",
+      "price": "Pris",
+      "stock": "Lagermengde",
+      "unit": "Enhet",
+      "shippingAvailable": "Frakt er tilgjengelig.",
+      "shippingCost": "Fraktgebyr",
+      "weight": "Vekt",
+      "weightUnit": "Vektenhet"
+    },
+    "placeholders": {
+      "title": "Eksempel: 2 år gammel Holstein-ku",
+      "shortDescription": "Produktbeskrivelse (maks 200 tegn)",
+      "description": "Gi detaljert informasjon om produktet...",
+      "category": "Velg en kategori."
+    },
+    "success": "Annonsen ble opprettet.",
+    "error": "Det oppsto en feil under oppretting av annonsen."
   }
 }

@@ -11,7 +11,17 @@
     "back": "Ar ais",
     "next": "Ar Aghaidh",
     "close": "Dún",
-    "emailPlaceholder": "ornek@ríomhphost.com"
+    "emailPlaceholder": "ornek@ríomhphost.com",
+    "login": "Logáil isteach",
+    "register": "Cláraigh"
+  },
+  "header": {
+    "products": "Táirgí",
+    "sellers": "Díoltóirí",
+    "about": "Fúinn",
+    "dashboard": "Painéal",
+    "settings": "Socruithe",
+    "logout": "Logáil Amach"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Painéal Rialaithe",
     "welcome": "Fáilte romhat, a {ainm}!",
-    "accountInfo": "Tá faisnéis do chuntais le feiceáil thíos.",
+    "accountInfo": "Tá achoimre do chuntais thíos.",
     "username": "Ainm úsáideora",
     "email": "Ríomhphost",
     "id": "Aitheantas",
-    "logout": "Logáil Amach"
+    "logout": "Logáil Amach",
+    "stats": {
+      "totalListings": "Iomlán na bhfógraí",
+      "active": "gníomhach",
+      "totalViews": "Líon Iomlán na nAmharc",
+      "thisWeek": "an tseachtain seo",
+      "favorites": "Is fearr leat",
+      "onYourListings": "i do fhógraí",
+      "messages": "Teachtaireacht",
+      "unread": "gan léamh"
+    },
+    "recentListings": "Do Liostaí is Déanaí",
+    "recentMessages": "Teachtaireachtaí Le Déanaí",
+    "noListings": "Níl aon fhógraí curtha leis agat go fóill.",
+    "noMessages": "Ní bhfuair tú teachtaireacht fós.",
+    "noNotifications": "Níl aon fhógraí faighte agat go fóill.",
+    "viewAllListings": "Féach ar na Liostaí Uile",
+    "viewAllMessages": "Féach ar na teachtaireachtaí uile"
+  },
+  "dashboardNav": {
+    "overview": "Forbhreathnú",
+    "myListings": "Mo fhógraí",
+    "favorites": "Mo rogha pearsanta",
+    "messages": "Teachtaireachtaí",
+    "notifications": "Fógraí",
+    "profile": "Próifíl",
+    "settings": "Socruithe",
+    "newListing": "Cuir Liostú Nua leis"
+  },
+  "myListings": {
+    "title": "Mo fhógraí",
+    "description": "Bainistigh do liostaí go léir as seo.",
+    "noListings": "Níl aon fhógraí curtha leis agat go fóill.",
+    "createFirst": "Cruthaigh do chéad liostú.",
+    "filters": {
+      "all": "Iad uile",
+      "active": "Gníomhach",
+      "draft": "Dréacht",
+      "pending": "Ag fanacht le ceadú",
+      "sold": "Díolta"
+    },
+    "actions": {
+      "edit": "Cuir in Eagar",
+      "delete": "Scrios",
+      "activate": "Gníomhachtaigh",
+      "deactivate": "Struchtúr Éighníomhach"
+    }
+  },
+  "favorites": {
+    "title": "Mo rogha pearsanta",
+    "description": "Lean na táirgí is maith leat anseo.",
+    "noFavorites": "Níl aon táirgí is fearr leat curtha leis agat go fóill.",
+    "browseProducts": "Brabhsáil Táirgí"
   },
   "settings": {
     "title": "Socruithe",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Rogha Teanga",
     "current": "Teanga Reatha"
+  },
+  "home": {
+    "hero": {
+      "title": "Ardán Trádála Ainmhithe Beo",
+      "subtitle": "An t-ardán trádála ainmhithe beo is iontaofa. Ceannaigh agus díol do chuid eallaigh agus caorach go sábháilte.",
+      "cta": "Tosaigh Anois",
+      "viewListings": "Féach ar Fhógraí"
+    },
+    "features": {
+      "secure": {
+        "title": "Siopadóireacht Shlán",
+        "description": "Tá gach idirbheart slán. Tá faisnéis an díoltóra agus an cheannaitheora fíoraithe."
+      },
+      "variety": {
+        "title": "Raon Leathan Táirgí",
+        "description": "Eallach, caoirigh, agus tuilleadh. Aimsigh an t-ainmhí atá uait go héasca."
+      },
+      "support": {
+        "title": "Tacaíocht 24/7",
+        "description": "Táimid anseo i gcónaí le haghaidh do cheisteanna. Tá ár líne tacaíochta beo gníomhach."
+      }
+    },
+    "categories": {
+      "title": "Catagóirí",
+      "cattle": "Eallach",
+      "sheep": "Beostoc beag",
+      "poultry": "Éanlaith chlóis",
+      "other": "Eile"
+    },
+    "featured": {
+      "title": "Fógraí Réadmhaoine",
+      "viewAll": "Féach ar gach rud"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Trádáil Beostoic. Gach ceart ar cosaint.",
+    "about": "Fúinn",
+    "contact": "Cumarsáid",
+    "terms": "Téarmaí Úsáide",
+    "privacy": "Polasaí Príobháideachais"
+  },
+  "products": {
+    "title": "Táirgí",
+    "search": "Cuardaigh táirgí...",
+    "filters": "Scagairí",
+    "sort": "Sórtáil",
+    "sortOptions": {
+      "newest": "Is déanaí",
+      "oldest": "Is sine",
+      "priceAsc": "Praghas (Ó Íseal go hArd)",
+      "priceDesc": "Praghas (Ard go hÍseal)",
+      "popular": "Is Coitianta"
+    },
+    "status": {
+      "draft": "Dréacht",
+      "active": "Gníomhach",
+      "sold": "Díolta",
+      "pending": "Ag fanacht le ceadú"
+    },
+    "condition": {
+      "new": "Nua",
+      "likeNew": "Úsáidte go héadrom",
+      "good": "Maith",
+      "fair": "Lár"
+    },
+    "outOfStock": "As Stoc",
+    "inStock": "I Stoc",
+    "noResults": "Níor aimsíodh an táirge.",
+    "loading": "Ag lódáil táirgí...",
+    "perPage": "In aghaidh an leathanaigh",
+    "showing": "Líon iomlán na dtáirgí {total} idir {from} agus {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Cuir le Ceanáin",
+    "removeFromFavorites": "Bain as na Ceanáin",
+    "share": "Comhroinn",
+    "report": "Tuairiscigh fadhb",
+    "description": "Míniú",
+    "specifications": "Gnéithe",
+    "location": "Suíomh",
+    "shipping": "Lastas",
+    "shippingAvailable": "Is féidir é a sheoladh le lasta.",
+    "noShipping": "Seachadadh de láimh amháin.",
+    "internationalShipping": "Loingseoireacht idirnáisiúnta ar fáil.",
+    "weight": "Meáchan",
+    "stock": "Stoc",
+    "inStock": "{count} earra i stoc",
+    "minOrder": "Íosordú",
+    "maxOrder": "Uasmhéid ordú",
+    "publishedAt": "Dáta foilsithe",
+    "views": "Breathnaíodh",
+    "similarProducts": "Táirgí Comhchosúla",
+    "sellerProducts": "Táirgí Eile an Díoltóra"
+  },
+  "seller": {
+    "title": "Faisnéis Díoltóra",
+    "verified": "Fíoraithe",
+    "reviews": "meastóireacht",
+    "products": "fógra",
+    "memberSince": "Ball ó {year}",
+    "contact": "Seol Teachtaireacht",
+    "call": "Cuardaigh",
+    "viewProfile": "Féach ar Phróifíl"
+  },
+  "newListing": {
+    "title": "Cruthaigh Liostú Nua",
+    "saveDraft": "Sábháil Dréacht",
+    "publish": "Foilsigh",
+    "basicInfo": "Faisnéis Bhunúsach",
+    "categoryAndCondition": "Catagóir agus Stádas",
+    "pricing": "Praghsáil",
+    "shipping": "Lastas",
+    "images": "Íomhánna",
+    "addImage": "Cuir Íomhá leis",
+    "maxImages": "Is féidir leat uasmhéid de 10 íomhá a uaslódáil.",
+    "imageHint": "Íomhá amháin ar a laghad, 10 n-íomhá ar a mhéad. I bhformáid PNG, JPG, nó WEBP.",
+    "fields": {
+      "title": "Teideal an Fhógra",
+      "shortDescription": "Cur Síos Achomair",
+      "description": "Míniú Mionsonraithe",
+      "category": "Catagóir",
+      "condition": "Stádas an Táirge",
+      "price": "Praghas",
+      "stock": "Cainníocht Stoic",
+      "unit": "Aonad",
+      "shippingAvailable": "Tá loingseoireacht ar fáil.",
+      "shippingCost": "Táille Loingseoireachta",
+      "weight": "Meáchan",
+      "weightUnit": "Aonad Meáchain"
+    },
+    "placeholders": {
+      "title": "Sampla: Bó Holstein 2 Bhliain d'Aois",
+      "shortDescription": "Cur síos ar an táirge (uasmhéid 200 carachtar)",
+      "description": "Tabhair faisnéis mhionsonraithe faoin táirge...",
+      "category": "Roghnaigh catagóir."
+    },
+    "success": "Cruthaíodh an fógra go rathúil.",
+    "error": "Tharla earráid agus an fógra á chruthú."
   }
 }

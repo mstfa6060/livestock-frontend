@@ -11,7 +11,17 @@
     "back": "Z powrotem",
     "next": "Do przodu",
     "close": "Zamknąć",
-    "emailPlaceholder": "ornek@email.com"
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Zaloguj się",
+    "register": "Rejestr"
+  },
+  "header": {
+    "products": "Produkty",
+    "sellers": "Sprzedawcy",
+    "about": "O nas",
+    "dashboard": "Płyta",
+    "settings": "Ustawienia",
+    "logout": "Wyloguj się"
   },
   "auth": {
     "login": {
@@ -74,11 +84,63 @@
   "dashboard": {
     "title": "Panel",
     "welcome": "Witaj, {name}!",
-    "accountInfo": "Poniżej wyświetlane są informacje o Twoim koncie.",
+    "accountInfo": "Podsumowanie Twojego konta znajduje się poniżej.",
     "username": "Nazwa użytkownika",
     "email": "E-mail",
     "id": "ID",
-    "logout": "Wyloguj się"
+    "logout": "Wyloguj się",
+    "stats": {
+      "totalListings": "Łączna liczba reklam",
+      "active": "aktywny",
+      "totalViews": "Łączna liczba wyświetleń",
+      "thisWeek": "w tym tygodniu",
+      "favorites": "Ulubiony",
+      "onYourListings": "w twoich reklamach",
+      "messages": "Wiadomość",
+      "unread": "niewykształcony"
+    },
+    "recentListings": "Twoje najnowsze oferty",
+    "recentMessages": "Ostatnie wiadomości",
+    "noListings": "Nie dodałeś jeszcze żadnych reklam.",
+    "noMessages": "Nie otrzymałeś jeszcze wiadomości.",
+    "noNotifications": "Nie otrzymałeś jeszcze żadnych powiadomień.",
+    "viewAllListings": "Zobacz wszystkie oferty",
+    "viewAllMessages": "Wyświetl wszystkie wiadomości"
+  },
+  "dashboardNav": {
+    "overview": "Przegląd",
+    "myListings": "Moje reklamy",
+    "favorites": "Moje ulubione",
+    "messages": "Wiadomości",
+    "notifications": "Powiadomienia",
+    "profile": "Profil",
+    "settings": "Ustawienia",
+    "newListing": "Dodaj nową ofertę"
+  },
+  "myListings": {
+    "title": "Moje reklamy",
+    "description": "Zarządzaj wszystkimi swoimi ofertami tutaj.",
+    "noListings": "Nie dodałeś jeszcze żadnych reklam.",
+    "createFirst": "Utwórz swoją pierwszą ofertę.",
+    "filters": {
+      "all": "Wszyscy oni",
+      "active": "Aktywny",
+      "draft": "Projekt",
+      "pending": "Oczekiwanie na zatwierdzenie",
+      "sold": "Sprzedany"
+    },
+    "actions": {
+      "edit": "Redagować",
+      "delete": "Usuwać",
+      "activate": "Aktywować",
+      "deactivate": "Struktura pasywna"
+    }
+  },
+  "favorites": {
+    "title": "Moje ulubione",
+    "description": "Tutaj możesz obserwować produkty, które Ci się podobają.",
+    "noFavorites": "Nie dodałeś jeszcze żadnych ulubionych produktów.",
+    "browseProducts": "Przeglądaj produkty"
   },
   "settings": {
     "title": "Ustawienia",
@@ -107,5 +169,143 @@
   "language": {
     "select": "Wybór języka",
     "current": "Aktualny język"
+  },
+  "home": {
+    "hero": {
+      "title": "Platforma handlu żywymi zwierzętami",
+      "subtitle": "Najbardziej niezawodna platforma do handlu żywymi zwierzętami. Kupuj i sprzedawaj bydło i owce bezpiecznie.",
+      "cta": "Zacznij teraz",
+      "viewListings": "Wyświetl reklamy"
+    },
+    "features": {
+      "secure": {
+        "title": "Bezpieczne zakupy",
+        "description": "Wszystkie transakcje są bezpieczne. Dane sprzedającego i kupującego zostały zweryfikowane."
+      },
+      "variety": {
+        "title": "Szeroka gama produktów",
+        "description": "Bydło, owce i wiele innych. Łatwo znajdź zwierzę, którego szukasz."
+      },
+      "support": {
+        "title": "Wsparcie 24/7",
+        "description": "Zawsze jesteśmy do Twojej dyspozycji. Nasza linia wsparcia jest aktywna."
+      }
+    },
+    "categories": {
+      "title": "Kategorie",
+      "cattle": "Bydło",
+      "sheep": "Małe zwierzęta gospodarskie",
+      "poultry": "Drób",
+      "other": "Inny"
+    },
+    "featured": {
+      "title": "Polecane reklamy",
+      "viewAll": "Zobacz wszystko"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Livestock Trading. Wszelkie prawa zastrzeżone.",
+    "about": "O nas",
+    "contact": "Komunikacja",
+    "terms": "Warunki korzystania",
+    "privacy": "Polityka prywatności"
+  },
+  "products": {
+    "title": "Produkty",
+    "search": "Wyszukaj produkty...",
+    "filters": "Filtry",
+    "sort": "Sortować",
+    "sortOptions": {
+      "newest": "Najnowszy",
+      "oldest": "Najstarszy",
+      "priceAsc": "Cena (od najniższej do najwyższej)",
+      "priceDesc": "Cena (od najwyższej do najniższej)",
+      "popular": "Najpopularniejsze"
+    },
+    "status": {
+      "draft": "Projekt",
+      "active": "Aktywny",
+      "sold": "Sprzedany",
+      "pending": "Oczekiwanie na zatwierdzenie"
+    },
+    "condition": {
+      "new": "Nowy",
+      "likeNew": "Lekko używany",
+      "good": "Dobry",
+      "fair": "Środek"
+    },
+    "outOfStock": "Brak w magazynie",
+    "inStock": "W magazynie",
+    "noResults": "Produkt nie został znaleziony.",
+    "loading": "Trwa ładowanie produktów...",
+    "perPage": "Na stronę",
+    "showing": "Suma {total} produktów pomiędzy {from} i {to}."
+  },
+  "productDetail": {
+    "addToFavorites": "Dodaj do ulubionych",
+    "removeFromFavorites": "Usuń z ulubionych",
+    "share": "Udział",
+    "report": "Zgłoś problem",
+    "description": "Wyjaśnienie",
+    "specifications": "Cechy",
+    "location": "Lokalizacja",
+    "shipping": "Ładunek",
+    "shippingAvailable": "Można wysłać jako przesyłkę cargo.",
+    "noShipping": "Dostawa wyłącznie osobiście.",
+    "internationalShipping": "Dostępna wysyłka międzynarodowa.",
+    "weight": "Waga",
+    "stock": "Magazyn",
+    "inStock": "{count} pozycji w magazynie",
+    "minOrder": "Minimalne zamówienie",
+    "maxOrder": "Maksymalne zamówienie",
+    "publishedAt": "Data publikacji",
+    "views": "Wyświetlono",
+    "similarProducts": "Podobne produkty",
+    "sellerProducts": "Inne produkty sprzedawcy"
+  },
+  "seller": {
+    "title": "Informacje o sprzedawcy",
+    "verified": "Zweryfikowano",
+    "reviews": "ocena",
+    "products": "reklama ",
+    "memberSince": "Członek od {rok}",
+    "contact": "Wyślij wiadomość",
+    "call": "Szukaj",
+    "viewProfile": "Wyświetl profil"
+  },
+  "newListing": {
+    "title": "Utwórz nową ofertę",
+    "saveDraft": "Zapisz wersję roboczą",
+    "publish": "Publikować",
+    "basicInfo": "Informacje podstawowe",
+    "categoryAndCondition": "Kategoria i status",
+    "pricing": "Wycena",
+    "shipping": "Ładunek",
+    "images": "Obrazy",
+    "addImage": "Dodaj obraz",
+    "maxImages": "Możesz przesłać maksymalnie 10 zdjęć.",
+    "imageHint": "Minimum 1, maksimum 10 obrazów. W formacie PNG, JPG lub WEBP.",
+    "fields": {
+      "title": "Tytuł reklamy",
+      "shortDescription": "Krótki opis",
+      "description": "Szczegółowe wyjaśnienie",
+      "category": "Kategoria",
+      "condition": "Status produktu",
+      "price": "Cena",
+      "stock": "Ilość magazynowa",
+      "unit": "Jednostka",
+      "shippingAvailable": "Dostępna jest wysyłka.",
+      "shippingCost": "Opłata za wysyłkę",
+      "weight": "Waga",
+      "weightUnit": "Jednostka wagi"
+    },
+    "placeholders": {
+      "title": "Przykład: 2-letnia krowa rasy holsztyńskiej",
+      "shortDescription": "Opis produktu (maks. 200 znaków)",
+      "description": "Podaj szczegółowe informacje o produkcie...",
+      "category": "Wybierz kategorię."
+    },
+    "success": "Reklama została pomyślnie utworzona.",
+    "error": "Wystąpił błąd podczas tworzenia reklamy."
   }
 }
