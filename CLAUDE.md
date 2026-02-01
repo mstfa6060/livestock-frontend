@@ -97,6 +97,10 @@ const user = await IAMAPI.Users.Detail.Request({ userId: 'xxx' });
 - Login providers: `native` (email/password), `google`, `apple`
 - See `common/API-INTEGRATION.md` for complete auth flow documentation
 
+**Administrator Accounts** (configured on backend):
+- `nagehanyazici13@gmail.com` - Administrator role
+- `m.mustafaocak@gmail.com` - Administrator role
+
 ## Internationalization (i18n)
 
 The app supports **50 languages** using `next-intl`. Turkish (tr) is the source language for development.
