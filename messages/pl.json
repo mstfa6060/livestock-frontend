@@ -102,7 +102,7 @@
     "recentListings": "Twoje najnowsze oferty",
     "recentMessages": "Ostatnie wiadomości",
     "noListings": "Nie dodałeś jeszcze żadnych reklam.",
-    "noMessages": "Nie otrzymałeś jeszcze wiadomości.",
+    "noMessages": "Nie otrzymałeś jeszcze żadnych wiadomości.",
     "noNotifications": "Nie otrzymałeś jeszcze żadnych powiadomień.",
     "viewAllListings": "Zobacz wszystkie oferty",
     "viewAllMessages": "Wyświetl wszystkie wiadomości"
@@ -122,6 +122,12 @@
     "description": "Zarządzaj wszystkimi swoimi ofertami tutaj.",
     "noListings": "Nie dodałeś jeszcze żadnych reklam.",
     "createFirst": "Utwórz swoją pierwszą ofertę.",
+    "fetchError": "Wystąpił błąd podczas ładowania reklam.",
+    "deleteSuccess": "Reklama została pomyślnie usunięta.",
+    "deleteError": "Wystąpił błąd podczas usuwania reklamy.",
+    "activateSuccess": "Reklama została aktywowana.",
+    "deactivateSuccess": "Oferta została dezaktywowana.",
+    "statusError": "Wystąpił błąd podczas zmiany statusu.",
     "filters": {
       "all": "Wszyscy oni",
       "active": "Aktywny",
@@ -134,6 +140,12 @@
       "delete": "Usuwać",
       "activate": "Aktywować",
       "deactivate": "Struktura pasywna"
+    },
+    "deleteDialog": {
+      "title": "Usuń reklamę",
+      "description": "Czy na pewno chcesz usunąć tę ofertę? Ta czynność jest nieodwracalna.",
+      "cancel": "Anulować",
+      "confirm": "Usuwać"
     }
   },
   "favorites": {
@@ -288,6 +300,52 @@
     "call": "Szukaj",
     "viewProfile": "Wyświetl profil"
   },
+  "editListing": {
+    "title": "Edytuj reklamę",
+    "saveChanges": "Zapisz zmiany",
+    "updating": "Aktualizowanie...",
+    "updateSuccess": "Reklama została pomyślnie zaktualizowana.",
+    "updateFailed": "Wystąpił błąd podczas aktualizacji oferty.",
+    "loadError": "Wystąpił błąd podczas ładowania reklamy.",
+    "basicInfo": "Informacje podstawowe",
+    "categoryAndCondition": "Kategoria i status",
+    "pricing": "Wycena",
+    "shipping": "Ładunek",
+    "images": "Obrazy",
+    "existingImages": "Dostępne obrazy",
+    "addImage": "Dodaj obraz",
+    "uploadingImages": "Trwa ładowanie obrazów...",
+    "uploadingImage": "Trwa ładowanie obrazu.",
+    "imageUploadFailed": "Nie można załadować obrazu.",
+    "imagesUploaded": "Wszystkie obrazy zostały pomyślnie przesłane",
+    "fields": {
+      "title": "Tytuł reklamy",
+      "shortDescription": "Krótki opis",
+      "description": "Szczegółowe wyjaśnienie",
+      "category": "Kategoria",
+      "condition": "Status produktu",
+      "price": "Cena",
+      "stock": "Ilość magazynowa",
+      "unit": "Jednostka",
+      "shippingAvailable": "Dostępna jest wysyłka.",
+      "shippingCost": "Opłata za wysyłkę",
+      "weight": "Waga",
+      "weightUnit": "Jednostka wagi"
+    },
+    "placeholders": {
+      "title": "Przykład: 2-letnia krowa rasy holsztyńskiej",
+      "shortDescription": "Opis produktu (maks. 200 znaków)",
+      "description": "Podaj szczegółowe informacje o produkcie...",
+      "category": "Wybierz kategorię."
+    },
+    "errors": {
+      "titleRequired": "Tytuł reklamy jest obowiązkowy.",
+      "shortDescriptionRequired": "Wymagany jest krótki opis.",
+      "descriptionRequired": "Wymagane jest szczegółowe wyjaśnienie.",
+      "categoryRequired": "Wybór kategorii jest obowiązkowy.",
+      "priceRequired": "Wprowadź prawidłową cenę."
+    }
+  },
   "newListing": {
     "title": "Utwórz nową ofertę",
     "saveDraft": "Zapisz wersję roboczą",
@@ -360,6 +418,6 @@
     "coverBadge": "POKRYWA",
     "videoBadge": "WIDEO",
     "coverUpdated": "Zdjęcie na okładce zostało pomyślnie dostosowane.",
-    "optimizationInfo": "Zdjęcia są zoptymalizowane pod kątem zgodności ze standardami internetowymi"
+    "optimizationInfo": "Zdjęcia zostały zoptymalizowane pod kątem zgodności ze standardami internetowymi"
   }
 }

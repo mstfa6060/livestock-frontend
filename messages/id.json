@@ -122,6 +122,12 @@
     "description": "Kelola semua daftar properti Anda dari sini.",
     "noListings": "Anda belum menambahkan iklan apa pun.",
     "createFirst": "Buat daftar properti pertama Anda.",
+    "fetchError": "Terjadi kesalahan saat memuat iklan.",
+    "deleteSuccess": "Iklan tersebut berhasil dihapus.",
+    "deleteError": "Terjadi kesalahan saat menghapus iklan.",
+    "activateSuccess": "Iklan telah diaktifkan.",
+    "deactivateSuccess": "Iklan tersebut telah dinonaktifkan.",
+    "statusError": "Terjadi kesalahan saat mengubah status.",
     "filters": {
       "all": "Mereka semua",
       "active": "Aktif",
@@ -134,6 +140,12 @@
       "delete": "Menghapus",
       "activate": "Mengaktifkan",
       "deactivate": "Struktur Pasif"
+    },
+    "deleteDialog": {
+      "title": "Hapus iklannya",
+      "description": "Apakah Anda yakin ingin menghapus daftar ini? Tindakan ini tidak dapat dibatalkan.",
+      "cancel": "Membatalkan",
+      "confirm": "Menghapus"
     }
   },
   "favorites": {
@@ -287,6 +299,52 @@
     "contact": "Kirim Pesan",
     "call": "Mencari",
     "viewProfile": "Lihat Profil"
+  },
+  "editListing": {
+    "title": "Edit iklannya",
+    "saveChanges": "Simpan Perubahan",
+    "updating": "Sedang memperbarui...",
+    "updateSuccess": "Iklan telah berhasil diperbarui.",
+    "updateFailed": "Terjadi kesalahan saat memperbarui daftar.",
+    "loadError": "Terjadi kesalahan saat memuat iklan.",
+    "basicInfo": "Informasi Dasar",
+    "categoryAndCondition": "Kategori dan Status",
+    "pricing": "Harga",
+    "shipping": "Muatan",
+    "images": "Gambar",
+    "existingImages": "Gambar yang Tersedia",
+    "addImage": "Tambahkan Gambar",
+    "uploadingImages": "Gambar sedang dimuat...",
+    "uploadingImage": "Gambar sedang dimuat.",
+    "imageUploadFailed": "Gambar tidak dapat dimuat.",
+    "imagesUploaded": "Semua gambar berhasil diunggah.",
+    "fields": {
+      "title": "Judul Iklan",
+      "shortDescription": "Deskripsi Singkat",
+      "description": "Penjelasan Terperinci",
+      "category": "Kategori",
+      "condition": "Status Produk",
+      "price": "Harga",
+      "stock": "Jumlah Stok",
+      "unit": "Satuan",
+      "shippingAvailable": "Pengiriman tersedia.",
+      "shippingCost": "Biaya Pengiriman",
+      "weight": "Berat",
+      "weightUnit": "Satuan Berat"
+    },
+    "placeholders": {
+      "title": "Contoh: Sapi Holstein Berumur 2 Tahun",
+      "shortDescription": "Deskripsi produk (maksimal 200 karakter)",
+      "description": "Berikan informasi detail tentang produk tersebut...",
+      "category": "Pilih kategori."
+    },
+    "errors": {
+      "titleRequired": "Judul iklan wajib diisi.",
+      "shortDescriptionRequired": "Deskripsi singkat diperlukan.",
+      "descriptionRequired": "Penjelasan rinci diperlukan.",
+      "categoryRequired": "Pemilihan kategori bersifat wajib.",
+      "priceRequired": "Masukkan harga yang valid."
+    }
   },
   "newListing": {
     "title": "Buat Daftar Baru",

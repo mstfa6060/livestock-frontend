@@ -122,6 +122,12 @@
     "description": "Gestionează toate anunțurile tale de aici.",
     "noListings": "Nu ați adăugat încă nicio reclamă.",
     "createFirst": "Creează-ți prima listare.",
+    "fetchError": "A apărut o eroare la încărcarea anunțurilor.",
+    "deleteSuccess": "Anunțul a fost șters cu succes.",
+    "deleteError": "A apărut o eroare la ștergerea anunțului.",
+    "activateSuccess": "Reclama a fost activată.",
+    "deactivateSuccess": "Listarea a fost dezactivată.",
+    "statusError": "A apărut o eroare la schimbarea stării.",
     "filters": {
       "all": "Toți",
       "active": "Activ",
@@ -134,6 +140,12 @@
       "delete": "Şterge",
       "activate": "Activa",
       "deactivate": "Structură pasivă"
+    },
+    "deleteDialog": {
+      "title": "Ștergeți anunțul",
+      "description": "Sigur vrei să ștergi această înregistrare? Această acțiune este ireversibilă.",
+      "cancel": "Anula",
+      "confirm": "Şterge"
     }
   },
   "favorites": {
@@ -288,6 +300,52 @@
     "call": "Căutare",
     "viewProfile": "Vizualizare profil"
   },
+  "editListing": {
+    "title": "Editați anunțul",
+    "saveChanges": "Salvați modificările",
+    "updating": "Se actualizează...",
+    "updateSuccess": "Reclama a fost actualizată cu succes.",
+    "updateFailed": "A apărut o eroare la actualizarea listării.",
+    "loadError": "A apărut o eroare la încărcarea anunțului.",
+    "basicInfo": "Informații de bază",
+    "categoryAndCondition": "Categorie și statut",
+    "pricing": "Prețuri",
+    "shipping": "Marfă",
+    "images": "Imagini",
+    "existingImages": "Imagini disponibile",
+    "addImage": "Adăugați o imagine",
+    "uploadingImages": "Imaginile se încarcă...",
+    "uploadingImage": "Imaginea se încarcă.",
+    "imageUploadFailed": "Imaginea nu a putut fi încărcată.",
+    "imagesUploaded": "Toate imaginile au fost încărcate cu succes",
+    "fields": {
+      "title": "Titlul reclamei",
+      "shortDescription": "Scurtă descriere",
+      "description": "Explicație detaliată",
+      "category": "Categorie",
+      "condition": "Starea produsului",
+      "price": "Preţ",
+      "stock": "Cantitate stoc",
+      "unit": "Unitate",
+      "shippingAvailable": "Livrarea este disponibilă.",
+      "shippingCost": "Taxă de livrare",
+      "weight": "Greutate",
+      "weightUnit": "Unitate de greutate"
+    },
+    "placeholders": {
+      "title": "Exemplu: Vacă Holstein de 2 ani",
+      "shortDescription": "Descrierea produsului (maxim 200 de caractere)",
+      "description": "Furnizați informații detaliate despre produs...",
+      "category": "Selectați o categorie."
+    },
+    "errors": {
+      "titleRequired": "Titlul anunțului este obligatoriu.",
+      "shortDescriptionRequired": "Este necesară o scurtă descriere.",
+      "descriptionRequired": "Este necesară o explicație detaliată.",
+      "categoryRequired": "Selectarea categoriei este obligatorie.",
+      "priceRequired": "Introduceți un preț valid."
+    }
+  },
   "newListing": {
     "title": "Creați o listă nouă",
     "saveDraft": "Salvați schița",
@@ -360,6 +418,6 @@
     "coverBadge": "CAPAC",
     "videoBadge": "VIDEO",
     "coverUpdated": "Fotografia de copertă a fost ajustată cu succes.",
-    "optimizationInfo": "Fotografiile sunt optimizate pentru a respecta standardele web"
+    "optimizationInfo": "Fotografiile au fost optimizate pentru a respecta standardele web"
   }
 }

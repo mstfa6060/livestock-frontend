@@ -122,6 +122,12 @@
     "description": "Beheer al uw advertenties vanaf hier.",
     "noListings": "Je hebt nog geen advertenties toegevoegd.",
     "createFirst": "Maak je eerste advertentie aan.",
+    "fetchError": "Er is een fout opgetreden tijdens het laden van de advertenties.",
+    "deleteSuccess": "De advertentie is succesvol verwijderd.",
+    "deleteError": "Er is een fout opgetreden tijdens het verwijderen van de advertentie.",
+    "activateSuccess": "De advertentie is geactiveerd.",
+    "deactivateSuccess": "De advertentie is gedeactiveerd.",
+    "statusError": "Er is een fout opgetreden tijdens het wijzigen van de status.",
     "filters": {
       "all": "Allemaal",
       "active": "Actief",
@@ -134,6 +140,12 @@
       "delete": "Verwijderen",
       "activate": "Activeren",
       "deactivate": "Passieve structuur"
+    },
+    "deleteDialog": {
+      "title": "Verwijder de advertentie",
+      "description": "Weet je zeker dat je deze advertentie wilt verwijderen? Deze actie is onomkeerbaar.",
+      "cancel": "Annuleren",
+      "confirm": "Verwijderen"
     }
   },
   "favorites": {
@@ -238,7 +250,7 @@
     "outOfStock": "Niet op voorraad",
     "inStock": "Op voorraad",
     "noResults": "Product niet gevonden.",
-    "loading": "Producten laden...",
+    "loading": "Producten worden ingeladen...",
     "perPage": "Per pagina",
     "showing": "Het totaal van {total} producten tussen {from} en {to}.",
     "loginToFavorite": "Log in om toe te voegen aan favorieten.",
@@ -287,6 +299,52 @@
     "contact": "Bericht verzenden",
     "call": "Zoekopdracht",
     "viewProfile": "Profiel bekijken"
+  },
+  "editListing": {
+    "title": "Bewerk de advertentie",
+    "saveChanges": "Wijzigingen opslaan",
+    "updating": "Bezig met bijwerken...",
+    "updateSuccess": "De advertentie is succesvol bijgewerkt.",
+    "updateFailed": "Er is een fout opgetreden tijdens het bijwerken van de advertentie.",
+    "loadError": "Er is een fout opgetreden tijdens het laden van de advertentie.",
+    "basicInfo": "Basisgegevens",
+    "categoryAndCondition": "Categorie en status",
+    "pricing": "Prijzen",
+    "shipping": "Lading",
+    "images": "Afbeeldingen",
+    "existingImages": "Beschikbare afbeeldingen",
+    "addImage": "Afbeelding toevoegen",
+    "uploadingImages": "Afbeeldingen worden geladen...",
+    "uploadingImage": "Afbeelding wordt geladen.",
+    "imageUploadFailed": "De afbeelding kon niet worden geladen.",
+    "imagesUploaded": "Alle afbeeldingen zijn succesvol geüpload.",
+    "fields": {
+      "title": "Advertentietitel",
+      "shortDescription": "Korte beschrijving",
+      "description": "Gedetailleerde uitleg",
+      "category": "Categorie",
+      "condition": "Productstatus",
+      "price": "Prijs",
+      "stock": "Voorraadhoeveelheid",
+      "unit": "Eenheid",
+      "shippingAvailable": "Verzending is mogelijk.",
+      "shippingCost": "Verzendkosten",
+      "weight": "Gewicht",
+      "weightUnit": "Gewichtseenheid"
+    },
+    "placeholders": {
+      "title": "Voorbeeld: een 2-jarige Holstein-koe",
+      "shortDescription": "Productomschrijving (max. 200 tekens)",
+      "description": "Geef gedetailleerde informatie over het product...",
+      "category": "Selecteer een categorie."
+    },
+    "errors": {
+      "titleRequired": "De titel van de advertentie is verplicht.",
+      "shortDescriptionRequired": "Een korte beschrijving is vereist.",
+      "descriptionRequired": "Een gedetailleerde uitleg is vereist.",
+      "categoryRequired": "Het selecteren van een categorie is verplicht.",
+      "priceRequired": "Voer een geldige prijs in."
+    }
   },
   "newListing": {
     "title": "Nieuwe advertentie aanmaken",

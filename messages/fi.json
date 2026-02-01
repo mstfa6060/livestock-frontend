@@ -102,7 +102,7 @@
     "recentListings": "Viimeisimmät ilmoituksesi",
     "recentMessages": "Viimeisimmät viestit",
     "noListings": "Et ole vielä lisännyt mainoksia.",
-    "noMessages": "Et ole vielä saanut viestejä.",
+    "noMessages": "Et ole vielä saanut viestiä.",
     "noNotifications": "Et ole vielä saanut ilmoituksia.",
     "viewAllListings": "Näytä kaikki ilmoitukset",
     "viewAllMessages": "Näytä kaikki viestit"
@@ -122,6 +122,12 @@
     "description": "Hallinnoi kaikkia ilmoituksiasi täältä.",
     "noListings": "Et ole vielä lisännyt mainoksia.",
     "createFirst": "Luo ensimmäinen ilmoituksesi.",
+    "fetchError": "Mainosten lataamisessa tapahtui virhe.",
+    "deleteSuccess": "Mainos poistettiin onnistuneesti.",
+    "deleteError": "Mainoksen poistamisessa tapahtui virhe.",
+    "activateSuccess": "Mainos on aktivoitu.",
+    "deactivateSuccess": "Listaus on poistettu käytöstä.",
+    "statusError": "Tilaa muutettaessa tapahtui virhe.",
     "filters": {
       "all": "Kaikki ne",
       "active": "Aktiivinen",
@@ -134,6 +140,12 @@
       "delete": "Poistaa",
       "activate": "Aktivoida",
       "deactivate": "Passiivinen rakenne"
+    },
+    "deleteDialog": {
+      "title": "Poista mainos",
+      "description": "Haluatko varmasti poistaa tämän ilmoituksen? Tätä toimintoa ei voi peruuttaa.",
+      "cancel": "Peruuttaa",
+      "confirm": "Poistaa"
     }
   },
   "favorites": {
@@ -231,7 +243,7 @@
     },
     "condition": {
       "new": "Uusi",
-      "likeNew": "Vähällä käytöllä",
+      "likeNew": "Vähälle käytölle",
       "good": "Hyvä",
       "fair": "Keskimmäinen"
     },
@@ -287,6 +299,52 @@
     "contact": "Lähetä viesti",
     "call": "Haku",
     "viewProfile": "Näytä profiili"
+  },
+  "editListing": {
+    "title": "Muokkaa mainosta",
+    "saveChanges": "Tallenna muutokset",
+    "updating": "Päivitetään...",
+    "updateSuccess": "Mainos on päivitetty onnistuneesti.",
+    "updateFailed": "Ilmoituksen päivityksessä tapahtui virhe.",
+    "loadError": "Mainoksen lataamisessa tapahtui virhe.",
+    "basicInfo": "Perustiedot",
+    "categoryAndCondition": "Luokka ja tila",
+    "pricing": "Hinnoittelu",
+    "shipping": "Rahti",
+    "images": "Kuvat",
+    "existingImages": "Saatavilla olevat kuvat",
+    "addImage": "Lisää kuva",
+    "uploadingImages": "Kuvat latautuvat...",
+    "uploadingImage": "Kuva latautuu.",
+    "imageUploadFailed": "Kuvaa ei voitu ladata.",
+    "imagesUploaded": "Kaikki kuvat ladattiin onnistuneesti",
+    "fields": {
+      "title": "Mainoksen otsikko",
+      "shortDescription": "Lyhyt kuvaus",
+      "description": "Yksityiskohtainen selitys",
+      "category": "Kategoria",
+      "condition": "Tuotteen tila",
+      "price": "Hinta",
+      "stock": "Varastomäärä",
+      "unit": "Yksikkö",
+      "shippingAvailable": "Toimitus on saatavilla.",
+      "shippingCost": "Toimitusmaksu",
+      "weight": "Paino",
+      "weightUnit": "Painoyksikkö"
+    },
+    "placeholders": {
+      "title": "Esimerkki: 2-vuotias holsteinlehmä",
+      "shortDescription": "Tuotekuvaus (enintään 200 merkkiä)",
+      "description": "Anna tarkempia tietoja tuotteesta...",
+      "category": "Valitse kategoria."
+    },
+    "errors": {
+      "titleRequired": "Mainoksen otsikko on pakollinen.",
+      "shortDescriptionRequired": "Lyhyt kuvaus vaaditaan.",
+      "descriptionRequired": "Yksityiskohtainen selvitys vaaditaan.",
+      "categoryRequired": "Kategorian valinta on pakollinen.",
+      "priceRequired": "Anna kelvollinen hinta."
+    }
   },
   "newListing": {
     "title": "Luo uusi ilmoitus",

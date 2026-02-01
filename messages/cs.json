@@ -102,7 +102,7 @@
     "recentListings": "Vaše nejnovější nabídky",
     "recentMessages": "Nedávné zprávy",
     "noListings": "Zatím jste nepřidali žádné reklamy.",
-    "noMessages": "Ještě jste neobdrželi žádnou zprávu.",
+    "noMessages": "Zatím jste neobdrželi žádné zprávy.",
     "noNotifications": "Zatím jste neobdrželi žádná oznámení.",
     "viewAllListings": "Zobrazit všechny nabídky",
     "viewAllMessages": "Zobrazit všechny zprávy"
@@ -122,6 +122,12 @@
     "description": "Spravujte všechny své inzeráty odtud.",
     "noListings": "Zatím jste nepřidali žádné reklamy.",
     "createFirst": "Vytvořte si svůj první inzerát.",
+    "fetchError": "Při načítání reklam došlo k chybě.",
+    "deleteSuccess": "Reklama byla úspěšně smazána.",
+    "deleteError": "Při mazání reklamy došlo k chybě.",
+    "activateSuccess": "Reklama byla aktivována.",
+    "deactivateSuccess": "Seznam byl deaktivován.",
+    "statusError": "Při změně stavu došlo k chybě.",
     "filters": {
       "all": "Všechny z nich",
       "active": "Aktivní",
@@ -134,6 +140,12 @@
       "delete": "Vymazat",
       "activate": "Aktivovat",
       "deactivate": "Pasivní struktura"
+    },
+    "deleteDialog": {
+      "title": "Smazat reklamu",
+      "description": "Opravdu chcete tento záznam smazat? Tuto akci nelze vrátit zpět.",
+      "cancel": "Zrušit",
+      "confirm": "Vymazat"
     }
   },
   "favorites": {
@@ -238,7 +250,7 @@
     "outOfStock": "Není skladem",
     "inStock": "Skladem",
     "noResults": "Produkt nenalezen.",
-    "loading": "Načítání produktů...",
+    "loading": "Produkty se načítají...",
     "perPage": "Na stránku",
     "showing": "Celkový počet produktů ({total}) mezi {from} a {to}.",
     "loginToFavorite": "Přihlaste se pro přidání do oblíbených.",
@@ -287,6 +299,52 @@
     "contact": "Odeslat zprávu",
     "call": "Vyhledávání",
     "viewProfile": "Zobrazit profil"
+  },
+  "editListing": {
+    "title": "Upravit reklamu",
+    "saveChanges": "Uložit změny",
+    "updating": "Aktualizace...",
+    "updateSuccess": "Reklama byla úspěšně aktualizována.",
+    "updateFailed": "Při aktualizaci záznamu došlo k chybě.",
+    "loadError": "Při načítání reklamy došlo k chybě.",
+    "basicInfo": "Základní informace",
+    "categoryAndCondition": "Kategorie a stav",
+    "pricing": "Ceny",
+    "shipping": "Náklad",
+    "images": "Obrázky",
+    "existingImages": "Dostupné obrázky",
+    "addImage": "Přidat obrázek",
+    "uploadingImages": "Načítání obrázků...",
+    "uploadingImage": "Obrázek se načítá.",
+    "imageUploadFailed": "Obrázek se nepodařilo načíst.",
+    "imagesUploaded": "Všechny obrázky byly úspěšně nahrány",
+    "fields": {
+      "title": "Název reklamy",
+      "shortDescription": "Stručný popis",
+      "description": "Podrobné vysvětlení",
+      "category": "Kategorie",
+      "condition": "Stav produktu",
+      "price": "Cena",
+      "stock": "Množství zásob",
+      "unit": "Jednotka",
+      "shippingAvailable": "Doprava je k dispozici.",
+      "shippingCost": "Poplatek za dopravu",
+      "weight": "Hmotnost",
+      "weightUnit": "Jednotka hmotnosti"
+    },
+    "placeholders": {
+      "title": "Příklad: Dvouletá kráva holštýnského plemene",
+      "shortDescription": "Popis produktu (max. 200 znaků)",
+      "description": "Poskytněte podrobné informace o produktu...",
+      "category": "Vyberte kategorii."
+    },
+    "errors": {
+      "titleRequired": "Název inzerátu je povinný.",
+      "shortDescriptionRequired": "Je vyžadován stručný popis.",
+      "descriptionRequired": "Je nutné podrobné vysvětlení.",
+      "categoryRequired": "Výběr kategorie je povinný.",
+      "priceRequired": "Zadejte platnou cenu."
+    }
   },
   "newListing": {
     "title": "Vytvořit nový inzerát",

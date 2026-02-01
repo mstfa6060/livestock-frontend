@@ -122,6 +122,12 @@
     "description": "येथून तुमच्या सर्व सूची व्यवस्थापित करा.",
     "noListings": "तुम्ही अजून कोणत्याही जाहिराती जोडलेल्या नाहीत.",
     "createFirst": "तुमची पहिली यादी तयार करा.",
+    "fetchError": "जाहिराती लोड करताना एक त्रुटी आली.",
+    "deleteSuccess": "जाहिरात यशस्वीरित्या हटवण्यात आली.",
+    "deleteError": "जाहिरात हटवताना एक त्रुटी आली.",
+    "activateSuccess": "जाहिरात सक्रिय केली गेली आहे.",
+    "deactivateSuccess": "सूची निष्क्रिय करण्यात आली आहे.",
+    "statusError": "स्थिती बदलताना एक त्रुटी आली.",
     "filters": {
       "all": "ते सर्व",
       "active": "सक्रिय",
@@ -134,6 +140,12 @@
       "delete": "हटवा",
       "activate": "सक्रिय करा",
       "deactivate": "निष्क्रिय रचना"
+    },
+    "deleteDialog": {
+      "title": "जाहिरात हटवा",
+      "description": "तुम्हाला ही यादी नक्की हटवायची आहे का? ही कृती परत करता येणार नाही.",
+      "cancel": "रद्द करा",
+      "confirm": "हटवा"
     }
   },
   "favorites": {
@@ -288,6 +300,52 @@
     "call": "शोध",
     "viewProfile": "प्रोफाइल पहा"
   },
+  "editListing": {
+    "title": "जाहिरात संपादित करा",
+    "saveChanges": "बदल जतन करा",
+    "updating": "अपडेट करत आहे...",
+    "updateSuccess": "जाहिरात यशस्वीरित्या अपडेट केली गेली आहे.",
+    "updateFailed": "सूची अपडेट करताना एक त्रुटी आली.",
+    "loadError": "जाहिरात लोड करताना एक त्रुटी आली.",
+    "basicInfo": "मूलभूत माहिती",
+    "categoryAndCondition": "श्रेणी आणि स्थिती",
+    "pricing": "किंमत",
+    "shipping": "मालवाहू",
+    "images": "प्रतिमा",
+    "existingImages": "उपलब्ध प्रतिमा",
+    "addImage": "प्रतिमा जोडा",
+    "uploadingImages": "प्रतिमा लोड होत आहेत...",
+    "uploadingImage": "इमेज लोड होत आहे.",
+    "imageUploadFailed": "प्रतिमा लोड करता आली नाही.",
+    "imagesUploaded": "सर्व प्रतिमा यशस्वीरित्या अपलोड केल्या.",
+    "fields": {
+      "title": "जाहिरातीचे शीर्षक",
+      "shortDescription": "थोडक्यात वर्णन",
+      "description": "सविस्तर स्पष्टीकरण",
+      "category": "श्रेणी",
+      "condition": "उत्पादनाची स्थिती",
+      "price": "किंमत",
+      "stock": "स्टॉक प्रमाण",
+      "unit": "युनिट",
+      "shippingAvailable": "शिपिंग उपलब्ध आहे.",
+      "shippingCost": "शिपिंग शुल्क",
+      "weight": "वजन",
+      "weightUnit": "वजनाचे एकक"
+    },
+    "placeholders": {
+      "title": "उदाहरण: २ वर्षांची होल्स्टीन गाय",
+      "shortDescription": "उत्पादनाचे वर्णन (कमाल २०० वर्ण)",
+      "description": "उत्पादनाबद्दल सविस्तर माहिती द्या...",
+      "category": "एक श्रेणी निवडा."
+    },
+    "errors": {
+      "titleRequired": "जाहिरातीचे शीर्षक अनिवार्य आहे.",
+      "shortDescriptionRequired": "थोडक्यात वर्णन आवश्यक आहे.",
+      "descriptionRequired": "सविस्तर स्पष्टीकरण आवश्यक आहे.",
+      "categoryRequired": "श्रेणी निवड अनिवार्य आहे.",
+      "priceRequired": "वैध किंमत एंटर करा."
+    }
+  },
   "newListing": {
     "title": "नवीन सूची तयार करा",
     "saveDraft": "मसुदा जतन करा",
@@ -326,7 +384,7 @@
     "uploadingImages": "प्रतिमा लोड होत आहेत...",
     "uploadingImage": "इमेज लोड होत आहे.",
     "imageUploadFailed": "प्रतिमा लोड करता आली नाही.",
-    "imagesUploaded": "सर्व प्रतिमा यशस्वीरित्या अपलोड केल्या गेल्या आहेत.",
+    "imagesUploaded": "सर्व प्रतिमा यशस्वीरित्या अपलोड केल्या.",
     "draftSaved": "मसुदा जतन केला",
     "productCreated": "उत्पादन यशस्वीरित्या तयार केले गेले.",
     "creationFailed": "उत्पादन तयार करता आले नाही. कृपया पुन्हा प्रयत्न करा.",

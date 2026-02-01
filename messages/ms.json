@@ -102,7 +102,7 @@
     "recentListings": "Penyenaraian Terkini Anda",
     "recentMessages": "Mesej Terkini",
     "noListings": "Anda belum menambah sebarang iklan lagi.",
-    "noMessages": "Anda belum menerima sebarang mesej lagi.",
+    "noMessages": "Anda belum menerima mesej lagi.",
     "noNotifications": "Anda belum menerima sebarang pemberitahuan lagi.",
     "viewAllListings": "Lihat Semua Penyenaraian",
     "viewAllMessages": "Lihat semua mesej"
@@ -122,6 +122,12 @@
     "description": "Urus semua penyenaraian anda dari sini.",
     "noListings": "Anda belum menambah sebarang iklan lagi.",
     "createFirst": "Cipta penyenaraian pertama anda.",
+    "fetchError": "Ralat berlaku semasa memuatkan iklan.",
+    "deleteSuccess": "Iklan tersebut berjaya dipadamkan.",
+    "deleteError": "Ralat berlaku semasa memadamkan iklan.",
+    "activateSuccess": "Iklan telah diaktifkan.",
+    "deactivateSuccess": "Penyenaraian telah dinyahaktifkan.",
+    "statusError": "Ralat berlaku semasa menukar status.",
     "filters": {
       "all": "Kesemua mereka",
       "active": "Aktif",
@@ -134,6 +140,12 @@
       "delete": "Padam",
       "activate": "Aktifkan",
       "deactivate": "Struktur Pasif"
+    },
+    "deleteDialog": {
+      "title": "Padam iklan",
+      "description": "Adakah anda pasti mahu memadamkan penyenaraian ini? Tindakan ini tidak boleh dipulihkan.",
+      "cancel": "Batal",
+      "confirm": "Padam"
     }
   },
   "favorites": {
@@ -288,6 +300,52 @@
     "call": "Carian",
     "viewProfile": "Lihat Profil"
   },
+  "editListing": {
+    "title": "Edit iklan",
+    "saveChanges": "Simpan Perubahan",
+    "updating": "Mengemas kini...",
+    "updateSuccess": "Iklan tersebut telah berjaya dikemas kini.",
+    "updateFailed": "Ralat berlaku semasa mengemas kini penyenaraian.",
+    "loadError": "Ralat berlaku semasa memuatkan iklan.",
+    "basicInfo": "Maklumat Asas",
+    "categoryAndCondition": "Kategori dan Status",
+    "pricing": "Penentuan harga",
+    "shipping": "Kargo",
+    "images": "Imej",
+    "existingImages": "Imej yang Tersedia",
+    "addImage": "Tambah Imej",
+    "uploadingImages": "Imej sedang dimuatkan...",
+    "uploadingImage": "Imej sedang dimuatkan.",
+    "imageUploadFailed": "Imej tidak dapat dimuatkan.",
+    "imagesUploaded": "Semua imej berjaya dimuat naik",
+    "fields": {
+      "title": "Tajuk Iklan",
+      "shortDescription": "Penerangan Ringkas",
+      "description": "Penjelasan Terperinci",
+      "category": "Kategori",
+      "condition": "Status Produk",
+      "price": "Harga",
+      "stock": "Kuantiti Stok",
+      "unit": "Unit",
+      "shippingAvailable": "Penghantaran disediakan.",
+      "shippingCost": "Yuran Penghantaran",
+      "weight": "Berat",
+      "weightUnit": "Unit Berat"
+    },
+    "placeholders": {
+      "title": "Contoh: Lembu Holstein Berusia 2 Tahun",
+      "shortDescription": "Penerangan produk (maksimum 200 aksara)",
+      "description": "Berikan maklumat terperinci tentang produk...",
+      "category": "Pilih kategori."
+    },
+    "errors": {
+      "titleRequired": "Tajuk iklan adalah wajib.",
+      "shortDescriptionRequired": "Penerangan ringkas diperlukan.",
+      "descriptionRequired": "Penjelasan terperinci diperlukan.",
+      "categoryRequired": "Pemilihan kategori adalah wajib.",
+      "priceRequired": "Masukkan harga yang sah."
+    }
+  },
   "newListing": {
     "title": "Cipta Penyenaraian Baharu",
     "saveDraft": "Simpan Draf",
@@ -326,7 +384,7 @@
     "uploadingImages": "Imej sedang dimuatkan...",
     "uploadingImage": "Imej sedang dimuatkan.",
     "imageUploadFailed": "Imej tidak dapat dimuatkan.",
-    "imagesUploaded": "Semua imej telah berjaya dimuat naik",
+    "imagesUploaded": "Semua imej berjaya dimuat naik",
     "draftSaved": "Draf disimpan",
     "productCreated": "Produk tersebut berjaya dihasilkan.",
     "creationFailed": "Produk tidak dapat dicipta. Sila cuba lagi.",
@@ -360,6 +418,6 @@
     "coverBadge": "TUTUP",
     "videoBadge": "VIDEO",
     "coverUpdated": "Foto muka depan telah berjaya dilaraskan.",
-    "optimizationInfo": "Foto telah dioptimumkan untuk mematuhi piawaian web"
+    "optimizationInfo": "Foto dioptimumkan untuk mematuhi piawaian web"
   }
 }

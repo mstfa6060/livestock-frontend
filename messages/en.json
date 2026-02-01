@@ -122,6 +122,12 @@
     "description": "Manage all your listings from here.",
     "noListings": "You haven't added any ads yet.",
     "createFirst": "Create your first listing.",
+    "fetchError": "An error occurred while loading ads.",
+    "deleteSuccess": "The ad was successfully deleted.",
+    "deleteError": "An error occurred while deleting the ad.",
+    "activateSuccess": "The ad has been activated.",
+    "deactivateSuccess": "The listing has been deactivated.",
+    "statusError": "An error occurred while changing the status.",
     "filters": {
       "all": "All of them",
       "active": "Active",
@@ -134,6 +140,12 @@
       "delete": "Delete",
       "activate": "Activate",
       "deactivate": "Passive Structure"
+    },
+    "deleteDialog": {
+      "title": "Delete the ad",
+      "description": "Are you sure you want to delete this listing? This action is irreversible.",
+      "cancel": "Cancel",
+      "confirm": "Delete"
     }
   },
   "favorites": {
@@ -238,7 +250,7 @@
     "outOfStock": "Out of Stock",
     "inStock": "In Stock",
     "noResults": "Product not found.",
-    "loading": "Products are being loaded...",
+    "loading": "Loading products...",
     "perPage": "Per page",
     "showing": "The total of {total} products between {from} and {to}.",
     "loginToFavorite": "Log in to add to favorites.",
@@ -287,6 +299,52 @@
     "contact": "Send Message",
     "call": "Search",
     "viewProfile": "View Profile"
+  },
+  "editListing": {
+    "title": "Edit the ad",
+    "saveChanges": "Save Changes",
+    "updating": "Updating...",
+    "updateSuccess": "The advertisement has been successfully updated.",
+    "updateFailed": "An error occurred while updating the listing.",
+    "loadError": "An error occurred while loading the ad.",
+    "basicInfo": "Basic Information",
+    "categoryAndCondition": "Category and Status",
+    "pricing": "Pricing",
+    "shipping": "Cargo",
+    "images": "Images",
+    "existingImages": "Available Images",
+    "addImage": "Add Image",
+    "uploadingImages": "Images are loading...",
+    "uploadingImage": "Image is loading.",
+    "imageUploadFailed": "Image could not be loaded.",
+    "imagesUploaded": "All images uploaded successfully",
+    "fields": {
+      "title": "Advertisement Title",
+      "shortDescription": "Brief Description",
+      "description": "Detailed Explanation",
+      "category": "Category",
+      "condition": "Product Status",
+      "price": "Price",
+      "stock": "Stock Quantity",
+      "unit": "Unit",
+      "shippingAvailable": "Shipping is available.",
+      "shippingCost": "Shipping Fee",
+      "weight": "Weight",
+      "weightUnit": "Unit of Weight"
+    },
+    "placeholders": {
+      "title": "Example: 2-Year-Old Holstein Cow",
+      "shortDescription": "Product description (max 200 characters)",
+      "description": "Provide detailed information about the product...",
+      "category": "Select a category."
+    },
+    "errors": {
+      "titleRequired": "Advertisement title is mandatory.",
+      "shortDescriptionRequired": "A brief description is required.",
+      "descriptionRequired": "A detailed explanation is required.",
+      "categoryRequired": "Category selection is mandatory.",
+      "priceRequired": "Enter a valid price."
+    }
   },
   "newListing": {
     "title": "Create New Listing",

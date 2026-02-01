@@ -122,6 +122,12 @@
     "description": "Tum ilanlarinizi buradan yonetin",
     "noListings": "Henuz ilan eklemediniz",
     "createFirst": "Ilk Ilaninizi Olusturun",
+    "fetchError": "Ilanlar yuklenirken bir hata olustu",
+    "deleteSuccess": "Ilan basariyla silindi",
+    "deleteError": "Ilan silinirken bir hata olustu",
+    "activateSuccess": "Ilan aktif edildi",
+    "deactivateSuccess": "Ilan pasif yapildi",
+    "statusError": "Durum degistirilirken bir hata olustu",
     "filters": {
       "all": "Tumu",
       "active": "Aktif",
@@ -134,6 +140,12 @@
       "delete": "Sil",
       "activate": "Aktif Et",
       "deactivate": "Pasif Yap"
+    },
+    "deleteDialog": {
+      "title": "Ilani sil",
+      "description": "Bu ilani silmek istediginizden emin misiniz? Bu islem geri alinamaz.",
+      "cancel": "Iptal",
+      "confirm": "Sil"
     }
   },
   "favorites": {
@@ -287,6 +299,52 @@
     "contact": "Mesaj Gonder",
     "call": "Ara",
     "viewProfile": "Profili Goruntule"
+  },
+  "editListing": {
+    "title": "Ilani Duzenle",
+    "saveChanges": "Degisiklikleri Kaydet",
+    "updating": "Guncelleniyor...",
+    "updateSuccess": "Ilan basariyla guncellendi",
+    "updateFailed": "Ilan guncellenirken bir hata olustu",
+    "loadError": "Ilan yuklenirken bir hata olustu",
+    "basicInfo": "Temel Bilgiler",
+    "categoryAndCondition": "Kategori ve Durum",
+    "pricing": "Fiyatlandirma",
+    "shipping": "Kargo",
+    "images": "Gorseller",
+    "existingImages": "Mevcut Gorseller",
+    "addImage": "Gorsel Ekle",
+    "uploadingImages": "Gorseller yukleniyor...",
+    "uploadingImage": "Gorsel yukleniyor",
+    "imageUploadFailed": "Gorsel yuklenemedi",
+    "imagesUploaded": "Tum gorseller basariyla yuklendi",
+    "fields": {
+      "title": "Ilan Basligi",
+      "shortDescription": "Kisa Aciklama",
+      "description": "Detayli Aciklama",
+      "category": "Kategori",
+      "condition": "Urun Durumu",
+      "price": "Fiyat",
+      "stock": "Stok Adedi",
+      "unit": "Birim",
+      "shippingAvailable": "Kargo ile gonderim yapilabilir",
+      "shippingCost": "Kargo Ucreti",
+      "weight": "Agirlik",
+      "weightUnit": "Agirlik Birimi"
+    },
+    "placeholders": {
+      "title": "Ornek: 2 Yasinda Holstein Inek",
+      "shortDescription": "Urunun kisa tanimi (max 200 karakter)",
+      "description": "Urun hakkinda detayli bilgi verin...",
+      "category": "Kategori secin"
+    },
+    "errors": {
+      "titleRequired": "Ilan basligi zorunludur",
+      "shortDescriptionRequired": "Kisa aciklama zorunludur",
+      "descriptionRequired": "Detayli aciklama zorunludur",
+      "categoryRequired": "Kategori secimi zorunludur",
+      "priceRequired": "Gecerli bir fiyat giriniz"
+    }
   },
   "newListing": {
     "title": "Yeni Ilan Olustur",

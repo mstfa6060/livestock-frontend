@@ -122,6 +122,12 @@
     "description": "Bainistigh do liostaí go léir as seo.",
     "noListings": "Níl aon fhógraí curtha leis agat go fóill.",
     "createFirst": "Cruthaigh do chéad liostú.",
+    "fetchError": "Tharla earráid agus fógraí á lódáil.",
+    "deleteSuccess": "Scriosadh an fógra go rathúil.",
+    "deleteError": "Tharla earráid agus an fógra á scriosadh.",
+    "activateSuccess": "Tá an fógra gníomhachtaithe.",
+    "deactivateSuccess": "Tá an liostú díghníomhachtaithe.",
+    "statusError": "Tharla earráid agus an stádas á athrú.",
     "filters": {
       "all": "Iad uile",
       "active": "Gníomhach",
@@ -134,6 +140,12 @@
       "delete": "Scrios",
       "activate": "Gníomhachtaigh",
       "deactivate": "Struchtúr Éighníomhach"
+    },
+    "deleteDialog": {
+      "title": "Scrios an fógra",
+      "description": "An bhfuil tú cinnte gur mian leat an liostú seo a scriosadh? Ní féidir an gníomh seo a aisiompú.",
+      "cancel": "Cealaigh",
+      "confirm": "Scrios"
     }
   },
   "favorites": {
@@ -288,6 +300,52 @@
     "call": "Cuardaigh",
     "viewProfile": "Féach ar Phróifíl"
   },
+  "editListing": {
+    "title": "Cuir an fógra in eagar",
+    "saveChanges": "Sábháil Athruithe",
+    "updating": "Ag nuashonrú...",
+    "updateSuccess": "Tá an fógra nuashonraithe go rathúil.",
+    "updateFailed": "Tharla earráid agus an liostú á nuashonrú.",
+    "loadError": "Tharla earráid agus an fógra á lódáil.",
+    "basicInfo": "Faisnéis Bhunúsach",
+    "categoryAndCondition": "Catagóir agus Stádas",
+    "pricing": "Praghsáil",
+    "shipping": "Lastas",
+    "images": "Íomhánna",
+    "existingImages": "Íomhánna atá ar Fáil",
+    "addImage": "Cuir Íomhá leis",
+    "uploadingImages": "Tá na híomhánna ag lódáil...",
+    "uploadingImage": "Tá an íomhá á lódáil.",
+    "imageUploadFailed": "Níorbh fhéidir an íomhá a luchtú.",
+    "imagesUploaded": "Uaslódáladh na híomhánna go léir go rathúil",
+    "fields": {
+      "title": "Teideal an Fhógra",
+      "shortDescription": "Cur Síos Achomair",
+      "description": "Míniú Mionsonraithe",
+      "category": "Catagóir",
+      "condition": "Stádas an Táirge",
+      "price": "Praghas",
+      "stock": "Cainníocht Stoic",
+      "unit": "Aonad",
+      "shippingAvailable": "Tá loingseoireacht ar fáil.",
+      "shippingCost": "Táille Loingseoireachta",
+      "weight": "Meáchan",
+      "weightUnit": "Aonad Meáchain"
+    },
+    "placeholders": {
+      "title": "Sampla: Bó Holstein 2 Bhliain d'Aois",
+      "shortDescription": "Cur síos ar an táirge (uasmhéid 200 carachtar)",
+      "description": "Tabhair faisnéis mhionsonraithe faoin táirge...",
+      "category": "Roghnaigh catagóir."
+    },
+    "errors": {
+      "titleRequired": "Tá teideal an fhógra éigeantach.",
+      "shortDescriptionRequired": "Tá cur síos gairid ag teastáil.",
+      "descriptionRequired": "Tá míniú mionsonraithe ag teastáil.",
+      "categoryRequired": "Tá roghnú catagóire éigeantach.",
+      "priceRequired": "Cuir isteach praghas bailí."
+    }
+  },
   "newListing": {
     "title": "Cruthaigh Liostú Nua",
     "saveDraft": "Sábháil Dréacht",
@@ -360,6 +418,6 @@
     "coverBadge": "CLÚDACH",
     "videoBadge": "FÍSEÁN",
     "coverUpdated": "Tá an grianghraf clúdaigh coigeartaithe go rathúil.",
-    "optimizationInfo": "Tá grianghraif optamaithe chun cloí le caighdeáin ghréasáin"
+    "optimizationInfo": "Tá na grianghraif optamaithe chun cloí le caighdeáin ghréasáin"
   }
 }

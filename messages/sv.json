@@ -102,7 +102,7 @@
     "recentListings": "Dina senaste listningar",
     "recentMessages": "Senaste meddelanden",
     "noListings": "Du har inte lagt till några annonser än.",
-    "noMessages": "Du har inte fått något meddelande än.",
+    "noMessages": "Du har inte fått några meddelanden än.",
     "noNotifications": "Du har inte fått några aviseringar än.",
     "viewAllListings": "Visa alla listningar",
     "viewAllMessages": "Visa alla meddelanden"
@@ -122,6 +122,12 @@
     "description": "Hantera alla dina annonser härifrån.",
     "noListings": "Du har inte lagt till några annonser än.",
     "createFirst": "Skapa din första annons.",
+    "fetchError": "Ett fel uppstod när annonserna lästes in.",
+    "deleteSuccess": "Annonsen har raderats.",
+    "deleteError": "Ett fel uppstod när annonsen togs bort.",
+    "activateSuccess": "Annonsen har aktiverats.",
+    "deactivateSuccess": "Listningen har inaktiverats.",
+    "statusError": "Ett fel uppstod när statusen ändrades.",
     "filters": {
       "all": "Alla av dem",
       "active": "Aktiv",
@@ -134,6 +140,12 @@
       "delete": "Radera",
       "activate": "Aktivera",
       "deactivate": "Passiv struktur"
+    },
+    "deleteDialog": {
+      "title": "Ta bort annonsen",
+      "description": "Är du säker på att du vill ta bort den här listan? Åtgärden kan inte ångras.",
+      "cancel": "Avboka",
+      "confirm": "Radera"
     }
   },
   "favorites": {
@@ -287,6 +299,52 @@
     "contact": "Skicka meddelande",
     "call": "Söka",
     "viewProfile": "Visa profil"
+  },
+  "editListing": {
+    "title": "Redigera annonsen",
+    "saveChanges": "Spara ändringar",
+    "updating": "Uppdaterar...",
+    "updateSuccess": "Annonsen har uppdaterats.",
+    "updateFailed": "Ett fel uppstod när listan uppdaterades.",
+    "loadError": "Ett fel uppstod när annonsen laddades.",
+    "basicInfo": "Grundläggande information",
+    "categoryAndCondition": "Kategori och status",
+    "pricing": "Prissättning",
+    "shipping": "Frakt",
+    "images": "Bilder",
+    "existingImages": "Tillgängliga bilder",
+    "addImage": "Lägg till bild",
+    "uploadingImages": "Bilderna laddas...",
+    "uploadingImage": "Bilden laddas.",
+    "imageUploadFailed": "Bilden kunde inte laddas.",
+    "imagesUploaded": "Alla bilder har laddats upp",
+    "fields": {
+      "title": "Annonstitel",
+      "shortDescription": "Kort beskrivning",
+      "description": "Detaljerad förklaring",
+      "category": "Kategori",
+      "condition": "Produktstatus",
+      "price": "Pris",
+      "stock": "Lagerkvantitet",
+      "unit": "Enhet",
+      "shippingAvailable": "Frakt är tillgänglig.",
+      "shippingCost": "Fraktavgift",
+      "weight": "Vikt",
+      "weightUnit": "Viktenhet"
+    },
+    "placeholders": {
+      "title": "Exempel: 2-årig Holsteinko",
+      "shortDescription": "Produktbeskrivning (max 200 tecken)",
+      "description": "Ge detaljerad information om produkten...",
+      "category": "Välj en kategori."
+    },
+    "errors": {
+      "titleRequired": "Annonstitel är obligatorisk.",
+      "shortDescriptionRequired": "En kort beskrivning krävs.",
+      "descriptionRequired": "En detaljerad förklaring krävs.",
+      "categoryRequired": "Val av kategori är obligatoriskt.",
+      "priceRequired": "Ange ett giltigt pris."
+    }
   },
   "newListing": {
     "title": "Skapa ny annons",

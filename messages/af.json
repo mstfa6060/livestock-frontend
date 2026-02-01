@@ -64,7 +64,7 @@
       "errorDefault": "'n Fout het voorgekom. Kontroleer asseblief u e-posadres."
     },
     "resetPassword": {
-      "title": "Stel 'n Nuwe Wagwoord",
+      "title": "Stel 'n nuwe wagwoord",
       "description": "Stel 'n nuwe wagwoord vir jou rekening.",
       "newPassword": "Nuwe Wagwoord",
       "confirmPassword": "Bevestig wagwoord",
@@ -122,6 +122,12 @@
     "description": "Bestuur al jou lyste van hier af.",
     "noListings": "Jy het nog geen advertensies bygevoeg nie.",
     "createFirst": "Skep jou eerste lysinskrywing.",
+    "fetchError": "'n Fout het voorgekom tydens die laai van advertensies.",
+    "deleteSuccess": "Die advertensie is suksesvol verwyder.",
+    "deleteError": "'n Fout het voorgekom tydens die verwydering van die advertensie.",
+    "activateSuccess": "Die advertensie is geaktiveer.",
+    "deactivateSuccess": "Die lys is gedeaktiveer.",
+    "statusError": "'n Fout het voorgekom tydens die verandering van die status.",
     "filters": {
       "all": "Almal van hulle",
       "active": "Aktief",
@@ -134,6 +140,12 @@
       "delete": "Vee uit",
       "activate": "Aktiveer",
       "deactivate": "Passiewe Struktuur"
+    },
+    "deleteDialog": {
+      "title": "Vee die advertensie uit",
+      "description": "Is jy seker jy wil hierdie lysinskrywing verwyder? Hierdie aksie is onomkeerbaar.",
+      "cancel": "Kanselleer",
+      "confirm": "Vee uit"
     }
   },
   "favorites": {
@@ -238,7 +250,7 @@
     "outOfStock": "Uit voorraad",
     "inStock": "In voorraad",
     "noResults": "Produk nie gevind nie.",
-    "loading": "Laai produkte...",
+    "loading": "Produkte word gelaai...",
     "perPage": "Per bladsy",
     "showing": "Die totaal van {total} produkte tussen {from} en {to}.",
     "loginToFavorite": "Meld aan om by gunstelinge te voeg.",
@@ -287,6 +299,52 @@
     "contact": "Stuur boodskap",
     "call": "Soek",
     "viewProfile": "Bekyk Profiel"
+  },
+  "editListing": {
+    "title": "Wysig die advertensie",
+    "saveChanges": "Stoor veranderinge",
+    "updating": "Opdatering...",
+    "updateSuccess": "Die advertensie is suksesvol opgedateer.",
+    "updateFailed": "'n Fout het voorgekom tydens die opdatering van die lysinskrywing.",
+    "loadError": "'n Fout het voorgekom tydens die laai van die advertensie.",
+    "basicInfo": "Basiese Inligting",
+    "categoryAndCondition": "Kategorie en Status",
+    "pricing": "Pryse",
+    "shipping": "Vrag",
+    "images": "Beelde",
+    "existingImages": "Beskikbare Beelde",
+    "addImage": "Voeg prent by",
+    "uploadingImages": "Beelde laai tans...",
+    "uploadingImage": "Beeld laai tans.",
+    "imageUploadFailed": "Beeld kon nie gelaai word nie.",
+    "imagesUploaded": "Alle beelde suksesvol opgelaai",
+    "fields": {
+      "title": "Advertensietitel",
+      "shortDescription": "Kort beskrywing",
+      "description": "Gedetailleerde Verduideliking",
+      "category": "Kategorie",
+      "condition": "Produkstatus",
+      "price": "Prys",
+      "stock": "Voorraadhoeveelheid",
+      "unit": "Eenheid",
+      "shippingAvailable": "Versending is beskikbaar.",
+      "shippingCost": "Versendingsfooi",
+      "weight": "Gewig",
+      "weightUnit": "Eenheid van Gewig"
+    },
+    "placeholders": {
+      "title": "Voorbeeld: 2-jarige Holstein-koei",
+      "shortDescription": "Produkbeskrywing (maks. 200 karakters)",
+      "description": "Verskaf gedetailleerde inligting oor die produk...",
+      "category": "Kies 'n kategorie."
+    },
+    "errors": {
+      "titleRequired": "Advertensietitel is verpligtend.",
+      "shortDescriptionRequired": "'n Kort beskrywing word vereis.",
+      "descriptionRequired": "'n Gedetailleerde verduideliking word benodig.",
+      "categoryRequired": "Kategoriekeuse is verpligtend.",
+      "priceRequired": "Voer 'n geldige prys in."
+    }
   },
   "newListing": {
     "title": "Skep Nuwe Lys",
@@ -346,7 +404,7 @@
     "videoLimit": "Video: maksimum 50MB",
     "uploadCount": "{huidige} / {maks} gelaai",
     "maxFilesError": "Jy kan 'n maksimum van {max} media oplaai.",
-    "imageTooLarge": "Die foto moet kleiner as 10MB wees.",
+    "imageTooLarge": "Die foto moet kleiner as 10 MB wees.",
     "videoTooLarge": "Die video moet kleiner as 50 MB wees.",
     "optimizing": "Optimaliseer...",
     "uploading": "Laai tans...",

@@ -122,6 +122,12 @@
     "description": "Dhibiti matangazo yako yote kutoka hapa.",
     "noListings": "Hujaongeza matangazo yoyote bado.",
     "createFirst": "Unda orodha yako ya kwanza.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia matangazo.",
+    "deleteSuccess": "Tangazo lilifutwa kwa mafanikio.",
+    "deleteError": "Hitilafu imetokea wakati wa kufuta tangazo.",
+    "activateSuccess": "Tangazo limeamilishwa.",
+    "deactivateSuccess": "Orodha imezimwa.",
+    "statusError": "Hitilafu imetokea wakati wa kubadilisha hali.",
     "filters": {
       "all": "Wote",
       "active": "Inayotumika",
@@ -134,6 +140,12 @@
       "delete": "Futa",
       "activate": "Washa",
       "deactivate": "Muundo Tulivu"
+    },
+    "deleteDialog": {
+      "title": "Futa tangazo",
+      "description": "Una uhakika unataka kufuta orodha hii? Kitendo hiki hakiwezi kutenduliwa.",
+      "cancel": "Ghairi",
+      "confirm": "Futa"
     }
   },
   "favorites": {
@@ -238,7 +250,7 @@
     "outOfStock": "Haipo",
     "inStock": "Inapatikana",
     "noResults": "Bidhaa haipatikani.",
-    "loading": "Bidhaa zinapakiwa...",
+    "loading": "Inapakia bidhaa...",
     "perPage": "Kwa kila ukurasa",
     "showing": "Jumla ya bidhaa {jumla} kati ya {from} na {to}.",
     "loginToFavorite": "Ingia ili kuongeza kwenye vipendwa.",
@@ -287,6 +299,52 @@
     "contact": "Tuma Ujumbe",
     "call": "Tafuta",
     "viewProfile": "Tazama Wasifu"
+  },
+  "editListing": {
+    "title": "Hariri tangazo",
+    "saveChanges": "Hifadhi Mabadiliko",
+    "updating": "Inasasisha...",
+    "updateSuccess": "Tangazo limesasishwa kwa mafanikio.",
+    "updateFailed": "Hitilafu imetokea wakati wa kusasisha orodha.",
+    "loadError": "Hitilafu imetokea wakati wa kupakia tangazo.",
+    "basicInfo": "Taarifa za Msingi",
+    "categoryAndCondition": "Kategoria na Hali",
+    "pricing": "Bei",
+    "shipping": "Mizigo",
+    "images": "Picha",
+    "existingImages": "Picha Zinazopatikana",
+    "addImage": "Ongeza Picha",
+    "uploadingImages": "Picha zinapakiwa...",
+    "uploadingImage": "Picha inapakiwa.",
+    "imageUploadFailed": "Picha haikuweza kupakiwa.",
+    "imagesUploaded": "Picha zote zimepakiwa kwa mafanikio",
+    "fields": {
+      "title": "Kichwa cha Tangazo",
+      "shortDescription": "Maelezo Mafupi",
+      "description": "Maelezo ya Kina",
+      "category": "Kategoria",
+      "condition": "Hali ya Bidhaa",
+      "price": "Bei",
+      "stock": "Kiasi cha Hisa",
+      "unit": "Kitengo",
+      "shippingAvailable": "Usafirishaji unapatikana.",
+      "shippingCost": "Ada ya Usafirishaji",
+      "weight": "Uzito",
+      "weightUnit": "Kipimo cha Uzito"
+    },
+    "placeholders": {
+      "title": "Mfano: Ng'ombe wa Holstein wa Miaka 2",
+      "shortDescription": "Maelezo ya bidhaa (isizidi herufi 200)",
+      "description": "Toa maelezo ya kina kuhusu bidhaa...",
+      "category": "Chagua kategoria."
+    },
+    "errors": {
+      "titleRequired": "Jina la tangazo ni lazima.",
+      "shortDescriptionRequired": "Maelezo mafupi yanahitajika.",
+      "descriptionRequired": "Maelezo ya kina yanahitajika.",
+      "categoryRequired": "Uteuzi wa kategoria ni lazima.",
+      "priceRequired": "Weka bei halali."
+    }
   },
   "newListing": {
     "title": "Unda Orodha Mpya",

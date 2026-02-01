@@ -102,7 +102,7 @@
     "recentListings": "Danh sách mới nhất của bạn",
     "recentMessages": "Tin nhắn gần đây",
     "noListings": "Bạn chưa thêm bất kỳ quảng cáo nào.",
-    "noMessages": "Bạn chưa nhận được tin nhắn nào.",
+    "noMessages": "Bạn chưa nhận được bất kỳ tin nhắn nào.",
     "noNotifications": "Bạn chưa nhận được bất kỳ thông báo nào.",
     "viewAllListings": "Xem tất cả tin đăng",
     "viewAllMessages": "Xem tất cả tin nhắn"
@@ -122,6 +122,12 @@
     "description": "Quản lý tất cả tin đăng của bạn từ đây.",
     "noListings": "Bạn chưa thêm bất kỳ quảng cáo nào.",
     "createFirst": "Tạo bài đăng đầu tiên của bạn.",
+    "fetchError": "Đã xảy ra lỗi khi tải quảng cáo.",
+    "deleteSuccess": "Quảng cáo đã được xóa thành công.",
+    "deleteError": "Đã xảy ra lỗi trong quá trình xóa quảng cáo.",
+    "activateSuccess": "Quảng cáo đã được kích hoạt.",
+    "deactivateSuccess": "Tin đăng đã bị vô hiệu hóa.",
+    "statusError": "Đã xảy ra lỗi trong quá trình thay đổi trạng thái.",
     "filters": {
       "all": "Tất cả bọn họ",
       "active": "Tích cực",
@@ -134,6 +140,12 @@
       "delete": "Xóa bỏ",
       "activate": "Kích hoạt",
       "deactivate": "Cấu trúc thụ động"
+    },
+    "deleteDialog": {
+      "title": "Xóa quảng cáo",
+      "description": "Bạn có chắc chắn muốn xóa tin đăng này không? Hành động này không thể đảo ngược.",
+      "cancel": "Hủy bỏ",
+      "confirm": "Xóa bỏ"
     }
   },
   "favorites": {
@@ -238,7 +250,7 @@
     "outOfStock": "Hết hàng",
     "inStock": "Còn hàng",
     "noResults": "Không tìm thấy sản phẩm.",
-    "loading": "Sản phẩm đang được chất lên...",
+    "loading": "Đang tải sản phẩm...",
     "perPage": "Mỗi trang",
     "showing": "Tổng số sản phẩm {total} nằm trong khoảng thời gian từ {from} đến {to}.",
     "loginToFavorite": "Đăng nhập để thêm vào mục yêu thích.",
@@ -287,6 +299,52 @@
     "contact": "Gửi tin nhắn",
     "call": "Tìm kiếm",
     "viewProfile": "Xem hồ sơ"
+  },
+  "editListing": {
+    "title": "Chỉnh sửa quảng cáo",
+    "saveChanges": "Lưu thay đổi",
+    "updating": "Đang cập nhật...",
+    "updateSuccess": "Quảng cáo đã được cập nhật thành công.",
+    "updateFailed": "Đã xảy ra lỗi trong quá trình cập nhật danh sách.",
+    "loadError": "Đã xảy ra lỗi khi tải quảng cáo.",
+    "basicInfo": "Thông tin cơ bản",
+    "categoryAndCondition": "Hạng mục và trạng thái",
+    "pricing": "Giá cả",
+    "shipping": "Hàng hóa",
+    "images": "Hình ảnh",
+    "existingImages": "Hình ảnh có sẵn",
+    "addImage": "Thêm hình ảnh",
+    "uploadingImages": "Đang tải hình ảnh...",
+    "uploadingImage": "Hình ảnh đang tải.",
+    "imageUploadFailed": "Không thể tải hình ảnh.",
+    "imagesUploaded": "Tất cả hình ảnh đã được tải lên thành công.",
+    "fields": {
+      "title": "Tiêu đề quảng cáo",
+      "shortDescription": "Mô tả ngắn gọn",
+      "description": "Giải thích chi tiết",
+      "category": "Loại",
+      "condition": "Trạng thái sản phẩm",
+      "price": "Giá",
+      "stock": "Số lượng hàng tồn kho",
+      "unit": "Đơn vị",
+      "shippingAvailable": "Có dịch vụ giao hàng.",
+      "shippingCost": "Phí vận chuyển",
+      "weight": "Cân nặng",
+      "weightUnit": "Đơn vị trọng lượng"
+    },
+    "placeholders": {
+      "title": "Ví dụ: Bò Holstein 2 tuổi",
+      "shortDescription": "Mô tả sản phẩm (tối đa 200 ký tự)",
+      "description": "Cung cấp thông tin chi tiết về sản phẩm...",
+      "category": "Chọn một danh mục."
+    },
+    "errors": {
+      "titleRequired": "Tiêu đề quảng cáo là bắt buộc.",
+      "shortDescriptionRequired": "Cần có một mô tả ngắn gọn.",
+      "descriptionRequired": "Cần có lời giải thích chi tiết.",
+      "categoryRequired": "Việc chọn danh mục là bắt buộc.",
+      "priceRequired": "Nhập giá hợp lệ."
+    }
   },
   "newListing": {
     "title": "Tạo tin đăng mới",
@@ -360,6 +418,6 @@
     "coverBadge": "NẮP",
     "videoBadge": "BĂNG HÌNH",
     "coverUpdated": "Ảnh bìa đã được điều chỉnh thành công.",
-    "optimizationInfo": "Ảnh được tối ưu hóa để tuân thủ các tiêu chuẩn web."
+    "optimizationInfo": "Ảnh đã được tối ưu hóa để tuân thủ các tiêu chuẩn web."
   }
 }

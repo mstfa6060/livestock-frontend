@@ -122,6 +122,12 @@
     "description": "تمام آگهی‌های خود را از اینجا مدیریت کنید.",
     "noListings": "شما هنوز هیچ تبلیغی اضافه نکرده‌اید.",
     "createFirst": "اولین فهرست خود را ایجاد کنید.",
+    "fetchError": "هنگام بارگذاری تبلیغات خطایی رخ داد.",
+    "deleteSuccess": "آگهی با موفقیت حذف شد.",
+    "deleteError": "هنگام حذف آگهی خطایی رخ داد.",
+    "activateSuccess": "آگهی فعال شد.",
+    "deactivateSuccess": "فهرست غیرفعال شده است.",
+    "statusError": "هنگام تغییر وضعیت خطایی رخ داد.",
     "filters": {
       "all": "همه آنها",
       "active": "فعال",
@@ -134,6 +140,12 @@
       "delete": "حذف",
       "activate": "فعال کردن",
       "deactivate": "ساختار غیرفعال"
+    },
+    "deleteDialog": {
+      "title": "تبلیغ را حذف کنید",
+      "description": "آیا از حذف این آگهی مطمئن هستید؟ این اقدام غیرقابل برگشت است.",
+      "cancel": "لغو",
+      "confirm": "حذف"
     }
   },
   "favorites": {
@@ -287,6 +299,52 @@
     "contact": "ارسال پیام",
     "call": "جستجو",
     "viewProfile": "مشاهده پروفایل"
+  },
+  "editListing": {
+    "title": "ویرایش آگهی",
+    "saveChanges": "ذخیره تغییرات",
+    "updating": "در حال به‌روزرسانی...",
+    "updateSuccess": "آگهی با موفقیت به‌روزرسانی شد.",
+    "updateFailed": "هنگام به‌روزرسانی فهرست، خطایی رخ داد.",
+    "loadError": "هنگام بارگذاری آگهی خطایی رخ داد.",
+    "basicInfo": "اطلاعات پایه",
+    "categoryAndCondition": "دسته بندی و وضعیت",
+    "pricing": "قیمت‌گذاری",
+    "shipping": "محموله",
+    "images": "تصاویر",
+    "existingImages": "تصاویر موجود",
+    "addImage": "افزودن تصویر",
+    "uploadingImages": "تصاویر در حال بارگذاری هستند...",
+    "uploadingImage": "تصویر در حال بارگذاری است.",
+    "imageUploadFailed": "تصویر قابل بارگذاری نبود.",
+    "imagesUploaded": "همه تصاویر با موفقیت آپلود شدند",
+    "fields": {
+      "title": "عنوان آگهی",
+      "shortDescription": "شرح مختصر",
+      "description": "توضیح مفصل",
+      "category": "دسته بندی",
+      "condition": "وضعیت محصول",
+      "price": "قیمت",
+      "stock": "مقدار موجودی",
+      "unit": "واحد",
+      "shippingAvailable": "ارسال موجود است.",
+      "shippingCost": "هزینه ارسال",
+      "weight": "وزن",
+      "weightUnit": "واحد وزن"
+    },
+    "placeholders": {
+      "title": "مثال: گاو هلشتاین ۲ ساله",
+      "shortDescription": "توضیحات محصول (حداکثر ۲۰۰ کاراکتر)",
+      "description": "ارائه اطلاعات دقیق در مورد محصول ...",
+      "category": "یک دسته بندی انتخاب کنید."
+    },
+    "errors": {
+      "titleRequired": "عنوان آگهی الزامی است.",
+      "shortDescriptionRequired": "شرح مختصری لازم است.",
+      "descriptionRequired": "توضیح مفصلی لازم است.",
+      "categoryRequired": "انتخاب دسته بندی الزامی است.",
+      "priceRequired": "قیمت معتبر وارد کنید."
+    }
   },
   "newListing": {
     "title": "ایجاد آگهی جدید",

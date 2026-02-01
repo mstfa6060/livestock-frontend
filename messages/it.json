@@ -122,6 +122,12 @@
     "description": "Gestisci tutti i tuoi annunci da qui.",
     "noListings": "Non hai ancora aggiunto alcun annuncio.",
     "createFirst": "Crea il tuo primo annuncio.",
+    "fetchError": "Si è verificato un errore durante il caricamento degli annunci.",
+    "deleteSuccess": "L'annuncio è stato eliminato correttamente.",
+    "deleteError": "Si è verificato un errore durante l'eliminazione dell'annuncio.",
+    "activateSuccess": "L'annuncio è stato attivato.",
+    "deactivateSuccess": "L'inserzione è stata disattivata.",
+    "statusError": "Si è verificato un errore durante la modifica dello stato.",
     "filters": {
       "all": "Tutti loro",
       "active": "Attivo",
@@ -134,6 +140,12 @@
       "delete": "Eliminare",
       "activate": "Attivare",
       "deactivate": "Struttura passiva"
+    },
+    "deleteDialog": {
+      "title": "Elimina l'annuncio",
+      "description": "Vuoi davvero eliminare questa inserzione? Questa azione è irreversibile.",
+      "cancel": "Cancellare",
+      "confirm": "Eliminare"
     }
   },
   "favorites": {
@@ -238,7 +250,7 @@
     "outOfStock": "Esaurito",
     "inStock": "In magazzino",
     "noResults": "Prodotto non trovato.",
-    "loading": "Caricamento prodotti in corso...",
+    "loading": "I prodotti vengono caricati...",
     "perPage": "Per pagina",
     "showing": "Il totale di {total} prodotti tra {from} e {to}.",
     "loginToFavorite": "Accedi per aggiungere ai preferiti.",
@@ -287,6 +299,52 @@
     "contact": "Invia messaggio",
     "call": "Ricerca",
     "viewProfile": "Visualizza profilo"
+  },
+  "editListing": {
+    "title": "Modifica l'annuncio",
+    "saveChanges": "Salva modifiche",
+    "updating": "Aggiornamento...",
+    "updateSuccess": "L'annuncio è stato aggiornato con successo.",
+    "updateFailed": "Si è verificato un errore durante l'aggiornamento dell'inserzione.",
+    "loadError": "Si è verificato un errore durante il caricamento dell'annuncio.",
+    "basicInfo": "Informazioni di base",
+    "categoryAndCondition": "Categoria e stato",
+    "pricing": "Prezzi",
+    "shipping": "Carico",
+    "images": "Immagini",
+    "existingImages": "Immagini disponibili",
+    "addImage": "Aggiungi immagine",
+    "uploadingImages": "Caricamento delle immagini in corso...",
+    "uploadingImage": "L'immagine si sta caricando.",
+    "imageUploadFailed": "Impossibile caricare l'immagine.",
+    "imagesUploaded": "Tutte le immagini sono state caricate con successo",
+    "fields": {
+      "title": "Titolo dell'annuncio",
+      "shortDescription": "Breve descrizione",
+      "description": "Spiegazione dettagliata",
+      "category": "Categoria",
+      "condition": "Stato del prodotto",
+      "price": "Prezzo",
+      "stock": "Quantità di magazzino",
+      "unit": "Unità",
+      "shippingAvailable": "La spedizione è disponibile.",
+      "shippingCost": "Spese di spedizione",
+      "weight": "Peso",
+      "weightUnit": "Unità di peso"
+    },
+    "placeholders": {
+      "title": "Esempio: mucca Holstein di 2 anni",
+      "shortDescription": "Descrizione del prodotto (max 200 caratteri)",
+      "description": "Fornire informazioni dettagliate sul prodotto...",
+      "category": "Seleziona una categoria."
+    },
+    "errors": {
+      "titleRequired": "Il titolo dell'annuncio è obbligatorio.",
+      "shortDescriptionRequired": "È richiesta una breve descrizione.",
+      "descriptionRequired": "È necessaria una spiegazione dettagliata.",
+      "categoryRequired": "La selezione della categoria è obbligatoria.",
+      "priceRequired": "Inserisci un prezzo valido."
+    }
   },
   "newListing": {
     "title": "Crea un nuovo annuncio",
@@ -360,6 +418,6 @@
     "coverBadge": "COPERCHIO",
     "videoBadge": "VIDEO",
     "coverUpdated": "La foto di copertina è stata modificata con successo.",
-    "optimizationInfo": "Le foto sono ottimizzate per rispettare gli standard web"
+    "optimizationInfo": "Le foto sono state ottimizzate per rispettare gli standard web"
   }
 }

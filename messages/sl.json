@@ -121,7 +121,13 @@
     "title": "Moji oglasi",
     "description": "Upravljajte vse svoje oglase od tukaj.",
     "noListings": "Še niste dodali nobenega oglasa.",
-    "createFirst": "Ustvarite svoj prvi vnos.",
+    "createFirst": "Ustvarite svoj prvi oglas.",
+    "fetchError": "Pri nalaganju oglasov je prišlo do napake.",
+    "deleteSuccess": "Oglas je bil uspešno izbrisan.",
+    "deleteError": "Pri brisanju oglasa je prišlo do napake.",
+    "activateSuccess": "Oglas je bil aktiviran.",
+    "deactivateSuccess": "Seznam je bil deaktiviran.",
+    "statusError": "Pri spreminjanju stanja je prišlo do napake.",
     "filters": {
       "all": "Vsi oni",
       "active": "Aktivno",
@@ -134,6 +140,12 @@
       "delete": "Izbriši",
       "activate": "Aktiviraj",
       "deactivate": "Pasivna struktura"
+    },
+    "deleteDialog": {
+      "title": "Izbriši oglas",
+      "description": "Ali ste prepričani, da želite izbrisati ta vnos? Tega dejanja ni mogoče razveljaviti.",
+      "cancel": "Prekliči",
+      "confirm": "Izbriši"
     }
   },
   "favorites": {
@@ -238,7 +250,7 @@
     "outOfStock": "Ni na zalogi",
     "inStock": "Na zalogi",
     "noResults": "Izdelka ni bilo mogoče najti.",
-    "loading": "Nalaganje izdelkov ...",
+    "loading": "Izdelki se nalagajo ...",
     "perPage": "Na stran",
     "showing": "Skupno število izdelkov {total} med {from} in {to}.",
     "loginToFavorite": "Prijavite se, da dodate med priljubljene.",
@@ -288,6 +300,52 @@
     "call": "Iskanje",
     "viewProfile": "Ogled profila"
   },
+  "editListing": {
+    "title": "Uredi oglas",
+    "saveChanges": "Shrani spremembe",
+    "updating": "Posodabljanje ...",
+    "updateSuccess": "Oglas je bil uspešno posodobljen.",
+    "updateFailed": "Pri posodabljanju vnosa je prišlo do napake.",
+    "loadError": "Pri nalaganju oglasa je prišlo do napake.",
+    "basicInfo": "Osnovne informacije",
+    "categoryAndCondition": "Kategorija in stanje",
+    "pricing": "Cenik",
+    "shipping": "Tovor",
+    "images": "Slike",
+    "existingImages": "Razpoložljive slike",
+    "addImage": "Dodaj sliko",
+    "uploadingImages": "Slike se nalagajo ...",
+    "uploadingImage": "Slika se nalaga.",
+    "imageUploadFailed": "Slike ni bilo mogoče naložiti.",
+    "imagesUploaded": "Vse slike so bile uspešno naložene",
+    "fields": {
+      "title": "Naslov oglasa",
+      "shortDescription": "Kratek opis",
+      "description": "Podrobna razlaga",
+      "category": "Kategorija",
+      "condition": "Stanje izdelka",
+      "price": "Cena",
+      "stock": "Količina zaloge",
+      "unit": "Enota",
+      "shippingAvailable": "Dostava je na voljo.",
+      "shippingCost": "Stroški pošiljanja",
+      "weight": "Teža",
+      "weightUnit": "Enota teže"
+    },
+    "placeholders": {
+      "title": "Primer: 2-letna krava holštajnske pasme",
+      "shortDescription": "Opis izdelka (največ 200 znakov)",
+      "description": "Navedite podrobne informacije o izdelku ...",
+      "category": "Izberite kategorijo."
+    },
+    "errors": {
+      "titleRequired": "Naslov oglasa je obvezen.",
+      "shortDescriptionRequired": "Potreben je kratek opis.",
+      "descriptionRequired": "Potrebna je podrobna razlaga.",
+      "categoryRequired": "Izbira kategorije je obvezna.",
+      "priceRequired": "Vnesite veljavno ceno."
+    }
+  },
   "newListing": {
     "title": "Ustvari nov oglas",
     "saveDraft": "Shrani osnutek",
@@ -315,7 +373,7 @@
       "weightUnit": "Enota teže"
     },
     "placeholders": {
-      "title": "Primer: 2-letna krava holštajnske pasme",
+      "title": "Primer: 2-letna holštajnska krava",
       "shortDescription": "Opis izdelka (največ 200 znakov)",
       "description": "Navedite podrobne informacije o izdelku ...",
       "category": "Izberite kategorijo."
