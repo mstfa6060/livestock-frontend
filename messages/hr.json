@@ -140,7 +140,8 @@
     "title": "Moji favoriti",
     "description": "Pratite proizvode koji vam se sviđaju ovdje.",
     "noFavorites": "Još niste dodali nijedan omiljeni proizvod.",
-    "browseProducts": "Pregledaj proizvode"
+    "browseProducts": "Pregledaj proizvode",
+    "fetchError": "Došlo je do pogreške prilikom učitavanja favorita."
   },
   "settings": {
     "title": "Postavke",
@@ -239,7 +240,10 @@
     "noResults": "Proizvod nije pronađen.",
     "loading": "Proizvodi se učitavaju...",
     "perPage": "Po stranici",
-    "showing": "Ukupan broj proizvoda od {total} između {from} i {to}."
+    "showing": "Ukupan broj proizvoda od {total} između {from} i {to}.",
+    "loginToFavorite": "Prijavite se kako biste dodali u favorite.",
+    "addedToFavorites": "Dodano u favorite",
+    "removedFromFavorites": "Uklonjeno iz favorita"
   },
   "productDetail": {
     "addToFavorites": "Dodaj u favorite",
@@ -307,5 +311,29 @@
     },
     "success": "Oglas je uspješno kreiran.",
     "error": "Došlo je do pogreške prilikom izrade oglasa."
+  },
+  "fileUpload": {
+    "dragDrop": "Prenesite fotografiju ili videozapis.",
+    "dragDropHint": "Povucite i ispustite ili kliknite za odabir.",
+    "dropHere": "Ostavi to...",
+    "imageLimit": "Fotografija: maksimalno 10 MB",
+    "videoLimit": "Video: maksimalno 50 MB",
+    "uploadCount": "{current} / {max} učitano",
+    "maxFilesError": "Možete prenijeti najviše {max} medija.",
+    "imageTooLarge": "Fotografija mora biti manja od 10 MB.",
+    "videoTooLarge": "Video mora biti manji od 50 MB.",
+    "optimizing": "Optimiziranje...",
+    "uploading": "Učitavanje...",
+    "queued": "Čekanje u redu...",
+    "uploadSuccess": "{count} medijskih sadržaja preneseno",
+    "uploadError": "Pogreška učitavanja",
+    "uploadFailed": "Prijenos nije uspio.",
+    "deleted": "Medij je uspješno zatvoren.",
+    "deleteError": "Medij nije mogao biti izbrisan.",
+    "setCover": "Napravite naslovnicu",
+    "coverBadge": "POKLOPAC",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Naslovna fotografija je uspješno prilagođena.",
+    "optimizationInfo": "Fotografije su optimizirane u skladu s web standardima"
   }
 }

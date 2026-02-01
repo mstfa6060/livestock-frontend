@@ -9,6 +9,9 @@ import { Button } from "@/components/ui/button";
 import { Heart, MapPin, Eye, Star } from "lucide-react";
 import { PriceDisplay } from "./price-display";
 import { useState } from "react";
+import { useFavoritesStore } from "@/stores/useFavoritesStore";
+import { useAuth } from "@/contexts/AuthContext";
+import { toast } from "sonner";
 
 export interface Product {
   id: string;
@@ -59,13 +62,42 @@ const CONDITION_MAP: Record<number, string> = {
 
 export function ProductCard({ product, onFavorite, isFavorite = false }: ProductCardProps) {
   const t = useTranslations("products");
-  const [favorite, setFavorite] = useState(isFavorite);
+  const { user } = useAuth();
+  const { isFavorite: isFavoriteInStore, toggleFavorite } = useFavoritesStore();
+  const [isTogglingFavorite, setIsTogglingFavorite] = useState(false);
 
-  const handleFavorite = (e: React.MouseEvent) => {
+  // Use store state or prop
+  const favorite = isFavoriteInStore(product.id) || isFavorite;
+
+  const handleFavorite = async (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    setFavorite(!favorite);
-    onFavorite?.(product.id);
+
+    // Require authentication
+    if (!user) {
+      toast.error(t("loginToFavorite"));
+      return;
+    }
+
+    setIsTogglingFavorite(true);
+
+    try {
+      const newState = await toggleFavorite(product.id, user.id);
+
+      // Show success toast
+      if (newState) {
+        toast.success(t("addedToFavorites"));
+      } else {
+        toast.success(t("removedFromFavorites"));
+      }
+
+      // Call optional callback
+      onFavorite?.(product.id);
+    } catch (error) {
+      // Error already handled in store
+    } finally {
+      setIsTogglingFavorite(false);
+    }
   };
 
   const status = STATUS_MAP[product.status] || STATUS_MAP[0];
@@ -93,9 +125,12 @@ export function ProductCard({ product, onFavorite, isFavorite = false }: Product
             size="icon"
             className="absolute top-2 right-2 bg-white/80 hover:bg-white"
             onClick={handleFavorite}
+            disabled={isTogglingFavorite}
           >
             <Heart
-              className={`h-5 w-5 ${favorite ? "fill-red-500 text-red-500" : "text-gray-600"}`}
+              className={`h-5 w-5 transition-colors ${
+                favorite ? "fill-red-500 text-red-500" : "text-gray-600"
+              } ${isTogglingFavorite ? "opacity-50" : ""}`}
             />
           </Button>
 

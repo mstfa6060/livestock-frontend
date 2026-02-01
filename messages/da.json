@@ -90,7 +90,7 @@
     "id": "ID",
     "logout": "Log ud",
     "stats": {
-      "totalListings": "Samlede annoncer",
+      "totalListings": "Samlet antal annoncer",
       "active": "aktiv",
       "totalViews": "Samlede visninger",
       "thisWeek": "denne uge",
@@ -103,7 +103,7 @@
     "recentMessages": "Seneste beskeder",
     "noListings": "Du har ikke tilføjet nogen annoncer endnu.",
     "noMessages": "Du har ikke modtaget en besked endnu.",
-    "noNotifications": "Du har endnu ikke modtaget nogen notifikationer.",
+    "noNotifications": "Du har ikke modtaget nogen notifikationer endnu.",
     "viewAllListings": "Se alle annoncer",
     "viewAllMessages": "Se alle beskeder"
   },
@@ -140,7 +140,8 @@
     "title": "Mine favoritter",
     "description": "Følg de produkter, du kan lide her.",
     "noFavorites": "Du har ikke tilføjet nogen favoritprodukter endnu.",
-    "browseProducts": "Gennemse produkter"
+    "browseProducts": "Gennemse produkter",
+    "fetchError": "Der opstod en fejl under indlæsning af favoritter."
   },
   "settings": {
     "title": "Indstillinger",
@@ -239,7 +240,10 @@
     "noResults": "Produktet blev ikke fundet.",
     "loading": "Indlæser produkter...",
     "perPage": "Pr. side",
-    "showing": "Det samlede antal produkter fra {total} mellem {from} og {to}."
+    "showing": "Det samlede antal produkter fra {total} mellem {from} og {to}.",
+    "loginToFavorite": "Log ind for at tilføje til favoritter.",
+    "addedToFavorites": "Tilføjet til favoritter",
+    "removedFromFavorites": "Fjernet fra favoritter"
   },
   "productDetail": {
     "addToFavorites": "Føj til favoritter",
@@ -307,5 +311,29 @@
     },
     "success": "Annoncen blev oprettet.",
     "error": "Der opstod en fejl under oprettelsen af annoncen."
+  },
+  "fileUpload": {
+    "dragDrop": "Upload et foto eller en video.",
+    "dragDropHint": "Træk og slip eller klik for at vælge.",
+    "dropHere": "Lad det være...",
+    "imageLimit": "Foto: maks. 10 MB",
+    "videoLimit": "Video: maks. 50 MB",
+    "uploadCount": "{nuværende} / {maks.} indlæst",
+    "maxFilesError": "Du kan maksimalt uploade {max} medier.",
+    "imageTooLarge": "Billedet skal være mindre end 10 MB.",
+    "videoTooLarge": "Videoen skal være mindre end 50 MB.",
+    "optimizing": "Optimering...",
+    "uploading": "Indlæser...",
+    "queued": "Venter i kø...",
+    "uploadSuccess": "{count} medier uploadet",
+    "uploadError": "Indlæsningsfejl",
+    "uploadFailed": "Upload mislykkedes.",
+    "deleted": "Mediet blev lukket ned med succes.",
+    "deleteError": "Mediet kunne ikke slettes.",
+    "setCover": "Lav et cover",
+    "coverBadge": "LÅG",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Forsidebilledet er blevet justeret.",
+    "optimizationInfo": "Billederne er optimeret til at overholde webstandarder"
   }
 }

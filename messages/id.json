@@ -140,7 +140,8 @@
     "title": "Favoritku",
     "description": "Ikuti produk yang Anda sukai di sini.",
     "noFavorites": "Anda belum menambahkan produk favorit apa pun.",
-    "browseProducts": "Telusuri Produk"
+    "browseProducts": "Telusuri Produk",
+    "fetchError": "Terjadi kesalahan saat memuat favorit."
   },
   "settings": {
     "title": "Pengaturan",
@@ -239,7 +240,10 @@
     "noResults": "Produk tidak ditemukan.",
     "loading": "Produk sedang dimuat...",
     "perPage": "Per halaman",
-    "showing": "Jumlah total produk {total} antara {from} dan {to}."
+    "showing": "Jumlah total produk {total} antara {from} dan {to}.",
+    "loginToFavorite": "Masuk untuk menambahkan ke favorit.",
+    "addedToFavorites": "Ditambahkan ke favorit",
+    "removedFromFavorites": "Dihapus dari favorit"
   },
   "productDetail": {
     "addToFavorites": "Tambahkan ke Favorit",
@@ -307,5 +311,29 @@
     },
     "success": "Iklan tersebut berhasil dibuat.",
     "error": "Terjadi kesalahan saat membuat iklan."
+  },
+  "fileUpload": {
+    "dragDrop": "Unggah foto atau video.",
+    "dragDropHint": "Seret dan lepas atau klik untuk memilih.",
+    "dropHere": "Biarkan saja...",
+    "imageLimit": "Foto: maksimal 10MB",
+    "videoLimit": "Video: maksimal 50MB",
+    "uploadCount": "{current} / {max} loaded",
+    "maxFilesError": "Anda dapat mengunggah maksimal {max} media.",
+    "imageTooLarge": "Ukuran foto harus kurang dari 10MB.",
+    "videoTooLarge": "Ukuran video harus kurang dari 50MB.",
+    "optimizing": "Mengoptimalkan...",
+    "uploading": "Memuat...",
+    "queued": "Sedang mengantre...",
+    "uploadSuccess": "{count} media diunggah",
+    "uploadError": "Kesalahan pemuatan",
+    "uploadFailed": "Unggahan gagal.",
+    "deleted": "Media berhasil dibungkam.",
+    "deleteError": "Media tersebut tidak bisa dihapus.",
+    "setCover": "Buat sampulnya",
+    "coverBadge": "TUTUP",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Foto sampul telah berhasil disesuaikan.",
+    "optimizationInfo": "Foto-foto telah dioptimalkan agar sesuai dengan standar web."
   }
 }

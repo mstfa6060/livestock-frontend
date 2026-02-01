@@ -119,7 +119,7 @@
   },
   "myListings": {
     "title": "Mano skelbimai",
-    "description": "Tvarkykite visus savo skelbimus čia.",
+    "description": "Tvarkykite visus savo skelbimus iš čia.",
     "noListings": "Dar nepridėjote jokių skelbimų.",
     "createFirst": "Sukurkite savo pirmąjį skelbimą.",
     "filters": {
@@ -140,7 +140,8 @@
     "title": "Mano mėgstamiausi",
     "description": "Sekite jums patinkančius produktus čia.",
     "noFavorites": "Dar nepridėjote jokių mėgstamiausių produktų.",
-    "browseProducts": "Naršyti produktus"
+    "browseProducts": "Naršyti produktus",
+    "fetchError": "Įkeliant mėgstamiausius įvyko klaida."
   },
   "settings": {
     "title": "Nustatymai",
@@ -239,7 +240,10 @@
     "noResults": "Produktas nerastas.",
     "loading": "Įkeliami produktai...",
     "perPage": "Puslapyje",
-    "showing": "Bendras produktų skaičius nuo {from} iki {to}."
+    "showing": "Bendras produktų skaičius nuo {from} iki {to}.",
+    "loginToFavorite": "Prisijunkite, kad pridėtumėte prie mėgstamiausių.",
+    "addedToFavorites": "Pridėta prie mėgstamiausių",
+    "removedFromFavorites": "Pašalinta iš mėgstamiausių"
   },
   "productDetail": {
     "addToFavorites": "Pridėti prie mėgstamiausių",
@@ -251,7 +255,7 @@
     "location": "Vieta",
     "shipping": "Krovinys",
     "shippingAvailable": "Galima gabenti krovininiu transportu.",
-    "noShipping": "Tik rankinis pristatymas.",
+    "noShipping": "Tik pristatymas į rankas.",
     "internationalShipping": "Galimas tarptautinis siuntimas.",
     "weight": "Svoris",
     "stock": "Atsargos",
@@ -307,5 +311,29 @@
     },
     "success": "Reklama sėkmingai sukurta.",
     "error": "Kuriant skelbimą įvyko klaida."
+  },
+  "fileUpload": {
+    "dragDrop": "Įkelkite nuotrauką arba vaizdo įrašą.",
+    "dragDropHint": "Nuvilkite arba spustelėkite, kad pasirinktumėte.",
+    "dropHere": "Palik tai...",
+    "imageLimit": "Nuotrauka: maks. 10 MB",
+    "videoLimit": "Vaizdo įrašas: maks. 50 MB",
+    "uploadCount": "{current} / {max} įkrauta",
+    "maxFilesError": "Galite įkelti daugiausia {max} medijos failų.",
+    "imageTooLarge": "Nuotrauka turi būti mažesnė nei 10 MB.",
+    "videoTooLarge": "Vaizdo įrašas turi būti mažesnis nei 50 MB.",
+    "optimizing": "Optimizuojama...",
+    "uploading": "Kraunama...",
+    "queued": "Laukiant eilėje...",
+    "uploadSuccess": "Įkelta {count} medijos duomenų",
+    "uploadError": "Įkėlimo klaida",
+    "uploadFailed": "Įkėlimas nepavyko.",
+    "deleted": "Žiniasklaida buvo sėkmingai uždaryta.",
+    "deleteError": "Nepavyko ištrinti medijos.",
+    "setCover": "Padarykite viršelį",
+    "coverBadge": "DANGTELIS",
+    "videoBadge": "VAIZDO ĮRAŠAS",
+    "coverUpdated": "Viršelio nuotrauka sėkmingai pakoreguota.",
+    "optimizationInfo": "Nuotraukos buvo optimizuotos, kad atitiktų interneto standartus"
   }
 }

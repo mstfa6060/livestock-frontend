@@ -140,7 +140,8 @@
     "title": "Mis favoritos",
     "description": "Sigue los productos que te gustan aquí.",
     "noFavorites": "Aún no has añadido ningún producto favorito.",
-    "browseProducts": "Explorar productos"
+    "browseProducts": "Explorar productos",
+    "fetchError": "Se produjo un error al cargar favoritos."
   },
   "settings": {
     "title": "Ajustes",
@@ -239,7 +240,10 @@
     "noResults": "Producto no encontrado.",
     "loading": "Los productos se están cargando...",
     "perPage": "Por página",
-    "showing": "El total de {total} productos entre {from} y {to}."
+    "showing": "El total de {total} productos entre {from} y {to}.",
+    "loginToFavorite": "Inicie sesión para agregar a favoritos.",
+    "addedToFavorites": "Añadido a favoritos",
+    "removedFromFavorites": "Eliminado de favoritos"
   },
   "productDetail": {
     "addToFavorites": "Añadir a favoritos",
@@ -307,5 +311,29 @@
     },
     "success": "El anuncio fue creado exitosamente.",
     "error": "Se produjo un error al crear el anuncio."
+  },
+  "fileUpload": {
+    "dragDrop": "Sube una foto o un vídeo.",
+    "dragDropHint": "Arrastre y suelte o haga clic para seleccionar.",
+    "dropHere": "Déjalo...",
+    "imageLimit": "Foto: máximo 10 MB",
+    "videoLimit": "Vídeo: máximo 50 MB",
+    "uploadCount": "{actual} / {máximo} cargado",
+    "maxFilesError": "Puedes cargar un máximo de {max} medios.",
+    "imageTooLarge": "La foto debe ser menor a 10 MB.",
+    "videoTooLarge": "El vídeo debe ser menor a 50 MB.",
+    "optimizing": "Optimizando...",
+    "uploading": "Cargando...",
+    "queued": "Esperando en la fila...",
+    "uploadSuccess": "{count} medios subidos",
+    "uploadError": "Error de carga",
+    "uploadFailed": "Error en la carga.",
+    "deleted": "Los medios de comunicación fueron clausurados con éxito.",
+    "deleteError": "No se pudieron eliminar los medios.",
+    "setCover": "Hacer una portada",
+    "coverBadge": "TAPA",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "La foto de portada se ha ajustado correctamente.",
+    "optimizationInfo": "Las fotos se han optimizado para cumplir con los estándares web."
   }
 }

@@ -140,7 +140,8 @@
     "title": "Mijn favorieten",
     "description": "Volg hier de producten die je leuk vindt.",
     "noFavorites": "Je hebt nog geen favoriete producten toegevoegd.",
-    "browseProducts": "Producten bekijken"
+    "browseProducts": "Producten bekijken",
+    "fetchError": "Er is een fout opgetreden tijdens het laden van favorieten."
   },
   "settings": {
     "title": "Instellingen",
@@ -237,9 +238,12 @@
     "outOfStock": "Niet op voorraad",
     "inStock": "Op voorraad",
     "noResults": "Product niet gevonden.",
-    "loading": "Producten laden...",
+    "loading": "Producten worden ingeladen...",
     "perPage": "Per pagina",
-    "showing": "Het totaal van {total} producten tussen {from} en {to}."
+    "showing": "Het totaal van {total} producten tussen {from} en {to}.",
+    "loginToFavorite": "Log in om toe te voegen aan favorieten.",
+    "addedToFavorites": "Toegevoegd aan favorieten",
+    "removedFromFavorites": "Verwijderd uit favorieten"
   },
   "productDetail": {
     "addToFavorites": "Toevoegen aan favorieten",
@@ -307,5 +311,29 @@
     },
     "success": "De advertentie is succesvol gemaakt.",
     "error": "Er is een fout opgetreden tijdens het maken van de advertentie."
+  },
+  "fileUpload": {
+    "dragDrop": "Upload een foto of video.",
+    "dragDropHint": "Sleep of klik om te selecteren.",
+    "dropHere": "Laat het maar zitten...",
+    "imageLimit": "Foto: maximaal 10 MB",
+    "videoLimit": "Video: maximaal 50 MB",
+    "uploadCount": "{current} / {max} geladen",
+    "maxFilesError": "Je kunt maximaal {max} media uploaden.",
+    "imageTooLarge": "De foto mag niet groter zijn dan 10 MB.",
+    "videoTooLarge": "De video mag niet groter zijn dan 50 MB.",
+    "optimizing": "Optimaliseren...",
+    "uploading": "Laden...",
+    "queued": "In de rij wachten...",
+    "uploadSuccess": "{count} media geüpload",
+    "uploadError": "Laadfout",
+    "uploadFailed": "Uploaden mislukt.",
+    "deleted": "De media zijn met succes het zwijgen opgelegd.",
+    "deleteError": "De media konden niet worden verwijderd.",
+    "setCover": "Maak een omslag",
+    "coverBadge": "DEKSEL",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "De omslagfoto is succesvol aangepast.",
+    "optimizationInfo": "De foto's zijn geoptimaliseerd om te voldoen aan de webstandaarden."
   }
 }

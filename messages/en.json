@@ -140,7 +140,8 @@
     "title": "My favorites",
     "description": "Follow the products you like here.",
     "noFavorites": "You haven't added any favorite products yet.",
-    "browseProducts": "Browse Products"
+    "browseProducts": "Browse Products",
+    "fetchError": "An error occurred while loading favorites."
   },
   "settings": {
     "title": "Settings",
@@ -239,7 +240,10 @@
     "noResults": "Product not found.",
     "loading": "Products are being loaded...",
     "perPage": "Per page",
-    "showing": "The total of {total} products between {from} and {to}."
+    "showing": "The total of {total} products between {from} and {to}.",
+    "loginToFavorite": "Log in to add to favorites.",
+    "addedToFavorites": "Added to favorites",
+    "removedFromFavorites": "Removed from favorites"
   },
   "productDetail": {
     "addToFavorites": "Add to Favorites",
@@ -307,5 +311,29 @@
     },
     "success": "The advertisement was successfully created.",
     "error": "An error occurred while creating the advertisement."
+  },
+  "fileUpload": {
+    "dragDrop": "Upload a photo or video.",
+    "dragDropHint": "Drag and drop or click to select.",
+    "dropHere": "Leave it...",
+    "imageLimit": "Photo: max 10MB",
+    "videoLimit": "Video: max 50MB",
+    "uploadCount": "{current} / {max} loaded",
+    "maxFilesError": "You can upload a maximum of {max} media.",
+    "imageTooLarge": "The photo must be smaller than 10MB.",
+    "videoTooLarge": "The video must be smaller than 50MB.",
+    "optimizing": "Optimizing...",
+    "uploading": "Loading...",
+    "queued": "Waiting in line...",
+    "uploadSuccess": "{count} media uploaded",
+    "uploadError": "Loading error",
+    "uploadFailed": "Upload failed.",
+    "deleted": "The media was successfully shut down.",
+    "deleteError": "The media couldn't be deleted.",
+    "setCover": "Make a cover",
+    "coverBadge": "LID",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "The cover photo has been successfully adjusted.",
+    "optimizationInfo": "Photos are optimized to comply with web standards"
   }
 }

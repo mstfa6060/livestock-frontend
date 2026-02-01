@@ -140,7 +140,8 @@
     "title": "Meus favoritos",
     "description": "Siga aqui os produtos que você gosta.",
     "noFavorites": "Você ainda não adicionou nenhum produto aos favoritos.",
-    "browseProducts": "Veja os produtos"
+    "browseProducts": "Veja os produtos",
+    "fetchError": "Ocorreu um erro ao carregar os favoritos."
   },
   "settings": {
     "title": "Configurações",
@@ -239,7 +240,10 @@
     "noResults": "Produto não encontrado.",
     "loading": "Os produtos estão sendo carregados...",
     "perPage": "Por página",
-    "showing": "O total de {total} produtos entre {from} e {to}."
+    "showing": "O total de {total} produtos entre {from} e {to}.",
+    "loginToFavorite": "Faça login para adicionar aos favoritos.",
+    "addedToFavorites": "Adicionado aos favoritos",
+    "removedFromFavorites": "Removido dos favoritos"
   },
   "productDetail": {
     "addToFavorites": "Adicionar aos favoritos",
@@ -307,5 +311,29 @@
     },
     "success": "O anúncio foi criado com sucesso.",
     "error": "Ocorreu um erro ao criar o anúncio."
+  },
+  "fileUpload": {
+    "dragDrop": "Envie uma foto ou um vídeo.",
+    "dragDropHint": "Arraste e solte ou clique para selecionar.",
+    "dropHere": "Deixe assim...",
+    "imageLimit": "Foto: máximo 10 MB",
+    "videoLimit": "Vídeo: máximo 50 MB",
+    "uploadCount": "{atual} / {máximo} carregado",
+    "maxFilesError": "Você pode enviar no máximo {max} arquivos de mídia.",
+    "imageTooLarge": "A foto deve ter menos de 10 MB.",
+    "videoTooLarge": "O vídeo deve ter menos de 50 MB.",
+    "optimizing": "Otimizando...",
+    "uploading": "Carregando...",
+    "queued": "Aguardando na fila...",
+    "uploadSuccess": "{count} mídias enviadas",
+    "uploadError": "Erro ao carregar",
+    "uploadFailed": "O envio falhou.",
+    "deleted": "Os meios de comunicação foram silenciados com sucesso.",
+    "deleteError": "Os arquivos de mídia não puderam ser apagados.",
+    "setCover": "Faça uma capa",
+    "coverBadge": "TAMPA",
+    "videoBadge": "VÍDEO",
+    "coverUpdated": "A foto da capa foi ajustada com sucesso.",
+    "optimizationInfo": "As fotos foram otimizadas para estarem em conformidade com os padrões da web."
   }
 }

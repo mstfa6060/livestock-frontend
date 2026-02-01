@@ -140,7 +140,8 @@
     "title": "Mo rogha pearsanta",
     "description": "Lean na táirgí is maith leat anseo.",
     "noFavorites": "Níl aon táirgí is fearr leat curtha leis agat go fóill.",
-    "browseProducts": "Brabhsáil Táirgí"
+    "browseProducts": "Brabhsáil Táirgí",
+    "fetchError": "Tharla earráid agus na cinn is ansa leat á lódáil."
   },
   "settings": {
     "title": "Socruithe",
@@ -237,13 +238,16 @@
     "outOfStock": "As Stoc",
     "inStock": "I Stoc",
     "noResults": "Níor aimsíodh an táirge.",
-    "loading": "Ag lódáil táirgí...",
+    "loading": "Tá táirgí á luchtú...",
     "perPage": "In aghaidh an leathanaigh",
-    "showing": "Líon iomlán na dtáirgí {total} idir {from} agus {to}."
+    "showing": "Líon iomlán na dtáirgí {total} idir {from} agus {to}.",
+    "loginToFavorite": "Logáil isteach le cur le do rogha pearsanta.",
+    "addedToFavorites": "Curtha le rogha pearsanta",
+    "removedFromFavorites": "Bainte as na cinn is ansa leat"
   },
   "productDetail": {
     "addToFavorites": "Cuir le Ceanáin",
-    "removeFromFavorites": "Bain as na Ceanáin",
+    "removeFromFavorites": "Bain as na Roghanna",
     "share": "Comhroinn",
     "report": "Tuairiscigh fadhb",
     "description": "Míniú",
@@ -307,5 +311,29 @@
     },
     "success": "Cruthaíodh an fógra go rathúil.",
     "error": "Tharla earráid agus an fógra á chruthú."
+  },
+  "fileUpload": {
+    "dragDrop": "Uaslódáil grianghraf nó físeán.",
+    "dragDropHint": "Tarraing agus scaoil nó cliceáil chun a roghnú.",
+    "dropHere": "Fág é...",
+    "imageLimit": "Grianghraf: uasmhéid 10MB",
+    "videoLimit": "Físeán: uasmhéid 50MB",
+    "uploadCount": "luchtaithe {reatha} / {uas}",
+    "maxFilesError": "Is féidir leat uasmhéid de {max} meán a uaslódáil.",
+    "imageTooLarge": "Ní mór don ghrianghraf a bheith níos lú ná 10MB.",
+    "videoTooLarge": "Ní mór don fhíseán a bheith níos lú ná 50MB.",
+    "optimizing": "Ag optamú...",
+    "uploading": "Ag lódáil...",
+    "queued": "Ag fanacht sa scuaine...",
+    "uploadSuccess": "{count} meán uaslódáilte",
+    "uploadError": "Earráid lódála",
+    "uploadFailed": "Theip ar an uaslódáil.",
+    "deleted": "Dúnadh na meáin go rathúil.",
+    "deleteError": "Níorbh fhéidir na meáin a scriosadh.",
+    "setCover": "Déan clúdach",
+    "coverBadge": "CLÚDACH",
+    "videoBadge": "FÍSEÁN",
+    "coverUpdated": "Tá an grianghraf clúdaigh coigeartaithe go rathúil.",
+    "optimizationInfo": "Tá grianghraif optamaithe chun cloí le caighdeáin ghréasáin"
   }
 }

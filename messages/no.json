@@ -140,7 +140,8 @@
     "title": "Mine favoritter",
     "description": "Følg produktene du liker her.",
     "noFavorites": "Du har ikke lagt til noen favorittprodukter ennå.",
-    "browseProducts": "Bla gjennom produkter"
+    "browseProducts": "Bla gjennom produkter",
+    "fetchError": "Det oppsto en feil under lasting av favoritter."
   },
   "settings": {
     "title": "Innstillinger",
@@ -239,7 +240,10 @@
     "noResults": "Produktet ble ikke funnet.",
     "loading": "Produktene lastes inn ...",
     "perPage": "Per side",
-    "showing": "Totalt antall {total} produkter mellom {from} og {to}."
+    "showing": "Totalt antall {total} produkter mellom {from} og {to}.",
+    "loginToFavorite": "Logg inn for å legge til i favoritter.",
+    "addedToFavorites": "Lagt til i favoritter",
+    "removedFromFavorites": "Fjernet fra favoritter"
   },
   "productDetail": {
     "addToFavorites": "Legg til i favoritter",
@@ -307,5 +311,29 @@
     },
     "success": "Annonsen ble opprettet.",
     "error": "Det oppsto en feil under oppretting av annonsen."
+  },
+  "fileUpload": {
+    "dragDrop": "Last opp et bilde eller en video.",
+    "dragDropHint": "Dra og slipp eller klikk for å velge.",
+    "dropHere": "La det være ...",
+    "imageLimit": "Foto: maks 10 MB",
+    "videoLimit": "Video: maks 50 MB",
+    "uploadCount": "{current} / {max} lastet",
+    "maxFilesError": "Du kan laste opp maksimalt {max} medier.",
+    "imageTooLarge": "Bildet må være mindre enn 10 MB.",
+    "videoTooLarge": "Videoen må være mindre enn 50 MB.",
+    "optimizing": "Optimalisering...",
+    "uploading": "Laster inn...",
+    "queued": "Venter i kø ...",
+    "uploadSuccess": "{count} medier lastet opp",
+    "uploadError": "Lastefeil",
+    "uploadFailed": "Opplastingen mislyktes.",
+    "deleted": "Mediene ble vellykket stengt ned.",
+    "deleteError": "Mediet kunne ikke slettes.",
+    "setCover": "Lag et omslag",
+    "coverBadge": "LOKK",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Forsidebildet er justert.",
+    "optimizationInfo": "Bildene er optimalisert for å overholde nettstandarder"
   }
 }

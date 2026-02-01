@@ -1,23 +1,98 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { ProductCard, ProductCardSkeleton, Product } from "@/components/features/product-card";
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
+import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { useAuth } from "@/contexts/AuthContext";
+import { toast } from "sonner";
 
 export default function FavoritesPage() {
   const t = useTranslations("favorites");
+  const { user } = useAuth();
 
-  const [isLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [favorites, setFavorites] = useState<Product[]>([]);
 
-  // Mock data - in production, fetch from API
-  const favorites: Product[] = [];
+  // Fetch favorite products
+  useEffect(() => {
+    const fetchFavorites = async () => {
+      if (!user) {
+        setIsLoading(false);
+        return;
+      }
+
+      try {
+        setIsLoading(true);
+
+        // Get all favorites with pagination
+        const favoritesData = await LivestockTradingAPI.FavoriteProducts.All.Request({
+          sorting: { key: "addedAt", direction: 1 }, // Descending
+          filters: [],
+          pageRequest: {
+            currentPage: 1,
+            perPageCount: 100,
+            listAll: true,
+          },
+        });
+
+        // Get product IDs
+        const productIds = favoritesData.map(f => f.productId);
+
+        // Fetch product details for each favorite
+        if (productIds.length > 0) {
+          const productPromises = productIds.map(id =>
+            LivestockTradingAPI.Products.Detail.Request({ id })
+          );
+
+          const products = await Promise.all(productPromises);
+
+          // Map to Product interface
+          const mappedProducts: Product[] = products.map(p => ({
+            id: p.id,
+            title: p.title,
+            slug: p.slug,
+            shortDescription: p.shortDescription,
+            categoryId: p.categoryId,
+            brandId: p.brandId || undefined,
+            basePrice: p.basePrice as number,
+            currency: p.currency,
+            discountedPrice: p.discountedPrice as number | undefined,
+            stockQuantity: p.stockQuantity,
+            isInStock: p.isInStock,
+            sellerId: p.sellerId,
+            locationId: p.locationId?.toString() || "",
+            locationCountryCode: "", // Detail endpoint doesn't return this
+            locationCity: "", // Detail endpoint doesn't return this
+            status: p.status,
+            condition: p.condition,
+            viewCount: p.viewCount,
+            averageRating: p.averageRating as number | undefined,
+            reviewCount: p.reviewCount,
+            createdAt: new Date(p.createdAt),
+            imageUrl: undefined, // Detail endpoint doesn't return images
+          }));
+
+          setFavorites(mappedProducts);
+        }
+      } catch (error) {
+        console.error("Failed to fetch favorites:", error);
+        toast.error(t("fetchError"));
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchFavorites();
+  }, [user, t]);
 
   const handleRemoveFavorite = (productId: string) => {
-    console.log("Remove from favorites:", productId);
+    // Remove from local state (optimistic update)
+    setFavorites(prev => prev.filter(p => p.id !== productId));
   };
 
   return (

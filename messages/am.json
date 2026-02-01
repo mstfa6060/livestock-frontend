@@ -102,7 +102,7 @@
     "recentListings": "የቅርብ ጊዜ ዝርዝሮችዎ",
     "recentMessages": "የቅርብ ጊዜ መልዕክቶች",
     "noListings": "እስካሁን ምንም አይነት ማስታወቂያ አላከልክም።",
-    "noMessages": "እስካሁን ምንም አይነት መልዕክቶችን አልተቀበሉም።",
+    "noMessages": "እስካሁን መልእክት አልደረሰህም።",
     "noNotifications": "እስካሁን ምንም ማሳወቂያዎችን አልተቀበሉም።",
     "viewAllListings": "ሁሉንም ዝርዝሮች ይመልከቱ",
     "viewAllMessages": "ሁሉንም መልዕክቶች ይመልከቱ"
@@ -140,7 +140,8 @@
     "title": "የእኔ ተወዳጆች",
     "description": "የሚወዷቸውን ምርቶች እዚህ ይከተሉ።",
     "noFavorites": "እስካሁን ምንም ተወዳጅ ምርቶችን አላከሉም።",
-    "browseProducts": "ምርቶችን ያስሱ"
+    "browseProducts": "ምርቶችን ያስሱ",
+    "fetchError": "ተወዳጆችን በመጫን ላይ ስህተት ተከስቷል።"
   },
   "settings": {
     "title": "ቅንብሮች",
@@ -239,7 +240,10 @@
     "noResults": "ምርቱ አልተገኘም።",
     "loading": "ምርቶች እየተጫኑ ነው...",
     "perPage": "በገጽ",
-    "showing": "በ{from} እና {to} መካከል የ{total} ምርቶች ድምር።"
+    "showing": "በ{from} እና {to} መካከል የ{total} ምርቶች ድምር።",
+    "loginToFavorite": "ወደ ተወዳጆች ለማከል ይግቡ።",
+    "addedToFavorites": "ወደ ተወዳጆች ታክሏል",
+    "removedFromFavorites": "ከተወዳጆች ተወግዷል"
   },
   "productDetail": {
     "addToFavorites": "ወደ ተወዳጆች አክል",
@@ -307,5 +311,29 @@
     },
     "success": "ማስታወቂያው በተሳካ ሁኔታ ተፈጥሯል።",
     "error": "ማስታወቂያውን በሚፈጥሩበት ጊዜ ስህተት ተከስቷል።"
+  },
+  "fileUpload": {
+    "dragDrop": "ፎቶ ወይም ቪዲዮ ይስቀሉ።",
+    "dragDropHint": "ለመምረጥ ይጎትቱና ይጣሉ ወይም ጠቅ ያድርጉ።",
+    "dropHere": "ተወው...",
+    "imageLimit": "ፎቶ፡ ቢበዛ 10ሜባ",
+    "videoLimit": "ቪዲዮ፡ ቢበዛ 50ሜባ",
+    "uploadCount": "{current} / {max} ተጭኗል",
+    "maxFilesError": "ቢበዛ {max} ሚዲያ መስቀል ይችላሉ።",
+    "imageTooLarge": "ፎቶው ከ10ሜባ ያነሰ መሆን አለበት።",
+    "videoTooLarge": "ቪዲዮው ከ50ሜባ ያነሰ መሆን አለበት።",
+    "optimizing": "በማመቻቸት ላይ...",
+    "uploading": "በመጫን ላይ...",
+    "queued": "ወረፋ እየጠበቅን ነው...",
+    "uploadSuccess": "{count} ሚዲያ ተሰቅሏል",
+    "uploadError": "የመጫን ስህተት",
+    "uploadFailed": "ሰቀላ አልተሳካም።",
+    "deleted": "ሚዲያው በተሳካ ሁኔታ ተዘግቷል።",
+    "deleteError": "ሚዲያው ሊሰረዝ አልቻለም።",
+    "setCover": "ሽፋን ያድርጉ",
+    "coverBadge": "ክዳን",
+    "videoBadge": "ቪዲዮ",
+    "coverUpdated": "የሽፋን ፎቶው በተሳካ ሁኔታ ተስተካክሏል።",
+    "optimizationInfo": "ፎቶዎች ከድር ደረጃዎች ጋር እንዲጣጣሙ ተመቻችተዋል"
   }
 }

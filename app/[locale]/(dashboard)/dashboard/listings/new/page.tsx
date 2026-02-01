@@ -35,13 +35,19 @@ export default function NewListingPage() {
   const t = useTranslations("newListing");
   const tc = useTranslations("common");
   const tp = useTranslations("products");
-  const { user } = useAuth();
+  const { user, isLoading: authLoading } = useAuth();
   const selectedCountry = useSelectedCountry();
 
   const [isLoading, setIsLoading] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
   const [images, setImages] = useState<File[]>([]);
   const [imagePreviewUrls, setImagePreviewUrls] = useState<string[]>([]);
+
+  // Debug: Log user object when it changes
+  useEffect(() => {
+    console.log("👤 User object:", user);
+    console.log("🔐 Auth loading:", authLoading);
+  }, [user, authLoading]);
 
   const [formData, setFormData] = useState({
     title: "",
@@ -125,10 +131,49 @@ export default function NewListingPage() {
 
   const handleSubmit = async (e: React.FormEvent, isDraft: boolean = false) => {
     e.preventDefault();
+
+    // Validate required fields
+    if (!formData.title.trim()) {
+      alert(t("errors.titleRequired"));
+      return;
+    }
+    if (!formData.shortDescription.trim()) {
+      alert(t("errors.shortDescriptionRequired"));
+      return;
+    }
+    if (!formData.description.trim()) {
+      alert(t("errors.descriptionRequired"));
+      return;
+    }
+    if (!formData.categoryId) {
+      alert(t("errors.categoryRequired"));
+      return;
+    }
+    if (!formData.basePrice || parseFloat(formData.basePrice) <= 0) {
+      alert(t("errors.priceRequired"));
+      return;
+    }
+    if (!user?.id) {
+      console.error("❌ User object missing or no ID:", { user });
+      alert("Kullanıcı bilgisi bulunamadı. Lütfen tekrar giriş yapın.");
+      router.push("/login");
+      return;
+    }
+
     setIsLoading(true);
 
     try {
       const slug = generateSlug(formData.title);
+
+      console.log("📤 Creating product with payload:", {
+        title: formData.title,
+        categoryId: formData.categoryId,
+        basePrice: parseFloat(formData.basePrice),
+        sellerId: user.id,
+        userId: user.id,
+        status: isDraft ? 0 : 3,
+        userObject: user,
+      });
 
       await LivestockTradingAPI.Products.Create.Request({
         title: formData.title,
@@ -142,8 +187,8 @@ export default function NewListingPage() {
         stockQuantity: parseInt(formData.stockQuantity),
         stockUnit: formData.stockUnit,
         isInStock: parseInt(formData.stockQuantity) > 0,
-        sellerId: user?.id || "",
-        locationId: "", // Should be fetched from user's location
+        sellerId: user.id,
+        locationId: "602cb4fa-50c8-4d69-88a0-d411b25a2c34", // TODO: Fetch from user's actual location
         status: isDraft ? 0 : 3, // 0=draft, 3=pending
         condition: formData.condition,
         isShippingAvailable: formData.isShippingAvailable,
@@ -159,11 +204,17 @@ export default function NewListingPage() {
         metaKeywords: "",
       });
 
+      console.log("✅ Product created successfully");
+
       // TODO: Upload images separately using FileProvider API
 
       router.push("/dashboard/my-listings");
-    } catch (error) {
-      console.error("Failed to create listing:", error);
+    } catch (error: any) {
+      console.error("❌ Failed to create listing:", error);
+
+      // Show user-friendly error message
+      const errorMessage = error?.message || "Failed to create listing. Please try again.";
+      alert(errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -190,13 +241,13 @@ export default function NewListingPage() {
               type="button"
               variant="outline"
               onClick={(e) => handleSubmit(e, true)}
-              disabled={isLoading}
+              disabled={isLoading || authLoading || !user?.id}
             >
               {t("saveDraft")}
             </Button>
-            <Button type="submit" disabled={isLoading}>
+            <Button type="submit" disabled={isLoading || authLoading || !user?.id}>
               <Save className="h-4 w-4 mr-2" />
-              {isLoading ? tc("loading") : t("publish")}
+              {authLoading ? "Yükleniyor..." : isLoading ? tc("loading") : t("publish")}
             </Button>
           </div>
         </div>

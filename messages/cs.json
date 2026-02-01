@@ -102,7 +102,7 @@
     "recentListings": "Vaše nejnovější nabídky",
     "recentMessages": "Nedávné zprávy",
     "noListings": "Zatím jste nepřidali žádné reklamy.",
-    "noMessages": "Zatím jste neobdrželi žádné zprávy.",
+    "noMessages": "Ještě jste neobdrželi žádnou zprávu.",
     "noNotifications": "Zatím jste neobdrželi žádná oznámení.",
     "viewAllListings": "Zobrazit všechny nabídky",
     "viewAllMessages": "Zobrazit všechny zprávy"
@@ -140,7 +140,8 @@
     "title": "Moje oblíbené",
     "description": "Sledujte zde produkty, které se vám líbí.",
     "noFavorites": "Zatím jste nepřidali žádné oblíbené produkty.",
-    "browseProducts": "Procházet produkty"
+    "browseProducts": "Procházet produkty",
+    "fetchError": "Při načítání oblíbených položek došlo k chybě."
   },
   "settings": {
     "title": "Nastavení",
@@ -237,9 +238,12 @@
     "outOfStock": "Není skladem",
     "inStock": "Skladem",
     "noResults": "Produkt nenalezen.",
-    "loading": "Produkty se načítají...",
+    "loading": "Načítání produktů...",
     "perPage": "Na stránku",
-    "showing": "Celkový počet produktů ({total}) mezi {from} a {to}."
+    "showing": "Celkový počet produktů ({total}) mezi {from} a {to}.",
+    "loginToFavorite": "Přihlaste se pro přidání do oblíbených.",
+    "addedToFavorites": "Přidáno k oblíbeným",
+    "removedFromFavorites": "Odebráno z oblíbených"
   },
   "productDetail": {
     "addToFavorites": "Přidat k oblíbeným",
@@ -307,5 +311,29 @@
     },
     "success": "Reklama byla úspěšně vytvořena.",
     "error": "Při vytváření reklamy došlo k chybě."
+  },
+  "fileUpload": {
+    "dragDrop": "Nahrajte fotografii nebo video.",
+    "dragDropHint": "Přetáhněte a upusťte nebo klikněte pro výběr.",
+    "dropHere": "Nechte to...",
+    "imageLimit": "Fotografie: max. 10 MB",
+    "videoLimit": "Video: max. 50 MB",
+    "uploadCount": "{current} / {max} načteno",
+    "maxFilesError": "Můžete nahrát maximálně {max} médií.",
+    "imageTooLarge": "Fotografie musí být menší než 10 MB.",
+    "videoTooLarge": "Video musí být menší než 50 MB.",
+    "optimizing": "Optimalizace...",
+    "uploading": "Načítání...",
+    "queued": "Čekání ve frontě...",
+    "uploadSuccess": "Nahráno {count} médií",
+    "uploadError": "Chyba načítání",
+    "uploadFailed": "Nahrávání se nezdařilo.",
+    "deleted": "Médium bylo úspěšně vypnuto.",
+    "deleteError": "Médium se nepodařilo smazat.",
+    "setCover": "Vytvořte obal",
+    "coverBadge": "VÍČKO",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Titulní fotografie byla úspěšně upravena.",
+    "optimizationInfo": "Fotografie byly optimalizovány tak, aby splňovaly webové standardy."
   }
 }

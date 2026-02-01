@@ -121,7 +121,7 @@
     "title": "Moji oglasi",
     "description": "Upravljajte vse svoje oglase od tukaj.",
     "noListings": "Še niste dodali nobenega oglasa.",
-    "createFirst": "Ustvarite svoj prvi vnos.",
+    "createFirst": "Ustvarite svoj prvi oglas.",
     "filters": {
       "all": "Vsi oni",
       "active": "Aktivno",
@@ -140,7 +140,8 @@
     "title": "Moji favoriti",
     "description": "Sledite izdelkom, ki so vam všeč, tukaj.",
     "noFavorites": "Še niste dodali nobenega priljubljenega izdelka.",
-    "browseProducts": "Brskaj po izdelkih"
+    "browseProducts": "Brskaj po izdelkih",
+    "fetchError": "Pri nalaganju priljubljenih je prišlo do napake."
   },
   "settings": {
     "title": "Nastavitve",
@@ -239,7 +240,10 @@
     "noResults": "Izdelka ni bilo mogoče najti.",
     "loading": "Nalaganje izdelkov ...",
     "perPage": "Na stran",
-    "showing": "Skupno število izdelkov {total} med {from} in {to}."
+    "showing": "Skupno število izdelkov {total} med {from} in {to}.",
+    "loginToFavorite": "Prijavite se, da dodate med priljubljene.",
+    "addedToFavorites": "Dodano med priljubljene",
+    "removedFromFavorites": "Odstranjeno iz priljubljenih"
   },
   "productDetail": {
     "addToFavorites": "Dodaj med priljubljene",
@@ -307,5 +311,29 @@
     },
     "success": "Oglas je bil uspešno ustvarjen.",
     "error": "Pri ustvarjanju oglasa je prišlo do napake."
+  },
+  "fileUpload": {
+    "dragDrop": "Naložite fotografijo ali videoposnetek.",
+    "dragDropHint": "Povlecite in spustite ali kliknite za izbiro.",
+    "dropHere": "Pusti ...",
+    "imageLimit": "Fotografija: največ 10 MB",
+    "videoLimit": "Video: največ 50 MB",
+    "uploadCount": "naloženo {current} / {max}",
+    "maxFilesError": "Naložite lahko največ {max} medijev.",
+    "imageTooLarge": "Fotografija mora biti manjša od 10 MB.",
+    "videoTooLarge": "Videoposnetek mora biti manjši od 50 MB.",
+    "optimizing": "Optimizacija ...",
+    "uploading": "Nalaganje ...",
+    "queued": "Čakanje v vrsti ...",
+    "uploadSuccess": "{count} naloženih medijev",
+    "uploadError": "Napaka pri nalaganju",
+    "uploadFailed": "Nalaganje ni uspelo.",
+    "deleted": "Medij je bil uspešno zaprt.",
+    "deleteError": "Medija ni bilo mogoče izbrisati.",
+    "setCover": "Naredite ovitek",
+    "coverBadge": "POKROV",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Naslovna fotografija je bila uspešno prilagojena.",
+    "optimizationInfo": "Fotografije so bile optimizirane v skladu s spletnimi standardi"
   }
 }

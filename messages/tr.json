@@ -140,7 +140,8 @@
     "title": "Favorilerim",
     "description": "Begendigniz urunleri buradan takip edin",
     "noFavorites": "Henuz favori urun eklemediniz",
-    "browseProducts": "Urunlere Goz At"
+    "browseProducts": "Urunlere Goz At",
+    "fetchError": "Favoriler yuklenirken bir hata olustu"
   },
   "settings": {
     "title": "Ayarlar",
@@ -239,7 +240,10 @@
     "noResults": "Urun bulunamadi",
     "loading": "Urunler yukleniyor...",
     "perPage": "Sayfa basina",
-    "showing": "{from}-{to} arasi, toplam {total} urun"
+    "showing": "{from}-{to} arasi, toplam {total} urun",
+    "loginToFavorite": "Favorilere eklemek icin giris yapin",
+    "addedToFavorites": "Favorilere eklendi",
+    "removedFromFavorites": "Favorilerden cikarildi"
   },
   "productDetail": {
     "addToFavorites": "Favorilere Ekle",

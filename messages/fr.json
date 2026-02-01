@@ -102,7 +102,7 @@
     "recentListings": "Vos dernières annonces",
     "recentMessages": "Messages récents",
     "noListings": "Vous n'avez pas encore ajouté de publicités.",
-    "noMessages": "Vous n'avez pas encore reçu de message.",
+    "noMessages": "Vous n'avez encore reçu aucun message.",
     "noNotifications": "Vous n'avez encore reçu aucune notification.",
     "viewAllListings": "Voir toutes les annonces",
     "viewAllMessages": "Afficher tous les messages"
@@ -140,7 +140,8 @@
     "title": "Mes favoris",
     "description": "Suivez ici les produits qui vous plaisent.",
     "noFavorites": "Vous n'avez pas encore ajouté de produits favoris.",
-    "browseProducts": "Parcourir les produits"
+    "browseProducts": "Parcourir les produits",
+    "fetchError": "Une erreur s'est produite lors du chargement des favoris."
   },
   "settings": {
     "title": "Paramètres",
@@ -237,9 +238,12 @@
     "outOfStock": "En rupture de stock",
     "inStock": "En stock",
     "noResults": "Produit introuvable.",
-    "loading": "Les produits sont en cours de chargement...",
+    "loading": "Chargement des produits...",
     "perPage": "Par page",
-    "showing": "Le total des produits {total} entre {from} et {to}."
+    "showing": "Le total des produits {total} entre {from} et {to}.",
+    "loginToFavorite": "Connectez-vous pour ajouter aux favoris.",
+    "addedToFavorites": "Ajouté aux favoris",
+    "removedFromFavorites": "Retiré des favoris"
   },
   "productDetail": {
     "addToFavorites": "Ajouter aux favoris",
@@ -307,5 +311,29 @@
     },
     "success": "La publicité a été créée avec succès.",
     "error": "Une erreur s'est produite lors de la création de l'annonce."
+  },
+  "fileUpload": {
+    "dragDrop": "Téléchargez une photo ou une vidéo.",
+    "dragDropHint": "Faites glisser et déposez ou cliquez pour sélectionner.",
+    "dropHere": "Laissez tomber...",
+    "imageLimit": "Photo : max 10 Mo",
+    "videoLimit": "Vidéo : max 50 Mo",
+    "uploadCount": "{actuel} / {max} chargé",
+    "maxFilesError": "Vous pouvez télécharger un maximum de {max} fichiers multimédias.",
+    "imageTooLarge": "La photo doit peser moins de 10 Mo.",
+    "videoTooLarge": "La vidéo doit avoir une taille inférieure à 50 Mo.",
+    "optimizing": "Optimisation...",
+    "uploading": "Chargement...",
+    "queued": "Attendre dans la file...",
+    "uploadSuccess": "{count} médias téléchargés",
+    "uploadError": "Erreur de chargement",
+    "uploadFailed": "Échec du chargement.",
+    "deleted": "Les médias ont été réussis à être réduits au silence.",
+    "deleteError": "Le contenu multimédia n'a pas pu être supprimé.",
+    "setCover": "Fabriquer une couverture",
+    "coverBadge": "COUVERCLE",
+    "videoBadge": "VIDÉO",
+    "coverUpdated": "La photo de couverture a été ajustée avec succès.",
+    "optimizationInfo": "Les photos ont été optimisées pour être conformes aux normes web"
   }
 }

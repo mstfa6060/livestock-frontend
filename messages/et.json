@@ -103,7 +103,7 @@
     "recentMessages": "Hiljutised sõnumid",
     "noListings": "Sa pole veel ühtegi reklaami lisanud.",
     "noMessages": "Sa pole veel sõnumit saanud.",
-    "noNotifications": "Te pole veel ühtegi märguannet saanud.",
+    "noNotifications": "Sa pole veel ühtegi märguannet saanud.",
     "viewAllListings": "Kuva kõik kuulutused",
     "viewAllMessages": "Kuva kõik sõnumid"
   },
@@ -140,7 +140,8 @@
     "title": "Minu lemmikud",
     "description": "Jälgige siin tooteid, mis teile meeldivad.",
     "noFavorites": "Sa pole veel ühtegi lemmiktoodet lisanud.",
-    "browseProducts": "Sirvi tooteid"
+    "browseProducts": "Sirvi tooteid",
+    "fetchError": "Lemmikute laadimisel ilmnes viga."
   },
   "settings": {
     "title": "Seaded",
@@ -239,7 +240,10 @@
     "noResults": "Toodet ei leitud.",
     "loading": "Tooteid laaditakse...",
     "perPage": "Lehe kohta",
-    "showing": "Toodete koguarv vahemikus {from} kuni {to} on {total}."
+    "showing": "Toodete koguarv vahemikus {from} kuni {to} on {total}.",
+    "loginToFavorite": "Lemmikutesse lisamiseks logi sisse.",
+    "addedToFavorites": "Lisatud lemmikutesse",
+    "removedFromFavorites": "Eemaldatud lemmikutest"
   },
   "productDetail": {
     "addToFavorites": "Lisa lemmikutesse",
@@ -307,5 +311,29 @@
     },
     "success": "Reklaam on edukalt loodud.",
     "error": "Kuulutuse loomisel ilmnes viga."
+  },
+  "fileUpload": {
+    "dragDrop": "Laadige üles foto või video.",
+    "dragDropHint": "Lohistage ja asetage või klõpsake valimiseks.",
+    "dropHere": "Jäta see...",
+    "imageLimit": "Foto: max 10 MB",
+    "videoLimit": "Video: maksimaalselt 50 MB",
+    "uploadCount": "{praegune} / {max} laaditud",
+    "maxFilesError": "Saate üles laadida maksimaalselt {max} meediafaili.",
+    "imageTooLarge": "Foto peab olema väiksem kui 10 MB.",
+    "videoTooLarge": "Video peab olema väiksem kui 50 MB.",
+    "optimizing": "Optimeerimine...",
+    "uploading": "Laadimine...",
+    "queued": "Ootan järjekorras...",
+    "uploadSuccess": "{count} meediat üles laaditud",
+    "uploadError": "Laadimisviga",
+    "uploadFailed": "Üleslaadimine ebaõnnestus.",
+    "deleted": "Meedia sulgemine õnnestus.",
+    "deleteError": "Meediumit ei saanud kustutada.",
+    "setCover": "Tee kaas",
+    "coverBadge": "KAAS",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Kaanefoto on edukalt kohandatud.",
+    "optimizationInfo": "Fotod on optimeeritud vastavalt veebistandarditele"
   }
 }

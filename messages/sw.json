@@ -102,7 +102,7 @@
     "recentListings": "Orodha Zako za Hivi Karibuni",
     "recentMessages": "Ujumbe wa Hivi Karibuni",
     "noListings": "Hujaongeza matangazo yoyote bado.",
-    "noMessages": "Bado hujapokea ujumbe wowote.",
+    "noMessages": "Hujapokea ujumbe bado.",
     "noNotifications": "Hujapokea arifa zozote bado.",
     "viewAllListings": "Tazama Orodha Zote",
     "viewAllMessages": "Tazama jumbe zote"
@@ -140,7 +140,8 @@
     "title": "Vipendwa vyangu",
     "description": "Fuata bidhaa unazopenda hapa.",
     "noFavorites": "Bado hujaongeza bidhaa zozote unazopenda.",
-    "browseProducts": "Vinjari Bidhaa"
+    "browseProducts": "Vinjari Bidhaa",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia vipendwa."
   },
   "settings": {
     "title": "Mipangilio",
@@ -239,7 +240,10 @@
     "noResults": "Bidhaa haipatikani.",
     "loading": "Bidhaa zinapakiwa...",
     "perPage": "Kwa kila ukurasa",
-    "showing": "Jumla ya bidhaa {jumla} kati ya {from} na {to}."
+    "showing": "Jumla ya bidhaa {jumla} kati ya {from} na {to}.",
+    "loginToFavorite": "Ingia ili kuongeza kwenye vipendwa.",
+    "addedToFavorites": "Imeongezwa kwenye vipendwa",
+    "removedFromFavorites": "Imeondolewa kwenye vipendwa"
   },
   "productDetail": {
     "addToFavorites": "Ongeza kwenye Vipendwa",
@@ -307,5 +311,29 @@
     },
     "success": "Tangazo liliundwa kwa mafanikio.",
     "error": "Hitilafu imetokea wakati wa kuunda tangazo."
+  },
+  "fileUpload": {
+    "dragDrop": "Pakia picha au video.",
+    "dragDropHint": "Buruta na uangushe au bofya ili kuchagua.",
+    "dropHere": "Acha...",
+    "imageLimit": "Picha: kiwango cha juu cha 10MB",
+    "videoLimit": "Video: kiwango cha juu cha 50MB",
+    "uploadCount": "{current} / {max} imepakiwa",
+    "maxFilesError": "Unaweza kupakia kiwango cha juu cha vyombo vya habari {max}.",
+    "imageTooLarge": "Picha lazima iwe ndogo kuliko 10MB.",
+    "videoTooLarge": "Video lazima iwe ndogo kuliko 50MB.",
+    "optimizing": "Inaboresha...",
+    "uploading": "Inapakia...",
+    "queued": "Wanasubiri kwenye foleni...",
+    "uploadSuccess": "Vyombo vya habari {count} vimepakiwa",
+    "uploadError": "Hitilafu ya kupakia",
+    "uploadFailed": "Imeshindwa kupakia.",
+    "deleted": "Vyombo vya habari vilifungwa kwa mafanikio.",
+    "deleteError": "Vyombo vya habari havikuweza kufutwa.",
+    "setCover": "Tengeneza kifuniko",
+    "coverBadge": "KIFUNIKO",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Picha ya jalada imerekebishwa kwa ufanisi.",
+    "optimizationInfo": "Picha zimeboreshwa ili ziendane na viwango vya wavuti"
   }
 }

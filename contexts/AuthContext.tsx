@@ -10,6 +10,7 @@ import {
 } from "react";
 import { useRouter } from "next/navigation";
 import { IAMAPI } from "@/api/base_modules/iam";
+import { useFavoritesStore } from "@/stores/useFavoritesStore";
 
 // User type from API
 export interface User {
@@ -113,6 +114,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     initializeAuth();
   }, []);
 
+  // Clear favorites when user logs out
+  useEffect(() => {
+    if (!state.isAuthenticated) {
+      useFavoritesStore.getState().clearFavorites();
+    }
+    // Note: Favorites are now loaded lazily (on first use) instead of eagerly on login
+    // This prevents 401 errors from blocking the login flow
+  }, [state.isAuthenticated]);
+
   const clearAuthData = () => {
     localStorage.removeItem(STORAGE_KEYS.JWT);
     localStorage.removeItem(STORAGE_KEYS.REFRESH_TOKEN);
@@ -135,6 +145,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       // Store tokens
       localStorage.setItem(STORAGE_KEYS.JWT, response.jwt);
+      localStorage.setItem('accessToken', response.jwt); // Also save as accessToken
       localStorage.setItem(STORAGE_KEYS.REFRESH_TOKEN, response.refreshToken);
       localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(response.user));
 

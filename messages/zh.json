@@ -140,7 +140,8 @@
     "title": "我的最爱",
     "description": "关注你喜欢的产品。",
     "noFavorites": "您还没有添加任何收藏商品。",
-    "browseProducts": "浏览产品"
+    "browseProducts": "浏览产品",
+    "fetchError": "加载收藏夹时出错。"
   },
   "settings": {
     "title": "设置",
@@ -239,7 +240,10 @@
     "noResults": "未找到产品。",
     "loading": "产品正在加载中……",
     "perPage": "每页",
-    "showing": "从 {from} 到 {to} 之间的 {total} 个产品的总数。"
+    "showing": "从 {from} 到 {to} 之间的 {total} 个产品的总数。",
+    "loginToFavorite": "登录即可添加到收藏夹。",
+    "addedToFavorites": "已添加到收藏夹",
+    "removedFromFavorites": "已从收藏夹中移除"
   },
   "productDetail": {
     "addToFavorites": "添加到收藏夹",
@@ -307,5 +311,29 @@
     },
     "success": "广告制作成功。",
     "error": "创建广告时发生错误。"
+  },
+  "fileUpload": {
+    "dragDrop": "上传照片或视频。",
+    "dragDropHint": "拖放或点击选择。",
+    "dropHere": "算了……",
+    "imageLimit": "照片：最大 10MB",
+    "videoLimit": "视频：最大 50MB",
+    "uploadCount": "当前 / 最大已加载",
+    "maxFilesError": "您最多可以上传 {max} 个媒体文件。",
+    "imageTooLarge": "照片大小必须小于10MB。",
+    "videoTooLarge": "视频文件大小必须小于50MB。",
+    "optimizing": "优化中……",
+    "uploading": "加载中...",
+    "queued": "排队等候……",
+    "uploadSuccess": "上传媒体文件数量：{count}",
+    "uploadError": "加载错误",
+    "uploadFailed": "上传失败。",
+    "deleted": "媒体被成功关闭。",
+    "deleteError": "媒体文件无法删除。",
+    "setCover": "制作封面",
+    "coverBadge": "盖",
+    "videoBadge": "视频",
+    "coverUpdated": "封面照片已成功调整。",
+    "optimizationInfo": "照片已优化以符合网络标准"
   }
 }

@@ -140,7 +140,8 @@
     "title": "Mani favorīti",
     "description": "Sekojiet līdzi produktiem, kas jums patīk šeit.",
     "noFavorites": "Jūs vēl neesat pievienojis nevienu iecienītāko produktu.",
-    "browseProducts": "Pārlūkot produktus"
+    "browseProducts": "Pārlūkot produktus",
+    "fetchError": "Ielādējot izlasi, radās kļūda."
   },
   "settings": {
     "title": "Iestatījumi",
@@ -239,7 +240,10 @@
     "noResults": "Produkts nav atrasts.",
     "loading": "Produkti tiek ielādēti...",
     "perPage": "Katrā lapā",
-    "showing": "Kopējais produktu skaits {total} no {from} līdz {to}."
+    "showing": "Kopējais produktu skaits {total} no {from} līdz {to}.",
+    "loginToFavorite": "Piesakieties, lai pievienotu izlasei.",
+    "addedToFavorites": "Pievienots izlasei",
+    "removedFromFavorites": "Noņemts no izlases"
   },
   "productDetail": {
     "addToFavorites": "Pievienot izlasei",
@@ -307,5 +311,29 @@
     },
     "success": "Reklāma ir veiksmīgi izveidota.",
     "error": "Veidojot reklāmu, radās kļūda."
+  },
+  "fileUpload": {
+    "dragDrop": "Augšupielādējiet fotoattēlu vai videoklipu.",
+    "dragDropHint": "Velciet un nometiet vai noklikšķiniet, lai atlasītu.",
+    "dropHere": "Atstājiet to...",
+    "imageLimit": "Fotoattēls: maks. 10 MB",
+    "videoLimit": "Video: maks. 50 MB",
+    "uploadCount": "{current} / {max} noslogots",
+    "maxFilesError": "Jūs varat augšupielādēt ne vairāk kā {max} multivides failus.",
+    "imageTooLarge": "Fotoattēlam jābūt mazākam par 10 MB.",
+    "videoTooLarge": "Videoklipam jābūt mazākam par 50 MB.",
+    "optimizing": "Optimizācija...",
+    "uploading": "Notiek ielāde...",
+    "queued": "Gaidot rindā...",
+    "uploadSuccess": "Augšupielādēts {count} multivides saturs",
+    "uploadError": "Ielādes kļūda",
+    "uploadFailed": "Augšupielāde neizdevās.",
+    "deleted": "Mediji tika veiksmīgi slēgti.",
+    "deleteError": "Multividi nevarēja izdzēst.",
+    "setCover": "Izveidojiet vāku",
+    "coverBadge": "VĀKS",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Vāka fotoattēls ir veiksmīgi pielāgots.",
+    "optimizationInfo": "Fotoattēli ir optimizēti, lai atbilstu tīmekļa standartiem"
   }
 }

@@ -140,7 +140,8 @@
     "title": "A kedvenceim",
     "description": "Kövesd az itt található termékeket, amiket szeretsz.",
     "noFavorites": "Még nem adtál hozzá kedvenc termékeket.",
-    "browseProducts": "Termékek böngészése"
+    "browseProducts": "Termékek böngészése",
+    "fetchError": "Hiba történt a kedvencek betöltése közben."
   },
   "settings": {
     "title": "Beállítások",
@@ -237,9 +238,12 @@
     "outOfStock": "Nincs raktáron",
     "inStock": "Raktáron",
     "noResults": "A termék nem található.",
-    "loading": "Termékek betöltése...",
+    "loading": "A termékek feltöltése folyamatban van...",
     "perPage": "Oldalanként",
-    "showing": "A {from} és {to} közötti {total} termékek összege."
+    "showing": "A {from} és {to} közötti {total} termékek összege.",
+    "loginToFavorite": "Jelentkezz be, hogy hozzáadhasd a kedvencekhez.",
+    "addedToFavorites": "Hozzáadva a kedvencekhez",
+    "removedFromFavorites": "Eltávolítva a kedvencek közül"
   },
   "productDetail": {
     "addToFavorites": "Hozzáadás a kedvencekhez",
@@ -307,5 +311,29 @@
     },
     "success": "A hirdetés sikeresen létrejött.",
     "error": "Hiba történt a hirdetés létrehozásakor."
+  },
+  "fileUpload": {
+    "dragDrop": "Töltsön fel egy fotót vagy videót.",
+    "dragDropHint": "Húzd és vidd el, vagy kattints a kiválasztáshoz.",
+    "dropHere": "Hagyd már...",
+    "imageLimit": "Fotó: max. 10 MB",
+    "videoLimit": "Videó: maximum 50 MB",
+    "uploadCount": "{jelenlegi} / {max} betöltve",
+    "maxFilesError": "Legfeljebb {max} médiafájlt tölthetsz fel.",
+    "imageTooLarge": "A fotónak kisebbnek kell lennie, mint 10 MB.",
+    "videoTooLarge": "A videónak kisebbnek kell lennie, mint 50 MB.",
+    "optimizing": "Optimalizálás...",
+    "uploading": "Terhelés...",
+    "queued": "Sorban várakozva...",
+    "uploadSuccess": "{count} feltöltött médiafájl",
+    "uploadError": "Betöltési hiba",
+    "uploadFailed": "A feltöltés sikertelen.",
+    "deleted": "A médiát sikeresen leállították.",
+    "deleteError": "A médiafájlt nem sikerült törölni.",
+    "setCover": "Készíts egy borítót",
+    "coverBadge": "FEDÉL",
+    "videoBadge": "VIDEÓ",
+    "coverUpdated": "A borítókép sikeresen beállítva.",
+    "optimizationInfo": "A fotókat optimalizáltuk, hogy megfeleljenek a webes szabványoknak"
   }
 }

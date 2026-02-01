@@ -140,7 +140,8 @@
     "title": "Moje ulubione",
     "description": "Tutaj możesz obserwować produkty, które Ci się podobają.",
     "noFavorites": "Nie dodałeś jeszcze żadnych ulubionych produktów.",
-    "browseProducts": "Przeglądaj produkty"
+    "browseProducts": "Przeglądaj produkty",
+    "fetchError": "Wystąpił błąd podczas ładowania ulubionych."
   },
   "settings": {
     "title": "Ustawienia",
@@ -239,7 +240,10 @@
     "noResults": "Produkt nie został znaleziony.",
     "loading": "Trwa ładowanie produktów...",
     "perPage": "Na stronę",
-    "showing": "Suma {total} produktów pomiędzy {from} i {to}."
+    "showing": "Suma {total} produktów pomiędzy {from} i {to}.",
+    "loginToFavorite": "Zaloguj się, aby dodać do ulubionych.",
+    "addedToFavorites": "Dodano do ulubionych",
+    "removedFromFavorites": "Usunięto z ulubionych"
   },
   "productDetail": {
     "addToFavorites": "Dodaj do ulubionych",
@@ -307,5 +311,29 @@
     },
     "success": "Reklama została pomyślnie utworzona.",
     "error": "Wystąpił błąd podczas tworzenia reklamy."
+  },
+  "fileUpload": {
+    "dragDrop": "Prześlij zdjęcie lub film.",
+    "dragDropHint": "Przeciągnij i upuść lub kliknij, aby wybrać.",
+    "dropHere": "Zostaw to...",
+    "imageLimit": "Zdjęcie: maks. 10 MB",
+    "videoLimit": "Wideo: maks. 50 MB",
+    "uploadCount": "{aktualne} / {maksymalne} załadowane",
+    "maxFilesError": "Możesz przesłać maksymalnie {max} multimediów.",
+    "imageTooLarge": "Zdjęcie musi być mniejsze niż 10MB.",
+    "videoTooLarge": "Rozmiar filmu musi być mniejszy niż 50 MB.",
+    "optimizing": "Optymalizacja...",
+    "uploading": "Załadunek...",
+    "queued": "Czekanie w kolejce...",
+    "uploadSuccess": "{count} przesłanych multimediów",
+    "uploadError": "Błąd ładowania",
+    "uploadFailed": "Przesyłanie nie powiodło się.",
+    "deleted": "Media zostały skutecznie zamknięte.",
+    "deleteError": "Nie udało się usunąć multimediów.",
+    "setCover": "Zrób okładkę",
+    "coverBadge": "POKRYWA",
+    "videoBadge": "WIDEO",
+    "coverUpdated": "Zdjęcie na okładce zostało pomyślnie dostosowane.",
+    "optimizationInfo": "Zdjęcia zostały zoptymalizowane pod kątem zgodności ze standardami internetowymi"
   }
 }

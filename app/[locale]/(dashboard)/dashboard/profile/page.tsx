@@ -12,7 +12,12 @@ export default function ProfilePage() {
   const { user } = useAuth();
 
   const initials = user
-    ? `${user.firstName?.charAt(0) || ""}${user.surname?.charAt(0) || ""}`
+    ? user.displayName
+        .split(" ")
+        .map(n => n.charAt(0))
+        .join("")
+        .toUpperCase()
+        .slice(0, 2) || "?"
     : "?";
 
   return (
@@ -28,9 +33,9 @@ export default function ProfilePage() {
             </Avatar>
             <div>
               <h2 className="text-xl font-semibold">
-                {user?.firstName} {user?.surname}
+                {user?.displayName}
               </h2>
-              <p className="text-muted-foreground">@{user?.userName}</p>
+              <p className="text-muted-foreground">@{user?.username}</p>
             </div>
           </div>
 
@@ -41,7 +46,7 @@ export default function ProfilePage() {
             </div>
             <div>
               <p className="text-sm text-muted-foreground">{td("username")}</p>
-              <p className="font-medium">{user?.userName || "-"}</p>
+              <p className="font-medium">{user?.username || "-"}</p>
             </div>
             <div>
               <p className="text-sm text-muted-foreground">{td("id")}</p>

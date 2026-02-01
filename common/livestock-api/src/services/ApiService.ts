@@ -65,6 +65,16 @@ export class ApiService {
 
       return payload;
     } catch (err: any) {
+      // Log the full error response for debugging
+      if (err?.response) {
+        console.error('❌ API Error Response:', {
+          status: err.response.status,
+          statusText: err.response.statusText,
+          data: err.response.data,
+          url: err.config?.url,
+        });
+      }
+
       // 401 Unauthorized - Token expired or invalid
       if (err?.response?.status === 401) {
         console.log('🔐 401 Unauthorized - Token expired or invalid');
@@ -110,7 +120,7 @@ export class ApiService {
 
         // Redirect to login
         if (typeof window !== 'undefined') {
-          window.location.href = '/auth/login';
+          window.location.href = '/login';
         }
 
         const authError = new Error('Session expired - please login again');

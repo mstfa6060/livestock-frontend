@@ -140,7 +140,8 @@
     "title": "I miei preferiti",
     "description": "Segui qui i prodotti che ti piacciono.",
     "noFavorites": "Non hai ancora aggiunto alcun prodotto preferito.",
-    "browseProducts": "Sfoglia i prodotti"
+    "browseProducts": "Sfoglia i prodotti",
+    "fetchError": "Si è verificato un errore durante il caricamento dei preferiti."
   },
   "settings": {
     "title": "Impostazioni",
@@ -230,16 +231,19 @@
     },
     "condition": {
       "new": "Nuovo",
-      "likeNew": "Leggermente usato",
+      "likeNew": "Usato poco",
       "good": "Bene",
       "fair": "Mezzo"
     },
     "outOfStock": "Esaurito",
     "inStock": "In magazzino",
     "noResults": "Prodotto non trovato.",
-    "loading": "Caricamento prodotti in corso...",
+    "loading": "I prodotti vengono caricati...",
     "perPage": "Per pagina",
-    "showing": "Il totale di {total} prodotti tra {from} e {to}."
+    "showing": "Il totale di {total} prodotti tra {from} e {to}.",
+    "loginToFavorite": "Accedi per aggiungere ai preferiti.",
+    "addedToFavorites": "Aggiunto ai preferiti",
+    "removedFromFavorites": "Rimosso dai preferiti"
   },
   "productDetail": {
     "addToFavorites": "Aggiungi ai preferiti",
@@ -307,5 +311,29 @@
     },
     "success": "L'annuncio è stato creato con successo.",
     "error": "Si è verificato un errore durante la creazione dell'annuncio."
+  },
+  "fileUpload": {
+    "dragDrop": "Carica una foto o un video.",
+    "dragDropHint": "Trascina e rilascia oppure clicca per selezionare.",
+    "dropHere": "Lascialo...",
+    "imageLimit": "Foto: max 10 MB",
+    "videoLimit": "Video: massimo 50 MB",
+    "uploadCount": "{corrente} / {max} caricato",
+    "maxFilesError": "Puoi caricare un massimo di {max} contenuti multimediali.",
+    "imageTooLarge": "La foto deve essere inferiore a 10 MB.",
+    "videoTooLarge": "Il video deve essere inferiore a 50 MB.",
+    "optimizing": "Ottimizzazione in corso...",
+    "uploading": "Caricamento...",
+    "queued": "Aspettando in fila...",
+    "uploadSuccess": "{count} contenuti multimediali caricati",
+    "uploadError": "Errore di caricamento",
+    "uploadFailed": "Caricamento non riuscito.",
+    "deleted": "I media sono stati chiusi con successo.",
+    "deleteError": "Non è stato possibile eliminare il contenuto multimediale.",
+    "setCover": "Crea una copertina",
+    "coverBadge": "COPERCHIO",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "La foto di copertina è stata modificata con successo.",
+    "optimizationInfo": "Le foto sono state ottimizzate per rispettare gli standard web"
   }
 }

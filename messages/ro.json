@@ -42,7 +42,7 @@
       "firstNamePlaceholder": "Ahmet",
       "surname": "Nume de familie",
       "surnamePlaceholder": "Yilmaz",
-      "username": "Nume de utilizator",
+      "username": "Nume utilizator",
       "usernamePlaceholder": "ahmetyilmaz",
       "confirmPassword": "Confirmați parola",
       "submit": "Registru",
@@ -85,7 +85,7 @@
     "title": "Bord",
     "welcome": "Bun venit, {name}!",
     "accountInfo": "Rezumatul contului dvs. este mai jos.",
-    "username": "Nume de utilizator",
+    "username": "Nume utilizator",
     "email": "E-mail",
     "id": "ID-ul",
     "logout": "Deconectare",
@@ -140,7 +140,8 @@
     "title": "Preferatele mele",
     "description": "Urmărește produsele care îți plac aici.",
     "noFavorites": "Nu ați adăugat încă niciun produs preferat.",
-    "browseProducts": "Răsfoiți produsele"
+    "browseProducts": "Răsfoiți produsele",
+    "fetchError": "A apărut o eroare la încărcarea favoritelor."
   },
   "settings": {
     "title": "Setări",
@@ -239,7 +240,10 @@
     "noResults": "Produs negăsit.",
     "loading": "Produsele sunt încărcate...",
     "perPage": "Pe pagină",
-    "showing": "Totalul de {total} produse între {from} și {to}."
+    "showing": "Totalul de {total} produse între {from} și {to}.",
+    "loginToFavorite": "Conectați-vă pentru a adăuga la favorite.",
+    "addedToFavorites": "Adăugat la favorite",
+    "removedFromFavorites": "Eliminat din favorite"
   },
   "productDetail": {
     "addToFavorites": "Adaugă la favorite",
@@ -307,5 +311,29 @@
     },
     "success": "Reclama a fost creată cu succes.",
     "error": "A apărut o eroare la crearea reclamei."
+  },
+  "fileUpload": {
+    "dragDrop": "Încarcă o fotografie sau un videoclip.",
+    "dragDropHint": "Trageți și plasați sau faceți clic pentru a selecta.",
+    "dropHere": "Lasă...",
+    "imageLimit": "Fotografie: maxim 10 MB",
+    "videoLimit": "Video: maxim 50 MB",
+    "uploadCount": "{current} / {max} încărcat",
+    "maxFilesError": "Puteți încărca maximum {max} fișiere media.",
+    "imageTooLarge": "Fotografia trebuie să aibă o dimensiune mai mică de 10 MB.",
+    "videoTooLarge": "Videoclipul trebuie să aibă o dimensiune mai mică de 50 MB.",
+    "optimizing": "Optimizare...",
+    "uploading": "Încărcare...",
+    "queued": "Așteptând la coadă...",
+    "uploadSuccess": "{count} fișiere media încărcate",
+    "uploadError": "Eroare la încărcare",
+    "uploadFailed": "Încărcarea a eșuat.",
+    "deleted": "Presa a fost închisă cu succes.",
+    "deleteError": "Fișierul media nu a putut fi șters.",
+    "setCover": "Faceți o copertă",
+    "coverBadge": "CAPAC",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Fotografia de copertă a fost ajustată cu succes.",
+    "optimizationInfo": "Fotografiile au fost optimizate pentru a respecta standardele web"
   }
 }

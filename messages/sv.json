@@ -140,7 +140,8 @@
     "title": "Mina favoriter",
     "description": "Följ de produkter du gillar här.",
     "noFavorites": "Du har inte lagt till några favoritprodukter än.",
-    "browseProducts": "Bläddra bland produkter"
+    "browseProducts": "Bläddra bland produkter",
+    "fetchError": "Ett fel uppstod när favoriterna lästes in."
   },
   "settings": {
     "title": "Inställningar",
@@ -237,9 +238,12 @@
     "outOfStock": "Slut i lager",
     "inStock": "I lager",
     "noResults": "Produkten hittades inte.",
-    "loading": "Produkter laddas...",
+    "loading": "Laddar produkter...",
     "perPage": "Per sida",
-    "showing": "Totalt antal {total} produkter mellan {from} och {to}."
+    "showing": "Totalt antal {total} produkter mellan {from} och {to}.",
+    "loginToFavorite": "Logga in för att lägga till i favoriter.",
+    "addedToFavorites": "Tillagd i favoriter",
+    "removedFromFavorites": "Borttagen från favoriter"
   },
   "productDetail": {
     "addToFavorites": "Lägg till i favoriter",
@@ -307,5 +311,29 @@
     },
     "success": "Annonsen skapades.",
     "error": "Ett fel uppstod när annonsen skapades."
+  },
+  "fileUpload": {
+    "dragDrop": "Ladda upp ett foto eller en video.",
+    "dragDropHint": "Dra och släpp eller klicka för att välja.",
+    "dropHere": "Lämna det...",
+    "imageLimit": "Foto: max 10 MB",
+    "videoLimit": "Video: max 50 MB",
+    "uploadCount": "{nuvarande} / {max} laddad",
+    "maxFilesError": "Du kan ladda upp maximalt {max} media.",
+    "imageTooLarge": "Fotot måste vara mindre än 10 MB.",
+    "videoTooLarge": "Videon måste vara mindre än 50 MB.",
+    "optimizing": "Optimerande...",
+    "uploading": "Belastning...",
+    "queued": "Väntar i kö...",
+    "uploadSuccess": "{count} uppladdade medier",
+    "uploadError": "Inläsningsfel",
+    "uploadFailed": "Uppladdningen misslyckades.",
+    "deleted": "Medierna stängdes av framgångsrikt.",
+    "deleteError": "Mediet kunde inte raderas.",
+    "setCover": "Gör ett omslag",
+    "coverBadge": "LOCK",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Omslagsfotot har justerats.",
+    "optimizationInfo": "Foton har optimerats för att följa webbstandarder"
   }
 }

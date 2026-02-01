@@ -140,7 +140,8 @@
     "title": "Những món tôi yêu thích",
     "description": "Theo dõi những sản phẩm bạn thích tại đây.",
     "noFavorites": "Bạn chưa thêm sản phẩm yêu thích nào.",
-    "browseProducts": "Xem sản phẩm"
+    "browseProducts": "Xem sản phẩm",
+    "fetchError": "Đã xảy ra lỗi khi tải mục yêu thích."
   },
   "settings": {
     "title": "Cài đặt",
@@ -237,9 +238,12 @@
     "outOfStock": "Hết hàng",
     "inStock": "Còn hàng",
     "noResults": "Không tìm thấy sản phẩm.",
-    "loading": "Đang tải sản phẩm...",
+    "loading": "Sản phẩm đang được tải lên...",
     "perPage": "Mỗi trang",
-    "showing": "Tổng số sản phẩm {total} nằm trong khoảng thời gian từ {from} đến {to}."
+    "showing": "Tổng số sản phẩm {total} nằm trong khoảng thời gian từ {from} đến {to}.",
+    "loginToFavorite": "Đăng nhập để thêm vào mục yêu thích.",
+    "addedToFavorites": "Đã thêm vào mục yêu thích",
+    "removedFromFavorites": "Đã xóa khỏi mục yêu thích"
   },
   "productDetail": {
     "addToFavorites": "Thêm vào mục yêu thích",
@@ -307,5 +311,29 @@
     },
     "success": "Quảng cáo đã được tạo thành công.",
     "error": "Đã xảy ra lỗi trong quá trình tạo quảng cáo."
+  },
+  "fileUpload": {
+    "dragDrop": "Tải lên ảnh hoặc video.",
+    "dragDropHint": "Kéo và thả hoặc nhấp chuột để chọn.",
+    "dropHere": "Thôi bỏ đi...",
+    "imageLimit": "Ảnh: tối đa 10MB",
+    "videoLimit": "Video: tối đa 50MB",
+    "uploadCount": "{hiện tại} / {tối đa} đã tải",
+    "maxFilesError": "Bạn có thể tải lên tối đa {max} tệp đa phương tiện.",
+    "imageTooLarge": "Ảnh phải có dung lượng nhỏ hơn 10MB.",
+    "videoTooLarge": "Video phải có dung lượng nhỏ hơn 50MB.",
+    "optimizing": "Đang tối ưu hóa...",
+    "uploading": "Đang tải...",
+    "queued": "Đang xếp hàng chờ...",
+    "uploadSuccess": "{count} phương tiện đã tải lên",
+    "uploadError": "Lỗi tải",
+    "uploadFailed": "Tải lên thất bại.",
+    "deleted": "Việc kiểm soát truyền thông đã thành công.",
+    "deleteError": "Không thể xóa phương tiện truyền thông.",
+    "setCover": "Làm bìa",
+    "coverBadge": "NẮP",
+    "videoBadge": "BĂNG HÌNH",
+    "coverUpdated": "Ảnh bìa đã được điều chỉnh thành công.",
+    "optimizationInfo": "Ảnh đã được tối ưu hóa để tuân thủ các tiêu chuẩn web."
   }
 }

@@ -140,7 +140,8 @@
     "title": "Kegemaran saya",
     "description": "Ikuti produk yang anda suka di sini.",
     "noFavorites": "Anda belum menambah sebarang produk kegemaran lagi.",
-    "browseProducts": "Layari Produk"
+    "browseProducts": "Layari Produk",
+    "fetchError": "Ralat berlaku semasa memuatkan kegemaran."
   },
   "settings": {
     "title": "Tetapan",
@@ -239,7 +240,10 @@
     "noResults": "Produk tidak dijumpai.",
     "loading": "Produk sedang dimuatkan...",
     "perPage": "Setiap halaman",
-    "showing": "Jumlah {total} produk antara {from} dan {to}."
+    "showing": "Jumlah {total} produk antara {from} dan {to}.",
+    "loginToFavorite": "Log masuk untuk menambah ke kegemaran.",
+    "addedToFavorites": "Ditambah ke kegemaran",
+    "removedFromFavorites": "Dialih keluar daripada kegemaran"
   },
   "productDetail": {
     "addToFavorites": "Tambah ke Kegemaran",
@@ -307,5 +311,29 @@
     },
     "success": "Iklan itu berjaya dihasilkan.",
     "error": "Ralat telah berlaku semasa membuat iklan."
+  },
+  "fileUpload": {
+    "dragDrop": "Muat naik foto atau video.",
+    "dragDropHint": "Seret dan lepas atau klik untuk memilih.",
+    "dropHere": "Biarkanlah...",
+    "imageLimit": "Foto: maksimum 10MB",
+    "videoLimit": "Video: maksimum 50MB",
+    "uploadCount": "{current} / {max} dimuatkan",
+    "maxFilesError": "Anda boleh memuat naik maksimum {maks} media.",
+    "imageTooLarge": "Foto mestilah lebih kecil daripada 10MB.",
+    "videoTooLarge": "Video mestilah lebih kecil daripada 50MB.",
+    "optimizing": "Mengoptimumkan...",
+    "uploading": "Memuatkan...",
+    "queued": "Menunggu dalam barisan...",
+    "uploadSuccess": "{count} media dimuat naik",
+    "uploadError": "Ralat pemuatan",
+    "uploadFailed": "Muat naik gagal.",
+    "deleted": "Media telah berjaya ditutup.",
+    "deleteError": "Media tidak dapat dipadamkan.",
+    "setCover": "Buat penutup",
+    "coverBadge": "TUTUP",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Foto muka depan telah berjaya dilaraskan.",
+    "optimizationInfo": "Foto telah dioptimumkan untuk mematuhi piawaian web"
   }
 }

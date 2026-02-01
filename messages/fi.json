@@ -140,7 +140,8 @@
     "title": "Suosikkini",
     "description": "Seuraa täällä tuotteita, joista pidät.",
     "noFavorites": "Et ole vielä lisännyt suosikkituotteita.",
-    "browseProducts": "Selaa tuotteita"
+    "browseProducts": "Selaa tuotteita",
+    "fetchError": "Suosikkien lataamisessa tapahtui virhe."
   },
   "settings": {
     "title": "Asetukset",
@@ -239,7 +240,10 @@
     "noResults": "Tuotetta ei löytynyt.",
     "loading": "Tuotteita ladataan...",
     "perPage": "Sivua kohden",
-    "showing": "Tuotteiden kokonaismäärä {total} välillä {from} ja {to}."
+    "showing": "Tuotteiden kokonaismäärä {total} välillä {from} ja {to}.",
+    "loginToFavorite": "Kirjaudu sisään lisätäksesi suosikkeihin.",
+    "addedToFavorites": "Lisätty suosikkeihin",
+    "removedFromFavorites": "Poistettu suosikeista"
   },
   "productDetail": {
     "addToFavorites": "Lisää suosikkeihin",
@@ -307,5 +311,29 @@
     },
     "success": "Mainos luotiin onnistuneesti.",
     "error": "Mainoksen luomisessa tapahtui virhe."
+  },
+  "fileUpload": {
+    "dragDrop": "Lataa kuva tai video.",
+    "dragDropHint": "Vedä ja pudota tai napsauta valitaksesi.",
+    "dropHere": "Jätä se...",
+    "imageLimit": "Kuva: enintään 10 Mt",
+    "videoLimit": "Video: enintään 50 Mt",
+    "uploadCount": "{current} / {max} ladattu",
+    "maxFilesError": "Voit ladata enintään {max} mediaa.",
+    "imageTooLarge": "Kuvan on oltava alle 10 Mt.",
+    "videoTooLarge": "Videon on oltava kooltaan alle 50 Mt.",
+    "optimizing": "Optimoidaan...",
+    "uploading": "Ladataan...",
+    "queued": "Jonossa odottamassa...",
+    "uploadSuccess": "{count} mediatiedostoa ladattu",
+    "uploadError": "Latausvirhe",
+    "uploadFailed": "Lataus epäonnistui.",
+    "deleted": "Media saatiin onnistuneesti suljettua.",
+    "deleteError": "Mediaa ei voitu poistaa.",
+    "setCover": "Tee kansi",
+    "coverBadge": "KANSI",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Kansikuvan muokkaus onnistui.",
+    "optimizationInfo": "Kuvat on optimoitu vastaamaan verkkostandardeja"
   }
 }

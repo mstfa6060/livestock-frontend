@@ -33,7 +33,7 @@
       "forgotPassword": "Zabudol/a som heslo.",
       "noAccount": "Nemáte účet?",
       "register": "Registrovať",
-      "errorDefault": "Prihlásenie zlyhalo. Skontrolujte si, prosím, svoje informácie."
+      "errorDefault": "Prihlásenie zlyhalo. Skontrolujte si svoje informácie."
     },
     "register": {
       "title": "Registrovať",
@@ -102,7 +102,7 @@
     "recentListings": "Vaše najnovšie ponuky",
     "recentMessages": "Nedávne správy",
     "noListings": "Zatiaľ ste nepridali žiadne reklamy.",
-    "noMessages": "Zatiaľ ste nedostali žiadne správy.",
+    "noMessages": "Zatiaľ ste nedostali žiadnu správu.",
     "noNotifications": "Zatiaľ ste nedostali žiadne upozornenia.",
     "viewAllListings": "Zobraziť všetky ponuky",
     "viewAllMessages": "Zobraziť všetky správy"
@@ -140,7 +140,8 @@
     "title": "Moje obľúbené",
     "description": "Sledujte tu produkty, ktoré sa vám páčia.",
     "noFavorites": "Zatiaľ ste nepridali žiadne obľúbené produkty.",
-    "browseProducts": "Prehliadať produkty"
+    "browseProducts": "Prehliadať produkty",
+    "fetchError": "Pri načítavaní obľúbených položiek sa vyskytla chyba."
   },
   "settings": {
     "title": "Nastavenia",
@@ -172,7 +173,7 @@
   },
   "home": {
     "hero": {
-      "title": "Platforma pre obchodovanie so živými zvieratami",
+      "title": "Platforma na obchodovanie so živými zvieratami",
       "subtitle": "Najspoľahlivejšia platforma na obchodovanie so živými zvieratami. Bezpečne nakupujte a predávajte svoj dobytok a ovce.",
       "cta": "Začať teraz",
       "viewListings": "Zobraziť reklamy"
@@ -239,7 +240,10 @@
     "noResults": "Produkt sa nenašiel.",
     "loading": "Produkty sa načítavajú...",
     "perPage": "Na stránku",
-    "showing": "Celkový počet produktov {total} medzi {from} a {to}."
+    "showing": "Celkový počet produktov {total} medzi {from} a {to}.",
+    "loginToFavorite": "Prihláste sa a pridajte k obľúbeným.",
+    "addedToFavorites": "Pridané k obľúbeným",
+    "removedFromFavorites": "Odstránené z obľúbených"
   },
   "productDetail": {
     "addToFavorites": "Pridať k obľúbeným",
@@ -307,5 +311,29 @@
     },
     "success": "Reklama bola úspešne vytvorená.",
     "error": "Pri vytváraní reklamy sa vyskytla chyba."
+  },
+  "fileUpload": {
+    "dragDrop": "Nahrajte fotografiu alebo video.",
+    "dragDropHint": "Pre výber použite potiahnutie a pustenie alebo kliknutie.",
+    "dropHere": "Nechaj to...",
+    "imageLimit": "Fotografia: max. 10 MB",
+    "videoLimit": "Video: max. 50 MB",
+    "uploadCount": "{current} / {max} načítané",
+    "maxFilesError": "Môžete nahrať maximálne {max} médií.",
+    "imageTooLarge": "Fotografia musí byť menšia ako 10 MB.",
+    "videoTooLarge": "Video musí byť menšie ako 50 MB.",
+    "optimizing": "Optimalizácia...",
+    "uploading": "Načítava sa...",
+    "queued": "Čakanie v rade...",
+    "uploadSuccess": "{count} nahraných médií",
+    "uploadError": "Chyba načítavania",
+    "uploadFailed": "Nahrávanie zlyhalo.",
+    "deleted": "Médium bolo úspešne vypnuté.",
+    "deleteError": "Médium sa nepodarilo odstrániť.",
+    "setCover": "Vytvorte si obal",
+    "coverBadge": "VEKO",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Titulná fotografia bola úspešne upravená.",
+    "optimizationInfo": "Fotografie boli optimalizované tak, aby spĺňali webové štandardy"
   }
 }

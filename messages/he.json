@@ -140,7 +140,8 @@
     "title": "המועדפים שלי",
     "description": "עקבו אחרי המוצרים שאתם אוהבים כאן.",
     "noFavorites": "עדיין לא הוספת מוצרים מועדפים.",
-    "browseProducts": "עיין במוצרים"
+    "browseProducts": "עיין במוצרים",
+    "fetchError": "אירעה שגיאה בעת טעינת המועדפים."
   },
   "settings": {
     "title": "הגדרות",
@@ -237,9 +238,12 @@
     "outOfStock": "אזל מהמלאי",
     "inStock": "בִּמלַאִי",
     "noResults": "המוצר לא נמצא.",
-    "loading": "טוען מוצרים...",
+    "loading": "מוצרים נטענים...",
     "perPage": "לכל עמוד",
-    "showing": "סך כל המוצרים של {total} בין {from} ל-{to}."
+    "showing": "סך כל המוצרים של {total} בין {from} ל-{to}.",
+    "loginToFavorite": "התחבר כדי להוסיף למועדפים.",
+    "addedToFavorites": "נוסף למועדפים",
+    "removedFromFavorites": "הוסר מהמועדפים"
   },
   "productDetail": {
     "addToFavorites": "הוסף למועדפים",
@@ -307,5 +311,29 @@
     },
     "success": "הפרסומת נוצרה בהצלחה.",
     "error": "אירעה שגיאה בעת יצירת המודעה."
+  },
+  "fileUpload": {
+    "dragDrop": "העלה תמונה או סרטון.",
+    "dragDropHint": "גרור ושחרר או לחץ כדי לבחור.",
+    "dropHere": "עזוב את זה...",
+    "imageLimit": "תמונה: מקסימום 10MB",
+    "videoLimit": "וידאו: מקסימום 50MB",
+    "uploadCount": "טעון {current} / {max}",
+    "maxFilesError": "ניתן להעלות מקסימום של {max} מדיה.",
+    "imageTooLarge": "התמונה חייבת להיות קטנה מ-10MB.",
+    "videoTooLarge": "הסרטון חייב להיות קטן מ-50MB.",
+    "optimizing": "אופטימיזציה...",
+    "uploading": "טְעִינָה...",
+    "queued": "מחכים בתור...",
+    "uploadSuccess": "הועלתה מדיה של {count}",
+    "uploadError": "שגיאת טעינה",
+    "uploadFailed": "ההעלאה נכשלה.",
+    "deleted": "התקשורת נסגרה בהצלחה.",
+    "deleteError": "לא ניתן היה למחוק את המדיה.",
+    "setCover": "הכינו כיסוי",
+    "coverBadge": "מִכסֶה",
+    "videoBadge": "וִידֵאוֹ",
+    "coverUpdated": "תמונת השער הותקנה בהצלחה.",
+    "optimizationInfo": "התמונות עברו אופטימיזציה כדי לעמוד בתקני האינטרנט"
   }
 }

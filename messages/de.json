@@ -57,7 +57,7 @@
       "title": "Ich habe mein Passwort vergessen.",
       "description": "Geben Sie Ihre E-Mail-Adresse ein, und wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts.",
       "submit": "Link zum Zurücksetzen senden",
-      "submitting": "Wird gesendet...",
+      "submitting": "Senden...",
       "backToLogin": "Zurück zur Startseite",
       "successTitle": "E-Mail gesendet",
       "successDescription": "Der Link zum Zurücksetzen Ihres Passworts wurde an Ihre E-Mail-Adresse gesendet. Bitte überprüfen Sie Ihren Posteingang.",
@@ -140,7 +140,8 @@
     "title": "Meine Favoriten",
     "description": "Folgen Sie hier den Produkten, die Ihnen gefallen.",
     "noFavorites": "Sie haben noch keine Lieblingsprodukte hinzugefügt.",
-    "browseProducts": "Produkte durchsuchen"
+    "browseProducts": "Produkte durchsuchen",
+    "fetchError": "Beim Laden der Favoriten ist ein Fehler aufgetreten."
   },
   "settings": {
     "title": "Einstellungen",
@@ -239,7 +240,10 @@
     "noResults": "Produkt nicht gefunden.",
     "loading": "Produkte werden geladen...",
     "perPage": "Pro Seite",
-    "showing": "Die Summe aller Produkte zwischen {von} und {bis}."
+    "showing": "Die Summe aller Produkte zwischen {von} und {bis}.",
+    "loginToFavorite": "Melde dich an, um zu den Favoriten hinzuzufügen.",
+    "addedToFavorites": "Zu Favoriten hinzugefügt",
+    "removedFromFavorites": "Aus den Favoriten entfernt"
   },
   "productDetail": {
     "addToFavorites": "Zu Favoriten hinzufügen",
@@ -307,5 +311,29 @@
     },
     "success": "Die Anzeige wurde erfolgreich erstellt.",
     "error": "Beim Erstellen der Anzeige ist ein Fehler aufgetreten."
+  },
+  "fileUpload": {
+    "dragDrop": "Laden Sie ein Foto oder ein Video hoch.",
+    "dragDropHint": "Per Drag & Drop oder durch Anklicken auswählen.",
+    "dropHere": "Lass es...",
+    "imageLimit": "Foto: max. 10 MB",
+    "videoLimit": "Video: max. 50 MB",
+    "uploadCount": "{aktuell} / {maximal} geladen",
+    "maxFilesError": "Sie können maximal {max} Medien hochladen.",
+    "imageTooLarge": "Das Foto darf nicht größer als 10 MB sein.",
+    "videoTooLarge": "Das Video darf nicht größer als 50 MB sein.",
+    "optimizing": "Optimierung...",
+    "uploading": "Laden...",
+    "queued": "Warten in der Schlange...",
+    "uploadSuccess": "{count} hochgeladene Medien",
+    "uploadError": "Ladefehler",
+    "uploadFailed": "Upload fehlgeschlagen.",
+    "deleted": "Die Medien wurden erfolgreich zum Schweigen gebracht.",
+    "deleteError": "Die Medien konnten nicht gelöscht werden.",
+    "setCover": "Erstelle ein Cover",
+    "coverBadge": "DECKEL",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Das Titelbild wurde erfolgreich angepasst.",
+    "optimizationInfo": "Die Fotos sind für die Einhaltung der Webstandards optimiert."
   }
 }

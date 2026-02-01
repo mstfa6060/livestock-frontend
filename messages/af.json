@@ -140,7 +140,8 @@
     "title": "My gunstelinge",
     "description": "Volg die produkte waarvan jy hier hou.",
     "noFavorites": "Jy het nog geen gunstelingprodukte bygevoeg nie.",
-    "browseProducts": "Blaai deur produkte"
+    "browseProducts": "Blaai deur produkte",
+    "fetchError": "'n Fout het voorgekom tydens die laai van gunstelinge."
   },
   "settings": {
     "title": "Instellings",
@@ -239,7 +240,10 @@
     "noResults": "Produk nie gevind nie.",
     "loading": "Laai produkte...",
     "perPage": "Per bladsy",
-    "showing": "Die totaal van {total} produkte tussen {from} en {to}."
+    "showing": "Die totaal van {total} produkte tussen {from} en {to}.",
+    "loginToFavorite": "Meld aan om by gunstelinge te voeg.",
+    "addedToFavorites": "By gunstelinge gevoeg",
+    "removedFromFavorites": "Verwyder van gunstelinge"
   },
   "productDetail": {
     "addToFavorites": "Voeg by gunstelinge",
@@ -307,5 +311,29 @@
     },
     "success": "Die advertensie is suksesvol geskep.",
     "error": "'n Fout het voorgekom tydens die skep van die advertensie."
+  },
+  "fileUpload": {
+    "dragDrop": "Laai 'n foto of video op.",
+    "dragDropHint": "Sleep en laat val of klik om te kies.",
+    "dropHere": "Los dit...",
+    "imageLimit": "Foto: maksimum 10MB",
+    "videoLimit": "Video: maksimum 50MB",
+    "uploadCount": "{huidige} / {maks} gelaai",
+    "maxFilesError": "Jy kan 'n maksimum van {max} media oplaai.",
+    "imageTooLarge": "Die foto moet kleiner as 10 MB wees.",
+    "videoTooLarge": "Die video moet kleiner as 50 MB wees.",
+    "optimizing": "Optimaliseer...",
+    "uploading": "Laai tans...",
+    "queued": "Wag in die ry...",
+    "uploadSuccess": "{count} media opgelaai",
+    "uploadError": "Laai fout",
+    "uploadFailed": "Oplaai het misluk.",
+    "deleted": "Die media is suksesvol afgeskakel.",
+    "deleteError": "Die media kon nie uitgevee word nie.",
+    "setCover": "Maak 'n omslag",
+    "coverBadge": "DEKSEL",
+    "videoBadge": "VIDEO",
+    "coverUpdated": "Die omslagfoto is suksesvol aangepas.",
+    "optimizationInfo": "Foto's is geoptimaliseer om aan webstandaarde te voldoen"
   }
 }

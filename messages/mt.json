@@ -140,7 +140,8 @@
     "title": "Il-favoriti tiegħi",
     "description": "Segwi l-prodotti li jogħġbuk hawn.",
     "noFavorites": "Għadek ma żidt l-ebda prodott favorit.",
-    "browseProducts": "Fittex Prodotti"
+    "browseProducts": "Fittex il-Prodotti",
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew il-favoriti."
   },
   "settings": {
     "title": "Issettjar",
@@ -239,7 +240,10 @@
     "noResults": "Prodott ma nstabx.",
     "loading": "Il-prodotti qed jiġu mgħobbija...",
     "perPage": "Għal kull paġna",
-    "showing": "It-total ta' prodotti {total} bejn {from} u {to}."
+    "showing": "It-total ta' prodotti {total} bejn {from} u {to}.",
+    "loginToFavorite": "Idħol biex iżżid mal-favoriti.",
+    "addedToFavorites": "Miżjud mal-favoriti",
+    "removedFromFavorites": "Imneħħi mill-favoriti"
   },
   "productDetail": {
     "addToFavorites": "Żid mal-Favoriti",
@@ -307,5 +311,29 @@
     },
     "success": "Ir-riklam inħoloq b'suċċess.",
     "error": "Seħħ żball waqt il-ħolqien tar-riklam."
+  },
+  "fileUpload": {
+    "dragDrop": "Tella’ ritratt jew vidjo.",
+    "dragDropHint": "Iddreggja u qiegħed jew ikklikkja biex tagħżel.",
+    "dropHere": "Ħalliha...",
+    "imageLimit": "Ritratt: massimu ta' 10MB",
+    "videoLimit": "Vidjo: massimu ta' 50MB",
+    "uploadCount": "{kurrenti} / {max} mgħobbija",
+    "maxFilesError": "Tista' ttella' massimu ta' {max} midja.",
+    "imageTooLarge": "Ir-ritratt irid ikun iżgħar minn 10MB.",
+    "videoTooLarge": "Il-vidjow irid ikun iżgħar minn 50MB.",
+    "optimizing": "Ottimizzazzjoni...",
+    "uploading": "Qed jitgħabba...",
+    "queued": "Nistenna fil-kju...",
+    "uploadSuccess": "{count} midja mtellgħa",
+    "uploadError": "Żball fit-tagħbija",
+    "uploadFailed": "It-tlugħ falla.",
+    "deleted": "Il-midja ngħalqet b'suċċess.",
+    "deleteError": "Il-midja ma setgħetx titħassar.",
+    "setCover": "Agħmel kopertura",
+    "coverBadge": "GĦATU",
+    "videoBadge": "VIDJOW",
+    "coverUpdated": "Ir-ritratt tal-qoxra ġie aġġustat b'suċċess.",
+    "optimizationInfo": "Ir-ritratti ġew ottimizzati biex jikkonformaw mal-istandards tal-web"
   }
 }

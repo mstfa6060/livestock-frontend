@@ -140,7 +140,8 @@
     "title": "내가 좋아하는 것들",
     "description": "마음에 드는 제품을 여기에서 팔로우하세요.",
     "noFavorites": "아직 즐겨찾는 제품을 추가하지 않으셨습니다.",
-    "browseProducts": "제품 둘러보기"
+    "browseProducts": "제품 둘러보기",
+    "fetchError": "즐겨찾기를 불러오는 중 오류가 발생했습니다."
   },
   "settings": {
     "title": "설정",
@@ -239,7 +240,10 @@
     "noResults": "제품을 찾을 수 없습니다.",
     "loading": "제품을 로딩하는 중입니다...",
     "perPage": "페이지당",
-    "showing": "{from}부터 {to}까지의 제품 총 개수는 {total}개입니다."
+    "showing": "{from}부터 {to}까지의 제품 총 개수는 {total}개입니다.",
+    "loginToFavorite": "즐겨찾기에 추가하려면 로그인하세요.",
+    "addedToFavorites": "즐겨찾기에 추가됨",
+    "removedFromFavorites": "즐겨찾기에서 삭제됨"
   },
   "productDetail": {
     "addToFavorites": "즐겨찾기에 추가",
@@ -307,5 +311,29 @@
     },
     "success": "광고 제작이 성공적으로 완료되었습니다.",
     "error": "광고 제작 중 오류가 발생했습니다."
+  },
+  "fileUpload": {
+    "dragDrop": "사진이나 동영상을 업로드하세요.",
+    "dragDropHint": "드래그 앤 드롭하거나 클릭하여 선택하세요.",
+    "dropHere": "그냥 놔둬...",
+    "imageLimit": "사진: 최대 10MB",
+    "videoLimit": "동영상: 최대 50MB",
+    "uploadCount": "현재 로드됨 / 최대 로드됨",
+    "maxFilesError": "최대 {max}개의 미디어를 업로드할 수 있습니다.",
+    "imageTooLarge": "사진 파일 크기는 10MB 미만이어야 합니다.",
+    "videoTooLarge": "동영상 파일 크기는 50MB 미만이어야 합니다.",
+    "optimizing": "최적화 중...",
+    "uploading": "로딩 중...",
+    "queued": "줄 서서 기다리는 중...",
+    "uploadSuccess": "{count}개의 미디어가 업로드되었습니다.",
+    "uploadError": "로딩 오류",
+    "uploadFailed": "업로드에 실패했습니다.",
+    "deleted": "언론은 성공적으로 차단되었다.",
+    "deleteError": "해당 미디어를 삭제할 수 없었습니다.",
+    "setCover": "표지를 만드세요",
+    "coverBadge": "뚜껑",
+    "videoBadge": "동영상",
+    "coverUpdated": "표지 사진이 성공적으로 조정되었습니다.",
+    "optimizationInfo": "사진은 웹 표준을 준수하도록 최적화되었습니다."
   }
 }
