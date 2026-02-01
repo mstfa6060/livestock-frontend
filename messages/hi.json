@@ -252,6 +252,9 @@
     "report": "एक समस्या का आख्या",
     "description": "स्पष्टीकरण",
     "specifications": "विशेषताएँ",
+    "category": "वर्ग",
+    "brand": "ब्रांड",
+    "condition": "परिस्थिति",
     "location": "जगह",
     "shipping": "माल",
     "shippingAvailable": "इसे कार्गो द्वारा भेजा जा सकता है।",
@@ -264,8 +267,16 @@
     "maxOrder": "अधिकतम ऑर्डर",
     "publishedAt": "प्रकाशन तिथि",
     "views": "देखा गया",
+    "reviews": "मूल्यांकन",
     "similarProducts": "मिलते-जुलते उत्पाद",
-    "sellerProducts": "विक्रेता के अन्य उत्पाद"
+    "sellerProducts": "विक्रेता के अन्य उत्पाद",
+    "contactSeller": "विक्रेता से संपर्क करें",
+    "loginRequired": "पसंदीदा सूची में जोड़ने के लिए लॉग इन करें।",
+    "addedToFavorites": "पसंदीदा में जोड़ा गया",
+    "removedFromFavorites": "पसंदीदा सूची से हटा दिया गया",
+    "linkCopied": "लिंक कॉपी कर लिया गया है।",
+    "messagingComingSoon": "मैसेजिंग फीचर जल्द ही आ रहा है।",
+    "productNotFound": "उत्पाद नहीं मिला।"
   },
   "seller": {
     "title": "विक्रेता की जानकारी",
@@ -310,7 +321,22 @@
       "category": "एक श्रेणी चुनें।"
     },
     "success": "विज्ञापन सफलतापूर्वक तैयार हो गया।",
-    "error": "विज्ञापन बनाते समय एक त्रुटि उत्पन्न हुई।"
+    "error": "विज्ञापन बनाते समय एक त्रुटि उत्पन्न हुई।",
+    "creating": "उत्पाद का निर्माण कार्य चल रहा है...",
+    "uploadingImages": "तस्वीरें लोड हो रही हैं...",
+    "uploadingImage": "छवि लोड हो रही है।",
+    "imageUploadFailed": "छवि लोड नहीं हो सकी।",
+    "imagesUploaded": "सभी छवियां सफलतापूर्वक अपलोड हो गईं",
+    "draftSaved": "ड्राफ्ट सहेज लिया गया",
+    "productCreated": "उत्पाद का निर्माण सफलतापूर्वक हो गया।",
+    "creationFailed": "उत्पाद बनाया नहीं जा सका। कृपया पुनः प्रयास करें।",
+    "errors": {
+      "titleRequired": "विज्ञापन का शीर्षक अनिवार्य है।",
+      "shortDescriptionRequired": "संक्षिप्त विवरण आवश्यक है।",
+      "descriptionRequired": "विस्तृत स्पष्टीकरण आवश्यक है।",
+      "categoryRequired": "श्रेणी का चयन अनिवार्य है।",
+      "priceRequired": "मान्य मूल्य दर्ज करें।"
+    }
   },
   "fileUpload": {
     "dragDrop": "एक फोटो या वीडियो अपलोड करें।",
@@ -334,6 +360,6 @@
     "coverBadge": "ढक्कन",
     "videoBadge": "वीडियो",
     "coverUpdated": "कवर फोटो सफलतापूर्वक समायोजित हो गया है।",
-    "optimizationInfo": "वेब मानकों के अनुरूप तस्वीरों को अनुकूलित किया गया है।"
+    "optimizationInfo": "फ़ोटो को वेब मानकों के अनुरूप अनुकूलित किया गया है।"
   }
 }

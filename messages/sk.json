@@ -33,7 +33,7 @@
       "forgotPassword": "Zabudol/a som heslo.",
       "noAccount": "Nemáte účet?",
       "register": "Registrovať",
-      "errorDefault": "Prihlásenie zlyhalo. Skontrolujte si svoje informácie."
+      "errorDefault": "Prihlásenie zlyhalo. Skontrolujte si, prosím, svoje informácie."
     },
     "register": {
       "title": "Registrovať",
@@ -188,7 +188,7 @@
         "description": "Hovädzí dobytok, ovce a ďalšie. Ľahko nájdite zviera, ktoré hľadáte."
       },
       "support": {
-        "title": "Podpora 24 hodín denne, 7 dní v týždni",
+        "title": "Podpora 24/7",
         "description": "Sme tu vždy pre vaše otázky. Naša linka podpory je aktívna."
       }
     },
@@ -252,6 +252,9 @@
     "report": "Nahlásiť problém",
     "description": "Vysvetlenie",
     "specifications": "Funkcie",
+    "category": "Kategória",
+    "brand": "Značka",
+    "condition": "Situácia",
     "location": "Poloha",
     "shipping": "Náklad",
     "shippingAvailable": "Môže byť prepravené nákladom.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maximálna objednávka",
     "publishedAt": "Dátum vydania",
     "views": "Zobrazené",
+    "reviews": "hodnotenie",
     "similarProducts": "Podobné produkty",
-    "sellerProducts": "Ďalšie produkty predajcu"
+    "sellerProducts": "Ďalšie produkty predajcu",
+    "contactSeller": "Kontaktujte predajcu",
+    "loginRequired": "Prihláste sa a pridajte k obľúbeným.",
+    "addedToFavorites": "Pridané k obľúbeným",
+    "removedFromFavorites": "Odstránené z obľúbených",
+    "linkCopied": "Odkaz bol skopírovaný.",
+    "messagingComingSoon": "Funkcia zasielania správ bude čoskoro k dispozícii.",
+    "productNotFound": "Produkt sa nenašiel."
   },
   "seller": {
     "title": "Informácie o predajcovi",
@@ -310,7 +321,22 @@
       "category": "Vyberte kategóriu."
     },
     "success": "Reklama bola úspešne vytvorená.",
-    "error": "Pri vytváraní reklamy sa vyskytla chyba."
+    "error": "Pri vytváraní reklamy sa vyskytla chyba.",
+    "creating": "Produkt sa vytvára...",
+    "uploadingImages": "Načítavajú sa obrázky...",
+    "uploadingImage": "Obrázok sa načítava.",
+    "imageUploadFailed": "Obrázok sa nepodarilo načítať.",
+    "imagesUploaded": "Všetky obrázky boli úspešne nahrané",
+    "draftSaved": "Koncept bol uložený",
+    "productCreated": "Produkt bol úspešne vytvorený.",
+    "creationFailed": "Produkt sa nepodarilo vytvoriť. Skúste to znova.",
+    "errors": {
+      "titleRequired": "Názov reklamy je povinný.",
+      "shortDescriptionRequired": "Vyžaduje sa stručný popis.",
+      "descriptionRequired": "Vyžaduje sa podrobné vysvetlenie.",
+      "categoryRequired": "Výber kategórie je povinný.",
+      "priceRequired": "Zadajte platnú cenu."
+    }
   },
   "fileUpload": {
     "dragDrop": "Nahrajte fotografiu alebo video.",
@@ -334,6 +360,6 @@
     "coverBadge": "VEKO",
     "videoBadge": "VIDEO",
     "coverUpdated": "Titulná fotografia bola úspešne upravená.",
-    "optimizationInfo": "Fotografie boli optimalizované tak, aby spĺňali webové štandardy"
+    "optimizationInfo": "Fotografie sú optimalizované tak, aby spĺňali webové štandardy"
   }
 }

@@ -238,7 +238,7 @@
     "outOfStock": "Utsolgt",
     "inStock": "På lager",
     "noResults": "Produktet ble ikke funnet.",
-    "loading": "Produktene lastes inn ...",
+    "loading": "Laster inn produkter ...",
     "perPage": "Per side",
     "showing": "Totalt antall {total} produkter mellom {from} og {to}.",
     "loginToFavorite": "Logg inn for å legge til i favoritter.",
@@ -252,6 +252,9 @@
     "report": "Rapporter et problem",
     "description": "Forklaring",
     "specifications": "Funksjoner",
+    "category": "Kategori",
+    "brand": "Merke",
+    "condition": "Situasjon",
     "location": "Sted",
     "shipping": "Last",
     "shippingAvailable": "Kan sendes med gods.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maksimal bestilling",
     "publishedAt": "Publikasjonsdato",
     "views": "Sett",
+    "reviews": "evaluering",
     "similarProducts": "Lignende produkter",
-    "sellerProducts": "Selgers andre produkter"
+    "sellerProducts": "Selgers andre produkter",
+    "contactSeller": "Kontakt selgeren",
+    "loginRequired": "Logg inn for å legge til i favoritter.",
+    "addedToFavorites": "Lagt til i favoritter",
+    "removedFromFavorites": "Fjernet fra favoritter",
+    "linkCopied": "Lenken har blitt kopiert.",
+    "messagingComingSoon": "Meldingsfunksjonen kommer snart.",
+    "productNotFound": "Produktet ble ikke funnet."
   },
   "seller": {
     "title": "Selgerinformasjon",
@@ -310,7 +321,22 @@
       "category": "Velg en kategori."
     },
     "success": "Annonsen ble opprettet.",
-    "error": "Det oppsto en feil under oppretting av annonsen."
+    "error": "Det oppsto en feil under oppretting av annonsen.",
+    "creating": "Produktet blir laget ...",
+    "uploadingImages": "Bildene lastes inn ...",
+    "uploadingImage": "Bildet lastes inn.",
+    "imageUploadFailed": "Bildet kunne ikke lastes inn.",
+    "imagesUploaded": "Alle bildene er lastet opp",
+    "draftSaved": "Utkast lagret",
+    "productCreated": "Produktet ble opprettet.",
+    "creationFailed": "Produktet kunne ikke opprettes. Prøv på nytt.",
+    "errors": {
+      "titleRequired": "Annonsetittel er obligatorisk.",
+      "shortDescriptionRequired": "En kort beskrivelse er nødvendig.",
+      "descriptionRequired": "En detaljert forklaring er nødvendig.",
+      "categoryRequired": "Valg av kategori er obligatorisk.",
+      "priceRequired": "Skriv inn en gyldig pris."
+    }
   },
   "fileUpload": {
     "dragDrop": "Last opp et bilde eller en video.",
@@ -318,7 +344,7 @@
     "dropHere": "La det være ...",
     "imageLimit": "Foto: maks 10 MB",
     "videoLimit": "Video: maks 50 MB",
-    "uploadCount": "{current} / {max} lastet",
+    "uploadCount": "{gjeldende} / {maks} lastet",
     "maxFilesError": "Du kan laste opp maksimalt {max} medier.",
     "imageTooLarge": "Bildet må være mindre enn 10 MB.",
     "videoTooLarge": "Videoen må være mindre enn 50 MB.",

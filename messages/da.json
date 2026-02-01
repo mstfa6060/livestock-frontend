@@ -252,6 +252,9 @@
     "report": "Rapportér et problem",
     "description": "Forklaring",
     "specifications": "Funktioner",
+    "category": "Kategori",
+    "brand": "Mærke",
+    "condition": "Situation",
     "location": "Beliggenhed",
     "shipping": "Last",
     "shippingAvailable": "Kan sendes med fragt.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maksimal ordre",
     "publishedAt": "Udgivelsesdato",
     "views": "Set",
+    "reviews": "evaluering",
     "similarProducts": "Lignende produkter",
-    "sellerProducts": "Sælgers andre produkter"
+    "sellerProducts": "Sælgers andre produkter",
+    "contactSeller": "Kontakt sælgeren",
+    "loginRequired": "Log ind for at tilføje til favoritter.",
+    "addedToFavorites": "Tilføjet til favoritter",
+    "removedFromFavorites": "Fjernet fra favoritter",
+    "linkCopied": "Linket er blevet kopieret.",
+    "messagingComingSoon": "Beskedfunktion kommer snart.",
+    "productNotFound": "Produktet blev ikke fundet."
   },
   "seller": {
     "title": "Sælgeroplysninger",
@@ -310,7 +321,22 @@
       "category": "Vælg en kategori."
     },
     "success": "Annoncen blev oprettet.",
-    "error": "Der opstod en fejl under oprettelsen af annoncen."
+    "error": "Der opstod en fejl under oprettelsen af annoncen.",
+    "creating": "Produktet bliver skabt...",
+    "uploadingImages": "Billeder indlæses...",
+    "uploadingImage": "Billedet indlæses.",
+    "imageUploadFailed": "Billedet kunne ikke indlæses.",
+    "imagesUploaded": "Alle billeder er uploadet",
+    "draftSaved": "Udkast gemt",
+    "productCreated": "Produktet blev oprettet.",
+    "creationFailed": "Produktet kunne ikke oprettes. Prøv igen.",
+    "errors": {
+      "titleRequired": "Annoncetitel er obligatorisk.",
+      "shortDescriptionRequired": "En kort beskrivelse er påkrævet.",
+      "descriptionRequired": "En detaljeret forklaring er påkrævet.",
+      "categoryRequired": "Valg af kategori er obligatorisk.",
+      "priceRequired": "Indtast en gyldig pris."
+    }
   },
   "fileUpload": {
     "dragDrop": "Upload et foto eller en video.",
@@ -334,6 +360,6 @@
     "coverBadge": "LÅG",
     "videoBadge": "VIDEO",
     "coverUpdated": "Forsidebilledet er blevet justeret.",
-    "optimizationInfo": "Billederne er optimeret til at overholde webstandarder"
+    "optimizationInfo": "Billeder er optimeret til at overholde webstandarder"
   }
 }

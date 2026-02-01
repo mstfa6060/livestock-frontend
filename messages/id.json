@@ -252,6 +252,9 @@
     "report": "Laporkan masalah",
     "description": "Penjelasan",
     "specifications": "Fitur",
+    "category": "Kategori",
+    "brand": "Merek",
+    "condition": "Situasi",
     "location": "Lokasi",
     "shipping": "Muatan",
     "shippingAvailable": "Dapat dikirim melalui jasa pengiriman kargo.",
@@ -264,8 +267,16 @@
     "maxOrder": "Pesanan maksimum",
     "publishedAt": "Tanggal penerbitan",
     "views": "Dilihat",
+    "reviews": "evaluasi",
     "similarProducts": "Produk Serupa",
-    "sellerProducts": "Produk Lain dari Penjual"
+    "sellerProducts": "Produk Lain dari Penjual",
+    "contactSeller": "Hubungi penjual",
+    "loginRequired": "Masuk untuk menambahkan ke favorit.",
+    "addedToFavorites": "Ditambahkan ke favorit",
+    "removedFromFavorites": "Dihapus dari favorit",
+    "linkCopied": "Tautan telah disalin.",
+    "messagingComingSoon": "Fitur perpesanan akan segera hadir.",
+    "productNotFound": "Produk tidak ditemukan."
   },
   "seller": {
     "title": "Informasi Penjual",
@@ -310,7 +321,22 @@
       "category": "Pilih kategori."
     },
     "success": "Iklan tersebut berhasil dibuat.",
-    "error": "Terjadi kesalahan saat membuat iklan."
+    "error": "Terjadi kesalahan saat membuat iklan.",
+    "creating": "Produk sedang dibuat...",
+    "uploadingImages": "Gambar sedang dimuat...",
+    "uploadingImage": "Gambar sedang dimuat.",
+    "imageUploadFailed": "Gambar tidak dapat dimuat.",
+    "imagesUploaded": "Semua gambar berhasil diunggah.",
+    "draftSaved": "Draf tersimpan",
+    "productCreated": "Produk tersebut berhasil dibuat.",
+    "creationFailed": "Produk tidak dapat dibuat. Silakan coba lagi.",
+    "errors": {
+      "titleRequired": "Judul iklan wajib diisi.",
+      "shortDescriptionRequired": "Deskripsi singkat diperlukan.",
+      "descriptionRequired": "Penjelasan rinci diperlukan.",
+      "categoryRequired": "Pemilihan kategori bersifat wajib.",
+      "priceRequired": "Masukkan harga yang valid."
+    }
   },
   "fileUpload": {
     "dragDrop": "Unggah foto atau video.",

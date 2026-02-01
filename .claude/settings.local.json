@@ -37,7 +37,10 @@
       "Bash(findstr:*)",
       "Bash(tasklist:*)",
       "Bash(taskkill:*)",
-      "Bash(if exist \".next\\\\dev\\\\lock\" del \".next\\\\dev\\\\lock\")"
+      "Bash(if exist \".next\\\\dev\\\\lock\" del \".next\\\\dev\\\\lock\")",
+      "Bash(xargs ls:*)",
+      "Bash(node:*)",
+      "Bash(npm run translate:missing:*)"
     ]
   }
 }

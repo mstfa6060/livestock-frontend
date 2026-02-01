@@ -238,7 +238,7 @@
     "outOfStock": "موجود نیست",
     "inStock": "موجود در انبار",
     "noResults": "محصول یافت نشد.",
-    "loading": "در حال بارگیری محصولات...",
+    "loading": "محصولات در حال بارگذاری هستند...",
     "perPage": "به ازای هر صفحه",
     "showing": "مجموع {total} محصولات بین {from} و {to}.",
     "loginToFavorite": "برای افزودن به علاقه‌مندی‌ها، وارد شوید.",
@@ -252,6 +252,9 @@
     "report": "گزارش مشکل",
     "description": "توضیح",
     "specifications": "ویژگی‌ها",
+    "category": "دسته بندی",
+    "brand": "برند",
+    "condition": "وضعیت",
     "location": "مکان",
     "shipping": "محموله",
     "shippingAvailable": "قابل ارسال با باربری.",
@@ -264,8 +267,16 @@
     "maxOrder": "حداکثر سفارش",
     "publishedAt": "تاریخ انتشار",
     "views": "مشاهده شده",
+    "reviews": "ارزیابی",
     "similarProducts": "محصولات مشابه",
-    "sellerProducts": "سایر محصولات فروشنده"
+    "sellerProducts": "سایر محصولات فروشنده",
+    "contactSeller": "با فروشنده تماس بگیرید",
+    "loginRequired": "برای افزودن به علاقه‌مندی‌ها، وارد شوید.",
+    "addedToFavorites": "به علاقه‌مندی‌ها اضافه شد",
+    "removedFromFavorites": "از موارد دلخواه حذف شد",
+    "linkCopied": "لینک کپی شده است.",
+    "messagingComingSoon": "قابلیت پیام‌رسانی به زودی اضافه می‌شود.",
+    "productNotFound": "محصول یافت نشد."
   },
   "seller": {
     "title": "اطلاعات فروشنده",
@@ -310,7 +321,22 @@
       "category": "یک دسته بندی انتخاب کنید."
     },
     "success": "آگهی با موفقیت ایجاد شد.",
-    "error": "هنگام ایجاد آگهی خطایی رخ داد."
+    "error": "هنگام ایجاد آگهی خطایی رخ داد.",
+    "creating": "محصول در حال تولید است...",
+    "uploadingImages": "تصاویر در حال بارگذاری هستند...",
+    "uploadingImage": "تصویر در حال بارگذاری است.",
+    "imageUploadFailed": "تصویر قابل بارگذاری نبود.",
+    "imagesUploaded": "همه تصاویر با موفقیت آپلود شدند",
+    "draftSaved": "پیش‌نویس ذخیره شد",
+    "productCreated": "محصول با موفقیت ایجاد شد.",
+    "creationFailed": "محصول ایجاد نشد. لطفا دوباره امتحان کنید.",
+    "errors": {
+      "titleRequired": "عنوان آگهی الزامی است.",
+      "shortDescriptionRequired": "شرح مختصری لازم است.",
+      "descriptionRequired": "توضیح مفصلی لازم است.",
+      "categoryRequired": "انتخاب دسته بندی الزامی است.",
+      "priceRequired": "قیمت معتبر وارد کنید."
+    }
   },
   "fileUpload": {
     "dragDrop": "عکس یا ویدیو آپلود کنید.",

@@ -238,7 +238,7 @@
     "outOfStock": "Nav noliktavā",
     "inStock": "Noliktavā",
     "noResults": "Produkts nav atrasts.",
-    "loading": "Produkti tiek ielādēti...",
+    "loading": "Notiek produktu ielāde...",
     "perPage": "Katrā lapā",
     "showing": "Kopējais produktu skaits {total} no {from} līdz {to}.",
     "loginToFavorite": "Piesakieties, lai pievienotu izlasei.",
@@ -252,6 +252,9 @@
     "report": "Ziņot par problēmu",
     "description": "Paskaidrojums",
     "specifications": "Funkcijas",
+    "category": "Kategorija",
+    "brand": "Zīmols",
+    "condition": "Situācija",
     "location": "Atrašanās vieta",
     "shipping": "Krava",
     "shippingAvailable": "Var piegādāt ar kravu.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maksimālais pasūtījums",
     "publishedAt": "Publicēšanas datums",
     "views": "Skatīts",
+    "reviews": "novērtējums",
     "similarProducts": "Līdzīgi produkti",
-    "sellerProducts": "Pārdevēja citi produkti"
+    "sellerProducts": "Pārdevēja citi produkti",
+    "contactSeller": "Sazinieties ar pārdevēju",
+    "loginRequired": "Piesakieties, lai pievienotu izlasei.",
+    "addedToFavorites": "Pievienots izlasei",
+    "removedFromFavorites": "Noņemts no izlases",
+    "linkCopied": "Saite ir nokopēta.",
+    "messagingComingSoon": "Ziņojumapmaiņas funkcija būs pieejama drīzumā.",
+    "productNotFound": "Produkts nav atrasts."
   },
   "seller": {
     "title": "Pārdevēja informācija",
@@ -310,7 +321,22 @@
       "category": "Izvēlieties kategoriju."
     },
     "success": "Reklāma ir veiksmīgi izveidota.",
-    "error": "Veidojot reklāmu, radās kļūda."
+    "error": "Veidojot reklāmu, radās kļūda.",
+    "creating": "Produkts tiek veidots...",
+    "uploadingImages": "Attēli tiek ielādēti...",
+    "uploadingImage": "Attēls tiek ielādēts.",
+    "imageUploadFailed": "Attēlu nevarēja ielādēt.",
+    "imagesUploaded": "Visi attēli ir veiksmīgi augšupielādēti",
+    "draftSaved": "Melnraksts saglabāts",
+    "productCreated": "Produkts tika veiksmīgi izveidots.",
+    "creationFailed": "Produktu nevarēja izveidot. Lūdzu, mēģiniet vēlreiz.",
+    "errors": {
+      "titleRequired": "Sludinājuma nosaukums ir obligāts.",
+      "shortDescriptionRequired": "Nepieciešams īss apraksts.",
+      "descriptionRequired": "Nepieciešams detalizēts skaidrojums.",
+      "categoryRequired": "Kategorijas izvēle ir obligāta.",
+      "priceRequired": "Ievadiet derīgu cenu."
+    }
   },
   "fileUpload": {
     "dragDrop": "Augšupielādējiet fotoattēlu vai videoklipu.",

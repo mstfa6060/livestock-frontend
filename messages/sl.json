@@ -121,7 +121,7 @@
     "title": "Moji oglasi",
     "description": "Upravljajte vse svoje oglase od tukaj.",
     "noListings": "Še niste dodali nobenega oglasa.",
-    "createFirst": "Ustvarite svoj prvi oglas.",
+    "createFirst": "Ustvarite svoj prvi vnos.",
     "filters": {
       "all": "Vsi oni",
       "active": "Aktivno",
@@ -252,6 +252,9 @@
     "report": "Prijavi težavo",
     "description": "Razlaga",
     "specifications": "Značilnosti",
+    "category": "Kategorija",
+    "brand": "Blagovna znamka",
+    "condition": "Situacija",
     "location": "Lokacija",
     "shipping": "Tovor",
     "shippingAvailable": "Lahko se pošlje s tovorom.",
@@ -264,8 +267,16 @@
     "maxOrder": "Največje naročilo",
     "publishedAt": "Datum objave",
     "views": "Ogledano",
+    "reviews": "vrednotenje",
     "similarProducts": "Podobni izdelki",
-    "sellerProducts": "Drugi izdelki prodajalca"
+    "sellerProducts": "Drugi izdelki prodajalca",
+    "contactSeller": "Kontaktirajte prodajalca",
+    "loginRequired": "Prijavite se, da dodate med priljubljene.",
+    "addedToFavorites": "Dodano med priljubljene",
+    "removedFromFavorites": "Odstranjeno iz priljubljenih",
+    "linkCopied": "Povezava je bila kopirana.",
+    "messagingComingSoon": "Funkcija sporočanja kmalu na voljo.",
+    "productNotFound": "Izdelka ni bilo mogoče najti."
   },
   "seller": {
     "title": "Podatki o prodajalcu",
@@ -304,13 +315,28 @@
       "weightUnit": "Enota teže"
     },
     "placeholders": {
-      "title": "Primer: 2-letna holštajnska krava",
+      "title": "Primer: 2-letna krava holštajnske pasme",
       "shortDescription": "Opis izdelka (največ 200 znakov)",
       "description": "Navedite podrobne informacije o izdelku ...",
       "category": "Izberite kategorijo."
     },
     "success": "Oglas je bil uspešno ustvarjen.",
-    "error": "Pri ustvarjanju oglasa je prišlo do napake."
+    "error": "Pri ustvarjanju oglasa je prišlo do napake.",
+    "creating": "Izdelek se ustvarja ...",
+    "uploadingImages": "Slike se nalagajo ...",
+    "uploadingImage": "Slika se nalaga.",
+    "imageUploadFailed": "Slike ni bilo mogoče naložiti.",
+    "imagesUploaded": "Vse slike so bile uspešno naložene",
+    "draftSaved": "Osnutek shranjen",
+    "productCreated": "Izdelek je bil uspešno ustvarjen.",
+    "creationFailed": "Izdelka ni bilo mogoče ustvariti. Poskusite znova.",
+    "errors": {
+      "titleRequired": "Naslov oglasa je obvezen.",
+      "shortDescriptionRequired": "Potreben je kratek opis.",
+      "descriptionRequired": "Potrebna je podrobna razlaga.",
+      "categoryRequired": "Izbira kategorije je obvezna.",
+      "priceRequired": "Vnesite veljavno ceno."
+    }
   },
   "fileUpload": {
     "dragDrop": "Naložite fotografijo ali videoposnetek.",
@@ -334,6 +360,6 @@
     "coverBadge": "POKROV",
     "videoBadge": "VIDEO",
     "coverUpdated": "Naslovna fotografija je bila uspešno prilagojena.",
-    "optimizationInfo": "Fotografije so bile optimizirane v skladu s spletnimi standardi"
+    "optimizationInfo": "Fotografije so optimizirane v skladu s spletnimi standardi"
   }
 }

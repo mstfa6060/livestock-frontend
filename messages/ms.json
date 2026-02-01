@@ -102,7 +102,7 @@
     "recentListings": "Penyenaraian Terkini Anda",
     "recentMessages": "Mesej Terkini",
     "noListings": "Anda belum menambah sebarang iklan lagi.",
-    "noMessages": "Anda belum menerima mesej lagi.",
+    "noMessages": "Anda belum menerima sebarang mesej lagi.",
     "noNotifications": "Anda belum menerima sebarang pemberitahuan lagi.",
     "viewAllListings": "Lihat Semua Penyenaraian",
     "viewAllMessages": "Lihat semua mesej"
@@ -252,6 +252,9 @@
     "report": "Laporkan masalah",
     "description": "Penjelasan",
     "specifications": "Ciri-ciri",
+    "category": "Kategori",
+    "brand": "Jenama",
+    "condition": "Situasi",
     "location": "Lokasi",
     "shipping": "Kargo",
     "shippingAvailable": "Boleh dihantar melalui kargo.",
@@ -264,8 +267,16 @@
     "maxOrder": "Pesanan maksimum",
     "publishedAt": "Tarikh penerbitan",
     "views": "Dilihat",
+    "reviews": "penilaian",
     "similarProducts": "Produk Serupa",
-    "sellerProducts": "Produk Lain Penjual"
+    "sellerProducts": "Produk Lain Penjual",
+    "contactSeller": "Hubungi penjual",
+    "loginRequired": "Log masuk untuk menambah ke kegemaran.",
+    "addedToFavorites": "Ditambah ke kegemaran",
+    "removedFromFavorites": "Dialih keluar daripada kegemaran",
+    "linkCopied": "Pautan telah disalin.",
+    "messagingComingSoon": "Ciri pemesejan akan datang tidak lama lagi.",
+    "productNotFound": "Produk tidak dijumpai."
   },
   "seller": {
     "title": "Maklumat Penjual",
@@ -310,7 +321,22 @@
       "category": "Pilih kategori."
     },
     "success": "Iklan itu berjaya dihasilkan.",
-    "error": "Ralat telah berlaku semasa membuat iklan."
+    "error": "Ralat telah berlaku semasa membuat iklan.",
+    "creating": "Produk sedang dihasilkan...",
+    "uploadingImages": "Imej sedang dimuatkan...",
+    "uploadingImage": "Imej sedang dimuatkan.",
+    "imageUploadFailed": "Imej tidak dapat dimuatkan.",
+    "imagesUploaded": "Semua imej telah berjaya dimuat naik",
+    "draftSaved": "Draf disimpan",
+    "productCreated": "Produk tersebut berjaya dihasilkan.",
+    "creationFailed": "Produk tidak dapat dicipta. Sila cuba lagi.",
+    "errors": {
+      "titleRequired": "Tajuk iklan adalah wajib.",
+      "shortDescriptionRequired": "Penerangan ringkas diperlukan.",
+      "descriptionRequired": "Penjelasan terperinci diperlukan.",
+      "categoryRequired": "Pemilihan kategori adalah wajib.",
+      "priceRequired": "Masukkan harga yang sah."
+    }
   },
   "fileUpload": {
     "dragDrop": "Muat naik foto atau video.",

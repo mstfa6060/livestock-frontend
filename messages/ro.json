@@ -238,7 +238,7 @@
     "outOfStock": "Epuizat",
     "inStock": "În stoc",
     "noResults": "Produs negăsit.",
-    "loading": "Produsele sunt încărcate...",
+    "loading": "Se încarcă produsele...",
     "perPage": "Pe pagină",
     "showing": "Totalul de {total} produse între {from} și {to}.",
     "loginToFavorite": "Conectați-vă pentru a adăuga la favorite.",
@@ -252,6 +252,9 @@
     "report": "Raportați o problemă",
     "description": "Explicaţie",
     "specifications": "Caracteristici",
+    "category": "Categorie",
+    "brand": "Marca",
+    "condition": "Situaţie",
     "location": "Locaţie",
     "shipping": "Marfă",
     "shippingAvailable": "Poate fi transportat prin cargo.",
@@ -264,8 +267,16 @@
     "maxOrder": "Comandă maximă",
     "publishedAt": "Data publicării",
     "views": "Vizualizat",
+    "reviews": "evaluare",
     "similarProducts": "Produse similare",
-    "sellerProducts": "Alte produse ale vânzătorului"
+    "sellerProducts": "Alte produse ale vânzătorului",
+    "contactSeller": "Contactați vânzătorul",
+    "loginRequired": "Conectați-vă pentru a adăuga la favorite.",
+    "addedToFavorites": "Adăugat la favorite",
+    "removedFromFavorites": "Eliminat din favorite",
+    "linkCopied": "Linkul a fost copiat.",
+    "messagingComingSoon": "Funcția de mesagerie va fi disponibilă în curând.",
+    "productNotFound": "Produs negăsit."
   },
   "seller": {
     "title": "Informații despre vânzător",
@@ -310,7 +321,22 @@
       "category": "Selectați o categorie."
     },
     "success": "Reclama a fost creată cu succes.",
-    "error": "A apărut o eroare la crearea reclamei."
+    "error": "A apărut o eroare la crearea reclamei.",
+    "creating": "Produsul este creat...",
+    "uploadingImages": "Imaginile se încarcă...",
+    "uploadingImage": "Imaginea se încarcă.",
+    "imageUploadFailed": "Imaginea nu a putut fi încărcată.",
+    "imagesUploaded": "Toate imaginile au fost încărcate cu succes",
+    "draftSaved": "Schiță salvată",
+    "productCreated": "Produsul a fost creat cu succes.",
+    "creationFailed": "Produsul nu a putut fi creat. Vă rugăm să încercați din nou.",
+    "errors": {
+      "titleRequired": "Titlul anunțului este obligatoriu.",
+      "shortDescriptionRequired": "Este necesară o scurtă descriere.",
+      "descriptionRequired": "Este necesară o explicație detaliată.",
+      "categoryRequired": "Selectarea categoriei este obligatorie.",
+      "priceRequired": "Introduceți un preț valid."
+    }
   },
   "fileUpload": {
     "dragDrop": "Încarcă o fotografie sau un videoclip.",
@@ -334,6 +360,6 @@
     "coverBadge": "CAPAC",
     "videoBadge": "VIDEO",
     "coverUpdated": "Fotografia de copertă a fost ajustată cu succes.",
-    "optimizationInfo": "Fotografiile au fost optimizate pentru a respecta standardele web"
+    "optimizationInfo": "Fotografiile sunt optimizate pentru a respecta standardele web"
   }
 }

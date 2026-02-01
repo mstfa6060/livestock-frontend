@@ -252,6 +252,9 @@
     "report": "Informar un problema",
     "description": "Explicación",
     "specifications": "Características",
+    "category": "Categoría",
+    "brand": "Marca",
+    "condition": "Situación",
     "location": "Ubicación",
     "shipping": "Carga",
     "shippingAvailable": "Se puede enviar por carga.",
@@ -264,8 +267,16 @@
     "maxOrder": "Pedido máximo",
     "publishedAt": "Fecha de publicación",
     "views": "Visto",
+    "reviews": "evaluación",
     "similarProducts": "Productos similares",
-    "sellerProducts": "Otros productos del vendedor"
+    "sellerProducts": "Otros productos del vendedor",
+    "contactSeller": "Contactar con el vendedor",
+    "loginRequired": "Inicie sesión para agregar a favoritos.",
+    "addedToFavorites": "Añadido a favoritos",
+    "removedFromFavorites": "Eliminado de favoritos",
+    "linkCopied": "El enlace ha sido copiado.",
+    "messagingComingSoon": "Próximamente habrá una función de mensajería.",
+    "productNotFound": "Producto no encontrado."
   },
   "seller": {
     "title": "Información del vendedor",
@@ -310,7 +321,22 @@
       "category": "Seleccione una categoría"
     },
     "success": "El anuncio fue creado exitosamente.",
-    "error": "Se produjo un error al crear el anuncio."
+    "error": "Se produjo un error al crear el anuncio.",
+    "creating": "El producto está siendo creado...",
+    "uploadingImages": "Las imágenes se están cargando...",
+    "uploadingImage": "La imagen se está cargando.",
+    "imageUploadFailed": "No se pudo cargar la imagen.",
+    "imagesUploaded": "Todas las imágenes se cargaron correctamente",
+    "draftSaved": "Borrador guardado",
+    "productCreated": "El producto fue creado exitosamente.",
+    "creationFailed": "No se pudo crear el producto. Inténtelo de nuevo.",
+    "errors": {
+      "titleRequired": "El título del anuncio es obligatorio.",
+      "shortDescriptionRequired": "Se requiere una breve descripción.",
+      "descriptionRequired": "Se requiere una explicación detallada.",
+      "categoryRequired": "La selección de categoría es obligatoria.",
+      "priceRequired": "Introduzca un precio válido."
+    }
   },
   "fileUpload": {
     "dragDrop": "Sube una foto o un vídeo.",
@@ -334,6 +360,6 @@
     "coverBadge": "TAPA",
     "videoBadge": "VIDEO",
     "coverUpdated": "La foto de portada se ha ajustado correctamente.",
-    "optimizationInfo": "Las fotos se han optimizado para cumplir con los estándares web."
+    "optimizationInfo": "Las fotos están optimizadas para cumplir con los estándares web."
   }
 }

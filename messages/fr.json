@@ -238,7 +238,7 @@
     "outOfStock": "En rupture de stock",
     "inStock": "En stock",
     "noResults": "Produit introuvable.",
-    "loading": "Chargement des produits...",
+    "loading": "Les produits sont en cours de chargement...",
     "perPage": "Par page",
     "showing": "Le total des produits {total} entre {from} et {to}.",
     "loginToFavorite": "Connectez-vous pour ajouter aux favoris.",
@@ -252,6 +252,9 @@
     "report": "Signaler un problème",
     "description": "Explication",
     "specifications": "Caractéristiques",
+    "category": "Catégorie",
+    "brand": "Marque",
+    "condition": "Situation",
     "location": "Emplacement",
     "shipping": "Cargaison",
     "shippingAvailable": "Peut être expédié par fret.",
@@ -264,8 +267,16 @@
     "maxOrder": "Commande maximale",
     "publishedAt": "Date de publication",
     "views": "Consulté",
+    "reviews": "évaluation",
     "similarProducts": "Produits similaires",
-    "sellerProducts": "Autres produits du vendeur"
+    "sellerProducts": "Autres produits du vendeur",
+    "contactSeller": "Contacter le vendeur",
+    "loginRequired": "Connectez-vous pour ajouter aux favoris.",
+    "addedToFavorites": "Ajouté aux favoris",
+    "removedFromFavorites": "Retiré des favoris",
+    "linkCopied": "Le lien a été copié.",
+    "messagingComingSoon": "Fonctionnalité de messagerie bientôt disponible.",
+    "productNotFound": "Produit introuvable."
   },
   "seller": {
     "title": "Informations sur le vendeur",
@@ -310,7 +321,22 @@
       "category": "Sélectionnez une catégorie."
     },
     "success": "La publicité a été créée avec succès.",
-    "error": "Une erreur s'est produite lors de la création de l'annonce."
+    "error": "Une erreur s'est produite lors de la création de l'annonce.",
+    "creating": "Le produit est en cours de création...",
+    "uploadingImages": "Chargement des images...",
+    "uploadingImage": "L'image est en cours de chargement.",
+    "imageUploadFailed": "L'image n'a pas pu être chargée.",
+    "imagesUploaded": "Toutes les images ont été téléchargées avec succès.",
+    "draftSaved": "Brouillon enregistré",
+    "productCreated": "Le produit a été créé avec succès.",
+    "creationFailed": "Le produit n'a pas pu être créé. Veuillez réessayer.",
+    "errors": {
+      "titleRequired": "Le titre de l'annonce est obligatoire.",
+      "shortDescriptionRequired": "Une brève description est requise.",
+      "descriptionRequired": "Une explication détaillée est nécessaire.",
+      "categoryRequired": "La sélection de la catégorie est obligatoire.",
+      "priceRequired": "Saisissez un prix valide."
+    }
   },
   "fileUpload": {
     "dragDrop": "Téléchargez une photo ou une vidéo.",
@@ -334,6 +360,6 @@
     "coverBadge": "COUVERCLE",
     "videoBadge": "VIDÉO",
     "coverUpdated": "La photo de couverture a été ajustée avec succès.",
-    "optimizationInfo": "Les photos ont été optimisées pour être conformes aux normes web"
+    "optimizationInfo": "Les photos sont optimisées pour être conformes aux normes web"
   }
 }

@@ -102,7 +102,7 @@
     "recentListings": "أحدث قوائمك",
     "recentMessages": "الرسائل الأخيرة",
     "noListings": "لم تقم بإضافة أي إعلانات حتى الآن.",
-    "noMessages": "لم تتلق رسالة بعد.",
+    "noMessages": "لم تتلق أي رسائل حتى الآن.",
     "noNotifications": "لم تتلق أي إشعارات حتى الآن.",
     "viewAllListings": "عرض جميع القوائم",
     "viewAllMessages": "عرض جميع الرسائل"
@@ -238,7 +238,7 @@
     "outOfStock": "إنتهى من المخزن",
     "inStock": "في الأوراق المالية",
     "noResults": "المنتج غير موجود.",
-    "loading": "يتم تحميل المنتجات...",
+    "loading": "جارٍ تحميل المنتجات...",
     "perPage": "لكل صفحة",
     "showing": "إجمالي المنتجات {الإجمالي} بين {من} و {إلى}.",
     "loginToFavorite": "سجّل الدخول لإضافة المحتوى إلى المفضلة.",
@@ -252,6 +252,9 @@
     "report": "الإبلاغ عن مشكلة",
     "description": "توضيح",
     "specifications": "سمات",
+    "category": "فئة",
+    "brand": "ماركة",
+    "condition": "الموقف",
     "location": "موقع",
     "shipping": "شحنة",
     "shippingAvailable": "يمكن شحنها عن طريق الشحن الجوي.",
@@ -264,8 +267,16 @@
     "maxOrder": "الحد الأقصى للطلب",
     "publishedAt": "تاريخ النشر",
     "views": "تمت المشاهدة",
+    "reviews": "تقييم",
     "similarProducts": "منتجات مماثلة",
-    "sellerProducts": "منتجات أخرى للبائع"
+    "sellerProducts": "منتجات أخرى للبائع",
+    "contactSeller": "اتصل بالبائع",
+    "loginRequired": "سجّل الدخول لإضافة المحتوى إلى المفضلة.",
+    "addedToFavorites": "تمت إضافته إلى المفضلة",
+    "removedFromFavorites": "تمت إزالته من المفضلة",
+    "linkCopied": "تم نسخ الرابط.",
+    "messagingComingSoon": "ميزة المراسلة ستتوفر قريباً.",
+    "productNotFound": "المنتج غير موجود."
   },
   "seller": {
     "title": "معلومات البائع",
@@ -310,7 +321,22 @@
       "category": "اختر فئة."
     },
     "success": "تم إنشاء الإعلان بنجاح.",
-    "error": "حدث خطأ أثناء إنشاء الإعلان."
+    "error": "حدث خطأ أثناء إنشاء الإعلان.",
+    "creating": "المنتج قيد الإنشاء...",
+    "uploadingImages": "يتم تحميل الصور...",
+    "uploadingImage": "يتم تحميل الصورة.",
+    "imageUploadFailed": "تعذر تحميل الصورة.",
+    "imagesUploaded": "تم تحميل جميع الصور بنجاح",
+    "draftSaved": "تم حفظ المسودة",
+    "productCreated": "تم إنشاء المنتج بنجاح.",
+    "creationFailed": "تعذر إنشاء المنتج. يرجى المحاولة مرة أخرى.",
+    "errors": {
+      "titleRequired": "عنوان الإعلان إلزامي.",
+      "shortDescriptionRequired": "مطلوب وصف موجز.",
+      "descriptionRequired": "يلزم تقديم شرح مفصل.",
+      "categoryRequired": "اختيار الفئة إلزامي.",
+      "priceRequired": "أدخل سعراً صحيحاً."
+    }
   },
   "fileUpload": {
     "dragDrop": "قم بتحميل صورة أو مقطع فيديو.",

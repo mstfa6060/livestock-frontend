@@ -252,6 +252,9 @@
     "report": "报告问题",
     "description": "解释",
     "specifications": "特征",
+    "category": "类别",
+    "brand": "品牌",
+    "condition": "情况",
     "location": "地点",
     "shipping": "货物",
     "shippingAvailable": "可通过货运方式运输。",
@@ -261,11 +264,19 @@
     "stock": "库存",
     "inStock": "库存数量为 {count} 件",
     "minOrder": "最低订购量",
-    "maxOrder": "最大订单",
+    "maxOrder": "最高订单",
     "publishedAt": "发布日期",
     "views": "已查看",
+    "reviews": "评估",
     "similarProducts": "类似产品",
-    "sellerProducts": "卖家其他产品"
+    "sellerProducts": "卖家其他产品",
+    "contactSeller": "联系卖家",
+    "loginRequired": "登录即可添加到收藏夹。",
+    "addedToFavorites": "已添加到收藏夹",
+    "removedFromFavorites": "已从收藏夹中移除",
+    "linkCopied": "链接已复制。",
+    "messagingComingSoon": "消息功能即将上线。",
+    "productNotFound": "未找到产品。"
   },
   "seller": {
     "title": "卖家信息",
@@ -310,7 +321,22 @@
       "category": "请选择类别。"
     },
     "success": "广告制作成功。",
-    "error": "创建广告时发生错误。"
+    "error": "创建广告时发生错误。",
+    "creating": "产品正在生产中……",
+    "uploadingImages": "图片正在加载……",
+    "uploadingImage": "图片正在加载。",
+    "imageUploadFailed": "图片加载失败。",
+    "imagesUploaded": "所有图片均已成功上传。",
+    "draftSaved": "草稿已保存",
+    "productCreated": "产品已成功制造完成。",
+    "creationFailed": "产品创建失败，请重试。",
+    "errors": {
+      "titleRequired": "广告标题为必填项。",
+      "shortDescriptionRequired": "请提供简要描述。",
+      "descriptionRequired": "需要详细解释。",
+      "categoryRequired": "类别选择为必填项。",
+      "priceRequired": "请输入有效价格。"
+    }
   },
   "fileUpload": {
     "dragDrop": "上传照片或视频。",
@@ -322,7 +348,7 @@
     "maxFilesError": "您最多可以上传 {max} 个媒体文件。",
     "imageTooLarge": "照片大小必须小于10MB。",
     "videoTooLarge": "视频文件大小必须小于50MB。",
-    "optimizing": "优化中……",
+    "optimizing": "正在优化……",
     "uploading": "加载中...",
     "queued": "排队等候……",
     "uploadSuccess": "上传媒体文件数量：{count}",

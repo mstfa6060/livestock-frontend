@@ -238,7 +238,7 @@
     "outOfStock": "በክምችት አልቋል",
     "inStock": "ለሽያጭ የቀረበ እቃ",
     "noResults": "ምርቱ አልተገኘም።",
-    "loading": "ምርቶች እየተጫኑ ነው...",
+    "loading": "ምርቶችን በመጫን ላይ...",
     "perPage": "በገጽ",
     "showing": "በ{from} እና {to} መካከል የ{total} ምርቶች ድምር።",
     "loginToFavorite": "ወደ ተወዳጆች ለማከል ይግቡ።",
@@ -252,6 +252,9 @@
     "report": "ችግር ሪፖርት ያድርጉ",
     "description": "ማብራሪያ",
     "specifications": "ባህሪያት",
+    "category": "ምድብ",
+    "brand": "የምርት ስም",
+    "condition": "ሁኔታ",
     "location": "አካባቢ",
     "shipping": "ጭነት",
     "shippingAvailable": "በጭነት ሊላክ ይችላል።",
@@ -264,8 +267,16 @@
     "maxOrder": "ከፍተኛው ትዕዛዝ",
     "publishedAt": "የታተመበት ቀን",
     "views": "ታይቷል",
+    "reviews": "ግምገማ",
     "similarProducts": "ተመሳሳይ ምርቶች",
-    "sellerProducts": "የሻጩ ሌሎች ምርቶች"
+    "sellerProducts": "የሻጩ ሌሎች ምርቶች",
+    "contactSeller": "ሻጩን ያነጋግሩ",
+    "loginRequired": "ወደ ተወዳጆች ለማከል ይግቡ።",
+    "addedToFavorites": "ወደ ተወዳጆች ታክሏል",
+    "removedFromFavorites": "ከተወዳጆች ተወግዷል",
+    "linkCopied": "አገናኙ ተገልብጧል።",
+    "messagingComingSoon": "የመልእክት ባህሪ በቅርቡ ይመጣል።",
+    "productNotFound": "ምርቱ አልተገኘም።"
   },
   "seller": {
     "title": "የሻጭ መረጃ",
@@ -310,7 +321,22 @@
       "category": "ምድብ ይምረጡ።"
     },
     "success": "ማስታወቂያው በተሳካ ሁኔታ ተፈጥሯል።",
-    "error": "ማስታወቂያውን በሚፈጥሩበት ጊዜ ስህተት ተከስቷል።"
+    "error": "ማስታወቂያውን በሚፈጥሩበት ጊዜ ስህተት ተከስቷል።",
+    "creating": "ምርቱ እየተገነባ ነው...",
+    "uploadingImages": "ምስሎች እየተጫኑ ነው...",
+    "uploadingImage": "ምስሉ እየተጫነ ነው።",
+    "imageUploadFailed": "ምስሉ ሊጫን አልቻለም።",
+    "imagesUploaded": "ሁሉም ምስሎች በተሳካ ሁኔታ ተሰቅለዋል",
+    "draftSaved": "ረቂቅ ተቀምጧል",
+    "productCreated": "ምርቱ በተሳካ ሁኔታ ተፈጥሯል።",
+    "creationFailed": "ምርቱ ሊፈጠር አልቻለም። እባክዎ እንደገና ይሞክሩ።",
+    "errors": {
+      "titleRequired": "የማስታወቂያ ርዕስ ግዴታ ነው።",
+      "shortDescriptionRequired": "አጭር መግለጫ ያስፈልጋል።",
+      "descriptionRequired": "ዝርዝር ማብራሪያ ያስፈልጋል።",
+      "categoryRequired": "የምድብ ምርጫ ግዴታ ነው።",
+      "priceRequired": "ትክክለኛ ዋጋ ያስገቡ።"
+    }
   },
   "fileUpload": {
     "dragDrop": "ፎቶ ወይም ቪዲዮ ይስቀሉ።",
@@ -334,6 +360,6 @@
     "coverBadge": "ክዳን",
     "videoBadge": "ቪዲዮ",
     "coverUpdated": "የሽፋን ፎቶው በተሳካ ሁኔታ ተስተካክሏል።",
-    "optimizationInfo": "ፎቶዎች ከድር ደረጃዎች ጋር እንዲጣጣሙ ተመቻችተዋል"
+    "optimizationInfo": "ፎቶዎች ከድር ደረጃዎች ጋር እንዲጣጣሙ የተመቻቹ ናቸው"
   }
 }

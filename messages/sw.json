@@ -252,6 +252,9 @@
     "report": "Ripoti tatizo",
     "description": "Maelezo",
     "specifications": "Vipengele",
+    "category": "Kategoria",
+    "brand": "Chapa",
+    "condition": "Hali",
     "location": "Mahali",
     "shipping": "Mizigo",
     "shippingAvailable": "Inaweza kusafirishwa kwa mizigo.",
@@ -264,8 +267,16 @@
     "maxOrder": "Agizo la juu zaidi",
     "publishedAt": "Tarehe ya kuchapishwa",
     "views": "Imetazamwa",
+    "reviews": "tathmini",
     "similarProducts": "Bidhaa Zinazofanana",
-    "sellerProducts": "Bidhaa Nyingine za Muuzaji"
+    "sellerProducts": "Bidhaa Nyingine za Muuzaji",
+    "contactSeller": "Wasiliana na muuzaji",
+    "loginRequired": "Ingia ili kuongeza kwenye vipendwa.",
+    "addedToFavorites": "Imeongezwa kwenye vipendwa",
+    "removedFromFavorites": "Imeondolewa kwenye vipendwa",
+    "linkCopied": "Kiungo kimenakiliwa.",
+    "messagingComingSoon": "Kipengele cha kutuma ujumbe kinakuja hivi karibuni.",
+    "productNotFound": "Bidhaa haipatikani."
   },
   "seller": {
     "title": "Taarifa za Muuzaji",
@@ -310,7 +321,22 @@
       "category": "Chagua kategoria."
     },
     "success": "Tangazo liliundwa kwa mafanikio.",
-    "error": "Hitilafu imetokea wakati wa kuunda tangazo."
+    "error": "Hitilafu imetokea wakati wa kuunda tangazo.",
+    "creating": "Bidhaa inatengenezwa...",
+    "uploadingImages": "Picha zinapakiwa...",
+    "uploadingImage": "Picha inapakiwa.",
+    "imageUploadFailed": "Picha haikuweza kupakiwa.",
+    "imagesUploaded": "Picha zote zimepakiwa kwa mafanikio",
+    "draftSaved": "Rasimu imehifadhiwa",
+    "productCreated": "Bidhaa hiyo iliundwa kwa mafanikio.",
+    "creationFailed": "Bidhaa haikuweza kuundwa. Tafadhali jaribu tena.",
+    "errors": {
+      "titleRequired": "Jina la tangazo ni lazima.",
+      "shortDescriptionRequired": "Maelezo mafupi yanahitajika.",
+      "descriptionRequired": "Maelezo ya kina yanahitajika.",
+      "categoryRequired": "Uteuzi wa kategoria ni lazima.",
+      "priceRequired": "Weka bei halali."
+    }
   },
   "fileUpload": {
     "dragDrop": "Pakia picha au video.",

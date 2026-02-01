@@ -252,6 +252,9 @@
     "report": "Zgłoś problem",
     "description": "Wyjaśnienie",
     "specifications": "Cechy",
+    "category": "Kategoria",
+    "brand": "Marka",
+    "condition": "Sytuacja",
     "location": "Lokalizacja",
     "shipping": "Ładunek",
     "shippingAvailable": "Można wysłać jako przesyłkę cargo.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maksymalne zamówienie",
     "publishedAt": "Data publikacji",
     "views": "Wyświetlono",
+    "reviews": "ocena",
     "similarProducts": "Podobne produkty",
-    "sellerProducts": "Inne produkty sprzedawcy"
+    "sellerProducts": "Inne produkty sprzedawcy",
+    "contactSeller": "Skontaktuj się ze sprzedawcą",
+    "loginRequired": "Zaloguj się, aby dodać do ulubionych.",
+    "addedToFavorites": "Dodano do ulubionych",
+    "removedFromFavorites": "Usunięto z ulubionych",
+    "linkCopied": "Link został skopiowany.",
+    "messagingComingSoon": "Funkcja przesyłania wiadomości będzie wkrótce dostępna.",
+    "productNotFound": "Produkt nie został znaleziony."
   },
   "seller": {
     "title": "Informacje o sprzedawcy",
@@ -310,7 +321,22 @@
       "category": "Wybierz kategorię."
     },
     "success": "Reklama została pomyślnie utworzona.",
-    "error": "Wystąpił błąd podczas tworzenia reklamy."
+    "error": "Wystąpił błąd podczas tworzenia reklamy.",
+    "creating": "Produkt jest tworzony...",
+    "uploadingImages": "Trwa ładowanie obrazów...",
+    "uploadingImage": "Trwa ładowanie obrazu.",
+    "imageUploadFailed": "Nie można załadować obrazu.",
+    "imagesUploaded": "Wszystkie obrazy zostały pomyślnie przesłane",
+    "draftSaved": "Wersja robocza zapisana",
+    "productCreated": "Produkt został pomyślnie utworzony.",
+    "creationFailed": "Nie udało się utworzyć produktu. Spróbuj ponownie.",
+    "errors": {
+      "titleRequired": "Tytuł reklamy jest obowiązkowy.",
+      "shortDescriptionRequired": "Wymagany jest krótki opis.",
+      "descriptionRequired": "Wymagane jest szczegółowe wyjaśnienie.",
+      "categoryRequired": "Wybór kategorii jest obowiązkowy.",
+      "priceRequired": "Wprowadź prawidłową cenę."
+    }
   },
   "fileUpload": {
     "dragDrop": "Prześlij zdjęcie lub film.",
@@ -334,6 +360,6 @@
     "coverBadge": "POKRYWA",
     "videoBadge": "WIDEO",
     "coverUpdated": "Zdjęcie na okładce zostało pomyślnie dostosowane.",
-    "optimizationInfo": "Zdjęcia zostały zoptymalizowane pod kątem zgodności ze standardami internetowymi"
+    "optimizationInfo": "Zdjęcia są zoptymalizowane pod kątem zgodności ze standardami internetowymi"
   }
 }

@@ -252,6 +252,9 @@
     "report": "Report a problem",
     "description": "Explanation",
     "specifications": "Features",
+    "category": "Category",
+    "brand": "Brand",
+    "condition": "Situation",
     "location": "Location",
     "shipping": "Cargo",
     "shippingAvailable": "Can be shipped by cargo.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maximum order",
     "publishedAt": "Publication date",
     "views": "Viewed",
+    "reviews": "evaluation",
     "similarProducts": "Similar Products",
-    "sellerProducts": "Seller's Other Products"
+    "sellerProducts": "Seller's Other Products",
+    "contactSeller": "Contact the seller",
+    "loginRequired": "Log in to add to favorites.",
+    "addedToFavorites": "Added to favorites",
+    "removedFromFavorites": "Removed from favorites",
+    "linkCopied": "The link has been copied.",
+    "messagingComingSoon": "Messaging feature coming soon.",
+    "productNotFound": "Product not found."
   },
   "seller": {
     "title": "Seller Information",
@@ -310,7 +321,22 @@
       "category": "Select a category."
     },
     "success": "The advertisement was successfully created.",
-    "error": "An error occurred while creating the advertisement."
+    "error": "An error occurred while creating the advertisement.",
+    "creating": "Product is being created...",
+    "uploadingImages": "Images are loading...",
+    "uploadingImage": "Image is loading.",
+    "imageUploadFailed": "Image could not be loaded.",
+    "imagesUploaded": "All images uploaded successfully",
+    "draftSaved": "Draft saved",
+    "productCreated": "The product was successfully created.",
+    "creationFailed": "The product could not be created. Please try again.",
+    "errors": {
+      "titleRequired": "Advertisement title is mandatory.",
+      "shortDescriptionRequired": "A brief description is required.",
+      "descriptionRequired": "A detailed explanation is required.",
+      "categoryRequired": "Category selection is mandatory.",
+      "priceRequired": "Enter a valid price."
+    }
   },
   "fileUpload": {
     "dragDrop": "Upload a photo or video.",
@@ -334,6 +360,6 @@
     "coverBadge": "LID",
     "videoBadge": "VIDEO",
     "coverUpdated": "The cover photo has been successfully adjusted.",
-    "optimizationInfo": "Photos are optimized to comply with web standards"
+    "optimizationInfo": "Photos have been optimized to comply with web standards"
   }
 }

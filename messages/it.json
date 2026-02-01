@@ -231,14 +231,14 @@
     },
     "condition": {
       "new": "Nuovo",
-      "likeNew": "Usato poco",
+      "likeNew": "Leggermente usato",
       "good": "Bene",
       "fair": "Mezzo"
     },
     "outOfStock": "Esaurito",
     "inStock": "In magazzino",
     "noResults": "Prodotto non trovato.",
-    "loading": "I prodotti vengono caricati...",
+    "loading": "Caricamento prodotti in corso...",
     "perPage": "Per pagina",
     "showing": "Il totale di {total} prodotti tra {from} e {to}.",
     "loginToFavorite": "Accedi per aggiungere ai preferiti.",
@@ -252,6 +252,9 @@
     "report": "Segnala un problema",
     "description": "Spiegazione",
     "specifications": "Caratteristiche",
+    "category": "Categoria",
+    "brand": "Marca",
+    "condition": "Situazione",
     "location": "Posizione",
     "shipping": "Carico",
     "shippingAvailable": "Può essere spedito via cargo.",
@@ -264,8 +267,16 @@
     "maxOrder": "Ordine massimo",
     "publishedAt": "Data di pubblicazione",
     "views": "Visualizzato",
+    "reviews": "valutazione",
     "similarProducts": "Prodotti simili",
-    "sellerProducts": "Altri prodotti del venditore"
+    "sellerProducts": "Altri prodotti del venditore",
+    "contactSeller": "Contatta il venditore",
+    "loginRequired": "Accedi per aggiungere ai preferiti.",
+    "addedToFavorites": "Aggiunto ai preferiti",
+    "removedFromFavorites": "Rimosso dai preferiti",
+    "linkCopied": "Il collegamento è stato copiato.",
+    "messagingComingSoon": "La funzionalità di messaggistica sarà disponibile a breve.",
+    "productNotFound": "Prodotto non trovato."
   },
   "seller": {
     "title": "Informazioni sul venditore",
@@ -310,7 +321,22 @@
       "category": "Seleziona una categoria."
     },
     "success": "L'annuncio è stato creato con successo.",
-    "error": "Si è verificato un errore durante la creazione dell'annuncio."
+    "error": "Si è verificato un errore durante la creazione dell'annuncio.",
+    "creating": "Il prodotto è in fase di creazione...",
+    "uploadingImages": "Caricamento delle immagini in corso...",
+    "uploadingImage": "L'immagine si sta caricando.",
+    "imageUploadFailed": "Impossibile caricare l'immagine.",
+    "imagesUploaded": "Tutte le immagini sono state caricate con successo",
+    "draftSaved": "Bozza salvata",
+    "productCreated": "Il prodotto è stato creato con successo.",
+    "creationFailed": "Impossibile creare il prodotto. Riprova.",
+    "errors": {
+      "titleRequired": "Il titolo dell'annuncio è obbligatorio.",
+      "shortDescriptionRequired": "È richiesta una breve descrizione.",
+      "descriptionRequired": "È necessaria una spiegazione dettagliata.",
+      "categoryRequired": "La selezione della categoria è obbligatoria.",
+      "priceRequired": "Inserisci un prezzo valido."
+    }
   },
   "fileUpload": {
     "dragDrop": "Carica una foto o un video.",
@@ -334,6 +360,6 @@
     "coverBadge": "COPERCHIO",
     "videoBadge": "VIDEO",
     "coverUpdated": "La foto di copertina è stata modificata con successo.",
-    "optimizationInfo": "Le foto sono state ottimizzate per rispettare gli standard web"
+    "optimizationInfo": "Le foto sono ottimizzate per rispettare gli standard web"
   }
 }

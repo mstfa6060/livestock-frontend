@@ -119,7 +119,7 @@
   },
   "myListings": {
     "title": "Mano skelbimai",
-    "description": "Tvarkykite visus savo skelbimus iš čia.",
+    "description": "Tvarkykite visus savo skelbimus čia.",
     "noListings": "Dar nepridėjote jokių skelbimų.",
     "createFirst": "Sukurkite savo pirmąjį skelbimą.",
     "filters": {
@@ -252,6 +252,9 @@
     "report": "Pranešti apie problemą",
     "description": "Paaiškinimas",
     "specifications": "Savybės",
+    "category": "Kategorija",
+    "brand": "Prekės ženklas",
+    "condition": "Situacija",
     "location": "Vieta",
     "shipping": "Krovinys",
     "shippingAvailable": "Galima gabenti krovininiu transportu.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maksimalus užsakymas",
     "publishedAt": "Išleidimo data",
     "views": "Peržiūrėta",
+    "reviews": "vertinimas",
     "similarProducts": "Panašūs produktai",
-    "sellerProducts": "Pardavėjo kiti produktai"
+    "sellerProducts": "Pardavėjo kiti produktai",
+    "contactSeller": "Susisiekite su pardavėju",
+    "loginRequired": "Prisijunkite, kad pridėtumėte prie mėgstamiausių.",
+    "addedToFavorites": "Pridėta prie mėgstamiausių",
+    "removedFromFavorites": "Pašalinta iš mėgstamiausių",
+    "linkCopied": "Nuoroda nukopijuota.",
+    "messagingComingSoon": "Žinučių funkcija pasirodys netrukus.",
+    "productNotFound": "Produktas nerastas."
   },
   "seller": {
     "title": "Pardavėjo informacija",
@@ -310,7 +321,22 @@
       "category": "Pasirinkite kategoriją."
     },
     "success": "Reklama sėkmingai sukurta.",
-    "error": "Kuriant skelbimą įvyko klaida."
+    "error": "Kuriant skelbimą įvyko klaida.",
+    "creating": "Produktas kuriamas...",
+    "uploadingImages": "Kraunami vaizdai...",
+    "uploadingImage": "Įkeliamas paveikslėlis.",
+    "imageUploadFailed": "Nepavyko įkelti vaizdo.",
+    "imagesUploaded": "Visi vaizdai sėkmingai įkelti",
+    "draftSaved": "Juodraštis išsaugotas",
+    "productCreated": "Produktas buvo sėkmingai sukurtas.",
+    "creationFailed": "Nepavyko sukurti produkto. Bandykite dar kartą.",
+    "errors": {
+      "titleRequired": "Reklamos pavadinimas yra privalomas.",
+      "shortDescriptionRequired": "Reikalingas trumpas aprašymas.",
+      "descriptionRequired": "Reikalingas išsamus paaiškinimas.",
+      "categoryRequired": "Kategorijos pasirinkimas yra privalomas.",
+      "priceRequired": "Įveskite galiojančią kainą."
+    }
   },
   "fileUpload": {
     "dragDrop": "Įkelkite nuotrauką arba vaizdo įrašą.",

@@ -252,6 +252,9 @@
     "report": "Irrapporta problema",
     "description": "Spjegazzjoni",
     "specifications": "Karatteristiċi",
+    "category": "Kategorija",
+    "brand": "Marka",
+    "condition": "Sitwazzjoni",
     "location": "Post",
     "shipping": "Merkanzija",
     "shippingAvailable": "Jista' jintbagħat bil-merkanzija.",
@@ -264,8 +267,16 @@
     "maxOrder": "Ordni massima",
     "publishedAt": "Data tal-pubblikazzjoni",
     "views": "Meqjusa",
+    "reviews": "evalwazzjoni",
     "similarProducts": "Prodotti Simili",
-    "sellerProducts": "Prodotti Oħra tal-Bejjiegħ"
+    "sellerProducts": "Prodotti Oħra tal-Bejjiegħ",
+    "contactSeller": "Ikkuntattja lill-bejjiegħ",
+    "loginRequired": "Idħol biex iżżid mal-favoriti.",
+    "addedToFavorites": "Miżjud mal-favoriti",
+    "removedFromFavorites": "Imneħħi mill-favoriti",
+    "linkCopied": "Il-link ġie kkupjat.",
+    "messagingComingSoon": "Il-karatteristika tal-messaġġi dalwaqt.",
+    "productNotFound": "Prodott ma nstabx."
   },
   "seller": {
     "title": "Informazzjoni dwar il-Bejjiegħ",
@@ -310,7 +321,22 @@
       "category": "Agħżel kategorija."
     },
     "success": "Ir-riklam inħoloq b'suċċess.",
-    "error": "Seħħ żball waqt il-ħolqien tar-riklam."
+    "error": "Seħħ żball waqt il-ħolqien tar-riklam.",
+    "creating": "Il-prodott qed jinħoloq...",
+    "uploadingImages": "L-immaġini qed jitgħabbew...",
+    "uploadingImage": "L-immaġni qed titgħabba.",
+    "imageUploadFailed": "L-immaġni ma setgħetx tiġi mgħobbija.",
+    "imagesUploaded": "L-immaġini kollha ġew imtella’ b’suċċess",
+    "draftSaved": "Abbozz salvat",
+    "productCreated": "Il-prodott inħoloq b'suċċess.",
+    "creationFailed": "Il-prodott ma setax jinħoloq. Jekk jogħġbok erġa' pprova.",
+    "errors": {
+      "titleRequired": "It-titlu tar-reklamar huwa obbligatorju.",
+      "shortDescriptionRequired": "Deskrizzjoni qasira hija meħtieġa.",
+      "descriptionRequired": "Hija meħtieġa spjegazzjoni dettaljata.",
+      "categoryRequired": "L-għażla tal-kategorija hija obbligatorja.",
+      "priceRequired": "Daħħal prezz validu."
+    }
   },
   "fileUpload": {
     "dragDrop": "Tella’ ritratt jew vidjo.",
@@ -334,6 +360,6 @@
     "coverBadge": "GĦATU",
     "videoBadge": "VIDJOW",
     "coverUpdated": "Ir-ritratt tal-qoxra ġie aġġustat b'suċċess.",
-    "optimizationInfo": "Ir-ritratti ġew ottimizzati biex jikkonformaw mal-istandards tal-web"
+    "optimizationInfo": "Ir-ritratti huma ottimizzati biex jikkonformaw mal-istandards tal-web"
   }
 }

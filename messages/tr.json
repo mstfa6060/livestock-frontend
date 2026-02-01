@@ -252,6 +252,9 @@
     "report": "Sikayet Et",
     "description": "Aciklama",
     "specifications": "Ozellikler",
+    "category": "Kategori",
+    "brand": "Marka",
+    "condition": "Durum",
     "location": "Konum",
     "shipping": "Kargo",
     "shippingAvailable": "Kargo ile gonderilebilir",
@@ -264,8 +267,16 @@
     "maxOrder": "Maksimum siparis",
     "publishedAt": "Yayinlanma tarihi",
     "views": "Goruntulenme",
+    "reviews": "degerlendirme",
     "similarProducts": "Benzer Urunler",
-    "sellerProducts": "Saticinin Diger Urunleri"
+    "sellerProducts": "Saticinin Diger Urunleri",
+    "contactSeller": "Satici ile Iletisime Gec",
+    "loginRequired": "Favorilere eklemek icin giris yapin",
+    "addedToFavorites": "Favorilere eklendi",
+    "removedFromFavorites": "Favorilerden cikarildi",
+    "linkCopied": "Link kopyalandi",
+    "messagingComingSoon": "Mesajlasma ozelligi cok yakinda",
+    "productNotFound": "Urun bulunamadi"
   },
   "seller": {
     "title": "Satici Bilgileri",
@@ -310,7 +321,22 @@
       "category": "Kategori secin"
     },
     "success": "Ilan basariyla olusturuldu",
-    "error": "Ilan olusturulurken bir hata olustu"
+    "error": "Ilan olusturulurken bir hata olustu",
+    "creating": "Urun olusturuluyor...",
+    "uploadingImages": "Gorseller yukleniyor...",
+    "uploadingImage": "Gorsel yukleniyor",
+    "imageUploadFailed": "Gorsel yuklenemedi",
+    "imagesUploaded": "Tum gorseller basariyla yuklendi",
+    "draftSaved": "Taslak kaydedildi",
+    "productCreated": "Urun basariyla olusturuldu",
+    "creationFailed": "Urun olusturulamadi. Lutfen tekrar deneyin.",
+    "errors": {
+      "titleRequired": "Ilan basligi zorunludur",
+      "shortDescriptionRequired": "Kisa aciklama zorunludur",
+      "descriptionRequired": "Detayli aciklama zorunludur",
+      "categoryRequired": "Kategori secimi zorunludur",
+      "priceRequired": "Gecerli bir fiyat giriniz"
+    }
   },
   "fileUpload": {
     "dragDrop": "Fotograf veya video yukleyin",

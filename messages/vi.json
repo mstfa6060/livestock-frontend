@@ -238,7 +238,7 @@
     "outOfStock": "Hết hàng",
     "inStock": "Còn hàng",
     "noResults": "Không tìm thấy sản phẩm.",
-    "loading": "Sản phẩm đang được tải lên...",
+    "loading": "Sản phẩm đang được chất lên...",
     "perPage": "Mỗi trang",
     "showing": "Tổng số sản phẩm {total} nằm trong khoảng thời gian từ {from} đến {to}.",
     "loginToFavorite": "Đăng nhập để thêm vào mục yêu thích.",
@@ -252,6 +252,9 @@
     "report": "Báo cáo sự cố",
     "description": "Giải thích",
     "specifications": "Đặc trưng",
+    "category": "Loại",
+    "brand": "Thương hiệu",
+    "condition": "Tình huống",
     "location": "Vị trí",
     "shipping": "Hàng hóa",
     "shippingAvailable": "Có thể vận chuyển bằng đường hàng hóa.",
@@ -264,8 +267,16 @@
     "maxOrder": "Đơn hàng tối đa",
     "publishedAt": "Ngày xuất bản",
     "views": "Đã xem",
+    "reviews": "sự đánh giá",
     "similarProducts": "Sản phẩm tương tự",
-    "sellerProducts": "Các sản phẩm khác của người bán"
+    "sellerProducts": "Các sản phẩm khác của người bán",
+    "contactSeller": "Liên hệ với người bán",
+    "loginRequired": "Đăng nhập để thêm vào mục yêu thích.",
+    "addedToFavorites": "Đã thêm vào mục yêu thích",
+    "removedFromFavorites": "Đã xóa khỏi mục yêu thích",
+    "linkCopied": "Liên kết đã được sao chép.",
+    "messagingComingSoon": "Tính năng nhắn tin sẽ sớm ra mắt.",
+    "productNotFound": "Không tìm thấy sản phẩm."
   },
   "seller": {
     "title": "Thông tin người bán",
@@ -310,7 +321,22 @@
       "category": "Chọn một danh mục."
     },
     "success": "Quảng cáo đã được tạo thành công.",
-    "error": "Đã xảy ra lỗi trong quá trình tạo quảng cáo."
+    "error": "Đã xảy ra lỗi trong quá trình tạo quảng cáo.",
+    "creating": "Sản phẩm đang được tạo ra...",
+    "uploadingImages": "Đang tải hình ảnh...",
+    "uploadingImage": "Hình ảnh đang tải.",
+    "imageUploadFailed": "Không thể tải hình ảnh.",
+    "imagesUploaded": "Tất cả hình ảnh đã được tải lên thành công.",
+    "draftSaved": "Bản nháp đã được lưu",
+    "productCreated": "Sản phẩm đã được tạo ra thành công.",
+    "creationFailed": "Không thể tạo sản phẩm. Vui lòng thử lại.",
+    "errors": {
+      "titleRequired": "Tiêu đề quảng cáo là bắt buộc.",
+      "shortDescriptionRequired": "Cần có một mô tả ngắn gọn.",
+      "descriptionRequired": "Cần có lời giải thích chi tiết.",
+      "categoryRequired": "Việc chọn danh mục là bắt buộc.",
+      "priceRequired": "Nhập giá hợp lệ."
+    }
   },
   "fileUpload": {
     "dragDrop": "Tải lên ảnh hoặc video.",
@@ -334,6 +360,6 @@
     "coverBadge": "NẮP",
     "videoBadge": "BĂNG HÌNH",
     "coverUpdated": "Ảnh bìa đã được điều chỉnh thành công.",
-    "optimizationInfo": "Ảnh đã được tối ưu hóa để tuân thủ các tiêu chuẩn web."
+    "optimizationInfo": "Ảnh được tối ưu hóa để tuân thủ các tiêu chuẩn web."
   }
 }

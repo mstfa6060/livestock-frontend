@@ -252,6 +252,9 @@
     "report": "Teata probleemist",
     "description": "Selgitus",
     "specifications": "Omadused",
+    "category": "Kategooria",
+    "brand": "Bränd",
+    "condition": "Olukord",
     "location": "Asukoht",
     "shipping": "Lasti",
     "shippingAvailable": "Võib kaubaga saata.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maksimaalne tellimus",
     "publishedAt": "Avaldamiskuupäev",
     "views": "Vaadatud",
+    "reviews": "hindamine",
     "similarProducts": "Sarnased tooted",
-    "sellerProducts": "Müüja muud tooted"
+    "sellerProducts": "Müüja muud tooted",
+    "contactSeller": "Võtke ühendust müüjaga",
+    "loginRequired": "Lemmikutesse lisamiseks logi sisse.",
+    "addedToFavorites": "Lisatud lemmikutesse",
+    "removedFromFavorites": "Eemaldatud lemmikutest",
+    "linkCopied": "Link on kopeeritud.",
+    "messagingComingSoon": "Sõnumite saatmise funktsioon on peagi saadaval.",
+    "productNotFound": "Toodet ei leitud."
   },
   "seller": {
     "title": "Müüja andmed",
@@ -310,7 +321,22 @@
       "category": "Valige kategooria."
     },
     "success": "Reklaam on edukalt loodud.",
-    "error": "Kuulutuse loomisel ilmnes viga."
+    "error": "Kuulutuse loomisel ilmnes viga.",
+    "creating": "Toodet luuakse...",
+    "uploadingImages": "Pildid laetakse...",
+    "uploadingImage": "Pilt laeb.",
+    "imageUploadFailed": "Pilti ei saanud laadida.",
+    "imagesUploaded": "Kõik pildid on edukalt üles laaditud",
+    "draftSaved": "Mustand salvestatud",
+    "productCreated": "Toode on edukalt loodud.",
+    "creationFailed": "Toodet ei õnnestunud luua. Palun proovige uuesti.",
+    "errors": {
+      "titleRequired": "Kuulutuse pealkiri on kohustuslik.",
+      "shortDescriptionRequired": "Lühike kirjeldus on vajalik.",
+      "descriptionRequired": "Vaja on üksikasjalikku selgitust.",
+      "categoryRequired": "Kategooria valimine on kohustuslik.",
+      "priceRequired": "Sisestage kehtiv hind."
+    }
   },
   "fileUpload": {
     "dragDrop": "Laadige üles foto või video.",

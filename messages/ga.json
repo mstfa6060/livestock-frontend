@@ -247,11 +247,14 @@
   },
   "productDetail": {
     "addToFavorites": "Cuir le Ceanáin",
-    "removeFromFavorites": "Bain as na Roghanna",
+    "removeFromFavorites": "Bain as na Ceanáin",
     "share": "Comhroinn",
     "report": "Tuairiscigh fadhb",
     "description": "Míniú",
     "specifications": "Gnéithe",
+    "category": "Catagóir",
+    "brand": "Branda",
+    "condition": "Staid",
     "location": "Suíomh",
     "shipping": "Lastas",
     "shippingAvailable": "Is féidir é a sheoladh le lasta.",
@@ -264,8 +267,16 @@
     "maxOrder": "Uasmhéid ordú",
     "publishedAt": "Dáta foilsithe",
     "views": "Breathnaíodh",
+    "reviews": "meastóireacht",
     "similarProducts": "Táirgí Comhchosúla",
-    "sellerProducts": "Táirgí Eile an Díoltóra"
+    "sellerProducts": "Táirgí Eile an Díoltóra",
+    "contactSeller": "Déan teagmháil leis an díoltóir",
+    "loginRequired": "Logáil isteach le cur le do rogha pearsanta.",
+    "addedToFavorites": "Curtha le rogha pearsanta",
+    "removedFromFavorites": "Bainte as na cinn is ansa leat",
+    "linkCopied": "Tá an nasc cóipeáilte.",
+    "messagingComingSoon": "Gné teachtaireachtaí ag teacht go luath.",
+    "productNotFound": "Níor aimsíodh an táirge."
   },
   "seller": {
     "title": "Faisnéis Díoltóra",
@@ -310,7 +321,22 @@
       "category": "Roghnaigh catagóir."
     },
     "success": "Cruthaíodh an fógra go rathúil.",
-    "error": "Tharla earráid agus an fógra á chruthú."
+    "error": "Tharla earráid agus an fógra á chruthú.",
+    "creating": "Tá an táirge á chruthú...",
+    "uploadingImages": "Tá na híomhánna ag lódáil...",
+    "uploadingImage": "Tá an íomhá á lódáil.",
+    "imageUploadFailed": "Níorbh fhéidir an íomhá a luchtú.",
+    "imagesUploaded": "Uaslódáladh na híomhánna go léir go rathúil",
+    "draftSaved": "Dréacht sábháilte",
+    "productCreated": "Cruthaíodh an táirge go rathúil.",
+    "creationFailed": "Níorbh fhéidir an táirge a chruthú. Déan iarracht arís.",
+    "errors": {
+      "titleRequired": "Tá teideal an fhógra éigeantach.",
+      "shortDescriptionRequired": "Tá cur síos gairid ag teastáil.",
+      "descriptionRequired": "Tá míniú mionsonraithe ag teastáil.",
+      "categoryRequired": "Tá roghnú catagóire éigeantach.",
+      "priceRequired": "Cuir isteach praghas bailí."
+    }
   },
   "fileUpload": {
     "dragDrop": "Uaslódáil grianghraf nó físeán.",

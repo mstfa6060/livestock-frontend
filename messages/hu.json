@@ -153,7 +153,7 @@
       "confirmPassword": "Új jelszó újra",
       "submit": "Jelszó frissítése",
       "submitting": "Frissítés...",
-      "success": "Jelszavad sikeresen frissítve.",
+      "success": "Jelszava sikeresen frissítve.",
       "passwordMismatch": "Az új jelszavak nem egyeznek.",
       "passwordTooShort": "Az új jelszónak legalább 6 karakter hosszúnak kell lennie.",
       "sessionError": "Nem találhatók a munkamenet adatai.",
@@ -218,7 +218,7 @@
     "sort": "Fajta",
     "sortOptions": {
       "newest": "Legújabb",
-      "oldest": "Legrégebbi",
+      "oldest": "Legidősebb",
       "priceAsc": "Ár (alacsonytól a magasig)",
       "priceDesc": "Ár (magastól a legalacsonyabbig)",
       "popular": "Legnépszerűbb"
@@ -252,6 +252,9 @@
     "report": "Probléma jelentése",
     "description": "Magyarázat",
     "specifications": "Jellemzők",
+    "category": "Kategória",
+    "brand": "Márka",
+    "condition": "Helyzet",
     "location": "Elhelyezkedés",
     "shipping": "Rakomány",
     "shippingAvailable": "Rakományként szállítható.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maximális rendelési érték",
     "publishedAt": "Megjelenés dátuma",
     "views": "Megtekintve",
+    "reviews": "értékelés",
     "similarProducts": "Hasonló termékek",
-    "sellerProducts": "Az eladó egyéb termékei"
+    "sellerProducts": "Az eladó egyéb termékei",
+    "contactSeller": "Lépjen kapcsolatba az eladóval",
+    "loginRequired": "Jelentkezz be, hogy hozzáadhasd a kedvencekhez.",
+    "addedToFavorites": "Hozzáadva a kedvencekhez",
+    "removedFromFavorites": "Eltávolítva a kedvencek közül",
+    "linkCopied": "A linket kimásoltuk.",
+    "messagingComingSoon": "Hamarosan elérhető lesz az üzenetküldő funkció.",
+    "productNotFound": "A termék nem található."
   },
   "seller": {
     "title": "Eladó adatai",
@@ -310,7 +321,22 @@
       "category": "Válasszon egy kategóriát."
     },
     "success": "A hirdetés sikeresen létrejött.",
-    "error": "Hiba történt a hirdetés létrehozásakor."
+    "error": "Hiba történt a hirdetés létrehozásakor.",
+    "creating": "A termék készül...",
+    "uploadingImages": "Képek töltődnek...",
+    "uploadingImage": "A kép betöltés alatt áll.",
+    "imageUploadFailed": "A kép nem tölthető be.",
+    "imagesUploaded": "Minden kép feltöltése sikeresen megtörtént",
+    "draftSaved": "Vázlat mentve",
+    "productCreated": "A termék sikeresen létrejött.",
+    "creationFailed": "A termék nem hozható létre. Kérjük, próbálja újra.",
+    "errors": {
+      "titleRequired": "A hirdetés címe kötelező.",
+      "shortDescriptionRequired": "Rövid leírás szükséges.",
+      "descriptionRequired": "Részletes magyarázat szükséges.",
+      "categoryRequired": "A kategória kiválasztása kötelező.",
+      "priceRequired": "Adjon meg egy érvényes árat."
+    }
   },
   "fileUpload": {
     "dragDrop": "Töltsön fel egy fotót vagy videót.",
@@ -325,7 +351,7 @@
     "optimizing": "Optimalizálás...",
     "uploading": "Terhelés...",
     "queued": "Sorban várakozva...",
-    "uploadSuccess": "{count} feltöltött médiafájl",
+    "uploadSuccess": "{count} média feltöltött",
     "uploadError": "Betöltési hiba",
     "uploadFailed": "A feltöltés sikertelen.",
     "deleted": "A médiát sikeresen leállították.",

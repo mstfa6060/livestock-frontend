@@ -102,7 +102,7 @@
     "recentListings": "Vaši najnoviji oglasi",
     "recentMessages": "Nedavne poruke",
     "noListings": "Još niste dodali nijedan oglas.",
-    "noMessages": "Još niste primili poruku.",
+    "noMessages": "Još niste primili nijednu poruku.",
     "noNotifications": "Još niste primili nikakve obavijesti.",
     "viewAllListings": "Pogledajte sve oglase",
     "viewAllMessages": "Prikaži sve poruke"
@@ -252,6 +252,9 @@
     "report": "Prijavi problem",
     "description": "Obrazloženje",
     "specifications": "Značajke",
+    "category": "Kategorija",
+    "brand": "Robna marka",
+    "condition": "Situacija",
     "location": "Mjesto",
     "shipping": "Teret",
     "shippingAvailable": "Može se slati teretom.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maksimalna narudžba",
     "publishedAt": "Datum objave",
     "views": "Pregledano",
+    "reviews": "evaluacija",
     "similarProducts": "Slični proizvodi",
-    "sellerProducts": "Ostali proizvodi prodavatelja"
+    "sellerProducts": "Ostali proizvodi prodavatelja",
+    "contactSeller": "Kontaktirajte prodavatelja",
+    "loginRequired": "Prijavite se kako biste dodali u favorite.",
+    "addedToFavorites": "Dodano u favorite",
+    "removedFromFavorites": "Uklonjeno iz favorita",
+    "linkCopied": "Veza je kopirana.",
+    "messagingComingSoon": "Funkcija slanja poruka uskoro stiže.",
+    "productNotFound": "Proizvod nije pronađen."
   },
   "seller": {
     "title": "Podaci o prodavatelju",
@@ -310,7 +321,22 @@
       "category": "Odaberite kategoriju."
     },
     "success": "Oglas je uspješno kreiran.",
-    "error": "Došlo je do pogreške prilikom izrade oglasa."
+    "error": "Došlo je do pogreške prilikom izrade oglasa.",
+    "creating": "Proizvod se stvara...",
+    "uploadingImages": "Slike se učitavaju...",
+    "uploadingImage": "Slika se učitava.",
+    "imageUploadFailed": "Slika se nije mogla učitati.",
+    "imagesUploaded": "Sve slike su uspješno prenesene",
+    "draftSaved": "Nacrt spremljen",
+    "productCreated": "Proizvod je uspješno kreiran.",
+    "creationFailed": "Proizvod nije moguće kreirati. Pokušajte ponovno.",
+    "errors": {
+      "titleRequired": "Naslov oglasa je obavezan.",
+      "shortDescriptionRequired": "Potreban je kratak opis.",
+      "descriptionRequired": "Potrebno je detaljno objašnjenje.",
+      "categoryRequired": "Odabir kategorije je obavezan.",
+      "priceRequired": "Unesite valjanu cijenu."
+    }
   },
   "fileUpload": {
     "dragDrop": "Prenesite fotografiju ili videozapis.",

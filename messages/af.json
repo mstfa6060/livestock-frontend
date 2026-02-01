@@ -102,7 +102,7 @@
     "recentListings": "Jou Nuutste Lysinskrywings",
     "recentMessages": "Onlangse Boodskappe",
     "noListings": "Jy het nog geen advertensies bygevoeg nie.",
-    "noMessages": "Jy het nog nie 'n boodskap ontvang nie.",
+    "noMessages": "Jy het nog geen boodskappe ontvang nie.",
     "noNotifications": "Jy het nog geen kennisgewings ontvang nie.",
     "viewAllListings": "Bekyk alle lyste",
     "viewAllMessages": "Bekyk alle boodskappe"
@@ -252,6 +252,9 @@
     "report": "Rapporteer 'n probleem",
     "description": "Verduideliking",
     "specifications": "Kenmerke",
+    "category": "Kategorie",
+    "brand": "Handelsmerk",
+    "condition": "Situasie",
     "location": "Ligging",
     "shipping": "Vrag",
     "shippingAvailable": "Kan per vrag gestuur word.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maksimum bestelling",
     "publishedAt": "Publikasiedatum",
     "views": "Bekyk",
+    "reviews": "evaluering",
     "similarProducts": "Soortgelyke Produkte",
-    "sellerProducts": "Verkoper se Ander Produkte"
+    "sellerProducts": "Verkoper se Ander Produkte",
+    "contactSeller": "Kontak die verkoper",
+    "loginRequired": "Meld aan om by gunstelinge te voeg.",
+    "addedToFavorites": "By gunstelinge gevoeg",
+    "removedFromFavorites": "Verwyder van gunstelinge",
+    "linkCopied": "Die skakel is gekopieer.",
+    "messagingComingSoon": "Boodskapfunksie kom binnekort.",
+    "productNotFound": "Produk nie gevind nie."
   },
   "seller": {
     "title": "Verkoperinligting",
@@ -310,7 +321,22 @@
       "category": "Kies 'n kategorie."
     },
     "success": "Die advertensie is suksesvol geskep.",
-    "error": "'n Fout het voorgekom tydens die skep van die advertensie."
+    "error": "'n Fout het voorgekom tydens die skep van die advertensie.",
+    "creating": "Produk word geskep...",
+    "uploadingImages": "Beelde laai tans...",
+    "uploadingImage": "Beeld laai tans.",
+    "imageUploadFailed": "Beeld kon nie gelaai word nie.",
+    "imagesUploaded": "Alle beelde suksesvol opgelaai",
+    "draftSaved": "Konsep gestoor",
+    "productCreated": "Die produk is suksesvol geskep.",
+    "creationFailed": "Die produk kon nie geskep word nie. Probeer asseblief weer.",
+    "errors": {
+      "titleRequired": "Advertensietitel is verpligtend.",
+      "shortDescriptionRequired": "'n Kort beskrywing word vereis.",
+      "descriptionRequired": "'n Gedetailleerde verduideliking word benodig.",
+      "categoryRequired": "Kategoriekeuse is verpligtend.",
+      "priceRequired": "Voer 'n geldige prys in."
+    }
   },
   "fileUpload": {
     "dragDrop": "Laai 'n foto of video op.",
@@ -320,7 +346,7 @@
     "videoLimit": "Video: maksimum 50MB",
     "uploadCount": "{huidige} / {maks} gelaai",
     "maxFilesError": "Jy kan 'n maksimum van {max} media oplaai.",
-    "imageTooLarge": "Die foto moet kleiner as 10 MB wees.",
+    "imageTooLarge": "Die foto moet kleiner as 10MB wees.",
     "videoTooLarge": "Die video moet kleiner as 50 MB wees.",
     "optimizing": "Optimaliseer...",
     "uploading": "Laai tans...",

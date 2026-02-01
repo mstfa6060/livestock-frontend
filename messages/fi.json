@@ -102,7 +102,7 @@
     "recentListings": "Viimeisimmät ilmoituksesi",
     "recentMessages": "Viimeisimmät viestit",
     "noListings": "Et ole vielä lisännyt mainoksia.",
-    "noMessages": "Et ole vielä saanut viestiä.",
+    "noMessages": "Et ole vielä saanut viestejä.",
     "noNotifications": "Et ole vielä saanut ilmoituksia.",
     "viewAllListings": "Näytä kaikki ilmoitukset",
     "viewAllMessages": "Näytä kaikki viestit"
@@ -252,6 +252,9 @@
     "report": "Ilmoita ongelmasta",
     "description": "Selitys",
     "specifications": "Ominaisuudet",
+    "category": "Kategoria",
+    "brand": "Merkki",
+    "condition": "Tilanne",
     "location": "Sijainti",
     "shipping": "Rahti",
     "shippingAvailable": "Voidaan kuljettaa rahtina.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maksimitilaus",
     "publishedAt": "Julkaisupäivämäärä",
     "views": "Katsottu",
+    "reviews": "arviointi",
     "similarProducts": "Samankaltaisia tuotteita",
-    "sellerProducts": "Myyjän muut tuotteet"
+    "sellerProducts": "Myyjän muut tuotteet",
+    "contactSeller": "Ota yhteyttä myyjään",
+    "loginRequired": "Kirjaudu sisään lisätäksesi suosikkeihin.",
+    "addedToFavorites": "Lisätty suosikkeihin",
+    "removedFromFavorites": "Poistettu suosikeista",
+    "linkCopied": "Linkki on kopioitu.",
+    "messagingComingSoon": "Viestitoiminto tulossa pian.",
+    "productNotFound": "Tuotetta ei löytynyt."
   },
   "seller": {
     "title": "Myyjän tiedot",
@@ -310,7 +321,22 @@
       "category": "Valitse kategoria."
     },
     "success": "Mainos luotiin onnistuneesti.",
-    "error": "Mainoksen luomisessa tapahtui virhe."
+    "error": "Mainoksen luomisessa tapahtui virhe.",
+    "creating": "Tuotetta luodaan...",
+    "uploadingImages": "Kuvat latautuvat...",
+    "uploadingImage": "Kuva latautuu.",
+    "imageUploadFailed": "Kuvaa ei voitu ladata.",
+    "imagesUploaded": "Kaikki kuvat ladattiin onnistuneesti",
+    "draftSaved": "Luonnos tallennettu",
+    "productCreated": "Tuote luotiin onnistuneesti.",
+    "creationFailed": "Tuotetta ei voitu luoda. Yritä uudelleen.",
+    "errors": {
+      "titleRequired": "Mainoksen otsikko on pakollinen.",
+      "shortDescriptionRequired": "Lyhyt kuvaus vaaditaan.",
+      "descriptionRequired": "Yksityiskohtainen selvitys vaaditaan.",
+      "categoryRequired": "Kategorian valinta on pakollinen.",
+      "priceRequired": "Anna kelvollinen hinta."
+    }
   },
   "fileUpload": {
     "dragDrop": "Lataa kuva tai video.",

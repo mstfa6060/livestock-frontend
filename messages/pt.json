@@ -92,7 +92,7 @@
     "stats": {
       "totalListings": "Total de anúncios",
       "active": "ativo",
-      "totalViews": "Visualizações totais",
+      "totalViews": "Total de visualizações",
       "thisWeek": "essa semana",
       "favorites": "Favorito",
       "onYourListings": "em seus anúncios",
@@ -238,7 +238,7 @@
     "outOfStock": "Fora de estoque",
     "inStock": "Em estoque",
     "noResults": "Produto não encontrado.",
-    "loading": "Os produtos estão sendo carregados...",
+    "loading": "Carregando produtos...",
     "perPage": "Por página",
     "showing": "O total de {total} produtos entre {from} e {to}.",
     "loginToFavorite": "Faça login para adicionar aos favoritos.",
@@ -252,6 +252,9 @@
     "report": "Reportar um problema",
     "description": "Explicação",
     "specifications": "Características",
+    "category": "Categoria",
+    "brand": "Marca",
+    "condition": "Situação",
     "location": "Localização",
     "shipping": "Carga",
     "shippingAvailable": "Pode ser enviado por via aérea.",
@@ -264,8 +267,16 @@
     "maxOrder": "Pedido máximo",
     "publishedAt": "Data de publicação",
     "views": "Visualizado",
+    "reviews": "avaliação",
     "similarProducts": "Produtos similares",
-    "sellerProducts": "Outros produtos do vendedor"
+    "sellerProducts": "Outros produtos do vendedor",
+    "contactSeller": "Contate o vendedor",
+    "loginRequired": "Faça login para adicionar aos favoritos.",
+    "addedToFavorites": "Adicionado aos favoritos",
+    "removedFromFavorites": "Removido dos favoritos",
+    "linkCopied": "O link foi copiado.",
+    "messagingComingSoon": "Recurso de mensagens em breve.",
+    "productNotFound": "Produto não encontrado."
   },
   "seller": {
     "title": "Informações do vendedor",
@@ -310,7 +321,22 @@
       "category": "Selecione uma categoria."
     },
     "success": "O anúncio foi criado com sucesso.",
-    "error": "Ocorreu um erro ao criar o anúncio."
+    "error": "Ocorreu um erro ao criar o anúncio.",
+    "creating": "O produto está sendo criado...",
+    "uploadingImages": "As imagens estão carregando...",
+    "uploadingImage": "A imagem está carregando.",
+    "imageUploadFailed": "Não foi possível carregar a imagem.",
+    "imagesUploaded": "Todas as imagens foram carregadas com sucesso.",
+    "draftSaved": "Rascunho salvo",
+    "productCreated": "O produto foi criado com sucesso.",
+    "creationFailed": "Não foi possível criar o produto. Tente novamente.",
+    "errors": {
+      "titleRequired": "O título do anúncio é obrigatório.",
+      "shortDescriptionRequired": "É necessária uma breve descrição.",
+      "descriptionRequired": "É necessária uma explicação detalhada.",
+      "categoryRequired": "A seleção da categoria é obrigatória.",
+      "priceRequired": "Insira um preço válido."
+    }
   },
   "fileUpload": {
     "dragDrop": "Envie uma foto ou um vídeo.",
@@ -334,6 +360,6 @@
     "coverBadge": "TAMPA",
     "videoBadge": "VÍDEO",
     "coverUpdated": "A foto da capa foi ajustada com sucesso.",
-    "optimizationInfo": "As fotos foram otimizadas para estarem em conformidade com os padrões da web."
+    "optimizationInfo": "As fotos são otimizadas para estarem em conformidade com os padrões da web."
   }
 }

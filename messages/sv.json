@@ -252,6 +252,9 @@
     "report": "Rapportera ett problem",
     "description": "Förklaring",
     "specifications": "Drag",
+    "category": "Kategori",
+    "brand": "Stämpla",
+    "condition": "Situation",
     "location": "Plats",
     "shipping": "Frakt",
     "shippingAvailable": "Kan fraktas med gods.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maximal beställning",
     "publishedAt": "Publiceringsdatum",
     "views": "Visad",
+    "reviews": "utvärdering",
     "similarProducts": "Liknande produkter",
-    "sellerProducts": "Säljarens övriga produkter"
+    "sellerProducts": "Säljarens övriga produkter",
+    "contactSeller": "Kontakta säljaren",
+    "loginRequired": "Logga in för att lägga till i favoriter.",
+    "addedToFavorites": "Tillagd i favoriter",
+    "removedFromFavorites": "Borttagen från favoriter",
+    "linkCopied": "Länken har kopierats.",
+    "messagingComingSoon": "Meddelandefunktionen kommer snart.",
+    "productNotFound": "Produkten hittades inte."
   },
   "seller": {
     "title": "Säljarinformation",
@@ -310,7 +321,22 @@
       "category": "Välj en kategori."
     },
     "success": "Annonsen skapades.",
-    "error": "Ett fel uppstod när annonsen skapades."
+    "error": "Ett fel uppstod när annonsen skapades.",
+    "creating": "Produkten skapas...",
+    "uploadingImages": "Bilderna laddas...",
+    "uploadingImage": "Bilden laddas.",
+    "imageUploadFailed": "Bilden kunde inte laddas.",
+    "imagesUploaded": "Alla bilder har laddats upp",
+    "draftSaved": "Utkast sparat",
+    "productCreated": "Produkten skapades.",
+    "creationFailed": "Produkten kunde inte skapas. Försök igen.",
+    "errors": {
+      "titleRequired": "Annonstitel är obligatorisk.",
+      "shortDescriptionRequired": "En kort beskrivning krävs.",
+      "descriptionRequired": "En detaljerad förklaring krävs.",
+      "categoryRequired": "Val av kategori är obligatoriskt.",
+      "priceRequired": "Ange ett giltigt pris."
+    }
   },
   "fileUpload": {
     "dragDrop": "Ladda upp ett foto eller en video.",
@@ -334,6 +360,6 @@
     "coverBadge": "LOCK",
     "videoBadge": "VIDEO",
     "coverUpdated": "Omslagsfotot har justerats.",
-    "optimizationInfo": "Foton har optimerats för att följa webbstandarder"
+    "optimizationInfo": "Foton är optimerade för att följa webbstandarder"
   }
 }

@@ -252,6 +252,9 @@
     "report": "Nahlásit problém",
     "description": "Vysvětlení",
     "specifications": "Funkce",
+    "category": "Kategorie",
+    "brand": "Značka",
+    "condition": "Situace",
     "location": "Umístění",
     "shipping": "Náklad",
     "shippingAvailable": "Lze přepravit nákladem.",
@@ -264,8 +267,16 @@
     "maxOrder": "Maximální objednávka",
     "publishedAt": "Datum vydání",
     "views": "Zobrazeno",
+    "reviews": "hodnocení",
     "similarProducts": "Podobné produkty",
-    "sellerProducts": "Další produkty prodejce"
+    "sellerProducts": "Další produkty prodejce",
+    "contactSeller": "Kontaktujte prodejce",
+    "loginRequired": "Přihlaste se pro přidání do oblíbených.",
+    "addedToFavorites": "Přidáno k oblíbeným",
+    "removedFromFavorites": "Odebráno z oblíbených",
+    "linkCopied": "Odkaz byl zkopírován.",
+    "messagingComingSoon": "Funkce zasílání zpráv bude brzy k dispozici.",
+    "productNotFound": "Produkt nenalezen."
   },
   "seller": {
     "title": "Informace o prodejci",
@@ -310,7 +321,22 @@
       "category": "Vyberte kategorii."
     },
     "success": "Reklama byla úspěšně vytvořena.",
-    "error": "Při vytváření reklamy došlo k chybě."
+    "error": "Při vytváření reklamy došlo k chybě.",
+    "creating": "Produkt se vytváří...",
+    "uploadingImages": "Načítání obrázků...",
+    "uploadingImage": "Obrázek se načítá.",
+    "imageUploadFailed": "Obrázek se nepodařilo načíst.",
+    "imagesUploaded": "Všechny obrázky byly úspěšně nahrány",
+    "draftSaved": "Koncept uložen",
+    "productCreated": "Produkt byl úspěšně vytvořen.",
+    "creationFailed": "Produkt se nepodařilo vytvořit. Zkuste to prosím znovu.",
+    "errors": {
+      "titleRequired": "Název inzerátu je povinný.",
+      "shortDescriptionRequired": "Je vyžadován stručný popis.",
+      "descriptionRequired": "Je nutné podrobné vysvětlení.",
+      "categoryRequired": "Výběr kategorie je povinný.",
+      "priceRequired": "Zadejte platnou cenu."
+    }
   },
   "fileUpload": {
     "dragDrop": "Nahrajte fotografii nebo video.",

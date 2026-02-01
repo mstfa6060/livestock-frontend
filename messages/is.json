@@ -102,7 +102,7 @@
     "recentListings": "Nýjustu skráningar þínar",
     "recentMessages": "Nýleg skilaboð",
     "noListings": "Þú hefur ekki bætt við neinum auglýsingum ennþá.",
-    "noMessages": "Þú hefur ekki fengið skilaboð ennþá.",
+    "noMessages": "Þú hefur ekki fengið nein skilaboð ennþá.",
     "noNotifications": "Þú hefur ekki fengið neinar tilkynningar ennþá.",
     "viewAllListings": "Skoða allar skráningar",
     "viewAllMessages": "Skoða öll skilaboð"
@@ -124,7 +124,7 @@
     "createFirst": "Búðu til þína fyrstu skráningu.",
     "filters": {
       "all": "Öll þau",
-      "active": "Virk",
+      "active": "Virkur",
       "draft": "Drög",
       "pending": "Bíður eftir samþykki",
       "sold": "Selt"
@@ -225,7 +225,7 @@
     },
     "status": {
       "draft": "Drög",
-      "active": "Virk",
+      "active": "Virkur",
       "sold": "Selt",
       "pending": "Bíður eftir samþykki"
     },
@@ -252,6 +252,9 @@
     "report": "Tilkynna vandamál",
     "description": "Útskýring",
     "specifications": "Eiginleikar",
+    "category": "Flokkur",
+    "brand": "Vörumerki",
+    "condition": "Aðstæður",
     "location": "Staðsetning",
     "shipping": "Farmur",
     "shippingAvailable": "Hægt að flytja með farmi.",
@@ -264,8 +267,16 @@
     "maxOrder": "Hámarkspöntun",
     "publishedAt": "Útgáfudagur",
     "views": "Skoðað",
+    "reviews": "mat",
     "similarProducts": "Líkar vörur",
-    "sellerProducts": "Aðrar vörur seljanda"
+    "sellerProducts": "Aðrar vörur seljanda",
+    "contactSeller": "Hafðu samband við seljandann",
+    "loginRequired": "Skráðu þig inn til að bæta við uppáhalds.",
+    "addedToFavorites": "Bætt við uppáhalds",
+    "removedFromFavorites": "Fjarlægt úr uppáhaldslistum",
+    "linkCopied": "Tengillinn hefur verið afritaður.",
+    "messagingComingSoon": "Skilaboðaaðgerð væntanleg.",
+    "productNotFound": "Vara fannst ekki."
   },
   "seller": {
     "title": "Upplýsingar um seljanda",
@@ -310,7 +321,22 @@
       "category": "Veldu flokk."
     },
     "success": "Auglýsingin var búin til með góðum árangri.",
-    "error": "Villa kom upp við að búa til auglýsinguna."
+    "error": "Villa kom upp við að búa til auglýsinguna.",
+    "creating": "Varan er að verða til...",
+    "uploadingImages": "Myndir eru að hlaðast inn...",
+    "uploadingImage": "Myndin er að hlaðast inn.",
+    "imageUploadFailed": "Ekki var hægt að hlaða myndinni.",
+    "imagesUploaded": "Allar myndir hafa verið hlaðnar upp",
+    "draftSaved": "Drög vistuð",
+    "productCreated": "Varan var búin til með góðum árangri.",
+    "creationFailed": "Ekki var hægt að búa til vöruna. Reyndu aftur.",
+    "errors": {
+      "titleRequired": "Titill auglýsingar er skylda.",
+      "shortDescriptionRequired": "Stutt lýsing er nauðsynleg.",
+      "descriptionRequired": "Ítarleg útskýring er nauðsynleg.",
+      "categoryRequired": "Val á flokki er skylda.",
+      "priceRequired": "Sláðu inn gilt verð."
+    }
   },
   "fileUpload": {
     "dragDrop": "Hladdu inn mynd eða myndbandi.",

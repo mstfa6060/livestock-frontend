@@ -17,10 +17,13 @@ import {
 } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
-import { ArrowLeft, Save, ImagePlus, X } from "lucide-react";
+import { ArrowLeft, Save, ImagePlus, X, Loader2 } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
+import { toast } from "sonner";
+import axios from "axios";
+import { AppConfig } from "@/config/livestock-config";
 
 interface Category {
   id: string;
@@ -39,6 +42,8 @@ export default function NewListingPage() {
   const selectedCountry = useSelectedCountry();
 
   const [isLoading, setIsLoading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
+  const [uploadStatus, setUploadStatus] = useState("");
   const [categories, setCategories] = useState<Category[]>([]);
   const [images, setImages] = useState<File[]>([]);
   const [imagePreviewUrls, setImagePreviewUrls] = useState<string[]>([]);
@@ -129,6 +134,44 @@ export default function NewListingPage() {
       .trim();
   };
 
+  // Upload image to FileProvider
+  const uploadImageToFileProvider = async (file: File, bucketId: string): Promise<string | null> => {
+    try {
+      const formData = new FormData();
+      formData.append("formFile", file);
+      formData.append("moduleName", "LivestockTrading");
+      formData.append("bucketId", bucketId);
+      formData.append("bucketType", "1"); // MultipleFileBucket
+      formData.append("folderName", "products");
+      formData.append("versionName", "original");
+
+      const token = localStorage.getItem("accessToken");
+      const response = await axios.post(
+        `${AppConfig.FileProviderUrl}/Files/Upload`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (response.data?.files && response.data.files.length > 0) {
+        const file = response.data.files[0];
+        // Return the full URL or the first variant URL
+        return file.variants && file.variants.length > 0
+          ? file.variants[0].url
+          : file.path;
+      }
+
+      return null;
+    } catch (error) {
+      console.error("Failed to upload image:", error);
+      throw error;
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent, isDraft: boolean = false) => {
     e.preventDefault();
 
@@ -161,6 +204,8 @@ export default function NewListingPage() {
     }
 
     setIsLoading(true);
+    setUploadProgress(0);
+    setUploadStatus(t("creating"));
 
     try {
       const slug = generateSlug(formData.title);
@@ -175,7 +220,7 @@ export default function NewListingPage() {
         userObject: user,
       });
 
-      await LivestockTradingAPI.Products.Create.Request({
+      const productResponse = await LivestockTradingAPI.Products.Create.Request({
         title: formData.title,
         slug: slug,
         description: formData.description,
@@ -204,19 +249,58 @@ export default function NewListingPage() {
         metaKeywords: "",
       });
 
-      console.log("✅ Product created successfully");
+      console.log("✅ Product created successfully:", productResponse);
 
-      // TODO: Upload images separately using FileProvider API
+      // Upload images if any
+      if (images.length > 0) {
+        setUploadStatus(t("uploadingImages"));
+        const productId = productResponse.id;
+        const bucketId = `product-${productId}`;
 
+        for (let i = 0; i < images.length; i++) {
+          const image = images[i];
+          setUploadStatus(`${t("uploadingImage")} ${i + 1}/${images.length}`);
+
+          try {
+            // Upload to FileProvider
+            const imageUrl = await uploadImageToFileProvider(image, bucketId);
+
+            if (imageUrl) {
+              // Link image to product
+              await LivestockTradingAPI.ProductImages.Create.Request({
+                productId: productId,
+                imageUrl: imageUrl,
+                thumbnailUrl: imageUrl, // Use same URL for now
+                altText: formData.title,
+                sortOrder: i,
+                isPrimary: i === 0, // First image is primary
+              });
+
+              console.log(`✅ Image ${i + 1} uploaded and linked`);
+            }
+
+            // Update progress
+            setUploadProgress(((i + 1) / images.length) * 100);
+          } catch (imageError) {
+            console.error(`Failed to upload image ${i + 1}:`, imageError);
+            toast.error(`${t("imageUploadFailed")} ${i + 1}`);
+          }
+        }
+
+        toast.success(t("imagesUploaded"));
+      }
+
+      toast.success(isDraft ? t("draftSaved") : t("productCreated"));
       router.push("/dashboard/my-listings");
     } catch (error: any) {
       console.error("❌ Failed to create listing:", error);
 
-      // Show user-friendly error message
-      const errorMessage = error?.message || "Failed to create listing. Please try again.";
-      alert(errorMessage);
+      const errorMessage = error?.message || t("creationFailed");
+      toast.error(errorMessage);
     } finally {
       setIsLoading(false);
+      setUploadProgress(0);
+      setUploadStatus("");
     }
   };
 
@@ -246,8 +330,17 @@ export default function NewListingPage() {
               {t("saveDraft")}
             </Button>
             <Button type="submit" disabled={isLoading || authLoading || !user?.id}>
-              <Save className="h-4 w-4 mr-2" />
-              {authLoading ? "Yükleniyor..." : isLoading ? tc("loading") : t("publish")}
+              {isLoading ? (
+                <>
+                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                  {uploadStatus || tc("loading")}
+                </>
+              ) : (
+                <>
+                  <Save className="h-4 w-4 mr-2" />
+                  {authLoading ? "Yükleniyor..." : t("publish")}
+                </>
+              )}
             </Button>
           </div>
         </div>
