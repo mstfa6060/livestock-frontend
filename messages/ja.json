@@ -122,6 +122,12 @@
     "description": "ここからすべてのリストを管理します。",
     "noListings": "まだ広告を追加していません。",
     "createFirst": "最初のリストを作成します。",
+    "fetchError": "広告の読み込み中にエラーが発生しました。",
+    "deleteSuccess": "広告は正常に削除されました。",
+    "deleteError": "広告の削除中にエラーが発生しました。",
+    "activateSuccess": "広告が有効になりました。",
+    "deactivateSuccess": "リストは非アクティブ化されました。",
+    "statusError": "ステータスの変更中にエラーが発生しました。",
     "filters": {
       "all": "全員",
       "active": "アクティブ",
@@ -134,6 +140,12 @@
       "delete": "消去",
       "activate": "活性化",
       "deactivate": "パッシブ構造"
+    },
+    "deleteDialog": {
+      "title": "広告を削除する",
+      "description": "このリストを削除してもよろしいですか? この操作は元に戻せません。",
+      "cancel": "キャンセル",
+      "confirm": "消去"
     }
   },
   "favorites": {
@@ -252,6 +264,9 @@
     "report": "問題を報告する",
     "description": "説明",
     "specifications": "特徴",
+    "category": "カテゴリ",
+    "brand": "ブランド",
+    "condition": "状況",
     "location": "位置",
     "shipping": "貨物",
     "shippingAvailable": "貨物便での発送も可能です。",
@@ -264,8 +279,16 @@
     "maxOrder": "最大注文数",
     "publishedAt": "発行日",
     "views": "閲覧済み",
+    "reviews": "評価",
     "similarProducts": "類似製品",
-    "sellerProducts": "出品者のその他の商品"
+    "sellerProducts": "出品者のその他の商品",
+    "contactSeller": "販売者に連絡する",
+    "loginRequired": "お気に入りに追加するにはログインしてください。",
+    "addedToFavorites": "お気に入りに追加されました",
+    "removedFromFavorites": "お気に入りから削除されました",
+    "linkCopied": "リンクがコピーされました。",
+    "messagingComingSoon": "メッセージング機能は近日中にリリース予定です。",
+    "productNotFound": "商品が見つかりません。"
   },
   "seller": {
     "title": "販売者情報",
@@ -276,6 +299,52 @@
     "contact": "メッセージを送信",
     "call": "検索",
     "viewProfile": "プロフィールを見る"
+  },
+  "editListing": {
+    "title": "広告を編集する",
+    "saveChanges": "変更を保存",
+    "updating": "更新中...",
+    "updateSuccess": "広告は正常に更新されました。",
+    "updateFailed": "リストの更新中にエラーが発生しました。",
+    "loadError": "広告の読み込み中にエラーが発生しました。",
+    "basicInfo": "基本情報",
+    "categoryAndCondition": "カテゴリーとステータス",
+    "pricing": "価格",
+    "shipping": "貨物",
+    "images": "画像",
+    "existingImages": "利用可能な画像",
+    "addImage": "画像を追加",
+    "uploadingImages": "画像を読み込んでいます...",
+    "uploadingImage": "画像を読み込んでいます。",
+    "imageUploadFailed": "画像を読み込めませんでした。",
+    "imagesUploaded": "すべての画像が正常にアップロードされました",
+    "fields": {
+      "title": "広告タイトル",
+      "shortDescription": "簡単な説明",
+      "description": "詳細な説明",
+      "category": "カテゴリ",
+      "condition": "製品ステータス",
+      "price": "価格",
+      "stock": "在庫数量",
+      "unit": "ユニット",
+      "shippingAvailable": "配送も可能です。",
+      "shippingCost": "送料",
+      "weight": "重さ",
+      "weightUnit": "重量の単位"
+    },
+    "placeholders": {
+      "title": "例: 2歳のホルスタイン牛",
+      "shortDescription": "製品の説明（最大200文字）",
+      "description": "製品に関する詳細な情報を提供します...",
+      "category": "カテゴリを選択してください。"
+    },
+    "errors": {
+      "titleRequired": "広告タイトルは必須です。",
+      "shortDescriptionRequired": "簡単な説明が必要です。",
+      "descriptionRequired": "詳しい説明が必要です。",
+      "categoryRequired": "カテゴリの選択は必須です。",
+      "priceRequired": "有効な価格を入力してください。"
+    }
   },
   "newListing": {
     "title": "新しいリストを作成する",
@@ -288,7 +357,7 @@
     "images": "画像",
     "addImage": "画像を追加",
     "maxImages": "最大10枚の画像をアップロードできます。",
-    "imageHint": "画像は1枚以上10枚まで。PNG、JPG、またはWEBP形式。",
+    "imageHint": "最低1枚、最大10枚の画像。PNG、JPG、またはWEBP形式。",
     "fields": {
       "title": "広告タイトル",
       "shortDescription": "簡単な説明",
@@ -310,7 +379,22 @@
       "category": "カテゴリを選択してください。"
     },
     "success": "広告は正常に作成されました。",
-    "error": "広告の作成中にエラーが発生しました。"
+    "error": "広告の作成中にエラーが発生しました。",
+    "creating": "製品を作成中です...",
+    "uploadingImages": "画像を読み込んでいます...",
+    "uploadingImage": "画像を読み込んでいます。",
+    "imageUploadFailed": "画像を読み込めませんでした。",
+    "imagesUploaded": "すべての画像が正常にアップロードされました",
+    "draftSaved": "下書きを保存しました",
+    "productCreated": "製品が正常に作成されました。",
+    "creationFailed": "製品を作成できませんでした。もう一度お試しください。",
+    "errors": {
+      "titleRequired": "広告タイトルは必須です。",
+      "shortDescriptionRequired": "簡単な説明が必要です。",
+      "descriptionRequired": "詳しい説明が必要です。",
+      "categoryRequired": "カテゴリの選択は必須です。",
+      "priceRequired": "有効な価格を入力してください。"
+    }
   },
   "fileUpload": {
     "dragDrop": "写真またはビデオをアップロードします。",

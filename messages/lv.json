@@ -122,6 +122,12 @@
     "description": "Pārvaldiet visus savus sludinājumus šeit.",
     "noListings": "Jūs vēl neesat pievienojis nevienu reklāmu.",
     "createFirst": "Izveidojiet savu pirmo sludinājumu.",
+    "fetchError": "Ielādējot reklāmas, radās kļūda.",
+    "deleteSuccess": "Sludinājums ir veiksmīgi izdzēsts.",
+    "deleteError": "Dzēšot reklāmu, radās kļūda.",
+    "activateSuccess": "Reklāma ir aktivizēta.",
+    "deactivateSuccess": "Saraksts ir deaktivizēts.",
+    "statusError": "Mainot statusu, radās kļūda.",
     "filters": {
       "all": "Visi no viņiem",
       "active": "Aktīvs",
@@ -134,6 +140,12 @@
       "delete": "Dzēst",
       "activate": "Aktivizēt",
       "deactivate": "Pasīvā struktūra"
+    },
+    "deleteDialog": {
+      "title": "Dzēst reklāmu",
+      "description": "Vai tiešām vēlaties dzēst šo ierakstu? Šī darbība ir neatgriezeniska.",
+      "cancel": "Atcelt",
+      "confirm": "Dzēst"
     }
   },
   "favorites": {
@@ -252,6 +264,9 @@
     "report": "Ziņot par problēmu",
     "description": "Paskaidrojums",
     "specifications": "Funkcijas",
+    "category": "Kategorija",
+    "brand": "Zīmols",
+    "condition": "Situācija",
     "location": "Atrašanās vieta",
     "shipping": "Krava",
     "shippingAvailable": "Var piegādāt ar kravu.",
@@ -264,8 +279,16 @@
     "maxOrder": "Maksimālais pasūtījums",
     "publishedAt": "Publicēšanas datums",
     "views": "Skatīts",
+    "reviews": "novērtējums",
     "similarProducts": "Līdzīgi produkti",
-    "sellerProducts": "Pārdevēja citi produkti"
+    "sellerProducts": "Pārdevēja citi produkti",
+    "contactSeller": "Sazinieties ar pārdevēju",
+    "loginRequired": "Piesakieties, lai pievienotu izlasei.",
+    "addedToFavorites": "Pievienots izlasei",
+    "removedFromFavorites": "Noņemts no izlases",
+    "linkCopied": "Saite ir nokopēta.",
+    "messagingComingSoon": "Ziņojumapmaiņas funkcija būs pieejama drīzumā.",
+    "productNotFound": "Produkts nav atrasts."
   },
   "seller": {
     "title": "Pārdevēja informācija",
@@ -276,6 +299,52 @@
     "contact": "Sūtīt ziņojumu",
     "call": "Meklēt",
     "viewProfile": "Skatīt profilu"
+  },
+  "editListing": {
+    "title": "Rediģēt reklāmu",
+    "saveChanges": "Saglabāt izmaiņas",
+    "updating": "Notiek atjaunināšana...",
+    "updateSuccess": "Sludinājums ir veiksmīgi atjaunināts.",
+    "updateFailed": "Atjauninot ierakstu, radās kļūda.",
+    "loadError": "Ielādējot reklāmu, radās kļūda.",
+    "basicInfo": "Pamatinformācija",
+    "categoryAndCondition": "Kategorija un statuss",
+    "pricing": "Cenu noteikšana",
+    "shipping": "Krava",
+    "images": "Attēli",
+    "existingImages": "Pieejamie attēli",
+    "addImage": "Pievienot attēlu",
+    "uploadingImages": "Attēli tiek ielādēti...",
+    "uploadingImage": "Attēls tiek ielādēts.",
+    "imageUploadFailed": "Attēlu nevarēja ielādēt.",
+    "imagesUploaded": "Visi attēli veiksmīgi augšupielādēti",
+    "fields": {
+      "title": "Reklāmas nosaukums",
+      "shortDescription": "Īss apraksts",
+      "description": "Detalizēts skaidrojums",
+      "category": "Kategorija",
+      "condition": "Produkta statuss",
+      "price": "Cena",
+      "stock": "Noliktavas daudzums",
+      "unit": "Vienība",
+      "shippingAvailable": "Piegāde ir pieejama.",
+      "shippingCost": "Piegādes maksa",
+      "weight": "Svars",
+      "weightUnit": "Svara mērvienība"
+    },
+    "placeholders": {
+      "title": "Piemērs: 2 gadus veca Holšteinas šķirnes govs",
+      "shortDescription": "Produkta apraksts (maksimums 200 rakstzīmes)",
+      "description": "Sniedziet detalizētu informāciju par produktu...",
+      "category": "Izvēlieties kategoriju."
+    },
+    "errors": {
+      "titleRequired": "Sludinājuma nosaukums ir obligāts.",
+      "shortDescriptionRequired": "Nepieciešams īss apraksts.",
+      "descriptionRequired": "Nepieciešams detalizēts skaidrojums.",
+      "categoryRequired": "Kategorijas izvēle ir obligāta.",
+      "priceRequired": "Ievadiet derīgu cenu."
+    }
   },
   "newListing": {
     "title": "Izveidot jaunu ierakstu",
@@ -310,7 +379,22 @@
       "category": "Izvēlieties kategoriju."
     },
     "success": "Reklāma ir veiksmīgi izveidota.",
-    "error": "Veidojot reklāmu, radās kļūda."
+    "error": "Veidojot reklāmu, radās kļūda.",
+    "creating": "Produkts tiek veidots...",
+    "uploadingImages": "Attēli tiek ielādēti...",
+    "uploadingImage": "Attēls tiek ielādēts.",
+    "imageUploadFailed": "Attēlu nevarēja ielādēt.",
+    "imagesUploaded": "Visi attēli ir veiksmīgi augšupielādēti",
+    "draftSaved": "Melnraksts saglabāts",
+    "productCreated": "Produkts tika veiksmīgi izveidots.",
+    "creationFailed": "Produktu nevarēja izveidot. Lūdzu, mēģiniet vēlreiz.",
+    "errors": {
+      "titleRequired": "Sludinājuma nosaukums ir obligāts.",
+      "shortDescriptionRequired": "Nepieciešams īss apraksts.",
+      "descriptionRequired": "Nepieciešams detalizēts skaidrojums.",
+      "categoryRequired": "Kategorijas izvēle ir obligāta.",
+      "priceRequired": "Ievadiet derīgu cenu."
+    }
   },
   "fileUpload": {
     "dragDrop": "Augšupielādējiet fotoattēlu vai videoklipu.",

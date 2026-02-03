@@ -122,6 +122,12 @@
     "description": "Verwalten Sie alle Ihre Angebote von hier aus.",
     "noListings": "Sie haben noch keine Anzeigen hinzugefügt.",
     "createFirst": "Erstellen Sie Ihren ersten Eintrag.",
+    "fetchError": "Beim Laden der Anzeigen ist ein Fehler aufgetreten.",
+    "deleteSuccess": "Die Anzeige wurde erfolgreich gelöscht.",
+    "deleteError": "Beim Löschen der Anzeige ist ein Fehler aufgetreten.",
+    "activateSuccess": "Die Anzeige wurde aktiviert.",
+    "deactivateSuccess": "Der Eintrag wurde deaktiviert.",
+    "statusError": "Beim Ändern des Status ist ein Fehler aufgetreten.",
     "filters": {
       "all": "Alle",
       "active": "Aktiv",
@@ -134,6 +140,12 @@
       "delete": "Löschen",
       "activate": "Aktivieren",
       "deactivate": "Passive Struktur"
+    },
+    "deleteDialog": {
+      "title": "Anzeige löschen",
+      "description": "Sind Sie sicher, dass Sie diesen Eintrag löschen möchten? Diese Aktion ist unwiderruflich.",
+      "cancel": "Stornieren",
+      "confirm": "Löschen"
     }
   },
   "favorites": {
@@ -220,7 +232,7 @@
       "newest": "Letzte",
       "oldest": "Älteste",
       "priceAsc": "Preis (von niedrig nach hoch)",
-      "priceDesc": "Preis (höchster bis niedrigster Wert)",
+      "priceDesc": "Preis (höchster bis niedrigster Preis)",
       "popular": "Am beliebtesten"
     },
     "status": {
@@ -238,7 +250,7 @@
     "outOfStock": "Nicht vorrätig",
     "inStock": "Auf Lager",
     "noResults": "Produkt nicht gefunden.",
-    "loading": "Produkte werden geladen...",
+    "loading": "Die Produkte werden geladen...",
     "perPage": "Pro Seite",
     "showing": "Die Summe aller Produkte zwischen {von} und {bis}.",
     "loginToFavorite": "Melde dich an, um zu den Favoriten hinzuzufügen.",
@@ -252,6 +264,9 @@
     "report": "Problem melden",
     "description": "Erläuterung",
     "specifications": "Merkmale",
+    "category": "Kategorie",
+    "brand": "Marke",
+    "condition": "Situation",
     "location": "Standort",
     "shipping": "Ladung",
     "shippingAvailable": "Kann per Fracht versendet werden.",
@@ -264,18 +279,72 @@
     "maxOrder": "Maximale Ordnung",
     "publishedAt": "Veröffentlichungsdatum",
     "views": "Angesehen",
+    "reviews": "Auswertung",
     "similarProducts": "Ähnliche Produkte",
-    "sellerProducts": "Weitere Produkte des Verkäufers"
+    "sellerProducts": "Weitere Produkte des Verkäufers",
+    "contactSeller": "Kontaktieren Sie den Verkäufer",
+    "loginRequired": "Melde dich an, um zu den Favoriten hinzuzufügen.",
+    "addedToFavorites": "Zu Favoriten hinzugefügt",
+    "removedFromFavorites": "Aus den Favoriten entfernt",
+    "linkCopied": "Der Link wurde kopiert.",
+    "messagingComingSoon": "Die Nachrichtenfunktion ist in Kürze verfügbar.",
+    "productNotFound": "Produkt nicht gefunden."
   },
   "seller": {
     "title": "Angaben zum Verkäufer",
-    "verified": "Bestätigt",
+    "verified": "Verifiziert",
     "reviews": "Auswertung",
     "products": "Anzeige",
     "memberSince": "Mitglied seit {Jahr}",
     "contact": "Nachricht senden",
     "call": "Suchen",
     "viewProfile": "Profil ansehen"
+  },
+  "editListing": {
+    "title": "Anzeige bearbeiten",
+    "saveChanges": "Änderungen speichern",
+    "updating": "Aktualisierung...",
+    "updateSuccess": "Die Anzeige wurde erfolgreich aktualisiert.",
+    "updateFailed": "Beim Aktualisieren des Eintrags ist ein Fehler aufgetreten.",
+    "loadError": "Beim Laden der Anzeige ist ein Fehler aufgetreten.",
+    "basicInfo": "Grundlegende Informationen",
+    "categoryAndCondition": "Kategorie und Status",
+    "pricing": "Preisgestaltung",
+    "shipping": "Ladung",
+    "images": "Bilder",
+    "existingImages": "Verfügbare Bilder",
+    "addImage": "Bild hinzufügen",
+    "uploadingImages": "Bilder werden geladen...",
+    "uploadingImage": "Bild wird geladen.",
+    "imageUploadFailed": "Das Bild konnte nicht geladen werden.",
+    "imagesUploaded": "Alle Bilder wurden erfolgreich hochgeladen",
+    "fields": {
+      "title": "Werbetitel",
+      "shortDescription": "Kurzbeschreibung",
+      "description": "Detaillierte Erklärung",
+      "category": "Kategorie",
+      "condition": "Produktstatus",
+      "price": "Preis",
+      "stock": "Lagerbestand",
+      "unit": "Einheit",
+      "shippingAvailable": "Versand ist möglich.",
+      "shippingCost": "Versandkosten",
+      "weight": "Gewicht",
+      "weightUnit": "Gewichtseinheit"
+    },
+    "placeholders": {
+      "title": "Beispiel: 2-jährige Holstein-Kuh",
+      "shortDescription": "Produktbeschreibung (max. 200 Zeichen)",
+      "description": "Geben Sie detaillierte Informationen zum Produkt an...",
+      "category": "Wählen Sie eine Kategorie."
+    },
+    "errors": {
+      "titleRequired": "Der Anzeigentitel ist obligatorisch.",
+      "shortDescriptionRequired": "Eine kurze Beschreibung ist erforderlich.",
+      "descriptionRequired": "Eine detaillierte Erklärung ist erforderlich.",
+      "categoryRequired": "Die Auswahl einer Kategorie ist obligatorisch.",
+      "priceRequired": "Geben Sie einen gültigen Preis ein."
+    }
   },
   "newListing": {
     "title": "Neuen Eintrag erstellen",
@@ -310,7 +379,22 @@
       "category": "Wählen Sie eine Kategorie."
     },
     "success": "Die Anzeige wurde erfolgreich erstellt.",
-    "error": "Beim Erstellen der Anzeige ist ein Fehler aufgetreten."
+    "error": "Beim Erstellen der Anzeige ist ein Fehler aufgetreten.",
+    "creating": "Das Produkt wird gerade erstellt...",
+    "uploadingImages": "Bilder werden geladen...",
+    "uploadingImage": "Bild wird geladen.",
+    "imageUploadFailed": "Das Bild konnte nicht geladen werden.",
+    "imagesUploaded": "Alle Bilder wurden erfolgreich hochgeladen.",
+    "draftSaved": "Entwurf gespeichert",
+    "productCreated": "Das Produkt wurde erfolgreich erstellt.",
+    "creationFailed": "Das Produkt konnte nicht erstellt werden. Bitte versuchen Sie es erneut.",
+    "errors": {
+      "titleRequired": "Der Anzeigentitel ist obligatorisch.",
+      "shortDescriptionRequired": "Eine kurze Beschreibung ist erforderlich.",
+      "descriptionRequired": "Eine detaillierte Erklärung ist erforderlich.",
+      "categoryRequired": "Die Auswahl einer Kategorie ist obligatorisch.",
+      "priceRequired": "Geben Sie einen gültigen Preis ein."
+    }
   },
   "fileUpload": {
     "dragDrop": "Laden Sie ein Foto oder ein Video hoch.",
@@ -324,7 +408,7 @@
     "videoTooLarge": "Das Video darf nicht größer als 50 MB sein.",
     "optimizing": "Optimierung...",
     "uploading": "Laden...",
-    "queued": "Warten in der Schlange...",
+    "queued": "Ich warte in der Schlange...",
     "uploadSuccess": "{count} hochgeladene Medien",
     "uploadError": "Ladefehler",
     "uploadFailed": "Upload fehlgeschlagen.",
@@ -334,6 +418,6 @@
     "coverBadge": "DECKEL",
     "videoBadge": "VIDEO",
     "coverUpdated": "Das Titelbild wurde erfolgreich angepasst.",
-    "optimizationInfo": "Die Fotos sind für die Einhaltung der Webstandards optimiert."
+    "optimizationInfo": "Die Fotos wurden optimiert, um den Webstandards zu entsprechen."
   }
 }

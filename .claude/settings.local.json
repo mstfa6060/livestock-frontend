@@ -40,7 +40,10 @@
       "Bash(if exist \".next\\\\dev\\\\lock\" del \".next\\\\dev\\\\lock\")",
       "Bash(git checkout:*)",
       "Bash(timeout:*)",
-      "Bash(npm run dev:start:*)"
+      "Bash(npm run dev:start:*)",
+      "Bash(xargs ls:*)",
+      "Bash(node:*)",
+      "Bash(npm run translate:missing:*)"
     ]
   }
 }

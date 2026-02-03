@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Button } from "@/components/ui/button";
@@ -33,20 +33,23 @@ interface Category {
 
 type ProductCondition = 0 | 1 | 2 | 3; // new, likeNew, good, fair
 
-export default function NewListingPage() {
+export default function EditListingPage() {
   const router = useRouter();
-  const t = useTranslations("newListing");
+  const params = useParams();
+  const productId = params.id as string;
+  const t = useTranslations("editListing");
   const tc = useTranslations("common");
   const tp = useTranslations("products");
   const { user, isLoading: authLoading } = useAuth();
   const selectedCountry = useSelectedCountry();
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [uploadStatus, setUploadStatus] = useState("");
   const [categories, setCategories] = useState<Category[]>([]);
   const [images, setImages] = useState<File[]>([]);
   const [imagePreviewUrls, setImagePreviewUrls] = useState<string[]>([]);
+  const [existingImages, setExistingImages] = useState<Array<{ id: string; url: string }>>([]);
 
   // Debug: Log user object when it changes
   useEffect(() => {
@@ -69,10 +72,6 @@ export default function NewListingPage() {
     shippingCost: "",
     weight: "",
     weightUnit: "kg",
-    // Location fields
-    city: "",
-    address: "",
-    postalCode: "",
   });
 
   // Load categories
@@ -95,15 +94,65 @@ export default function NewListingPage() {
     loadCategories();
   }, []);
 
-  // Update currency when country changes
+  // Load existing product data
   useEffect(() => {
-    if (selectedCountry?.defaultCurrencyCode) {
-      setFormData((prev) => ({
-        ...prev,
-        currency: selectedCountry.defaultCurrencyCode,
-      }));
-    }
-  }, [selectedCountry]);
+    const loadProduct = async () => {
+      if (!productId) return;
+
+      setIsLoading(true);
+      try {
+        // Fetch product details
+        const product = await LivestockTradingAPI.Products.Detail.Request({ id: productId });
+
+        // Populate form
+        setFormData({
+          title: product.title,
+          shortDescription: product.shortDescription,
+          description: product.description,
+          categoryId: product.categoryId,
+          basePrice: String(product.basePrice),
+          currency: product.currency,
+          priceUnit: product.priceUnit,
+          stockQuantity: String(product.stockQuantity),
+          stockUnit: product.stockUnit,
+          condition: product.condition as ProductCondition,
+          isShippingAvailable: product.isShippingAvailable,
+          shippingCost: product.shippingCost ? String(product.shippingCost) : "",
+          weight: product.weight ? String(product.weight) : "",
+          weightUnit: product.weightUnit,
+        });
+
+        // Fetch existing images
+        const imagesResponse = await LivestockTradingAPI.ProductImages.All.Request({
+          sorting: { key: "sortOrder", direction: 0 },
+          filters: [
+            {
+              key: "productId",
+              type: "guid",
+              isUsed: true,
+              values: [productId],
+              min: {},
+              max: {},
+              conditionType: "equals",
+            },
+          ],
+          pageRequest: { currentPage: 1, perPageCount: 20, listAll: true },
+        });
+
+        setExistingImages(
+          imagesResponse.map((img) => ({ id: img.id, url: img.imageUrl }))
+        );
+      } catch (error) {
+        console.error("Failed to load product:", error);
+        toast.error(t("loadError"));
+        router.push("/dashboard/my-listings");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadProduct();
+  }, [productId, router, t]);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
@@ -176,7 +225,7 @@ export default function NewListingPage() {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent, isDraft: boolean = false) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Validate required fields
@@ -200,14 +249,6 @@ export default function NewListingPage() {
       alert(t("errors.priceRequired"));
       return;
     }
-    if (!formData.city.trim()) {
-      alert(t("errors.cityRequired"));
-      return;
-    }
-    if (!formData.address.trim()) {
-      alert(t("errors.addressRequired"));
-      return;
-    }
     if (!user?.id) {
       console.error("❌ User object missing or no ID:", { user });
       alert("Kullanıcı bilgisi bulunamadı. Lütfen tekrar giriş yapın.");
@@ -217,80 +258,21 @@ export default function NewListingPage() {
 
     setIsLoading(true);
     setUploadProgress(0);
-    setUploadStatus(t("creating"));
+    setUploadStatus(t("updating"));
 
     try {
       const slug = generateSlug(formData.title);
 
-      // Step 1: Check if Seller profile exists, if not create one
-      console.log("👤 Checking seller profile...");
-      let sellerId: string;
-
-      try {
-        // Try to get existing seller profile by user id
-        const sellerResponse = await LivestockTradingAPI.Sellers.Detail.Request({
-          id: user.id,
-        });
-        sellerId = sellerResponse.id;
-        console.log("✅ Seller profile found:", sellerId);
-      } catch {
-        // Seller doesn't exist, create one
-        console.log("📝 Creating seller profile...");
-        const newSeller = await LivestockTradingAPI.Sellers.Create.Request({
-          userId: user.id,
-          businessName: user.displayName || user.username || "My Business",
-          businessType: "Individual",
-          taxNumber: "",
-          registrationNumber: "",
-          description: "",
-          logoUrl: "",
-          bannerUrl: "",
-          email: user.email || "",
-          phone: "",
-          website: "",
-          isActive: true,
-          status: 0,
-          businessHours: "",
-          acceptedPaymentMethods: "",
-          returnPolicy: "",
-          shippingPolicy: "",
-          socialMediaLinks: "",
-        });
-        sellerId = newSeller.id;
-        console.log("✅ Seller profile created:", sellerId);
-      }
-
-      // Step 2: Create Location
-      console.log("📍 Creating location...");
-      const locationResponse = await LivestockTradingAPI.Locations.Create.Request({
-        name: formData.title,
-        addressLine1: formData.address,
-        addressLine2: "",
-        city: formData.city,
-        state: formData.city,
-        postalCode: formData.postalCode || "",
-        countryCode: selectedCountry?.code || "TR",
-        latitude: 0,
-        longitude: 0,
-        phone: "",
-        email: "",
-        type: 0, // ProductLocation
-        isActive: true,
-      });
-
-      console.log("✅ Location created:", locationResponse.id);
-
-      // Step 3: Create Product with the sellerId and locationId
-      console.log("📤 Creating product with payload:", {
+      console.log("📤 Updating product with payload:", {
+        id: productId,
         title: formData.title,
         categoryId: formData.categoryId,
         basePrice: parseFloat(formData.basePrice),
-        sellerId: sellerId,
-        locationId: locationResponse.id,
-        status: isDraft ? 0 : 4, // 0=draft, 4=pendingApproval
+        sellerId: user.id,
       });
 
-      const productResponse = await LivestockTradingAPI.Products.Create.Request({
+      const productResponse = await LivestockTradingAPI.Products.Update.Request({
+        id: productId,
         title: formData.title,
         slug: slug,
         description: formData.description,
@@ -302,9 +284,9 @@ export default function NewListingPage() {
         stockQuantity: parseInt(formData.stockQuantity),
         stockUnit: formData.stockUnit,
         isInStock: parseInt(formData.stockQuantity) > 0,
-        sellerId: sellerId,
-        locationId: locationResponse.id,
-        status: isDraft ? 0 : 4, // 0=draft, 4=pendingApproval
+        sellerId: user.id,
+        locationId: "602cb4fa-50c8-4d69-88a0-d411b25a2c34", // TODO: Fetch from user's actual location
+        status: isDraft ? 0 : 3, // 0=draft, 3=pending
         condition: formData.condition,
         isShippingAvailable: formData.isShippingAvailable,
         shippingCost: formData.shippingCost
@@ -319,12 +301,11 @@ export default function NewListingPage() {
         metaKeywords: "",
       });
 
-      console.log("✅ Product created successfully:", productResponse);
+      console.log("✅ Product updated successfully:", productResponse);
 
-      // Upload images if any
+      // Upload new images if any
       if (images.length > 0) {
         setUploadStatus(t("uploadingImages"));
-        const productId = productResponse.id;
         const bucketId = `product-${productId}`;
 
         for (let i = 0; i < images.length; i++) {
@@ -360,12 +341,12 @@ export default function NewListingPage() {
         toast.success(t("imagesUploaded"));
       }
 
-      toast.success(isDraft ? t("draftSaved") : t("productCreated"));
+      toast.success(t("updateSuccess"));
       router.push("/dashboard/my-listings");
     } catch (error: any) {
-      console.error("❌ Failed to create listing:", error);
+      console.error("❌ Failed to update listing:", error);
 
-      const errorMessage = error?.message || t("creationFailed");
+      const errorMessage = error?.message || t("updateFailed");
       toast.error(errorMessage);
     } finally {
       setIsLoading(false);
@@ -376,7 +357,7 @@ export default function NewListingPage() {
 
   return (
     <DashboardLayout>
-      <form onSubmit={(e) => handleSubmit(e, false)}>
+      <form onSubmit={handleSubmit}>
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-4">
@@ -391,14 +372,6 @@ export default function NewListingPage() {
             <h1 className="text-2xl font-bold">{t("title")}</h1>
           </div>
           <div className="flex gap-2">
-            <Button
-              type="button"
-              variant="outline"
-              onClick={(e) => handleSubmit(e, true)}
-              disabled={isLoading || authLoading || !user?.id}
-            >
-              {t("saveDraft")}
-            </Button>
             <Button type="submit" disabled={isLoading || authLoading || !user?.id}>
               {isLoading ? (
                 <>
@@ -408,7 +381,7 @@ export default function NewListingPage() {
               ) : (
                 <>
                   <Save className="h-4 w-4 mr-2" />
-                  {authLoading ? "Yükleniyor..." : t("publish")}
+                  {authLoading ? "Yükleniyor..." : t("saveChanges")}
                 </>
               )}
             </Button>
@@ -639,53 +612,6 @@ export default function NewListingPage() {
                       }
                     />
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Location */}
-            <Card>
-              <CardHeader>
-                <CardTitle>{t("location")}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="city">{t("fields.city")} *</Label>
-                  <Input
-                    id="city"
-                    value={formData.city}
-                    onChange={(e) =>
-                      setFormData({ ...formData, city: e.target.value })
-                    }
-                    placeholder={t("placeholders.city")}
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="address">{t("fields.address")} *</Label>
-                  <Textarea
-                    id="address"
-                    value={formData.address}
-                    onChange={(e) =>
-                      setFormData({ ...formData, address: e.target.value })
-                    }
-                    placeholder={t("placeholders.address")}
-                    rows={2}
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="postalCode">{t("fields.postalCode")}</Label>
-                  <Input
-                    id="postalCode"
-                    value={formData.postalCode}
-                    onChange={(e) =>
-                      setFormData({ ...formData, postalCode: e.target.value })
-                    }
-                    placeholder={t("placeholders.postalCode")}
-                  />
                 </div>
               </CardContent>
             </Card>

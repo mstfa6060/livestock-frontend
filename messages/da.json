@@ -103,7 +103,7 @@
     "recentMessages": "Seneste beskeder",
     "noListings": "Du har ikke tilføjet nogen annoncer endnu.",
     "noMessages": "Du har ikke modtaget en besked endnu.",
-    "noNotifications": "Du har ikke modtaget nogen notifikationer endnu.",
+    "noNotifications": "Du har endnu ikke modtaget nogen notifikationer.",
     "viewAllListings": "Se alle annoncer",
     "viewAllMessages": "Se alle beskeder"
   },
@@ -122,6 +122,12 @@
     "description": "Administrer alle dine annoncer herfra.",
     "noListings": "Du har ikke tilføjet nogen annoncer endnu.",
     "createFirst": "Opret din første annonce.",
+    "fetchError": "Der opstod en fejl under indlæsning af annoncer.",
+    "deleteSuccess": "Annoncen blev slettet.",
+    "deleteError": "Der opstod en fejl under sletning af annoncen.",
+    "activateSuccess": "Annoncen er blevet aktiveret.",
+    "deactivateSuccess": "Opslaget er blevet deaktiveret.",
+    "statusError": "Der opstod en fejl under ændring af status.",
     "filters": {
       "all": "Alle af dem",
       "active": "Aktiv",
@@ -134,6 +140,12 @@
       "delete": "Slet",
       "activate": "Aktivér",
       "deactivate": "Passiv struktur"
+    },
+    "deleteDialog": {
+      "title": "Slet annoncen",
+      "description": "Er du sikker på, at du vil slette denne fortegnelse? Denne handling kan ikke fortrydes.",
+      "cancel": "Ophæve",
+      "confirm": "Slet"
     }
   },
   "favorites": {
@@ -252,6 +264,9 @@
     "report": "Rapportér et problem",
     "description": "Forklaring",
     "specifications": "Funktioner",
+    "category": "Kategori",
+    "brand": "Mærke",
+    "condition": "Situation",
     "location": "Beliggenhed",
     "shipping": "Last",
     "shippingAvailable": "Kan sendes med fragt.",
@@ -264,8 +279,16 @@
     "maxOrder": "Maksimal ordre",
     "publishedAt": "Udgivelsesdato",
     "views": "Set",
+    "reviews": "evaluering",
     "similarProducts": "Lignende produkter",
-    "sellerProducts": "Sælgers andre produkter"
+    "sellerProducts": "Sælgers andre produkter",
+    "contactSeller": "Kontakt sælgeren",
+    "loginRequired": "Log ind for at tilføje til favoritter.",
+    "addedToFavorites": "Tilføjet til favoritter",
+    "removedFromFavorites": "Fjernet fra favoritter",
+    "linkCopied": "Linket er blevet kopieret.",
+    "messagingComingSoon": "Beskedfunktion kommer snart.",
+    "productNotFound": "Produktet blev ikke fundet."
   },
   "seller": {
     "title": "Sælgeroplysninger",
@@ -276,6 +299,52 @@
     "contact": "Send besked",
     "call": "Søge",
     "viewProfile": "Se profil"
+  },
+  "editListing": {
+    "title": "Rediger annoncen",
+    "saveChanges": "Gem ændringer",
+    "updating": "Opdaterer...",
+    "updateSuccess": "Annoncen er blevet opdateret.",
+    "updateFailed": "Der opstod en fejl under opdateringen af listen.",
+    "loadError": "Der opstod en fejl under indlæsning af annoncen.",
+    "basicInfo": "Grundlæggende oplysninger",
+    "categoryAndCondition": "Kategori og status",
+    "pricing": "Priser",
+    "shipping": "Last",
+    "images": "Billeder",
+    "existingImages": "Tilgængelige billeder",
+    "addImage": "Tilføj billede",
+    "uploadingImages": "Billeder indlæses...",
+    "uploadingImage": "Billedet indlæses.",
+    "imageUploadFailed": "Billedet kunne ikke indlæses.",
+    "imagesUploaded": "Alle billeder er uploadet",
+    "fields": {
+      "title": "Annoncetitel",
+      "shortDescription": "Kort beskrivelse",
+      "description": "Detaljeret forklaring",
+      "category": "Kategori",
+      "condition": "Produktstatus",
+      "price": "Pris",
+      "stock": "Lagerbeholdning",
+      "unit": "Enhed",
+      "shippingAvailable": "Forsendelse er tilgængelig.",
+      "shippingCost": "Forsendelsesgebyr",
+      "weight": "Vægt",
+      "weightUnit": "Vægtenhed"
+    },
+    "placeholders": {
+      "title": "Eksempel: 2-årig Holstein-ko",
+      "shortDescription": "Produktbeskrivelse (maks. 200 tegn)",
+      "description": "Giv detaljerede oplysninger om produktet...",
+      "category": "Vælg en kategori."
+    },
+    "errors": {
+      "titleRequired": "Annoncetitel er obligatorisk.",
+      "shortDescriptionRequired": "En kort beskrivelse er påkrævet.",
+      "descriptionRequired": "En detaljeret forklaring er påkrævet.",
+      "categoryRequired": "Valg af kategori er obligatorisk.",
+      "priceRequired": "Indtast en gyldig pris."
+    }
   },
   "newListing": {
     "title": "Opret ny fortegnelse",
@@ -310,7 +379,22 @@
       "category": "Vælg en kategori."
     },
     "success": "Annoncen blev oprettet.",
-    "error": "Der opstod en fejl under oprettelsen af annoncen."
+    "error": "Der opstod en fejl under oprettelsen af annoncen.",
+    "creating": "Produktet bliver skabt...",
+    "uploadingImages": "Billeder indlæses...",
+    "uploadingImage": "Billedet indlæses.",
+    "imageUploadFailed": "Billedet kunne ikke indlæses.",
+    "imagesUploaded": "Alle billeder er uploadet",
+    "draftSaved": "Udkast gemt",
+    "productCreated": "Produktet blev oprettet.",
+    "creationFailed": "Produktet kunne ikke oprettes. Prøv igen.",
+    "errors": {
+      "titleRequired": "Annoncetitel er obligatorisk.",
+      "shortDescriptionRequired": "En kort beskrivelse er påkrævet.",
+      "descriptionRequired": "En detaljeret forklaring er påkrævet.",
+      "categoryRequired": "Valg af kategori er obligatorisk.",
+      "priceRequired": "Indtast en gyldig pris."
+    }
   },
   "fileUpload": {
     "dragDrop": "Upload et foto eller en video.",
@@ -334,6 +418,6 @@
     "coverBadge": "LÅG",
     "videoBadge": "VIDEO",
     "coverUpdated": "Forsidebilledet er blevet justeret.",
-    "optimizationInfo": "Billederne er optimeret til at overholde webstandarder"
+    "optimizationInfo": "Billeder er optimeret til at overholde webstandarder"
   }
 }

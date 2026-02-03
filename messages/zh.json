@@ -122,6 +122,12 @@
     "description": "在这里管理您的所有房源。",
     "noListings": "您尚未添加任何广告。",
     "createFirst": "创建您的第一个商品信息。",
+    "fetchError": "加载广告时发生错误。",
+    "deleteSuccess": "广告已成功删除。",
+    "deleteError": "删除广告时发生错误。",
+    "activateSuccess": "广告已上线。",
+    "deactivateSuccess": "该房源已下架。",
+    "statusError": "更改状态时发生错误。",
     "filters": {
       "all": "他们所有人",
       "active": "积极的",
@@ -134,6 +140,12 @@
       "delete": "删除",
       "activate": "激活",
       "deactivate": "被动结构"
+    },
+    "deleteDialog": {
+      "title": "删除广告",
+      "description": "您确定要删除此商品信息吗？此操作不可逆。",
+      "cancel": "取消",
+      "confirm": "删除"
     }
   },
   "favorites": {
@@ -252,6 +264,9 @@
     "report": "报告问题",
     "description": "解释",
     "specifications": "特征",
+    "category": "类别",
+    "brand": "品牌",
+    "condition": "情况",
     "location": "地点",
     "shipping": "货物",
     "shippingAvailable": "可通过货运方式运输。",
@@ -264,8 +279,16 @@
     "maxOrder": "最大订单",
     "publishedAt": "发布日期",
     "views": "已查看",
+    "reviews": "评估",
     "similarProducts": "类似产品",
-    "sellerProducts": "卖家其他产品"
+    "sellerProducts": "卖家其他产品",
+    "contactSeller": "联系卖家",
+    "loginRequired": "登录即可添加到收藏夹。",
+    "addedToFavorites": "已添加到收藏夹",
+    "removedFromFavorites": "已从收藏夹中移除",
+    "linkCopied": "链接已复制。",
+    "messagingComingSoon": "消息功能即将上线。",
+    "productNotFound": "未找到产品。"
   },
   "seller": {
     "title": "卖家信息",
@@ -276,6 +299,52 @@
     "contact": "发送消息",
     "call": "搜索",
     "viewProfile": "查看个人资料"
+  },
+  "editListing": {
+    "title": "编辑广告",
+    "saveChanges": "保存更改",
+    "updating": "正在更新……",
+    "updateSuccess": "广告已成功更新。",
+    "updateFailed": "更新列表时发生错误。",
+    "loadError": "广告加载时出错。",
+    "basicInfo": "基本信息",
+    "categoryAndCondition": "类别和状态",
+    "pricing": "定价",
+    "shipping": "货物",
+    "images": "图片",
+    "existingImages": "可用图片",
+    "addImage": "添加图片",
+    "uploadingImages": "图片正在加载……",
+    "uploadingImage": "图片正在加载。",
+    "imageUploadFailed": "图片加载失败。",
+    "imagesUploaded": "所有图片均已成功上传。",
+    "fields": {
+      "title": "广告标题",
+      "shortDescription": "简要描述",
+      "description": "详细解释",
+      "category": "类别",
+      "condition": "产品状态",
+      "price": "价格",
+      "stock": "库存数量",
+      "unit": "单元",
+      "shippingAvailable": "提供配送服务。",
+      "shippingCost": "运费",
+      "weight": "重量",
+      "weightUnit": "重量单位"
+    },
+    "placeholders": {
+      "title": "例如：2岁荷斯坦奶牛",
+      "shortDescription": "产品描述（最多 200 个字符）",
+      "description": "请提供产品详细信息……",
+      "category": "请选择类别。"
+    },
+    "errors": {
+      "titleRequired": "广告标题为必填项。",
+      "shortDescriptionRequired": "请提供简要描述。",
+      "descriptionRequired": "需要详细解释。",
+      "categoryRequired": "类别选择为必填项。",
+      "priceRequired": "请输入有效价格。"
+    }
   },
   "newListing": {
     "title": "创建新列表",
@@ -310,7 +379,22 @@
       "category": "请选择类别。"
     },
     "success": "广告制作成功。",
-    "error": "创建广告时发生错误。"
+    "error": "创建广告时发生错误。",
+    "creating": "产品正在生产中……",
+    "uploadingImages": "图片正在加载……",
+    "uploadingImage": "图片正在加载。",
+    "imageUploadFailed": "图片加载失败。",
+    "imagesUploaded": "所有图片均已成功上传。",
+    "draftSaved": "草稿已保存",
+    "productCreated": "产品已成功制造完成。",
+    "creationFailed": "产品创建失败，请重试。",
+    "errors": {
+      "titleRequired": "广告标题为必填项。",
+      "shortDescriptionRequired": "请提供简要描述。",
+      "descriptionRequired": "需要详细解释。",
+      "categoryRequired": "类别选择为必填项。",
+      "priceRequired": "请输入有效价格。"
+    }
   },
   "fileUpload": {
     "dragDrop": "上传照片或视频。",
@@ -322,7 +406,7 @@
     "maxFilesError": "您最多可以上传 {max} 个媒体文件。",
     "imageTooLarge": "照片大小必须小于10MB。",
     "videoTooLarge": "视频文件大小必须小于50MB。",
-    "optimizing": "优化中……",
+    "optimizing": "正在优化……",
     "uploading": "加载中...",
     "queued": "排队等候……",
     "uploadSuccess": "上传媒体文件数量：{count}",

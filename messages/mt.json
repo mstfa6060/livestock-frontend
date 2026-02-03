@@ -122,6 +122,12 @@
     "description": "Immaniġġja l-listi kollha tiegħek minn hawn.",
     "noListings": "Għadek ma żidt l-ebda reklam.",
     "createFirst": "Oħloq l-ewwel lista tiegħek.",
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew ir-reklami.",
+    "deleteSuccess": "Ir-riklam tħassar b'suċċess.",
+    "deleteError": "Seħħ żball waqt it-tħassir tar-riklam.",
+    "activateSuccess": "Ir-riklam ġie attivat.",
+    "deactivateSuccess": "Il-lista ġiet diżattivata.",
+    "statusError": "Seħħ żball waqt li kien qed jinbidel l-istatus.",
     "filters": {
       "all": "Kollha kemm huma",
       "active": "Attiv",
@@ -134,6 +140,12 @@
       "delete": "Ħassar",
       "activate": "Attiva",
       "deactivate": "Struttura Passiva"
+    },
+    "deleteDialog": {
+      "title": "Ħassar ir-riklam",
+      "description": "Żgur li trid tħassar din il-lista? Din l-azzjoni hija irriversibbli.",
+      "cancel": "Ikkanċella",
+      "confirm": "Ħassar"
     }
   },
   "favorites": {
@@ -252,6 +264,9 @@
     "report": "Irrapporta problema",
     "description": "Spjegazzjoni",
     "specifications": "Karatteristiċi",
+    "category": "Kategorija",
+    "brand": "Marka",
+    "condition": "Sitwazzjoni",
     "location": "Post",
     "shipping": "Merkanzija",
     "shippingAvailable": "Jista' jintbagħat bil-merkanzija.",
@@ -264,8 +279,16 @@
     "maxOrder": "Ordni massima",
     "publishedAt": "Data tal-pubblikazzjoni",
     "views": "Meqjusa",
+    "reviews": "evalwazzjoni",
     "similarProducts": "Prodotti Simili",
-    "sellerProducts": "Prodotti Oħra tal-Bejjiegħ"
+    "sellerProducts": "Prodotti Oħra tal-Bejjiegħ",
+    "contactSeller": "Ikkuntattja lill-bejjiegħ",
+    "loginRequired": "Idħol biex iżżid mal-favoriti.",
+    "addedToFavorites": "Miżjud mal-favoriti",
+    "removedFromFavorites": "Imneħħi mill-favoriti",
+    "linkCopied": "Il-link ġie kkupjat.",
+    "messagingComingSoon": "Il-karatteristika tal-messaġġi dalwaqt.",
+    "productNotFound": "Prodott ma nstabx."
   },
   "seller": {
     "title": "Informazzjoni dwar il-Bejjiegħ",
@@ -276,6 +299,52 @@
     "contact": "Ibgħat Messaġġ",
     "call": "Fittex",
     "viewProfile": "Ara l-Profil"
+  },
+  "editListing": {
+    "title": "Editja r-riklam",
+    "saveChanges": "Salva l-Bidliet",
+    "updating": "Aġġornament...",
+    "updateSuccess": "Ir-riklam ġie aġġornat b'suċċess.",
+    "updateFailed": "Seħħ żball waqt l-aġġornament tal-lista.",
+    "loadError": "Seħħ żball waqt li kien qed jitgħabba r-riklam.",
+    "basicInfo": "Informazzjoni Bażika",
+    "categoryAndCondition": "Kategorija u Status",
+    "pricing": "Prezzijiet",
+    "shipping": "Merkanzija",
+    "images": "Stampi",
+    "existingImages": "Stampi Disponibbli",
+    "addImage": "Żid Immaġni",
+    "uploadingImages": "L-immaġini qed jitgħabbew...",
+    "uploadingImage": "L-immaġni qed titgħabba.",
+    "imageUploadFailed": "L-immaġni ma setgħetx tiġi mgħobbija.",
+    "imagesUploaded": "L-immaġini kollha ġew imtella’ b’suċċess",
+    "fields": {
+      "title": "Titlu tar-Reklamar",
+      "shortDescription": "Deskrizzjoni qasira",
+      "description": "Spjegazzjoni Dettaljata",
+      "category": "Kategorija",
+      "condition": "Status tal-Prodott",
+      "price": "Prezz",
+      "stock": "Kwantità tal-Istokk",
+      "unit": "Unità",
+      "shippingAvailable": "It-tbaħħir huwa disponibbli.",
+      "shippingCost": "Ħlas tat-Tbaħħir",
+      "weight": "Piż",
+      "weightUnit": "Unità tal-Piż"
+    },
+    "placeholders": {
+      "title": "Eżempju: Baqra Holstein ta' sentejn",
+      "shortDescription": "Deskrizzjoni tal-prodott (massimu ta' 200 karattru)",
+      "description": "Agħti informazzjoni dettaljata dwar il-prodott...",
+      "category": "Agħżel kategorija."
+    },
+    "errors": {
+      "titleRequired": "It-titlu tar-reklamar huwa obbligatorju.",
+      "shortDescriptionRequired": "Deskrizzjoni qasira hija meħtieġa.",
+      "descriptionRequired": "Hija meħtieġa spjegazzjoni dettaljata.",
+      "categoryRequired": "L-għażla tal-kategorija hija obbligatorja.",
+      "priceRequired": "Daħħal prezz validu."
+    }
   },
   "newListing": {
     "title": "Oħloq Lista Ġdida",
@@ -310,7 +379,22 @@
       "category": "Agħżel kategorija."
     },
     "success": "Ir-riklam inħoloq b'suċċess.",
-    "error": "Seħħ żball waqt il-ħolqien tar-riklam."
+    "error": "Seħħ żball waqt il-ħolqien tar-riklam.",
+    "creating": "Il-prodott qed jinħoloq...",
+    "uploadingImages": "L-immaġini qed jitgħabbew...",
+    "uploadingImage": "L-immaġni qed titgħabba.",
+    "imageUploadFailed": "L-immaġni ma setgħetx tiġi mgħobbija.",
+    "imagesUploaded": "L-immaġini kollha ġew imtella’ b’suċċess",
+    "draftSaved": "Abbozz salvat",
+    "productCreated": "Il-prodott inħoloq b'suċċess.",
+    "creationFailed": "Il-prodott ma setax jinħoloq. Jekk jogħġbok erġa' pprova.",
+    "errors": {
+      "titleRequired": "It-titlu tar-reklamar huwa obbligatorju.",
+      "shortDescriptionRequired": "Deskrizzjoni qasira hija meħtieġa.",
+      "descriptionRequired": "Hija meħtieġa spjegazzjoni dettaljata.",
+      "categoryRequired": "L-għażla tal-kategorija hija obbligatorja.",
+      "priceRequired": "Daħħal prezz validu."
+    }
   },
   "fileUpload": {
     "dragDrop": "Tella’ ritratt jew vidjo.",
@@ -334,6 +418,6 @@
     "coverBadge": "GĦATU",
     "videoBadge": "VIDJOW",
     "coverUpdated": "Ir-ritratt tal-qoxra ġie aġġustat b'suċċess.",
-    "optimizationInfo": "Ir-ritratti ġew ottimizzati biex jikkonformaw mal-istandards tal-web"
+    "optimizationInfo": "Ir-ritratti huma ottimizzati biex jikkonformaw mal-istandards tal-web"
   }
 }

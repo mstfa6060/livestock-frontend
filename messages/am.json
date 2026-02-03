@@ -122,6 +122,12 @@
     "description": "ሁሉንም ዝርዝሮችዎን ከዚህ ያስተዳድሩ።",
     "noListings": "እስካሁን ምንም አይነት ማስታወቂያ አላከልክም።",
     "createFirst": "የመጀመሪያ ዝርዝርዎን ይፍጠሩ።",
+    "fetchError": "ማስታወቂያዎችን በመጫን ላይ ስህተት ተከስቷል።",
+    "deleteSuccess": "ማስታወቂያው በተሳካ ሁኔታ ተሰርዟል።",
+    "deleteError": "ማስታወቂያውን በመሰረዝ ላይ ሳለ አንድ ስህተት ተከስቷል።",
+    "activateSuccess": "ማስታወቂያው ነቅቷል።",
+    "deactivateSuccess": "ዝርዝሩ ተሰናክሏል።",
+    "statusError": "ሁኔታውን በመቀየር ላይ ስህተት ተከስቷል።",
     "filters": {
       "all": "ሁሉም",
       "active": "ንቁ",
@@ -134,6 +140,12 @@
       "delete": "ሰርዝ",
       "activate": "አግብር",
       "deactivate": "ተገብሮ መዋቅር"
+    },
+    "deleteDialog": {
+      "title": "ማስታወቂያውን ሰርዝ",
+      "description": "ይህንን ዝርዝር መሰረዝ እንደሚፈልጉ እርግጠኛ ነዎት? ይህ እርምጃ የማይቀለበስ ነው።",
+      "cancel": "ሰርዝ",
+      "confirm": "ሰርዝ"
     }
   },
   "favorites": {
@@ -238,7 +250,7 @@
     "outOfStock": "በክምችት አልቋል",
     "inStock": "ለሽያጭ የቀረበ እቃ",
     "noResults": "ምርቱ አልተገኘም።",
-    "loading": "ምርቶች እየተጫኑ ነው...",
+    "loading": "ምርቶችን በመጫን ላይ...",
     "perPage": "በገጽ",
     "showing": "በ{from} እና {to} መካከል የ{total} ምርቶች ድምር።",
     "loginToFavorite": "ወደ ተወዳጆች ለማከል ይግቡ።",
@@ -252,6 +264,9 @@
     "report": "ችግር ሪፖርት ያድርጉ",
     "description": "ማብራሪያ",
     "specifications": "ባህሪያት",
+    "category": "ምድብ",
+    "brand": "የምርት ስም",
+    "condition": "ሁኔታ",
     "location": "አካባቢ",
     "shipping": "ጭነት",
     "shippingAvailable": "በጭነት ሊላክ ይችላል።",
@@ -264,8 +279,16 @@
     "maxOrder": "ከፍተኛው ትዕዛዝ",
     "publishedAt": "የታተመበት ቀን",
     "views": "ታይቷል",
+    "reviews": "ግምገማ",
     "similarProducts": "ተመሳሳይ ምርቶች",
-    "sellerProducts": "የሻጩ ሌሎች ምርቶች"
+    "sellerProducts": "የሻጩ ሌሎች ምርቶች",
+    "contactSeller": "ሻጩን ያነጋግሩ",
+    "loginRequired": "ወደ ተወዳጆች ለማከል ይግቡ።",
+    "addedToFavorites": "ወደ ተወዳጆች ታክሏል",
+    "removedFromFavorites": "ከተወዳጆች ተወግዷል",
+    "linkCopied": "አገናኙ ተገልብጧል።",
+    "messagingComingSoon": "የመልእክት ባህሪ በቅርቡ ይመጣል።",
+    "productNotFound": "ምርቱ አልተገኘም።"
   },
   "seller": {
     "title": "የሻጭ መረጃ",
@@ -276,6 +299,52 @@
     "contact": "መልእክት ላክ",
     "call": "ፈልግ",
     "viewProfile": "መገለጫ ይመልከቱ"
+  },
+  "editListing": {
+    "title": "ማስታወቂያውን ያርትዑ",
+    "saveChanges": "ለውጦችን አስቀምጥ",
+    "updating": "በማዘመን ላይ...",
+    "updateSuccess": "ማስታወቂያው በተሳካ ሁኔታ ተዘምኗል።",
+    "updateFailed": "ዝርዝሩን በማዘመን ላይ ስህተት ተከስቷል።",
+    "loadError": "ማስታወቂያውን በመጫን ላይ ሳለ ስህተት ተከስቷል።",
+    "basicInfo": "መሰረታዊ መረጃ",
+    "categoryAndCondition": "ምድብ እና ሁኔታ",
+    "pricing": "የዋጋ አወጣጥ",
+    "shipping": "ጭነት",
+    "images": "ምስሎች",
+    "existingImages": "የሚገኙ ምስሎች",
+    "addImage": "ምስል ያክሉ",
+    "uploadingImages": "ምስሎች እየተጫኑ ነው...",
+    "uploadingImage": "ምስሉ እየተጫነ ነው።",
+    "imageUploadFailed": "ምስሉ ሊጫን አልቻለም።",
+    "imagesUploaded": "ሁሉም ምስሎች በተሳካ ሁኔታ ተሰቅለዋል",
+    "fields": {
+      "title": "የማስታወቂያ ርዕስ",
+      "shortDescription": "አጭር መግለጫ",
+      "description": "ዝርዝር ማብራሪያ",
+      "category": "ምድብ",
+      "condition": "የምርት ሁኔታ",
+      "price": "ዋጋ",
+      "stock": "የአክሲዮን ብዛት",
+      "unit": "ዩኒት",
+      "shippingAvailable": "መላኪያ ይገኛል።",
+      "shippingCost": "የማጓጓዣ ክፍያ",
+      "weight": "ክብደት",
+      "weightUnit": "የክብደት አሃድ"
+    },
+    "placeholders": {
+      "title": "ምሳሌ፡ የ2 ዓመት ሆልስቴይን ላም",
+      "shortDescription": "የምርት መግለጫ (ቢበዛ 200 ቁምፊዎች)",
+      "description": "ስለ ምርቱ ዝርዝር መረጃ ያቅርቡ…",
+      "category": "ምድብ ይምረጡ።"
+    },
+    "errors": {
+      "titleRequired": "የማስታወቂያ ርዕስ ግዴታ ነው።",
+      "shortDescriptionRequired": "አጭር መግለጫ ያስፈልጋል።",
+      "descriptionRequired": "ዝርዝር ማብራሪያ ያስፈልጋል።",
+      "categoryRequired": "የምድብ ምርጫ ግዴታ ነው።",
+      "priceRequired": "ትክክለኛ ዋጋ ያስገቡ።"
+    }
   },
   "newListing": {
     "title": "አዲስ ዝርዝር ይፍጠሩ",
@@ -310,7 +379,22 @@
       "category": "ምድብ ይምረጡ።"
     },
     "success": "ማስታወቂያው በተሳካ ሁኔታ ተፈጥሯል።",
-    "error": "ማስታወቂያውን በሚፈጥሩበት ጊዜ ስህተት ተከስቷል።"
+    "error": "ማስታወቂያውን በሚፈጥሩበት ጊዜ ስህተት ተከስቷል።",
+    "creating": "ምርቱ እየተገነባ ነው...",
+    "uploadingImages": "ምስሎች እየተጫኑ ነው...",
+    "uploadingImage": "ምስሉ እየተጫነ ነው።",
+    "imageUploadFailed": "ምስሉ ሊጫን አልቻለም።",
+    "imagesUploaded": "ሁሉም ምስሎች በተሳካ ሁኔታ ተሰቅለዋል",
+    "draftSaved": "ረቂቅ ተቀምጧል",
+    "productCreated": "ምርቱ በተሳካ ሁኔታ ተፈጥሯል።",
+    "creationFailed": "ምርቱ ሊፈጠር አልቻለም። እባክዎ እንደገና ይሞክሩ።",
+    "errors": {
+      "titleRequired": "የማስታወቂያ ርዕስ ግዴታ ነው።",
+      "shortDescriptionRequired": "አጭር መግለጫ ያስፈልጋል።",
+      "descriptionRequired": "ዝርዝር ማብራሪያ ያስፈልጋል።",
+      "categoryRequired": "የምድብ ምርጫ ግዴታ ነው።",
+      "priceRequired": "ትክክለኛ ዋጋ ያስገቡ።"
+    }
   },
   "fileUpload": {
     "dragDrop": "ፎቶ ወይም ቪዲዮ ይስቀሉ።",

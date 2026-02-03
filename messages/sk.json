@@ -33,7 +33,7 @@
       "forgotPassword": "Zabudol/a som heslo.",
       "noAccount": "Nemáte účet?",
       "register": "Registrovať",
-      "errorDefault": "Prihlásenie zlyhalo. Skontrolujte si svoje informácie."
+      "errorDefault": "Prihlásenie zlyhalo. Skontrolujte si, prosím, svoje informácie."
     },
     "register": {
       "title": "Registrovať",
@@ -122,6 +122,12 @@
     "description": "Spravujte všetky svoje záznamy odtiaľto.",
     "noListings": "Zatiaľ ste nepridali žiadne reklamy.",
     "createFirst": "Vytvorte si svoj prvý záznam.",
+    "fetchError": "Pri načítavaní reklám sa vyskytla chyba.",
+    "deleteSuccess": "Reklama bola úspešne odstránená.",
+    "deleteError": "Pri odstraňovaní reklamy sa vyskytla chyba.",
+    "activateSuccess": "Reklama bola aktivovaná.",
+    "deactivateSuccess": "Zoznam bol deaktivovaný.",
+    "statusError": "Pri zmene stavu sa vyskytla chyba.",
     "filters": {
       "all": "Všetky z nich",
       "active": "Aktívne",
@@ -134,6 +140,12 @@
       "delete": "Odstrániť",
       "activate": "Aktivovať",
       "deactivate": "Pasívna štruktúra"
+    },
+    "deleteDialog": {
+      "title": "Odstrániť reklamu",
+      "description": "Naozaj chcete odstrániť tento záznam? Táto akcia je nevratná.",
+      "cancel": "Zrušiť",
+      "confirm": "Odstrániť"
     }
   },
   "favorites": {
@@ -173,7 +185,7 @@
   },
   "home": {
     "hero": {
-      "title": "Platforma na obchodovanie so živými zvieratami",
+      "title": "Platforma pre obchodovanie so živými zvieratami",
       "subtitle": "Najspoľahlivejšia platforma na obchodovanie so živými zvieratami. Bezpečne nakupujte a predávajte svoj dobytok a ovce.",
       "cta": "Začať teraz",
       "viewListings": "Zobraziť reklamy"
@@ -188,7 +200,7 @@
         "description": "Hovädzí dobytok, ovce a ďalšie. Ľahko nájdite zviera, ktoré hľadáte."
       },
       "support": {
-        "title": "Podpora 24 hodín denne, 7 dní v týždni",
+        "title": "Podpora 24/7",
         "description": "Sme tu vždy pre vaše otázky. Naša linka podpory je aktívna."
       }
     },
@@ -238,7 +250,7 @@
     "outOfStock": "Nie je na sklade",
     "inStock": "Na sklade",
     "noResults": "Produkt sa nenašiel.",
-    "loading": "Produkty sa načítavajú...",
+    "loading": "Načítavajú sa produkty...",
     "perPage": "Na stránku",
     "showing": "Celkový počet produktov {total} medzi {from} a {to}.",
     "loginToFavorite": "Prihláste sa a pridajte k obľúbeným.",
@@ -252,6 +264,9 @@
     "report": "Nahlásiť problém",
     "description": "Vysvetlenie",
     "specifications": "Funkcie",
+    "category": "Kategória",
+    "brand": "Značka",
+    "condition": "Situácia",
     "location": "Poloha",
     "shipping": "Náklad",
     "shippingAvailable": "Môže byť prepravené nákladom.",
@@ -264,8 +279,16 @@
     "maxOrder": "Maximálna objednávka",
     "publishedAt": "Dátum vydania",
     "views": "Zobrazené",
+    "reviews": "hodnotenie",
     "similarProducts": "Podobné produkty",
-    "sellerProducts": "Ďalšie produkty predajcu"
+    "sellerProducts": "Ďalšie produkty predajcu",
+    "contactSeller": "Kontaktujte predajcu",
+    "loginRequired": "Prihláste sa a pridajte k obľúbeným.",
+    "addedToFavorites": "Pridané k obľúbeným",
+    "removedFromFavorites": "Odstránené z obľúbených",
+    "linkCopied": "Odkaz bol skopírovaný.",
+    "messagingComingSoon": "Funkcia zasielania správ bude čoskoro k dispozícii.",
+    "productNotFound": "Produkt sa nenašiel."
   },
   "seller": {
     "title": "Informácie o predajcovi",
@@ -276,6 +299,52 @@
     "contact": "Odoslať správu",
     "call": "Hľadať",
     "viewProfile": "Zobraziť profil"
+  },
+  "editListing": {
+    "title": "Upraviť reklamu",
+    "saveChanges": "Uložiť zmeny",
+    "updating": "Aktualizácia...",
+    "updateSuccess": "Reklama bola úspešne aktualizovaná.",
+    "updateFailed": "Pri aktualizácii záznamu sa vyskytla chyba.",
+    "loadError": "Pri načítavaní reklamy sa vyskytla chyba.",
+    "basicInfo": "Základné informácie",
+    "categoryAndCondition": "Kategória a stav",
+    "pricing": "Cenník",
+    "shipping": "Náklad",
+    "images": "Obrázky",
+    "existingImages": "Dostupné obrázky",
+    "addImage": "Pridať obrázok",
+    "uploadingImages": "Načítavajú sa obrázky...",
+    "uploadingImage": "Obrázok sa načítava.",
+    "imageUploadFailed": "Obrázok sa nepodarilo načítať.",
+    "imagesUploaded": "Všetky obrázky boli úspešne nahrané",
+    "fields": {
+      "title": "Názov reklamy",
+      "shortDescription": "Stručný popis",
+      "description": "Podrobné vysvetlenie",
+      "category": "Kategória",
+      "condition": "Stav produktu",
+      "price": "Cena",
+      "stock": "Množstvo na sklade",
+      "unit": "Jednotka",
+      "shippingAvailable": "Doprava je k dispozícii.",
+      "shippingCost": "Poplatok za dopravu",
+      "weight": "Hmotnosť",
+      "weightUnit": "Jednotka hmotnosti"
+    },
+    "placeholders": {
+      "title": "Príklad: 2-ročná holštajnská krava",
+      "shortDescription": "Popis produktu (max. 200 znakov)",
+      "description": "Poskytnite podrobné informácie o produkte...",
+      "category": "Vyberte kategóriu."
+    },
+    "errors": {
+      "titleRequired": "Názov reklamy je povinný.",
+      "shortDescriptionRequired": "Vyžaduje sa stručný popis.",
+      "descriptionRequired": "Vyžaduje sa podrobné vysvetlenie.",
+      "categoryRequired": "Výber kategórie je povinný.",
+      "priceRequired": "Zadajte platnú cenu."
+    }
   },
   "newListing": {
     "title": "Vytvoriť nový záznam",
@@ -310,7 +379,22 @@
       "category": "Vyberte kategóriu."
     },
     "success": "Reklama bola úspešne vytvorená.",
-    "error": "Pri vytváraní reklamy sa vyskytla chyba."
+    "error": "Pri vytváraní reklamy sa vyskytla chyba.",
+    "creating": "Produkt sa vytvára...",
+    "uploadingImages": "Načítavajú sa obrázky...",
+    "uploadingImage": "Obrázok sa načítava.",
+    "imageUploadFailed": "Obrázok sa nepodarilo načítať.",
+    "imagesUploaded": "Všetky obrázky boli úspešne nahrané",
+    "draftSaved": "Koncept bol uložený",
+    "productCreated": "Produkt bol úspešne vytvorený.",
+    "creationFailed": "Produkt sa nepodarilo vytvoriť. Skúste to znova.",
+    "errors": {
+      "titleRequired": "Názov reklamy je povinný.",
+      "shortDescriptionRequired": "Vyžaduje sa stručný popis.",
+      "descriptionRequired": "Vyžaduje sa podrobné vysvetlenie.",
+      "categoryRequired": "Výber kategórie je povinný.",
+      "priceRequired": "Zadajte platnú cenu."
+    }
   },
   "fileUpload": {
     "dragDrop": "Nahrajte fotografiu alebo video.",

@@ -122,9 +122,15 @@
     "description": "Stjórnaðu öllum skráningum þínum héðan.",
     "noListings": "Þú hefur ekki bætt við neinum auglýsingum ennþá.",
     "createFirst": "Búðu til þína fyrstu skráningu.",
+    "fetchError": "Villa kom upp við að hlaða inn auglýsingum.",
+    "deleteSuccess": "Auglýsinginni var eytt.",
+    "deleteError": "Villa kom upp við að eyða auglýsingunni.",
+    "activateSuccess": "Auglýsingin hefur verið virkjuð.",
+    "deactivateSuccess": "Skráningunni hefur verið gert óvirk.",
+    "statusError": "Villa kom upp við að breyta stöðunni.",
     "filters": {
       "all": "Öll þau",
-      "active": "Virk",
+      "active": "Virkur",
       "draft": "Drög",
       "pending": "Bíður eftir samþykki",
       "sold": "Selt"
@@ -134,6 +140,12 @@
       "delete": "Eyða",
       "activate": "Virkja",
       "deactivate": "Óvirk uppbygging"
+    },
+    "deleteDialog": {
+      "title": "Eyða auglýsingunni",
+      "description": "Ertu viss um að þú viljir eyða þessari skráningu? Þessi aðgerð er óafturkræf.",
+      "cancel": "Hætta við",
+      "confirm": "Eyða"
     }
   },
   "favorites": {
@@ -225,7 +237,7 @@
     },
     "status": {
       "draft": "Drög",
-      "active": "Virk",
+      "active": "Virkur",
       "sold": "Selt",
       "pending": "Bíður eftir samþykki"
     },
@@ -238,7 +250,7 @@
     "outOfStock": "Uppselt",
     "inStock": "Á lager",
     "noResults": "Vara fannst ekki.",
-    "loading": "Hleður vörur...",
+    "loading": "Vörur eru að hlaðast inn...",
     "perPage": "Á hverri síðu",
     "showing": "Heildarfjöldi vara frá {from} til {to} (fjöldi vara í heild sinni).",
     "loginToFavorite": "Skráðu þig inn til að bæta við uppáhalds.",
@@ -252,6 +264,9 @@
     "report": "Tilkynna vandamál",
     "description": "Útskýring",
     "specifications": "Eiginleikar",
+    "category": "Flokkur",
+    "brand": "Vörumerki",
+    "condition": "Aðstæður",
     "location": "Staðsetning",
     "shipping": "Farmur",
     "shippingAvailable": "Hægt að flytja með farmi.",
@@ -264,8 +279,16 @@
     "maxOrder": "Hámarkspöntun",
     "publishedAt": "Útgáfudagur",
     "views": "Skoðað",
+    "reviews": "mat",
     "similarProducts": "Líkar vörur",
-    "sellerProducts": "Aðrar vörur seljanda"
+    "sellerProducts": "Aðrar vörur seljanda",
+    "contactSeller": "Hafðu samband við seljandann",
+    "loginRequired": "Skráðu þig inn til að bæta við uppáhalds.",
+    "addedToFavorites": "Bætt við uppáhalds",
+    "removedFromFavorites": "Fjarlægt úr uppáhaldslistum",
+    "linkCopied": "Tengillinn hefur verið afritaður.",
+    "messagingComingSoon": "Skilaboðaaðgerð væntanleg.",
+    "productNotFound": "Vara fannst ekki."
   },
   "seller": {
     "title": "Upplýsingar um seljanda",
@@ -276,6 +299,52 @@
     "contact": "Senda skilaboð",
     "call": "Leita",
     "viewProfile": "Skoða prófíl"
+  },
+  "editListing": {
+    "title": "Breyta auglýsingunni",
+    "saveChanges": "Vista breytingar",
+    "updating": "Uppfærir...",
+    "updateSuccess": "Auglýsingin hefur verið uppfærð.",
+    "updateFailed": "Villa kom upp við að uppfæra skráninguna.",
+    "loadError": "Villa kom upp við að hlaða inn auglýsingunni.",
+    "basicInfo": "Grunnupplýsingar",
+    "categoryAndCondition": "Flokkur og staða",
+    "pricing": "Verðlagning",
+    "shipping": "Farmur",
+    "images": "Myndir",
+    "existingImages": "Tiltækar myndir",
+    "addImage": "Bæta við mynd",
+    "uploadingImages": "Myndir eru að hlaðast inn...",
+    "uploadingImage": "Myndin er að hlaðast inn.",
+    "imageUploadFailed": "Ekki var hægt að hlaða myndinni.",
+    "imagesUploaded": "Allar myndir voru sendar inn",
+    "fields": {
+      "title": "Titill auglýsingar",
+      "shortDescription": "Stutt lýsing",
+      "description": "Ítarleg útskýring",
+      "category": "Flokkur",
+      "condition": "Vörustaða",
+      "price": "Verð",
+      "stock": "Magn á lager",
+      "unit": "Eining",
+      "shippingAvailable": "Sending er í boði.",
+      "shippingCost": "Sendingargjald",
+      "weight": "Þyngd",
+      "weightUnit": "Þyngdareining"
+    },
+    "placeholders": {
+      "title": "Dæmi: Tveggja ára Holstein kýr",
+      "shortDescription": "Vörulýsing (hámark 200 stafir)",
+      "description": "Gefðu ítarlegar upplýsingar um vöruna...",
+      "category": "Veldu flokk."
+    },
+    "errors": {
+      "titleRequired": "Titill auglýsingar er skylda.",
+      "shortDescriptionRequired": "Stutt lýsing er nauðsynleg.",
+      "descriptionRequired": "Ítarleg útskýring er nauðsynleg.",
+      "categoryRequired": "Val á flokki er skylda.",
+      "priceRequired": "Sláðu inn gilt verð."
+    }
   },
   "newListing": {
     "title": "Búa til nýja skráningu",
@@ -294,7 +363,7 @@
       "shortDescription": "Stutt lýsing",
       "description": "Ítarleg útskýring",
       "category": "Flokkur",
-      "condition": "Staða vöru",
+      "condition": "Vörustaða",
       "price": "Verð",
       "stock": "Magn á lager",
       "unit": "Eining",
@@ -309,8 +378,23 @@
       "description": "Gefðu ítarlegar upplýsingar um vöruna...",
       "category": "Veldu flokk."
     },
-    "success": "Auglýsingin var búin til með góðum árangri.",
-    "error": "Villa kom upp við að búa til auglýsinguna."
+    "success": "Auglýsingin var búin til.",
+    "error": "Villa kom upp við að búa til auglýsinguna.",
+    "creating": "Varan er að verða til...",
+    "uploadingImages": "Myndir eru að hlaðast inn...",
+    "uploadingImage": "Myndin er að hlaðast inn.",
+    "imageUploadFailed": "Ekki var hægt að hlaða myndinni.",
+    "imagesUploaded": "Allar myndir hafa verið hlaðnar upp",
+    "draftSaved": "Drög vistuð",
+    "productCreated": "Varan var búin til með góðum árangri.",
+    "creationFailed": "Ekki var hægt að búa til vöruna. Reyndu aftur.",
+    "errors": {
+      "titleRequired": "Titill auglýsingar er skylda.",
+      "shortDescriptionRequired": "Stutt lýsing er nauðsynleg.",
+      "descriptionRequired": "Ítarleg útskýring er nauðsynleg.",
+      "categoryRequired": "Val á flokki er skylda.",
+      "priceRequired": "Sláðu inn gilt verð."
+    }
   },
   "fileUpload": {
     "dragDrop": "Hladdu inn mynd eða myndbandi.",

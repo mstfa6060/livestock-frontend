@@ -7,6 +7,7 @@ import { MainHeader } from "@/components/layout/main-header";
 import { ImageGallery } from "@/components/features/image-gallery";
 import { PriceDisplay } from "@/components/features/price-display";
 import { SellerCard, Seller } from "@/components/features/seller-card";
+import { ProductCard, Product } from "@/components/features/product-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -23,6 +24,9 @@ import {
   Star,
 } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { useFavoritesStore } from "@/stores/useFavoritesStore";
+import { useAuth } from "@/contexts/AuthContext";
+import { toast } from "sonner";
 
 interface ProductDetail {
   id: string;
@@ -75,17 +79,17 @@ export default function ProductDetailPage() {
   const t = useTranslations("productDetail");
   const tp = useTranslations("products");
   const tc = useTranslations("common");
+  const { user } = useAuth();
+  const { favoriteIds, toggleFavorite, isFavorite: checkIsFavorite } = useFavoritesStore();
 
   const [product, setProduct] = useState<ProductDetail | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [isFavorite, setIsFavorite] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // Mock images - in production, fetch from ProductImages API
-  const [images] = useState<string[]>([]);
-
-  // Mock seller - in production, fetch from Sellers API
+  const [images, setImages] = useState<string[]>([]);
+  const [similarProducts, setSimilarProducts] = useState<Product[]>([]);
   const [seller, setSeller] = useState<Seller | null>(null);
+
+  const isFavorite = product ? checkIsFavorite(product.id) : false;
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -93,13 +97,12 @@ export default function ProductDetailPage() {
       setError(null);
 
       try {
-        // Note: API uses ID, but we have slug. In production, you'd have a slug-to-id lookup
-        // or the API would support slug-based queries
+        // Fetch product details (using slug as ID since they're UUIDs)
         const response = await LivestockTradingAPI.Products.Detail.Request({
-          id: slug, // This should be the actual product ID
+          id: slug,
         });
 
-        setProduct({
+        const productData = {
           id: response.id,
           title: response.title,
           slug: response.slug,
@@ -135,9 +138,79 @@ export default function ProductDetailPage() {
           reviewCount: response.reviewCount,
           publishedAt: response.publishedAt,
           createdAt: response.createdAt,
+        };
+
+        setProduct(productData);
+
+        // Fetch product images
+        const imagesResponse = await LivestockTradingAPI.ProductImages.All.Request({
+          sorting: { key: "sortOrder", direction: 0 },
+          filters: [
+            {
+              key: "productId",
+              type: "guid",
+              isUsed: true,
+              values: [response.id],
+              min: {},
+              max: {},
+              conditionType: "equals",
+            },
+          ],
+          pageRequest: { currentPage: 1, perPageCount: 20, listAll: true },
         });
 
-        // Mock seller data
+        setImages(imagesResponse.map((img) => img.imageUrl));
+
+        // Fetch similar products from same category
+        const similarResponse = await LivestockTradingAPI.Products.All.Request({
+          countryCode: "TR",
+          sorting: { key: "createdAt", direction: 1 },
+          filters: [
+            {
+              key: "categoryId",
+              type: "guid",
+              isUsed: true,
+              values: [response.categoryId],
+              min: {},
+              max: {},
+              conditionType: "equals",
+            },
+          ],
+          pageRequest: { currentPage: 1, perPageCount: 4, listAll: false },
+        });
+
+        // Transform and filter out current product
+        const similarProductsData = similarResponse
+          .filter((p) => p.id !== response.id)
+          .slice(0, 3)
+          .map((item) => ({
+            id: item.id,
+            title: item.title,
+            slug: item.slug,
+            shortDescription: item.shortDescription,
+            categoryId: item.categoryId,
+            brandId: item.brandId || undefined,
+            basePrice: item.basePrice as number,
+            currency: item.currency,
+            discountedPrice: item.discountedPrice as number | undefined,
+            stockQuantity: item.stockQuantity,
+            isInStock: item.isInStock,
+            sellerId: item.sellerId,
+            locationId: item.locationId,
+            locationCountryCode: item.locationCountryCode,
+            locationCity: item.locationCity,
+            status: item.status,
+            condition: item.condition,
+            viewCount: item.viewCount,
+            averageRating: item.averageRating as number | undefined,
+            reviewCount: item.reviewCount,
+            createdAt: item.createdAt,
+            imageUrl: undefined,
+          }));
+
+        setSimilarProducts(similarProductsData);
+
+        // Mock seller data (TODO: Fetch from Users API when available)
         setSeller({
           id: response.sellerId,
           name: response.sellerName,
@@ -150,7 +223,7 @@ export default function ProductDetailPage() {
         });
       } catch (err) {
         console.error("Failed to fetch product:", err);
-        setError("Product not found");
+        setError(t("productNotFound"));
       } finally {
         setIsLoading(false);
       }
@@ -159,7 +232,23 @@ export default function ProductDetailPage() {
     if (slug) {
       fetchProduct();
     }
-  }, [slug]);
+  }, [slug, t]);
+
+  const handleFavoriteToggle = async () => {
+    if (!user) {
+      toast.error(t("loginRequired"));
+      return;
+    }
+
+    if (!product) return;
+
+    try {
+      await toggleFavorite(product.id, user.id);
+      toast.success(isFavorite ? t("removedFromFavorites") : t("addedToFavorites"));
+    } catch (error) {
+      console.error("Failed to toggle favorite:", error);
+    }
+  };
 
   const handleShare = () => {
     if (navigator.share) {
@@ -169,11 +258,13 @@ export default function ProductDetailPage() {
       });
     } else {
       navigator.clipboard.writeText(window.location.href);
+      toast.success(t("linkCopied"));
     }
   };
 
   const handleContact = () => {
-    // Navigate to messages or open contact modal
+    // TODO: Navigate to messages or open contact modal
+    toast.info(t("messagingComingSoon"));
     console.log("Contact seller:", seller?.id);
   };
 
@@ -253,17 +344,17 @@ export default function ProductDetailPage() {
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <span className="text-muted-foreground">Kategori</span>
+                    <span className="text-muted-foreground">{t("category")}</span>
                     <p className="font-medium">{product.categoryName}</p>
                   </div>
                   {product.brandName && (
                     <div>
-                      <span className="text-muted-foreground">Marka</span>
+                      <span className="text-muted-foreground">{t("brand")}</span>
                       <p className="font-medium">{product.brandName}</p>
                     </div>
                   )}
                   <div>
-                    <span className="text-muted-foreground">Durum</span>
+                    <span className="text-muted-foreground">{t("condition")}</span>
                     <p className="font-medium">{tp(`condition.${condition}`)}</p>
                   </div>
                   {product.weight && (
@@ -314,7 +405,7 @@ export default function ProductDetailPage() {
                     <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                     <span className="font-medium">{product.averageRating.toFixed(1)}</span>
                     <span className="text-muted-foreground">
-                      ({product.reviewCount} degerlendirme)
+                      ({product.reviewCount} {t("reviews")})
                     </span>
                   </div>
                 )}
@@ -353,19 +444,19 @@ export default function ProductDetailPage() {
                 {/* Location */}
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
                   <MapPin className="h-4 w-4" />
-                  Istanbul, Turkey
+                  {t("location")}
                 </div>
 
                 {/* Actions */}
                 <div className="space-y-2">
                   <Button className="w-full" size="lg" onClick={handleContact}>
-                    Satici ile Iletisime Gec
+                    {t("contactSeller")}
                   </Button>
                   <div className="flex gap-2">
                     <Button
                       variant="outline"
                       className="flex-1"
-                      onClick={() => setIsFavorite(!isFavorite)}
+                      onClick={handleFavoriteToggle}
                     >
                       <Heart
                         className={`h-4 w-4 mr-2 ${
@@ -377,7 +468,7 @@ export default function ProductDetailPage() {
                     <Button variant="outline" size="icon" onClick={handleShare}>
                       <Share2 className="h-4 w-4" />
                     </Button>
-                    <Button variant="outline" size="icon">
+                    <Button variant="outline" size="icon" title={t("report")}>
                       <Flag className="h-4 w-4" />
                     </Button>
                   </div>
@@ -391,6 +482,18 @@ export default function ProductDetailPage() {
             )}
           </div>
         </div>
+
+        {/* Similar Products */}
+        {similarProducts.length > 0 && (
+          <div className="mt-16">
+            <h2 className="text-2xl font-bold mb-6">{t("similarProducts")}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {similarProducts.map((similarProduct) => (
+                <ProductCard key={similarProduct.id} product={similarProduct} />
+              ))}
+            </div>
+          </div>
+        )}
       </main>
     </div>
   );

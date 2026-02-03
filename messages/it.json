@@ -122,6 +122,12 @@
     "description": "Gestisci tutti i tuoi annunci da qui.",
     "noListings": "Non hai ancora aggiunto alcun annuncio.",
     "createFirst": "Crea il tuo primo annuncio.",
+    "fetchError": "Si è verificato un errore durante il caricamento degli annunci.",
+    "deleteSuccess": "L'annuncio è stato eliminato correttamente.",
+    "deleteError": "Si è verificato un errore durante l'eliminazione dell'annuncio.",
+    "activateSuccess": "L'annuncio è stato attivato.",
+    "deactivateSuccess": "L'inserzione è stata disattivata.",
+    "statusError": "Si è verificato un errore durante la modifica dello stato.",
     "filters": {
       "all": "Tutti loro",
       "active": "Attivo",
@@ -134,6 +140,12 @@
       "delete": "Eliminare",
       "activate": "Attivare",
       "deactivate": "Struttura passiva"
+    },
+    "deleteDialog": {
+      "title": "Elimina l'annuncio",
+      "description": "Vuoi davvero eliminare questa inserzione? Questa azione è irreversibile.",
+      "cancel": "Cancellare",
+      "confirm": "Eliminare"
     }
   },
   "favorites": {
@@ -231,7 +243,7 @@
     },
     "condition": {
       "new": "Nuovo",
-      "likeNew": "Usato poco",
+      "likeNew": "Leggermente usato",
       "good": "Bene",
       "fair": "Mezzo"
     },
@@ -252,6 +264,9 @@
     "report": "Segnala un problema",
     "description": "Spiegazione",
     "specifications": "Caratteristiche",
+    "category": "Categoria",
+    "brand": "Marca",
+    "condition": "Situazione",
     "location": "Posizione",
     "shipping": "Carico",
     "shippingAvailable": "Può essere spedito via cargo.",
@@ -264,8 +279,16 @@
     "maxOrder": "Ordine massimo",
     "publishedAt": "Data di pubblicazione",
     "views": "Visualizzato",
+    "reviews": "valutazione",
     "similarProducts": "Prodotti simili",
-    "sellerProducts": "Altri prodotti del venditore"
+    "sellerProducts": "Altri prodotti del venditore",
+    "contactSeller": "Contatta il venditore",
+    "loginRequired": "Accedi per aggiungere ai preferiti.",
+    "addedToFavorites": "Aggiunto ai preferiti",
+    "removedFromFavorites": "Rimosso dai preferiti",
+    "linkCopied": "Il collegamento è stato copiato.",
+    "messagingComingSoon": "La funzionalità di messaggistica sarà disponibile a breve.",
+    "productNotFound": "Prodotto non trovato."
   },
   "seller": {
     "title": "Informazioni sul venditore",
@@ -276,6 +299,52 @@
     "contact": "Invia messaggio",
     "call": "Ricerca",
     "viewProfile": "Visualizza profilo"
+  },
+  "editListing": {
+    "title": "Modifica l'annuncio",
+    "saveChanges": "Salva modifiche",
+    "updating": "Aggiornamento...",
+    "updateSuccess": "L'annuncio è stato aggiornato con successo.",
+    "updateFailed": "Si è verificato un errore durante l'aggiornamento dell'inserzione.",
+    "loadError": "Si è verificato un errore durante il caricamento dell'annuncio.",
+    "basicInfo": "Informazioni di base",
+    "categoryAndCondition": "Categoria e stato",
+    "pricing": "Prezzi",
+    "shipping": "Carico",
+    "images": "Immagini",
+    "existingImages": "Immagini disponibili",
+    "addImage": "Aggiungi immagine",
+    "uploadingImages": "Caricamento delle immagini in corso...",
+    "uploadingImage": "L'immagine si sta caricando.",
+    "imageUploadFailed": "Impossibile caricare l'immagine.",
+    "imagesUploaded": "Tutte le immagini sono state caricate con successo",
+    "fields": {
+      "title": "Titolo dell'annuncio",
+      "shortDescription": "Breve descrizione",
+      "description": "Spiegazione dettagliata",
+      "category": "Categoria",
+      "condition": "Stato del prodotto",
+      "price": "Prezzo",
+      "stock": "Quantità di magazzino",
+      "unit": "Unità",
+      "shippingAvailable": "La spedizione è disponibile.",
+      "shippingCost": "Spese di spedizione",
+      "weight": "Peso",
+      "weightUnit": "Unità di peso"
+    },
+    "placeholders": {
+      "title": "Esempio: mucca Holstein di 2 anni",
+      "shortDescription": "Descrizione del prodotto (max 200 caratteri)",
+      "description": "Fornire informazioni dettagliate sul prodotto...",
+      "category": "Seleziona una categoria."
+    },
+    "errors": {
+      "titleRequired": "Il titolo dell'annuncio è obbligatorio.",
+      "shortDescriptionRequired": "È richiesta una breve descrizione.",
+      "descriptionRequired": "È necessaria una spiegazione dettagliata.",
+      "categoryRequired": "La selezione della categoria è obbligatoria.",
+      "priceRequired": "Inserisci un prezzo valido."
+    }
   },
   "newListing": {
     "title": "Crea un nuovo annuncio",
@@ -310,7 +379,22 @@
       "category": "Seleziona una categoria."
     },
     "success": "L'annuncio è stato creato con successo.",
-    "error": "Si è verificato un errore durante la creazione dell'annuncio."
+    "error": "Si è verificato un errore durante la creazione dell'annuncio.",
+    "creating": "Il prodotto è in fase di creazione...",
+    "uploadingImages": "Caricamento delle immagini in corso...",
+    "uploadingImage": "L'immagine si sta caricando.",
+    "imageUploadFailed": "Impossibile caricare l'immagine.",
+    "imagesUploaded": "Tutte le immagini sono state caricate con successo",
+    "draftSaved": "Bozza salvata",
+    "productCreated": "Il prodotto è stato creato con successo.",
+    "creationFailed": "Impossibile creare il prodotto. Riprova.",
+    "errors": {
+      "titleRequired": "Il titolo dell'annuncio è obbligatorio.",
+      "shortDescriptionRequired": "È richiesta una breve descrizione.",
+      "descriptionRequired": "È necessaria una spiegazione dettagliata.",
+      "categoryRequired": "La selezione della categoria è obbligatoria.",
+      "priceRequired": "Inserisci un prezzo valido."
+    }
   },
   "fileUpload": {
     "dragDrop": "Carica una foto o un video.",

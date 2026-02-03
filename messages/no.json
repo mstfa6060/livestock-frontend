@@ -122,6 +122,12 @@
     "description": "Administrer alle oppføringene dine herfra.",
     "noListings": "Du har ikke lagt til noen annonser ennå.",
     "createFirst": "Opprett din første oppføring.",
+    "fetchError": "Det oppsto en feil under innlasting av annonser.",
+    "deleteSuccess": "Annonsen ble slettet.",
+    "deleteError": "Det oppsto en feil under sletting av annonsen.",
+    "activateSuccess": "Annonsen er aktivert.",
+    "deactivateSuccess": "Oppføringen er deaktivert.",
+    "statusError": "Det oppsto en feil under endring av statusen.",
     "filters": {
       "all": "Alle av dem",
       "active": "Aktiv",
@@ -134,6 +140,12 @@
       "delete": "Slett",
       "activate": "Aktiver",
       "deactivate": "Passiv struktur"
+    },
+    "deleteDialog": {
+      "title": "Slett annonsen",
+      "description": "Er du sikker på at du vil slette denne oppføringen? Denne handlingen kan ikke angres.",
+      "cancel": "Kansellere",
+      "confirm": "Slett"
     }
   },
   "favorites": {
@@ -252,6 +264,9 @@
     "report": "Rapporter et problem",
     "description": "Forklaring",
     "specifications": "Funksjoner",
+    "category": "Kategori",
+    "brand": "Merke",
+    "condition": "Situasjon",
     "location": "Sted",
     "shipping": "Last",
     "shippingAvailable": "Kan sendes med gods.",
@@ -264,8 +279,16 @@
     "maxOrder": "Maksimal bestilling",
     "publishedAt": "Publikasjonsdato",
     "views": "Sett",
+    "reviews": "evaluering",
     "similarProducts": "Lignende produkter",
-    "sellerProducts": "Selgers andre produkter"
+    "sellerProducts": "Selgers andre produkter",
+    "contactSeller": "Kontakt selgeren",
+    "loginRequired": "Logg inn for å legge til i favoritter.",
+    "addedToFavorites": "Lagt til i favoritter",
+    "removedFromFavorites": "Fjernet fra favoritter",
+    "linkCopied": "Lenken har blitt kopiert.",
+    "messagingComingSoon": "Meldingsfunksjonen kommer snart.",
+    "productNotFound": "Produktet ble ikke funnet."
   },
   "seller": {
     "title": "Selgerinformasjon",
@@ -276,6 +299,52 @@
     "contact": "Send melding",
     "call": "Søk",
     "viewProfile": "Vis profil"
+  },
+  "editListing": {
+    "title": "Rediger annonsen",
+    "saveChanges": "Lagre endringer",
+    "updating": "Oppdaterer...",
+    "updateSuccess": "Annonsen er oppdatert.",
+    "updateFailed": "Det oppsto en feil under oppdatering av oppføringen.",
+    "loadError": "Det oppsto en feil under innlasting av annonsen.",
+    "basicInfo": "Grunnleggende informasjon",
+    "categoryAndCondition": "Kategori og status",
+    "pricing": "Prissetting",
+    "shipping": "Last",
+    "images": "Bilder",
+    "existingImages": "Tilgjengelige bilder",
+    "addImage": "Legg til bilde",
+    "uploadingImages": "Bildene lastes inn ...",
+    "uploadingImage": "Bildet lastes inn.",
+    "imageUploadFailed": "Bildet kunne ikke lastes inn.",
+    "imagesUploaded": "Alle bildene er lastet opp",
+    "fields": {
+      "title": "Annonsetittel",
+      "shortDescription": "Kort beskrivelse",
+      "description": "Detaljert forklaring",
+      "category": "Kategori",
+      "condition": "Produktstatus",
+      "price": "Pris",
+      "stock": "Lagermengde",
+      "unit": "Enhet",
+      "shippingAvailable": "Frakt er tilgjengelig.",
+      "shippingCost": "Fraktgebyr",
+      "weight": "Vekt",
+      "weightUnit": "Vektenhet"
+    },
+    "placeholders": {
+      "title": "Eksempel: 2 år gammel Holstein-ku",
+      "shortDescription": "Produktbeskrivelse (maks 200 tegn)",
+      "description": "Gi detaljert informasjon om produktet...",
+      "category": "Velg en kategori."
+    },
+    "errors": {
+      "titleRequired": "Annonsetittel er obligatorisk.",
+      "shortDescriptionRequired": "En kort beskrivelse er nødvendig.",
+      "descriptionRequired": "En detaljert forklaring er nødvendig.",
+      "categoryRequired": "Valg av kategori er obligatorisk.",
+      "priceRequired": "Skriv inn en gyldig pris."
+    }
   },
   "newListing": {
     "title": "Opprett ny oppføring",
@@ -310,7 +379,22 @@
       "category": "Velg en kategori."
     },
     "success": "Annonsen ble opprettet.",
-    "error": "Det oppsto en feil under oppretting av annonsen."
+    "error": "Det oppsto en feil under oppretting av annonsen.",
+    "creating": "Produktet blir laget ...",
+    "uploadingImages": "Bildene lastes inn ...",
+    "uploadingImage": "Bildet lastes inn.",
+    "imageUploadFailed": "Bildet kunne ikke lastes inn.",
+    "imagesUploaded": "Alle bildene er lastet opp",
+    "draftSaved": "Utkast lagret",
+    "productCreated": "Produktet ble opprettet.",
+    "creationFailed": "Produktet kunne ikke opprettes. Prøv på nytt.",
+    "errors": {
+      "titleRequired": "Annonsetittel er obligatorisk.",
+      "shortDescriptionRequired": "En kort beskrivelse er nødvendig.",
+      "descriptionRequired": "En detaljert forklaring er nødvendig.",
+      "categoryRequired": "Valg av kategori er obligatorisk.",
+      "priceRequired": "Skriv inn en gyldig pris."
+    }
   },
   "fileUpload": {
     "dragDrop": "Last opp et bilde eller en video.",

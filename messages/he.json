@@ -122,6 +122,12 @@
     "description": "נהל את כל המודעות שלך מכאן.",
     "noListings": "עדיין לא הוספת מודעות.",
     "createFirst": "צור את המודעה הראשונה שלך.",
+    "fetchError": "אירעה שגיאה בעת טעינת המודעות.",
+    "deleteSuccess": "המודעה נמחקה בהצלחה.",
+    "deleteError": "אירעה שגיאה בעת מחיקת המודעה.",
+    "activateSuccess": "המודעה הופעלה.",
+    "deactivateSuccess": "הרישום הושבת.",
+    "statusError": "אירעה שגיאה בעת שינוי הסטטוס.",
     "filters": {
       "all": "כולם",
       "active": "פָּעִיל",
@@ -134,6 +140,12 @@
       "delete": "לִמְחוֹק",
       "activate": "לְהַפְעִיל",
       "deactivate": "מבנה פסיבי"
+    },
+    "deleteDialog": {
+      "title": "מחק את המודעה",
+      "description": "האם אתה בטוח שברצונך למחוק את הרישום הזה? פעולה זו אינה הפיכה.",
+      "cancel": "לְבַטֵל",
+      "confirm": "לִמְחוֹק"
     }
   },
   "favorites": {
@@ -252,6 +264,9 @@
     "report": "דווח על בעיה",
     "description": "הֶסבֵּר",
     "specifications": "תכונות",
+    "category": "קָטֵגוֹרִיָה",
+    "brand": "מותג",
+    "condition": "מַצָב",
     "location": "מִקוּם",
     "shipping": "מִטְעָן",
     "shippingAvailable": "ניתן לשלוח באמצעות מטען.",
@@ -264,8 +279,16 @@
     "maxOrder": "הזמנה מקסימלית",
     "publishedAt": "תאריך פרסום",
     "views": "נצפה",
+    "reviews": "הַעֲרָכָה",
     "similarProducts": "מוצרים דומים",
-    "sellerProducts": "מוצרים אחרים של המוכר"
+    "sellerProducts": "מוצרים אחרים של המוכר",
+    "contactSeller": "צור קשר עם המוכר",
+    "loginRequired": "התחבר כדי להוסיף למועדפים.",
+    "addedToFavorites": "נוסף למועדפים",
+    "removedFromFavorites": "הוסר מהמועדפים",
+    "linkCopied": "הקישור הועתק.",
+    "messagingComingSoon": "תכונת העברת הודעות תגיע בקרוב.",
+    "productNotFound": "המוצר לא נמצא."
   },
   "seller": {
     "title": "פרטי המוכר",
@@ -276,6 +299,52 @@
     "contact": "שלח הודעה",
     "call": "לְחַפֵּשׂ",
     "viewProfile": "הצג פרופיל"
+  },
+  "editListing": {
+    "title": "ערוך את המודעה",
+    "saveChanges": "שמירת שינויים",
+    "updating": "עִדכּוּן...",
+    "updateSuccess": "המודעה עודכנה בהצלחה.",
+    "updateFailed": "אירעה שגיאה בעת עדכון הרישום.",
+    "loadError": "אירעה שגיאה בעת טעינת המודעה.",
+    "basicInfo": "מידע בסיסי",
+    "categoryAndCondition": "קטגוריה וסטטוס",
+    "pricing": "תמחור",
+    "shipping": "מִטְעָן",
+    "images": "תמונות",
+    "existingImages": "תמונות זמינות",
+    "addImage": "הוסף תמונה",
+    "uploadingImages": "התמונות נטענות...",
+    "uploadingImage": "התמונה נטענת.",
+    "imageUploadFailed": "לא ניתן היה לטעון את התמונה.",
+    "imagesUploaded": "כל התמונות הועלו בהצלחה",
+    "fields": {
+      "title": "כותרת הפרסומת",
+      "shortDescription": "תיאור קצר",
+      "description": "הסבר מפורט",
+      "category": "קָטֵגוֹרִיָה",
+      "condition": "סטטוס המוצר",
+      "price": "מְחִיר",
+      "stock": "כמות במלאי",
+      "unit": "יְחִידָה",
+      "shippingAvailable": "משלוח זמין.",
+      "shippingCost": "דמי משלוח",
+      "weight": "מִשׁקָל",
+      "weightUnit": "יחידת משקל"
+    },
+    "placeholders": {
+      "title": "דוגמה: פרה הולשטיין בת שנתיים",
+      "shortDescription": "תיאור מוצר (מקסימום 200 תווים)",
+      "description": "ספק מידע מפורט על המוצר...",
+      "category": "בחר קטגוריה."
+    },
+    "errors": {
+      "titleRequired": "כותרת המודעה היא חובה.",
+      "shortDescriptionRequired": "נדרש תיאור קצר.",
+      "descriptionRequired": "נדרש הסבר מפורט.",
+      "categoryRequired": "בחירת קטגוריה היא חובה.",
+      "priceRequired": "הזן מחיר תקין."
+    }
   },
   "newListing": {
     "title": "צור רישום חדש",
@@ -310,7 +379,22 @@
       "category": "בחר קטגוריה."
     },
     "success": "הפרסומת נוצרה בהצלחה.",
-    "error": "אירעה שגיאה בעת יצירת המודעה."
+    "error": "אירעה שגיאה בעת יצירת המודעה.",
+    "creating": "המוצר נמצא ביצירת...",
+    "uploadingImages": "התמונות נטענות...",
+    "uploadingImage": "התמונה נטענת.",
+    "imageUploadFailed": "לא ניתן היה לטעון את התמונה.",
+    "imagesUploaded": "כל התמונות הועלו בהצלחה",
+    "draftSaved": "הטיוטה נשמרה",
+    "productCreated": "המוצר נוצר בהצלחה.",
+    "creationFailed": "לא ניתן היה ליצור את המוצר. אנא נסה שוב.",
+    "errors": {
+      "titleRequired": "כותרת המודעה היא חובה.",
+      "shortDescriptionRequired": "נדרש תיאור קצר.",
+      "descriptionRequired": "נדרש הסבר מפורט.",
+      "categoryRequired": "בחירת קטגוריה היא חובה.",
+      "priceRequired": "הזן מחיר תקין."
+    }
   },
   "fileUpload": {
     "dragDrop": "העלה תמונה או סרטון.",

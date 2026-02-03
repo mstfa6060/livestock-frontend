@@ -119,9 +119,15 @@
   },
   "myListings": {
     "title": "Mano skelbimai",
-    "description": "Tvarkykite visus savo skelbimus iš čia.",
+    "description": "Tvarkykite visus savo skelbimus čia.",
     "noListings": "Dar nepridėjote jokių skelbimų.",
     "createFirst": "Sukurkite savo pirmąjį skelbimą.",
+    "fetchError": "Įkeliant skelbimus įvyko klaida.",
+    "deleteSuccess": "Skelbimas sėkmingai ištrintas.",
+    "deleteError": "Trinant skelbimą įvyko klaida.",
+    "activateSuccess": "Skelbimas aktyvuotas.",
+    "deactivateSuccess": "Skelbimas buvo deaktyvuotas.",
+    "statusError": "Keičiant būseną įvyko klaida.",
     "filters": {
       "all": "Visi jie",
       "active": "Aktyvus",
@@ -134,6 +140,12 @@
       "delete": "Ištrinti",
       "activate": "Aktyvuoti",
       "deactivate": "Pasyvi struktūra"
+    },
+    "deleteDialog": {
+      "title": "Ištrinti skelbimą",
+      "description": "Ar tikrai norite ištrinti šį įrašą? Šis veiksmas yra negrįžtamas.",
+      "cancel": "Atšaukti",
+      "confirm": "Ištrinti"
     }
   },
   "favorites": {
@@ -252,10 +264,13 @@
     "report": "Pranešti apie problemą",
     "description": "Paaiškinimas",
     "specifications": "Savybės",
+    "category": "Kategorija",
+    "brand": "Prekės ženklas",
+    "condition": "Situacija",
     "location": "Vieta",
     "shipping": "Krovinys",
     "shippingAvailable": "Galima gabenti krovininiu transportu.",
-    "noShipping": "Tik pristatymas į rankas.",
+    "noShipping": "Tik rankinis pristatymas.",
     "internationalShipping": "Galimas tarptautinis siuntimas.",
     "weight": "Svoris",
     "stock": "Atsargos",
@@ -264,8 +279,16 @@
     "maxOrder": "Maksimalus užsakymas",
     "publishedAt": "Išleidimo data",
     "views": "Peržiūrėta",
+    "reviews": "vertinimas",
     "similarProducts": "Panašūs produktai",
-    "sellerProducts": "Pardavėjo kiti produktai"
+    "sellerProducts": "Pardavėjo kiti produktai",
+    "contactSeller": "Susisiekite su pardavėju",
+    "loginRequired": "Prisijunkite, kad pridėtumėte prie mėgstamiausių.",
+    "addedToFavorites": "Pridėta prie mėgstamiausių",
+    "removedFromFavorites": "Pašalinta iš mėgstamiausių",
+    "linkCopied": "Nuoroda nukopijuota.",
+    "messagingComingSoon": "Žinučių funkcija pasirodys netrukus.",
+    "productNotFound": "Produktas nerastas."
   },
   "seller": {
     "title": "Pardavėjo informacija",
@@ -276,6 +299,52 @@
     "contact": "Siųsti žinutę",
     "call": "Paieška",
     "viewProfile": "Peržiūrėti profilį"
+  },
+  "editListing": {
+    "title": "Redaguoti skelbimą",
+    "saveChanges": "Išsaugoti pakeitimus",
+    "updating": "Atnaujinama...",
+    "updateSuccess": "Skelbimas sėkmingai atnaujintas.",
+    "updateFailed": "Atnaujinant įrašą įvyko klaida.",
+    "loadError": "Įkeliant skelbimą įvyko klaida.",
+    "basicInfo": "Pagrindinė informacija",
+    "categoryAndCondition": "Kategorija ir būsena",
+    "pricing": "Kainodara",
+    "shipping": "Krovinys",
+    "images": "Vaizdai",
+    "existingImages": "Galimi vaizdai",
+    "addImage": "Pridėti paveikslėlį",
+    "uploadingImages": "Kraunami vaizdai...",
+    "uploadingImage": "Įkeliamas paveikslėlis.",
+    "imageUploadFailed": "Nepavyko įkelti vaizdo.",
+    "imagesUploaded": "Visi vaizdai sėkmingai įkelti",
+    "fields": {
+      "title": "Reklamos pavadinimas",
+      "shortDescription": "Trumpas aprašymas",
+      "description": "Išsamus paaiškinimas",
+      "category": "Kategorija",
+      "condition": "Produkto būsena",
+      "price": "Kaina",
+      "stock": "Atsargų kiekis",
+      "unit": "Vienetas",
+      "shippingAvailable": "Siuntimas galimas.",
+      "shippingCost": "Siuntimo mokestis",
+      "weight": "Svoris",
+      "weightUnit": "Svorio vienetas"
+    },
+    "placeholders": {
+      "title": "Pavyzdys: 2 metų Holšteino veislės karvė",
+      "shortDescription": "Produkto aprašymas (daugiausia 200 simbolių)",
+      "description": "Pateikite išsamią informaciją apie produktą...",
+      "category": "Pasirinkite kategoriją."
+    },
+    "errors": {
+      "titleRequired": "Reklamos pavadinimas yra privalomas.",
+      "shortDescriptionRequired": "Reikalingas trumpas aprašymas.",
+      "descriptionRequired": "Reikalingas išsamus paaiškinimas.",
+      "categoryRequired": "Kategorijos pasirinkimas yra privalomas.",
+      "priceRequired": "Įveskite galiojančią kainą."
+    }
   },
   "newListing": {
     "title": "Sukurti naują skelbimą",
@@ -310,7 +379,22 @@
       "category": "Pasirinkite kategoriją."
     },
     "success": "Reklama sėkmingai sukurta.",
-    "error": "Kuriant skelbimą įvyko klaida."
+    "error": "Kuriant skelbimą įvyko klaida.",
+    "creating": "Produktas kuriamas...",
+    "uploadingImages": "Kraunami vaizdai...",
+    "uploadingImage": "Įkeliamas paveikslėlis.",
+    "imageUploadFailed": "Nepavyko įkelti vaizdo.",
+    "imagesUploaded": "Visi vaizdai sėkmingai įkelti",
+    "draftSaved": "Juodraštis išsaugotas",
+    "productCreated": "Produktas buvo sėkmingai sukurtas.",
+    "creationFailed": "Nepavyko sukurti produkto. Bandykite dar kartą.",
+    "errors": {
+      "titleRequired": "Reklamos pavadinimas yra privalomas.",
+      "shortDescriptionRequired": "Reikalingas trumpas aprašymas.",
+      "descriptionRequired": "Reikalingas išsamus paaiškinimas.",
+      "categoryRequired": "Kategorijos pasirinkimas yra privalomas.",
+      "priceRequired": "Įveskite galiojančią kainą."
+    }
   },
   "fileUpload": {
     "dragDrop": "Įkelkite nuotrauką arba vaizdo įrašą.",

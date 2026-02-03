@@ -102,7 +102,7 @@
     "recentListings": "Vos dernières annonces",
     "recentMessages": "Messages récents",
     "noListings": "Vous n'avez pas encore ajouté de publicités.",
-    "noMessages": "Vous n'avez encore reçu aucun message.",
+    "noMessages": "Vous n'avez pas encore reçu de message.",
     "noNotifications": "Vous n'avez encore reçu aucune notification.",
     "viewAllListings": "Voir toutes les annonces",
     "viewAllMessages": "Afficher tous les messages"
@@ -122,6 +122,12 @@
     "description": "Gérez toutes vos annonces depuis ici.",
     "noListings": "Vous n'avez pas encore ajouté de publicités.",
     "createFirst": "Créez votre première annonce.",
+    "fetchError": "Une erreur s'est produite lors du chargement des publicités.",
+    "deleteSuccess": "L'annonce a été supprimée avec succès.",
+    "deleteError": "Une erreur s'est produite lors de la suppression de l'annonce.",
+    "activateSuccess": "L'annonce a été activée.",
+    "deactivateSuccess": "L'annonce a été désactivée.",
+    "statusError": "Une erreur s'est produite lors de la modification du statut.",
     "filters": {
       "all": "Tous",
       "active": "Actif",
@@ -134,6 +140,12 @@
       "delete": "Supprimer",
       "activate": "Activer",
       "deactivate": "Structure passive"
+    },
+    "deleteDialog": {
+      "title": "Supprimer l'annonce",
+      "description": "Êtes-vous sûr de vouloir supprimer cette annonce ? Cette action est irréversible.",
+      "cancel": "Annuler",
+      "confirm": "Supprimer"
     }
   },
   "favorites": {
@@ -252,6 +264,9 @@
     "report": "Signaler un problème",
     "description": "Explication",
     "specifications": "Caractéristiques",
+    "category": "Catégorie",
+    "brand": "Marque",
+    "condition": "Situation",
     "location": "Emplacement",
     "shipping": "Cargaison",
     "shippingAvailable": "Peut être expédié par fret.",
@@ -264,8 +279,16 @@
     "maxOrder": "Commande maximale",
     "publishedAt": "Date de publication",
     "views": "Consulté",
+    "reviews": "évaluation",
     "similarProducts": "Produits similaires",
-    "sellerProducts": "Autres produits du vendeur"
+    "sellerProducts": "Autres produits du vendeur",
+    "contactSeller": "Contacter le vendeur",
+    "loginRequired": "Connectez-vous pour ajouter aux favoris.",
+    "addedToFavorites": "Ajouté aux favoris",
+    "removedFromFavorites": "Retiré des favoris",
+    "linkCopied": "Le lien a été copié.",
+    "messagingComingSoon": "Fonctionnalité de messagerie bientôt disponible.",
+    "productNotFound": "Produit introuvable."
   },
   "seller": {
     "title": "Informations sur le vendeur",
@@ -276,6 +299,52 @@
     "contact": "Envoyer un message",
     "call": "Recherche",
     "viewProfile": "Voir le profil"
+  },
+  "editListing": {
+    "title": "Modifier l'annonce",
+    "saveChanges": "Enregistrer les modifications",
+    "updating": "Mise à jour en cours...",
+    "updateSuccess": "L'annonce a été mise à jour avec succès.",
+    "updateFailed": "Une erreur s'est produite lors de la mise à jour de l'annonce.",
+    "loadError": "Une erreur s'est produite lors du chargement de l'annonce.",
+    "basicInfo": "Informations de base",
+    "categoryAndCondition": "Catégorie et statut",
+    "pricing": "Tarification",
+    "shipping": "Cargaison",
+    "images": "Images",
+    "existingImages": "Images disponibles",
+    "addImage": "Ajouter une image",
+    "uploadingImages": "Chargement des images...",
+    "uploadingImage": "L'image est en cours de chargement.",
+    "imageUploadFailed": "L'image n'a pas pu être chargée.",
+    "imagesUploaded": "Toutes les images ont été téléchargées avec succès.",
+    "fields": {
+      "title": "Titre de l'annonce",
+      "shortDescription": "Brève description",
+      "description": "Explication détaillée",
+      "category": "Catégorie",
+      "condition": "État du produit",
+      "price": "Prix",
+      "stock": "Quantité en stock",
+      "unit": "Unité",
+      "shippingAvailable": "Livraison possible.",
+      "shippingCost": "Frais d'expédition",
+      "weight": "Poids",
+      "weightUnit": "Unité de poids"
+    },
+    "placeholders": {
+      "title": "Exemple : Vache Holstein de 2 ans",
+      "shortDescription": "Description du produit (200 caractères maximum)",
+      "description": "Fournissez des informations détaillées sur le produit...",
+      "category": "Sélectionnez une catégorie."
+    },
+    "errors": {
+      "titleRequired": "Le titre de l'annonce est obligatoire.",
+      "shortDescriptionRequired": "Une brève description est requise.",
+      "descriptionRequired": "Une explication détaillée est nécessaire.",
+      "categoryRequired": "La sélection de la catégorie est obligatoire.",
+      "priceRequired": "Saisissez un prix valide."
+    }
   },
   "newListing": {
     "title": "Créer une nouvelle annonce",
@@ -310,7 +379,22 @@
       "category": "Sélectionnez une catégorie."
     },
     "success": "La publicité a été créée avec succès.",
-    "error": "Une erreur s'est produite lors de la création de l'annonce."
+    "error": "Une erreur s'est produite lors de la création de l'annonce.",
+    "creating": "Le produit est en cours de création...",
+    "uploadingImages": "Chargement des images...",
+    "uploadingImage": "L'image est en cours de chargement.",
+    "imageUploadFailed": "L'image n'a pas pu être chargée.",
+    "imagesUploaded": "Toutes les images ont été téléchargées avec succès.",
+    "draftSaved": "Brouillon enregistré",
+    "productCreated": "Le produit a été créé avec succès.",
+    "creationFailed": "Le produit n'a pas pu être créé. Veuillez réessayer.",
+    "errors": {
+      "titleRequired": "Le titre de l'annonce est obligatoire.",
+      "shortDescriptionRequired": "Une brève description est requise.",
+      "descriptionRequired": "Une explication détaillée est nécessaire.",
+      "categoryRequired": "La sélection de la catégorie est obligatoire.",
+      "priceRequired": "Saisissez un prix valide."
+    }
   },
   "fileUpload": {
     "dragDrop": "Téléchargez une photo ou une vidéo.",
@@ -334,6 +418,6 @@
     "coverBadge": "COUVERCLE",
     "videoBadge": "VIDÉO",
     "coverUpdated": "La photo de couverture a été ajustée avec succès.",
-    "optimizationInfo": "Les photos ont été optimisées pour être conformes aux normes web"
+    "optimizationInfo": "Les photos sont optimisées pour être conformes aux normes web"
   }
 }

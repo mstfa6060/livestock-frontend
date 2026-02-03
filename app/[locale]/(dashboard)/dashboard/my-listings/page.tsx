@@ -1,12 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { ProductCard, ProductCardSkeleton, Product } from "@/components/features/product-card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { useAuth } from "@/contexts/AuthContext";
+import { toast } from "sonner";
 import {
   Select,
   SelectContent,
@@ -20,6 +23,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { PlusCircle, MoreVertical, Pencil, Trash2, Eye, EyeOff } from "lucide-react";
 
 type ListingStatus = "all" | "active" | "draft" | "sold" | "pending";
@@ -28,12 +41,77 @@ export default function MyListingsPage() {
   const t = useTranslations("myListings");
   const tn = useTranslations("dashboardNav");
   const tp = useTranslations("products");
+  const { user } = useAuth();
 
   const [statusFilter, setStatusFilter] = useState<ListingStatus>("all");
-  const [isLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [listings, setListings] = useState<Product[]>([]);
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [productToDelete, setProductToDelete] = useState<string | null>(null);
 
-  // Mock data - in production, fetch from API
-  const listings: Product[] = [];
+  // Fetch user's listings
+  useEffect(() => {
+    const fetchListings = async () => {
+      if (!user?.id) {
+        setIsLoading(false);
+        return;
+      }
+
+      setIsLoading(true);
+      try {
+        const response = await LivestockTradingAPI.Products.All.Request({
+          countryCode: "TR",
+          sorting: { key: "createdAt", direction: 1 }, // Descending
+          filters: [
+            {
+              key: "sellerId",
+              type: "guid",
+              isUsed: true,
+              values: [user.id],
+              min: {},
+              max: {},
+              conditionType: "equals",
+            },
+          ],
+          pageRequest: { currentPage: 1, perPageCount: 100, listAll: true },
+        });
+
+        const transformedProducts: Product[] = response.map((item) => ({
+          id: item.id,
+          title: item.title,
+          slug: item.slug,
+          shortDescription: item.shortDescription,
+          categoryId: item.categoryId,
+          brandId: item.brandId || undefined,
+          basePrice: item.basePrice as number,
+          currency: item.currency,
+          discountedPrice: item.discountedPrice as number | undefined,
+          stockQuantity: item.stockQuantity,
+          isInStock: item.isInStock,
+          sellerId: item.sellerId,
+          locationId: item.locationId,
+          locationCountryCode: item.locationCountryCode,
+          locationCity: item.locationCity,
+          status: item.status,
+          condition: item.condition,
+          viewCount: item.viewCount,
+          averageRating: item.averageRating as number | undefined,
+          reviewCount: item.reviewCount,
+          createdAt: item.createdAt,
+          imageUrl: undefined,
+        }));
+
+        setListings(transformedProducts);
+      } catch (error) {
+        console.error("Failed to fetch listings:", error);
+        toast.error(t("fetchError"));
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchListings();
+  }, [user?.id, t]);
 
   const filteredListings =
     statusFilter === "all"
@@ -48,12 +126,53 @@ export default function MyListingsPage() {
           return statusMap[l.status] === statusFilter;
         });
 
-  const handleDelete = (productId: string) => {
-    console.log("Delete product:", productId);
+  const handleDeleteClick = (productId: string) => {
+    setProductToDelete(productId);
+    setDeleteDialogOpen(true);
   };
 
-  const handleToggleStatus = (productId: string) => {
-    console.log("Toggle status:", productId);
+  const handleDeleteConfirm = async () => {
+    if (!productToDelete) return;
+
+    try {
+      await LivestockTradingAPI.Products.Delete.Request({ id: productToDelete });
+
+      // Remove from local state
+      setListings((prev) => prev.filter((p) => p.id !== productToDelete));
+
+      toast.success(t("deleteSuccess"));
+      setDeleteDialogOpen(false);
+      setProductToDelete(null);
+    } catch (error) {
+      console.error("Failed to delete product:", error);
+      toast.error(t("deleteError"));
+    }
+  };
+
+  const handleToggleStatus = async (productId: string) => {
+    const product = listings.find((p) => p.id === productId);
+    if (!product) return;
+
+    const newStatus = product.status === 1 ? 0 : 1; // Toggle between active (1) and draft (0)
+
+    try {
+      await LivestockTradingAPI.Products.Update.Request({
+        id: productId,
+        status: newStatus,
+      });
+
+      // Update local state
+      setListings((prev) =>
+        prev.map((p) => (p.id === productId ? { ...p, status: newStatus } : p))
+      );
+
+      toast.success(
+        newStatus === 1 ? t("activateSuccess") : t("deactivateSuccess")
+      );
+    } catch (error) {
+      console.error("Failed to update status:", error);
+      toast.error(t("statusError"));
+    }
   };
 
   return (
@@ -155,7 +274,7 @@ export default function MyListingsPage() {
                     )}
                   </DropdownMenuItem>
                   <DropdownMenuItem
-                    onClick={() => handleDelete(listing.id)}
+                    onClick={() => handleDeleteClick(listing.id)}
                     className="text-destructive focus:text-destructive"
                   >
                     <Trash2 className="h-4 w-4 mr-2" />
@@ -167,6 +286,27 @@ export default function MyListingsPage() {
           ))}
         </div>
       )}
+
+      {/* Delete Confirmation Dialog */}
+      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>{t("deleteDialog.title")}</AlertDialogTitle>
+            <AlertDialogDescription>
+              {t("deleteDialog.description")}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>{t("deleteDialog.cancel")}</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={handleDeleteConfirm}
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            >
+              {t("deleteDialog.confirm")}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </DashboardLayout>
   );
 }

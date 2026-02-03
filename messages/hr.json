@@ -102,7 +102,7 @@
     "recentListings": "Vaši najnoviji oglasi",
     "recentMessages": "Nedavne poruke",
     "noListings": "Još niste dodali nijedan oglas.",
-    "noMessages": "Još niste primili poruku.",
+    "noMessages": "Još niste primili nijednu poruku.",
     "noNotifications": "Još niste primili nikakve obavijesti.",
     "viewAllListings": "Pogledajte sve oglase",
     "viewAllMessages": "Prikaži sve poruke"
@@ -122,6 +122,12 @@
     "description": "Upravljajte svim svojim oglasima odavde.",
     "noListings": "Još niste dodali nijedan oglas.",
     "createFirst": "Izradite svoj prvi oglas.",
+    "fetchError": "Došlo je do pogreške prilikom učitavanja oglasa.",
+    "deleteSuccess": "Oglas je uspješno izbrisan.",
+    "deleteError": "Došlo je do pogreške prilikom brisanja oglasa.",
+    "activateSuccess": "Oglas je aktiviran.",
+    "deactivateSuccess": "Popis je deaktiviran.",
+    "statusError": "Došlo je do pogreške prilikom promjene statusa.",
     "filters": {
       "all": "Svi oni",
       "active": "Aktivan",
@@ -134,6 +140,12 @@
       "delete": "Izbrisati",
       "activate": "Aktivirati",
       "deactivate": "Pasivna struktura"
+    },
+    "deleteDialog": {
+      "title": "Izbriši oglas",
+      "description": "Jeste li sigurni da želite izbrisati ovaj oglas? Ova radnja je nepovratna.",
+      "cancel": "Otkazati",
+      "confirm": "Izbrisati"
     }
   },
   "favorites": {
@@ -238,7 +250,7 @@
     "outOfStock": "Rasprodano",
     "inStock": "Na lageru",
     "noResults": "Proizvod nije pronađen.",
-    "loading": "Proizvodi se učitavaju...",
+    "loading": "Učitavanje proizvoda...",
     "perPage": "Po stranici",
     "showing": "Ukupan broj proizvoda od {total} između {from} i {to}.",
     "loginToFavorite": "Prijavite se kako biste dodali u favorite.",
@@ -252,6 +264,9 @@
     "report": "Prijavi problem",
     "description": "Obrazloženje",
     "specifications": "Značajke",
+    "category": "Kategorija",
+    "brand": "Robna marka",
+    "condition": "Situacija",
     "location": "Mjesto",
     "shipping": "Teret",
     "shippingAvailable": "Može se slati teretom.",
@@ -264,8 +279,16 @@
     "maxOrder": "Maksimalna narudžba",
     "publishedAt": "Datum objave",
     "views": "Pregledano",
+    "reviews": "evaluacija",
     "similarProducts": "Slični proizvodi",
-    "sellerProducts": "Ostali proizvodi prodavatelja"
+    "sellerProducts": "Ostali proizvodi prodavatelja",
+    "contactSeller": "Kontaktirajte prodavatelja",
+    "loginRequired": "Prijavite se kako biste dodali u favorite.",
+    "addedToFavorites": "Dodano u favorite",
+    "removedFromFavorites": "Uklonjeno iz favorita",
+    "linkCopied": "Veza je kopirana.",
+    "messagingComingSoon": "Funkcija slanja poruka uskoro stiže.",
+    "productNotFound": "Proizvod nije pronađen."
   },
   "seller": {
     "title": "Podaci o prodavatelju",
@@ -276,6 +299,52 @@
     "contact": "Pošalji poruku",
     "call": "Pretraživanje",
     "viewProfile": "Prikaži profil"
+  },
+  "editListing": {
+    "title": "Uredi oglas",
+    "saveChanges": "Spremi promjene",
+    "updating": "Ažuriranje...",
+    "updateSuccess": "Oglas je uspješno ažuriran.",
+    "updateFailed": "Došlo je do pogreške prilikom ažuriranja popisa.",
+    "loadError": "Došlo je do pogreške prilikom učitavanja oglasa.",
+    "basicInfo": "Osnovne informacije",
+    "categoryAndCondition": "Kategorija i status",
+    "pricing": "Cijene",
+    "shipping": "Teret",
+    "images": "Slike",
+    "existingImages": "Dostupne slike",
+    "addImage": "Dodaj sliku",
+    "uploadingImages": "Slike se učitavaju...",
+    "uploadingImage": "Slika se učitava.",
+    "imageUploadFailed": "Slika se nije mogla učitati.",
+    "imagesUploaded": "Sve slike su uspješno prenesene",
+    "fields": {
+      "title": "Naslov oglasa",
+      "shortDescription": "Kratak opis",
+      "description": "Detaljno objašnjenje",
+      "category": "Kategorija",
+      "condition": "Status proizvoda",
+      "price": "Cijena",
+      "stock": "Količina zaliha",
+      "unit": "Jedinica",
+      "shippingAvailable": "Dostava je dostupna.",
+      "shippingCost": "Naknada za dostavu",
+      "weight": "Težina",
+      "weightUnit": "Jedinica težine"
+    },
+    "placeholders": {
+      "title": "Primjer: Dvogodišnja krava Holstein pasmine",
+      "shortDescription": "Opis proizvoda (maksimalno 200 znakova)",
+      "description": "Navedite detaljne informacije o proizvodu...",
+      "category": "Odaberite kategoriju."
+    },
+    "errors": {
+      "titleRequired": "Naslov oglasa je obavezan.",
+      "shortDescriptionRequired": "Potreban je kratak opis.",
+      "descriptionRequired": "Potrebno je detaljno objašnjenje.",
+      "categoryRequired": "Odabir kategorije je obavezan.",
+      "priceRequired": "Unesite valjanu cijenu."
+    }
   },
   "newListing": {
     "title": "Izradi novi oglas",
@@ -310,7 +379,22 @@
       "category": "Odaberite kategoriju."
     },
     "success": "Oglas je uspješno kreiran.",
-    "error": "Došlo je do pogreške prilikom izrade oglasa."
+    "error": "Došlo je do pogreške prilikom izrade oglasa.",
+    "creating": "Proizvod se stvara...",
+    "uploadingImages": "Slike se učitavaju...",
+    "uploadingImage": "Slika se učitava.",
+    "imageUploadFailed": "Slika se nije mogla učitati.",
+    "imagesUploaded": "Sve slike su uspješno prenesene",
+    "draftSaved": "Nacrt spremljen",
+    "productCreated": "Proizvod je uspješno kreiran.",
+    "creationFailed": "Proizvod nije moguće kreirati. Pokušajte ponovno.",
+    "errors": {
+      "titleRequired": "Naslov oglasa je obavezan.",
+      "shortDescriptionRequired": "Potreban je kratak opis.",
+      "descriptionRequired": "Potrebno je detaljno objašnjenje.",
+      "categoryRequired": "Odabir kategorije je obavezan.",
+      "priceRequired": "Unesite valjanu cijenu."
+    }
   },
   "fileUpload": {
     "dragDrop": "Prenesite fotografiju ili videozapis.",

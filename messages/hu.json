@@ -122,6 +122,12 @@
     "description": "Kezelje az összes hirdetését innen.",
     "noListings": "Még nem adtál hozzá hirdetéseket.",
     "createFirst": "Hozd létre az első hirdetésedet.",
+    "fetchError": "Hiba történt a hirdetések betöltése során.",
+    "deleteSuccess": "A hirdetést sikeresen töröltük.",
+    "deleteError": "Hiba történt a hirdetés törlése közben.",
+    "activateSuccess": "A hirdetés aktiválva lett.",
+    "deactivateSuccess": "A hirdetés deaktiválva lett.",
+    "statusError": "Hiba történt az állapot módosításakor.",
     "filters": {
       "all": "Mindegyikük",
       "active": "Aktív",
@@ -134,6 +140,12 @@
       "delete": "Töröl",
       "activate": "Aktiválás",
       "deactivate": "Passzív szerkezet"
+    },
+    "deleteDialog": {
+      "title": "Töröld a hirdetést",
+      "description": "Biztosan törölni szeretné ezt a listát? Ez a művelet visszafordíthatatlan.",
+      "cancel": "Mégsem",
+      "confirm": "Töröl"
     }
   },
   "favorites": {
@@ -153,7 +165,7 @@
       "confirmPassword": "Új jelszó újra",
       "submit": "Jelszó frissítése",
       "submitting": "Frissítés...",
-      "success": "Jelszavad sikeresen frissítve.",
+      "success": "Jelszava sikeresen frissítve.",
       "passwordMismatch": "Az új jelszavak nem egyeznek.",
       "passwordTooShort": "Az új jelszónak legalább 6 karakter hosszúnak kell lennie.",
       "sessionError": "Nem találhatók a munkamenet adatai.",
@@ -218,7 +230,7 @@
     "sort": "Fajta",
     "sortOptions": {
       "newest": "Legújabb",
-      "oldest": "Legrégebbi",
+      "oldest": "Legidősebb",
       "priceAsc": "Ár (alacsonytól a magasig)",
       "priceDesc": "Ár (magastól a legalacsonyabbig)",
       "popular": "Legnépszerűbb"
@@ -252,6 +264,9 @@
     "report": "Probléma jelentése",
     "description": "Magyarázat",
     "specifications": "Jellemzők",
+    "category": "Kategória",
+    "brand": "Márka",
+    "condition": "Helyzet",
     "location": "Elhelyezkedés",
     "shipping": "Rakomány",
     "shippingAvailable": "Rakományként szállítható.",
@@ -264,8 +279,16 @@
     "maxOrder": "Maximális rendelési érték",
     "publishedAt": "Megjelenés dátuma",
     "views": "Megtekintve",
+    "reviews": "értékelés",
     "similarProducts": "Hasonló termékek",
-    "sellerProducts": "Az eladó egyéb termékei"
+    "sellerProducts": "Az eladó egyéb termékei",
+    "contactSeller": "Lépjen kapcsolatba az eladóval",
+    "loginRequired": "Jelentkezz be, hogy hozzáadhasd a kedvencekhez.",
+    "addedToFavorites": "Hozzáadva a kedvencekhez",
+    "removedFromFavorites": "Eltávolítva a kedvencek közül",
+    "linkCopied": "A linket kimásoltuk.",
+    "messagingComingSoon": "Hamarosan elérhető lesz az üzenetküldő funkció.",
+    "productNotFound": "A termék nem található."
   },
   "seller": {
     "title": "Eladó adatai",
@@ -276,6 +299,52 @@
     "contact": "Üzenet küldése",
     "call": "Keresés",
     "viewProfile": "Profil megtekintése"
+  },
+  "editListing": {
+    "title": "Szerkessze a hirdetést",
+    "saveChanges": "Változtatások mentése",
+    "updating": "Frissítés...",
+    "updateSuccess": "A hirdetés frissítése sikeresen megtörtént.",
+    "updateFailed": "Hiba történt a lista frissítése során.",
+    "loadError": "Hiba történt a hirdetés betöltése közben.",
+    "basicInfo": "Alapvető információk",
+    "categoryAndCondition": "Kategória és állapot",
+    "pricing": "Árazás",
+    "shipping": "Rakomány",
+    "images": "Képek",
+    "existingImages": "Elérhető képek",
+    "addImage": "Kép hozzáadása",
+    "uploadingImages": "Képek töltődnek...",
+    "uploadingImage": "A kép betöltés alatt áll.",
+    "imageUploadFailed": "A kép nem tölthető be.",
+    "imagesUploaded": "Minden kép feltöltve",
+    "fields": {
+      "title": "Hirdetés címe",
+      "shortDescription": "Rövid leírás",
+      "description": "Részletes magyarázat",
+      "category": "Kategória",
+      "condition": "Termék állapota",
+      "price": "Ár",
+      "stock": "Készletmennyiség",
+      "unit": "Egység",
+      "shippingAvailable": "Szállítás elérhető.",
+      "shippingCost": "Szállítási díj",
+      "weight": "Súly",
+      "weightUnit": "Súlyegység"
+    },
+    "placeholders": {
+      "title": "Példa: 2 éves holstein tehén",
+      "shortDescription": "Termékleírás (maximum 200 karakter)",
+      "description": "Adjon meg részletes információkat a termékről...",
+      "category": "Válasszon egy kategóriát."
+    },
+    "errors": {
+      "titleRequired": "A hirdetés címe kötelező.",
+      "shortDescriptionRequired": "Rövid leírás szükséges.",
+      "descriptionRequired": "Részletes magyarázat szükséges.",
+      "categoryRequired": "A kategória kiválasztása kötelező.",
+      "priceRequired": "Adjon meg egy érvényes árat."
+    }
   },
   "newListing": {
     "title": "Új hirdetés létrehozása",
@@ -310,7 +379,22 @@
       "category": "Válasszon egy kategóriát."
     },
     "success": "A hirdetés sikeresen létrejött.",
-    "error": "Hiba történt a hirdetés létrehozásakor."
+    "error": "Hiba történt a hirdetés létrehozásakor.",
+    "creating": "A termék készül...",
+    "uploadingImages": "Képek töltődnek...",
+    "uploadingImage": "A kép betöltés alatt áll.",
+    "imageUploadFailed": "A kép nem tölthető be.",
+    "imagesUploaded": "Minden kép feltöltve",
+    "draftSaved": "Vázlat mentve",
+    "productCreated": "A termék sikeresen létrejött.",
+    "creationFailed": "A termék nem hozható létre. Kérjük, próbálja újra.",
+    "errors": {
+      "titleRequired": "A hirdetés címe kötelező.",
+      "shortDescriptionRequired": "Rövid leírás szükséges.",
+      "descriptionRequired": "Részletes magyarázat szükséges.",
+      "categoryRequired": "A kategória kiválasztása kötelező.",
+      "priceRequired": "Adjon meg egy érvényes árat."
+    }
   },
   "fileUpload": {
     "dragDrop": "Töltsön fel egy fotót vagy videót.",
@@ -334,6 +418,6 @@
     "coverBadge": "FEDÉL",
     "videoBadge": "VIDEÓ",
     "coverUpdated": "A borítókép sikeresen beállítva.",
-    "optimizationInfo": "A fotókat optimalizáltuk, hogy megfeleljenek a webes szabványoknak"
+    "optimizationInfo": "A fotók optimalizálva vannak a webes szabványoknak való megfelelés érdekében."
   }
 }

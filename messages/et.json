@@ -122,6 +122,12 @@
     "description": "Halda kõiki oma kuulutusi siit.",
     "noListings": "Sa pole veel ühtegi reklaami lisanud.",
     "createFirst": "Loo oma esimene kuulutus.",
+    "fetchError": "Reklaamide laadimisel ilmnes viga.",
+    "deleteSuccess": "Reklaam kustutati edukalt.",
+    "deleteError": "Reklaami kustutamisel ilmnes viga.",
+    "activateSuccess": "Reklaam on aktiveeritud.",
+    "deactivateSuccess": "Kuulutus on deaktiveeritud.",
+    "statusError": "Staatuse muutmisel ilmnes viga.",
     "filters": {
       "all": "Kõik nad",
       "active": "Aktiivne",
@@ -134,6 +140,12 @@
       "delete": "Kustuta",
       "activate": "Aktiveeri",
       "deactivate": "Passiivne struktuur"
+    },
+    "deleteDialog": {
+      "title": "Kustuta reklaam",
+      "description": "Kas olete kindel, et soovite selle kuulutuse kustutada? See toiming on pöördumatu.",
+      "cancel": "Tühista",
+      "confirm": "Kustuta"
     }
   },
   "favorites": {
@@ -238,7 +250,7 @@
     "outOfStock": "Laost otsas",
     "inStock": "Laos",
     "noResults": "Toodet ei leitud.",
-    "loading": "Tooteid laaditakse...",
+    "loading": "Toodete laadimine...",
     "perPage": "Lehe kohta",
     "showing": "Toodete koguarv vahemikus {from} kuni {to} on {total}.",
     "loginToFavorite": "Lemmikutesse lisamiseks logi sisse.",
@@ -252,6 +264,9 @@
     "report": "Teata probleemist",
     "description": "Selgitus",
     "specifications": "Omadused",
+    "category": "Kategooria",
+    "brand": "Bränd",
+    "condition": "Olukord",
     "location": "Asukoht",
     "shipping": "Lasti",
     "shippingAvailable": "Võib kaubaga saata.",
@@ -264,8 +279,16 @@
     "maxOrder": "Maksimaalne tellimus",
     "publishedAt": "Avaldamiskuupäev",
     "views": "Vaadatud",
+    "reviews": "hindamine",
     "similarProducts": "Sarnased tooted",
-    "sellerProducts": "Müüja muud tooted"
+    "sellerProducts": "Müüja muud tooted",
+    "contactSeller": "Võtke ühendust müüjaga",
+    "loginRequired": "Lemmikutesse lisamiseks logi sisse.",
+    "addedToFavorites": "Lisatud lemmikutesse",
+    "removedFromFavorites": "Eemaldatud lemmikutest",
+    "linkCopied": "Link on kopeeritud.",
+    "messagingComingSoon": "Sõnumite saatmise funktsioon on peagi saadaval.",
+    "productNotFound": "Toodet ei leitud."
   },
   "seller": {
     "title": "Müüja andmed",
@@ -276,6 +299,52 @@
     "contact": "Saada sõnum",
     "call": "Otsi",
     "viewProfile": "Vaata profiili"
+  },
+  "editListing": {
+    "title": "Redigeeri reklaami",
+    "saveChanges": "Salvesta muudatused",
+    "updating": "Värskendamine...",
+    "updateSuccess": "Kuulutus on edukalt uuendatud.",
+    "updateFailed": "Kuulutuse värskendamisel ilmnes viga.",
+    "loadError": "Reklaami laadimisel ilmnes viga.",
+    "basicInfo": "Põhiteave",
+    "categoryAndCondition": "Kategooria ja staatus",
+    "pricing": "Hinnakujundus",
+    "shipping": "Lasti",
+    "images": "Pildid",
+    "existingImages": "Saadaval olevad pildid",
+    "addImage": "Lisa pilt",
+    "uploadingImages": "Pildid laetakse...",
+    "uploadingImage": "Pilt laeb.",
+    "imageUploadFailed": "Pilti ei saanud laadida.",
+    "imagesUploaded": "Kõik pildid on edukalt üles laaditud",
+    "fields": {
+      "title": "Reklaami pealkiri",
+      "shortDescription": "Lühike kirjeldus",
+      "description": "Üksikasjalik selgitus",
+      "category": "Kategooria",
+      "condition": "Toote staatus",
+      "price": "Hind",
+      "stock": "Laoseisu kogus",
+      "unit": "Ühik",
+      "shippingAvailable": "Saatmine on saadaval.",
+      "shippingCost": "Saatmistasu",
+      "weight": "Kaal",
+      "weightUnit": "Kaaluühik"
+    },
+    "placeholders": {
+      "title": "Näide: 2-aastane holsteini lehm",
+      "shortDescription": "Tootekirjeldus (maksimaalselt 200 tähemärki)",
+      "description": "Esitage toote kohta üksikasjalikku teavet...",
+      "category": "Valige kategooria."
+    },
+    "errors": {
+      "titleRequired": "Kuulutuse pealkiri on kohustuslik.",
+      "shortDescriptionRequired": "Lühike kirjeldus on vajalik.",
+      "descriptionRequired": "Vaja on üksikasjalikku selgitust.",
+      "categoryRequired": "Kategooria valimine on kohustuslik.",
+      "priceRequired": "Sisestage kehtiv hind."
+    }
   },
   "newListing": {
     "title": "Loo uus kuulutus",
@@ -310,7 +379,22 @@
       "category": "Valige kategooria."
     },
     "success": "Reklaam on edukalt loodud.",
-    "error": "Kuulutuse loomisel ilmnes viga."
+    "error": "Kuulutuse loomisel ilmnes viga.",
+    "creating": "Toodet luuakse...",
+    "uploadingImages": "Pildid laetakse...",
+    "uploadingImage": "Pilt laeb.",
+    "imageUploadFailed": "Pilti ei saanud laadida.",
+    "imagesUploaded": "Kõik pildid on edukalt üles laaditud",
+    "draftSaved": "Mustand salvestatud",
+    "productCreated": "Toode on edukalt loodud.",
+    "creationFailed": "Toodet ei õnnestunud luua. Palun proovige uuesti.",
+    "errors": {
+      "titleRequired": "Kuulutuse pealkiri on kohustuslik.",
+      "shortDescriptionRequired": "Lühike kirjeldus on vajalik.",
+      "descriptionRequired": "Vaja on üksikasjalikku selgitust.",
+      "categoryRequired": "Kategooria valimine on kohustuslik.",
+      "priceRequired": "Sisestage kehtiv hind."
+    }
   },
   "fileUpload": {
     "dragDrop": "Laadige üles foto või video.",
