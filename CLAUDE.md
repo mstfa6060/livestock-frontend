@@ -5,6 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Build and Development Commands
 
 ```bash
+npm run dev:start        # Kill port 3000, clean locks, start dev server (RECOMMENDED)
 npm run dev              # Start development server (localhost:3000)
 npm run build            # Production build
 npm run start            # Start production server

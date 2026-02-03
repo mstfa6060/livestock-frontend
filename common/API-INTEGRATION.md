@@ -1848,7 +1848,89 @@ Bu bolum, platformdaki tum API endpoint'lerini, amaclarini ve kullanim senaryola
 | `POST /Products/Approve` | Ilani onayla | Moderator |
 | `POST /Products/Reject` | Ilani reddet (sebep ile) | Moderator |
 
-**Ornek Kullanim:**
+#### Urun Olusturma (Products/Create)
+
+**ONEMLI:** Urun olusturmak icin `locationId` alani **ZORUNLUDUR** ve gecerli bir GUID formatinda olmalidir.
+
+**Adim 1: Once Location olusturun**
+
+```typescript
+// Urun icin konum olustur
+const location = await LivestockTradingAPI.Locations.Create.Request({
+  name: 'Ciftlik Konumu',
+  addressLine1: 'Ornek Mahallesi, No: 123',
+  addressLine2: '',
+  city: 'Konya',
+  state: 'Konya',
+  postalCode: '42000',
+  countryCode: 'TR',              // ISO 3166-1 alpha-2 (TR, US, DE vb.)
+  latitude: 37.8746,              // Opsiyonel - harita icin
+  longitude: 32.4932,             // Opsiyonel - harita icin
+  phone: '+905551234567',
+  email: 'ciftlik@example.com',
+  type: 0,                        // 0: ProductLocation
+  isActive: true
+});
+
+const locationId = location.id;   // Bu ID'yi urun olustururken kullanin
+```
+
+**Adim 2: Urunu locationId ile olusturun**
+
+```typescript
+const product = await LivestockTradingAPI.Products.Create.Request({
+  title: 'Satilik Holstein Inek',
+  slug: 'satilik-holstein-inek',
+  description: 'Detayli aciklama...',
+  shortDescription: 'Kisa aciklama',
+  categoryId: 'category-uuid',     // ZORUNLU - Gecerli GUID
+  brandId: null,                   // Opsiyonel
+  basePrice: 50000,
+  currency: 'TRY',
+  discountedPrice: null,
+  priceUnit: 'adet',
+  stockQuantity: 5,
+  stockUnit: 'adet',
+  minOrderQuantity: 1,
+  maxOrderQuantity: 5,
+  isInStock: true,
+  sellerId: 'seller-uuid',         // ZORUNLU - Gecerli GUID
+  locationId: locationId,          // ZORUNLU - Gecerli GUID (yukarida olusturulan)
+  status: 1,                       // 1: Active
+  condition: 0,                    // 0: New
+  isShippingAvailable: false,
+  shippingCost: null,
+  isInternationalShipping: false,
+  weight: null,
+  weightUnit: null,
+  attributes: null,
+  metaTitle: 'SEO baslik',
+  metaDescription: 'SEO aciklama',
+  metaKeywords: 'inek, holstein, satilik'
+});
+```
+
+**HATA:** Eger `locationId` icin gecersiz bir deger gonderirseniz (bos string, null, veya GUID formatinda olmayan bir deger), asagidaki hatayi alirsiniz:
+
+```
+System.Text.Json.JsonException: The JSON value could not be converted to System.Guid. Path: $.locationId
+```
+
+**Cozum:** `locationId` icin gecerli bir GUID gonderdiginizden emin olun:
+- Gecerli format: `"3fa85f64-5717-4562-b3fc-2c963f66afa6"`
+- Gecersiz formatlar: `""`, `null`, `"not-a-guid"`, `123`
+
+**Location Type Degerleri:**
+| Deger | Anlam | Kullanim |
+|-------|-------|----------|
+| 0 | ProductLocation | Urun konumu |
+| 1 | FarmLocation | Ciftlik konumu |
+| 2 | UserAddress | Kullanici adresi |
+| 3 | WarehouseLocation | Depo konumu |
+| 4 | ShippingAddress | Teslimat adresi |
+| 5 | BillingAddress | Fatura adresi |
+
+**Ornek Kullanim - Listeleme:**
 ```typescript
 // Ilan listesi - ulkeye gore filtreleme
 const products = await LivestockTradingAPI.Products.All.Request({
@@ -1895,6 +1977,52 @@ const categories = await LivestockTradingAPI.Categories.All.Request({
 | `POST /Sellers/Detail` | Satici detayi | Herkes |
 | `POST /Sellers/Verify` | Saticiyi dogrula | Moderator |
 | `POST /Sellers/Suspend` | Saticiyi askiya al | Moderator |
+
+**ONEMLI:** Urun olusturmadan once Seller profili olusturulmalidir. Kullanicinin Seller ROLU olmasi yeterli degildir, ayrica Seller ENTITY'si de olmalidir.
+
+**Ornek - Seller Profili Kontrolu ve Olusturma:**
+```typescript
+// Urun olusturmadan once seller profili kontrol et
+let sellerId: string;
+
+try {
+  // Mevcut seller profili var mi kontrol et
+  const sellerResponse = await LivestockTradingAPI.Sellers.Detail.Request({
+    id: user.id,
+  });
+  sellerId = sellerResponse.id;
+} catch {
+  // Seller profili yoksa olustur
+  const newSeller = await LivestockTradingAPI.Sellers.Create.Request({
+    userId: user.id,
+    businessName: user.displayName || "My Business",
+    businessType: "Individual",
+    taxNumber: "",
+    registrationNumber: "",
+    description: "",
+    logoUrl: "",
+    bannerUrl: "",
+    email: user.email || "",
+    phone: "",
+    website: "",
+    isActive: true,
+    status: 0,
+    businessHours: "",
+    acceptedPaymentMethods: "",
+    returnPolicy: "",
+    shippingPolicy: "",
+    socialMediaLinks: "",
+  });
+  sellerId = newSeller.id;
+}
+
+// Artik sellerId ile urun olusturabilirsiniz
+await LivestockTradingAPI.Products.Create.Request({
+  // ...
+  sellerId: sellerId,
+  // ...
+});
+```
 
 ### Transporters (Nakliyeciler)
 
@@ -2040,6 +2168,62 @@ const favorites = await LivestockTradingAPI.FavoriteProducts.All.Request({
 | `POST /MachineryInfos/Create` | Makine bilgisi |
 | `POST /ChemicalInfos/Create` | Kimyasal bilgisi |
 
+### Locations (Konumlar)
+
+**Amac:** Urunler, ciftlikler ve kullanicilar icin konum/adres yonetimi. Cok ulkeli filtreleme icin kritik bir entity.
+
+| Endpoint | Amac |
+|----------|------|
+| `POST /Locations/Create` | Yeni konum olustur |
+| `POST /Locations/Update` | Konum guncelle |
+| `POST /Locations/Delete` | Konum sil |
+| `POST /Locations/All` | Konum listesi |
+| `POST /Locations/Detail` | Konum detayi |
+| `POST /Locations/Pick` | Dropdown icin konumlar |
+
+**Ornek - Konum Olusturma:**
+```typescript
+const location = await LivestockTradingAPI.Locations.Create.Request({
+  name: 'Ana Ciftlik',
+  addressLine1: 'Merkez Mahallesi, Ciftlik Yolu No: 45',
+  addressLine2: '',
+  city: 'Konya',
+  state: 'Konya',
+  postalCode: '42000',
+  countryCode: 'TR',              // ISO 3166-1 alpha-2
+  latitude: 37.8746,
+  longitude: 32.4932,
+  phone: '+905551234567',
+  email: 'ciftlik@example.com',
+  type: 0,                        // 0: ProductLocation
+  isActive: true
+});
+
+// Olusturulan location.id'yi urun olustururken kullanin
+```
+
+**Location Type Enum:**
+| Deger | Tip | Aciklama |
+|-------|-----|----------|
+| 0 | ProductLocation | Urun satildigi konum |
+| 1 | FarmLocation | Ciftlik adresi |
+| 2 | UserAddress | Kullanici ev adresi |
+| 3 | WarehouseLocation | Depo adresi |
+| 4 | ShippingAddress | Teslimat adresi |
+| 5 | BillingAddress | Fatura adresi |
+
+**Ulke Kodlari (CountryCode):**
+ISO 3166-1 alpha-2 formatinda olmalidir:
+- Turkiye: `TR`
+- Almanya: `DE`
+- Amerika: `US`
+- Ingiltere: `GB`
+- Fransa: `FR`
+
+Tam liste: [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+
+---
+
 ### System (Sistem Verileri)
 
 | Endpoint | Amac |
@@ -2049,7 +2233,6 @@ const favorites = await LivestockTradingAPI.FavoriteProducts.All.Request({
 | `POST /TaxRates/All` | Vergi oranlari |
 | `POST /Banners/All` | Ana sayfa banner'lari |
 | `POST /FAQs/All` | Sikca sorulan sorular |
-| `POST /Locations/All` | Konum listesi |
 | `POST /ShippingCarriers/All` | Kargo firmalari |
 | `POST /ShippingZones/All` | Kargo bolgeleri |
 | `POST /ShippingRates/All` | Kargo ucretleri |

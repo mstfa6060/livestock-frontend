@@ -64,6 +64,10 @@ export default function NewListingPage() {
     shippingCost: "",
     weight: "",
     weightUnit: "kg",
+    // Location fields
+    city: "",
+    address: "",
+    postalCode: "",
   });
 
   // Load categories
@@ -153,6 +157,14 @@ export default function NewListingPage() {
       alert(t("errors.priceRequired"));
       return;
     }
+    if (!formData.city.trim()) {
+      alert(t("errors.cityRequired"));
+      return;
+    }
+    if (!formData.address.trim()) {
+      alert(t("errors.addressRequired"));
+      return;
+    }
     if (!user?.id) {
       console.error("❌ User object missing or no ID:", { user });
       alert("Kullanıcı bilgisi bulunamadı. Lütfen tekrar giriş yapın.");
@@ -165,14 +177,72 @@ export default function NewListingPage() {
     try {
       const slug = generateSlug(formData.title);
 
+      // Step 1: Check if Seller profile exists, if not create one
+      console.log("👤 Checking seller profile...");
+      let sellerId: string;
+
+      try {
+        // Try to get existing seller profile by user id
+        const sellerResponse = await LivestockTradingAPI.Sellers.Detail.Request({
+          id: user.id,
+        });
+        sellerId = sellerResponse.id;
+        console.log("✅ Seller profile found:", sellerId);
+      } catch {
+        // Seller doesn't exist, create one
+        console.log("📝 Creating seller profile...");
+        const newSeller = await LivestockTradingAPI.Sellers.Create.Request({
+          userId: user.id,
+          businessName: user.displayName || user.username || "My Business",
+          businessType: "Individual",
+          taxNumber: "",
+          registrationNumber: "",
+          description: "",
+          logoUrl: "",
+          bannerUrl: "",
+          email: user.email || "",
+          phone: "",
+          website: "",
+          isActive: true,
+          status: 0,
+          businessHours: "",
+          acceptedPaymentMethods: "",
+          returnPolicy: "",
+          shippingPolicy: "",
+          socialMediaLinks: "",
+        });
+        sellerId = newSeller.id;
+        console.log("✅ Seller profile created:", sellerId);
+      }
+
+      // Step 2: Create Location
+      console.log("📍 Creating location...");
+      const locationResponse = await LivestockTradingAPI.Locations.Create.Request({
+        name: formData.title,
+        addressLine1: formData.address,
+        addressLine2: "",
+        city: formData.city,
+        state: formData.city,
+        postalCode: formData.postalCode || "",
+        countryCode: selectedCountry?.code || "TR",
+        latitude: 0,
+        longitude: 0,
+        phone: "",
+        email: "",
+        type: 0, // ProductLocation
+        isActive: true,
+      });
+
+      console.log("✅ Location created:", locationResponse.id);
+
+      // Step 3: Create Product with the sellerId and locationId
       console.log("📤 Creating product with payload:", {
         title: formData.title,
         categoryId: formData.categoryId,
         basePrice: parseFloat(formData.basePrice),
-        sellerId: user.id,
-        userId: user.id,
-        status: isDraft ? 0 : 3,
-        userObject: user,
+        sellerId: sellerId,
+        locationId: locationResponse.id,
+        status: isDraft ? 0 : 4, // 0=draft, 4=pendingApproval
       });
 
       await LivestockTradingAPI.Products.Create.Request({
@@ -187,9 +257,9 @@ export default function NewListingPage() {
         stockQuantity: parseInt(formData.stockQuantity),
         stockUnit: formData.stockUnit,
         isInStock: parseInt(formData.stockQuantity) > 0,
-        sellerId: user.id,
-        locationId: "602cb4fa-50c8-4d69-88a0-d411b25a2c34", // TODO: Fetch from user's actual location
-        status: isDraft ? 0 : 3, // 0=draft, 3=pending
+        sellerId: sellerId,
+        locationId: locationResponse.id,
+        status: isDraft ? 0 : 4, // 0=draft, 4=pendingApproval
         condition: formData.condition,
         isShippingAvailable: formData.isShippingAvailable,
         shippingCost: formData.shippingCost
@@ -476,6 +546,53 @@ export default function NewListingPage() {
                       }
                     />
                   </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Location */}
+            <Card>
+              <CardHeader>
+                <CardTitle>{t("location")}</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="city">{t("fields.city")} *</Label>
+                  <Input
+                    id="city"
+                    value={formData.city}
+                    onChange={(e) =>
+                      setFormData({ ...formData, city: e.target.value })
+                    }
+                    placeholder={t("placeholders.city")}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="address">{t("fields.address")} *</Label>
+                  <Textarea
+                    id="address"
+                    value={formData.address}
+                    onChange={(e) =>
+                      setFormData({ ...formData, address: e.target.value })
+                    }
+                    placeholder={t("placeholders.address")}
+                    rows={2}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="postalCode">{t("fields.postalCode")}</Label>
+                  <Input
+                    id="postalCode"
+                    value={formData.postalCode}
+                    onChange={(e) =>
+                      setFormData({ ...formData, postalCode: e.target.value })
+                    }
+                    placeholder={t("placeholders.postalCode")}
+                  />
                 </div>
               </CardContent>
             </Card>

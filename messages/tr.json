@@ -289,6 +289,7 @@
     "addImage": "Gorsel Ekle",
     "maxImages": "En fazla 10 gorsel yukleyebilirsiniz",
     "imageHint": "Minimum 1, maksimum 10 gorsel. PNG, JPG veya WEBP formatinda.",
+    "location": "Konum Bilgisi",
     "fields": {
       "title": "Ilan Basligi",
       "shortDescription": "Kisa Aciklama",
@@ -301,13 +302,29 @@
       "shippingAvailable": "Kargo ile gonderim yapilabilir",
       "shippingCost": "Kargo Ucreti",
       "weight": "Agirlik",
-      "weightUnit": "Agirlik Birimi"
+      "weightUnit": "Agirlik Birimi",
+      "city": "Sehir",
+      "address": "Adres",
+      "postalCode": "Posta Kodu"
     },
     "placeholders": {
       "title": "Ornek: 2 Yasinda Holstein Inek",
       "shortDescription": "Urunun kisa tanimi (max 200 karakter)",
       "description": "Urun hakkinda detayli bilgi verin...",
-      "category": "Kategori secin"
+      "category": "Kategori secin",
+      "city": "Sehir girin",
+      "address": "Acik adres girin",
+      "postalCode": "Posta kodu"
+    },
+    "errors": {
+      "titleRequired": "Ilan basligi zorunludur",
+      "shortDescriptionRequired": "Kisa aciklama zorunludur",
+      "descriptionRequired": "Detayli aciklama zorunludur",
+      "categoryRequired": "Kategori secimi zorunludur",
+      "priceRequired": "Fiyat zorunludur",
+      "cityRequired": "Sehir bilgisi zorunludur",
+      "addressRequired": "Adres bilgisi zorunludur",
+      "locationError": "Konum olusturulurken hata olustu"
     },
     "success": "Ilan basariyla olusturuldu",
     "error": "Ilan olusturulurken bir hata olustu"

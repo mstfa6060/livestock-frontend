@@ -37,7 +37,9 @@
       "Bash(findstr:*)",
       "Bash(tasklist:*)",
       "Bash(taskkill:*)",
-      "Bash(if exist \".next\\\\dev\\\\lock\" del \".next\\\\dev\\\\lock\")"
+      "Bash(if exist \".next\\\\dev\\\\lock\" del \".next\\\\dev\\\\lock\")",
+      "Bash(git checkout:*)",
+      "Bash(timeout:*)"
     ]
   }
 }
