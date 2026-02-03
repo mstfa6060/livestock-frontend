@@ -138,11 +138,17 @@ export default function MyComponent() {
 
 ### Adding New Translations
 1. Add Turkish text to `messages/tr.json`
-2. Run `npm run translate:all` to generate other languages
-3. Or run `npm run translate -- en` for specific language
+2. **DO NOT** run translation scripts automatically - user will run manually when needed
+3. Or run `npm run translate -- en` for specific language (only when requested)
 
 ### Translation Script
 `scripts/translate-all.js` uses Google Cloud Translation API to auto-translate from Turkish to all supported languages.
+
+**⚠️ IMPORTANT - DO NOT RUN TRANSLATION SCRIPTS AUTOMATICALLY:**
+- Translation scripts consume Google Cloud Translation API credits
+- **NEVER** run `npm run translate:all` or `npm run translate:missing` unless explicitly requested by the user
+- Only add new keys to `messages/tr.json` - the user will handle translations manually
+- If user asks to translate, confirm before running as it affects 50 languages
 
 ## Tech Stack
 
