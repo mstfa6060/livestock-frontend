@@ -39,7 +39,8 @@
       "Bash(taskkill:*)",
       "Bash(if exist \".next\\\\dev\\\\lock\" del \".next\\\\dev\\\\lock\")",
       "Bash(git checkout:*)",
-      "Bash(timeout:*)"
+      "Bash(timeout:*)",
+      "Bash(npm run dev:start:*)"
     ]
   }
 }
