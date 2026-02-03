@@ -97,9 +97,33 @@ export default function ProductDetailPage() {
       setError(null);
 
       try {
-        // Fetch product details (using slug as ID since they're UUIDs)
+        // First, find product by slug
+        const searchResponse = await LivestockTradingAPI.Products.All.Request({
+          countryCode: "TR",
+          sorting: { key: "createdAt", direction: 1 },
+          filters: [
+            {
+              key: "slug",
+              type: "string",
+              isUsed: true,
+              values: [slug],
+              min: {},
+              max: {},
+              conditionType: "equals",
+            },
+          ],
+          pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
+        });
+
+        if (searchResponse.length === 0) {
+          throw new Error("Product not found");
+        }
+
+        const productId = searchResponse[0].id;
+
+        // Then fetch full details by ID
         const response = await LivestockTradingAPI.Products.Detail.Request({
-          id: slug,
+          id: productId,
         });
 
         const productData = {
