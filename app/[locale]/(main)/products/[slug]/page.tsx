@@ -97,31 +97,41 @@ export default function ProductDetailPage() {
       setError(null);
 
       try {
-        // First, find product by slug
-        const searchResponse = await LivestockTradingAPI.Products.All.Request({
-          countryCode: "TR",
-          sorting: { key: "createdAt", direction: 1 },
-          filters: [
-            {
-              key: "slug",
-              type: "string",
-              isUsed: true,
-              values: [slug],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
-        });
+        // Check if slug is a valid GUID (UUID format)
+        const isGuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(slug);
 
-        if (searchResponse.length === 0) {
-          throw new Error("Product not found");
+        let productId: string;
+
+        if (isGuid) {
+          // If it's a GUID, use it directly
+          productId = slug;
+        } else {
+          // Otherwise, search by slug
+          const searchResponse = await LivestockTradingAPI.Products.All.Request({
+            countryCode: "TR",
+            sorting: { key: "createdAt", direction: 1 },
+            filters: [
+              {
+                key: "slug",
+                type: "string",
+                isUsed: true,
+                values: [slug],
+                min: {},
+                max: {},
+                conditionType: "equals",
+              },
+            ],
+            pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
+          });
+
+          if (searchResponse.length === 0) {
+            throw new Error("Product not found");
+          }
+
+          productId = searchResponse[0].id;
         }
 
-        const productId = searchResponse[0].id;
-
-        // Then fetch full details by ID
+        // Fetch full details by ID
         const response = await LivestockTradingAPI.Products.Detail.Request({
           id: productId,
         });
