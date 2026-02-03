@@ -48,17 +48,40 @@ export default function MyListingsPage() {
   const [listings, setListings] = useState<Product[]>([]);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [productToDelete, setProductToDelete] = useState<string | null>(null);
+  const [sellerId, setSellerId] = useState<string | null>(null);
+
+  // Fetch seller profile first
+  useEffect(() => {
+    const fetchSellerProfile = async () => {
+      if (!user?.id) return;
+
+      try {
+        // Try to get seller profile by user id
+        const sellerResponse = await LivestockTradingAPI.Sellers.Detail.Request({
+          id: user.id,
+        });
+        setSellerId(sellerResponse.id);
+        console.log("✅ Seller profile found:", sellerResponse.id);
+      } catch {
+        console.log("ℹ️ No seller profile found for user");
+        setSellerId(null);
+      }
+    };
+
+    fetchSellerProfile();
+  }, [user?.id]);
 
   // Fetch user's listings
   useEffect(() => {
     const fetchListings = async () => {
-      if (!user?.id) {
+      if (!sellerId) {
         setIsLoading(false);
         return;
       }
 
       setIsLoading(true);
       try {
+        console.log("🔍 Fetching products for sellerId:", sellerId);
         const response = await LivestockTradingAPI.Products.All.Request({
           countryCode: "TR",
           sorting: { key: "createdAt", direction: 1 }, // Descending
@@ -67,7 +90,7 @@ export default function MyListingsPage() {
               key: "sellerId",
               type: "guid",
               isUsed: true,
-              values: [user.id],
+              values: [sellerId],
               min: {},
               max: {},
               conditionType: "equals",
@@ -111,7 +134,7 @@ export default function MyListingsPage() {
     };
 
     fetchListings();
-  }, [user?.id, t]);
+  }, [sellerId, t]);
 
   const filteredListings =
     statusFilter === "all"
