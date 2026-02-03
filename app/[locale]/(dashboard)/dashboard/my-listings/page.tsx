@@ -56,14 +56,32 @@ export default function MyListingsPage() {
       if (!user?.id) return;
 
       try {
-        // Try to get seller profile by user id
-        const sellerResponse = await LivestockTradingAPI.Sellers.Detail.Request({
-          id: user.id,
+        // Find seller profile by userId using Sellers.All with filter
+        const sellersResponse = await LivestockTradingAPI.Sellers.All.Request({
+          sorting: { key: "createdAt", direction: 1 },
+          filters: [
+            {
+              key: "userId",
+              type: "guid",
+              isUsed: true,
+              values: [user.id],
+              min: {},
+              max: {},
+              conditionType: "equals",
+            },
+          ],
+          pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
         });
-        setSellerId(sellerResponse.id);
-        console.log("✅ Seller profile found:", sellerResponse.id);
-      } catch {
-        console.log("ℹ️ No seller profile found for user");
+
+        if (sellersResponse.length > 0) {
+          setSellerId(sellersResponse[0].id);
+          console.log("✅ Seller profile found:", sellersResponse[0].id);
+        } else {
+          console.log("ℹ️ No seller profile found for user");
+          setSellerId(null);
+        }
+      } catch (error) {
+        console.error("❌ Error fetching seller profile:", error);
         setSellerId(null);
       }
     };
