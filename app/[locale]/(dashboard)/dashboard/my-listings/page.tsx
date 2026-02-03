@@ -197,9 +197,35 @@ export default function MyListingsPage() {
     const newStatus = product.status === 1 ? 0 : 1; // Toggle between active (1) and draft (0)
 
     try {
+      // Fetch full product details for update (API requires all fields)
+      const fullProduct = await LivestockTradingAPI.Products.Detail.Request({ id: productId });
+
       await LivestockTradingAPI.Products.Update.Request({
         id: productId,
+        title: fullProduct.title,
+        slug: fullProduct.slug,
+        description: fullProduct.description,
+        shortDescription: fullProduct.shortDescription,
+        categoryId: fullProduct.categoryId,
+        basePrice: fullProduct.basePrice as any,
+        currency: fullProduct.currency,
+        priceUnit: fullProduct.priceUnit,
+        stockQuantity: fullProduct.stockQuantity,
+        stockUnit: fullProduct.stockUnit,
+        isInStock: fullProduct.isInStock,
+        sellerId: fullProduct.sellerId,
+        locationId: fullProduct.locationId,
         status: newStatus,
+        condition: fullProduct.condition,
+        isShippingAvailable: fullProduct.isShippingAvailable,
+        shippingCost: fullProduct.shippingCost as any,
+        isInternationalShipping: fullProduct.isInternationalShipping,
+        weight: fullProduct.weight as any,
+        weightUnit: fullProduct.weightUnit,
+        attributes: fullProduct.attributes,
+        metaTitle: fullProduct.metaTitle,
+        metaDescription: fullProduct.metaDescription,
+        metaKeywords: fullProduct.metaKeywords,
       });
 
       // Update local state

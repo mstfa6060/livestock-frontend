@@ -50,12 +50,54 @@ export default function EditListingPage() {
   const [images, setImages] = useState<File[]>([]);
   const [imagePreviewUrls, setImagePreviewUrls] = useState<string[]>([]);
   const [existingImages, setExistingImages] = useState<Array<{ id: string; url: string }>>([]);
+  const [sellerId, setSellerId] = useState<string | null>(null);
+  const [originalStatus, setOriginalStatus] = useState<number>(0);
 
   // Debug: Log user object when it changes
   useEffect(() => {
     console.log("👤 User object:", user);
     console.log("🔐 Auth loading:", authLoading);
   }, [user, authLoading]);
+
+  // Fetch seller profile
+  useEffect(() => {
+    const fetchSellerProfile = async () => {
+      if (!user?.id) return;
+
+      try {
+        // Find seller profile by userId using Sellers.All with filter
+        const sellersResponse = await LivestockTradingAPI.Sellers.All.Request({
+          sorting: { key: "createdAt", direction: 1 },
+          filters: [
+            {
+              key: "userId",
+              type: "guid",
+              isUsed: true,
+              values: [user.id],
+              min: {},
+              max: {},
+              conditionType: "equals",
+            },
+          ],
+          pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
+        });
+
+        if (sellersResponse.length > 0) {
+          setSellerId(sellersResponse[0].id);
+          console.log("✅ Seller profile found:", sellersResponse[0].id);
+        } else {
+          console.log("⚠️ No seller profile found for user");
+          toast.error("Satıcı profili bulunamadı");
+          router.push("/dashboard/my-listings");
+        }
+      } catch (error) {
+        console.error("❌ Error fetching seller profile:", error);
+        toast.error("Satıcı profili yüklenemedi");
+      }
+    };
+
+    fetchSellerProfile();
+  }, [user?.id, router]);
 
   const [formData, setFormData] = useState({
     title: "",
@@ -74,37 +116,32 @@ export default function EditListingPage() {
     weightUnit: "kg",
   });
 
-  // Load categories
+  // Load categories AND product data together to ensure proper state sync
   useEffect(() => {
-    const loadCategories = async () => {
+    const loadData = async () => {
+      if (!productId) return;
+
+      setIsLoading(true);
       try {
-        const response = await LivestockTradingAPI.Categories.All.Request({
+        // Load categories first
+        const categoriesResponse = await LivestockTradingAPI.Categories.All.Request({
           languageCode: "tr",
           sorting: { key: "sortOrder", direction: 0 },
           filters: [],
           pageRequest: { currentPage: 1, perPageCount: 100, listAll: true },
         });
-        setCategories(
-          response.map((c) => ({ id: c.id, name: c.name, slug: c.slug }))
-        );
-      } catch (error) {
-        console.error("Failed to load categories:", error);
-      }
-    };
-    loadCategories();
-  }, []);
+        const loadedCategories = categoriesResponse.map((c) => ({ id: c.id, name: c.name, slug: c.slug }));
+        setCategories(loadedCategories);
+        console.log("✅ Categories loaded:", loadedCategories.length);
 
-  // Load existing product data
-  useEffect(() => {
-    const loadProduct = async () => {
-      if (!productId) return;
-
-      setIsLoading(true);
-      try {
-        // Fetch product details
+        // Then load product details
         const product = await LivestockTradingAPI.Products.Detail.Request({ id: productId });
+        console.log("✅ Product loaded, categoryId:", product.categoryId);
 
-        // Populate form
+        // Store original status
+        setOriginalStatus(product.status);
+
+        // Populate form - categoryId should now match a loaded category
         setFormData({
           title: product.title,
           shortDescription: product.shortDescription,
@@ -121,6 +158,10 @@ export default function EditListingPage() {
           weight: product.weight ? String(product.weight) : "",
           weightUnit: product.weightUnit,
         });
+
+        // Verify category exists in loaded categories
+        const categoryExists = loadedCategories.some(c => c.id === product.categoryId);
+        console.log("✅ Category exists in list:", categoryExists, "categoryId:", product.categoryId);
 
         // Fetch existing images
         const imagesResponse = await LivestockTradingAPI.ProductImages.All.Request({
@@ -143,7 +184,7 @@ export default function EditListingPage() {
           imagesResponse.map((img) => ({ id: img.id, url: img.imageUrl }))
         );
       } catch (error) {
-        console.error("Failed to load product:", error);
+        console.error("Failed to load data:", error);
         toast.error(t("loadError"));
         router.push("/dashboard/my-listings");
       } finally {
@@ -151,7 +192,7 @@ export default function EditListingPage() {
       }
     };
 
-    loadProduct();
+    loadData();
   }, [productId, router, t]);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -255,6 +296,11 @@ export default function EditListingPage() {
       router.push("/login");
       return;
     }
+    if (!sellerId) {
+      console.error("❌ Seller ID not found");
+      alert("Satıcı profili bulunamadı.");
+      return;
+    }
 
     setIsLoading(true);
     setUploadProgress(0);
@@ -268,7 +314,7 @@ export default function EditListingPage() {
         title: formData.title,
         categoryId: formData.categoryId,
         basePrice: parseFloat(formData.basePrice),
-        sellerId: user.id,
+        sellerId: sellerId,
       });
 
       const productResponse = await LivestockTradingAPI.Products.Update.Request({
@@ -284,9 +330,9 @@ export default function EditListingPage() {
         stockQuantity: parseInt(formData.stockQuantity),
         stockUnit: formData.stockUnit,
         isInStock: parseInt(formData.stockQuantity) > 0,
-        sellerId: user.id,
+        sellerId: sellerId,
         locationId: "602cb4fa-50c8-4d69-88a0-d411b25a2c34", // TODO: Fetch from user's actual location
-        status: isDraft ? 0 : 3, // 0=draft, 3=pending
+        status: originalStatus, // Keep the original status
         condition: formData.condition,
         isShippingAvailable: formData.isShippingAvailable,
         shippingCost: formData.shippingCost
@@ -372,7 +418,7 @@ export default function EditListingPage() {
             <h1 className="text-2xl font-bold">{t("title")}</h1>
           </div>
           <div className="flex gap-2">
-            <Button type="submit" disabled={isLoading || authLoading || !user?.id}>
+            <Button type="submit" disabled={isLoading || authLoading || !user?.id || !sellerId}>
               {isLoading ? (
                 <>
                   <Loader2 className="h-4 w-4 mr-2 animate-spin" />
@@ -447,8 +493,37 @@ export default function EditListingPage() {
               <CardHeader>
                 <CardTitle>{t("images")}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <CardContent className="space-y-4">
+                {/* Existing Images */}
+                {existingImages.length > 0 && (
+                  <div>
+                    <Label className="text-sm font-medium mb-2 block">{t("existingImages")}</Label>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                      {existingImages.map((img, index) => (
+                        <div
+                          key={img.id}
+                          className="relative aspect-square rounded-lg overflow-hidden bg-muted border"
+                        >
+                          <img
+                            src={img.url}
+                            alt={`Existing ${index + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                          {index === 0 && (
+                            <span className="absolute bottom-1 left-1 text-xs bg-primary text-primary-foreground px-1.5 py-0.5 rounded">
+                              Ana
+                            </span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* New Images */}
+                <div>
+                  <Label className="text-sm font-medium mb-2 block">{t("addImage")}</Label>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                   {imagePreviewUrls.map((url, index) => (
                     <div
                       key={index}
@@ -486,8 +561,9 @@ export default function EditListingPage() {
                       />
                     </label>
                   )}
+                  </div>
                 </div>
-                <p className="text-xs text-muted-foreground mt-2">
+                <p className="text-xs text-muted-foreground">
                   {t("imageHint")}
                 </p>
               </CardContent>

@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Heart, MapPin, Eye, Star } from "lucide-react";
+import { Heart, MapPin, Eye, Star, ImageOff } from "lucide-react";
 import { PriceDisplay } from "./price-display";
 import { useState } from "react";
 import { useFavoritesStore } from "@/stores/useFavoritesStore";
@@ -103,21 +103,28 @@ export function ProductCard({ product, onFavorite, isFavorite = false }: Product
   const status = STATUS_MAP[product.status] || STATUS_MAP[0];
   const condition = CONDITION_MAP[product.condition] || "new";
 
-  // Placeholder image if no image provided
-  const imageUrl = product.imageUrl || "/placeholder-product.jpg";
+  // Check if we have a valid image URL
+  const hasImage = product.imageUrl && product.imageUrl.length > 0;
 
   return (
     <Link href={`/products/${product.slug}`}>
       <Card className="group overflow-hidden hover:shadow-lg transition-shadow h-full">
         {/* Image Container */}
         <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-          <Image
-            src={imageUrl}
-            alt={product.title}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+          {hasImage ? (
+            <Image
+              src={product.imageUrl!}
+              alt={product.title}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          ) : (
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-muted">
+              <ImageOff className="h-12 w-12 text-muted-foreground/50" />
+              <span className="text-xs text-muted-foreground/50 mt-2">Görsel yok</span>
+            </div>
+          )}
 
           {/* Favorite Button */}
           <Button

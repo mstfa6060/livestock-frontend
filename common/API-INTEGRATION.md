@@ -2426,3 +2426,98 @@ await LivestockTradingAPI.Messages.SendTypingIndicator.Request({
 | FileProvider | 7 |
 | LivestockTrading | 200+ |
 | **Toplam** | **230+** |
+
+---
+
+## Backend Gelistirme Talimatlari
+
+Bu bolum, frontend testleri sirasinda tespit edilen sorunlari ve onerilen cozumleri icerir.
+
+### 1. Slug Benzersizligi (KRITIK)
+
+**Sorun:** `Products` tablosunda `slug` alani unique degildir. Ayni slug'a sahip birden fazla urun olusturulabilir.
+
+**Etki:** Frontend `/products/{slug}` URL'i ile urun detayini gosterirken yanlis urunu gosterebilir.
+
+**Cozum:**
+```sql
+ALTER TABLE Products ADD CONSTRAINT UQ_Products_Slug UNIQUE (slug);
+```
+
+### 2. Seller Profili Otomatik Olusturma
+
+**Mevcut Durum:** Kullaniciya `LivestockTrading.Seller` rolu atandiginda, veritabaninda otomatik olarak `Seller` entity'si olusturulmuyor.
+
+**Etki:** Kullanici Seller rolune sahip olsa bile, urun olusturamaz cunku `Seller` kaydi yok.
+
+**Onerilen Cozum:** Rol atandiginda veya `Products.Create` cagrildiginda otomatik Seller olusturma:
+```csharp
+// Products.Create icinde
+var seller = await _context.Sellers.FirstOrDefaultAsync(s => s.UserId == currentUserId);
+if (seller == null)
+{
+    seller = await _sellerService.CreateAsync(new CreateSellerRequest
+    {
+        UserId = currentUserId,
+        BusinessName = user.DisplayName,
+        BusinessType = "Individual",
+        Email = user.Email,
+        IsActive = true,
+        Status = 0
+    });
+}
+// Sonra product.SellerId = seller.Id olarak kullan
+```
+
+### 3. Products.DetailBySlug Endpoint Onerisi
+
+**Mevcut Durum:** `Products.Detail` endpoint'i sadece `id` (GUID) kabul ediyor.
+
+**Etki:** Frontend URL'de slug kullaniyor, her seferinde once slug ile arama yapmak zorunda kaliyor (2 API cagirisi).
+
+**Onerilen Cozum:**
+```csharp
+[HttpPost("DetailBySlug")]
+public async Task<ProductDetailResponse> DetailBySlug(DetailBySlugRequest request)
+{
+    var product = await _context.Products
+        .Include(p => p.Seller)
+        .Include(p => p.Category)
+        .Include(p => p.Images)
+        .FirstOrDefaultAsync(p => p.Slug == request.Slug);
+
+    if (product == null)
+        throw new NotFoundException("PRODUCT_NOT_FOUND");
+
+    return MapToDetailResponse(product);
+}
+```
+
+### 4. Sellers.DetailByUserId Endpoint Onerisi
+
+**Mevcut Durum:** `Sellers.Detail` endpoint'i sadece `sellerId` kabul ediyor.
+
+**Etki:** Frontend, kullanicinin seller profilini bulmak icin `Sellers.All` ile filtreleme yapmak zorunda kaliyor.
+
+**Onerilen Cozum:**
+```csharp
+[HttpPost("DetailByUserId")]
+public async Task<SellerDetailResponse> DetailByUserId(DetailByUserIdRequest request)
+{
+    var seller = await _context.Sellers.FirstOrDefaultAsync(s => s.UserId == request.UserId);
+    if (seller == null)
+        throw new NotFoundException("SELLER_NOT_FOUND");
+    return MapToDetailResponse(seller);
+}
+```
+
+### 5. Oncelik Tablosu
+
+| Oncelik | Konu | Etki |
+|---------|------|------|
+| KRITIK | Slug benzersizligi | Yanlis urun gosterme riski |
+| YUKSEK | Seller otomatik olusturma | Kullanici deneyimi |
+| ORTA | DetailBySlug endpoint | Performans (2 API yerine 1) |
+| DUSUK | DetailByUserId endpoint | Performans |
+
+**Son Guncelleme:** 2026-02-03
