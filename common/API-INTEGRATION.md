@@ -2513,11 +2513,155 @@ public async Task<SellerDetailResponse> DetailByUserId(DetailByUserIdRequest req
 
 ### 5. Oncelik Tablosu
 
-| Oncelik | Konu | Etki |
-|---------|------|------|
-| KRITIK | Slug benzersizligi | Yanlis urun gosterme riski |
-| YUKSEK | Seller otomatik olusturma | Kullanici deneyimi |
-| ORTA | DetailBySlug endpoint | Performans (2 API yerine 1) |
-| DUSUK | DetailByUserId endpoint | Performans |
+| Oncelik | Konu | Etki | Durum |
+|---------|------|------|-------|
+| KRITIK | Slug benzersizligi | Yanlis urun gosterme riski | ✅ TAMAMLANDI |
+| YUKSEK | Seller otomatik olusturma | Kullanici deneyimi | ✅ TAMAMLANDI |
+| ORTA | DetailBySlug endpoint | Performans (2 API yerine 1) | ✅ TAMAMLANDI |
+| DUSUK | DetailByUserId endpoint | Performans | ✅ TAMAMLANDI |
 
-**Son Guncelleme:** 2026-02-03
+---
+
+## 🆕 Backend Guncellemeleri (2026-02-04)
+
+### Tamamlanan Ozellikler
+
+#### 1. Products/DetailBySlug Endpoint (SEO-Friendly URL)
+
+Artik urunleri slug ile sorgulayabilirsiniz:
+
+```typescript
+// Eski yontem (2 API cagrisi gerektiriyordu):
+const products = await LivestockTradingAPI.Products.All({ filters: [{ field: 'slug', value: slug }] });
+const product = products.data[0];
+
+// Yeni yontem (tek cagri):
+const product = await LivestockTradingAPI.Products.DetailBySlug({ slug: 'kirmizi-angus-dana' });
+```
+
+**Request:**
+```typescript
+{
+  slug: string;  // Urun slug'i (ornek: "kirmizi-angus-dana")
+}
+```
+
+**Response:** Tam urun detayi (Detail endpoint ile ayni)
+
+---
+
+#### 2. Sellers/DetailByUserId Endpoint
+
+Kullanici ID'si ile seller bilgisini sorgulayabilirsiniz:
+
+```typescript
+// Mevcut kullanicinin seller profilini al
+const seller = await LivestockTradingAPI.Sellers.DetailByUserId({
+  userId: currentUser.id
+});
+```
+
+**Request:**
+```typescript
+{
+  userId: string;  // UUID formatinda kullanici ID'si
+}
+```
+
+**Response:** Tam seller detayi (Detail endpoint ile ayni)
+
+---
+
+#### 3. Products/Create Otomatik Seller Olusturma
+
+`Products/Create` artik `sellerId` olmadan cagrilabilir. Sistem otomatik olarak:
+1. Kullanicinin mevcut seller'ini arar
+2. Yoksa yeni bir seller olusturur (status: PendingVerification)
+3. Urunu bu seller'a baglar
+
+```typescript
+// Eski yontem (sellerId zorunluydu):
+await LivestockTradingAPI.Products.Create({
+  sellerId: existingSeller.id,  // Onceden bulunmasi gerekiyordu
+  title: 'Urun Adi',
+  // ...
+});
+
+// Yeni yontem (sellerId opsiyonel):
+await LivestockTradingAPI.Products.Create({
+  // sellerId gonderilmezse otomatik olusturulur
+  title: 'Urun Adi',
+  slug: 'urun-adi',
+  categoryId: categoryId,
+  locationId: locationId,
+  basePrice: 1000,
+  // ...
+});
+```
+
+**Onemli:** Otomatik olusturulan seller'in status'u `PendingVerification` olur. Admin onayindan sonra `Verified` olur.
+
+---
+
+#### 4. Products.Slug Unique Constraint
+
+Veritabaninda `Products.Slug` sutununa unique constraint eklendi. Ayni slug ile birden fazla urun olusturulamaz.
+
+**Frontend etkisi:**
+- `Products/Create` ve `Products/Update` icin slug zaten varsa hata donecek
+- Slug uretirken benzersizlik kontrolu yapin veya backend hatasini yakalayip kullaniciya bildirin
+
+---
+
+#### 5. Product Entity Degisiklikleri
+
+**Yeni alanlar:**
+```typescript
+interface Product {
+  // ... mevcut alanlar ...
+
+  // YENi: MediaBucket entegrasyonu (FileProvider)
+  mediaBucketId?: string;      // FileProvider'daki bucket ID'si
+  coverImageFileId?: string;   // Kapak resmi file ID'si
+}
+```
+
+**Kaldirilan entity'ler:**
+- `ProductImages` - Artik `mediaBucketId` kullanin
+- `ProductVideos` - Artik `mediaBucketId` kullanin
+- `ProductDocuments` - Artik `mediaBucketId` kullanin
+
+**MediaBucket kullanimi:**
+```typescript
+// 1. Bucket olustur
+const bucket = await FileProviderAPI.MediaBuckets.Create({
+  name: 'product-media',
+  entityType: 'Product',
+  entityId: productId
+});
+
+// 2. Dosya yukle
+const file = await FileProviderAPI.Files.Upload({
+  bucketId: bucket.id,
+  file: imageFile
+});
+
+// 3. Urune bagla
+await LivestockTradingAPI.Products.Update({
+  id: productId,
+  mediaBucketId: bucket.id,
+  coverImageFileId: file.id
+});
+```
+
+---
+
+### API Client Guncelleme
+
+Backend degisikliklerinden sonra `arf-cli` ile client'i guncellemeyi unutmayin:
+
+```bash
+arf-cli generate --output D:\Projects\GlobalLivestock\web\common\livestock-api
+```
+
+**Son Guncelleme:** 2026-02-04
