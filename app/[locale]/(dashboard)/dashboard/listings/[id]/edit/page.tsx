@@ -17,13 +17,14 @@ import {
 } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
-import { ArrowLeft, Save, ImagePlus, X, Loader2 } from "lucide-react";
+import { ArrowLeft, Save, Loader2 } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { FileProviderAPI } from "@/api/base_modules/FileProvider";
+import { AppConfig } from "@/config/livestock-config";
 import { useAuth } from "@/contexts/AuthContext";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { toast } from "sonner";
-import axios from "axios";
-import { AppConfig } from "@/config/livestock-config";
+import { MediaUpload } from "@/components/features/media-upload";
 
 interface Category {
   id: string;
@@ -31,7 +32,17 @@ interface Category {
   slug: string;
 }
 
+interface MediaFile {
+  id: string;
+  path: string;
+  url: string;
+  isVideo: boolean;
+  name: string;
+}
+
 type ProductCondition = 0 | 1 | 2 | 3; // new, likeNew, good, fair
+
+const EMPTY_GUID = "00000000-0000-0000-0000-000000000000";
 
 export default function EditListingPage() {
   const router = useRouter();
@@ -44,14 +55,16 @@ export default function EditListingPage() {
   const selectedCountry = useSelectedCountry();
 
   const [isLoading, setIsLoading] = useState(true);
-  const [uploadProgress, setUploadProgress] = useState(0);
-  const [uploadStatus, setUploadStatus] = useState("");
+  const [isSaving, setIsSaving] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
-  const [images, setImages] = useState<File[]>([]);
-  const [imagePreviewUrls, setImagePreviewUrls] = useState<string[]>([]);
-  const [existingImages, setExistingImages] = useState<Array<{ id: string; url: string }>>([]);
   const [sellerId, setSellerId] = useState<string | null>(null);
   const [originalStatus, setOriginalStatus] = useState<number>(0);
+  const [originalLocationId, setOriginalLocationId] = useState<string>("");
+
+  // Media state - new system
+  const [mediaBucketId, setMediaBucketId] = useState<string>("");
+  const [coverImageFileId, setCoverImageFileId] = useState<string>("");
+  const [mediaFiles, setMediaFiles] = useState<MediaFile[]>([]);
 
   // Debug: Log user object when it changes
   useEffect(() => {
@@ -136,10 +149,41 @@ export default function EditListingPage() {
 
         // Then load product details
         const product = await LivestockTradingAPI.Products.Detail.Request({ id: productId });
-        console.log("✅ Product loaded, categoryId:", product.categoryId);
+        console.log("✅ Product loaded:", product);
 
-        // Store original status
+        // Store original status and locationId
         setOriginalStatus(product.status);
+        setOriginalLocationId(product.locationId);
+
+        // Store media bucket info
+        const productBucketId = (product as any).mediaBucketId || "";
+        const productCoverFileId = (product as any).coverImageFileId || "";
+        setMediaBucketId(productBucketId);
+        setCoverImageFileId(productCoverFileId);
+
+        // Load existing files from bucket if exists
+        if (productBucketId && productBucketId !== EMPTY_GUID) {
+          try {
+            const bucketResponse = await FileProviderAPI.Buckets.Detail.Request({
+              bucketId: productBucketId,
+              changeId: EMPTY_GUID,
+            });
+
+            if (bucketResponse.files && bucketResponse.files.length > 0) {
+              const loadedFiles: MediaFile[] = bucketResponse.files.map((f) => ({
+                id: f.id,
+                path: f.path,
+                url: `${AppConfig.FileStorageBaseUrl}${f.path}`,
+                isVideo: f.contentType?.startsWith("video/") || false,
+                name: f.name,
+              }));
+              setMediaFiles(loadedFiles);
+              console.log("✅ Media files loaded:", loadedFiles.length);
+            }
+          } catch (bucketError) {
+            console.log("ℹ️ No existing bucket or empty:", bucketError);
+          }
+        }
 
         // Populate form - categoryId should now match a loaded category
         setFormData({
@@ -162,27 +206,6 @@ export default function EditListingPage() {
         // Verify category exists in loaded categories
         const categoryExists = loadedCategories.some(c => c.id === product.categoryId);
         console.log("✅ Category exists in list:", categoryExists, "categoryId:", product.categoryId);
-
-        // Fetch existing images
-        const imagesResponse = await LivestockTradingAPI.ProductImages.All.Request({
-          sorting: { key: "sortOrder", direction: 0 },
-          filters: [
-            {
-              key: "productId",
-              type: "guid",
-              isUsed: true,
-              values: [productId],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 20, listAll: true },
-        });
-
-        setExistingImages(
-          imagesResponse.map((img) => ({ id: img.id, url: img.imageUrl }))
-        );
       } catch (error) {
         console.error("Failed to load data:", error);
         toast.error(t("loadError"));
@@ -195,28 +218,12 @@ export default function EditListingPage() {
     loadData();
   }, [productId, router, t]);
 
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(e.target.files || []);
-    if (files.length + images.length > 10) {
-      alert(t("maxImages"));
-      return;
-    }
-
-    setImages((prev) => [...prev, ...files]);
-
-    // Create preview URLs
-    files.forEach((file) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setImagePreviewUrls((prev) => [...prev, reader.result as string]);
-      };
-      reader.readAsDataURL(file);
-    });
-  };
-
-  const removeImage = (index: number) => {
-    setImages((prev) => prev.filter((_, i) => i !== index));
-    setImagePreviewUrls((prev) => prev.filter((_, i) => i !== index));
+  // Handle media change from MediaUpload component
+  const handleMediaChange = (bucketId: string, coverFileId: string, files: MediaFile[]) => {
+    setMediaBucketId(bucketId);
+    setCoverImageFileId(coverFileId);
+    setMediaFiles(files);
+    console.log("📸 Media updated - bucketId:", bucketId, "coverFileId:", coverFileId, "files:", files.length);
   };
 
   const generateSlug = (title: string) => {
@@ -228,83 +235,48 @@ export default function EditListingPage() {
       .trim();
   };
 
-  // Upload image to FileProvider
-  const uploadImageToFileProvider = async (file: File, bucketId: string): Promise<string | null> => {
-    try {
-      const formData = new FormData();
-      formData.append("formFile", file);
-      formData.append("moduleName", "LivestockTrading");
-      formData.append("bucketId", bucketId);
-      formData.append("bucketType", "1"); // MultipleFileBucket
-      formData.append("folderName", "products");
-      formData.append("versionName", "original");
-
-      const token = localStorage.getItem("accessToken");
-      const response = await axios.post(
-        `${AppConfig.FileProviderUrl}/Files/Upload`,
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
-      if (response.data?.files && response.data.files.length > 0) {
-        const file = response.data.files[0];
-        // Return the full URL or the first variant URL
-        return file.variants && file.variants.length > 0
-          ? file.variants[0].url
-          : file.path;
-      }
-
-      return null;
-    } catch (error) {
-      console.error("Failed to upload image:", error);
-      throw error;
-    }
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Validate required fields
     if (!formData.title.trim()) {
-      alert(t("errors.titleRequired"));
+      toast.error(t("errors.titleRequired"));
       return;
     }
     if (!formData.shortDescription.trim()) {
-      alert(t("errors.shortDescriptionRequired"));
+      toast.error(t("errors.shortDescriptionRequired"));
       return;
     }
     if (!formData.description.trim()) {
-      alert(t("errors.descriptionRequired"));
+      toast.error(t("errors.descriptionRequired"));
       return;
     }
     if (!formData.categoryId) {
-      alert(t("errors.categoryRequired"));
+      toast.error(t("errors.categoryRequired"));
       return;
     }
     if (!formData.basePrice || parseFloat(formData.basePrice) <= 0) {
-      alert(t("errors.priceRequired"));
+      toast.error(t("errors.priceRequired"));
       return;
     }
     if (!user?.id) {
       console.error("❌ User object missing or no ID:", { user });
-      alert("Kullanıcı bilgisi bulunamadı. Lütfen tekrar giriş yapın.");
+      toast.error("Kullanıcı bilgisi bulunamadı. Lütfen tekrar giriş yapın.");
       router.push("/login");
       return;
     }
     if (!sellerId) {
       console.error("❌ Seller ID not found");
-      alert("Satıcı profili bulunamadı.");
+      toast.error("Satıcı profili bulunamadı.");
+      return;
+    }
+    if (!originalLocationId) {
+      console.error("❌ Original location ID not found");
+      toast.error("Konum bilgisi bulunamadı. Lütfen sayfayı yenileyin.");
       return;
     }
 
-    setIsLoading(true);
-    setUploadProgress(0);
-    setUploadStatus(t("updating"));
+    setIsSaving(true);
 
     try {
       const slug = generateSlug(formData.title);
@@ -315,9 +287,11 @@ export default function EditListingPage() {
         categoryId: formData.categoryId,
         basePrice: parseFloat(formData.basePrice),
         sellerId: sellerId,
+        mediaBucketId: mediaBucketId || EMPTY_GUID,
+        coverImageFileId: coverImageFileId || EMPTY_GUID,
       });
 
-      const productResponse = await LivestockTradingAPI.Products.Update.Request({
+      await LivestockTradingAPI.Products.Update.Request({
         id: productId,
         title: formData.title,
         slug: slug,
@@ -331,8 +305,8 @@ export default function EditListingPage() {
         stockUnit: formData.stockUnit,
         isInStock: parseInt(formData.stockQuantity) > 0,
         sellerId: sellerId,
-        locationId: "602cb4fa-50c8-4d69-88a0-d411b25a2c34", // TODO: Fetch from user's actual location
-        status: originalStatus, // Keep the original status
+        locationId: originalLocationId,
+        status: originalStatus,
         condition: formData.condition,
         isShippingAvailable: formData.isShippingAvailable,
         shippingCost: formData.shippingCost
@@ -345,61 +319,35 @@ export default function EditListingPage() {
         metaTitle: formData.title,
         metaDescription: formData.shortDescription,
         metaKeywords: "",
-      });
+        // New media fields
+        mediaBucketId: mediaBucketId || EMPTY_GUID,
+        coverImageFileId: coverImageFileId || EMPTY_GUID,
+      } as any);
 
-      console.log("✅ Product updated successfully:", productResponse);
-
-      // Upload new images if any
-      if (images.length > 0) {
-        setUploadStatus(t("uploadingImages"));
-        const bucketId = `product-${productId}`;
-
-        for (let i = 0; i < images.length; i++) {
-          const image = images[i];
-          setUploadStatus(`${t("uploadingImage")} ${i + 1}/${images.length}`);
-
-          try {
-            // Upload to FileProvider
-            const imageUrl = await uploadImageToFileProvider(image, bucketId);
-
-            if (imageUrl) {
-              // Link image to product
-              await LivestockTradingAPI.ProductImages.Create.Request({
-                productId: productId,
-                imageUrl: imageUrl,
-                thumbnailUrl: imageUrl, // Use same URL for now
-                altText: formData.title,
-                sortOrder: i,
-                isPrimary: i === 0, // First image is primary
-              });
-
-              console.log(`✅ Image ${i + 1} uploaded and linked`);
-            }
-
-            // Update progress
-            setUploadProgress(((i + 1) / images.length) * 100);
-          } catch (imageError) {
-            console.error(`Failed to upload image ${i + 1}:`, imageError);
-            toast.error(`${t("imageUploadFailed")} ${i + 1}`);
-          }
-        }
-
-        toast.success(t("imagesUploaded"));
-      }
-
+      console.log("✅ Product updated successfully");
       toast.success(t("updateSuccess"));
       router.push("/dashboard/my-listings");
     } catch (error: any) {
-      console.error("❌ Failed to update listing:", error);
-
-      const errorMessage = error?.message || t("updateFailed");
+      const errorMessage = error.response?.data?.error?.message
+        || error.response?.data?.message
+        || error.message
+        || t("updateFailed");
+      console.error("❌ Failed to update listing:", error.response?.data || error);
       toast.error(errorMessage);
     } finally {
-      setIsLoading(false);
-      setUploadProgress(0);
-      setUploadStatus("");
+      setIsSaving(false);
     }
   };
+
+  if (isLoading) {
+    return (
+      <DashboardLayout>
+        <div className="flex items-center justify-center min-h-[400px]">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      </DashboardLayout>
+    );
+  }
 
   return (
     <DashboardLayout>
@@ -418,11 +366,11 @@ export default function EditListingPage() {
             <h1 className="text-2xl font-bold">{t("title")}</h1>
           </div>
           <div className="flex gap-2">
-            <Button type="submit" disabled={isLoading || authLoading || !user?.id || !sellerId}>
-              {isLoading ? (
+            <Button type="submit" disabled={isSaving || authLoading || !user?.id || !sellerId}>
+              {isSaving ? (
                 <>
                   <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                  {uploadStatus || tc("loading")}
+                  {tc("loading")}
                 </>
               ) : (
                 <>
@@ -488,82 +436,20 @@ export default function EditListingPage() {
               </CardContent>
             </Card>
 
-            {/* Images */}
+            {/* Media Upload - New System */}
             <Card>
               <CardHeader>
                 <CardTitle>{t("images")}</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                {/* Existing Images */}
-                {existingImages.length > 0 && (
-                  <div>
-                    <Label className="text-sm font-medium mb-2 block">{t("existingImages")}</Label>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                      {existingImages.map((img, index) => (
-                        <div
-                          key={img.id}
-                          className="relative aspect-square rounded-lg overflow-hidden bg-muted border"
-                        >
-                          <img
-                            src={img.url}
-                            alt={`Existing ${index + 1}`}
-                            className="w-full h-full object-cover"
-                          />
-                          {index === 0 && (
-                            <span className="absolute bottom-1 left-1 text-xs bg-primary text-primary-foreground px-1.5 py-0.5 rounded">
-                              Ana
-                            </span>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* New Images */}
-                <div>
-                  <Label className="text-sm font-medium mb-2 block">{t("addImage")}</Label>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                  {imagePreviewUrls.map((url, index) => (
-                    <div
-                      key={index}
-                      className="relative aspect-square rounded-lg overflow-hidden bg-muted"
-                    >
-                      <img
-                        src={url}
-                        alt={`Preview ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                      <Button
-                        type="button"
-                        variant="destructive"
-                        size="icon"
-                        className="absolute top-1 right-1 h-6 w-6"
-                        onClick={() => removeImage(index)}
-                      >
-                        <X className="h-3 w-3" />
-                      </Button>
-                    </div>
-                  ))}
-
-                  {images.length < 10 && (
-                    <label className="aspect-square rounded-lg border-2 border-dashed border-muted-foreground/25 flex flex-col items-center justify-center cursor-pointer hover:border-primary transition-colors">
-                      <ImagePlus className="h-8 w-8 text-muted-foreground mb-2" />
-                      <span className="text-xs text-muted-foreground">
-                        {t("addImage")}
-                      </span>
-                      <input
-                        type="file"
-                        accept="image/*"
-                        multiple
-                        className="hidden"
-                        onChange={handleImageUpload}
-                      />
-                    </label>
-                  )}
-                  </div>
-                </div>
-                <p className="text-xs text-muted-foreground">
+              <CardContent>
+                <MediaUpload
+                  entityId={productId}
+                  onMediaChange={handleMediaChange}
+                  initialBucketId={mediaBucketId}
+                  initialFiles={mediaFiles}
+                  maxFiles={10}
+                />
+                <p className="text-xs text-muted-foreground mt-4">
                   {t("imageHint")}
                 </p>
               </CardContent>

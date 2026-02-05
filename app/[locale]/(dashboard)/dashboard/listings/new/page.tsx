@@ -17,13 +17,20 @@ import {
 } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
-import { ArrowLeft, Save, ImagePlus, X, Loader2 } from "lucide-react";
+import { ArrowLeft, Save, Loader2 } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { toast } from "sonner";
-import axios from "axios";
-import { AppConfig } from "@/config/livestock-config";
+import { MediaUpload } from "@/components/features/media-upload";
+
+interface MediaFile {
+  id: string;
+  path: string;
+  url: string;
+  isVideo: boolean;
+  name: string;
+}
 
 interface Category {
   id: string;
@@ -42,11 +49,12 @@ export default function NewListingPage() {
   const selectedCountry = useSelectedCountry();
 
   const [isLoading, setIsLoading] = useState(false);
-  const [uploadProgress, setUploadProgress] = useState(0);
-  const [uploadStatus, setUploadStatus] = useState("");
   const [categories, setCategories] = useState<Category[]>([]);
-  const [images, setImages] = useState<File[]>([]);
-  const [imagePreviewUrls, setImagePreviewUrls] = useState<string[]>([]);
+
+  // Media upload state
+  const [mediaBucketId, setMediaBucketId] = useState<string>("");
+  const [coverImageFileId, setCoverImageFileId] = useState<string>("");
+  const [mediaFiles, setMediaFiles] = useState<MediaFile[]>([]);
 
   // Debug: Log user object when it changes
   useEffect(() => {
@@ -105,30 +113,6 @@ export default function NewListingPage() {
     }
   }, [selectedCountry]);
 
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(e.target.files || []);
-    if (files.length + images.length > 10) {
-      alert(t("maxImages"));
-      return;
-    }
-
-    setImages((prev) => [...prev, ...files]);
-
-    // Create preview URLs
-    files.forEach((file) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setImagePreviewUrls((prev) => [...prev, reader.result as string]);
-      };
-      reader.readAsDataURL(file);
-    });
-  };
-
-  const removeImage = (index: number) => {
-    setImages((prev) => prev.filter((_, i) => i !== index));
-    setImagePreviewUrls((prev) => prev.filter((_, i) => i !== index));
-  };
-
   const generateSlug = (title: string) => {
     return title
       .toLowerCase()
@@ -138,42 +122,11 @@ export default function NewListingPage() {
       .trim();
   };
 
-  // Upload image to FileProvider
-  const uploadImageToFileProvider = async (file: File, bucketId: string): Promise<string | null> => {
-    try {
-      const formData = new FormData();
-      formData.append("formFile", file);
-      formData.append("moduleName", "LivestockTrading");
-      formData.append("bucketId", bucketId);
-      formData.append("bucketType", "1"); // MultipleFileBucket
-      formData.append("folderName", "products");
-      formData.append("versionName", "original");
-
-      const token = localStorage.getItem("accessToken");
-      const response = await axios.post(
-        `${AppConfig.FileProviderUrl}/Files/Upload`,
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
-      if (response.data?.files && response.data.files.length > 0) {
-        const file = response.data.files[0];
-        // Return the full URL or the first variant URL
-        return file.variants && file.variants.length > 0
-          ? file.variants[0].url
-          : file.path;
-      }
-
-      return null;
-    } catch (error) {
-      console.error("Failed to upload image:", error);
-      throw error;
-    }
+  // Handle media upload changes
+  const handleMediaChange = (bucketId: string, coverFileId: string, files: MediaFile[]) => {
+    setMediaBucketId(bucketId);
+    setCoverImageFileId(coverFileId);
+    setMediaFiles(files);
   };
 
   const handleSubmit = async (e: React.FormEvent, isDraft: boolean = false) => {
@@ -216,8 +169,6 @@ export default function NewListingPage() {
     }
 
     setIsLoading(true);
-    setUploadProgress(0);
-    setUploadStatus(t("creating"));
 
     try {
       const slug = generateSlug(formData.title);
@@ -317,47 +268,14 @@ export default function NewListingPage() {
         metaTitle: formData.title,
         metaDescription: formData.shortDescription,
         metaKeywords: "",
+        // Media bucket - files already uploaded via MediaUpload component
+        mediaBucketId: mediaBucketId || "",
+        coverImageFileId: coverImageFileId || "",
       });
 
       console.log("✅ Product created successfully:", productResponse);
-
-      // Upload images if any
-      if (images.length > 0) {
-        setUploadStatus(t("uploadingImages"));
-        const productId = productResponse.id;
-        const bucketId = `product-${productId}`;
-
-        for (let i = 0; i < images.length; i++) {
-          const image = images[i];
-          setUploadStatus(`${t("uploadingImage")} ${i + 1}/${images.length}`);
-
-          try {
-            // Upload to FileProvider
-            const imageUrl = await uploadImageToFileProvider(image, bucketId);
-
-            if (imageUrl) {
-              // Link image to product
-              await LivestockTradingAPI.ProductImages.Create.Request({
-                productId: productId,
-                imageUrl: imageUrl,
-                thumbnailUrl: imageUrl, // Use same URL for now
-                altText: formData.title,
-                sortOrder: i,
-                isPrimary: i === 0, // First image is primary
-              });
-
-              console.log(`✅ Image ${i + 1} uploaded and linked`);
-            }
-
-            // Update progress
-            setUploadProgress(((i + 1) / images.length) * 100);
-          } catch (imageError) {
-            console.error(`Failed to upload image ${i + 1}:`, imageError);
-            toast.error(`${t("imageUploadFailed")} ${i + 1}`);
-          }
-        }
-
-        toast.success(t("imagesUploaded"));
+      if (mediaFiles.length > 0) {
+        console.log(`📸 ${mediaFiles.length} medya dosyası bucket'a bağlandı`);
       }
 
       toast.success(isDraft ? t("draftSaved") : t("productCreated"));
@@ -369,8 +287,6 @@ export default function NewListingPage() {
       toast.error(errorMessage);
     } finally {
       setIsLoading(false);
-      setUploadProgress(0);
-      setUploadStatus("");
     }
   };
 
@@ -403,7 +319,7 @@ export default function NewListingPage() {
               {isLoading ? (
                 <>
                   <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                  {uploadStatus || tc("loading")}
+                  {tc("loading")}
                 </>
               ) : (
                 <>
@@ -469,51 +385,16 @@ export default function NewListingPage() {
               </CardContent>
             </Card>
 
-            {/* Images */}
+            {/* Media Upload */}
             <Card>
               <CardHeader>
                 <CardTitle>{t("images")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                  {imagePreviewUrls.map((url, index) => (
-                    <div
-                      key={index}
-                      className="relative aspect-square rounded-lg overflow-hidden bg-muted"
-                    >
-                      <img
-                        src={url}
-                        alt={`Preview ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                      <Button
-                        type="button"
-                        variant="destructive"
-                        size="icon"
-                        className="absolute top-1 right-1 h-6 w-6"
-                        onClick={() => removeImage(index)}
-                      >
-                        <X className="h-3 w-3" />
-                      </Button>
-                    </div>
-                  ))}
-
-                  {images.length < 10 && (
-                    <label className="aspect-square rounded-lg border-2 border-dashed border-muted-foreground/25 flex flex-col items-center justify-center cursor-pointer hover:border-primary transition-colors">
-                      <ImagePlus className="h-8 w-8 text-muted-foreground mb-2" />
-                      <span className="text-xs text-muted-foreground">
-                        {t("addImage")}
-                      </span>
-                      <input
-                        type="file"
-                        accept="image/*"
-                        multiple
-                        className="hidden"
-                        onChange={handleImageUpload}
-                      />
-                    </label>
-                  )}
-                </div>
+                <MediaUpload
+                  onMediaChange={handleMediaChange}
+                  maxFiles={10}
+                />
                 <p className="text-xs text-muted-foreground mt-2">
                   {t("imageHint")}
                 </p>

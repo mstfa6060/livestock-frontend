@@ -226,6 +226,9 @@ export default function MyListingsPage() {
         metaTitle: fullProduct.metaTitle,
         metaDescription: fullProduct.metaDescription,
         metaKeywords: fullProduct.metaKeywords,
+        // Note: Detail endpoint doesn't return these yet, pass empty to preserve existing
+        mediaBucketId: (fullProduct as any).mediaBucketId || "",
+        coverImageFileId: (fullProduct as any).coverImageFileId || "",
       });
 
       // Update local state

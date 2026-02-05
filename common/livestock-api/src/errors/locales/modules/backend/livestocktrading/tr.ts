@@ -139,7 +139,6 @@ export default {
       TRANSPORTER_USER_REQUIRED: "Kullanici zorunludur.",
       TRANSPORTER_NOT_PENDING_VERIFICATION: "Tasiyici dogrulama bekleyen durumda degil.",
       TRANSPORTER_ALREADY_SUSPENDED: "Tasiyici zaten askiya alinmis.",
-      SUSPENSION_REASON_REQUIRED: "Askiya alma nedeni zorunludur.",
       TRANSPORT_REQUEST_NOT_FOUND: "Tasima talebi bulunamadi.",
       TRANSPORT_REQUEST_PRODUCT_REQUIRED: "Urun zorunludur.",
       TRANSPORT_REQUEST_SELLER_REQUIRED: "Satici zorunludur.",
