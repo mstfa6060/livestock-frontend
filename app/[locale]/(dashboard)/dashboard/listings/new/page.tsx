@@ -42,7 +42,7 @@ export default function NewListingPage() {
   const selectedCountry = useSelectedCountry();
 
   const [isLoading, setIsLoading] = useState(false);
-  const [uploadProgress, setUploadProgress] = useState(0);
+  const [, setUploadProgress] = useState(0);
   const [uploadStatus, setUploadStatus] = useState("");
   const [categories, setCategories] = useState<Category[]>([]);
   const [images, setImages] = useState<File[]>([]);
@@ -296,7 +296,7 @@ export default function NewListingPage() {
         description: formData.description,
         shortDescription: formData.shortDescription,
         categoryId: formData.categoryId,
-        basePrice: parseFloat(formData.basePrice) as any,
+        basePrice: parseFloat(formData.basePrice),
         currency: formData.currency,
         priceUnit: formData.priceUnit,
         stockQuantity: parseInt(formData.stockQuantity),
@@ -308,10 +308,10 @@ export default function NewListingPage() {
         condition: formData.condition,
         isShippingAvailable: formData.isShippingAvailable,
         shippingCost: formData.shippingCost
-          ? (parseFloat(formData.shippingCost) as any)
+          ? parseFloat(formData.shippingCost)
           : undefined,
         isInternationalShipping: false,
-        weight: formData.weight ? (parseFloat(formData.weight) as any) : undefined,
+        weight: formData.weight ? parseFloat(formData.weight) : undefined,
         weightUnit: formData.weightUnit,
         attributes: "{}",
         metaTitle: formData.title,
@@ -362,10 +362,10 @@ export default function NewListingPage() {
 
       toast.success(isDraft ? t("draftSaved") : t("productCreated"));
       router.push("/dashboard/my-listings");
-    } catch (error: any) {
+    } catch (error) {
       console.error("❌ Failed to create listing:", error);
 
-      const errorMessage = error?.message || t("creationFailed");
+      const errorMessage = error instanceof Error ? error.message : t("creationFailed");
       toast.error(errorMessage);
     } finally {
       setIsLoading(false);
@@ -481,6 +481,7 @@ export default function NewListingPage() {
                       key={index}
                       className="relative aspect-square rounded-lg overflow-hidden bg-muted"
                     >
+                      {/* eslint-disable-next-line @next/next/no-img-element -- Blob URLs for preview don't work with Next.js Image */}
                       <img
                         src={url}
                         alt={`Preview ${index + 1}`}

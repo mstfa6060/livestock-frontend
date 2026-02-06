@@ -81,8 +81,8 @@ export default function SettingsPage() {
       });
       setSuccess(true);
       setFormData({ oldPassword: "", newPassword: "", confirmPassword: "" });
-    } catch (err: any) {
-      setError(err.message || tp("errorDefault"));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : tp("errorDefault"));
       console.error(err);
     } finally {
       setIsLoading(false);

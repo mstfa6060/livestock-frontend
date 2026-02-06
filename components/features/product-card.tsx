@@ -93,7 +93,7 @@ export function ProductCard({ product, onFavorite, isFavorite = false }: Product
 
       // Call optional callback
       onFavorite?.(product.id);
-    } catch (error) {
+    } catch {
       // Error already handled in store
     } finally {
       setIsTogglingFavorite(false);

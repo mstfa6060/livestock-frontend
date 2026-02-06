@@ -19,6 +19,7 @@
     "products": "Urunler",
     "sellers": "Saticilar",
     "about": "Hakkimizda",
+    "search": "Ara",
     "dashboard": "Panel",
     "settings": "Ayarlar",
     "logout": "Cikis Yap"
@@ -33,7 +34,11 @@
       "forgotPassword": "Sifremi unuttum",
       "noAccount": "Hesabiniz yok mu?",
       "register": "Kayit Ol",
-      "errorDefault": "Giris basarisiz. Lutfen bilgilerinizi kontrol edin."
+      "errorDefault": "Giris basarisiz. Lutfen bilgilerinizi kontrol edin.",
+      "orContinueWith": "veya devam edin",
+      "continueWithGoogle": "Google ile devam et",
+      "continueWithApple": "Apple ile devam et",
+      "socialLoginError": "Sosyal giris basarisiz oldu. Lutfen tekrar deneyin."
     },
     "register": {
       "title": "Kayit Ol",
@@ -94,18 +99,28 @@
       "active": "aktif",
       "totalViews": "Toplam Goruntulenme",
       "thisWeek": "bu hafta",
+      "allTime": "tum zamanlar",
       "favorites": "Favori",
       "onYourListings": "ilanlarinizda",
+      "savedItems": "kayitli urun",
       "messages": "Mesaj",
-      "unread": "okunmamis"
+      "notifications": "Bildirimler",
+      "unread": "okunmamis",
+      "views": "goruntulenme",
+      "draft": "Taslak",
+      "sold": "Satildi",
+      "pending": "Beklemede"
     },
     "recentListings": "Son Ilanlariniz",
     "recentMessages": "Son Mesajlar",
+    "quickLinks": "Hizli Erisim",
     "noListings": "Henuz ilan eklemediniz",
     "noMessages": "Henuz mesajiniz yok",
     "noNotifications": "Henuz bildiriminiz yok",
     "viewAllListings": "Tum Ilanlari Gor",
-    "viewAllMessages": "Tum Mesajlari Gor"
+    "viewAllMessages": "Tum Mesajlari Gor",
+    "viewNotifications": "Bildirimleri Gor",
+    "viewFavorites": "Favorileri Gor"
   },
   "dashboardNav": {
     "overview": "Genel Bakis",
@@ -115,7 +130,38 @@
     "notifications": "Bildirimler",
     "profile": "Profil",
     "settings": "Ayarlar",
-    "newListing": "Yeni Ilan Ekle"
+    "newListing": "Yeni Ilan Ekle",
+    "becomeSeller": "Satici Ol"
+  },
+  "profile": {
+    "title": "Profil Bilgileri",
+    "description": "Kisisel bilgilerinizi buradan guncelleyebilirsiniz",
+    "personalInfo": "Kisisel Bilgiler",
+    "contactInfo": "Iletisim Bilgileri",
+    "preferences": "Tercihler",
+    "firstName": "Ad",
+    "firstNamePlaceholder": "Adinizi girin",
+    "surname": "Soyad",
+    "surnamePlaceholder": "Soyadinizi girin",
+    "displayName": "Gorunen Ad",
+    "phone": "Telefon Numarasi",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Dogrulanmis",
+    "phoneNotVerified": "Dogrulanmamis",
+    "verifyPhone": "Telefonu Dogrula",
+    "country": "Ulke",
+    "selectCountry": "Ulke secin",
+    "language": "Dil Tercihi",
+    "selectLanguage": "Dil secin",
+    "currency": "Para Birimi",
+    "selectCurrency": "Para birimi secin",
+    "saveChanges": "Degisiklikleri Kaydet",
+    "saving": "Kaydediliyor...",
+    "saveSuccess": "Profil bilgileriniz guncellendi",
+    "saveError": "Profil guncellenirken bir hata olustu",
+    "avatar": "Profil Fotografi",
+    "changeAvatar": "Fotografi Degistir",
+    "removeAvatar": "Fotografi Kaldir"
   },
   "myListings": {
     "title": "Ilanlarim",
@@ -154,6 +200,60 @@
     "noFavorites": "Henuz favori urun eklemediniz",
     "browseProducts": "Urunlere Goz At",
     "fetchError": "Favoriler yuklenirken bir hata olustu"
+  },
+  "messages": {
+    "title": "Mesajlar",
+    "description": "Alicilar ve saticilarla iletisime gecin",
+    "noConversations": "Henuz mesajiniz yok",
+    "startConversation": "Bir ilan hakkinda soru sormak icin ilana gidin",
+    "fetchError": "Mesajlar yuklenirken bir hata olustu",
+    "sendError": "Mesaj gonderilirken bir hata olustu",
+    "connectionError": "Baglanti kurulamadi. Tekrar deneniyor...",
+    "connected": "Baglandi",
+    "connecting": "Baglaniyor...",
+    "searchPlaceholder": "Mesajlarda ara...",
+    "typeMessage": "Mesajinizi yazin...",
+    "send": "Gonder",
+    "sending": "Gonderiliyor...",
+    "typing": "yaziyor...",
+    "read": "Okundu",
+    "delivered": "Iletildi",
+    "today": "Bugun",
+    "yesterday": "Dun",
+    "noMessages": "Henuz mesaj yok. Konusmaya baslayin!",
+    "loadMore": "Daha fazla yukle",
+    "loadingMessages": "Mesajlar yukleniyor...",
+    "about": "Hakkinda",
+    "product": "Urun",
+    "startNewConversation": "Yeni Konusma Baslat",
+    "selectConversation": "Bir konusma secin veya yeni bir konusma baslatin",
+    "online": "Cevrimici",
+    "offline": "Cevrimdisi",
+    "lastSeen": "Son gorulen",
+    "deleteConversation": "Konusmayi Sil",
+    "deleteConfirm": "Bu konusmayi silmek istediginizden emin misiniz?",
+    "deleted": "Konusma silindi"
+  },
+  "notifications": {
+    "title": "Bildirimler",
+    "description": "Tum bildirimlerinizi buradan takip edin",
+    "noNotifications": "Henuz bildiriminiz yok",
+    "fetchError": "Bildirimler yuklenirken bir hata olustu",
+    "markAsRead": "Okundu olarak isaretle",
+    "markAllAsRead": "Tumunu okundu isaretle",
+    "deleteAll": "Tumunu sil",
+    "today": "Bugun",
+    "yesterday": "Dun",
+    "older": "Daha eski",
+    "unread": "okunmamis",
+    "viewAll": "Tumunu Gor",
+    "types": {
+      "message": "Yeni mesaj",
+      "offer": "Yeni teklif",
+      "order": "Siparis guncelleme",
+      "system": "Sistem bildirimi",
+      "listing": "Ilan guncelleme"
+    }
   },
   "settings": {
     "title": "Ayarlar",
@@ -221,19 +321,160 @@
     "about": "Hakkimizda",
     "contact": "Iletisim",
     "terms": "Kullanim Sartlari",
-    "privacy": "Gizlilik Politikasi"
+    "privacy": "Gizlilik Politikasi",
+    "company": "Sirket",
+    "support": "Destek",
+    "legal": "Yasal",
+    "followUs": "Bizi Takip Edin",
+    "newsletter": "Bulten",
+    "newsletterDescription": "En yeni ilanlari ve kampanyalari kacirmayin.",
+    "subscribe": "Abone Ol",
+    "emailPlaceholder": "E-posta adresiniz"
+  },
+  "about": {
+    "title": "Hakkimizda",
+    "subtitle": "Turkiye'nin en guvenilir canli hayvan ticaret platformu",
+    "mission": {
+      "title": "Misyonumuz",
+      "description": "Canli hayvan ticaretini dijitallestirerek, uretici ve alicilar arasinda guvenli, seffaf ve verimli bir kopi kurmak."
+    },
+    "vision": {
+      "title": "Vizyonumuz",
+      "description": "Tarim sektorunde dijital donusumun oncusu olmak ve canli hayvan ticaretinde global bir platform haline gelmek."
+    },
+    "values": {
+      "title": "Degerlerimiz",
+      "trust": {
+        "title": "Guven",
+        "description": "Tum islemlerde seffaflik ve guvenilirlik esastir."
+      },
+      "quality": {
+        "title": "Kalite",
+        "description": "En iyi hizmeti sunmak icin surekli gelisim."
+      },
+      "innovation": {
+        "title": "Yenilikcilik",
+        "description": "Teknolojiyi kullanarak sektoru donusturmek."
+      }
+    },
+    "stats": {
+      "users": "Kayitli Kullanici",
+      "sellers": "Aktif Satici",
+      "products": "Ilan",
+      "transactions": "Basarili Islem"
+    }
+  },
+  "contact": {
+    "title": "Iletisim",
+    "subtitle": "Sorulariniz icin bizimle iletisime gecin",
+    "form": {
+      "name": "Adiniz",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "E-posta",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Konu",
+      "subjectPlaceholder": "Mesajinizin konusu",
+      "message": "Mesajiniz",
+      "messagePlaceholder": "Mesajinizi buraya yazin...",
+      "submit": "Gonder",
+      "submitting": "Gonderiliyor...",
+      "success": "Mesajiniz basariyla gonderildi. En kisa surede size donus yapacagiz.",
+      "error": "Mesaj gonderilirken bir hata olustu. Lutfen tekrar deneyin."
+    },
+    "info": {
+      "title": "Iletisim Bilgileri",
+      "address": "Adres",
+      "addressValue": "Istanbul, Turkiye",
+      "email": "E-posta",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Telefon",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Calisma Saatleri",
+      "workingHoursValue": "Pazartesi - Cuma: 09:00 - 18:00"
+    }
+  },
+  "terms": {
+    "title": "Kullanim Sartlari",
+    "lastUpdated": "Son guncelleme: {date}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Sartlarin Kabulü",
+        "content": "Bu web sitesini kullanarak, asagidaki kullanim sartlarini kabul etmis sayilirsiniz. Bu sartlari kabul etmiyorsaniz, lutfen siteyi kullanmayin."
+      },
+      "services": {
+        "title": "2. Hizmetler",
+        "content": "Livestock Trading, canli hayvan alim-satimi icin bir platform saglar. Platform uzerindeki tum islemler kullanici sorumlulugundadir."
+      },
+      "accounts": {
+        "title": "3. Kullanici Hesaplari",
+        "content": "Hesap olusturmak icin dogru ve guncel bilgiler saglamnalisiniz. Hesap guvenliginiz sizin sorumluluginizdadir."
+      },
+      "prohibited": {
+        "title": "4. Yasakli Faaliyetler",
+        "content": "Yaniltici ilanlar, sahte bilgiler, dolandiricilik ve yasadisi faaliyetler kesinlikle yasaktir."
+      },
+      "liability": {
+        "title": "5. Sorumluluk Sinirlamasi",
+        "content": "Platform, kullanicilar arasi islemlerden dogrudan sorumlu degildir. Tum islemler taraflar arasinda gerceklesir."
+      },
+      "changes": {
+        "title": "6. Degisiklikler",
+        "content": "Bu sartlar onceden bildirimde bulunmaksizin degistirilebilir. Degisiklikler yayinlandigi anda yururluge girer."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Gizlilik Politikasi",
+    "lastUpdated": "Son guncelleme: {date}",
+    "sections": {
+      "collection": {
+        "title": "1. Bilgi Toplama",
+        "content": "Hesap olusturdugunuzda ad, e-posta, telefon numarasi gibi kisisel bilgilerinizi topluyoruz. Ayrica site kullaniminiza iliskin anonim veriler de toplanabilir."
+      },
+      "usage": {
+        "title": "2. Bilgi Kullanimi",
+        "content": "Toplanan bilgiler, hizmetlerimizi sunmak, hesabinizi yonetmek, guvenlik saglamak ve size ozel teklifler sunmak icin kullanilir."
+      },
+      "sharing": {
+        "title": "3. Bilgi Paylasimi",
+        "content": "Kisisel bilgileriniz ucuncu taraflarla satilmaz veya kiralanmaz. Yasal zorunluluklar disinda bilgileriniz paylasilmaz."
+      },
+      "security": {
+        "title": "4. Guvenlik",
+        "content": "Bilgilerinizi korumak icin endustri standartlarinda guvenlik onlemleri uygulanmaktadir."
+      },
+      "cookies": {
+        "title": "5. Cerezler",
+        "content": "Sitemiz, kullanici deneyimini iyilestirmek icin cerezler kullanmaktadir. Tarayici ayarlarinizdan cerez tercihlerinizi yonetebilirsiniz."
+      },
+      "rights": {
+        "title": "6. Haklariniz",
+        "content": "KVKK kapsaminda kisisel verilerinize erisim, duzeltme ve silme haklariniz bulunmaktadir."
+      }
+    }
   },
   "products": {
     "title": "Urunler",
     "search": "Urun ara...",
     "filters": "Filtreler",
     "sort": "Sirala",
+    "sort": {
+      "newest": "En Yeni",
+      "oldest": "En Eski",
+      "priceAsc": "Fiyat (Dusukten Yuksege)",
+      "priceDesc": "Fiyat (Yuksekten Dusuge)",
+      "popular": "En Populer"
+    },
     "sortOptions": {
       "newest": "En Yeni",
       "oldest": "En Eski",
       "priceAsc": "Fiyat (Dusukten Yuksege)",
       "priceDesc": "Fiyat (Yuksekten Dusuge)",
       "popular": "En Populer"
+    },
+    "pagination": {
+      "prev": "Onceki",
+      "next": "Sonraki"
     },
     "status": {
       "draft": "Taslak",
@@ -299,6 +540,54 @@
     "contact": "Mesaj Gonder",
     "call": "Ara",
     "viewProfile": "Profili Goruntule"
+  },
+  "sellers": {
+    "title": "Saticilar",
+    "description": "Guvenilir saticilari kesfedin",
+    "search": "Satici ara...",
+    "sort": "Sirala",
+    "sortOptions": {
+      "newest": "En Yeni",
+      "mostSales": "En Cok Satan",
+      "topRated": "En Yuksek Puan",
+      "mostProducts": "En Cok Ilan"
+    },
+    "noResults": "Satici bulunamadi",
+    "loading": "Saticilar yukleniyor...",
+    "showing": "{count} satici bulundu",
+    "verified": "Dogrulanmis",
+    "sales": "satis",
+    "products": "ilan",
+    "reviews": "degerlendirme",
+    "rating": "puan",
+    "viewProducts": "Urunleri Gor",
+    "contactSeller": "Mesaj Gonder",
+    "memberSince": "{year}'den beri uye",
+    "detail": {
+      "title": "Satici Profili",
+      "about": "Hakkinda",
+      "businessInfo": "Isletme Bilgileri",
+      "businessName": "Isletme Adi",
+      "businessType": "Isletme Turu",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "website": "Web Sitesi",
+      "description": "Aciklama",
+      "policies": "Politikalar",
+      "returnPolicy": "Iade Politikasi",
+      "shippingPolicy": "Kargo Politikasi",
+      "businessHours": "Calisma Saatleri",
+      "paymentMethods": "Odeme Yontemleri",
+      "allProducts": "Tum Urunler",
+      "stats": {
+        "totalSales": "Toplam Satis",
+        "totalProducts": "Toplam Urun",
+        "totalReviews": "Degerlendirme",
+        "rating": "Puan"
+      },
+      "notFound": "Satici bulunamadi",
+      "backToList": "Saticilara Don"
+    }
   },
   "editListing": {
     "title": "Ilani Duzenle",
@@ -413,6 +702,36 @@
       "priceRequired": "Gecerli bir fiyat giriniz"
     }
   },
+  "becomeSeller": {
+    "title": "Satici Ol",
+    "description": "Satis yapmak icin satici profilinizi olusturun",
+    "alreadySeller": "Zaten bir satici profiliniz var",
+    "goToListings": "Ilanlarima Git",
+    "businessInfo": "Isletme Bilgileri",
+    "contactInfo": "Iletisim Bilgileri",
+    "businessName": "Isletme Adi",
+    "businessNamePlaceholder": "Ornek: Yilmaz Ciftligi",
+    "businessType": "Isletme Turu",
+    "businessTypePlaceholder": "Isletme turunu secin",
+    "businessTypes": {
+      "individual": "Bireysel",
+      "company": "Sirket",
+      "cooperative": "Kooperatif",
+      "farm": "Ciftlik"
+    },
+    "taxNumber": "Vergi Numarasi",
+    "taxNumberPlaceholder": "Vergi numaranizi girin (opsiyonel)",
+    "description": "Isletme Aciklamasi",
+    "descriptionPlaceholder": "Isletmeniz hakkinda kisa bir aciklama yazin...",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Web Sitesi",
+    "websitePlaceholder": "https://www.orneksite.com (opsiyonel)",
+    "submit": "Satici Profili Olustur",
+    "submitting": "Profil olusturuluyor...",
+    "success": "Satici profiliniz basariyla olusturuldu!",
+    "error": "Satici profili olusturulurken bir hata olustu"
+  },
   "fileUpload": {
     "dragDrop": "Fotograf veya video yukleyin",
     "dragDropHint": "Surukle-birak veya tiklayarak secin",
@@ -436,5 +755,41 @@
     "videoBadge": "VIDEO",
     "coverUpdated": "Kapak fotografı basariyla ayarlandi",
     "optimizationInfo": "Fotograflar web standartlarina uygun sekilde optimize edildi"
+  },
+  "error": {
+    "title": "Bir Hata Olustu",
+    "description": "Beklenmedik bir hata meydana geldi. Lutfen sayfayi yenileyin veya daha sonra tekrar deneyin.",
+    "retry": "Tekrar Dene",
+    "goBack": "Geri Don",
+    "goHome": "Ana Sayfa",
+    "notFound": {
+      "title": "Sayfa Bulunamadi",
+      "description": "Aradiginiz sayfa mevcut degil veya tasindi.",
+      "goHome": "Ana Sayfaya Don"
+    }
+  },
+  "search": {
+    "title": "Ara",
+    "placeholder": "Urun, kategori veya satici ara...",
+    "searchButton": "Ara",
+    "searchingFor": "Aranan",
+    "loading": "Aranıyor...",
+    "resultsCount": "{count} sonuc bulundu",
+    "noResults": "Sonuc bulunamadi",
+    "tryDifferentSearch": "Farkli anahtar kelimeler deneyin veya filtreleri degistirin",
+    "filters": {
+      "title": "Filtreler",
+      "category": "Kategori",
+      "allCategories": "Tum Kategoriler",
+      "condition": "Durum",
+      "allConditions": "Tum Durumlar",
+      "priceRange": "Fiyat Araligi",
+      "price": "Fiyat",
+      "min": "Min",
+      "max": "Max",
+      "apply": "Uygula",
+      "clear": "Temizle",
+      "clearAll": "Tumu Temizle"
+    }
   }
 }

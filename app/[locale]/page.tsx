@@ -5,11 +5,11 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MainHeader } from "@/components/layout/main-header";
+import { Footer } from "@/components/layout/footer";
 import { ShieldCheck, Layers, Headphones, ArrowRight } from "lucide-react";
 
 export default function Home() {
   const t = useTranslations("home");
-  const tf = useTranslations("footer");
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -141,40 +141,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t bg-background">
-        <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">{tf("copyright")}</p>
-            <nav className="flex gap-6">
-              <Link
-                href="/about"
-                className="text-sm text-muted-foreground hover:text-foreground"
-              >
-                {tf("about")}
-              </Link>
-              <Link
-                href="/contact"
-                className="text-sm text-muted-foreground hover:text-foreground"
-              >
-                {tf("contact")}
-              </Link>
-              <Link
-                href="/terms"
-                className="text-sm text-muted-foreground hover:text-foreground"
-              >
-                {tf("terms")}
-              </Link>
-              <Link
-                href="/privacy"
-                className="text-sm text-muted-foreground hover:text-foreground"
-              >
-                {tf("privacy")}
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

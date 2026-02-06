@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import {
   DropdownMenu,
@@ -71,7 +71,6 @@ export function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-  const t = useTranslations("language");
 
   const handleLocaleChange = (newLocale: Locale) => {
     const segments = pathname.split("/");

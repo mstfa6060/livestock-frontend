@@ -9,7 +9,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   User,
   Phone,
-  Mail,
   MapPin,
   Star,
   Calendar,
@@ -39,13 +38,6 @@ interface SellerCardProps {
 
 export function SellerCard({ seller, showContact = true, onContact }: SellerCardProps) {
   const t = useTranslations("seller");
-
-  const initials = seller.name
-    .split(" ")
-    .map((n) => n[0])
-    .join("")
-    .toUpperCase()
-    .slice(0, 2);
 
   const memberSinceYear = seller.memberSince
     ? new Date(seller.memberSince).getFullYear()

@@ -53,9 +53,20 @@ interface RegisterParams {
   preferredCurrencyCode: string;
 }
 
+// Social login params
+interface SocialLoginParams {
+  provider: "google" | "apple";
+  token: string;
+  externalUserId: string;
+  firstName?: string;
+  surname?: string;
+  email?: string;
+}
+
 // Context type
 interface AuthContextType extends AuthState {
   login: (params: LoginParams) => Promise<void>;
+  loginWithSocial: (params: SocialLoginParams) => Promise<void>;
   register: (params: RegisterParams) => Promise<void>;
   logout: () => Promise<void>;
   refreshUser: () => Promise<void>;
@@ -78,6 +89,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     isAuthenticated: false,
     isLoading: true,
   });
+
+  // Helper to clear auth data from localStorage
+  const clearAuthData = useCallback(() => {
+    localStorage.removeItem(STORAGE_KEYS.JWT);
+    localStorage.removeItem(STORAGE_KEYS.REFRESH_TOKEN);
+    localStorage.removeItem(STORAGE_KEYS.USER);
+  }, []);
 
   // Initialize auth state from localStorage
   useEffect(() => {
@@ -102,7 +120,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }
       } catch {
         // Clear invalid data
-        clearAuthData();
+        localStorage.removeItem(STORAGE_KEYS.JWT);
+        localStorage.removeItem(STORAGE_KEYS.REFRESH_TOKEN);
+        localStorage.removeItem(STORAGE_KEYS.USER);
         setState({
           user: null,
           isAuthenticated: false,
@@ -122,12 +142,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // Note: Favorites are now loaded lazily (on first use) instead of eagerly on login
     // This prevents 401 errors from blocking the login flow
   }, [state.isAuthenticated]);
-
-  const clearAuthData = () => {
-    localStorage.removeItem(STORAGE_KEYS.JWT);
-    localStorage.removeItem(STORAGE_KEYS.REFRESH_TOKEN);
-    localStorage.removeItem(STORAGE_KEYS.USER);
-  };
 
   const login = useCallback(
     async ({ email, password, rememberMe }: LoginParams) => {
@@ -155,6 +169,38 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       } else {
         localStorage.removeItem(STORAGE_KEYS.REMEMBERED_EMAIL);
       }
+
+      // Update state
+      setState({
+        user: response.user,
+        isAuthenticated: true,
+        isLoading: false,
+      });
+
+      router.push("/dashboard");
+    },
+    [router]
+  );
+
+  const loginWithSocial = useCallback(
+    async ({ provider, token, externalUserId, firstName, surname }: SocialLoginParams) => {
+      const response = await IAMAPI.Auth.Login.Request({
+        provider: provider,
+        userName: "",
+        password: "",
+        token: token,
+        platform: IAMAPI.Enums.ClientPlatforms.Web,
+        firstName: firstName || "",
+        surname: surname || "",
+        phoneNumber: "",
+        externalProviderUserId: externalUserId,
+      });
+
+      // Store tokens
+      localStorage.setItem(STORAGE_KEYS.JWT, response.jwt);
+      localStorage.setItem('accessToken', response.jwt);
+      localStorage.setItem(STORAGE_KEYS.REFRESH_TOKEN, response.refreshToken);
+      localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(response.user));
 
       // Update state
       setState({
@@ -209,7 +255,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
 
     router.push("/login");
-  }, [router]);
+  }, [router, clearAuthData]);
 
   const refreshUser = useCallback(async () => {
     const storedUser = localStorage.getItem(STORAGE_KEYS.USER);
@@ -244,6 +290,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       value={{
         ...state,
         login,
+        loginWithSocial,
         register,
         logout,
         refreshUser,

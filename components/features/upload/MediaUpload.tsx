@@ -467,6 +467,7 @@ export function MediaUpload({
                     <PlayCircle className="w-6 h-6 text-white" />
                   </div>
                 ) : (
+                  /* eslint-disable-next-line @next/next/no-img-element -- Blob URLs don't work with Next.js Image */
                   <img
                     src={uf.localUrl}
                     alt=""
@@ -557,6 +558,7 @@ export function MediaUpload({
                     </div>
                   </div>
                 ) : (
+                  /* eslint-disable-next-line @next/next/no-img-element -- Blob URLs don't work with Next.js Image */
                   <img
                     src={file.localUrl}
                     alt={file.name}

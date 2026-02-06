@@ -99,7 +99,7 @@ export async function compressImage(
           ctx.drawImage(img, 0, 0, width, height);
 
           // Sıkıştırılmış resmi blob olarak al
-          let quality = opts.quality!;
+          const quality = opts.quality!;
           const outputType = file.type === 'image/png' ? 'image/png' : 'image/jpeg';
 
           const tryCompress = (currentQuality: number) => {

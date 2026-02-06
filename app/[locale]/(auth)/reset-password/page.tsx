@@ -61,8 +61,8 @@ export default function ResetPasswordPage() {
         newPassword: formData.password,
       });
       setSuccess(true);
-    } catch (err: any) {
-      setError(err.message || t("errorDefault"));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : t("errorDefault"));
       console.error(err);
     } finally {
       setIsLoading(false);

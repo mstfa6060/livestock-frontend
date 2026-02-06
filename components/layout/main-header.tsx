@@ -10,9 +10,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { User, LogOut, Settings, LayoutDashboard, Menu } from "lucide-react";
+import { User, LogOut, Settings, LayoutDashboard, Menu, Search } from "lucide-react";
 import { LanguageSwitcher } from "./language-switcher";
 import { CountrySwitcher } from "./country-switcher";
+import { NotificationBell } from "./notification-bell";
 import { useAuth } from "@/contexts/AuthContext";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
@@ -53,6 +54,13 @@ export function MainHeader() {
           >
             {t("about")}
           </Link>
+          <Link
+            href="/search"
+            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
+          >
+            <Search className="h-4 w-4" />
+            {t("search")}
+          </Link>
         </nav>
 
         {/* Right Side Actions */}
@@ -62,6 +70,11 @@ export function MainHeader() {
             <CountrySwitcher />
             <LanguageSwitcher />
           </div>
+
+          {/* Notification Bell - Only for authenticated users */}
+          {isAuthenticated && user && (
+            <NotificationBell />
+          )}
 
           {/* Auth Buttons */}
           {isAuthenticated && user ? (
@@ -115,6 +128,14 @@ export function MainHeader() {
             </SheetTrigger>
             <SheetContent side="right" className="w-72">
               <nav className="flex flex-col gap-4 mt-8">
+                <Link
+                  href="/search"
+                  className="text-lg font-medium flex items-center gap-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <Search className="h-5 w-5" />
+                  {t("search")}
+                </Link>
                 <Link
                   href="/products"
                   className="text-lg font-medium"

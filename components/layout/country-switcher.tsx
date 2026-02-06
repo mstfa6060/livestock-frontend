@@ -122,16 +122,23 @@ export function CountrySwitcher() {
 
 // Hook to get selected country
 export function useSelectedCountry() {
-  const [country, setCountry] = useState<Country | null>(null);
+  const [country, setCountry] = useState<Country | null>(() => {
+    // Load from storage during initialization
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        try {
+          return JSON.parse(saved) as Country;
+        } catch {
+          return null;
+        }
+      }
+    }
+    return null;
+  });
 
   useEffect(() => {
-    // Load from storage
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) {
-      setCountry(JSON.parse(saved));
-    }
-
-    // Listen for changes
+    // Listen for changes only
     const handleChange = (e: CustomEvent<Country>) => {
       setCountry(e.detail);
     };

@@ -80,7 +80,7 @@ export default function ProductDetailPage() {
   const tp = useTranslations("products");
   const tc = useTranslations("common");
   const { user } = useAuth();
-  const { favoriteIds, toggleFavorite, isFavorite: checkIsFavorite } = useFavoritesStore();
+  const { toggleFavorite, isFavorite: checkIsFavorite } = useFavoritesStore();
 
   const [product, setProduct] = useState<ProductDetail | null>(null);
   const [isLoading, setIsLoading] = useState(true);

@@ -44,12 +44,12 @@ export default function EditListingPage() {
   const selectedCountry = useSelectedCountry();
 
   const [isLoading, setIsLoading] = useState(true);
-  const [uploadProgress, setUploadProgress] = useState(0);
+  const [, setUploadProgress] = useState(0);
   const [uploadStatus, setUploadStatus] = useState("");
   const [categories, setCategories] = useState<Category[]>([]);
   const [images, setImages] = useState<File[]>([]);
   const [imagePreviewUrls, setImagePreviewUrls] = useState<string[]>([]);
-  const [existingImages, setExistingImages] = useState<Array<{ id: string; url: string }>>([]);
+  const [, setExistingImages] = useState<Array<{ id: string; url: string }>>([]);
 
   // Debug: Log user object when it changes
   useEffect(() => {
@@ -72,6 +72,7 @@ export default function EditListingPage() {
     shippingCost: "",
     weight: "",
     weightUnit: "kg",
+    status: 1, // Default to active, will be overwritten on load
   });
 
   // Load categories
@@ -120,6 +121,7 @@ export default function EditListingPage() {
           shippingCost: product.shippingCost ? String(product.shippingCost) : "",
           weight: product.weight ? String(product.weight) : "",
           weightUnit: product.weightUnit,
+          status: product.status,
         });
 
         // Fetch existing images
@@ -278,7 +280,7 @@ export default function EditListingPage() {
         description: formData.description,
         shortDescription: formData.shortDescription,
         categoryId: formData.categoryId,
-        basePrice: parseFloat(formData.basePrice) as any,
+        basePrice: parseFloat(formData.basePrice),
         currency: formData.currency,
         priceUnit: formData.priceUnit,
         stockQuantity: parseInt(formData.stockQuantity),
@@ -286,14 +288,14 @@ export default function EditListingPage() {
         isInStock: parseInt(formData.stockQuantity) > 0,
         sellerId: user.id,
         locationId: "602cb4fa-50c8-4d69-88a0-d411b25a2c34", // TODO: Fetch from user's actual location
-        status: isDraft ? 0 : 3, // 0=draft, 3=pending
+        status: formData.status, // Preserve existing status
         condition: formData.condition,
         isShippingAvailable: formData.isShippingAvailable,
         shippingCost: formData.shippingCost
-          ? (parseFloat(formData.shippingCost) as any)
+          ? parseFloat(formData.shippingCost)
           : undefined,
         isInternationalShipping: false,
-        weight: formData.weight ? (parseFloat(formData.weight) as any) : undefined,
+        weight: formData.weight ? parseFloat(formData.weight) : undefined,
         weightUnit: formData.weightUnit,
         attributes: "{}",
         metaTitle: formData.title,
@@ -343,10 +345,10 @@ export default function EditListingPage() {
 
       toast.success(t("updateSuccess"));
       router.push("/dashboard/my-listings");
-    } catch (error: any) {
+    } catch (error) {
       console.error("❌ Failed to update listing:", error);
 
-      const errorMessage = error?.message || t("updateFailed");
+      const errorMessage = error instanceof Error ? error.message : t("updateFailed");
       toast.error(errorMessage);
     } finally {
       setIsLoading(false);
@@ -454,6 +456,7 @@ export default function EditListingPage() {
                       key={index}
                       className="relative aspect-square rounded-lg overflow-hidden bg-muted"
                     >
+                      {/* eslint-disable-next-line @next/next/no-img-element -- Blob URLs for preview don't work with Next.js Image */}
                       <img
                         src={url}
                         alt={`Preview ${index + 1}`}
