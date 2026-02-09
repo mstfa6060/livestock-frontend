@@ -33,6 +33,7 @@ import {
   Package,
   ArrowUpDown,
 } from "lucide-react";
+import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { getProductCoverImages } from "@/lib/product-images";
@@ -297,6 +298,7 @@ export default function SearchPage() {
         }
       } catch {
         setProducts([]);
+        toast.error(t("fetchError"));
       } finally {
         setIsLoading(false);
       }

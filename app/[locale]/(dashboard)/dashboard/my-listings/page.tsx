@@ -87,6 +87,7 @@ export default function MyListingsPage() {
       } catch {
         setSellerId(null);
         setIsLoading(false);
+        toast.error(t("fetchError"));
       } finally {
         setIsSellerLoading(false);
       }

@@ -11,6 +11,7 @@ import { ProductCard, Product } from "@/components/features/product-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Separator } from "@/components/ui/separator";
 import {
   Heart,
@@ -355,19 +356,41 @@ export default function ProductDetailPage() {
     return (
       <div className="min-h-screen bg-background">
         <MainHeader />
-        <div className="container mx-auto px-4 py-8">
-          <div className="animate-pulse space-y-8">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="aspect-[4/3] bg-muted rounded-lg" />
-              <div className="space-y-4">
-                <div className="h-8 bg-muted rounded w-3/4" />
-                <div className="h-6 bg-muted rounded w-1/4" />
-                <div className="h-4 bg-muted rounded w-full" />
-                <div className="h-4 bg-muted rounded w-2/3" />
+        <main className="container mx-auto px-4 py-8">
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-6">
+              <Skeleton className="aspect-[4/3] w-full rounded-lg" />
+              <div className="space-y-3">
+                <Skeleton className="h-8 w-3/4" />
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-5/6" />
+                <Skeleton className="h-4 w-2/3" />
               </div>
             </div>
+            <div className="space-y-6">
+              <Card>
+                <CardContent className="p-6 space-y-4">
+                  <Skeleton className="h-10 w-1/2" />
+                  <Skeleton className="h-5 w-1/3" />
+                  <Separator />
+                  <Skeleton className="h-10 w-full" />
+                  <Skeleton className="h-10 w-full" />
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6 space-y-3">
+                  <div className="flex items-center gap-3">
+                    <Skeleton className="h-12 w-12 rounded-full" />
+                    <div className="space-y-2">
+                      <Skeleton className="h-5 w-32" />
+                      <Skeleton className="h-3 w-20" />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
-        </div>
+        </main>
       </div>
     );
   }

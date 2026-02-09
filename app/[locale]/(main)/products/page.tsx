@@ -1,12 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
-import { useSearchParams } from "next/navigation";
+import { useState, useEffect, useCallback } from "react";
+import { useTranslations, useLocale } from "next-intl";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { MainHeader } from "@/components/layout/main-header";
+import { SimpleFooter } from "@/components/layout/footer";
 import { ProductCard, ProductCardSkeleton, Product } from "@/components/features/product-card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Select,
   SelectContent,
@@ -14,28 +19,107 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Search, SlidersHorizontal } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Search, SlidersHorizontal, X } from "lucide-react";
+import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { getProductCoverImages } from "@/lib/product-images";
 
 type SortOption = "newest" | "oldest" | "priceAsc" | "priceDesc" | "popular";
+type ConditionOption = "all" | "new" | "likeNew" | "good" | "fair";
 
 const ITEMS_PER_PAGE = 12;
 
+const CONDITION_MAP: Record<string, number> = {
+  new: 0,
+  likeNew: 1,
+  good: 2,
+  fair: 3,
+};
+
+interface Category {
+  id: string;
+  name: string;
+}
+
 export default function ProductsPage() {
   const t = useTranslations("products");
+  const tf = useTranslations("search.filters");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   const searchParams = useSearchParams();
   const selectedCountry = useSelectedCountry();
 
+  // URL params
+  const categoryParam = searchParams.get("category") || "";
+  const conditionParam = (searchParams.get("condition") || "all") as ConditionOption;
+  const minPriceParam = searchParams.get("minPrice") || "";
+  const maxPriceParam = searchParams.get("maxPrice") || "";
+  const sortParam = (searchParams.get("sort") || "newest") as SortOption;
+  const pageParam = parseInt(searchParams.get("page") || "1", 10);
+
+  // State
   const [products, setProducts] = useState<Product[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
-  const [sortBy, setSortBy] = useState<SortOption>("newest");
-  const [currentPage, setCurrentPage] = useState(1);
+  const [isFiltersOpen, setIsFiltersOpen] = useState(false);
   const [totalProducts, setTotalProducts] = useState(0);
 
-  const categoryFilter = searchParams.get("category");
+  // Local filter state (until applied)
+  const [localCategory, setLocalCategory] = useState(categoryParam);
+  const [localCondition, setLocalCondition] = useState(conditionParam);
+  const [localMinPrice, setLocalMinPrice] = useState(minPriceParam);
+  const [localMaxPrice, setLocalMaxPrice] = useState(maxPriceParam);
+
+  // Update URL params
+  const updateParams = useCallback(
+    (updates: Record<string, string | null>) => {
+      const params = new URLSearchParams(searchParams.toString());
+
+      Object.entries(updates).forEach(([key, value]) => {
+        if (value === null || value === "" || value === "all") {
+          params.delete(key);
+        } else {
+          params.set(key, value);
+        }
+      });
+
+      // Reset page when filters change
+      if (!updates.page) {
+        params.delete("page");
+      }
+
+      router.push(`${pathname}?${params.toString()}`, { scroll: false });
+    },
+    [searchParams, router, pathname]
+  );
+
+  // Fetch categories
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await LivestockTradingAPI.Categories.All.Request({
+          languageCode: locale,
+          sorting: { key: "name", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
+          filters: [],
+          pageRequest: { currentPage: 1, perPageCount: 100, listAll: true },
+        });
+        setCategories(response.map((c) => ({ id: c.id, name: c.name })));
+      } catch {
+        // Categories are optional
+      }
+    };
+    fetchCategories();
+  }, [locale]);
 
   // Fetch products
   useEffect(() => {
@@ -48,12 +132,63 @@ export default function ProductsPage() {
           priceAsc: "basePrice",
           priceDesc: "basePrice",
           popular: "viewCount",
-        }[sortBy];
+        }[sortParam];
 
         const sortingDirection =
-          sortBy === "oldest" || sortBy === "priceAsc"
+          sortParam === "oldest" || sortParam === "priceAsc"
             ? LivestockTradingAPI.Enums.XSortingDirection.Ascending
             : LivestockTradingAPI.Enums.XSortingDirection.Descending;
+
+        // Build filters
+        const filters: any[] = [];
+
+        if (categoryParam) {
+          filters.push({
+            key: "categoryId",
+            type: "guid",
+            isUsed: true,
+            values: [categoryParam],
+            min: {},
+            max: {},
+            conditionType: "equals",
+          });
+        }
+
+        if (conditionParam !== "all") {
+          filters.push({
+            key: "condition",
+            type: "number",
+            isUsed: true,
+            values: [String(CONDITION_MAP[conditionParam])],
+            min: {},
+            max: {},
+            conditionType: "equals",
+          });
+        }
+
+        if (minPriceParam) {
+          filters.push({
+            key: "basePrice",
+            type: "number",
+            isUsed: true,
+            values: [],
+            min: { value: parseFloat(minPriceParam) },
+            max: {},
+            conditionType: "greaterThanOrEqual",
+          });
+        }
+
+        if (maxPriceParam) {
+          filters.push({
+            key: "basePrice",
+            type: "number",
+            isUsed: true,
+            values: [],
+            min: {},
+            max: { value: parseFloat(maxPriceParam) },
+            conditionType: "lessThanOrEqual",
+          });
+        }
 
         const response = await LivestockTradingAPI.Products.All.Request({
           countryCode: selectedCountry?.code || "TR",
@@ -61,27 +196,14 @@ export default function ProductsPage() {
             key: sortingKey,
             direction: sortingDirection,
           },
-          filters: categoryFilter
-            ? [
-                {
-                  key: "categoryId",
-                  type: "guid",
-                  isUsed: true,
-                  values: [categoryFilter],
-                  min: {},
-                  max: {},
-                  conditionType: "equals",
-                },
-              ]
-            : [],
+          filters,
           pageRequest: {
-            currentPage: currentPage,
+            currentPage: pageParam,
             perPageCount: ITEMS_PER_PAGE,
             listAll: false,
           },
         });
 
-        // Transform API response to Product type
         const transformedProducts: Product[] = response.map((item) => ({
           id: item.id,
           title: item.title,
@@ -108,9 +230,9 @@ export default function ProductsPage() {
         }));
 
         setProducts(transformedProducts);
-        setTotalProducts(transformedProducts.length); // API should return total count
+        setTotalProducts(transformedProducts.length);
 
-        // Fetch cover images asynchronously (non-blocking)
+        // Fetch cover images asynchronously
         const productIds = transformedProducts.map((p) => p.id);
         getProductCoverImages(productIds).then((imageMap) => {
           setProducts((prev) =>
@@ -122,15 +244,54 @@ export default function ProductsPage() {
         });
       } catch {
         setProducts([]);
+        toast.error(t("fetchError"));
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchProducts();
-  }, [sortBy, currentPage, categoryFilter, selectedCountry?.code]);
+  }, [sortParam, pageParam, categoryParam, conditionParam, minPriceParam, maxPriceParam, selectedCountry?.code]);
 
-  // Filter products by search query (client-side)
+  // Apply filters
+  const applyFilters = () => {
+    updateParams({
+      category: localCategory,
+      condition: localCondition,
+      minPrice: localMinPrice,
+      maxPrice: localMaxPrice,
+    });
+    setIsFiltersOpen(false);
+  };
+
+  // Clear all filters
+  const clearFilters = () => {
+    setLocalCategory("");
+    setLocalCondition("all");
+    setLocalMinPrice("");
+    setLocalMaxPrice("");
+    updateParams({
+      category: null,
+      condition: null,
+      minPrice: null,
+      maxPrice: null,
+    });
+  };
+
+  // Count active filters
+  const activeFilterCount = [
+    categoryParam,
+    conditionParam !== "all" ? conditionParam : "",
+    minPriceParam,
+    maxPriceParam,
+  ].filter(Boolean).length;
+
+  // Get category name
+  const getCategoryName = (id: string) => {
+    return categories.find((c) => c.id === id)?.name || "";
+  };
+
+  // Client-side search within loaded results
   const filteredProducts = searchQuery
     ? products.filter(
         (p) =>
@@ -140,6 +301,79 @@ export default function ProductsPage() {
     : products;
 
   const totalPages = Math.ceil(totalProducts / ITEMS_PER_PAGE);
+
+  // Filter sidebar content
+  const FilterContent = () => (
+    <div className="space-y-6">
+      {/* Category */}
+      <div className="space-y-2">
+        <Label>{tf("category")}</Label>
+        <Select value={localCategory} onValueChange={setLocalCategory}>
+          <SelectTrigger>
+            <SelectValue placeholder={tf("allCategories")} />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="">{tf("allCategories")}</SelectItem>
+            {categories.map((cat) => (
+              <SelectItem key={cat.id} value={cat.id}>
+                {cat.name}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* Condition */}
+      <div className="space-y-2">
+        <Label>{tf("condition")}</Label>
+        <Select value={localCondition} onValueChange={(v) => setLocalCondition(v as ConditionOption)}>
+          <SelectTrigger>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">{tf("allConditions")}</SelectItem>
+            <SelectItem value="new">{t("condition.new")}</SelectItem>
+            <SelectItem value="likeNew">{t("condition.likeNew")}</SelectItem>
+            <SelectItem value="good">{t("condition.good")}</SelectItem>
+            <SelectItem value="fair">{t("condition.fair")}</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* Price Range */}
+      <div className="space-y-2">
+        <Label>{tf("priceRange")}</Label>
+        <div className="flex gap-2">
+          <Input
+            type="number"
+            placeholder={tf("min")}
+            value={localMinPrice}
+            onChange={(e) => setLocalMinPrice(e.target.value)}
+            min="0"
+          />
+          <Input
+            type="number"
+            placeholder={tf("max")}
+            value={localMaxPrice}
+            onChange={(e) => setLocalMaxPrice(e.target.value)}
+            min="0"
+          />
+        </div>
+      </div>
+
+      <Separator />
+
+      {/* Action buttons */}
+      <div className="flex gap-2">
+        <Button onClick={applyFilters} className="flex-1">
+          {tf("apply")}
+        </Button>
+        <Button variant="outline" onClick={clearFilters}>
+          {tf("clear")}
+        </Button>
+      </div>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -152,17 +386,16 @@ export default function ProductsPage() {
           {totalProducts > 0 && (
             <p className="text-muted-foreground">
               {t("showing", {
-                from: (currentPage - 1) * ITEMS_PER_PAGE + 1,
-                to: Math.min(currentPage * ITEMS_PER_PAGE, totalProducts),
+                from: (pageParam - 1) * ITEMS_PER_PAGE + 1,
+                to: Math.min(pageParam * ITEMS_PER_PAGE, totalProducts),
                 total: totalProducts,
               })}
             </p>
           )}
         </div>
 
-        {/* Filters Bar */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-8">
-          {/* Search */}
+        {/* Search & Sort Bar */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-4">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
@@ -173,10 +406,9 @@ export default function ProductsPage() {
             />
           </div>
 
-          {/* Sort */}
-          <Select value={sortBy} onValueChange={(v) => setSortBy(v as SortOption)}>
+          <Select value={sortParam} onValueChange={(v) => updateParams({ sort: v })}>
             <SelectTrigger className="w-full sm:w-48">
-              <SelectValue placeholder={t("sort")} />
+              <SelectValue placeholder={t("sortOptions.newest")} />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="newest">{t("sortOptions.newest")}</SelectItem>
@@ -187,67 +419,143 @@ export default function ProductsPage() {
             </SelectContent>
           </Select>
 
-          {/* Filter Button (for mobile) */}
-          <Button variant="outline" className="sm:hidden">
-            <SlidersHorizontal className="h-4 w-4 mr-2" />
-            {t("filters")}
-          </Button>
+          {/* Mobile filter button */}
+          <Sheet open={isFiltersOpen} onOpenChange={setIsFiltersOpen}>
+            <SheetTrigger asChild>
+              <Button variant="outline" className="lg:hidden">
+                <SlidersHorizontal className="h-4 w-4 mr-2" />
+                {t("filters")}
+                {activeFilterCount > 0 && (
+                  <Badge variant="secondary" className="ml-2 h-5 w-5 p-0 flex items-center justify-center text-xs">
+                    {activeFilterCount}
+                  </Badge>
+                )}
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>{tf("title")}</SheetTitle>
+              </SheetHeader>
+              <div className="mt-6">
+                <FilterContent />
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
 
-        {/* Products Grid */}
-        {isLoading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <ProductCardSkeleton key={i} />
-            ))}
-          </div>
-        ) : filteredProducts.length === 0 ? (
-          <div className="text-center py-16">
-            <p className="text-muted-foreground text-lg">{t("noResults")}</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
+        {/* Active filters badges */}
+        {activeFilterCount > 0 && (
+          <div className="flex flex-wrap items-center gap-2 mb-6">
+            {categoryParam && (
+              <Badge variant="secondary" className="gap-1">
+                {tf("category")}: {getCategoryName(categoryParam)}
+                <button onClick={() => updateParams({ category: null })}>
+                  <X className="h-3 w-3" />
+                </button>
+              </Badge>
+            )}
+            {conditionParam !== "all" && (
+              <Badge variant="secondary" className="gap-1">
+                {tf("condition")}: {t(`condition.${conditionParam}`)}
+                <button onClick={() => updateParams({ condition: null })}>
+                  <X className="h-3 w-3" />
+                </button>
+              </Badge>
+            )}
+            {(minPriceParam || maxPriceParam) && (
+              <Badge variant="secondary" className="gap-1">
+                {tf("price")}: {minPriceParam || "0"} - {maxPriceParam || "∞"}
+                <button onClick={() => updateParams({ minPrice: null, maxPrice: null })}>
+                  <X className="h-3 w-3" />
+                </button>
+              </Badge>
+            )}
+            <Button variant="ghost" size="sm" onClick={clearFilters}>
+              {tf("clearAll")}
+            </Button>
           </div>
         )}
 
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="flex justify-center gap-2 mt-8">
-            <Button
-              variant="outline"
-              disabled={currentPage === 1}
-              onClick={() => setCurrentPage((p) => p - 1)}
-            >
-              {t("common:back")}
-            </Button>
-            <div className="flex items-center gap-1">
-              {Array.from({ length: Math.min(5, totalPages) }).map((_, i) => {
-                const page = i + 1;
-                return (
-                  <Button
-                    key={page}
-                    variant={currentPage === page ? "default" : "outline"}
-                    size="icon"
-                    onClick={() => setCurrentPage(page)}
-                  >
-                    {page}
+        <div className="flex gap-8">
+          {/* Filters Sidebar - Desktop */}
+          <aside className="hidden lg:block w-64 flex-shrink-0">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <SlidersHorizontal className="h-4 w-4" />
+                  {tf("title")}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <FilterContent />
+              </CardContent>
+            </Card>
+          </aside>
+
+          {/* Products Grid */}
+          <div className="flex-1">
+            {isLoading ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                {Array.from({ length: 9 }).map((_, i) => (
+                  <ProductCardSkeleton key={i} />
+                ))}
+              </div>
+            ) : filteredProducts.length === 0 ? (
+              <div className="text-center py-16">
+                <p className="text-muted-foreground text-lg">{t("noResults")}</p>
+                {activeFilterCount > 0 && (
+                  <Button variant="outline" className="mt-4" onClick={clearFilters}>
+                    {tf("clearAll")}
                   </Button>
-                );
-              })}
-            </div>
-            <Button
-              variant="outline"
-              disabled={currentPage === totalPages}
-              onClick={() => setCurrentPage((p) => p + 1)}
-            >
-              {t("common:next")}
-            </Button>
+                )}
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                {filteredProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            )}
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="flex justify-center gap-2 mt-8">
+                <Button
+                  variant="outline"
+                  disabled={pageParam === 1}
+                  onClick={() => updateParams({ page: String(pageParam - 1) })}
+                >
+                  {t("pagination.prev")}
+                </Button>
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: Math.min(5, totalPages) }).map((_, i) => {
+                    const page = i + 1;
+                    return (
+                      <Button
+                        key={page}
+                        variant={pageParam === page ? "default" : "outline"}
+                        size="icon"
+                        onClick={() => updateParams({ page: String(page) })}
+                      >
+                        {page}
+                      </Button>
+                    );
+                  })}
+                </div>
+                <Button
+                  variant="outline"
+                  disabled={pageParam === totalPages}
+                  onClick={() => updateParams({ page: String(pageParam + 1) })}
+                >
+                  {t("pagination.next")}
+                </Button>
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </main>
+
+      <SimpleFooter />
     </div>
   );
 }

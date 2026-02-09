@@ -31,12 +31,13 @@ interface Country {
 
 // Password strength indicator
 function PasswordStrength({ password }: { password: string }) {
+  const t = useTranslations("auth.register.passwordStrength");
   const checks = [
-    { label: "En az 8 karakter", valid: password.length >= 8 },
-    { label: "Buyuk harf (A-Z)", valid: /[A-Z]/.test(password) },
-    { label: "Kucuk harf (a-z)", valid: /[a-z]/.test(password) },
-    { label: "Rakam (0-9)", valid: /[0-9]/.test(password) },
-    { label: "Ozel karakter (!@#$%)", valid: /[!@#$%^&*(),.?":{}|<>]/.test(password) },
+    { label: t("minLength"), valid: password.length >= 8 },
+    { label: t("uppercase"), valid: /[A-Z]/.test(password) },
+    { label: t("lowercase"), valid: /[a-z]/.test(password) },
+    { label: t("number"), valid: /[0-9]/.test(password) },
+    { label: t("special"), valid: /[!@#$%^&*(),.?":{}|<>]/.test(password) },
   ];
 
   if (!password) return null;

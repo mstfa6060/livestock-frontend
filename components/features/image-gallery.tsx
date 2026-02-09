@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react";
@@ -26,6 +26,28 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
   const goToNext = () => {
     setSelectedIndex((prev) => (prev === displayImages.length - 1 ? 0 : prev + 1));
   };
+
+  // Keyboard navigation for lightbox
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (!isLightboxOpen) return;
+      if (e.key === "Escape") setIsLightboxOpen(false);
+      if (e.key === "ArrowLeft") goToPrevious();
+      if (e.key === "ArrowRight") goToNext();
+    },
+    [isLightboxOpen]
+  );
+
+  useEffect(() => {
+    if (isLightboxOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [isLightboxOpen, handleKeyDown]);
 
   return (
     <>
@@ -112,6 +134,9 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
       {/* Lightbox */}
       {isLightboxOpen && (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image lightbox"
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
           onClick={() => setIsLightboxOpen(false)}
         >

@@ -18,6 +18,7 @@ import {
   Bell,
   PlusCircle,
 } from "lucide-react";
+import { toast } from "sonner";
 
 interface DashboardStats {
   totalListings: number;
@@ -114,7 +115,7 @@ export default function DashboardPage() {
 
         setRecentListings(recent);
       } catch {
-        // Silently fail
+        toast.error(t("fetchError"));
       } finally {
         setIsLoading(false);
       }
@@ -146,8 +147,9 @@ export default function DashboardPage() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-8">
           {Array.from({ length: 4 }).map((_, i) => (
             <Card key={i}>
-              <CardHeader className="pb-2">
+              <CardHeader className="flex flex-row items-center justify-between pb-2">
                 <Skeleton className="h-4 w-24" />
+                <Skeleton className="h-4 w-4" />
               </CardHeader>
               <CardContent>
                 <Skeleton className="h-8 w-16 mb-2" />
@@ -155,6 +157,23 @@ export default function DashboardPage() {
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="space-y-4">
+          <Skeleton className="h-6 w-40" />
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {Array.from({ length: 3 }).map((_, i) => (
+              <Card key={i}>
+                <CardContent className="p-4 space-y-3">
+                  <Skeleton className="h-5 w-3/4" />
+                  <Skeleton className="h-4 w-1/2" />
+                  <div className="flex justify-between">
+                    <Skeleton className="h-3 w-20" />
+                    <Skeleton className="h-5 w-16 rounded-full" />
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </DashboardLayout>
     );

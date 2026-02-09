@@ -18,6 +18,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Search, BadgeCheck, Star, ShoppingBag } from "lucide-react";
+import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 
 interface Seller {
@@ -62,12 +63,14 @@ function SellerCardSkeleton() {
 
 export default function SellersPage() {
   const t = useTranslations("sellers");
+  const tc = useTranslations("common");
 
   const [sellers, setSellers] = useState<Seller[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<SortOption>("newest");
   const [currentPage, setCurrentPage] = useState(1);
+  const [hasMore, setHasMore] = useState(false);
 
   // Fetch sellers
   useEffect(() => {
@@ -97,8 +100,10 @@ export default function SellersPage() {
         // Only show active sellers
         const activeSellers = response.filter((s) => s.isActive);
         setSellers(activeSellers as Seller[]);
+        setHasMore(response.length >= ITEMS_PER_PAGE);
       } catch {
         setSellers([]);
+        toast.error(t("fetchError"));
       } finally {
         setIsLoading(false);
       }
@@ -262,20 +267,24 @@ export default function SellersPage() {
         )}
 
         {/* Pagination */}
-        {filteredSellers.length >= ITEMS_PER_PAGE && (
-          <div className="flex justify-center gap-2 mt-8">
+        {(currentPage > 1 || hasMore) && (
+          <div className="flex justify-center items-center gap-2 mt-8">
             <Button
               variant="outline"
               disabled={currentPage === 1}
               onClick={() => setCurrentPage((p) => p - 1)}
             >
-              {t("common:back")}
+              {tc("back")}
             </Button>
+            <span className="text-sm text-muted-foreground px-4">
+              {currentPage}
+            </span>
             <Button
               variant="outline"
+              disabled={!hasMore}
               onClick={() => setCurrentPage((p) => p + 1)}
             >
-              {t("common:next")}
+              {tc("next")}
             </Button>
           </div>
         )}

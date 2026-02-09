@@ -29,7 +29,9 @@ import {
   Truck,
   RotateCcw,
 } from "lucide-react";
+import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { getProductCoverImages } from "@/lib/product-images";
 
 interface SellerDetail {
   id: string;
@@ -84,6 +86,7 @@ export default function SellerDetailPage() {
         setSeller(response as unknown as SellerDetail);
       } catch {
         setSeller(null);
+        toast.error(t("fetchError"));
       } finally {
         setIsLoading(false);
       }
@@ -149,8 +152,20 @@ export default function SellerDetailPage() {
         }));
 
         setProducts(transformedProducts);
+
+        // Fetch cover images asynchronously
+        const productIds = transformedProducts.map((p) => p.id);
+        getProductCoverImages(productIds).then((imageMap) => {
+          setProducts((prev) =>
+            prev.map((p) => ({
+              ...p,
+              imageUrl: imageMap[p.id] || p.imageUrl,
+            }))
+          );
+        });
       } catch {
         setProducts([]);
+        toast.error(t("productsLoadError"));
       } finally {
         setIsLoadingProducts(false);
       }
@@ -179,16 +194,34 @@ export default function SellerDetailPage() {
       <div className="min-h-screen bg-background flex flex-col">
         <MainHeader />
         <main className="flex-1 container mx-auto px-4 py-8">
-          <div className="space-y-6">
-            <Skeleton className="h-48 w-full rounded-lg" />
-            <div className="flex gap-6">
-              <Skeleton className="h-24 w-24 rounded-full" />
-              <div className="flex-1 space-y-2">
+          <Skeleton className="h-9 w-32 mb-6" />
+          <Skeleton className="h-48 w-full rounded-lg mb-6" />
+          <div className="flex flex-col md:flex-row gap-6 mb-8">
+            <div className="flex items-start gap-4">
+              <Skeleton className="h-24 w-24 rounded-full -mt-12" />
+              <div className="space-y-2 pt-2">
                 <Skeleton className="h-8 w-48" />
                 <Skeleton className="h-4 w-32" />
-                <Skeleton className="h-4 w-64" />
+                <Skeleton className="h-4 w-40" />
               </div>
             </div>
+            <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-4 md:ml-auto">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <Card key={i}>
+                  <CardContent className="p-4 text-center space-y-2">
+                    <Skeleton className="h-6 w-6 mx-auto" />
+                    <Skeleton className="h-8 w-12 mx-auto" />
+                    <Skeleton className="h-3 w-16 mx-auto" />
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+          <Skeleton className="h-10 w-64 mb-6" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <ProductCardSkeleton key={i} />
+            ))}
           </div>
         </main>
       </div>
@@ -336,7 +369,7 @@ export default function SellerDetailPage() {
               <div className="text-center py-16">
                 <Package className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
                 <p className="text-muted-foreground">
-                  Bu saticinin henuz ilani yok
+                  {t("noProducts")}
                 </p>
               </div>
             ) : (
@@ -398,7 +431,7 @@ export default function SellerDetailPage() {
               {/* Contact Info */}
               <Card>
                 <CardHeader>
-                  <CardTitle>Iletisim</CardTitle>
+                  <CardTitle>{t("contactInfo")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {seller.email && (
@@ -501,7 +534,7 @@ export default function SellerDetailPage() {
                 !seller.acceptedPaymentMethods && (
                   <div className="md:col-span-2 text-center py-16">
                     <p className="text-muted-foreground">
-                      Satici henuz politikalarini belirlemedi
+                      {t("noPolicies")}
                     </p>
                   </div>
                 )}

@@ -61,10 +61,10 @@ export default function GlobalError({
               </svg>
             </div>
             <h1 style={{ fontSize: "1.5rem", fontWeight: "600", marginBottom: "0.5rem" }}>
-              Kritik Hata
+              Something went wrong
             </h1>
             <p style={{ color: "#6b7280", marginBottom: "1.5rem" }}>
-              Beklenmedik bir hata olustu. Lutfen sayfayi yenileyin.
+              An unexpected error occurred. Please refresh the page.
             </p>
             <button
               onClick={reset}
@@ -79,7 +79,7 @@ export default function GlobalError({
                 cursor: "pointer",
               }}
             >
-              Tekrar Dene
+              Try again
             </button>
           </div>
         </div>

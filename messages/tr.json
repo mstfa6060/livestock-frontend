@@ -57,7 +57,14 @@
       "login": "Giris Yap",
       "passwordMismatch": "Sifreler eslesmiyor.",
       "passwordTooShort": "Sifre en az 6 karakter olmalidir.",
-      "errorDefault": "Kayit basarisiz. Lutfen tekrar deneyin."
+      "errorDefault": "Kayit basarisiz. Lutfen tekrar deneyin.",
+      "passwordStrength": {
+        "minLength": "En az 8 karakter",
+        "uppercase": "Buyuk harf (A-Z)",
+        "lowercase": "Kucuk harf (a-z)",
+        "number": "Rakam (0-9)",
+        "special": "Ozel karakter (!@#$%)"
+      }
     },
     "forgotPassword": {
       "title": "Sifremi Unuttum",
@@ -121,7 +128,8 @@
     "viewAllListings": "Tum Ilanlari Gor",
     "viewAllMessages": "Tum Mesajlari Gor",
     "viewNotifications": "Bildirimleri Gor",
-    "viewFavorites": "Favorileri Gor"
+    "viewFavorites": "Favorileri Gor",
+    "fetchError": "Panel verileri yuklenirken bir hata olustu"
   },
   "dashboardNav": {
     "overview": "Genel Bakis",
@@ -504,6 +512,7 @@
     "loading": "Urunler yukleniyor...",
     "perPage": "Sayfa basina",
     "showing": "{from}-{to} arasi, toplam {total} urun",
+    "fetchError": "Urunler yuklenirken bir hata olustu",
     "loginToFavorite": "Favorilere eklemek icin giris yapin",
     "addedToFavorites": "Favorilere eklendi",
     "removedFromFavorites": "Favorilerden cikarildi"
@@ -578,6 +587,7 @@
     "viewProducts": "Urunleri Gor",
     "contactSeller": "Mesaj Gonder",
     "memberSince": "{year}'den beri uye",
+    "fetchError": "Saticilar yuklenirken bir hata olustu",
     "detail": {
       "title": "Satici Profili",
       "about": "Hakkinda",
@@ -601,7 +611,12 @@
         "rating": "Puan"
       },
       "notFound": "Satici bulunamadi",
-      "backToList": "Saticilara Don"
+      "backToList": "Saticilara Don",
+      "contactInfo": "Iletisim",
+      "noProducts": "Bu saticinin henuz ilani yok",
+      "noPolicies": "Satici henuz politikalarini belirlemedi",
+      "fetchError": "Satici bilgileri yuklenirken bir hata olustu",
+      "productsLoadError": "Saticinin urunleri yuklenirken bir hata olustu"
     }
   },
   "editListing": {
@@ -812,6 +827,7 @@
       "apply": "Uygula",
       "clear": "Temizle",
       "clearAll": "Tumu Temizle"
-    }
+    },
+    "fetchError": "Arama sonuclari yuklenirken bir hata olustu"
   }
 }
