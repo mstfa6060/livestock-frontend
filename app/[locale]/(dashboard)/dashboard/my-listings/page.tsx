@@ -48,17 +48,58 @@ export default function MyListingsPage() {
   const [listings, setListings] = useState<Product[]>([]);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [productToDelete, setProductToDelete] = useState<string | null>(null);
+  const [sellerId, setSellerId] = useState<string | null>(null);
+
+  // Fetch seller profile first
+  useEffect(() => {
+    const fetchSellerProfile = async () => {
+      if (!user?.id) return;
+
+      try {
+        // Find seller profile by userId using Sellers.All with filter
+        const sellersResponse = await LivestockTradingAPI.Sellers.All.Request({
+          sorting: { key: "createdAt", direction: 1 },
+          filters: [
+            {
+              key: "userId",
+              type: "guid",
+              isUsed: true,
+              values: [user.id],
+              min: {},
+              max: {},
+              conditionType: "equals",
+            },
+          ],
+          pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
+        });
+
+        if (sellersResponse.length > 0) {
+          setSellerId(sellersResponse[0].id);
+          console.log("✅ Seller profile found:", sellersResponse[0].id);
+        } else {
+          console.log("ℹ️ No seller profile found for user");
+          setSellerId(null);
+        }
+      } catch (error) {
+        console.error("❌ Error fetching seller profile:", error);
+        setSellerId(null);
+      }
+    };
+
+    fetchSellerProfile();
+  }, [user?.id]);
 
   // Fetch user's listings
   useEffect(() => {
     const fetchListings = async () => {
-      if (!user?.id) {
+      if (!sellerId) {
         setIsLoading(false);
         return;
       }
 
       setIsLoading(true);
       try {
+        console.log("🔍 Fetching products for sellerId:", sellerId);
         const response = await LivestockTradingAPI.Products.All.Request({
           countryCode: "TR",
           sorting: { key: "createdAt", direction: 1 }, // Descending
@@ -67,7 +108,7 @@ export default function MyListingsPage() {
               key: "sellerId",
               type: "guid",
               isUsed: true,
-              values: [user.id],
+              values: [sellerId],
               min: {},
               max: {},
               conditionType: "equals",
@@ -111,7 +152,7 @@ export default function MyListingsPage() {
     };
 
     fetchListings();
-  }, [user?.id, t]);
+  }, [sellerId, t]);
 
   const filteredListings =
     statusFilter === "all"
@@ -155,15 +196,53 @@ export default function MyListingsPage() {
 
     const newStatus = product.status === 1 ? 0 : 1; // Toggle between active (1) and draft (0)
 
-    // TODO: API requires full update, implement when partial update is supported
-    // For now, update local state only (changes won't persist)
-    setListings((prev) =>
-      prev.map((p) => (p.id === productId ? { ...p, status: newStatus } : p))
-    );
+    try {
+      // Fetch full product details for update (API requires all fields)
+      const fullProduct = await LivestockTradingAPI.Products.Detail.Request({ id: productId });
 
-    toast.success(
-      newStatus === 1 ? t("activateSuccess") : t("deactivateSuccess")
-    );
+      await LivestockTradingAPI.Products.Update.Request({
+        id: productId,
+        title: fullProduct.title,
+        slug: fullProduct.slug,
+        description: fullProduct.description,
+        shortDescription: fullProduct.shortDescription,
+        categoryId: fullProduct.categoryId,
+        basePrice: fullProduct.basePrice as any,
+        currency: fullProduct.currency,
+        priceUnit: fullProduct.priceUnit,
+        stockQuantity: fullProduct.stockQuantity,
+        stockUnit: fullProduct.stockUnit,
+        isInStock: fullProduct.isInStock,
+        sellerId: fullProduct.sellerId,
+        locationId: fullProduct.locationId,
+        status: newStatus,
+        condition: fullProduct.condition,
+        isShippingAvailable: fullProduct.isShippingAvailable,
+        shippingCost: fullProduct.shippingCost as any,
+        isInternationalShipping: fullProduct.isInternationalShipping,
+        weight: fullProduct.weight as any,
+        weightUnit: fullProduct.weightUnit,
+        attributes: fullProduct.attributes,
+        metaTitle: fullProduct.metaTitle,
+        metaDescription: fullProduct.metaDescription,
+        metaKeywords: fullProduct.metaKeywords,
+        // Note: Detail endpoint doesn't return these yet, pass empty to preserve existing
+        mediaBucketId: (fullProduct as any).mediaBucketId || "",
+        coverImageFileId: (fullProduct as any).coverImageFileId || "",
+      });
+
+      // Update local state
+      setListings((prev) =>
+        prev.map((p) => (p.id === productId ? { ...p, status: newStatus } : p))
+      );
+
+      toast.success(
+        newStatus === 1 ? t("activateSuccess") : t("deactivateSuccess")
+      );
+    } catch (error) {
+      console.error("Failed to update status:", error);
+      toast.error(t("statusError"));
+    }
   };
 
   return (

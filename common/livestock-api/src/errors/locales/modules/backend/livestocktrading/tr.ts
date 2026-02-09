@@ -115,6 +115,7 @@ export default {
       PREFERENCES_USER_REQUIRED: "Kullanici zorunludur.",
       CONVERSATION_NOT_FOUND: "Konusma bulunamadi.",
       CONVERSATION_PARTICIPANTS_REQUIRED: "Katilimcilar zorunludur.",
+      CONVERSATION_ID_REQUIRED: "Konusma ID zorunludur.",
       MESSAGE_NOT_FOUND: "Mesaj bulunamadi.",
       MESSAGE_CONTENT_REQUIRED: "Icerik zorunludur.",
       MESSAGE_CONVERSATION_REQUIRED: "Konusma zorunludur.",

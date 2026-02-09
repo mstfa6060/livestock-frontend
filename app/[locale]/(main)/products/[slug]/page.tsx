@@ -24,9 +24,13 @@ import {
   Star,
 } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { FileProviderAPI } from "@/api/base_modules/FileProvider";
+import { AppConfig } from "@/config/livestock-config";
 import { useFavoritesStore } from "@/stores/useFavoritesStore";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
+
+const EMPTY_GUID = "00000000-0000-0000-0000-000000000000";
 
 interface ProductDetail {
   id: string;
@@ -97,9 +101,43 @@ export default function ProductDetailPage() {
       setError(null);
 
       try {
-        // Fetch product details (using slug as ID since they're UUIDs)
+        // Check if slug is a valid GUID (UUID format)
+        const isGuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(slug);
+
+        let productId: string;
+
+        if (isGuid) {
+          // If it's a GUID, use it directly
+          productId = slug;
+        } else {
+          // Otherwise, search by slug
+          const searchResponse = await LivestockTradingAPI.Products.All.Request({
+            countryCode: "TR",
+            sorting: { key: "createdAt", direction: 1 },
+            filters: [
+              {
+                key: "slug",
+                type: "string",
+                isUsed: true,
+                values: [slug],
+                min: {},
+                max: {},
+                conditionType: "equals",
+              },
+            ],
+            pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
+          });
+
+          if (searchResponse.length === 0) {
+            throw new Error("Product not found");
+          }
+
+          productId = searchResponse[0].id;
+        }
+
+        // Fetch full details by ID
         const response = await LivestockTradingAPI.Products.Detail.Request({
-          id: slug,
+          id: productId,
         });
 
         const productData = {
@@ -142,24 +180,31 @@ export default function ProductDetailPage() {
 
         setProduct(productData);
 
-        // Fetch product images
-        const imagesResponse = await LivestockTradingAPI.ProductImages.All.Request({
-          sorting: { key: "sortOrder", direction: 0 },
-          filters: [
-            {
-              key: "productId",
-              type: "guid",
-              isUsed: true,
-              values: [response.id],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 20, listAll: true },
-        });
+        // Fetch product images from media bucket
+        const mediaBucketId = (response as any).mediaBucketId;
+        if (mediaBucketId) {
+          try {
+            const bucketResponse = await FileProviderAPI.Buckets.Detail.Request({
+              bucketId: mediaBucketId,
+              changeId: EMPTY_GUID,
+            });
 
-        setImages(imagesResponse.map((img) => img.imageUrl));
+            if (bucketResponse.files && bucketResponse.files.length > 0) {
+              const imageUrls = bucketResponse.files
+                .filter((file: any) => !file.contentType?.startsWith("video/"))
+                .map((file: any) => {
+                  // Use variant URL if available, otherwise build URL from path
+                  if (file.variants && file.variants.length > 0) {
+                    return file.variants[0].url;
+                  }
+                  return `${AppConfig.FileStorageBaseUrl}${file.path}`;
+                });
+              setImages(imageUrls);
+            }
+          } catch (bucketError) {
+            console.error("Failed to fetch media bucket:", bucketError);
+          }
+        }
 
         // Fetch similar products from same category
         const similarResponse = await LivestockTradingAPI.Products.All.Request({

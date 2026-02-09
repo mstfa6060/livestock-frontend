@@ -603,6 +603,8 @@
     "images": "Gorseller",
     "existingImages": "Mevcut Gorseller",
     "addImage": "Gorsel Ekle",
+    "maxImages": "En fazla 10 gorsel yukleyebilirsiniz",
+    "imageHint": "Minimum 1, maksimum 10 gorsel. PNG, JPG veya WEBP formatinda.",
     "uploadingImages": "Gorseller yukleniyor...",
     "uploadingImage": "Gorsel yukleniyor",
     "imageUploadFailed": "Gorsel yuklenemedi",

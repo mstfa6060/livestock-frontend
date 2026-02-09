@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { Toaster } from "sonner";
 import { locales, type Locale } from "@/i18n/config";
 import { Providers } from "@/components/providers/Providers";
+import { ErrorCapture } from "@/components/debug/error-capture";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -50,6 +51,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <Providers>{children}</Providers>
           <Toaster position="top-right" richColors />
+          <ErrorCapture />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -43,7 +43,11 @@
       "Bash(npm run dev:start:*)",
       "Bash(xargs ls:*)",
       "Bash(node:*)",
-      "Bash(npm run translate:missing:*)"
+      "Bash(npm run translate:missing:*)",
+      "Bash(grep:*)",
+      "Bash(for file in *.ts)",
+      "Bash(do sed -i '142d' \"$file\")",
+      "Bash(done)"
     ]
   }
 }
