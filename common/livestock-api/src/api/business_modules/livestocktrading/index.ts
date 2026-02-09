@@ -2348,6 +2348,43 @@ export namespace LivestockTradingAPI {
 			}
 		}
 
+		export namespace GetByUserId {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/GetByUserId';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(api.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				userId: Guid;
+			}
+			export interface IResponseModel {
+				id: Guid;
+				userId: Guid;
+				businessName: string;
+				businessType: string;
+				taxNumber: string;
+				registrationNumber: string;
+				description: string;
+				logoUrl: string;
+				bannerUrl: string;
+				email: string;
+				phone: string;
+				website: string;
+				isVerified: boolean;
+				verifiedAt?: Date;
+				isActive: boolean;
+				status: number;
+				averageRating?: number;
+				totalReviews: number;
+				totalSales: number;
+				totalRevenue: number;
+				businessHours: string;
+				acceptedPaymentMethods: string;
+				returnPolicy: string;
+				shippingPolicy: string;
+				socialMediaLinks: string;
+				createdAt: Date;
+				updatedAt?: Date;
+			}
+		}
+
 	}
 
 	export namespace SellerReviews {
@@ -3548,6 +3585,59 @@ export namespace LivestockTradingAPI {
 			}
 		}
 
+		export namespace Search {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/Search';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(api.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				query: string;
+				countryCode?: string;
+				categoryId?: Guid;
+				minPrice?: number;
+				maxPrice?: number;
+				currency?: string;
+				condition?: number;
+				locationCity?: string;
+				sortBy?: string;
+				pageRequest: IXPageRequest;
+			}
+			export interface IXPageRequest {
+				currentPage: number;
+				perPageCount: number;
+				listAll: boolean;
+			}
+			export interface IResponseModel {
+				results: ISearchResult[];
+				totalCount: number;
+				currentPage: number;
+				totalPages: number;
+				suggestions: string[];
+			}
+			export interface ISearchResult {
+				id: Guid;
+				title: string;
+				slug: string;
+				shortDescription: string;
+				categoryId: Guid;
+				categoryName: string;
+				basePrice: number;
+				currency: string;
+				discountedPrice?: number;
+				isInStock: boolean;
+				sellerId: Guid;
+				sellerName: string;
+				locationCity: string;
+				locationCountryCode: string;
+				status: number;
+				condition: number;
+				viewCount: number;
+				averageRating?: number;
+				reviewCount: number;
+				coverImageUrl: string;
+				createdAt: Date;
+				relevanceScore: number;
+			}
+		}
+
 	}
 
 	export namespace ProductReviews {
@@ -4476,6 +4566,26 @@ export namespace LivestockTradingAPI {
 				attachmentUrls: string;
 				sentAt: Date;
 				createdAt: Date;
+			}
+		}
+
+		export namespace UnreadCount {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/Messages/UnreadCount';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(api.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				userId: Guid;
+			}
+			export interface IResponseModel {
+				totalUnreadCount: number;
+				conversations: IConversationUnread[];
+			}
+			export interface IConversationUnread {
+				conversationId: Guid;
+				unreadCount: number;
+				lastMessage: string;
+				lastMessageAt: Date;
+				senderUserId: Guid;
+				senderDisplayName: string;
 			}
 		}
 
@@ -6338,6 +6448,23 @@ export namespace LivestockTradingAPI {
 			}
 		}
 
+		export namespace StartWithProduct {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/Conversations/StartWithProduct';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(api.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				productId: Guid;
+				sellerId: Guid;
+				buyerUserId: Guid;
+				initialMessage: string;
+			}
+			export interface IResponseModel {
+				conversationId: Guid;
+				isNewConversation: boolean;
+				messageId: Guid;
+				createdAt: Date;
+			}
+		}
+
 	}
 
 	export namespace ChemicalInfos {
@@ -7288,6 +7415,59 @@ export namespace LivestockTradingAPI {
 				sireDetails: string;
 				damDetails: string;
 				purpose: number;
+				createdAt: Date;
+			}
+		}
+
+	}
+
+	export namespace ContactMessages {
+
+		export namespace Create {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/ContactMessages/Create';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(api.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				name: string;
+				email: string;
+				subject: string;
+				message: string;
+			}
+			export interface IResponseModel {
+				id: Guid;
+				status: string;
+			}
+		}
+
+	}
+
+	export namespace Dashboard {
+
+		export namespace MyStats {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/Dashboard/MyStats';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(api.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				userId: Guid;
+				period?: string;
+			}
+			export interface IResponseModel {
+				totalListings: number;
+				activeListings: number;
+				draftListings: number;
+				pendingListings: number;
+				soldListings: number;
+				totalViews: number;
+				totalFavorites: number;
+				totalMessages: number;
+				unreadMessages: number;
+				totalReviews: number;
+				averageRating: number;
+				recentActivity: IActivityItem[];
+			}
+			export interface IActivityItem {
+				type: string;
+				entityId: Guid;
+				entityTitle: string;
+				actorName: string;
 				createdAt: Date;
 			}
 		}

@@ -17,7 +17,7 @@ export function Footer() {
               LivestockTrading
             </Link>
             <p className="text-sm text-muted-foreground">
-              Turkiye&apos;nin en guvenilir canli hayvan ticaret platformu.
+              {t("tagline")}
             </p>
             {/* Social Links */}
             <div className="flex gap-4">
@@ -69,7 +69,7 @@ export function Footer() {
                   href="/sellers"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Saticilar
+                  {t("sellers")}
                 </Link>
               </li>
               <li>
@@ -77,7 +77,7 @@ export function Footer() {
                   href="/products"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Urunler
+                  {t("products")}
                 </Link>
               </li>
             </ul>

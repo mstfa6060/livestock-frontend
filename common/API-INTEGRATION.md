@@ -1323,3 +1323,393 @@ Frontend uygulamalarinda:
 ### "hasError: true" Response
 
 Backend is mantigi hatasi. `error.message` icinde Turkce aciklama bulunur.
+
+---
+
+## BACKEND'DEN BEKLENEN EKSIK API'LER
+
+> **Bu bolum frontend ekibi tarafindan yazilmistir.**
+> Asagidaki endpoint'ler frontend tarafinda kullanilmak uzere hazirdir veya ihtiyac duyulmaktadir.
+> Backend ekibi bu endpoint'leri `arf-cli` ile olusturup yayinladiginda, frontend otomatik olarak entegre edilecektir.
+>
+> **Son guncelleme: 2026-02-09**
+
+---
+
+### 1. IAMAPI.Users.Update (Kullanici Profil Guncelleme)
+
+**Oncelik:** KRITIK
+**Durum:** Frontend UI tamamen hazir, API bekleniyor
+**Frontend dosyasi:** `app/[locale]/(dashboard)/dashboard/profile/page.tsx`
+
+Kullanicilar profil sayfasinda ad, soyad, telefon, ulke, dil ve para birimi bilgilerini duzenleyebilir.
+Simdilik "Cok yakinda aktif olacak" mesaji gosteriliyor.
+
+**Endpoint:**
+```
+POST /iam/Users/Update
+Authorization: Bearer {jwt}
+```
+
+**Request Model:**
+```typescript
+interface IRequestModel {
+  userId: Guid;                    // Zorunlu - Guncellenecek kullanicinin ID'si
+  firstName: string;               // Zorunlu - Ad
+  surname: string;                 // Zorunlu - Soyad
+  phoneNumber?: string;            // Opsiyonel - Telefon numarasi (uluslararasi format: +905551234567)
+  countryId?: number;              // Opsiyonel - Ulke ID'si (Countries.All'dan gelen)
+  language: string;                // Zorunlu - Dil kodu (tr, en, de, fr, ar, ru)
+  preferredCurrencyCode: string;   // Zorunlu - Para birimi kodu (TRY, USD, EUR, GBP)
+  avatarUrl?: string;              // Opsiyonel - Avatar resim URL'i (FileProvider'dan yuklenen)
+}
+```
+
+**Beklenen Response Model:**
+```typescript
+interface IResponseModel {
+  userId: Guid;
+  userName: string;
+  email: string;
+  firstName: string;
+  surname: string;
+  fullName: string;                // firstName + " " + surname
+  phoneNumber: string;
+  countryId: number;
+  countryCode: string;
+  countryName: string;
+  language: string;
+  preferredCurrencyCode: string;
+  currencySymbol: string;
+  avatarUrl: string;
+  isPhoneVerified: boolean;
+  isActive: boolean;
+}
+```
+
+**Is Kurallari:**
+- Kullanici sadece kendi profilini guncelleyebilmeli (JWT'deki userId == request userId)
+- Admin tum kullanicilari guncelleyebilmeli
+- `email` ve `userName` bu endpoint ile degistirilememeli (ayri flow gerekir)
+- Telefon numarasi degistiginde `isPhoneVerified` otomatik `false` olmali
+- Guncelleme sonrasi JWT token'daki claim'ler de guncellenecekse, response'da yeni JWT donmeli (opsiyonel)
+
+**Frontend'de nasil kullanilacak:**
+```typescript
+await IAMAPI.Users.Update.Request({
+  userId: user.id,
+  firstName: formData.firstName,
+  surname: formData.surname,
+  phoneNumber: formData.phoneNumber || undefined,
+  countryId: formData.countryId || undefined,
+  language: formData.language,
+  preferredCurrencyCode: formData.preferredCurrencyCode,
+});
+```
+
+---
+
+### 2. Dashboard Istatistikleri API
+
+**Oncelik:** ONEMLI
+**Durum:** Frontend mock data / client-side hesaplama kullaniyor
+**Frontend dosyasi:** `app/[locale]/(dashboard)/dashboard/page.tsx`
+
+Su an dashboard'da istatistikler icin kullanicinin tum urunleri `Products.All` ile cekilip client-side hesaplaniyor.
+Bu performans acisindan sorunlu - 100+ urunu olan saticlarda yavas.
+
+**Endpoint:**
+```
+POST /livestocktrading/Dashboard/MyStats
+Authorization: Bearer {jwt}
+```
+
+**Request Model:**
+```typescript
+interface IRequestModel {
+  userId: Guid;                    // Zorunlu - Kullanici ID'si
+  period?: string;                 // Opsiyonel - "week", "month", "year", "all" (varsayilan: "all")
+}
+```
+
+**Beklenen Response Model:**
+```typescript
+interface IResponseModel {
+  totalListings: number;           // Toplam ilan sayisi
+  activeListings: number;          // Aktif ilan sayisi (status=1)
+  draftListings: number;           // Taslak ilan sayisi (status=0)
+  pendingListings: number;         // Onay bekleyen ilan sayisi (status=3)
+  soldListings: number;            // Satilmis ilan sayisi (status=2)
+  totalViews: number;              // Toplam goruntulenme
+  totalFavorites: number;          // Toplam favori sayisi (diger kullanicilarin favorileri)
+  totalMessages: number;           // Toplam mesaj sayisi
+  unreadMessages: number;          // Okunmamis mesaj sayisi
+  totalReviews: number;            // Toplam degerlendirme sayisi
+  averageRating: number;           // Ortalama puan (0-5)
+  recentActivity: IActivityItem[]; // Son aktiviteler (max 10)
+}
+
+interface IActivityItem {
+  type: string;                    // "new_message", "new_favorite", "new_review", "product_viewed", "product_approved"
+  entityId: Guid;                  // Ilgili entity ID
+  entityTitle: string;             // Ilgili entity basligi
+  actorName: string;               // Islemi yapan kisi adi
+  createdAt: Date;                 // Islem zamani
+}
+```
+
+**Is Kurallari:**
+- Kullanici sadece kendi istatistiklerini gorebilmeli
+- Admin tum kullanicilarin istatistiklerini gorebilmeli
+- `period` filtresi sadece `recentActivity` ve goruntuleme/favori sayilarini etkilemeli, toplam ilan sayilari her zaman tum zamanlari gostermeli
+- Performans icin veritabaninda materialized view veya cache kullanilmali
+
+---
+
+### 3. Okunmamis Mesaj Sayisi API
+
+**Oncelik:** ONEMLI
+**Durum:** Client-side hesaplaniyor, performans sorunu var
+
+Su an okunmamis mesaj sayisi icin tum mesajlar cekilip `isRead === false` olanlari sayiliyor.
+Header'daki bildirim badge'i icin her sayfa yuklemesinde agir bir islem.
+
+**Endpoint:**
+```
+POST /livestocktrading/Messages/UnreadCount
+Authorization: Bearer {jwt}
+```
+
+**Request Model:**
+```typescript
+interface IRequestModel {
+  userId: Guid;                    // Zorunlu - Kullanici ID'si
+}
+```
+
+**Beklenen Response Model:**
+```typescript
+interface IResponseModel {
+  totalUnreadCount: number;                    // Toplam okunmamis mesaj sayisi
+  conversations: IConversationUnread[];        // Konusma bazli okunmamis sayilari
+}
+
+interface IConversationUnread {
+  conversationId: Guid;
+  unreadCount: number;
+  lastMessage: string;                         // Son mesajin ilk 100 karakteri
+  lastMessageAt: Date;
+  senderUserId: Guid;
+  senderDisplayName: string;
+}
+```
+
+**Is Kurallari:**
+- Sadece kullaniciya gelen (recipientUserId == userId) ve `isRead === false` olan mesajlar sayilmali
+- Response, sadece okunmamis mesaji olan konusmalar icermeli
+- `lastMessageAt` gore azalan sirada siralanmali
+- SignalR ile real-time guncelleme desteklenmeli (yeni mesaj geldiginde push)
+
+---
+
+### 4. Urun Arama API (Full-Text Search)
+
+**Oncelik:** IYILESTIRME
+**Durum:** Client-side filtreleme yapiliyor
+
+Su an `Products.All` ile tum urunler cekilip frontend'de filtreleniyor.
+Backend'de full-text search (ElasticSearch veya PostgreSQL FTS) ile arama yapilmali.
+
+**Endpoint:**
+```
+POST /livestocktrading/Products/Search
+Authorization: Opsiyonel (public endpoint olabilir)
+```
+
+**Request Model:**
+```typescript
+interface IRequestModel {
+  query: string;                   // Zorunlu - Arama metni (min 2 karakter)
+  countryCode?: string;            // Opsiyonel - Ulke filtresi
+  categoryId?: Guid;               // Opsiyonel - Kategori filtresi
+  minPrice?: number;               // Opsiyonel - Min fiyat
+  maxPrice?: number;               // Opsiyonel - Max fiyat
+  currency?: string;               // Opsiyonel - Para birimi (TRY, USD, EUR)
+  condition?: number;              // Opsiyonel - Urun durumu (0=yeni, 1=kullanilmis, vb.)
+  locationCity?: string;           // Opsiyonel - Sehir filtresi
+  sortBy?: string;                 // Opsiyonel - "relevance", "price_asc", "price_desc", "newest", "most_viewed"
+  pageRequest: IXPageRequest;
+}
+
+interface IXPageRequest {
+  currentPage: number;
+  perPageCount: number;
+  listAll: boolean;
+}
+```
+
+**Beklenen Response Model:**
+```typescript
+interface IResponseModel {
+  results: ISearchResult[];
+  totalCount: number;
+  currentPage: number;
+  totalPages: number;
+  suggestions: string[];            // Arama onerileri ("bunu mu demek istediniz?")
+}
+
+interface ISearchResult {
+  id: Guid;
+  title: string;
+  slug: string;
+  shortDescription: string;
+  categoryId: Guid;
+  categoryName: string;
+  basePrice: number;
+  currency: string;
+  discountedPrice?: number;
+  isInStock: boolean;
+  sellerId: Guid;
+  sellerName: string;
+  locationCity: string;
+  locationCountryCode: string;
+  status: number;
+  condition: number;
+  viewCount: number;
+  averageRating?: number;
+  reviewCount: number;
+  coverImageUrl: string;            // Kapak resmi URL'i (minio'dan)
+  createdAt: Date;
+  relevanceScore: number;           // Arama uygunluk puani
+}
+```
+
+**Is Kurallari:**
+- Sadece `status === 1` (aktif) urunler aranmali
+- Arama: title, description, shortDescription, categoryName, brandName alanlarinda yapilmali
+- Turkce karakter destegi: "buyukbas" araması "buyukbas" ve "buyukbas hayvan" sonuclarini donmeli
+- `query` bos ise populer/one cikan urunleri donmeli
+- `suggestions` alani, arama sonucu az ciktiginda (< 3 sonuc) aktif olmali
+- Public endpoint olmali (JWT gerektirmemeli)
+
+---
+
+### 5. Satici Profili by UserId
+
+**Oncelik:** IYILESTIRME
+**Durum:** `Sellers.All` ile filter yapiliyor
+
+Su an bir kullanicinin satici profilini almak icin `Sellers.All` endpoint'ine `userId` filtresi gonderiliyor.
+Direkt userId ile seller getiren endpoint daha performansli olur.
+
+**Endpoint:**
+```
+POST /livestocktrading/Sellers/GetByUserId
+Authorization: Bearer {jwt}
+```
+
+**Request Model:**
+```typescript
+interface IRequestModel {
+  userId: Guid;                    // Zorunlu - Kullanici ID'si
+}
+```
+
+**Beklenen Response Model:**
+```typescript
+// Sellers.Detail ile ayni response model
+interface IResponseModel {
+  id: Guid;
+  userId: Guid;
+  businessName: string;
+  businessType: string;
+  taxNumber: string;
+  registrationNumber: string;
+  description: string;
+  logoUrl: string;
+  bannerUrl: string;
+  email: string;
+  phone: string;
+  website: string;
+  isVerified: boolean;
+  verifiedAt?: Date;
+  isActive: boolean;
+  status: number;
+  averageRating?: number;
+  totalReviews: number;
+  totalSales: number;
+  totalRevenue: number;
+  businessHours: string;
+  acceptedPaymentMethods: string;
+  returnPolicy: string;
+  shippingPolicy: string;
+  socialMediaLinks: string;
+  createdAt: Date;
+  updatedAt?: Date;
+}
+```
+
+**Is Kurallari:**
+- Kullanicinin seller kaydi yoksa `hasError: true` ile uygun hata kodu donmeli
+- Public endpoint olabilir (herkes satici profiline bakabilmeli)
+
+---
+
+### 6. Conversation Baslatma (Urun Uzerinden)
+
+**Oncelik:** IYILESTIRME
+**Durum:** Frontend'de manuel Conversations.Create + Messages.Create yapiliyor
+
+Urun detay sayfasinda "Saticiya Sor" butonu var. Tiklandiginda:
+1. Once mevcut conversation var mi diye kontrol ediliyor
+2. Yoksa Conversations.Create ile yeni conversation olusturuluyor
+3. Sonra Messages.Create ile ilk mesaj gonderiliyor
+
+Bu 3 adimli islemi tek endpoint'e indirmek daha iyi olur.
+
+**Endpoint:**
+```
+POST /livestocktrading/Conversations/StartWithProduct
+Authorization: Bearer {jwt}
+```
+
+**Request Model:**
+```typescript
+interface IRequestModel {
+  productId: Guid;                 // Zorunlu - Urun ID'si
+  sellerId: Guid;                  // Zorunlu - Satici ID'si (urun sahibi)
+  buyerUserId: Guid;               // Zorunlu - Alici kullanici ID'si (JWT'deki user)
+  initialMessage: string;          // Zorunlu - Ilk mesaj (min 1 karakter)
+}
+```
+
+**Beklenen Response Model:**
+```typescript
+interface IResponseModel {
+  conversationId: Guid;            // Yeni veya mevcut conversation ID
+  isNewConversation: boolean;      // Yeni mi yoksa mevcut mu
+  messageId: Guid;                 // Gonderilen mesajin ID'si
+  createdAt: Date;
+}
+```
+
+**Is Kurallari:**
+- Ayni productId + buyerUserId + sellerId icin zaten conversation varsa, yeni olusturmamali, mevcut conversation'a mesaj eklemeli
+- `isNewConversation: false` donmeli bu durumda
+- Kullanici kendi urunune mesaj atamamali (buyerUserId !== seller'in userId'si)
+- initialMessage bos olamaz
+
+---
+
+### OZET TABLO
+
+| # | Endpoint | Modul | Oncelik | Public? |
+|---|----------|-------|---------|---------|
+| 1 | `POST /iam/Users/Update` | IAM | KRITIK | Hayir |
+| 2 | `POST /livestocktrading/Dashboard/MyStats` | LivestockTrading | ONEMLI | Hayir |
+| 3 | `POST /livestocktrading/Messages/UnreadCount` | LivestockTrading | ONEMLI | Hayir |
+| 4 | `POST /livestocktrading/Products/Search` | LivestockTrading | IYILESTIRME | Evet |
+| 5 | `POST /livestocktrading/Sellers/GetByUserId` | LivestockTrading | IYILESTIRME | Evet |
+| 6 | `POST /livestocktrading/Conversations/StartWithProduct` | LivestockTrading | IYILESTIRME | Hayir |
+
+**Not:** Endpoint'ler hazir oldugunda `arf-cli` ile generate edildikten sonra frontend entegrasyonu yaklasik 1-2 saat icerisinde tamamlanabilir. Her endpoint icin frontend kodu zaten hazir veya comment-out durumda bekliyor.

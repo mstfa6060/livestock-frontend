@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useCallback, useRef, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import {
   Upload,
   X,
@@ -124,6 +125,7 @@ export function MediaUpload({
   initialFiles = [],
   maxFiles = 10,
 }: MediaUploadProps) {
+  const t = useTranslations("fileUpload");
   const [files, setFiles] = useState<MediaFile[]>(initialFiles);
   const [uploadingFiles, setUploadingFiles] = useState<UploadingFile[]>([]);
   const [bucketId, setBucketId] = useState<string>(initialBucketId);
@@ -169,7 +171,7 @@ export function MediaUpload({
       if (isVideo && file.size > 50 * 1024 * 1024) {
         updateUploadingFile(tempId, {
           status: "error",
-          errorMessage: "Video 50MB'dan küçük olmalı",
+          errorMessage: t("videoTooLarge"),
         });
         return { mediaFile: null, newBucket: currentBucket };
       }
@@ -177,7 +179,7 @@ export function MediaUpload({
       if (!isVideo && file.size > 10 * 1024 * 1024) {
         updateUploadingFile(tempId, {
           status: "error",
-          errorMessage: "Fotoğraf 10MB'dan küçük olmalı",
+          errorMessage: t("imageTooLarge"),
         });
         return { mediaFile: null, newBucket: currentBucket };
       }
@@ -198,8 +200,7 @@ export function MediaUpload({
             progress: 20,
             status: "uploading",
           });
-        } catch (err) {
-          console.warn("Compression failed, using original:", err);
+        } catch {
           updateUploadingFile(tempId, { progress: 20, status: "uploading" });
         }
       } else {
@@ -224,19 +225,6 @@ export function MediaUpload({
 
       const token = localStorage.getItem("accessToken");
 
-      // Debug: Log upload request details
-      console.log("📤 File Upload Request:", {
-        url: `${AppConfig.FileProviderUrl}/Files/Upload`,
-        fileName: fileToUpload.name,
-        fileSize: fileToUpload.size,
-        fileType: fileToUpload.type,
-        bucketId: currentBucket,
-        moduleName: "LivestockTrading",
-        folderName: "products",
-        companyId: AppConfig.companyId,
-        hasToken: !!token,
-      });
-
       const response = await axios.post(
         `${AppConfig.FileProviderUrl}/Files/Upload`,
         formData,
@@ -253,8 +241,6 @@ export function MediaUpload({
           },
         }
       );
-
-      console.log("✅ File Upload Response:", response.data);
 
       const responseData = response.data;
       const payload = responseData.payload || responseData;
@@ -299,27 +285,15 @@ export function MediaUpload({
 
       updateUploadingFile(tempId, {
         status: "error",
-        errorMessage: "Yükleme başarısız",
+        errorMessage: t("uploadFailed"),
       });
       return { mediaFile: null, newBucket: currentBucket };
     } catch (error: any) {
-      // Debug: Log detailed error information
-      console.error("❌ File Upload Error:", {
-        status: error.response?.status,
-        statusText: error.response?.statusText,
-        errorData: error.response?.data,
-        errorCode: error.response?.data?.code,
-        errorMessage: error.response?.data?.error?.message,
-        stackTrace: error.response?.data?.error?.stackTrace,
-        message: error.message,
-      });
-
       const errorMessage =
         error.response?.data?.error?.message ||
         error.response?.data?.message ||
         error.message ||
-        "Yükleme hatası";
-      console.error("Upload error:", errorMessage, error);
+        t("uploadError");
       updateUploadingFile(tempId, { status: "error", errorMessage });
       return { mediaFile: null, newBucket: currentBucket };
     }
@@ -329,7 +303,7 @@ export function MediaUpload({
     const fileArray = Array.from(selectedFiles);
 
     if (files.length + fileArray.length > maxFiles) {
-      toast.error(`En fazla ${maxFiles} medya yükleyebilirsiniz`);
+      toast.error(t("maxFilesError", { max: maxFiles }));
       return;
     }
 
@@ -404,7 +378,7 @@ export function MediaUpload({
         return updatedFiles;
       });
 
-      toast.success(`${newFiles.length} medya yüklendi`);
+      toast.success(t("uploadSuccess", { count: newFiles.length }));
     }
   };
 
@@ -475,10 +449,9 @@ export function MediaUpload({
       }
 
       onMediaChange(bucketId, newCoverFileId, updatedFiles);
-      toast.success("Medya silindi");
-    } catch (error) {
-      console.error("Delete error:", error);
-      toast.error("Medya silinemedi");
+      toast.success(t("deleted"));
+    } catch {
+      toast.error(t("deleteError"));
     }
   };
 
@@ -487,7 +460,7 @@ export function MediaUpload({
     if (file && !file.isVideo) {
       setCoverFileId(fileId);
       onMediaChange(bucketId, fileId, files);
-      toast.success("Kapak fotoğrafı ayarlandı");
+      toast.success(t("coverUpdated"));
     }
   };
 
@@ -545,24 +518,24 @@ export function MediaUpload({
 
           <div>
             <p className="font-medium">
-              {isDragging ? "Bırakın..." : "Fotoğraf veya video yükleyin"}
+              {isDragging ? t("dropHere") : t("dragDrop")}
             </p>
             <p className="text-sm text-muted-foreground mt-1">
-              Sürükle-bırak veya tıklayarak seçin
+              {t("dragDropHint")}
             </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground mt-2">
             <span className="flex items-center gap-1">
               <ImageIcon className="h-3 w-3" />
-              Fotoğraf: max 10MB
+              {t("imageLimit")}
             </span>
             <span className="flex items-center gap-1">
               <Video className="h-3 w-3" />
-              Video: max 50MB
+              {t("videoLimit")}
             </span>
             <span className="font-medium text-primary">
-              {files.length} / {maxFiles} yüklendi
+              {t("uploadCount", { current: files.length, max: maxFiles })}
             </span>
           </div>
         </div>
@@ -617,10 +590,10 @@ export function MediaUpload({
                     <Progress value={uf.progress} className="h-1.5" />
                     <p className="text-xs text-muted-foreground mt-1">
                       {uf.status === "pending"
-                        ? "Sırada bekliyor..."
+                        ? t("queued")
                         : uf.status === "compressing"
-                          ? "Optimize ediliyor..."
-                          : "Yükleniyor..."}
+                          ? t("optimizing")
+                          : t("uploading")}
                     </p>
                   </div>
                 )}
@@ -674,7 +647,7 @@ export function MediaUpload({
                   <div className="w-full h-full flex items-center justify-center bg-muted-foreground/20">
                     <PlayCircle className="w-10 h-10 text-muted-foreground" />
                     <div className="absolute bottom-1 left-1 bg-blue-500 text-white text-[10px] px-1.5 py-0.5 rounded">
-                      VIDEO
+                      {t("videoBadge")}
                     </div>
                   </div>
                 ) : (
@@ -688,7 +661,7 @@ export function MediaUpload({
                 {/* Cover Badge */}
                 {coverFileId === file.id && !file.isVideo && (
                   <div className="absolute bottom-1 left-1 bg-primary text-primary-foreground text-[10px] px-1.5 py-0.5 rounded font-semibold flex items-center gap-0.5">
-                    <Star className="h-3 w-3" /> KAPAK
+                    <Star className="h-3 w-3" /> {t("coverBadge")}
                   </div>
                 )}
 
@@ -705,7 +678,7 @@ export function MediaUpload({
                       }}
                       className="text-xs h-7 px-2"
                     >
-                      Kapak Yap
+                      {t("setCover")}
                     </Button>
                   )}
                   <Button
@@ -732,10 +705,7 @@ export function MediaUpload({
         <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 p-3 rounded-lg">
           <p className="text-sm text-green-800 dark:text-green-200 flex items-center gap-2">
             <CheckCircle className="h-4 w-4 flex-shrink-0" />
-            <span>
-              <strong>Otomatik optimizasyon:</strong> Fotoğraflar web
-              standartlarına uygun şekilde optimize edildi
-            </span>
+            <span>{t("optimizationInfo")}</span>
           </p>
         </div>
       )}

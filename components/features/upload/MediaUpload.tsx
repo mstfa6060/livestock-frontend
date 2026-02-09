@@ -129,8 +129,7 @@ export function MediaUpload({
             progress: 20,
             status: 'uploading',
           });
-        } catch (err) {
-          console.warn('Compression failed, using original:', err);
+        } catch {
           updateUploadingFile(tempId, { progress: 20, status: 'uploading' });
         }
       } else {
@@ -203,8 +202,7 @@ export function MediaUpload({
         errorMessage: t('uploadFailed'),
       });
       return { mediaFile: null, newBucket: currentBucket };
-    } catch (error: unknown) {
-      console.error('Upload error:', error);
+    } catch {
       updateUploadingFile(tempId, {
         status: 'error',
         errorMessage: t('uploadError'),
@@ -366,8 +364,7 @@ export function MediaUpload({
       onMediaChange(bucketId, newCoverFileId, updatedFiles);
 
       toast.success(t('deleted'));
-    } catch (error) {
-      console.error('Delete error:', error);
+    } catch {
       toast.error(t('deleteError'));
     }
   };

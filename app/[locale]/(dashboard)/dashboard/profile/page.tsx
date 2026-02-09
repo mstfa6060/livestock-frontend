@@ -30,7 +30,7 @@ interface Country {
 
 export default function ProfilePage() {
   const t = useTranslations("profile");
-  const { user } = useAuth();
+  const { user, refreshUser } = useAuth();
 
   // Compute initial form data from user
   const initialFormData = useMemo(() => {
@@ -59,9 +59,6 @@ export default function ProfilePage() {
   const [countries, setCountries] = useState<Country[]>([]);
   const [formData, setFormData] = useState(initialFormData);
 
-  // Suppress unused variable warning - will be used when API is ready
-  void setIsLoading;
-
   // Sync form data when user data becomes available (initial load)
   useEffect(() => {
     if (user && formData.firstName === "" && formData.surname === "") {
@@ -81,8 +78,8 @@ export default function ProfilePage() {
           name: c.name,
           code: c.code,
         })));
-      } catch (error) {
-        console.error("Failed to fetch countries:", error);
+      } catch {
+        // Countries are optional
       }
     };
     fetchCountries();
@@ -101,9 +98,6 @@ export default function ProfilePage() {
     e.preventDefault();
     if (!user) return;
 
-    // TODO: IAMAPI.Users.Update endpoint does not exist yet
-    // When backend adds this endpoint, uncomment the code below:
-    /*
     setIsLoading(true);
     try {
       await IAMAPI.Users.Update.Request({
@@ -118,16 +112,11 @@ export default function ProfilePage() {
 
       await refreshUser();
       toast.success(t("saveSuccess"));
-    } catch (error) {
-      console.error("Failed to update profile:", error);
+    } catch {
       toast.error(t("saveError"));
     } finally {
       setIsLoading(false);
     }
-    */
-
-    // For now, show coming soon message
-    toast.info("Profil guncelleme ozelligi cok yakinda aktif olacak");
   };
 
   const languages = [

@@ -82,8 +82,7 @@ export default function SellerDetailPage() {
           id: sellerId,
         });
         setSeller(response as unknown as SellerDetail);
-      } catch (error) {
-        console.error("Failed to fetch seller:", error);
+      } catch {
         setSeller(null);
       } finally {
         setIsLoading(false);
@@ -150,8 +149,7 @@ export default function SellerDetailPage() {
         }));
 
         setProducts(transformedProducts);
-      } catch (error) {
-        console.error("Failed to fetch products:", error);
+      } catch {
         setProducts([]);
       } finally {
         setIsLoadingProducts(false);

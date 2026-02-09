@@ -44,6 +44,7 @@ export default function MyListingsPage() {
   const { user } = useAuth();
 
   const [statusFilter, setStatusFilter] = useState<ListingStatus>("all");
+  const [isSellerLoading, setIsSellerLoading] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [listings, setListings] = useState<Product[]>([]);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
@@ -53,7 +54,11 @@ export default function MyListingsPage() {
   // Fetch seller profile first
   useEffect(() => {
     const fetchSellerProfile = async () => {
-      if (!user?.id) return;
+      if (!user?.id) {
+        setIsSellerLoading(false);
+        setIsLoading(false);
+        return;
+      }
 
       try {
         // Find seller profile by userId using Sellers.All with filter
@@ -75,14 +80,15 @@ export default function MyListingsPage() {
 
         if (sellersResponse.length > 0) {
           setSellerId(sellersResponse[0].id);
-          console.log("✅ Seller profile found:", sellersResponse[0].id);
         } else {
-          console.log("ℹ️ No seller profile found for user");
           setSellerId(null);
+          setIsLoading(false);
         }
-      } catch (error) {
-        console.error("❌ Error fetching seller profile:", error);
+      } catch {
         setSellerId(null);
+        setIsLoading(false);
+      } finally {
+        setIsSellerLoading(false);
       }
     };
 
@@ -93,13 +99,11 @@ export default function MyListingsPage() {
   useEffect(() => {
     const fetchListings = async () => {
       if (!sellerId) {
-        setIsLoading(false);
         return;
       }
 
       setIsLoading(true);
       try {
-        console.log("🔍 Fetching products for sellerId:", sellerId);
         const response = await LivestockTradingAPI.Products.All.Request({
           countryCode: "TR",
           sorting: { key: "createdAt", direction: 1 }, // Descending
@@ -143,8 +147,7 @@ export default function MyListingsPage() {
         }));
 
         setListings(transformedProducts);
-      } catch (error) {
-        console.error("Failed to fetch listings:", error);
+      } catch {
         toast.error(t("fetchError"));
       } finally {
         setIsLoading(false);
@@ -184,8 +187,7 @@ export default function MyListingsPage() {
       toast.success(t("deleteSuccess"));
       setDeleteDialogOpen(false);
       setProductToDelete(null);
-    } catch (error) {
-      console.error("Failed to delete product:", error);
+    } catch {
       toast.error(t("deleteError"));
     }
   };
@@ -239,8 +241,7 @@ export default function MyListingsPage() {
       toast.success(
         newStatus === 1 ? t("activateSuccess") : t("deactivateSuccess")
       );
-    } catch (error) {
-      console.error("Failed to update status:", error);
+    } catch {
       toast.error(t("statusError"));
     }
   };

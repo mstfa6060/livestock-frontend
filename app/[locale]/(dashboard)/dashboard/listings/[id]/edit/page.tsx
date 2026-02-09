@@ -66,12 +66,6 @@ export default function EditListingPage() {
   const [coverImageFileId, setCoverImageFileId] = useState<string>("");
   const [mediaFiles, setMediaFiles] = useState<MediaFile[]>([]);
 
-  // Debug: Log user object when it changes
-  useEffect(() => {
-    console.log("👤 User object:", user);
-    console.log("🔐 Auth loading:", authLoading);
-  }, [user, authLoading]);
-
   // Fetch seller profile
   useEffect(() => {
     const fetchSellerProfile = async () => {
@@ -97,15 +91,12 @@ export default function EditListingPage() {
 
         if (sellersResponse.length > 0) {
           setSellerId(sellersResponse[0].id);
-          console.log("✅ Seller profile found:", sellersResponse[0].id);
         } else {
-          console.log("⚠️ No seller profile found for user");
-          toast.error("Satıcı profili bulunamadı");
+          toast.error(t("sellerNotFound"));
           router.push("/dashboard/my-listings");
         }
-      } catch (error) {
-        console.error("❌ Error fetching seller profile:", error);
-        toast.error("Satıcı profili yüklenemedi");
+      } catch {
+        toast.error(t("sellerLoadError"));
       }
     };
 
@@ -145,11 +136,8 @@ export default function EditListingPage() {
         });
         const loadedCategories = categoriesResponse.map((c) => ({ id: c.id, name: c.name, slug: c.slug }));
         setCategories(loadedCategories);
-        console.log("✅ Categories loaded:", loadedCategories.length);
-
         // Then load product details
         const product = await LivestockTradingAPI.Products.Detail.Request({ id: productId });
-        console.log("✅ Product loaded:", product);
 
         // Store original status and locationId
         setOriginalStatus(product.status);
@@ -178,10 +166,9 @@ export default function EditListingPage() {
                 name: f.name,
               }));
               setMediaFiles(loadedFiles);
-              console.log("✅ Media files loaded:", loadedFiles.length);
             }
-          } catch (bucketError) {
-            console.log("ℹ️ No existing bucket or empty:", bucketError);
+          } catch {
+            // No existing bucket or empty
           }
         }
 
@@ -204,10 +191,7 @@ export default function EditListingPage() {
         });
 
         // Verify category exists in loaded categories
-        const categoryExists = loadedCategories.some(c => c.id === product.categoryId);
-        console.log("✅ Category exists in list:", categoryExists, "categoryId:", product.categoryId);
-      } catch (error) {
-        console.error("Failed to load data:", error);
+      } catch {
         toast.error(t("loadError"));
         router.push("/dashboard/my-listings");
       } finally {
@@ -223,7 +207,6 @@ export default function EditListingPage() {
     setMediaBucketId(bucketId);
     setCoverImageFileId(coverFileId);
     setMediaFiles(files);
-    console.log("📸 Media updated - bucketId:", bucketId, "coverFileId:", coverFileId, "files:", files.length);
   };
 
   const generateSlug = (title: string) => {
@@ -260,19 +243,16 @@ export default function EditListingPage() {
       return;
     }
     if (!user?.id) {
-      console.error("❌ User object missing or no ID:", { user });
-      toast.error("Kullanıcı bilgisi bulunamadı. Lütfen tekrar giriş yapın.");
+      toast.error(t("userNotFound"));
       router.push("/login");
       return;
     }
     if (!sellerId) {
-      console.error("❌ Seller ID not found");
-      toast.error("Satıcı profili bulunamadı.");
+      toast.error(t("sellerNotFound"));
       return;
     }
     if (!originalLocationId) {
-      console.error("❌ Original location ID not found");
-      toast.error("Konum bilgisi bulunamadı. Lütfen sayfayı yenileyin.");
+      toast.error(t("locationNotFound"));
       return;
     }
 
@@ -280,16 +260,6 @@ export default function EditListingPage() {
 
     try {
       const slug = generateSlug(formData.title);
-
-      console.log("📤 Updating product with payload:", {
-        id: productId,
-        title: formData.title,
-        categoryId: formData.categoryId,
-        basePrice: parseFloat(formData.basePrice),
-        sellerId: sellerId,
-        mediaBucketId: mediaBucketId || EMPTY_GUID,
-        coverImageFileId: coverImageFileId || EMPTY_GUID,
-      });
 
       await LivestockTradingAPI.Products.Update.Request({
         id: productId,
@@ -324,7 +294,6 @@ export default function EditListingPage() {
         coverImageFileId: coverImageFileId || EMPTY_GUID,
       } as any);
 
-      console.log("✅ Product updated successfully");
       toast.success(t("updateSuccess"));
       router.push("/dashboard/my-listings");
     } catch (error: any) {
@@ -332,7 +301,6 @@ export default function EditListingPage() {
         || error.response?.data?.message
         || error.message
         || t("updateFailed");
-      console.error("❌ Failed to update listing:", error.response?.data || error);
       toast.error(errorMessage);
     } finally {
       setIsSaving(false);
@@ -375,7 +343,7 @@ export default function EditListingPage() {
               ) : (
                 <>
                   <Save className="h-4 w-4 mr-2" />
-                  {authLoading ? "Yükleniyor..." : t("saveChanges")}
+                  {authLoading ? tc("loading") : t("saveChanges")}
                 </>
               )}
             </Button>

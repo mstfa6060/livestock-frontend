@@ -21,15 +21,17 @@ interface NotificationsState {
   isLoading: boolean;
   error: string | null;
   lastFetched: number | null;
+  retryCount: number;
   // Actions
-  fetchNotifications: (userId: string) => Promise<void>;
+  fetchNotifications: (userId: string, force?: boolean) => Promise<void>;
   markAsRead: (notificationId: string) => Promise<void>;
   markAllAsRead: () => Promise<void>;
   clearNotifications: () => void;
 }
 
-// Cache duration in milliseconds (5 minutes)
-const CACHE_DURATION = 5 * 60 * 1000;
+// Cache duration in milliseconds (2 minutes)
+const CACHE_DURATION = 2 * 60 * 1000;
+const MAX_RETRIES = 3;
 
 export const useNotificationsStore = create<NotificationsState>((set, get) => ({
   notifications: [],
@@ -37,13 +39,17 @@ export const useNotificationsStore = create<NotificationsState>((set, get) => ({
   isLoading: false,
   error: null,
   lastFetched: null,
+  retryCount: 0,
 
-  fetchNotifications: async (userId: string) => {
-    // Check cache
-    const { lastFetched } = get();
-    if (lastFetched && Date.now() - lastFetched < CACHE_DURATION) {
+  fetchNotifications: async (userId: string, force = false) => {
+    // Check cache (skip if forced)
+    const { lastFetched, isLoading } = get();
+    if (!force && lastFetched && Date.now() - lastFetched < CACHE_DURATION) {
       return; // Use cached data
     }
+
+    // Prevent concurrent fetches
+    if (isLoading) return;
 
     set({ isLoading: true, error: null });
 
@@ -85,13 +91,26 @@ export const useNotificationsStore = create<NotificationsState>((set, get) => ({
         unreadCount,
         isLoading: false,
         lastFetched: Date.now(),
+        retryCount: 0,
+        error: null,
       });
     } catch (error) {
-      console.error("Failed to fetch notifications:", error);
+
+      const { retryCount } = get();
+
       set({
         isLoading: false,
         error: error instanceof Error ? error.message : "Failed to fetch notifications",
+        retryCount: retryCount + 1,
       });
+
+      // Auto-retry with exponential backoff (max 3 retries)
+      if (retryCount < MAX_RETRIES) {
+        const delay = Math.pow(2, retryCount) * 1000; // 1s, 2s, 4s
+        setTimeout(() => {
+          get().fetchNotifications(userId, true);
+        }, delay);
+      }
     }
   },
 
@@ -100,6 +119,14 @@ export const useNotificationsStore = create<NotificationsState>((set, get) => ({
     const notification = notifications.find((n) => n.id === notificationId);
 
     if (!notification || notification.isRead) return;
+
+    // Optimistic update
+    set((state) => ({
+      notifications: state.notifications.map((n) =>
+        n.id === notificationId ? { ...n, isRead: true } : n
+      ),
+      unreadCount: Math.max(0, state.unreadCount - 1),
+    }));
 
     try {
       await LivestockTradingAPI.Notifications.Update.Request({
@@ -111,16 +138,14 @@ export const useNotificationsStore = create<NotificationsState>((set, get) => ({
         actionData: notification.actionData || "",
         isRead: true,
       });
-
-      // Update local state
+    } catch {
+      // Revert optimistic update
       set((state) => ({
         notifications: state.notifications.map((n) =>
-          n.id === notificationId ? { ...n, isRead: true } : n
+          n.id === notificationId ? { ...n, isRead: false } : n
         ),
-        unreadCount: Math.max(0, state.unreadCount - 1),
+        unreadCount: state.unreadCount + 1,
       }));
-    } catch (error) {
-      console.error("Failed to mark notification as read:", error);
     }
   },
 
@@ -128,8 +153,16 @@ export const useNotificationsStore = create<NotificationsState>((set, get) => ({
     const { notifications } = get();
     const unreadNotifications = notifications.filter((n) => !n.isRead);
 
+    if (unreadNotifications.length === 0) return;
+
+    // Optimistic update
+    const previousUnreadCount = get().unreadCount;
+    set((state) => ({
+      notifications: state.notifications.map((n) => ({ ...n, isRead: true })),
+      unreadCount: 0,
+    }));
+
     try {
-      // Mark all unread notifications as read
       await Promise.all(
         unreadNotifications.map((notification) =>
           LivestockTradingAPI.Notifications.Update.Request({
@@ -143,14 +176,15 @@ export const useNotificationsStore = create<NotificationsState>((set, get) => ({
           })
         )
       );
-
-      // Update local state
+    } catch {
+      // Revert optimistic update
       set((state) => ({
-        notifications: state.notifications.map((n) => ({ ...n, isRead: true })),
-        unreadCount: 0,
+        notifications: state.notifications.map((n) => {
+          const wasUnread = unreadNotifications.some((un) => un.id === n.id);
+          return wasUnread ? { ...n, isRead: false } : n;
+        }),
+        unreadCount: previousUnreadCount,
       }));
-    } catch (error) {
-      console.error("Failed to mark all notifications as read:", error);
     }
   },
 
@@ -159,6 +193,7 @@ export const useNotificationsStore = create<NotificationsState>((set, get) => ({
       notifications: [],
       unreadCount: 0,
       lastFetched: null,
+      retryCount: 0,
     });
   },
 }));

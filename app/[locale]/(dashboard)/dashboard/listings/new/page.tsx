@@ -56,12 +56,6 @@ export default function NewListingPage() {
   const [coverImageFileId, setCoverImageFileId] = useState<string>("");
   const [mediaFiles, setMediaFiles] = useState<MediaFile[]>([]);
 
-  // Debug: Log user object when it changes
-  useEffect(() => {
-    console.log("👤 User object:", user);
-    console.log("🔐 Auth loading:", authLoading);
-  }, [user, authLoading]);
-
   const [formData, setFormData] = useState({
     title: "",
     shortDescription: "",
@@ -96,8 +90,8 @@ export default function NewListingPage() {
         setCategories(
           response.map((c) => ({ id: c.id, name: c.name, slug: c.slug }))
         );
-      } catch (error) {
-        console.error("Failed to load categories:", error);
+      } catch {
+        // Categories are optional
       }
     };
     loadCategories();
@@ -162,8 +156,7 @@ export default function NewListingPage() {
       return;
     }
     if (!user?.id) {
-      console.error("❌ User object missing or no ID:", { user });
-      alert("Kullanıcı bilgisi bulunamadı. Lütfen tekrar giriş yapın.");
+      alert(t("userNotFound"));
       router.push("/login");
       return;
     }
@@ -174,7 +167,6 @@ export default function NewListingPage() {
       const slug = generateSlug(formData.title);
 
       // Step 1: Check if Seller profile exists, if not create one
-      console.log("👤 Checking seller profile...");
       let sellerId: string;
 
       try {
@@ -183,10 +175,8 @@ export default function NewListingPage() {
           id: user.id,
         });
         sellerId = sellerResponse.id;
-        console.log("✅ Seller profile found:", sellerId);
       } catch {
         // Seller doesn't exist, create one
-        console.log("📝 Creating seller profile...");
         const newSeller = await LivestockTradingAPI.Sellers.Create.Request({
           userId: user.id,
           businessName: user.displayName || user.username || "My Business",
@@ -208,11 +198,9 @@ export default function NewListingPage() {
           socialMediaLinks: "",
         });
         sellerId = newSeller.id;
-        console.log("✅ Seller profile created:", sellerId);
       }
 
       // Step 2: Create Location
-      console.log("📍 Creating location...");
       const locationResponse = await LivestockTradingAPI.Locations.Create.Request({
         name: formData.title,
         addressLine1: formData.address,
@@ -229,18 +217,7 @@ export default function NewListingPage() {
         isActive: true,
       });
 
-      console.log("✅ Location created:", locationResponse.id);
-
       // Step 3: Create Product with the sellerId and locationId
-      console.log("📤 Creating product with payload:", {
-        title: formData.title,
-        categoryId: formData.categoryId,
-        basePrice: parseFloat(formData.basePrice),
-        sellerId: sellerId,
-        locationId: locationResponse.id,
-        status: isDraft ? 0 : 4, // 0=draft, 4=pendingApproval
-      });
-
       const productResponse = await LivestockTradingAPI.Products.Create.Request({
         title: formData.title,
         slug: slug,
@@ -273,16 +250,9 @@ export default function NewListingPage() {
         coverImageFileId: coverImageFileId || "",
       });
 
-      console.log("✅ Product created successfully:", productResponse);
-      if (mediaFiles.length > 0) {
-        console.log(`📸 ${mediaFiles.length} medya dosyası bucket'a bağlandı`);
-      }
-
       toast.success(isDraft ? t("draftSaved") : t("productCreated"));
       router.push("/dashboard/my-listings");
     } catch (error: any) {
-      console.error("❌ Failed to create listing:", error);
-
       const errorMessage = error?.message || t("creationFailed");
       toast.error(errorMessage);
     } finally {
@@ -324,7 +294,7 @@ export default function NewListingPage() {
               ) : (
                 <>
                   <Save className="h-4 w-4 mr-2" />
-                  {authLoading ? "Yükleniyor..." : t("publish")}
+                  {authLoading ? tc("loading") : t("publish")}
                 </>
               )}
             </Button>

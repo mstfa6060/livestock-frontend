@@ -71,6 +71,23 @@ export default function MessagesPage() {
             conv.participantUserId2 === user.id
         );
 
+        // Fetch unread counts
+        let unreadMap: Record<string, { unreadCount: number; lastMessage: string; senderDisplayName: string }> = {};
+        try {
+          const unreadResponse = await LivestockTradingAPI.Messages.UnreadCount.Request({
+            userId: user.id,
+          });
+          unreadResponse.conversations.forEach((c) => {
+            unreadMap[c.conversationId] = {
+              unreadCount: c.unreadCount,
+              lastMessage: c.lastMessage,
+              senderDisplayName: c.senderDisplayName,
+            };
+          });
+        } catch {
+          // UnreadCount API not available yet, fallback to 0
+        }
+
         // Enrich conversations with user data
         const enrichedConversations = await Promise.all(
           userConversations.map(async (conv) => {
@@ -79,7 +96,7 @@ export default function MessagesPage() {
                 ? conv.participantUserId2
                 : conv.participantUserId1;
 
-            let otherUserName = "Kullanici";
+            let otherUserName = t("defaultUser");
             let otherUserInitials = "?";
 
             try {
@@ -87,7 +104,7 @@ export default function MessagesPage() {
                 userId: otherUserId,
               });
               if (userDetail) {
-                otherUserName = userDetail.fullName || userDetail.userName || "Kullanici";
+                otherUserName = userDetail.fullName || userDetail.userName || t("defaultUser");
                 otherUserInitials = otherUserName
                   .split(" ")
                   .map((n: string) => n.charAt(0))
@@ -99,20 +116,22 @@ export default function MessagesPage() {
               // User details not available
             }
 
+            const unreadInfo = unreadMap[conv.id];
+
             return {
               ...conv,
               lastMessageAt: conv.lastMessageAt?.toString(),
               createdAt: conv.createdAt.toString(),
               otherUserName,
               otherUserInitials,
-              unreadCount: 0, // TODO: Calculate unread count from messages
+              unreadCount: unreadInfo?.unreadCount || 0,
+              lastMessage: unreadInfo?.lastMessage,
             };
           })
         );
 
         setConversations(enrichedConversations);
-      } catch (error) {
-        console.error("Failed to fetch conversations:", error);
+      } catch {
         toast.error(t("fetchError"));
       } finally {
         setIsLoading(false);
@@ -172,7 +191,7 @@ export default function MessagesPage() {
         <div className="text-center py-16">
           <MessageSquare className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
           <p className="text-muted-foreground text-lg mb-2">
-            {searchQuery ? "Sonuc bulunamadi" : t("noConversations")}
+            {searchQuery ? t("noResults") : t("noConversations")}
           </p>
           <p className="text-sm text-muted-foreground">
             {t("startConversation")}
@@ -226,7 +245,7 @@ export default function MessagesPage() {
                         </span>
                       </div>
                       <p className="text-sm text-muted-foreground truncate mt-1">
-                        {conversation.subject || "Yeni konusma"}
+                        {conversation.subject || t("newConversation")}
                       </p>
                     </div>
 

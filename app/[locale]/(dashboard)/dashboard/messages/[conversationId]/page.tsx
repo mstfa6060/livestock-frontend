@@ -137,7 +137,7 @@ export default function ConversationPage() {
           const userDetail = await IAMAPI.Users.Detail.Request({
             userId: otherUserId,
           });
-          const displayName = userDetail.fullName || userDetail.userName || "Kullanici";
+          const displayName = userDetail.fullName || userDetail.userName || t("defaultUser");
           setOtherUser({
             id: otherUserId,
             displayName,
@@ -151,7 +151,7 @@ export default function ConversationPage() {
         } catch {
           setOtherUser({
             id: otherUserId,
-            displayName: "Kullanici",
+            displayName: t("defaultUser"),
             initials: "?",
           });
         }
@@ -222,8 +222,7 @@ export default function ConversationPage() {
             // Continue even if marking as read fails
           }
         }
-      } catch (error) {
-        console.error("Failed to fetch conversation:", error);
+      } catch {
         toast.error(t("fetchError"));
       } finally {
         setIsLoading(false);
@@ -273,8 +272,7 @@ export default function ConversationPage() {
       });
 
       inputRef.current?.focus();
-    } catch (error) {
-      console.error("Failed to send message:", error);
+    } catch {
       toast.error(t("sendError"));
       setNewMessage(messageContent); // Restore message on error
     } finally {

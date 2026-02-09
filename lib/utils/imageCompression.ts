@@ -175,8 +175,7 @@ export async function compressImages(
     try {
       const result = await compressImage(file, options);
       results.push(result);
-    } catch (error) {
-      console.error(`Error compressing ${file.name}:`, error);
+    } catch {
       // Hata olursa orijinal dosyayı kullan
       results.push({
         file,

@@ -14,28 +14,42 @@ export const useChat = ({ conversationId, onNewMessage }: UseChatOptions) => {
   const [isConnected, setIsConnected] = useState(false);
   const [isConnecting, setIsConnecting] = useState(false);
   const typingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const isMountedRef = useRef(true);
+  const onNewMessageRef = useRef(onNewMessage);
+
+  // Keep ref up to date without causing re-subscriptions
+  useEffect(() => {
+    onNewMessageRef.current = onNewMessage;
+  }, [onNewMessage]);
+
+  // Track mounted state
+  useEffect(() => {
+    isMountedRef.current = true;
+    return () => {
+      isMountedRef.current = false;
+    };
+  }, []);
 
   // Connect to SignalR and join conversation
   useEffect(() => {
     if (!conversationId) return;
 
-    let isMounted = true;
+    let cancelled = false;
 
     const initializeChat = async () => {
       setIsConnecting(true);
       try {
         await chatService.connect();
-        if (isMounted) {
+        if (!cancelled) {
           setIsConnected(true);
           await chatService.joinConversation(conversationId);
         }
-      } catch (error) {
-        console.error("SignalR baglanti hatasi:", error);
-        if (isMounted) {
+      } catch {
+        if (!cancelled) {
           setIsConnected(false);
         }
       } finally {
-        if (isMounted) {
+        if (!cancelled) {
           setIsConnecting(false);
         }
       }
@@ -44,8 +58,8 @@ export const useChat = ({ conversationId, onNewMessage }: UseChatOptions) => {
     initializeChat();
 
     return () => {
-      isMounted = false;
-      chatService.leaveConversation(conversationId).catch(console.error);
+      cancelled = true;
+      chatService.leaveConversation(conversationId).catch(() => {});
     };
   }, [conversationId]);
 
@@ -56,7 +70,7 @@ export const useChat = ({ conversationId, onNewMessage }: UseChatOptions) => {
     const handleNewMessage = (message: Message) => {
       if (message.conversationId === conversationId) {
         setMessages((prev) => [...prev, message]);
-        onNewMessage?.(message);
+        onNewMessageRef.current?.(message);
       }
     };
 
@@ -91,7 +105,7 @@ export const useChat = ({ conversationId, onNewMessage }: UseChatOptions) => {
       chatService.offTypingIndicator(handleTypingIndicator);
       chatService.offMessageRead(handleMessageRead);
     };
-  }, [isConnected, conversationId, onNewMessage]);
+  }, [isConnected, conversationId]);
 
   // Send typing indicator
   const sendTypingIndicator = useCallback(async () => {
@@ -106,15 +120,12 @@ export const useChat = ({ conversationId, onNewMessage }: UseChatOptions) => {
       }
 
       // Stop typing indicator after 2 seconds of inactivity
-      typingTimeoutRef.current = setTimeout(async () => {
-        try {
-          await chatService.sendTypingIndicator(conversationId, false);
-        } catch (error) {
-          console.error("Typing indicator gonderme hatasi:", error);
-        }
+      typingTimeoutRef.current = setTimeout(() => {
+        if (!isMountedRef.current) return;
+        chatService.sendTypingIndicator(conversationId, false).catch(() => {});
       }, 2000);
-    } catch (error) {
-      console.error("Typing indicator gonderme hatasi:", error);
+    } catch {
+      // Typing indicator is non-critical, silently ignore
     }
   }, [conversationId, isConnected]);
 
@@ -123,8 +134,8 @@ export const useChat = ({ conversationId, onNewMessage }: UseChatOptions) => {
     if (!isConnected) return;
     try {
       await chatService.markMessageAsRead(messageId);
-    } catch (error) {
-      console.error("Mesaj okundu olarak isaretlenemedi:", error);
+    } catch {
+      // Non-critical, silently ignore
     }
   }, [isConnected]);
 

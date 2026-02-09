@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
+import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { MapPin, Mail, Phone, Clock, Loader2 } from "lucide-react";
 
 export default function ContactPage() {
@@ -27,9 +28,13 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      await LivestockTradingAPI.ContactMessages.Create.Request({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      });
       toast.success(t("form.success"));
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch {
@@ -192,7 +197,7 @@ export default function ContactPage() {
                     <div className="h-64 bg-muted rounded-lg flex items-center justify-center">
                       <div className="text-center text-muted-foreground">
                         <MapPin className="h-12 w-12 mx-auto mb-2" />
-                        <p>Harita</p>
+                        <p>{t("info.map")}</p>
                       </div>
                     </div>
                   </CardContent>

@@ -65,8 +65,8 @@ export function CountrySwitcher() {
           setSelectedCountry(turkey);
           localStorage.setItem(STORAGE_KEY, JSON.stringify(turkey));
         }
-      } catch (error) {
-        console.error("Failed to load countries:", error);
+      } catch {
+        // Countries are optional
       } finally {
         setIsLoading(false);
       }

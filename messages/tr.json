@@ -38,7 +38,8 @@
       "orContinueWith": "veya devam edin",
       "continueWithGoogle": "Google ile devam et",
       "continueWithApple": "Apple ile devam et",
-      "socialLoginError": "Sosyal giris basarisiz oldu. Lutfen tekrar deneyin."
+      "socialLoginError": "Sosyal giris basarisiz oldu. Lutfen tekrar deneyin.",
+      "appleComingSoon": "Cok yakinda"
     },
     "register": {
       "title": "Kayit Ol",
@@ -232,7 +233,10 @@
     "lastSeen": "Son gorulen",
     "deleteConversation": "Konusmayi Sil",
     "deleteConfirm": "Bu konusmayi silmek istediginizden emin misiniz?",
-    "deleted": "Konusma silindi"
+    "deleted": "Konusma silindi",
+    "defaultUser": "Kullanici",
+    "noResults": "Sonuc bulunamadi",
+    "newConversation": "Yeni konusma"
   },
   "notifications": {
     "title": "Bildirimler",
@@ -329,7 +333,12 @@
     "newsletter": "Bulten",
     "newsletterDescription": "En yeni ilanlari ve kampanyalari kacirmayin.",
     "subscribe": "Abone Ol",
-    "emailPlaceholder": "E-posta adresiniz"
+    "emailPlaceholder": "E-posta adresiniz",
+    "tagline": "Turkiye'nin en guvenilir canli hayvan ticaret platformu.",
+    "sellers": "Saticilar",
+    "products": "Urunler",
+    "map": "Harita",
+    "appleLoginComingSoon": "Apple ile giris cok yakinda aktif olacak"
   },
   "about": {
     "title": "Hakkimizda",
@@ -390,7 +399,8 @@
       "phone": "Telefon",
       "phoneValue": "+90 (212) 123 45 67",
       "workingHours": "Calisma Saatleri",
-      "workingHoursValue": "Pazartesi - Cuma: 09:00 - 18:00"
+      "workingHoursValue": "Pazartesi - Cuma: 09:00 - 18:00",
+      "map": "Harita"
     }
   },
   "terms": {
@@ -529,7 +539,12 @@
     "removedFromFavorites": "Favorilerden cikarildi",
     "linkCopied": "Link kopyalandi",
     "messagingComingSoon": "Mesajlasma ozelligi cok yakinda",
-    "productNotFound": "Urun bulunamadi"
+    "productNotFound": "Urun bulunamadi",
+    "contacting": "Iletisime geciliyor...",
+    "contactError": "Iletisim kurulamadi. Lutfen tekrar deneyin.",
+    "noImage": "Gorsel yok",
+    "defaultLocation": "Turkiye",
+    "inquiryMessage": "{title} hakkinda bilgi almak istiyorum."
   },
   "seller": {
     "title": "Satici Bilgileri",
@@ -596,6 +611,10 @@
     "updateSuccess": "Ilan basariyla guncellendi",
     "updateFailed": "Ilan guncellenirken bir hata olustu",
     "loadError": "Ilan yuklenirken bir hata olustu",
+    "sellerNotFound": "Satici profili bulunamadi",
+    "sellerLoadError": "Satici profili yuklenemedi",
+    "userNotFound": "Kullanici bilgisi bulunamadi. Lutfen tekrar giris yapin.",
+    "locationNotFound": "Konum bilgisi bulunamadi. Lutfen sayfayi yenileyin.",
     "basicInfo": "Temel Bilgiler",
     "categoryAndCondition": "Kategori ve Durum",
     "pricing": "Fiyatlandirma",
@@ -696,6 +715,7 @@
     "draftSaved": "Taslak kaydedildi",
     "productCreated": "Urun basariyla olusturuldu",
     "creationFailed": "Urun olusturulamadi. Lutfen tekrar deneyin.",
+    "userNotFound": "Kullanici bilgisi bulunamadi. Lutfen tekrar giris yapin.",
     "errors": {
       "titleRequired": "Ilan basligi zorunludur",
       "shortDescriptionRequired": "Kisa aciklama zorunludur",

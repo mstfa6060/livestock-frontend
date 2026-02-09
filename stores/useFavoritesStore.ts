@@ -1,10 +1,9 @@
 import { create } from 'zustand';
 import { LivestockTradingAPI } from '@/api/business_modules/livestocktrading';
-import { toast } from 'sonner';
 
 interface FavoriteState {
-  // Favorite product IDs set for quick lookup
-  favoriteIds: Set<string>;
+  // Map of productId -> favoriteRecordId for quick lookup and delete
+  favoriteMap: Map<string, string>;
 
   // Loading state
   isLoading: boolean;
@@ -20,7 +19,7 @@ interface FavoriteState {
 }
 
 export const useFavoritesStore = create<FavoriteState>((set, get) => ({
-  favoriteIds: new Set<string>(),
+  favoriteMap: new Map<string, string>(),
   isLoading: false,
   isInitialized: false,
 
@@ -37,87 +36,77 @@ export const useFavoritesStore = create<FavoriteState>((set, get) => ({
 
       // Fetch all user favorites
       const favorites = await LivestockTradingAPI.FavoriteProducts.All.Request({
-        sorting: { key: 'addedAt', direction: 1 }, // Descending
+        sorting: { key: 'addedAt', direction: 1 },
         filters: [],
         pageRequest: {
           currentPage: 1,
-          perPageCount: 1000, // Get all favorites
+          perPageCount: 1000,
           listAll: true,
         },
       });
 
-      // Extract product IDs
-      const productIds = new Set(favorites.map(f => f.productId));
-      set({ favoriteIds: productIds, isLoading: false, isInitialized: true });
-    } catch (error) {
-      console.error('Failed to initialize favorites:', error);
+      // Build productId -> favoriteRecordId map
+      const favoriteMap = new Map<string, string>();
+      for (const f of favorites) {
+        favoriteMap.set(f.productId, f.id);
+      }
+      set({ favoriteMap, isLoading: false, isInitialized: true });
+    } catch {
       // Mark as initialized even on error to prevent retry loops
-      // User can manually retry by navigating to favorites page
       set({ isLoading: false, isInitialized: true });
     }
   },
 
   toggleFavorite: async (productId: string, userId: string) => {
-    const { favoriteIds, isInitialized } = get();
+    const { favoriteMap, isInitialized } = get();
 
-    // Lazy initialization: initialize on first toggle if not already done
+    // Lazy initialization
     if (!isInitialized) {
       await get().initialize(userId);
     }
 
-    const isFavorited = favoriteIds.has(productId);
+    const existingRecordId = get().favoriteMap.get(productId);
+    const isFavorited = !!existingRecordId;
 
     // Optimistic update
-    const newFavoriteIds = new Set(favoriteIds);
+    const previousMap = new Map(get().favoriteMap);
+    const newMap = new Map(get().favoriteMap);
     if (isFavorited) {
-      newFavoriteIds.delete(productId);
+      newMap.delete(productId);
     } else {
-      newFavoriteIds.add(productId);
+      newMap.set(productId, 'pending');
     }
-    set({ favoriteIds: newFavoriteIds });
+    set({ favoriteMap: newMap });
 
     try {
       if (isFavorited) {
-        // Remove from favorites
-        // First, find the favorite ID
-        const favorites = await LivestockTradingAPI.FavoriteProducts.All.Request({
-          sorting: { key: 'addedAt', direction: 1 },
-          filters: [],
-          pageRequest: { currentPage: 1, perPageCount: 1000, listAll: true },
-        });
-
-        const favorite = favorites.find(f => f.productId === productId);
-        if (favorite) {
-          await LivestockTradingAPI.FavoriteProducts.Delete.Request({ id: favorite.id });
-        }
+        // Remove: use cached record ID directly (no extra API call)
+        await LivestockTradingAPI.FavoriteProducts.Delete.Request({ id: existingRecordId });
       } else {
         // Add to favorites
-        await LivestockTradingAPI.FavoriteProducts.Create.Request({
+        const response = await LivestockTradingAPI.FavoriteProducts.Create.Request({
           userId,
           productId,
         });
+        // Update map with the real record ID
+        const updatedMap = new Map(get().favoriteMap);
+        updatedMap.set(productId, response.id);
+        set({ favoriteMap: updatedMap });
       }
 
-      return !isFavorited; // Return new state
-    } catch (error) {
-      console.error('Failed to toggle favorite:', error);
-
+      return !isFavorited;
+    } catch {
       // Revert optimistic update on error
-      set({ favoriteIds });
-
-      // Show error toast
-      toast.error(isFavorited ? 'Favorilerden çıkarılamadı' : 'Favorilere eklenemedi');
-
-      return isFavorited; // Return original state
+      set({ favoriteMap: previousMap });
+      return isFavorited;
     }
   },
 
   isFavorite: (productId: string) => {
-    const { favoriteIds } = get();
-    return favoriteIds.has(productId);
+    return get().favoriteMap.has(productId);
   },
 
   clearFavorites: () => {
-    set({ favoriteIds: new Set<string>(), isInitialized: false });
+    set({ favoriteMap: new Map<string, string>(), isInitialized: false });
   },
 }));

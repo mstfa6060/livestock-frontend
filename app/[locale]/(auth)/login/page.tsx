@@ -69,7 +69,6 @@ function LoginForm() {
 
   const [isLoading, setIsLoading] = useState(false);
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
-  const [isAppleLoading, setIsAppleLoading] = useState(false);
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
@@ -169,28 +168,8 @@ function LoginForm() {
     },
   });
 
-  // Handle Apple login
-  const handleAppleLogin = async () => {
-    setIsAppleLoading(true);
-    setError("");
-
-    // Apple Sign In requires a specific setup with Apple Developer account
-    // For now, we'll show a message that it's coming soon
-    // In production, you would use the Apple JS SDK or a library like react-apple-signin-auth
-
-    try {
-      // Placeholder - Apple Sign In implementation
-      // This would typically use AppleID.auth.signIn() from Apple's JS SDK
-      console.log("Apple Sign In clicked - implementation pending");
-      setError("Apple ile giris cok yakinda aktif olacak");
-    } catch (err: unknown) {
-      const errorMessage =
-        err instanceof Error ? err.message : t("socialLoginError");
-      setError(errorMessage);
-    } finally {
-      setIsAppleLoading(false);
-    }
-  };
+  // Apple Sign In - not yet implemented
+  // Requires Apple Developer account setup and Apple JS SDK
 
   // Show loading while checking auth
   if (authLoading) {
@@ -236,16 +215,13 @@ function LoginForm() {
               <Button
                 type="button"
                 variant="outline"
-                className="w-full"
-                onClick={handleAppleLogin}
-                disabled={isAppleLoading || isLoading}
+                className="w-full opacity-50 cursor-not-allowed"
+                disabled
+                title={t("appleComingSoon")}
               >
-                {isAppleLoading ? (
-                  <Loader2 className="h-5 w-5 mr-2 animate-spin" />
-                ) : (
-                  <AppleIcon />
-                )}
+                <AppleIcon />
                 {t("continueWithApple")}
+                <span className="ml-2 text-xs text-muted-foreground">({t("appleComingSoon")})</span>
               </Button>
             </div>
 

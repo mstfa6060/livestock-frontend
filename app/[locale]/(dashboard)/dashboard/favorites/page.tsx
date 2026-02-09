@@ -79,8 +79,7 @@ export default function FavoritesPage() {
 
           setFavorites(mappedProducts);
         }
-      } catch (error) {
-        console.error("Failed to fetch favorites:", error);
+      } catch {
         toast.error(t("fetchError"));
       } finally {
         setIsLoading(false);

@@ -66,22 +66,15 @@ class ChatService {
       .build();
 
     // Connection state handlers
-    this.connection.onreconnecting((error) => {
-      console.log("SignalR yeniden baglaniyor...", error);
-    });
+    this.connection.onreconnecting(() => {});
 
-    this.connection.onreconnected((connectionId) => {
-      console.log("SignalR yeniden baglandi:", connectionId);
-    });
+    this.connection.onreconnected(() => {});
 
-    this.connection.onclose((error) => {
-      console.log("SignalR baglantisi kapandi:", error);
+    this.connection.onclose(() => {
       this.connectionPromise = null;
     });
 
-    this.connectionPromise = this.connection.start().then(() => {
-      console.log("SignalR baglantisi kuruldu");
-    });
+    this.connectionPromise = this.connection.start();
 
     return this.connectionPromise;
   }

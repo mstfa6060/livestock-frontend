@@ -62,6 +62,7 @@ const CONDITION_MAP: Record<number, string> = {
 
 export function ProductCard({ product, onFavorite, isFavorite = false }: ProductCardProps) {
   const t = useTranslations("products");
+  const tpd = useTranslations("productDetail");
   const { user } = useAuth();
   const { isFavorite: isFavoriteInStore, toggleFavorite } = useFavoritesStore();
   const [isTogglingFavorite, setIsTogglingFavorite] = useState(false);
@@ -122,7 +123,7 @@ export function ProductCard({ product, onFavorite, isFavorite = false }: Product
           ) : (
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-muted">
               <ImageOff className="h-12 w-12 text-muted-foreground/50" />
-              <span className="text-xs text-muted-foreground/50 mt-2">Görsel yok</span>
+              <span className="text-xs text-muted-foreground/50 mt-2">{tpd("noImage")}</span>
             </div>
           )}
 

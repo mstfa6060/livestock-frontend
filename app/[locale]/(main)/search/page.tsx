@@ -35,6 +35,7 @@ import {
 } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
+import { getProductCoverImages } from "@/lib/product-images";
 
 type SortOption = "newest" | "oldest" | "priceAsc" | "priceDesc" | "popular";
 type ConditionOption = "all" | "new" | "likeNew" | "good" | "fair";
@@ -118,8 +119,8 @@ export default function SearchPage() {
           pageRequest: { currentPage: 1, perPageCount: 100, listAll: true },
         });
         setCategories(response.map((c) => ({ id: c.id, name: c.name })));
-      } catch (error) {
-        console.error("Failed to fetch categories:", error);
+      } catch {
+        // Categories are optional
       }
     };
     fetchCategories();
@@ -130,122 +131,171 @@ export default function SearchPage() {
     const fetchProducts = async () => {
       setIsLoading(true);
       try {
-        const sortingKey = {
-          newest: "createdAt",
-          oldest: "createdAt",
-          priceAsc: "basePrice",
-          priceDesc: "basePrice",
-          popular: "viewCount",
-        }[sortParam];
-
-        const sortingDirection =
-          sortParam === "oldest" || sortParam === "priceAsc"
-            ? LivestockTradingAPI.Enums.XSortingDirection.Ascending
-            : LivestockTradingAPI.Enums.XSortingDirection.Descending;
-
-        // Build filters
-        const filters: Array<{
-          key: string;
-          type: string;
-          isUsed: boolean;
-          values: string[];
-          min: Record<string, unknown>;
-          max: Record<string, unknown>;
-          conditionType: string;
-        }> = [];
-
-        // Category filter
-        if (categoryParam) {
-          filters.push({
-            key: "categoryId",
-            type: "guid",
-            isUsed: true,
-            values: [categoryParam],
-            min: {},
-            max: {},
-            conditionType: "equals",
-          });
-        }
-
-        // Condition filter
-        if (conditionParam && conditionParam !== "all") {
-          filters.push({
-            key: "condition",
-            type: "int",
-            isUsed: true,
-            values: [CONDITION_MAP[conditionParam].toString()],
-            min: {},
-            max: {},
-            conditionType: "equals",
-          });
-        }
-
-        // Price range filter
-        if (minPriceParam || maxPriceParam) {
-          filters.push({
-            key: "basePrice",
-            type: "decimal",
-            isUsed: true,
-            values: [],
-            min: minPriceParam ? { value: parseFloat(minPriceParam) } : {},
-            max: maxPriceParam ? { value: parseFloat(maxPriceParam) } : {},
-            conditionType: "between",
-          });
-        }
-
-        const response = await LivestockTradingAPI.Products.All.Request({
-          countryCode: selectedCountry?.code || "TR",
-          sorting: {
-            key: sortingKey,
-            direction: sortingDirection,
-          },
-          filters,
-          pageRequest: {
-            currentPage: pageParam,
-            perPageCount: ITEMS_PER_PAGE,
-            listAll: false,
-          },
-        });
-
-        // Transform and filter by search query
-        let transformedProducts: Product[] = response.map((item) => ({
-          id: item.id,
-          title: item.title,
-          slug: item.slug,
-          shortDescription: item.shortDescription,
-          categoryId: item.categoryId,
-          brandId: item.brandId || undefined,
-          basePrice: item.basePrice as number,
-          currency: item.currency,
-          discountedPrice: item.discountedPrice as number | undefined,
-          stockQuantity: item.stockQuantity,
-          isInStock: item.isInStock,
-          sellerId: item.sellerId,
-          locationId: item.locationId,
-          locationCountryCode: item.locationCountryCode,
-          locationCity: item.locationCity,
-          status: item.status,
-          condition: item.condition,
-          viewCount: item.viewCount,
-          averageRating: item.averageRating as number | undefined,
-          reviewCount: item.reviewCount,
-          createdAt: item.createdAt,
-          imageUrl: undefined,
-        }));
-
-        // Client-side search filter
+        // Use Search API when query is present, otherwise fall back to Products.All
         if (queryParam) {
-          const query = queryParam.toLowerCase();
-          transformedProducts = transformedProducts.filter(
-            (p) =>
-              p.title.toLowerCase().includes(query) ||
-              p.shortDescription.toLowerCase().includes(query)
-          );
-        }
+          const sortByMap: Record<SortOption, string> = {
+            newest: "newest",
+            oldest: "newest", // Backend'de oldest yoksa newest kullan
+            priceAsc: "price_asc",
+            priceDesc: "price_desc",
+            popular: "most_viewed",
+          };
 
-        setProducts(transformedProducts);
-      } catch (error) {
-        console.error("Failed to fetch products:", error);
+          const searchResponse = await LivestockTradingAPI.Products.Search.Request({
+            query: queryParam,
+            countryCode: selectedCountry?.code || "TR",
+            categoryId: categoryParam || undefined,
+            minPrice: minPriceParam ? parseFloat(minPriceParam) : undefined,
+            maxPrice: maxPriceParam ? parseFloat(maxPriceParam) : undefined,
+            condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
+            sortBy: sortByMap[sortParam] || "relevance",
+            pageRequest: {
+              currentPage: pageParam,
+              perPageCount: ITEMS_PER_PAGE,
+              listAll: false,
+            },
+          });
+
+          const transformedProducts: Product[] = searchResponse.results.map((item) => ({
+            id: item.id,
+            title: item.title,
+            slug: item.slug,
+            shortDescription: item.shortDescription,
+            categoryId: item.categoryId,
+            brandId: undefined,
+            basePrice: item.basePrice,
+            currency: item.currency,
+            discountedPrice: item.discountedPrice,
+            stockQuantity: 0,
+            isInStock: item.isInStock,
+            sellerId: item.sellerId,
+            locationId: "",
+            locationCountryCode: item.locationCountryCode,
+            locationCity: item.locationCity,
+            status: item.status,
+            condition: item.condition,
+            viewCount: item.viewCount,
+            averageRating: item.averageRating,
+            reviewCount: item.reviewCount,
+            createdAt: item.createdAt,
+            imageUrl: item.coverImageUrl || undefined,
+          }));
+
+          setProducts(transformedProducts);
+        } else {
+          // No search query - use Products.All with filters
+          const sortingKey = {
+            newest: "createdAt",
+            oldest: "createdAt",
+            priceAsc: "basePrice",
+            priceDesc: "basePrice",
+            popular: "viewCount",
+          }[sortParam];
+
+          const sortingDirection =
+            sortParam === "oldest" || sortParam === "priceAsc"
+              ? LivestockTradingAPI.Enums.XSortingDirection.Ascending
+              : LivestockTradingAPI.Enums.XSortingDirection.Descending;
+
+          const filters: Array<{
+            key: string;
+            type: string;
+            isUsed: boolean;
+            values: string[];
+            min: Record<string, unknown>;
+            max: Record<string, unknown>;
+            conditionType: string;
+          }> = [];
+
+          if (categoryParam) {
+            filters.push({
+              key: "categoryId",
+              type: "guid",
+              isUsed: true,
+              values: [categoryParam],
+              min: {},
+              max: {},
+              conditionType: "equals",
+            });
+          }
+
+          if (conditionParam && conditionParam !== "all") {
+            filters.push({
+              key: "condition",
+              type: "int",
+              isUsed: true,
+              values: [CONDITION_MAP[conditionParam].toString()],
+              min: {},
+              max: {},
+              conditionType: "equals",
+            });
+          }
+
+          if (minPriceParam || maxPriceParam) {
+            filters.push({
+              key: "basePrice",
+              type: "decimal",
+              isUsed: true,
+              values: [],
+              min: minPriceParam ? { value: parseFloat(minPriceParam) } : {},
+              max: maxPriceParam ? { value: parseFloat(maxPriceParam) } : {},
+              conditionType: "between",
+            });
+          }
+
+          const response = await LivestockTradingAPI.Products.All.Request({
+            countryCode: selectedCountry?.code || "TR",
+            sorting: {
+              key: sortingKey,
+              direction: sortingDirection,
+            },
+            filters,
+            pageRequest: {
+              currentPage: pageParam,
+              perPageCount: ITEMS_PER_PAGE,
+              listAll: false,
+            },
+          });
+
+          const transformedProducts: Product[] = response.map((item) => ({
+            id: item.id,
+            title: item.title,
+            slug: item.slug,
+            shortDescription: item.shortDescription,
+            categoryId: item.categoryId,
+            brandId: item.brandId || undefined,
+            basePrice: item.basePrice as number,
+            currency: item.currency,
+            discountedPrice: item.discountedPrice as number | undefined,
+            stockQuantity: item.stockQuantity,
+            isInStock: item.isInStock,
+            sellerId: item.sellerId,
+            locationId: item.locationId,
+            locationCountryCode: item.locationCountryCode,
+            locationCity: item.locationCity,
+            status: item.status,
+            condition: item.condition,
+            viewCount: item.viewCount,
+            averageRating: item.averageRating as number | undefined,
+            reviewCount: item.reviewCount,
+            createdAt: item.createdAt,
+            imageUrl: undefined,
+          }));
+
+          setProducts(transformedProducts);
+
+          // Fetch cover images asynchronously (non-blocking)
+          const productIds = transformedProducts.map((p) => p.id);
+          getProductCoverImages(productIds).then((imageMap) => {
+            setProducts((prev) =>
+              prev.map((p) => ({
+                ...p,
+                imageUrl: imageMap[p.id] || p.imageUrl,
+              }))
+            );
+          });
+        }
+      } catch {
         setProducts([]);
       } finally {
         setIsLoading(false);

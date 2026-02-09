@@ -97,8 +97,7 @@ export default function SellersPage() {
         // Only show active sellers
         const activeSellers = response.filter((s) => s.isActive);
         setSellers(activeSellers as Seller[]);
-      } catch (error) {
-        console.error("Failed to fetch sellers:", error);
+      } catch {
         setSellers([]);
       } finally {
         setIsLoading(false);

@@ -23,6 +23,7 @@ import {
   Package,
   Star,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { FileProviderAPI } from "@/api/base_modules/FileProvider";
 import { AppConfig } from "@/config/livestock-config";
@@ -83,6 +84,7 @@ export default function ProductDetailPage() {
   const t = useTranslations("productDetail");
   const tp = useTranslations("products");
   const tc = useTranslations("common");
+  const router = useRouter();
   const { user } = useAuth();
   const { toggleFavorite, isFavorite: checkIsFavorite } = useFavoritesStore();
 
@@ -201,8 +203,8 @@ export default function ProductDetailPage() {
                 });
               setImages(imageUrls);
             }
-          } catch (bucketError) {
-            console.error("Failed to fetch media bucket:", bucketError);
+          } catch {
+            // Images are optional
           }
         }
 
@@ -255,19 +257,35 @@ export default function ProductDetailPage() {
 
         setSimilarProducts(similarProductsData);
 
-        // Mock seller data (TODO: Fetch from Users API when available)
-        setSeller({
-          id: response.sellerId,
-          name: response.sellerName,
-          isVerified: true,
-          rating: 4.5,
-          reviewCount: 23,
-          productCount: 15,
-          memberSince: new Date("2022-01-01"),
-          location: "Istanbul, Turkey",
-        });
-      } catch (err) {
-        console.error("Failed to fetch product:", err);
+        // Fetch seller data
+        try {
+          const sellerResponse = await LivestockTradingAPI.Sellers.GetByUserId.Request({
+            userId: response.sellerId,
+          });
+          setSeller({
+            id: sellerResponse.id,
+            name: sellerResponse.businessName || response.sellerName,
+            isVerified: sellerResponse.isVerified,
+            rating: sellerResponse.averageRating || 0,
+            reviewCount: sellerResponse.totalReviews,
+            productCount: sellerResponse.totalSales,
+            memberSince: sellerResponse.createdAt,
+            location: sellerResponse.phone ? sellerResponse.description : t("defaultLocation"),
+          });
+        } catch {
+          // Fallback to basic seller info from product
+          setSeller({
+            id: response.sellerId,
+            name: response.sellerName,
+            isVerified: false,
+            rating: 0,
+            reviewCount: 0,
+            productCount: 0,
+            memberSince: new Date(),
+            location: t("defaultLocation"),
+          });
+        }
+      } catch {
         setError(t("productNotFound"));
       } finally {
         setIsLoading(false);
@@ -290,8 +308,8 @@ export default function ProductDetailPage() {
     try {
       await toggleFavorite(product.id, user.id);
       toast.success(isFavorite ? t("removedFromFavorites") : t("addedToFavorites"));
-    } catch (error) {
-      console.error("Failed to toggle favorite:", error);
+    } catch {
+      // Handled by store
     }
   };
 
@@ -307,10 +325,30 @@ export default function ProductDetailPage() {
     }
   };
 
-  const handleContact = () => {
-    // TODO: Navigate to messages or open contact modal
-    toast.info(t("messagingComingSoon"));
-    console.log("Contact seller:", seller?.id);
+  const [isContacting, setIsContacting] = useState(false);
+
+  const handleContact = async () => {
+    if (!user) {
+      toast.error(t("loginRequired"));
+      return;
+    }
+    if (!product || !seller) return;
+
+    setIsContacting(true);
+    try {
+      const response = await LivestockTradingAPI.Conversations.StartWithProduct.Request({
+        productId: product.id,
+        sellerId: seller.id,
+        buyerUserId: user.id,
+        initialMessage: t("inquiryMessage", { title: product.title }),
+      });
+
+      router.push(`/dashboard/messages/${response.conversationId}`);
+    } catch {
+      toast.error(t("contactError"));
+    } finally {
+      setIsContacting(false);
+    }
   };
 
   if (isLoading) {
@@ -494,8 +532,8 @@ export default function ProductDetailPage() {
 
                 {/* Actions */}
                 <div className="space-y-2">
-                  <Button className="w-full" size="lg" onClick={handleContact}>
-                    {t("contactSeller")}
+                  <Button className="w-full" size="lg" onClick={handleContact} disabled={isContacting}>
+                    {isContacting ? t("contacting") || "..." : t("contactSeller")}
                   </Button>
                   <div className="flex gap-2">
                     <Button

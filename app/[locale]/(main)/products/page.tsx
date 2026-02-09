@@ -17,6 +17,7 @@ import {
 import { Search, SlidersHorizontal } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
+import { getProductCoverImages } from "@/lib/product-images";
 
 type SortOption = "newest" | "oldest" | "priceAsc" | "priceDesc" | "popular";
 
@@ -103,13 +104,23 @@ export default function ProductsPage() {
           averageRating: item.averageRating as number | undefined,
           reviewCount: item.reviewCount,
           createdAt: item.createdAt,
-          imageUrl: undefined, // API doesn't return image in list
+          imageUrl: undefined,
         }));
 
         setProducts(transformedProducts);
         setTotalProducts(transformedProducts.length); // API should return total count
-      } catch (error) {
-        console.error("Failed to fetch products:", error);
+
+        // Fetch cover images asynchronously (non-blocking)
+        const productIds = transformedProducts.map((p) => p.id);
+        getProductCoverImages(productIds).then((imageMap) => {
+          setProducts((prev) =>
+            prev.map((p) => ({
+              ...p,
+              imageUrl: imageMap[p.id] || p.imageUrl,
+            }))
+          );
+        });
+      } catch {
         setProducts([]);
       } finally {
         setIsLoading(false);

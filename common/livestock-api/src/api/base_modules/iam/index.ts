@@ -112,6 +112,11 @@ export namespace IAMAPI {
 				city: string;
 				district: string;
 				isPhoneVerified: boolean;
+				countryId?: number;
+				countryCode?: string;
+				countryName?: string;
+				preferredCurrencyCode?: string;
+				currencySymbol?: string;
 			}
 		}
 
@@ -237,6 +242,39 @@ export namespace IAMAPI {
 				language: string;
 				currencyCode: string;
 				currencySymbol: string;
+			}
+		}
+
+		export namespace Update {
+			export const RequestPath = AppConfig.IAMUrl + '/Users/Update';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(api.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				userId: Guid;
+				firstName: string;
+				surname: string;
+				phoneNumber?: string;
+				countryId?: number;
+				language: string;
+				preferredCurrencyCode: string;
+				avatarUrl?: string;
+			}
+			export interface IResponseModel {
+				userId: Guid;
+				userName: string;
+				email: string;
+				firstName: string;
+				surname: string;
+				fullName: string;
+				phoneNumber: string;
+				countryId: number;
+				countryCode: string;
+				countryName: string;
+				language: string;
+				preferredCurrencyCode: string;
+				currencySymbol: string;
+				avatarUrl: string;
+				isPhoneVerified: boolean;
+				isActive: boolean;
 			}
 		}
 

@@ -77,10 +77,25 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 // Storage keys
 const STORAGE_KEYS = {
   JWT: "jwt",
+  ACCESS_TOKEN: "accessToken",
   REFRESH_TOKEN: "refreshToken",
   USER: "user",
   REMEMBERED_EMAIL: "rememberedEmail",
 } as const;
+
+// Check if JWT token is expired by decoding the payload
+function isTokenExpired(token: string): boolean {
+  try {
+    const parts = token.split(".");
+    if (parts.length !== 3) return true;
+    const payload = JSON.parse(atob(parts[1]));
+    if (!payload.exp) return false;
+    // Add 30 second buffer to avoid edge cases
+    return Date.now() >= (payload.exp * 1000) - 30000;
+  } catch {
+    return true;
+  }
+}
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
@@ -93,6 +108,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Helper to clear auth data from localStorage
   const clearAuthData = useCallback(() => {
     localStorage.removeItem(STORAGE_KEYS.JWT);
+    localStorage.removeItem(STORAGE_KEYS.ACCESS_TOKEN);
     localStorage.removeItem(STORAGE_KEYS.REFRESH_TOKEN);
     localStorage.removeItem(STORAGE_KEYS.USER);
   }, []);
@@ -105,6 +121,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         const jwt = localStorage.getItem(STORAGE_KEYS.JWT);
 
         if (storedUser && jwt) {
+          // Check if JWT is expired
+          if (isTokenExpired(jwt)) {
+            // Token expired, clear auth data
+            clearAuthData();
+            setState({
+              user: null,
+              isAuthenticated: false,
+              isLoading: false,
+            });
+            return;
+          }
+
           const user = JSON.parse(storedUser) as User;
           setState({
             user,
@@ -120,9 +148,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }
       } catch {
         // Clear invalid data
-        localStorage.removeItem(STORAGE_KEYS.JWT);
-        localStorage.removeItem(STORAGE_KEYS.REFRESH_TOKEN);
-        localStorage.removeItem(STORAGE_KEYS.USER);
+        clearAuthData();
         setState({
           user: null,
           isAuthenticated: false,
@@ -132,7 +158,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
 
     initializeAuth();
-  }, []);
+  }, [clearAuthData]);
 
   // Clear favorites when user logs out
   useEffect(() => {
@@ -159,7 +185,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       // Store tokens
       localStorage.setItem(STORAGE_KEYS.JWT, response.jwt);
-      localStorage.setItem('accessToken', response.jwt); // Also save as accessToken
+      localStorage.setItem(STORAGE_KEYS.ACCESS_TOKEN, response.jwt); // Also save as accessToken
       localStorage.setItem(STORAGE_KEYS.REFRESH_TOKEN, response.refreshToken);
       localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(response.user));
 
@@ -198,7 +224,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       // Store tokens
       localStorage.setItem(STORAGE_KEYS.JWT, response.jwt);
-      localStorage.setItem('accessToken', response.jwt);
+      localStorage.setItem(STORAGE_KEYS.ACCESS_TOKEN, response.jwt);
       localStorage.setItem(STORAGE_KEYS.REFRESH_TOKEN, response.refreshToken);
       localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(response.user));
 
@@ -273,6 +299,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         email: response.email,
         displayName: response.fullName,
         isPhoneVerified: response.isPhoneVerified,
+        countryId: response.countryId ?? user.countryId,
+        countryCode: response.countryCode ?? user.countryCode,
+        countryName: response.countryName ?? user.countryName,
+        language: response.language ?? user.language,
+        currencyCode: response.preferredCurrencyCode ?? user.currencyCode,
+        currencySymbol: response.currencySymbol ?? user.currencySymbol,
       };
 
       localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(updatedUser));

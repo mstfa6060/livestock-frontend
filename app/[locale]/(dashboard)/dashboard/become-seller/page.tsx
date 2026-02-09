@@ -81,7 +81,6 @@ export default function BecomeSellerPage() {
         }
       } catch {
         // No seller profile found, which is fine
-        console.log("No existing seller profile found");
       } finally {
         setIsCheckingSeller(false);
       }
@@ -119,7 +118,6 @@ export default function BecomeSellerPage() {
       toast.success(t("success"));
       router.push("/dashboard/listings/new");
     } catch (error) {
-      console.error("Failed to create seller profile:", error);
       toast.error(t("error"));
     } finally {
       setIsLoading(false);

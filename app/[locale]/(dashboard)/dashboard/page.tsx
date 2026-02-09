@@ -9,7 +9,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { useAuth } from "@/contexts/AuthContext";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
-import { useFavoritesStore } from "@/stores/useFavoritesStore";
 import { useNotificationsStore } from "@/stores/useNotificationsStore";
 import {
   Package,
@@ -41,7 +40,6 @@ export default function DashboardPage() {
   const tn = useTranslations("dashboardNav");
   const { user } = useAuth();
 
-  const { favoriteIds } = useFavoritesStore();
   const { unreadCount: unreadNotifications, fetchNotifications } = useNotificationsStore();
 
   const [isLoading, setIsLoading] = useState(true);
@@ -64,7 +62,12 @@ export default function DashboardPage() {
 
       setIsLoading(true);
       try {
-        // Fetch user's products
+        // Fetch stats from Dashboard API
+        const statsResponse = await LivestockTradingAPI.Dashboard.MyStats.Request({
+          userId: user.id,
+        });
+
+        // Fetch recent listings for the activity section
         const productsResponse = await LivestockTradingAPI.Products.All.Request({
           countryCode: "TR",
           sorting: {
@@ -84,15 +87,10 @@ export default function DashboardPage() {
           ],
           pageRequest: {
             currentPage: 1,
-            perPageCount: 100,
+            perPageCount: 5,
             listAll: false,
           },
         });
-
-        // Calculate stats from products
-        const totalListings = productsResponse.length;
-        const activeListings = productsResponse.filter((p) => p.status === 1).length;
-        const totalViews = productsResponse.reduce((sum, p) => sum + (p.viewCount || 0), 0);
 
         // Get recent listings (top 5)
         const recent = productsResponse.slice(0, 5).map((p) => ({
@@ -107,23 +105,23 @@ export default function DashboardPage() {
         await fetchNotifications(user.id);
 
         setStats({
-          totalListings,
-          activeListings,
-          totalViews,
-          totalFavorites: favoriteIds.size,
+          totalListings: statsResponse.totalListings,
+          activeListings: statsResponse.activeListings,
+          totalViews: statsResponse.totalViews,
+          totalFavorites: statsResponse.totalFavorites,
           unreadNotifications,
         });
 
         setRecentListings(recent);
-      } catch (error) {
-        console.error("Failed to fetch dashboard data:", error);
+      } catch {
+        // Silently fail
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchDashboardData();
-  }, [user?.id, favoriteIds.size, unreadNotifications, fetchNotifications]);
+  }, [user?.id, unreadNotifications, fetchNotifications]);
 
   // Get status text
   const getStatusText = (status: number) => {
