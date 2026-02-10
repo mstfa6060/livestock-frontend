@@ -23,11 +23,11 @@ export interface Product {
   basePrice: number;
   currency: string;
   discountedPrice?: number | null;
-  stockQuantity: number;
+  stockQuantity?: number;
   isInStock: boolean;
   sellerId: string;
-  locationId: string;
-  locationCountryCode: string;
+  locationId?: string;
+  locationCountryCode?: string;
   locationCity: string;
   status: number;
   condition: number;

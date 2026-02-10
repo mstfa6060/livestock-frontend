@@ -26,11 +26,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Search, SlidersHorizontal, X } from "lucide-react";
+import { Search, SlidersHorizontal, X, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
-import { getProductCoverImages } from "@/lib/product-images";
 
 type SortOption = "newest" | "oldest" | "priceAsc" | "priceDesc" | "popular";
 type ConditionOption = "all" | "new" | "likeNew" | "good" | "fair";
@@ -70,9 +69,11 @@ export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
   const [totalProducts, setTotalProducts] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
 
   // Local filter state (until applied)
   const [localCategory, setLocalCategory] = useState(categoryParam);
@@ -121,82 +122,54 @@ export default function ProductsPage() {
     fetchCategories();
   }, [locale]);
 
-  // Fetch products
+  // Sort mapping
+  const getSortBy = (sort: SortOption) => {
+    const map: Record<SortOption, string> = {
+      newest: "createdAt_desc",
+      oldest: "createdAt_asc",
+      priceAsc: "basePrice_asc",
+      priceDesc: "basePrice_desc",
+      popular: "viewCount_desc",
+    };
+    return map[sort];
+  };
+
+  // Transform search result to Product
+  const transformResult = (item: LivestockTradingAPI.Products.Search.ISearchResult): Product => ({
+    id: item.id,
+    title: item.title,
+    slug: item.slug,
+    shortDescription: item.shortDescription,
+    categoryId: item.categoryId,
+    basePrice: item.basePrice,
+    currency: item.currency,
+    discountedPrice: item.discountedPrice,
+    isInStock: item.isInStock,
+    sellerId: item.sellerId,
+    locationCity: item.locationCity,
+    locationCountryCode: item.locationCountryCode,
+    status: item.status,
+    condition: item.condition,
+    viewCount: item.viewCount,
+    averageRating: item.averageRating,
+    reviewCount: item.reviewCount,
+    createdAt: item.createdAt,
+    imageUrl: item.coverImageUrl || undefined,
+  });
+
+  // Fetch products using Search endpoint (has totalCount & coverImageUrl)
   useEffect(() => {
     const fetchProducts = async () => {
       setIsLoading(true);
       try {
-        const sortingKey = {
-          newest: "createdAt",
-          oldest: "createdAt",
-          priceAsc: "basePrice",
-          priceDesc: "basePrice",
-          popular: "viewCount",
-        }[sortParam];
-
-        const sortingDirection =
-          sortParam === "oldest" || sortParam === "priceAsc"
-            ? LivestockTradingAPI.Enums.XSortingDirection.Ascending
-            : LivestockTradingAPI.Enums.XSortingDirection.Descending;
-
-        // Build filters
-        const filters: any[] = [];
-
-        if (categoryParam) {
-          filters.push({
-            key: "categoryId",
-            type: "guid",
-            isUsed: true,
-            values: [categoryParam],
-            min: {},
-            max: {},
-            conditionType: "equals",
-          });
-        }
-
-        if (conditionParam !== "all") {
-          filters.push({
-            key: "condition",
-            type: "number",
-            isUsed: true,
-            values: [String(CONDITION_MAP[conditionParam])],
-            min: {},
-            max: {},
-            conditionType: "equals",
-          });
-        }
-
-        if (minPriceParam) {
-          filters.push({
-            key: "basePrice",
-            type: "number",
-            isUsed: true,
-            values: [],
-            min: { value: parseFloat(minPriceParam) },
-            max: {},
-            conditionType: "greaterThanOrEqual",
-          });
-        }
-
-        if (maxPriceParam) {
-          filters.push({
-            key: "basePrice",
-            type: "number",
-            isUsed: true,
-            values: [],
-            min: {},
-            max: { value: parseFloat(maxPriceParam) },
-            conditionType: "lessThanOrEqual",
-          });
-        }
-
-        const response = await LivestockTradingAPI.Products.All.Request({
+        const response = await LivestockTradingAPI.Products.Search.Request({
+          query: "",
           countryCode: selectedCountry?.code || "TR",
-          sorting: {
-            key: sortingKey,
-            direction: sortingDirection,
-          },
-          filters,
+          categoryId: categoryParam || undefined,
+          condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
+          minPrice: minPriceParam ? parseFloat(minPriceParam) : undefined,
+          maxPrice: maxPriceParam ? parseFloat(maxPriceParam) : undefined,
+          sortBy: getSortBy(sortParam),
           pageRequest: {
             currentPage: pageParam,
             perPageCount: ITEMS_PER_PAGE,
@@ -204,46 +177,13 @@ export default function ProductsPage() {
           },
         });
 
-        const transformedProducts: Product[] = response.map((item) => ({
-          id: item.id,
-          title: item.title,
-          slug: item.slug,
-          shortDescription: item.shortDescription,
-          categoryId: item.categoryId,
-          brandId: item.brandId || undefined,
-          basePrice: item.basePrice as number,
-          currency: item.currency,
-          discountedPrice: item.discountedPrice as number | undefined,
-          stockQuantity: item.stockQuantity,
-          isInStock: item.isInStock,
-          sellerId: item.sellerId,
-          locationId: item.locationId,
-          locationCountryCode: item.locationCountryCode,
-          locationCity: item.locationCity,
-          status: item.status,
-          condition: item.condition,
-          viewCount: item.viewCount,
-          averageRating: item.averageRating as number | undefined,
-          reviewCount: item.reviewCount,
-          createdAt: item.createdAt,
-          imageUrl: undefined,
-        }));
-
-        setProducts(transformedProducts);
-        setTotalProducts(transformedProducts.length);
-
-        // Fetch cover images asynchronously
-        const productIds = transformedProducts.map((p) => p.id);
-        getProductCoverImages(productIds).then((imageMap) => {
-          setProducts((prev) =>
-            prev.map((p) => ({
-              ...p,
-              imageUrl: imageMap[p.id] || p.imageUrl,
-            }))
-          );
-        });
+        setProducts(response.results.map(transformResult));
+        setTotalProducts(response.totalCount);
+        setTotalPages(response.totalPages);
       } catch {
         setProducts([]);
+        setTotalProducts(0);
+        setTotalPages(0);
         toast.error(t("fetchError"));
       } finally {
         setIsLoading(false);
@@ -252,6 +192,36 @@ export default function ProductsPage() {
 
     fetchProducts();
   }, [sortParam, pageParam, categoryParam, conditionParam, minPriceParam, maxPriceParam, selectedCountry?.code]);
+
+  // Load more handler for "Load More" button
+  const handleLoadMore = async () => {
+    if (isLoadingMore || pageParam >= totalPages) return;
+    setIsLoadingMore(true);
+    try {
+      const nextPage = pageParam + 1;
+      const response = await LivestockTradingAPI.Products.Search.Request({
+        query: "",
+        countryCode: selectedCountry?.code || "TR",
+        categoryId: categoryParam || undefined,
+        condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
+        minPrice: minPriceParam ? parseFloat(minPriceParam) : undefined,
+        maxPrice: maxPriceParam ? parseFloat(maxPriceParam) : undefined,
+        sortBy: getSortBy(sortParam),
+        pageRequest: {
+          currentPage: nextPage,
+          perPageCount: ITEMS_PER_PAGE,
+          listAll: false,
+        },
+      });
+
+      setProducts((prev) => [...prev, ...response.results.map(transformResult)]);
+      updateParams({ page: String(nextPage) });
+    } catch {
+      toast.error(t("fetchError"));
+    } finally {
+      setIsLoadingMore(false);
+    }
+  };
 
   // Apply filters
   const applyFilters = () => {
@@ -299,8 +269,6 @@ export default function ProductsPage() {
           p.shortDescription.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : products;
-
-  const totalPages = Math.ceil(totalProducts / ITEMS_PER_PAGE);
 
   // Filter sidebar content
   const FilterContent = () => (
@@ -517,39 +485,32 @@ export default function ProductsPage() {
               </div>
             )}
 
-            {/* Pagination */}
-            {totalPages > 1 && (
-              <div className="flex justify-center gap-2 mt-8">
+            {/* Load More */}
+            {pageParam < totalPages && (
+              <div className="flex justify-center mt-8">
                 <Button
                   variant="outline"
-                  disabled={pageParam === 1}
-                  onClick={() => updateParams({ page: String(pageParam - 1) })}
+                  size="lg"
+                  onClick={handleLoadMore}
+                  disabled={isLoadingMore}
                 >
-                  {t("pagination.prev")}
-                </Button>
-                <div className="flex items-center gap-1">
-                  {Array.from({ length: Math.min(5, totalPages) }).map((_, i) => {
-                    const page = i + 1;
-                    return (
-                      <Button
-                        key={page}
-                        variant={pageParam === page ? "default" : "outline"}
-                        size="icon"
-                        onClick={() => updateParams({ page: String(page) })}
-                      >
-                        {page}
-                      </Button>
-                    );
-                  })}
-                </div>
-                <Button
-                  variant="outline"
-                  disabled={pageParam === totalPages}
-                  onClick={() => updateParams({ page: String(pageParam + 1) })}
-                >
-                  {t("pagination.next")}
+                  {isLoadingMore ? (
+                    <>
+                      <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                      {t("loading")}
+                    </>
+                  ) : (
+                    t("loadMore")
+                  )}
                 </Button>
               </div>
+            )}
+
+            {/* Results count */}
+            {!isLoading && totalProducts > 0 && (
+              <p className="text-center text-sm text-muted-foreground mt-4">
+                {t("showingOf", { count: products.length, total: totalProducts })}
+              </p>
             )}
           </div>
         </div>

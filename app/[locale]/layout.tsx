@@ -62,6 +62,13 @@ export async function generateMetadata({
     },
     description,
     metadataBase: new URL(BASE_URL),
+    manifest: "/manifest.json",
+    themeColor: "#16a34a",
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: "default",
+      title: "Livestock Trading",
+    },
     alternates: {
       canonical: locale === defaultLocale ? BASE_URL : `${BASE_URL}/${locale}`,
       languages: alternateLanguages,

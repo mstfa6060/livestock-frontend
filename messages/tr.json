@@ -519,6 +519,8 @@
     "perPage": "Sayfa basina",
     "showing": "{from}-{to} arasi, toplam {total} urun",
     "fetchError": "Urunler yuklenirken bir hata olustu",
+    "loadMore": "Daha Fazla Goster",
+    "showingOf": "{count} / {total} urun gosteriliyor",
     "loginToFavorite": "Favorilere eklemek icin giris yapin",
     "addedToFavorites": "Favorilere eklendi",
     "removedFromFavorites": "Favorilerden cikarildi"
