@@ -170,7 +170,13 @@
     "saveError": "Profil guncellenirken bir hata olustu",
     "avatar": "Profil Fotografi",
     "changeAvatar": "Fotografi Degistir",
-    "removeAvatar": "Fotografi Kaldir"
+    "removeAvatar": "Fotografi Kaldir",
+    "currencies": {
+      "try": "Turk Lirasi",
+      "usd": "ABD Dolari",
+      "eur": "Euro",
+      "gbp": "Ingiliz Sterlini"
+    }
   },
   "myListings": {
     "title": "Ilanlarim",
@@ -326,6 +332,11 @@
     "featured": {
       "title": "One Cikan Ilanlar",
       "viewAll": "Tumunu Gor"
+    },
+    "cta": {
+      "title": "Hemen Baslayin",
+      "subtitle": "Binlerce satici ve alicinin bulustugu platformda yerinizi alin.",
+      "button": "Ucretsiz Kayit Ol"
     }
   },
   "footer": {
@@ -346,7 +357,8 @@
     "sellers": "Saticilar",
     "products": "Urunler",
     "map": "Harita",
-    "appleLoginComingSoon": "Apple ile giris cok yakinda aktif olacak"
+    "appleLoginComingSoon": "Apple ile giris cok yakinda aktif olacak",
+    "supportEmail": "info@livestock-trading.com"
   },
   "about": {
     "title": "Hakkimizda",
@@ -385,6 +397,7 @@
     "title": "Iletisim",
     "subtitle": "Sorulariniz icin bizimle iletisime gecin",
     "form": {
+      "title": "Bize Yazin",
       "name": "Adiniz",
       "namePlaceholder": "Ahmet Yilmaz",
       "email": "E-posta",
@@ -476,13 +489,6 @@
     "search": "Urun ara...",
     "filters": "Filtreler",
     "sort": "Sirala",
-    "sort": {
-      "newest": "En Yeni",
-      "oldest": "En Eski",
-      "priceAsc": "Fiyat (Dusukten Yuksege)",
-      "priceDesc": "Fiyat (Yuksekten Dusuge)",
-      "popular": "En Populer"
-    },
     "sortOptions": {
       "newest": "En Yeni",
       "oldest": "En Eski",
@@ -553,7 +559,11 @@
     "contactError": "Iletisim kurulamadi. Lutfen tekrar deneyin.",
     "noImage": "Gorsel yok",
     "defaultLocation": "Turkiye",
-    "inquiryMessage": "{title} hakkinda bilgi almak istiyorum."
+    "inquiryMessage": "{title} hakkinda bilgi almak istiyorum.",
+    "breadcrumb": {
+      "home": "Ana Sayfa",
+      "products": "Urunler"
+    }
   },
   "seller": {
     "title": "Satici Bilgileri",
@@ -731,6 +741,7 @@
     "productCreated": "Urun basariyla olusturuldu",
     "creationFailed": "Urun olusturulamadi. Lutfen tekrar deneyin.",
     "userNotFound": "Kullanici bilgisi bulunamadi. Lutfen tekrar giris yapin.",
+    "defaultBusinessName": "Isletmem",
     "errors": {
       "titleRequired": "Ilan basligi zorunludur",
       "shortDescriptionRequired": "Kisa aciklama zorunludur",
@@ -767,7 +778,12 @@
     "submit": "Satici Profili Olustur",
     "submitting": "Profil olusturuluyor...",
     "success": "Satici profiliniz basariyla olusturuldu!",
-    "error": "Satici profili olusturulurken bir hata olustu"
+    "error": "Satici profili olusturulurken bir hata olustu",
+    "taxNumberHelp": "10 veya 11 haneli vergi numaranizi girin (opsiyonel)",
+    "phoneHelp": "Ornek: +90 555 123 45 67 veya 0555 123 45 67",
+    "websiteHelp": "Ornek: www.isletmem.com veya https://isletmem.com",
+    "alreadySellerDescription": "Ilanlarinizi yonetmek icin asagidaki butonu kullanabilirsiniz.",
+    "newListing": "Yeni Ilan Ekle"
   },
   "fileUpload": {
     "dragDrop": "Fotograf veya video yukleyin",

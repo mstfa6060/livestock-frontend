@@ -100,8 +100,8 @@ export default function RegisterPage() {
           // Find Turkey or use first country
           const turkey = countries.find((c) => c.code === "TR");
           setDefaultCountry(turkey || countries[0]);
-        } catch (error) {
-          console.error("Failed to load countries:", error);
+        } catch {
+          // Countries are optional for registration
         }
       };
       loadDefaultCountry();
@@ -131,7 +131,6 @@ export default function RegisterPage() {
       router.push("/login");
     } catch (err) {
       setError(err instanceof Error ? err.message : t("errorDefault"));
-      console.error(err);
     } finally {
       setIsLoading(false);
     }

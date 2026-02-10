@@ -21,6 +21,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { IAMAPI } from "@/api/base_modules/iam";
 import { toast } from "sonner";
 import { CheckCircle, XCircle, Loader2 } from "lucide-react";
+import { languageNames, type Locale } from "@/i18n/config";
 
 interface Country {
   id: number;
@@ -119,20 +120,17 @@ export default function ProfilePage() {
     }
   };
 
-  const languages = [
-    { code: "tr", name: "Turkce" },
-    { code: "en", name: "English" },
-    { code: "de", name: "Deutsch" },
-    { code: "fr", name: "Francais" },
-    { code: "ar", name: "العربية" },
-    { code: "ru", name: "Русский" },
-  ];
+  const popularLocales: Locale[] = ["tr", "en", "de", "fr", "ar", "ru", "es", "pt", "zh", "ja"];
+  const languages = popularLocales.map((code) => ({
+    code,
+    name: languageNames[code],
+  }));
 
   const currencies = [
-    { code: "TRY", symbol: "₺", name: "Turk Lirasi" },
-    { code: "USD", symbol: "$", name: "US Dollar" },
-    { code: "EUR", symbol: "€", name: "Euro" },
-    { code: "GBP", symbol: "£", name: "British Pound" },
+    { code: "TRY", symbol: "₺", name: t("currencies.try") },
+    { code: "USD", symbol: "$", name: t("currencies.usd") },
+    { code: "EUR", symbol: "€", name: t("currencies.eur") },
+    { code: "GBP", symbol: "£", name: t("currencies.gbp") },
   ];
 
   return (

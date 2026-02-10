@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,8 +16,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowLeft, Mail } from "lucide-react";
+import { ArrowLeft, Mail, Loader2, AlertCircle } from "lucide-react";
 import { IAMAPI } from "@/api/base_modules/iam";
+import { forgotPasswordSchema, type ForgotPasswordFormData } from "@/lib/validations";
 
 export default function ForgotPasswordPage() {
   const t = useTranslations("auth.forgotPassword");
@@ -23,21 +26,29 @@ export default function ForgotPasswordPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
-  const [email, setEmail] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ForgotPasswordFormData>({
+    resolver: zodResolver(forgotPasswordSchema),
+    defaultValues: {
+      email: "",
+    },
+  });
+
+  const onSubmit = async (data: ForgotPasswordFormData) => {
     setIsLoading(true);
     setError("");
 
     try {
       await IAMAPI.Users.ForgotPassword.Request({
-        email: email,
+        email: data.email,
       });
       setSuccess(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : t("errorDefault"));
-      console.error(err);
     } finally {
       setIsLoading(false);
     }
@@ -48,7 +59,7 @@ export default function ForgotPasswordPage() {
       <div className="min-h-screen flex items-center justify-center bg-background px-4">
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
-            <div className="mx-auto mb-4 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+            <div className="mx-auto mb-4 w-12 h-12 bg-green-100 dark:bg-green-950/50 rounded-full flex items-center justify-center">
               <Mail className="w-6 h-6 text-green-600" />
             </div>
             <CardTitle className="text-2xl">{t("successTitle")}</CardTitle>
@@ -74,10 +85,10 @@ export default function ForgotPasswordPage() {
           <CardTitle className="text-2xl">{t("title")}</CardTitle>
           <CardDescription>{t("description")}</CardDescription>
         </CardHeader>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <CardContent className="space-y-4">
             {error && (
-              <div className="p-3 text-sm text-red-500 bg-red-50 rounded-md">
+              <div className="p-3 text-sm text-red-500 bg-red-50 dark:bg-red-950/50 rounded-md">
                 {error}
               </div>
             )}
@@ -87,15 +98,27 @@ export default function ForgotPasswordPage() {
                 id="email"
                 type="email"
                 placeholder={tc("emailPlaceholder")}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
+                {...register("email")}
+                className={errors.email ? "border-red-500" : ""}
               />
+              {errors.email && (
+                <p className="text-sm text-red-500 flex items-center gap-1">
+                  <AlertCircle className="h-3 w-3" />
+                  {errors.email.message}
+                </p>
+              )}
             </div>
           </CardContent>
           <CardFooter className="flex flex-col gap-4">
             <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? t("submitting") : t("submit")}
+              {isLoading ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  {t("submitting")}
+                </>
+              ) : (
+                t("submit")
+              )}
             </Button>
             <Link
               href="/login"

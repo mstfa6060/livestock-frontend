@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -51,6 +51,7 @@ export default function EditListingPage() {
   const t = useTranslations("editListing");
   const tc = useTranslations("common");
   const tp = useTranslations("products");
+  const locale = useLocale();
   const { user, isLoading: authLoading } = useAuth();
   const selectedCountry = useSelectedCountry();
 
@@ -129,7 +130,7 @@ export default function EditListingPage() {
       try {
         // Load categories first
         const categoriesResponse = await LivestockTradingAPI.Categories.All.Request({
-          languageCode: "tr",
+          languageCode: locale,
           sorting: { key: "sortOrder", direction: 0 },
           filters: [],
           pageRequest: { currentPage: 1, perPageCount: 100, listAll: true },

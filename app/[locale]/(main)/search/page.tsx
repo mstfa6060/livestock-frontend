@@ -551,11 +551,11 @@ export default function SearchPage() {
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="newest">{tp("sort.newest")}</SelectItem>
-                    <SelectItem value="oldest">{tp("sort.oldest")}</SelectItem>
-                    <SelectItem value="priceAsc">{tp("sort.priceAsc")}</SelectItem>
-                    <SelectItem value="priceDesc">{tp("sort.priceDesc")}</SelectItem>
-                    <SelectItem value="popular">{tp("sort.popular")}</SelectItem>
+                    <SelectItem value="newest">{tp("sortOptions.newest")}</SelectItem>
+                    <SelectItem value="oldest">{tp("sortOptions.oldest")}</SelectItem>
+                    <SelectItem value="priceAsc">{tp("sortOptions.priceAsc")}</SelectItem>
+                    <SelectItem value="priceDesc">{tp("sortOptions.priceDesc")}</SelectItem>
+                    <SelectItem value="popular">{tp("sortOptions.popular")}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

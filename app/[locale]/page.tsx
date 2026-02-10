@@ -126,14 +126,14 @@ export default function Home() {
         <section className="bg-primary text-primary-foreground py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              {t("hero.title")}
+              {t("cta.title")}
             </h2>
             <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              {t("hero.subtitle")}
+              {t("cta.subtitle")}
             </p>
             <Button size="lg" variant="secondary" asChild>
               <Link href="/register">
-                {t("hero.cta")}
+                {t("cta.button")}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

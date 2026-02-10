@@ -1,8 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,21 +13,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowLeft, Eye, EyeOff, CheckCircle } from "lucide-react";
+import { Eye, EyeOff, CheckCircle, Loader2 } from "lucide-react";
 import { IAMAPI } from "@/api/base_modules/iam";
-
-interface User {
-  id: string;
-  username: string;
-  displayName: string;
-  email: string;
-}
+import { DashboardLayout } from "@/components/layout/dashboard-layout";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function SettingsPage() {
-  const router = useRouter();
   const t = useTranslations("settings");
   const tp = useTranslations("settings.updatePassword");
-  const [user, setUser] = useState<User | null>(null);
+  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
@@ -41,15 +33,6 @@ export default function SettingsPage() {
     newPassword: "",
     confirmPassword: "",
   });
-
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (!storedUser) {
-      router.push("/login");
-      return;
-    }
-    setUser(JSON.parse(storedUser));
-  }, [router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -83,32 +66,14 @@ export default function SettingsPage() {
       setFormData({ oldPassword: "", newPassword: "", confirmPassword: "" });
     } catch (err) {
       setError(err instanceof Error ? err.message : tp("errorDefault"));
-      console.error(err);
     } finally {
       setIsLoading(false);
     }
   };
 
-  if (!user) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p>Loading...</p>
-      </div>
-    );
-  }
-
   return (
-    <div className="min-h-screen bg-background p-6">
-      <div className="max-w-2xl mx-auto space-y-6">
-        <div className="flex items-center gap-4">
-          <Link href="/dashboard">
-            <Button variant="ghost" size="icon">
-              <ArrowLeft className="w-5 h-5" />
-            </Button>
-          </Link>
-          <h1 className="text-3xl font-bold">{t("title")}</h1>
-        </div>
-
+    <DashboardLayout title={t("title")}>
+      <div className="max-w-2xl space-y-6">
         <Card>
           <CardHeader>
             <CardTitle>{tp("title")}</CardTitle>
@@ -117,12 +82,12 @@ export default function SettingsPage() {
           <form onSubmit={handleSubmit}>
             <CardContent className="space-y-4">
               {error && (
-                <div className="p-3 text-sm text-red-500 bg-red-50 rounded-md">
+                <div className="p-3 text-sm text-red-500 bg-red-50 dark:bg-red-950/50 rounded-md">
                   {error}
                 </div>
               )}
               {success && (
-                <div className="p-3 text-sm text-green-600 bg-green-50 rounded-md flex items-center gap-2">
+                <div className="p-3 text-sm text-green-600 bg-green-50 dark:bg-green-950/50 rounded-md flex items-center gap-2">
                   <CheckCircle className="w-4 h-4" />
                   {tp("success")}
                 </div>
@@ -199,12 +164,19 @@ export default function SettingsPage() {
             </CardContent>
             <CardFooter>
               <Button type="submit" disabled={isLoading}>
-                {isLoading ? tp("submitting") : tp("submit")}
+                {isLoading ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    {tp("submitting")}
+                  </>
+                ) : (
+                  tp("submit")
+                )}
               </Button>
             </CardFooter>
           </form>
         </Card>
       </div>
-    </div>
+    </DashboardLayout>
   );
 }

@@ -44,6 +44,9 @@ export default function ContactPage() {
     }
   };
 
+  const emailValue = t("info.emailValue");
+  const phoneValue = t("info.phoneValue");
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -53,14 +56,14 @@ export default function ContactPage() {
     {
       icon: Mail,
       label: t("info.email"),
-      value: t("info.emailValue"),
-      href: "mailto:info@livestock-trading.com",
+      value: emailValue,
+      href: `mailto:${emailValue}`,
     },
     {
       icon: Phone,
       label: t("info.phone"),
-      value: t("info.phoneValue"),
-      href: "tel:+902121234567",
+      value: phoneValue,
+      href: `tel:${phoneValue.replace(/[\s()-]/g, "")}`,
     },
     {
       icon: Clock,
@@ -91,7 +94,7 @@ export default function ContactPage() {
               {/* Contact Form */}
               <Card>
                 <CardHeader>
-                  <CardTitle>{t("form.name")}</CardTitle>
+                  <CardTitle>{t("form.title")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-4">

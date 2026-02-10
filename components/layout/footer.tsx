@@ -97,10 +97,10 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@livestock-trading.com"
+                  href={`mailto:${t("supportEmail")}`}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  info@livestock-trading.com
+                  {t("supportEmail")}
                 </a>
               </li>
             </ul>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -45,6 +45,7 @@ export default function NewListingPage() {
   const t = useTranslations("newListing");
   const tc = useTranslations("common");
   const tp = useTranslations("products");
+  const locale = useLocale();
   const { user, isLoading: authLoading } = useAuth();
   const selectedCountry = useSelectedCountry();
 
@@ -82,7 +83,7 @@ export default function NewListingPage() {
     const loadCategories = async () => {
       try {
         const response = await LivestockTradingAPI.Categories.All.Request({
-          languageCode: "tr",
+          languageCode: locale,
           sorting: { key: "sortOrder", direction: 0 },
           filters: [],
           pageRequest: { currentPage: 1, perPageCount: 100, listAll: true },
@@ -128,35 +129,35 @@ export default function NewListingPage() {
 
     // Validate required fields
     if (!formData.title.trim()) {
-      alert(t("errors.titleRequired"));
+      toast.error(t("errors.titleRequired"));
       return;
     }
     if (!formData.shortDescription.trim()) {
-      alert(t("errors.shortDescriptionRequired"));
+      toast.error(t("errors.shortDescriptionRequired"));
       return;
     }
     if (!formData.description.trim()) {
-      alert(t("errors.descriptionRequired"));
+      toast.error(t("errors.descriptionRequired"));
       return;
     }
     if (!formData.categoryId) {
-      alert(t("errors.categoryRequired"));
+      toast.error(t("errors.categoryRequired"));
       return;
     }
     if (!formData.basePrice || parseFloat(formData.basePrice) <= 0) {
-      alert(t("errors.priceRequired"));
+      toast.error(t("errors.priceRequired"));
       return;
     }
     if (!formData.city.trim()) {
-      alert(t("errors.cityRequired"));
+      toast.error(t("errors.cityRequired"));
       return;
     }
     if (!formData.address.trim()) {
-      alert(t("errors.addressRequired"));
+      toast.error(t("errors.addressRequired"));
       return;
     }
     if (!user?.id) {
-      alert(t("userNotFound"));
+      toast.error(t("userNotFound"));
       router.push("/login");
       return;
     }
@@ -179,7 +180,7 @@ export default function NewListingPage() {
         // Seller doesn't exist, create one
         const newSeller = await LivestockTradingAPI.Sellers.Create.Request({
           userId: user.id,
-          businessName: user.displayName || user.username || "My Business",
+          businessName: user.displayName || user.username || t("defaultBusinessName"),
           businessType: "Individual",
           taxNumber: "",
           registrationNumber: "",

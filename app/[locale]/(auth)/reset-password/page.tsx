@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -15,8 +17,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Eye, EyeOff, CheckCircle } from "lucide-react";
+import { Eye, EyeOff, CheckCircle, Loader2, AlertCircle } from "lucide-react";
 import { IAMAPI } from "@/api/base_modules/iam";
+import { resetPasswordSchema, type ResetPasswordFormData } from "@/lib/validations";
 
 export default function ResetPasswordPage() {
   const router = useRouter();
@@ -29,24 +32,21 @@ export default function ResetPasswordPage() {
   const [success, setSuccess] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [formData, setFormData] = useState({
-    password: "",
-    confirmPassword: "",
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ResetPasswordFormData>({
+    resolver: zodResolver(resetPasswordSchema),
+    defaultValues: {
+      password: "",
+      confirmPassword: "",
+    },
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (data: ResetPasswordFormData) => {
     setError("");
-
-    if (formData.password !== formData.confirmPassword) {
-      setError(t("passwordMismatch"));
-      return;
-    }
-
-    if (formData.password.length < 6) {
-      setError(t("passwordTooShort"));
-      return;
-    }
 
     if (!token) {
       setError(t("invalidLinkDescription"));
@@ -58,12 +58,11 @@ export default function ResetPasswordPage() {
     try {
       await IAMAPI.Users.ResetPassword.Request({
         token: token,
-        newPassword: formData.password,
+        newPassword: data.password,
       });
       setSuccess(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : t("errorDefault"));
-      console.error(err);
     } finally {
       setIsLoading(false);
     }
@@ -92,7 +91,7 @@ export default function ResetPasswordPage() {
       <div className="min-h-screen flex items-center justify-center bg-background px-4">
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
-            <div className="mx-auto mb-4 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+            <div className="mx-auto mb-4 w-12 h-12 bg-green-100 dark:bg-green-950/50 rounded-full flex items-center justify-center">
               <CheckCircle className="w-6 h-6 text-green-600" />
             </div>
             <CardTitle className="text-2xl">{t("successTitle")}</CardTitle>
@@ -115,26 +114,22 @@ export default function ResetPasswordPage() {
           <CardTitle className="text-2xl">{t("title")}</CardTitle>
           <CardDescription>{t("description")}</CardDescription>
         </CardHeader>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <CardContent className="space-y-4">
             {error && (
-              <div className="p-3 text-sm text-red-500 bg-red-50 rounded-md">
+              <div className="p-3 text-sm text-red-500 bg-red-50 dark:bg-red-950/50 rounded-md">
                 {error}
               </div>
             )}
             <div className="space-y-2">
-              <Label htmlFor="password">{t("newPassword")}</Label>
+              <Label htmlFor="password">{t("newPassword")} *</Label>
               <div className="relative">
                 <Input
                   id="password"
                   type={showPassword ? "text" : "password"}
                   placeholder="••••••••"
-                  value={formData.password}
-                  onChange={(e) =>
-                    setFormData({ ...formData, password: e.target.value })
-                  }
-                  required
-                  className="pr-10"
+                  {...register("password")}
+                  className={`pr-10 ${errors.password ? "border-red-500" : ""}`}
                 />
                 <button
                   type="button"
@@ -144,20 +139,22 @@ export default function ResetPasswordPage() {
                   {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                 </button>
               </div>
+              {errors.password && (
+                <p className="text-sm text-red-500 flex items-center gap-1">
+                  <AlertCircle className="h-3 w-3" />
+                  {errors.password.message}
+                </p>
+              )}
             </div>
             <div className="space-y-2">
-              <Label htmlFor="confirmPassword">{t("confirmPassword")}</Label>
+              <Label htmlFor="confirmPassword">{t("confirmPassword")} *</Label>
               <div className="relative">
                 <Input
                   id="confirmPassword"
                   type={showConfirmPassword ? "text" : "password"}
                   placeholder="••••••••"
-                  value={formData.confirmPassword}
-                  onChange={(e) =>
-                    setFormData({ ...formData, confirmPassword: e.target.value })
-                  }
-                  required
-                  className="pr-10"
+                  {...register("confirmPassword")}
+                  className={`pr-10 ${errors.confirmPassword ? "border-red-500" : ""}`}
                 />
                 <button
                   type="button"
@@ -167,11 +164,24 @@ export default function ResetPasswordPage() {
                   {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                 </button>
               </div>
+              {errors.confirmPassword && (
+                <p className="text-sm text-red-500 flex items-center gap-1">
+                  <AlertCircle className="h-3 w-3" />
+                  {errors.confirmPassword.message}
+                </p>
+              )}
             </div>
           </CardContent>
           <CardFooter>
             <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? t("submitting") : t("submit")}
+              {isLoading ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  {t("submitting")}
+                </>
+              ) : (
+                t("submit")
+              )}
             </Button>
           </CardFooter>
         </form>

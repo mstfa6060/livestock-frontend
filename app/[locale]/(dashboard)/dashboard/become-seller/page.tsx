@@ -142,9 +142,18 @@ export default function BecomeSellerPage() {
           <CardContent className="py-16 text-center">
             <CheckCircle className="h-16 w-16 mx-auto text-green-500 mb-4" />
             <h2 className="text-xl font-semibold mb-2">{t("alreadySeller")}</h2>
-            <Button asChild className="mt-4">
-              <Link href="/dashboard/my-listings">{t("goToListings")}</Link>
-            </Button>
+            <p className="text-muted-foreground mb-6">{t("alreadySellerDescription")}</p>
+            <div className="flex justify-center gap-3">
+              <Button asChild>
+                <Link href="/dashboard/my-listings">{t("goToListings")}</Link>
+              </Button>
+              <Button variant="outline" asChild>
+                <Link href="/dashboard/listings/new">
+                  <Store className="h-4 w-4 mr-2" />
+                  {t("newListing")}
+                </Link>
+              </Button>
+            </div>
           </CardContent>
         </Card>
       </DashboardLayout>
@@ -227,7 +236,7 @@ export default function BecomeSellerPage() {
                 </p>
               )}
               <p className="text-xs text-muted-foreground">
-                10 veya 11 haneli vergi numaranizi girin (opsiyonel)
+                {t("taxNumberHelp")}
               </p>
             </div>
 
@@ -272,7 +281,7 @@ export default function BecomeSellerPage() {
                 </p>
               )}
               <p className="text-xs text-muted-foreground">
-                Ornek: +90 555 123 45 67 veya 0555 123 45 67
+                {t("phoneHelp")}
               </p>
             </div>
 
@@ -292,7 +301,7 @@ export default function BecomeSellerPage() {
                 </p>
               )}
               <p className="text-xs text-muted-foreground">
-                Ornek: www.isletmem.com veya https://isletmem.com
+                {t("websiteHelp")}
               </p>
             </div>
           </CardContent>

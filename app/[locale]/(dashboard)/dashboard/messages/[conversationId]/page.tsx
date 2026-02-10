@@ -531,6 +531,7 @@ export default function ConversationPage() {
             onKeyDown={handleKeyPress}
             placeholder={t("typeMessage")}
             disabled={isSending}
+            autoFocus
             className="flex-1"
           />
           <Button onClick={handleSendMessage} disabled={isSending || !newMessage.trim()}>

@@ -117,7 +117,6 @@ function LoginForm() {
       const errorMessage =
         err instanceof Error ? err.message : t("errorDefault");
       setError(errorMessage);
-      console.error(err);
     } finally {
       setIsLoading(false);
     }
@@ -153,7 +152,6 @@ function LoginForm() {
       const errorMessage =
         err instanceof Error ? err.message : t("socialLoginError");
       setError(errorMessage);
-      console.error(err);
     } finally {
       setIsGoogleLoading(false);
     }
@@ -162,8 +160,7 @@ function LoginForm() {
   // Google login hook
   const googleLogin = useGoogleLogin({
     onSuccess: handleGoogleSuccess,
-    onError: (error) => {
-      console.error("Google login error:", error);
+    onError: () => {
       setError(t("socialLoginError"));
     },
   });

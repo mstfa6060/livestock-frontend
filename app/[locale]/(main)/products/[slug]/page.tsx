@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 import { MainHeader } from "@/components/layout/main-header";
+import { SimpleFooter } from "@/components/layout/footer";
 import { ImageGallery } from "@/components/features/image-gallery";
 import { PriceDisplay } from "@/components/features/price-display";
 import { SellerCard, Seller } from "@/components/features/seller-card";
@@ -23,6 +25,8 @@ import {
   Truck,
   Package,
   Star,
+  ChevronRight,
+  MessageSquare,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
@@ -31,6 +35,7 @@ import { AppConfig } from "@/config/livestock-config";
 import { useFavoritesStore } from "@/stores/useFavoritesStore";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
+import { getProductCoverImages } from "@/lib/product-images";
 
 const EMPTY_GUID = "00000000-0000-0000-0000-000000000000";
 
@@ -85,6 +90,7 @@ export default function ProductDetailPage() {
   const t = useTranslations("productDetail");
   const tp = useTranslations("products");
   const tc = useTranslations("common");
+  const locale = useLocale();
   const router = useRouter();
   const { user } = useAuth();
   const { toggleFavorite, isFavorite: checkIsFavorite } = useFavoritesStore();
@@ -258,6 +264,16 @@ export default function ProductDetailPage() {
 
         setSimilarProducts(similarProductsData);
 
+        // Fetch cover images for similar products
+        const similarIds = similarProductsData.map((p) => p.id);
+        if (similarIds.length > 0) {
+          getProductCoverImages(similarIds).then((imageMap) => {
+            setSimilarProducts((prev) =>
+              prev.map((p) => ({ ...p, imageUrl: imageMap[p.id] || p.imageUrl }))
+            );
+          });
+        }
+
         // Fetch seller data
         try {
           const sellerResponse = await LivestockTradingAPI.Sellers.GetByUserId.Request({
@@ -410,10 +426,36 @@ export default function ProductDetailPage() {
   const condition = CONDITION_MAP[product.condition] || "new";
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <MainHeader />
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="flex-1 container mx-auto px-4 py-8">
+        {/* Breadcrumb */}
+        <nav className="flex items-center gap-1 text-sm text-muted-foreground mb-6">
+          <Link href="/" className="hover:text-foreground transition-colors">
+            {t("breadcrumb.home")}
+          </Link>
+          <ChevronRight className="h-3 w-3" />
+          <Link href="/products" className="hover:text-foreground transition-colors">
+            {t("breadcrumb.products")}
+          </Link>
+          {product.categoryName && (
+            <>
+              <ChevronRight className="h-3 w-3" />
+              <Link
+                href={`/products?category=${product.categoryId}`}
+                className="hover:text-foreground transition-colors"
+              >
+                {product.categoryName}
+              </Link>
+            </>
+          )}
+          <ChevronRight className="h-3 w-3" />
+          <span className="text-foreground font-medium truncate max-w-[200px]">
+            {product.title}
+          </span>
+        </nav>
+
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Left Column - Images & Description */}
           <div className="lg:col-span-2 space-y-8">
@@ -527,7 +569,7 @@ export default function ProductDetailPage() {
                   {product.publishedAt && (
                     <div className="flex items-center gap-1">
                       <Calendar className="h-4 w-4" />
-                      {new Date(product.publishedAt).toLocaleDateString("tr-TR")}
+                      {new Date(product.publishedAt).toLocaleDateString(locale)}
                     </div>
                   )}
                 </div>
@@ -601,6 +643,24 @@ export default function ProductDetailPage() {
           </div>
         )}
       </main>
+
+      {/* Mobile Sticky Action Bar */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-background border-t p-4 z-40">
+        <div className="flex gap-2">
+          <Button className="flex-1" onClick={handleContact} disabled={isContacting}>
+            <MessageSquare className="h-4 w-4 mr-2" />
+            {isContacting ? t("contacting") : t("contactSeller")}
+          </Button>
+          <Button variant="outline" size="icon" onClick={handleFavoriteToggle}>
+            <Heart className={`h-4 w-4 ${isFavorite ? "fill-red-500 text-red-500" : ""}`} />
+          </Button>
+          <Button variant="outline" size="icon" onClick={handleShare}>
+            <Share2 className="h-4 w-4" />
+          </Button>
+        </div>
+      </div>
+
+      <SimpleFooter />
     </div>
   );
 }

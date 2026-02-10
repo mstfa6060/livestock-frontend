@@ -62,7 +62,7 @@ export const languageNames: Record<Locale, string> = {
   ga: 'Gaeilge',
   mt: 'Malti',
   am: 'አማርኛ',
-  hy: 'Հայերdelays'
+  hy: 'Հայերեն'
 };
 
 // RTL languages
