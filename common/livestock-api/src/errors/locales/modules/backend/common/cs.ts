@@ -128,6 +128,11 @@ export default {
       GOOGLE_TOKEN_EXPIRED: "Google token süresi dolmuş.",
       INVALID_VISIBILITY_RADIUS: "Geçersiz görünürlük yarıçapı.",
       GOOGLE_EMAIL_NOT_VERIFIED: "Google e-posta adresi doğrulanmamış.",
+      USER_FIRST_NAME_REQUIRED: "Ad zorunludur.",
+      USER_SURNAME_REQUIRED: "Soyad zorunludur.",
+      USER_EMAIL_ALREADY_EXISTS: "Bu e-posta adresi zaten kullanılıyor.",
+      USER_USER_NAME_ALREADY_EXISTS: "Bu kullanıcı adı zaten kullanılıyor.",
+      USER_COUNTRY_ID_REQUIRED: "Ülke seçimi zorunludur.",
     }
   }
 };

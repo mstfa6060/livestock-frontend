@@ -233,7 +233,7 @@ export default function NewListingPage() {
         isInStock: parseInt(formData.stockQuantity) > 0,
         sellerId: sellerId,
         locationId: locationResponse.id,
-        status: isDraft ? 0 : 4, // 0=draft, 4=pendingApproval
+        status: isDraft ? 0 : 1, // 0=Draft, 1=PendingApproval
         condition: formData.condition,
         isShippingAvailable: formData.isShippingAvailable,
         shippingCost: formData.shippingCost
