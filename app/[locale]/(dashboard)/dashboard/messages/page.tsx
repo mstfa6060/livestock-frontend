@@ -32,7 +32,6 @@ interface Conversation {
   otherUserName?: string;
   otherUserInitials?: string;
   unreadCount?: number;
-  lastMessage?: string;
 }
 
 export default function MessagesPage() {
@@ -72,7 +71,7 @@ export default function MessagesPage() {
         );
 
         // Fetch unread counts
-        let unreadMap: Record<string, { unreadCount: number; lastMessage: string; senderDisplayName: string }> = {};
+        let unreadMap: Record<string, { unreadCount: number; lastMessageAt?: Date }> = {};
         try {
           const unreadResponse = await LivestockTradingAPI.Messages.UnreadCount.Request({
             userId: user.id,
@@ -80,9 +79,8 @@ export default function MessagesPage() {
           unreadResponse.conversations.forEach((c) => {
             unreadMap[c.conversationId] = {
               unreadCount: c.unreadCount,
-              lastMessage: c.lastMessage,
-              senderDisplayName: c.senderDisplayName,
-            };
+              lastMessageAt: c.lastMessageAt,
+            }; 
           });
         } catch {
           // UnreadCount API not available yet, fallback to 0
@@ -125,7 +123,6 @@ export default function MessagesPage() {
               otherUserName,
               otherUserInitials,
               unreadCount: unreadInfo?.unreadCount || 0,
-              lastMessage: unreadInfo?.lastMessage,
             };
           })
         );

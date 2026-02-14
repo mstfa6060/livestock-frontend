@@ -102,13 +102,14 @@ export default function ProfilePage() {
     setIsLoading(true);
     try {
       await IAMAPI.Users.Update.Request({
-        userId: user.id,
+        id: user.id,
         firstName: formData.firstName,
         surname: formData.surname,
-        phoneNumber: formData.phoneNumber || undefined,
+        phoneNumber: formData.phoneNumber || "",
         countryId: formData.countryId || undefined,
         language: formData.language,
         preferredCurrencyCode: formData.preferredCurrencyCode,
+        avatarUrl: "",
       });
 
       await refreshUser();

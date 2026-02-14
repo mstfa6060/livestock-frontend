@@ -1,14 +1,11 @@
-"use client";
-
-import { useTranslations } from "next-intl";
-import { useLocale } from "next-intl";
+import { getTranslations, getLocale } from "next-intl/server";
 import { MainHeader } from "@/components/layout/main-header";
 import { SimpleFooter } from "@/components/layout/footer";
 import { Card, CardContent } from "@/components/ui/card";
 
-export default function PrivacyPage() {
-  const t = useTranslations("privacy");
-  const locale = useLocale();
+export default async function PrivacyPage() {
+  const t = await getTranslations("privacy");
+  const locale = await getLocale();
 
   const lastUpdatedDate = new Date("2025-01-01").toLocaleDateString(locale, {
     year: "numeric",

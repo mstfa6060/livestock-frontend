@@ -106,10 +106,10 @@ api.interceptors.response.use(
             localStorage.removeItem('jwt');
             localStorage.removeItem('accessToken');
             localStorage.removeItem('refreshToken');
-            window.location.href = '/login';
+            window.location.href = '/auth/login';
           }
         } else {
-          window.location.href = '/login';
+          window.location.href = '/auth/login';
         }
       }
     }

@@ -298,13 +298,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         username: response.userName,
         email: response.email,
         displayName: response.fullName,
-        isPhoneVerified: response.isPhoneVerified,
-        countryId: response.countryId ?? user.countryId,
-        countryCode: response.countryCode ?? user.countryCode,
-        countryName: response.countryName ?? user.countryName,
-        language: response.language ?? user.language,
-        currencyCode: response.preferredCurrencyCode ?? user.currencyCode,
-        currencySymbol: response.currencySymbol ?? user.currencySymbol,
       };
 
       localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(updatedUser));

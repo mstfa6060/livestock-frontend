@@ -1,14 +1,11 @@
-"use client";
-
-import { useTranslations } from "next-intl";
-import { useLocale } from "next-intl";
+import { getTranslations, getLocale } from "next-intl/server";
 import { MainHeader } from "@/components/layout/main-header";
 import { SimpleFooter } from "@/components/layout/footer";
 import { Card, CardContent } from "@/components/ui/card";
 
-export default function TermsPage() {
-  const t = useTranslations("terms");
-  const locale = useLocale();
+export default async function TermsPage() {
+  const t = await getTranslations("terms");
+  const locale = await getLocale();
 
   const lastUpdatedDate = new Date("2025-01-01").toLocaleDateString(locale, {
     year: "numeric",

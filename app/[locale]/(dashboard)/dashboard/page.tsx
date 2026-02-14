@@ -41,7 +41,8 @@ export default function DashboardPage() {
   const tn = useTranslations("dashboardNav");
   const { user } = useAuth();
 
-  const { unreadCount: unreadNotifications, fetchNotifications } = useNotificationsStore();
+  const unreadNotifications = useNotificationsStore((s) => s.unreadCount);
+  const fetchNotifications = useNotificationsStore((s) => s.fetchNotifications);
 
   const [isLoading, setIsLoading] = useState(true);
   const [stats, setStats] = useState<DashboardStats>({
@@ -64,7 +65,7 @@ export default function DashboardPage() {
       setIsLoading(true);
       try {
         // Fetch stats from Dashboard API
-        const statsResponse = await LivestockTradingAPI.Dashboard.MyStats.Request({
+        const statsResponse = await LivestockTradingAPI.Dashboard.Stats.Request({
           userId: user.id,
         });
 
@@ -102,15 +103,16 @@ export default function DashboardPage() {
           createdAt: p.createdAt,
         }));
 
-        // Fetch notifications
+        // Fetch notifications and read updated count from store
         await fetchNotifications(user.id);
+        const updatedUnreadCount = useNotificationsStore.getState().unreadCount;
 
         setStats({
           totalListings: statsResponse.totalListings,
           activeListings: statsResponse.activeListings,
           totalViews: statsResponse.totalViews,
           totalFavorites: statsResponse.totalFavorites,
-          unreadNotifications,
+          unreadNotifications: updatedUnreadCount,
         });
 
         setRecentListings(recent);
@@ -122,7 +124,8 @@ export default function DashboardPage() {
     };
 
     fetchDashboardData();
-  }, [user?.id, unreadNotifications, fetchNotifications]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.id]);
 
   // Get status text
   const getStatusText = (status: number) => {

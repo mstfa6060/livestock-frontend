@@ -134,22 +134,23 @@ export default function SearchPage() {
       try {
         // Use Search API when query is present, otherwise fall back to Products.All
         if (queryParam) {
-          const sortByMap: Record<SortOption, string> = {
-            newest: "newest",
-            oldest: "newest", // Backend'de oldest yoksa newest kullan
-            priceAsc: "price_asc",
-            priceDesc: "price_desc",
-            popular: "most_viewed",
+          const sortingMap: Record<SortOption, { key: string; direction: LivestockTradingAPI.Enums.XSortingDirection }> = {
+            newest: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+            oldest: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
+            priceAsc: { key: "basePrice", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
+            priceDesc: { key: "basePrice", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+            popular: { key: "viewCount", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
           };
 
           const searchResponse = await LivestockTradingAPI.Products.Search.Request({
             query: queryParam,
             countryCode: selectedCountry?.code || "TR",
+            city: "",
             categoryId: categoryParam || undefined,
-            minPrice: minPriceParam ? parseFloat(minPriceParam) : undefined,
-            maxPrice: maxPriceParam ? parseFloat(maxPriceParam) : undefined,
+            minPrice: minPriceParam ? parseFloat(minPriceParam) as any : undefined,
+            maxPrice: maxPriceParam ? parseFloat(maxPriceParam) as any : undefined,
             condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
-            sortBy: sortByMap[sortParam] || "relevance",
+            sorting: sortingMap[sortParam],
             pageRequest: {
               currentPage: pageParam,
               perPageCount: ITEMS_PER_PAGE,
@@ -157,7 +158,7 @@ export default function SearchPage() {
             },
           });
 
-          const transformedProducts: Product[] = searchResponse.results.map((item) => ({
+          const transformedProducts: Product[] = searchResponse.map((item) => ({
             id: item.id,
             title: item.title,
             slug: item.slug,
@@ -179,7 +180,7 @@ export default function SearchPage() {
             averageRating: item.averageRating,
             reviewCount: item.reviewCount,
             createdAt: item.createdAt,
-            imageUrl: item.coverImageUrl || undefined,
+            imageUrl: undefined,
           }));
 
           setProducts(transformedProducts);

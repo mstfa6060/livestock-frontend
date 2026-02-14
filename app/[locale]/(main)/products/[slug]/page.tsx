@@ -189,96 +189,104 @@ export default function ProductDetailPage() {
 
         setProduct(productData);
 
-        // Fetch product images from media bucket
+        // Fetch media bucket, similar products, and seller data in parallel
         const mediaBucketId = (response as any).mediaBucketId;
-        if (mediaBucketId) {
-          try {
-            const bucketResponse = await FileProviderAPI.Buckets.Detail.Request({
-              bucketId: mediaBucketId,
-              changeId: EMPTY_GUID,
-            });
 
-            if (bucketResponse.files && bucketResponse.files.length > 0) {
-              const imageUrls = bucketResponse.files
-                .filter((file: any) => !file.contentType?.startsWith("video/"))
-                .map((file: any) => {
-                  // Use variant URL if available, otherwise build URL from path
-                  if (file.variants && file.variants.length > 0) {
-                    return file.variants[0].url;
-                  }
-                  return `${AppConfig.FileStorageBaseUrl}${file.path}`;
-                });
-              setImages(imageUrls);
-            }
-          } catch {
-            // Images are optional
+        const [imagesResult, similarResult, sellerResult] = await Promise.allSettled([
+          // 1. Fetch product images from media bucket
+          mediaBucketId
+            ? FileProviderAPI.Buckets.Detail.Request({
+                bucketId: mediaBucketId,
+                changeId: EMPTY_GUID,
+              })
+            : Promise.resolve(null),
+
+          // 2. Fetch similar products from same category
+          LivestockTradingAPI.Products.All.Request({
+            countryCode: "TR",
+            sorting: { key: "createdAt", direction: 1 },
+            filters: [
+              {
+                key: "categoryId",
+                type: "guid",
+                isUsed: true,
+                values: [response.categoryId],
+                min: {},
+                max: {},
+                conditionType: "equals",
+              },
+            ],
+            pageRequest: { currentPage: 1, perPageCount: 4, listAll: false },
+          }),
+
+          // 3. Fetch seller data
+          LivestockTradingAPI.Sellers.Detail.Request({
+            id: response.sellerId,
+          }),
+        ]);
+
+        // Process images result
+        if (imagesResult.status === "fulfilled" && imagesResult.value) {
+          const bucketResponse = imagesResult.value;
+          if (bucketResponse.files && bucketResponse.files.length > 0) {
+            const imageUrls = bucketResponse.files
+              .filter((file: any) => !file.contentType?.startsWith("video/"))
+              .map((file: any) => {
+                if (file.variants && file.variants.length > 0) {
+                  return file.variants[0].url;
+                }
+                return `${AppConfig.FileStorageBaseUrl}${file.path}`;
+              });
+            setImages(imageUrls);
           }
         }
 
-        // Fetch similar products from same category
-        const similarResponse = await LivestockTradingAPI.Products.All.Request({
-          countryCode: "TR",
-          sorting: { key: "createdAt", direction: 1 },
-          filters: [
-            {
-              key: "categoryId",
-              type: "guid",
-              isUsed: true,
-              values: [response.categoryId],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 4, listAll: false },
-        });
+        // Process similar products result
+        if (similarResult.status === "fulfilled") {
+          const similarProductsData = similarResult.value
+            .filter((p) => p.id !== response.id)
+            .slice(0, 3)
+            .map((item) => ({
+              id: item.id,
+              title: item.title,
+              slug: item.slug,
+              shortDescription: item.shortDescription,
+              categoryId: item.categoryId,
+              brandId: item.brandId || undefined,
+              basePrice: item.basePrice as number,
+              currency: item.currency,
+              discountedPrice: item.discountedPrice as number | undefined,
+              stockQuantity: item.stockQuantity,
+              isInStock: item.isInStock,
+              sellerId: item.sellerId,
+              locationId: item.locationId,
+              locationCountryCode: item.locationCountryCode,
+              locationCity: item.locationCity,
+              status: item.status,
+              condition: item.condition,
+              viewCount: item.viewCount,
+              averageRating: item.averageRating as number | undefined,
+              reviewCount: item.reviewCount,
+              createdAt: item.createdAt,
+              imageUrl: undefined,
+            }));
 
-        // Transform and filter out current product
-        const similarProductsData = similarResponse
-          .filter((p) => p.id !== response.id)
-          .slice(0, 3)
-          .map((item) => ({
-            id: item.id,
-            title: item.title,
-            slug: item.slug,
-            shortDescription: item.shortDescription,
-            categoryId: item.categoryId,
-            brandId: item.brandId || undefined,
-            basePrice: item.basePrice as number,
-            currency: item.currency,
-            discountedPrice: item.discountedPrice as number | undefined,
-            stockQuantity: item.stockQuantity,
-            isInStock: item.isInStock,
-            sellerId: item.sellerId,
-            locationId: item.locationId,
-            locationCountryCode: item.locationCountryCode,
-            locationCity: item.locationCity,
-            status: item.status,
-            condition: item.condition,
-            viewCount: item.viewCount,
-            averageRating: item.averageRating as number | undefined,
-            reviewCount: item.reviewCount,
-            createdAt: item.createdAt,
-            imageUrl: undefined,
-          }));
+          setSimilarProducts(similarProductsData);
 
-        setSimilarProducts(similarProductsData);
-
-        // Fetch cover images for similar products
-        const similarIds = similarProductsData.map((p) => p.id);
-        if (similarIds.length > 0) {
-          getProductCoverImages(similarIds).then((imageMap) => {
-            setSimilarProducts((prev) =>
-              prev.map((p) => ({ ...p, imageUrl: imageMap[p.id] || p.imageUrl }))
-            );
-          });
+          // Fetch cover images for similar products (fire-and-forget)
+          const similarIds = similarProductsData.map((p) => p.id);
+          if (similarIds.length > 0) {
+            getProductCoverImages(similarIds).then((imageMap) => {
+              setSimilarProducts((prev) =>
+                prev.map((p) => ({ ...p, imageUrl: imageMap[p.id] || p.imageUrl }))
+              );
+            });
+          }
         }
 
-        // Fetch seller data
-        try {
-          const sellerResponse = await LivestockTradingAPI.Sellers.GetByUserId.Request({
-            userId: response.sellerId,
-          });
+        // Process seller result
+        if (sellerResult.status === "fulfilled") {
+          const sellerResponse = sellerResult.value;
           setSeller({
             id: sellerResponse.id,
             name: sellerResponse.businessName || response.sellerName,
@@ -289,7 +297,7 @@ export default function ProductDetailPage() {
             memberSince: sellerResponse.createdAt,
             location: sellerResponse.phone ? sellerResponse.description : t("defaultLocation"),
           });
-        } catch {
+        } else {
           // Fallback to basic seller info from product
           setSeller({
             id: response.sellerId,
@@ -353,14 +361,9 @@ export default function ProductDetailPage() {
 
     setIsContacting(true);
     try {
-      const response = await LivestockTradingAPI.Conversations.StartWithProduct.Request({
-        productId: product.id,
-        sellerId: seller.id,
-        buyerUserId: user.id,
-        initialMessage: t("inquiryMessage", { title: product.title }),
-      });
-
-      router.push(`/dashboard/messages/${response.conversationId}`);
+      // TODO: Conversations.StartWithProduct API not yet available
+      // For now, redirect to messages page
+      router.push(`/dashboard/messages`);
     } catch {
       toast.error(t("contactError"));
     } finally {

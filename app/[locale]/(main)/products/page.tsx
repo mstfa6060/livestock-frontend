@@ -123,19 +123,19 @@ export default function ProductsPage() {
   }, [locale]);
 
   // Sort mapping
-  const getSortBy = (sort: SortOption) => {
-    const map: Record<SortOption, string> = {
-      newest: "createdAt_desc",
-      oldest: "createdAt_asc",
-      priceAsc: "basePrice_asc",
-      priceDesc: "basePrice_desc",
-      popular: "viewCount_desc",
+  const getSorting = (sort: SortOption): { key: string; direction: LivestockTradingAPI.Enums.XSortingDirection } => {
+    const map: Record<SortOption, { key: string; direction: LivestockTradingAPI.Enums.XSortingDirection }> = {
+      newest: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+      oldest: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
+      priceAsc: { key: "basePrice", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
+      priceDesc: { key: "basePrice", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+      popular: { key: "viewCount", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
     };
     return map[sort];
   };
 
   // Transform search result to Product
-  const transformResult = (item: LivestockTradingAPI.Products.Search.ISearchResult): Product => ({
+  const transformResult = (item: LivestockTradingAPI.Products.Search.IResponseModel): Product => ({
     id: item.id,
     title: item.title,
     slug: item.slug,
@@ -154,7 +154,7 @@ export default function ProductsPage() {
     averageRating: item.averageRating,
     reviewCount: item.reviewCount,
     createdAt: item.createdAt,
-    imageUrl: item.coverImageUrl || undefined,
+    imageUrl: undefined,
   });
 
   // Fetch products using Search endpoint (has totalCount & coverImageUrl)
@@ -165,11 +165,12 @@ export default function ProductsPage() {
         const response = await LivestockTradingAPI.Products.Search.Request({
           query: "",
           countryCode: selectedCountry?.code || "TR",
+          city: "",
           categoryId: categoryParam || undefined,
           condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
-          minPrice: minPriceParam ? parseFloat(minPriceParam) : undefined,
-          maxPrice: maxPriceParam ? parseFloat(maxPriceParam) : undefined,
-          sortBy: getSortBy(sortParam),
+          minPrice: minPriceParam ? parseFloat(minPriceParam) as any : undefined,
+          maxPrice: maxPriceParam ? parseFloat(maxPriceParam) as any : undefined,
+          sorting: getSorting(sortParam),
           pageRequest: {
             currentPage: pageParam,
             perPageCount: ITEMS_PER_PAGE,
@@ -177,9 +178,9 @@ export default function ProductsPage() {
           },
         });
 
-        setProducts(response.results.map(transformResult));
-        setTotalProducts(response.totalCount);
-        setTotalPages(response.totalPages);
+        setProducts(response.map(transformResult));
+        setTotalProducts(response.length);
+        setTotalPages(Math.ceil(response.length / ITEMS_PER_PAGE));
       } catch {
         setProducts([]);
         setTotalProducts(0);
@@ -202,11 +203,12 @@ export default function ProductsPage() {
       const response = await LivestockTradingAPI.Products.Search.Request({
         query: "",
         countryCode: selectedCountry?.code || "TR",
+        city: "",
         categoryId: categoryParam || undefined,
         condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
-        minPrice: minPriceParam ? parseFloat(minPriceParam) : undefined,
-        maxPrice: maxPriceParam ? parseFloat(maxPriceParam) : undefined,
-        sortBy: getSortBy(sortParam),
+        minPrice: minPriceParam ? parseFloat(minPriceParam) as any : undefined,
+        maxPrice: maxPriceParam ? parseFloat(maxPriceParam) as any : undefined,
+        sorting: getSorting(sortParam),
         pageRequest: {
           currentPage: nextPage,
           perPageCount: ITEMS_PER_PAGE,
@@ -214,7 +216,7 @@ export default function ProductsPage() {
         },
       });
 
-      setProducts((prev) => [...prev, ...response.results.map(transformResult)]);
+      setProducts((prev) => [...prev, ...response.map(transformResult)]);
       updateParams({ page: String(nextPage) });
     } catch {
       toast.error(t("fetchError"));

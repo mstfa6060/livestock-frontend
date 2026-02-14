@@ -1,13 +1,11 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { MainHeader } from "@/components/layout/main-header";
 import { SimpleFooter } from "@/components/layout/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Award, Lightbulb, Users, Store, Package, CheckCircle } from "lucide-react";
 
-export default function AboutPage() {
-  const t = useTranslations("about");
+export default async function AboutPage() {
+  const t = await getTranslations("about");
 
   const stats = [
     { label: t("stats.users"), value: "50,000+", icon: Users },

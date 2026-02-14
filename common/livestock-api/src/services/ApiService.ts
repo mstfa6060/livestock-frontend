@@ -1,6 +1,5 @@
 import { api } from '@config/livestock-config';
 import { AxiosRequestConfig, AxiosResponse } from 'axios';
-import axios from 'axios';
 import commonErrors from '../errors/locales/modules/backend/common/tr';
 import livestocktradingErrors from '../errors/locales/modules/backend/livestocktrading/tr';
 
@@ -75,58 +74,8 @@ export class ApiService {
         });
       }
 
-      // 401 Unauthorized - Token expired or invalid
-      if (err?.response?.status === 401) {
-        console.log('🔐 401 Unauthorized - Token expired or invalid');
-
-        const refreshToken = localStorage.getItem('refreshToken');
-
-        if (refreshToken) {
-          try {
-            console.log('🔄 Attempting token refresh...');
-
-            // Refresh token
-            const { AppConfig } = await import('@config/livestock-config');
-            const refreshResponse = await axios.post(`${AppConfig.apiUrl}/iam/auth/RefreshToken`, {
-              refreshToken,
-              platform: 0, // Web
-            });
-
-            if (refreshResponse.data?.payload) {
-              const { jwt: newJwt } = refreshResponse.data.payload;
-
-              // Save new token
-              localStorage.setItem('jwt', newJwt);
-              localStorage.setItem('accessToken', newJwt);
-
-              console.log('✅ Token refreshed successfully');
-
-              // Retry original request
-              const retryConfig = err.config;
-              retryConfig.headers['Authorization'] = `Bearer ${newJwt}`;
-              const retryResponse = await api.request(retryConfig);
-              return retryResponse.data.payload;
-            }
-          } catch (refreshError) {
-            console.error('❌ Token refresh failed:', refreshError);
-          }
-        }
-
-        // Token refresh failed or no refresh token - logout
-        console.warn('🚪 Logging out - clearing tokens and redirecting to login');
-        localStorage.removeItem('jwt');
-        localStorage.removeItem('accessToken');
-        localStorage.removeItem('refreshToken');
-
-        // Redirect to login
-        if (typeof window !== 'undefined') {
-          window.location.href = '/login';
-        }
-
-        const authError = new Error('Session expired - please login again');
-        (authError as any).code = 'SESSION_EXPIRED';
-        throw authError;
-      }
+      // 401 handling is done by the axios response interceptor in livestock-config.ts
+      // which automatically refreshes tokens and retries the request
 
       // Other errors
       this.logApiError(err, 'network_error', {
@@ -147,13 +96,12 @@ export class ApiService {
     formData: FormData,
     config: AxiosRequestConfig = {}
   ): Promise<T> {
-    const token = localStorage.getItem('jwt');
-
-    const response = await axios.post(url, formData, {
+    // Use the `api` instance so the request/response interceptors handle
+    // token injection and 401 refresh automatically
+    const response = await api.post(url, formData, {
       ...config,
       headers: {
         'Content-Type': 'multipart/form-data',
-        Authorization: token ? `Bearer ${token}` : '',
         ...(config.headers || {}),
       },
     });
