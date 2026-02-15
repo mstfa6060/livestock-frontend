@@ -32,7 +32,7 @@ export const AppConfig = {
   companyId: '9dae9cbd-82b1-4ead-bd2b-9c5fe5146a2a',
 };
 
-// Create axios instance
+// Create custom axios instance (used by ApiService.callMultipart, request, etc.)
 export const api: AxiosInstance = axios.create({
   baseURL: AppConfig.apiUrl,
   headers: {
@@ -40,79 +40,125 @@ export const api: AxiosInstance = axios.create({
   },
 });
 
-// Request interceptor - add token and fix ONLY IAM URL paths
-api.interceptors.request.use(
-  (config) => {
-    if (typeof window !== 'undefined') {
-      // accessToken'ı önce dene, yoksa jwt'yi kullan
-      const token = localStorage.getItem('accessToken') || localStorage.getItem('jwt');
-      if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
-      }
+// Token injection helper
+const addAuthToken = (config: any) => {
+  if (typeof window !== 'undefined') {
+    const token = localStorage.getItem('accessToken') || localStorage.getItem('jwt');
+    if (token) {
+      config.headers = config.headers || {};
+      config.headers.Authorization = `Bearer ${token}`;
     }
+  }
+  return config;
+};
 
-    // SADECE IAM endpoint'leri için lowercase yap
-    // IAM: /iam/Auth/SendOtp -> /iam/auth/SendOtp
-    // LivestockTrading: /livestocktrading/Students/All -> /livestocktrading/Students/All (DEĞİŞMEZ)
-    // FileProvider: /fileprovider/Buckets/Detail -> /fileprovider/Buckets/Detail (DEĞİŞMEZ)
-    if (config.url && config.url.includes('/iam/')) {
-      try {
-        const url = new URL(config.url, config.baseURL || AppConfig.apiUrl);
-        const pathParts = url.pathname.split('/');
-
-        // IAM için: /iam/Auth/SendOtp -> /iam/auth/SendOtp
-        if (pathParts.length >= 3 && pathParts[1] === 'iam') {
-          pathParts[2] = pathParts[2].toLowerCase();
-          config.url = url.origin + pathParts.join('/');
-        }
-      } catch (e) {
-        // URL parsing error - keep original URL
-        console.error('URL parsing error:', e);
+// IAM URL lowercase fix helper
+const fixIamUrl = (config: any) => {
+  if (config.url && config.url.includes('/iam/')) {
+    try {
+      const url = new URL(config.url, config.baseURL || AppConfig.apiUrl);
+      const pathParts = url.pathname.split('/');
+      if (pathParts.length >= 3 && pathParts[1] === 'iam') {
+        pathParts[2] = pathParts[2].toLowerCase();
+        config.url = url.origin + pathParts.join('/');
       }
+    } catch {
+      // URL parsing error - keep original URL
     }
+  }
+  return config;
+};
 
-    return config;
-  },
-  (error) => Promise.reject(error)
-);
+// 401 handler with token refresh (prevents concurrent refresh attempts)
+let isRefreshing = false;
+let failedQueue: Array<{ resolve: (token: string) => void; reject: (error: any) => void }> = [];
 
-// Response interceptor - handle errors
-api.interceptors.response.use(
-  (response) => response,
-  async (error) => {
-    if (error.response?.status === 401) {
-      // Token expired - try to refresh
-      if (typeof window !== 'undefined') {
-        const refreshToken = localStorage.getItem('refreshToken');
-        if (refreshToken) {
-          try {
-            const response = await axios.post(`${AppConfig.apiUrl}/iam/auth/RefreshToken`, {
-              refreshToken,
-              platform: 0, // Web
-            });
-
-            if (response.data?.payload) {
-              const { jwt } = response.data.payload;
-              localStorage.setItem('jwt', jwt);
-              localStorage.setItem('accessToken', jwt);
-              localStorage.setItem('refreshToken', response.data.payload.refreshToken);
-
-              // Retry the original request
-              error.config.headers.Authorization = `Bearer ${jwt}`;
-              return api.request(error.config);
-            }
-          } catch (refreshError) {
-            // Refresh failed - logout
-            localStorage.removeItem('jwt');
-            localStorage.removeItem('accessToken');
-            localStorage.removeItem('refreshToken');
-            window.location.href = '/auth/login';
-          }
-        } else {
-          window.location.href = '/auth/login';
-        }
-      }
+const processQueue = (error: any, token: string | null = null) => {
+  failedQueue.forEach((prom) => {
+    if (token) {
+      prom.resolve(token);
+    } else {
+      prom.reject(error);
     }
+  });
+  failedQueue = [];
+};
+
+const handle401 = async (error: any) => {
+  if (error.response?.status !== 401) return Promise.reject(error);
+  if (typeof window === 'undefined') return Promise.reject(error);
+
+  const originalRequest = error.config;
+  if (originalRequest._retry) return Promise.reject(error);
+
+  if (isRefreshing) {
+    return new Promise((resolve, reject) => {
+      failedQueue.push({
+        resolve: (token: string) => {
+          originalRequest.headers.Authorization = `Bearer ${token}`;
+          resolve(axios(originalRequest));
+        },
+        reject,
+      });
+    });
+  }
+
+  originalRequest._retry = true;
+  isRefreshing = true;
+
+  const refreshToken = localStorage.getItem('refreshToken');
+  if (!refreshToken) {
+    isRefreshing = false;
+    localStorage.removeItem('jwt');
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
+    window.location.href = '/auth/login';
     return Promise.reject(error);
   }
+
+  try {
+    const response = await axios.post(`${AppConfig.apiUrl}/iam/auth/RefreshToken`, {
+      refreshToken,
+      platform: 0,
+    });
+
+    if (response.data?.payload) {
+      const { jwt } = response.data.payload;
+      localStorage.setItem('jwt', jwt);
+      localStorage.setItem('accessToken', jwt);
+      localStorage.setItem('refreshToken', response.data.payload.refreshToken);
+
+      processQueue(null, jwt);
+
+      originalRequest.headers.Authorization = `Bearer ${jwt}`;
+      return axios(originalRequest);
+    }
+  } catch (refreshError) {
+    processQueue(refreshError, null);
+    localStorage.removeItem('jwt');
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
+    window.location.href = '/auth/login';
+    return Promise.reject(refreshError);
+  } finally {
+    isRefreshing = false;
+  }
+
+  return Promise.reject(error);
+};
+
+// Apply interceptors to the DEFAULT axios instance
+// (auto-generated API files use `axios.post()` directly)
+axios.interceptors.request.use(
+  (config) => fixIamUrl(addAuthToken(config)),
+  (error) => Promise.reject(error)
 );
+axios.interceptors.response.use((response) => response, handle401);
+
+// Apply same interceptors to the custom `api` instance
+// (used by ApiService.callMultipart, request, get, post, etc.)
+api.interceptors.request.use(
+  (config) => fixIamUrl(addAuthToken(config)),
+  (error) => Promise.reject(error)
+);
+api.interceptors.response.use((response) => response, handle401);
