@@ -30,7 +30,7 @@ export default function NotFound() {
               className="flex-1"
             >
               <ArrowLeft className="h-4 w-4 mr-2" />
-              Geri Don
+              {t("goBack")}
             </Button>
 
             <Button asChild className="flex-1">

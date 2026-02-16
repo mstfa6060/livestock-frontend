@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "next-intl";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 
 interface PriceDisplayProps {
@@ -21,7 +22,24 @@ const EXCHANGE_RATES: Record<string, number> = {
   SAR: 0.11,
 };
 
-function formatPrice(amount: number, currency: string): string {
+// Locale mapping for Intl.NumberFormat
+const LOCALE_MAP: Record<string, string> = {
+  tr: "tr-TR",
+  en: "en-US",
+  de: "de-DE",
+  fr: "fr-FR",
+  es: "es-ES",
+  ar: "ar-SA",
+  ja: "ja-JP",
+  zh: "zh-CN",
+  ko: "ko-KR",
+  pt: "pt-BR",
+  ru: "ru-RU",
+  it: "it-IT",
+  nl: "nl-NL",
+};
+
+function formatPrice(amount: number, currency: string, locale: string = "tr"): string {
   const symbols: Record<string, string> = {
     TRY: "₺",
     USD: "$",
@@ -32,7 +50,8 @@ function formatPrice(amount: number, currency: string): string {
   };
 
   const symbol = symbols[currency] || currency;
-  const formatted = new Intl.NumberFormat("tr-TR", {
+  const intlLocale = LOCALE_MAP[locale] || locale;
+  const formatted = new Intl.NumberFormat(intlLocale, {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(amount);
@@ -63,6 +82,7 @@ export function PriceDisplay({
   size = "md",
   className = "",
 }: PriceDisplayProps) {
+  const locale = useLocale();
   const selectedCountry = useSelectedCountry();
   const targetCurrency = selectedCountry?.defaultCurrencyCode || "TRY";
 
@@ -92,7 +112,7 @@ export function PriceDisplay({
       <div className="flex items-baseline gap-2">
         {/* Main price */}
         <span className={`font-bold ${sizeClasses[size]}`}>
-          {formatPrice(displayPrice, currency)}
+          {formatPrice(displayPrice, currency, locale)}
         </span>
 
         {/* Original price if discounted */}
@@ -100,7 +120,7 @@ export function PriceDisplay({
           <span
             className={`text-muted-foreground line-through ${originalSizeClasses[size]}`}
           >
-            {formatPrice(price, currency)}
+            {formatPrice(price, currency, locale)}
           </span>
         )}
 
@@ -115,7 +135,7 @@ export function PriceDisplay({
       {/* Converted price */}
       {convertedPrice !== null && (
         <span className="text-xs text-muted-foreground">
-          ≈ {formatPrice(convertedPrice, targetCurrency)}
+          ≈ {formatPrice(convertedPrice, targetCurrency, locale)}
         </span>
       )}
     </div>

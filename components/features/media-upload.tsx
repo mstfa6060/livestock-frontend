@@ -19,7 +19,7 @@ import { Progress } from "@/components/ui/progress";
 import { FileProviderAPI } from "@/api/base_modules/FileProvider";
 import { AppConfig } from "@/config/livestock-config";
 import { toast } from "sonner";
-import axios from "axios";
+import { api } from "@/config/livestock-config";
 
 const EMPTY_GUID = "00000000-0000-0000-0000-000000000000";
 
@@ -223,14 +223,12 @@ export function MediaUpload({
         formData.append("entityId", entityId);
       }
 
-      const token = localStorage.getItem("accessToken");
-
-      const response = await axios.post(
+      const response = await api.post(
         `${AppConfig.FileProviderUrl}/Files/Upload`,
         formData,
         {
           headers: {
-            Authorization: token ? `Bearer ${token}` : "",
+            'Content-Type': 'multipart/form-data',
           },
           onUploadProgress: (progressEvent) => {
             if (progressEvent.total) {

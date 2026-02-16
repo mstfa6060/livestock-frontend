@@ -150,6 +150,8 @@ export default function SearchPage() {
             minPrice: minPriceParam ? parseFloat(minPriceParam) as any : undefined,
             maxPrice: maxPriceParam ? parseFloat(maxPriceParam) as any : undefined,
             condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
+            currency: selectedCountry?.defaultCurrencyCode || "TRY",
+            sortBy: sortingMap[sortParam].key,
             sorting: sortingMap[sortParam],
             pageRequest: {
               currentPage: pageParam,

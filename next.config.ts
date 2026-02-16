@@ -46,6 +46,9 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'date-fns', '@radix-ui/react-icons'],
+  },
   images: {
     remotePatterns: [
       {

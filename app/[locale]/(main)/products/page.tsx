@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useDeferredValue, useMemo } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { MainHeader } from "@/components/layout/main-header";
@@ -46,6 +46,110 @@ const CONDITION_MAP: Record<string, number> = {
 interface Category {
   id: string;
   name: string;
+}
+
+interface FilterContentProps {
+  categories: Category[];
+  localCategory: string;
+  setLocalCategory: (v: string) => void;
+  localCondition: ConditionOption;
+  setLocalCondition: (v: ConditionOption) => void;
+  localMinPrice: string;
+  setLocalMinPrice: (v: string) => void;
+  localMaxPrice: string;
+  setLocalMaxPrice: (v: string) => void;
+  applyFilters: () => void;
+  clearFilters: () => void;
+  tf: (key: string) => string;
+  t: (key: string) => string;
+}
+
+function FilterContent({
+  categories,
+  localCategory,
+  setLocalCategory,
+  localCondition,
+  setLocalCondition,
+  localMinPrice,
+  setLocalMinPrice,
+  localMaxPrice,
+  setLocalMaxPrice,
+  applyFilters,
+  clearFilters,
+  tf,
+  t,
+}: FilterContentProps) {
+  return (
+    <div className="space-y-6">
+      {/* Category */}
+      <div className="space-y-2">
+        <Label>{tf("category")}</Label>
+        <Select value={localCategory} onValueChange={setLocalCategory}>
+          <SelectTrigger>
+            <SelectValue placeholder={tf("allCategories")} />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="">{tf("allCategories")}</SelectItem>
+            {categories.map((cat) => (
+              <SelectItem key={cat.id} value={cat.id}>
+                {cat.name}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* Condition */}
+      <div className="space-y-2">
+        <Label>{tf("condition")}</Label>
+        <Select value={localCondition} onValueChange={(v) => setLocalCondition(v as ConditionOption)}>
+          <SelectTrigger>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">{tf("allConditions")}</SelectItem>
+            <SelectItem value="new">{t("condition.new")}</SelectItem>
+            <SelectItem value="likeNew">{t("condition.likeNew")}</SelectItem>
+            <SelectItem value="good">{t("condition.good")}</SelectItem>
+            <SelectItem value="fair">{t("condition.fair")}</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* Price Range */}
+      <div className="space-y-2">
+        <Label>{tf("priceRange")}</Label>
+        <div className="flex gap-2">
+          <Input
+            type="number"
+            placeholder={tf("min")}
+            value={localMinPrice}
+            onChange={(e) => setLocalMinPrice(e.target.value)}
+            min="0"
+          />
+          <Input
+            type="number"
+            placeholder={tf("max")}
+            value={localMaxPrice}
+            onChange={(e) => setLocalMaxPrice(e.target.value)}
+            min="0"
+          />
+        </div>
+      </div>
+
+      <Separator />
+
+      {/* Action buttons */}
+      <div className="flex gap-2">
+        <Button onClick={applyFilters} className="flex-1">
+          {tf("apply")}
+        </Button>
+        <Button variant="outline" onClick={clearFilters}>
+          {tf("clear")}
+        </Button>
+      </div>
+    </div>
+  );
 }
 
 export default function ProductsPage() {
@@ -170,6 +274,8 @@ export default function ProductsPage() {
           condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
           minPrice: minPriceParam ? parseFloat(minPriceParam) as any : undefined,
           maxPrice: maxPriceParam ? parseFloat(maxPriceParam) as any : undefined,
+          currency: selectedCountry?.defaultCurrencyCode || "TRY",
+          sortBy: getSorting(sortParam).key,
           sorting: getSorting(sortParam),
           pageRequest: {
             currentPage: pageParam,
@@ -208,6 +314,8 @@ export default function ProductsPage() {
         condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
         minPrice: minPriceParam ? parseFloat(minPriceParam) as any : undefined,
         maxPrice: maxPriceParam ? parseFloat(maxPriceParam) as any : undefined,
+        currency: selectedCountry?.defaultCurrencyCode || "TRY",
+        sortBy: getSorting(sortParam).key,
         sorting: getSorting(sortParam),
         pageRequest: {
           currentPage: nextPage,
@@ -263,86 +371,20 @@ export default function ProductsPage() {
     return categories.find((c) => c.id === id)?.name || "";
   };
 
+  // Debounced search with useDeferredValue
+  const deferredSearchQuery = useDeferredValue(searchQuery);
+
   // Client-side search within loaded results
-  const filteredProducts = searchQuery
-    ? products.filter(
-        (p) =>
-          p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          p.shortDescription.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : products;
-
-  // Filter sidebar content
-  const FilterContent = () => (
-    <div className="space-y-6">
-      {/* Category */}
-      <div className="space-y-2">
-        <Label>{tf("category")}</Label>
-        <Select value={localCategory} onValueChange={setLocalCategory}>
-          <SelectTrigger>
-            <SelectValue placeholder={tf("allCategories")} />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="">{tf("allCategories")}</SelectItem>
-            {categories.map((cat) => (
-              <SelectItem key={cat.id} value={cat.id}>
-                {cat.name}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
-
-      {/* Condition */}
-      <div className="space-y-2">
-        <Label>{tf("condition")}</Label>
-        <Select value={localCondition} onValueChange={(v) => setLocalCondition(v as ConditionOption)}>
-          <SelectTrigger>
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">{tf("allConditions")}</SelectItem>
-            <SelectItem value="new">{t("condition.new")}</SelectItem>
-            <SelectItem value="likeNew">{t("condition.likeNew")}</SelectItem>
-            <SelectItem value="good">{t("condition.good")}</SelectItem>
-            <SelectItem value="fair">{t("condition.fair")}</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-
-      {/* Price Range */}
-      <div className="space-y-2">
-        <Label>{tf("priceRange")}</Label>
-        <div className="flex gap-2">
-          <Input
-            type="number"
-            placeholder={tf("min")}
-            value={localMinPrice}
-            onChange={(e) => setLocalMinPrice(e.target.value)}
-            min="0"
-          />
-          <Input
-            type="number"
-            placeholder={tf("max")}
-            value={localMaxPrice}
-            onChange={(e) => setLocalMaxPrice(e.target.value)}
-            min="0"
-          />
-        </div>
-      </div>
-
-      <Separator />
-
-      {/* Action buttons */}
-      <div className="flex gap-2">
-        <Button onClick={applyFilters} className="flex-1">
-          {tf("apply")}
-        </Button>
-        <Button variant="outline" onClick={clearFilters}>
-          {tf("clear")}
-        </Button>
-      </div>
-    </div>
+  const filteredProducts = useMemo(
+    () =>
+      deferredSearchQuery
+        ? products.filter(
+            (p) =>
+              p.title.toLowerCase().includes(deferredSearchQuery.toLowerCase()) ||
+              p.shortDescription.toLowerCase().includes(deferredSearchQuery.toLowerCase())
+          )
+        : products,
+    [products, deferredSearchQuery]
   );
 
   return (
@@ -407,7 +449,21 @@ export default function ProductsPage() {
                 <SheetTitle>{tf("title")}</SheetTitle>
               </SheetHeader>
               <div className="mt-6">
-                <FilterContent />
+                <FilterContent
+                  categories={categories}
+                  localCategory={localCategory}
+                  setLocalCategory={setLocalCategory}
+                  localCondition={localCondition}
+                  setLocalCondition={setLocalCondition}
+                  localMinPrice={localMinPrice}
+                  setLocalMinPrice={setLocalMinPrice}
+                  localMaxPrice={localMaxPrice}
+                  setLocalMaxPrice={setLocalMaxPrice}
+                  applyFilters={applyFilters}
+                  clearFilters={clearFilters}
+                  tf={tf}
+                  t={t}
+                />
               </div>
             </SheetContent>
           </Sheet>
@@ -457,7 +513,21 @@ export default function ProductsPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <FilterContent />
+                <FilterContent
+                  categories={categories}
+                  localCategory={localCategory}
+                  setLocalCategory={setLocalCategory}
+                  localCondition={localCondition}
+                  setLocalCondition={setLocalCondition}
+                  localMinPrice={localMinPrice}
+                  setLocalMinPrice={setLocalMinPrice}
+                  localMaxPrice={localMaxPrice}
+                  setLocalMaxPrice={setLocalMaxPrice}
+                  applyFilters={applyFilters}
+                  clearFilters={clearFilters}
+                  tf={tf}
+                  t={t}
+                />
               </CardContent>
             </Card>
           </aside>
