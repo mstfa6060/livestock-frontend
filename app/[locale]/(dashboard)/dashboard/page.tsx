@@ -41,7 +41,6 @@ export default function DashboardPage() {
   const tn = useTranslations("dashboardNav");
   const { user } = useAuth();
 
-  const unreadNotifications = useNotificationsStore((s) => s.unreadCount);
   const fetchNotifications = useNotificationsStore((s) => s.fetchNotifications);
 
   const [isLoading, setIsLoading] = useState(true);
@@ -252,7 +251,7 @@ export default function DashboardPage() {
             <Bell className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{unreadNotifications}</div>
+            <div className="text-2xl font-bold">{stats.unreadNotifications}</div>
             <p className="text-xs text-muted-foreground">{t("stats.unread")}</p>
           </CardContent>
         </Card>

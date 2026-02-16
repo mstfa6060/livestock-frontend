@@ -216,7 +216,7 @@ export default function ProductsPage() {
           languageCode: locale,
           sorting: { key: "name", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
           filters: [],
-          pageRequest: { currentPage: 1, perPageCount: 100, listAll: true },
+          pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
         });
         setCategories(response.map((c) => ({ id: c.id, name: c.name })));
       } catch {

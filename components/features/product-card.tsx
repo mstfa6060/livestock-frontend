@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Heart, MapPin, Eye, Star, ImageOff } from "lucide-react";
 import { PriceDisplay } from "./price-display";
-import { useState } from "react";
+import { useState, memo } from "react";
 import { useFavoritesStore } from "@/stores/useFavoritesStore";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
@@ -60,7 +60,7 @@ const CONDITION_MAP: Record<number, string> = {
   3: "fair",
 };
 
-export function ProductCard({ product, onFavorite, isFavorite = false }: ProductCardProps) {
+export const ProductCard = memo(function ProductCard({ product, onFavorite, isFavorite = false }: ProductCardProps) {
   const t = useTranslations("products");
   const tpd = useTranslations("productDetail");
   const { user } = useAuth();
@@ -134,6 +134,7 @@ export function ProductCard({ product, onFavorite, isFavorite = false }: Product
             className="absolute top-2 right-2 bg-white/80 hover:bg-white"
             onClick={handleFavorite}
             disabled={isTogglingFavorite}
+            aria-label={favorite ? t("removedFromFavorites") : t("addedToFavorites")}
           >
             <Heart
               className={`h-5 w-5 transition-colors ${
@@ -209,7 +210,7 @@ export function ProductCard({ product, onFavorite, isFavorite = false }: Product
       </Card>
     </Link>
   );
-}
+});
 
 // Skeleton for loading state
 export function ProductCardSkeleton() {

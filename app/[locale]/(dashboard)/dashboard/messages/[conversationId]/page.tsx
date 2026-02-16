@@ -189,7 +189,7 @@ export default function ConversationPage() {
               conditionType: "equals",
             },
           ],
-          pageRequest: { currentPage: 1, perPageCount: 100, listAll: true },
+          pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
         });
 
         setMessages(
@@ -206,21 +206,21 @@ export default function ConversationPage() {
           }))
         );
 
-        // Mark unread messages as read
+        // Mark unread messages as read (parallel)
         const unreadMessages = messagesResponse.filter(
           (msg) => !msg.isRead && msg.senderUserId !== user.id
         );
-        for (const msg of unreadMessages) {
-          try {
-            await LivestockTradingAPI.Messages.Update.Request({
-              id: msg.id,
-              content: msg.content,
-              attachmentUrls: "",
-              isRead: true,
-            });
-          } catch {
-            // Continue even if marking as read fails
-          }
+        if (unreadMessages.length > 0) {
+          await Promise.allSettled(
+            unreadMessages.map((msg) =>
+              LivestockTradingAPI.Messages.Update.Request({
+                id: msg.id,
+                content: msg.content,
+                attachmentUrls: "",
+                isRead: true,
+              })
+            )
+          );
         }
       } catch {
         toast.error(t("fetchError"));

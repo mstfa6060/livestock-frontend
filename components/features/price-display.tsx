@@ -39,6 +39,22 @@ const LOCALE_MAP: Record<string, string> = {
   nl: "nl-NL",
 };
 
+// Cache Intl.NumberFormat instances to avoid recreation on every render
+const formatterCache = new Map<string, Intl.NumberFormat>();
+
+function getFormatter(locale: string): Intl.NumberFormat {
+  const intlLocale = LOCALE_MAP[locale] || locale;
+  let formatter = formatterCache.get(intlLocale);
+  if (!formatter) {
+    formatter = new Intl.NumberFormat(intlLocale, {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    });
+    formatterCache.set(intlLocale, formatter);
+  }
+  return formatter;
+}
+
 function formatPrice(amount: number, currency: string, locale: string = "tr"): string {
   const symbols: Record<string, string> = {
     TRY: "₺",
@@ -50,11 +66,7 @@ function formatPrice(amount: number, currency: string, locale: string = "tr"): s
   };
 
   const symbol = symbols[currency] || currency;
-  const intlLocale = LOCALE_MAP[locale] || locale;
-  const formatted = new Intl.NumberFormat(intlLocale, {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
+  const formatted = getFormatter(locale).format(amount);
 
   return `${symbol}${formatted}`;
 }

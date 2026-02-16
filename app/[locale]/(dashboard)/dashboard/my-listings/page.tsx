@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
@@ -33,7 +33,9 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { PlusCircle, MoreVertical, Pencil, Trash2, Eye, EyeOff } from "lucide-react";
+import { PlusCircle, MoreVertical, Pencil, Trash2, Eye, EyeOff, Loader2 } from "lucide-react";
+
+const PAGE_SIZE = 20;
 
 type ListingStatus = "all" | "active" | "draft" | "sold" | "pending";
 
@@ -47,6 +49,9 @@ export default function MyListingsPage() {
   const [isSellerLoading, setIsSellerLoading] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [listings, setListings] = useState<Product[]>([]);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [hasMore, setHasMore] = useState(false);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [productToDelete, setProductToDelete] = useState<string | null>(null);
   const [sellerId, setSellerId] = useState<string | null>(null);
@@ -96,58 +101,64 @@ export default function MyListingsPage() {
     fetchSellerProfile();
   }, [user?.id]);
 
+  const fetchListingsPage = useCallback(async (page: number) => {
+    if (!sellerId) return [];
+
+    const response = await LivestockTradingAPI.Products.All.Request({
+      countryCode: "TR",
+      sorting: { key: "createdAt", direction: 1 },
+      filters: [
+        {
+          key: "sellerId",
+          type: "guid",
+          isUsed: true,
+          values: [sellerId],
+          min: {},
+          max: {},
+          conditionType: "equals",
+        },
+      ],
+      pageRequest: { currentPage: page, perPageCount: PAGE_SIZE, listAll: false },
+    });
+
+    setHasMore(response.length === PAGE_SIZE);
+
+    return response.map((item) => ({
+      id: item.id,
+      title: item.title,
+      slug: item.slug,
+      shortDescription: item.shortDescription,
+      categoryId: item.categoryId,
+      brandId: item.brandId || undefined,
+      basePrice: item.basePrice as number,
+      currency: item.currency,
+      discountedPrice: item.discountedPrice as number | undefined,
+      stockQuantity: item.stockQuantity,
+      isInStock: item.isInStock,
+      sellerId: item.sellerId,
+      locationId: item.locationId,
+      locationCountryCode: item.locationCountryCode,
+      locationCity: item.locationCity,
+      status: item.status,
+      condition: item.condition,
+      viewCount: item.viewCount,
+      averageRating: item.averageRating as number | undefined,
+      reviewCount: item.reviewCount,
+      createdAt: item.createdAt,
+      imageUrl: undefined,
+    })) as Product[];
+  }, [sellerId]);
+
   // Fetch user's listings
   useEffect(() => {
     const fetchListings = async () => {
-      if (!sellerId) {
-        return;
-      }
+      if (!sellerId) return;
 
       setIsLoading(true);
       try {
-        const response = await LivestockTradingAPI.Products.All.Request({
-          countryCode: "TR",
-          sorting: { key: "createdAt", direction: 1 }, // Descending
-          filters: [
-            {
-              key: "sellerId",
-              type: "guid",
-              isUsed: true,
-              values: [sellerId],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 100, listAll: true },
-        });
-
-        const transformedProducts: Product[] = response.map((item) => ({
-          id: item.id,
-          title: item.title,
-          slug: item.slug,
-          shortDescription: item.shortDescription,
-          categoryId: item.categoryId,
-          brandId: item.brandId || undefined,
-          basePrice: item.basePrice as number,
-          currency: item.currency,
-          discountedPrice: item.discountedPrice as number | undefined,
-          stockQuantity: item.stockQuantity,
-          isInStock: item.isInStock,
-          sellerId: item.sellerId,
-          locationId: item.locationId,
-          locationCountryCode: item.locationCountryCode,
-          locationCity: item.locationCity,
-          status: item.status,
-          condition: item.condition,
-          viewCount: item.viewCount,
-          averageRating: item.averageRating as number | undefined,
-          reviewCount: item.reviewCount,
-          createdAt: item.createdAt,
-          imageUrl: undefined,
-        }));
-
-        setListings(transformedProducts);
+        const products = await fetchListingsPage(1);
+        setListings(products);
+        setCurrentPage(1);
       } catch {
         toast.error(t("fetchError"));
       } finally {
@@ -156,7 +167,21 @@ export default function MyListingsPage() {
     };
 
     fetchListings();
-  }, [sellerId, t]);
+  }, [sellerId, t, fetchListingsPage]);
+
+  const handleLoadMore = async () => {
+    try {
+      setIsLoadingMore(true);
+      const nextPage = currentPage + 1;
+      const moreProducts = await fetchListingsPage(nextPage);
+      setListings(prev => [...prev, ...moreProducts]);
+      setCurrentPage(nextPage);
+    } catch {
+      toast.error(t("fetchError"));
+    } finally {
+      setIsLoadingMore(false);
+    }
+  };
 
   const filteredListings =
     statusFilter === "all"
@@ -356,6 +381,21 @@ export default function MyListingsPage() {
               </DropdownMenu>
             </div>
           ))}
+        </div>
+      )}
+
+      {hasMore && !isLoading && (
+        <div className="flex justify-center mt-6">
+          <Button variant="outline" onClick={handleLoadMore} disabled={isLoadingMore}>
+            {isLoadingMore ? (
+              <>
+                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                {t("loadingMore")}
+              </>
+            ) : (
+              t("loadMore")
+            )}
+          </Button>
         </div>
       )}
 

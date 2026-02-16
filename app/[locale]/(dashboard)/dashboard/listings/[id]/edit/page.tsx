@@ -24,7 +24,8 @@ import { AppConfig } from "@/config/livestock-config";
 import { useAuth } from "@/contexts/AuthContext";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { toast } from "sonner";
-import { MediaUpload } from "@/components/features/media-upload";
+import dynamic from "next/dynamic";
+const MediaUpload = dynamic(() => import("@/components/features/media-upload").then(mod => ({ default: mod.MediaUpload })), { ssr: false });
 
 interface Category {
   id: string;
@@ -133,7 +134,7 @@ export default function EditListingPage() {
           languageCode: locale,
           sorting: { key: "sortOrder", direction: 0 },
           filters: [],
-          pageRequest: { currentPage: 1, perPageCount: 100, listAll: true },
+          pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
         });
         const loadedCategories = categoriesResponse.map((c) => ({ id: c.id, name: c.name, slug: c.slug }));
         setCategories(loadedCategories);

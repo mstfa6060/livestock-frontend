@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { memo } from "react";
 import {
   User,
   Phone,
@@ -36,7 +37,7 @@ interface SellerCardProps {
   onContact?: () => void;
 }
 
-export function SellerCard({ seller, showContact = true, onContact }: SellerCardProps) {
+export const SellerCard = memo(function SellerCard({ seller, showContact = true, onContact }: SellerCardProps) {
   const t = useTranslations("seller");
 
   const memberSinceYear = seller.memberSince
@@ -138,4 +139,4 @@ export function SellerCard({ seller, showContact = true, onContact }: SellerCard
       </CardContent>
     </Card>
   );
-}
+});

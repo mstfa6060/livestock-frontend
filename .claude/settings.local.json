@@ -50,7 +50,8 @@
       "Bash(grep:*)",
       "Bash(for file in *.ts)",
       "Bash(do sed -i '142d' \"$file\")",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(npm audit:*)"
     ]
   }
 }

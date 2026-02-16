@@ -22,7 +22,8 @@
     "search": "Ara",
     "dashboard": "Panel",
     "settings": "Ayarlar",
-    "logout": "Cikis Yap"
+    "logout": "Cikis Yap",
+    "menu": "Menu"
   },
   "auth": {
     "login": {
@@ -207,14 +208,18 @@
       "description": "Bu ilani silmek istediginizden emin misiniz? Bu islem geri alinamaz.",
       "cancel": "Iptal",
       "confirm": "Sil"
-    }
+    },
+    "loadMore": "Daha Fazla Yukle",
+    "loadingMore": "Yukleniyor..."
   },
   "favorites": {
     "title": "Favorilerim",
     "description": "Begendigniz urunleri buradan takip edin",
     "noFavorites": "Henuz favori urun eklemediniz",
     "browseProducts": "Urunlere Goz At",
-    "fetchError": "Favoriler yuklenirken bir hata olustu"
+    "fetchError": "Favoriler yuklenirken bir hata olustu",
+    "loadMore": "Daha Fazla Yukle",
+    "loadingMore": "Yukleniyor..."
   },
   "messages": {
     "title": "Mesajlar",

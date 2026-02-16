@@ -11,6 +11,9 @@ import "../globals.css";
 
 const BASE_URL = "https://livestock-trading.com";
 
+// RTL languages
+const RTL_LOCALES = new Set(["ar", "he", "fa", "ur"]);
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -111,9 +114,10 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages();
+  const dir = RTL_LOCALES.has(locale) ? "rtl" : "ltr";
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={dir}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
