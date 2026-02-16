@@ -23,9 +23,10 @@ import {
 import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { useAuth, getRememberedEmail } from "@/contexts/AuthContext";
 import { loginFormSchema, type LoginFormData } from "@/lib/validations";
+import { AppConfig } from "@/config/livestock-config";
 
 // Google Client ID from config
-const GOOGLE_CLIENT_ID = "983073672409-j7v2vi68dfh52gt3ahjjda2otpmmfh6q.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = AppConfig.GoogleWebClientId;
 
 // Google Icon SVG
 function GoogleIcon() {

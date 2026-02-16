@@ -2,8 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const { Translate } = require('@google-cloud/translate').v2;
 
-// Google Cloud Translation API Key (Hirovo project - working)
-const API_KEY = 'AIzaSyCqUyXdlmgJMSgnMIcgs7A4649J3Zzjx-Q';
+// Google Cloud Translation API Key - loaded from environment variable
+const API_KEY = process.env.GOOGLE_TRANSLATE_API_KEY;
+if (!API_KEY) {
+    console.error('GOOGLE_TRANSLATE_API_KEY env variable gerekli. .env.local dosyasına ekleyin.');
+    process.exit(1);
+}
 
 const translate = new Translate({
     key: API_KEY,

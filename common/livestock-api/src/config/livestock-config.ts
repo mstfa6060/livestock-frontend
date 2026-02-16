@@ -24,12 +24,12 @@ export const AppConfig = {
   FileStorageBaseUrl: `${baseURL}/file-storage/`,
 
   // Google API credentials
-  GoogleWebClientId: '983073672409-j7v2vi68dfh52gt3ahjjda2otpmmfh6q.apps.googleusercontent.com',
-  GooglePlacesApiKey: 'AIzaSyCAth2kFsXa9W9uQTftAVpJ9fFaBi76KG0',
+  GoogleWebClientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '',
+  GooglePlacesApiKey: process.env.NEXT_PUBLIC_GOOGLE_PLACES_API_KEY || '',
 
   // Company ID
-  DefaultCompanyId: '9dae9cbd-82b1-4ead-bd2b-9c5fe5146a2a',
-  companyId: '9dae9cbd-82b1-4ead-bd2b-9c5fe5146a2a',
+  DefaultCompanyId: process.env.NEXT_PUBLIC_DEFAULT_COMPANY_ID || '',
+  companyId: process.env.NEXT_PUBLIC_DEFAULT_COMPANY_ID || '',
 };
 
 // Create custom axios instance (used by ApiService.callMultipart, request, etc.)
