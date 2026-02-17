@@ -15,12 +15,14 @@ import {
   User,
   Bell,
   Store,
+  FolderTree,
 } from "lucide-react";
 
 const menuItems = [
   { key: "overview", href: "/dashboard", icon: LayoutDashboard },
   { key: "myListings", href: "/dashboard/my-listings", icon: Package },
   { key: "becomeSeller", href: "/dashboard/become-seller", icon: Store },
+  { key: "categories", href: "/dashboard/categories", icon: FolderTree },
   { key: "favorites", href: "/dashboard/favorites", icon: Heart },
   { key: "messages", href: "/dashboard/messages", icon: MessageSquare },
   { key: "notifications", href: "/dashboard/notifications", icon: Bell },

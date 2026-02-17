@@ -141,7 +141,8 @@
     "profile": "Profil",
     "settings": "Ayarlar",
     "newListing": "Yeni Ilan Ekle",
-    "becomeSeller": "Satici Ol"
+    "becomeSeller": "Satici Ol",
+    "categories": "Kategoriler"
   },
   "profile": {
     "title": "Profil Bilgileri",
@@ -852,5 +853,74 @@
       "clearAll": "Tumu Temizle"
     },
     "fetchError": "Arama sonuclari yuklenirken bir hata olustu"
+  },
+  "categories": {
+    "title": "Kategori Yonetimi",
+    "description": "Kategorileri buradan yonetin",
+    "noCategories": "Henuz kategori eklenmemis",
+    "createFirst": "Ilk Kategoriyi Olusturun",
+    "fetchError": "Kategoriler yuklenirken bir hata olustu",
+    "createSuccess": "Kategori basariyla olusturuldu",
+    "createError": "Kategori olusturulurken bir hata olustu",
+    "updateSuccess": "Kategori basariyla guncellendi",
+    "updateError": "Kategori guncellenirken bir hata olustu",
+    "deleteSuccess": "Kategori basariyla silindi",
+    "deleteError": "Kategori silinirken bir hata olustu",
+    "activateSuccess": "Kategori aktif edildi",
+    "deactivateSuccess": "Kategori pasif yapildi",
+    "statusError": "Durum degistirilirken bir hata olustu",
+    "loadError": "Kategori yuklenirken bir hata olustu",
+    "filters": {
+      "all": "Tumu",
+      "active": "Aktif",
+      "inactive": "Inaktif"
+    },
+    "table": {
+      "name": "Kategori Adi",
+      "slug": "Slug",
+      "sortOrder": "Sira No",
+      "subCategories": "Alt Kategori",
+      "status": "Durum",
+      "actions": "Islemler"
+    },
+    "actions": {
+      "edit": "Duzenle",
+      "delete": "Sil",
+      "activate": "Aktif Et",
+      "deactivate": "Pasif Yap"
+    },
+    "deleteDialog": {
+      "title": "Kategoriyi Sil",
+      "description": "Bu kategoriyi silmek istediginizden emin misiniz? Bu islem geri alinamaz.",
+      "cancel": "Iptal",
+      "confirm": "Sil"
+    },
+    "addNew": "Yeni Kategori Ekle",
+    "loadMore": "Daha Fazla Yukle",
+    "loadingMore": "Yukleniyor...",
+    "form": {
+      "newTitle": "Yeni Kategori Olustur",
+      "editTitle": "Kategoriyi Duzenle",
+      "name": "Kategori Adi",
+      "namePlaceholder": "Ornek: Buyukbas Hayvanlar",
+      "slug": "Slug",
+      "slugPlaceholder": "ornek: buyukbas-hayvanlar",
+      "description": "Aciklama",
+      "descriptionPlaceholder": "Kategori hakkinda kisa bir aciklama...",
+      "parentCategory": "Ust Kategori",
+      "parentCategoryPlaceholder": "Ust kategori secin (opsiyonel)",
+      "noParent": "Ust kategori yok (Ana kategori)",
+      "sortOrder": "Siralama Numarasi",
+      "isActive": "Aktif",
+      "iconUrl": "Ikon URL",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Kaydet",
+      "submitting": "Kaydediliyor...",
+      "updating": "Guncelleniyor...",
+      "errors": {
+        "nameRequired": "Kategori adi zorunludur",
+        "slugRequired": "Slug zorunludur"
+      }
+    }
   }
 }
