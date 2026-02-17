@@ -40,8 +40,6 @@ export class ApiService {
     try {
       const response = await promise;
 
-      console.log('🔎 Raw API response:', JSON.stringify(response.data, null, 2));
-
       const { hasError, error, payload } = response.data;
 
       if (hasError) {

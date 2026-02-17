@@ -71,7 +71,7 @@ export default function MessagesPage() {
         );
 
         // Fetch unread counts
-        let unreadMap: Record<string, { unreadCount: number; lastMessageAt?: Date }> = {};
+        const unreadMap: Record<string, { unreadCount: number; lastMessageAt?: Date }> = {};
         try {
           const unreadResponse = await LivestockTradingAPI.Messages.UnreadCount.Request({
             userId: user.id,

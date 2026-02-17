@@ -1,7 +1,4 @@
 {
-  "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
-  },
   "permissions": {
     "allow": [
       "Bash(dir:*)",
@@ -51,7 +48,8 @@
       "Bash(for file in *.ts)",
       "Bash(do sed -i '142d' \"$file\")",
       "Bash(done)",
-      "Bash(npm audit:*)"
+      "Bash(wc:*)",
+      "Bash(find:*)"
     ]
   }
 }

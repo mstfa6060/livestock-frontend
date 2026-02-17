@@ -17,12 +17,21 @@ import {
   Store,
   FolderTree,
 } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
+import { isAdminEmail } from "@/lib/admin";
 
-const menuItems = [
+interface MenuItem {
+  key: string;
+  href: string;
+  icon: typeof LayoutDashboard;
+  adminOnly?: boolean;
+}
+
+const menuItems: MenuItem[] = [
   { key: "overview", href: "/dashboard", icon: LayoutDashboard },
   { key: "myListings", href: "/dashboard/my-listings", icon: Package },
   { key: "becomeSeller", href: "/dashboard/become-seller", icon: Store },
-  { key: "categories", href: "/dashboard/categories", icon: FolderTree },
+  { key: "categories", href: "/dashboard/categories", icon: FolderTree, adminOnly: true },
   { key: "favorites", href: "/dashboard/favorites", icon: Heart },
   { key: "messages", href: "/dashboard/messages", icon: MessageSquare },
   { key: "notifications", href: "/dashboard/notifications", icon: Bell },
@@ -33,9 +42,13 @@ const menuItems = [
 export function DashboardSidebar() {
   const pathname = usePathname();
   const t = useTranslations("dashboardNav");
+  const { user } = useAuth();
+  const isAdmin = isAdminEmail(user?.email);
 
   // Remove locale prefix from pathname for comparison
   const currentPath = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, "");
+
+  const visibleItems = menuItems.filter((item) => !item.adminOnly || isAdmin);
 
   return (
     <aside className="w-64 border-r bg-background min-h-[calc(100vh-4rem)] p-4 hidden lg:block">
@@ -49,7 +62,7 @@ export function DashboardSidebar() {
 
       {/* Navigation */}
       <nav className="space-y-1">
-        {menuItems.map((item) => {
+        {visibleItems.map((item) => {
           const isActive =
             currentPath === item.href ||
             (item.href !== "/dashboard" && currentPath.startsWith(item.href));

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,6 +21,8 @@ import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { IconUpload } from "@/components/features/icon-upload";
+import { useAuth } from "@/contexts/AuthContext";
+import { isAdminEmail } from "@/lib/admin";
 
 interface ParentCategory {
   id: string;
@@ -30,9 +32,19 @@ interface ParentCategory {
 export default function EditCategoryPage() {
   const t = useTranslations("categories");
   const tc = useTranslations("common");
+  const locale = useLocale();
   const router = useRouter();
   const params = useParams();
   const categoryId = params.id as string;
+  const { user } = useAuth();
+
+  // Admin-only page
+  useEffect(() => {
+    if (user && !isAdminEmail(user.email)) {
+      toast.error(tc("unauthorized"));
+      router.replace("/dashboard");
+    }
+  }, [user, router, tc]);
 
   const [isLoadingCategory, setIsLoadingCategory] = useState(true);
   const [name, setName] = useState("");
@@ -57,13 +69,13 @@ export default function EditCategoryPage() {
         const [detail, parents] = await Promise.all([
           LivestockTradingAPI.Categories.Detail.Request({
             id: categoryId,
-            languageCode: "tr",
+            languageCode: locale,
           }),
           LivestockTradingAPI.Categories.Pick.Request({
             selectedIds: [],
             keyword: "",
             limit: 100,
-            languageCode: "tr",
+            languageCode: locale,
           }),
         ]);
 

@@ -46,7 +46,7 @@ export default function MyListingsPage() {
   const { user } = useAuth();
 
   const [statusFilter, setStatusFilter] = useState<ListingStatus>("all");
-  const [isSellerLoading, setIsSellerLoading] = useState(true);
+  const [, setIsSellerLoading] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [listings, setListings] = useState<Product[]>([]);
   const [isLoadingMore, setIsLoadingMore] = useState(false);

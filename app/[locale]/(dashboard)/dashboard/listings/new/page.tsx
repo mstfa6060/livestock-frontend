@@ -56,7 +56,7 @@ export default function NewListingPage() {
   // Media upload state
   const [mediaBucketId, setMediaBucketId] = useState<string>("");
   const [coverImageFileId, setCoverImageFileId] = useState<string>("");
-  const [mediaFiles, setMediaFiles] = useState<MediaFile[]>([]);
+  const [, setMediaFiles] = useState<MediaFile[]>([]);
 
   const [formData, setFormData] = useState({
     title: "",
@@ -220,7 +220,7 @@ export default function NewListingPage() {
       });
 
       // Step 3: Create Product with the sellerId and locationId
-      const productResponse = await LivestockTradingAPI.Products.Create.Request({
+      await LivestockTradingAPI.Products.Create.Request({
         title: formData.title,
         slug: slug,
         description: formData.description,

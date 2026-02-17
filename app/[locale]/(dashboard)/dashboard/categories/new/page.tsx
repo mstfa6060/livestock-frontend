@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -20,6 +20,8 @@ import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 import { IconUpload } from "@/components/features/icon-upload";
+import { useAuth } from "@/contexts/AuthContext";
+import { isAdminEmail } from "@/lib/admin";
 
 interface ParentCategory {
   id: string;
@@ -38,7 +40,17 @@ function slugify(text: string): string {
 export default function NewCategoryPage() {
   const t = useTranslations("categories");
   const tc = useTranslations("common");
+  const locale = useLocale();
   const router = useRouter();
+  const { user } = useAuth();
+
+  // Admin-only page
+  useEffect(() => {
+    if (user && !isAdminEmail(user.email)) {
+      toast.error(tc("unauthorized"));
+      router.replace("/dashboard");
+    }
+  }, [user, router, tc]);
 
   const [name, setName] = useState("");
   const [slug, setSlug] = useState("");
@@ -60,7 +72,7 @@ export default function NewCategoryPage() {
           selectedIds: [],
           keyword: "",
           limit: 100,
-          languageCode: "tr",
+          languageCode: locale,
         });
         setParentCategories(
           response.map((item: any) => ({ id: item.id, name: item.name }))

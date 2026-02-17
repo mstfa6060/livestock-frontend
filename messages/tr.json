@@ -11,6 +11,7 @@
     "back": "Geri",
     "next": "Ileri",
     "close": "Kapat",
+    "unauthorized": "Bu sayfaya erisim yetkiniz bulunmamaktadir",
     "emailPlaceholder": "ornek@email.com",
     "login": "Giris Yap",
     "register": "Kayit Ol"
@@ -749,14 +750,7 @@
     "productCreated": "Urun basariyla olusturuldu",
     "creationFailed": "Urun olusturulamadi. Lutfen tekrar deneyin.",
     "userNotFound": "Kullanici bilgisi bulunamadi. Lutfen tekrar giris yapin.",
-    "defaultBusinessName": "Isletmem",
-    "errors": {
-      "titleRequired": "Ilan basligi zorunludur",
-      "shortDescriptionRequired": "Kisa aciklama zorunludur",
-      "descriptionRequired": "Detayli aciklama zorunludur",
-      "categoryRequired": "Kategori secimi zorunludur",
-      "priceRequired": "Gecerli bir fiyat giriniz"
-    }
+    "defaultBusinessName": "Isletmem"
   },
   "becomeSeller": {
     "title": "Satici Ol",

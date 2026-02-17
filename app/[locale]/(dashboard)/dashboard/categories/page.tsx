@@ -2,8 +2,11 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
+import { useTranslations, useLocale } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
+import { useAuth } from "@/contexts/AuthContext";
+import { isAdminEmail } from "@/lib/admin";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
@@ -53,6 +56,18 @@ interface Category {
 
 export default function CategoriesPage() {
   const t = useTranslations("categories");
+  const tc = useTranslations("common");
+  const locale = useLocale();
+  const router = useRouter();
+  const { user } = useAuth();
+
+  // Admin-only page
+  useEffect(() => {
+    if (user && !isAdminEmail(user.email)) {
+      toast.error(tc("unauthorized"));
+      router.replace("/dashboard");
+    }
+  }, [user, router, tc]);
 
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
   const [isLoading, setIsLoading] = useState(true);
@@ -65,7 +80,7 @@ export default function CategoriesPage() {
 
   const fetchCategoriesPage = useCallback(async (page: number) => {
     const response = await LivestockTradingAPI.Categories.All.Request({
-      languageCode: "tr",
+      languageCode: locale,
       sorting: { key: "sortOrder", direction: 0 },
       filters: [],
       pageRequest: { currentPage: page, perPageCount: PAGE_SIZE, listAll: false },
@@ -151,7 +166,7 @@ export default function CategoriesPage() {
     try {
       const detail = await LivestockTradingAPI.Categories.Detail.Request({
         id: categoryId,
-        languageCode: "tr",
+        languageCode: locale,
       });
 
       await LivestockTradingAPI.Categories.Update.Request({
