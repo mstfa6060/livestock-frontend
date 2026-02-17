@@ -81,7 +81,7 @@ export default function SearchPage() {
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
 
   // Filter state (local until applied)
-  const [localCategory, setLocalCategory] = useState(categoryParam);
+  const [localCategory, setLocalCategory] = useState(categoryParam || "all");
   const [localCondition, setLocalCondition] = useState(conditionParam);
   const [localMinPrice, setLocalMinPrice] = useState(minPriceParam);
   const [localMaxPrice, setLocalMaxPrice] = useState(maxPriceParam);
@@ -329,7 +329,7 @@ export default function SearchPage() {
 
   // Clear all filters
   const clearFilters = () => {
-    setLocalCategory("");
+    setLocalCategory("all");
     setLocalCondition("all");
     setLocalMinPrice("");
     setLocalMaxPrice("");
@@ -365,7 +365,7 @@ export default function SearchPage() {
             <SelectValue placeholder={t("filters.allCategories")} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">{t("filters.allCategories")}</SelectItem>
+            <SelectItem value="all">{t("filters.allCategories")}</SelectItem>
             {categories.map((cat) => (
               <SelectItem key={cat.id} value={cat.id}>
                 {cat.name}

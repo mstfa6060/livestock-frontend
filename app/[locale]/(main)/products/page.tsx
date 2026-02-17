@@ -89,7 +89,7 @@ function FilterContent({
             <SelectValue placeholder={tf("allCategories")} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">{tf("allCategories")}</SelectItem>
+            <SelectItem value="all">{tf("allCategories")}</SelectItem>
             {categories.map((cat) => (
               <SelectItem key={cat.id} value={cat.id}>
                 {cat.name}
@@ -180,7 +180,7 @@ export default function ProductsPage() {
   const [totalPages, setTotalPages] = useState(0);
 
   // Local filter state (until applied)
-  const [localCategory, setLocalCategory] = useState(categoryParam);
+  const [localCategory, setLocalCategory] = useState(categoryParam || "all");
   const [localCondition, setLocalCondition] = useState(conditionParam);
   const [localMinPrice, setLocalMinPrice] = useState(minPriceParam);
   const [localMaxPrice, setLocalMaxPrice] = useState(maxPriceParam);
@@ -346,7 +346,7 @@ export default function ProductsPage() {
 
   // Clear all filters
   const clearFilters = () => {
-    setLocalCategory("");
+    setLocalCategory("all");
     setLocalCondition("all");
     setLocalMinPrice("");
     setLocalMaxPrice("");
