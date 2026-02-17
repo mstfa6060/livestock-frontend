@@ -19,6 +19,7 @@ import {
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
+import { IconUpload } from "@/components/features/icon-upload";
 
 interface ParentCategory {
   id: string;
@@ -200,15 +201,10 @@ export default function NewCategoryPage() {
           />
         </div>
 
-        {/* Icon URL */}
+        {/* Icon */}
         <div className="space-y-2">
-          <Label htmlFor="iconUrl">{t("form.iconUrl")}</Label>
-          <Input
-            id="iconUrl"
-            value={iconUrl}
-            onChange={(e) => setIconUrl(e.target.value)}
-            placeholder={t("form.iconUrlPlaceholder")}
-          />
+          <Label>{t("form.iconUrl")}</Label>
+          <IconUpload value={iconUrl} onChange={setIconUrl} />
         </div>
 
         {/* Is Active */}

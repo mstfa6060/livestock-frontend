@@ -815,7 +815,10 @@
     "coverBadge": "KAPAK",
     "videoBadge": "VIDEO",
     "coverUpdated": "Kapak fotografı basariyla ayarlandi",
-    "optimizationInfo": "Fotograflar web standartlarina uygun sekilde optimize edildi"
+    "optimizationInfo": "Fotograflar web standartlarina uygun sekilde optimize edildi",
+    "selectImage": "Gorsel Sec",
+    "changeImage": "Degistir",
+    "removeImage": "Kaldir"
   },
   "error": {
     "title": "Bir Hata Olustu",
