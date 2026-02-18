@@ -70,6 +70,57 @@ interface VetInfo {
   storageInstructions: string;
 }
 
+interface ChemicalInfo {
+  id: string;
+  subType: string;
+  activeIngredients: string;
+  registrationNumber: string;
+  toxicityLevel: number;
+  isOrganic: boolean;
+  applicationMethod: string;
+  targetPests: string;
+  targetCrops: string;
+  safetyInstructions: string;
+}
+
+interface FeedInfo {
+  id: string;
+  targetAnimal: string;
+  targetAge: string;
+  proteinPercentage: number | null;
+  fatPercentage: number | null;
+  fiberPercentage: number | null;
+  isOrganic: boolean;
+  isGMOFree: boolean;
+  feedingInstructions: string;
+  storageInstructions: string;
+}
+
+interface SeedInfo {
+  id: string;
+  variety: string;
+  scientificName: string;
+  germinationRate: number | null;
+  daysToMaturity: number | null;
+  plantingSeason: string;
+  harvestSeason: string;
+  isOrganic: boolean;
+  isHybrid: boolean;
+  climateZones: string;
+  soilType: string;
+}
+
+interface MachineryInfo {
+  id: string;
+  model: string;
+  yearOfManufacture: number | null;
+  powerHp: number | null;
+  hoursUsed: number | null;
+  hasWarranty: boolean;
+  serialNumber: string;
+  powerSource: string;
+}
+
 interface ProductAnimalInfoProps {
   productId: string;
 }
@@ -82,6 +133,10 @@ export function ProductAnimalInfo({ productId }: ProductAnimalInfoProps) {
   const [healthRecords, setHealthRecords] = useState<HealthRecord[]>([]);
   const [vaccinations, setVaccinations] = useState<Vaccination[]>([]);
   const [vetInfo, setVetInfo] = useState<VetInfo[]>([]);
+  const [chemicalInfo, setChemicalInfo] = useState<ChemicalInfo[]>([]);
+  const [feedInfo, setFeedInfo] = useState<FeedInfo[]>([]);
+  const [seedInfo, setSeedInfo] = useState<SeedInfo[]>([]);
+  const [machineryInfo, setMachineryInfo] = useState<MachineryInfo[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -197,8 +252,57 @@ export function ProductAnimalInfo({ productId }: ProductAnimalInfoProps) {
             storageInstructions: v.storageInstructions,
           }))
         );
+
+        // Fetch other product info types in parallel
+        const productFilter = [
+          { key: "productId", type: "guid", isUsed: true, values: [productId], min: {}, max: {}, conditionType: "equals" },
+        ];
+        const defaultPaging = { currentPage: 1, perPageCount: 5, listAll: false };
+        const defaultSort = { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending };
+
+        const [chemRes, feedRes, seedRes, machRes] = await Promise.allSettled([
+          LivestockTradingAPI.ChemicalInfos.All.Request({ sorting: defaultSort, filters: productFilter, pageRequest: defaultPaging }),
+          LivestockTradingAPI.FeedInfos.All.Request({ sorting: defaultSort, filters: productFilter, pageRequest: defaultPaging }),
+          LivestockTradingAPI.SeedInfos.All.Request({ sorting: defaultSort, filters: productFilter, pageRequest: defaultPaging }),
+          LivestockTradingAPI.MachineryInfos.All.Request({ sorting: defaultSort, filters: productFilter, pageRequest: defaultPaging }),
+        ]);
+
+        if (chemRes.status === "fulfilled" && chemRes.value.length > 0) {
+          setChemicalInfo(chemRes.value.map((c) => ({
+            id: c.id, subType: c.subType, activeIngredients: "", registrationNumber: c.registrationNumber,
+            toxicityLevel: c.toxicityLevel, isOrganic: c.isOrganic, applicationMethod: "", targetPests: "",
+            targetCrops: "", safetyInstructions: "",
+          })));
+        }
+        if (feedRes.status === "fulfilled" && feedRes.value.length > 0) {
+          setFeedInfo(feedRes.value.map((f) => ({
+            id: f.id, targetAnimal: f.targetAnimal, targetAge: f.targetAge,
+            proteinPercentage: f.proteinPercentage as number | null,
+            fatPercentage: f.fatPercentage as number | null,
+            fiberPercentage: f.fiberPercentage as number | null,
+            isOrganic: f.isOrganic, isGMOFree: f.isGMOFree,
+            feedingInstructions: f.feedingInstructions, storageInstructions: f.storageInstructions,
+          })));
+        }
+        if (seedRes.status === "fulfilled" && seedRes.value.length > 0) {
+          setSeedInfo(seedRes.value.map((s) => ({
+            id: s.id, variety: s.variety, scientificName: s.scientificName,
+            germinationRate: s.germinationRate as number | null,
+            daysToMaturity: s.daysToMaturity ?? null,
+            plantingSeason: "", harvestSeason: "",
+            isOrganic: s.isOrganic, isHybrid: s.isHybrid,
+            climateZones: "", soilType: "",
+          })));
+        }
+        if (machRes.status === "fulfilled" && machRes.value.length > 0) {
+          setMachineryInfo(machRes.value.map((m) => ({
+            id: m.id, model: m.model, yearOfManufacture: m.yearOfManufacture ?? null,
+            powerHp: m.powerHp as number | null, hoursUsed: m.hoursUsed ?? null,
+            hasWarranty: m.hasWarranty, serialNumber: "", powerSource: "",
+          })));
+        }
       } catch {
-        // Animal info is optional - product may not be an animal
+        // Product info is optional
       } finally {
         setIsLoading(false);
       }
@@ -207,8 +311,9 @@ export function ProductAnimalInfo({ productId }: ProductAnimalInfoProps) {
     if (productId) fetchData();
   }, [productId]);
 
-  // Don't render anything if there's no animal data
-  if (!isLoading && !animalInfo && healthRecords.length === 0 && vaccinations.length === 0 && vetInfo.length === 0) {
+  // Don't render anything if there's no data at all
+  if (!isLoading && !animalInfo && healthRecords.length === 0 && vaccinations.length === 0 && vetInfo.length === 0
+      && chemicalInfo.length === 0 && feedInfo.length === 0 && seedInfo.length === 0 && machineryInfo.length === 0) {
     return null;
   }
 
@@ -273,6 +378,10 @@ export function ProductAnimalInfo({ productId }: ProductAnimalInfoProps) {
   if (healthRecords.length > 0) availableTabs.push("health");
   if (vaccinations.length > 0) availableTabs.push("vaccinations");
   if (vetInfo.length > 0) availableTabs.push("veterinary");
+  if (chemicalInfo.length > 0) availableTabs.push("chemical");
+  if (feedInfo.length > 0) availableTabs.push("feed");
+  if (seedInfo.length > 0) availableTabs.push("seed");
+  if (machineryInfo.length > 0) availableTabs.push("machinery");
 
   return (
     <Card>
@@ -307,6 +416,26 @@ export function ProductAnimalInfo({ productId }: ProductAnimalInfoProps) {
               <TabsTrigger value="veterinary" className="gap-1">
                 <Stethoscope className="h-3.5 w-3.5" />
                 {t("veterinaryTab")}
+              </TabsTrigger>
+            )}
+            {chemicalInfo.length > 0 && (
+              <TabsTrigger value="chemical" className="gap-1">
+                {t("chemicalTab")}
+              </TabsTrigger>
+            )}
+            {feedInfo.length > 0 && (
+              <TabsTrigger value="feed" className="gap-1">
+                {t("feedTab")}
+              </TabsTrigger>
+            )}
+            {seedInfo.length > 0 && (
+              <TabsTrigger value="seed" className="gap-1">
+                {t("seedTab")}
+              </TabsTrigger>
+            )}
+            {machineryInfo.length > 0 && (
+              <TabsTrigger value="machinery" className="gap-1">
+                {t("machineryTab")}
               </TabsTrigger>
             )}
           </TabsList>
@@ -517,6 +646,113 @@ export function ProductAnimalInfo({ productId }: ProductAnimalInfoProps) {
                         {t("storage")}: {info.storageInstructions}
                       </p>
                     )}
+                  </div>
+                ))}
+              </div>
+            </TabsContent>
+          )}
+          {/* Chemical Info Tab */}
+          {chemicalInfo.length > 0 && (
+            <TabsContent value="chemical" className="mt-4">
+              <div className="space-y-4">
+                {chemicalInfo.map((chem) => (
+                  <div key={chem.id} className="border rounded-lg p-3 space-y-2">
+                    <div className="flex items-center gap-2">
+                      <span className="font-medium text-sm">{chem.subType}</span>
+                      {chem.isOrganic && <Badge variant="default" className="text-xs">{t("organic")}</Badge>}
+                      <Badge variant={chem.toxicityLevel <= 1 ? "secondary" : "destructive"} className="text-xs">
+                        {t("toxicity")}: {chem.toxicityLevel}
+                      </Badge>
+                    </div>
+                    {chem.registrationNumber && (
+                      <p className="text-xs text-muted-foreground">{t("registrationNo")}: {chem.registrationNumber}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </TabsContent>
+          )}
+
+          {/* Feed Info Tab */}
+          {feedInfo.length > 0 && (
+            <TabsContent value="feed" className="mt-4">
+              <div className="space-y-4">
+                {feedInfo.map((feed) => (
+                  <div key={feed.id} className="border rounded-lg p-3 space-y-2">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="font-medium text-sm">{feed.targetAnimal}</span>
+                      {feed.targetAge && <Badge variant="outline" className="text-xs">{feed.targetAge}</Badge>}
+                      {feed.isOrganic && <Badge variant="default" className="text-xs">{t("organic")}</Badge>}
+                      {feed.isGMOFree && <Badge variant="secondary" className="text-xs">{t("gmoFree")}</Badge>}
+                    </div>
+                    <div className="grid grid-cols-3 gap-2 text-sm">
+                      {feed.proteinPercentage != null && (
+                        <div><span className="text-xs text-muted-foreground">{t("protein")}</span><p>{Number(feed.proteinPercentage).toFixed(1)}%</p></div>
+                      )}
+                      {feed.fatPercentage != null && (
+                        <div><span className="text-xs text-muted-foreground">{t("fat")}</span><p>{Number(feed.fatPercentage).toFixed(1)}%</p></div>
+                      )}
+                      {feed.fiberPercentage != null && (
+                        <div><span className="text-xs text-muted-foreground">{t("fiber")}</span><p>{Number(feed.fiberPercentage).toFixed(1)}%</p></div>
+                      )}
+                    </div>
+                    {feed.feedingInstructions && (
+                      <p className="text-xs text-muted-foreground">{feed.feedingInstructions}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </TabsContent>
+          )}
+
+          {/* Seed Info Tab */}
+          {seedInfo.length > 0 && (
+            <TabsContent value="seed" className="mt-4">
+              <div className="space-y-4">
+                {seedInfo.map((seed) => (
+                  <div key={seed.id} className="border rounded-lg p-3 space-y-2">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="font-medium text-sm">{seed.variety}</span>
+                      {seed.scientificName && <span className="text-xs italic text-muted-foreground">{seed.scientificName}</span>}
+                      {seed.isOrganic && <Badge variant="default" className="text-xs">{t("organic")}</Badge>}
+                      {seed.isHybrid && <Badge variant="secondary" className="text-xs">{t("hybrid")}</Badge>}
+                    </div>
+                    <div className="grid grid-cols-2 gap-2 text-sm">
+                      {seed.germinationRate != null && (
+                        <div><span className="text-xs text-muted-foreground">{t("germination")}</span><p>{Number(seed.germinationRate).toFixed(0)}%</p></div>
+                      )}
+                      {seed.daysToMaturity != null && (
+                        <div><span className="text-xs text-muted-foreground">{t("daysToMaturity")}</span><p>{seed.daysToMaturity} {t("daysLabel")}</p></div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </TabsContent>
+          )}
+
+          {/* Machinery Info Tab */}
+          {machineryInfo.length > 0 && (
+            <TabsContent value="machinery" className="mt-4">
+              <div className="space-y-4">
+                {machineryInfo.map((mach) => (
+                  <div key={mach.id} className="border rounded-lg p-3 space-y-2">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="font-medium text-sm">{mach.model}</span>
+                      {mach.yearOfManufacture && <Badge variant="outline" className="text-xs">{mach.yearOfManufacture}</Badge>}
+                      {mach.hasWarranty && <Badge variant="default" className="text-xs">{t("warranty")}</Badge>}
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+                      {mach.powerHp != null && (
+                        <div><span className="text-xs text-muted-foreground">{t("power")}</span><p>{Number(mach.powerHp).toFixed(0)} HP</p></div>
+                      )}
+                      {mach.hoursUsed != null && (
+                        <div><span className="text-xs text-muted-foreground">{t("hoursUsed")}</span><p>{mach.hoursUsed} {t("hours")}</p></div>
+                      )}
+                      {mach.powerSource && (
+                        <div><span className="text-xs text-muted-foreground">{t("powerSource")}</span><p>{mach.powerSource}</p></div>
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>

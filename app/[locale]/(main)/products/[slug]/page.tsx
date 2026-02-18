@@ -315,6 +315,15 @@ export default function ProductDetailPage() {
             location: t("defaultLocation"),
           });
         }
+
+        // Track product view (fire-and-forget)
+        if (user?.id) {
+          LivestockTradingAPI.ProductViewHistories.Create.Request({
+            userId: user.id,
+            productId: productData.id,
+            viewSource: "web",
+          }).catch(() => {});
+        }
       } catch {
         setError(t("productNotFound"));
       } finally {
@@ -325,7 +334,7 @@ export default function ProductDetailPage() {
     if (slug) {
       fetchProduct();
     }
-  }, [slug, t]);
+  }, [slug, t, user?.id]);
 
   const handleFavoriteToggle = async () => {
     if (!user) {

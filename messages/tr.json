@@ -1287,6 +1287,25 @@
     "targetSpecies": "Hedef Turler",
     "activeIngredients": "Aktif Maddeler",
     "registrationNo": "Kayit No",
-    "storage": "Saklama"
+    "storage": "Saklama",
+    "chemicalTab": "Kimyasal",
+    "feedTab": "Yem",
+    "seedTab": "Tohum",
+    "machineryTab": "Makine",
+    "organic": "Organik",
+    "toxicity": "Toksisite",
+    "gmoFree": "GDO'suz",
+    "protein": "Protein",
+    "fat": "Yag",
+    "fiber": "Lif",
+    "hybrid": "Hibrit",
+    "germination": "Cimlendirme",
+    "daysToMaturity": "Olgunlasma",
+    "daysLabel": "gun",
+    "warranty": "Garantili",
+    "power": "Guc",
+    "hoursUsed": "Kullanim Saati",
+    "hours": "saat",
+    "powerSource": "Guc Kaynagi"
   }
 }
