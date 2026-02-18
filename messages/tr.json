@@ -387,7 +387,13 @@
     "products": "Urunler",
     "map": "Harita",
     "appleLoginComingSoon": "Apple ile giris cok yakinda aktif olacak",
-    "supportEmail": "info@livestock-trading.com"
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "SSS"
+  },
+  "faq": {
+    "title": "Sikca Sorulan Sorular",
+    "description": "Platformumuz hakkinda merak ettiginiz sorularin cevaplari",
+    "noFaqs": "Henuz soru eklenmemis"
   },
   "about": {
     "title": "Hakkimizda",
@@ -663,7 +669,17 @@
       "noProducts": "Bu saticinin henuz ilani yok",
       "noPolicies": "Satici henuz politikalarini belirlemedi",
       "fetchError": "Satici bilgileri yuklenirken bir hata olustu",
-      "productsLoadError": "Saticinin urunleri yuklenirken bir hata olustu"
+      "productsLoadError": "Saticinin urunleri yuklenirken bir hata olustu",
+      "reviewsTab": "Degerlendirmeler",
+      "reviews": {
+        "summary": "Degerlendirme Ozeti",
+        "reviewCount": "degerlendirme",
+        "communication": "Iletisim",
+        "shippingSpeed": "Kargo Hizi",
+        "productQuality": "Urun Kalitesi",
+        "noReviews": "Henuz degerlendirme yapilmamis",
+        "verified": "Dogrulanmis Alici"
+      }
     }
   },
   "editListing": {

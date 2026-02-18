@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MainHeader } from "@/components/layout/main-header";
 import { Footer } from "@/components/layout/footer";
 import { ShieldCheck, Layers, Headphones, ArrowRight } from "lucide-react";
+import { HomepageBanners } from "@/components/features/homepage-banners";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -38,6 +39,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Banners */}
+        <HomepageBanners />
 
         {/* Categories */}
         <section className="bg-muted/50 py-16">

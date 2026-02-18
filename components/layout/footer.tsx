@@ -96,6 +96,14 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/faq"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {t("faq")}
+                </Link>
+              </li>
+              <li>
                 <a
                   href={`mailto:${t("supportEmail")}`}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"

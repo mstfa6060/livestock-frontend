@@ -32,6 +32,7 @@ import {
 import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { getProductCoverImages } from "@/lib/product-images";
+import { SellerReviews } from "@/components/features/seller-reviews";
 
 interface SellerDetail {
   id: string;
@@ -353,6 +354,9 @@ export default function SellerDetailPage() {
         <Tabs defaultValue="products" className="space-y-6">
           <TabsList>
             <TabsTrigger value="products">{t("allProducts")}</TabsTrigger>
+            <TabsTrigger value="reviews">
+              {t("reviewsTab")} ({seller.totalReviews})
+            </TabsTrigger>
             <TabsTrigger value="about">{t("about")}</TabsTrigger>
             <TabsTrigger value="policies">{t("policies")}</TabsTrigger>
           </TabsList>
@@ -379,6 +383,15 @@ export default function SellerDetailPage() {
                 ))}
               </div>
             )}
+          </TabsContent>
+
+          {/* Reviews Tab */}
+          <TabsContent value="reviews">
+            <SellerReviews
+              sellerId={seller.id}
+              averageRating={seller.averageRating ? Number(seller.averageRating) : undefined}
+              totalReviews={seller.totalReviews}
+            />
           </TabsContent>
 
           {/* About Tab */}
