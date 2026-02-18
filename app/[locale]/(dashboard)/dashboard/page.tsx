@@ -17,24 +17,13 @@ import {
   MessageSquare,
   Bell,
   PlusCircle,
+  ShoppingCart,
+  FileEdit,
+  Clock,
 } from "lucide-react";
 import { toast } from "sonner";
 
-interface DashboardStats {
-  totalListings: number;
-  activeListings: number;
-  totalViews: number;
-  totalFavorites: number;
-  unreadNotifications: number;
-}
-
-interface RecentListing {
-  id: string;
-  title: string;
-  status: number;
-  viewCount: number;
-  createdAt: Date;
-}
+type MyStatsResponse = LivestockTradingAPI.Dashboard.MyStats.IResponseModel;
 
 export default function DashboardPage() {
   const t = useTranslations("dashboard");
@@ -44,14 +33,8 @@ export default function DashboardPage() {
   const fetchNotifications = useNotificationsStore((s) => s.fetchNotifications);
 
   const [isLoading, setIsLoading] = useState(true);
-  const [stats, setStats] = useState<DashboardStats>({
-    totalListings: 0,
-    activeListings: 0,
-    totalViews: 0,
-    totalFavorites: 0,
-    unreadNotifications: 0,
-  });
-  const [recentListings, setRecentListings] = useState<RecentListing[]>([]);
+  const [stats, setStats] = useState<MyStatsResponse | null>(null);
+  const [unreadNotifications, setUnreadNotifications] = useState(0);
 
   // Fetch dashboard data
   useEffect(() => {
@@ -63,58 +46,17 @@ export default function DashboardPage() {
 
       setIsLoading(true);
       try {
-        // Fetch stats from Dashboard API
-        const statsResponse = await LivestockTradingAPI.Dashboard.Stats.Request({
-          userId: user.id,
-        });
+        // Fetch stats from Dashboard.MyStats API and notifications in parallel
+        const [statsResponse] = await Promise.all([
+          LivestockTradingAPI.Dashboard.MyStats.Request({
+            userId: user.id,
+            period: "all",
+          }),
+          fetchNotifications(user.id),
+        ]);
 
-        // Fetch recent listings for the activity section
-        const productsResponse = await LivestockTradingAPI.Products.All.Request({
-          countryCode: "TR",
-          sorting: {
-            key: "createdAt",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
-          },
-          filters: [
-            {
-              key: "sellerId",
-              type: "guid",
-              isUsed: true,
-              values: [user.id],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: {
-            currentPage: 1,
-            perPageCount: 5,
-            listAll: false,
-          },
-        });
-
-        // Get recent listings (top 5)
-        const recent = productsResponse.slice(0, 5).map((p) => ({
-          id: p.id,
-          title: p.title,
-          status: p.status,
-          viewCount: p.viewCount,
-          createdAt: p.createdAt,
-        }));
-
-        // Fetch notifications and read updated count from store
-        await fetchNotifications(user.id);
-        const updatedUnreadCount = useNotificationsStore.getState().unreadCount;
-
-        setStats({
-          totalListings: statsResponse.totalListings,
-          activeListings: statsResponse.activeListings,
-          totalViews: statsResponse.totalViews,
-          totalFavorites: statsResponse.totalFavorites,
-          unreadNotifications: updatedUnreadCount,
-        });
-
-        setRecentListings(recent);
+        setStats(statsResponse);
+        setUnreadNotifications(useNotificationsStore.getState().unreadCount);
       } catch {
         toast.error(t("fetchError"));
       } finally {
@@ -123,19 +65,8 @@ export default function DashboardPage() {
     };
 
     fetchDashboardData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?.id]);
-
-  // Get status text
-  const getStatusText = (status: number) => {
-    const statusMap: Record<number, string> = {
-      0: t("stats.draft"),
-      1: t("stats.active"),
-      2: t("stats.sold"),
-      3: t("stats.pending"),
-    };
-    return statusMap[status] || t("stats.draft");
-  };
 
   if (isLoading) {
     return (
@@ -206,9 +137,12 @@ export default function DashboardPage() {
             <Package className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats.totalListings}</div>
+            <div className="text-2xl font-bold">{stats?.totalListings ?? 0}</div>
             <p className="text-xs text-muted-foreground">
-              {stats.activeListings} {t("stats.active")}
+              {stats?.activeListings ?? 0} {t("stats.active")}
+              {(stats?.draftListings ?? 0) > 0 && (
+                <> · {stats?.draftListings} {t("stats.draft")}</>
+              )}
             </p>
           </CardContent>
         </Card>
@@ -221,7 +155,7 @@ export default function DashboardPage() {
             <Eye className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats.totalViews}</div>
+            <div className="text-2xl font-bold">{stats?.totalViews ?? 0}</div>
             <p className="text-xs text-muted-foreground">
               {t("stats.allTime")}
             </p>
@@ -236,7 +170,7 @@ export default function DashboardPage() {
             <Heart className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats.totalFavorites}</div>
+            <div className="text-2xl font-bold">{stats?.totalFavorites ?? 0}</div>
             <p className="text-xs text-muted-foreground">
               {t("stats.savedItems")}
             </p>
@@ -251,40 +185,88 @@ export default function DashboardPage() {
             <Bell className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats.unreadNotifications}</div>
+            <div className="text-2xl font-bold">{unreadNotifications}</div>
             <p className="text-xs text-muted-foreground">{t("stats.unread")}</p>
           </CardContent>
         </Card>
       </div>
 
-      {/* Recent Activity */}
+      {/* Secondary Stats Row */}
+      <div className="grid gap-4 md:grid-cols-3 mb-8">
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium">
+              {t("stats.messages")}
+            </CardTitle>
+            <MessageSquare className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{stats?.totalMessages ?? 0}</div>
+            <p className="text-xs text-muted-foreground">
+              {stats?.unreadMessages ?? 0} {t("stats.unread")}
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium">
+              {t("stats.sold")}
+            </CardTitle>
+            <ShoppingCart className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{stats?.soldListings ?? 0}</div>
+            <p className="text-xs text-muted-foreground">
+              {t("stats.allTime")}
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium">
+              {t("stats.pending")}
+            </CardTitle>
+            <Clock className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{stats?.pendingListings ?? 0}</div>
+            <p className="text-xs text-muted-foreground">
+              {t("stats.awaitingApproval")}
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Recent Activity & Quick Links */}
       <div className="grid gap-4 md:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">{t("recentListings")}</CardTitle>
+            <CardTitle className="text-lg">{t("recentActivity")}</CardTitle>
           </CardHeader>
           <CardContent>
-            {recentListings.length === 0 ? (
+            {!stats?.recentActivity || stats.recentActivity.length === 0 ? (
               <div className="text-sm text-muted-foreground text-center py-8">
-                {t("noListings")}
+                {t("noActivity")}
               </div>
             ) : (
               <div className="space-y-4">
-                {recentListings.map((listing) => (
-                  <Link
-                    key={listing.id}
-                    href={`/dashboard/listings/${listing.id}/edit`}
-                    className="flex items-center justify-between p-2 rounded-lg hover:bg-muted transition-colors"
+                {stats.recentActivity.slice(0, 5).map((activity, i) => (
+                  <div
+                    key={`${activity.entityId}-${i}`}
+                    className="flex items-start gap-3 p-2 rounded-lg"
                   >
+                    <ActivityIcon type={activity.type} />
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium truncate">
-                        {listing.title}
+                        {activity.entityTitle}
                       </p>
                       <p className="text-xs text-muted-foreground">
-                        {getStatusText(listing.status)} • {listing.viewCount} {t("stats.views")}
+                        {activity.actorName}
                       </p>
                     </div>
-                  </Link>
+                  </div>
                 ))}
               </div>
             )}
@@ -322,4 +304,20 @@ export default function DashboardPage() {
       </div>
     </DashboardLayout>
   );
+}
+
+function ActivityIcon({ type }: { type: string }) {
+  switch (type) {
+    case "listing_created":
+    case "listing_updated":
+      return <FileEdit className="h-4 w-4 mt-0.5 text-blue-500" />;
+    case "listing_sold":
+      return <ShoppingCart className="h-4 w-4 mt-0.5 text-green-500" />;
+    case "message_received":
+      return <MessageSquare className="h-4 w-4 mt-0.5 text-purple-500" />;
+    case "favorite_added":
+      return <Heart className="h-4 w-4 mt-0.5 text-red-500" />;
+    default:
+      return <Bell className="h-4 w-4 mt-0.5 text-muted-foreground" />;
+  }
 }

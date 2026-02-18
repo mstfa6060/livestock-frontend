@@ -5,8 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
-import { useAuth } from "@/contexts/AuthContext";
-import { isAdminEmail } from "@/lib/admin";
+import { useRoles } from "@/hooks/useRoles";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
@@ -59,15 +58,15 @@ export default function CategoriesPage() {
   const tc = useTranslations("common");
   const locale = useLocale();
   const router = useRouter();
-  const { user } = useAuth();
+  const { isAdmin } = useRoles();
 
   // Admin-only page
   useEffect(() => {
-    if (user && !isAdminEmail(user.email)) {
+    if (!isAdmin) {
       toast.error(tc("unauthorized"));
       router.replace("/dashboard");
     }
-  }, [user, router, tc]);
+  }, [isAdmin, router, tc]);
 
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
   const [isLoading, setIsLoading] = useState(true);

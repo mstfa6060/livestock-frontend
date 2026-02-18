@@ -70,6 +70,7 @@ interface AuthContextType extends AuthState {
   register: (params: RegisterParams) => Promise<void>;
   logout: () => Promise<void>;
   refreshUser: () => Promise<void>;
+  updateUserData: (data: Partial<User>) => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -298,6 +299,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         username: response.userName,
         email: response.email,
         displayName: response.fullName,
+        isPhoneVerified: response.isPhoneVerified,
+        language: response.language || user.language,
       };
 
       localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(updatedUser));
@@ -310,6 +313,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
+  // Update user state directly (used after profile update with full response)
+  const updateUserData = useCallback((data: Partial<User>) => {
+    setState((prev) => {
+      if (!prev.user) return prev;
+      const updatedUser = { ...prev.user, ...data };
+      localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(updatedUser));
+      return { ...prev, user: updatedUser };
+    });
+  }, []);
+
   return (
     <AuthContext.Provider
       value={{
@@ -319,6 +332,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         register,
         logout,
         refreshUser,
+        updateUserData,
       }}
     >
       {children}

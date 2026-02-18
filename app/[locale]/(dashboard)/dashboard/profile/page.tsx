@@ -31,7 +31,7 @@ interface Country {
 
 export default function ProfilePage() {
   const t = useTranslations("profile");
-  const { user, refreshUser } = useAuth();
+  const { user, updateUserData } = useAuth();
 
   // Compute initial form data from user
   const initialFormData = useMemo(() => {
@@ -101,7 +101,7 @@ export default function ProfilePage() {
 
     setIsLoading(true);
     try {
-      await IAMAPI.Users.Update.Request({
+      const response = await IAMAPI.Users.Update.Request({
         id: user.id,
         firstName: formData.firstName,
         surname: formData.surname,
@@ -112,7 +112,19 @@ export default function ProfilePage() {
         avatarUrl: "",
       });
 
-      await refreshUser();
+      // Use the Update response to sync all user fields
+      updateUserData({
+        username: response.userName,
+        displayName: response.fullName,
+        email: response.email,
+        isPhoneVerified: response.isPhoneVerified,
+        countryId: response.countryId,
+        countryCode: response.countryCode,
+        countryName: response.countryName,
+        language: response.language,
+        currencyCode: response.currencyCode,
+        currencySymbol: response.currencySymbol,
+      });
       toast.success(t("saveSuccess"));
     } catch {
       toast.error(t("saveError"));

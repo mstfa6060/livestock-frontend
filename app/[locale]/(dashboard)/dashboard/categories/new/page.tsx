@@ -20,8 +20,7 @@ import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 import { IconUpload } from "@/components/features/icon-upload";
-import { useAuth } from "@/contexts/AuthContext";
-import { isAdminEmail } from "@/lib/admin";
+import { useRoles } from "@/hooks/useRoles";
 
 interface ParentCategory {
   id: string;
@@ -42,15 +41,15 @@ export default function NewCategoryPage() {
   const tc = useTranslations("common");
   const locale = useLocale();
   const router = useRouter();
-  const { user } = useAuth();
+  const { isAdmin } = useRoles();
 
   // Admin-only page
   useEffect(() => {
-    if (user && !isAdminEmail(user.email)) {
+    if (!isAdmin) {
       toast.error(tc("unauthorized"));
       router.replace("/dashboard");
     }
-  }, [user, router, tc]);
+  }, [isAdmin, router, tc]);
 
   const [name, setName] = useState("");
   const [slug, setSlug] = useState("");

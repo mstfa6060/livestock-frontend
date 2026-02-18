@@ -119,12 +119,15 @@
       "views": "goruntulenme",
       "draft": "Taslak",
       "sold": "Satildi",
-      "pending": "Beklemede"
+      "pending": "Beklemede",
+      "awaitingApproval": "onay bekliyor"
     },
     "recentListings": "Son Ilanlariniz",
+    "recentActivity": "Son Aktiviteler",
     "recentMessages": "Son Mesajlar",
     "quickLinks": "Hizli Erisim",
     "noListings": "Henuz ilan eklemediniz",
+    "noActivity": "Henuz aktivite bulunmuyor",
     "noMessages": "Henuz mesajiniz yok",
     "noNotifications": "Henuz bildiriminiz yok",
     "viewAllListings": "Tum Ilanlari Gor",

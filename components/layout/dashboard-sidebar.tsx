@@ -17,8 +17,7 @@ import {
   Store,
   FolderTree,
 } from "lucide-react";
-import { useAuth } from "@/contexts/AuthContext";
-import { isAdminEmail } from "@/lib/admin";
+import { useRoles } from "@/hooks/useRoles";
 
 interface MenuItem {
   key: string;
@@ -42,8 +41,7 @@ const menuItems: MenuItem[] = [
 export function DashboardSidebar() {
   const pathname = usePathname();
   const t = useTranslations("dashboardNav");
-  const { user } = useAuth();
-  const isAdmin = isAdminEmail(user?.email);
+  const { isAdmin } = useRoles();
 
   // Remove locale prefix from pathname for comparison
   const currentPath = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, "");
