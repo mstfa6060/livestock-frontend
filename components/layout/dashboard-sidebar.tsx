@@ -21,6 +21,8 @@ import {
   Handshake,
   Tractor,
   Truck,
+  ShieldCheck,
+  Tag,
 } from "lucide-react";
 import { useRoles } from "@/hooks/useRoles";
 import { useAuth } from "@/contexts/AuthContext";
@@ -43,7 +45,9 @@ const menuItems: MenuItem[] = [
   { key: "farms", href: "/dashboard/farms", icon: Tractor },
   { key: "transport", href: "/dashboard/transport", icon: Truck },
   { key: "becomeSeller", href: "/dashboard/become-seller", icon: Store },
+  { key: "moderation", href: "/dashboard/moderation", icon: ShieldCheck, adminOnly: true },
   { key: "categories", href: "/dashboard/categories", icon: FolderTree, adminOnly: true },
+  { key: "brands", href: "/dashboard/brands", icon: Tag, adminOnly: true },
   { key: "favorites", href: "/dashboard/favorites", icon: Heart },
   { key: "messages", href: "/dashboard/messages", icon: MessageSquare, badgeKey: "messages" },
   { key: "notifications", href: "/dashboard/notifications", icon: Bell, badgeKey: "notifications" },

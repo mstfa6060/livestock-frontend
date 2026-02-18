@@ -151,7 +151,9 @@
     "offers": "Teklifler",
     "deals": "Anlasmalar",
     "farms": "Ciftliklerim",
-    "transport": "Nakliye"
+    "transport": "Nakliye",
+    "moderation": "Moderasyon",
+    "brands": "Markalar"
   },
   "profile": {
     "title": "Profil Bilgileri",
@@ -899,7 +901,11 @@
       "clear": "Temizle",
       "clearAll": "Tumu Temizle"
     },
-    "fetchError": "Arama sonuclari yuklenirken bir hata olustu"
+    "fetchError": "Arama sonuclari yuklenirken bir hata olustu",
+    "recentSearches": "Son Aramalar",
+    "clearHistory": "Gecmisi Temizle",
+    "noSearchHistory": "Henuz arama gecmisiniz yok",
+    "deleteHistoryError": "Arama gecmisi silinirken hata olustu"
   },
   "categories": {
     "title": "Kategori Yonetimi",
@@ -1122,5 +1128,68 @@
       "hazardous": "Tehlikeli Madde",
       "oversized": "Buyuk Boyut"
     }
+  },
+  "moderation": {
+    "title": "Urun Moderasyonu",
+    "description": "Onay bekleyen urunleri inceleyin",
+    "pending": "beklemede",
+    "allClear": "Tum urunler incelendi",
+    "noPending": "Onay bekleyen urun bulunmuyor",
+    "awaitingReview": "Inceleme Bekliyor",
+    "by": "Satici:",
+    "stock": "Stok",
+    "preview": "Onizle",
+    "approve": "Onayla",
+    "reject": "Reddet",
+    "confirmReject": "Reddet",
+    "cancelReject": "Vazgec",
+    "rejectReasonPlaceholder": "Reddetme nedenini yazin...",
+    "rejectReasonRequired": "Reddetme nedeni zorunludur",
+    "approveSuccess": "Urun basariyla onaylandi",
+    "rejectSuccess": "Urun reddedildi",
+    "actionError": "Islem sirasinda bir hata olustu",
+    "fetchError": "Urunler yuklenirken bir hata olustu",
+    "unauthorized": "Bu sayfaya erisim yetkiniz bulunmamaktadir"
+  },
+  "transporterDetail": {
+    "notFound": "Nakliyeci bulunamadi",
+    "backToList": "Nakliyecilere Don",
+    "verified": "Dogrulanmis",
+    "totalTransports": "toplam nakliye",
+    "completed": "tamamlanan",
+    "about": "Hakkinda",
+    "contact": "Iletisim Bilgileri",
+    "businessInfo": "Isletme Bilgileri",
+    "license": "Lisans Numarasi",
+    "insurance": "Sigorta Bilgisi",
+    "fleet": "Filo Bilgisi",
+    "serviceRegions": "Hizmet Bolgeleri",
+    "specializations": "Uzmanlik Alanlari",
+    "certifications": "Sertifikalar"
+  },
+  "brands": {
+    "title": "Marka Yonetimi",
+    "description": "Urun markalarini yonetin",
+    "addBrand": "Marka Ekle",
+    "editBrand": "Marka Duzenle",
+    "noBrands": "Henuz marka eklenmemis",
+    "brandName": "Marka Adi",
+    "brandDescription": "Aciklama",
+    "website": "Web Sitesi",
+    "logoUrl": "Logo URL",
+    "save": "Kaydet",
+    "saving": "Kaydediliyor...",
+    "cancel": "Iptal",
+    "edit": "Duzenle",
+    "delete": "Sil",
+    "inactive": "Pasif",
+    "products": "urun",
+    "createSuccess": "Marka basariyla eklendi",
+    "updateSuccess": "Marka basariyla guncellendi",
+    "deleteSuccess": "Marka basariyla silindi",
+    "saveError": "Marka kaydedilirken bir hata olustu",
+    "deleteError": "Marka silinirken bir hata olustu",
+    "fetchError": "Markalar yuklenirken bir hata olustu",
+    "unauthorized": "Bu sayfaya erisim yetkiniz bulunmamaktadir"
   }
 }

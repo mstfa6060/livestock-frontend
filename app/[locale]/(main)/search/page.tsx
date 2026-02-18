@@ -32,11 +32,13 @@ import {
   X,
   Package,
   ArrowUpDown,
+  Clock,
 } from "lucide-react";
 import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { getProductCoverImages } from "@/lib/product-images";
+import { useAuth } from "@/contexts/AuthContext";
 
 type SortOption = "newest" | "oldest" | "priceAsc" | "priceDesc" | "popular";
 type ConditionOption = "all" | "new" | "likeNew" | "good" | "fair";
@@ -63,6 +65,7 @@ export default function SearchPage() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const selectedCountry = useSelectedCountry();
+  const { user } = useAuth();
 
   // URL params
   const queryParam = searchParams.get("q") || "";
@@ -79,6 +82,8 @@ export default function SearchPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [searchInput, setSearchInput] = useState(queryParam);
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+  const [searchHistory, setSearchHistory] = useState<{ id: string; searchQuery: string; searchedAt: Date }[]>([]);
+  const [showHistory, setShowHistory] = useState(false);
 
   // Filter state (local until applied)
   const [localCategory, setLocalCategory] = useState(categoryParam || "all");
@@ -126,6 +131,56 @@ export default function SearchPage() {
     };
     fetchCategories();
   }, [locale]);
+
+  // Fetch search history
+  useEffect(() => {
+    if (!user?.id) return;
+    const fetchHistory = async () => {
+      try {
+        const response = await LivestockTradingAPI.SearchHistories.All.Request({
+          sorting: { key: "searchedAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+          filters: [],
+          pageRequest: { currentPage: 1, perPageCount: 10, listAll: false },
+        });
+        setSearchHistory(response.map((h) => ({ id: h.id, searchQuery: h.searchQuery, searchedAt: h.searchedAt })));
+      } catch {
+        // Search history is non-critical
+      }
+    };
+    fetchHistory();
+  }, [user?.id]);
+
+  // Save search to history
+  const saveSearchHistory = useCallback(async (query: string, resultsCount: number) => {
+    if (!user?.id || !query.trim()) return;
+    try {
+      await LivestockTradingAPI.SearchHistories.Create.Request({
+        userId: user.id,
+        searchQuery: query.trim(),
+        filters: "",
+        resultsCount,
+      });
+      // Refresh history
+      const response = await LivestockTradingAPI.SearchHistories.All.Request({
+        sorting: { key: "searchedAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+        filters: [],
+        pageRequest: { currentPage: 1, perPageCount: 10, listAll: false },
+      });
+      setSearchHistory(response.map((h) => ({ id: h.id, searchQuery: h.searchQuery, searchedAt: h.searchedAt })));
+    } catch {
+      // Non-critical
+    }
+  }, [user?.id]);
+
+  // Delete search history item
+  const deleteHistoryItem = async (id: string) => {
+    try {
+      await LivestockTradingAPI.SearchHistories.Delete.Request({ id });
+      setSearchHistory((prev) => prev.filter((h) => h.id !== id));
+    } catch {
+      toast.error(t("deleteHistoryError"));
+    }
+  };
 
   // Fetch products
   useEffect(() => {
@@ -186,6 +241,9 @@ export default function SearchPage() {
           }));
 
           setProducts(transformedProducts);
+
+          // Save to search history
+          saveSearchHistory(queryParam, transformedProducts.length);
         } else {
           // No search query - use Products.All with filters
           const sortingKey = {
@@ -313,7 +371,15 @@ export default function SearchPage() {
   // Handle search submit
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
+    setShowHistory(false);
     updateParams({ q: searchInput });
+  };
+
+  // Handle history item click
+  const handleHistoryClick = (query: string) => {
+    setSearchInput(query);
+    setShowHistory(false);
+    updateParams({ q: query });
   };
 
   // Apply filters
@@ -443,9 +509,47 @@ export default function SearchPage() {
               <Input
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
+                onFocus={() => setShowHistory(true)}
+                onBlur={() => setTimeout(() => setShowHistory(false), 200)}
                 placeholder={t("placeholder")}
                 className="pl-10"
               />
+
+              {/* Search history dropdown */}
+              {showHistory && searchHistory.length > 0 && !queryParam && (
+                <div className="absolute top-full left-0 right-0 z-50 mt-1 bg-background border rounded-lg shadow-lg overflow-hidden">
+                  <div className="flex items-center justify-between px-3 py-2 border-b">
+                    <span className="text-sm font-medium flex items-center gap-1.5">
+                      <Clock className="h-3.5 w-3.5" />
+                      {t("recentSearches")}
+                    </span>
+                  </div>
+                  <div className="max-h-60 overflow-y-auto">
+                    {searchHistory.map((item) => (
+                      <div
+                        key={item.id}
+                        className="flex items-center justify-between px-3 py-2 hover:bg-muted cursor-pointer group"
+                      >
+                        <button
+                          type="button"
+                          className="flex items-center gap-2 flex-1 text-left text-sm"
+                          onMouseDown={(e) => { e.preventDefault(); handleHistoryClick(item.searchQuery); }}
+                        >
+                          <Search className="h-3.5 w-3.5 text-muted-foreground" />
+                          {item.searchQuery}
+                        </button>
+                        <button
+                          type="button"
+                          className="opacity-0 group-hover:opacity-100 p-1 hover:text-destructive transition-opacity"
+                          onMouseDown={(e) => { e.preventDefault(); deleteHistoryItem(item.id); }}
+                        >
+                          <X className="h-3.5 w-3.5" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
             <Button type="submit">{t("searchButton")}</Button>
           </form>
