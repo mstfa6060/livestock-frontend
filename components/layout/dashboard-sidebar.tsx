@@ -23,6 +23,7 @@ import {
   Truck,
   ShieldCheck,
   Tag,
+  Send,
 } from "lucide-react";
 import { useRoles } from "@/hooks/useRoles";
 import { useAuth } from "@/contexts/AuthContext";
@@ -44,6 +45,7 @@ const menuItems: MenuItem[] = [
   { key: "deals", href: "/dashboard/deals", icon: Handshake },
   { key: "farms", href: "/dashboard/farms", icon: Tractor },
   { key: "transport", href: "/dashboard/transport", icon: Truck },
+  { key: "transportOffers", href: "/dashboard/transport-offers", icon: Send },
   { key: "becomeSeller", href: "/dashboard/become-seller", icon: Store },
   { key: "moderation", href: "/dashboard/moderation", icon: ShieldCheck, adminOnly: true },
   { key: "categories", href: "/dashboard/categories", icon: FolderTree, adminOnly: true },

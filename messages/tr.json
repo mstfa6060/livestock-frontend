@@ -153,7 +153,8 @@
     "farms": "Ciftliklerim",
     "transport": "Nakliye",
     "moderation": "Moderasyon",
-    "brands": "Markalar"
+    "brands": "Markalar",
+    "transportOffers": "Nakliye Teklifleri"
   },
   "profile": {
     "title": "Profil Bilgileri",
@@ -1191,5 +1192,101 @@
     "deleteError": "Marka silinirken bir hata olustu",
     "fetchError": "Markalar yuklenirken bir hata olustu",
     "unauthorized": "Bu sayfaya erisim yetkiniz bulunmamaktadir"
+  },
+  "transporterReviews": {
+    "title": "Degerlendirmeler",
+    "reviewCount": "degerlendirme",
+    "noReviews": "Henuz degerlendirme yapilmamis",
+    "timeliness": "Zamaninda Teslimat",
+    "communication": "Iletisim",
+    "carefulHandling": "Dikkatli Tasima",
+    "professionalism": "Profesyonellik"
+  },
+  "transportOffers": {
+    "title": "Nakliye Teklifleri",
+    "description": "Nakliye taleplerine verdginiz teklifleri yonetin",
+    "newOffer": "Yeni Teklif",
+    "transportRequestId": "Nakliye Talep ID",
+    "requestIdPlaceholder": "Nakliye talep ID'sini girin",
+    "offeredPrice": "Teklif Fiyati",
+    "estimatedDays": "Tahmini Sure (Gun)",
+    "days": "gun",
+    "vehicleType": "Arac Tipi",
+    "insuranceIncluded": "Sigorta Dahil",
+    "message": "Mesaj",
+    "cancel": "Iptal",
+    "sending": "Gonderiliyor...",
+    "sendOffer": "Teklif Gonder",
+    "cancelOffer": "Iptal Et",
+    "pendingTab": "Bekleyen",
+    "historyTab": "Gecmis",
+    "noPendingOffers": "Bekleyen teklifiniz yok",
+    "noHistory": "Gecmis teklif bulunmuyor",
+    "status": {
+      "pending": "Bekliyor",
+      "accepted": "Kabul Edildi",
+      "rejected": "Reddedildi",
+      "expired": "Suresi Doldu",
+      "cancelled": "Iptal Edildi"
+    },
+    "createSuccess": "Teklif basariyla gonderildi",
+    "createError": "Teklif gonderilirken bir hata olustu",
+    "cancelSuccess": "Teklif iptal edildi",
+    "cancelError": "Teklif iptal edilirken bir hata olustu",
+    "fetchError": "Teklifler yuklenirken bir hata olustu"
+  },
+  "animalInfo": {
+    "title": "Hayvan & Urun Bilgileri",
+    "animalTab": "Hayvan",
+    "healthTab": "Saglik",
+    "vaccinationsTab": "Asilar",
+    "veterinaryTab": "Veteriner",
+    "breed": "Irk",
+    "genderLabel": "Cinsiyet",
+    "gender": {
+      "male": "Erkek",
+      "female": "Disi",
+      "unknown": "Bilinmiyor"
+    },
+    "age": "Yas",
+    "months": "ay",
+    "weight": "Agirlik",
+    "color": "Renk",
+    "tagNumber": "Kulak Numarasi",
+    "healthStatus": "Saglik Durumu",
+    "health": {
+      "healthy": "Saglikli",
+      "underTreatment": "Tedavi Altinda",
+      "recovering": "Iyilesiyor",
+      "quarantined": "Karantinada",
+      "unknown": "Bilinmiyor"
+    },
+    "purposeLabel": "Kullanim Amaci",
+    "purpose": {
+      "breeding": "Damizlik",
+      "dairy": "Sut",
+      "meat": "Et",
+      "egg": "Yumurta",
+      "wool": "Yun",
+      "working": "Is",
+      "pet": "Evcil",
+      "other": "Diger"
+    },
+    "pregnancy": "Gebelik",
+    "pregnant": "Gebe",
+    "microchip": "Mikrocip No",
+    "passport": "Pasaport No",
+    "sireDetails": "Baba Bilgileri",
+    "damDetails": "Ana Bilgileri",
+    "diagnosis": "Teshis",
+    "treatment": "Tedavi",
+    "medications": "Ilaclar",
+    "veterinarian": "Veteriner",
+    "nextDue": "Sonraki Asi Tarihi",
+    "prescriptionRequired": "Recete Gerekli",
+    "targetSpecies": "Hedef Turler",
+    "activeIngredients": "Aktif Maddeler",
+    "registrationNo": "Kayit No",
+    "storage": "Saklama"
   }
 }

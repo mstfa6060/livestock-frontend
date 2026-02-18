@@ -39,6 +39,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
 import { getProductCoverImages } from "@/lib/product-images";
 import { ProductReviews } from "@/components/features/product-reviews";
+import { ProductAnimalInfo } from "@/components/features/product-animal-info";
 import { MakeOfferDialog } from "@/components/features/make-offer-dialog";
 
 const EMPTY_GUID = "00000000-0000-0000-0000-000000000000";
@@ -536,6 +537,9 @@ export default function ProductDetailPage() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Animal / Product Info */}
+            <ProductAnimalInfo productId={product.id} />
 
             {/* Reviews */}
             <ProductReviews

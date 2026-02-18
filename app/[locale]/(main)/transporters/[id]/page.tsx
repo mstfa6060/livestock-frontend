@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { TransporterReviews } from "@/components/features/transporter-reviews";
 import {
   Truck,
   Star,
@@ -366,6 +367,14 @@ export default function TransporterDetailPage() {
                 </CardContent>
               </Card>
             )}
+          </div>
+
+          {/* Reviews */}
+          <div className="mt-6">
+            <TransporterReviews
+              transporterId={transporter.id}
+              averageRating={transporter.averageRating}
+            />
           </div>
         </div>
       </main>
