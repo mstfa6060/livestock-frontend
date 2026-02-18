@@ -107,10 +107,37 @@ class ChatService {
     }
   }
 
-  public async markMessageAsRead(messageId: string): Promise<void> {
+  public async markMessageAsRead(messageId: string, conversationId?: string): Promise<void> {
     if (this.connection?.state === signalR.HubConnectionState.Connected) {
-      await this.connection.invoke("MarkMessageAsRead", messageId);
+      if (conversationId) {
+        await this.connection.invoke("MarkMessageAsRead", messageId, conversationId);
+      } else {
+        await this.connection.invoke("MarkMessageAsRead", messageId);
+      }
     }
+  }
+
+  public async getOnlineUsers(userIds: string[]): Promise<{ userId: string; isOnline: boolean }[]> {
+    if (this.connection?.state === signalR.HubConnectionState.Connected) {
+      return await this.connection.invoke("GetOnlineUsers", userIds);
+    }
+    return [];
+  }
+
+  public onUserOnline(callback: (data: { userId: string }) => void): void {
+    this.connection?.on("UserOnline", callback);
+  }
+
+  public offUserOnline(callback: (data: { userId: string }) => void): void {
+    this.connection?.off("UserOnline", callback);
+  }
+
+  public onUserOffline(callback: (data: { userId: string }) => void): void {
+    this.connection?.on("UserOffline", callback);
+  }
+
+  public offUserOffline(callback: (data: { userId: string }) => void): void {
+    this.connection?.off("UserOffline", callback);
   }
 
   public async sendTypingIndicator(conversationId: string, isTyping: boolean): Promise<void> {

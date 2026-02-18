@@ -49,6 +49,12 @@ export function MainHeader() {
             {t("sellers")}
           </Link>
           <Link
+            href="/transporters"
+            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+          >
+            {t("transporters")}
+          </Link>
+          <Link
             href="/about"
             className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           >

@@ -17,6 +17,10 @@ import {
   Bell,
   Store,
   FolderTree,
+  HandCoins,
+  Handshake,
+  Tractor,
+  Truck,
 } from "lucide-react";
 import { useRoles } from "@/hooks/useRoles";
 import { useAuth } from "@/contexts/AuthContext";
@@ -34,6 +38,10 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
   { key: "overview", href: "/dashboard", icon: LayoutDashboard },
   { key: "myListings", href: "/dashboard/my-listings", icon: Package },
+  { key: "offers", href: "/dashboard/offers", icon: HandCoins },
+  { key: "deals", href: "/dashboard/deals", icon: Handshake },
+  { key: "farms", href: "/dashboard/farms", icon: Tractor },
+  { key: "transport", href: "/dashboard/transport", icon: Truck },
   { key: "becomeSeller", href: "/dashboard/become-seller", icon: Store },
   { key: "categories", href: "/dashboard/categories", icon: FolderTree, adminOnly: true },
   { key: "favorites", href: "/dashboard/favorites", icon: Heart },

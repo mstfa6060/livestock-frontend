@@ -28,6 +28,7 @@ import {
   Star,
   ChevronRight,
   MessageSquare,
+  HandCoins,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
@@ -38,6 +39,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
 import { getProductCoverImages } from "@/lib/product-images";
 import { ProductReviews } from "@/components/features/product-reviews";
+import { MakeOfferDialog } from "@/components/features/make-offer-dialog";
 
 const EMPTY_GUID = "00000000-0000-0000-0000-000000000000";
 
@@ -353,6 +355,7 @@ export default function ProductDetailPage() {
   };
 
   const [isContacting, setIsContacting] = useState(false);
+  const [showOfferDialog, setShowOfferDialog] = useState(false);
 
   const handleContact = async () => {
     if (!user) {
@@ -618,6 +621,20 @@ export default function ProductDetailPage() {
                   <Button className="w-full" size="lg" onClick={handleContact} disabled={isContacting}>
                     {isContacting ? t("contacting") || "..." : t("contactSeller")}
                   </Button>
+                  {user?.id !== product.sellerId && (
+                    <Button
+                      className="w-full"
+                      size="lg"
+                      variant="secondary"
+                      onClick={() => {
+                        if (!user) { toast.error(t("loginRequired")); return; }
+                        setShowOfferDialog(true);
+                      }}
+                    >
+                      <HandCoins className="h-4 w-4 mr-2" />
+                      {t("makeOffer")}
+                    </Button>
+                  )}
                   <div className="flex gap-2">
                     <Button
                       variant="outline"
@@ -669,6 +686,18 @@ export default function ProductDetailPage() {
             <MessageSquare className="h-4 w-4 mr-2" />
             {isContacting ? t("contacting") : t("contactSeller")}
           </Button>
+          {user?.id !== product.sellerId && (
+            <Button
+              variant="secondary"
+              size="icon"
+              onClick={() => {
+                if (!user) { toast.error(t("loginRequired")); return; }
+                setShowOfferDialog(true);
+              }}
+            >
+              <HandCoins className="h-4 w-4" />
+            </Button>
+          )}
           <Button variant="outline" size="icon" onClick={handleFavoriteToggle}>
             <Heart className={`h-4 w-4 ${isFavorite ? "fill-red-500 text-red-500" : ""}`} />
           </Button>
@@ -679,6 +708,20 @@ export default function ProductDetailPage() {
       </div>
 
       <SimpleFooter />
+
+      {/* Make Offer Dialog */}
+      {product && (
+        <MakeOfferDialog
+          isOpen={showOfferDialog}
+          onClose={() => setShowOfferDialog(false)}
+          productId={product.id}
+          sellerId={product.sellerId}
+          productTitle={product.title}
+          basePrice={product.basePrice}
+          currency={product.currency}
+          maxQuantity={product.stockQuantity}
+        />
+      )}
     </div>
   );
 }
