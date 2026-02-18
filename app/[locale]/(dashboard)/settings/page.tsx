@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
 import {
   Card,
   CardContent,
@@ -13,14 +14,19 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Eye, EyeOff, CheckCircle, Loader2 } from "lucide-react";
 import { IAMAPI } from "@/api/base_modules/iam";
+import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { useAuth } from "@/contexts/AuthContext";
+import { toast } from "sonner";
 
 export default function SettingsPage() {
   const t = useTranslations("settings");
   const tp = useTranslations("settings.updatePassword");
+  const tpref = useTranslations("settings.preferences");
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -34,7 +40,65 @@ export default function SettingsPage() {
     confirmPassword: "",
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Preferences state
+  const [prefsLoading, setPrefsLoading] = useState(true);
+  const [prefsSaving, setPrefsSaving] = useState(false);
+  const [prefs, setPrefs] = useState({
+    emailNotificationsEnabled: true,
+    smsNotificationsEnabled: false,
+    pushNotificationsEnabled: true,
+    darkModeEnabled: false,
+    // Store full preference data for update call
+    preferredCurrency: "TRY",
+    preferredLanguage: "tr",
+    countryCode: "TR",
+    timeZone: "Europe/Istanbul",
+    weightSystem: 0,
+    distanceSystem: 0,
+    areaSystem: 0,
+    productsPerPage: 20,
+    defaultViewMode: 0,
+  });
+
+  // Fetch preferences on mount
+  useEffect(() => {
+    const fetchPreferences = async () => {
+      if (!user?.id) {
+        setPrefsLoading(false);
+        return;
+      }
+
+      try {
+        const response = await LivestockTradingAPI.Preferences.My.Request({
+          userId: user.id,
+        });
+
+        setPrefs({
+          emailNotificationsEnabled: response.emailNotificationsEnabled,
+          smsNotificationsEnabled: response.smsNotificationsEnabled,
+          pushNotificationsEnabled: response.pushNotificationsEnabled,
+          darkModeEnabled: response.darkModeEnabled,
+          preferredCurrency: response.preferredCurrency,
+          preferredLanguage: response.preferredLanguage,
+          countryCode: response.countryCode,
+          timeZone: response.timeZone,
+          weightSystem: response.weightSystem,
+          distanceSystem: response.distanceSystem,
+          areaSystem: response.areaSystem,
+          productsPerPage: response.productsPerPage,
+          defaultViewMode: response.defaultViewMode,
+        });
+      } catch {
+        // Preferences may not exist yet for this user - use defaults
+      } finally {
+        setPrefsLoading(false);
+      }
+    };
+
+    fetchPreferences();
+  }, [user?.id]);
+
+  const handlePasswordSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     setSuccess(false);
@@ -71,15 +135,33 @@ export default function SettingsPage() {
     }
   };
 
+  const handlePreferencesSave = async () => {
+    if (!user?.id) return;
+
+    setPrefsSaving(true);
+    try {
+      await LivestockTradingAPI.Preferences.Update.Request({
+        userId: user.id,
+        ...prefs,
+      });
+      toast.success(tpref("saveSuccess"));
+    } catch {
+      toast.error(tpref("saveError"));
+    } finally {
+      setPrefsSaving(false);
+    }
+  };
+
   return (
     <DashboardLayout title={t("title")}>
       <div className="max-w-2xl space-y-6">
+        {/* Password Card */}
         <Card>
           <CardHeader>
             <CardTitle>{tp("title")}</CardTitle>
             <CardDescription>{tp("description")}</CardDescription>
           </CardHeader>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handlePasswordSubmit}>
             <CardContent className="space-y-4">
               {error && (
                 <div className="p-3 text-sm text-red-500 bg-red-50 dark:bg-red-950/50 rounded-md">
@@ -175,6 +257,118 @@ export default function SettingsPage() {
               </Button>
             </CardFooter>
           </form>
+        </Card>
+
+        {/* Preferences Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle>{tpref("title")}</CardTitle>
+            <CardDescription>{tpref("description")}</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            {prefsLoading ? (
+              <div className="space-y-4">
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <div key={i} className="flex items-center justify-between">
+                    <div className="space-y-1">
+                      <Skeleton className="h-4 w-32" />
+                      <Skeleton className="h-3 w-48" />
+                    </div>
+                    <Skeleton className="h-5 w-9 rounded-full" />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <>
+                {/* Notification Settings */}
+                <div>
+                  <h3 className="text-sm font-medium mb-4">{tpref("notifications")}</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="space-y-0.5">
+                        <Label>{tpref("emailNotifications")}</Label>
+                        <p className="text-xs text-muted-foreground">
+                          {tpref("emailNotificationsDesc")}
+                        </p>
+                      </div>
+                      <Switch
+                        checked={prefs.emailNotificationsEnabled}
+                        onCheckedChange={(checked) =>
+                          setPrefs({ ...prefs, emailNotificationsEnabled: checked })
+                        }
+                      />
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <div className="space-y-0.5">
+                        <Label>{tpref("smsNotifications")}</Label>
+                        <p className="text-xs text-muted-foreground">
+                          {tpref("smsNotificationsDesc")}
+                        </p>
+                      </div>
+                      <Switch
+                        checked={prefs.smsNotificationsEnabled}
+                        onCheckedChange={(checked) =>
+                          setPrefs({ ...prefs, smsNotificationsEnabled: checked })
+                        }
+                      />
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <div className="space-y-0.5">
+                        <Label>{tpref("pushNotifications")}</Label>
+                        <p className="text-xs text-muted-foreground">
+                          {tpref("pushNotificationsDesc")}
+                        </p>
+                      </div>
+                      <Switch
+                        checked={prefs.pushNotificationsEnabled}
+                        onCheckedChange={(checked) =>
+                          setPrefs({ ...prefs, pushNotificationsEnabled: checked })
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <Separator />
+
+                {/* Appearance */}
+                <div>
+                  <h3 className="text-sm font-medium mb-4">{tpref("appearance")}</h3>
+                  <div className="flex items-center justify-between">
+                    <div className="space-y-0.5">
+                      <Label>{tpref("darkMode")}</Label>
+                      <p className="text-xs text-muted-foreground">
+                        {tpref("darkModeDesc")}
+                      </p>
+                    </div>
+                    <Switch
+                      checked={prefs.darkModeEnabled}
+                      onCheckedChange={(checked) =>
+                        setPrefs({ ...prefs, darkModeEnabled: checked })
+                      }
+                    />
+                  </div>
+                </div>
+              </>
+            )}
+          </CardContent>
+          <CardFooter>
+            <Button
+              onClick={handlePreferencesSave}
+              disabled={prefsSaving || prefsLoading}
+            >
+              {prefsSaving ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  {tpref("saving")}
+                </>
+              ) : (
+                tpref("saveChanges")
+              )}
+            </Button>
+          </CardFooter>
         </Card>
       </div>
     </DashboardLayout>

@@ -298,6 +298,25 @@
       "passwordTooShort": "Yeni sifre en az 6 karakter olmalidir.",
       "sessionError": "Oturum bilgisi bulunamadi.",
       "errorDefault": "Sifre guncellenemedi. Mevcut sifrenizi kontrol edin."
+    },
+    "preferences": {
+      "title": "Bildirim ve Gorunum Tercihleri",
+      "description": "Bildirim kanallarinizi ve gorunum tercihlerinizi yonetin.",
+      "notifications": "Bildirimler",
+      "emailNotifications": "E-posta Bildirimleri",
+      "emailNotificationsDesc": "Yeni mesaj ve ilan guncellemeleri icin e-posta alin",
+      "smsNotifications": "SMS Bildirimleri",
+      "smsNotificationsDesc": "Onemli bildirimler icin SMS alin",
+      "pushNotifications": "Push Bildirimleri",
+      "pushNotificationsDesc": "Anlik bildirimler icin push bildirimleri alin",
+      "appearance": "Gorunum",
+      "darkMode": "Karanlik Mod",
+      "darkModeDesc": "Karanlik temaya gec",
+      "saveChanges": "Tercihleri Kaydet",
+      "saving": "Kaydediliyor...",
+      "saveSuccess": "Tercihleriniz guncellendi",
+      "saveError": "Tercihler guncellenirken bir hata olustu",
+      "loadError": "Tercihler yuklenemedi"
     }
   },
   "navigation": {
@@ -561,7 +580,7 @@
     "similarProducts": "Benzer Urunler",
     "sellerProducts": "Saticinin Diger Urunleri",
     "contactSeller": "Satici ile Iletisime Gec",
-    "loginRequired": "Favorilere eklemek icin giris yapin",
+    "loginRequired": "Bu islemi yapabilmek icin giris yapin",
     "addedToFavorites": "Favorilere eklendi",
     "removedFromFavorites": "Favorilerden cikarildi",
     "linkCopied": "Link kopyalandi",
@@ -575,6 +594,12 @@
     "breadcrumb": {
       "home": "Ana Sayfa",
       "products": "Urunler"
+    },
+    "reviews": {
+      "title": "Degerlendirmeler",
+      "reviewCount": "degerlendirme",
+      "noReviews": "Henuz degerlendirme yapilmamis",
+      "verified": "Dogrulanmis Alici"
     }
   },
   "seller": {

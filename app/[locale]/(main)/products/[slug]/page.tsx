@@ -37,6 +37,7 @@ import { useFavoritesStore } from "@/stores/useFavoritesStore";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
 import { getProductCoverImages } from "@/lib/product-images";
+import { ProductReviews } from "@/components/features/product-reviews";
 
 const EMPTY_GUID = "00000000-0000-0000-0000-000000000000";
 
@@ -362,9 +363,15 @@ export default function ProductDetailPage() {
 
     setIsContacting(true);
     try {
-      // TODO: Conversations.StartWithProduct API not yet available
-      // For now, redirect to messages page
-      router.push(`/dashboard/messages`);
+      const response = await LivestockTradingAPI.Conversations.StartWithProduct.Request({
+        productId: product.id,
+        sellerId: product.sellerId,
+        buyerUserId: user.id,
+        initialMessage: t("inquiryMessage", { title: product.title }),
+      });
+
+      // Navigate to the conversation
+      router.push(`/dashboard/messages?conversation=${response.conversationId}`);
     } catch {
       toast.error(t("contactError"));
     } finally {
@@ -526,6 +533,13 @@ export default function ProductDetailPage() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Reviews */}
+            <ProductReviews
+              productId={product.id}
+              averageRating={product.averageRating}
+              reviewCount={product.reviewCount}
+            />
           </div>
 
           {/* Right Column - Price, Seller, Actions */}

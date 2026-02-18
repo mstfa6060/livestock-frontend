@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
@@ -18,12 +19,16 @@ import {
   FolderTree,
 } from "lucide-react";
 import { useRoles } from "@/hooks/useRoles";
+import { useAuth } from "@/contexts/AuthContext";
+import { useMessagesStore } from "@/stores/useMessagesStore";
+import { useNotificationsStore } from "@/stores/useNotificationsStore";
 
 interface MenuItem {
   key: string;
   href: string;
   icon: typeof LayoutDashboard;
   adminOnly?: boolean;
+  badgeKey?: "messages" | "notifications";
 }
 
 const menuItems: MenuItem[] = [
@@ -32,21 +37,50 @@ const menuItems: MenuItem[] = [
   { key: "becomeSeller", href: "/dashboard/become-seller", icon: Store },
   { key: "categories", href: "/dashboard/categories", icon: FolderTree, adminOnly: true },
   { key: "favorites", href: "/dashboard/favorites", icon: Heart },
-  { key: "messages", href: "/dashboard/messages", icon: MessageSquare },
-  { key: "notifications", href: "/dashboard/notifications", icon: Bell },
+  { key: "messages", href: "/dashboard/messages", icon: MessageSquare, badgeKey: "messages" },
+  { key: "notifications", href: "/dashboard/notifications", icon: Bell, badgeKey: "notifications" },
   { key: "profile", href: "/dashboard/profile", icon: User },
   { key: "settings", href: "/settings", icon: Settings },
 ];
+
+function UnreadBadge({ count }: { count: number }) {
+  if (count === 0) return null;
+  return (
+    <span className="ml-auto inline-flex items-center justify-center rounded-full bg-destructive px-1.5 py-0.5 text-[10px] font-medium text-destructive-foreground min-w-[18px]">
+      {count > 99 ? "99+" : count}
+    </span>
+  );
+}
 
 export function DashboardSidebar() {
   const pathname = usePathname();
   const t = useTranslations("dashboardNav");
   const { isAdmin } = useRoles();
+  const { user } = useAuth();
+
+  const unreadMessages = useMessagesStore((s) => s.unreadCount);
+  const fetchUnreadCount = useMessagesStore((s) => s.fetchUnreadCount);
+  const unreadNotifications = useNotificationsStore((s) => s.unreadCount);
+  const fetchNotifications = useNotificationsStore((s) => s.fetchNotifications);
+
+  // Fetch unread counts on mount
+  useEffect(() => {
+    if (user?.id) {
+      fetchUnreadCount(user.id);
+      fetchNotifications(user.id);
+    }
+  }, [user?.id, fetchUnreadCount, fetchNotifications]);
 
   // Remove locale prefix from pathname for comparison
   const currentPath = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, "");
 
   const visibleItems = menuItems.filter((item) => !item.adminOnly || isAdmin);
+
+  const getBadgeCount = (badgeKey?: "messages" | "notifications") => {
+    if (badgeKey === "messages") return unreadMessages;
+    if (badgeKey === "notifications") return unreadNotifications;
+    return 0;
+  };
 
   return (
     <aside className="w-64 border-r bg-background min-h-[calc(100vh-4rem)] p-4 hidden lg:block">
@@ -79,6 +113,7 @@ export function DashboardSidebar() {
             >
               <item.icon className="h-4 w-4" />
               {t(item.key)}
+              <UnreadBadge count={getBadgeCount(item.badgeKey)} />
             </Link>
           );
         })}
@@ -91,6 +126,16 @@ export function DashboardSidebar() {
 export function DashboardMobileNav() {
   const pathname = usePathname();
   const t = useTranslations("dashboardNav");
+  const { user } = useAuth();
+
+  const unreadMessages = useMessagesStore((s) => s.unreadCount);
+  const fetchUnreadCount = useMessagesStore((s) => s.fetchUnreadCount);
+
+  useEffect(() => {
+    if (user?.id) {
+      fetchUnreadCount(user.id);
+    }
+  }, [user?.id, fetchUnreadCount]);
 
   const currentPath = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, "");
 
@@ -98,7 +143,7 @@ export function DashboardMobileNav() {
     { key: "overview", href: "/dashboard", icon: LayoutDashboard },
     { key: "myListings", href: "/dashboard/my-listings", icon: Package },
     { key: "favorites", href: "/dashboard/favorites", icon: Heart },
-    { key: "messages", href: "/dashboard/messages", icon: MessageSquare },
+    { key: "messages", href: "/dashboard/messages", icon: MessageSquare, showBadge: true },
     { key: "profile", href: "/dashboard/profile", icon: User },
   ];
 
@@ -115,11 +160,18 @@ export function DashboardMobileNav() {
               key={item.key}
               href={item.href}
               className={cn(
-                "flex flex-col items-center gap-1 px-3 py-1 text-xs",
+                "flex flex-col items-center gap-1 px-3 py-1 text-xs relative",
                 isActive ? "text-primary" : "text-muted-foreground"
               )}
             >
-              <item.icon className="h-5 w-5" />
+              <div className="relative">
+                <item.icon className="h-5 w-5" />
+                {item.showBadge && unreadMessages > 0 && (
+                  <span className="absolute -top-1 -right-1.5 inline-flex items-center justify-center rounded-full bg-destructive w-4 h-4 text-[9px] font-medium text-destructive-foreground">
+                    {unreadMessages > 9 ? "9+" : unreadMessages}
+                  </span>
+                )}
+              </div>
               <span>{t(item.key)}</span>
             </Link>
           );
