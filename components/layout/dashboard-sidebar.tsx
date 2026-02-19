@@ -50,6 +50,7 @@ const menuItems: MenuItem[] = [
   { key: "moderation", href: "/dashboard/moderation", icon: ShieldCheck, adminOnly: true },
   { key: "categories", href: "/dashboard/categories", icon: FolderTree, adminOnly: true },
   { key: "brands", href: "/dashboard/brands", icon: Tag, adminOnly: true },
+  { key: "systemSettings", href: "/dashboard/system-settings", icon: Settings, adminOnly: true },
   { key: "favorites", href: "/dashboard/favorites", icon: Heart },
   { key: "messages", href: "/dashboard/messages", icon: MessageSquare, badgeKey: "messages" },
   { key: "notifications", href: "/dashboard/notifications", icon: Bell, badgeKey: "notifications" },

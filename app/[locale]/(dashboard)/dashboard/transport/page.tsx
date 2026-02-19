@@ -22,7 +22,9 @@ import {
   AlertTriangle,
   ArrowRight,
   Zap,
+  Navigation,
 } from "lucide-react";
+import { TransportTracking } from "@/components/features/transport-tracking";
 
 const TransportStatus = {
   Pending: 0,
@@ -100,6 +102,7 @@ export default function TransportPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [sellerRequests, setSellerRequests] = useState<TransportRequest[]>([]);
   const [buyerRequests, setBuyerRequests] = useState<TransportRequest[]>([]);
+  const [expandedTracking, setExpandedTracking] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     const fetchRequests = async () => {
@@ -208,13 +211,37 @@ export default function TransportPage() {
               </div>
             </div>
 
-            <Link href={`/products/${request.productId}`}>
-              <Button size="sm" variant="outline">
-                <Package className="h-3 w-3 mr-1" />
-                {t("viewProduct")}
-              </Button>
-            </Link>
+            <div className="flex flex-col gap-2">
+              <Link href={`/products/${request.productId}`}>
+                <Button size="sm" variant="outline" className="w-full">
+                  <Package className="h-3 w-3 mr-1" />
+                  {t("viewProduct")}
+                </Button>
+              </Link>
+              {request.status >= TransportStatus.Assigned && request.status <= TransportStatus.InTransit && (
+                <Button
+                  size="sm"
+                  variant="secondary"
+                  className="w-full"
+                  onClick={() => {
+                    setExpandedTracking((prev) => {
+                      const next = new Set(prev);
+                      if (next.has(request.id)) next.delete(request.id);
+                      else next.add(request.id);
+                      return next;
+                    });
+                  }}
+                >
+                  <Navigation className="h-3 w-3 mr-1" />
+                  {t("trackShipment")}
+                </Button>
+              )}
+            </div>
           </div>
+
+          {expandedTracking.has(request.id) && (
+            <TransportTracking transportRequestId={request.id} />
+          )}
         </CardContent>
       </Card>
     );

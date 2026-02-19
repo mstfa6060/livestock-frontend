@@ -154,7 +154,8 @@
     "transport": "Nakliye",
     "moderation": "Moderasyon",
     "brands": "Markalar",
-    "transportOffers": "Nakliye Teklifleri"
+    "transportOffers": "Nakliye Teklifleri",
+    "systemSettings": "Sistem Ayarlari"
   },
   "profile": {
     "title": "Profil Bilgileri",
@@ -1112,6 +1113,7 @@
     "delivery": "Teslimat",
     "urgent": "Acil",
     "fetchError": "Nakliye talepleri yuklenirken bir hata olustu",
+    "trackShipment": "Takip Et",
     "transportStatus": {
       "pending": "Beklemede",
       "inPool": "Havuzda",
@@ -1307,5 +1309,47 @@
     "hoursUsed": "Kullanim Saati",
     "hours": "saat",
     "powerSource": "Guc Kaynagi"
+  },
+  "productVariants": {
+    "title": "Urun Varyantlari",
+    "variantCount": "varyant",
+    "inStock": "Stokta",
+    "outOfStock": "Tukendi"
+  },
+  "productPrices": {
+    "title": "Fiyatlar (Coklu Para Birimi)",
+    "autoConversion": "Otomatik Donusum",
+    "validUntil": "Gecerlilik"
+  },
+  "transportTracking": {
+    "title": "Gonderim Takibi",
+    "noTracking": "Henuz takip bilgisi bulunmuyor",
+    "update": "Guncelleme"
+  },
+  "systemSettings": {
+    "title": "Sistem Ayarlari",
+    "description": "Platform para birimleri, diller, odeme yontemleri, kargo ve vergi ayarlarini goruntuleyin",
+    "unauthorized": "Bu sayfaya erisim yetkiniz bulunmamaktadir",
+    "currenciesTab": "Para Birimleri",
+    "languagesTab": "Diller",
+    "paymentTab": "Odeme Yontemleri",
+    "shippingTab": "Kargo",
+    "taxTab": "Vergi",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "default": "Varsayilan",
+    "noCurrencies": "Henuz para birimi tanimlanmamis",
+    "noLanguages": "Henuz dil tanimlanmamis",
+    "noPaymentMethods": "Henuz odeme yontemi tanimlanmamis",
+    "noCarriers": "Henuz kargo firmasi tanimlanmamis",
+    "noZones": "Henuz kargo bolgesi tanimlanmamis",
+    "noTaxRates": "Henuz vergi orani tanimlanmamis",
+    "carriers": "Kargo Firmalari",
+    "zones": "Kargo Bolgeleri",
+    "countries": "Ulkeler",
+    "rates": "Kargo Ucretleri",
+    "noRates": "Henuz kargo ucreti tanimlanmamis",
+    "freeShipping": "Ucretsiz Kargo",
+    "deliveryDays": "gun teslimat suresi"
   }
 }
