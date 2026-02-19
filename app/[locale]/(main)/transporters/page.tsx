@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { MainHeader } from "@/components/layout/main-header";
 import { SimpleFooter } from "@/components/layout/footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -26,9 +26,28 @@ import {
   Search,
   Phone,
   Mail,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 type SortOption = "newest" | "rating" | "mostTransports";
+
+const SORT_MAP: Record<SortOption, { key: string; direction: number }> = {
+  newest: {
+    key: "createdAt",
+    direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+  },
+  rating: {
+    key: "averageRating",
+    direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+  },
+  mostTransports: {
+    key: "totalTransports",
+    direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+  },
+};
+
+const PER_PAGE = 12;
 
 interface Transporter {
   id: string;
@@ -47,35 +66,42 @@ interface Transporter {
 
 export default function TransportersPage() {
   const t = useTranslations("transporters");
-  const locale = useLocale();
 
   const [isLoading, setIsLoading] = useState(true);
   const [transporters, setTransporters] = useState<Transporter[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<SortOption>("newest");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [hasMore, setHasMore] = useState(false);
 
-  useEffect(() => {
-    const fetchTransporters = async () => {
+  const fetchTransporters = useCallback(
+    async (page: number, sort: SortOption) => {
       setIsLoading(true);
       try {
-        const response = await LivestockTradingAPI.Transporters.All.Request({
-          sorting: {
-            key: "createdAt",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
-          },
-          filters: [
-            {
-              key: "isActive",
-              type: "boolean",
-              isUsed: true,
-              values: [true],
-              min: {},
-              max: {},
-              conditionType: "equals",
+        const sortConfig = SORT_MAP[sort];
+        const response =
+          await LivestockTradingAPI.Transporters.All.Request({
+            sorting: {
+              key: sortConfig.key,
+              direction: sortConfig.direction,
             },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-        });
+            filters: [
+              {
+                key: "isActive",
+                type: "boolean",
+                isUsed: true,
+                values: [true],
+                min: {},
+                max: {},
+                conditionType: "equals",
+              },
+            ],
+            pageRequest: {
+              currentPage: page,
+              perPageCount: PER_PAGE,
+              listAll: false,
+            },
+          });
 
         setTransporters(
           response.map((t) => ({
@@ -93,34 +119,35 @@ export default function TransportersPage() {
             createdAt: t.createdAt,
           }))
         );
+        setHasMore(response.length === PER_PAGE);
       } catch {
         // Silently handle
       } finally {
         setIsLoading(false);
       }
-    };
+    },
+    []
+  );
 
-    fetchTransporters();
-  }, []);
+  useEffect(() => {
+    fetchTransporters(currentPage, sortBy);
+  }, [currentPage, sortBy, fetchTransporters]);
 
-  const filtered = transporters
-    .filter(
-      (t) =>
-        t.companyName.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        t.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        t.contactPerson.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-    .sort((a, b) => {
-      switch (sortBy) {
-        case "rating":
-          return (Number(b.averageRating) || 0) - (Number(a.averageRating) || 0);
-        case "mostTransports":
-          return b.totalTransports - a.totalTransports;
-        case "newest":
-        default:
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-      }
-    });
+  // Reset page when sort changes
+  const handleSortChange = (value: string) => {
+    setSortBy(value as SortOption);
+    setCurrentPage(1);
+  };
+
+  // Client-side search filter on current page
+  const filtered = searchQuery
+    ? transporters.filter(
+        (t) =>
+          t.companyName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          t.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          t.contactPerson.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : transporters;
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -146,14 +173,16 @@ export default function TransportersPage() {
                 className="pl-10"
               />
             </div>
-            <Select value={sortBy} onValueChange={(v) => setSortBy(v as SortOption)}>
+            <Select value={sortBy} onValueChange={handleSortChange}>
               <SelectTrigger className="w-[160px]">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="newest">{t("sort.newest")}</SelectItem>
                 <SelectItem value="rating">{t("sort.rating")}</SelectItem>
-                <SelectItem value="mostTransports">{t("sort.mostTransports")}</SelectItem>
+                <SelectItem value="mostTransports">
+                  {t("sort.mostTransports")}
+                </SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -175,70 +204,107 @@ export default function TransportersPage() {
         ) : filtered.length === 0 ? (
           <div className="text-center py-16">
             <Truck className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
-            <p className="text-lg text-muted-foreground">{t("noTransporters")}</p>
+            <p className="text-lg text-muted-foreground">
+              {t("noTransporters")}
+            </p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filtered.map((transporter) => (
-              <Card key={transporter.id} className="hover:border-primary transition-colors">
-                <CardContent className="p-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <div>
-                      <h3 className="font-semibold text-lg">{transporter.companyName}</h3>
-                      <p className="text-sm text-muted-foreground">{transporter.contactPerson}</p>
-                    </div>
-                    {transporter.isVerified && (
-                      <Badge variant="default" className="gap-1 shrink-0">
-                        <BadgeCheck className="h-3 w-3" />
-                        {t("verified")}
-                      </Badge>
-                    )}
-                  </div>
-
-                  <div className="space-y-2 text-sm mb-4">
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <MapPin className="h-4 w-4 shrink-0" />
-                      {transporter.city}, {transporter.countryCode}
-                    </div>
-                    {transporter.phone && (
-                      <div className="flex items-center gap-2 text-muted-foreground">
-                        <Phone className="h-4 w-4 shrink-0" />
-                        {transporter.phone}
+          <>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filtered.map((transporter) => (
+                <Card
+                  key={transporter.id}
+                  className="hover:border-primary transition-colors"
+                >
+                  <CardContent className="p-6">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <h3 className="font-semibold text-lg">
+                          {transporter.companyName}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          {transporter.contactPerson}
+                        </p>
                       </div>
-                    )}
-                    {transporter.email && (
-                      <div className="flex items-center gap-2 text-muted-foreground">
-                        <Mail className="h-4 w-4 shrink-0" />
-                        {transporter.email}
-                      </div>
-                    )}
-                  </div>
+                      {transporter.isVerified && (
+                        <Badge variant="default" className="gap-1 shrink-0">
+                          <BadgeCheck className="h-3 w-3" />
+                          {t("verified")}
+                        </Badge>
+                      )}
+                    </div>
 
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      {transporter.averageRating != null && transporter.averageRating > 0 && (
-                        <div className="flex items-center gap-1">
-                          <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                          <span className="text-sm font-medium">
-                            {Number(transporter.averageRating).toFixed(1)}
-                          </span>
+                    <div className="space-y-2 text-sm mb-4">
+                      <div className="flex items-center gap-2 text-muted-foreground">
+                        <MapPin className="h-4 w-4 shrink-0" />
+                        {transporter.city}, {transporter.countryCode}
+                      </div>
+                      {transporter.phone && (
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                          <Phone className="h-4 w-4 shrink-0" />
+                          {transporter.phone}
                         </div>
                       )}
-                      <span className="text-xs text-muted-foreground">
-                        {transporter.totalTransports} {t("transports")}
-                      </span>
+                      {transporter.email && (
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                          <Mail className="h-4 w-4 shrink-0" />
+                          {transporter.email}
+                        </div>
+                      )}
                     </div>
 
-                    <Link href={`/transporters/${transporter.id}`}>
-                      <Button size="sm" variant="outline">
-                        {t("viewProfile")}
-                      </Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        {transporter.averageRating != null &&
+                          transporter.averageRating > 0 && (
+                            <div className="flex items-center gap-1">
+                              <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                              <span className="text-sm font-medium">
+                                {Number(transporter.averageRating).toFixed(1)}
+                              </span>
+                            </div>
+                          )}
+                        <span className="text-xs text-muted-foreground">
+                          {transporter.totalTransports} {t("transports")}
+                        </span>
+                      </div>
+
+                      <Link href={`/transporters/${transporter.id}`}>
+                        <Button size="sm" variant="outline">
+                          {t("viewProfile")}
+                        </Button>
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Pagination */}
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={currentPage === 1}
+                onClick={() => setCurrentPage((p) => p - 1)}
+              >
+                <ChevronLeft className="h-4 w-4 mr-1" />
+                {t("pagination.previous")}
+              </Button>
+              <span className="text-sm text-muted-foreground">
+                {t("pagination.page", { page: currentPage })}
+              </span>
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={!hasMore}
+                onClick={() => setCurrentPage((p) => p + 1)}
+              >
+                {t("pagination.next")}
+                <ChevronRight className="h-4 w-4 ml-1" />
+              </Button>
+            </div>
+          </>
         )}
       </main>
 

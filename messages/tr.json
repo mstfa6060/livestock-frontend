@@ -121,7 +121,11 @@
       "draft": "Taslak",
       "sold": "Satildi",
       "pending": "Beklemede",
-      "awaitingApproval": "onay bekliyor"
+      "awaitingApproval": "onay bekliyor",
+      "totalSales": "Toplam Satis",
+      "completedSales": "tamamlanan satislar",
+      "revenue": "Gelir",
+      "totalRevenue": "toplam gelir"
     },
     "recentListings": "Son Ilanlariniz",
     "recentActivity": "Son Aktiviteler",
@@ -135,6 +139,7 @@
     "viewAllMessages": "Tum Mesajlari Gor",
     "viewNotifications": "Bildirimleri Gor",
     "viewFavorites": "Favorileri Gor",
+    "recentlyViewed": "Son Goruntulenenler",
     "fetchError": "Panel verileri yuklenirken bir hata olustu"
   },
   "dashboardNav": {
@@ -1102,6 +1107,11 @@
       "newest": "En Yeni",
       "rating": "En Yuksek Puan",
       "mostTransports": "En Cok Nakliye"
+    },
+    "pagination": {
+      "previous": "Onceki",
+      "next": "Sonraki",
+      "page": "Sayfa {page}"
     }
   },
   "transport": {

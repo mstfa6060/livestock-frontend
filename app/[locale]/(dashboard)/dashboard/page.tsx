@@ -10,6 +10,7 @@ import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { useAuth } from "@/contexts/AuthContext";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useNotificationsStore } from "@/stores/useNotificationsStore";
+import { RecentlyViewedProducts } from "@/components/features/recently-viewed-products";
 import {
   Package,
   Heart,
@@ -20,10 +21,13 @@ import {
   ShoppingCart,
   FileEdit,
   Clock,
+  DollarSign,
+  TrendingUp,
 } from "lucide-react";
 import { toast } from "sonner";
 
 type MyStatsResponse = LivestockTradingAPI.Dashboard.MyStats.IResponseModel;
+type StatsResponse = LivestockTradingAPI.Dashboard.Stats.IResponseModel;
 
 export default function DashboardPage() {
   const t = useTranslations("dashboard");
@@ -34,6 +38,7 @@ export default function DashboardPage() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [stats, setStats] = useState<MyStatsResponse | null>(null);
+  const [sellerStats, setSellerStats] = useState<StatsResponse | null>(null);
   const [unreadNotifications, setUnreadNotifications] = useState(0);
 
   // Fetch dashboard data
@@ -46,16 +51,24 @@ export default function DashboardPage() {
 
       setIsLoading(true);
       try {
-        // Fetch stats from Dashboard.MyStats API and notifications in parallel
-        const [statsResponse] = await Promise.all([
+        // Fetch stats from Dashboard.MyStats, Dashboard.Stats and notifications in parallel
+        const results = await Promise.allSettled([
           LivestockTradingAPI.Dashboard.MyStats.Request({
             userId: user.id,
             period: "all",
           }),
+          LivestockTradingAPI.Dashboard.Stats.Request({
+            userId: user.id,
+          }),
           fetchNotifications(user.id),
         ]);
 
-        setStats(statsResponse);
+        if (results[0].status === "fulfilled") {
+          setStats(results[0].value);
+        }
+        if (results[1].status === "fulfilled") {
+          setSellerStats(results[1].value);
+        }
         setUnreadNotifications(useNotificationsStore.getState().unreadCount);
       } catch {
         toast.error(t("fetchError"));
@@ -239,8 +252,45 @@ export default function DashboardPage() {
         </Card>
       </div>
 
-      {/* Recent Activity & Quick Links */}
-      <div className="grid gap-4 md:grid-cols-2">
+      {/* Seller Revenue Stats */}
+      {sellerStats && (Number(sellerStats.totalSales) > 0 || Number(sellerStats.revenue) > 0) && (
+        <div className="grid gap-4 md:grid-cols-2 mb-8">
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between pb-2">
+              <CardTitle className="text-sm font-medium">
+                {t("stats.totalSales")}
+              </CardTitle>
+              <ShoppingCart className="h-4 w-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{sellerStats.totalSales}</div>
+              <p className="text-xs text-muted-foreground">
+                {t("stats.completedSales")}
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between pb-2">
+              <CardTitle className="text-sm font-medium">
+                {t("stats.revenue")}
+              </CardTitle>
+              <TrendingUp className="h-4 w-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">
+                {Number(sellerStats.revenue).toLocaleString()} ₺
+              </div>
+              <p className="text-xs text-muted-foreground">
+                {t("stats.totalRevenue")}
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      )}
+
+      {/* Recent Activity, Quick Links & Recently Viewed */}
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         <Card>
           <CardHeader>
             <CardTitle className="text-lg">{t("recentActivity")}</CardTitle>
@@ -301,6 +351,8 @@ export default function DashboardPage() {
             </Button>
           </CardContent>
         </Card>
+
+        <RecentlyViewedProducts />
       </div>
     </DashboardLayout>
   );
