@@ -155,7 +155,8 @@
     "moderation": "Moderasyon",
     "brands": "Markalar",
     "transportOffers": "Nakliye Teklifleri",
-    "systemSettings": "Sistem Ayarlari"
+    "systemSettings": "Sistem Ayarlari",
+    "locations": "Adreslerim"
   },
   "profile": {
     "title": "Profil Bilgileri",
@@ -1047,7 +1048,8 @@
       "pickup": "Elden Teslim",
       "shipping": "Kargo ile",
       "transport": "Nakliye ile"
-    }
+    },
+    "requestTransport": "Nakliye Talebi"
   },
   "farms": {
     "title": "Ciftliklerim",
@@ -1321,10 +1323,65 @@
     "autoConversion": "Otomatik Donusum",
     "validUntil": "Gecerlilik"
   },
+  "requestTransport": {
+    "title": "Nakliye Talebi Olustur",
+    "pickupLocation": "Yuklenme Noktasi",
+    "deliveryLocation": "Teslimat Noktasi",
+    "city": "Sehir",
+    "address": "Adres",
+    "transportType": "Nakliye Turu",
+    "types": {
+      "standard": "Standart",
+      "refrigerated": "Soguk Zincir",
+      "liveAnimal": "Canli Hayvan",
+      "hazardous": "Tehlikeli Madde",
+      "oversized": "Buyuk Boyut"
+    },
+    "weight": "Agirlik (kg)",
+    "preferredPickupDate": "Tercih Edilen Yukleme Tarihi",
+    "preferredDeliveryDate": "Tercih Edilen Teslimat Tarihi",
+    "urgent": "Acil Nakliye",
+    "specialInstructions": "Ozel Talimatlar",
+    "instructionsPlaceholder": "Ozel talimatlarinizi buraya yazin...",
+    "cancel": "Vazgec",
+    "submit": "Talep Olustur",
+    "submitting": "Olusturuluyor...",
+    "success": "Nakliye talebi basariyla olusturuldu",
+    "error": "Nakliye talebi olusturulurken bir hata olustu"
+  },
   "transportTracking": {
     "title": "Gonderim Takibi",
     "noTracking": "Henuz takip bilgisi bulunmuyor",
     "update": "Guncelleme"
+  },
+  "locations": {
+    "title": "Adreslerim",
+    "description": "Kayitli adreslerinizi yonetin",
+    "addLocation": "Adres Ekle",
+    "editLocation": "Adresi Duzenle",
+    "noLocations": "Henuz kayitli adresiniz bulunmuyor",
+    "name": "Adres Adi",
+    "namePlaceholder": "Ornegin: Ev, Is, Ciftlik",
+    "address": "Adres",
+    "addressLine2": "Adres Satir 2",
+    "city": "Sehir",
+    "state": "Ilce / Bolge",
+    "postalCode": "Posta Kodu",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "cancel": "Vazgec",
+    "save": "Kaydet",
+    "saving": "Kaydediliyor...",
+    "typePickup": "Yukleme",
+    "typeDelivery": "Teslimat",
+    "typeBoth": "Genel",
+    "createSuccess": "Adres basariyla eklendi",
+    "createError": "Adres eklenirken bir hata olustu",
+    "updateSuccess": "Adres basariyla guncellendi",
+    "updateError": "Adres guncellenirken bir hata olustu",
+    "deleteSuccess": "Adres silindi",
+    "deleteError": "Adres silinirken bir hata olustu",
+    "fetchError": "Adresler yuklenirken bir hata olustu"
   },
   "systemSettings": {
     "title": "Sistem Ayarlari",

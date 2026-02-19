@@ -24,6 +24,7 @@ import {
   ShoppingBag,
   Store,
 } from "lucide-react";
+import { RequestTransportDialog } from "@/components/features/request-transport-dialog";
 
 const DealStatus = {
   Pending: 0,
@@ -217,11 +218,23 @@ export default function DealsPage() {
               </div>
             </div>
 
-            <Link href={`/products/${deal.productId}`}>
-              <Button size="sm" variant="outline">
-                {t("viewProduct")}
-              </Button>
-            </Link>
+            <div className="flex flex-col gap-2 shrink-0">
+              <Link href={`/products/${deal.productId}`}>
+                <Button size="sm" variant="outline" className="w-full">
+                  {t("viewProduct")}
+                </Button>
+              </Link>
+              {deal.deliveryMethod === DeliveryMethod.Transport &&
+                deal.status >= DealStatus.Confirmed &&
+                deal.status <= DealStatus.Processing && (
+                <RequestTransportDialog deal={deal}>
+                  <Button size="sm" variant="secondary" className="w-full">
+                    <Truck className="h-3 w-3 mr-1" />
+                    {t("requestTransport")}
+                  </Button>
+                </RequestTransportDialog>
+              )}
+            </div>
           </div>
         </CardContent>
       </Card>
