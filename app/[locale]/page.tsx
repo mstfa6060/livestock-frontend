@@ -8,6 +8,7 @@ import { MainHeader } from "@/components/layout/main-header";
 import { Footer } from "@/components/layout/footer";
 import { ShieldCheck, Layers, Headphones, ArrowRight } from "lucide-react";
 import { HomepageBanners } from "@/components/features/homepage-banners";
+import { FeaturedProducts } from "@/components/features/featured-products";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -42,6 +43,9 @@ export default function Home() {
 
         {/* Banners */}
         <HomepageBanners />
+
+        {/* Featured Products */}
+        <FeaturedProducts />
 
         {/* Categories */}
         <section className="bg-muted/50 py-16">

@@ -12,6 +12,13 @@ import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
   Truck,
   Star,
   BadgeCheck,
@@ -20,6 +27,8 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
+
+type SortOption = "newest" | "rating" | "mostTransports";
 
 interface Transporter {
   id: string;
@@ -43,6 +52,7 @@ export default function TransportersPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [transporters, setTransporters] = useState<Transporter[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [sortBy, setSortBy] = useState<SortOption>("newest");
 
   useEffect(() => {
     const fetchTransporters = async () => {
@@ -93,12 +103,24 @@ export default function TransportersPage() {
     fetchTransporters();
   }, []);
 
-  const filtered = transporters.filter(
-    (t) =>
-      t.companyName.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      t.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      t.contactPerson.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filtered = transporters
+    .filter(
+      (t) =>
+        t.companyName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        t.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        t.contactPerson.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .sort((a, b) => {
+      switch (sortBy) {
+        case "rating":
+          return (Number(b.averageRating) || 0) - (Number(a.averageRating) || 0);
+        case "mostTransports":
+          return b.totalTransports - a.totalTransports;
+        case "newest":
+        default:
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+      }
+    });
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -114,14 +136,26 @@ export default function TransportersPage() {
             <p className="text-muted-foreground mt-1">{t("description")}</p>
           </div>
 
-          <div className="relative w-full md:w-64">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-            <Input
-              placeholder={t("searchPlaceholder")}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10"
-            />
+          <div className="flex gap-3 w-full md:w-auto">
+            <div className="relative flex-1 md:w-64">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                placeholder={t("searchPlaceholder")}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10"
+              />
+            </div>
+            <Select value={sortBy} onValueChange={(v) => setSortBy(v as SortOption)}>
+              <SelectTrigger className="w-[160px]">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="newest">{t("sort.newest")}</SelectItem>
+                <SelectItem value="rating">{t("sort.rating")}</SelectItem>
+                <SelectItem value="mostTransports">{t("sort.mostTransports")}</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
         </div>
 

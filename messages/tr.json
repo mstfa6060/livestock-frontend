@@ -1097,7 +1097,12 @@
     "noTransporters": "Henuz kayitli nakliyeci bulunmuyor",
     "verified": "Dogrulanmis",
     "transports": "nakliye",
-    "viewProfile": "Profili Gor"
+    "viewProfile": "Profili Gor",
+    "sort": {
+      "newest": "En Yeni",
+      "rating": "En Yuksek Puan",
+      "mostTransports": "En Cok Nakliye"
+    }
   },
   "transport": {
     "title": "Nakliye Taleplerim",
