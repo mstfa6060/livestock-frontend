@@ -1331,7 +1331,7 @@ Backend is mantigi hatasi. `error.message` icinde Turkce aciklama bulunur.
 
 > **Bu bolum frontend ekibi tarafindan yazilmis, backend ekibi tarafindan guncellenmistir.**
 >
-> **Son guncelleme: 2026-02-18**
+> **Son guncelleme: 2026-02-20**
 
 ---
 
@@ -1339,7 +1339,7 @@ Backend is mantigi hatasi. `error.message` icinde Turkce aciklama bulunur.
 
 | # | Endpoint | Modul | Oncelik | Durum |
 |---|----------|-------|---------|-------|
-| 1 | `POST /iam/Users/Update` | IAM | KRITIK | BEKLENIYOR |
+| 1 | `POST /iam/Users/Update` | IAM | KRITIK | TAMAMLANDI |
 | 2 | `POST /livestocktrading/Dashboard/MyStats` | LivestockTrading | ONEMLI | TAMAMLANDI |
 | 3 | `POST /livestocktrading/Messages/UnreadCount` | LivestockTrading | ONEMLI | TAMAMLANDI |
 | 4 | `POST /livestocktrading/Products/Search` | LivestockTrading | IYILESTIRME | TAMAMLANDI |
@@ -1351,10 +1351,10 @@ Backend is mantigi hatasi. `error.message` icinde Turkce aciklama bulunur.
 
 ---
 
-### 1. IAMAPI.Users.Update (Kullanici Profil Guncelleme) - BEKLENIYOR
+### 1. IAMAPI.Users.Update (Kullanici Profil Guncelleme) - TAMAMLANDI
 
 **Oncelik:** KRITIK
-**Durum:** Frontend UI tamamen hazir, API bekleniyor
+**Durum:** TAMAMLANDI - Backend endpoint mevcut, `arf-cli` ile generate edip kullanabilirsiniz
 **Frontend dosyasi:** `app/[locale]/(dashboard)/dashboard/profile/page.tsx`
 
 Kullanicilar profil sayfasinda ad, soyad, telefon, ulke, dil ve para birimi bilgilerini duzenleyebilir.
@@ -1762,15 +1762,36 @@ interface IRequestModel {
 
 ---
 
+### TAMAMLANAN ISLER (Sprint 2 - 2026-02-20)
+
+| Is Itemi | Aciklama | Durum |
+|----------|----------|-------|
+| Users/Update | IAM modulunde profil guncelleme endpoint'i | TAMAMLANDI - `arf-cli` ile generate edin |
+| Product onay/red bildirimi | Products/Approve ve Reject'te notification event publish | TAMAMLANDI |
+| Offer bildirimleri | Offers/Create ve Update'te notification event publish | TAMAMLANDI |
+| Review duplicate check | Ayni kullanici ayni urun/satici/tasiyiciya birden fazla review birakamaz | TAMAMLANDI |
+
+**Bildirim Event Detaylari:**
+- `ProductApprovedEvent` - Urun onaylandiginda saticiya bildirim
+- `ProductRejectedEvent` - Urun reddedildiginde saticiya bildirim (red nedeni ile)
+- `OfferCreatedEvent` - Yeni teklif yapildiginda saticiya bildirim (fiyat, para birimi, alici adi)
+- `OfferStatusChangedEvent` - Teklif durumu degistiginde (kabul/red/karsi teklif) aliciya bildirim
+
+**Review Duplicate Check:**
+- Ayni kullanici ayni urune birden fazla ProductReview birakamaz
+- Ayni kullanici ayni saticiya birden fazla SellerReview birakamaz
+- Ayni kullanici ayni tasiyiciya birden fazla TransporterReview birakamaz
+- Hata mesajlari: `ProductReviewAlreadyExists`, `SellerReviewAlreadyExists`, `TransporterReviewAlreadyExists`
+
+---
+
 ### KALAN ISLER
 
 | Is Itemi | Aciklama | Oncelik |
 |----------|----------|---------|
-| Users/Update | IAM modulunde profil guncelleme endpoint'i | KRITIK |
 | Products/Search suggestions | Arama onerileri ("bunu mu demek istediniz?") | DUSUK |
 | Products/Search relevanceScore | Arama uygunluk puani | DUSUK |
 | Products/Search full-text | LIKE yerine full-text search (ElasticSearch/FTS) | DUSUK |
 | NotificationHub | Genel bildirimler icin SignalR hub (ChatHub sadece mesajlasma) | ORTA |
-| Product onay/red bildirimi | Products/Approve ve Reject'te notification event publish | ORTA |
 
 **Not:** `arf-cli` ile generate edildikten sonra frontend entegrasyonu tamamlanabilir.
