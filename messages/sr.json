@@ -401,11 +401,11 @@
     "dragDropHint": "Превуците и испустите или кликните да бисте изабрали.",
     "dropHere": "Остави то...",
     "imageLimit": "Фотографија: максимално 10MB",
-    "videoLimit": "Видео: максимално 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "Учитано је {current} / {max}",
     "maxFilesError": "Можете отпремити највише {max} медија.",
     "imageTooLarge": "Фотографија мора бити мања од 10MB.",
-    "videoTooLarge": "Видео мора бити мањи од 50MB.",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "Оптимизација...",
     "uploading": "Учитавање...",
     "queued": "Чекање у реду...",
@@ -418,6 +418,10 @@
     "coverBadge": "ЛИД",
     "videoBadge": "ВИДЕО",
     "coverUpdated": "Насловна фотографија је успешно прилагођена.",
-    "optimizationInfo": "Фотографије су оптимизоване да би биле у складу са веб стандардима"
+    "optimizationInfo": "Фотографије су оптимизоване да би биле у складу са веб стандардима",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

@@ -418,6 +418,10 @@
     "coverBadge": "POKRYWA",
     "videoBadge": "WIDEO",
     "coverUpdated": "Zdjęcie na okładce zostało pomyślnie dostosowane.",
-    "optimizationInfo": "Zdjęcia zostały zoptymalizowane pod kątem zgodności ze standardami internetowymi"
+    "optimizationInfo": "Zdjęcia zostały zoptymalizowane pod kątem zgodności ze standardami internetowymi",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

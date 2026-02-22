@@ -401,11 +401,11 @@
     "dragDropHint": "Dragðu og slepptu eða smelltu til að velja.",
     "dropHere": "Láttu það vera...",
     "imageLimit": "Mynd: hámark 10MB",
-    "videoLimit": "Myndband: hámark 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "{núverandi} / {hámark} hlaðið",
     "maxFilesError": "Þú getur hlaðið upp að hámarki {max} margmiðlunarefni.",
     "imageTooLarge": "Myndin verður að vera minni en 10MB.",
-    "videoTooLarge": "Myndbandið verður að vera minna en 50MB.",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "Að fínstilla...",
     "uploading": "Hleður...",
     "queued": "Að bíða í röð...",
@@ -418,6 +418,10 @@
     "coverBadge": "LOK",
     "videoBadge": "MYNDBAND",
     "coverUpdated": "Forsíðumyndinni hefur verið leiðrétt.",
-    "optimizationInfo": "Myndir eru fínstilltar til að uppfylla vefstaðla"
+    "optimizationInfo": "Myndir eru fínstilltar til að uppfylla vefstaðla",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

@@ -401,11 +401,11 @@
     "dragDropHint": "Σύρετε και αποθέστε ή κάντε κλικ για να επιλέξετε.",
     "dropHere": "Άφησέ το...",
     "imageLimit": "Φωτογραφία: μέγιστο 10MB",
-    "videoLimit": "Βίντεο: μέγιστο 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "{current} / {max} φορτωμένο",
     "maxFilesError": "Μπορείτε να ανεβάσετε έως και {max} μέσα.",
     "imageTooLarge": "Η φωτογραφία πρέπει να είναι μικρότερη από 10MB.",
-    "videoTooLarge": "Το βίντεο πρέπει να είναι μικρότερο από 50MB.",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "Βελτιστοποίηση...",
     "uploading": "Φόρτωση...",
     "queued": "Περιμένοντας στην ουρά...",
@@ -418,6 +418,10 @@
     "coverBadge": "ΚΑΠΑΚΙ",
     "videoBadge": "ΒΙΝΤΕΟ",
     "coverUpdated": "Η φωτογραφία εξωφύλλου προσαρμόστηκε με επιτυχία.",
-    "optimizationInfo": "Οι φωτογραφίες έχουν βελτιστοποιηθεί ώστε να συμμορφώνονται με τα πρότυπα ιστού"
+    "optimizationInfo": "Οι φωτογραφίες έχουν βελτιστοποιηθεί ώστε να συμμορφώνονται με τα πρότυπα ιστού",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

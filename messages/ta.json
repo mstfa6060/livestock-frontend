@@ -401,11 +401,11 @@
     "dragDropHint": "தேர்ந்தெடுக்க இழுத்து விடவும் அல்லது கிளிக் செய்யவும்.",
     "dropHere": "விடு...",
     "imageLimit": "புகைப்படம்: அதிகபட்சம் 10MB",
-    "videoLimit": "வீடியோ: அதிகபட்சம் 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "{தற்போதைய} / {அதிகபட்சம்} ஏற்றப்பட்டது",
     "maxFilesError": "நீங்கள் அதிகபட்சமாக {அதிகபட்சம்} மீடியாவைப் பதிவேற்றலாம்.",
     "imageTooLarge": "புகைப்படம் 10MB ஐ விட சிறியதாக இருக்க வேண்டும்.",
-    "videoTooLarge": "வீடியோ 50MB ஐ விட சிறியதாக இருக்க வேண்டும்.",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "மேம்படுத்துகிறது...",
     "uploading": "ஏற்றுகிறது...",
     "queued": "வரிசையில் காத்திருக்கிறேன்...",
@@ -418,6 +418,10 @@
     "coverBadge": "மூடி",
     "videoBadge": "காணொளி",
     "coverUpdated": "அட்டைப்படம் வெற்றிகரமாக சரிசெய்யப்பட்டது.",
-    "optimizationInfo": "புகைப்படங்கள் வலைத் தரநிலைகளுக்கு இணங்க மேம்படுத்தப்பட்டுள்ளன."
+    "optimizationInfo": "புகைப்படங்கள் வலைத் தரநிலைகளுக்கு இணங்க மேம்படுத்தப்பட்டுள்ளன.",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

@@ -418,6 +418,10 @@
     "coverBadge": "VEKO",
     "videoBadge": "VIDEO",
     "coverUpdated": "Titulná fotografia bola úspešne upravená.",
-    "optimizationInfo": "Fotografie boli optimalizované tak, aby spĺňali webové štandardy"
+    "optimizationInfo": "Fotografie boli optimalizované tak, aby spĺňali webové štandardy",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

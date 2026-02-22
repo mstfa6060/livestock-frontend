@@ -401,11 +401,11 @@
     "dragDropHint": "ドラッグアンドドロップするか、クリックして選択します。",
     "dropHere": "放っておいて…",
     "imageLimit": "写真: 最大10MB",
-    "videoLimit": "ビデオ: 最大50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "{現在} / {最大} が読み込まれました",
     "maxFilesError": "最大 {max} 個のメディアをアップロードできます。",
     "imageTooLarge": "写真は10MB未満である必要があります。",
-    "videoTooLarge": "ビデオは50MB未満である必要があります。",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "最適化しています...",
     "uploading": "読み込み中...",
     "queued": "列に並んで待っています...",
@@ -418,6 +418,10 @@
     "coverBadge": "蓋",
     "videoBadge": "ビデオ",
     "coverUpdated": "カバー写真の調整が完了しました。",
-    "optimizationInfo": "写真はウェブ標準に準拠するように最適化されています"
+    "optimizationInfo": "写真はウェブ標準に準拠するように最適化されています",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

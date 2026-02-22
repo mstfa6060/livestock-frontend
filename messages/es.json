@@ -418,6 +418,10 @@
     "coverBadge": "TAPA",
     "videoBadge": "VIDEO",
     "coverUpdated": "La foto de portada se ha ajustado correctamente.",
-    "optimizationInfo": "Las fotos se han optimizado para cumplir con los estándares web."
+    "optimizationInfo": "Las fotos se han optimizado para cumplir con los estándares web.",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

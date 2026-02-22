@@ -401,11 +401,11 @@
     "dragDropHint": "Seret dan lepas atau klik untuk memilih.",
     "dropHere": "Biarkan saja...",
     "imageLimit": "Foto: maksimal 10MB",
-    "videoLimit": "Video: maksimal 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "{current} / {max} loaded",
     "maxFilesError": "Anda dapat mengunggah maksimal {max} media.",
     "imageTooLarge": "Ukuran foto harus kurang dari 10MB.",
-    "videoTooLarge": "Ukuran video harus kurang dari 50MB.",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "Mengoptimalkan...",
     "uploading": "Memuat...",
     "queued": "Sedang mengantre...",
@@ -418,6 +418,10 @@
     "coverBadge": "TUTUP",
     "videoBadge": "VIDEO",
     "coverUpdated": "Foto sampul telah berhasil disesuaikan.",
-    "optimizationInfo": "Foto-foto telah dioptimalkan agar sesuai dengan standar web."
+    "optimizationInfo": "Foto-foto telah dioptimalkan agar sesuai dengan standar web.",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

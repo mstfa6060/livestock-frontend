@@ -418,6 +418,10 @@
     "coverBadge": "VÍČKO",
     "videoBadge": "VIDEO",
     "coverUpdated": "Titulní fotografie byla úspěšně upravena.",
-    "optimizationInfo": "Fotografie byly optimalizovány tak, aby splňovaly webové standardy."
+    "optimizationInfo": "Fotografie byly optimalizovány tak, aby splňovaly webové standardy.",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

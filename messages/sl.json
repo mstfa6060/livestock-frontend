@@ -418,6 +418,10 @@
     "coverBadge": "POKROV",
     "videoBadge": "VIDEO",
     "coverUpdated": "Naslovna fotografija je bila uspešno prilagojena.",
-    "optimizationInfo": "Fotografije so optimizirane v skladu s spletnimi standardi"
+    "optimizationInfo": "Fotografije so optimizirane v skladu s spletnimi standardi",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

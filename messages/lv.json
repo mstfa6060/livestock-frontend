@@ -418,6 +418,10 @@
     "coverBadge": "VĀKS",
     "videoBadge": "VIDEO",
     "coverUpdated": "Vāka fotoattēls ir veiksmīgi pielāgots.",
-    "optimizationInfo": "Fotoattēli ir optimizēti, lai atbilstu tīmekļa standartiem"
+    "optimizationInfo": "Fotoattēli ir optimizēti, lai atbilstu tīmekļa standartiem",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

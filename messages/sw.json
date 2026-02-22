@@ -401,11 +401,11 @@
     "dragDropHint": "Buruta na uangushe au bofya ili kuchagua.",
     "dropHere": "Acha...",
     "imageLimit": "Picha: kiwango cha juu cha 10MB",
-    "videoLimit": "Video: kiwango cha juu cha 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "{current} / {max} imepakiwa",
     "maxFilesError": "Unaweza kupakia kiwango cha juu cha vyombo vya habari {max}.",
     "imageTooLarge": "Picha lazima iwe ndogo kuliko 10MB.",
-    "videoTooLarge": "Video lazima iwe ndogo kuliko 50MB.",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "Inaboresha...",
     "uploading": "Inapakia...",
     "queued": "Wanasubiri kwenye foleni...",
@@ -418,6 +418,10 @@
     "coverBadge": "KIFUNIKO",
     "videoBadge": "VIDEO",
     "coverUpdated": "Picha ya jalada imerekebishwa kwa ufanisi.",
-    "optimizationInfo": "Picha zimeboreshwa ili ziendane na viwango vya wavuti"
+    "optimizationInfo": "Picha zimeboreshwa ili ziendane na viwango vya wavuti",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

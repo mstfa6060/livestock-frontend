@@ -418,6 +418,10 @@
     "coverBadge": "ঢাকনা",
     "videoBadge": "ভিডিও",
     "coverUpdated": "কভার ফটোটি সফলভাবে সামঞ্জস্য করা হয়েছে।",
-    "optimizationInfo": "ওয়েব স্ট্যান্ডার্ড মেনে ছবিগুলি অপ্টিমাইজ করা হয়েছে।"
+    "optimizationInfo": "ওয়েব স্ট্যান্ডার্ড মেনে ছবিগুলি অপ্টিমাইজ করা হয়েছে।",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

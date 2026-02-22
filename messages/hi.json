@@ -401,11 +401,11 @@
     "dragDropHint": "चयन करने के लिए ड्रैग एंड ड्रॉप करें या क्लिक करें।",
     "dropHere": "इसे छोड़ो...",
     "imageLimit": "फोटो: अधिकतम 10MB",
-    "videoLimit": "वीडियो: अधिकतम 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "{वर्तमान} / {अधिकतम} लोड किया गया",
     "maxFilesError": "आप अधिकतम {max} मीडिया अपलोड कर सकते हैं।",
     "imageTooLarge": "फोटो का आकार 10MB से कम होना चाहिए।",
-    "videoTooLarge": "वीडियो का आकार 50MB से कम होना चाहिए।",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "अनुकूलन हो रहा है...",
     "uploading": "लोड हो रहा है...",
     "queued": "लाइन में इंतजार कर रहा हूँ...",
@@ -418,6 +418,10 @@
     "coverBadge": "ढक्कन",
     "videoBadge": "वीडियो",
     "coverUpdated": "कवर फोटो सफलतापूर्वक समायोजित हो गया है।",
-    "optimizationInfo": "फ़ोटो को वेब मानकों के अनुरूप अनुकूलित किया गया है।"
+    "optimizationInfo": "फ़ोटो को वेब मानकों के अनुरूप अनुकूलित किया गया है।",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

@@ -418,6 +418,10 @@
     "coverBadge": "LOCK",
     "videoBadge": "VIDEO",
     "coverUpdated": "Omslagsfotot har justerats.",
-    "optimizationInfo": "Foton är optimerade för att följa webbstandarder"
+    "optimizationInfo": "Foton är optimerade för att följa webbstandarder",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

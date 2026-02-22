@@ -418,6 +418,10 @@
     "coverBadge": "درب",
     "videoBadge": "ویدئو",
     "coverUpdated": "عکس روی جلد با موفقیت تنظیم شد.",
-    "optimizationInfo": "عکس‌ها برای مطابقت با استانداردهای وب بهینه شده‌اند"
+    "optimizationInfo": "عکس‌ها برای مطابقت با استانداردهای وب بهینه شده‌اند",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

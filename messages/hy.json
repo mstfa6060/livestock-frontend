@@ -418,6 +418,10 @@
     "coverBadge": "Կափարիչ",
     "videoBadge": "Տեսանյութ",
     "coverUpdated": "Շապիկի լուսանկարը հաջողությամբ շտկվել է։",
-    "optimizationInfo": "Լուսանկարները օպտիմալացվել են՝ վեբ ստանդարտներին համապատասխանելու համար"
+    "optimizationInfo": "Լուսանկարները օպտիմալացվել են՝ վեբ ստանդարտներին համապատասխանելու համար",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

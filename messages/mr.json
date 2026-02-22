@@ -418,6 +418,10 @@
     "coverBadge": "झाकण",
     "videoBadge": "व्हिडिओ",
     "coverUpdated": "कव्हर फोटो यशस्वीरित्या समायोजित केला गेला आहे.",
-    "optimizationInfo": "वेब मानकांचे पालन करण्यासाठी फोटो ऑप्टिमाइझ केले आहेत."
+    "optimizationInfo": "वेब मानकांचे पालन करण्यासाठी फोटो ऑप्टिमाइझ केले आहेत.",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

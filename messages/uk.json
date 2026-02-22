@@ -418,6 +418,10 @@
     "coverBadge": "ЛІД",
     "videoBadge": "ВІДЕО",
     "coverUpdated": "Обкладинку успішно скориговано.",
-    "optimizationInfo": "Фотографії оптимізовані відповідно до веб-стандартів"
+    "optimizationInfo": "Фотографії оптимізовані відповідно до веб-стандартів",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

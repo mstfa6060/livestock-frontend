@@ -418,6 +418,10 @@
     "coverBadge": "غطاء",
     "videoBadge": "فيديو",
     "coverUpdated": "تم تعديل صورة الغلاف بنجاح.",
-    "optimizationInfo": "تم تحسين الصور لتتوافق مع معايير الويب"
+    "optimizationInfo": "تم تحسين الصور لتتوافق مع معايير الويب",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

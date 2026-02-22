@@ -418,6 +418,10 @@
     "coverBadge": "DANGTELIS",
     "videoBadge": "VAIZDO ĮRAŠAS",
     "coverUpdated": "Viršelio nuotrauka sėkmingai pakoreguota.",
-    "optimizationInfo": "Nuotraukos buvo optimizuotos, kad atitiktų interneto standartus"
+    "optimizationInfo": "Nuotraukos buvo optimizuotos, kad atitiktų interneto standartus",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

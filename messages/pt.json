@@ -418,6 +418,10 @@
     "coverBadge": "TAMPA",
     "videoBadge": "VÍDEO",
     "coverUpdated": "A foto da capa foi ajustada com sucesso.",
-    "optimizationInfo": "As fotos são otimizadas para estarem em conformidade com os padrões da web."
+    "optimizationInfo": "As fotos são otimizadas para estarem em conformidade com os padrões da web.",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

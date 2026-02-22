@@ -401,11 +401,11 @@
     "dragDropHint": "גרור ושחרר או לחץ כדי לבחור.",
     "dropHere": "עזוב את זה...",
     "imageLimit": "תמונה: מקסימום 10MB",
-    "videoLimit": "וידאו: מקסימום 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "טעון {current} / {max}",
     "maxFilesError": "ניתן להעלות מקסימום של {max} מדיה.",
     "imageTooLarge": "התמונה חייבת להיות קטנה מ-10MB.",
-    "videoTooLarge": "הסרטון חייב להיות קטן מ-50MB.",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "אופטימיזציה...",
     "uploading": "טְעִינָה...",
     "queued": "מחכים בתור...",
@@ -418,6 +418,10 @@
     "coverBadge": "מִכסֶה",
     "videoBadge": "וִידֵאוֹ",
     "coverUpdated": "תמונת השער הותקנה בהצלחה.",
-    "optimizationInfo": "התמונות עברו אופטימיזציה כדי לעמוד בתקני האינטרנט"
+    "optimizationInfo": "התמונות עברו אופטימיזציה כדי לעמוד בתקני האינטרנט",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

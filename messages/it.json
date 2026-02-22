@@ -418,6 +418,10 @@
     "coverBadge": "COPERCHIO",
     "videoBadge": "VIDEO",
     "coverUpdated": "La foto di copertina è stata modificata con successo.",
-    "optimizationInfo": "Le foto sono state ottimizzate per rispettare gli standard web"
+    "optimizationInfo": "Le foto sono state ottimizzate per rispettare gli standard web",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

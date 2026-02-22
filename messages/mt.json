@@ -401,11 +401,11 @@
     "dragDropHint": "Iddreggja u qiegħed jew ikklikkja biex tagħżel.",
     "dropHere": "Ħalliha...",
     "imageLimit": "Ritratt: massimu ta' 10MB",
-    "videoLimit": "Vidjo: massimu ta' 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "{kurrenti} / {max} mgħobbija",
     "maxFilesError": "Tista' ttella' massimu ta' {max} midja.",
     "imageTooLarge": "Ir-ritratt irid ikun iżgħar minn 10MB.",
-    "videoTooLarge": "Il-vidjow irid ikun iżgħar minn 50MB.",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "Ottimizzazzjoni...",
     "uploading": "Qed jitgħabba...",
     "queued": "Nistenna fil-kju...",
@@ -418,6 +418,10 @@
     "coverBadge": "GĦATU",
     "videoBadge": "VIDJOW",
     "coverUpdated": "Ir-ritratt tal-qoxra ġie aġġustat b'suċċess.",
-    "optimizationInfo": "Ir-ritratti huma ottimizzati biex jikkonformaw mal-istandards tal-web"
+    "optimizationInfo": "Ir-ritratti huma ottimizzati biex jikkonformaw mal-istandards tal-web",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

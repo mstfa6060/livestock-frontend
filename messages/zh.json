@@ -401,11 +401,11 @@
     "dragDropHint": "拖放或点击选择。",
     "dropHere": "算了……",
     "imageLimit": "照片：最大 10MB",
-    "videoLimit": "视频：最大 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "当前 / 最大已加载",
     "maxFilesError": "您最多可以上传 {max} 个媒体文件。",
     "imageTooLarge": "照片大小必须小于10MB。",
-    "videoTooLarge": "视频文件大小必须小于50MB。",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "正在优化……",
     "uploading": "加载中...",
     "queued": "排队等候……",
@@ -418,6 +418,10 @@
     "coverBadge": "盖",
     "videoBadge": "视频",
     "coverUpdated": "封面照片已成功调整。",
-    "optimizationInfo": "照片已优化以符合网络标准"
+    "optimizationInfo": "照片已优化以符合网络标准",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

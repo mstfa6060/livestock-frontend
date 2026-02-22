@@ -418,6 +418,10 @@
     "coverBadge": "LOKK",
     "videoBadge": "VIDEO",
     "coverUpdated": "Forsidebildet er justert.",
-    "optimizationInfo": "Bildene er optimalisert for å overholde nettstandarder"
+    "optimizationInfo": "Bildene er optimalisert for å overholde nettstandarder",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

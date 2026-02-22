@@ -418,6 +418,10 @@
     "coverBadge": "KANSI",
     "videoBadge": "VIDEO",
     "coverUpdated": "Kansikuvan muokkaus onnistui.",
-    "optimizationInfo": "Kuvat on optimoitu vastaamaan verkkostandardeja"
+    "optimizationInfo": "Kuvat on optimoitu vastaamaan verkkostandardeja",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

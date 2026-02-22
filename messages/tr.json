@@ -597,7 +597,12 @@
     "maxOrder": "Maksimum siparis",
     "publishedAt": "Yayinlanma tarihi",
     "views": "Goruntulenme",
-    "reviews": "degerlendirme",
+    "reviews": {
+      "title": "Degerlendirmeler",
+      "reviewCount": "degerlendirme",
+      "noReviews": "Henuz degerlendirme yapilmamis",
+      "verified": "Dogrulanmis Alici"
+    },
     "similarProducts": "Benzer Urunler",
     "sellerProducts": "Saticinin Diger Urunleri",
     "contactSeller": "Satici ile Iletisime Gec",
@@ -616,12 +621,6 @@
     "breadcrumb": {
       "home": "Ana Sayfa",
       "products": "Urunler"
-    },
-    "reviews": {
-      "title": "Degerlendirmeler",
-      "reviewCount": "degerlendirme",
-      "noReviews": "Henuz degerlendirme yapilmamis",
-      "verified": "Dogrulanmis Alici"
     }
   },
   "seller": {
@@ -814,7 +813,7 @@
   },
   "becomeSeller": {
     "title": "Satici Ol",
-    "description": "Satis yapmak icin satici profilinizi olusturun",
+    "description": "Isletme Aciklamasi",
     "alreadySeller": "Zaten bir satici profiliniz var",
     "goToListings": "Ilanlarima Git",
     "businessInfo": "Isletme Bilgileri",
@@ -831,7 +830,6 @@
     },
     "taxNumber": "Vergi Numarasi",
     "taxNumberPlaceholder": "Vergi numaranizi girin (opsiyonel)",
-    "description": "Isletme Aciklamasi",
     "descriptionPlaceholder": "Isletmeniz hakkinda kisa bir aciklama yazin...",
     "phone": "Telefon",
     "phonePlaceholder": "+90 5XX XXX XX XX",
@@ -852,11 +850,11 @@
     "dragDropHint": "Surukle-birak veya tiklayarak secin",
     "dropHere": "Birakin...",
     "imageLimit": "Fotograf: max 10MB",
-    "videoLimit": "Video: max 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "{current} / {max} yuklendi",
     "maxFilesError": "En fazla {max} medya yukleyebilirsiniz",
     "imageTooLarge": "Fotograf 10MB'dan kucuk olmali",
-    "videoTooLarge": "Video 50MB'dan kucuk olmali",
+    "videoTooLarge": "Video 100MB'dan kucuk olmali",
     "optimizing": "Optimize ediliyor...",
     "uploading": "Yukleniyor...",
     "queued": "Sirada bekliyor...",
@@ -872,7 +870,11 @@
     "optimizationInfo": "Fotograflar web standartlarina uygun sekilde optimize edildi",
     "selectImage": "Gorsel Sec",
     "changeImage": "Degistir",
-    "removeImage": "Kaldir"
+    "removeImage": "Kaldir",
+    "videoProcessing": "Video isleniyor...",
+    "videoProcessingFailed": "Isleme basarisiz",
+    "reorderError": "Dosya siralanamadi",
+    "coverUpdateError": "Kapak fotografı guncellenemedi"
   },
   "error": {
     "title": "Bir Hata Olustu",

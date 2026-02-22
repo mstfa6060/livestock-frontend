@@ -418,6 +418,10 @@
     "coverBadge": "LÅG",
     "videoBadge": "VIDEO",
     "coverUpdated": "Forsidebilledet er blevet justeret.",
-    "optimizationInfo": "Billeder er optimeret til at overholde webstandarder"
+    "optimizationInfo": "Billeder er optimeret til at overholde webstandarder",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

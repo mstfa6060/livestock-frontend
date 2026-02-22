@@ -418,6 +418,10 @@
     "coverBadge": "FEDÉL",
     "videoBadge": "VIDEÓ",
     "coverUpdated": "A borítókép sikeresen beállítva.",
-    "optimizationInfo": "A fotók optimalizálva vannak a webes szabványoknak való megfelelés érdekében."
+    "optimizationInfo": "A fotók optimalizálva vannak a webes szabványoknak való megfelelés érdekében.",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

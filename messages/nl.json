@@ -418,6 +418,10 @@
     "coverBadge": "DEKSEL",
     "videoBadge": "VIDEO",
     "coverUpdated": "De omslagfoto is succesvol aangepast.",
-    "optimizationInfo": "De foto's zijn geoptimaliseerd om te voldoen aan de webstandaarden."
+    "optimizationInfo": "De foto's zijn geoptimaliseerd om te voldoen aan de webstandaarden.",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

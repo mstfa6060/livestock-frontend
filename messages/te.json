@@ -401,11 +401,11 @@
     "dragDropHint": "ఎంచుకోవడానికి లాగి వదలండి లేదా క్లిక్ చేయండి.",
     "dropHere": "వదిలేయండి...",
     "imageLimit": "ఫోటో: గరిష్టంగా 10MB",
-    "videoLimit": "వీడియో: గరిష్టంగా 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "{ప్రస్తుత} / {గరిష్టంగా} లోడ్ చేయబడింది",
     "maxFilesError": "మీరు గరిష్టంగా {max} మీడియాను అప్‌లోడ్ చేయవచ్చు.",
     "imageTooLarge": "ఫోటో 10MB కంటే చిన్నదిగా ఉండాలి.",
-    "videoTooLarge": "వీడియో 50MB కంటే తక్కువగా ఉండాలి.",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "ఆప్టిమైజ్ చేస్తోంది...",
     "uploading": "లోడ్ అవుతోంది...",
     "queued": "వరుసలో వేచి ఉన్నారు...",
@@ -418,6 +418,10 @@
     "coverBadge": "మూత",
     "videoBadge": "వీడియో",
     "coverUpdated": "కవర్ ఫోటో విజయవంతంగా సర్దుబాటు చేయబడింది.",
-    "optimizationInfo": "వెబ్ ప్రమాణాలకు అనుగుణంగా ఫోటోలు ఆప్టిమైజ్ చేయబడ్డాయి."
+    "optimizationInfo": "వెబ్ ప్రమాణాలకు అనుగుణంగా ఫోటోలు ఆప్టిమైజ్ చేయబడ్డాయి.",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

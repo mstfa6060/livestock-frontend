@@ -418,6 +418,10 @@
     "coverBadge": "COUVERCLE",
     "videoBadge": "VIDÉO",
     "coverUpdated": "La photo de couverture a été ajustée avec succès.",
-    "optimizationInfo": "Les photos sont optimisées pour être conformes aux normes web"
+    "optimizationInfo": "Les photos sont optimisées pour être conformes aux normes web",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

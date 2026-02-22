@@ -401,7 +401,7 @@
     "dragDropHint": "Sleep en laat val of klik om te kies.",
     "dropHere": "Los dit...",
     "imageLimit": "Foto: maksimum 10MB",
-    "videoLimit": "Video: maksimum 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "{huidige} / {maks} gelaai",
     "maxFilesError": "Jy kan 'n maksimum van {max} media oplaai.",
     "imageTooLarge": "Die foto moet kleiner as 10 MB wees.",
@@ -418,6 +418,10 @@
     "coverBadge": "DEKSEL",
     "videoBadge": "VIDEO",
     "coverUpdated": "Die omslagfoto is suksesvol aangepas.",
-    "optimizationInfo": "Foto's is geoptimaliseer om aan webstandaarde te voldoen"
+    "optimizationInfo": "Foto's is geoptimaliseer om aan webstandaarde te voldoen",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

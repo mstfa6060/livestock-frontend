@@ -418,6 +418,10 @@
     "coverBadge": "KAAS",
     "videoBadge": "VIDEO",
     "coverUpdated": "Kaanefoto on edukalt kohandatud.",
-    "optimizationInfo": "Fotod on optimeeritud vastavalt veebistandarditele"
+    "optimizationInfo": "Fotod on optimeeritud vastavalt veebistandarditele",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

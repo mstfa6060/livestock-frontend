@@ -418,6 +418,10 @@
     "coverBadge": "POKLOPAC",
     "videoBadge": "VIDEO",
     "coverUpdated": "Naslovna fotografija je uspješno prilagođena.",
-    "optimizationInfo": "Fotografije su optimizirane u skladu s web standardima"
+    "optimizationInfo": "Fotografije su optimizirane u skladu s web standardima",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

@@ -418,6 +418,10 @@
     "coverBadge": "КРЫШКА",
     "videoBadge": "ВИДЕО",
     "coverUpdated": "Фотография на обложке успешно отредактирована.",
-    "optimizationInfo": "Фотографии оптимизированы в соответствии с веб-стандартами."
+    "optimizationInfo": "Фотографии оптимизированы в соответствии с веб-стандартами.",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

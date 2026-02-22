@@ -418,6 +418,10 @@
     "coverBadge": "ክዳን",
     "videoBadge": "ቪዲዮ",
     "coverUpdated": "የሽፋን ፎቶው በተሳካ ሁኔታ ተስተካክሏል።",
-    "optimizationInfo": "ፎቶዎች ከድር ደረጃዎች ጋር እንዲጣጣሙ ተመቻችተዋል"
+    "optimizationInfo": "ፎቶዎች ከድር ደረጃዎች ጋር እንዲጣጣሙ ተመቻችተዋል",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

@@ -401,11 +401,11 @@
     "dragDropHint": "Drag and drop or click to select.",
     "dropHere": "Leave it...",
     "imageLimit": "Photo: max 10MB",
-    "videoLimit": "Video: max 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "{current} / {max} loaded",
     "maxFilesError": "You can upload a maximum of {max} media.",
     "imageTooLarge": "The photo must be smaller than 10MB.",
-    "videoTooLarge": "The video must be smaller than 50MB.",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "Optimizing...",
     "uploading": "Loading...",
     "queued": "Waiting in line...",
@@ -418,6 +418,10 @@
     "coverBadge": "LID",
     "videoBadge": "VIDEO",
     "coverUpdated": "The cover photo has been successfully adjusted.",
-    "optimizationInfo": "Photos have been optimized to comply with web standards"
+    "optimizationInfo": "Photos have been optimized to comply with web standards",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

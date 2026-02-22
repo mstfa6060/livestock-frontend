@@ -401,11 +401,11 @@
     "dragDropHint": "ลากและวาง หรือคลิกเพื่อเลือก",
     "dropHere": "ปล่อยมันไว้...",
     "imageLimit": "รูปภาพ: ขนาดสูงสุด 10MB",
-    "videoLimit": "วิดีโอ: ขนาดสูงสุด 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "โหลดปัจจุบัน / โหลดสูงสุด",
     "maxFilesError": "คุณสามารถอัปโหลดสื่อได้สูงสุด {max} รายการ",
     "imageTooLarge": "ไฟล์ภาพต้องมีขนาดเล็กกว่า 10MB",
-    "videoTooLarge": "ไฟล์วิดีโอต้องมีขนาดไม่เกิน 50MB",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "กำลังปรับปรุงประสิทธิภาพ...",
     "uploading": "กำลังโหลด...",
     "queued": "กำลังรอคิว...",
@@ -418,6 +418,10 @@
     "coverBadge": "ฝา",
     "videoBadge": "วิดีโอ",
     "coverUpdated": "ปรับแต่งรูปภาพหน้าปกเสร็จเรียบร้อยแล้ว",
-    "optimizationInfo": "รูปภาพได้รับการปรับแต่งเพื่อให้เป็นไปตามมาตรฐานเว็บ"
+    "optimizationInfo": "รูปภาพได้รับการปรับแต่งเพื่อให้เป็นไปตามมาตรฐานเว็บ",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

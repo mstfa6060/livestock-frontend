@@ -418,6 +418,10 @@
     "coverBadge": "DECKEL",
     "videoBadge": "VIDEO",
     "coverUpdated": "Das Titelbild wurde erfolgreich angepasst.",
-    "optimizationInfo": "Die Fotos wurden optimiert, um den Webstandards zu entsprechen."
+    "optimizationInfo": "Die Fotos wurden optimiert, um den Webstandards zu entsprechen.",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

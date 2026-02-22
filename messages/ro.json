@@ -418,6 +418,10 @@
     "coverBadge": "CAPAC",
     "videoBadge": "VIDEO",
     "coverUpdated": "Fotografia de copertă a fost ajustată cu succes.",
-    "optimizationInfo": "Fotografiile au fost optimizate pentru a respecta standardele web"
+    "optimizationInfo": "Fotografiile au fost optimizate pentru a respecta standardele web",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }

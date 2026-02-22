@@ -401,11 +401,11 @@
     "dragDropHint": "Kéo và thả hoặc nhấp chuột để chọn.",
     "dropHere": "Thôi bỏ đi...",
     "imageLimit": "Ảnh: tối đa 10MB",
-    "videoLimit": "Video: tối đa 50MB",
+    "videoLimit": "Video: max 100MB",
     "uploadCount": "{hiện tại} / {tối đa} đã tải",
     "maxFilesError": "Bạn có thể tải lên tối đa {max} tệp đa phương tiện.",
     "imageTooLarge": "Ảnh phải có dung lượng nhỏ hơn 10MB.",
-    "videoTooLarge": "Video phải có dung lượng nhỏ hơn 50MB.",
+    "videoTooLarge": "The video must be smaller than 100MB.",
     "optimizing": "Đang tối ưu hóa...",
     "uploading": "Đang tải...",
     "queued": "Đang xếp hàng chờ...",
@@ -418,6 +418,10 @@
     "coverBadge": "NẮP",
     "videoBadge": "BĂNG HÌNH",
     "coverUpdated": "Ảnh bìa đã được điều chỉnh thành công.",
-    "optimizationInfo": "Ảnh đã được tối ưu hóa để tuân thủ các tiêu chuẩn web."
+    "optimizationInfo": "Ảnh đã được tối ưu hóa để tuân thủ các tiêu chuẩn web.",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
   }
 }
