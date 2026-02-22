@@ -3359,6 +3359,7 @@ export namespace LivestockTradingAPI {
 				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
 				reviewCount: number;
 				coverImageFileId: string;
+				coverImageUrl: string;
 				mediaBucketId: string;
 				createdAt: Date;
 			}
@@ -3435,10 +3436,31 @@ export namespace LivestockTradingAPI {
 				favoriteCount: number;
 				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
 				reviewCount: number;
+				coverImageFileId: string;
+				coverImageUrl: string;
+				mediaBucketId: string;
+				mediaFiles: IMediaFileModel[];
 				publishedAt?: Date;
 				expiresAt?: Date;
 				createdAt: Date;
 				updatedAt?: Date;
+			}
+			export interface IMediaFileModel {
+				id: Guid;
+				name: string;
+				path: string;
+				contentType: string;
+				extention: string;
+				isDefault: boolean;
+				index: number;
+				width?: number;
+				height?: number;
+				sizeBytes?: number;
+				variants: IMediaFileVariantModel[];
+			}
+			export interface IMediaFileVariantModel {
+				key: string;
+				url: string;
 			}
 		}
 
@@ -3485,12 +3507,31 @@ export namespace LivestockTradingAPI {
 				favoriteCount: number;
 				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
 				reviewCount: number;
+				coverImageFileId: string;
+				coverImageUrl: string;
+				mediaBucketId: string;
+				mediaFiles: IMediaFileModel[];
 				publishedAt?: Date;
 				expiresAt?: Date;
-				mediaBucketId: string;
-				coverImageFileId: string;
 				createdAt: Date;
 				updatedAt?: Date;
+			}
+			export interface IMediaFileModel {
+				id: Guid;
+				name: string;
+				path: string;
+				contentType: string;
+				extention: string;
+				isDefault: boolean;
+				index: number;
+				width?: number;
+				height?: number;
+				sizeBytes?: number;
+				variants: IMediaFileVariantModel[];
+			}
+			export interface IMediaFileVariantModel {
+				key: string;
+				url: string;
 			}
 		}
 
@@ -3544,7 +3585,14 @@ export namespace LivestockTradingAPI {
 				viewCount: number;
 				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
 				reviewCount: number;
+				coverImageFileId: string;
+				coverImageUrl: string;
+				coverImageVariants: ICoverImageVariantModel[];
 				createdAt: Date;
+			}
+			export interface ICoverImageVariantModel {
+				key: string;
+				url: string;
 			}
 		}
 

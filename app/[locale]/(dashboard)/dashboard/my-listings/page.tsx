@@ -8,6 +8,7 @@ import { ProductCard, ProductCardSkeleton, Product } from "@/components/features
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { AppConfig } from "@/config/livestock-config";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
 import {
@@ -145,7 +146,7 @@ export default function MyListingsPage() {
       averageRating: item.averageRating as number | undefined,
       reviewCount: item.reviewCount,
       createdAt: item.createdAt,
-      imageUrl: undefined,
+      imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
     })) as Product[];
   }, [sellerId]);
 

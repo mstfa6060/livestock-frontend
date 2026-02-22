@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { ProductCard, type Product } from "@/components/features/product-card";
+import { AppConfig } from "@/config/livestock-config";
 import { ArrowRight } from "lucide-react";
 
 export function FeaturedProducts() {
@@ -51,7 +52,7 @@ export function FeaturedProducts() {
             averageRating: p.averageRating as number | null,
             reviewCount: p.reviewCount,
             createdAt: p.createdAt,
-            imageUrl: undefined,
+            imageUrl: p.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${p.coverImageUrl}` : undefined,
           }))
         );
       } catch {

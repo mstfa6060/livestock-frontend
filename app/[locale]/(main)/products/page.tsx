@@ -29,6 +29,7 @@ import {
 import { Search, SlidersHorizontal, X, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { AppConfig } from "@/config/livestock-config";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 
 type SortOption = "newest" | "oldest" | "priceAsc" | "priceDesc" | "popular";
@@ -258,7 +259,7 @@ export default function ProductsPage() {
     averageRating: item.averageRating,
     reviewCount: item.reviewCount,
     createdAt: item.createdAt,
-    imageUrl: undefined,
+    imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
   });
 
   // Fetch products using Search endpoint (has totalCount & coverImageUrl)

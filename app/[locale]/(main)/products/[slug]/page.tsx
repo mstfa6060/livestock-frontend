@@ -240,7 +240,7 @@ export default function ProductDetailPage() {
               .filter((file: any) => !file.contentType?.startsWith("video/"))
               .map((file: any) => {
                 if (file.variants && file.variants.length > 0) {
-                  return file.variants[0].url;
+                  return `${AppConfig.FileStorageBaseUrl}${file.variants[0].url}`;
                 }
                 return `${AppConfig.FileStorageBaseUrl}${file.path}`;
               });
@@ -275,7 +275,7 @@ export default function ProductDetailPage() {
               averageRating: item.averageRating as number | undefined,
               reviewCount: item.reviewCount,
               createdAt: item.createdAt,
-              imageUrl: undefined,
+              imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
             }));
 
           setSimilarProducts(similarProductsData);

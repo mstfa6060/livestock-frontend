@@ -36,6 +36,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { AppConfig } from "@/config/livestock-config";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { getProductCoverImages } from "@/lib/product-images";
 import { useAuth } from "@/contexts/AuthContext";
@@ -237,7 +238,7 @@ export default function SearchPage() {
             averageRating: item.averageRating,
             reviewCount: item.reviewCount,
             createdAt: item.createdAt,
-            imageUrl: undefined,
+            imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
           }));
 
           setProducts(transformedProducts);
@@ -341,7 +342,7 @@ export default function SearchPage() {
             averageRating: item.averageRating as number | undefined,
             reviewCount: item.reviewCount,
             createdAt: item.createdAt,
-            imageUrl: undefined,
+            imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
           }));
 
           setProducts(transformedProducts);

@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Heart, Loader2 } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
+import { AppConfig } from "@/config/livestock-config";
 import { toast } from "sonner";
 
 const PAGE_SIZE = 20;
@@ -67,7 +68,7 @@ export default function FavoritesPage() {
       averageRating: p.averageRating as number | undefined,
       reviewCount: p.reviewCount,
       createdAt: new Date(p.createdAt),
-      imageUrl: undefined,
+      imageUrl: p.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${p.coverImageUrl}` : undefined,
     })) as Product[];
   }, [user]);
 
