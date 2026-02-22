@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -13,16 +12,6 @@ const BASE_URL = "https://livestock-trading.com";
 
 // RTL languages
 const RTL_LOCALES = new Set(["ar", "he", "fa", "ur"]);
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export async function generateMetadata({
   params,
@@ -66,7 +55,6 @@ export async function generateMetadata({
     description,
     metadataBase: new URL(BASE_URL),
     manifest: "/manifest.json",
-    themeColor: "#16a34a",
     appleWebApp: {
       capable: true,
       statusBarStyle: "default",
@@ -96,6 +84,12 @@ export async function generateMetadata({
   };
 }
 
+export function generateViewport(): Viewport {
+  return {
+    themeColor: "#16a34a",
+  };
+}
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -117,16 +111,12 @@ export default async function LocaleLayout({
   const dir = RTL_LOCALES.has(locale) ? "rtl" : "ltr";
 
   return (
-    <html lang={locale} dir={dir}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <NextIntlClientProvider messages={messages}>
-          <Providers>{children}</Providers>
-          <Toaster position="top-right" richColors />
-          <ErrorCapture />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <div lang={locale} dir={dir}>
+      <NextIntlClientProvider messages={messages}>
+        <Providers>{children}</Providers>
+        <Toaster position="top-right" richColors />
+        <ErrorCapture />
+      </NextIntlClientProvider>
+    </div>
   );
 }

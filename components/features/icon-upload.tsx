@@ -56,7 +56,7 @@ export function IconUpload({ value, onChange }: IconUploadProps) {
         const uploaded = payload.files[0];
         const fileUrl =
           uploaded.variants && uploaded.variants.length > 0
-            ? uploaded.variants[0].url
+            ? `${AppConfig.FileStorageBaseUrl}${uploaded.variants[0].url}`
             : `${AppConfig.FileStorageBaseUrl}${uploaded.path}`;
         onChange(fileUrl);
       }

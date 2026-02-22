@@ -87,7 +87,7 @@ export async function getProductCoverImages(
     if (targetFile) {
       // Prefer variant URL if available, otherwise construct from path
       if (targetFile.variants?.length > 0) {
-        imageMap[pm.productId] = targetFile.variants[0].url;
+        imageMap[pm.productId] = `${AppConfig.FileStorageBaseUrl}${targetFile.variants[0].url}`;
       } else if (targetFile.path) {
         imageMap[pm.productId] = `${AppConfig.FileStorageBaseUrl}${targetFile.path}`;
       }
