@@ -95,7 +95,7 @@ export const ProductCard = memo(function ProductCard({ product, onFavorite, isFa
       // Call optional callback
       onFavorite?.(product.id);
     } catch {
-      // Error already handled in store
+      toast.error(t("favoriteError"));
     } finally {
       setIsTogglingFavorite(false);
     }

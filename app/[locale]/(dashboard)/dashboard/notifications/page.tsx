@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { formatDistanceToNow, isToday, isYesterday } from "date-fns";
-import { tr, enUS } from "date-fns/locale";
+import { getDateLocale } from "@/lib/date-locale";
 import { useLocale } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent } from "@/components/ui/card";
@@ -58,7 +58,7 @@ export default function NotificationsPage() {
     const date = new Date(dateString);
     return formatDistanceToNow(date, {
       addSuffix: true,
-      locale: locale === "tr" ? tr : enUS,
+      locale: getDateLocale(locale),
     });
   };
 

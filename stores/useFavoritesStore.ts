@@ -1,6 +1,5 @@
 import { create } from 'zustand';
 import { LivestockTradingAPI } from '@/api/business_modules/livestocktrading';
-import { toast } from 'sonner';
 
 interface FavoriteState {
   // Map of productId -> favoriteRecordId for quick lookup and delete
@@ -96,11 +95,10 @@ export const useFavoritesStore = create<FavoriteState>((set, get) => ({
       }
 
       return !isFavorited;
-    } catch {
-      // Revert optimistic update on error and notify user
+    } catch (error) {
+      // Revert optimistic update on error, let component handle toast
       set({ favoriteMap: previousMap });
-      toast.error(isFavorited ? 'Favorilerden kaldırılamadı' : 'Favorilere eklenemedi');
-      return isFavorited;
+      throw error;
     }
   },
 

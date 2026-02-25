@@ -1,12 +1,23 @@
 import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Toaster } from "sonner";
+import { Geist, Geist_Mono } from "next/font/google";
 import { locales, defaultLocale, type Locale } from "@/i18n/config";
 import { Providers } from "@/components/providers/Providers";
 import { ErrorCapture } from "@/components/debug/error-capture";
 import "../globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 const BASE_URL = "https://livestock-trading.com";
 
@@ -19,27 +30,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
 
-  const titles: Record<string, string> = {
-    en: "Livestock Trading - Live Animal Trading Platform",
-    tr: "Livestock Trading - Canli Hayvan Ticaret Platformu",
-    de: "Livestock Trading - Viehhandelsplattform",
-    fr: "Livestock Trading - Plateforme de Commerce d'Animaux",
-    es: "Livestock Trading - Plataforma de Comercio de Ganado",
-    ar: "Livestock Trading - منصة تداول الماشية",
-  };
-
-  const descriptions: Record<string, string> = {
-    en: "The most trusted live animal trading platform. Buy and sell livestock safely and transparently.",
-    tr: "Turkiye'nin en guvenilir canli hayvan ticaret platformu. Guvenli ve seffaf hayvan alim satimi.",
-    de: "Die vertrauenswurdigste Plattform fur den Handel mit Nutztieren.",
-    fr: "La plateforme de commerce d'animaux la plus fiable.",
-    es: "La plataforma de comercio de ganado mas confiable.",
-    ar: "أكثر منصة موثوقة لتداول الماشية",
-  };
-
-  const title = titles[locale] || titles.en;
-  const description = descriptions[locale] || descriptions.en;
+  const title = t("title");
+  const description = t("description");
 
   const alternateLanguages: Record<string, string> = {};
   for (const loc of locales) {
@@ -111,12 +105,14 @@ export default async function LocaleLayout({
   const dir = RTL_LOCALES.has(locale) ? "rtl" : "ltr";
 
   return (
-    <div lang={locale} dir={dir}>
-      <NextIntlClientProvider messages={messages}>
-        <Providers>{children}</Providers>
-        <Toaster position="top-right" richColors />
-        <ErrorCapture />
-      </NextIntlClientProvider>
-    </div>
+    <html lang={locale} dir={dir} suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <NextIntlClientProvider messages={messages}>
+          <Providers>{children}</Providers>
+          <Toaster position="top-right" richColors />
+          <ErrorCapture />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

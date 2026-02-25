@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { format, isToday, isYesterday } from "date-fns";
-import { tr, enUS } from "date-fns/locale";
+import { getDateLocale } from "@/lib/date-locale";
 import { useLocale } from "next-intl";
 import { useQuery } from "@tanstack/react-query";
 import { queryKeys } from "@/lib/query-keys";
@@ -301,7 +301,7 @@ export default function ConversationPage() {
   // Format message time
   const formatMessageTime = (dateString: string) => {
     const date = new Date(dateString);
-    const dateLocale = locale === "tr" ? tr : enUS;
+    const dateLocale = getDateLocale(locale);
 
     if (isToday(date)) {
       return format(date, "HH:mm", { locale: dateLocale });
@@ -331,7 +331,7 @@ export default function ConversationPage() {
 
   const formatDateHeader = (dateString: string) => {
     const date = new Date(dateString);
-    const dateLocale = locale === "tr" ? tr : enUS;
+    const dateLocale = getDateLocale(locale);
 
     if (isToday(date)) {
       return t("today");

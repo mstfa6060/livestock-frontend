@@ -423,5 +423,9 @@
     "videoProcessingFailed": "Processing failed",
     "reorderError": "Failed to reorder files",
     "coverUpdateError": "Failed to update cover photo"
+  },
+  "metadata": {
+    "title": "Livestock Trading - Live Animal Trading Platform",
+    "description": "The most trusted live animal trading platform. Buy and sell livestock safely and transparently."
   }
 }

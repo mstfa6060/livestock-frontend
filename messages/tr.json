@@ -581,7 +581,8 @@
     "showingOf": "{count} / {total} urun gosteriliyor",
     "loginToFavorite": "Favorilere eklemek icin giris yapin",
     "addedToFavorites": "Favorilere eklendi",
-    "removedFromFavorites": "Favorilerden cikarildi"
+    "removedFromFavorites": "Favorilerden cikarildi",
+    "favoriteError": "Favori islemi basarisiz oldu"
   },
   "productDetail": {
     "addToFavorites": "Favorilere Ekle",
@@ -1434,5 +1435,9 @@
     "noRates": "Henuz kargo ucreti tanimlanmamis",
     "freeShipping": "Ucretsiz Kargo",
     "deliveryDays": "gun teslimat suresi"
+  },
+  "metadata": {
+    "title": "Livestock Trading - Canli Hayvan Ticaret Platformu",
+    "description": "Dunyanin en guvenilir canli hayvan ticaret platformu. Guvenli ve seffaf hayvan alim satimi."
   }
 }
