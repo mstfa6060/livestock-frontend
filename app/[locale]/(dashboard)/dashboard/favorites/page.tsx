@@ -29,11 +29,15 @@ export default function FavoritesPage() {
       const productIds = favoritesData.map((f) => f.productId);
       if (productIds.length === 0) return [];
 
-      const products = await Promise.all(
-        productIds.map((id) =>
-          LivestockTradingAPI.Products.Detail.Request({ id })
-        )
-      );
+      // Single batch request instead of N individual Detail calls
+      const products = await LivestockTradingAPI.Products.All.Request({
+        countryCode: "",
+        sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+        filters: [
+          { key: "id", type: "guid", isUsed: true, values: productIds as any[], min: {}, max: {}, conditionType: "equals" },
+        ],
+        pageRequest: { currentPage: 1, perPageCount: productIds.length, listAll: false },
+      });
 
       return products.map((p) => ({
         id: p.id,
@@ -49,8 +53,8 @@ export default function FavoritesPage() {
         isInStock: p.isInStock,
         sellerId: p.sellerId,
         locationId: p.locationId?.toString() || "",
-        locationCountryCode: "",
-        locationCity: "",
+        locationCountryCode: p.locationCountryCode || "",
+        locationCity: p.locationCity || "",
         status: p.status,
         condition: p.condition,
         viewCount: p.viewCount,

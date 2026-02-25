@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useDeferredValue } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { formatDistanceToNow } from "date-fns";
@@ -41,6 +41,7 @@ export default function MessagesPage() {
   const { user } = useAuth();
 
   const [searchQuery, setSearchQuery] = useState("");
+  const deferredSearch = useDeferredValue(searchQuery);
 
   const { data: conversations = [], isLoading } = useQuery({
     queryKey: [...queryKeys.conversations.list(), "enriched", user?.id],
@@ -80,46 +81,59 @@ export default function MessagesPage() {
         // UnreadCount API not available yet, fallback to 0
       }
 
-      // Enrich conversations with user data
-      const enrichedConversations = await Promise.all(
-        userConversations.map(async (conv) => {
-          const otherUserId =
-            conv.participantUserId1 === user.id
-              ? conv.participantUserId2
-              : conv.participantUserId1;
+      // Batch fetch all other user details in a single request instead of N individual calls
+      const otherUserIds = [...new Set(
+        userConversations.map((conv) =>
+          conv.participantUserId1 === user.id
+            ? conv.participantUserId2
+            : conv.participantUserId1
+        )
+      )];
 
-          let otherUserName = "User";
-          let otherUserInitials = "?";
+      const userMap: Record<string, { fullName: string; userName: string }> = {};
+      if (otherUserIds.length > 0) {
+        try {
+          const usersData = await IAMAPI.Users.All.Request({
+            sorting: { key: "fullName", direction: 0 },
+            filters: [
+              { key: "userId", type: "guid", isUsed: true, values: otherUserIds as any[], min: {}, max: {}, conditionType: "equals" },
+            ],
+            pageRequest: { currentPage: 1, perPageCount: otherUserIds.length, listAll: false },
+          });
+          usersData.forEach((u) => {
+            userMap[u.userId] = { fullName: u.fullName, userName: u.userName };
+          });
+        } catch {
+          // Users.All not available, conversations will show fallback names
+        }
+      }
 
-          try {
-            const userDetail = await IAMAPI.Users.Detail.Request({
-              userId: otherUserId,
-            });
-            if (userDetail) {
-              otherUserName = userDetail.fullName || userDetail.userName || "User";
-              otherUserInitials = otherUserName
-                .split(" ")
-                .map((n: string) => n.charAt(0))
-                .join("")
-                .toUpperCase()
-                .slice(0, 2);
-            }
-          } catch {
-            // User details not available
-          }
+      const enrichedConversations = userConversations.map((conv) => {
+        const otherUserId =
+          conv.participantUserId1 === user.id
+            ? conv.participantUserId2
+            : conv.participantUserId1;
 
-          const unreadInfo = unreadMap[conv.id];
+        const otherUser = userMap[otherUserId];
+        const otherUserName = otherUser?.fullName || otherUser?.userName || "User";
+        const otherUserInitials = otherUserName
+          .split(" ")
+          .map((n: string) => n.charAt(0))
+          .join("")
+          .toUpperCase()
+          .slice(0, 2);
 
-          return {
-            ...conv,
-            lastMessageAt: conv.lastMessageAt?.toString(),
-            createdAt: conv.createdAt.toString(),
-            otherUserName,
-            otherUserInitials,
-            unreadCount: unreadInfo?.unreadCount || 0,
-          } as Conversation;
-        })
-      );
+        const unreadInfo = unreadMap[conv.id];
+
+        return {
+          ...conv,
+          lastMessageAt: conv.lastMessageAt?.toString(),
+          createdAt: conv.createdAt.toString(),
+          otherUserName,
+          otherUserInitials,
+          unreadCount: unreadInfo?.unreadCount || 0,
+        } as Conversation;
+      });
 
       return enrichedConversations;
     },
@@ -128,8 +142,8 @@ export default function MessagesPage() {
 
   const filteredConversations = conversations.filter(
     (conv) =>
-      conv.subject?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      conv.otherUserName?.toLowerCase().includes(searchQuery.toLowerCase())
+      conv.subject?.toLowerCase().includes(deferredSearch.toLowerCase()) ||
+      conv.otherUserName?.toLowerCase().includes(deferredSearch.toLowerCase())
   );
 
   const formatDate = (dateString?: string) => {
@@ -148,6 +162,7 @@ export default function MessagesPage() {
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         <Input
           placeholder={t("searchPlaceholder")}
+          aria-label={t("searchPlaceholder")}
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="pl-10"

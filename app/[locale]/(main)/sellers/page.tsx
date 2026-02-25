@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useDeferredValue } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { MainHeader } from "@/components/layout/main-header";
@@ -73,6 +73,7 @@ export default function SellersPage() {
   const tc = useTranslations("common");
 
   const [searchQuery, setSearchQuery] = useState("");
+  const deferredSearch = useDeferredValue(searchQuery);
   const [sortBy, setSortBy] = useState<SortOption>("newest");
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -88,9 +89,9 @@ export default function SellersPage() {
   const hasMore = rawSellers.length >= ITEMS_PER_PAGE;
 
   // Filter sellers by search query (client-side)
-  const filteredSellers = searchQuery
+  const filteredSellers = deferredSearch
     ? sellers.filter((s) =>
-        s.businessName.toLowerCase().includes(searchQuery.toLowerCase())
+        s.businessName.toLowerCase().includes(deferredSearch.toLowerCase())
       )
     : sellers;
 
@@ -127,6 +128,7 @@ export default function SellersPage() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               placeholder={t("search")}
+              aria-label={t("search")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-10"
