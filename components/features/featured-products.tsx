@@ -1,69 +1,27 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
-import { ProductCard, type Product } from "@/components/features/product-card";
-import { AppConfig } from "@/config/livestock-config";
+import { ProductCard } from "@/components/features/product-card";
 import { ArrowRight } from "lucide-react";
+import { useProductSearch } from "@/hooks/queries/useProducts";
+import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 
 export function FeaturedProducts() {
   const t = useTranslations("home.featured");
-  const [products, setProducts] = useState<Product[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await LivestockTradingAPI.Products.Search.Request({
-          query: "",
-          countryCode: "TR",
-          city: "",
-          currency: "TRY",
-          sortBy: "createdAt",
-          sorting: {
-            key: "createdAt",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
-          },
-          pageRequest: { currentPage: 1, perPageCount: 8, listAll: false },
-        });
-
-        setProducts(
-          response.map((p) => ({
-            id: p.id,
-            title: p.title,
-            slug: p.slug,
-            shortDescription: p.shortDescription,
-            categoryId: p.categoryId,
-            basePrice: p.basePrice as number,
-            currency: p.currency,
-            discountedPrice: p.discountedPrice as number | null,
-            stockQuantity: p.stockQuantity,
-            isInStock: p.isInStock,
-            sellerId: p.sellerId,
-            locationCity: p.locationCity,
-            locationCountryCode: p.locationCountryCode,
-            status: p.status,
-            condition: p.condition,
-            viewCount: p.viewCount,
-            averageRating: p.averageRating as number | null,
-            reviewCount: p.reviewCount,
-            createdAt: p.createdAt,
-            imageUrl: p.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${p.coverImageUrl}` : undefined,
-          }))
-        );
-      } catch {
-        // Non-critical
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
+  const { data: products = [], isLoading } = useProductSearch({
+    query: "",
+    countryCode: "TR",
+    city: "",
+    currency: "TRY",
+    sortBy: "createdAt",
+    sortDirection: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+    currentPage: 1,
+    perPageCount: 8,
+  });
 
   if (!isLoading && products.length === 0) return null;
 

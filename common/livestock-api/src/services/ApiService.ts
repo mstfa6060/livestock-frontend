@@ -94,38 +94,57 @@ export class ApiService {
     formData: FormData,
     config: AxiosRequestConfig = {}
   ): Promise<T> {
-    // Use the `api` instance so the request/response interceptors handle
-    // token injection and 401 refresh automatically
-    const response = await api.post(url, formData, {
-      ...config,
-      headers: {
-        'Content-Type': 'multipart/form-data',
-        ...(config.headers || {}),
-      },
-    });
+    try {
+      // Use the `api` instance so the request/response interceptors handle
+      // token injection and 401 refresh automatically
+      const response = await api.post(url, formData, {
+        ...config,
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          ...(config.headers || {}),
+        },
+      });
 
-    // Bazı servisler payload'ı doğrudan dönüyor
-    const data = response.data;
-    const payload = data?.payload ?? data;
+      // Bazı servisler payload'ı doğrudan dönüyor
+      const data = response.data;
+      const payload = data?.payload ?? data;
 
-    if (data.hasError) {
-      const backendKey = data.error?.code || data.error?.message;
-      const errorMessage = backendKey ? getErrorMessage(backendKey) : 'Bilinmeyen hata oluştu';
+      if (data.hasError) {
+        const backendKey = data.error?.code || data.error?.message;
+        const errorMessage = backendKey ? getErrorMessage(backendKey) : 'Bilinmeyen hata oluştu';
 
-      this.logApiError(data.error, 'multipart_error', {
-        backend_error_code: backendKey,
-        backend_error_message: data.error?.message,
+        this.logApiError(data.error, 'multipart_error', {
+          backend_error_code: backendKey,
+          backend_error_message: data.error?.message,
+          multipart_upload: 'true',
+        });
+
+        console.error('Multipart upload error:', errorMessage);
+
+        const enrichedError = new Error(errorMessage);
+        (enrichedError as any).original = data.error;
+        throw enrichedError;
+      }
+
+      return payload as T;
+    } catch (err: any) {
+      if (err?.response) {
+        console.error('❌ Multipart Error Response:', {
+          status: err.response.status,
+          statusText: err.response.statusText,
+          data: err.response.data,
+          url: err.config?.url,
+        });
+      }
+
+      this.logApiError(err, 'multipart_network_error', {
+        error_message: err?.message,
+        error_name: err?.name,
         multipart_upload: 'true',
       });
 
-      console.error('Multipart upload error:', errorMessage);
-
-      const enrichedError = new Error(errorMessage);
-      (enrichedError as any).original = data.error;
-      throw enrichedError;
+      throw err;
     }
-
-    return payload as T;
   }
 
   /**

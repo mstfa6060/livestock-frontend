@@ -19,6 +19,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { useAuth } from "@/contexts/AuthContext";
 import { IAMAPI } from "@/api/base_modules/iam";
+import { useCountries } from "@/hooks/queries";
 import { toast } from "sonner";
 import { CheckCircle, XCircle, Loader2 } from "lucide-react";
 import { languageNames, type Locale } from "@/i18n/config";
@@ -57,7 +58,6 @@ export default function ProfilePage() {
   }, [user]);
 
   const [isLoading, setIsLoading] = useState(false);
-  const [countries, setCountries] = useState<Country[]>([]);
   const [formData, setFormData] = useState(initialFormData);
 
   // Sync form data when user data becomes available (initial load)
@@ -69,22 +69,12 @@ export default function ProfilePage() {
   }, [user?.id]);
 
   // Fetch countries
-  useEffect(() => {
-    const fetchCountries = async () => {
-      try {
-        const response = await IAMAPI.Countries.All.Request({ keyword: "" });
-        const countriesData = Array.isArray(response) ? response : [];
-        setCountries(countriesData.map((c: { id: number; name: string; code: string }) => ({
-          id: c.id,
-          name: c.name,
-          code: c.code,
-        })));
-      } catch {
-        // Countries are optional
-      }
-    };
-    fetchCountries();
-  }, []);
+  const { data: countriesRaw = [] } = useCountries();
+  const countries: Country[] = countriesRaw.map((c: any) => ({
+    id: c.id,
+    name: c.name,
+    code: c.code,
+  }));
 
   const initials = user
     ? user.displayName

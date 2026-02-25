@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,7 @@ interface ImageGalleryProps {
 }
 
 export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
+  const tc = useTranslations("common");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
@@ -70,7 +72,7 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
             size="icon"
             className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity"
             onClick={() => setIsLightboxOpen(true)}
-            aria-label="Zoom in"
+            aria-label={tc("zoomIn")}
           >
             <ZoomIn className="h-4 w-4" />
           </Button>
@@ -83,7 +85,7 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
                 size="icon"
                 className="absolute left-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
                 onClick={goToPrevious}
-                aria-label="Previous image"
+                aria-label={tc("previousImage")}
               >
                 <ChevronLeft className="h-4 w-4" />
               </Button>
@@ -92,7 +94,7 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
                 size="icon"
                 className="absolute right-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
                 onClick={goToNext}
-                aria-label="Next image"
+                aria-label={tc("nextImage")}
               >
                 <ChevronRight className="h-4 w-4" />
               </Button>
@@ -139,7 +141,7 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
         <div
           role="dialog"
           aria-modal="true"
-          aria-label="Image lightbox"
+          aria-label={tc("imageLightbox")}
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
           onClick={() => setIsLightboxOpen(false)}
         >
@@ -149,7 +151,7 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
             size="icon"
             className="absolute top-4 right-4 text-white hover:bg-white/20"
             onClick={() => setIsLightboxOpen(false)}
-            aria-label="Close lightbox"
+            aria-label={tc("closeLightbox")}
           >
             <X className="h-6 w-6" />
           </Button>
@@ -165,7 +167,7 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
                   e.stopPropagation();
                   goToPrevious();
                 }}
-                aria-label="Previous image"
+                aria-label={tc("previousImage")}
               >
                 <ChevronLeft className="h-8 w-8" />
               </Button>
@@ -177,7 +179,7 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
                   e.stopPropagation();
                   goToNext();
                 }}
-                aria-label="Next image"
+                aria-label={tc("nextImage")}
               >
                 <ChevronRight className="h-8 w-8" />
               </Button>

@@ -153,8 +153,3 @@ export function PriceDisplay({
     </div>
   );
 }
-
-// Simple price formatter for use outside of component
-export function formatCurrency(amount: number, currency: string): string {
-  return formatPrice(amount, currency);
-}

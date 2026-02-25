@@ -4,6 +4,8 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { useRoles } from "@/hooks/useRoles";
 import { Button } from "@/components/ui/button";
@@ -68,25 +70,17 @@ export default function CategoriesPage() {
     }
   }, [isAdmin, router, tc]);
 
+  const queryClient = useQueryClient();
+
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
-  const [isLoading, setIsLoading] = useState(true);
-  const [categories, setCategories] = useState<Category[]>([]);
+  const [extraPages, setExtraPages] = useState<Category[]>([]);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [hasMore, setHasMore] = useState(false);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [categoryToDelete, setCategoryToDelete] = useState<string | null>(null);
 
-  const fetchCategoriesPage = useCallback(async (page: number) => {
-    const response = await LivestockTradingAPI.Categories.All.Request({
-      languageCode: locale,
-      sorting: { key: "sortOrder", direction: 0 },
-      filters: [],
-      pageRequest: { currentPage: page, perPageCount: PAGE_SIZE, listAll: false },
-    });
-
-    setHasMore(response.length === PAGE_SIZE);
-
+  const mapCategories = useCallback((response: any[]): Category[] => {
     return response.map((item: any) => ({
       id: item.id,
       name: item.name,
@@ -98,32 +92,39 @@ export default function CategoriesPage() {
       parentCategoryId: item.parentCategoryId || undefined,
       subCategoryCount: item.subCategoryCount,
       createdAt: item.createdAt,
-    })) as Category[];
+    }));
   }, []);
 
-  useEffect(() => {
-    const fetchCategories = async () => {
-      setIsLoading(true);
-      try {
-        const data = await fetchCategoriesPage(1);
-        setCategories(data);
-        setCurrentPage(1);
-      } catch {
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
+  const { data: firstPageData, isLoading } = useQuery({
+    queryKey: queryKeys.categories.list(locale),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.Categories.All.Request({
+        languageCode: locale,
+        sorting: { key: "sortOrder", direction: 0 },
+        filters: [],
+        pageRequest: { currentPage: 1, perPageCount: PAGE_SIZE, listAll: false },
+      });
+      setHasMore(response.length === PAGE_SIZE);
+      setCurrentPage(1);
+      setExtraPages([]);
+      return mapCategories(response);
+    },
+  });
 
-    fetchCategories();
-  }, [fetchCategoriesPage, t]);
+  const categories = [...(firstPageData ?? []), ...extraPages];
 
   const handleLoadMore = async () => {
     try {
       setIsLoadingMore(true);
       const nextPage = currentPage + 1;
-      const moreCategories = await fetchCategoriesPage(nextPage);
-      setCategories((prev) => [...prev, ...moreCategories]);
+      const response = await LivestockTradingAPI.Categories.All.Request({
+        languageCode: locale,
+        sorting: { key: "sortOrder", direction: 0 },
+        filters: [],
+        pageRequest: { currentPage: nextPage, perPageCount: PAGE_SIZE, listAll: false },
+      });
+      setHasMore(response.length === PAGE_SIZE);
+      setExtraPages((prev) => [...prev, ...mapCategories(response)]);
       setCurrentPage(nextPage);
     } catch {
       toast.error(t("fetchError"));
@@ -149,10 +150,10 @@ export default function CategoriesPage() {
 
     try {
       await LivestockTradingAPI.Categories.Delete.Request({ id: categoryToDelete });
-      setCategories((prev) => prev.filter((c) => c.id !== categoryToDelete));
       toast.success(t("deleteSuccess"));
       setDeleteDialogOpen(false);
       setCategoryToDelete(null);
+      queryClient.invalidateQueries({ queryKey: queryKeys.categories.all });
     } catch {
       toast.error(t("deleteError"));
     }
@@ -182,15 +183,10 @@ export default function CategoriesPage() {
         attributesTemplate: detail.attributesTemplate || "{}",
       });
 
-      setCategories((prev) =>
-        prev.map((c) =>
-          c.id === categoryId ? { ...c, isActive: !c.isActive } : c
-        )
-      );
-
       toast.success(
         !category.isActive ? t("activateSuccess") : t("deactivateSuccess")
       );
+      queryClient.invalidateQueries({ queryKey: queryKeys.categories.all });
     } catch {
       toast.error(t("statusError"));
     }

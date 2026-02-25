@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,6 +13,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import { toast } from "sonner";
 import {
   Truck,
@@ -63,8 +65,38 @@ export default function TransportOffersPage() {
   const t = useTranslations("transportOffers");
   const { user } = useAuth();
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [offers, setOffers] = useState<TransportOffer[]>([]);
+  const queryClient = useQueryClient();
+
+  const transportOffersQueryKey = [...queryKeys.transporters.transportOffers(), "mine", user?.id];
+
+  const { data: offersRaw = [], isLoading } = useQuery({
+    queryKey: transportOffersQueryKey,
+    queryFn: () =>
+      LivestockTradingAPI.TransportOffers.All.Request({
+        sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+        filters: [
+          { key: "transporterId", type: "guid", isUsed: true, values: [user!.id], min: {}, max: {}, conditionType: "equals" },
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
+      }).then((response) =>
+        response.map((o) => ({
+          id: o.id,
+          transportRequestId: o.transportRequestId,
+          transporterId: o.transporterId,
+          offeredPrice: o.offeredPrice as number,
+          currency: o.currency,
+          status: o.status,
+          estimatedDurationDays: o.estimatedDurationDays as number | null,
+          insuranceIncluded: o.insuranceIncluded,
+          offerDate: o.offerDate,
+          createdAt: o.createdAt,
+        }))
+      ),
+    enabled: !!user?.id,
+  });
+
+  const offers: TransportOffer[] = offersRaw;
+
   const [showForm, setShowForm] = useState(false);
   const [selectedRequestId, setSelectedRequestId] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -78,54 +110,6 @@ export default function TransportOffersPage() {
     additionalServices: "",
     message: "",
   });
-
-  useEffect(() => {
-    const fetchOffers = async () => {
-      if (!user?.id) return;
-      setIsLoading(true);
-      try {
-        const response = await LivestockTradingAPI.TransportOffers.All.Request({
-          sorting: {
-            key: "createdAt",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
-          },
-          filters: [
-            {
-              key: "transporterId",
-              type: "guid",
-              isUsed: true,
-              values: [user.id],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-        });
-
-        setOffers(
-          response.map((o) => ({
-            id: o.id,
-            transportRequestId: o.transportRequestId,
-            transporterId: o.transporterId,
-            offeredPrice: o.offeredPrice as number,
-            currency: o.currency,
-            status: o.status,
-            estimatedDurationDays: o.estimatedDurationDays as number | null,
-            insuranceIncluded: o.insuranceIncluded,
-            offerDate: o.offerDate,
-            createdAt: o.createdAt,
-          }))
-        );
-      } catch {
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchOffers();
-  }, [user?.id, t]);
 
   const resetForm = () => {
     setFormData({
@@ -169,28 +153,7 @@ export default function TransportOffersPage() {
       toast.success(t("createSuccess"));
       resetForm();
 
-      // Refresh
-      const response = await LivestockTradingAPI.TransportOffers.All.Request({
-        sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-        filters: [
-          { key: "transporterId", type: "guid", isUsed: true, values: [user.id], min: {}, max: {}, conditionType: "equals" },
-        ],
-        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-      });
-      setOffers(
-        response.map((o) => ({
-          id: o.id,
-          transportRequestId: o.transportRequestId,
-          transporterId: o.transporterId,
-          offeredPrice: o.offeredPrice as number,
-          currency: o.currency,
-          status: o.status,
-          estimatedDurationDays: o.estimatedDurationDays as number | null,
-          insuranceIncluded: o.insuranceIncluded,
-          offerDate: o.offerDate,
-          createdAt: o.createdAt,
-        }))
-      );
+      queryClient.invalidateQueries({ queryKey: transportOffersQueryKey });
     } catch {
       toast.error(t("createError"));
     } finally {
@@ -216,9 +179,7 @@ export default function TransportOffersPage() {
         status: OfferStatus.Cancelled,
       });
 
-      setOffers((prev) =>
-        prev.map((o) => (o.id === offerId ? { ...o, status: OfferStatus.Cancelled } : o))
-      );
+      queryClient.invalidateQueries({ queryKey: transportOffersQueryKey });
       toast.success(t("cancelSuccess"));
     } catch {
       toast.error(t("cancelError"));

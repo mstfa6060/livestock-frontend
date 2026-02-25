@@ -7,6 +7,8 @@ import { useTranslations } from "next-intl";
 import { format, isToday, isYesterday } from "date-fns";
 import { tr, enUS } from "date-fns/locale";
 import { useLocale } from "next-intl";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -72,10 +74,6 @@ export default function ConversationPage() {
   const conversationId = params.conversationId as string;
   const { user } = useAuth();
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [conversation, setConversation] = useState<ConversationDetail | null>(null);
-  const [otherUser, setOtherUser] = useState<OtherUser | null>(null);
-  const [product, setProduct] = useState<Product | null>(null);
   const [newMessage, setNewMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
 
@@ -106,131 +104,137 @@ export default function ConversationPage() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // Fetch conversation details and messages
-  useEffect(() => {
-    const fetchData = async () => {
-      if (!conversationId || !user?.id) {
-        setIsLoading(false);
-        return;
-      }
+  // Fetch conversation detail + other user + product
+  const { data: conversationData, isLoading: isConversationLoading } = useQuery({
+    queryKey: queryKeys.conversations.detail(conversationId),
+    queryFn: async () => {
+      const convResponse = await LivestockTradingAPI.Conversations.Detail.Request({
+        id: conversationId,
+      });
 
-      setIsLoading(true);
+      const conversation: ConversationDetail = {
+        ...convResponse,
+        lastMessageAt: convResponse.lastMessageAt?.toString(),
+        createdAt: convResponse.createdAt.toString(),
+      };
+
+      // Determine other user
+      const otherUserId =
+        convResponse.participantUserId1 === user!.id
+          ? convResponse.participantUserId2
+          : convResponse.participantUserId1;
+
+      // Fetch other user details
+      let otherUser: OtherUser;
       try {
-        // Fetch conversation
-        const convResponse = await LivestockTradingAPI.Conversations.Detail.Request({
-          id: conversationId,
+        const userDetail = await IAMAPI.Users.Detail.Request({
+          userId: otherUserId,
         });
-        setConversation({
-          ...convResponse,
-          lastMessageAt: convResponse.lastMessageAt?.toString(),
-          createdAt: convResponse.createdAt.toString(),
-        });
-
-        // Determine other user
-        const otherUserId =
-          convResponse.participantUserId1 === user.id
-            ? convResponse.participantUserId2
-            : convResponse.participantUserId1;
-
-        // Fetch other user details
-        try {
-          const userDetail = await IAMAPI.Users.Detail.Request({
-            userId: otherUserId,
-          });
-          const displayName = userDetail.fullName || userDetail.userName || t("defaultUser");
-          setOtherUser({
-            id: otherUserId,
-            displayName,
-            initials: displayName
-              .split(" ")
-              .map((n: string) => n.charAt(0))
-              .join("")
-              .toUpperCase()
-              .slice(0, 2),
-          });
-        } catch {
-          setOtherUser({
-            id: otherUserId,
-            displayName: t("defaultUser"),
-            initials: "?",
-          });
-        }
-
-        // Fetch product if exists
-        if (convResponse.productId) {
-          try {
-            const productResponse = await LivestockTradingAPI.Products.Detail.Request({
-              id: convResponse.productId,
-            });
-            setProduct({
-              id: productResponse.id,
-              title: productResponse.title,
-              slug: productResponse.slug,
-            });
-          } catch {
-            // Product may have been deleted
-          }
-        }
-
-        // Fetch messages
-        const messagesResponse = await LivestockTradingAPI.Messages.All.Request({
-          sorting: {
-            key: "sentAt",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending,
-          },
-          filters: [
-            {
-              key: "conversationId",
-              type: "guid",
-              isUsed: true,
-              values: [conversationId],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
-        });
-
-        setMessages(
-          messagesResponse.map((msg) => ({
-            id: msg.id,
-            conversationId: msg.conversationId,
-            senderUserId: msg.senderUserId,
-            recipientUserId: msg.recipientUserId,
-            content: msg.content,
-            attachmentUrls: null,
-            isRead: msg.isRead,
-            sentAt: msg.sentAt.toString(),
-            createdAt: msg.createdAt.toString(),
-          }))
-        );
-
-        // Mark unread messages as read (parallel)
-        const unreadMessages = messagesResponse.filter(
-          (msg) => !msg.isRead && msg.senderUserId !== user.id
-        );
-        if (unreadMessages.length > 0) {
-          await Promise.allSettled(
-            unreadMessages.map((msg) =>
-              LivestockTradingAPI.Messages.Update.Request({
-                id: msg.id,
-                content: msg.content,
-                attachmentUrls: "",
-                isRead: true,
-              })
-            )
-          );
-        }
+        const displayName = userDetail.fullName || userDetail.userName || t("defaultUser");
+        otherUser = {
+          id: otherUserId,
+          displayName,
+          initials: displayName
+            .split(" ")
+            .map((n: string) => n.charAt(0))
+            .join("")
+            .toUpperCase()
+            .slice(0, 2),
+        };
       } catch {
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
+        otherUser = {
+          id: otherUserId,
+          displayName: t("defaultUser"),
+          initials: "?",
+        };
       }
-    };
 
-    fetchData();
-  }, [conversationId, user?.id, t, setMessages]);
+      // Fetch product if exists
+      let product: Product | null = null;
+      if (convResponse.productId) {
+        try {
+          const productResponse = await LivestockTradingAPI.Products.Detail.Request({
+            id: convResponse.productId,
+          });
+          product = {
+            id: productResponse.id,
+            title: productResponse.title,
+            slug: productResponse.slug,
+          };
+        } catch {
+          // Product may have been deleted
+        }
+      }
+
+      return { conversation, otherUser, product };
+    },
+    enabled: !!conversationId && !!user?.id,
+  });
+
+  const conversation = conversationData?.conversation ?? null;
+  const otherUser = conversationData?.otherUser ?? null;
+  const product = conversationData?.product ?? null;
+
+  // Fetch messages list
+  const { isLoading: isMessagesLoading } = useQuery({
+    queryKey: queryKeys.messages.list(conversationId),
+    queryFn: async () => {
+      const messagesResponse = await LivestockTradingAPI.Messages.All.Request({
+        sorting: {
+          key: "sentAt",
+          direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending,
+        },
+        filters: [
+          {
+            key: "conversationId",
+            type: "guid",
+            isUsed: true,
+            values: [conversationId],
+            min: {},
+            max: {},
+            conditionType: "equals",
+          },
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
+      });
+
+      setMessages(
+        messagesResponse.map((msg) => ({
+          id: msg.id,
+          conversationId: msg.conversationId,
+          senderUserId: msg.senderUserId,
+          recipientUserId: msg.recipientUserId,
+          content: msg.content,
+          attachmentUrls: null,
+          isRead: msg.isRead,
+          sentAt: msg.sentAt.toString(),
+          createdAt: msg.createdAt.toString(),
+        }))
+      );
+
+      // Mark unread messages as read (parallel)
+      const unreadMessages = messagesResponse.filter(
+        (msg) => !msg.isRead && msg.senderUserId !== user!.id
+      );
+      if (unreadMessages.length > 0) {
+        await Promise.allSettled(
+          unreadMessages.map((msg) =>
+            LivestockTradingAPI.Messages.Update.Request({
+              id: msg.id,
+              content: msg.content,
+              attachmentUrls: "",
+              isRead: true,
+            })
+          )
+        );
+      }
+
+      return messagesResponse;
+    },
+    enabled: !!conversationId && !!user?.id,
+  });
+
+  const isLoading = isConversationLoading || isMessagesLoading;
 
   // Send message
   const handleSendMessage = useCallback(async () => {

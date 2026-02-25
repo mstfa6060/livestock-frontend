@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,6 +13,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import {
   Tractor,
   PlusCircle,
@@ -76,10 +78,56 @@ export default function FarmsPage() {
   const t = useTranslations("farms");
   const locale = useLocale();
   const { user } = useAuth();
+  const queryClient = useQueryClient();
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [farms, setFarms] = useState<Farm[]>([]);
-  const [sellerId, setSellerId] = useState<string | null>(null);
+  // Fetch seller profile
+  const { data: sellerProfile } = useQuery({
+    queryKey: queryKeys.sellers.byUserId(user?.id ?? ""),
+    queryFn: () => LivestockTradingAPI.Sellers.GetByUserId.Request({ userId: user!.id }),
+    enabled: !!user?.id,
+  });
+  const sellerId = sellerProfile?.id ?? null;
+
+  // Fetch farms for this seller
+  const { data: farmsRaw = [], isLoading } = useQuery({
+    queryKey: queryKeys.farms.list({ sellerId }),
+    queryFn: async () => {
+      const farmsResponse = await LivestockTradingAPI.Farms.All.Request({
+        sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+        filters: [
+          {
+            key: "sellerId",
+            type: "guid",
+            isUsed: true,
+            values: [sellerId!],
+            min: {},
+            max: {},
+            conditionType: "equals",
+          },
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
+      });
+
+      return farmsResponse.map((f) => ({
+        id: f.id,
+        name: f.name,
+        description: "",
+        registrationNumber: "",
+        sellerId: f.sellerId,
+        locationId: f.locationId,
+        type: f.type,
+        totalAreaHectares: f.totalAreaHectares as number | undefined,
+        isOrganic: f.isOrganic,
+        isActive: f.isActive,
+        isVerified: f.isVerified,
+        createdAt: f.createdAt,
+      })) as Farm[];
+    },
+    enabled: !!sellerId,
+  });
+
+  const farms = farmsRaw;
+
   const [showForm, setShowForm] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -93,70 +141,6 @@ export default function FarmsPage() {
     certifications: "",
     isOrganic: false,
   });
-
-  useEffect(() => {
-    const fetchData = async () => {
-      if (!user?.id) {
-        setIsLoading(false);
-        return;
-      }
-
-      setIsLoading(true);
-      try {
-        // First get seller profile
-        const sellerResponse = await LivestockTradingAPI.Sellers.GetByUserId.Request({
-          userId: user.id,
-        });
-
-        if (!sellerResponse?.id) {
-          setIsLoading(false);
-          return;
-        }
-
-        setSellerId(sellerResponse.id);
-
-        // Then fetch farms for this seller
-        const farmsResponse = await LivestockTradingAPI.Farms.All.Request({
-          sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-          filters: [
-            {
-              key: "sellerId",
-              type: "guid",
-              isUsed: true,
-              values: [sellerResponse.id],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-        });
-
-        setFarms(
-          farmsResponse.map((f) => ({
-            id: f.id,
-            name: f.name,
-            description: "",
-            registrationNumber: "",
-            sellerId: f.sellerId,
-            locationId: f.locationId,
-            type: f.type,
-            totalAreaHectares: f.totalAreaHectares as number | undefined,
-            isOrganic: f.isOrganic,
-            isActive: f.isActive,
-            isVerified: f.isVerified,
-            createdAt: f.createdAt,
-          }))
-        );
-      } catch {
-        // Seller profile might not exist
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [user?.id]);
 
   const resetForm = () => {
     setFormData({
@@ -242,39 +226,7 @@ export default function FarmsPage() {
 
       resetForm();
 
-      // Refresh farms list
-      const farmsResponse = await LivestockTradingAPI.Farms.All.Request({
-        sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-        filters: [
-          {
-            key: "sellerId",
-            type: "guid",
-            isUsed: true,
-            values: [sellerId],
-            min: {},
-            max: {},
-            conditionType: "equals",
-          },
-        ],
-        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-      });
-
-      setFarms(
-        farmsResponse.map((f) => ({
-          id: f.id,
-          name: f.name,
-          description: "",
-          registrationNumber: "",
-          sellerId: f.sellerId,
-          locationId: f.locationId,
-          type: f.type,
-          totalAreaHectares: f.totalAreaHectares as number | undefined,
-          isOrganic: f.isOrganic,
-          isActive: f.isActive,
-          isVerified: f.isVerified,
-          createdAt: f.createdAt,
-        }))
-      );
+      queryClient.invalidateQueries({ queryKey: queryKeys.farms.list({ sellerId }) });
     } catch {
       toast.error(t("saveError"));
     } finally {
@@ -285,7 +237,7 @@ export default function FarmsPage() {
   const handleDelete = async (farmId: string) => {
     try {
       await LivestockTradingAPI.Farms.Delete.Request({ id: farmId });
-      setFarms((prev) => prev.filter((f) => f.id !== farmId));
+      queryClient.invalidateQueries({ queryKey: queryKeys.farms.list({ sellerId }) });
       toast.success(t("deleteSuccess"));
     } catch {
       toast.error(t("deleteError"));

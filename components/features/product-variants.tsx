@@ -1,26 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { Layers, Package, Tag } from "lucide-react";
-
-interface ProductVariant {
-  id: string;
-  name: string;
-  sKU: string;
-  price: number;
-  discountedPrice: number | null;
-  stockQuantity: number;
-  isInStock: boolean;
-  attributes: string;
-  imageUrl: string;
-  isActive: boolean;
-  sortOrder: number;
-}
+import { useProductVariants } from "@/hooks/queries/useProductSubresources";
 
 interface ProductVariantsProps {
   productId: string;
@@ -29,56 +14,8 @@ interface ProductVariantsProps {
 
 export function ProductVariants({ productId, currency = "TRY" }: ProductVariantsProps) {
   const t = useTranslations("productVariants");
-  const [variants, setVariants] = useState<ProductVariant[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchVariants = async () => {
-      setIsLoading(true);
-      try {
-        const response = await LivestockTradingAPI.ProductVariants.All.Request({
-          sorting: {
-            key: "sortOrder",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending,
-          },
-          filters: [
-            {
-              key: "productId",
-              type: "guid",
-              isUsed: true,
-              values: [productId],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-        });
-
-        setVariants(
-          response.map((v) => ({
-            id: v.id,
-            name: v.name,
-            sKU: v.sKU,
-            price: v.price as number,
-            discountedPrice: v.discountedPrice as number | null,
-            stockQuantity: v.stockQuantity,
-            isInStock: v.isInStock,
-            attributes: v.attributes,
-            imageUrl: v.imageUrl,
-            isActive: v.isActive,
-            sortOrder: v.sortOrder,
-          }))
-        );
-      } catch {
-        // Variants are optional
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    if (productId) fetchVariants();
-  }, [productId]);
+  const { data: variants = [], isLoading } = useProductVariants(productId);
 
   if (isLoading) {
     return (

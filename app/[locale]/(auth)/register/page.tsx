@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
@@ -20,6 +20,7 @@ import {
 import { Eye, EyeOff, Loader2, CheckCircle, XCircle } from "lucide-react";
 import { IAMAPI } from "@/api/base_modules/iam";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
+import { useCountries } from "@/hooks/queries";
 import { registerFormSchema, type RegisterFormData } from "@/lib/validations";
 
 interface Country {
@@ -65,7 +66,6 @@ export default function RegisterPage() {
   const t = useTranslations("auth.register");
   const tc = useTranslations("common");
   const selectedCountry = useSelectedCountry();
-  const [defaultCountry, setDefaultCountry] = useState<Country | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -91,22 +91,11 @@ export default function RegisterPage() {
 
   const password = watch("password");
 
-  // Load default country if none selected
-  useEffect(() => {
-    if (!selectedCountry) {
-      const loadDefaultCountry = async () => {
-        try {
-          const countries = await IAMAPI.Countries.All.Request({ keyword: "" });
-          // Find Turkey or use first country
-          const turkey = countries.find((c) => c.code === "TR");
-          setDefaultCountry(turkey || countries[0]);
-        } catch {
-          // Countries are optional for registration
-        }
-      };
-      loadDefaultCountry();
-    }
-  }, [selectedCountry]);
+  // Load countries for default selection
+  const { data: countriesData } = useCountries();
+  const defaultCountry = !selectedCountry && countriesData
+    ? (countriesData.find((c: any) => c.code === "TR") || countriesData[0] || null)
+    : null;
 
   const onSubmit = async (data: RegisterFormData) => {
     setIsLoading(true);

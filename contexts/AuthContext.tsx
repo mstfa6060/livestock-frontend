@@ -9,6 +9,7 @@ import {
   ReactNode,
 } from "react";
 import { useRouter } from "next/navigation";
+import { useQueryClient } from "@tanstack/react-query";
 import { IAMAPI } from "@/api/base_modules/iam";
 import { useFavoritesStore } from "@/stores/useFavoritesStore";
 
@@ -100,6 +101,7 @@ function isTokenExpired(token: string): boolean {
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
+  const queryClient = useQueryClient();
   const [state, setState] = useState<AuthState>({
     user: null,
     isAuthenticated: false,
@@ -275,6 +277,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
 
     clearAuthData();
+    queryClient.clear();
     setState({
       user: null,
       isAuthenticated: false,
@@ -282,7 +285,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
 
     router.push("/login");
-  }, [router, clearAuthData]);
+  }, [router, clearAuthData, queryClient]);
 
   const refreshUser = useCallback(async () => {
     const storedUser = localStorage.getItem(STORAGE_KEYS.USER);

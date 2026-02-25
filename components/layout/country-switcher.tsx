@@ -9,8 +9,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { MapPin, ChevronDown } from "lucide-react";
-import { IAMAPI } from "@/api/base_modules/iam";
 import { useAuth } from "@/contexts/AuthContext";
+import { useCountries } from "@/hooks/queries";
 
 interface Country {
   id: number;
@@ -27,53 +27,45 @@ const STORAGE_KEY = "selectedCountry";
 
 export function CountrySwitcher() {
   const { user } = useAuth();
-  const [countries, setCountries] = useState<Country[]>([]);
+  const { data: countries = [], isLoading } = useCountries();
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
 
-  // Load countries from API
+  // Select country based on saved preference, user profile, or default to Turkey
   useEffect(() => {
-    const loadCountries = async () => {
+    if (countries.length === 0) return;
+
+    // Try to restore saved country
+    const savedCountry = localStorage.getItem(STORAGE_KEY);
+    if (savedCountry) {
       try {
-        const response = await IAMAPI.Countries.All.Request({ keyword: "" });
-        setCountries(response);
-
-        // Try to restore saved country or use user's country
-        const savedCountry = localStorage.getItem(STORAGE_KEY);
-        if (savedCountry) {
-          const parsed = JSON.parse(savedCountry) as Country;
-          const found = response.find((c) => c.id === parsed.id);
-          if (found) {
-            setSelectedCountry(found);
-            return;
-          }
-        }
-
-        // Use user's country if logged in
-        if (user?.countryId) {
-          const userCountry = response.find((c) => c.id === user.countryId);
-          if (userCountry) {
-            setSelectedCountry(userCountry);
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(userCountry));
-            return;
-          }
-        }
-
-        // Default to Turkey
-        const turkey = response.find((c) => c.code === "TR");
-        if (turkey) {
-          setSelectedCountry(turkey);
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(turkey));
+        const parsed = JSON.parse(savedCountry) as Country;
+        const found = countries.find((c: Country) => c.id === parsed.id);
+        if (found) {
+          setSelectedCountry(found);
+          return;
         }
       } catch {
-        // Countries are optional
-      } finally {
-        setIsLoading(false);
+        // Invalid saved country
       }
-    };
+    }
 
-    loadCountries();
-  }, [user?.countryId]);
+    // Use user's country if logged in
+    if (user?.countryId) {
+      const userCountry = countries.find((c: Country) => c.id === user.countryId);
+      if (userCountry) {
+        setSelectedCountry(userCountry);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(userCountry));
+        return;
+      }
+    }
+
+    // Default to Turkey
+    const turkey = countries.find((c: Country) => c.code === "TR");
+    if (turkey) {
+      setSelectedCountry(turkey);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(turkey));
+    }
+  }, [countries, user?.countryId]);
 
   const handleCountryChange = (country: Country) => {
     setSelectedCountry(country);

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
@@ -10,6 +10,8 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import { useRoles } from "@/hooks/useRoles";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
@@ -45,69 +47,60 @@ export default function ModerationPage() {
   const { user } = useAuth();
   const { isAdmin, isStaff } = useRoles();
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [pendingProducts, setPendingProducts] = useState<PendingProduct[]>([]);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
   const [rejectingId, setRejectingId] = useState<string | null>(null);
   const [rejectReason, setRejectReason] = useState("");
 
-  useEffect(() => {
-    if (!isAdmin && !isStaff) return;
+  const queryClient = useQueryClient();
 
-    const fetchPending = async () => {
-      setIsLoading(true);
-      try {
-        const response = await LivestockTradingAPI.Products.All.Request({
-          countryCode: "",
-          sorting: {
-            key: "createdAt",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+  const moderationQueryKey = [...queryKeys.products.lists(), "moderation"];
+
+  const { data: pendingProducts = [], isLoading } = useQuery({
+    queryKey: moderationQueryKey,
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.Products.All.Request({
+        countryCode: "",
+        sorting: {
+          key: "createdAt",
+          direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+        },
+        filters: [
+          {
+            key: "status",
+            type: "number",
+            isUsed: true,
+            values: [3],
+            min: {},
+            max: {},
+            conditionType: "equals",
           },
-          filters: [
-            {
-              key: "status",
-              type: "number",
-              isUsed: true,
-              values: [3], // Pending
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-        });
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
+      });
 
-        setPendingProducts(
-          response.map((p) => ({
-            id: p.id,
-            title: p.title,
-            slug: p.slug,
-            shortDescription: p.shortDescription,
-            categoryId: p.categoryId,
-            basePrice: p.basePrice as number,
-            currency: p.currency,
-            stockQuantity: p.stockQuantity,
-            sellerId: p.sellerId,
-            status: p.status,
-            condition: p.condition,
-            createdAt: p.createdAt,
-          }))
-        );
-      } catch {
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchPending();
-  }, [isAdmin, isStaff, t]);
+      return response.map((p) => ({
+        id: p.id,
+        title: p.title,
+        slug: p.slug,
+        shortDescription: p.shortDescription,
+        categoryId: p.categoryId,
+        basePrice: p.basePrice as number,
+        currency: p.currency,
+        stockQuantity: p.stockQuantity,
+        sellerId: p.sellerId,
+        status: p.status,
+        condition: p.condition,
+        createdAt: p.createdAt,
+      })) as PendingProduct[];
+    },
+    enabled: isAdmin || isStaff,
+  });
 
   const handleApprove = async (productId: string) => {
     setActionLoading(productId);
     try {
       await LivestockTradingAPI.Products.Approve.Request({ id: productId });
-      setPendingProducts((prev) => prev.filter((p) => p.id !== productId));
+      queryClient.invalidateQueries({ queryKey: moderationQueryKey });
       toast.success(t("approveSuccess"));
     } catch {
       toast.error(t("actionError"));
@@ -128,7 +121,7 @@ export default function ModerationPage() {
         id: productId,
         reason: rejectReason,
       });
-      setPendingProducts((prev) => prev.filter((p) => p.id !== productId));
+      queryClient.invalidateQueries({ queryKey: moderationQueryKey });
       setRejectingId(null);
       setRejectReason("");
       toast.success(t("rejectSuccess"));

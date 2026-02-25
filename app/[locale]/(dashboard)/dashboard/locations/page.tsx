@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,6 +9,8 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
@@ -45,9 +47,50 @@ const LocationType = {
 export default function LocationsPage() {
   const t = useTranslations("locations");
   const { user } = useAuth();
+  const queryClient = useQueryClient();
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [locations, setLocations] = useState<Location[]>([]);
+  const { data: locationsRaw = [], isLoading } = useQuery({
+    queryKey: queryKeys.locations.list({ userId: user?.id }),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.Locations.All.Request({
+        sorting: {
+          key: "createdAt",
+          direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+        },
+        filters: [
+          {
+            key: "userId",
+            type: "guid",
+            isUsed: true,
+            values: [user!.id],
+            min: {},
+            max: {},
+            conditionType: "equals",
+          },
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
+      });
+
+      return response.map((l) => ({
+        id: l.id,
+        name: l.name,
+        addressLine1: l.addressLine1,
+        addressLine2: l.addressLine2,
+        city: l.city,
+        state: l.state,
+        postalCode: l.postalCode,
+        countryCode: l.countryCode,
+        phone: l.phone,
+        email: l.email,
+        type: l.type,
+        isActive: l.isActive,
+      })) as Location[];
+    },
+    enabled: !!user?.id,
+  });
+
+  const locations = locationsRaw;
+
   const [showForm, setShowForm] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -63,56 +106,6 @@ export default function LocationsPage() {
     email: "",
     type: 2,
   });
-
-  const fetchLocations = async () => {
-    if (!user?.id) return;
-    setIsLoading(true);
-    try {
-      const response = await LivestockTradingAPI.Locations.All.Request({
-        sorting: {
-          key: "createdAt",
-          direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
-        },
-        filters: [
-          {
-            key: "userId",
-            type: "guid",
-            isUsed: true,
-            values: [user.id],
-            min: {},
-            max: {},
-            conditionType: "equals",
-          },
-        ],
-        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-      });
-
-      setLocations(
-        response.map((l) => ({
-          id: l.id,
-          name: l.name,
-          addressLine1: l.addressLine1,
-          addressLine2: l.addressLine2,
-          city: l.city,
-          state: l.state,
-          postalCode: l.postalCode,
-          countryCode: l.countryCode,
-          phone: l.phone,
-          email: l.email,
-          type: l.type,
-          isActive: l.isActive,
-        }))
-      );
-    } catch {
-      toast.error(t("fetchError"));
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchLocations();
-  }, [user?.id]);
 
   const resetForm = () => {
     setFormData({
@@ -171,7 +164,7 @@ export default function LocationsPage() {
         toast.success(t("createSuccess"));
       }
       resetForm();
-      fetchLocations();
+      queryClient.invalidateQueries({ queryKey: queryKeys.locations.list({ userId: user?.id }) });
     } catch {
       toast.error(editingId ? t("updateError") : t("createError"));
     } finally {
@@ -182,7 +175,7 @@ export default function LocationsPage() {
   const handleDelete = async (id: string) => {
     try {
       await LivestockTradingAPI.Locations.Delete.Request({ id });
-      setLocations((prev) => prev.filter((l) => l.id !== id));
+      queryClient.invalidateQueries({ queryKey: queryKeys.locations.list({ userId: user?.id }) });
       toast.success(t("deleteSuccess"));
     } catch {
       toast.error(t("deleteError"));

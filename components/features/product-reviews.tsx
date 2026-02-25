@@ -1,23 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
 import { Star, ThumbsUp, CheckCircle } from "lucide-react";
-import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
-
-interface Review {
-  id: string;
-  userId: string;
-  rating: number;
-  title: string;
-  comment: string;
-  isVerifiedPurchase: boolean;
-  helpfulCount: number;
-  createdAt: Date;
-}
+import { useProductReviews } from "@/hooks/queries/useProductSubresources";
 
 interface ProductReviewsProps {
   productId: string;
@@ -48,66 +37,10 @@ export function ProductReviews({
   reviewCount,
 }: ProductReviewsProps) {
   const t = useTranslations("productDetail.reviews");
-  const [reviews, setReviews] = useState<Review[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchReviews = async () => {
-      if (reviewCount === 0) {
-        setIsLoading(false);
-        return;
-      }
-
-      try {
-        const response = await LivestockTradingAPI.ProductReviews.All.Request({
-          sorting: {
-            key: "createdAt",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
-          },
-          filters: [
-            {
-              key: "productId",
-              type: "guid",
-              isUsed: true,
-              values: [productId],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-            {
-              key: "isApproved",
-              type: "boolean",
-              isUsed: true,
-              values: [true],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 10, listAll: false },
-        });
-
-        setReviews(
-          response.map((r) => ({
-            id: r.id,
-            userId: r.userId,
-            rating: r.rating,
-            title: r.title,
-            comment: r.comment,
-            isVerifiedPurchase: r.isVerifiedPurchase,
-            helpfulCount: r.helpfulCount,
-            createdAt: r.createdAt,
-          }))
-        );
-      } catch {
-        // Reviews are optional, fail silently
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchReviews();
-  }, [productId, reviewCount]);
+  const { data: reviews = [], isLoading } = useProductReviews(productId, {
+    enabled: reviewCount > 0,
+  });
 
   if (isLoading) {
     return (

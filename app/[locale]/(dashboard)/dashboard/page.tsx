@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { useAuth } from "@/contexts/AuthContext";
-import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useNotificationsStore } from "@/stores/useNotificationsStore";
 import { RecentlyViewedProducts } from "@/components/features/recently-viewed-products";
+import { useDashboardMyStats, useDashboardStats } from "@/hooks/queries";
 import {
   Package,
   Heart,
@@ -24,10 +24,6 @@ import {
   DollarSign,
   TrendingUp,
 } from "lucide-react";
-import { toast } from "sonner";
-
-type MyStatsResponse = LivestockTradingAPI.Dashboard.MyStats.IResponseModel;
-type StatsResponse = LivestockTradingAPI.Dashboard.Stats.IResponseModel;
 
 export default function DashboardPage() {
   const t = useTranslations("dashboard");
@@ -35,51 +31,25 @@ export default function DashboardPage() {
   const { user } = useAuth();
 
   const fetchNotifications = useNotificationsStore((s) => s.fetchNotifications);
+  const unreadNotifications = useNotificationsStore((s) => s.unreadCount);
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [stats, setStats] = useState<MyStatsResponse | null>(null);
-  const [sellerStats, setSellerStats] = useState<StatsResponse | null>(null);
-  const [unreadNotifications, setUnreadNotifications] = useState(0);
+  const { data: stats, isLoading: isMyStatsLoading } = useDashboardMyStats(
+    user?.id ?? "",
+    { enabled: !!user?.id }
+  );
+  const { data: sellerStats, isLoading: isStatsLoading } = useDashboardStats(
+    user?.id ?? "",
+    { enabled: !!user?.id }
+  );
 
-  // Fetch dashboard data
+  const isLoading = isMyStatsLoading || isStatsLoading;
+
+  // Fetch notifications via Zustand
   useEffect(() => {
-    const fetchDashboardData = async () => {
-      if (!user?.id) {
-        setIsLoading(false);
-        return;
-      }
-
-      setIsLoading(true);
-      try {
-        // Fetch stats from Dashboard.MyStats, Dashboard.Stats and notifications in parallel
-        const results = await Promise.allSettled([
-          LivestockTradingAPI.Dashboard.MyStats.Request({
-            userId: user.id,
-            period: "all",
-          }),
-          LivestockTradingAPI.Dashboard.Stats.Request({
-            userId: user.id,
-          }),
-          fetchNotifications(user.id),
-        ]);
-
-        if (results[0].status === "fulfilled") {
-          setStats(results[0].value);
-        }
-        if (results[1].status === "fulfilled") {
-          setSellerStats(results[1].value);
-        }
-        setUnreadNotifications(useNotificationsStore.getState().unreadCount);
-      } catch {
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchDashboardData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user?.id]);
+    if (user?.id) {
+      fetchNotifications(user.id);
+    }
+  }, [user?.id, fetchNotifications]);
 
   if (isLoading) {
     return (

@@ -1,8 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -45,7 +47,8 @@ export default function EditCategoryPage() {
     }
   }, [isAdmin, router, tc]);
 
-  const [isLoadingCategory, setIsLoadingCategory] = useState(true);
+  const queryClient = useQueryClient();
+
   const [name, setName] = useState("");
   const [slug, setSlug] = useState("");
   const [description, setDescription] = useState("");
@@ -57,53 +60,54 @@ export default function EditCategoryPage() {
   const [descriptionTranslations, setDescriptionTranslations] = useState("{}");
   const [attributesTemplate, setAttributesTemplate] = useState("{}");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [parentCategories, setParentCategories] = useState<ParentCategory[]>([]);
   const [errors, setErrors] = useState<{ name?: string; slug?: string }>({});
 
-  // Fetch category detail and parent categories
+  // Fetch category detail
+  const { data: categoryDetail, isLoading: isLoadingDetail } = useQuery({
+    queryKey: queryKeys.categories.detail(categoryId, locale),
+    queryFn: () =>
+      LivestockTradingAPI.Categories.Detail.Request({
+        id: categoryId,
+        languageCode: locale,
+      }),
+    enabled: !!categoryId,
+  });
+
+  // Fetch parent categories
+  const { data: parentCategories = [], isLoading: isLoadingParents } = useQuery({
+    queryKey: queryKeys.categories.pick(locale),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.Categories.Pick.Request({
+        selectedIds: [],
+        keyword: "",
+        limit: 100,
+        languageCode: locale,
+      });
+      return response
+        .filter((item: any) => item.id !== categoryId)
+        .map((item: any) => ({ id: item.id, name: item.name })) as ParentCategory[];
+    },
+  });
+
+  const isLoadingCategory = isLoadingDetail || isLoadingParents;
+
+  // Populate form state when category detail loads
+  const formPopulated = useRef(false);
   useEffect(() => {
-    const fetchData = async () => {
-      setIsLoadingCategory(true);
-      try {
-        const [detail, parents] = await Promise.all([
-          LivestockTradingAPI.Categories.Detail.Request({
-            id: categoryId,
-            languageCode: locale,
-          }),
-          LivestockTradingAPI.Categories.Pick.Request({
-            selectedIds: [],
-            keyword: "",
-            limit: 100,
-            languageCode: locale,
-          }),
-        ]);
-
-        setName(detail.name);
-        setSlug(detail.slug);
-        setDescription(detail.description || "");
-        setParentCategoryId(detail.parentCategoryId || "none");
-        setSortOrder(detail.sortOrder);
-        setIsActive(detail.isActive);
-        setIconUrl(detail.iconUrl || "");
-        setNameTranslations(detail.nameTranslations || "{}");
-        setDescriptionTranslations(detail.descriptionTranslations || "{}");
-        setAttributesTemplate(detail.attributesTemplate || "{}");
-
-        // Filter out self from parent list
-        setParentCategories(
-          parents
-            .filter((item: any) => item.id !== categoryId)
-            .map((item: any) => ({ id: item.id, name: item.name }))
-        );
-      } catch {
-        toast.error(t("loadError"));
-      } finally {
-        setIsLoadingCategory(false);
-      }
-    };
-
-    if (categoryId) fetchData();
-  }, [categoryId, t]);
+    if (categoryDetail && !formPopulated.current) {
+      formPopulated.current = true;
+      setName(categoryDetail.name);
+      setSlug(categoryDetail.slug);
+      setDescription(categoryDetail.description || "");
+      setParentCategoryId(categoryDetail.parentCategoryId || "none");
+      setSortOrder(categoryDetail.sortOrder);
+      setIsActive(categoryDetail.isActive);
+      setIconUrl(categoryDetail.iconUrl || "");
+      setNameTranslations(categoryDetail.nameTranslations || "{}");
+      setDescriptionTranslations(categoryDetail.descriptionTranslations || "{}");
+      setAttributesTemplate(categoryDetail.attributesTemplate || "{}");
+    }
+  }, [categoryDetail]);
 
   const validate = (): boolean => {
     const newErrors: { name?: string; slug?: string } = {};
@@ -134,6 +138,7 @@ export default function EditCategoryPage() {
       });
 
       toast.success(t("updateSuccess"));
+      queryClient.invalidateQueries({ queryKey: queryKeys.categories.all });
       router.push("/dashboard/categories");
     } catch {
       toast.error(t("updateError"));

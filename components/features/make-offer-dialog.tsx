@@ -100,7 +100,7 @@ export function MakeOfferDialog({
             <HandCoins className="h-5 w-5" />
             {t("makeOffer")}
           </h2>
-          <Button variant="ghost" size="icon" onClick={onClose}>
+          <Button variant="ghost" size="icon" onClick={onClose} aria-label={t("cancel")}>
             <X className="h-4 w-4" />
           </Button>
         </div>

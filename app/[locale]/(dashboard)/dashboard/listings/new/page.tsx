@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
+import { useQueryClient } from "@tanstack/react-query";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -22,6 +23,8 @@ import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { toast } from "sonner";
+import { useCategories } from "@/hooks/queries";
+import { queryKeys } from "@/lib/query-keys";
 import dynamic from "next/dynamic";
 const MediaUpload = dynamic(() => import("@/components/features/media-upload").then(mod => ({ default: mod.MediaUpload })), { ssr: false });
 
@@ -31,12 +34,6 @@ interface MediaFile {
   url: string;
   isVideo: boolean;
   name: string;
-}
-
-interface Category {
-  id: string;
-  name: string;
-  slug: string;
 }
 
 type ProductCondition = 0 | 1 | 2 | 3; // new, likeNew, good, fair
@@ -49,9 +46,12 @@ export default function NewListingPage() {
   const locale = useLocale();
   const { user, isLoading: authLoading } = useAuth();
   const selectedCountry = useSelectedCountry();
+  const queryClient = useQueryClient();
+
+  const { data: categoriesData } = useCategories(locale);
+  const categories = (categoriesData ?? []).map((c) => ({ id: c.id, name: c.name, slug: c.slug }));
 
   const [isLoading, setIsLoading] = useState(false);
-  const [categories, setCategories] = useState<Category[]>([]);
 
   // Media upload state
   const [mediaBucketId, setMediaBucketId] = useState<string>("");
@@ -78,26 +78,6 @@ export default function NewListingPage() {
     address: "",
     postalCode: "",
   });
-
-  // Load categories
-  useEffect(() => {
-    const loadCategories = async () => {
-      try {
-        const response = await LivestockTradingAPI.Categories.All.Request({
-          languageCode: locale,
-          sorting: { key: "sortOrder", direction: 0 },
-          filters: [],
-          pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
-        });
-        setCategories(
-          response.map((c) => ({ id: c.id, name: c.name, slug: c.slug }))
-        );
-      } catch {
-        // Categories are optional
-      }
-    };
-    loadCategories();
-  }, []);
 
   // Update currency when country changes
   useEffect(() => {
@@ -252,6 +232,7 @@ export default function NewListingPage() {
         coverImageFileId: coverImageFileId || "",
       });
 
+      await queryClient.invalidateQueries({ queryKey: queryKeys.products.all });
       toast.success(isDraft ? t("draftSaved") : t("productCreated"));
       router.push("/dashboard/my-listings");
     } catch (error: any) {

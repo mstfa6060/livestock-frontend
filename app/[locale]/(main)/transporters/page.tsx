@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { MainHeader } from "@/components/layout/main-header";
@@ -10,6 +10,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import {
   Select,
@@ -67,71 +69,63 @@ interface Transporter {
 export default function TransportersPage() {
   const t = useTranslations("transporters");
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [transporters, setTransporters] = useState<Transporter[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<SortOption>("newest");
   const [currentPage, setCurrentPage] = useState(1);
-  const [hasMore, setHasMore] = useState(false);
 
-  const fetchTransporters = useCallback(
-    async (page: number, sort: SortOption) => {
-      setIsLoading(true);
-      try {
-        const sortConfig = SORT_MAP[sort];
-        const response =
-          await LivestockTradingAPI.Transporters.All.Request({
-            sorting: {
-              key: sortConfig.key,
-              direction: sortConfig.direction,
-            },
-            filters: [
-              {
-                key: "isActive",
-                type: "boolean",
-                isUsed: true,
-                values: [true],
-                min: {},
-                max: {},
-                conditionType: "equals",
-              },
-            ],
-            pageRequest: {
-              currentPage: page,
-              perPageCount: PER_PAGE,
-              listAll: false,
-            },
-          });
+  const sortConfig = SORT_MAP[sortBy];
 
-        setTransporters(
-          response.map((t) => ({
-            id: t.id,
-            companyName: t.companyName,
-            contactPerson: t.contactPerson,
-            email: t.email,
-            phone: t.phone,
-            city: t.city,
-            countryCode: t.countryCode,
-            isVerified: t.isVerified,
-            isActive: t.isActive,
-            averageRating: t.averageRating as number | null,
-            totalTransports: t.totalTransports,
-            createdAt: t.createdAt,
-          }))
-        );
-        setHasMore(response.length === PER_PAGE);
-      } catch {
-        // Silently handle
-      } finally {
-        setIsLoading(false);
-      }
+  const { data: transporters = [], isLoading } = useQuery({
+    queryKey: queryKeys.transporters.list({
+      sortBy: sortConfig.key,
+      sortDirection: sortConfig.direction,
+      currentPage,
+    }),
+    queryFn: async () => {
+      const response =
+        await LivestockTradingAPI.Transporters.All.Request({
+          sorting: {
+            key: sortConfig.key,
+            direction: sortConfig.direction,
+          },
+          filters: [
+            {
+              key: "isActive",
+              type: "boolean",
+              isUsed: true,
+              values: [true],
+              min: {},
+              max: {},
+              conditionType: "equals",
+            },
+          ],
+          pageRequest: {
+            currentPage,
+            perPageCount: PER_PAGE,
+            listAll: false,
+          },
+        });
+
+      return response.map(
+        (t): Transporter => ({
+          id: t.id,
+          companyName: t.companyName,
+          contactPerson: t.contactPerson,
+          email: t.email,
+          phone: t.phone,
+          city: t.city,
+          countryCode: t.countryCode,
+          isVerified: t.isVerified,
+          isActive: t.isActive,
+          averageRating: t.averageRating as number | null,
+          totalTransports: t.totalTransports,
+          createdAt: t.createdAt,
+        })
+      );
     },
-    []
-  );
+  });
 
-  useEffect(() => {
-    fetchTransporters(currentPage, sortBy);
-  }, [currentPage, sortBy, fetchTransporters]);
+  const hasMore = transporters.length === PER_PAGE;
 
   // Reset page when sort changes
   const handleSortChange = (value: string) => {

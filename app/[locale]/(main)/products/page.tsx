@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useDeferredValue, useMemo } from "react";
+import { useState, useCallback, useDeferredValue, useMemo } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { MainHeader } from "@/components/layout/main-header";
@@ -27,10 +27,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Search, SlidersHorizontal, X, Loader2 } from "lucide-react";
-import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { AppConfig } from "@/config/livestock-config";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
+import { useCategories } from "@/hooks/queries/useCategories";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 
 type SortOption = "newest" | "oldest" | "priceAsc" | "priceDesc" | "popular";
 type ConditionOption = "all" | "new" | "likeNew" | "good" | "fair";
@@ -171,14 +173,8 @@ export default function ProductsPage() {
   const pageParam = parseInt(searchParams.get("page") || "1", 10);
 
   // State
-  const [products, setProducts] = useState<Product[]>([]);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
-  const [totalProducts, setTotalProducts] = useState(0);
-  const [totalPages, setTotalPages] = useState(0);
 
   // Local filter state (until applied)
   const [localCategory, setLocalCategory] = useState(categoryParam || "all");
@@ -209,23 +205,9 @@ export default function ProductsPage() {
     [searchParams, router, pathname]
   );
 
-  // Fetch categories
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const response = await LivestockTradingAPI.Categories.All.Request({
-          languageCode: locale,
-          sorting: { key: "name", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
-          filters: [],
-          pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
-        });
-        setCategories(response.map((c) => ({ id: c.id, name: c.name })));
-      } catch {
-        // Categories are optional
-      }
-    };
-    fetchCategories();
-  }, [locale]);
+  // Fetch categories via React Query
+  const { data: categoriesRaw = [] } = useCategories(locale);
+  const categories: Category[] = categoriesRaw.map((c) => ({ id: c.id, name: c.name }));
 
   // Sort mapping
   const getSorting = (sort: SortOption): { key: string; direction: LivestockTradingAPI.Enums.XSortingDirection } => {
@@ -262,77 +244,53 @@ export default function ProductsPage() {
     imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
   });
 
-  // Fetch products using Search endpoint (has totalCount & coverImageUrl)
-  useEffect(() => {
-    const fetchProducts = async () => {
-      setIsLoading(true);
-      try {
-        const response = await LivestockTradingAPI.Products.Search.Request({
-          query: "",
-          countryCode: selectedCountry?.code || "TR",
-          city: "",
-          categoryId: categoryParam || undefined,
-          condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
-          minPrice: minPriceParam ? parseFloat(minPriceParam) as any : undefined,
-          maxPrice: maxPriceParam ? parseFloat(maxPriceParam) as any : undefined,
-          currency: selectedCountry?.defaultCurrencyCode || "TRY",
-          sortBy: getSorting(sortParam).key,
-          sorting: getSorting(sortParam),
-          pageRequest: {
-            currentPage: pageParam,
-            perPageCount: ITEMS_PER_PAGE,
-            listAll: false,
-          },
-        });
-
-        setProducts(response.map(transformResult));
-        setTotalProducts(response.length);
-        setTotalPages(Math.ceil(response.length / ITEMS_PER_PAGE));
-      } catch {
-        setProducts([]);
-        setTotalProducts(0);
-        setTotalPages(0);
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, [sortParam, pageParam, categoryParam, conditionParam, minPriceParam, maxPriceParam, selectedCountry?.code]);
-
-  // Load more handler for "Load More" button
-  const handleLoadMore = async () => {
-    if (isLoadingMore || pageParam >= totalPages) return;
-    setIsLoadingMore(true);
-    try {
-      const nextPage = pageParam + 1;
+  // Fetch products via React Query
+  const sorting = getSorting(sortParam);
+  const { data: products = [], isLoading } = useQuery({
+    queryKey: queryKeys.products.search({
+      countryCode: selectedCountry?.code || "TR",
+      categoryId: categoryParam || undefined,
+      condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
+      minPrice: minPriceParam || undefined,
+      maxPrice: maxPriceParam || undefined,
+      sortBy: sorting.key,
+      sortDirection: sorting.direction,
+      page: pageParam,
+    }),
+    queryFn: async () => {
       const response = await LivestockTradingAPI.Products.Search.Request({
         query: "",
         countryCode: selectedCountry?.code || "TR",
         city: "",
         categoryId: categoryParam || undefined,
         condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         minPrice: minPriceParam ? parseFloat(minPriceParam) as any : undefined,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         maxPrice: maxPriceParam ? parseFloat(maxPriceParam) as any : undefined,
         currency: selectedCountry?.defaultCurrencyCode || "TRY",
-        sortBy: getSorting(sortParam).key,
-        sorting: getSorting(sortParam),
+        sortBy: sorting.key,
+        sorting,
         pageRequest: {
-          currentPage: nextPage,
+          currentPage: pageParam,
           perPageCount: ITEMS_PER_PAGE,
           listAll: false,
         },
       });
 
-      setProducts((prev) => [...prev, ...response.map(transformResult)]);
-      updateParams({ page: String(nextPage) });
-    } catch {
-      toast.error(t("fetchError"));
-    } finally {
-      setIsLoadingMore(false);
-    }
+      return response.map(transformResult);
+    },
+  });
+
+  const totalProducts = products.length;
+  const totalPages = Math.ceil(totalProducts / ITEMS_PER_PAGE);
+
+  // Load more - navigate to next page
+  const handleLoadMore = () => {
+    if (pageParam >= totalPages) return;
+    updateParams({ page: String(pageParam + 1) });
   };
+  const isLoadingMore = false;
 
   // Apply filters
   const applyFilters = () => {

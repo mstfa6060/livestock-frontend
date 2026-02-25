@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { formatDistanceToNow } from "date-fns";
@@ -15,7 +15,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { IAMAPI } from "@/api/base_modules/iam";
 import { useAuth } from "@/contexts/AuthContext";
-import { toast } from "sonner";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import { MessageSquare, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -39,104 +40,91 @@ export default function MessagesPage() {
   const locale = useLocale();
   const { user } = useAuth();
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [conversations, setConversations] = useState<Conversation[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Fetch conversations
-  useEffect(() => {
-    const fetchConversations = async () => {
-      if (!user?.id) {
-        setIsLoading(false);
-        return;
-      }
+  const { data: conversations = [], isLoading } = useQuery({
+    queryKey: [...queryKeys.conversations.list(), "enriched", user?.id],
+    queryFn: async () => {
+      if (!user?.id) return [];
 
-      setIsLoading(true);
+      // Fetch conversations
+      const response = await LivestockTradingAPI.Conversations.All.Request({
+        sorting: {
+          key: "lastMessageAt",
+          direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+        },
+        filters: [],
+        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
+      });
+
+      // Filter conversations where user is a participant
+      const userConversations = response.filter(
+        (conv) =>
+          conv.participantUserId1 === user.id ||
+          conv.participantUserId2 === user.id
+      );
+
+      // Fetch unread counts
+      const unreadMap: Record<string, { unreadCount: number; lastMessageAt?: Date }> = {};
       try {
-        // Fetch conversations where user is a participant
-        const response = await LivestockTradingAPI.Conversations.All.Request({
-          sorting: {
-            key: "lastMessageAt",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
-          },
-          filters: [],
-          pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
+        const unreadResponse = await LivestockTradingAPI.Messages.UnreadCount.Request({
+          userId: user.id,
         });
-
-        // Filter conversations where user is a participant
-        const userConversations = response.filter(
-          (conv) =>
-            conv.participantUserId1 === user.id ||
-            conv.participantUserId2 === user.id
-        );
-
-        // Fetch unread counts
-        const unreadMap: Record<string, { unreadCount: number; lastMessageAt?: Date }> = {};
-        try {
-          const unreadResponse = await LivestockTradingAPI.Messages.UnreadCount.Request({
-            userId: user.id,
-          });
-          unreadResponse.conversations.forEach((c) => {
-            unreadMap[c.conversationId] = {
-              unreadCount: c.unreadCount,
-              lastMessageAt: c.lastMessageAt,
-            }; 
-          });
-        } catch {
-          // UnreadCount API not available yet, fallback to 0
-        }
-
-        // Enrich conversations with user data
-        const enrichedConversations = await Promise.all(
-          userConversations.map(async (conv) => {
-            const otherUserId =
-              conv.participantUserId1 === user.id
-                ? conv.participantUserId2
-                : conv.participantUserId1;
-
-            let otherUserName = t("defaultUser");
-            let otherUserInitials = "?";
-
-            try {
-              const userDetail = await IAMAPI.Users.Detail.Request({
-                userId: otherUserId,
-              });
-              if (userDetail) {
-                otherUserName = userDetail.fullName || userDetail.userName || t("defaultUser");
-                otherUserInitials = otherUserName
-                  .split(" ")
-                  .map((n: string) => n.charAt(0))
-                  .join("")
-                  .toUpperCase()
-                  .slice(0, 2);
-              }
-            } catch {
-              // User details not available
-            }
-
-            const unreadInfo = unreadMap[conv.id];
-
-            return {
-              ...conv,
-              lastMessageAt: conv.lastMessageAt?.toString(),
-              createdAt: conv.createdAt.toString(),
-              otherUserName,
-              otherUserInitials,
-              unreadCount: unreadInfo?.unreadCount || 0,
-            };
-          })
-        );
-
-        setConversations(enrichedConversations);
+        unreadResponse.conversations.forEach((c) => {
+          unreadMap[c.conversationId] = {
+            unreadCount: c.unreadCount,
+            lastMessageAt: c.lastMessageAt,
+          };
+        });
       } catch {
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
+        // UnreadCount API not available yet, fallback to 0
       }
-    };
 
-    fetchConversations();
-  }, [user?.id, t]);
+      // Enrich conversations with user data
+      const enrichedConversations = await Promise.all(
+        userConversations.map(async (conv) => {
+          const otherUserId =
+            conv.participantUserId1 === user.id
+              ? conv.participantUserId2
+              : conv.participantUserId1;
+
+          let otherUserName = "User";
+          let otherUserInitials = "?";
+
+          try {
+            const userDetail = await IAMAPI.Users.Detail.Request({
+              userId: otherUserId,
+            });
+            if (userDetail) {
+              otherUserName = userDetail.fullName || userDetail.userName || "User";
+              otherUserInitials = otherUserName
+                .split(" ")
+                .map((n: string) => n.charAt(0))
+                .join("")
+                .toUpperCase()
+                .slice(0, 2);
+            }
+          } catch {
+            // User details not available
+          }
+
+          const unreadInfo = unreadMap[conv.id];
+
+          return {
+            ...conv,
+            lastMessageAt: conv.lastMessageAt?.toString(),
+            createdAt: conv.createdAt.toString(),
+            otherUserName,
+            otherUserInitials,
+            unreadCount: unreadInfo?.unreadCount || 0,
+          } as Conversation;
+        })
+      );
+
+      return enrichedConversations;
+    },
+    enabled: !!user?.id,
+  });
 
   const filteredConversations = conversations.filter(
     (conv) =>

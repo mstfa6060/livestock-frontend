@@ -14,7 +14,14 @@
     "unauthorized": "Bu sayfaya erisim yetkiniz bulunmamaktadir",
     "emailPlaceholder": "ornek@email.com",
     "login": "Giris Yap",
-    "register": "Kayit Ol"
+    "register": "Kayit Ol",
+    "previous": "Onceki",
+    "zoomIn": "Yakınlastir",
+    "previousImage": "Onceki gorsel",
+    "nextImage": "Sonraki gorsel",
+    "closeLightbox": "Galeryi kapat",
+    "imageLightbox": "Gorsel galerisi",
+    "slideN": "Slayt {n}"
   },
   "header": {
     "products": "Urunler",
@@ -25,7 +32,8 @@
     "dashboard": "Panel",
     "settings": "Ayarlar",
     "logout": "Cikis Yap",
-    "menu": "Menu"
+    "menu": "Menu",
+    "language": "Dil secimi"
   },
   "auth": {
     "login": {
@@ -1355,6 +1363,7 @@
       "oversized": "Buyuk Boyut"
     },
     "weight": "Agirlik (kg)",
+    "weightPlaceholder": "kg",
     "preferredPickupDate": "Tercih Edilen Yukleme Tarihi",
     "preferredDeliveryDate": "Tercih Edilen Teslimat Tarihi",
     "urgent": "Acil Nakliye",

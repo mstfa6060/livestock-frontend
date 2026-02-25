@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import {
   DropdownMenu,
@@ -69,6 +69,7 @@ const popularLocales: Locale[] = ["en", "tr", "ar", "de", "es", "fr", "ru", "zh"
 
 export function LanguageSwitcher() {
   const locale = useLocale();
+  const t = useTranslations("header");
   const router = useRouter();
   const pathname = usePathname();
 
@@ -85,7 +86,7 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button variant="outline" size="icon" aria-label={t("language")}>
           <Globe className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>

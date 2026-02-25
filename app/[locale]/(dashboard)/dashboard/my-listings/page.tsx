@@ -1,8 +1,11 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
+import { useSellerByUserId } from "@/hooks/queries";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { ProductCard, ProductCardSkeleton, Product } from "@/components/features/product-card";
 import { Button } from "@/components/ui/button";
@@ -34,7 +37,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { PlusCircle, MoreVertical, Pencil, Trash2, Eye, EyeOff, Loader2 } from "lucide-react";
+import { PlusCircle, MoreVertical, Pencil, Trash2, Eye, EyeOff } from "lucide-react";
 
 const PAGE_SIZE = 20;
 
@@ -45,144 +48,70 @@ export default function MyListingsPage() {
   const tn = useTranslations("dashboardNav");
   const tp = useTranslations("products");
   const { user } = useAuth();
+  const queryClient = useQueryClient();
 
   const [statusFilter, setStatusFilter] = useState<ListingStatus>("all");
-  const [, setIsSellerLoading] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState<Product[]>([]);
-  const [isLoadingMore, setIsLoadingMore] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [hasMore, setHasMore] = useState(false);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [productToDelete, setProductToDelete] = useState<string | null>(null);
-  const [sellerId, setSellerId] = useState<string | null>(null);
 
-  // Fetch seller profile first
-  useEffect(() => {
-    const fetchSellerProfile = async () => {
-      if (!user?.id) {
-        setIsSellerLoading(false);
-        setIsLoading(false);
-        return;
-      }
+  // Fetch seller profile
+  const { data: sellerData } = useSellerByUserId(user?.id ?? "", {
+    enabled: !!user?.id,
+  });
+  const sellerId = sellerData?.id ?? null;
 
-      try {
-        // Find seller profile by userId using Sellers.All with filter
-        const sellersResponse = await LivestockTradingAPI.Sellers.All.Request({
-          sorting: { key: "createdAt", direction: 1 },
-          filters: [
-            {
-              key: "userId",
-              type: "guid",
-              isUsed: true,
-              values: [user.id],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
-        });
+  // Fetch listings for this seller
+  const { data: listingsRaw = [], isLoading } = useQuery({
+    queryKey: queryKeys.products.list({ sellerId, page: "all" }),
+    queryFn: async () => {
+      if (!sellerId) return [];
 
-        if (sellersResponse.length > 0) {
-          setSellerId(sellersResponse[0].id);
-        } else {
-          setSellerId(null);
-          setIsLoading(false);
-        }
-      } catch {
-        setSellerId(null);
-        setIsLoading(false);
-        toast.error(t("fetchError"));
-      } finally {
-        setIsSellerLoading(false);
-      }
-    };
+      const response = await LivestockTradingAPI.Products.All.Request({
+        countryCode: "TR",
+        sorting: { key: "createdAt", direction: 1 },
+        filters: [
+          {
+            key: "sellerId",
+            type: "guid",
+            isUsed: true,
+            values: [sellerId],
+            min: {},
+            max: {},
+            conditionType: "equals",
+          },
+        ],
+        pageRequest: { currentPage: 1, perPageCount: PAGE_SIZE, listAll: false },
+      });
 
-    fetchSellerProfile();
-  }, [user?.id]);
+      return response.map((item) => ({
+        id: item.id,
+        title: item.title,
+        slug: item.slug,
+        shortDescription: item.shortDescription,
+        categoryId: item.categoryId,
+        brandId: item.brandId || undefined,
+        basePrice: item.basePrice as number,
+        currency: item.currency,
+        discountedPrice: item.discountedPrice as number | undefined,
+        stockQuantity: item.stockQuantity,
+        isInStock: item.isInStock,
+        sellerId: item.sellerId,
+        locationId: item.locationId,
+        locationCountryCode: item.locationCountryCode,
+        locationCity: item.locationCity,
+        status: item.status,
+        condition: item.condition,
+        viewCount: item.viewCount,
+        averageRating: item.averageRating as number | undefined,
+        reviewCount: item.reviewCount,
+        createdAt: item.createdAt,
+        imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
+      })) as Product[];
+    },
+    enabled: !!sellerId,
+  });
 
-  const fetchListingsPage = useCallback(async (page: number) => {
-    if (!sellerId) return [];
-
-    const response = await LivestockTradingAPI.Products.All.Request({
-      countryCode: "TR",
-      sorting: { key: "createdAt", direction: 1 },
-      filters: [
-        {
-          key: "sellerId",
-          type: "guid",
-          isUsed: true,
-          values: [sellerId],
-          min: {},
-          max: {},
-          conditionType: "equals",
-        },
-      ],
-      pageRequest: { currentPage: page, perPageCount: PAGE_SIZE, listAll: false },
-    });
-
-    setHasMore(response.length === PAGE_SIZE);
-
-    return response.map((item) => ({
-      id: item.id,
-      title: item.title,
-      slug: item.slug,
-      shortDescription: item.shortDescription,
-      categoryId: item.categoryId,
-      brandId: item.brandId || undefined,
-      basePrice: item.basePrice as number,
-      currency: item.currency,
-      discountedPrice: item.discountedPrice as number | undefined,
-      stockQuantity: item.stockQuantity,
-      isInStock: item.isInStock,
-      sellerId: item.sellerId,
-      locationId: item.locationId,
-      locationCountryCode: item.locationCountryCode,
-      locationCity: item.locationCity,
-      status: item.status,
-      condition: item.condition,
-      viewCount: item.viewCount,
-      averageRating: item.averageRating as number | undefined,
-      reviewCount: item.reviewCount,
-      createdAt: item.createdAt,
-      imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
-    })) as Product[];
-  }, [sellerId]);
-
-  // Fetch user's listings
-  useEffect(() => {
-    const fetchListings = async () => {
-      if (!sellerId) return;
-
-      setIsLoading(true);
-      try {
-        const products = await fetchListingsPage(1);
-        setListings(products);
-        setCurrentPage(1);
-      } catch {
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchListings();
-  }, [sellerId, t, fetchListingsPage]);
-
-  const handleLoadMore = async () => {
-    try {
-      setIsLoadingMore(true);
-      const nextPage = currentPage + 1;
-      const moreProducts = await fetchListingsPage(nextPage);
-      setListings(prev => [...prev, ...moreProducts]);
-      setCurrentPage(nextPage);
-    } catch {
-      toast.error(t("fetchError"));
-    } finally {
-      setIsLoadingMore(false);
-    }
-  };
+  const listings = listingsRaw;
 
   const filteredListings =
     statusFilter === "all"
@@ -208,8 +137,7 @@ export default function MyListingsPage() {
     try {
       await LivestockTradingAPI.Products.Delete.Request({ id: productToDelete });
 
-      // Remove from local state
-      setListings((prev) => prev.filter((p) => p.id !== productToDelete));
+      queryClient.invalidateQueries({ queryKey: queryKeys.products.list({ sellerId, page: "all" }) });
 
       toast.success(t("deleteSuccess"));
       setDeleteDialogOpen(false);
@@ -260,10 +188,7 @@ export default function MyListingsPage() {
         coverImageFileId: (fullProduct as any).coverImageFileId || "",
       });
 
-      // Update local state
-      setListings((prev) =>
-        prev.map((p) => (p.id === productId ? { ...p, status: newStatus } : p))
-      );
+      queryClient.invalidateQueries({ queryKey: queryKeys.products.list({ sellerId, page: "all" }) });
 
       toast.success(
         newStatus === 1 ? t("activateSuccess") : t("deactivateSuccess")
@@ -382,21 +307,6 @@ export default function MyListingsPage() {
               </DropdownMenu>
             </div>
           ))}
-        </div>
-      )}
-
-      {hasMore && !isLoading && (
-        <div className="flex justify-center mt-6">
-          <Button variant="outline" onClick={handleLoadMore} disabled={isLoadingMore}>
-            {isLoadingMore ? (
-              <>
-                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                {t("loadingMore")}
-              </>
-            ) : (
-              t("loadMore")
-            )}
-          </Button>
         </div>
       )}
 

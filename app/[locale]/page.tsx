@@ -1,7 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MainHeader } from "@/components/layout/main-header";
@@ -10,8 +8,8 @@ import { ShieldCheck, Layers, Headphones, ArrowRight } from "lucide-react";
 import { HomepageBanners } from "@/components/features/homepage-banners";
 import { FeaturedProducts } from "@/components/features/featured-products";
 
-export default function Home() {
-  const t = useTranslations("home");
+export default async function Home() {
+  const t = await getTranslations("home");
 
   return (
     <div className="min-h-screen bg-background flex flex-col">

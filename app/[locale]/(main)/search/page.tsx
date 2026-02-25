@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { MainHeader } from "@/components/layout/main-header";
@@ -38,8 +38,10 @@ import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { AppConfig } from "@/config/livestock-config";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
-import { getProductCoverImages } from "@/lib/product-images";
 import { useAuth } from "@/contexts/AuthContext";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
+import { useCategories } from "@/hooks/queries/useCategories";
 
 type SortOption = "newest" | "oldest" | "priceAsc" | "priceDesc" | "popular";
 type ConditionOption = "all" | "new" | "likeNew" | "good" | "fair";
@@ -58,371 +60,38 @@ interface Category {
   name: string;
 }
 
-export default function SearchPage() {
-  const t = useTranslations("search");
-  const tp = useTranslations("products");
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const selectedCountry = useSelectedCountry();
-  const { user } = useAuth();
+interface SearchFilterContentProps {
+  categories: Category[];
+  localCategory: string;
+  setLocalCategory: (v: string) => void;
+  localCondition: ConditionOption;
+  setLocalCondition: (v: ConditionOption) => void;
+  localMinPrice: string;
+  setLocalMinPrice: (v: string) => void;
+  localMaxPrice: string;
+  setLocalMaxPrice: (v: string) => void;
+  applyFilters: () => void;
+  clearFilters: () => void;
+  t: (key: string) => string;
+  tp: (key: string) => string;
+}
 
-  // URL params
-  const queryParam = searchParams.get("q") || "";
-  const categoryParam = searchParams.get("category") || "";
-  const conditionParam = (searchParams.get("condition") || "all") as ConditionOption;
-  const minPriceParam = searchParams.get("minPrice") || "";
-  const maxPriceParam = searchParams.get("maxPrice") || "";
-  const sortParam = (searchParams.get("sort") || "newest") as SortOption;
-  const pageParam = parseInt(searchParams.get("page") || "1", 10);
-
-  // Local state
-  const [products, setProducts] = useState<Product[]>([]);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchInput, setSearchInput] = useState(queryParam);
-  const [isFiltersOpen, setIsFiltersOpen] = useState(false);
-  const [searchHistory, setSearchHistory] = useState<{ id: string; searchQuery: string; searchedAt: Date }[]>([]);
-  const [showHistory, setShowHistory] = useState(false);
-
-  // Filter state (local until applied)
-  const [localCategory, setLocalCategory] = useState(categoryParam || "all");
-  const [localCondition, setLocalCondition] = useState(conditionParam);
-  const [localMinPrice, setLocalMinPrice] = useState(minPriceParam);
-  const [localMaxPrice, setLocalMaxPrice] = useState(maxPriceParam);
-
-  // Update URL params
-  const updateParams = useCallback(
-    (updates: Record<string, string | null>) => {
-      const params = new URLSearchParams(searchParams.toString());
-
-      Object.entries(updates).forEach(([key, value]) => {
-        if (value === null || value === "" || value === "all") {
-          params.delete(key);
-        } else {
-          params.set(key, value);
-        }
-      });
-
-      // Reset page when filters change
-      if (!updates.page) {
-        params.delete("page");
-      }
-
-      router.push(`${pathname}?${params.toString()}`, { scroll: false });
-    },
-    [searchParams, router, pathname]
-  );
-
-  // Fetch categories
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const response = await LivestockTradingAPI.Categories.All.Request({
-          languageCode: locale,
-          sorting: { key: "name", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
-          filters: [],
-          pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
-        });
-        setCategories(response.map((c) => ({ id: c.id, name: c.name })));
-      } catch {
-        // Categories are optional
-      }
-    };
-    fetchCategories();
-  }, [locale]);
-
-  // Fetch search history
-  useEffect(() => {
-    if (!user?.id) return;
-    const fetchHistory = async () => {
-      try {
-        const response = await LivestockTradingAPI.SearchHistories.All.Request({
-          sorting: { key: "searchedAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-          filters: [],
-          pageRequest: { currentPage: 1, perPageCount: 10, listAll: false },
-        });
-        setSearchHistory(response.map((h) => ({ id: h.id, searchQuery: h.searchQuery, searchedAt: h.searchedAt })));
-      } catch {
-        // Search history is non-critical
-      }
-    };
-    fetchHistory();
-  }, [user?.id]);
-
-  // Save search to history
-  const saveSearchHistory = useCallback(async (query: string, resultsCount: number) => {
-    if (!user?.id || !query.trim()) return;
-    try {
-      await LivestockTradingAPI.SearchHistories.Create.Request({
-        userId: user.id,
-        searchQuery: query.trim(),
-        filters: "",
-        resultsCount,
-      });
-      // Refresh history
-      const response = await LivestockTradingAPI.SearchHistories.All.Request({
-        sorting: { key: "searchedAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-        filters: [],
-        pageRequest: { currentPage: 1, perPageCount: 10, listAll: false },
-      });
-      setSearchHistory(response.map((h) => ({ id: h.id, searchQuery: h.searchQuery, searchedAt: h.searchedAt })));
-    } catch {
-      // Non-critical
-    }
-  }, [user?.id]);
-
-  // Delete search history item
-  const deleteHistoryItem = async (id: string) => {
-    try {
-      await LivestockTradingAPI.SearchHistories.Delete.Request({ id });
-      setSearchHistory((prev) => prev.filter((h) => h.id !== id));
-    } catch {
-      toast.error(t("deleteHistoryError"));
-    }
-  };
-
-  // Fetch products
-  useEffect(() => {
-    const fetchProducts = async () => {
-      setIsLoading(true);
-      try {
-        // Use Search API when query is present, otherwise fall back to Products.All
-        if (queryParam) {
-          const sortingMap: Record<SortOption, { key: string; direction: LivestockTradingAPI.Enums.XSortingDirection }> = {
-            newest: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-            oldest: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
-            priceAsc: { key: "basePrice", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
-            priceDesc: { key: "basePrice", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-            popular: { key: "viewCount", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-          };
-
-          const searchResponse = await LivestockTradingAPI.Products.Search.Request({
-            query: queryParam,
-            countryCode: selectedCountry?.code || "TR",
-            city: "",
-            categoryId: categoryParam || undefined,
-            minPrice: minPriceParam ? parseFloat(minPriceParam) as any : undefined,
-            maxPrice: maxPriceParam ? parseFloat(maxPriceParam) as any : undefined,
-            condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
-            currency: selectedCountry?.defaultCurrencyCode || "TRY",
-            sortBy: sortingMap[sortParam].key,
-            sorting: sortingMap[sortParam],
-            pageRequest: {
-              currentPage: pageParam,
-              perPageCount: ITEMS_PER_PAGE,
-              listAll: false,
-            },
-          });
-
-          const transformedProducts: Product[] = searchResponse.map((item) => ({
-            id: item.id,
-            title: item.title,
-            slug: item.slug,
-            shortDescription: item.shortDescription,
-            categoryId: item.categoryId,
-            brandId: undefined,
-            basePrice: item.basePrice,
-            currency: item.currency,
-            discountedPrice: item.discountedPrice,
-            stockQuantity: 0,
-            isInStock: item.isInStock,
-            sellerId: item.sellerId,
-            locationId: "",
-            locationCountryCode: item.locationCountryCode,
-            locationCity: item.locationCity,
-            status: item.status,
-            condition: item.condition,
-            viewCount: item.viewCount,
-            averageRating: item.averageRating,
-            reviewCount: item.reviewCount,
-            createdAt: item.createdAt,
-            imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
-          }));
-
-          setProducts(transformedProducts);
-
-          // Save to search history
-          saveSearchHistory(queryParam, transformedProducts.length);
-        } else {
-          // No search query - use Products.All with filters
-          const sortingKey = {
-            newest: "createdAt",
-            oldest: "createdAt",
-            priceAsc: "basePrice",
-            priceDesc: "basePrice",
-            popular: "viewCount",
-          }[sortParam];
-
-          const sortingDirection =
-            sortParam === "oldest" || sortParam === "priceAsc"
-              ? LivestockTradingAPI.Enums.XSortingDirection.Ascending
-              : LivestockTradingAPI.Enums.XSortingDirection.Descending;
-
-          const filters: Array<{
-            key: string;
-            type: string;
-            isUsed: boolean;
-            values: string[];
-            min: Record<string, unknown>;
-            max: Record<string, unknown>;
-            conditionType: string;
-          }> = [];
-
-          if (categoryParam) {
-            filters.push({
-              key: "categoryId",
-              type: "guid",
-              isUsed: true,
-              values: [categoryParam],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            });
-          }
-
-          if (conditionParam && conditionParam !== "all") {
-            filters.push({
-              key: "condition",
-              type: "int",
-              isUsed: true,
-              values: [CONDITION_MAP[conditionParam].toString()],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            });
-          }
-
-          if (minPriceParam || maxPriceParam) {
-            filters.push({
-              key: "basePrice",
-              type: "decimal",
-              isUsed: true,
-              values: [],
-              min: minPriceParam ? { value: parseFloat(minPriceParam) } : {},
-              max: maxPriceParam ? { value: parseFloat(maxPriceParam) } : {},
-              conditionType: "between",
-            });
-          }
-
-          const response = await LivestockTradingAPI.Products.All.Request({
-            countryCode: selectedCountry?.code || "TR",
-            sorting: {
-              key: sortingKey,
-              direction: sortingDirection,
-            },
-            filters,
-            pageRequest: {
-              currentPage: pageParam,
-              perPageCount: ITEMS_PER_PAGE,
-              listAll: false,
-            },
-          });
-
-          const transformedProducts: Product[] = response.map((item) => ({
-            id: item.id,
-            title: item.title,
-            slug: item.slug,
-            shortDescription: item.shortDescription,
-            categoryId: item.categoryId,
-            brandId: item.brandId || undefined,
-            basePrice: item.basePrice as number,
-            currency: item.currency,
-            discountedPrice: item.discountedPrice as number | undefined,
-            stockQuantity: item.stockQuantity,
-            isInStock: item.isInStock,
-            sellerId: item.sellerId,
-            locationId: item.locationId,
-            locationCountryCode: item.locationCountryCode,
-            locationCity: item.locationCity,
-            status: item.status,
-            condition: item.condition,
-            viewCount: item.viewCount,
-            averageRating: item.averageRating as number | undefined,
-            reviewCount: item.reviewCount,
-            createdAt: item.createdAt,
-            imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
-          }));
-
-          setProducts(transformedProducts);
-
-          // Fetch cover images asynchronously (non-blocking)
-          const productIds = transformedProducts.map((p) => p.id);
-          getProductCoverImages(productIds).then((imageMap) => {
-            setProducts((prev) =>
-              prev.map((p) => ({
-                ...p,
-                imageUrl: imageMap[p.id] || p.imageUrl,
-              }))
-            );
-          });
-        }
-      } catch {
-        setProducts([]);
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, [queryParam, categoryParam, conditionParam, minPriceParam, maxPriceParam, sortParam, pageParam, selectedCountry?.code]);
-
-  // Handle search submit
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    setShowHistory(false);
-    updateParams({ q: searchInput });
-  };
-
-  // Handle history item click
-  const handleHistoryClick = (query: string) => {
-    setSearchInput(query);
-    setShowHistory(false);
-    updateParams({ q: query });
-  };
-
-  // Apply filters
-  const applyFilters = () => {
-    updateParams({
-      category: localCategory,
-      condition: localCondition,
-      minPrice: localMinPrice,
-      maxPrice: localMaxPrice,
-    });
-    setIsFiltersOpen(false);
-  };
-
-  // Clear all filters
-  const clearFilters = () => {
-    setLocalCategory("all");
-    setLocalCondition("all");
-    setLocalMinPrice("");
-    setLocalMaxPrice("");
-    updateParams({
-      category: null,
-      condition: null,
-      minPrice: null,
-      maxPrice: null,
-    });
-  };
-
-  // Count active filters
-  const activeFilterCount = [
-    categoryParam,
-    conditionParam !== "all" ? conditionParam : "",
-    minPriceParam,
-    maxPriceParam,
-  ].filter(Boolean).length;
-
-  // Get category name
-  const getCategoryName = (id: string) => {
-    return categories.find((c) => c.id === id)?.name || "";
-  };
-
-  // Filter sidebar content
-  const FilterContent = () => (
+function SearchFilterContent({
+  categories,
+  localCategory,
+  setLocalCategory,
+  localCondition,
+  setLocalCondition,
+  localMinPrice,
+  setLocalMinPrice,
+  localMaxPrice,
+  setLocalMaxPrice,
+  applyFilters,
+  clearFilters,
+  t,
+  tp,
+}: SearchFilterContentProps) {
+  return (
     <div className="space-y-6">
       {/* Category */}
       <div className="space-y-2">
@@ -493,6 +162,309 @@ export default function SearchPage() {
       </div>
     </div>
   );
+}
+
+export default function SearchPage() {
+  const t = useTranslations("search");
+  const tp = useTranslations("products");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const selectedCountry = useSelectedCountry();
+  const { user } = useAuth();
+
+  // URL params
+  const queryParam = searchParams.get("q") || "";
+  const categoryParam = searchParams.get("category") || "";
+  const conditionParam = (searchParams.get("condition") || "all") as ConditionOption;
+  const minPriceParam = searchParams.get("minPrice") || "";
+  const maxPriceParam = searchParams.get("maxPrice") || "";
+  const sortParam = (searchParams.get("sort") || "newest") as SortOption;
+  const pageParam = parseInt(searchParams.get("page") || "1", 10);
+
+  const queryClient = useQueryClient();
+
+  // Local state
+  const [searchInput, setSearchInput] = useState(queryParam);
+  const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+  const [showHistory, setShowHistory] = useState(false);
+
+  // Filter state (local until applied)
+  const [localCategory, setLocalCategory] = useState(categoryParam || "all");
+  const [localCondition, setLocalCondition] = useState(conditionParam);
+  const [localMinPrice, setLocalMinPrice] = useState(minPriceParam);
+  const [localMaxPrice, setLocalMaxPrice] = useState(maxPriceParam);
+
+  // Update URL params
+  const updateParams = useCallback(
+    (updates: Record<string, string | null>) => {
+      const params = new URLSearchParams(searchParams.toString());
+
+      Object.entries(updates).forEach(([key, value]) => {
+        if (value === null || value === "" || value === "all") {
+          params.delete(key);
+        } else {
+          params.set(key, value);
+        }
+      });
+
+      // Reset page when filters change
+      if (!updates.page) {
+        params.delete("page");
+      }
+
+      router.push(`${pathname}?${params.toString()}`, { scroll: false });
+    },
+    [searchParams, router, pathname]
+  );
+
+  // Fetch categories via React Query
+  const { data: categoriesRaw = [] } = useCategories(locale);
+  const categories: Category[] = categoriesRaw.map((c) => ({ id: c.id, name: c.name }));
+
+  // Fetch search history via React Query
+  const { data: searchHistory = [] } = useQuery({
+    queryKey: queryKeys.searchHistories.list(),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.SearchHistories.All.Request({
+        sorting: { key: "searchedAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+        filters: [],
+        pageRequest: { currentPage: 1, perPageCount: 10, listAll: false },
+      });
+      return response.map((h) => ({ id: h.id, searchQuery: h.searchQuery, searchedAt: h.searchedAt }));
+    },
+    enabled: !!user?.id,
+  });
+
+  // Save search to history
+  const saveSearchHistory = useCallback(async (query: string, resultsCount: number) => {
+    if (!user?.id || !query.trim()) return;
+    try {
+      await LivestockTradingAPI.SearchHistories.Create.Request({
+        userId: user.id,
+        searchQuery: query.trim(),
+        filters: "",
+        resultsCount,
+      });
+      queryClient.invalidateQueries({ queryKey: queryKeys.searchHistories.list() });
+    } catch {
+      // Non-critical
+    }
+  }, [user?.id, queryClient]);
+
+  // Delete search history item
+  const deleteHistoryItem = async (id: string) => {
+    try {
+      await LivestockTradingAPI.SearchHistories.Delete.Request({ id });
+      queryClient.invalidateQueries({ queryKey: queryKeys.searchHistories.list() });
+    } catch {
+      toast.error(t("deleteHistoryError"));
+    }
+  };
+
+  // Sort config
+  const sortingMap: Record<SortOption, { key: string; direction: LivestockTradingAPI.Enums.XSortingDirection }> = {
+    newest: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+    oldest: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
+    priceAsc: { key: "basePrice", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
+    priceDesc: { key: "basePrice", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+    popular: { key: "viewCount", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+  };
+  const sorting = sortingMap[sortParam];
+
+  // Fetch products via React Query
+  const { data: products = [], isLoading } = useQuery({
+    queryKey: queryKeys.products.search({
+      query: queryParam,
+      countryCode: selectedCountry?.code || "TR",
+      categoryId: categoryParam || undefined,
+      condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
+      minPrice: minPriceParam || undefined,
+      maxPrice: maxPriceParam || undefined,
+      sortBy: sorting.key,
+      sortDirection: sorting.direction,
+      page: pageParam,
+      mode: queryParam ? "search" : "all",
+    }),
+    queryFn: async () => {
+      if (queryParam) {
+        const searchResponse = await LivestockTradingAPI.Products.Search.Request({
+          query: queryParam,
+          countryCode: selectedCountry?.code || "TR",
+          city: "",
+          categoryId: categoryParam || undefined,
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          minPrice: minPriceParam ? parseFloat(minPriceParam) as any : undefined,
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          maxPrice: maxPriceParam ? parseFloat(maxPriceParam) as any : undefined,
+          condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
+          currency: selectedCountry?.defaultCurrencyCode || "TRY",
+          sortBy: sorting.key,
+          sorting,
+          pageRequest: {
+            currentPage: pageParam,
+            perPageCount: ITEMS_PER_PAGE,
+            listAll: false,
+          },
+        });
+
+        const transformed: Product[] = searchResponse.map((item) => ({
+          id: item.id,
+          title: item.title,
+          slug: item.slug,
+          shortDescription: item.shortDescription,
+          categoryId: item.categoryId,
+          basePrice: item.basePrice,
+          currency: item.currency,
+          discountedPrice: item.discountedPrice,
+          isInStock: item.isInStock,
+          sellerId: item.sellerId,
+          locationCountryCode: item.locationCountryCode,
+          locationCity: item.locationCity,
+          status: item.status,
+          condition: item.condition,
+          viewCount: item.viewCount,
+          averageRating: item.averageRating,
+          reviewCount: item.reviewCount,
+          createdAt: item.createdAt,
+          imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
+        }));
+
+        // Save to search history (fire-and-forget)
+        saveSearchHistory(queryParam, transformed.length);
+        return transformed;
+      } else {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const filters: any[] = [];
+
+        if (categoryParam) {
+          filters.push({
+            key: "categoryId", type: "guid", isUsed: true,
+            values: [categoryParam], min: {}, max: {}, conditionType: "equals",
+          });
+        }
+
+        if (conditionParam && conditionParam !== "all") {
+          filters.push({
+            key: "condition", type: "int", isUsed: true,
+            values: [CONDITION_MAP[conditionParam].toString()], min: {}, max: {}, conditionType: "equals",
+          });
+        }
+
+        if (minPriceParam || maxPriceParam) {
+          filters.push({
+            key: "basePrice", type: "decimal", isUsed: true, values: [],
+            min: minPriceParam ? { value: parseFloat(minPriceParam) } : {},
+            max: maxPriceParam ? { value: parseFloat(maxPriceParam) } : {},
+            conditionType: "between",
+          });
+        }
+
+        const response = await LivestockTradingAPI.Products.All.Request({
+          countryCode: selectedCountry?.code || "TR",
+          sorting,
+          filters,
+          pageRequest: {
+            currentPage: pageParam,
+            perPageCount: ITEMS_PER_PAGE,
+            listAll: false,
+          },
+        });
+
+        return response.map((item): Product => ({
+          id: item.id,
+          title: item.title,
+          slug: item.slug,
+          shortDescription: item.shortDescription,
+          categoryId: item.categoryId,
+          basePrice: item.basePrice as number,
+          currency: item.currency,
+          discountedPrice: item.discountedPrice as number | undefined,
+          stockQuantity: item.stockQuantity,
+          isInStock: item.isInStock,
+          sellerId: item.sellerId,
+          locationCountryCode: item.locationCountryCode,
+          locationCity: item.locationCity,
+          status: item.status,
+          condition: item.condition,
+          viewCount: item.viewCount,
+          averageRating: item.averageRating as number | undefined,
+          reviewCount: item.reviewCount,
+          createdAt: item.createdAt,
+          imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
+        }));
+      }
+    },
+  });
+
+  // Handle search submit
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    setShowHistory(false);
+    updateParams({ q: searchInput });
+  };
+
+  // Handle history item click
+  const handleHistoryClick = (query: string) => {
+    setSearchInput(query);
+    setShowHistory(false);
+    updateParams({ q: query });
+  };
+
+  // Apply filters
+  const applyFilters = () => {
+    updateParams({
+      category: localCategory,
+      condition: localCondition,
+      minPrice: localMinPrice,
+      maxPrice: localMaxPrice,
+    });
+    setIsFiltersOpen(false);
+  };
+
+  // Clear all filters
+  const clearFilters = () => {
+    setLocalCategory("all");
+    setLocalCondition("all");
+    setLocalMinPrice("");
+    setLocalMaxPrice("");
+    updateParams({
+      category: null,
+      condition: null,
+      minPrice: null,
+      maxPrice: null,
+    });
+  };
+
+  // Count active filters
+  const activeFilterCount = [
+    categoryParam,
+    conditionParam !== "all" ? conditionParam : "",
+    minPriceParam,
+    maxPriceParam,
+  ].filter(Boolean).length;
+
+  // Get category name
+  const getCategoryName = (id: string) => {
+    return categories.find((c) => c.id === id)?.name || "";
+  };
+
+  const filterProps: SearchFilterContentProps = {
+    categories,
+    localCategory,
+    setLocalCategory,
+    localCondition,
+    setLocalCondition,
+    localMinPrice,
+    setLocalMinPrice,
+    localMaxPrice,
+    setLocalMaxPrice,
+    applyFilters,
+    clearFilters,
+    t,
+    tp,
+  };
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -610,7 +582,7 @@ export default function SearchPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <FilterContent />
+                <SearchFilterContent {...filterProps} />
               </CardContent>
             </Card>
           </aside>
@@ -644,7 +616,7 @@ export default function SearchPage() {
                       <SheetTitle>{t("filters.title")}</SheetTitle>
                     </SheetHeader>
                     <div className="mt-6">
-                      <FilterContent />
+                      <SearchFilterContent {...filterProps} />
                     </div>
                   </SheetContent>
                 </Sheet>

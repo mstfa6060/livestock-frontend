@@ -69,6 +69,11 @@ const fixIamUrl = (config: any) => {
   return config;
 };
 
+// Plain axios instance for refresh requests — no interceptors to avoid:
+// 1. Adding expired auth token to refresh request
+// 2. Re-entering handle401 if refresh itself returns 401 (deadlock)
+const refreshClient = axios.create();
+
 // 401 handler with token refresh (prevents concurrent refresh attempts)
 let isRefreshing = false;
 let failedQueue: Array<{ resolve: (token: string) => void; reject: (error: any) => void }> = [];
@@ -112,12 +117,12 @@ const handle401 = async (error: any) => {
     localStorage.removeItem('jwt');
     localStorage.removeItem('accessToken');
     localStorage.removeItem('refreshToken');
-    window.location.href = '/auth/login';
+    window.location.href = '/login';
     return Promise.reject(error);
   }
 
   try {
-    const response = await axios.post(`${AppConfig.apiUrl}/iam/auth/RefreshToken`, {
+    const response = await refreshClient.post(`${AppConfig.apiUrl}/iam/auth/RefreshToken`, {
       refreshToken,
       platform: 0,
     });
@@ -138,7 +143,7 @@ const handle401 = async (error: any) => {
     localStorage.removeItem('jwt');
     localStorage.removeItem('accessToken');
     localStorage.removeItem('refreshToken');
-    window.location.href = '/auth/login';
+    window.location.href = '/login';
     return Promise.reject(refreshError);
   } finally {
     isRefreshing = false;

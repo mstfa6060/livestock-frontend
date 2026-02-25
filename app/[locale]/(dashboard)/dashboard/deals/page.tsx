@@ -1,17 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
-import { toast } from "sonner";
 import {
   Handshake,
   Clock,
@@ -24,7 +24,8 @@ import {
   ShoppingBag,
   Store,
 } from "lucide-react";
-import { RequestTransportDialog } from "@/components/features/request-transport-dialog";
+import dynamic from "next/dynamic";
+const RequestTransportDialog = dynamic(() => import("@/components/features/request-transport-dialog").then(mod => ({ default: mod.RequestTransportDialog })), { ssr: false });
 
 const DealStatus = {
   Pending: 0,
@@ -101,80 +102,51 @@ export default function DealsPage() {
   const locale = useLocale();
   const { user } = useAuth();
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [buyingDeals, setBuyingDeals] = useState<Deal[]>([]);
-  const [sellingDeals, setSellingDeals] = useState<Deal[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const mapDeal = (d: any): Deal => ({
+    id: d.id,
+    dealNumber: d.dealNumber,
+    productId: d.productId,
+    sellerId: d.sellerId,
+    buyerId: d.buyerId,
+    agreedPrice: d.agreedPrice as number,
+    currency: d.currency,
+    quantity: d.quantity,
+    status: d.status,
+    dealDate: d.dealDate,
+    deliveryMethod: d.deliveryMethod,
+    isCompleted: d.isCompleted,
+    isCancelled: d.isCancelled,
+    createdAt: d.createdAt,
+  });
 
-  useEffect(() => {
-    const fetchDeals = async () => {
-      if (!user?.id) {
-        setIsLoading(false);
-        return;
-      }
+  const { data: buyingDeals = [], isLoading: isBuyingLoading } = useQuery({
+    queryKey: [...queryKeys.deals.list(), "buyer", user?.id],
+    queryFn: () =>
+      LivestockTradingAPI.Deals.All.Request({
+        sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+        filters: [
+          { key: "buyerId", type: "guid", isUsed: true, values: [user!.id], min: {}, max: {}, conditionType: "equals" },
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
+      }).then((resp) => resp.map(mapDeal)),
+    enabled: !!user?.id,
+  });
 
-      setIsLoading(true);
-      try {
-        const [buyerResponse, sellerResponse] = await Promise.all([
-          LivestockTradingAPI.Deals.All.Request({
-            sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-            filters: [
-              {
-                key: "buyerId",
-                type: "guid",
-                isUsed: true,
-                values: [user.id],
-                min: {},
-                max: {},
-                conditionType: "equals",
-              },
-            ],
-            pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-          }),
-          LivestockTradingAPI.Deals.All.Request({
-            sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-            filters: [
-              {
-                key: "sellerId",
-                type: "guid",
-                isUsed: true,
-                values: [user.id],
-                min: {},
-                max: {},
-                conditionType: "equals",
-              },
-            ],
-            pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-          }),
-        ]);
+  const { data: sellingDeals = [], isLoading: isSellingLoading } = useQuery({
+    queryKey: [...queryKeys.deals.list(), "seller", user?.id],
+    queryFn: () =>
+      LivestockTradingAPI.Deals.All.Request({
+        sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+        filters: [
+          { key: "sellerId", type: "guid", isUsed: true, values: [user!.id], min: {}, max: {}, conditionType: "equals" },
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
+      }).then((resp) => resp.map(mapDeal)),
+    enabled: !!user?.id,
+  });
 
-        const mapDeal = (d: any): Deal => ({
-          id: d.id,
-          dealNumber: d.dealNumber,
-          productId: d.productId,
-          sellerId: d.sellerId,
-          buyerId: d.buyerId,
-          agreedPrice: d.agreedPrice as number,
-          currency: d.currency,
-          quantity: d.quantity,
-          status: d.status,
-          dealDate: d.dealDate,
-          deliveryMethod: d.deliveryMethod,
-          isCompleted: d.isCompleted,
-          isCancelled: d.isCancelled,
-          createdAt: d.createdAt,
-        });
-
-        setBuyingDeals(buyerResponse.map(mapDeal));
-        setSellingDeals(sellerResponse.map(mapDeal));
-      } catch {
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchDeals();
-  }, [user?.id, t]);
+  const isLoading = isBuyingLoading || isSellingLoading;
 
   const renderDealCard = (deal: Deal) => {
     const statusInfo = getDealStatusInfo(deal.status, t);

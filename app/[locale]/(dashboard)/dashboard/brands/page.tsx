@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,6 +13,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useRoles } from "@/hooks/useRoles";
 import { toast } from "sonner";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import {
   Tag,
   PlusCircle,
@@ -53,8 +55,37 @@ export default function BrandsPage() {
   const t = useTranslations("brands");
   const { isAdmin } = useRoles();
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [brands, setBrands] = useState<Brand[]>([]);
+  const queryClient = useQueryClient();
+
+  const { data: brandsRaw = [], isLoading } = useQuery({
+    queryKey: queryKeys.brands.list({ sortBy: "name" }),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.Brands.All.Request({
+        sorting: {
+          key: "name",
+          direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending,
+        },
+        filters: [],
+        pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
+      });
+
+      return response.map((b) => ({
+        id: b.id,
+        name: b.name,
+        slug: b.slug,
+        description: "",
+        logoUrl: "",
+        website: "",
+        isActive: b.isActive,
+        isVerified: b.isVerified,
+        productCount: b.productCount,
+        createdAt: b.createdAt,
+      })) as Brand[];
+    },
+  });
+
+  const brands = brandsRaw;
+
   const [showForm, setShowForm] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -68,43 +99,6 @@ export default function BrandsPage() {
     phone: "",
     countryCode: "TR",
   });
-
-  useEffect(() => {
-    const fetchBrands = async () => {
-      setIsLoading(true);
-      try {
-        const response = await LivestockTradingAPI.Brands.All.Request({
-          sorting: {
-            key: "name",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending,
-          },
-          filters: [],
-          pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
-        });
-
-        setBrands(
-          response.map((b) => ({
-            id: b.id,
-            name: b.name,
-            slug: b.slug,
-            description: "",
-            logoUrl: "",
-            website: "",
-            isActive: b.isActive,
-            isVerified: b.isVerified,
-            productCount: b.productCount,
-            createdAt: b.createdAt,
-          }))
-        );
-      } catch {
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchBrands();
-  }, [t]);
 
   const resetForm = () => {
     setFormData({
@@ -187,27 +181,7 @@ export default function BrandsPage() {
 
       resetForm();
 
-      // Refresh
-      const response = await LivestockTradingAPI.Brands.All.Request({
-        sorting: { key: "name", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
-        filters: [],
-        pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
-      });
-
-      setBrands(
-        response.map((b) => ({
-          id: b.id,
-          name: b.name,
-          slug: b.slug,
-          description: "",
-          logoUrl: "",
-          website: "",
-          isActive: b.isActive,
-          isVerified: b.isVerified,
-          productCount: b.productCount,
-          createdAt: b.createdAt,
-        }))
-      );
+      queryClient.invalidateQueries({ queryKey: queryKeys.brands.list({ sortBy: "name" }) });
     } catch {
       toast.error(t("saveError"));
     } finally {
@@ -218,7 +192,7 @@ export default function BrandsPage() {
   const handleDelete = async (brandId: string) => {
     try {
       await LivestockTradingAPI.Brands.Delete.Request({ id: brandId });
-      setBrands((prev) => prev.filter((b) => b.id !== brandId));
+      queryClient.invalidateQueries({ queryKey: queryKeys.brands.list({ sortBy: "name" }) });
       toast.success(t("deleteSuccess"));
     } catch {
       toast.error(t("deleteError"));

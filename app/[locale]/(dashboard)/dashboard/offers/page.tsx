@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
@@ -12,6 +12,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
+import { useOffersSent, useOffersReceived } from "@/hooks/queries";
+import { useQueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import {
   HandCoins,
   ArrowUpRight,
@@ -75,94 +78,42 @@ export default function OffersPage() {
   const locale = useLocale();
   const { user } = useAuth();
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [sentOffers, setSentOffers] = useState<Offer[]>([]);
-  const [receivedOffers, setReceivedOffers] = useState<Offer[]>([]);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchOffers = async () => {
-      if (!user?.id) {
-        setIsLoading(false);
-        return;
-      }
+  const queryClient = useQueryClient();
 
-      setIsLoading(true);
-      try {
-        // Fetch sent and received offers in parallel
-        const [sentResponse, receivedResponse] = await Promise.all([
-          LivestockTradingAPI.Offers.All.Request({
-            sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-            filters: [
-              {
-                key: "buyerUserId",
-                type: "guid",
-                isUsed: true,
-                values: [user.id],
-                min: {},
-                max: {},
-                conditionType: "equals",
-              },
-            ],
-            pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-          }),
-          LivestockTradingAPI.Offers.All.Request({
-            sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-            filters: [
-              {
-                key: "sellerUserId",
-                type: "guid",
-                isUsed: true,
-                values: [user.id],
-                min: {},
-                max: {},
-                conditionType: "equals",
-              },
-            ],
-            pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-          }),
-        ]);
+  const { data: sentOffersRaw = [], isLoading: isSentLoading } = useOffersSent(user?.id ?? "");
+  const { data: receivedOffersRaw = [], isLoading: isReceivedLoading } = useOffersReceived(user?.id ?? "");
 
-        setSentOffers(
-          sentResponse.map((o) => ({
-            id: o.id,
-            productId: o.productId,
-            buyerUserId: o.buyerUserId,
-            sellerUserId: o.sellerUserId,
-            offeredPrice: o.offeredPrice as number,
-            currency: o.currency,
-            quantity: o.quantity,
-            status: o.status,
-            offerDate: o.offerDate,
-            expiryDate: o.expiryDate,
-            createdAt: o.createdAt,
-          }))
-        );
+  const isLoading = isSentLoading || isReceivedLoading;
 
-        setReceivedOffers(
-          receivedResponse.map((o) => ({
-            id: o.id,
-            productId: o.productId,
-            buyerUserId: o.buyerUserId,
-            sellerUserId: o.sellerUserId,
-            offeredPrice: o.offeredPrice as number,
-            currency: o.currency,
-            quantity: o.quantity,
-            status: o.status,
-            offerDate: o.offerDate,
-            expiryDate: o.expiryDate,
-            createdAt: o.createdAt,
-          }))
-        );
-      } catch {
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
+  const sentOffers: Offer[] = sentOffersRaw.map((o: any) => ({
+    id: o.id,
+    productId: o.productId,
+    buyerUserId: o.buyerUserId,
+    sellerUserId: o.sellerUserId,
+    offeredPrice: o.offeredPrice as number,
+    currency: o.currency,
+    quantity: o.quantity,
+    status: o.status,
+    offerDate: o.offerDate,
+    expiryDate: o.expiryDate,
+    createdAt: o.createdAt,
+  }));
 
-    fetchOffers();
-  }, [user?.id, t]);
+  const receivedOffers: Offer[] = receivedOffersRaw.map((o: any) => ({
+    id: o.id,
+    productId: o.productId,
+    buyerUserId: o.buyerUserId,
+    sellerUserId: o.sellerUserId,
+    offeredPrice: o.offeredPrice as number,
+    currency: o.currency,
+    quantity: o.quantity,
+    status: o.status,
+    offerDate: o.offerDate,
+    expiryDate: o.expiryDate,
+    createdAt: o.createdAt,
+  }));
 
   const handleAcceptOffer = async (offerId: string) => {
     const offer = receivedOffers.find((o) => o.id === offerId);
@@ -183,9 +134,7 @@ export default function OffersPage() {
         respondedAt: new Date(),
         responseMessage: "",
       });
-      setReceivedOffers((prev) =>
-        prev.map((o) => (o.id === offerId ? { ...o, status: OfferStatus.Accepted } : o))
-      );
+      queryClient.invalidateQueries({ queryKey: queryKeys.offers.all });
       toast.success(t("acceptSuccess"));
     } catch {
       toast.error(t("actionError"));
@@ -213,9 +162,7 @@ export default function OffersPage() {
         respondedAt: new Date(),
         responseMessage: "",
       });
-      setReceivedOffers((prev) =>
-        prev.map((o) => (o.id === offerId ? { ...o, status: OfferStatus.Rejected } : o))
-      );
+      queryClient.invalidateQueries({ queryKey: queryKeys.offers.all });
       toast.success(t("rejectSuccess"));
     } catch {
       toast.error(t("actionError"));
@@ -242,9 +189,7 @@ export default function OffersPage() {
         status: OfferStatus.Withdrawn,
         responseMessage: "",
       });
-      setSentOffers((prev) =>
-        prev.map((o) => (o.id === offerId ? { ...o, status: OfferStatus.Withdrawn } : o))
-      );
+      queryClient.invalidateQueries({ queryKey: queryKeys.offers.all });
       toast.success(t("withdrawSuccess"));
     } catch {
       toast.error(t("actionError"));

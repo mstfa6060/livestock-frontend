@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -13,11 +12,10 @@ import {
   Stethoscope,
   Calendar,
   Weight,
-  Ruler,
   Tag,
   FileText,
 } from "lucide-react";
-import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { useProductAnimalInfo } from "@/hooks/queries/useProductSubresources";
 
 interface AnimalInfo {
   id: string;
@@ -128,188 +126,16 @@ interface ProductAnimalInfoProps {
 export function ProductAnimalInfo({ productId }: ProductAnimalInfoProps) {
   const t = useTranslations("animalInfo");
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [animalInfo, setAnimalInfo] = useState<AnimalInfo | null>(null);
-  const [healthRecords, setHealthRecords] = useState<HealthRecord[]>([]);
-  const [vaccinations, setVaccinations] = useState<Vaccination[]>([]);
-  const [vetInfo, setVetInfo] = useState<VetInfo[]>([]);
-  const [chemicalInfo, setChemicalInfo] = useState<ChemicalInfo[]>([]);
-  const [feedInfo, setFeedInfo] = useState<FeedInfo[]>([]);
-  const [seedInfo, setSeedInfo] = useState<SeedInfo[]>([]);
-  const [machineryInfo, setMachineryInfo] = useState<MachineryInfo[]>([]);
+  const { data, isLoading } = useProductAnimalInfo(productId);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      try {
-        // Fetch animal info for this product
-        const animalResponse = await LivestockTradingAPI.AnimalInfos.All.Request({
-          sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-          filters: [
-            { key: "productId", type: "guid", isUsed: true, values: [productId], min: {}, max: {}, conditionType: "equals" },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
-        });
-
-        if (animalResponse.length > 0) {
-          const a = animalResponse[0];
-          const info: AnimalInfo = {
-            id: a.id,
-            breedName: a.breedName,
-            gender: a.gender,
-            ageMonths: a.ageMonths ?? null,
-            weightKg: a.weightKg as number | null,
-            color: a.color,
-            tagNumber: a.tagNumber,
-            healthStatus: a.healthStatus,
-            purpose: a.purpose,
-            isPregnant: false,
-            numberOfBirths: null,
-            sireDetails: "",
-            damDetails: "",
-            microchipNumber: "",
-            passportNumber: "",
-          };
-
-          setAnimalInfo(info);
-
-          // Fetch detail for extra fields
-          try {
-            const detail = await LivestockTradingAPI.AnimalInfos.Detail.Request({ id: a.id });
-            setAnimalInfo({
-              ...info,
-              isPregnant: detail.isPregnant,
-              numberOfBirths: detail.numberOfBirths ?? null,
-              sireDetails: detail.sireDetails,
-              damDetails: detail.damDetails,
-              microchipNumber: detail.microchipNumber,
-              passportNumber: detail.passportNumber,
-            });
-
-            // Fetch health records for this animal
-            const healthResponse = await LivestockTradingAPI.HealthRecords.All.Request({
-              sorting: { key: "recordDate", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-              filters: [
-                { key: "animalInfoId", type: "guid", isUsed: true, values: [a.id], min: {}, max: {}, conditionType: "equals" },
-              ],
-              pageRequest: { currentPage: 1, perPageCount: 10, listAll: false },
-            });
-            setHealthRecords(
-              healthResponse.map((h) => ({
-                id: h.id,
-                recordDate: h.recordDate,
-                recordType: h.recordType,
-                veterinarianName: h.veterinarianName,
-                clinicName: h.clinicName,
-                diagnosis: h.diagnosis,
-                treatment: h.treatment,
-                medications: h.medications,
-                notes: h.notes,
-              }))
-            );
-
-            // Fetch vaccinations
-            const vaccResponse = await LivestockTradingAPI.Vaccinations.All.Request({
-              sorting: { key: "vaccinationDate", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-              filters: [
-                { key: "animalInfoId", type: "guid", isUsed: true, values: [a.id], min: {}, max: {}, conditionType: "equals" },
-              ],
-              pageRequest: { currentPage: 1, perPageCount: 20, listAll: false },
-            });
-            setVaccinations(
-              vaccResponse.map((v) => ({
-                id: v.id,
-                vaccineName: v.vaccineName,
-                vaccineType: v.vaccineType,
-                vaccinationDate: v.vaccinationDate,
-                nextDueDate: v.nextDueDate ?? null,
-                veterinarianName: v.veterinarianName,
-                notes: "",
-              }))
-            );
-          } catch {
-            // Sub-fetches are non-critical
-          }
-        }
-
-        // Fetch vet info for this product
-        const vetResponse = await LivestockTradingAPI.VeterinaryInfos.All.Request({
-          sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-          filters: [
-            { key: "productId", type: "guid", isUsed: true, values: [productId], min: {}, max: {}, conditionType: "equals" },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 10, listAll: false },
-        });
-        setVetInfo(
-          vetResponse.map((v) => ({
-            id: v.id,
-            type: v.type,
-            therapeuticCategory: v.therapeuticCategory,
-            targetSpecies: v.targetSpecies,
-            activeIngredients: v.activeIngredients,
-            requiresPrescription: v.requiresPrescription,
-            registrationNumber: v.registrationNumber,
-            storageInstructions: v.storageInstructions,
-          }))
-        );
-
-        // Fetch other product info types in parallel
-        const productFilter = [
-          { key: "productId", type: "guid", isUsed: true, values: [productId], min: {}, max: {}, conditionType: "equals" },
-        ];
-        const defaultPaging = { currentPage: 1, perPageCount: 5, listAll: false };
-        const defaultSort = { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending };
-
-        const [chemRes, feedRes, seedRes, machRes] = await Promise.allSettled([
-          LivestockTradingAPI.ChemicalInfos.All.Request({ sorting: defaultSort, filters: productFilter, pageRequest: defaultPaging }),
-          LivestockTradingAPI.FeedInfos.All.Request({ sorting: defaultSort, filters: productFilter, pageRequest: defaultPaging }),
-          LivestockTradingAPI.SeedInfos.All.Request({ sorting: defaultSort, filters: productFilter, pageRequest: defaultPaging }),
-          LivestockTradingAPI.MachineryInfos.All.Request({ sorting: defaultSort, filters: productFilter, pageRequest: defaultPaging }),
-        ]);
-
-        if (chemRes.status === "fulfilled" && chemRes.value.length > 0) {
-          setChemicalInfo(chemRes.value.map((c) => ({
-            id: c.id, subType: c.subType, activeIngredients: "", registrationNumber: c.registrationNumber,
-            toxicityLevel: c.toxicityLevel, isOrganic: c.isOrganic, applicationMethod: "", targetPests: "",
-            targetCrops: "", safetyInstructions: "",
-          })));
-        }
-        if (feedRes.status === "fulfilled" && feedRes.value.length > 0) {
-          setFeedInfo(feedRes.value.map((f) => ({
-            id: f.id, targetAnimal: f.targetAnimal, targetAge: f.targetAge,
-            proteinPercentage: f.proteinPercentage as number | null,
-            fatPercentage: f.fatPercentage as number | null,
-            fiberPercentage: f.fiberPercentage as number | null,
-            isOrganic: f.isOrganic, isGMOFree: f.isGMOFree,
-            feedingInstructions: f.feedingInstructions, storageInstructions: f.storageInstructions,
-          })));
-        }
-        if (seedRes.status === "fulfilled" && seedRes.value.length > 0) {
-          setSeedInfo(seedRes.value.map((s) => ({
-            id: s.id, variety: s.variety, scientificName: s.scientificName,
-            germinationRate: s.germinationRate as number | null,
-            daysToMaturity: s.daysToMaturity ?? null,
-            plantingSeason: "", harvestSeason: "",
-            isOrganic: s.isOrganic, isHybrid: s.isHybrid,
-            climateZones: "", soilType: "",
-          })));
-        }
-        if (machRes.status === "fulfilled" && machRes.value.length > 0) {
-          setMachineryInfo(machRes.value.map((m) => ({
-            id: m.id, model: m.model, yearOfManufacture: m.yearOfManufacture ?? null,
-            powerHp: m.powerHp as number | null, hoursUsed: m.hoursUsed ?? null,
-            hasWarranty: m.hasWarranty, serialNumber: "", powerSource: "",
-          })));
-        }
-      } catch {
-        // Product info is optional
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    if (productId) fetchData();
-  }, [productId]);
+  const animalInfo = data?.animalInfo ?? null;
+  const healthRecords = data?.healthRecords ?? [];
+  const vaccinations = data?.vaccinations ?? [];
+  const vetInfo = data?.vetInfo ?? [];
+  const chemicalInfo = data?.chemicalInfo ?? [];
+  const feedInfo = data?.feedInfo ?? [];
+  const seedInfo = data?.seedInfo ?? [];
+  const machineryInfo = data?.machineryInfo ?? [];
 
   // Don't render anything if there's no data at all
   if (!isLoading && !animalInfo && healthRecords.length === 0 && vaccinations.length === 0 && vetInfo.length === 0

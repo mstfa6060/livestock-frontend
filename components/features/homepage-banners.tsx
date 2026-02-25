@@ -2,9 +2,12 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 
 interface Banner {
@@ -17,48 +20,44 @@ interface Banner {
 }
 
 export function HomepageBanners() {
-  const [banners, setBanners] = useState<Banner[]>([]);
+  const tc = useTranslations("common");
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const fetchBanners = async () => {
-      try {
-        const response = await LivestockTradingAPI.Banners.All.Request({
-          sorting: {
-            key: "displayOrder",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending,
+  const { data: banners = [] } = useQuery({
+    queryKey: queryKeys.banners.list(),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.Banners.All.Request({
+        sorting: {
+          key: "displayOrder",
+          direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending,
+        },
+        filters: [
+          {
+            key: "isActive",
+            type: "boolean",
+            isUsed: true,
+            values: [true],
+            min: {},
+            max: {},
+            conditionType: "equals",
           },
-          filters: [
-            {
-              key: "isActive",
-              type: "boolean",
-              isUsed: true,
-              values: [true],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 10, listAll: false },
-        });
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 10, listAll: false },
+      });
 
-        setBanners(
-          response.map((b) => ({
-            id: b.id,
-            title: b.title,
-            description: b.description,
-            imageUrl: b.imageUrl,
-            targetUrl: b.targetUrl,
-            displayOrder: b.displayOrder,
-          }))
-        );
-      } catch {
-        // Banners are optional, fail silently
-      }
-    };
-
-    fetchBanners();
-  }, []);
+      return response.map(
+        (b): Banner => ({
+          id: b.id,
+          title: b.title,
+          description: b.description,
+          imageUrl: b.imageUrl,
+          targetUrl: b.targetUrl,
+          displayOrder: b.displayOrder,
+        })
+      );
+    },
+    staleTime: 10 * 60 * 1000, // 10 minutes
+  });
 
   const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % banners.length);
@@ -121,14 +120,14 @@ export function HomepageBanners() {
               <button
                 onClick={prevSlide}
                 className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-colors"
-                aria-label="Previous"
+                aria-label={tc("previous")}
               >
                 <ChevronLeft className="h-5 w-5" />
               </button>
               <button
                 onClick={nextSlide}
                 className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-colors"
-                aria-label="Next"
+                aria-label={tc("next")}
               >
                 <ChevronRight className="h-5 w-5" />
               </button>
@@ -146,7 +145,7 @@ export function HomepageBanners() {
                     "w-2 h-2 rounded-full transition-colors",
                     i === currentIndex ? "bg-white" : "bg-white/50"
                   )}
-                  aria-label={`Slide ${i + 1}`}
+                  aria-label={tc("slideN", { n: i + 1 })}
                 />
               ))}
             </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
@@ -11,7 +11,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
-import { toast } from "sonner";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import {
   Truck,
   Clock,
@@ -99,79 +100,50 @@ export default function TransportPage() {
   const locale = useLocale();
   const { user } = useAuth();
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [sellerRequests, setSellerRequests] = useState<TransportRequest[]>([]);
-  const [buyerRequests, setBuyerRequests] = useState<TransportRequest[]>([]);
   const [expandedTracking, setExpandedTracking] = useState<Set<string>>(new Set());
 
-  useEffect(() => {
-    const fetchRequests = async () => {
-      if (!user?.id) {
-        setIsLoading(false);
-        return;
-      }
+  const mapRequest = (r: any): TransportRequest => ({
+    id: r.id,
+    productId: r.productId,
+    sellerId: r.sellerId,
+    buyerId: r.buyerId,
+    pickupLocationId: r.pickupLocationId,
+    deliveryLocationId: r.deliveryLocationId,
+    transportType: r.transportType,
+    status: r.status,
+    isUrgent: r.isUrgent,
+    isInPool: r.isInPool,
+    assignedTransporterId: r.assignedTransporterId,
+    createdAt: r.createdAt,
+  });
 
-      setIsLoading(true);
-      try {
-        const [sellerResp, buyerResp] = await Promise.all([
-          LivestockTradingAPI.TransportRequests.All.Request({
-            sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-            filters: [
-              {
-                key: "sellerId",
-                type: "guid",
-                isUsed: true,
-                values: [user.id],
-                min: {},
-                max: {},
-                conditionType: "equals",
-              },
-            ],
-            pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-          }),
-          LivestockTradingAPI.TransportRequests.All.Request({
-            sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
-            filters: [
-              {
-                key: "buyerId",
-                type: "guid",
-                isUsed: true,
-                values: [user.id],
-                min: {},
-                max: {},
-                conditionType: "equals",
-              },
-            ],
-            pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-          }),
-        ]);
+  const { data: sellerRequests = [], isLoading: isSellerLoading } = useQuery({
+    queryKey: [...queryKeys.transporters.requests(), "seller", user?.id],
+    queryFn: () =>
+      LivestockTradingAPI.TransportRequests.All.Request({
+        sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+        filters: [
+          { key: "sellerId", type: "guid", isUsed: true, values: [user!.id], min: {}, max: {}, conditionType: "equals" },
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
+      }).then((resp) => resp.map(mapRequest)),
+    enabled: !!user?.id,
+  });
 
-        const mapRequest = (r: any): TransportRequest => ({
-          id: r.id,
-          productId: r.productId,
-          sellerId: r.sellerId,
-          buyerId: r.buyerId,
-          pickupLocationId: r.pickupLocationId,
-          deliveryLocationId: r.deliveryLocationId,
-          transportType: r.transportType,
-          status: r.status,
-          isUrgent: r.isUrgent,
-          isInPool: r.isInPool,
-          assignedTransporterId: r.assignedTransporterId,
-          createdAt: r.createdAt,
-        });
+  const { data: buyerRequests = [], isLoading: isBuyerLoading } = useQuery({
+    queryKey: [...queryKeys.transporters.requests(), "buyer", user?.id],
+    queryFn: () =>
+      LivestockTradingAPI.TransportRequests.All.Request({
+        sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+        filters: [
+          { key: "buyerId", type: "guid", isUsed: true, values: [user!.id], min: {}, max: {}, conditionType: "equals" },
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
+      }).then((resp) => resp.map(mapRequest)),
+    enabled: !!user?.id,
+  });
 
-        setSellerRequests(sellerResp.map(mapRequest));
-        setBuyerRequests(buyerResp.map(mapRequest));
-      } catch {
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchRequests();
-  }, [user?.id, t]);
+  const isLoading = isSellerLoading || isBuyerLoading;
 
   const renderRequestCard = (request: TransportRequest) => {
     const statusInfo = getTransportStatusInfo(request.status, t);

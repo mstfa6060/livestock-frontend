@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
+import { useQueryClient, useQuery } from "@tanstack/react-query";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,14 +25,10 @@ import { AppConfig } from "@/config/livestock-config";
 import { useAuth } from "@/contexts/AuthContext";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { toast } from "sonner";
+import { useCategories, useProductDetail, useSellerByUserId } from "@/hooks/queries";
+import { queryKeys } from "@/lib/query-keys";
 import dynamic from "next/dynamic";
 const MediaUpload = dynamic(() => import("@/components/features/media-upload").then(mod => ({ default: mod.MediaUpload })), { ssr: false });
-
-interface Category {
-  id: string;
-  name: string;
-  slug: string;
-}
 
 interface MediaFile {
   id: string;
@@ -55,55 +52,45 @@ export default function EditListingPage() {
   const locale = useLocale();
   const { user, isLoading: authLoading } = useAuth();
   const selectedCountry = useSelectedCountry();
+  const queryClient = useQueryClient();
 
-  const [isLoading, setIsLoading] = useState(true);
+  // Data fetching via React Query
+  const { data: categoriesData } = useCategories(locale);
+  const categories = (categoriesData ?? []).map((c) => ({ id: c.id, name: c.name, slug: c.slug }));
+
+  const { data: product, isLoading: isProductLoading, isError: isProductError } = useProductDetail(productId);
+
+  const { data: sellerData } = useSellerByUserId(user?.id ?? "", { enabled: !!user?.id });
+  const sellerId = sellerData?.id ?? null;
+
+  // Fetch media bucket files for the product
+  const productBucketId = (product as any)?.mediaBucketId || "";
+  const { data: bucketFiles } = useQuery({
+    queryKey: queryKeys.fileBuckets.detail(productBucketId),
+    queryFn: async () => {
+      const bucketResponse = await FileProviderAPI.Buckets.Detail.Request({
+        bucketId: productBucketId,
+        changeId: EMPTY_GUID,
+      });
+      if (!bucketResponse.files || bucketResponse.files.length === 0) return [];
+      return bucketResponse.files.map((f) => ({
+        id: f.id,
+        path: f.path,
+        url: `${AppConfig.FileStorageBaseUrl}${f.path}`,
+        isVideo: f.contentType?.startsWith("video/") || false,
+        name: f.name,
+      })) as MediaFile[];
+    },
+    enabled: !!productBucketId && productBucketId !== EMPTY_GUID,
+  });
+
   const [isSaving, setIsSaving] = useState(false);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [sellerId, setSellerId] = useState<string | null>(null);
-  const [originalStatus, setOriginalStatus] = useState<number>(0);
-  const [originalLocationId, setOriginalLocationId] = useState<string>("");
+  const [formPopulated, setFormPopulated] = useState(false);
 
-  // Media state - new system
+  // Media state - updated by MediaUpload component or populated from product
   const [mediaBucketId, setMediaBucketId] = useState<string>("");
   const [coverImageFileId, setCoverImageFileId] = useState<string>("");
   const [mediaFiles, setMediaFiles] = useState<MediaFile[]>([]);
-
-  // Fetch seller profile
-  useEffect(() => {
-    const fetchSellerProfile = async () => {
-      if (!user?.id) return;
-
-      try {
-        // Find seller profile by userId using Sellers.All with filter
-        const sellersResponse = await LivestockTradingAPI.Sellers.All.Request({
-          sorting: { key: "createdAt", direction: 1 },
-          filters: [
-            {
-              key: "userId",
-              type: "guid",
-              isUsed: true,
-              values: [user.id],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
-        });
-
-        if (sellersResponse.length > 0) {
-          setSellerId(sellersResponse[0].id);
-        } else {
-          toast.error(t("sellerNotFound"));
-          router.push("/dashboard/my-listings");
-        }
-      } catch {
-        toast.error(t("sellerLoadError"));
-      }
-    };
-
-    fetchSellerProfile();
-  }, [user?.id, router]);
 
   const [formData, setFormData] = useState({
     title: "",
@@ -122,87 +109,46 @@ export default function EditListingPage() {
     weightUnit: "kg",
   });
 
-  // Load categories AND product data together to ensure proper state sync
+  // Populate form when product data loads
   useEffect(() => {
-    const loadData = async () => {
-      if (!productId) return;
+    if (!product || formPopulated) return;
 
-      setIsLoading(true);
-      try {
-        // Load categories first
-        const categoriesResponse = await LivestockTradingAPI.Categories.All.Request({
-          languageCode: locale,
-          sorting: { key: "sortOrder", direction: 0 },
-          filters: [],
-          pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
-        });
-        const loadedCategories = categoriesResponse.map((c) => ({ id: c.id, name: c.name, slug: c.slug }));
-        setCategories(loadedCategories);
-        // Then load product details
-        const product = await LivestockTradingAPI.Products.Detail.Request({ id: productId });
+    setMediaBucketId((product as any).mediaBucketId || "");
+    setCoverImageFileId((product as any).coverImageFileId || "");
 
-        // Store original status and locationId
-        setOriginalStatus(product.status);
-        setOriginalLocationId(product.locationId);
+    setFormData({
+      title: product.title,
+      shortDescription: product.shortDescription,
+      description: product.description,
+      categoryId: product.categoryId,
+      basePrice: String(product.basePrice),
+      currency: product.currency,
+      priceUnit: product.priceUnit,
+      stockQuantity: String(product.stockQuantity),
+      stockUnit: product.stockUnit,
+      condition: product.condition as ProductCondition,
+      isShippingAvailable: product.isShippingAvailable,
+      shippingCost: product.shippingCost ? String(product.shippingCost) : "",
+      weight: product.weight ? String(product.weight) : "",
+      weightUnit: product.weightUnit,
+    });
+    setFormPopulated(true);
+  }, [product, formPopulated]);
 
-        // Store media bucket info
-        const productBucketId = (product as any).mediaBucketId || "";
-        const productCoverFileId = (product as any).coverImageFileId || "";
-        setMediaBucketId(productBucketId);
-        setCoverImageFileId(productCoverFileId);
+  // Populate media files from bucket query
+  useEffect(() => {
+    if (bucketFiles && bucketFiles.length > 0 && mediaFiles.length === 0) {
+      setMediaFiles(bucketFiles);
+    }
+  }, [bucketFiles, mediaFiles.length]);
 
-        // Load existing files from bucket if exists
-        if (productBucketId && productBucketId !== EMPTY_GUID) {
-          try {
-            const bucketResponse = await FileProviderAPI.Buckets.Detail.Request({
-              bucketId: productBucketId,
-              changeId: EMPTY_GUID,
-            });
-
-            if (bucketResponse.files && bucketResponse.files.length > 0) {
-              const loadedFiles: MediaFile[] = bucketResponse.files.map((f) => ({
-                id: f.id,
-                path: f.path,
-                url: `${AppConfig.FileStorageBaseUrl}${f.path}`,
-                isVideo: f.contentType?.startsWith("video/") || false,
-                name: f.name,
-              }));
-              setMediaFiles(loadedFiles);
-            }
-          } catch {
-            // No existing bucket or empty
-          }
-        }
-
-        // Populate form - categoryId should now match a loaded category
-        setFormData({
-          title: product.title,
-          shortDescription: product.shortDescription,
-          description: product.description,
-          categoryId: product.categoryId,
-          basePrice: String(product.basePrice),
-          currency: product.currency,
-          priceUnit: product.priceUnit,
-          stockQuantity: String(product.stockQuantity),
-          stockUnit: product.stockUnit,
-          condition: product.condition as ProductCondition,
-          isShippingAvailable: product.isShippingAvailable,
-          shippingCost: product.shippingCost ? String(product.shippingCost) : "",
-          weight: product.weight ? String(product.weight) : "",
-          weightUnit: product.weightUnit,
-        });
-
-        // Verify category exists in loaded categories
-      } catch {
-        toast.error(t("loadError"));
-        router.push("/dashboard/my-listings");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadData();
-  }, [productId, router, t]);
+  // Handle product load error
+  useEffect(() => {
+    if (isProductError) {
+      toast.error(t("loadError"));
+      router.push("/dashboard/my-listings");
+    }
+  }, [isProductError, t, router]);
 
   // Handle media change from MediaUpload component
   const handleMediaChange = (bucketId: string, coverFileId: string, files: MediaFile[]) => {
@@ -253,7 +199,7 @@ export default function EditListingPage() {
       toast.error(t("sellerNotFound"));
       return;
     }
-    if (!originalLocationId) {
+    if (!product?.locationId) {
       toast.error(t("locationNotFound"));
       return;
     }
@@ -277,8 +223,8 @@ export default function EditListingPage() {
         stockUnit: formData.stockUnit,
         isInStock: parseInt(formData.stockQuantity) > 0,
         sellerId: sellerId,
-        locationId: originalLocationId,
-        status: originalStatus,
+        locationId: product.locationId,
+        status: product.status,
         condition: formData.condition,
         isShippingAvailable: formData.isShippingAvailable,
         shippingCost: formData.shippingCost
@@ -296,6 +242,7 @@ export default function EditListingPage() {
         coverImageFileId: coverImageFileId || EMPTY_GUID,
       } as any);
 
+      await queryClient.invalidateQueries({ queryKey: queryKeys.products.all });
       toast.success(t("updateSuccess"));
       router.push("/dashboard/my-listings");
     } catch (error: any) {
@@ -309,7 +256,7 @@ export default function EditListingPage() {
     }
   };
 
-  if (isLoading) {
+  if (isProductLoading) {
     return (
       <DashboardLayout>
         <div className="flex items-center justify-center min-h-[400px]">

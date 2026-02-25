@@ -10,7 +10,7 @@ import dynamic from "next/dynamic";
 const ImageGallery = dynamic(() => import("@/components/features/image-gallery").then(mod => ({ default: mod.ImageGallery })), { ssr: false });
 import { PriceDisplay } from "@/components/features/price-display";
 import { SellerCard, Seller } from "@/components/features/seller-card";
-import { ProductCard, Product } from "@/components/features/product-card";
+import { ProductCard } from "@/components/features/product-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -32,19 +32,20 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
-import { FileProviderAPI } from "@/api/base_modules/FileProvider";
 import { AppConfig } from "@/config/livestock-config";
 import { useFavoritesStore } from "@/stores/useFavoritesStore";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
-import { getProductCoverImages } from "@/lib/product-images";
 import { ProductReviews } from "@/components/features/product-reviews";
-import { ProductAnimalInfo } from "@/components/features/product-animal-info";
+const ProductAnimalInfo = dynamic(() => import("@/components/features/product-animal-info").then(mod => ({ default: mod.ProductAnimalInfo })), { ssr: false });
 import { ProductVariants } from "@/components/features/product-variants";
 import { ProductPrices } from "@/components/features/product-prices";
-import { MakeOfferDialog } from "@/components/features/make-offer-dialog";
-
-const EMPTY_GUID = "00000000-0000-0000-0000-000000000000";
+const MakeOfferDialog = dynamic(() => import("@/components/features/make-offer-dialog").then(mod => ({ default: mod.MakeOfferDialog })), { ssr: false });
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
+import { useProductList } from "@/hooks/queries/useProducts";
+import { useSellerDetail } from "@/hooks/queries/useSellers";
+import { useMediaBucket } from "@/hooks/queries/useProductSubresources";
 
 interface ProductDetail {
   id: string;
@@ -82,6 +83,7 @@ interface ProductDetail {
   reviewCount: number;
   publishedAt?: Date;
   createdAt: Date;
+  mediaBucketId?: string;
 }
 
 const CONDITION_MAP: Record<number, string> = {
@@ -102,241 +104,131 @@ export default function ProductDetailPage() {
   const { user } = useAuth();
   const { toggleFavorite, isFavorite: checkIsFavorite } = useFavoritesStore();
 
-  const [product, setProduct] = useState<ProductDetail | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [images, setImages] = useState<string[]>([]);
-  const [similarProducts, setSimilarProducts] = useState<Product[]>([]);
-  const [seller, setSeller] = useState<Seller | null>(null);
+  const isGuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(slug);
+
+  // Step 1: Resolve slug → product ID (only if slug is not a GUID)
+  const { data: slugResults } = useProductList(
+    { slug, perPageCount: 1 },
+    { enabled: !isGuid && !!slug }
+  );
+  const resolvedId = isGuid ? slug : slugResults?.[0]?.id;
+
+  // Step 2: Fetch full product detail (enabled when we have an ID)
+  const {
+    data: productRaw,
+    isLoading: isProductLoading,
+    error: productError,
+  } = useQuery({
+    queryKey: queryKeys.products.detail(resolvedId ?? ""),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.Products.Detail.Request({
+        id: resolvedId!,
+      });
+
+      return {
+        id: response.id,
+        title: response.title,
+        slug: response.slug,
+        description: response.description,
+        shortDescription: response.shortDescription,
+        categoryId: response.categoryId,
+        categoryName: response.categoryName,
+        brandId: response.brandId || undefined,
+        brandName: response.brandName,
+        basePrice: response.basePrice as number,
+        currency: response.currency,
+        discountedPrice: response.discountedPrice as number | undefined,
+        priceUnit: response.priceUnit,
+        stockQuantity: response.stockQuantity,
+        stockUnit: response.stockUnit,
+        minOrderQuantity: response.minOrderQuantity || undefined,
+        maxOrderQuantity: response.maxOrderQuantity || undefined,
+        isInStock: response.isInStock,
+        sellerId: response.sellerId,
+        sellerName: response.sellerName,
+        locationId: response.locationId,
+        status: response.status,
+        condition: response.condition,
+        isShippingAvailable: response.isShippingAvailable,
+        shippingCost: response.shippingCost as number | undefined,
+        isInternationalShipping: response.isInternationalShipping,
+        weight: response.weight as number | undefined,
+        weightUnit: response.weightUnit,
+        attributes: response.attributes,
+        viewCount: response.viewCount,
+        favoriteCount: response.favoriteCount,
+        averageRating: response.averageRating as number | undefined,
+        reviewCount: response.reviewCount,
+        publishedAt: response.publishedAt,
+        createdAt: response.createdAt,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        mediaBucketId: (response as any).mediaBucketId as string | undefined,
+      } satisfies ProductDetail;
+    },
+    enabled: !!resolvedId,
+  });
+
+  const product = productRaw ?? null;
+
+  // Step 3: Parallel dependent queries (all enabled when product is loaded)
+  const { data: images = [] } = useMediaBucket(product?.mediaBucketId, {
+    enabled: !!product?.mediaBucketId,
+  });
+
+  const { data: similarProductsRaw = [] } = useProductList(
+    {
+      categoryId: product?.categoryId,
+      perPageCount: 4,
+    },
+    { enabled: !!product?.categoryId }
+  );
+
+  const similarProducts = similarProductsRaw
+    .filter((p) => p.id !== product?.id)
+    .slice(0, 3);
+
+  const { data: sellerRaw } = useSellerDetail(product?.sellerId ?? "", {
+    enabled: !!product?.sellerId,
+  });
+
+  const seller: Seller | null = sellerRaw
+    ? {
+        id: sellerRaw.id,
+        name: sellerRaw.businessName || product?.sellerName || "",
+        isVerified: sellerRaw.isVerified,
+        rating: sellerRaw.averageRating || 0,
+        reviewCount: sellerRaw.totalReviews,
+        productCount: sellerRaw.totalSales,
+        memberSince: sellerRaw.createdAt,
+        location: sellerRaw.phone
+          ? sellerRaw.description
+          : t("defaultLocation"),
+      }
+    : product
+      ? {
+          id: product.sellerId,
+          name: product.sellerName,
+          isVerified: false,
+          rating: 0,
+          reviewCount: 0,
+          productCount: 0,
+          memberSince: new Date(),
+          location: t("defaultLocation"),
+        }
+      : null;
 
   const isFavorite = product ? checkIsFavorite(product.id) : false;
 
+  // Track product view (fire-and-forget)
   useEffect(() => {
-    const fetchProduct = async () => {
-      setIsLoading(true);
-      setError(null);
-
-      try {
-        // Check if slug is a valid GUID (UUID format)
-        const isGuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(slug);
-
-        let productId: string;
-
-        if (isGuid) {
-          // If it's a GUID, use it directly
-          productId = slug;
-        } else {
-          // Otherwise, search by slug
-          const searchResponse = await LivestockTradingAPI.Products.All.Request({
-            countryCode: "TR",
-            sorting: { key: "createdAt", direction: 1 },
-            filters: [
-              {
-                key: "slug",
-                type: "string",
-                isUsed: true,
-                values: [slug],
-                min: {},
-                max: {},
-                conditionType: "equals",
-              },
-            ],
-            pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
-          });
-
-          if (searchResponse.length === 0) {
-            throw new Error("Product not found");
-          }
-
-          productId = searchResponse[0].id;
-        }
-
-        // Fetch full details by ID
-        const response = await LivestockTradingAPI.Products.Detail.Request({
-          id: productId,
-        });
-
-        const productData = {
-          id: response.id,
-          title: response.title,
-          slug: response.slug,
-          description: response.description,
-          shortDescription: response.shortDescription,
-          categoryId: response.categoryId,
-          categoryName: response.categoryName,
-          brandId: response.brandId || undefined,
-          brandName: response.brandName,
-          basePrice: response.basePrice as number,
-          currency: response.currency,
-          discountedPrice: response.discountedPrice as number | undefined,
-          priceUnit: response.priceUnit,
-          stockQuantity: response.stockQuantity,
-          stockUnit: response.stockUnit,
-          minOrderQuantity: response.minOrderQuantity || undefined,
-          maxOrderQuantity: response.maxOrderQuantity || undefined,
-          isInStock: response.isInStock,
-          sellerId: response.sellerId,
-          sellerName: response.sellerName,
-          locationId: response.locationId,
-          status: response.status,
-          condition: response.condition,
-          isShippingAvailable: response.isShippingAvailable,
-          shippingCost: response.shippingCost as number | undefined,
-          isInternationalShipping: response.isInternationalShipping,
-          weight: response.weight as number | undefined,
-          weightUnit: response.weightUnit,
-          attributes: response.attributes,
-          viewCount: response.viewCount,
-          favoriteCount: response.favoriteCount,
-          averageRating: response.averageRating as number | undefined,
-          reviewCount: response.reviewCount,
-          publishedAt: response.publishedAt,
-          createdAt: response.createdAt,
-        };
-
-        setProduct(productData);
-
-        // Fetch media bucket, similar products, and seller data in parallel
-        const mediaBucketId = (response as any).mediaBucketId;
-
-        const [imagesResult, similarResult, sellerResult] = await Promise.allSettled([
-          // 1. Fetch product images from media bucket
-          mediaBucketId
-            ? FileProviderAPI.Buckets.Detail.Request({
-                bucketId: mediaBucketId,
-                changeId: EMPTY_GUID,
-              })
-            : Promise.resolve(null),
-
-          // 2. Fetch similar products from same category
-          LivestockTradingAPI.Products.All.Request({
-            countryCode: "TR",
-            sorting: { key: "createdAt", direction: 1 },
-            filters: [
-              {
-                key: "categoryId",
-                type: "guid",
-                isUsed: true,
-                values: [response.categoryId],
-                min: {},
-                max: {},
-                conditionType: "equals",
-              },
-            ],
-            pageRequest: { currentPage: 1, perPageCount: 4, listAll: false },
-          }),
-
-          // 3. Fetch seller data
-          LivestockTradingAPI.Sellers.Detail.Request({
-            id: response.sellerId,
-          }),
-        ]);
-
-        // Process images result
-        if (imagesResult.status === "fulfilled" && imagesResult.value) {
-          const bucketResponse = imagesResult.value;
-          if (bucketResponse.files && bucketResponse.files.length > 0) {
-            const imageUrls = bucketResponse.files
-              .filter((file: any) => !file.contentType?.startsWith("video/"))
-              .map((file: any) => {
-                if (file.variants && file.variants.length > 0) {
-                  return `${AppConfig.FileStorageBaseUrl}${file.variants[0].url}`;
-                }
-                return `${AppConfig.FileStorageBaseUrl}${file.path}`;
-              });
-            setImages(imageUrls);
-          }
-        }
-
-        // Process similar products result
-        if (similarResult.status === "fulfilled") {
-          const similarProductsData = similarResult.value
-            .filter((p) => p.id !== response.id)
-            .slice(0, 3)
-            .map((item) => ({
-              id: item.id,
-              title: item.title,
-              slug: item.slug,
-              shortDescription: item.shortDescription,
-              categoryId: item.categoryId,
-              brandId: item.brandId || undefined,
-              basePrice: item.basePrice as number,
-              currency: item.currency,
-              discountedPrice: item.discountedPrice as number | undefined,
-              stockQuantity: item.stockQuantity,
-              isInStock: item.isInStock,
-              sellerId: item.sellerId,
-              locationId: item.locationId,
-              locationCountryCode: item.locationCountryCode,
-              locationCity: item.locationCity,
-              status: item.status,
-              condition: item.condition,
-              viewCount: item.viewCount,
-              averageRating: item.averageRating as number | undefined,
-              reviewCount: item.reviewCount,
-              createdAt: item.createdAt,
-              imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
-            }));
-
-          setSimilarProducts(similarProductsData);
-
-          // Fetch cover images for similar products (fire-and-forget)
-          const similarIds = similarProductsData.map((p) => p.id);
-          if (similarIds.length > 0) {
-            getProductCoverImages(similarIds).then((imageMap) => {
-              setSimilarProducts((prev) =>
-                prev.map((p) => ({ ...p, imageUrl: imageMap[p.id] || p.imageUrl }))
-              );
-            });
-          }
-        }
-
-        // Process seller result
-        if (sellerResult.status === "fulfilled") {
-          const sellerResponse = sellerResult.value;
-          setSeller({
-            id: sellerResponse.id,
-            name: sellerResponse.businessName || response.sellerName,
-            isVerified: sellerResponse.isVerified,
-            rating: sellerResponse.averageRating || 0,
-            reviewCount: sellerResponse.totalReviews,
-            productCount: sellerResponse.totalSales,
-            memberSince: sellerResponse.createdAt,
-            location: sellerResponse.phone ? sellerResponse.description : t("defaultLocation"),
-          });
-        } else {
-          // Fallback to basic seller info from product
-          setSeller({
-            id: response.sellerId,
-            name: response.sellerName,
-            isVerified: false,
-            rating: 0,
-            reviewCount: 0,
-            productCount: 0,
-            memberSince: new Date(),
-            location: t("defaultLocation"),
-          });
-        }
-
-        // Track product view (fire-and-forget)
-        if (user?.id) {
-          LivestockTradingAPI.ProductViewHistories.Create.Request({
-            userId: user.id,
-            productId: productData.id,
-            viewSource: "web",
-          }).catch(() => {});
-        }
-      } catch {
-        setError(t("productNotFound"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    if (slug) {
-      fetchProduct();
+    if (product?.id && user?.id) {
+      LivestockTradingAPI.ProductViewHistories.Create.Request({
+        userId: user.id,
+        productId: product.id,
+        viewSource: "web",
+      }).catch(() => {});
     }
-  }, [slug, t, user?.id]);
+  }, [product?.id, user?.id]);
 
   const handleFavoriteToggle = async () => {
     if (!user) {
@@ -394,6 +286,8 @@ export default function ProductDetailPage() {
     }
   };
 
+  const isLoading = isProductLoading || (!isGuid && !slugResults);
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-background">
@@ -437,12 +331,12 @@ export default function ProductDetailPage() {
     );
   }
 
-  if (error || !product) {
+  if (productError || !product) {
     return (
       <div className="min-h-screen bg-background">
         <MainHeader />
         <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-2xl font-bold mb-4">{error || "Product not found"}</h1>
+          <h1 className="text-2xl font-bold mb-4">{t("productNotFound")}</h1>
           <Button onClick={() => window.history.back()}>{tc("back")}</Button>
         </div>
       </div>

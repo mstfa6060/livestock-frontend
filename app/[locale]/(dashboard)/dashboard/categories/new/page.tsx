@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -60,28 +62,23 @@ export default function NewCategoryPage() {
   const [isActive, setIsActive] = useState(true);
   const [iconUrl, setIconUrl] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [parentCategories, setParentCategories] = useState<ParentCategory[]>([]);
   const [errors, setErrors] = useState<{ name?: string; slug?: string }>({});
 
+  const queryClient = useQueryClient();
+
   // Fetch parent categories for dropdown
-  useEffect(() => {
-    const fetchParents = async () => {
-      try {
-        const response = await LivestockTradingAPI.Categories.Pick.Request({
-          selectedIds: [],
-          keyword: "",
-          limit: 100,
-          languageCode: locale,
-        });
-        setParentCategories(
-          response.map((item: any) => ({ id: item.id, name: item.name }))
-        );
-      } catch {
-        // Silently fail - parent selection is optional
-      }
-    };
-    fetchParents();
-  }, []);
+  const { data: parentCategories = [] } = useQuery({
+    queryKey: queryKeys.categories.pick(locale),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.Categories.Pick.Request({
+        selectedIds: [],
+        keyword: "",
+        limit: 100,
+        languageCode: locale,
+      });
+      return response.map((item: any) => ({ id: item.id, name: item.name })) as ParentCategory[];
+    },
+  });
 
   // Auto-generate slug from name
   const handleNameChange = (value: string) => {
@@ -126,6 +123,7 @@ export default function NewCategoryPage() {
       });
 
       toast.success(t("createSuccess"));
+      queryClient.invalidateQueries({ queryKey: queryKeys.categories.all });
       router.push("/dashboard/categories");
     } catch {
       toast.error(t("createError"));

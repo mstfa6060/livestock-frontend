@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { MainHeader } from "@/components/layout/main-header";
 import { SimpleFooter } from "@/components/layout/footer";
@@ -8,6 +8,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 
 interface FAQItem {
@@ -46,65 +48,54 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
 export default function FAQPage() {
   const t = useTranslations("faq");
   const locale = useLocale();
-  const [faqs, setFaqs] = useState<FAQItem[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchFAQs = async () => {
-      try {
-        const response = await LivestockTradingAPI.FAQs.All.Request({
-          sorting: {
-            key: "sortOrder",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending,
+  const { data: faqs = [], isLoading } = useQuery({
+    queryKey: queryKeys.faqs.list(locale),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.FAQs.All.Request({
+        sorting: {
+          key: "sortOrder",
+          direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending,
+        },
+        filters: [
+          {
+            key: "isActive",
+            type: "boolean",
+            isUsed: true,
+            values: [true],
+            min: {},
+            max: {},
+            conditionType: "equals",
           },
-          filters: [
-            {
-              key: "isActive",
-              type: "boolean",
-              isUsed: true,
-              values: [true],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
-        });
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
+      });
 
-        setFaqs(
-          response.map((faq) => {
-            // Try to use localized question/answer if available
-            let question = faq.question;
-            let answer = faq.answer;
+      return response.map((faq): FAQItem => {
+        let question = faq.question;
+        let answer = faq.answer;
 
-            if (locale !== "tr") {
-              try {
-                const questionTranslations = JSON.parse(faq.questionTranslations || "{}");
-                const answerTranslations = JSON.parse(faq.answerTranslations || "{}");
-                if (questionTranslations[locale]) question = questionTranslations[locale];
-                if (answerTranslations[locale]) answer = answerTranslations[locale];
-              } catch {
-                // Use default question/answer
-              }
-            }
+        if (locale !== "tr") {
+          try {
+            const questionTranslations = JSON.parse(faq.questionTranslations || "{}");
+            const answerTranslations = JSON.parse(faq.answerTranslations || "{}");
+            if (questionTranslations[locale]) question = questionTranslations[locale];
+            if (answerTranslations[locale]) answer = answerTranslations[locale];
+          } catch {
+            // Use default question/answer
+          }
+        }
 
-            return {
-              id: faq.id,
-              question,
-              answer,
-              sortOrder: faq.sortOrder,
-            };
-          })
-        );
-      } catch {
-        // FAQs unavailable
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchFAQs();
-  }, [locale]);
+        return {
+          id: faq.id,
+          question,
+          answer,
+          sortOrder: faq.sortOrder,
+        };
+      });
+    },
+    staleTime: 30 * 60 * 1000, // 30 minutes - semi-static content
+  });
 
   return (
     <div className="min-h-screen bg-background flex flex-col">

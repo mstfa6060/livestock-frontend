@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useForm, Controller } from "react-hook-form";
@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/select";
 import { useAuth } from "@/contexts/AuthContext";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { useSellerByUserId } from "@/hooks/queries";
 import { toast } from "sonner";
 import { Loader2, Store, CheckCircle, AlertCircle } from "lucide-react";
 import Link from "next/link";
@@ -31,8 +32,6 @@ export default function BecomeSellerPage() {
   const { user } = useAuth();
 
   const [isLoading, setIsLoading] = useState(false);
-  const [isCheckingSeller, setIsCheckingSeller] = useState(true);
-  const [existingSeller, setExistingSeller] = useState<{ id: string } | null>(null);
 
   // Form with Zod validation
   const {
@@ -52,42 +51,11 @@ export default function BecomeSellerPage() {
     },
   });
 
-  // Check if user already has a seller profile
-  useEffect(() => {
-    const checkSellerProfile = async () => {
-      if (!user?.id) return;
-
-      setIsCheckingSeller(true);
-      try {
-        // Try to find seller by userId
-        const response = await LivestockTradingAPI.Sellers.All.Request({
-          sorting: { key: "createdAt", direction: 1 },
-          filters: [
-            {
-              key: "userId",
-              type: "guid",
-              isUsed: true,
-              values: [user.id],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
-        });
-
-        if (response && response.length > 0) {
-          setExistingSeller({ id: response[0].id });
-        }
-      } catch {
-        // No seller profile found, which is fine
-      } finally {
-        setIsCheckingSeller(false);
-      }
-    };
-
-    checkSellerProfile();
-  }, [user?.id]);
+  const { data: sellerData, isLoading: isCheckingSeller } = useSellerByUserId(
+    user?.id ?? "",
+    { enabled: !!user?.id }
+  );
+  const existingSeller = sellerData?.id ? { id: sellerData.id } : null;
 
   const onSubmit = async (data: BecomeSellerFormData) => {
     if (!user) return;

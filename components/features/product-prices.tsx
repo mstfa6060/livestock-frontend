@@ -1,24 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { Coins, Globe } from "lucide-react";
-
-interface ProductPrice {
-  id: string;
-  currencyCode: string;
-  price: number;
-  discountedPrice: number | null;
-  countryCodes: string;
-  isActive: boolean;
-  validFrom: Date | null;
-  validUntil: Date | null;
-  isAutomaticConversion: boolean;
-}
+import { useProductPrices } from "@/hooks/queries/useProductSubresources";
 
 interface ProductPricesProps {
   productId: string;
@@ -26,54 +13,8 @@ interface ProductPricesProps {
 
 export function ProductPrices({ productId }: ProductPricesProps) {
   const t = useTranslations("productPrices");
-  const [prices, setPrices] = useState<ProductPrice[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchPrices = async () => {
-      setIsLoading(true);
-      try {
-        const response = await LivestockTradingAPI.ProductPrices.All.Request({
-          sorting: {
-            key: "currencyCode",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending,
-          },
-          filters: [
-            {
-              key: "productId",
-              type: "guid",
-              isUsed: true,
-              values: [productId],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-        });
-
-        setPrices(
-          response.map((p) => ({
-            id: p.id,
-            currencyCode: p.currencyCode,
-            price: p.price as number,
-            discountedPrice: p.discountedPrice as number | null,
-            countryCodes: p.countryCodes,
-            isActive: p.isActive,
-            validFrom: p.validFrom ?? null,
-            validUntil: p.validUntil ?? null,
-            isAutomaticConversion: p.isAutomaticConversion,
-          }))
-        );
-      } catch {
-        // Prices are optional
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    if (productId) fetchPrices();
-  }, [productId]);
+  const { data: prices = [], isLoading } = useProductPrices(productId);
 
   if (isLoading) {
     return (

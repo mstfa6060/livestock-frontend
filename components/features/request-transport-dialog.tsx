@@ -215,7 +215,7 @@ export function RequestTransportDialog({ deal, children }: RequestTransportDialo
                 step="0.1"
                 value={weightKg}
                 onChange={(e) => setWeightKg(e.target.value)}
-                placeholder="kg"
+                placeholder={t("weightPlaceholder")}
               />
             </div>
           </div>

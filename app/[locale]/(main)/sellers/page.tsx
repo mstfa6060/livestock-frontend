@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { MainHeader } from "@/components/layout/main-header";
@@ -18,8 +18,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Search, BadgeCheck, Star, ShoppingBag } from "lucide-react";
-import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { useSellerList } from "@/hooks/queries/useSellers";
 
 interface Seller {
   id: string;
@@ -40,6 +40,13 @@ interface Seller {
 type SortOption = "newest" | "mostSales" | "topRated" | "mostProducts";
 
 const ITEMS_PER_PAGE = 12;
+
+const SORT_KEY_MAP: Record<SortOption, string> = {
+  newest: "createdAt",
+  mostSales: "totalSales",
+  topRated: "averageRating",
+  mostProducts: "totalSales",
+};
 
 function SellerCardSkeleton() {
   return (
@@ -65,52 +72,20 @@ export default function SellersPage() {
   const t = useTranslations("sellers");
   const tc = useTranslations("common");
 
-  const [sellers, setSellers] = useState<Seller[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<SortOption>("newest");
   const [currentPage, setCurrentPage] = useState(1);
-  const [hasMore, setHasMore] = useState(false);
 
-  // Fetch sellers
-  useEffect(() => {
-    const fetchSellers = async () => {
-      setIsLoading(true);
-      try {
-        const sortingKey = {
-          newest: "createdAt",
-          mostSales: "totalSales",
-          topRated: "averageRating",
-          mostProducts: "totalSales", // API may not have totalProducts
-        }[sortBy];
+  const { data: rawSellers = [], isLoading } = useSellerList({
+    sortBy: SORT_KEY_MAP[sortBy],
+    sortDirection: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+    currentPage,
+    perPageCount: ITEMS_PER_PAGE,
+  });
 
-        const response = await LivestockTradingAPI.Sellers.All.Request({
-          sorting: {
-            key: sortingKey,
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
-          },
-          filters: [],
-          pageRequest: {
-            currentPage: currentPage,
-            perPageCount: ITEMS_PER_PAGE,
-            listAll: false,
-          },
-        });
-
-        // Only show active sellers
-        const activeSellers = response.filter((s) => s.isActive);
-        setSellers(activeSellers as Seller[]);
-        setHasMore(response.length >= ITEMS_PER_PAGE);
-      } catch {
-        setSellers([]);
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchSellers();
-  }, [sortBy, currentPage]);
+  // Only show active sellers
+  const sellers = (rawSellers as Seller[]).filter((s) => s.isActive);
+  const hasMore = rawSellers.length >= ITEMS_PER_PAGE;
 
   // Filter sellers by search query (client-side)
   const filteredSellers = searchQuery
@@ -161,7 +136,10 @@ export default function SellersPage() {
           {/* Sort */}
           <Select
             value={sortBy}
-            onValueChange={(v) => setSortBy(v as SortOption)}
+            onValueChange={(v) => {
+              setSortBy(v as SortOption);
+              setCurrentPage(1);
+            }}
           >
             <SelectTrigger className="w-full sm:w-48">
               <SelectValue placeholder={t("sort")} />

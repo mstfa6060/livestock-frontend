@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -91,24 +92,15 @@ export default function SystemSettingsPage() {
   const t = useTranslations("systemSettings");
   const { isAdmin } = useRoles();
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [currencies, setCurrencies] = useState<Currency[]>([]);
-  const [languages, setLanguages] = useState<Language[]>([]);
-  const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>([]);
-  const [carriers, setCarriers] = useState<ShippingCarrier[]>([]);
-  const [zones, setZones] = useState<ShippingZone[]>([]);
-  const [rates, setRates] = useState<ShippingRate[]>([]);
-  const [taxRates, setTaxRates] = useState<TaxRate[]>([]);
+  const defaultReq = {
+    sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
+    filters: [],
+    pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
+  };
 
-  useEffect(() => {
-    const fetchAll = async () => {
-      setIsLoading(true);
-      const defaultReq = {
-        sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
-        filters: [],
-        pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
-      };
-
+  const { data: allSettings, isLoading } = useQuery({
+    queryKey: [...queryKeys.systemSettings.all, "all"],
+    queryFn: async () => {
       const [curRes, langRes, payRes, carrRes, zoneRes, rateRes, taxRes] = await Promise.allSettled([
         LivestockTradingAPI.Currencies.All.Request(defaultReq),
         LivestockTradingAPI.Languages.All.Request(defaultReq),
@@ -119,56 +111,49 @@ export default function SystemSettingsPage() {
         LivestockTradingAPI.TaxRates.All.Request(defaultReq),
       ]);
 
-      if (curRes.status === "fulfilled") {
-        setCurrencies(curRes.value.map((c) => ({
+      return {
+        currencies: curRes.status === "fulfilled" ? curRes.value.map((c) => ({
           id: c.id, code: c.code, symbol: c.symbol, name: c.name,
           exchangeRateToUSD: c.exchangeRateToUSD as number, isActive: c.isActive,
-        })));
-      }
-      if (langRes.status === "fulfilled") {
-        setLanguages(langRes.value.map((l) => ({
+        })) as Currency[] : [],
+        languages: langRes.status === "fulfilled" ? langRes.value.map((l) => ({
           id: l.id, code: l.code, name: l.name, nativeName: l.nativeName,
           isRightToLeft: l.isRightToLeft, isActive: l.isActive, isDefault: l.isDefault, sortOrder: l.sortOrder,
-        })));
-      }
-      if (payRes.status === "fulfilled") {
-        setPaymentMethods(payRes.value.map((p) => ({
+        })) as Language[] : [],
+        paymentMethods: payRes.status === "fulfilled" ? payRes.value.map((p) => ({
           id: p.id, name: p.name, code: p.code, description: p.description,
           isActive: p.isActive, supportedCountries: p.supportedCountries, supportedCurrencies: p.supportedCurrencies,
-        })));
-      }
-      if (carrRes.status === "fulfilled") {
-        setCarriers(carrRes.value.map((c) => ({
+        })) as PaymentMethod[] : [],
+        carriers: carrRes.status === "fulfilled" ? carrRes.value.map((c) => ({
           id: c.id, name: c.name, code: c.code, website: c.website,
           isActive: c.isActive, supportedCountries: c.supportedCountries,
-        })));
-      }
-      if (zoneRes.status === "fulfilled") {
-        setZones(zoneRes.value.map((z) => ({
+        })) as ShippingCarrier[] : [],
+        zones: zoneRes.status === "fulfilled" ? zoneRes.value.map((z) => ({
           id: z.id, name: z.name, countryCodes: z.countryCodes, isActive: z.isActive,
-        })));
-      }
-      if (rateRes.status === "fulfilled") {
-        setRates(rateRes.value.map((r) => ({
+        })) as ShippingZone[] : [],
+        rates: rateRes.status === "fulfilled" ? rateRes.value.map((r) => ({
           id: r.id, shippingZoneId: r.shippingZoneId,
           shippingCarrierId: (r.shippingCarrierId as string) ?? null,
           shippingCost: r.shippingCost as number, currency: r.currency,
           estimatedDeliveryDays: (r.estimatedDeliveryDays as number) ?? null,
           isFreeShipping: r.isFreeShipping, isActive: r.isActive,
-        })));
-      }
-      if (taxRes.status === "fulfilled") {
-        setTaxRates(taxRes.value.map((t) => ({
+        })) as ShippingRate[] : [],
+        taxRates: taxRes.status === "fulfilled" ? taxRes.value.map((t) => ({
           id: t.id, countryCode: t.countryCode, stateCode: t.stateCode,
           taxName: t.taxName, rate: t.rate as number, type: t.type, isActive: t.isActive,
-        })));
-      }
+        })) as TaxRate[] : [],
+      };
+    },
+    enabled: isAdmin,
+  });
 
-      setIsLoading(false);
-    };
-
-    fetchAll();
-  }, []);
+  const currencies = allSettings?.currencies ?? [];
+  const languages = allSettings?.languages ?? [];
+  const paymentMethods = allSettings?.paymentMethods ?? [];
+  const carriers = allSettings?.carriers ?? [];
+  const zones = allSettings?.zones ?? [];
+  const rates = allSettings?.rates ?? [];
+  const taxRates = allSettings?.taxRates ?? [];
 
   if (!isAdmin) {
     return (
