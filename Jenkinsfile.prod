@@ -69,24 +69,23 @@ pipeline {
 
                     timeout(time: 30, unit: 'MINUTES') {
                         sh """
-                            docker buildx build \
+                            DOCKER_BUILDKIT=1 docker build \
                                 ${cacheArgs} \
-                                --progress=auto \
                                 --file Dockerfile \
                                 --build-arg NEXT_PUBLIC_ENVIRONMENT=production \
                                 --tag ${IMAGE_NAME}:${TAG_SUFFIX} \
                                 --tag ${IMAGE_NAME}:${IMMUTABLE_TAG} \
                                 --label org.opencontainers.image.revision=${GIT_COMMIT} \
                                 --label org.opencontainers.image.version=${IMMUTABLE_TAG} \
-                                --provenance=false \
-                                --sbom=false \
-                                --pull \
-                                --push .
+                                --pull .
+
+                            docker push ${IMAGE_NAME}:${TAG_SUFFIX}
+                            docker push ${IMAGE_NAME}:${IMMUTABLE_TAG}
                         """
                     }
 
                     echo "PRODUCTION WEB: Image basariyla build edildi ve push edildi"
-                    sh 'docker builder prune -f --filter type=exec.cachemount || true'
+                    sh 'docker image prune -f || true'
                 }
             }
         }
