@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { ErrorDisplay } from "@/components/error/error-display";
+import { logger } from "@/lib/logger";
 
 export default function DashboardError({
   error,
@@ -11,8 +12,7 @@ export default function DashboardError({
   reset: () => void;
 }) {
   useEffect(() => {
-    // Log the error to an error reporting service
-    console.error("Dashboard Error:", error);
+    logger.reportError("DashboardError", error);
   }, [error]);
 
   return <ErrorDisplay error={error} reset={reset} showHomeButton showBackButton />;

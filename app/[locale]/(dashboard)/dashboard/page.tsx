@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { useAuth } from "@/contexts/AuthContext";
-import { useNotificationsStore } from "@/stores/useNotificationsStore";
+import { useUnreadCount } from "@/hooks/queries/useNotifications";
 import { RecentlyViewedProducts } from "@/components/features/recently-viewed-products";
 import { useDashboardMyStats, useDashboardStats } from "@/hooks/queries";
 import {
@@ -30,8 +29,7 @@ export default function DashboardPage() {
   const tn = useTranslations("dashboardNav");
   const { user } = useAuth();
 
-  const fetchNotifications = useNotificationsStore((s) => s.fetchNotifications);
-  const unreadNotifications = useNotificationsStore((s) => s.unreadCount);
+  const unreadNotifications = useUnreadCount(user?.id ?? "");
 
   const { data: stats, isLoading: isMyStatsLoading } = useDashboardMyStats(
     user?.id ?? "",
@@ -43,13 +41,6 @@ export default function DashboardPage() {
   );
 
   const isLoading = isMyStatsLoading || isStatsLoading;
-
-  // Fetch notifications via Zustand
-  useEffect(() => {
-    if (user?.id) {
-      fetchNotifications(user.id);
-    }
-  }, [user?.id, fetchNotifications]);
 
   if (isLoading) {
     return (

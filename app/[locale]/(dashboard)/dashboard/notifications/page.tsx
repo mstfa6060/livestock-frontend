@@ -18,7 +18,13 @@ import {
   CheckCheck,
   Check,
 } from "lucide-react";
-import { useNotificationsStore, Notification } from "@/stores/useNotificationsStore";
+import {
+  useNotifications,
+  useUnreadCount,
+  useMarkAsReadMutation,
+  useMarkAllAsReadMutation,
+  type Notification,
+} from "@/hooks/queries/useNotifications";
 import { useAuth } from "@/contexts/AuthContext";
 import { cn } from "@/lib/utils";
 
@@ -35,23 +41,18 @@ export default function NotificationsPage() {
   const t = useTranslations("notifications");
   const locale = useLocale();
   const { user } = useAuth();
-  const {
-    notifications,
-    unreadCount,
-    isLoading,
-    fetchNotifications,
-    markAsRead,
-    markAllAsRead,
-  } = useNotificationsStore();
+  const userId = user?.id ?? "";
+  const { data: notifications = [], isLoading, refetch } = useNotifications(userId);
+  const unreadCount = useUnreadCount(userId);
+  const markAsReadMutation = useMarkAsReadMutation(userId);
+  const markAllAsReadMutation = useMarkAllAsReadMutation(userId);
 
-  // Fetch notifications on mount
+  // Force refresh on page visit
   useEffect(() => {
-    if (user?.id) {
-      // Force refresh on page visit
-      useNotificationsStore.setState({ lastFetched: null });
-      fetchNotifications(user.id);
+    if (userId) {
+      refetch();
     }
-  }, [user?.id, fetchNotifications]);
+  }, [userId, refetch]);
 
   // Format notification time
   const formatTime = (dateString: string) => {
@@ -96,10 +97,8 @@ export default function NotificationsPage() {
   const notificationGroups = groupNotifications(notifications);
 
   // Handle mark all as read
-  const handleMarkAllAsRead = async () => {
-    if (user?.id) {
-      await markAllAsRead();
-    }
+  const handleMarkAllAsRead = () => {
+    markAllAsReadMutation.mutate();
   };
 
   return (
@@ -163,11 +162,11 @@ export default function NotificationsPage() {
                         "cursor-pointer transition-colors hover:bg-muted/50",
                         !notification.isRead && "border-primary/50 bg-primary/5"
                       )}
-                      onClick={() => markAsRead(notification.id)}
+                      onClick={() => markAsReadMutation.mutate(notification.id)}
                       onKeyDown={(e) => {
                         if (e.key === "Enter" || e.key === " ") {
                           e.preventDefault();
-                          markAsRead(notification.id);
+                          markAsReadMutation.mutate(notification.id);
                         }
                       }}
                     >

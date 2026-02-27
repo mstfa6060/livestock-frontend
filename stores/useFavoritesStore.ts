@@ -1,3 +1,9 @@
+/**
+ * @deprecated Use hooks/queries/useFavorites.ts instead.
+ * This store is kept for backward compatibility with existing tests.
+ * Components should use useFavorites(), useFavoriteActions(),
+ * and useToggleFavoriteMutation() from React Query hooks.
+ */
 import { create } from 'zustand';
 import { LivestockTradingAPI } from '@/api/business_modules/livestocktrading';
 

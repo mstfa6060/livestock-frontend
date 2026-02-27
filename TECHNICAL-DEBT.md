@@ -60,19 +60,20 @@
 - [x] `products/[slug]/page.tsx` — `.catch(() => {})` yerine `console.warn` + favorite hatasi icin `toast.error`
 - [x] `MakeOfferDialog.tsx` — API hata mesaji varsa onu gosteriyor, yoksa genel hata mesaji
 
-### 8. Production Logging Iyilestirmesi
-- [ ] `ApiService.ts` — console.error'lari environment-gated yap
-- [ ] Error tracking entegrasyonu kur (Sentry veya LogRocket)
-- [ ] Error boundary'lerdeki console.error'lari error tracking'e yonlendir
-- **Dosya:** `common/livestock-api/src/services/ApiService.ts`
-- **Effort:** 2-3 saat
+### 8. ~~Production Logging Iyilestirmesi~~ ✅ TAMAMLANDI (2026-02-28)
+- [x] `lib/logger.ts` — environment-gated logger olusturuldu (error/warn/debug/reportError)
+- [x] `ApiService.ts` — 6 console.error → logger.error (critical) + logger.debug (verbose details)
+- [x] Error boundary'ler (global-error, locale error, main error, dashboard error) → `logger.reportError()`
+- [x] Error tracking altyapisi hazir (TODO: Sentry entegrasyonu eklenecek)
+- **Sonuc:** Production'da sadece critical error'lar loglanir, verbose detaylar sadece development'ta
 
-### 9. Zustand + React Query State Ayristirmasi
-- [ ] `useNotificationsStore` — manuel retry/backoff'u React Query retry'a devret
-- [ ] `useFavoritesStore` — toggle islemini `useMutation` ile yonet
-- [ ] Zustand'i sadece UI state (sidebar acik/kapali vb.) icin kullan
-- **Dosyalar:** `stores/useFavoritesStore.ts`, `stores/useNotificationsStore.ts`
-- **Effort:** 3-4 saat
+### 9. ~~Zustand + React Query State Ayristirmasi~~ ✅ TAMAMLANDI (2026-02-28)
+- [x] `useNotificationsStore` → `hooks/queries/useNotifications.ts` (useNotifications, useUnreadCount, useMarkAsReadMutation, useMarkAllAsReadMutation)
+- [x] `useFavoritesStore` → `hooks/queries/useFavorites.ts` (useFavorites, useFavoriteActions, useToggleFavoriteMutation)
+- [x] 7 consumer guncellendi: notification-bell, dashboard-sidebar, notifications page, dashboard page, product-card, product detail, AuthContext
+- [x] Zustand store'lar @deprecated olarak isaretlendi (testler icin korundu)
+- [x] React Query: otomatik retry, staleTime caching, optimistic updates, query cache paylasimi
+- **Sonuc:** Zustand artik sadece UI state (useMessagesStore) icin kullaniliyor
 
 ### 10. Locale-Aware Routing Duzeltmeleri
 - [ ] `livestock-config.ts` — 401 redirect'te locale prefix ekle (`/tr/auth/login`)
@@ -151,8 +152,8 @@
 | 5 | `any` type temizligi | Yuksek | 3-4 saat |
 | 6 | Mutation hooks olusturma | Yuksek | 3-4 saat |
 | 7 | Silent error handling | Orta | 2-3 saat |
-| 8 | Production logging | Orta | 2-3 saat |
-| 9 | Zustand/React Query ayristirma | Orta | 3-4 saat |
+| 8 | ~~Production logging~~ | ✅ Tamamlandi | — |
+| 9 | ~~Zustand/React Query ayristirma~~ | ✅ Tamamlandi | — |
 | 10 | Locale-aware routing | Orta | 2 saat |
 | 11 | Unused dependencies | Orta | 30 dk |
 | 12 | Bos dizin temizligi | Orta | 15 dk |

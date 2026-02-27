@@ -1,5 +1,6 @@
 import { api } from '@config/livestock-config';
 import { AxiosRequestConfig, AxiosResponse } from 'axios';
+import { logger } from '@/lib/logger';
 import commonErrors from '../errors/locales/modules/backend/common/tr';
 import livestocktradingErrors from '../errors/locales/modules/backend/livestocktrading/tr';
 
@@ -14,14 +15,17 @@ const getErrorMessage = (key: string): string => {
 
 export class ApiService {
   /**
-   * Log API errors (web version - console only)
+   * Log API errors — verbose in development, minimal in production
    */
   private static logApiError(error: unknown, context: string, additionalData?: Record<string, unknown>) {
-    console.error(`🚨 API Error [${context}]:`, error);
-
-    // Web'de crashlytics yok, sadece console log
     const axiosErr = error as { response?: { status?: number }; config?: { url?: string; method?: string } };
-    console.error('Error details:', {
+
+    logger.error(`API Error [${context}]:`, {
+      status: axiosErr.response?.status || 'unknown',
+      url: axiosErr.config?.url || 'unknown',
+    });
+
+    logger.debug('Error details:', {
       context,
       error_type: axiosErr.response?.status ? 'http_error' : 'network_error',
       status_code: axiosErr.response?.status || 'unknown',
@@ -53,8 +57,7 @@ export class ApiService {
           response_status: 'hasError_true',
         });
 
-        // Web'de alert yerine sadece console error (toast eklenebilir)
-        console.error('Backend error:', errorMessage);
+        logger.debug('Backend error:', errorMessage);
 
         const enrichedError = new Error(errorMessage);
         (enrichedError as Error & { original: unknown }).original = error;
@@ -63,10 +66,9 @@ export class ApiService {
 
       return payload;
     } catch (err: unknown) {
-      // Log the full error response for debugging
       const axiosErr = err as { response?: { status?: number; statusText?: string; data?: unknown }; config?: { url?: string }; message?: string; name?: string };
       if (axiosErr.response) {
-        console.error('❌ API Error Response:', {
+        logger.debug('API Error Response:', {
           status: axiosErr.response.status,
           statusText: axiosErr.response.statusText,
           data: axiosErr.response.data,
@@ -121,7 +123,7 @@ export class ApiService {
           multipart_upload: 'true',
         });
 
-        console.error('Multipart upload error:', errorMessage);
+        logger.debug('Multipart upload error:', errorMessage);
 
         const enrichedError = new Error(errorMessage);
         (enrichedError as Error & { original: unknown }).original = data.error;
@@ -132,7 +134,7 @@ export class ApiService {
     } catch (err: unknown) {
       const axiosErr = err as { response?: { status?: number; statusText?: string; data?: unknown }; config?: { url?: string }; message?: string; name?: string };
       if (axiosErr.response) {
-        console.error('❌ Multipart Error Response:', {
+        logger.debug('Multipart Error Response:', {
           status: axiosErr.response.status,
           statusText: axiosErr.response.statusText,
           data: axiosErr.response.data,

@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Heart, MapPin, Eye, Star, ImageOff } from "lucide-react";
 import { PriceDisplay } from "./price-display";
 import { useState, memo } from "react";
-import { useFavoritesStore } from "@/stores/useFavoritesStore";
+import { useFavoriteActions } from "@/hooks/queries/useFavorites";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
 
@@ -64,11 +64,11 @@ export const ProductCard = memo(function ProductCard({ product, onFavorite, isFa
   const t = useTranslations("products");
   const tpd = useTranslations("productDetail");
   const { user } = useAuth();
-  const { isFavorite: isFavoriteInStore, toggleFavorite } = useFavoritesStore();
+  const { isFavorite: isFavoriteCheck, toggleFavorite } = useFavoriteActions(user?.id ?? "");
   const [isTogglingFavorite, setIsTogglingFavorite] = useState(false);
 
-  // Use store state or prop
-  const favorite = isFavoriteInStore(product.id) || isFavorite;
+  // Use query state or prop
+  const favorite = isFavoriteCheck(product.id) || isFavorite;
 
   const handleFavorite = async (e: React.MouseEvent) => {
     e.preventDefault();
@@ -83,7 +83,7 @@ export const ProductCard = memo(function ProductCard({ product, onFavorite, isFa
     setIsTogglingFavorite(true);
 
     try {
-      const newState = await toggleFavorite(product.id, user.id);
+      const newState = await toggleFavorite(product.id);
 
       // Show success toast
       if (newState) {

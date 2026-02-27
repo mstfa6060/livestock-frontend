@@ -170,4 +170,10 @@ export const queryKeys = {
     list: (userId: string) =>
       [...queryKeys.favorites.all, "list", userId] as const,
   },
+
+  notifications: {
+    all: ["notifications"] as const,
+    list: (userId: string) =>
+      [...queryKeys.notifications.all, "list", userId] as const,
+  },
 } as const;

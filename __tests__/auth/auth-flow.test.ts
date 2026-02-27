@@ -50,15 +50,6 @@ vi.mock("@/api/base_modules/iam", () => ({
   },
 }));
 
-// Mock favorites store
-vi.mock("@/stores/useFavoritesStore", () => ({
-  useFavoritesStore: {
-    getState: () => ({
-      clearFavorites: vi.fn(),
-    }),
-  },
-}));
-
 // ─── Tests ──────────────────────────────────────────────────────────
 
 describe("Auth Flow", () => {

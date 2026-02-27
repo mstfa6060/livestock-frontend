@@ -11,7 +11,7 @@ import {
 import { useRouter } from "next/navigation";
 import { useQueryClient } from "@tanstack/react-query";
 import { IAMAPI } from "@/api/base_modules/iam";
-import { useFavoritesStore } from "@/stores/useFavoritesStore";
+import { queryKeys } from "@/lib/query-keys";
 import { isTokenExpired } from "@/lib/auth";
 
 // User type from API
@@ -151,14 +151,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     initializeAuth();
   }, [clearAuthData]);
 
-  // Clear favorites when user logs out
+  // Clear favorites + notifications cache when user logs out
   useEffect(() => {
     if (!state.isAuthenticated) {
-      useFavoritesStore.getState().clearFavorites();
+      queryClient.removeQueries({ queryKey: queryKeys.favorites.all });
+      queryClient.removeQueries({ queryKey: queryKeys.notifications.all });
     }
-    // Note: Favorites are now loaded lazily (on first use) instead of eagerly on login
-    // This prevents 401 errors from blocking the login flow
-  }, [state.isAuthenticated]);
+  }, [state.isAuthenticated, queryClient]);
 
   const login = useCallback(
     async ({ email, password, rememberMe }: LoginParams) => {

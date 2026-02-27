@@ -33,7 +33,7 @@ import {
 import { useRouter } from "next/navigation";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { AppConfig } from "@/config/livestock-config";
-import { useFavoritesStore } from "@/stores/useFavoritesStore";
+import { useFavoriteActions } from "@/hooks/queries/useFavorites";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
 import { ProductReviews } from "@/components/features/product-reviews";
@@ -102,7 +102,7 @@ export default function ProductDetailPage() {
   const locale = useLocale();
   const router = useRouter();
   const { user } = useAuth();
-  const { toggleFavorite, isFavorite: checkIsFavorite } = useFavoritesStore();
+  const { toggleFavorite, isFavorite: checkIsFavorite } = useFavoriteActions(user?.id ?? "");
 
   const isGuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(slug);
 
@@ -240,7 +240,7 @@ export default function ProductDetailPage() {
     if (!product) return;
 
     try {
-      await toggleFavorite(product.id, user.id);
+      await toggleFavorite(product.id);
       toast.success(isFavorite ? t("removedFromFavorites") : t("addedToFavorites"));
     } catch {
       toast.error(t("favoriteError"));

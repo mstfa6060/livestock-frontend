@@ -12,3 +12,5 @@ export * from "./useBrands";
 export * from "./useBanners";
 export * from "./useMediaUpload";
 export * from "./useIAM";
+export * from "./useNotifications";
+export * from "./useFavorites";

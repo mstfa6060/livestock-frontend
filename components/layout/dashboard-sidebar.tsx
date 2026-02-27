@@ -29,7 +29,7 @@ import {
 import { useRoles } from "@/hooks/useRoles";
 import { useAuth } from "@/contexts/AuthContext";
 import { useMessagesStore } from "@/stores/useMessagesStore";
-import { useNotificationsStore } from "@/stores/useNotificationsStore";
+import { useUnreadCount } from "@/hooks/queries/useNotifications";
 
 interface MenuItem {
   key: string;
@@ -79,16 +79,14 @@ export function DashboardSidebar() {
 
   const unreadMessages = useMessagesStore((s) => s.unreadCount);
   const fetchUnreadCount = useMessagesStore((s) => s.fetchUnreadCount);
-  const unreadNotifications = useNotificationsStore((s) => s.unreadCount);
-  const fetchNotifications = useNotificationsStore((s) => s.fetchNotifications);
+  const unreadNotifications = useUnreadCount(user?.id ?? "");
 
-  // Fetch unread counts on mount
+  // Fetch unread message count on mount
   useEffect(() => {
     if (user?.id) {
       fetchUnreadCount(user.id);
-      fetchNotifications(user.id);
     }
-  }, [user?.id, fetchUnreadCount, fetchNotifications]);
+  }, [user?.id, fetchUnreadCount]);
 
   // Remove locale prefix from pathname for comparison
   const currentPath = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, "");

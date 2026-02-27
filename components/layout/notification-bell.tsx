@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { formatDistanceToNow } from "date-fns";
@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Bell, MessageSquare, Tag, Package, Info, CheckCheck } from "lucide-react";
-import { useNotificationsStore } from "@/stores/useNotificationsStore";
+import { useNotifications, useUnreadCount, useMarkAsReadMutation, useMarkAllAsReadMutation } from "@/hooks/queries/useNotifications";
 import { useAuth } from "@/contexts/AuthContext";
 import { cn } from "@/lib/utils";
 
@@ -34,23 +34,13 @@ export function NotificationBell() {
   const t = useTranslations("notifications");
   const locale = useLocale();
   const { user, isAuthenticated } = useAuth();
-  const {
-    notifications,
-    unreadCount,
-    isLoading,
-    fetchNotifications,
-    markAsRead,
-    markAllAsRead,
-  } = useNotificationsStore();
+  const userId = user?.id ?? "";
+  const { data: notifications = [], isLoading } = useNotifications(userId);
+  const unreadCount = useUnreadCount(userId);
+  const markAsReadMutation = useMarkAsReadMutation(userId);
+  const markAllAsReadMutation = useMarkAllAsReadMutation(userId);
 
   const [isOpen, setIsOpen] = useState(false);
-
-  // Fetch notifications when component mounts or user changes
-  useEffect(() => {
-    if (isAuthenticated && user?.id) {
-      fetchNotifications(user.id);
-    }
-  }, [isAuthenticated, user?.id, fetchNotifications]);
 
   // Format notification time
   const formatTime = (dateString: string) => {
@@ -62,16 +52,14 @@ export function NotificationBell() {
   };
 
   // Handle notification click
-  const handleNotificationClick = async (notificationId: string) => {
-    await markAsRead(notificationId);
+  const handleNotificationClick = (notificationId: string) => {
+    markAsReadMutation.mutate(notificationId);
     setIsOpen(false);
   };
 
   // Handle mark all as read
-  const handleMarkAllAsRead = async () => {
-    if (user?.id) {
-      await markAllAsRead();
-    }
+  const handleMarkAllAsRead = () => {
+    markAllAsReadMutation.mutate();
   };
 
   // Only show for authenticated users

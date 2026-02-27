@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { MainHeader } from "@/components/layout/main-header";
 import { SimpleFooter } from "@/components/layout/footer";
 import { ErrorDisplay } from "@/components/error/error-display";
+import { logger } from "@/lib/logger";
 
 export default function MainError({
   error,
@@ -13,8 +14,7 @@ export default function MainError({
   reset: () => void;
 }) {
   useEffect(() => {
-    // Log the error to an error reporting service
-    console.error("Main Error:", error);
+    logger.reportError("MainError", error);
   }, [error]);
 
   return (
