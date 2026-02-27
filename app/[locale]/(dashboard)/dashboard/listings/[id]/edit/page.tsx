@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
+import { useForm, Controller } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient, useQuery } from "@tanstack/react-query";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Button } from "@/components/ui/button";
@@ -27,6 +29,7 @@ import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { toast } from "sonner";
 import { useCategories, useProductDetail, useSellerByUserId } from "@/hooks/queries";
 import { queryKeys } from "@/lib/query-keys";
+import { editListingFormSchema, type EditListingFormData } from "@/lib/validations";
 import dynamic from "next/dynamic";
 const MediaUpload = dynamic(() => import("@/components/features/media-upload").then(mod => ({ default: mod.MediaUpload })), { ssr: false });
 
@@ -37,8 +40,6 @@ interface MediaFile {
   isVideo: boolean;
   name: string;
 }
-
-type ProductCondition = 0 | 1 | 2 | 3; // new, likeNew, good, fair
 
 const EMPTY_GUID = "00000000-0000-0000-0000-000000000000";
 
@@ -87,27 +88,40 @@ export default function EditListingPage() {
   const [isSaving, setIsSaving] = useState(false);
   const [formPopulated, setFormPopulated] = useState(false);
 
-  // Media state - updated by MediaUpload component or populated from product
+  // Media state
   const [mediaBucketId, setMediaBucketId] = useState<string>("");
   const [coverImageFileId, setCoverImageFileId] = useState<string>("");
   const [mediaFiles, setMediaFiles] = useState<MediaFile[]>([]);
 
-  const [formData, setFormData] = useState({
-    title: "",
-    shortDescription: "",
-    description: "",
-    categoryId: "",
-    basePrice: "",
-    currency: selectedCountry?.defaultCurrencyCode || "TRY",
-    priceUnit: "adet",
-    stockQuantity: "1",
-    stockUnit: "adet",
-    condition: 0 as ProductCondition,
-    isShippingAvailable: false,
-    shippingCost: "",
-    weight: "",
-    weightUnit: "kg",
+  // Form with Zod validation
+  const {
+    register,
+    handleSubmit: formSubmit,
+    control,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm<EditListingFormData>({
+    resolver: zodResolver(editListingFormSchema),
+    defaultValues: {
+      title: "",
+      shortDescription: "",
+      description: "",
+      categoryId: "",
+      basePrice: "",
+      currency: selectedCountry?.defaultCurrencyCode || "TRY",
+      priceUnit: "adet",
+      stockQuantity: "1",
+      stockUnit: "adet",
+      condition: 0,
+      isShippingAvailable: false,
+      shippingCost: "",
+      weight: "",
+      weightUnit: "kg",
+    },
   });
+
+  const isShippingAvailable = watch("isShippingAvailable");
 
   // Populate form when product data loads
   useEffect(() => {
@@ -116,7 +130,7 @@ export default function EditListingPage() {
     setMediaBucketId((product as any).mediaBucketId || "");
     setCoverImageFileId((product as any).coverImageFileId || "");
 
-    setFormData({
+    reset({
       title: product.title,
       shortDescription: product.shortDescription,
       description: product.description,
@@ -126,14 +140,14 @@ export default function EditListingPage() {
       priceUnit: product.priceUnit,
       stockQuantity: String(product.stockQuantity),
       stockUnit: product.stockUnit,
-      condition: product.condition as ProductCondition,
+      condition: product.condition as 0 | 1 | 2 | 3,
       isShippingAvailable: product.isShippingAvailable,
       shippingCost: product.shippingCost ? String(product.shippingCost) : "",
       weight: product.weight ? String(product.weight) : "",
       weightUnit: product.weightUnit,
     });
     setFormPopulated(true);
-  }, [product, formPopulated]);
+  }, [product, formPopulated, reset]);
 
   // Populate media files from bucket query
   useEffect(() => {
@@ -166,30 +180,7 @@ export default function EditListingPage() {
       .trim();
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Validate required fields
-    if (!formData.title.trim()) {
-      toast.error(t("errors.titleRequired"));
-      return;
-    }
-    if (!formData.shortDescription.trim()) {
-      toast.error(t("errors.shortDescriptionRequired"));
-      return;
-    }
-    if (!formData.description.trim()) {
-      toast.error(t("errors.descriptionRequired"));
-      return;
-    }
-    if (!formData.categoryId) {
-      toast.error(t("errors.categoryRequired"));
-      return;
-    }
-    if (!formData.basePrice || parseFloat(formData.basePrice) <= 0) {
-      toast.error(t("errors.priceRequired"));
-      return;
-    }
+  const onSubmit = async (data: EditListingFormData) => {
     if (!user?.id) {
       toast.error(t("userNotFound"));
       router.push("/login");
@@ -207,37 +198,36 @@ export default function EditListingPage() {
     setIsSaving(true);
 
     try {
-      const slug = generateSlug(formData.title);
+      const slug = generateSlug(data.title);
 
       await LivestockTradingAPI.Products.Update.Request({
         id: productId,
-        title: formData.title,
+        title: data.title,
         slug: slug,
-        description: formData.description,
-        shortDescription: formData.shortDescription,
-        categoryId: formData.categoryId,
-        basePrice: parseFloat(formData.basePrice) as any,
-        currency: formData.currency,
-        priceUnit: formData.priceUnit,
-        stockQuantity: parseInt(formData.stockQuantity),
-        stockUnit: formData.stockUnit,
-        isInStock: parseInt(formData.stockQuantity) > 0,
+        description: data.description,
+        shortDescription: data.shortDescription,
+        categoryId: data.categoryId,
+        basePrice: parseFloat(data.basePrice) as any,
+        currency: data.currency,
+        priceUnit: data.priceUnit,
+        stockQuantity: parseInt(data.stockQuantity),
+        stockUnit: data.stockUnit,
+        isInStock: parseInt(data.stockQuantity) > 0,
         sellerId: sellerId,
         locationId: product.locationId,
         status: product.status,
-        condition: formData.condition,
-        isShippingAvailable: formData.isShippingAvailable,
-        shippingCost: formData.shippingCost
-          ? (parseFloat(formData.shippingCost) as any)
+        condition: data.condition,
+        isShippingAvailable: data.isShippingAvailable,
+        shippingCost: data.shippingCost
+          ? (parseFloat(data.shippingCost) as any)
           : undefined,
         isInternationalShipping: false,
-        weight: formData.weight ? (parseFloat(formData.weight) as any) : undefined,
-        weightUnit: formData.weightUnit,
+        weight: data.weight ? (parseFloat(data.weight) as any) : undefined,
+        weightUnit: data.weightUnit,
         attributes: "{}",
-        metaTitle: formData.title,
-        metaDescription: formData.shortDescription,
+        metaTitle: data.title,
+        metaDescription: data.shortDescription,
         metaKeywords: "",
-        // New media fields
         mediaBucketId: mediaBucketId || EMPTY_GUID,
         coverImageFileId: coverImageFileId || EMPTY_GUID,
       } as any);
@@ -268,7 +258,7 @@ export default function EditListingPage() {
 
   return (
     <DashboardLayout>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={formSubmit(onSubmit)}>
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-4">
@@ -312,13 +302,12 @@ export default function EditListingPage() {
                   <Label htmlFor="title">{t("fields.title")} *</Label>
                   <Input
                     id="title"
-                    value={formData.title}
-                    onChange={(e) =>
-                      setFormData({ ...formData, title: e.target.value })
-                    }
+                    {...register("title")}
                     placeholder={t("placeholders.title")}
-                    required
                   />
+                  {errors.title && (
+                    <p className="text-sm text-destructive">{errors.title.message}</p>
+                  )}
                 </div>
 
                 <div className="space-y-2">
@@ -327,33 +316,31 @@ export default function EditListingPage() {
                   </Label>
                   <Textarea
                     id="shortDescription"
-                    value={formData.shortDescription}
-                    onChange={(e) =>
-                      setFormData({ ...formData, shortDescription: e.target.value })
-                    }
+                    {...register("shortDescription")}
                     placeholder={t("placeholders.shortDescription")}
                     rows={2}
-                    required
                   />
+                  {errors.shortDescription && (
+                    <p className="text-sm text-destructive">{errors.shortDescription.message}</p>
+                  )}
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="description">{t("fields.description")} *</Label>
                   <Textarea
                     id="description"
-                    value={formData.description}
-                    onChange={(e) =>
-                      setFormData({ ...formData, description: e.target.value })
-                    }
+                    {...register("description")}
                     placeholder={t("placeholders.description")}
                     rows={6}
-                    required
                   />
+                  {errors.description && (
+                    <p className="text-sm text-destructive">{errors.description.message}</p>
+                  )}
                 </div>
               </CardContent>
             </Card>
 
-            {/* Media Upload - New System */}
+            {/* Media Upload */}
             <Card>
               <CardHeader>
                 <CardTitle>{t("images")}</CardTitle>
@@ -383,47 +370,51 @@ export default function EditListingPage() {
               <CardContent className="space-y-4">
                 <div className="space-y-2">
                   <Label>{t("fields.category")} *</Label>
-                  <Select
-                    value={formData.categoryId}
-                    onValueChange={(v) =>
-                      setFormData({ ...formData, categoryId: v })
-                    }
-                    required
-                  >
-                    <SelectTrigger>
-                      <SelectValue placeholder={t("placeholders.category")} />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {categories.map((cat) => (
-                        <SelectItem key={cat.id} value={cat.id}>
-                          {cat.name}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <Controller
+                    name="categoryId"
+                    control={control}
+                    render={({ field }) => (
+                      <Select value={field.value} onValueChange={field.onChange}>
+                        <SelectTrigger>
+                          <SelectValue placeholder={t("placeholders.category")} />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {categories.map((cat) => (
+                            <SelectItem key={cat.id} value={cat.id}>
+                              {cat.name}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
+                  {errors.categoryId && (
+                    <p className="text-sm text-destructive">{errors.categoryId.message}</p>
+                  )}
                 </div>
 
                 <div className="space-y-2">
                   <Label>{t("fields.condition")} *</Label>
-                  <Select
-                    value={String(formData.condition)}
-                    onValueChange={(v) =>
-                      setFormData({
-                        ...formData,
-                        condition: parseInt(v) as ProductCondition,
-                      })
-                    }
-                  >
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="0">{tp("condition.new")}</SelectItem>
-                      <SelectItem value="1">{tp("condition.likeNew")}</SelectItem>
-                      <SelectItem value="2">{tp("condition.good")}</SelectItem>
-                      <SelectItem value="3">{tp("condition.fair")}</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Controller
+                    name="condition"
+                    control={control}
+                    render={({ field }) => (
+                      <Select
+                        value={String(field.value)}
+                        onValueChange={(v) => field.onChange(parseInt(v))}
+                      >
+                        <SelectTrigger>
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="0">{tp("condition.new")}</SelectItem>
+                          <SelectItem value="1">{tp("condition.likeNew")}</SelectItem>
+                          <SelectItem value="2">{tp("condition.good")}</SelectItem>
+                          <SelectItem value="3">{tp("condition.fair")}</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
                 </div>
               </CardContent>
             </Card>
@@ -442,30 +433,30 @@ export default function EditListingPage() {
                       type="number"
                       min="0"
                       step="0.01"
-                      value={formData.basePrice}
-                      onChange={(e) =>
-                        setFormData({ ...formData, basePrice: e.target.value })
-                      }
+                      {...register("basePrice")}
                       placeholder="0.00"
                       className="flex-1"
-                      required
                     />
-                    <Select
-                      value={formData.currency}
-                      onValueChange={(v) =>
-                        setFormData({ ...formData, currency: v })
-                      }
-                    >
-                      <SelectTrigger className="w-24">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="TRY">TRY</SelectItem>
-                        <SelectItem value="USD">USD</SelectItem>
-                        <SelectItem value="EUR">EUR</SelectItem>
-                      </SelectContent>
-                    </Select>
+                    <Controller
+                      name="currency"
+                      control={control}
+                      render={({ field }) => (
+                        <Select value={field.value} onValueChange={field.onChange}>
+                          <SelectTrigger className="w-24">
+                            <SelectValue />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="TRY">TRY</SelectItem>
+                            <SelectItem value="USD">USD</SelectItem>
+                            <SelectItem value="EUR">EUR</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
                   </div>
+                  {errors.basePrice && (
+                    <p className="text-sm text-destructive">{errors.basePrice.message}</p>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -475,20 +466,17 @@ export default function EditListingPage() {
                       id="stockQuantity"
                       type="number"
                       min="1"
-                      value={formData.stockQuantity}
-                      onChange={(e) =>
-                        setFormData({ ...formData, stockQuantity: e.target.value })
-                      }
+                      {...register("stockQuantity")}
                     />
+                    {errors.stockQuantity && (
+                      <p className="text-sm text-destructive">{errors.stockQuantity.message}</p>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="stockUnit">{t("fields.unit")}</Label>
                     <Input
                       id="stockUnit"
-                      value={formData.stockUnit}
-                      onChange={(e) =>
-                        setFormData({ ...formData, stockUnit: e.target.value })
-                      }
+                      {...register("stockUnit")}
                     />
                   </div>
                 </div>
@@ -501,23 +489,24 @@ export default function EditListingPage() {
                 <CardTitle>{t("shipping")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="flex items-center space-x-2">
-                  <Checkbox
-                    id="isShippingAvailable"
-                    checked={formData.isShippingAvailable}
-                    onCheckedChange={(checked) =>
-                      setFormData({
-                        ...formData,
-                        isShippingAvailable: checked === true,
-                      })
-                    }
-                  />
-                  <Label htmlFor="isShippingAvailable" className="font-normal">
-                    {t("fields.shippingAvailable")}
-                  </Label>
-                </div>
+                <Controller
+                  name="isShippingAvailable"
+                  control={control}
+                  render={({ field }) => (
+                    <div className="flex items-center space-x-2">
+                      <Checkbox
+                        id="isShippingAvailable"
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
+                      <Label htmlFor="isShippingAvailable" className="font-normal">
+                        {t("fields.shippingAvailable")}
+                      </Label>
+                    </div>
+                  )}
+                />
 
-                {formData.isShippingAvailable && (
+                {isShippingAvailable && (
                   <>
                     <div className="space-y-2">
                       <Label htmlFor="shippingCost">{t("fields.shippingCost")}</Label>
@@ -526,10 +515,7 @@ export default function EditListingPage() {
                         type="number"
                         min="0"
                         step="0.01"
-                        value={formData.shippingCost}
-                        onChange={(e) =>
-                          setFormData({ ...formData, shippingCost: e.target.value })
-                        }
+                        {...register("shippingCost")}
                         placeholder="0.00"
                       />
                     </div>
@@ -542,29 +528,27 @@ export default function EditListingPage() {
                           type="number"
                           min="0"
                           step="0.1"
-                          value={formData.weight}
-                          onChange={(e) =>
-                            setFormData({ ...formData, weight: e.target.value })
-                          }
+                          {...register("weight")}
                         />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="weightUnit">{t("fields.weightUnit")}</Label>
-                        <Select
-                          value={formData.weightUnit}
-                          onValueChange={(v) =>
-                            setFormData({ ...formData, weightUnit: v })
-                          }
-                        >
-                          <SelectTrigger>
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="kg">kg</SelectItem>
-                            <SelectItem value="g">g</SelectItem>
-                            <SelectItem value="lb">lb</SelectItem>
-                          </SelectContent>
-                        </Select>
+                        <Controller
+                          name="weightUnit"
+                          control={control}
+                          render={({ field }) => (
+                            <Select value={field.value} onValueChange={field.onChange}>
+                              <SelectTrigger>
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="kg">kg</SelectItem>
+                                <SelectItem value="g">g</SelectItem>
+                                <SelectItem value="lb">lb</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          )}
+                        />
                       </div>
                     </div>
                   </>

@@ -171,27 +171,76 @@ export const becomeSellerFormSchema = z.object({
   ),
 });
 
-// Ilan olusturma/duzenleme formu
+// Ilan olusturma formu (HTML input type="number" string dondurur)
 export const listingFormSchema = z.object({
   title: requiredStringSchema(5, 200),
   shortDescription: requiredStringSchema(10, 500),
   description: requiredStringSchema(20, 5000),
   categoryId: z.string({ message: messages.required }).min(1, { message: messages.required }),
-  basePrice: priceSchema,
-  discountedPrice: z.number().positive({ message: messages.positive }).optional(),
-  currency: z.string().min(3).max(3).default("TRY"),
-  stockQuantity: stockSchema,
+  basePrice: z.string({ message: messages.required })
+    .min(1, { message: messages.required })
+    .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) > 0, {
+      message: messages.positive,
+    }),
+  currency: z.string().min(1).max(3),
+  priceUnit: z.string(),
+  stockQuantity: z.string()
+    .refine((val) => !isNaN(parseInt(val)) && parseInt(val) >= 0, {
+      message: messages.min(0),
+    }),
+  stockUnit: z.string(),
   condition: z.number().min(0).max(3),
-  brandId: z.string().optional(),
-  tags: z.array(z.string()).optional(),
-}).refine((data) => {
-  if (data.discountedPrice && data.discountedPrice >= data.basePrice) {
-    return false;
-  }
-  return true;
-}, {
-  message: "Indirimli fiyat normal fiyattan dusuk olmalidir",
-  path: ["discountedPrice"],
+  isShippingAvailable: z.boolean(),
+  shippingCost: z.string().optional(),
+  weight: z.string().optional(),
+  weightUnit: z.string(),
+  // Location fields (create only)
+  city: requiredStringSchema(1, 100),
+  address: requiredStringSchema(1, 500),
+  postalCode: z.string().optional(),
+});
+
+// Edit formu - location alanlari olmadan
+export const editListingFormSchema = z.object({
+  title: requiredStringSchema(5, 200),
+  shortDescription: requiredStringSchema(10, 500),
+  description: requiredStringSchema(20, 5000),
+  categoryId: z.string({ message: messages.required }).min(1, { message: messages.required }),
+  basePrice: z.string({ message: messages.required })
+    .min(1, { message: messages.required })
+    .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) > 0, {
+      message: messages.positive,
+    }),
+  currency: z.string().min(1).max(3),
+  priceUnit: z.string(),
+  stockQuantity: z.string()
+    .refine((val) => !isNaN(parseInt(val)) && parseInt(val) >= 0, {
+      message: messages.min(0),
+    }),
+  stockUnit: z.string(),
+  condition: z.number().min(0).max(3),
+  isShippingAvailable: z.boolean(),
+  shippingCost: z.string().optional(),
+  weight: z.string().optional(),
+  weightUnit: z.string(),
+});
+
+// Ciftlik formu
+export const farmFormSchema = z.object({
+  name: requiredStringSchema(2, 200),
+  description: z.string().max(2000, { message: messages.maxLength(2000) }),
+  registrationNumber: z.string(),
+  type: z.number().min(0).max(5),
+  totalAreaHectares: z.string()
+    .refine((val) => !val || val === "" || (!isNaN(parseFloat(val)) && parseFloat(val) >= 0), {
+      message: messages.positive,
+    }),
+  cultivatedAreaHectares: z.string()
+    .refine((val) => !val || val === "" || (!isNaN(parseFloat(val)) && parseFloat(val) >= 0), {
+      message: messages.positive,
+    }),
+  certifications: z.string(),
+  isOrganic: z.boolean(),
 });
 
 // Iletisim formu
@@ -216,6 +265,8 @@ export type ChangePasswordFormData = z.infer<typeof changePasswordSchema>;
 export type ProfileFormData = z.infer<typeof profileFormSchema>;
 export type BecomeSellerFormData = z.infer<typeof becomeSellerFormSchema>;
 export type ListingFormData = z.infer<typeof listingFormSchema>;
+export type EditListingFormData = z.infer<typeof editListingFormSchema>;
+export type FarmFormData = z.infer<typeof farmFormSchema>;
 export type ContactFormData = z.infer<typeof contactFormSchema>;
 
 // ==================== HELPER FUNCTIONS ====================

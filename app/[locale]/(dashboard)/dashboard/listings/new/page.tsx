@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
+import { useForm, Controller } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useQueryClient } from "@tanstack/react-query";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Button } from "@/components/ui/button";
@@ -25,6 +27,7 @@ import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { toast } from "sonner";
 import { useCategories } from "@/hooks/queries";
 import { queryKeys } from "@/lib/query-keys";
+import { listingFormSchema, type ListingFormData } from "@/lib/validations";
 import dynamic from "next/dynamic";
 const MediaUpload = dynamic(() => import("@/components/features/media-upload").then(mod => ({ default: mod.MediaUpload })), { ssr: false });
 
@@ -58,36 +61,45 @@ export default function NewListingPage() {
   const [coverImageFileId, setCoverImageFileId] = useState<string>("");
   const [, setMediaFiles] = useState<MediaFile[]>([]);
 
-  const [formData, setFormData] = useState({
-    title: "",
-    shortDescription: "",
-    description: "",
-    categoryId: "",
-    basePrice: "",
-    currency: selectedCountry?.defaultCurrencyCode || "TRY",
-    priceUnit: "adet",
-    stockQuantity: "1",
-    stockUnit: "adet",
-    condition: 0 as ProductCondition,
-    isShippingAvailable: false,
-    shippingCost: "",
-    weight: "",
-    weightUnit: "kg",
-    // Location fields
-    city: "",
-    address: "",
-    postalCode: "",
+  // Form with Zod validation
+  const {
+    register,
+    handleSubmit: formSubmit,
+    control,
+    watch,
+    setValue,
+    formState: { errors },
+  } = useForm<ListingFormData>({
+    resolver: zodResolver(listingFormSchema),
+    defaultValues: {
+      title: "",
+      shortDescription: "",
+      description: "",
+      categoryId: "",
+      basePrice: "",
+      currency: selectedCountry?.defaultCurrencyCode || "TRY",
+      priceUnit: "adet",
+      stockQuantity: "1",
+      stockUnit: "adet",
+      condition: 0,
+      isShippingAvailable: false,
+      shippingCost: "",
+      weight: "",
+      weightUnit: "kg",
+      city: "",
+      address: "",
+      postalCode: "",
+    },
   });
+
+  const isShippingAvailable = watch("isShippingAvailable");
 
   // Update currency when country changes
   useEffect(() => {
     if (selectedCountry?.defaultCurrencyCode) {
-      setFormData((prev) => ({
-        ...prev,
-        currency: selectedCountry.defaultCurrencyCode,
-      }));
+      setValue("currency", selectedCountry.defaultCurrencyCode);
     }
-  }, [selectedCountry]);
+  }, [selectedCountry, setValue]);
 
   const generateSlug = (title: string) => {
     return title
@@ -105,38 +117,7 @@ export default function NewListingPage() {
     setMediaFiles(files);
   };
 
-  const handleSubmit = async (e: React.FormEvent, isDraft: boolean = false) => {
-    e.preventDefault();
-
-    // Validate required fields
-    if (!formData.title.trim()) {
-      toast.error(t("errors.titleRequired"));
-      return;
-    }
-    if (!formData.shortDescription.trim()) {
-      toast.error(t("errors.shortDescriptionRequired"));
-      return;
-    }
-    if (!formData.description.trim()) {
-      toast.error(t("errors.descriptionRequired"));
-      return;
-    }
-    if (!formData.categoryId) {
-      toast.error(t("errors.categoryRequired"));
-      return;
-    }
-    if (!formData.basePrice || parseFloat(formData.basePrice) <= 0) {
-      toast.error(t("errors.priceRequired"));
-      return;
-    }
-    if (!formData.city.trim()) {
-      toast.error(t("errors.cityRequired"));
-      return;
-    }
-    if (!formData.address.trim()) {
-      toast.error(t("errors.addressRequired"));
-      return;
-    }
+  const onSubmit = async (data: ListingFormData, isDraft: boolean = false) => {
     if (!user?.id) {
       toast.error(t("userNotFound"));
       router.push("/login");
@@ -146,19 +127,17 @@ export default function NewListingPage() {
     setIsLoading(true);
 
     try {
-      const slug = generateSlug(formData.title);
+      const slug = generateSlug(data.title);
 
       // Step 1: Check if Seller profile exists, if not create one
       let sellerId: string;
 
       try {
-        // Try to get existing seller profile by user id
         const sellerResponse = await LivestockTradingAPI.Sellers.Detail.Request({
           id: user.id,
         });
         sellerId = sellerResponse.id;
       } catch {
-        // Seller doesn't exist, create one
         const newSeller = await LivestockTradingAPI.Sellers.Create.Request({
           userId: user.id,
           businessName: user.displayName || user.username || t("defaultBusinessName"),
@@ -184,12 +163,12 @@ export default function NewListingPage() {
 
       // Step 2: Create Location
       const locationResponse = await LivestockTradingAPI.Locations.Create.Request({
-        name: formData.title,
-        addressLine1: formData.address,
+        name: data.title,
+        addressLine1: data.address,
         addressLine2: "",
-        city: formData.city,
-        state: formData.city,
-        postalCode: formData.postalCode || "",
+        city: data.city,
+        state: data.city,
+        postalCode: data.postalCode || "",
         countryCode: selectedCountry?.code || "TR",
         latitude: 0,
         longitude: 0,
@@ -201,33 +180,32 @@ export default function NewListingPage() {
 
       // Step 3: Create Product with the sellerId and locationId
       await LivestockTradingAPI.Products.Create.Request({
-        title: formData.title,
+        title: data.title,
         slug: slug,
-        description: formData.description,
-        shortDescription: formData.shortDescription,
-        categoryId: formData.categoryId,
-        basePrice: parseFloat(formData.basePrice) as any,
-        currency: formData.currency,
-        priceUnit: formData.priceUnit,
-        stockQuantity: parseInt(formData.stockQuantity),
-        stockUnit: formData.stockUnit,
-        isInStock: parseInt(formData.stockQuantity) > 0,
+        description: data.description,
+        shortDescription: data.shortDescription,
+        categoryId: data.categoryId,
+        basePrice: parseFloat(data.basePrice) as any,
+        currency: data.currency,
+        priceUnit: data.priceUnit,
+        stockQuantity: parseInt(data.stockQuantity),
+        stockUnit: data.stockUnit,
+        isInStock: parseInt(data.stockQuantity) > 0,
         sellerId: sellerId,
         locationId: locationResponse.id,
         status: isDraft ? 0 : 1, // 0=Draft, 1=PendingApproval
-        condition: formData.condition,
-        isShippingAvailable: formData.isShippingAvailable,
-        shippingCost: formData.shippingCost
-          ? (parseFloat(formData.shippingCost) as any)
+        condition: data.condition,
+        isShippingAvailable: data.isShippingAvailable,
+        shippingCost: data.shippingCost
+          ? (parseFloat(data.shippingCost) as any)
           : undefined,
         isInternationalShipping: false,
-        weight: formData.weight ? (parseFloat(formData.weight) as any) : undefined,
-        weightUnit: formData.weightUnit,
+        weight: data.weight ? (parseFloat(data.weight) as any) : undefined,
+        weightUnit: data.weightUnit,
         attributes: "{}",
-        metaTitle: formData.title,
-        metaDescription: formData.shortDescription,
+        metaTitle: data.title,
+        metaDescription: data.shortDescription,
         metaKeywords: "",
-        // Media bucket - files already uploaded via MediaUpload component
         mediaBucketId: mediaBucketId || "",
         coverImageFileId: coverImageFileId || "",
       });
@@ -243,9 +221,12 @@ export default function NewListingPage() {
     }
   };
 
+  const handlePublish = formSubmit((data) => onSubmit(data, false));
+  const handleDraft = formSubmit((data) => onSubmit(data, true));
+
   return (
     <DashboardLayout>
-      <form onSubmit={(e) => handleSubmit(e, false)}>
+      <form onSubmit={handlePublish}>
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-4">
@@ -263,7 +244,7 @@ export default function NewListingPage() {
             <Button
               type="button"
               variant="outline"
-              onClick={(e) => handleSubmit(e, true)}
+              onClick={handleDraft}
               disabled={isLoading || authLoading || !user?.id}
             >
               {t("saveDraft")}
@@ -297,13 +278,12 @@ export default function NewListingPage() {
                   <Label htmlFor="title">{t("fields.title")} *</Label>
                   <Input
                     id="title"
-                    value={formData.title}
-                    onChange={(e) =>
-                      setFormData({ ...formData, title: e.target.value })
-                    }
+                    {...register("title")}
                     placeholder={t("placeholders.title")}
-                    required
                   />
+                  {errors.title && (
+                    <p className="text-sm text-destructive">{errors.title.message}</p>
+                  )}
                 </div>
 
                 <div className="space-y-2">
@@ -312,28 +292,26 @@ export default function NewListingPage() {
                   </Label>
                   <Textarea
                     id="shortDescription"
-                    value={formData.shortDescription}
-                    onChange={(e) =>
-                      setFormData({ ...formData, shortDescription: e.target.value })
-                    }
+                    {...register("shortDescription")}
                     placeholder={t("placeholders.shortDescription")}
                     rows={2}
-                    required
                   />
+                  {errors.shortDescription && (
+                    <p className="text-sm text-destructive">{errors.shortDescription.message}</p>
+                  )}
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="description">{t("fields.description")} *</Label>
                   <Textarea
                     id="description"
-                    value={formData.description}
-                    onChange={(e) =>
-                      setFormData({ ...formData, description: e.target.value })
-                    }
+                    {...register("description")}
                     placeholder={t("placeholders.description")}
                     rows={6}
-                    required
                   />
+                  {errors.description && (
+                    <p className="text-sm text-destructive">{errors.description.message}</p>
+                  )}
                 </div>
               </CardContent>
             </Card>
@@ -365,47 +343,51 @@ export default function NewListingPage() {
               <CardContent className="space-y-4">
                 <div className="space-y-2">
                   <Label>{t("fields.category")} *</Label>
-                  <Select
-                    value={formData.categoryId}
-                    onValueChange={(v) =>
-                      setFormData({ ...formData, categoryId: v })
-                    }
-                    required
-                  >
-                    <SelectTrigger>
-                      <SelectValue placeholder={t("placeholders.category")} />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {categories.map((cat) => (
-                        <SelectItem key={cat.id} value={cat.id}>
-                          {cat.name}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <Controller
+                    name="categoryId"
+                    control={control}
+                    render={({ field }) => (
+                      <Select value={field.value} onValueChange={field.onChange}>
+                        <SelectTrigger>
+                          <SelectValue placeholder={t("placeholders.category")} />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {categories.map((cat) => (
+                            <SelectItem key={cat.id} value={cat.id}>
+                              {cat.name}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
+                  {errors.categoryId && (
+                    <p className="text-sm text-destructive">{errors.categoryId.message}</p>
+                  )}
                 </div>
 
                 <div className="space-y-2">
                   <Label>{t("fields.condition")} *</Label>
-                  <Select
-                    value={String(formData.condition)}
-                    onValueChange={(v) =>
-                      setFormData({
-                        ...formData,
-                        condition: parseInt(v) as ProductCondition,
-                      })
-                    }
-                  >
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="0">{tp("condition.new")}</SelectItem>
-                      <SelectItem value="1">{tp("condition.likeNew")}</SelectItem>
-                      <SelectItem value="2">{tp("condition.good")}</SelectItem>
-                      <SelectItem value="3">{tp("condition.fair")}</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Controller
+                    name="condition"
+                    control={control}
+                    render={({ field }) => (
+                      <Select
+                        value={String(field.value)}
+                        onValueChange={(v) => field.onChange(parseInt(v))}
+                      >
+                        <SelectTrigger>
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="0">{tp("condition.new")}</SelectItem>
+                          <SelectItem value="1">{tp("condition.likeNew")}</SelectItem>
+                          <SelectItem value="2">{tp("condition.good")}</SelectItem>
+                          <SelectItem value="3">{tp("condition.fair")}</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
                 </div>
               </CardContent>
             </Card>
@@ -424,30 +406,30 @@ export default function NewListingPage() {
                       type="number"
                       min="0"
                       step="0.01"
-                      value={formData.basePrice}
-                      onChange={(e) =>
-                        setFormData({ ...formData, basePrice: e.target.value })
-                      }
+                      {...register("basePrice")}
                       placeholder="0.00"
                       className="flex-1"
-                      required
                     />
-                    <Select
-                      value={formData.currency}
-                      onValueChange={(v) =>
-                        setFormData({ ...formData, currency: v })
-                      }
-                    >
-                      <SelectTrigger className="w-24">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="TRY">TRY</SelectItem>
-                        <SelectItem value="USD">USD</SelectItem>
-                        <SelectItem value="EUR">EUR</SelectItem>
-                      </SelectContent>
-                    </Select>
+                    <Controller
+                      name="currency"
+                      control={control}
+                      render={({ field }) => (
+                        <Select value={field.value} onValueChange={field.onChange}>
+                          <SelectTrigger className="w-24">
+                            <SelectValue />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="TRY">TRY</SelectItem>
+                            <SelectItem value="USD">USD</SelectItem>
+                            <SelectItem value="EUR">EUR</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
                   </div>
+                  {errors.basePrice && (
+                    <p className="text-sm text-destructive">{errors.basePrice.message}</p>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -457,20 +439,17 @@ export default function NewListingPage() {
                       id="stockQuantity"
                       type="number"
                       min="1"
-                      value={formData.stockQuantity}
-                      onChange={(e) =>
-                        setFormData({ ...formData, stockQuantity: e.target.value })
-                      }
+                      {...register("stockQuantity")}
                     />
+                    {errors.stockQuantity && (
+                      <p className="text-sm text-destructive">{errors.stockQuantity.message}</p>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="stockUnit">{t("fields.unit")}</Label>
                     <Input
                       id="stockUnit"
-                      value={formData.stockUnit}
-                      onChange={(e) =>
-                        setFormData({ ...formData, stockUnit: e.target.value })
-                      }
+                      {...register("stockUnit")}
                     />
                   </div>
                 </div>
@@ -487,37 +466,32 @@ export default function NewListingPage() {
                   <Label htmlFor="city">{t("fields.city")} *</Label>
                   <Input
                     id="city"
-                    value={formData.city}
-                    onChange={(e) =>
-                      setFormData({ ...formData, city: e.target.value })
-                    }
+                    {...register("city")}
                     placeholder={t("placeholders.city")}
-                    required
                   />
+                  {errors.city && (
+                    <p className="text-sm text-destructive">{errors.city.message}</p>
+                  )}
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="address">{t("fields.address")} *</Label>
                   <Textarea
                     id="address"
-                    value={formData.address}
-                    onChange={(e) =>
-                      setFormData({ ...formData, address: e.target.value })
-                    }
+                    {...register("address")}
                     placeholder={t("placeholders.address")}
                     rows={2}
-                    required
                   />
+                  {errors.address && (
+                    <p className="text-sm text-destructive">{errors.address.message}</p>
+                  )}
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="postalCode">{t("fields.postalCode")}</Label>
                   <Input
                     id="postalCode"
-                    value={formData.postalCode}
-                    onChange={(e) =>
-                      setFormData({ ...formData, postalCode: e.target.value })
-                    }
+                    {...register("postalCode")}
                     placeholder={t("placeholders.postalCode")}
                   />
                 </div>
@@ -530,23 +504,24 @@ export default function NewListingPage() {
                 <CardTitle>{t("shipping")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="flex items-center space-x-2">
-                  <Checkbox
-                    id="isShippingAvailable"
-                    checked={formData.isShippingAvailable}
-                    onCheckedChange={(checked) =>
-                      setFormData({
-                        ...formData,
-                        isShippingAvailable: checked === true,
-                      })
-                    }
-                  />
-                  <Label htmlFor="isShippingAvailable" className="font-normal">
-                    {t("fields.shippingAvailable")}
-                  </Label>
-                </div>
+                <Controller
+                  name="isShippingAvailable"
+                  control={control}
+                  render={({ field }) => (
+                    <div className="flex items-center space-x-2">
+                      <Checkbox
+                        id="isShippingAvailable"
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
+                      <Label htmlFor="isShippingAvailable" className="font-normal">
+                        {t("fields.shippingAvailable")}
+                      </Label>
+                    </div>
+                  )}
+                />
 
-                {formData.isShippingAvailable && (
+                {isShippingAvailable && (
                   <>
                     <div className="space-y-2">
                       <Label htmlFor="shippingCost">{t("fields.shippingCost")}</Label>
@@ -555,10 +530,7 @@ export default function NewListingPage() {
                         type="number"
                         min="0"
                         step="0.01"
-                        value={formData.shippingCost}
-                        onChange={(e) =>
-                          setFormData({ ...formData, shippingCost: e.target.value })
-                        }
+                        {...register("shippingCost")}
                         placeholder="0.00"
                       />
                     </div>
@@ -571,29 +543,27 @@ export default function NewListingPage() {
                           type="number"
                           min="0"
                           step="0.1"
-                          value={formData.weight}
-                          onChange={(e) =>
-                            setFormData({ ...formData, weight: e.target.value })
-                          }
+                          {...register("weight")}
                         />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="weightUnit">{t("fields.weightUnit")}</Label>
-                        <Select
-                          value={formData.weightUnit}
-                          onValueChange={(v) =>
-                            setFormData({ ...formData, weightUnit: v })
-                          }
-                        >
-                          <SelectTrigger>
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="kg">kg</SelectItem>
-                            <SelectItem value="g">g</SelectItem>
-                            <SelectItem value="lb">lb</SelectItem>
-                          </SelectContent>
-                        </Select>
+                        <Controller
+                          name="weightUnit"
+                          control={control}
+                          render={({ field }) => (
+                            <Select value={field.value} onValueChange={field.onChange}>
+                              <SelectTrigger>
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="kg">kg</SelectItem>
+                                <SelectItem value="g">g</SelectItem>
+                                <SelectItem value="lb">lb</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          )}
+                        />
                       </div>
                     </div>
                   </>

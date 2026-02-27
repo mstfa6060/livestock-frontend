@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { useForm, Controller } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,11 +12,20 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { queryKeys } from "@/lib/query-keys";
+import { farmFormSchema, type FarmFormData } from "@/lib/validations";
 import {
   Tractor,
   PlusCircle,
@@ -49,17 +60,6 @@ interface Farm {
   isActive: boolean;
   isVerified: boolean;
   createdAt: Date;
-}
-
-interface FarmFormData {
-  name: string;
-  description: string;
-  registrationNumber: string;
-  type: number;
-  totalAreaHectares: string;
-  cultivatedAreaHectares: string;
-  certifications: string;
-  isOrganic: boolean;
 }
 
 function getFarmTypeLabel(type: number, t: (key: string) => string) {
@@ -131,7 +131,8 @@ export default function FarmsPage() {
   const [showForm, setShowForm] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState<FarmFormData>({
+
+  const defaultFormValues: FarmFormData = {
     name: "",
     description: "",
     registrationNumber: "",
@@ -140,19 +141,21 @@ export default function FarmsPage() {
     cultivatedAreaHectares: "",
     certifications: "",
     isOrganic: false,
+  };
+
+  const {
+    register,
+    handleSubmit: formSubmit,
+    control,
+    reset,
+    formState: { errors },
+  } = useForm<FarmFormData>({
+    resolver: zodResolver(farmFormSchema),
+    defaultValues: defaultFormValues,
   });
 
   const resetForm = () => {
-    setFormData({
-      name: "",
-      description: "",
-      registrationNumber: "",
-      type: FarmType.Livestock,
-      totalAreaHectares: "",
-      cultivatedAreaHectares: "",
-      certifications: "",
-      isOrganic: false,
-    });
+    reset(defaultFormValues);
     setEditingId(null);
     setShowForm(false);
   };
@@ -160,7 +163,7 @@ export default function FarmsPage() {
   const handleEdit = async (farmId: string) => {
     try {
       const detail = await LivestockTradingAPI.Farms.Detail.Request({ id: farmId });
-      setFormData({
+      reset({
         name: detail.name,
         description: detail.description || "",
         registrationNumber: detail.registrationNumber || "",
@@ -177,8 +180,7 @@ export default function FarmsPage() {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (data: FarmFormData) => {
     if (!sellerId || !user?.id) return;
 
     setIsSubmitting(true);
@@ -188,16 +190,16 @@ export default function FarmsPage() {
         const detail = await LivestockTradingAPI.Farms.Detail.Request({ id: editingId });
         await LivestockTradingAPI.Farms.Update.Request({
           id: editingId,
-          name: formData.name,
-          description: formData.description,
-          registrationNumber: formData.registrationNumber,
+          name: data.name,
+          description: data.description || "",
+          registrationNumber: data.registrationNumber || "",
           sellerId,
           locationId: detail.locationId,
-          type: formData.type,
-          totalAreaHectares: formData.totalAreaHectares ? parseFloat(formData.totalAreaHectares) as any : undefined,
-          cultivatedAreaHectares: formData.cultivatedAreaHectares ? parseFloat(formData.cultivatedAreaHectares) as any : undefined,
-          certifications: formData.certifications,
-          isOrganic: formData.isOrganic,
+          type: data.type,
+          totalAreaHectares: data.totalAreaHectares ? parseFloat(data.totalAreaHectares) as any : undefined,
+          cultivatedAreaHectares: data.cultivatedAreaHectares ? parseFloat(data.cultivatedAreaHectares) as any : undefined,
+          certifications: data.certifications || "",
+          isOrganic: data.isOrganic,
           imageUrls: detail.imageUrls || "",
           videoUrl: detail.videoUrl || "",
           isActive: true,
@@ -207,16 +209,16 @@ export default function FarmsPage() {
       } else {
         // Create
         await LivestockTradingAPI.Farms.Create.Request({
-          name: formData.name,
-          description: formData.description,
-          registrationNumber: formData.registrationNumber,
+          name: data.name,
+          description: data.description || "",
+          registrationNumber: data.registrationNumber || "",
           sellerId,
           locationId: "00000000-0000-0000-0000-000000000000",
-          type: formData.type,
-          totalAreaHectares: formData.totalAreaHectares ? parseFloat(formData.totalAreaHectares) as any : undefined,
-          cultivatedAreaHectares: formData.cultivatedAreaHectares ? parseFloat(formData.cultivatedAreaHectares) as any : undefined,
-          certifications: formData.certifications,
-          isOrganic: formData.isOrganic,
+          type: data.type,
+          totalAreaHectares: data.totalAreaHectares ? parseFloat(data.totalAreaHectares) as any : undefined,
+          cultivatedAreaHectares: data.cultivatedAreaHectares ? parseFloat(data.cultivatedAreaHectares) as any : undefined,
+          certifications: data.certifications || "",
+          isOrganic: data.isOrganic,
           imageUrls: "",
           videoUrl: "",
           isActive: true,
@@ -314,39 +316,48 @@ export default function FarmsPage() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={formSubmit(onSubmit)} className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="farm-name">{t("farmName")}</Label>
                     <Input
                       id="farm-name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      required
+                      {...register("name")}
                     />
+                    {errors.name && (
+                      <p className="text-sm text-destructive mt-1">{errors.name.message}</p>
+                    )}
                   </div>
                   <div>
                     <Label htmlFor="farm-reg">{t("registrationNumber")}</Label>
                     <Input
                       id="farm-reg"
-                      value={formData.registrationNumber}
-                      onChange={(e) => setFormData({ ...formData, registrationNumber: e.target.value })}
+                      {...register("registrationNumber")}
                     />
                   </div>
                   <div>
                     <Label htmlFor="farm-type">{t("farmTypeLabel")}</Label>
-                    <select
-                      id="farm-type"
-                      className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors"
-                      value={formData.type}
-                      onChange={(e) => setFormData({ ...formData, type: parseInt(e.target.value) })}
-                    >
-                      {Object.entries(FarmType).map(([key, value]) => (
-                        <option key={key} value={value}>
-                          {getFarmTypeLabel(value, t)}
-                        </option>
-                      ))}
-                    </select>
+                    <Controller
+                      name="type"
+                      control={control}
+                      render={({ field }) => (
+                        <Select
+                          value={String(field.value)}
+                          onValueChange={(v) => field.onChange(parseInt(v))}
+                        >
+                          <SelectTrigger>
+                            <SelectValue />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {Object.entries(FarmType).map(([key, value]) => (
+                              <SelectItem key={key} value={String(value)}>
+                                {getFarmTypeLabel(value, t)}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
                   </div>
                   <div>
                     <Label htmlFor="farm-area">{t("totalArea")} (ha)</Label>
@@ -354,9 +365,11 @@ export default function FarmsPage() {
                       id="farm-area"
                       type="number"
                       step="0.01"
-                      value={formData.totalAreaHectares}
-                      onChange={(e) => setFormData({ ...formData, totalAreaHectares: e.target.value })}
+                      {...register("totalAreaHectares")}
                     />
+                    {errors.totalAreaHectares && (
+                      <p className="text-sm text-destructive mt-1">{errors.totalAreaHectares.message}</p>
+                    )}
                   </div>
                   <div>
                     <Label htmlFor="farm-cultivated">{t("cultivatedArea")} (ha)</Label>
@@ -364,19 +377,27 @@ export default function FarmsPage() {
                       id="farm-cultivated"
                       type="number"
                       step="0.01"
-                      value={formData.cultivatedAreaHectares}
-                      onChange={(e) => setFormData({ ...formData, cultivatedAreaHectares: e.target.value })}
+                      {...register("cultivatedAreaHectares")}
                     />
+                    {errors.cultivatedAreaHectares && (
+                      <p className="text-sm text-destructive mt-1">{errors.cultivatedAreaHectares.message}</p>
+                    )}
                   </div>
                   <div className="flex items-center gap-2 pt-6">
-                    <input
-                      id="farm-organic"
-                      type="checkbox"
-                      checked={formData.isOrganic}
-                      onChange={(e) => setFormData({ ...formData, isOrganic: e.target.checked })}
-                      className="h-4 w-4 rounded border-gray-300"
+                    <Controller
+                      name="isOrganic"
+                      control={control}
+                      render={({ field }) => (
+                        <div className="flex items-center gap-2">
+                          <Checkbox
+                            id="farm-organic"
+                            checked={field.value}
+                            onCheckedChange={field.onChange}
+                          />
+                          <Label htmlFor="farm-organic">{t("organic")}</Label>
+                        </div>
+                      )}
                     />
-                    <Label htmlFor="farm-organic">{t("organic")}</Label>
                   </div>
                 </div>
 
@@ -384,8 +405,7 @@ export default function FarmsPage() {
                   <Label htmlFor="farm-desc">{t("farmDescription")}</Label>
                   <Textarea
                     id="farm-desc"
-                    value={formData.description}
-                    onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                    {...register("description")}
                     rows={3}
                   />
                 </div>
@@ -394,8 +414,7 @@ export default function FarmsPage() {
                   <Label htmlFor="farm-certs">{t("certifications")}</Label>
                   <Input
                     id="farm-certs"
-                    value={formData.certifications}
-                    onChange={(e) => setFormData({ ...formData, certifications: e.target.value })}
+                    {...register("certifications")}
                     placeholder={t("certificationsPlaceholder")}
                   />
                 </div>

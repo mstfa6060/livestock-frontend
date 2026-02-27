@@ -50,6 +50,8 @@ const menuItems: MenuItem[] = [
   { key: "locations", href: "/dashboard/locations", icon: MapPin },
   { key: "becomeSeller", href: "/dashboard/become-seller", icon: Store },
   { key: "moderation", href: "/dashboard/moderation", icon: ShieldCheck, adminOnly: true },
+  { key: "sellerModeration", href: "/dashboard/seller-moderation", icon: Store, adminOnly: true },
+  { key: "transporterModeration", href: "/dashboard/transporter-moderation", icon: Truck, adminOnly: true },
   { key: "categories", href: "/dashboard/categories", icon: FolderTree, adminOnly: true },
   { key: "brands", href: "/dashboard/brands", icon: Tag, adminOnly: true },
   { key: "systemSettings", href: "/dashboard/system-settings", icon: Settings, adminOnly: true },
@@ -72,7 +74,7 @@ function UnreadBadge({ count }: { count: number }) {
 export function DashboardSidebar() {
   const pathname = usePathname();
   const t = useTranslations("dashboardNav");
-  const { isAdmin } = useRoles();
+  const { isAdmin, isStaff } = useRoles();
   const { user } = useAuth();
 
   const unreadMessages = useMessagesStore((s) => s.unreadCount);
@@ -91,7 +93,7 @@ export function DashboardSidebar() {
   // Remove locale prefix from pathname for comparison
   const currentPath = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, "");
 
-  const visibleItems = menuItems.filter((item) => !item.adminOnly || isAdmin);
+  const visibleItems = menuItems.filter((item) => !item.adminOnly || isAdmin || isStaff);
 
   const getBadgeCount = (badgeKey?: "messages" | "notifications") => {
     if (badgeKey === "messages") return unreadMessages;
