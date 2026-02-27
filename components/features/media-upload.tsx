@@ -112,6 +112,7 @@ export function MediaUpload({
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const pollingRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const pollFailCountRef = useRef(0);
 
   // Sync initial files
   useEffect(() => {
@@ -156,6 +157,7 @@ export function MediaUpload({
 
         const responseData = response.data;
         const statuses = responseData.payload || responseData;
+        pollFailCountRef.current = 0;
 
         if (Array.isArray(statuses) && statuses.length > 0) {
           setFiles((prev) => {
@@ -187,7 +189,14 @@ export function MediaUpload({
           });
         }
       } catch {
-        // Silently ignore polling errors
+        pollFailCountRef.current += 1;
+        if (pollFailCountRef.current >= 3) {
+          toast.error(t("videoProcessingPollError"));
+          if (pollingRef.current) {
+            clearInterval(pollingRef.current);
+            pollingRef.current = null;
+          }
+        }
       }
     };
 

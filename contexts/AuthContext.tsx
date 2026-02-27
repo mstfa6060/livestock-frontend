@@ -260,8 +260,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const logout = useCallback(async () => {
     try {
       await IAMAPI.Auth.Logout.Request({});
-    } catch {
-      // Ignore logout errors - we'll clear local state anyway
+    } catch (error) {
+      console.warn("Logout API call failed, clearing local session:", error);
     }
 
     clearAuthData();

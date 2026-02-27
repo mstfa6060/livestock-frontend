@@ -47,8 +47,10 @@ export function MakeOfferDialog({
       onClose();
       onSuccess?.();
     },
-    onError: () => {
-      toast.error(t("offerError"));
+    onError: (error) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const apiMessage = (error as any)?.response?.data?.error?.message;
+      toast.error(apiMessage || t("offerError"));
     },
   });
 

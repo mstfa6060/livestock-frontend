@@ -88,7 +88,7 @@ interface MakeOfferParams {
 
 export function useMakeOfferMutation(options?: {
   onSuccess?: () => void;
-  onError?: () => void;
+  onError?: (error: Error) => void;
 }) {
   const queryClient = useQueryClient();
 
@@ -102,8 +102,8 @@ export function useMakeOfferMutation(options?: {
       queryClient.invalidateQueries({ queryKey: queryKeys.offers.all });
       options?.onSuccess?.();
     },
-    onError: () => {
-      options?.onError?.();
+    onError: (error: Error) => {
+      options?.onError?.(error);
     },
   });
 }

@@ -54,12 +54,11 @@
 
 ## ORTA ONCELIK
 
-### 7. Sessiz Hata Yonetimi (Silent Error Handling)
-- [ ] `MediaUpload.tsx` — video processing polling hatalarini kullaniciya bildir
-- [ ] `AuthContext.tsx` — logout hatalarini handle et
-- [ ] `products/[slug]/page.tsx` — `.catch(() => {})` yerine proper error handling
-- [ ] `MakeOfferDialog.tsx` — hata turune gore farkli mesajlar goster
-- **Effort:** 2-3 saat
+### 7. ~~Sessiz Hata Yonetimi (Silent Error Handling)~~ ✅ TAMAMLANDI (2026-02-28)
+- [x] `MediaUpload.tsx` — 3 ardisik polling hatasinda toast gosterip polling durduruluyor
+- [x] `AuthContext.tsx` — logout hatasi `console.warn` ile loglaniyor
+- [x] `products/[slug]/page.tsx` — `.catch(() => {})` yerine `console.warn` + favorite hatasi icin `toast.error`
+- [x] `MakeOfferDialog.tsx` — API hata mesaji varsa onu gosteriyor, yoksa genel hata mesaji
 
 ### 8. Production Logging Iyilestirmesi
 - [ ] `ApiService.ts` — console.error'lari environment-gated yap

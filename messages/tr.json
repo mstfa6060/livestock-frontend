@@ -884,6 +884,7 @@
     "removeImage": "Kaldir",
     "videoProcessing": "Video isleniyor...",
     "videoProcessingFailed": "Isleme basarisiz",
+    "videoProcessingPollError": "Video isleme durumu alinamadi. Lutfen sayfayi yenileyin.",
     "reorderError": "Dosya siralanamadi",
     "coverUpdateError": "Kapak fotografı guncellenemedi"
   },

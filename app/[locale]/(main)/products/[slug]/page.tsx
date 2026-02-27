@@ -225,7 +225,9 @@ export default function ProductDetailPage() {
         userId: user.id,
         productId: product.id,
         viewSource: "web",
-      }).catch(() => {});
+      }).catch((error) => {
+        console.warn("Failed to track product view:", error);
+      });
     }
   }, [product?.id, user?.id]);
 
@@ -241,7 +243,7 @@ export default function ProductDetailPage() {
       await toggleFavorite(product.id, user.id);
       toast.success(isFavorite ? t("removedFromFavorites") : t("addedToFavorites"));
     } catch {
-      // Handled by store
+      toast.error(t("favoriteError"));
     }
   };
 
