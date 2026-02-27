@@ -11,7 +11,7 @@ pipeline {
         IMAGE_NAME = 'mstfaock/livestocktrading-web'
         TAG_SUFFIX = 'latest'
         IMMUTABLE_TAG = "prod-${BUILD_ID}-${GIT_COMMIT.take(8)}"
-        DOCKER_BUILDKIT = '1'
+        DOCKER_BUILDKIT = '0'
 
         DOCKERHUB_CREDENTIAL_ID = 'dockerhub-credentials'
         SERVER_SSH_KEY_ID = 'maden-server-key'
@@ -69,8 +69,7 @@ pipeline {
 
                     timeout(time: 30, unit: 'MINUTES') {
                         sh """
-                            docker buildx build \
-                                --builder default \
+                            DOCKER_BUILDKIT=0 docker build \
                                 ${cacheArgs} \
                                 --file Dockerfile \
                                 --build-arg NEXT_PUBLIC_ENVIRONMENT=production \
@@ -78,8 +77,7 @@ pipeline {
                                 --tag ${IMAGE_NAME}:${IMMUTABLE_TAG} \
                                 --label org.opencontainers.image.revision=${GIT_COMMIT} \
                                 --label org.opencontainers.image.version=${IMMUTABLE_TAG} \
-                                --pull \
-                                --load .
+                                --pull .
 
                             docker push ${IMAGE_NAME}:${TAG_SUFFIX}
                             docker push ${IMAGE_NAME}:${IMMUTABLE_TAG}
