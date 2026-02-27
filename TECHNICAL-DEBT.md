@@ -26,11 +26,9 @@
 
 ## YUKSEK ONCELIK
 
-### 3. Duplicate Token Validation
-- [ ] `contexts/AuthContext.tsx` icindeki lokal `isTokenExpired()` fonksiyonunu kaldir
-- [ ] `lib/auth.ts`'den import et
-- **Dosyalar:** `contexts/AuthContext.tsx:89-100`, `lib/auth.ts:36-43`
-- **Effort:** 15 dakika
+### 3. ~~Duplicate Token Validation~~ ✅ TAMAMLANDI (2026-02-27)
+- [x] `contexts/AuthContext.tsx` icindeki lokal `isTokenExpired()` fonksiyonu kaldirildi
+- [x] `lib/auth.ts`'den import edildi (30s buffer parametresi eklendi)
 
 ### 4. Duplicate Media Upload Componenti
 - [ ] `components/features/media-upload.tsx` (856 satir) ve `components/features/upload/MediaUpload.tsx` (621 satir) karsilastir
@@ -158,7 +156,7 @@
 |---|-----|---------|--------|
 | 1 | ~~Test altyapisi + kritik testler~~ | ✅ Tamamlandi | — |
 | 2 | ~~npm audit fix~~ | ✅ Tamamlandi | — |
-| 3 | Duplicate token validation | Yuksek | 15 dk |
+| 3 | ~~Duplicate token validation~~ | ✅ Tamamlandi | — |
 | 4 | Duplicate MediaUpload birlestirme | Yuksek | 2-3 saat |
 | 5 | `any` type temizligi | Yuksek | 3-4 saat |
 | 6 | Mutation hooks olusturma | Yuksek | 3-4 saat |

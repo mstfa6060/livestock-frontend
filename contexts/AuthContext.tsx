@@ -12,6 +12,7 @@ import { useRouter } from "next/navigation";
 import { useQueryClient } from "@tanstack/react-query";
 import { IAMAPI } from "@/api/base_modules/iam";
 import { useFavoritesStore } from "@/stores/useFavoritesStore";
+import { isTokenExpired } from "@/lib/auth";
 
 // User type from API
 export interface User {
@@ -85,19 +86,6 @@ const STORAGE_KEYS = {
   REMEMBERED_EMAIL: "rememberedEmail",
 } as const;
 
-// Check if JWT token is expired by decoding the payload
-function isTokenExpired(token: string): boolean {
-  try {
-    const parts = token.split(".");
-    if (parts.length !== 3) return true;
-    const payload = JSON.parse(atob(parts[1]));
-    if (!payload.exp) return false;
-    // Add 30 second buffer to avoid edge cases
-    return Date.now() >= (payload.exp * 1000) - 30000;
-  } catch {
-    return true;
-  }
-}
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
