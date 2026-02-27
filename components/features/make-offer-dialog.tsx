@@ -71,7 +71,7 @@ export function MakeOfferDialog({
         productId,
         buyerUserId: user.id,
         sellerUserId: sellerId,
-        offeredPrice: priceNum as any,
+        offeredPrice: priceNum,
         currency,
         quantity: quantityNum,
         message,

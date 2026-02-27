@@ -10,8 +10,7 @@ export function useLocationList(params?: {
   return useQuery({
     queryKey: queryKeys.locations.list(params),
     queryFn: () => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const filters: any[] = [];
+      const filters: LivestockTradingAPI.Locations.All.IXFilterItem[] = [];
       if (params?.sellerId) {
         filters.push({
           key: "sellerId",

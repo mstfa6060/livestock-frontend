@@ -96,7 +96,7 @@ export default function MessagesPage() {
           const usersData = await IAMAPI.Users.All.Request({
             sorting: { key: "fullName", direction: 0 },
             filters: [
-              { key: "userId", type: "guid", isUsed: true, values: otherUserIds as any[], min: {}, max: {}, conditionType: "equals" },
+              { key: "userId", type: "guid", isUsed: true, values: otherUserIds, min: {}, max: {}, conditionType: "equals" },
             ],
             pageRequest: { currentPage: 1, perPageCount: otherUserIds.length, listAll: false },
           });

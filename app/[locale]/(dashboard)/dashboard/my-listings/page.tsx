@@ -164,7 +164,7 @@ export default function MyListingsPage() {
         description: fullProduct.description,
         shortDescription: fullProduct.shortDescription,
         categoryId: fullProduct.categoryId,
-        basePrice: fullProduct.basePrice as any,
+        basePrice: fullProduct.basePrice,
         currency: fullProduct.currency,
         priceUnit: fullProduct.priceUnit,
         stockQuantity: fullProduct.stockQuantity,
@@ -175,17 +175,17 @@ export default function MyListingsPage() {
         status: newStatus,
         condition: fullProduct.condition,
         isShippingAvailable: fullProduct.isShippingAvailable,
-        shippingCost: fullProduct.shippingCost as any,
+        shippingCost: fullProduct.shippingCost,
         isInternationalShipping: fullProduct.isInternationalShipping,
-        weight: fullProduct.weight as any,
+        weight: fullProduct.weight,
         weightUnit: fullProduct.weightUnit,
         attributes: fullProduct.attributes,
         metaTitle: fullProduct.metaTitle,
         metaDescription: fullProduct.metaDescription,
         metaKeywords: fullProduct.metaKeywords,
         // Note: Detail endpoint doesn't return these yet, pass empty to preserve existing
-        mediaBucketId: (fullProduct as any).mediaBucketId || "",
-        coverImageFileId: (fullProduct as any).coverImageFileId || "",
+        mediaBucketId: (fullProduct as unknown as Record<string, unknown>).mediaBucketId as string || "",
+        coverImageFileId: (fullProduct as unknown as Record<string, unknown>).coverImageFileId as string || "",
       });
 
       queryClient.invalidateQueries({ queryKey: queryKeys.products.list({ sellerId, page: "all" }) });

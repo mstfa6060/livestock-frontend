@@ -161,8 +161,7 @@ export default function ProductDetailPage() {
         reviewCount: response.reviewCount,
         publishedAt: response.publishedAt,
         createdAt: response.createdAt,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        mediaBucketId: (response as any).mediaBucketId as string | undefined,
+        mediaBucketId: (response as unknown as Record<string, unknown>).mediaBucketId as string | undefined,
       } satisfies ProductDetail;
     },
     enabled: !!resolvedId,

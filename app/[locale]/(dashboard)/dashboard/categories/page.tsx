@@ -80,8 +80,9 @@ export default function CategoriesPage() {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [categoryToDelete, setCategoryToDelete] = useState<string | null>(null);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const mapCategories = useCallback((response: any[]): Category[] => {
-    return response.map((item: any) => ({
+    return response.map((item) => ({
       id: item.id,
       name: item.name,
       slug: item.slug,

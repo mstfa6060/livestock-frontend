@@ -43,6 +43,13 @@ interface MediaFile {
 
 const EMPTY_GUID = "00000000-0000-0000-0000-000000000000";
 
+// Extended product type for fields not in auto-generated types
+interface ProductWithMedia {
+  mediaBucketId?: string;
+  coverImageFileId?: string;
+  [key: string]: unknown;
+}
+
 export default function EditListingPage() {
   const router = useRouter();
   const params = useParams();
@@ -65,7 +72,7 @@ export default function EditListingPage() {
   const sellerId = sellerData?.id ?? null;
 
   // Fetch media bucket files for the product
-  const productBucketId = (product as any)?.mediaBucketId || "";
+  const productBucketId = (product as unknown as ProductWithMedia)?.mediaBucketId || "";
   const { data: bucketFiles } = useQuery({
     queryKey: queryKeys.fileBuckets.detail(productBucketId),
     queryFn: async () => {
@@ -127,8 +134,8 @@ export default function EditListingPage() {
   useEffect(() => {
     if (!product || formPopulated) return;
 
-    setMediaBucketId((product as any).mediaBucketId || "");
-    setCoverImageFileId((product as any).coverImageFileId || "");
+    setMediaBucketId((product as unknown as ProductWithMedia).mediaBucketId || "");
+    setCoverImageFileId((product as unknown as ProductWithMedia).coverImageFileId || "");
 
     reset({
       title: product.title,
@@ -207,7 +214,7 @@ export default function EditListingPage() {
         description: data.description,
         shortDescription: data.shortDescription,
         categoryId: data.categoryId,
-        basePrice: parseFloat(data.basePrice) as any,
+        basePrice: parseFloat(data.basePrice),
         currency: data.currency,
         priceUnit: data.priceUnit,
         stockQuantity: parseInt(data.stockQuantity),
@@ -219,10 +226,10 @@ export default function EditListingPage() {
         condition: data.condition,
         isShippingAvailable: data.isShippingAvailable,
         shippingCost: data.shippingCost
-          ? (parseFloat(data.shippingCost) as any)
+          ? parseFloat(data.shippingCost)
           : undefined,
         isInternationalShipping: false,
-        weight: data.weight ? (parseFloat(data.weight) as any) : undefined,
+        weight: data.weight ? parseFloat(data.weight) : undefined,
         weightUnit: data.weightUnit,
         attributes: "{}",
         metaTitle: data.title,
@@ -230,15 +237,16 @@ export default function EditListingPage() {
         metaKeywords: "",
         mediaBucketId: mediaBucketId || EMPTY_GUID,
         coverImageFileId: coverImageFileId || EMPTY_GUID,
-      } as any);
+      });
 
       await queryClient.invalidateQueries({ queryKey: queryKeys.products.all });
       toast.success(t("updateSuccess"));
       router.push("/dashboard/my-listings");
-    } catch (error: any) {
-      const errorMessage = error.response?.data?.error?.message
-        || error.response?.data?.message
-        || error.message
+    } catch (error: unknown) {
+      const err = error as { response?: { data?: { error?: { message?: string }; message?: string } }; message?: string };
+      const errorMessage = err.response?.data?.error?.message
+        || err.response?.data?.message
+        || err.message
         || t("updateFailed");
       toast.error(errorMessage);
     } finally {

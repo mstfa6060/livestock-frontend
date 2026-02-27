@@ -10,8 +10,7 @@ export function useFarmList(params?: {
   return useQuery({
     queryKey: queryKeys.farms.list(params),
     queryFn: () => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const filters: any[] = [];
+      const filters: LivestockTradingAPI.Farms.All.IXFilterItem[] = [];
       if (params?.sellerId) {
         filters.push({
           key: "sellerId",

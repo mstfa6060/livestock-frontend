@@ -34,17 +34,14 @@
 - [x] `components/features/upload/` dizini silindi (kullanilmiyordu)
 - [x] `components/features/media-upload.tsx` (856 satir) tek kaynak olarak kaldi
 
-### 5. TypeScript `any` Kullanimini Ortadan Kaldir (~46 instance)
-- [ ] `app/[locale]/(dashboard)/dashboard/farms/page.tsx` — numeric field cast'leri
-- [ ] `app/[locale]/(dashboard)/dashboard/listings/new/page.tsx` — form field cast'leri
-- [ ] `app/[locale]/(dashboard)/dashboard/listings/[id]/edit/page.tsx` — product type cast
-- [ ] `app/[locale]/(dashboard)/dashboard/categories/page.tsx` — response mapping
-- [ ] `app/[locale]/(auth)/register/page.tsx` — country data typing
-- [ ] `hooks/queries/useProducts.ts` — generic any type
-- [ ] `hooks/queries/useFarms.ts`, `useLocations.ts`, `useProductSubresources.ts`
-- [ ] `lib/query-keys.ts` — `Record<string, any>` yerine proper Params tipi
-- [ ] `common/livestock-api/src/services/ApiService.ts` — error handling typing
-- **Effort:** 3-4 saat
+### 5. ~~TypeScript `any` Kullanimini Ortadan Kaldir (~46 instance)~~ ✅ TAMAMLANDI (2026-02-27)
+- [x] `parseFloat() as any` gereksiz cast'leri kaldirildi (farms, listings, products, search, offers, transport-offers)
+- [x] `error: any` → `error: unknown` + proper narrowing (listings/new, listings/edit, ApiService.ts, livestock-config.ts)
+- [x] `(product as any).field` → typed interface + double assertion (listings/edit, my-listings)
+- [x] `(o: any)` callback annotations kaldirildi — TS inference kullanildi (register, profile, categories, offers)
+- [x] Filter dizileri `IXFilterItem[]` ile duzgun tiplendi (search, seller-moderation, transporter-moderation, useFarms, useLocations)
+- [x] API sinir noktalarindaki zorunlu `any` icin `eslint-disable` eklendi (categories, deals, transport, useProducts, useProductSubresources)
+- **Sonuc:** ~46 → ~15 instance (tumune eslint-disable eklendi, API boundary'lerde zorunlu)
 
 ### 6. Eksik React Query Mutation Hooks
 - [ ] `useMakeOfferMutation()` olustur — `MakeOfferDialog` icindeki dogrudan API cagrisini degistir

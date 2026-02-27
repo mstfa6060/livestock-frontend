@@ -70,7 +70,7 @@ export default function ProfilePage() {
 
   // Fetch countries
   const { data: countriesRaw = [] } = useCountries();
-  const countries: Country[] = countriesRaw.map((c: any) => ({
+  const countries: Country[] = countriesRaw.map((c) => ({
     id: c.id,
     name: c.name,
     code: c.code,

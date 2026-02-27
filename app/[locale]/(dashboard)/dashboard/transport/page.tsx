@@ -102,6 +102,7 @@ export default function TransportPage() {
 
   const [expandedTracking, setExpandedTracking] = useState<Set<string>>(new Set());
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const mapRequest = (r: any): TransportRequest => ({
     id: r.id,
     productId: r.productId,

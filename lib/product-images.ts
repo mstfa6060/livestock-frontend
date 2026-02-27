@@ -58,6 +58,7 @@ export async function getProductCoverImages(
   );
 
   // Build a map of bucketId -> files
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const bucketFilesMap: Record<string, any[]> = {};
   bucketResults.forEach((result, index) => {
     if (result.status === "fulfilled" && result.value.files?.length > 0) {

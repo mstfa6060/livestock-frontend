@@ -16,16 +16,17 @@ export class ApiService {
   /**
    * Log API errors (web version - console only)
    */
-  private static logApiError(error: any, context: string, additionalData?: any) {
+  private static logApiError(error: unknown, context: string, additionalData?: Record<string, unknown>) {
     console.error(`🚨 API Error [${context}]:`, error);
 
     // Web'de crashlytics yok, sadece console log
+    const axiosErr = error as { response?: { status?: number }; config?: { url?: string; method?: string } };
     console.error('Error details:', {
       context,
-      error_type: error?.response?.status ? 'http_error' : 'network_error',
-      status_code: error?.response?.status || 'unknown',
-      url: error?.config?.url || 'unknown',
-      method: error?.config?.method || 'unknown',
+      error_type: axiosErr.response?.status ? 'http_error' : 'network_error',
+      status_code: axiosErr.response?.status || 'unknown',
+      url: axiosErr.config?.url || 'unknown',
+      method: axiosErr.config?.method || 'unknown',
       timestamp: new Date().toISOString(),
       ...additionalData,
     });
@@ -35,7 +36,7 @@ export class ApiService {
    * Main call method used by auto-generated endpoints
    */
   static async call<T>(
-    promise: Promise<AxiosResponse<{ payload: T; error: any; hasError: boolean }>>
+    promise: Promise<AxiosResponse<{ payload: T; error: { message?: string; code?: string } | null; hasError: boolean }>>
   ): Promise<T> {
     try {
       const response = await promise;
@@ -56,19 +57,20 @@ export class ApiService {
         console.error('Backend error:', errorMessage);
 
         const enrichedError = new Error(errorMessage);
-        (enrichedError as any).original = error;
+        (enrichedError as Error & { original: unknown }).original = error;
         throw enrichedError;
       }
 
       return payload;
-    } catch (err: any) {
+    } catch (err: unknown) {
       // Log the full error response for debugging
-      if (err?.response) {
+      const axiosErr = err as { response?: { status?: number; statusText?: string; data?: unknown }; config?: { url?: string }; message?: string; name?: string };
+      if (axiosErr.response) {
         console.error('❌ API Error Response:', {
-          status: err.response.status,
-          statusText: err.response.statusText,
-          data: err.response.data,
-          url: err.config?.url,
+          status: axiosErr.response.status,
+          statusText: axiosErr.response.statusText,
+          data: axiosErr.response.data,
+          url: axiosErr.config?.url,
         });
       }
 
@@ -77,8 +79,8 @@ export class ApiService {
 
       // Other errors
       this.logApiError(err, 'network_error', {
-        error_message: err?.message,
-        error_name: err?.name,
+        error_message: axiosErr.message,
+        error_name: axiosErr.name,
         network_error: 'true',
       });
 
@@ -122,24 +124,25 @@ export class ApiService {
         console.error('Multipart upload error:', errorMessage);
 
         const enrichedError = new Error(errorMessage);
-        (enrichedError as any).original = data.error;
+        (enrichedError as Error & { original: unknown }).original = data.error;
         throw enrichedError;
       }
 
       return payload as T;
-    } catch (err: any) {
-      if (err?.response) {
+    } catch (err: unknown) {
+      const axiosErr = err as { response?: { status?: number; statusText?: string; data?: unknown }; config?: { url?: string }; message?: string; name?: string };
+      if (axiosErr.response) {
         console.error('❌ Multipart Error Response:', {
-          status: err.response.status,
-          statusText: err.response.statusText,
-          data: err.response.data,
-          url: err.config?.url,
+          status: axiosErr.response.status,
+          statusText: axiosErr.response.statusText,
+          data: axiosErr.response.data,
+          url: axiosErr.config?.url,
         });
       }
 
       this.logApiError(err, 'multipart_network_error', {
-        error_message: err?.message,
-        error_name: err?.name,
+        error_message: axiosErr.message,
+        error_name: axiosErr.name,
         multipart_upload: 'true',
       });
 
@@ -156,18 +159,19 @@ export class ApiService {
     try {
       const response = await api.request<TResponse>(config);
       return response.data;
-    } catch (error: any) {
-      if (error.response) {
+    } catch (error: unknown) {
+      const axiosErr = error as { response?: { data?: { message?: string }; status?: number }; message?: string };
+      if (axiosErr.response) {
         throw {
           success: false,
-          message: error.response.data?.message || 'An error occurred',
-          data: error.response.data,
-          status: error.response.status,
+          message: axiosErr.response.data?.message || 'An error occurred',
+          data: axiosErr.response.data,
+          status: axiosErr.response.status,
         };
       }
       throw {
         success: false,
-        message: error.message || 'Network error',
+        message: axiosErr.message || 'Network error',
         data: null,
       };
     }

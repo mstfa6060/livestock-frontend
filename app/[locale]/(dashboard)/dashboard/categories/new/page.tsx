@@ -76,7 +76,7 @@ export default function NewCategoryPage() {
         limit: 100,
         languageCode: locale,
       });
-      return response.map((item: any) => ({ id: item.id, name: item.name })) as ParentCategory[];
+      return response.map((item) => ({ id: item.id, name: item.name })) as ParentCategory[];
     },
   });
 

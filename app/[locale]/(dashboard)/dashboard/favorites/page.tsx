@@ -34,7 +34,7 @@ export default function FavoritesPage() {
         countryCode: "",
         sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
         filters: [
-          { key: "id", type: "guid", isUsed: true, values: productIds as any[], min: {}, max: {}, conditionType: "equals" },
+          { key: "id", type: "guid", isUsed: true, values: productIds, min: {}, max: {}, conditionType: "equals" },
         ],
         pageRequest: { currentPage: 1, perPageCount: productIds.length, listAll: false },
       });

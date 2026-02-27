@@ -54,7 +54,7 @@ export default function TransporterModerationPage() {
   const { data: transporters = [], isLoading } = useQuery({
     queryKey: transporterModerationKey,
     queryFn: async () => {
-      const filters: any[] = [];
+      const filters: LivestockTradingAPI.Transporters.All.IXFilterItem[] = [];
 
       if (statusFilter !== "all") {
         const statusValue = statusFilter === "pending" ? 0 : statusFilter === "active" ? 1 : 2;

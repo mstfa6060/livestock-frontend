@@ -84,8 +84,8 @@ export default function EditCategoryPage() {
         languageCode: locale,
       });
       return response
-        .filter((item: any) => item.id !== categoryId)
-        .map((item: any) => ({ id: item.id, name: item.name })) as ParentCategory[];
+        .filter((item) => item.id !== categoryId)
+        .map((item) => ({ id: item.id, name: item.name })) as ParentCategory[];
     },
   });
 

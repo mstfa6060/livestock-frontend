@@ -135,7 +135,7 @@ export default function TransportOffersPage() {
       await LivestockTradingAPI.TransportOffers.Create.Request({
         transportRequestId: selectedRequestId,
         transporterId: user.id,
-        offeredPrice: parseFloat(formData.offeredPrice) as any,
+        offeredPrice: parseFloat(formData.offeredPrice),
         currency: formData.currency,
         estimatedDurationDays: formData.estimatedDurationDays
           ? parseInt(formData.estimatedDurationDays)
@@ -143,7 +143,7 @@ export default function TransportOffersPage() {
         vehicleType: formData.vehicleType,
         insuranceIncluded: formData.insuranceIncluded,
         insuranceAmount: formData.insuranceAmount
-          ? (parseFloat(formData.insuranceAmount) as any)
+          ? parseFloat(formData.insuranceAmount)
           : undefined,
         additionalServices: formData.additionalServices,
         message: formData.message,
@@ -170,7 +170,7 @@ export default function TransportOffersPage() {
         id: offerId,
         transportRequestId: offer.transportRequestId,
         transporterId: offer.transporterId,
-        offeredPrice: offer.offeredPrice as any,
+        offeredPrice: offer.offeredPrice,
         currency: offer.currency,
         vehicleType: "",
         insuranceIncluded: offer.insuranceIncluded,

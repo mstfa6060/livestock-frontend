@@ -87,7 +87,7 @@ export default function OffersPage() {
 
   const isLoading = isSentLoading || isReceivedLoading;
 
-  const sentOffers: Offer[] = sentOffersRaw.map((o: any) => ({
+  const sentOffers: Offer[] = sentOffersRaw.map((o) => ({
     id: o.id,
     productId: o.productId,
     buyerUserId: o.buyerUserId,
@@ -101,7 +101,7 @@ export default function OffersPage() {
     createdAt: o.createdAt,
   }));
 
-  const receivedOffers: Offer[] = receivedOffersRaw.map((o: any) => ({
+  const receivedOffers: Offer[] = receivedOffersRaw.map((o) => ({
     id: o.id,
     productId: o.productId,
     buyerUserId: o.buyerUserId,
@@ -126,7 +126,7 @@ export default function OffersPage() {
         productId: offer.productId,
         buyerUserId: offer.buyerUserId,
         sellerUserId: offer.sellerUserId,
-        offeredPrice: offer.offeredPrice as any,
+        offeredPrice: offer.offeredPrice,
         currency: offer.currency,
         quantity: offer.quantity,
         message: "",
@@ -154,7 +154,7 @@ export default function OffersPage() {
         productId: offer.productId,
         buyerUserId: offer.buyerUserId,
         sellerUserId: offer.sellerUserId,
-        offeredPrice: offer.offeredPrice as any,
+        offeredPrice: offer.offeredPrice,
         currency: offer.currency,
         quantity: offer.quantity,
         message: "",
@@ -182,7 +182,7 @@ export default function OffersPage() {
         productId: offer.productId,
         buyerUserId: offer.buyerUserId,
         sellerUserId: offer.sellerUserId,
-        offeredPrice: offer.offeredPrice as any,
+        offeredPrice: offer.offeredPrice,
         currency: offer.currency,
         quantity: offer.quantity,
         message: "",

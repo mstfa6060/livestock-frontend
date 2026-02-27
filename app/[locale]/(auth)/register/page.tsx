@@ -94,7 +94,7 @@ export default function RegisterPage() {
   // Load countries for default selection
   const { data: countriesData } = useCountries();
   const defaultCountry = !selectedCountry && countriesData
-    ? (countriesData.find((c: any) => c.code === "TR") || countriesData[0] || null)
+    ? (countriesData.find((c) => c.code === "TR") || countriesData[0] || null)
     : null;
 
   const onSubmit = async (data: RegisterFormData) => {

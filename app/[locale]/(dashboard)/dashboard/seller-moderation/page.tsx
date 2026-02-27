@@ -55,7 +55,7 @@ export default function SellerModerationPage() {
   const { data: sellers = [], isLoading } = useQuery({
     queryKey: sellerModerationKey,
     queryFn: async () => {
-      const filters: any[] = [];
+      const filters: LivestockTradingAPI.Sellers.All.IXFilterItem[] = [];
 
       if (statusFilter !== "all") {
         const statusValue = statusFilter === "pending" ? 0 : statusFilter === "active" ? 1 : 2;

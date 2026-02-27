@@ -154,7 +154,7 @@ export function MediaUpload({
             let changed = false;
             const updated = prev.map((f) => {
               const status = statuses.find(
-                (s: any) => s.fileEntryId === f.id
+                (s: Record<string, unknown>) => s.fileEntryId === f.id
               );
               if (status && status.processingStatus !== f.processingStatus) {
                 changed = true;
@@ -273,7 +273,7 @@ export function MediaUpload({
       if (payload.files && payload.files.length > 0) {
         // Find the uploaded file
         let uploadedFile = payload.files.find(
-          (f: any) => f.name === file.name
+          (f: Record<string, unknown>) => f.name === file.name
         );
 
         if (!uploadedFile) {

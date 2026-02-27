@@ -295,9 +295,9 @@ export default function SearchPage() {
           city: "",
           categoryId: categoryParam || undefined,
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          minPrice: minPriceParam ? parseFloat(minPriceParam) as any : undefined,
+          minPrice: minPriceParam ? parseFloat(minPriceParam) : undefined,
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          maxPrice: maxPriceParam ? parseFloat(maxPriceParam) as any : undefined,
+          maxPrice: maxPriceParam ? parseFloat(maxPriceParam) : undefined,
           condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
           currency: selectedCountry?.defaultCurrencyCode || "TRY",
           sortBy: sorting.key,
@@ -335,8 +335,7 @@ export default function SearchPage() {
         saveSearchHistory(queryParam, transformed.length);
         return transformed;
       } else {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const filters: any[] = [];
+        const filters: LivestockTradingAPI.Products.All.IXFilterItem[] = [];
 
         if (categoryParam) {
           filters.push({

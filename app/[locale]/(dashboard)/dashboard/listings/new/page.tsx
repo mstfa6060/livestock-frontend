@@ -185,7 +185,7 @@ export default function NewListingPage() {
         description: data.description,
         shortDescription: data.shortDescription,
         categoryId: data.categoryId,
-        basePrice: parseFloat(data.basePrice) as any,
+        basePrice: parseFloat(data.basePrice),
         currency: data.currency,
         priceUnit: data.priceUnit,
         stockQuantity: parseInt(data.stockQuantity),
@@ -197,10 +197,10 @@ export default function NewListingPage() {
         condition: data.condition,
         isShippingAvailable: data.isShippingAvailable,
         shippingCost: data.shippingCost
-          ? (parseFloat(data.shippingCost) as any)
+          ? parseFloat(data.shippingCost)
           : undefined,
         isInternationalShipping: false,
-        weight: data.weight ? (parseFloat(data.weight) as any) : undefined,
+        weight: data.weight ? parseFloat(data.weight) : undefined,
         weightUnit: data.weightUnit,
         attributes: "{}",
         metaTitle: data.title,
@@ -213,8 +213,8 @@ export default function NewListingPage() {
       await queryClient.invalidateQueries({ queryKey: queryKeys.products.all });
       toast.success(isDraft ? t("draftSaved") : t("productCreated"));
       router.push("/dashboard/my-listings");
-    } catch (error: any) {
-      const errorMessage = error?.message || t("creationFailed");
+    } catch (error: unknown) {
+      const errorMessage = error instanceof Error ? error.message : t("creationFailed");
       toast.error(errorMessage);
     } finally {
       setIsLoading(false);
