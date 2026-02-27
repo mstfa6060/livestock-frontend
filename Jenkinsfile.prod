@@ -69,7 +69,8 @@ pipeline {
 
                     timeout(time: 30, unit: 'MINUTES') {
                         sh """
-                            DOCKER_BUILDKIT=1 docker build \
+                            docker buildx build \
+                                --builder default \
                                 ${cacheArgs} \
                                 --file Dockerfile \
                                 --build-arg NEXT_PUBLIC_ENVIRONMENT=production \
@@ -77,7 +78,8 @@ pipeline {
                                 --tag ${IMAGE_NAME}:${IMMUTABLE_TAG} \
                                 --label org.opencontainers.image.revision=${GIT_COMMIT} \
                                 --label org.opencontainers.image.version=${IMMUTABLE_TAG} \
-                                --pull .
+                                --pull \
+                                --load .
 
                             docker push ${IMAGE_NAME}:${TAG_SUFFIX}
                             docker push ${IMAGE_NAME}:${IMMUTABLE_TAG}
