@@ -23,6 +23,11 @@ import { AppConfig } from "@/config/livestock-config";
 import { toast } from "sonner";
 import { api } from "@/config/livestock-config";
 import {
+  useDeleteFileMutation,
+  useReorderFilesMutation,
+  useSetCoverMutation,
+} from "@/hooks/queries/useMediaUpload";
+import {
   DragDropContext,
   Droppable,
   Draggable,
@@ -97,6 +102,9 @@ export function MediaUpload({
   maxFiles = 10,
 }: MediaUploadProps) {
   const t = useTranslations("fileUpload");
+  const deleteFileMutation = useDeleteFileMutation();
+  const reorderFilesMutation = useReorderFilesMutation();
+  const setCoverMutation = useSetCoverMutation();
   const [files, setFiles] = useState<MediaFile[]>(initialFiles);
   const [uploadingFiles, setUploadingFiles] = useState<UploadingFile[]>([]);
   const [bucketId, setBucketId] = useState<string>(initialBucketId);
@@ -472,16 +480,13 @@ export function MediaUpload({
       // Persist to backend
       if (bucketId) {
         try {
-          await api.post(
-            `${AppConfig.FileProviderUrl}/Files/Reorder`,
-            {
-              bucketId,
-              fileOrders: reordered.map((f, idx) => ({
-                fileId: f.id,
-                index: idx,
-              })),
-            }
-          );
+          await reorderFilesMutation.mutateAsync({
+            bucketId,
+            fileOrders: reordered.map((f, idx) => ({
+              fileId: f.id,
+              index: idx,
+            })),
+          });
         } catch {
           // Revert on failure
           setFiles(files);
@@ -496,11 +501,7 @@ export function MediaUpload({
   const handleRemoveFile = async (fileId: string) => {
     try {
       if (bucketId) {
-        await FileProviderAPI.Files.Delete.Request({
-          bucketId: bucketId,
-          fileId: fileId,
-          changeId: EMPTY_GUID,
-        });
+        await deleteFileMutation.mutateAsync({ bucketId, fileId });
       }
 
       const updatedFiles = files.filter((f) => f.id !== fileId);
@@ -526,16 +527,9 @@ export function MediaUpload({
     setCoverFileId(fileId);
     onMediaChange(bucketId, fileId, files);
 
-    // Persist to backend
     if (bucketId) {
       try {
-        await api.post(
-          `${AppConfig.FileProviderUrl}/Files/SetCover`,
-          {
-            bucketId,
-            fileId,
-          }
-        );
+        await setCoverMutation.mutateAsync({ bucketId, fileId });
         toast.success(t("coverUpdated"));
       } catch {
         toast.error(t("coverUpdateError"));

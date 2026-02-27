@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { screen, fireEvent, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { renderWithProviders } from "../test-utils";
 
 // ─── Mocks ──────────────────────────────────────────────────────────
 
@@ -85,7 +86,7 @@ describe("MakeOfferDialog", () => {
 
   describe("Rendering", () => {
     it("should render dialog when isOpen is true", () => {
-      render(<MakeOfferDialog {...defaultProps} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} />);
 
       expect(screen.getByText("Make Offer")).toBeInTheDocument();
       expect(
@@ -94,13 +95,13 @@ describe("MakeOfferDialog", () => {
     });
 
     it("should not render when isOpen is false", () => {
-      render(<MakeOfferDialog {...defaultProps} isOpen={false} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} isOpen={false} />);
 
       expect(screen.queryByText("Make Offer")).not.toBeInTheDocument();
     });
 
     it("should display the listing price", () => {
-      render(<MakeOfferDialog {...defaultProps} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} />);
 
       expect(screen.getByText(/Listing Price/)).toBeInTheDocument();
       // Price and currency are rendered together in a single span
@@ -112,7 +113,7 @@ describe("MakeOfferDialog", () => {
     });
 
     it("should display form fields", () => {
-      render(<MakeOfferDialog {...defaultProps} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} />);
 
       expect(screen.getByLabelText(/Your Offer/)).toBeInTheDocument();
       expect(screen.getByLabelText(/Quantity/)).toBeInTheDocument();
@@ -120,7 +121,7 @@ describe("MakeOfferDialog", () => {
     });
 
     it("should pre-fill price with basePrice", () => {
-      render(<MakeOfferDialog {...defaultProps} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} />);
 
       const priceInput = screen.getByLabelText(
         /Your Offer/
@@ -129,7 +130,7 @@ describe("MakeOfferDialog", () => {
     });
 
     it("should pre-fill quantity with 1", () => {
-      render(<MakeOfferDialog {...defaultProps} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} />);
 
       const quantityInput = screen.getByLabelText(
         /Quantity/
@@ -143,7 +144,7 @@ describe("MakeOfferDialog", () => {
   describe("Form Interaction", () => {
     it("should update price on input change", async () => {
       const user = userEvent.setup();
-      render(<MakeOfferDialog {...defaultProps} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} />);
 
       const priceInput = screen.getByLabelText(
         /Your Offer/
@@ -156,7 +157,7 @@ describe("MakeOfferDialog", () => {
 
     it("should update quantity on input change", async () => {
       const user = userEvent.setup();
-      render(<MakeOfferDialog {...defaultProps} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} />);
 
       const quantityInput = screen.getByLabelText(
         /Quantity/
@@ -170,7 +171,7 @@ describe("MakeOfferDialog", () => {
     it("should call onClose when cancel button is clicked", async () => {
       const user = userEvent.setup();
       const onClose = vi.fn();
-      render(<MakeOfferDialog {...defaultProps} onClose={onClose} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} onClose={onClose} />);
 
       const cancelButton = screen.getByText("Cancel");
       await user.click(cancelButton);
@@ -181,7 +182,7 @@ describe("MakeOfferDialog", () => {
     it("should call onClose when backdrop is clicked", async () => {
       const user = userEvent.setup();
       const onClose = vi.fn();
-      render(<MakeOfferDialog {...defaultProps} onClose={onClose} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} onClose={onClose} />);
 
       // The backdrop is the element with bg-black/50
       const backdrop = document.querySelector(".bg-black\\/50");
@@ -201,7 +202,7 @@ describe("MakeOfferDialog", () => {
       const onSuccess = vi.fn();
       mockOfferCreateRequest.mockResolvedValueOnce({});
 
-      render(
+      renderWithProviders(
         <MakeOfferDialog
           {...defaultProps}
           onClose={onClose}
@@ -235,7 +236,7 @@ describe("MakeOfferDialog", () => {
       const user = userEvent.setup();
       mockOfferCreateRequest.mockRejectedValueOnce(new Error("Server error"));
 
-      render(<MakeOfferDialog {...defaultProps} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} />);
 
       const submitButton = screen.getByText("Send Offer");
       await user.click(submitButton);
@@ -251,7 +252,7 @@ describe("MakeOfferDialog", () => {
       // Make the request hang to check disabled state
       mockOfferCreateRequest.mockReturnValueOnce(new Promise(() => {}));
 
-      render(<MakeOfferDialog {...defaultProps} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} />);
 
       const submitButton = screen.getByText("Send Offer");
       await user.click(submitButton);
@@ -267,7 +268,7 @@ describe("MakeOfferDialog", () => {
   describe("Validation", () => {
     it("should show error for invalid price (0)", async () => {
       const user = userEvent.setup();
-      render(<MakeOfferDialog {...defaultProps} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} />);
 
       const priceInput = screen.getByLabelText(
         /Your Offer/
@@ -290,7 +291,7 @@ describe("MakeOfferDialog", () => {
 
     it("should show error for invalid quantity (0)", async () => {
       const user = userEvent.setup();
-      render(<MakeOfferDialog {...defaultProps} />);
+      renderWithProviders(<MakeOfferDialog {...defaultProps} />);
 
       const quantityInput = screen.getByLabelText(
         /Quantity/

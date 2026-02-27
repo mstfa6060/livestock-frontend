@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { queryKeys } from "@/lib/query-keys";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 
@@ -73,5 +73,37 @@ export function useOffersReceived(
         },
       }),
     enabled: !!userId,
+  });
+}
+
+interface MakeOfferParams {
+  productId: string;
+  buyerUserId: string;
+  sellerUserId: string;
+  offeredPrice: number;
+  currency: string;
+  quantity: number;
+  message: string;
+}
+
+export function useMakeOfferMutation(options?: {
+  onSuccess?: () => void;
+  onError?: () => void;
+}) {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (params: MakeOfferParams) =>
+      LivestockTradingAPI.Offers.Create.Request({
+        ...params,
+        status: 0, // Pending
+      }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: queryKeys.offers.all });
+      options?.onSuccess?.();
+    },
+    onError: () => {
+      options?.onError?.();
+    },
   });
 }

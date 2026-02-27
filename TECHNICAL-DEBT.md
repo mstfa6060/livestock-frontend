@@ -43,16 +43,12 @@
 - [x] API sinir noktalarindaki zorunlu `any` icin `eslint-disable` eklendi (categories, deals, transport, useProducts, useProductSubresources)
 - **Sonuc:** ~46 → ~15 instance (tumune eslint-disable eklendi, API boundary'lerde zorunlu)
 
-### 6. Eksik React Query Mutation Hooks
-- [ ] `useMakeOfferMutation()` olustur — `MakeOfferDialog` icindeki dogrudan API cagrisini degistir
-- [ ] `useMediaUpload()` olustur — dosya upload/reorder/cover islemlerini hook'a tasi
-- [ ] `useBanners()` olustur — `HomepageBanners` icindeki API cagrisini degistir
-- [ ] `useContactFormMutation()` olustur — ContactForm API entegrasyonu tamamlandiginda
-- **Dosyalar:**
-  - `components/features/make-offer-dialog.tsx`
-  - `components/features/upload/MediaUpload.tsx`
-  - `components/features/homepage-banners.tsx`
-- **Effort:** 3-4 saat
+### 6. ~~Eksik React Query Mutation Hooks~~ ✅ TAMAMLANDI (2026-02-28)
+- [x] `useMakeOfferMutation()` — `hooks/queries/useOffers.ts`'e eklendi, `MakeOfferDialog` guncellendi
+- [x] `useBanners()` — `hooks/queries/useBanners.ts` olusturuldu, `HomepageBanners` guncellendi
+- [x] `useDeleteFileMutation()`, `useReorderFilesMutation()`, `useSetCoverMutation()` — `hooks/queries/useMediaUpload.ts` olusturuldu, `MediaUpload` guncellendi
+- [x] `useContactFormMutation()` — API henuz hazir degil (fake success), beklemede
+- **Sonuc:** 3 yeni hook dosyasi, 3 component guncellendi, 112 test gecti
 
 ---
 

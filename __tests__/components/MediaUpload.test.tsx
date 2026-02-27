@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { screen, fireEvent, waitFor } from "@testing-library/react";
+import { renderWithProviders } from "../test-utils";
 
 // ─── Mocks ──────────────────────────────────────────────────────────
 
@@ -142,7 +143,7 @@ describe("MediaUpload", () => {
 
   describe("Rendering", () => {
     it("should render the drag & drop zone", () => {
-      render(<MediaUpload {...defaultProps} />);
+      renderWithProviders(<MediaUpload {...defaultProps} />);
 
       expect(
         screen.getByText("Drag & drop files here or click to browse")
@@ -153,7 +154,7 @@ describe("MediaUpload", () => {
     });
 
     it("should render file type limits", () => {
-      render(<MediaUpload {...defaultProps} />);
+      renderWithProviders(<MediaUpload {...defaultProps} />);
 
       expect(screen.getByText("Images: max 10MB")).toBeInTheDocument();
       expect(screen.getByText("Videos: max 100MB")).toBeInTheDocument();
@@ -170,7 +171,7 @@ describe("MediaUpload", () => {
         },
       ];
 
-      render(
+      renderWithProviders(
         <MediaUpload
           {...defaultProps}
           initialFiles={initialFiles}
@@ -197,7 +198,7 @@ describe("MediaUpload", () => {
         },
       ];
 
-      render(
+      renderWithProviders(
         <MediaUpload
           {...defaultProps}
           initialFiles={initialFiles}
@@ -220,7 +221,7 @@ describe("MediaUpload", () => {
         },
       ];
 
-      render(
+      renderWithProviders(
         <MediaUpload
           {...defaultProps}
           initialFiles={initialFiles}
@@ -238,7 +239,7 @@ describe("MediaUpload", () => {
 
   describe("File Selection", () => {
     it("should have a hidden file input", () => {
-      render(<MediaUpload {...defaultProps} />);
+      renderWithProviders(<MediaUpload {...defaultProps} />);
 
       const fileInput = document.querySelector(
         'input[type="file"]'
@@ -257,7 +258,7 @@ describe("MediaUpload", () => {
         name: `file${i}.jpg`,
       }));
 
-      render(
+      renderWithProviders(
         <MediaUpload
           {...defaultProps}
           initialFiles={initialFiles}
@@ -278,7 +279,7 @@ describe("MediaUpload", () => {
 
   describe("Drag & Drop", () => {
     it("should show drop indicator when dragging over", () => {
-      render(<MediaUpload {...defaultProps} />);
+      renderWithProviders(<MediaUpload {...defaultProps} />);
 
       const dropZone = screen
         .getByText("Drag & drop files here or click to browse")
@@ -295,7 +296,7 @@ describe("MediaUpload", () => {
     });
 
     it("should hide drop indicator when drag leaves", () => {
-      render(<MediaUpload {...defaultProps} />);
+      renderWithProviders(<MediaUpload {...defaultProps} />);
 
       const dropZone = screen
         .getByText("Drag & drop files here or click to browse")
@@ -337,7 +338,7 @@ describe("MediaUpload", () => {
 
       const onMediaChange = vi.fn();
 
-      render(
+      renderWithProviders(
         <MediaUpload
           {...defaultProps}
           initialFiles={initialFiles}
@@ -380,7 +381,7 @@ describe("MediaUpload", () => {
         },
       ];
 
-      render(
+      renderWithProviders(
         <MediaUpload
           {...defaultProps}
           initialFiles={initialFiles}
@@ -403,7 +404,7 @@ describe("MediaUpload", () => {
         },
       ];
 
-      render(
+      renderWithProviders(
         <MediaUpload
           {...defaultProps}
           initialFiles={initialFiles}
@@ -427,7 +428,7 @@ describe("MediaUpload", () => {
         },
       ];
 
-      render(
+      renderWithProviders(
         <MediaUpload
           {...defaultProps}
           initialFiles={initialFiles}
@@ -452,7 +453,7 @@ describe("MediaUpload", () => {
         },
       ];
 
-      render(
+      renderWithProviders(
         <MediaUpload
           {...defaultProps}
           initialFiles={initialFiles}
@@ -480,7 +481,7 @@ describe("MediaUpload", () => {
         },
       ];
 
-      render(
+      renderWithProviders(
         <MediaUpload
           {...defaultProps}
           initialFiles={initialFiles}
@@ -507,7 +508,7 @@ describe("MediaUpload", () => {
         },
       ];
 
-      render(
+      renderWithProviders(
         <MediaUpload
           {...defaultProps}
           initialFiles={initialFiles}

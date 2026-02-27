@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { useMakeOfferMutation } from "@/hooks/queries/useOffers";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
 import { HandCoins, X } from "lucide-react";
@@ -40,7 +40,17 @@ export function MakeOfferDialog({
   const [price, setPrice] = useState(basePrice.toString());
   const [quantity, setQuantity] = useState("1");
   const [message, setMessage] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const makeOffer = useMakeOfferMutation({
+    onSuccess: () => {
+      toast.success(t("offerSent"));
+      onClose();
+      onSuccess?.();
+    },
+    onError: () => {
+      toast.error(t("offerError"));
+    },
+  });
 
   if (!isOpen) return null;
 
@@ -65,27 +75,15 @@ export function MakeOfferDialog({
       return;
     }
 
-    setIsSubmitting(true);
-    try {
-      await LivestockTradingAPI.Offers.Create.Request({
-        productId,
-        buyerUserId: user.id,
-        sellerUserId: sellerId,
-        offeredPrice: priceNum,
-        currency,
-        quantity: quantityNum,
-        message,
-        status: 0, // Pending
-      });
-
-      toast.success(t("offerSent"));
-      onClose();
-      onSuccess?.();
-    } catch {
-      toast.error(t("offerError"));
-    } finally {
-      setIsSubmitting(false);
-    }
+    makeOffer.mutate({
+      productId,
+      buyerUserId: user.id,
+      sellerUserId: sellerId,
+      offeredPrice: priceNum,
+      currency,
+      quantity: quantityNum,
+      message,
+    });
   };
 
   return (
@@ -166,9 +164,9 @@ export function MakeOfferDialog({
             <Button
               type="submit"
               className="flex-1"
-              disabled={isSubmitting}
+              disabled={makeOffer.isPending}
             >
-              {isSubmitting ? t("sending") : t("sendOffer")}
+              {makeOffer.isPending ? t("sending") : t("sendOffer")}
             </Button>
           </div>
         </form>
