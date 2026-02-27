@@ -120,7 +120,7 @@ export default function NewListingPage() {
   const onSubmit = async (data: ListingFormData, isDraft: boolean = false) => {
     if (!user?.id) {
       toast.error(t("userNotFound"));
-      router.push("/login");
+      router.push(locale === "en" ? "/login" : `/${locale}/login`);
       return;
     }
 

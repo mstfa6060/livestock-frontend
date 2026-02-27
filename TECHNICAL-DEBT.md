@@ -75,15 +75,11 @@
 - [x] React Query: otomatik retry, staleTime caching, optimistic updates, query cache paylasimi
 - **Sonuc:** Zustand artik sadece UI state (useMessagesStore) icin kullaniliyor
 
-### 10. Locale-Aware Routing Duzeltmeleri
-- [ ] `livestock-config.ts` — 401 redirect'te locale prefix ekle (`/tr/auth/login`)
-- [ ] Dashboard sayfalarindaki hardcoded route'lari next-intl `useRouter` ile degistir
-- [ ] `error-display.tsx` — hardcoded `/` yerine locale-aware redirect
-- **Dosyalar:**
-  - `common/livestock-api/src/config/livestock-config.ts`
-  - `components/error/error-display.tsx`
-  - `app/[locale]/(auth)/login/page.tsx`
-- **Effort:** 2 saat
+### 10. ~~Locale-Aware Routing Duzeltmeleri~~ ✅ TAMAMLANDI (2026-02-28)
+- [x] `livestock-config.ts` — `getLoginPath()` helper: `document.documentElement.lang`'den locale alip `/{locale}/login`'e yonlendiriyor
+- [x] `error-display.tsx` — `useLocale()` ile locale-aware home redirect (`/{locale}`)
+- [x] `listings/new/page.tsx` ve `listings/[id]/edit/page.tsx` — `router.push("/login")` → locale-aware
+- **Sonuc:** 401 redirect ve error boundary home butonu artik kullanicinin dilini koruyor
 
 ### 11. Kullanilmayan Dependencies Temizligi
 - [ ] `class-variance-authority` — kodda kullanilmiyor, kaldir
@@ -154,7 +150,7 @@
 | 7 | Silent error handling | Orta | 2-3 saat |
 | 8 | ~~Production logging~~ | ✅ Tamamlandi | — |
 | 9 | ~~Zustand/React Query ayristirma~~ | ✅ Tamamlandi | — |
-| 10 | Locale-aware routing | Orta | 2 saat |
+| 10 | ~~Locale-aware routing~~ | ✅ Tamamlandi | — |
 | 11 | Unused dependencies | Orta | 30 dk |
 | 12 | Bos dizin temizligi | Orta | 15 dk |
 | 13 | Buyuk bilesenleri parcala | Dusuk | 3-4 saat |

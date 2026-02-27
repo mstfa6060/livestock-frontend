@@ -74,6 +74,15 @@ const fixIamUrl = (config: import("axios").InternalAxiosRequestConfig) => {
 // 2. Re-entering handle401 if refresh itself returns 401 (deadlock)
 const refreshClient = axios.create();
 
+// Get locale-aware login path for redirect
+const getLoginPath = () => {
+  if (typeof document !== 'undefined') {
+    const lang = document.documentElement.lang;
+    if (lang && lang !== 'en') return `/${lang}/login`;
+  }
+  return '/login';
+};
+
 // 401 handler with token refresh (prevents concurrent refresh attempts)
 let isRefreshing = false;
 let failedQueue: Array<{ resolve: (token: string) => void; reject: (error: unknown) => void }> = [];
@@ -118,7 +127,7 @@ const handle401 = async (error: any) => {
     localStorage.removeItem('jwt');
     localStorage.removeItem('accessToken');
     localStorage.removeItem('refreshToken');
-    window.location.href = '/login';
+    window.location.href = getLoginPath();
     return Promise.reject(error);
   }
 
@@ -144,7 +153,7 @@ const handle401 = async (error: any) => {
     localStorage.removeItem('jwt');
     localStorage.removeItem('accessToken');
     localStorage.removeItem('refreshToken');
-    window.location.href = '/login';
+    window.location.href = getLoginPath();
     return Promise.reject(refreshError);
   } finally {
     isRefreshing = false;

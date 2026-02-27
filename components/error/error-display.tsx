@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlertTriangle, RefreshCw, Home, ArrowLeft } from "lucide-react";
@@ -19,6 +19,7 @@ export function ErrorDisplay({
   showBackButton = false,
 }: ErrorDisplayProps) {
   const t = useTranslations("error");
+  const locale = useLocale();
 
   return (
     <div className="min-h-[50vh] flex items-center justify-center p-4">
@@ -67,7 +68,7 @@ export function ErrorDisplay({
             {showHomeButton && (
               <Button
                 variant="outline"
-                onClick={() => (window.location.href = "/")}
+                onClick={() => (window.location.href = locale === "en" ? "/" : `/${locale}`)}
                 className="flex-1"
               >
                 <Home className="h-4 w-4 mr-2" />

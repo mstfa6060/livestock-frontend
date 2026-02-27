@@ -190,7 +190,7 @@ export default function EditListingPage() {
   const onSubmit = async (data: EditListingFormData) => {
     if (!user?.id) {
       toast.error(t("userNotFound"));
-      router.push("/login");
+      router.push(locale === "en" ? "/login" : `/${locale}/login`);
       return;
     }
     if (!sellerId) {
