@@ -30,11 +30,9 @@
 - [x] `contexts/AuthContext.tsx` icindeki lokal `isTokenExpired()` fonksiyonu kaldirildi
 - [x] `lib/auth.ts`'den import edildi (30s buffer parametresi eklendi)
 
-### 4. Duplicate Media Upload Componenti
-- [ ] `components/features/media-upload.tsx` (856 satir) ve `components/features/upload/MediaUpload.tsx` (621 satir) karsilastir
-- [ ] Tek bir bilesende birlestir
-- [ ] Kullanilmayan dosyayi sil
-- **Effort:** 2-3 saat
+### 4. ~~Duplicate Media Upload Componenti~~ ✅ TAMAMLANDI (2026-02-27)
+- [x] `components/features/upload/` dizini silindi (kullanilmiyordu)
+- [x] `components/features/media-upload.tsx` (856 satir) tek kaynak olarak kaldi
 
 ### 5. TypeScript `any` Kullanimini Ortadan Kaldir (~46 instance)
 - [ ] `app/[locale]/(dashboard)/dashboard/farms/page.tsx` — numeric field cast'leri
@@ -157,7 +155,7 @@
 | 1 | ~~Test altyapisi + kritik testler~~ | ✅ Tamamlandi | — |
 | 2 | ~~npm audit fix~~ | ✅ Tamamlandi | — |
 | 3 | ~~Duplicate token validation~~ | ✅ Tamamlandi | — |
-| 4 | Duplicate MediaUpload birlestirme | Yuksek | 2-3 saat |
+| 4 | ~~Duplicate MediaUpload birlestirme~~ | ✅ Tamamlandi | — |
 | 5 | `any` type temizligi | Yuksek | 3-4 saat |
 | 6 | Mutation hooks olusturma | Yuksek | 3-4 saat |
 | 7 | Silent error handling | Orta | 2-3 saat |
