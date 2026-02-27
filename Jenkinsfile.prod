@@ -1,0 +1,195 @@
+pipeline {
+    agent any
+
+    parameters {
+        booleanParam(name: 'NO_CACHE', defaultValue: false, description: 'Docker build cache kullanma')
+        booleanParam(name: 'DEPLOY_TO_PROD', defaultValue: true, description: 'Build sonrasi PRODUCTION ortamina deploy yap')
+    }
+
+    environment {
+        REGISTRY = 'docker.io'
+        IMAGE_NAME = 'mstfaock/livestocktrading-web'
+        TAG_SUFFIX = 'latest'
+        IMMUTABLE_TAG = "prod-${BUILD_ID}-${GIT_COMMIT.take(8)}"
+        DOCKER_BUILDKIT = '1'
+
+        DOCKERHUB_CREDENTIAL_ID = 'dockerhub-credentials'
+        SERVER_SSH_KEY_ID = 'maden-server-key'
+        SERVER_HOST_ID = 'dev-server-host'
+
+        CONTAINER_NAME = 'livestock_prod_web'
+        HOST_PORT = '3000'
+        CONTAINER_PORT = '3000'
+    }
+
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '20'))
+        timeout(time: 1, unit: 'HOURS')
+        timestamps()
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    echo "PRODUCTION WEB: Kod cekiliyor..."
+                    sh '''
+                        echo "Kod basariyla cekildi"
+                        echo "Branch: ${GIT_BRANCH}"
+                        echo "Commit: ${GIT_COMMIT}"
+                    '''
+                }
+            }
+        }
+
+        stage('Docker Login') {
+            steps {
+                script {
+                    withCredentials([usernamePassword(
+                        credentialsId: env.DOCKERHUB_CREDENTIAL_ID,
+                        usernameVariable: 'DOCKER_USERNAME',
+                        passwordVariable: 'DOCKER_PASSWORD'
+                    )]) {
+                        sh '''
+                            echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin > /dev/null 2>&1 && \
+                            echo "Docker Hub login basarili (PRODUCTION WEB)" || \
+                            (echo "Docker login basarisiz!"; exit 1)
+                        '''
+                    }
+                }
+            }
+        }
+
+        stage('Build & Push Image') {
+            steps {
+                script {
+                    echo "PRODUCTION WEB: Docker image build ediliyor..."
+
+                    def cacheArgs = params.NO_CACHE ? '--no-cache' : ''
+
+                    timeout(time: 30, unit: 'MINUTES') {
+                        sh """
+                            docker buildx build \
+                                ${cacheArgs} \
+                                --progress=auto \
+                                --file Dockerfile \
+                                --build-arg NEXT_PUBLIC_ENVIRONMENT=production \
+                                --tag ${IMAGE_NAME}:${TAG_SUFFIX} \
+                                --tag ${IMAGE_NAME}:${IMMUTABLE_TAG} \
+                                --label org.opencontainers.image.revision=${GIT_COMMIT} \
+                                --label org.opencontainers.image.version=${IMMUTABLE_TAG} \
+                                --provenance=false \
+                                --sbom=false \
+                                --pull \
+                                --push .
+                        """
+                    }
+
+                    echo "PRODUCTION WEB: Image basariyla build edildi ve push edildi"
+                    sh 'docker builder prune -f --filter type=exec.cachemount || true'
+                }
+            }
+        }
+
+        stage('Deploy to PRODUCTION') {
+            when {
+                expression { return params.DEPLOY_TO_PROD }
+            }
+            steps {
+                script {
+                    echo "PRODUCTION WEB: Sunucuya deploy basliyor..."
+
+                    withCredentials([
+                        sshUserPrivateKey(credentialsId: env.SERVER_SSH_KEY_ID, keyFileVariable: 'SSH_KEY', usernameVariable: 'SSH_USER'),
+                        string(credentialsId: env.SERVER_HOST_ID, variable: 'SERVER_HOST'),
+                        usernamePassword(credentialsId: env.DOCKERHUB_CREDENTIAL_ID, usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')
+                    ]) {
+                        def sshUser = SSH_USER
+                        def sshHost = SERVER_HOST
+                        def dockerUser = DOCKER_USERNAME
+                        def dockerPass = DOCKER_PASSWORD
+
+                        sh """
+                            chmod 600 "\$SSH_KEY"
+
+                            ssh -o StrictHostKeyChecking=no -i "\$SSH_KEY" ${sshUser}@${sshHost} bash <<'ENDSSH'
+export DOCKER_USERNAME='${dockerUser}'
+export DOCKER_PASSWORD='${dockerPass}'
+
+set -e
+
+echo "Docker Hub login yapiliyor..."
+echo "\$DOCKER_PASSWORD" | docker login -u "\$DOCKER_USERNAME" --password-stdin || {
+    echo "Docker Hub login basarisiz!";
+    exit 1;
+}
+
+IMAGE="${IMAGE_NAME}:${TAG_SUFFIX}"
+CONTAINER="${CONTAINER_NAME}"
+
+echo "Yeni image cekiliyor: \$IMAGE"
+docker pull \$IMAGE
+
+echo "Mevcut container durduruluyor..."
+docker stop \$CONTAINER 2>/dev/null || true
+docker rm \$CONTAINER 2>/dev/null || true
+
+echo "Yeni container baslatiliyor..."
+docker run -d \
+    --name \$CONTAINER \
+    --restart unless-stopped \
+    -p ${HOST_PORT}:${CONTAINER_PORT} \
+    \$IMAGE
+
+echo "Container baslatildi, saglik kontrolu yapiliyor..."
+sleep 5
+
+if docker ps --filter "name=\$CONTAINER" --filter "status=running" -q | grep -q .; then
+    echo "PRODUCTION WEB deploy basariyla tamamlandi!"
+    echo "Erisim: http://\$(hostname -I | awk '{print \$1}'):${HOST_PORT}"
+else
+    echo "Container baslatma basarisiz!"
+    docker logs \$CONTAINER
+    exit 1
+fi
+
+echo "Eski Docker imajlari temizleniyor..."
+docker image prune -f
+ENDSSH
+                        """
+                    }
+                }
+            }
+        }
+
+        stage('Cleanup') {
+            steps {
+                script {
+                    echo "Jenkins build artifacts temizleniyor..."
+                    sh '''
+                        docker image prune -f || true
+                        docker builder prune -f --filter type=exec.cachemount || true
+                    '''
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "PRODUCTION WEB Pipeline basariyla tamamlandi!"
+            echo "Build ID: ${BUILD_ID}"
+            echo "Commit: ${GIT_COMMIT}"
+            echo "Tag: ${IMMUTABLE_TAG}"
+            echo "Image: ${IMAGE_NAME}:${TAG_SUFFIX}"
+        }
+        failure {
+            echo "PRODUCTION WEB Pipeline basarisiz oldu!"
+            echo "Build ID: ${BUILD_ID}"
+            echo "Commit: ${GIT_COMMIT}"
+        }
+        always {
+            sh 'docker logout || true'
+        }
+    }
+}
