@@ -131,11 +131,11 @@
 - [x] CSP environment-aware yapildi: `unsafe-eval` sadece development'ta ekleniyor, production'da kaldirildi
 - **Sonuc:** Production CSP'de `unsafe-eval` yok, development HMR calismaya devam ediyor
 
-### 17. Legacy TSConfig Alias Temizligi
-- [ ] `@config/*`, `@services/*`, `@errors/*` legacy alias'lari kaldir
-- [ ] Bu alias'lari kullanan import'lari `@/config/*` formatina guncelle
-- **Dosya:** `tsconfig.json`
-- **Effort:** 1 saat
+### 17. ~~Legacy TSConfig Alias Temizligi~~ ✅ TAMAMLANDI (2026-02-28)
+- [x] `@errors/*` legacy alias'i kaldirildi (hic kullanilmiyordu)
+- [x] `ApiService.ts` import'u `@config/` → `@/config/` formatina guncellendi
+- [x] `@config/*` ve `@services/*` korundu — auto-generated API dosyalari tarafindan kullaniliyor (duzenlenemez)
+- **Sonuc:** Kullanilmayan alias temizlendi, duzenlenebilir dosyalar standart formata gecti
 
 ### 18. Query Cache Stale Time Optimizasyonu
 - [ ] Countries, cities gibi nadir degisen veriler icin uzun staleTime (1 saat+)
@@ -166,5 +166,5 @@
 | 14 | ~~Tamamlanmamis ozellikler~~ | ✅ Tamamlandi | — |
 | 15 | ~~ESLint kural iyilestirmeleri~~ | ✅ Tamamlandi | — |
 | 16 | ~~CSP unsafe-eval inceleme~~ | ✅ Tamamlandi | — |
-| 17 | Legacy alias temizligi | Dusuk | 1 saat |
+| 17 | ~~Legacy alias temizligi~~ | ✅ Tamamlandi | — |
 | 18 | Query cache optimizasyonu | Dusuk | 1 saat |

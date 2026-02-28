@@ -1,4 +1,4 @@
-import { api } from '@config/livestock-config';
+import { api } from '@/config/livestock-config';
 import { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { logger } from '@/lib/logger';
 import commonErrors from '../errors/locales/modules/backend/common/tr';

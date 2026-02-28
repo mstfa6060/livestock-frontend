@@ -30,8 +30,7 @@
       "@/errors/*": ["./common/livestock-api/src/errors/*"],
       "@/api/*": ["./common/livestock-api/src/api/*"],
       "@config/*": ["./common/livestock-api/src/config/*"],
-      "@services/*": ["./common/livestock-api/src/services/*"],
-      "@errors/*": ["./common/livestock-api/src/errors/*"]
+      "@services/*": ["./common/livestock-api/src/services/*"]
     }
   },
   "include": [
