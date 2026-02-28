@@ -9,6 +9,7 @@ export function useFarmList(params?: {
 }) {
   return useQuery({
     queryKey: queryKeys.farms.list(params),
+    staleTime: 10 * 60 * 1000, // 10 minutes - farms change infrequently
     queryFn: () => {
       const filters: LivestockTradingAPI.Farms.All.IXFilterItem[] = [];
       if (params?.sellerId) {

@@ -8,6 +8,7 @@ export function useBrandList(params?: {
 }) {
   return useQuery({
     queryKey: queryKeys.brands.list(params),
+    staleTime: 60 * 60 * 1000, // 1 hour - brands rarely change
     queryFn: () =>
       LivestockTradingAPI.Brands.All.Request({
         sorting: {

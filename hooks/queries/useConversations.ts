@@ -8,6 +8,7 @@ export function useConversationList(params?: {
 }) {
   return useQuery({
     queryKey: queryKeys.conversations.list(params),
+    staleTime: 30 * 1000, // 30 seconds - messages change frequently
     queryFn: () =>
       LivestockTradingAPI.Conversations.All.Request({
         sorting: {

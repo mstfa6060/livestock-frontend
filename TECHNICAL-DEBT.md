@@ -137,12 +137,11 @@
 - [x] `@config/*` ve `@services/*` korundu — auto-generated API dosyalari tarafindan kullaniliyor (duzenlenemez)
 - **Sonuc:** Kullanilmayan alias temizlendi, duzenlenebilir dosyalar standart formata gecti
 
-### 18. Query Cache Stale Time Optimizasyonu
-- [ ] Countries, cities gibi nadir degisen veriler icin uzun staleTime (1 saat+)
-- [ ] Messages, notifications icin kisa staleTime (30 saniye)
-- [ ] Banners icin orta staleTime (10 dakika)
-- **Dosya:** `lib/query-client.ts`, ilgili hook'lar
-- **Effort:** 1 saat
+### 18. ~~Query Cache Stale Time Optimizasyonu~~ ✅ TAMAMLANDI (2026-02-28)
+- [x] Nadir degisen veriler — 1 saat: `useLocations`, `useBrands` (+ mevcut `useIAM`, `useCategories` 30dk)
+- [x] Sik degisen veriler — 30 saniye: `useConversations`, `useNotifications` (2dk → 30sn)
+- [x] Orta siklikta veriler — 10 dakika: `useFarms` (+ mevcut `useBanners` 10dk)
+- **Sonuc:** Her veri tipi icin uygun cache suresi ayarlandi
 
 ---
 
@@ -167,4 +166,4 @@
 | 15 | ~~ESLint kural iyilestirmeleri~~ | ✅ Tamamlandi | — |
 | 16 | ~~CSP unsafe-eval inceleme~~ | ✅ Tamamlandi | — |
 | 17 | ~~Legacy alias temizligi~~ | ✅ Tamamlandi | — |
-| 18 | Query cache optimizasyonu | Dusuk | 1 saat |
+| 18 | ~~Query cache optimizasyonu~~ | ✅ Tamamlandi | — |

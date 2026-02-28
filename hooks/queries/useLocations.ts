@@ -9,6 +9,7 @@ export function useLocationList(params?: {
 }) {
   return useQuery({
     queryKey: queryKeys.locations.list(params),
+    staleTime: 60 * 60 * 1000, // 1 hour - locations rarely change
     queryFn: () => {
       const filters: LivestockTradingAPI.Locations.All.IXFilterItem[] = [];
       if (params?.sellerId) {
