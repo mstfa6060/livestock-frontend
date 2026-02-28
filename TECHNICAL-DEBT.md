@@ -126,10 +126,10 @@
 - [x] `scripts/`, `vitest.setup.ts`, `.claude/` ESLint ignore'a eklendi
 - **Sonuc:** Yeni kurallar icin 0 ihlal, 112 test gecti
 
-### 16. CSP'de `unsafe-eval` Incelemesi
-- [ ] `next.config.ts` — `script-src`'de `unsafe-eval` neden gerekli dogrula
-- [ ] Mumkunse `unsafe-eval`'i kaldir, nonce-based CSP'ye gec
-- **Effort:** 1-2 saat
+### 16. ~~CSP'de `unsafe-eval` Incelemesi~~ ✅ TAMAMLANDI (2026-02-28)
+- [x] Kaynak kodda `eval()` / `new Function()` kullanimi yok — `unsafe-eval` sadece Next.js dev HMR icin gerekliydi
+- [x] CSP environment-aware yapildi: `unsafe-eval` sadece development'ta ekleniyor, production'da kaldirildi
+- **Sonuc:** Production CSP'de `unsafe-eval` yok, development HMR calismaya devam ediyor
 
 ### 17. Legacy TSConfig Alias Temizligi
 - [ ] `@config/*`, `@services/*`, `@errors/*` legacy alias'lari kaldir
@@ -165,6 +165,6 @@
 | 13 | ~~Buyuk bilesenleri parcala~~ | ✅ Tamamlandi | — |
 | 14 | ~~Tamamlanmamis ozellikler~~ | ✅ Tamamlandi | — |
 | 15 | ~~ESLint kural iyilestirmeleri~~ | ✅ Tamamlandi | — |
-| 16 | CSP unsafe-eval inceleme | Dusuk | 1-2 saat |
+| 16 | ~~CSP unsafe-eval inceleme~~ | ✅ Tamamlandi | — |
 | 17 | Legacy alias temizligi | Dusuk | 1 saat |
 | 18 | Query cache optimizasyonu | Dusuk | 1 saat |
