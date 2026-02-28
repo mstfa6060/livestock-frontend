@@ -8,13 +8,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { Loader2 } from "lucide-react";
+import { useContactFormMutation } from "@/hooks/queries/useContactForm";
 
 export function ContactForm() {
   const t = useTranslations("contact");
+  const contactMutation = useContactFormMutation();
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,18 +24,19 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
-    try {
-      // Contact form submissions will be handled via email until ContactMessages API is available
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      toast.success(t("form.success"));
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch {
-      toast.error(t("form.error"));
-    } finally {
-      setIsSubmitting(false);
-    }
+    contactMutation.mutate(formData, {
+      onSuccess: () => {
+        toast.success(t("form.success"));
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      },
+      onError: (error) => {
+        const message =
+          (error as { response?: { data?: { error?: { message?: string } } } })
+            .response?.data?.error?.message || t("form.error");
+        toast.error(message);
+      },
+    });
   };
 
   return (
@@ -97,8 +98,8 @@ export function ContactForm() {
               required
             />
           </div>
-          <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? (
+          <Button type="submit" className="w-full" disabled={contactMutation.isPending}>
+            {contactMutation.isPending ? (
               <>
                 <Loader2 className="h-4 w-4 mr-2 animate-spin" />
                 {t("form.submitting")}

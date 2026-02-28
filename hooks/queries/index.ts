@@ -14,3 +14,4 @@ export * from "./useMediaUpload";
 export * from "./useIAM";
 export * from "./useNotifications";
 export * from "./useFavorites";
+export * from "./useContactForm";

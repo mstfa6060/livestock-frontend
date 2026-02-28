@@ -114,13 +114,10 @@
   - `index.tsx` — Ana bileşen (veri çekme + tab yapısı)
 - **Sonuc:** Import path'leri degismedi (index.tsx barrel export), 112 test gecti
 
-### 14. Tamamlanmamis Ozellikler
-- [ ] `ContactForm` — API entegrasyonu yok, fake success donuyor. Backend hazir oldugunda tamamla
-- [ ] Apple Sign In — `login/page.tsx`'de commented-out kod. Ya implement et ya temizle
-- **Dosyalar:**
-  - `components/features/contact-form.tsx`
-  - `app/[locale]/(auth)/login/page.tsx`
-- **Effort:** 2-3 saat
+### 14. ~~Tamamlanmamis Ozellikler~~ ✅ TAMAMLANDI (2026-02-28)
+- [x] `ContactForm` — `useContactFormMutation` hook'u olusturuldu, gercek API (`ContactMessages/Create`) entegre edildi
+- [x] Apple Sign In — disabled buton, `AppleIcon` componenti ve yorum satirlari temizlendi
+- **Sonuc:** ContactForm artik gercek backend API'sini kullaniyor, Apple Sign In kodu kaldirildi
 
 ### 15. ESLint Kural Iyilestirmeleri
 - [ ] `eslint.config.mjs`'ye `@typescript-eslint/no-explicit-any: 'error'` ekle
@@ -165,7 +162,7 @@
 | 11 | ~~Unused dependencies~~ | ✅ Tamamlandi | — |
 | 12 | ~~Bos dizin temizligi~~ | ✅ Tamamlandi | — |
 | 13 | ~~Buyuk bilesenleri parcala~~ | ✅ Tamamlandi | — |
-| 14 | Tamamlanmamis ozellikler | Dusuk | 2-3 saat |
+| 14 | ~~Tamamlanmamis ozellikler~~ | ✅ Tamamlandi | — |
 | 15 | ESLint kural iyilestirmeleri | Dusuk | 30 dk+ |
 | 16 | CSP unsafe-eval inceleme | Dusuk | 1-2 saat |
 | 17 | Legacy alias temizligi | Dusuk | 1 saat |
