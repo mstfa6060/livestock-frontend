@@ -99,10 +99,20 @@
 
 ## DUSUK ONCELIK
 
-### 13. Buyuk Bilesenleri Parcala (600+ satir)
-- [ ] `components/features/media-upload.tsx` (856 satir) — alt bilesenlere ayir
-- [ ] `components/features/product-animal-info.tsx` (591 satir) — alt bilesenlere ayir
-- **Effort:** 3-4 saat
+### 13. ~~Buyuk Bilesenleri Parcala (600+ satir)~~ ✅ TAMAMLANDI (2026-02-28)
+- [x] `media-upload.tsx` (860 satir) → `media-upload/` dizinine ayrildi:
+  - `types.ts` — interface'ler, sabitler, utility fonksiyonlar
+  - `drop-zone.tsx` — DropZone bileşeni (dosya sürükle-bırak alanı)
+  - `upload-progress-item.tsx` — UploadProgressItem bileşeni (yükleme ilerleme kartı)
+  - `media-card.tsx` — MediaCard bileşeni (DnD grid içindeki medya kartı)
+  - `index.tsx` — Ana bileşen (tüm logic + alt bileşen kompozisyonu)
+- [x] `product-animal-info.tsx` (591 satir) → `product-animal-info/` dizinine ayrildi:
+  - `types.ts` — 8 veri interface'i
+  - `animal-tab.tsx` — AnimalTab bileşeni (hayvan bilgisi + utility fonksiyonlar)
+  - `record-tabs.tsx` — HealthRecordsTab, VaccinationsTab, VetInfoTab bileşenleri
+  - `product-tabs.tsx` — ChemicalTab, FeedTab, SeedTab, MachineryTab bileşenleri
+  - `index.tsx` — Ana bileşen (veri çekme + tab yapısı)
+- **Sonuc:** Import path'leri degismedi (index.tsx barrel export), 112 test gecti
 
 ### 14. Tamamlanmamis Ozellikler
 - [ ] `ContactForm` — API entegrasyonu yok, fake success donuyor. Backend hazir oldugunda tamamla
@@ -154,7 +164,7 @@
 | 10 | ~~Locale-aware routing~~ | ✅ Tamamlandi | — |
 | 11 | ~~Unused dependencies~~ | ✅ Tamamlandi | — |
 | 12 | ~~Bos dizin temizligi~~ | ✅ Tamamlandi | — |
-| 13 | Buyuk bilesenleri parcala | Dusuk | 3-4 saat |
+| 13 | ~~Buyuk bilesenleri parcala~~ | ✅ Tamamlandi | — |
 | 14 | Tamamlanmamis ozellikler | Dusuk | 2-3 saat |
 | 15 | ESLint kural iyilestirmeleri | Dusuk | 30 dk+ |
 | 16 | CSP unsafe-eval inceleme | Dusuk | 1-2 saat |
