@@ -75,12 +75,14 @@ export async function getProductCoverImages(
 
     // Find the cover image file
     let targetFile = files.find(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (f: any) => f.id === pm.coverImageFileId
     );
 
     // Fallback: first non-video file
     if (!targetFile) {
       targetFile = files.find(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (f: any) => !f.contentType?.startsWith("video/")
       );
     }

@@ -116,6 +116,7 @@ export function ErrorCapture() {
     const originalWarn = console.warn;
 
     // Override console.error
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     console.error = (...args: any[]) => {
       const message = args
         .map((arg) =>
@@ -135,6 +136,7 @@ export function ErrorCapture() {
     };
 
     // Override console.warn
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     console.warn = (...args: any[]) => {
       const message = args
         .map((arg) =>
@@ -199,10 +201,12 @@ export function ErrorCapture() {
     window.addEventListener("keydown", handleKeyDown);
 
     // Log instructions on mount
+    // eslint-disable-next-line no-console
     console.log(
       "%c🐛 Debug Mode Active",
       "color: #10b981; font-weight: bold; font-size: 14px"
     );
+    // eslint-disable-next-line no-console
     console.log(
       "%cCtrl+Shift+E → Copy errors to clipboard\nCtrl+Shift+D → Clear error log",
       "color: #6b7280; font-size: 12px"

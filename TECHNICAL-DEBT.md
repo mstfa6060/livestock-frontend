@@ -119,11 +119,12 @@
 - [x] Apple Sign In — disabled buton, `AppleIcon` componenti ve yorum satirlari temizlendi
 - **Sonuc:** ContactForm artik gercek backend API'sini kullaniyor, Apple Sign In kodu kaldirildi
 
-### 15. ESLint Kural Iyilestirmeleri
-- [ ] `eslint.config.mjs`'ye `@typescript-eslint/no-explicit-any: 'error'` ekle
-- [ ] `no-console: ['warn', { allow: ['warn', 'error'] }]` ekle
-- [ ] Mevcut ihlalleri duzelt veya eslint-disable ile dokumante et
-- **Effort:** 30 dakika + ihlal duzeltme suresi
+### 15. ~~ESLint Kural Iyilestirmeleri~~ ✅ TAMAMLANDI (2026-02-28)
+- [x] `eslint.config.mjs`'ye `@typescript-eslint/no-explicit-any: 'error'` eklendi
+- [x] `no-console: ['warn', { allow: ['warn', 'error'] }]` eklendi
+- [x] Mevcut ihlaller duzeltildi: `catch (error: any)` → `unknown`, unused eslint-disable'lar temizlendi
+- [x] `scripts/`, `vitest.setup.ts`, `.claude/` ESLint ignore'a eklendi
+- **Sonuc:** Yeni kurallar icin 0 ihlal, 112 test gecti
 
 ### 16. CSP'de `unsafe-eval` Incelemesi
 - [ ] `next.config.ts` — `script-src`'de `unsafe-eval` neden gerekli dogrula
@@ -163,7 +164,7 @@
 | 12 | ~~Bos dizin temizligi~~ | ✅ Tamamlandi | — |
 | 13 | ~~Buyuk bilesenleri parcala~~ | ✅ Tamamlandi | — |
 | 14 | ~~Tamamlanmamis ozellikler~~ | ✅ Tamamlandi | — |
-| 15 | ESLint kural iyilestirmeleri | Dusuk | 30 dk+ |
+| 15 | ~~ESLint kural iyilestirmeleri~~ | ✅ Tamamlandi | — |
 | 16 | CSP unsafe-eval inceleme | Dusuk | 1-2 saat |
 | 17 | Legacy alias temizligi | Dusuk | 1 saat |
 | 18 | Query cache optimizasyonu | Dusuk | 1 saat |

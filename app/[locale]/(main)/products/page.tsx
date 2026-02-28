@@ -264,9 +264,7 @@ export default function ProductsPage() {
         city: "",
         categoryId: categoryParam || undefined,
         condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         minPrice: minPriceParam ? parseFloat(minPriceParam) : undefined,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         maxPrice: maxPriceParam ? parseFloat(maxPriceParam) : undefined,
         currency: selectedCountry?.defaultCurrencyCode || "TRY",
         sortBy: sorting.key,

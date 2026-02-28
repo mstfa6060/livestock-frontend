@@ -267,11 +267,12 @@ export function MediaUpload({
         errorMessage: t("uploadFailed"),
       });
       return { mediaFile: null, newBucket: currentBucket };
-    } catch (error: any) {
+    } catch (error: unknown) {
+      const err = error as { response?: { data?: { error?: { message?: string }; message?: string } }; message?: string };
       const errorMessage =
-        error.response?.data?.error?.message ||
-        error.response?.data?.message ||
-        error.message ||
+        err.response?.data?.error?.message ||
+        err.response?.data?.message ||
+        err.message ||
         t("uploadError");
       updateUploadingFile(tempId, { status: "error", errorMessage });
       return { mediaFile: null, newBucket: currentBucket };
