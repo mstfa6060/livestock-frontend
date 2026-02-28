@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import { getUserRoles, hasRole, hasAnyRole } from "@/utils/jwt";
+import { getUserRoles, hasRole, hasAnyRole } from "@/lib/jwt";
 import { Roles } from "@/constants/roles";
 
 export const useRoles = () => {

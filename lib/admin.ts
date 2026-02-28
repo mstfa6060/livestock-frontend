@@ -1,4 +1,4 @@
-import { hasRole, hasAnyRole } from "@/utils/jwt";
+import { hasRole, hasAnyRole } from "@/lib/jwt";
 import { Roles, AdminRoles, StaffRoles } from "@/constants/roles";
 
 // Fallback admin emails (used when JWT doesn't contain role claims yet)

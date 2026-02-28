@@ -81,18 +81,19 @@
 - [x] `listings/new/page.tsx` ve `listings/[id]/edit/page.tsx` — `router.push("/login")` → locale-aware
 - **Sonuc:** 401 redirect ve error boundary home butonu artik kullanicinin dilini koruyor
 
-### 11. Kullanilmayan Dependencies Temizligi
-- [ ] `class-variance-authority` — kodda kullanilmiyor, kaldir
-- [ ] `radix-ui` (umbrella package) — bireysel `@radix-ui/*` zaten mevcut, kaldir
-- [ ] `tw-animate-css` — kullanim dogrula, gerekmiyorsa kaldir
-- [ ] `@hello-pangea/dnd` — sadece media-upload'da, alternatif degerlendir
-- **Effort:** 30 dakika
+### 11. ~~Kullanilmayan Dependencies Temizligi~~ ✅ TAMAMLANDI (2026-02-28)
+- [x] `class-variance-authority` — aktif kullaniliyor (button, badge, sheet), korundu
+- [x] `radix-ui` (umbrella) — aktif kullaniliyor (button, switch), bireysel paketlerle birlikte korundu
+- [x] `tw-animate-css` — `globals.css`'de import ediliyor, korundu
+- [x] `@hello-pangea/dnd` — media-upload'da aktif kullaniliyor, korundu
+- [x] `@radix-ui/react-slot` — kullanilmiyordu (umbrella uzerinden geliyor), kaldirildi
+- **Sonuc:** Sadece `@radix-ui/react-slot` gereksizdi, diger 4 paket aktif kullaniliyor
 
-### 12. Bos/Orphan Dizin Temizligi
-- [ ] `lib/store/` — bos dizin, sil (store'lar `/stores/`'da)
-- [ ] `app/(marketplace)/animals/` — bos marketplace dizini, sil veya dokumante et
-- [ ] `utils/jwt.ts` — `lib/utils/`'a tasi, tutarlilik sagla
-- **Effort:** 15 dakika
+### 12. ~~Bos/Orphan Dizin Temizligi~~ ✅ TAMAMLANDI (2026-02-28)
+- [x] `lib/store/` — bos dizin silindi
+- [x] `app/(marketplace)/animals/` — bos dizin silindi
+- [x] `utils/jwt.ts` → `lib/jwt.ts`'e tasindi, `lib/admin.ts` ve `hooks/useRoles.ts` import'lari guncellendi
+- [x] `utils/` dizini tamamen silindi
 
 ---
 
@@ -151,8 +152,8 @@
 | 8 | ~~Production logging~~ | ✅ Tamamlandi | — |
 | 9 | ~~Zustand/React Query ayristirma~~ | ✅ Tamamlandi | — |
 | 10 | ~~Locale-aware routing~~ | ✅ Tamamlandi | — |
-| 11 | Unused dependencies | Orta | 30 dk |
-| 12 | Bos dizin temizligi | Orta | 15 dk |
+| 11 | ~~Unused dependencies~~ | ✅ Tamamlandi | — |
+| 12 | ~~Bos dizin temizligi~~ | ✅ Tamamlandi | — |
 | 13 | Buyuk bilesenleri parcala | Dusuk | 3-4 saat |
 | 14 | Tamamlanmamis ozellikler | Dusuk | 2-3 saat |
 | 15 | ESLint kural iyilestirmeleri | Dusuk | 30 dk+ |
