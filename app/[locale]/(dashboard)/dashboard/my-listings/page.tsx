@@ -41,7 +41,8 @@ import { PlusCircle, MoreVertical, Pencil, Trash2, Eye, EyeOff } from "lucide-re
 
 const PAGE_SIZE = 20;
 
-type ListingStatus = "all" | "active" | "draft" | "sold" | "pending";
+// ProductStatus enum: 0=Draft, 1=PendingApproval, 2=Active, 3=Inactive, 4=OutOfStock, 5=Expired, 6=Sold, 7=Rejected
+type ListingStatus = "all" | "draft" | "pending" | "active" | "inactive" | "sold" | "rejected";
 
 export default function MyListingsPage() {
   const t = useTranslations("myListings");
@@ -119,9 +120,11 @@ export default function MyListingsPage() {
       : listings.filter((l) => {
           const statusMap: Record<number, ListingStatus> = {
             0: "draft",
-            1: "active",
-            2: "sold",
-            3: "pending",
+            1: "pending",
+            2: "active",
+            3: "inactive",
+            6: "sold",
+            7: "rejected",
           };
           return statusMap[l.status] === statusFilter;
         });
@@ -151,7 +154,8 @@ export default function MyListingsPage() {
     const product = listings.find((p) => p.id === productId);
     if (!product) return;
 
-    const newStatus = product.status === 1 ? 0 : 1; // Toggle between active (1) and draft (0)
+    // Draft(0) → PendingApproval(1), Active(2)/PendingApproval(1) → Draft(0)
+    const newStatus = product.status === 0 ? 1 : 0;
 
     try {
       // Fetch full product details for update (API requires all fields)
@@ -191,7 +195,7 @@ export default function MyListingsPage() {
       queryClient.invalidateQueries({ queryKey: queryKeys.products.list({ sellerId, page: "all" }) });
 
       toast.success(
-        newStatus === 1 ? t("activateSuccess") : t("deactivateSuccess")
+        newStatus === 1 ? t("publishSuccess") : t("unpublishSuccess")
       );
     } catch {
       toast.error(t("statusError"));
@@ -212,9 +216,10 @@ export default function MyListingsPage() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">{t("filters.all")}</SelectItem>
-              <SelectItem value="active">{t("filters.active")}</SelectItem>
               <SelectItem value="draft">{t("filters.draft")}</SelectItem>
               <SelectItem value="pending">{t("filters.pending")}</SelectItem>
+              <SelectItem value="active">{t("filters.active")}</SelectItem>
+              <SelectItem value="rejected">{t("filters.rejected")}</SelectItem>
               <SelectItem value="sold">{t("filters.sold")}</SelectItem>
             </SelectContent>
           </Select>
@@ -255,14 +260,23 @@ export default function MyListingsPage() {
               <Badge
                 className="absolute top-2 left-2 z-10"
                 variant={
-                  listing.status === 1
+                  listing.status === 2
                     ? "default"
                     : listing.status === 0
                     ? "secondary"
+                    : listing.status === 7
+                    ? "destructive"
                     : "outline"
                 }
               >
-                {tp(`status.${listing.status === 0 ? "draft" : listing.status === 1 ? "active" : listing.status === 2 ? "sold" : "pending"}`)}
+                {tp(`status.${
+                  listing.status === 0 ? "draft" :
+                  listing.status === 1 ? "pending" :
+                  listing.status === 2 ? "active" :
+                  listing.status === 3 ? "inactive" :
+                  listing.status === 6 ? "sold" :
+                  listing.status === 7 ? "rejected" : "draft"
+                }`)}
               </Badge>
 
               {/* Actions Dropdown */}
@@ -283,19 +297,18 @@ export default function MyListingsPage() {
                       {t("actions.edit")}
                     </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => handleToggleStatus(listing.id)}>
-                    {listing.status === 1 ? (
-                      <>
-                        <EyeOff className="h-4 w-4 mr-2" />
-                        {t("actions.deactivate")}
-                      </>
-                    ) : (
-                      <>
-                        <Eye className="h-4 w-4 mr-2" />
-                        {t("actions.activate")}
-                      </>
-                    )}
-                  </DropdownMenuItem>
+                  {listing.status === 0 && (
+                    <DropdownMenuItem onClick={() => handleToggleStatus(listing.id)}>
+                      <Eye className="h-4 w-4 mr-2" />
+                      {t("actions.publish")}
+                    </DropdownMenuItem>
+                  )}
+                  {(listing.status === 1 || listing.status === 2) && (
+                    <DropdownMenuItem onClick={() => handleToggleStatus(listing.id)}>
+                      <EyeOff className="h-4 w-4 mr-2" />
+                      {t("actions.unpublish")}
+                    </DropdownMenuItem>
+                  )}
                   <DropdownMenuItem
                     onClick={() => handleDeleteClick(listing.id)}
                     className="text-destructive focus:text-destructive"

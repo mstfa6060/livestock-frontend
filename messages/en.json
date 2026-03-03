@@ -146,21 +146,22 @@
     "fetchError": "An error occurred while loading ads.",
     "deleteSuccess": "The ad was successfully deleted.",
     "deleteError": "An error occurred while deleting the ad.",
-    "activateSuccess": "The ad has been activated.",
-    "deactivateSuccess": "The listing has been deactivated.",
+    "publishSuccess": "Listing submitted for approval.",
+    "unpublishSuccess": "Listing moved to draft.",
     "statusError": "An error occurred while changing the status.",
     "filters": {
-      "all": "All of them",
-      "active": "Active",
+      "all": "All",
       "draft": "Draft",
-      "pending": "Awaiting Approval",
+      "pending": "Pending Approval",
+      "active": "Active",
+      "rejected": "Rejected",
       "sold": "Sold"
     },
     "actions": {
       "edit": "Edit",
       "delete": "Delete",
-      "activate": "Activate",
-      "deactivate": "Passive Structure"
+      "publish": "Submit for Approval",
+      "unpublish": "Move to Draft"
     },
     "deleteDialog": {
       "title": "Delete the ad",
@@ -258,9 +259,13 @@
     },
     "status": {
       "draft": "Draft",
+      "pending": "Pending Approval",
       "active": "Active",
+      "inactive": "Inactive",
+      "outOfStock": "Out of Stock",
+      "expired": "Expired",
       "sold": "Sold",
-      "pending": "Awaiting Approval"
+      "rejected": "Rejected"
     },
     "condition": {
       "new": "New",

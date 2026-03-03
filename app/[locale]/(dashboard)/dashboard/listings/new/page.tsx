@@ -117,7 +117,7 @@ export default function NewListingPage() {
     setMediaFiles(files);
   };
 
-  const onSubmit = async (data: ListingFormData, isDraft: boolean = false) => {
+  const onSubmit = async (data: ListingFormData) => {
     if (!user?.id) {
       toast.error(t("userNotFound"));
       router.push(locale === "en" ? "/login" : `/${locale}/login`);
@@ -179,7 +179,7 @@ export default function NewListingPage() {
       });
 
       // Step 3: Create Product with the sellerId and locationId
-      const productResponse = await LivestockTradingAPI.Products.Create.Request({
+      await LivestockTradingAPI.Products.Create.Request({
         title: data.title,
         slug: slug,
         description: data.description,
@@ -210,16 +210,8 @@ export default function NewListingPage() {
         coverImageFileId: coverImageFileId || "",
       });
 
-      // If user clicked "Publish", update status to PendingApproval after creation
-      if (!isDraft && productResponse?.id) {
-        await LivestockTradingAPI.Products.Update.Request({
-          id: productResponse.id,
-          status: 1, // PendingApproval
-        });
-      }
-
       await queryClient.invalidateQueries({ queryKey: queryKeys.products.all });
-      toast.success(isDraft ? t("draftSaved") : t("productCreated"));
+      toast.success(t("draftSaved"));
       router.push("/dashboard/my-listings");
     } catch (error: unknown) {
       const errorMessage = error instanceof Error ? error.message : t("creationFailed");
@@ -229,12 +221,11 @@ export default function NewListingPage() {
     }
   };
 
-  const handlePublish = formSubmit((data) => onSubmit(data, false));
-  const handleDraft = formSubmit((data) => onSubmit(data, true));
+  const handleSubmit = formSubmit((data) => onSubmit(data));
 
   return (
     <DashboardLayout>
-      <form onSubmit={handlePublish}>
+      <form onSubmit={handleSubmit}>
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-4">
@@ -249,14 +240,6 @@ export default function NewListingPage() {
             <h1 className="text-2xl font-bold">{t("title")}</h1>
           </div>
           <div className="flex gap-2">
-            <Button
-              type="button"
-              variant="outline"
-              onClick={handleDraft}
-              disabled={isLoading || authLoading || !user?.id}
-            >
-              {t("saveDraft")}
-            </Button>
             <Button type="submit" disabled={isLoading || authLoading || !user?.id}>
               {isLoading ? (
                 <>
@@ -266,7 +249,7 @@ export default function NewListingPage() {
               ) : (
                 <>
                   <Save className="h-4 w-4 mr-2" />
-                  {authLoading ? tc("loading") : t("publish")}
+                  {authLoading ? tc("loading") : t("saveDraft")}
                 </>
               )}
             </Button>

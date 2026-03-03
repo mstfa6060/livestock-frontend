@@ -222,21 +222,22 @@
     "fetchError": "Ilanlar yuklenirken bir hata olustu",
     "deleteSuccess": "Ilan basariyla silindi",
     "deleteError": "Ilan silinirken bir hata olustu",
-    "activateSuccess": "Ilan aktif edildi",
-    "deactivateSuccess": "Ilan pasif yapildi",
+    "publishSuccess": "Ilan onaya gonderildi.",
+    "unpublishSuccess": "Ilan taslaga alindi.",
     "statusError": "Durum degistirilirken bir hata olustu",
     "filters": {
       "all": "Tumu",
-      "active": "Aktif",
       "draft": "Taslak",
       "pending": "Onay Bekliyor",
+      "active": "Aktif",
+      "rejected": "Reddedildi",
       "sold": "Satildi"
     },
     "actions": {
       "edit": "Duzenle",
       "delete": "Sil",
-      "activate": "Aktif Et",
-      "deactivate": "Pasif Yap"
+      "publish": "Onaya Gonder",
+      "unpublish": "Taslaga Al"
     },
     "deleteDialog": {
       "title": "Ilani sil",
@@ -567,9 +568,13 @@
     },
     "status": {
       "draft": "Taslak",
+      "pending": "Onay Bekliyor",
       "active": "Aktif",
+      "inactive": "Pasif",
+      "outOfStock": "Stokta Yok",
+      "expired": "Suresi Dolmus",
       "sold": "Satildi",
-      "pending": "Onay Bekliyor"
+      "rejected": "Reddedildi"
     },
     "condition": {
       "new": "Yeni",
