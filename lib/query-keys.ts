@@ -171,6 +171,41 @@ export const queryKeys = {
       [...queryKeys.favorites.all, "list", userId] as const,
   },
 
+  healthRecords: {
+    all: ["healthRecords"] as const,
+    lists: () => [...queryKeys.healthRecords.all, "list"] as const,
+    list: (params?: Params) =>
+      [...queryKeys.healthRecords.lists(), params] as const,
+  },
+
+  vaccinations: {
+    all: ["vaccinations"] as const,
+    lists: () => [...queryKeys.vaccinations.all, "list"] as const,
+    list: (params?: Params) =>
+      [...queryKeys.vaccinations.lists(), params] as const,
+  },
+
+  shippingCarriers: {
+    all: ["shippingCarriers"] as const,
+    lists: () => [...queryKeys.shippingCarriers.all, "list"] as const,
+    list: (params?: Params) =>
+      [...queryKeys.shippingCarriers.lists(), params] as const,
+  },
+
+  shippingZones: {
+    all: ["shippingZones"] as const,
+    lists: () => [...queryKeys.shippingZones.all, "list"] as const,
+    list: (params?: Params) =>
+      [...queryKeys.shippingZones.lists(), params] as const,
+  },
+
+  shippingRates: {
+    all: ["shippingRates"] as const,
+    lists: () => [...queryKeys.shippingRates.all, "list"] as const,
+    list: (params?: Params) =>
+      [...queryKeys.shippingRates.lists(), params] as const,
+  },
+
   notifications: {
     all: ["notifications"] as const,
     list: (userId: string) =>

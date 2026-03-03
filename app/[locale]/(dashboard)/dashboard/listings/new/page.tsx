@@ -133,8 +133,8 @@ export default function NewListingPage() {
       let sellerId: string;
 
       try {
-        const sellerResponse = await LivestockTradingAPI.Sellers.Detail.Request({
-          id: user.id,
+        const sellerResponse = await LivestockTradingAPI.Sellers.GetByUserId.Request({
+          userId: user.id,
         });
         sellerId = sellerResponse.id;
       } catch {

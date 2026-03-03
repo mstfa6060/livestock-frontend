@@ -25,8 +25,12 @@ import {
   Tag,
   Send,
   MapPin,
+  DollarSign,
+  ClipboardPlus,
+  Syringe,
 } from "lucide-react";
 import { useRoles } from "@/hooks/useRoles";
+import { Roles } from "@/constants/roles";
 import { useAuth } from "@/contexts/AuthContext";
 import { useMessagesStore } from "@/stores/useMessagesStore";
 import { useUnreadCount } from "@/hooks/queries/useNotifications";
@@ -36,6 +40,7 @@ interface MenuItem {
   href: string;
   icon: typeof LayoutDashboard;
   adminOnly?: boolean;
+  requiredRoles?: string[];
   badgeKey?: "messages" | "notifications";
 }
 
@@ -48,12 +53,17 @@ const menuItems: MenuItem[] = [
   { key: "transport", href: "/dashboard/transport", icon: Truck },
   { key: "transportOffers", href: "/dashboard/transport-offers", icon: Send },
   { key: "locations", href: "/dashboard/locations", icon: MapPin },
+  { key: "healthRecords", href: "/dashboard/health-records", icon: ClipboardPlus, requiredRoles: [Roles.Seller, Roles.Veterinarian] },
+  { key: "vaccinations", href: "/dashboard/vaccinations", icon: Syringe, requiredRoles: [Roles.Seller, Roles.Veterinarian] },
   { key: "becomeSeller", href: "/dashboard/become-seller", icon: Store },
   { key: "moderation", href: "/dashboard/moderation", icon: ShieldCheck, adminOnly: true },
   { key: "sellerModeration", href: "/dashboard/seller-moderation", icon: Store, adminOnly: true },
   { key: "transporterModeration", href: "/dashboard/transporter-moderation", icon: Truck, adminOnly: true },
   { key: "categories", href: "/dashboard/categories", icon: FolderTree, adminOnly: true },
   { key: "brands", href: "/dashboard/brands", icon: Tag, adminOnly: true },
+  { key: "shippingCarriers", href: "/dashboard/shipping-carriers", icon: Truck, adminOnly: true },
+  { key: "shippingZones", href: "/dashboard/shipping-zones", icon: MapPin, adminOnly: true },
+  { key: "shippingRates", href: "/dashboard/shipping-rates", icon: DollarSign, adminOnly: true },
   { key: "systemSettings", href: "/dashboard/system-settings", icon: Settings, adminOnly: true },
   { key: "favorites", href: "/dashboard/favorites", icon: Heart },
   { key: "messages", href: "/dashboard/messages", icon: MessageSquare, badgeKey: "messages" },
@@ -74,7 +84,7 @@ function UnreadBadge({ count }: { count: number }) {
 export function DashboardSidebar() {
   const pathname = usePathname();
   const t = useTranslations("dashboardNav");
-  const { isAdmin, isStaff } = useRoles();
+  const { isAdmin, isStaff, hasAnyRole } = useRoles();
   const { user } = useAuth();
 
   const unreadMessages = useMessagesStore((s) => s.unreadCount);
@@ -91,7 +101,11 @@ export function DashboardSidebar() {
   // Remove locale prefix from pathname for comparison
   const currentPath = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, "");
 
-  const visibleItems = menuItems.filter((item) => !item.adminOnly || isAdmin || isStaff);
+  const visibleItems = menuItems.filter((item) => {
+    if (item.adminOnly && !isAdmin && !isStaff) return false;
+    if (item.requiredRoles && !isAdmin && !isStaff && !hasAnyRole(item.requiredRoles)) return false;
+    return true;
+  });
 
   const getBadgeCount = (badgeKey?: "messages" | "notifications") => {
     if (badgeKey === "messages") return unreadMessages;

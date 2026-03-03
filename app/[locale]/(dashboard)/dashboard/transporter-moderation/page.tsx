@@ -198,9 +198,17 @@ export default function TransporterModerationPage() {
                         <span className="font-semibold text-lg">
                           {transporter.companyName}
                         </span>
-                        <Badge variant={STATUS_VARIANT[transporter.isActive ? 1 : 0] ?? "outline"}>
-                          {!transporter.isVerified && <Clock className="h-3 w-3 mr-1" />}
-                          {t(`statusLabels.${transporter.isVerified ? "active" : "pendingVerification"}`)}
+                        <Badge variant={STATUS_VARIANT[
+                          transporter.isVerified && transporter.isActive ? 1
+                            : !transporter.isActive && transporter.isVerified ? 2
+                            : 0
+                        ] ?? "outline"}>
+                          {!transporter.isVerified && !transporter.isActive && <Clock className="h-3 w-3 mr-1" />}
+                          {t(`statusLabels.${
+                            transporter.isVerified && transporter.isActive ? "active"
+                              : !transporter.isActive && transporter.isVerified ? "suspended"
+                              : "pendingVerification"
+                          }`)}
                         </Badge>
                       </div>
 

@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import { MainHeader } from "./main-header";
 import { DashboardSidebar, DashboardMobileNav } from "./dashboard-sidebar";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
+import { PushPermission } from "@/components/features/push-permission";
 
 interface DashboardLayoutProps {
   children: ReactNode;
@@ -25,6 +26,7 @@ export function DashboardLayout({
           <DashboardSidebar />
 
           <main className="flex-1 p-4 lg:p-8 pb-20 lg:pb-8">
+            <PushPermission />
             {(title || description) && (
               <div className="mb-6">
                 {title && <h1 className="text-2xl font-bold">{title}</h1>}

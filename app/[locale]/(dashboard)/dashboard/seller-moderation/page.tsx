@@ -19,7 +19,6 @@ import {
   XCircle,
   Clock,
   ShieldCheck,
-  AlertTriangle,
 } from "lucide-react";
 
 type StatusFilter = "all" | "pending" | "active" | "suspended";

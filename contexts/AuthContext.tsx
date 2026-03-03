@@ -86,6 +86,18 @@ const STORAGE_KEYS = {
   REMEMBERED_EMAIL: "rememberedEmail",
 } as const;
 
+const AUTH_COOKIE_NAME = "auth-token";
+
+// Set a cookie flag so Next.js middleware can detect auth state
+function setAuthCookie() {
+  document.cookie = `${AUTH_COOKIE_NAME}=1; path=/; max-age=${60 * 60 * 24 * 30}; SameSite=Lax`;
+}
+
+// Remove the auth cookie
+function removeAuthCookie() {
+  document.cookie = `${AUTH_COOKIE_NAME}=; path=/; max-age=0; SameSite=Lax`;
+}
+
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
@@ -96,12 +108,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     isLoading: true,
   });
 
-  // Helper to clear auth data from localStorage
+  // Helper to clear auth data from localStorage and cookie
   const clearAuthData = useCallback(() => {
     localStorage.removeItem(STORAGE_KEYS.JWT);
     localStorage.removeItem(STORAGE_KEYS.ACCESS_TOKEN);
     localStorage.removeItem(STORAGE_KEYS.REFRESH_TOKEN);
     localStorage.removeItem(STORAGE_KEYS.USER);
+    removeAuthCookie();
   }, []);
 
   // Initialize auth state from localStorage
@@ -125,12 +138,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           }
 
           const user = JSON.parse(storedUser) as User;
+          setAuthCookie();
           setState({
             user,
             isAuthenticated: true,
             isLoading: false,
           });
         } else {
+          removeAuthCookie();
           setState({
             user: null,
             isAuthenticated: false,
@@ -178,6 +193,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       localStorage.setItem(STORAGE_KEYS.ACCESS_TOKEN, response.jwt); // Also save as accessToken
       localStorage.setItem(STORAGE_KEYS.REFRESH_TOKEN, response.refreshToken);
       localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(response.user));
+      setAuthCookie();
 
       // Handle remember me
       if (rememberMe) {
@@ -217,6 +233,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       localStorage.setItem(STORAGE_KEYS.ACCESS_TOKEN, response.jwt);
       localStorage.setItem(STORAGE_KEYS.REFRESH_TOKEN, response.refreshToken);
       localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(response.user));
+      setAuthCookie();
 
       // Update state
       setState({

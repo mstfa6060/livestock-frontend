@@ -5,6 +5,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { makeQueryClient } from "@/lib/query-client";
+import { useSWRegistration } from "@/hooks/useSWRegistration";
 
 interface ProvidersProps {
   children: ReactNode;
@@ -16,6 +17,8 @@ interface ProvidersProps {
  */
 export function Providers({ children }: ProvidersProps) {
   const [queryClient] = useState(() => makeQueryClient());
+
+  useSWRegistration();
 
   return (
     <QueryClientProvider client={queryClient}>

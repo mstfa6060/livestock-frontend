@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -39,10 +40,13 @@ export function HomepageBanners() {
         <div className="relative aspect-[3/1] md:aspect-[4/1] rounded-lg overflow-hidden">
           {/* Banner Image */}
           {current.imageUrl ? (
-            <img
+            <Image
               src={current.imageUrl}
               alt={current.title}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
             />
           ) : (
             <div className="w-full h-full bg-gradient-to-r from-primary/20 to-primary/5" />

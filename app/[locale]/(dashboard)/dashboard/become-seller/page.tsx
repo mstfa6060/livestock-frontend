@@ -85,7 +85,7 @@ export default function BecomeSellerPage() {
 
       toast.success(t("success"));
       router.push("/dashboard/listings/new");
-    } catch (error) {
+    } catch {
       toast.error(t("error"));
     } finally {
       setIsLoading(false);
