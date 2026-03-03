@@ -179,7 +179,7 @@ export default function NewListingPage() {
       });
 
       // Step 3: Create Product with the sellerId and locationId
-      await LivestockTradingAPI.Products.Create.Request({
+      const productResponse = await LivestockTradingAPI.Products.Create.Request({
         title: data.title,
         slug: slug,
         description: data.description,
@@ -193,7 +193,7 @@ export default function NewListingPage() {
         isInStock: parseInt(data.stockQuantity) > 0,
         sellerId: sellerId,
         locationId: locationResponse.id,
-        status: isDraft ? 0 : 1, // 0=Draft, 1=PendingApproval
+        status: 0, // Always create as Draft (backend enforces this)
         condition: data.condition,
         isShippingAvailable: data.isShippingAvailable,
         shippingCost: data.shippingCost
@@ -209,6 +209,14 @@ export default function NewListingPage() {
         mediaBucketId: mediaBucketId || "",
         coverImageFileId: coverImageFileId || "",
       });
+
+      // If user clicked "Publish", update status to PendingApproval after creation
+      if (!isDraft && productResponse?.id) {
+        await LivestockTradingAPI.Products.Update.Request({
+          id: productResponse.id,
+          status: 1, // PendingApproval
+        });
+      }
 
       await queryClient.invalidateQueries({ queryKey: queryKeys.products.all });
       toast.success(isDraft ? t("draftSaved") : t("productCreated"));
