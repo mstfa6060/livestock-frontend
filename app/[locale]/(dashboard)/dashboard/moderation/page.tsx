@@ -45,7 +45,7 @@ export default function ModerationPage() {
   const tp = useTranslations("products");
   const locale = useLocale();
   const { user } = useAuth();
-  const { isAdmin, isStaff } = useRoles();
+  const { isAdmin, isStaff, isLoaded: rolesLoaded } = useRoles();
 
   const [actionLoading, setActionLoading] = useState<string | null>(null);
   const [rejectingId, setRejectingId] = useState<string | null>(null);
@@ -93,7 +93,7 @@ export default function ModerationPage() {
         createdAt: p.createdAt,
       })) as PendingProduct[];
     },
-    enabled: isAdmin || isStaff,
+    enabled: rolesLoaded && (isAdmin || isStaff),
   });
 
   const handleApprove = async (productId: string) => {
@@ -132,7 +132,26 @@ export default function ModerationPage() {
     }
   };
 
-  // Access control
+  // Access control - wait for roles to load
+  if (!rolesLoaded) {
+    return (
+      <DashboardLayout>
+        <div className="space-y-4">
+          {Array.from({ length: 3 }).map((_, i) => (
+            <Card key={i}>
+              <CardContent className="p-4">
+                <div className="space-y-3">
+                  <Skeleton className="h-5 w-64" />
+                  <Skeleton className="h-4 w-full" />
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </DashboardLayout>
+    );
+  }
+
   if (!isAdmin && !isStaff) {
     return (
       <DashboardLayout>

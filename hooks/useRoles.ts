@@ -6,35 +6,33 @@ import { Roles } from "@/constants/roles";
 
 export const useRoles = () => {
   const [roles, setRoles] = useState<string[]>([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setRoles(getUserRoles());
+    setIsLoaded(true);
   }, []);
 
   const permissions = useMemo(
     () => ({
-      isAdmin: hasRole(Roles.Admin),
-      isModerator: hasRole(Roles.Moderator),
-      isSupport: hasRole(Roles.Support),
-      isSeller: hasRole(Roles.Seller),
-      isTransporter: hasRole(Roles.Transporter),
-      isBuyer: hasRole(Roles.Buyer),
-      isVeterinarian: hasRole(Roles.Veterinarian),
-      isStaff: hasAnyRole([Roles.Admin, Roles.Moderator, Roles.Support]),
-      canManageProducts: hasAnyRole([
-        Roles.Admin,
-        Roles.Moderator,
-        Roles.Seller,
-      ]),
-      canManageOrders: hasAnyRole([Roles.Admin, Roles.Moderator]),
-      canManageUsers: hasRole(Roles.Admin),
+      isAdmin: roles.includes(Roles.Admin),
+      isModerator: roles.includes(Roles.Moderator),
+      isSupport: roles.includes(Roles.Support),
+      isSeller: roles.includes(Roles.Seller),
+      isTransporter: roles.includes(Roles.Transporter),
+      isBuyer: roles.includes(Roles.Buyer),
+      isVeterinarian: roles.includes(Roles.Veterinarian),
+      isStaff: [Roles.Admin, Roles.Moderator, Roles.Support].some((r) => roles.includes(r)),
+      canManageProducts: [Roles.Admin, Roles.Moderator, Roles.Seller].some((r) => roles.includes(r)),
+      canManageOrders: [Roles.Admin, Roles.Moderator].some((r) => roles.includes(r)),
+      canManageUsers: roles.includes(Roles.Admin),
     }),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [roles]
   );
 
   return {
     roles,
+    isLoaded,
     ...permissions,
     hasRole,
     hasAnyRole,
