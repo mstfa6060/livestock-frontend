@@ -49,7 +49,20 @@
       "Bash(do sed -i '142d' \"$file\")",
       "Bash(done)",
       "Bash(wc:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(cat:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(head:*)",
+      "Bash(git check-ignore /d/Projects/GlobalLivestock/web/.env.local)",
+      "Bash(cd /d/Projects/GlobalLivestock/web && npm audit 2>&1)",
+      "Bash(cd /d/Projects/GlobalLivestock/web && npm audit fix 2>&1)",
+      "Bash(cd:*)",
+      "Bash(cd /d/Projects/GlobalLivestock/web && npx vitest run 2>&1)",
+      "Bash(tail:*)",
+      "Bash(cd /d/Projects/GlobalLivestock/web && npx vitest run --reporter=verbose 2>&1)",
+      "Bash(grep no-explicit-any:*)",
+      "Bash(grep no-console:*)",
+      "Bash(sleep 3:*)"
     ]
   }
 }

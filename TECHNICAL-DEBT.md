@@ -110,7 +110,7 @@
   - `types.ts` — 8 veri interface'i
   - `animal-tab.tsx` — AnimalTab bileşeni (hayvan bilgisi + utility fonksiyonlar)
   - `record-tabs.tsx` — HealthRecordsTab, VaccinationsTab, VetInfoTab bileşenleri
-  - `product-tabs.tsx` — ChemicalTab, FeedTab, SeedTab, MachineryTab bileşenleri
+  - `product-tabs.tsx` — ChemicalTab, FeedTab, SeedTab, MachineryTab bileşenleribi 
   - `index.tsx` — Ana bileşen (veri çekme + tab yapısı)
 - **Sonuc:** Import path'leri degismedi (index.tsx barrel export), 112 test gecti
 
