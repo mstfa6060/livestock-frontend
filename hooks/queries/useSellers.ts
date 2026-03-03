@@ -52,26 +52,14 @@ export function useSellerByUserId(
   return useQuery({
     queryKey: queryKeys.sellers.byUserId(userId),
     queryFn: async () => {
-      const response = await LivestockTradingAPI.Sellers.All.Request({
-        sorting: {
-          key: "createdAt",
-          direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
-        },
-        filters: [
-          {
-            key: "userId",
-            type: "guid",
-            isUsed: true,
-            values: [userId],
-            min: {},
-            max: {},
-            conditionType: "equals",
-          },
-        ],
-        pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
-      });
-
-      return response[0] ?? null;
+      try {
+        const response = await LivestockTradingAPI.Sellers.GetByUserId.Request({
+          userId,
+        });
+        return response ?? null;
+      } catch {
+        return null;
+      }
     },
     enabled: (options?.enabled ?? true) && !!userId,
   });

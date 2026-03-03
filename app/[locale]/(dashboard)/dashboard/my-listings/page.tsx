@@ -68,6 +68,7 @@ export default function MyListingsPage() {
       if (!sellerId) return [];
 
       const response = await LivestockTradingAPI.Products.All.Request({
+        countryCode: "",
         sorting: { key: "createdAt", direction: 1 },
         filters: [
           {
