@@ -69,7 +69,7 @@ export default function ModerationPage() {
             key: "status",
             type: "number",
             isUsed: true,
-            values: [3],
+            values: [1],
             min: {},
             max: {},
             conditionType: "equals",
