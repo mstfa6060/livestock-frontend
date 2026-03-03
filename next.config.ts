@@ -64,6 +64,16 @@ const nextConfig: NextConfig = {
         hostname: '*.livestock-trading.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: '**',
+        pathname: '/**',
+      },
+      {
+        protocol: 'http',
+        hostname: '**',
+        pathname: '/**',
+      },
     ],
   },
   async headers() {
