@@ -23,6 +23,8 @@ import {
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
+import { Checkbox } from "@/components/ui/checkbox";
+import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { Truck, Loader2 } from "lucide-react";
 
 const TransportType = {
@@ -48,6 +50,7 @@ interface RequestTransportDialogProps {
 export function RequestTransportDialog({ deal, children }: RequestTransportDialogProps) {
   const t = useTranslations("requestTransport");
   const { user } = useAuth();
+  const selectedCountry = useSelectedCountry();
   const [open, setOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -76,7 +79,7 @@ export function RequestTransportDialog({ deal, children }: RequestTransportDialo
         city: pickupCity,
         state: "",
         postalCode: "",
-        countryCode: "TR",
+        countryCode: selectedCountry?.code || "",
         phone: "",
         email: "",
         type: 0,
@@ -92,7 +95,7 @@ export function RequestTransportDialog({ deal, children }: RequestTransportDialo
         city: deliveryCity,
         state: "",
         postalCode: "",
-        countryCode: "TR",
+        countryCode: selectedCountry?.code || "",
         phone: "",
         email: "",
         type: 1,
@@ -242,12 +245,10 @@ export function RequestTransportDialog({ deal, children }: RequestTransportDialo
           </div>
 
           <div className="flex items-center gap-2">
-            <input
-              type="checkbox"
+            <Checkbox
               id="urgent"
               checked={isUrgent}
-              onChange={(e) => setIsUrgent(e.target.checked)}
-              className="rounded"
+              onCheckedChange={(checked) => setIsUrgent(checked === true)}
             />
             <Label htmlFor="urgent" className="cursor-pointer">
               {t("urgent")}

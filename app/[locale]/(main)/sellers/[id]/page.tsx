@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
@@ -29,11 +30,10 @@ import {
   Truck,
   RotateCcw,
 } from "lucide-react";
-import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { AppConfig } from "@/config/livestock-config";
-import { getProductCoverImages } from "@/lib/product-images";
 import { SellerReviews } from "@/components/features/seller-reviews";
+import { useSelectedCountry } from "@/components/layout/country-switcher";
 
 interface SellerDetail {
   id: string;
@@ -70,111 +70,75 @@ export default function SellerDetailPage() {
   const params = useParams();
   const sellerId = params.id as string;
 
-  const [seller, setSeller] = useState<SellerDetail | null>(null);
-  const [products, setProducts] = useState<Product[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isLoadingProducts, setIsLoadingProducts] = useState(true);
+  const selectedCountry = useSelectedCountry();
 
-  // Fetch seller details
-  useEffect(() => {
-    const fetchSeller = async () => {
-      if (!sellerId) return;
+  // Fetch seller details via React Query
+  const { data: seller = null, isLoading } = useQuery({
+    queryKey: queryKeys.sellers.detail(sellerId),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.Sellers.Detail.Request({
+        id: sellerId,
+      });
+      return response as unknown as SellerDetail;
+    },
+    enabled: !!sellerId,
+  });
 
-      setIsLoading(true);
-      try {
-        const response = await LivestockTradingAPI.Sellers.Detail.Request({
-          id: sellerId,
-        });
-        setSeller(response as unknown as SellerDetail);
-      } catch {
-        setSeller(null);
-        toast.error(t("fetchError"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchSeller();
-  }, [sellerId]);
-
-  // Fetch seller's products
-  useEffect(() => {
-    const fetchProducts = async () => {
-      if (!sellerId) return;
-
-      setIsLoadingProducts(true);
-      try {
-        const response = await LivestockTradingAPI.Products.All.Request({
-          countryCode: "TR",
-          sorting: {
-            key: "createdAt",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+  // Fetch seller's products via React Query
+  const { data: products = [], isLoading: isLoadingProducts } = useQuery({
+    queryKey: queryKeys.products.list({ sellerId, countryCode: selectedCountry?.code }),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.Products.All.Request({
+        countryCode: selectedCountry?.code || "",
+        sorting: {
+          key: "createdAt",
+          direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+        },
+        filters: [
+          {
+            key: "sellerId",
+            type: "guid",
+            isUsed: true,
+            values: [sellerId],
+            min: {},
+            max: {},
+            conditionType: "equals",
           },
-          filters: [
-            {
-              key: "sellerId",
-              type: "guid",
-              isUsed: true,
-              values: [sellerId],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: {
-            currentPage: 1,
-            perPageCount: 12,
-            listAll: false,
-          },
-        });
+        ],
+        pageRequest: {
+          currentPage: 1,
+          perPageCount: 12,
+          listAll: false,
+        },
+      });
 
-        const transformedProducts: Product[] = response.map((item) => ({
-          id: item.id,
-          title: item.title,
-          slug: item.slug,
-          shortDescription: item.shortDescription,
-          categoryId: item.categoryId,
-          brandId: item.brandId || undefined,
-          basePrice: item.basePrice as number,
-          currency: item.currency,
-          discountedPrice: item.discountedPrice as number | undefined,
-          stockQuantity: item.stockQuantity,
-          isInStock: item.isInStock,
-          sellerId: item.sellerId,
-          locationId: item.locationId,
-          locationCountryCode: item.locationCountryCode,
-          locationCity: item.locationCity,
-          status: item.status,
-          condition: item.condition,
-          viewCount: item.viewCount,
-          averageRating: item.averageRating as number | undefined,
-          reviewCount: item.reviewCount,
-          createdAt: item.createdAt,
-          imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
-        }));
-
-        setProducts(transformedProducts);
-
-        // Fetch cover images asynchronously
-        const productIds = transformedProducts.map((p) => p.id);
-        getProductCoverImages(productIds).then((imageMap) => {
-          setProducts((prev) =>
-            prev.map((p) => ({
-              ...p,
-              imageUrl: imageMap[p.id] || p.imageUrl,
-            }))
-          );
-        });
-      } catch {
-        setProducts([]);
-        toast.error(t("productsLoadError"));
-      } finally {
-        setIsLoadingProducts(false);
-      }
-    };
-
-    fetchProducts();
-  }, [sellerId]);
+      return response.map((item): Product => ({
+        id: item.id,
+        title: item.title,
+        slug: item.slug,
+        shortDescription: item.shortDescription,
+        categoryId: item.categoryId,
+        brandId: item.brandId || undefined,
+        basePrice: item.basePrice as number,
+        currency: item.currency,
+        discountedPrice: item.discountedPrice as number | undefined,
+        stockQuantity: item.stockQuantity,
+        isInStock: item.isInStock,
+        sellerId: item.sellerId,
+        locationId: item.locationId,
+        locationCountryCode: item.locationCountryCode,
+        locationCity: item.locationCity,
+        status: item.status,
+        condition: item.condition,
+        viewCount: item.viewCount,
+        averageRating: item.averageRating as number | undefined,
+        reviewCount: item.reviewCount,
+        createdAt: item.createdAt,
+        imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
+      }));
+    },
+    enabled: !!sellerId,
+  });
 
   // Get initials from business name
   const getInitials = (name: string) => {

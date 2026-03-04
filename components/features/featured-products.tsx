@@ -8,15 +8,17 @@ import { ProductCard } from "@/components/features/product-card";
 import { ArrowRight } from "lucide-react";
 import { useProductSearch } from "@/hooks/queries/useProducts";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { useSelectedCountry } from "@/components/layout/country-switcher";
 
 export function FeaturedProducts() {
   const t = useTranslations("home.featured");
+  const selectedCountry = useSelectedCountry();
 
   const { data: products = [], isLoading } = useProductSearch({
     query: "",
-    countryCode: "TR",
+    countryCode: selectedCountry?.code || "",
     city: "",
-    currency: "TRY",
+    currency: selectedCountry?.defaultCurrencyCode || "",
     sortBy: "createdAt",
     sortDirection: LivestockTradingAPI.Enums.XSortingDirection.Descending,
     currentPage: 1,

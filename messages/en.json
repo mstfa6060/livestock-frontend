@@ -16,15 +16,20 @@
     "register": "Register",
     "unauthorized": "You do not have permission to access this page",
     "previous": "Previous",
-    "slideN": "Slide {n}"
+    "slideN": "Slide {n}",
+    "viewMore": "View More"
   },
   "header": {
     "products": "Products",
     "sellers": "Sellers",
+    "transporters": "Transporters",
     "about": "About Us",
-    "dashboard": "Panel",
+    "search": "Search",
+    "dashboard": "Dashboard",
     "settings": "Settings",
-    "logout": "Log Out"
+    "logout": "Log Out",
+    "menu": "Menu",
+    "language": "Language"
   },
   "auth": {
     "login": {
@@ -36,7 +41,14 @@
       "forgotPassword": "I forgot my password.",
       "noAccount": "Don't you have an account?",
       "register": "Register",
-      "errorDefault": "Login failed. Please check your information."
+      "errorDefault": "Login failed. Please check your information.",
+      "orContinueWith": "or continue with",
+      "continueWithGoogle": "Continue with Google",
+      "continueWithApple": "Continue with Apple",
+      "socialLoginError": "Social login failed. Please try again.",
+      "appleComingSoon": "Coming soon",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password"
     },
     "register": {
       "title": "Register",
@@ -54,7 +66,16 @@
       "login": "Log in",
       "passwordMismatch": "The passwords don't match.",
       "passwordTooShort": "The password must be at least 6 characters long.",
-      "errorDefault": "Registration failed. Please try again."
+      "errorDefault": "Registration failed. Please try again.",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password",
+      "passwordStrength": {
+        "minLength": "At least 8 characters",
+        "uppercase": "Uppercase letter (A-Z)",
+        "lowercase": "Lowercase letter (a-z)",
+        "number": "Number (0-9)",
+        "special": "Special character (!@#$%)"
+      }
     },
     "forgotPassword": {
       "title": "I forgot my password.",
@@ -81,7 +102,9 @@
       "requestNewLink": "Request a New Connection",
       "passwordMismatch": "The passwords don't match.",
       "passwordTooShort": "The password must be at least 6 characters long.",
-      "errorDefault": "Password reset failed. The connection may be invalid or expired."
+      "errorDefault": "Password reset failed. The connection may be invalid or expired.",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password"
     }
   },
   "dashboard": {
@@ -161,7 +184,8 @@
       "edit": "Edit",
       "delete": "Delete",
       "publish": "Submit for Approval",
-      "unpublish": "Move to Draft"
+      "unpublish": "Move to Draft",
+      "menu": "Actions"
     },
     "deleteDialog": {
       "title": "Delete the ad",
@@ -191,7 +215,9 @@
       "passwordMismatch": "The new passwords don't match.",
       "passwordTooShort": "The new password must be at least 6 characters long.",
       "sessionError": "Session information could not be found.",
-      "errorDefault": "The password could not be updated. Please check your current password."
+      "errorDefault": "The password could not be updated. Please check your current password.",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password"
     }
   },
   "navigation": {

@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { MapPin, Clock, FileText } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 
 interface TrackingEvent {
   id: string;
@@ -23,51 +23,41 @@ interface TransportTrackingProps {
 
 export function TransportTracking({ transportRequestId }: TransportTrackingProps) {
   const t = useTranslations("transportTracking");
-  const [events, setEvents] = useState<TrackingEvent[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchTracking = async () => {
-      setIsLoading(true);
-      try {
-        const response = await LivestockTradingAPI.TransportTrackings.All.Request({
-          sorting: {
-            key: "recordedAt",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+  const { data: events = [], isLoading } = useQuery({
+    queryKey: queryKeys.transportTrackings.list(transportRequestId),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.TransportTrackings.All.Request({
+        sorting: {
+          key: "recordedAt",
+          direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+        },
+        filters: [
+          {
+            key: "transportRequestId",
+            type: "guid",
+            isUsed: true,
+            values: [transportRequestId],
+            min: {},
+            max: {},
+            conditionType: "equals",
           },
-          filters: [
-            {
-              key: "transportRequestId",
-              type: "guid",
-              isUsed: true,
-              values: [transportRequestId],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
-        });
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
+      });
 
-        setEvents(
-          response.map((e) => ({
-            id: e.id,
-            locationDescription: e.locationDescription,
-            status: e.status,
-            statusDescription: e.statusDescription,
-            recordedAt: e.recordedAt,
-            notes: e.notes,
-          }))
-        );
-      } catch {
-        // Tracking may not be available
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    if (transportRequestId) fetchTracking();
-  }, [transportRequestId]);
+      return response.map((e): TrackingEvent => ({
+        id: e.id,
+        locationDescription: e.locationDescription,
+        status: e.status,
+        statusDescription: e.statusDescription,
+        recordedAt: e.recordedAt,
+        notes: e.notes,
+      }));
+    },
+    enabled: !!transportRequestId,
+    staleTime: 2 * 60 * 1000,
+  });
 
   if (isLoading) {
     return (

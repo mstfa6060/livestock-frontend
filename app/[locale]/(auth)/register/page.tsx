@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
@@ -65,6 +65,7 @@ export default function RegisterPage() {
   const router = useRouter();
   const t = useTranslations("auth.register");
   const tc = useTranslations("common");
+  const locale = useLocale();
   const selectedCountry = useSelectedCountry();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -113,7 +114,7 @@ export default function RegisterPage() {
         description: "",
         phoneNumber: "",
         countryId: selectedCountry?.id || defaultCountry?.id || 1,
-        language: "tr",
+        language: locale,
         preferredCurrencyCode: selectedCountry?.defaultCurrencyCode || defaultCountry?.defaultCurrencyCode || "TRY",
       });
 
@@ -215,6 +216,7 @@ export default function RegisterPage() {
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                  aria-label={showPassword ? t("hidePassword") : t("showPassword")}
                 >
                   {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                 </button>
@@ -240,6 +242,7 @@ export default function RegisterPage() {
                   type="button"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                  aria-label={showConfirmPassword ? t("hidePassword") : t("showPassword")}
                 >
                   {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                 </button>

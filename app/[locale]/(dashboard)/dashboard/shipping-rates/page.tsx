@@ -534,6 +534,7 @@ export default function ShippingRatesPage() {
                     size="icon"
                     variant="ghost"
                     onClick={() => handleEdit(rate.id)}
+                    aria-label={t("edit")}
                   >
                     <Edit className="h-3 w-3" />
                   </Button>
@@ -542,6 +543,7 @@ export default function ShippingRatesPage() {
                     variant="ghost"
                     className="text-destructive"
                     onClick={() => handleDelete(rate.id)}
+                    aria-label={t("delete")}
                   >
                     <Trash2 className="h-3 w-3" />
                   </Button>

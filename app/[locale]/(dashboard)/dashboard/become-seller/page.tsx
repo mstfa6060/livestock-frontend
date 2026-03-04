@@ -146,10 +146,10 @@ export default function BecomeSellerPage() {
                 id="businessName"
                 {...register("businessName")}
                 placeholder={t("businessNamePlaceholder")}
-                className={errors.businessName ? "border-red-500" : ""}
+                className={errors.businessName ? "border-destructive" : ""}
               />
               {errors.businessName && (
-                <p className="text-sm text-red-500 flex items-center gap-1">
+                <p className="text-sm text-destructive flex items-center gap-1">
                   <AlertCircle className="h-3 w-3" />
                   {errors.businessName.message}
                 </p>
@@ -163,7 +163,7 @@ export default function BecomeSellerPage() {
                 control={control}
                 render={({ field }) => (
                   <Select value={field.value} onValueChange={field.onChange}>
-                    <SelectTrigger className={errors.businessType ? "border-red-500" : ""}>
+                    <SelectTrigger className={errors.businessType ? "border-destructive" : ""}>
                       <SelectValue placeholder={t("businessTypePlaceholder")} />
                     </SelectTrigger>
                     <SelectContent>
@@ -182,7 +182,7 @@ export default function BecomeSellerPage() {
                 )}
               />
               {errors.businessType && (
-                <p className="text-sm text-red-500 flex items-center gap-1">
+                <p className="text-sm text-destructive flex items-center gap-1">
                   <AlertCircle className="h-3 w-3" />
                   {errors.businessType.message}
                 </p>
@@ -195,10 +195,10 @@ export default function BecomeSellerPage() {
                 id="taxNumber"
                 {...register("taxNumber")}
                 placeholder={t("taxNumberPlaceholder")}
-                className={errors.taxNumber ? "border-red-500" : ""}
+                className={errors.taxNumber ? "border-destructive" : ""}
               />
               {errors.taxNumber && (
-                <p className="text-sm text-red-500 flex items-center gap-1">
+                <p className="text-sm text-destructive flex items-center gap-1">
                   <AlertCircle className="h-3 w-3" />
                   {errors.taxNumber.message}
                 </p>
@@ -215,10 +215,10 @@ export default function BecomeSellerPage() {
                 {...register("description")}
                 placeholder={t("descriptionPlaceholder")}
                 rows={4}
-                className={errors.description ? "border-red-500" : ""}
+                className={errors.description ? "border-destructive" : ""}
               />
               {errors.description && (
-                <p className="text-sm text-red-500 flex items-center gap-1">
+                <p className="text-sm text-destructive flex items-center gap-1">
                   <AlertCircle className="h-3 w-3" />
                   {errors.description.message}
                 </p>
@@ -240,10 +240,10 @@ export default function BecomeSellerPage() {
                 type="tel"
                 {...register("phone")}
                 placeholder={t("phonePlaceholder")}
-                className={errors.phone ? "border-red-500" : ""}
+                className={errors.phone ? "border-destructive" : ""}
               />
               {errors.phone && (
-                <p className="text-sm text-red-500 flex items-center gap-1">
+                <p className="text-sm text-destructive flex items-center gap-1">
                   <AlertCircle className="h-3 w-3" />
                   {errors.phone.message}
                 </p>
@@ -260,10 +260,10 @@ export default function BecomeSellerPage() {
                 type="text"
                 {...register("website")}
                 placeholder={t("websitePlaceholder")}
-                className={errors.website ? "border-red-500" : ""}
+                className={errors.website ? "border-destructive" : ""}
               />
               {errors.website && (
-                <p className="text-sm text-red-500 flex items-center gap-1">
+                <p className="text-sm text-destructive flex items-center gap-1">
                   <AlertCircle className="h-3 w-3" />
                   {errors.website.message}
                 </p>

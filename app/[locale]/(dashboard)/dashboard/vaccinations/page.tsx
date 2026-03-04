@@ -211,7 +211,7 @@ export default function VaccinationsPage() {
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
                 {editingId ? t("editVaccination") : t("addVaccination")}
-                <Button variant="ghost" size="icon" onClick={resetForm}>
+                <Button variant="ghost" size="icon" onClick={resetForm} aria-label={t("cancel")}>
                   <X className="h-4 w-4" />
                 </Button>
               </CardTitle>
@@ -461,6 +461,7 @@ export default function VaccinationsPage() {
                     size="icon"
                     variant="ghost"
                     onClick={() => handleEdit(vac.id)}
+                    aria-label={t("editVaccination")}
                   >
                     <Edit className="h-3 w-3" />
                   </Button>
@@ -469,6 +470,7 @@ export default function VaccinationsPage() {
                     variant="ghost"
                     className="text-destructive"
                     onClick={() => handleDelete(vac.id)}
+                    aria-label={t("deleteVaccination")}
                   >
                     <Trash2 className="h-3 w-3" />
                   </Button>

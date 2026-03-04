@@ -159,6 +159,48 @@ export default function MyComponent() {
 - **Real-time**: SignalR
 - **i18n**: next-intl (50 languages)
 
+## Test Ekibi (Regresyon / E2E Test)
+
+"Regresyon testi yap", "hazır ekiple test et" veya "test ekibini kur" denildiğinde bu kullanıcılarla SSH üzerinden API çağrıları yaparak test et.
+
+### Test Kullanıcıları
+
+| Rol | Username | Email | Şifre | UserId | Login |
+|-----|----------|-------|-------|--------|-------|
+| Admin/Seller | mocak | m.mustafaocak@gmail.com | Deneme123. | 0e6bc908-3887-46ac-b751-b39150eb7552 | ✅ |
+| Buyer | mustafaocak | mustafaocak89@hotmail.com | Deneme123. | 6d8a045c-0196-448b-aa59-ce6360b32404 | ✅ |
+| Admin/Seller | nagehanyzc | nagehanyazici13@gmail.com | ? | bb6b27e4-50cc-4744-a51f-8f68ea4cfcb4 | ❌ |
+| Seller/Buyer | aliyilmaz | ali.yilmaz@test.com | Test1234. | 11f1308c-f0f9-4a8e-ad5a-ebd211957376 | ❌ |
+| Buyer | mehmetdemir | mehmet.demir@test.com | Test1234. | 91e3c6e4-7783-4fa9-9745-e5047975b615 | ❌ |
+| Buyer | aysekaya | ayse.kaya@test.com | Test1234. | 8e7f81f4-7fb2-4fa1-ac15-86b9a41db719 | ❌ |
+| Buyer | test@test.com | test@test.com | ? | 2ebd83d2-1d84-47f5-984f-31746d9a080a | ❌ |
+
+> ✅ = native login ile giriş yapabilir, ❌ = şifre farklı veya Google/Apple ile oluşturulmuş
+
+### Test Akışı (Marketplace E2E)
+1. Tüm kullanıcılarla login ol, JWT token'ları tut
+2. **aliyilmaz**: Seller profili + Location + Product oluştur (status:0 Draft)
+3. **aliyilmaz**: Ürünü onaya gönder (status:1 PendingApproval)
+4. **mocak** (admin): Ürünü onayla (Products/Approve → status:2 Active)
+5. **mehmetdemir**: Teklif ver (Offers/Create, düşük fiyat)
+6. **aysekaya**: Daha yüksek teklif ver (Offers/Create)
+7. **aliyilmaz**: Yüksek teklifi kabul et, düşük teklifi reddet (Offers/Update)
+8. **QA**: DB kontrolü, SellerUserId doğruluğu, notification log kontrolü
+
+### Ekip Yapısı (2 agent)
+- **executor**: Sıralı marketplace akışını yürütür
+- **qa-monitor**: Tüm adımlar bittikten sonra DB + API doğrulaması yapar
+
+### API Çağrı Formatı
+```bash
+ssh -o BatchMode=yes hirovo-server "curl -s -X POST https://dev-api.livestock-trading.com/[path] -H 'Content-Type: application/json' -H 'Authorization: Bearer [JWT]' -d '{...}'"
+```
+
+### Login
+```bash
+POST /iam/Auth/Login → {"provider":"native", "userName":"[username]", "password":"[pass]", "platform":0}
+```
+
 ## Conventions
 
 - **UI Development Language**: Turkish - Add new UI text to `messages/tr.json`, then run translation script

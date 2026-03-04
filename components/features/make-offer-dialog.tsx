@@ -6,10 +6,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { useMakeOfferMutation } from "@/hooks/queries/useOffers";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
-import { HandCoins, X } from "lucide-react";
+import { HandCoins } from "lucide-react";
 
 interface MakeOfferDialogProps {
   productId: string;
@@ -54,8 +61,6 @@ export function MakeOfferDialog({
     },
   });
 
-  if (!isOpen) return null;
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -89,27 +94,17 @@ export function MakeOfferDialog({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
-      {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/50" onClick={onClose} />
-
-      {/* Dialog */}
-      <div className="relative bg-background rounded-lg shadow-lg w-full max-w-md mx-4 p-6">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold flex items-center gap-2">
+    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
+      <DialogContent className="sm:max-w-md">
+        <DialogHeader>
+          <DialogTitle className="flex items-center gap-2">
             <HandCoins className="h-5 w-5" />
             {t("makeOffer")}
-          </h2>
-          <Button variant="ghost" size="icon" onClick={onClose} aria-label={t("cancel")}>
-            <X className="h-4 w-4" />
-          </Button>
-        </div>
+          </DialogTitle>
+          <DialogDescription>{productTitle}</DialogDescription>
+        </DialogHeader>
 
-        <p className="text-sm text-muted-foreground mb-4">
-          {productTitle}
-        </p>
-
-        <div className="text-sm mb-4">
+        <div className="text-sm mb-2">
           <span className="text-muted-foreground">{t("listingPrice")}: </span>
           <span className="font-medium">
             {basePrice.toLocaleString()} {currency}
@@ -172,7 +167,7 @@ export function MakeOfferDialog({
             </Button>
           </div>
         </form>
-      </div>
-    </div>
+      </DialogContent>
+    </Dialog>
   );
 }

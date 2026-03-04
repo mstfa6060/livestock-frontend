@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
 import { Star, CheckCircle } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 
 interface SellerReview {
   id: string;
@@ -65,8 +66,53 @@ export function SellerReviews({
   totalReviews,
 }: SellerReviewsProps) {
   const t = useTranslations("sellers.detail.reviews");
-  const [reviews, setReviews] = useState<SellerReview[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+
+  const { data: reviews = [], isLoading } = useQuery({
+    queryKey: queryKeys.sellers.reviews(sellerId),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.SellerReviews.All.Request({
+        sorting: {
+          key: "createdAt",
+          direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+        },
+        filters: [
+          {
+            key: "sellerId",
+            type: "guid",
+            isUsed: true,
+            values: [sellerId],
+            min: {},
+            max: {},
+            conditionType: "equals",
+          },
+          {
+            key: "isApproved",
+            type: "boolean",
+            isUsed: true,
+            values: [true],
+            min: {},
+            max: {},
+            conditionType: "equals",
+          },
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 20, listAll: false },
+      });
+
+      return response.map((r): SellerReview => ({
+        id: r.id,
+        userId: r.userId,
+        overallRating: r.overallRating,
+        communicationRating: r.communicationRating,
+        shippingSpeedRating: r.shippingSpeedRating,
+        productQualityRating: r.productQualityRating,
+        title: r.title,
+        isVerifiedPurchase: r.isVerifiedPurchase,
+        createdAt: r.createdAt,
+      }));
+    },
+    enabled: totalReviews > 0,
+    staleTime: 5 * 60 * 1000,
+  });
 
   // Compute average category ratings
   const avgCommunication =
@@ -81,65 +127,6 @@ export function SellerReviews({
     reviews.length > 0
       ? reviews.reduce((sum, r) => sum + r.productQualityRating, 0) / reviews.length
       : 0;
-
-  useEffect(() => {
-    const fetchReviews = async () => {
-      if (totalReviews === 0) {
-        setIsLoading(false);
-        return;
-      }
-
-      try {
-        const response = await LivestockTradingAPI.SellerReviews.All.Request({
-          sorting: {
-            key: "createdAt",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
-          },
-          filters: [
-            {
-              key: "sellerId",
-              type: "guid",
-              isUsed: true,
-              values: [sellerId],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-            {
-              key: "isApproved",
-              type: "boolean",
-              isUsed: true,
-              values: [true],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 20, listAll: false },
-        });
-
-        setReviews(
-          response.map((r) => ({
-            id: r.id,
-            userId: r.userId,
-            overallRating: r.overallRating,
-            communicationRating: r.communicationRating,
-            shippingSpeedRating: r.shippingSpeedRating,
-            productQualityRating: r.productQualityRating,
-            title: r.title,
-            isVerifiedPurchase: r.isVerifiedPurchase,
-            createdAt: r.createdAt,
-          }))
-        );
-      } catch {
-        // Reviews are optional
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchReviews();
-  }, [sellerId, totalReviews]);
 
   if (isLoading) {
     return (

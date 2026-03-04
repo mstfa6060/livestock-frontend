@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -22,12 +22,49 @@ import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
+
+interface Preferences {
+  emailNotificationsEnabled: boolean;
+  smsNotificationsEnabled: boolean;
+  pushNotificationsEnabled: boolean;
+  darkModeEnabled: boolean;
+  preferredCurrency: string;
+  preferredLanguage: string;
+  countryCode: string;
+  timeZone: string;
+  weightSystem: number;
+  distanceSystem: number;
+  areaSystem: number;
+  productsPerPage: number;
+  defaultViewMode: number;
+}
+
+const defaultPrefs: Preferences = {
+  emailNotificationsEnabled: true,
+  smsNotificationsEnabled: false,
+  pushNotificationsEnabled: true,
+  darkModeEnabled: false,
+  preferredCurrency: "TRY",
+  preferredLanguage: "tr",
+  countryCode: "TR",
+  timeZone: "Europe/Istanbul",
+  weightSystem: 0,
+  distanceSystem: 0,
+  areaSystem: 0,
+  productsPerPage: 20,
+  defaultViewMode: 0,
+};
 
 export default function SettingsPage() {
   const t = useTranslations("settings");
   const tp = useTranslations("settings.updatePassword");
   const tpref = useTranslations("settings.preferences");
   const { user } = useAuth();
+  const queryClient = useQueryClient();
+
+  // Password form state (mutations stay local)
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
@@ -40,63 +77,44 @@ export default function SettingsPage() {
     confirmPassword: "",
   });
 
-  // Preferences state
-  const [prefsLoading, setPrefsLoading] = useState(true);
-  const [prefsSaving, setPrefsSaving] = useState(false);
-  const [prefs, setPrefs] = useState({
-    emailNotificationsEnabled: true,
-    smsNotificationsEnabled: false,
-    pushNotificationsEnabled: true,
-    darkModeEnabled: false,
-    // Store full preference data for update call
-    preferredCurrency: "TRY",
-    preferredLanguage: "tr",
-    countryCode: "TR",
-    timeZone: "Europe/Istanbul",
-    weightSystem: 0,
-    distanceSystem: 0,
-    areaSystem: 0,
-    productsPerPage: 20,
-    defaultViewMode: 0,
+  // Preferences via React Query
+  const { data: prefs = defaultPrefs, isLoading: prefsLoading } = useQuery({
+    queryKey: queryKeys.preferences.my(user?.id ?? ""),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.Preferences.My.Request({
+        userId: user!.id,
+      });
+
+      return {
+        emailNotificationsEnabled: response.emailNotificationsEnabled,
+        smsNotificationsEnabled: response.smsNotificationsEnabled,
+        pushNotificationsEnabled: response.pushNotificationsEnabled,
+        darkModeEnabled: response.darkModeEnabled,
+        preferredCurrency: response.preferredCurrency,
+        preferredLanguage: response.preferredLanguage,
+        countryCode: response.countryCode,
+        timeZone: response.timeZone,
+        weightSystem: response.weightSystem,
+        distanceSystem: response.distanceSystem,
+        areaSystem: response.areaSystem,
+        productsPerPage: response.productsPerPage,
+        defaultViewMode: response.defaultViewMode,
+      } satisfies Preferences;
+    },
+    enabled: !!user?.id,
+    staleTime: 5 * 60 * 1000,
   });
 
-  // Fetch preferences on mount
-  useEffect(() => {
-    const fetchPreferences = async () => {
-      if (!user?.id) {
-        setPrefsLoading(false);
-        return;
-      }
+  // Local editable copy of prefs for toggles
+  const [localPrefs, setLocalPrefs] = useState<Preferences | null>(null);
+  const editablePrefs = localPrefs ?? prefs;
 
-      try {
-        const response = await LivestockTradingAPI.Preferences.My.Request({
-          userId: user.id,
-        });
+  // Sync local prefs when query data changes (only if not already editing)
+  const updatePref = (key: keyof Preferences, value: boolean) => {
+    setLocalPrefs((prev) => ({ ...(prev ?? prefs), [key]: value }));
+  };
 
-        setPrefs({
-          emailNotificationsEnabled: response.emailNotificationsEnabled,
-          smsNotificationsEnabled: response.smsNotificationsEnabled,
-          pushNotificationsEnabled: response.pushNotificationsEnabled,
-          darkModeEnabled: response.darkModeEnabled,
-          preferredCurrency: response.preferredCurrency,
-          preferredLanguage: response.preferredLanguage,
-          countryCode: response.countryCode,
-          timeZone: response.timeZone,
-          weightSystem: response.weightSystem,
-          distanceSystem: response.distanceSystem,
-          areaSystem: response.areaSystem,
-          productsPerPage: response.productsPerPage,
-          defaultViewMode: response.defaultViewMode,
-        });
-      } catch {
-        // Preferences may not exist yet for this user - use defaults
-      } finally {
-        setPrefsLoading(false);
-      }
-    };
-
-    fetchPreferences();
-  }, [user?.id]);
+  const [prefsSaving, setPrefsSaving] = useState(false);
 
   const handlePasswordSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -142,8 +160,13 @@ export default function SettingsPage() {
     try {
       await LivestockTradingAPI.Preferences.Update.Request({
         userId: user.id,
-        ...prefs,
+        ...editablePrefs,
       });
+      // Invalidate the query to refetch fresh data
+      queryClient.invalidateQueries({
+        queryKey: queryKeys.preferences.my(user.id),
+      });
+      setLocalPrefs(null);
       toast.success(tpref("saveSuccess"));
     } catch {
       toast.error(tpref("saveError"));
@@ -192,6 +215,7 @@ export default function SettingsPage() {
                     type="button"
                     onClick={() => setShowOldPassword(!showOldPassword)}
                     className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                    aria-label={showOldPassword ? tp("hidePassword") : tp("showPassword")}
                   >
                     {showOldPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                   </button>
@@ -215,6 +239,7 @@ export default function SettingsPage() {
                     type="button"
                     onClick={() => setShowNewPassword(!showNewPassword)}
                     className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                    aria-label={showNewPassword ? tp("hidePassword") : tp("showPassword")}
                   >
                     {showNewPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                   </button>
@@ -238,6 +263,7 @@ export default function SettingsPage() {
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                     className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                    aria-label={showConfirmPassword ? tp("hidePassword") : tp("showPassword")}
                   >
                     {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                   </button>
@@ -292,9 +318,9 @@ export default function SettingsPage() {
                         </p>
                       </div>
                       <Switch
-                        checked={prefs.emailNotificationsEnabled}
+                        checked={editablePrefs.emailNotificationsEnabled}
                         onCheckedChange={(checked) =>
-                          setPrefs({ ...prefs, emailNotificationsEnabled: checked })
+                          updatePref("emailNotificationsEnabled", checked)
                         }
                       />
                     </div>
@@ -307,9 +333,9 @@ export default function SettingsPage() {
                         </p>
                       </div>
                       <Switch
-                        checked={prefs.smsNotificationsEnabled}
+                        checked={editablePrefs.smsNotificationsEnabled}
                         onCheckedChange={(checked) =>
-                          setPrefs({ ...prefs, smsNotificationsEnabled: checked })
+                          updatePref("smsNotificationsEnabled", checked)
                         }
                       />
                     </div>
@@ -322,9 +348,9 @@ export default function SettingsPage() {
                         </p>
                       </div>
                       <Switch
-                        checked={prefs.pushNotificationsEnabled}
+                        checked={editablePrefs.pushNotificationsEnabled}
                         onCheckedChange={(checked) =>
-                          setPrefs({ ...prefs, pushNotificationsEnabled: checked })
+                          updatePref("pushNotificationsEnabled", checked)
                         }
                       />
                     </div>
@@ -344,9 +370,9 @@ export default function SettingsPage() {
                       </p>
                     </div>
                     <Switch
-                      checked={prefs.darkModeEnabled}
+                      checked={editablePrefs.darkModeEnabled}
                       onCheckedChange={(checked) =>
-                        setPrefs({ ...prefs, darkModeEnabled: checked })
+                        updatePref("darkModeEnabled", checked)
                       }
                     />
                   </div>

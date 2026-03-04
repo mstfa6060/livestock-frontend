@@ -310,7 +310,7 @@ export default function FarmsPage() {
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
                 {editingId ? t("editFarm") : t("addFarm")}
-                <Button variant="ghost" size="icon" onClick={resetForm}>
+                <Button variant="ghost" size="icon" onClick={resetForm} aria-label={t("cancel")}>
                   <X className="h-4 w-4" />
                 </Button>
               </CardTitle>

@@ -202,7 +202,7 @@ export default function HealthRecordsPage() {
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
                 {editingId ? t("editRecord") : t("addRecord")}
-                <Button variant="ghost" size="icon" onClick={resetForm}>
+                <Button variant="ghost" size="icon" onClick={resetForm} aria-label={t("cancel")}>
                   <X className="h-4 w-4" />
                 </Button>
               </CardTitle>
@@ -483,6 +483,7 @@ export default function HealthRecordsPage() {
                     size="icon"
                     variant="ghost"
                     onClick={() => handleEdit(record.id)}
+                    aria-label={t("editRecord")}
                   >
                     <Edit className="h-3 w-3" />
                   </Button>
@@ -491,6 +492,7 @@ export default function HealthRecordsPage() {
                     variant="ghost"
                     className="text-destructive"
                     onClick={() => handleDelete(record.id)}
+                    aria-label={t("deleteRecord")}
                   >
                     <Trash2 className="h-3 w-3" />
                   </Button>

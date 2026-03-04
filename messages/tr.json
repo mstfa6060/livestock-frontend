@@ -21,7 +21,8 @@
     "nextImage": "Sonraki gorsel",
     "closeLightbox": "Galeryi kapat",
     "imageLightbox": "Gorsel galerisi",
-    "slideN": "Slayt {n}"
+    "slideN": "Slayt {n}",
+    "viewMore": "Devamini Gor"
   },
   "header": {
     "products": "Urunler",
@@ -50,7 +51,9 @@
       "continueWithGoogle": "Google ile devam et",
       "continueWithApple": "Apple ile devam et",
       "socialLoginError": "Sosyal giris basarisiz oldu. Lutfen tekrar deneyin.",
-      "appleComingSoon": "Cok yakinda"
+      "appleComingSoon": "Cok yakinda",
+      "showPassword": "Sifreyi goster",
+      "hidePassword": "Sifreyi gizle"
     },
     "register": {
       "title": "Kayit Ol",
@@ -69,6 +72,8 @@
       "passwordMismatch": "Sifreler eslesmiyor.",
       "passwordTooShort": "Sifre en az 6 karakter olmalidir.",
       "errorDefault": "Kayit basarisiz. Lutfen tekrar deneyin.",
+      "showPassword": "Sifreyi goster",
+      "hidePassword": "Sifreyi gizle",
       "passwordStrength": {
         "minLength": "En az 8 karakter",
         "uppercase": "Buyuk harf (A-Z)",
@@ -102,7 +107,9 @@
       "requestNewLink": "Yeni Baglanti Iste",
       "passwordMismatch": "Sifreler eslesmiyor.",
       "passwordTooShort": "Sifre en az 6 karakter olmalidir.",
-      "errorDefault": "Sifre sifirlama basarisiz. Baglanti gecersiz veya suresi dolmus olabilir."
+      "errorDefault": "Sifre sifirlama basarisiz. Baglanti gecersiz veya suresi dolmus olabilir.",
+      "showPassword": "Sifreyi goster",
+      "hidePassword": "Sifreyi gizle"
     }
   },
   "dashboard": {
@@ -237,7 +244,8 @@
       "edit": "Duzenle",
       "delete": "Sil",
       "publish": "Onaya Gonder",
-      "unpublish": "Taslaga Al"
+      "unpublish": "Taslaga Al",
+      "menu": "Islemler"
     },
     "deleteDialog": {
       "title": "Ilani sil",
@@ -328,7 +336,9 @@
       "passwordMismatch": "Yeni sifreler eslesmiyor.",
       "passwordTooShort": "Yeni sifre en az 6 karakter olmalidir.",
       "sessionError": "Oturum bilgisi bulunamadi.",
-      "errorDefault": "Sifre guncellenemedi. Mevcut sifrenizi kontrol edin."
+      "errorDefault": "Sifre guncellenemedi. Mevcut sifrenizi kontrol edin.",
+      "showPassword": "Sifreyi goster",
+      "hidePassword": "Sifreyi gizle"
     },
     "preferences": {
       "title": "Bildirim ve Gorunum Tercihleri",
@@ -1486,6 +1496,7 @@
     "createError": "Adres eklenirken bir hata olustu",
     "updateSuccess": "Adres basariyla guncellendi",
     "updateError": "Adres guncellenirken bir hata olustu",
+    "deleteLocation": "Adresi Sil",
     "deleteSuccess": "Adres silindi",
     "deleteError": "Adres silinirken bir hata olustu",
     "fetchError": "Adresler yuklenirken bir hata olustu"
@@ -1544,6 +1555,7 @@
     "description": "Hayvan saglik kayitlarini ve tibbi gecmisi yonetin",
     "addRecord": "Kayit Ekle",
     "editRecord": "Kayit Duzenle",
+    "deleteRecord": "Kaydi Sil",
     "noRecords": "Henuz saglik kaydi eklenmemis",
     "animalInfoId": "Hayvan ID",
     "animalInfoIdPlaceholder": "Hayvan bilgi ID'sini girin",
@@ -1573,6 +1585,7 @@
     "description": "Hayvan asi kayitlarini ve takvimini yonetin",
     "addVaccination": "Asi Ekle",
     "editVaccination": "Asi Duzenle",
+    "deleteVaccination": "Asi Sil",
     "noVaccinations": "Henuz asi kaydi eklenmemis",
     "animalInfoId": "Hayvan ID",
     "animalInfoIdPlaceholder": "Hayvan bilgi ID'sini girin",

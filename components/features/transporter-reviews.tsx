@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Star } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 
 interface TransporterReview {
   id: string;
@@ -59,54 +60,44 @@ function RatingBar({ label, rating }: { label: string; rating: number }) {
 
 export function TransporterReviews({ transporterId, averageRating }: TransporterReviewsProps) {
   const t = useTranslations("transporterReviews");
-  const [reviews, setReviews] = useState<TransporterReview[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchReviews = async () => {
-      setIsLoading(true);
-      try {
-        const response = await LivestockTradingAPI.TransporterReviews.All.Request({
-          sorting: {
-            key: "createdAt",
-            direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+  const { data: reviews = [], isLoading } = useQuery({
+    queryKey: queryKeys.transporters.reviews(transporterId),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.TransporterReviews.All.Request({
+        sorting: {
+          key: "createdAt",
+          direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+        },
+        filters: [
+          {
+            key: "transporterId",
+            type: "guid",
+            isUsed: true,
+            values: [transporterId],
+            min: {},
+            max: {},
+            conditionType: "equals",
           },
-          filters: [
-            {
-              key: "transporterId",
-              type: "guid",
-              isUsed: true,
-              values: [transporterId],
-              min: {},
-              max: {},
-              conditionType: "equals",
-            },
-          ],
-          pageRequest: { currentPage: 1, perPageCount: 20, listAll: false },
-        });
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 20, listAll: false },
+      });
 
-        setReviews(
-          response.map((r) => ({
-            id: r.id,
-            userId: r.userId,
-            overallRating: r.overallRating,
-            timelinessRating: r.timelinessRating,
-            communicationRating: r.communicationRating,
-            carefulHandlingRating: r.carefulHandlingRating,
-            professionalismRating: r.professionalismRating,
-            isApproved: r.isApproved,
-            createdAt: r.createdAt,
-          }))
-        );
-      } catch {
-        // Reviews are non-critical
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    if (transporterId) fetchReviews();
-  }, [transporterId]);
+      return response.map((r): TransporterReview => ({
+        id: r.id,
+        userId: r.userId,
+        overallRating: r.overallRating,
+        timelinessRating: r.timelinessRating,
+        communicationRating: r.communicationRating,
+        carefulHandlingRating: r.carefulHandlingRating,
+        professionalismRating: r.professionalismRating,
+        isApproved: r.isApproved,
+        createdAt: r.createdAt,
+      }));
+    },
+    enabled: !!transporterId,
+    staleTime: 5 * 60 * 1000,
+  });
 
   if (isLoading) {
     return (

@@ -66,7 +66,8 @@ export function HomepageBanners() {
               {current.targetUrl && (
                 <Button className="mt-4" size="sm" asChild>
                   <Link href={current.targetUrl}>
-                    <ChevronRight className="h-4 w-4" />
+                    {tc("viewMore")}
+                    <ChevronRight className="h-4 w-4 ml-1" />
                   </Link>
                 </Button>
               )}

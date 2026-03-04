@@ -64,10 +64,10 @@ export function PushPermission() {
       if (permission !== "granted") return;
 
       const registration = await navigator.serviceWorker.ready;
+      const vapidKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
-        // VAPID public key would go here in production:
-        // applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY),
+        ...(vapidKey ? { applicationServerKey: vapidKey } : {}),
       });
 
       await registerPushToken(subscription);

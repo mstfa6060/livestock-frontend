@@ -60,15 +60,15 @@ export default function CategoriesPage() {
   const tc = useTranslations("common");
   const locale = useLocale();
   const router = useRouter();
-  const { isAdmin } = useRoles();
+  const { isAdmin, isLoaded: rolesLoaded } = useRoles();
 
   // Admin-only page
   useEffect(() => {
-    if (!isAdmin) {
+    if (rolesLoaded && !isAdmin) {
       toast.error(tc("unauthorized"));
       router.replace("/dashboard");
     }
-  }, [isAdmin, router, tc]);
+  }, [isAdmin, rolesLoaded, router, tc]);
 
   const queryClient = useQueryClient();
 

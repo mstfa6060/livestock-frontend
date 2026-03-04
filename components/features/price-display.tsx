@@ -12,7 +12,8 @@ interface PriceDisplayProps {
   className?: string;
 }
 
-// Currency conversion rates (simplified - in production, fetch from API)
+// TODO: Replace with live exchange rates from backend API when available.
+// These static rates are placeholder approximations only.
 const EXCHANGE_RATES: Record<string, number> = {
   TRY: 1,
   USD: 0.029,

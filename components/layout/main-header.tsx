@@ -157,6 +157,13 @@ export function MainHeader() {
                   {t("sellers")}
                 </Link>
                 <Link
+                  href="/transporters"
+                  className="text-lg font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {t("transporters")}
+                </Link>
+                <Link
                   href="/about"
                   className="text-lg font-medium"
                   onClick={() => setMobileMenuOpen(false)}

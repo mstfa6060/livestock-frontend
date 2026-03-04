@@ -564,10 +564,10 @@ export default function ProductDetailPage() {
                       />
                       {isFavorite ? t("removeFromFavorites") : t("addToFavorites")}
                     </Button>
-                    <Button variant="outline" size="icon" onClick={handleShare}>
+                    <Button variant="outline" size="icon" onClick={handleShare} aria-label={t("share")}>
                       <Share2 className="h-4 w-4" />
                     </Button>
-                    <Button variant="outline" size="icon" title={t("report")}>
+                    <Button variant="outline" size="icon" aria-label={t("report")}>
                       <Flag className="h-4 w-4" />
                     </Button>
                   </div>
@@ -610,14 +610,15 @@ export default function ProductDetailPage() {
                 if (!user) { toast.error(t("loginRequired")); return; }
                 setShowOfferDialog(true);
               }}
+              aria-label={t("makeOffer")}
             >
               <HandCoins className="h-4 w-4" />
             </Button>
           )}
-          <Button variant="outline" size="icon" onClick={handleFavoriteToggle}>
+          <Button variant="outline" size="icon" onClick={handleFavoriteToggle} aria-label={isFavorite ? t("removeFromFavorites") : t("addToFavorites")}>
             <Heart className={`h-4 w-4 ${isFavorite ? "fill-red-500 text-red-500" : ""}`} />
           </Button>
-          <Button variant="outline" size="icon" onClick={handleShare}>
+          <Button variant="outline" size="icon" onClick={handleShare} aria-label={t("share")}>
             <Share2 className="h-4 w-4" />
           </Button>
         </div>

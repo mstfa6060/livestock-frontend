@@ -42,6 +42,8 @@ export const queryKeys = {
     detail: (id: string) => [...queryKeys.sellers.details(), id] as const,
     byUserId: (userId: string) =>
       [...queryKeys.sellers.all, "byUser", userId] as const,
+    reviews: (sellerId: string) =>
+      [...queryKeys.sellers.detail(sellerId), "reviews"] as const,
   },
 
   dashboard: {
@@ -86,6 +88,8 @@ export const queryKeys = {
       [...queryKeys.transporters.all, "requests", params] as const,
     transportOffers: (params?: Params) =>
       [...queryKeys.transporters.all, "transportOffers", params] as const,
+    reviews: (transporterId: string) =>
+      [...queryKeys.transporters.detail(transporterId), "reviews"] as const,
   },
 
   farms: {
@@ -210,5 +214,23 @@ export const queryKeys = {
     all: ["notifications"] as const,
     list: (userId: string) =>
       [...queryKeys.notifications.all, "list", userId] as const,
+  },
+
+  preferences: {
+    all: ["preferences"] as const,
+    my: (userId: string) =>
+      [...queryKeys.preferences.all, "my", userId] as const,
+  },
+
+  recentlyViewed: {
+    all: ["recentlyViewed"] as const,
+    list: (userId: string) =>
+      [...queryKeys.recentlyViewed.all, "list", userId] as const,
+  },
+
+  transportTrackings: {
+    all: ["transportTrackings"] as const,
+    list: (transportRequestId: string) =>
+      [...queryKeys.transportTrackings.all, "list", transportRequestId] as const,
   },
 } as const;

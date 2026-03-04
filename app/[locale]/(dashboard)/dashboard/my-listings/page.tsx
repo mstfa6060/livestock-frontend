@@ -123,6 +123,8 @@ export default function MyListingsPage() {
             1: "pending",
             2: "active",
             3: "inactive",
+            4: "inactive",
+            5: "inactive",
             6: "sold",
             7: "rejected",
           };
@@ -288,6 +290,7 @@ export default function MyListingsPage() {
                     className="absolute top-2 right-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity"
                   >
                     <MoreVertical className="h-4 w-4" />
+                    <span className="sr-only">{t("actions.menu")}</span>
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">

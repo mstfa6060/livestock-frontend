@@ -22,6 +22,7 @@ import {
   Pencil,
   Trash2,
 } from "lucide-react";
+import { useSelectedCountry } from "@/components/layout/country-switcher";
 
 interface Location {
   id: string;
@@ -48,6 +49,8 @@ export default function LocationsPage() {
   const t = useTranslations("locations");
   const { user } = useAuth();
   const queryClient = useQueryClient();
+
+  const selectedCountry = useSelectedCountry();
 
   const { data: locationsRaw = [], isLoading } = useQuery({
     queryKey: queryKeys.locations.list({ userId: user?.id }),
@@ -101,7 +104,7 @@ export default function LocationsPage() {
     city: "",
     state: "",
     postalCode: "",
-    countryCode: "TR",
+    countryCode: selectedCountry?.code || "",
     phone: "",
     email: "",
     type: 2,
@@ -115,7 +118,7 @@ export default function LocationsPage() {
       city: "",
       state: "",
       postalCode: "",
-      countryCode: "TR",
+      countryCode: selectedCountry?.code || "",
       phone: "",
       email: "",
       type: 2,
@@ -220,7 +223,7 @@ export default function LocationsPage() {
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
                 {editingId ? t("editLocation") : t("addLocation")}
-                <Button variant="ghost" size="icon" onClick={resetForm}>
+                <Button variant="ghost" size="icon" onClick={resetForm} aria-label={t("cancel")}>
                   <X className="h-4 w-4" />
                 </Button>
               </CardTitle>
@@ -397,6 +400,7 @@ export default function LocationsPage() {
                         size="icon"
                         variant="ghost"
                         onClick={() => handleEdit(loc)}
+                        aria-label={t("editLocation")}
                       >
                         <Pencil className="h-4 w-4" />
                       </Button>
@@ -405,6 +409,7 @@ export default function LocationsPage() {
                         variant="ghost"
                         className="text-destructive"
                         onClick={() => handleDelete(loc.id)}
+                        aria-label={t("deleteLocation")}
                       >
                         <Trash2 className="h-4 w-4" />
                       </Button>

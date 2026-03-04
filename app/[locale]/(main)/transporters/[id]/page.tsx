@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
@@ -12,6 +11,8 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { TransporterReviews } from "@/components/features/transporter-reviews";
+import { useQuery } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/query-keys";
 import {
   Truck,
   Star,
@@ -60,50 +61,39 @@ export default function TransporterDetailPage() {
   const params = useParams();
   const id = params.id as string;
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [transporter, setTransporter] = useState<TransporterDetail | null>(null);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    const fetchTransporter = async () => {
-      setIsLoading(true);
-      try {
-        const response = await LivestockTradingAPI.Transporters.Detail.Request({ id });
-        setTransporter({
-          id: response.id,
-          userId: response.userId,
-          companyName: response.companyName,
-          contactPerson: response.contactPerson,
-          email: response.email,
-          phone: response.phone,
-          address: response.address,
-          city: response.city,
-          countryCode: response.countryCode,
-          logoUrl: response.logoUrl,
-          description: response.description,
-          licenseNumber: response.licenseNumber,
-          insuranceInfo: response.insuranceInfo,
-          fleetInfo: response.fleetInfo,
-          serviceRegions: response.serviceRegions,
-          specializations: response.specializations,
-          isVerified: response.isVerified,
-          isActive: response.isActive,
-          averageRating: response.averageRating as number | null,
-          totalTransports: response.totalTransports,
-          completedTransports: response.completedTransports,
-          website: response.website,
-          certifications: response.certifications,
-          createdAt: response.createdAt,
-        });
-      } catch {
-        setError(true);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    if (id) fetchTransporter();
-  }, [id]);
+  const { data: transporter = null, isLoading, isError: error } = useQuery({
+    queryKey: queryKeys.transporters.detail(id),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.Transporters.Detail.Request({ id });
+      return {
+        id: response.id,
+        userId: response.userId,
+        companyName: response.companyName,
+        contactPerson: response.contactPerson,
+        email: response.email,
+        phone: response.phone,
+        address: response.address,
+        city: response.city,
+        countryCode: response.countryCode,
+        logoUrl: response.logoUrl,
+        description: response.description,
+        licenseNumber: response.licenseNumber,
+        insuranceInfo: response.insuranceInfo,
+        fleetInfo: response.fleetInfo,
+        serviceRegions: response.serviceRegions,
+        specializations: response.specializations,
+        isVerified: response.isVerified,
+        isActive: response.isActive,
+        averageRating: response.averageRating as number | null,
+        totalTransports: response.totalTransports,
+        completedTransports: response.completedTransports,
+        website: response.website,
+        certifications: response.certifications,
+        createdAt: response.createdAt,
+      } satisfies TransporterDetail;
+    },
+    enabled: !!id,
+  });
 
   if (isLoading) {
     return (
