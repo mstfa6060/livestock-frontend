@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useDeferredValue, useMemo } from "react";
+import { useState, useCallback, useDeferredValue, useMemo, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { MainHeader } from "@/components/layout/main-header";
@@ -209,6 +209,21 @@ export default function ProductsPage() {
   const { data: categoriesRaw = [] } = useCategories(locale);
   const categories: Category[] = categoriesRaw.map((c) => ({ id: c.id, name: c.name }));
 
+  // Resolve category param: URL might contain slug or ID
+  const resolvedCategoryId = useMemo(() => {
+    if (!categoryParam) return "";
+    // If it matches a category ID directly, use it
+    if (categoriesRaw.some((c) => c.id === categoryParam)) return categoryParam;
+    // Try to find by slug
+    const found = categoriesRaw.find((c) => c.slug === categoryParam);
+    return found?.id || "";
+  }, [categoryParam, categoriesRaw]);
+
+  // Sync local filter state when resolved category changes (e.g. slug → ID after categories load)
+  useEffect(() => {
+    setLocalCategory(resolvedCategoryId || "all");
+  }, [resolvedCategoryId]);
+
   // Sort mapping
   const getSorting = (sort: SortOption): { key: string; direction: LivestockTradingAPI.Enums.XSortingDirection } => {
     const map: Record<SortOption, { key: string; direction: LivestockTradingAPI.Enums.XSortingDirection }> = {
@@ -249,7 +264,7 @@ export default function ProductsPage() {
   const { data: products = [], isLoading } = useQuery({
     queryKey: queryKeys.products.search({
       countryCode: selectedCountry?.code || "TR",
-      categoryId: categoryParam || undefined,
+      categoryId: resolvedCategoryId || undefined,
       condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
       minPrice: minPriceParam || undefined,
       maxPrice: maxPriceParam || undefined,
@@ -262,7 +277,7 @@ export default function ProductsPage() {
         query: "",
         countryCode: selectedCountry?.code || "TR",
         city: "",
-        categoryId: categoryParam || undefined,
+        categoryId: resolvedCategoryId || undefined,
         condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
         minPrice: minPriceParam ? parseFloat(minPriceParam) : undefined,
         maxPrice: maxPriceParam ? parseFloat(maxPriceParam) : undefined,
@@ -317,7 +332,7 @@ export default function ProductsPage() {
 
   // Count active filters
   const activeFilterCount = [
-    categoryParam,
+    resolvedCategoryId,
     conditionParam !== "all" ? conditionParam : "",
     minPriceParam,
     maxPriceParam,
@@ -430,9 +445,9 @@ export default function ProductsPage() {
         {/* Active filters badges */}
         {activeFilterCount > 0 && (
           <div className="flex flex-wrap items-center gap-2 mb-6">
-            {categoryParam && (
+            {resolvedCategoryId && (
               <Badge variant="secondary" className="gap-1">
-                {tf("category")}: {getCategoryName(categoryParam)}
+                {tf("category")}: {getCategoryName(resolvedCategoryId)}
                 <button onClick={() => updateParams({ category: null })}>
                   <X className="h-3 w-3" />
                 </button>

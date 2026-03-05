@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/footer";
 import { ShieldCheck, Layers, Headphones, ArrowRight } from "lucide-react";
 import { HomepageBanners } from "@/components/features/homepage-banners";
 import { FeaturedProducts } from "@/components/features/featured-products";
+import { HomepageCategories } from "@/components/features/homepage-categories";
 
 export default async function Home() {
   const t = await getTranslations("home");
@@ -46,32 +47,7 @@ export default async function Home() {
         <FeaturedProducts />
 
         {/* Categories */}
-        <section className="bg-muted/50 py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold text-center mb-8">
-              {t("categories.title")}
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { key: "cattle", icon: "🐄" },
-                { key: "sheep", icon: "🐑" },
-                { key: "poultry", icon: "🐔" },
-                { key: "other", icon: "🐴" },
-              ].map((category) => (
-                <Link key={category.key} href={`/products?category=${category.key}`}>
-                  <Card className="hover:border-primary transition-colors cursor-pointer">
-                    <CardContent className="flex flex-col items-center justify-center p-6">
-                      <span className="text-4xl mb-2">{category.icon}</span>
-                      <span className="font-medium">
-                        {t(`categories.${category.key}`)}
-                      </span>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        <HomepageCategories />
 
         {/* Features */}
         <section className="py-16">

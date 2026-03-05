@@ -9,6 +9,7 @@ interface Banner {
   imageUrl: string;
   targetUrl: string;
   displayOrder: number;
+  endDate: string | null;
 }
 
 export function useBanners() {
@@ -34,16 +35,20 @@ export function useBanners() {
         pageRequest: { currentPage: 1, perPageCount: 10, listAll: false },
       });
 
-      return response.map(
-        (b): Banner => ({
-          id: b.id,
-          title: b.title,
-          description: b.description,
-          imageUrl: b.imageUrl,
-          targetUrl: b.targetUrl,
-          displayOrder: b.displayOrder,
-        })
-      );
+      const now = new Date();
+      return response
+        .map(
+          (b): Banner => ({
+            id: b.id,
+            title: b.title,
+            description: b.description,
+            imageUrl: b.imageUrl,
+            targetUrl: b.targetUrl,
+            displayOrder: b.displayOrder,
+            endDate: b.endDate as unknown as string | null,
+          })
+        )
+        .filter((b) => !b.endDate || new Date(b.endDate) > now);
     },
     staleTime: 10 * 60 * 1000, // 10 minutes
   });

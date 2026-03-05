@@ -2,6 +2,7 @@
   "permissions": {
     "allow": [
       "Bash(dir:*)",
+      "Bash(*)",
       "Bash(npm run build:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
@@ -62,7 +63,9 @@
       "Bash(cd /d/Projects/GlobalLivestock/web && npx vitest run --reporter=verbose 2>&1)",
       "Bash(grep no-explicit-any:*)",
       "Bash(grep no-console:*)",
-      "Bash(sleep 3:*)"
+      "Bash(sleep 3:*)",
+      "Bash(ssh:*)",
+      "WebFetch(domain:localhost)"
     ]
   }
 }
