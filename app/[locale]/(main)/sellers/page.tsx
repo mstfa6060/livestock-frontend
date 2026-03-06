@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useDeferredValue } from "react";
+import { useListPage } from "@/hooks/useListPage";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { MainHeader } from "@/components/layout/main-header";
@@ -72,10 +72,11 @@ export default function SellersPage() {
   const t = useTranslations("sellers");
   const tc = useTranslations("common");
 
-  const [searchQuery, setSearchQuery] = useState("");
-  const deferredSearch = useDeferredValue(searchQuery);
-  const [sortBy, setSortBy] = useState<SortOption>("newest");
-  const [currentPage, setCurrentPage] = useState(1);
+  const {
+    searchQuery, setSearchQuery, deferredSearch,
+    sortBy, handleSortChange,
+    currentPage, handleNextPage, handlePrevPage, hasMore: checkHasMore,
+  } = useListPage<SortOption>({ defaultSort: "newest" });
 
   const { data: rawSellers = [], isLoading } = useSellerList({
     sortBy: SORT_KEY_MAP[sortBy],
@@ -86,7 +87,7 @@ export default function SellersPage() {
 
   // Only show active sellers
   const sellers = (rawSellers as Seller[]).filter((s) => s.isActive);
-  const hasMore = rawSellers.length >= ITEMS_PER_PAGE;
+  const hasMore = checkHasMore(rawSellers.length);
 
   // Filter sellers by search query (client-side)
   const filteredSellers = deferredSearch
@@ -138,10 +139,7 @@ export default function SellersPage() {
           {/* Sort */}
           <Select
             value={sortBy}
-            onValueChange={(v) => {
-              setSortBy(v as SortOption);
-              setCurrentPage(1);
-            }}
+            onValueChange={(v) => handleSortChange(v as SortOption)}
           >
             <SelectTrigger className="w-full sm:w-48">
               <SelectValue placeholder={t("sort")} />
@@ -252,7 +250,7 @@ export default function SellersPage() {
             <Button
               variant="outline"
               disabled={currentPage === 1}
-              onClick={() => setCurrentPage((p) => p - 1)}
+              onClick={handlePrevPage}
             >
               {tc("back")}
             </Button>
@@ -262,7 +260,7 @@ export default function SellersPage() {
             <Button
               variant="outline"
               disabled={!hasMore}
-              onClick={() => setCurrentPage((p) => p + 1)}
+              onClick={handleNextPage}
             >
               {tc("next")}
             </Button>

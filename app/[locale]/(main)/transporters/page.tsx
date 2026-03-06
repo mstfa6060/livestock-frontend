@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useDeferredValue } from "react";
+import { useListPage } from "@/hooks/useListPage";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { MainHeader } from "@/components/layout/main-header";
@@ -49,7 +49,6 @@ const SORT_MAP: Record<SortOption, { key: string; direction: number }> = {
   },
 };
 
-const PER_PAGE = 12;
 
 interface Transporter {
   id: string;
@@ -69,10 +68,11 @@ interface Transporter {
 export default function TransportersPage() {
   const t = useTranslations("transporters");
 
-  const [searchQuery, setSearchQuery] = useState("");
-  const deferredSearch = useDeferredValue(searchQuery);
-  const [sortBy, setSortBy] = useState<SortOption>("newest");
-  const [currentPage, setCurrentPage] = useState(1);
+  const {
+    searchQuery, setSearchQuery, deferredSearch,
+    sortBy, handleSortChange,
+    currentPage, handleNextPage, handlePrevPage, hasMore: checkHasMore, perPage,
+  } = useListPage<SortOption>({ defaultSort: "newest" });
 
   const sortConfig = SORT_MAP[sortBy];
 
@@ -102,7 +102,7 @@ export default function TransportersPage() {
           ],
           pageRequest: {
             currentPage,
-            perPageCount: PER_PAGE,
+            perPageCount: perPage,
             listAll: false,
           },
         });
@@ -126,13 +126,7 @@ export default function TransportersPage() {
     },
   });
 
-  const hasMore = transporters.length === PER_PAGE;
-
-  // Reset page when sort changes
-  const handleSortChange = (value: string) => {
-    setSortBy(value as SortOption);
-    setCurrentPage(1);
-  };
+  const hasMore = checkHasMore(transporters.length);
 
   // Client-side search filter on current page
   const filtered = deferredSearch
@@ -169,7 +163,7 @@ export default function TransportersPage() {
                 className="pl-10"
               />
             </div>
-            <Select value={sortBy} onValueChange={handleSortChange}>
+            <Select value={sortBy} onValueChange={(v) => handleSortChange(v as SortOption)}>
               <SelectTrigger className="w-[160px]">
                 <SelectValue />
               </SelectTrigger>
@@ -282,7 +276,7 @@ export default function TransportersPage() {
                 variant="outline"
                 size="sm"
                 disabled={currentPage === 1}
-                onClick={() => setCurrentPage((p) => p - 1)}
+                onClick={handlePrevPage}
               >
                 <ChevronLeft className="h-4 w-4 mr-1" />
                 {t("pagination.previous")}
@@ -294,7 +288,7 @@ export default function TransportersPage() {
                 variant="outline"
                 size="sm"
                 disabled={!hasMore}
-                onClick={() => setCurrentPage((p) => p + 1)}
+                onClick={handleNextPage}
               >
                 {t("pagination.next")}
                 <ChevronRight className="h-4 w-4 ml-1" />

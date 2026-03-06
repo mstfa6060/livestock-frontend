@@ -168,7 +168,7 @@ Sadece 9 test dosyasi var. Eksik testler:
 | `messages/[conversationId]/page.tsx` | 552 | Chat sayfasi, mantiksal bolunme yerinde |
 
 ### 5.2 Tekrar Eden Kod Kaliplari
-- [ ] **Filter builder:** search, sellers, transporters sayfalarinda ayni filter pattern
+- [x] **Filter builder:** `useListPage` hook olusturuldu — sellers + transporters refactor edildi
 - [ ] **List hooks:** useFarms, useLocations, useBrands identik yapi (generic factory hook)
 - [ ] **API request boilerplate:** sorting/pageRequest pattern 20+ dosyada tekrar
 
@@ -209,7 +209,7 @@ Sadece 9 test dosyasi var. Eksik testler:
 8. [x] ~~Infinite scroll veya proper pagination~~ — ATLANDI (backend totalCount donmuyor, mevcut prev/next yeterli)
 9. [x] Sentry error tracking aktif (@sentry/nextjs, client/server/edge config, logger.ts baglandi, global-error.tsx)
 10. [x] ~~Buyuk dosyalari refactor et~~ — ATLANDI (search 691, product-detail 644 satir ama ic yapi duzgun, component extract'ler zaten yapilmis)
-11. [ ] Generic filter builder utility olustur
+11. [x] Generic filter builder: `useListPage` hook (search/sort/pagination state, sellers+transporters refactor)
 12. [ ] Test coverage %60'a cikar (5 kritik flow)
 
 ### Uzun Vadeli
