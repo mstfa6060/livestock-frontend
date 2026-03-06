@@ -18,6 +18,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Eye, EyeOff, Loader2, CheckCircle, XCircle } from "lucide-react";
+import { toast } from "sonner";
 import { IAMAPI } from "@/api/base_modules/iam";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { useCountries } from "@/hooks/queries";
@@ -79,6 +80,7 @@ export default function RegisterPage() {
     watch,
     formState: { errors },
   } = useForm<RegisterFormData>({
+    mode: "onBlur",
     resolver: zodResolver(registerFormSchema),
     defaultValues: {
       firstName: "",
@@ -118,6 +120,7 @@ export default function RegisterPage() {
         preferredCurrencyCode: selectedCountry?.defaultCurrencyCode || defaultCountry?.defaultCurrencyCode || "TRY",
       });
 
+      toast.success(t("registerSuccess"));
       router.push("/login");
     } catch (err) {
       setError(err instanceof Error ? err.message : t("errorDefault"));
@@ -136,7 +139,7 @@ export default function RegisterPage() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <CardContent className="space-y-4">
             {error && (
-              <div className="p-3 text-sm text-red-500 bg-red-50 rounded-md dark:bg-red-950/50">
+              <div className="p-3 text-sm text-destructive bg-destructive/10 rounded-md dark:bg-red-950/50">
                 {error}
               </div>
             )}
@@ -153,7 +156,7 @@ export default function RegisterPage() {
                   className={errors.firstName ? "border-red-500" : ""}
                 />
                 {errors.firstName && (
-                  <p className="text-xs text-red-500">{errors.firstName.message}</p>
+                  <p className="text-xs text-destructive">{errors.firstName.message}</p>
                 )}
               </div>
               <div className="space-y-2">
@@ -166,7 +169,7 @@ export default function RegisterPage() {
                   className={errors.surname ? "border-red-500" : ""}
                 />
                 {errors.surname && (
-                  <p className="text-xs text-red-500">{errors.surname.message}</p>
+                  <p className="text-xs text-destructive">{errors.surname.message}</p>
                 )}
               </div>
             </div>
@@ -182,7 +185,7 @@ export default function RegisterPage() {
                 className={errors.username ? "border-red-500" : ""}
               />
               {errors.username && (
-                <p className="text-xs text-red-500">{errors.username.message}</p>
+                <p className="text-xs text-destructive">{errors.username.message}</p>
               )}
             </div>
 
@@ -197,7 +200,7 @@ export default function RegisterPage() {
                 className={errors.email ? "border-red-500" : ""}
               />
               {errors.email && (
-                <p className="text-xs text-red-500">{errors.email.message}</p>
+                <p className="text-xs text-destructive">{errors.email.message}</p>
               )}
             </div>
 
@@ -223,7 +226,7 @@ export default function RegisterPage() {
               </div>
               <PasswordStrength password={password || ""} />
               {errors.password && (
-                <p className="text-xs text-red-500">{errors.password.message}</p>
+                <p className="text-xs text-destructive">{errors.password.message}</p>
               )}
             </div>
 
@@ -248,7 +251,7 @@ export default function RegisterPage() {
                 </button>
               </div>
               {errors.confirmPassword && (
-                <p className="text-xs text-red-500">{errors.confirmPassword.message}</p>
+                <p className="text-xs text-destructive">{errors.confirmPassword.message}</p>
               )}
             </div>
           </CardContent>

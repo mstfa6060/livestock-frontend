@@ -17,7 +17,12 @@
     "unauthorized": "You do not have permission to access this page",
     "previous": "Previous",
     "slideN": "Slide {n}",
-    "viewMore": "View More"
+    "viewMore": "View More",
+    "zoomIn": "Zoom in",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "closeLightbox": "Close gallery",
+    "imageLightbox": "Image gallery"
   },
   "header": {
     "products": "Products",
@@ -75,7 +80,8 @@
         "lowercase": "Lowercase letter (a-z)",
         "number": "Number (0-9)",
         "special": "Special character (!@#$%)"
-      }
+      },
+      "registerSuccess": "Your account has been created successfully! Redirecting to login..."
     },
     "forgotPassword": {
       "title": "I forgot my password.",
@@ -123,7 +129,19 @@
       "favorites": "Favorite",
       "onYourListings": "in your advertisements",
       "messages": "Message",
-      "unread": "unread"
+      "unread": "unread",
+      "allTime": "all time",
+      "savedItems": "saved items",
+      "notifications": "Notifications",
+      "views": "views",
+      "draft": "Draft",
+      "sold": "Sold",
+      "pending": "Pending",
+      "awaitingApproval": "awaiting approval",
+      "totalSales": "Total Sales",
+      "completedSales": "completed sales",
+      "revenue": "Revenue",
+      "totalRevenue": "total revenue"
     },
     "recentListings": "Your Latest Listings",
     "recentMessages": "Recent Messages",
@@ -131,7 +149,14 @@
     "noMessages": "You haven't received a message yet.",
     "noNotifications": "You haven't received any notifications yet.",
     "viewAllListings": "View All Listings",
-    "viewAllMessages": "View all messages"
+    "viewAllMessages": "View all messages",
+    "recentActivity": "Recent Activity",
+    "quickLinks": "Quick Links",
+    "noActivity": "No activity yet",
+    "viewNotifications": "View Notifications",
+    "viewFavorites": "View Favorites",
+    "recentlyViewed": "Recently Viewed",
+    "fetchError": "An error occurred while loading dashboard data"
   },
   "dashboardNav": {
     "overview": "Overview",
@@ -192,14 +217,18 @@
       "description": "Are you sure you want to delete this listing? This action is irreversible.",
       "cancel": "Cancel",
       "confirm": "Delete"
-    }
+    },
+    "loadMore": "Load More",
+    "loadingMore": "Loading..."
   },
   "favorites": {
     "title": "My favorites",
     "description": "Follow the products you like here.",
     "noFavorites": "You haven't added any favorite products yet.",
     "browseProducts": "Browse Products",
-    "fetchError": "An error occurred while loading favorites."
+    "fetchError": "An error occurred while loading favorites.",
+    "loadMore": "Load More",
+    "loadingMore": "Loading..."
   },
   "settings": {
     "title": "Settings",
@@ -218,6 +247,25 @@
       "errorDefault": "The password could not be updated. Please check your current password.",
       "showPassword": "Show password",
       "hidePassword": "Hide password"
+    },
+    "preferences": {
+      "title": "Bildirim ve Gorunum Tercihleri",
+      "description": "Bildirim kanallarinizi ve gorunum tercihlerinizi yonetin.",
+      "notifications": "Notifications",
+      "emailNotifications": "Email Notifications",
+      "emailNotificationsDesc": "Yeni mesaj ve ilan guncellemeleri icin e-posta alin",
+      "smsNotifications": "SMS Notifications",
+      "smsNotificationsDesc": "Onemli bildirimler icin SMS alin",
+      "pushNotifications": "Push Notifications",
+      "pushNotificationsDesc": "Anlik bildirimler icin push bildirimleri alin",
+      "appearance": "Gorunum",
+      "darkMode": "Karanlik Mod",
+      "darkModeDesc": "Karanlik temaya gec",
+      "saveChanges": "Tercihleri Kaydet",
+      "saving": "Saving...",
+      "saveSuccess": "Tercihleriniz guncellendi",
+      "saveError": "Tercihler guncellenirken bir hata olustu",
+      "loadError": "Tercihler yuklenemedi"
     }
   },
   "navigation": {
@@ -262,6 +310,11 @@
     "featured": {
       "title": "Featured Ads",
       "viewAll": "See all"
+    },
+    "cta": {
+      "title": "Get Started Now",
+      "subtitle": "Join the platform where thousands of buyers and sellers meet.",
+      "button": "Sign Up for Free"
     }
   },
   "footer": {
@@ -269,7 +322,22 @@
     "about": "About Us",
     "contact": "Communication",
     "terms": "Terms of Use",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "company": "Company",
+    "support": "Support",
+    "legal": "Legal",
+    "followUs": "Follow Us",
+    "newsletter": "Newsletter",
+    "newsletterDescription": "En yeni ilanlari ve kampanyalari kacirmayin.",
+    "subscribe": "Subscribe",
+    "emailPlaceholder": "Your email address",
+    "tagline": "Turkiye'nin en guvenilir canli hayvan ticaret platformu.",
+    "sellers": "Sellers",
+    "products": "Products",
+    "map": "Map",
+    "appleLoginComingSoon": "Apple ile giris cok yakinda aktif olacak",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "SSS"
   },
   "products": {
     "title": "Products",
@@ -307,7 +375,15 @@
     "showing": "The total of {total} products between {from} and {to}.",
     "loginToFavorite": "Log in to add to favorites.",
     "addedToFavorites": "Added to favorites",
-    "removedFromFavorites": "Removed from favorites"
+    "removedFromFavorites": "Removed from favorites",
+    "pagination": {
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "fetchError": "An error occurred while loading products",
+    "loadMore": "Show More",
+    "showingOf": "{count} / {total} products shown",
+    "favoriteError": "Favorite operation failed"
   },
   "productDetail": {
     "addToFavorites": "Add to Favorites",
@@ -340,7 +416,17 @@
     "removedFromFavorites": "Removed from favorites",
     "linkCopied": "The link has been copied.",
     "messagingComingSoon": "Messaging feature coming soon.",
-    "productNotFound": "Product not found."
+    "productNotFound": "Product not found.",
+    "makeOffer": "Make an Offer",
+    "contacting": "Iletisime geciliyor...",
+    "contactError": "Iletisim kurulamadi. Lutfen tekrar deneyin.",
+    "noImage": "No image",
+    "defaultLocation": "Turkiye",
+    "inquiryMessage": "{title} hakkinda bilgi almak istiyorum.",
+    "breadcrumb": {
+      "home": "Home",
+      "products": "Products"
+    }
   },
   "seller": {
     "title": "Seller Information",
@@ -526,7 +612,11 @@
     "videoProcessing": "Processing video...",
     "videoProcessingFailed": "Processing failed",
     "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "coverUpdateError": "Failed to update cover photo",
+    "selectImage": "Select Image",
+    "changeImage": "Degistir",
+    "removeImage": "Kaldir",
+    "videoProcessingPollError": "Video isleme durumu alinamadi. Lutfen sayfayi yenileyin."
   },
   "moderation": {
     "title": "Product Moderation",
@@ -667,7 +757,8 @@
     "deleteSuccess": "Health record deleted successfully",
     "saveError": "An error occurred while saving the record",
     "deleteError": "An error occurred while deleting the record",
-    "fetchError": "An error occurred while loading records"
+    "fetchError": "An error occurred while loading records",
+    "deleteRecord": "Delete Record"
   },
   "vaccinations": {
     "title": "Vaccinations",
@@ -694,7 +785,8 @@
     "deleteSuccess": "Vaccination record deleted successfully",
     "saveError": "An error occurred while saving the vaccination",
     "deleteError": "An error occurred while deleting the vaccination",
-    "fetchError": "An error occurred while loading vaccinations"
+    "fetchError": "An error occurred while loading vaccinations",
+    "deleteVaccination": "Asi Sil"
   },
   "shippingCarriers": {
     "title": "Shipping Carriers",
@@ -779,5 +871,800 @@
   "metadata": {
     "title": "Livestock Trading - Live Animal Trading Platform",
     "description": "The most trusted live animal trading platform. Buy and sell livestock safely and transparently."
+  },
+  "profile": {
+    "title": "Profile Information",
+    "description": "You can update your personal information here",
+    "personalInfo": "Personal Information",
+    "contactInfo": "Contact Information",
+    "preferences": "Preferences",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "Enter your first name",
+    "surname": "Last Name",
+    "surnamePlaceholder": "Enter your last name",
+    "displayName": "Display Name",
+    "phone": "Phone Number",
+    "phonePlaceholder": "+1 XXX XXX XXXX",
+    "phoneVerified": "Verified",
+    "phoneNotVerified": "Not Verified",
+    "verifyPhone": "Verify Phone",
+    "country": "Country",
+    "selectCountry": "Select country",
+    "language": "Language Preference",
+    "selectLanguage": "Select language",
+    "currency": "Currency",
+    "selectCurrency": "Select currency",
+    "saveChanges": "Save Changes",
+    "saving": "Saving...",
+    "saveSuccess": "Your profile has been updated",
+    "saveError": "An error occurred while updating profile",
+    "avatar": "Profile Photo",
+    "changeAvatar": "Fotografi Degistir",
+    "removeAvatar": "Fotografi Kaldir",
+    "currencies": {
+      "try": "Turk Lirasi",
+      "usd": "ABD Dolari",
+      "eur": "Euro",
+      "gbp": "Ingiliz Sterlini"
+    }
+  },
+  "messages": {
+    "title": "Messages",
+    "description": "Communicate with buyers and sellers",
+    "noConversations": "You have no messages yet",
+    "startConversation": "Go to a listing to ask a question about it",
+    "fetchError": "An error occurred while loading messages",
+    "sendError": "An error occurred while sending message",
+    "connectionError": "Connection failed. Retrying...",
+    "connected": "Connected",
+    "connecting": "Connecting...",
+    "searchPlaceholder": "Search messages...",
+    "typeMessage": "Type your message...",
+    "send": "Send",
+    "sending": "Sending...",
+    "typing": "typing...",
+    "read": "Okundu",
+    "delivered": "Iletildi",
+    "today": "Bugun",
+    "yesterday": "Dun",
+    "noMessages": "Henuz mesaj yok. Konusmaya baslayin!",
+    "loadMore": "Daha fazla yukle",
+    "loadingMessages": "Mesajlar yukleniyor...",
+    "about": "Hakkinda",
+    "product": "Urun",
+    "startNewConversation": "Yeni Konusma Baslat",
+    "selectConversation": "Bir konusma secin veya yeni bir konusma baslatin",
+    "online": "Online",
+    "offline": "Cevrimdisi",
+    "lastSeen": "Son gorulen",
+    "deleteConversation": "Konusmayi Sil",
+    "deleteConfirm": "Bu konusmayi silmek istediginizden emin misiniz?",
+    "deleted": "Konusma silindi",
+    "defaultUser": "Kullanici",
+    "noResults": "No results found",
+    "newConversation": "Yeni konusma"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Platformumuz hakkinda merak ettiginiz sorularin cevaplari",
+    "noFaqs": "Henuz soru eklenmemis"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Turkiye'nin en guvenilir canli hayvan ticaret platformu",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Canli hayvan ticaretini dijitallestirerek, uretici ve alicilar arasinda guvenli, seffaf ve verimli bir kopi kurmak."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "Tarim sektorunde dijital donusumun oncusu olmak ve canli hayvan ticaretinde global bir platform haline gelmek."
+    },
+    "values": {
+      "title": "Our Values",
+      "trust": {
+        "title": "Guven",
+        "description": "Tum islemlerde seffaflik ve guvenilirlik esastir."
+      },
+      "quality": {
+        "title": "Kalite",
+        "description": "En iyi hizmeti sunmak icin surekli gelisim."
+      },
+      "innovation": {
+        "title": "Yenilikcilik",
+        "description": "Teknolojiyi kullanarak sektoru donusturmek."
+      }
+    },
+    "stats": {
+      "users": "Kayitli Kullanici",
+      "sellers": "Aktif Satici",
+      "products": "Ilan",
+      "transactions": "Basarili Islem"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Sorulariniz icin bizimle iletisime gecin",
+    "form": {
+      "title": "Bize Yazin",
+      "name": "Adiniz",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "Email",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Mesajinizin konusu",
+      "message": "Your Message",
+      "messagePlaceholder": "Mesajinizi buraya yazin...",
+      "submit": "Send",
+      "submitting": "Sending...",
+      "success": "Mesajiniz basariyla gonderildi. En kisa surede size donus yapacagiz.",
+      "error": "Mesaj gonderilirken bir hata olustu. Lutfen tekrar deneyin."
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "addressValue": "Istanbul, Turkiye",
+      "email": "Email",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Phone",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Calisma Saatleri",
+      "workingHoursValue": "Pazartesi - Cuma: 09:00 - 18:00",
+      "map": "Map"
+    }
+  },
+  "terms": {
+    "title": "Kullanim Sartlari",
+    "lastUpdated": "Son guncelleme: {date}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Sartlarin Kabulü",
+        "content": "Bu web sitesini kullanarak, asagidaki kullanim sartlarini kabul etmis sayilirsiniz. Bu sartlari kabul etmiyorsaniz, lutfen siteyi kullanmayin."
+      },
+      "services": {
+        "title": "2. Hizmetler",
+        "content": "Livestock Trading, canli hayvan alim-satimi icin bir platform saglar. Platform uzerindeki tum islemler kullanici sorumlulugundadir."
+      },
+      "accounts": {
+        "title": "3. Kullanici Hesaplari",
+        "content": "Hesap olusturmak icin dogru ve guncel bilgiler saglamnalisiniz. Hesap guvenliginiz sizin sorumluluginizdadir."
+      },
+      "prohibited": {
+        "title": "4. Yasakli Faaliyetler",
+        "content": "Yaniltici ilanlar, sahte bilgiler, dolandiricilik ve yasadisi faaliyetler kesinlikle yasaktir."
+      },
+      "liability": {
+        "title": "5. Sorumluluk Sinirlamasi",
+        "content": "Platform, kullanicilar arasi islemlerden dogrudan sorumlu degildir. Tum islemler taraflar arasinda gerceklesir."
+      },
+      "changes": {
+        "title": "6. Degisiklikler",
+        "content": "Bu sartlar onceden bildirimde bulunmaksizin degistirilebilir. Degisiklikler yayinlandigi anda yururluge girer."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Son guncelleme: {date}",
+    "sections": {
+      "collection": {
+        "title": "1. Bilgi Toplama",
+        "content": "Hesap olusturdugunuzda ad, e-posta, telefon numarasi gibi kisisel bilgilerinizi topluyoruz. Ayrica site kullaniminiza iliskin anonim veriler de toplanabilir."
+      },
+      "usage": {
+        "title": "2. Bilgi Kullanimi",
+        "content": "Toplanan bilgiler, hizmetlerimizi sunmak, hesabinizi yonetmek, guvenlik saglamak ve size ozel teklifler sunmak icin kullanilir."
+      },
+      "sharing": {
+        "title": "3. Bilgi Paylasimi",
+        "content": "Kisisel bilgileriniz ucuncu taraflarla satilmaz veya kiralanmaz. Yasal zorunluluklar disinda bilgileriniz paylasilmaz."
+      },
+      "security": {
+        "title": "4. Guvenlik",
+        "content": "Bilgilerinizi korumak icin endustri standartlarinda guvenlik onlemleri uygulanmaktadir."
+      },
+      "cookies": {
+        "title": "5. Cerezler",
+        "content": "Sitemiz, kullanici deneyimini iyilestirmek icin cerezler kullanmaktadir. Tarayici ayarlarinizdan cerez tercihlerinizi yonetebilirsiniz."
+      },
+      "rights": {
+        "title": "6. Haklariniz",
+        "content": "KVKK kapsaminda kisisel verilerinize erisim, duzeltme ve silme haklariniz bulunmaktadir."
+      }
+    }
+  },
+  "sellers": {
+    "title": "Sellers",
+    "description": "Guvenilir saticilari kesfedin",
+    "search": "Satici ara...",
+    "sort": "Sirala",
+    "sortOptions": {
+      "newest": "En Yeni",
+      "mostSales": "En Cok Satan",
+      "topRated": "En Yuksek Puan",
+      "mostProducts": "En Cok Ilan"
+    },
+    "noResults": "Satici bulunamadi",
+    "loading": "Saticilar yukleniyor...",
+    "showing": "{count} satici bulundu",
+    "verified": "Verified",
+    "sales": "satis",
+    "products": "ilan",
+    "reviews": "review",
+    "rating": "puan",
+    "viewProducts": "View Products",
+    "contactSeller": "Send Message",
+    "memberSince": "{year}'den beri uye",
+    "fetchError": "Saticilar yuklenirken bir hata olustu",
+    "detail": {
+      "title": "Seller Profile",
+      "about": "Hakkinda",
+      "businessInfo": "Isletme Bilgileri",
+      "businessName": "Isletme Adi",
+      "businessType": "Isletme Turu",
+      "email": "Email",
+      "phone": "Phone",
+      "website": "Web Sitesi",
+      "description": "Aciklama",
+      "policies": "Politikalar",
+      "returnPolicy": "Iade Politikasi",
+      "shippingPolicy": "Kargo Politikasi",
+      "businessHours": "Calisma Saatleri",
+      "paymentMethods": "Odeme Yontemleri",
+      "allProducts": "Tum Urunler",
+      "stats": {
+        "totalSales": "Total Sales",
+        "totalProducts": "Total Products",
+        "totalReviews": "Degerlendirme",
+        "rating": "Puan"
+      },
+      "notFound": "Satici bulunamadi",
+      "backToList": "Saticilara Don",
+      "contactInfo": "Contact",
+      "noProducts": "Bu saticinin henuz ilani yok",
+      "noPolicies": "Satici henuz politikalarini belirlemedi",
+      "fetchError": "Satici bilgileri yuklenirken bir hata olustu",
+      "productsLoadError": "Saticinin urunleri yuklenirken bir hata olustu",
+      "reviewsTab": "Reviews",
+      "reviews": {
+        "summary": "Degerlendirme Ozeti",
+        "reviewCount": "review",
+        "communication": "Contact",
+        "shippingSpeed": "Kargo Hizi",
+        "productQuality": "Urun Kalitesi",
+        "noReviews": "Henuz degerlendirme yapilmamis",
+        "verified": "Dogrulanmis Alici"
+      }
+    }
+  },
+  "error": {
+    "title": "An Error Occurred",
+    "description": "An unexpected error occurred. Please refresh the page or try again later.",
+    "retry": "Try Again",
+    "goBack": "Go Back",
+    "goHome": "Home",
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "The page you are looking for does not exist or has been moved.",
+      "goHome": "Return to Home"
+    }
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Search products, categories or sellers...",
+    "searchButton": "Search",
+    "searchingFor": "Searching for",
+    "loading": "Aranıyor...",
+    "resultsCount": "{count} results found",
+    "noResults": "No results found",
+    "tryDifferentSearch": "Try different keywords or change filters",
+    "filters": {
+      "title": "Filters",
+      "category": "Category",
+      "allCategories": "All Categories",
+      "condition": "Condition",
+      "allConditions": "All Conditions",
+      "priceRange": "Price Range",
+      "price": "Price",
+      "min": "Min",
+      "max": "Max",
+      "apply": "Apply",
+      "clear": "Clear",
+      "clearAll": "Tumu Temizle"
+    },
+    "fetchError": "Arama sonuclari yuklenirken bir hata olustu",
+    "recentSearches": "Son Aramalar",
+    "clearHistory": "Gecmisi Temizle",
+    "noSearchHistory": "Henuz arama gecmisiniz yok",
+    "deleteHistoryError": "Arama gecmisi silinirken hata olustu"
+  },
+  "categories": {
+    "title": "Category Management",
+    "description": "Kategorileri buradan yonetin",
+    "noCategories": "Henuz kategori eklenmemis",
+    "createFirst": "Ilk Kategoriyi Olusturun",
+    "fetchError": "Kategoriler yuklenirken bir hata olustu",
+    "createSuccess": "Kategori basariyla olusturuldu",
+    "createError": "Kategori olusturulurken bir hata olustu",
+    "updateSuccess": "Kategori basariyla guncellendi",
+    "updateError": "Kategori guncellenirken bir hata olustu",
+    "deleteSuccess": "Kategori basariyla silindi",
+    "deleteError": "Kategori silinirken bir hata olustu",
+    "activateSuccess": "Kategori aktif edildi",
+    "deactivateSuccess": "Kategori pasif yapildi",
+    "statusError": "Durum degistirilirken bir hata olustu",
+    "loadError": "Kategori yuklenirken bir hata olustu",
+    "filters": {
+      "all": "Tumu",
+      "active": "Aktif",
+      "inactive": "Inaktif"
+    },
+    "table": {
+      "name": "Kategori Adi",
+      "slug": "Slug",
+      "sortOrder": "Sira No",
+      "subCategories": "Alt Kategori",
+      "status": "Condition",
+      "actions": "Islemler"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "activate": "Aktif Et",
+      "deactivate": "Pasif Yap"
+    },
+    "deleteDialog": {
+      "title": "Kategoriyi Sil",
+      "description": "Bu kategoriyi silmek istediginizden emin misiniz? Bu islem geri alinamaz.",
+      "cancel": "Cancel",
+      "confirm": "Delete"
+    },
+    "addNew": "Yeni Kategori Ekle",
+    "loadMore": "Load More",
+    "loadingMore": "Loading...",
+    "form": {
+      "newTitle": "Yeni Kategori Olustur",
+      "editTitle": "Kategoriyi Duzenle",
+      "name": "Kategori Adi",
+      "namePlaceholder": "Ornek: Buyukbas Hayvanlar",
+      "slug": "Slug",
+      "slugPlaceholder": "ornek: buyukbas-hayvanlar",
+      "description": "Aciklama",
+      "descriptionPlaceholder": "Kategori hakkinda kisa bir aciklama...",
+      "parentCategory": "Ust Kategori",
+      "parentCategoryPlaceholder": "Ust kategori secin (opsiyonel)",
+      "noParent": "Ust kategori yok (Ana kategori)",
+      "sortOrder": "Siralama Numarasi",
+      "isActive": "Aktif",
+      "iconUrl": "Ikon URL",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Save",
+      "submitting": "Saving...",
+      "updating": "Guncelleniyor...",
+      "errors": {
+        "nameRequired": "Kategori adi zorunludur",
+        "slugRequired": "Slug zorunludur"
+      }
+    }
+  },
+  "offers": {
+    "title": "Offers",
+    "description": "Manage your incoming and outgoing offers",
+    "received": "Received Offers",
+    "sent": "Sent Offers",
+    "noReceivedOffers": "No received offers yet",
+    "noSentOffers": "You haven't sent any offers yet",
+    "browseProducts": "Browse Products",
+    "viewProduct": "View Product",
+    "accept": "Accept",
+    "reject": "Reject",
+    "withdraw": "Withdraw",
+    "makeOffer": "Make an Offer",
+    "sendOffer": "Send Offer",
+    "sending": "Sending...",
+    "cancel": "Cancel",
+    "listingPrice": "Ilan fiyati",
+    "yourOffer": "Teklifiniz",
+    "quantity": "Miktar",
+    "messageOptional": "Mesaj (Opsiyonel)",
+    "messagePlaceholder": "Saticiyla paylasmak istediginiz bir not...",
+    "expiresAt": "Son gecerlilik",
+    "offerSent": "Teklifiniz basariyla gonderildi",
+    "offerError": "Teklif gonderilirken bir hata olustu",
+    "acceptSuccess": "Teklif kabul edildi",
+    "rejectSuccess": "Teklif reddedildi",
+    "withdrawSuccess": "Teklif geri cekildi",
+    "actionError": "An error occurred during the operation",
+    "fetchError": "Teklifler yuklenirken bir hata olustu",
+    "loginRequired": "Teklif vermek icin giris yapin",
+    "invalidPrice": "Gecerli bir fiyat girin",
+    "invalidQuantity": "Gecerli bir miktar girin",
+    "status": {
+      "pending": "Pending",
+      "accepted": "Accepted",
+      "rejected": "Rejected",
+      "countered": "Counter Offer",
+      "expired": "Expired",
+      "withdrawn": "Withdrawn"
+    }
+  },
+  "deals": {
+    "title": "Anlasmalar",
+    "description": "Alisveris anlasmalarinizi takip edin",
+    "buying": "Alimlar",
+    "selling": "Satislar",
+    "noBuyingDeals": "Henuz alim isleminiz bulunmuyor",
+    "noSellingDeals": "Henuz satis isleminiz bulunmuyor",
+    "browseProducts": "Browse Products",
+    "viewProduct": "View Product",
+    "activeDeals": "Aktif Anlasmalar",
+    "completedDeals": "Tamamlanan",
+    "purchases": "Alimlar",
+    "sales": "Satislar",
+    "fetchError": "Anlasmalar yuklenirken bir hata olustu",
+    "dealStatus": {
+      "pending": "Pending",
+      "confirmed": "Onaylandi",
+      "processing": "Hazirlaniyor",
+      "shipped": "Kargoda",
+      "delivered": "Teslim Edildi",
+      "completed": "Tamamlandi",
+      "cancelled": "Iptal Edildi",
+      "disputed": "Anlasmalilik"
+    },
+    "delivery": {
+      "pickup": "Elden Teslim",
+      "shipping": "Kargo ile",
+      "transport": "Nakliye ile"
+    },
+    "requestTransport": "Transport Request"
+  },
+  "farms": {
+    "title": "Ciftliklerim",
+    "description": "Ciftliklerinizi yonetin ve guncelleyin",
+    "addFarm": "Add Farm",
+    "editFarm": "Edit Farm",
+    "noFarms": "Henuz ciftlik eklemediniz",
+    "farmName": "Farm Name",
+    "registrationNumber": "Tescil Numarasi",
+    "farmTypeLabel": "Ciftlik Turu",
+    "farmDescription": "Aciklama",
+    "totalArea": "Total Area",
+    "cultivatedArea": "Cultivated Area",
+    "certifications": "Certifications",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP vb.",
+    "organic": "Organic",
+    "verified": "Verified",
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "sellerRequired": "Satici Profili Gerekli",
+    "sellerRequiredDesc": "Ciftlik eklemek icin once satici profilinizi olusturmaniz gerekiyor",
+    "becomeSeller": "Become a Seller",
+    "createSuccess": "Ciftlik basariyla eklendi",
+    "updateSuccess": "Farm updated successfully",
+    "deleteSuccess": "Farm deleted successfully",
+    "saveError": "Ciftlik kaydedilirken bir hata olustu",
+    "deleteError": "Ciftlik silinirken bir hata olustu",
+    "fetchError": "Ciftlik bilgileri yuklenirken bir hata olustu",
+    "farmType": {
+      "livestock": "Hayvancilik",
+      "crop": "Crop",
+      "mixed": "Mixed",
+      "poultry": "Kanatli",
+      "dairy": "Sutculuk",
+      "aquaculture": "Aquaculture"
+    }
+  },
+  "transporters": {
+    "title": "Nakliyeciler",
+    "description": "Hayvan ve urun nakliye hizmetleri",
+    "searchPlaceholder": "Nakliyeci ara...",
+    "noTransporters": "Henuz kayitli nakliyeci bulunmuyor",
+    "verified": "Verified",
+    "transports": "nakliye",
+    "viewProfile": "Profili Gor",
+    "sort": {
+      "newest": "En Yeni",
+      "rating": "En Yuksek Puan",
+      "mostTransports": "En Cok Nakliye"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Sayfa {page}"
+    }
+  },
+  "transport": {
+    "title": "My Transport Requests",
+    "description": "Nakliye taleplerinizi takip edin",
+    "findTransporter": "Nakliyeci Bul",
+    "active": "Aktif",
+    "completed": "Tamamlanan",
+    "total": "Toplam",
+    "asSeller": "Satici Olarak",
+    "asBuyer": "Alici Olarak",
+    "noSellerRequests": "Satici olarak nakliye talebiniz bulunmuyor",
+    "noBuyerRequests": "Alici olarak nakliye talebiniz bulunmuyor",
+    "viewProduct": "View Product",
+    "pickup": "Teslim Al",
+    "delivery": "Delivery",
+    "urgent": "Acil",
+    "fetchError": "Nakliye talepleri yuklenirken bir hata olustu",
+    "trackShipment": "Takip Et",
+    "transportStatus": {
+      "pending": "Pending",
+      "inPool": "Havuzda",
+      "assigned": "Atandi",
+      "pickedUp": "Alindi",
+      "inTransit": "Yolda",
+      "delivered": "Teslim Edildi",
+      "completed": "Tamamlandi",
+      "cancelled": "Iptal Edildi"
+    },
+    "transportType": {
+      "standard": "Standart",
+      "refrigerated": "Soguk Zincir",
+      "liveAnimal": "Canli Hayvan",
+      "hazardous": "Tehlikeli Madde",
+      "oversized": "Buyuk Boyut"
+    }
+  },
+  "transporterDetail": {
+    "notFound": "Nakliyeci bulunamadi",
+    "backToList": "Nakliyecilere Don",
+    "verified": "Verified",
+    "totalTransports": "toplam nakliye",
+    "completed": "tamamlanan",
+    "about": "Hakkinda",
+    "contact": "Contact Information",
+    "businessInfo": "Isletme Bilgileri",
+    "license": "Lisans Numarasi",
+    "insurance": "Sigorta Bilgisi",
+    "fleet": "Filo Bilgisi",
+    "serviceRegions": "Service Areas",
+    "specializations": "Uzmanlik Alanlari",
+    "certifications": "Certifications"
+  },
+  "brands": {
+    "title": "Marka Yonetimi",
+    "description": "Urun markalarini yonetin",
+    "addBrand": "Add Brand",
+    "editBrand": "Marka Duzenle",
+    "noBrands": "No brands added yet",
+    "brandName": "Marka Adi",
+    "brandDescription": "Aciklama",
+    "website": "Web Sitesi",
+    "logoUrl": "Logo URL",
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "inactive": "Pasif",
+    "products": "urun",
+    "createSuccess": "Marka basariyla eklendi",
+    "updateSuccess": "Marka basariyla guncellendi",
+    "deleteSuccess": "Marka basariyla silindi",
+    "saveError": "Marka kaydedilirken bir hata olustu",
+    "deleteError": "Marka silinirken bir hata olustu",
+    "fetchError": "Markalar yuklenirken bir hata olustu",
+    "unauthorized": "Bu sayfaya erisim yetkiniz bulunmamaktadir"
+  },
+  "transporterReviews": {
+    "title": "Reviews",
+    "reviewCount": "review",
+    "noReviews": "Henuz degerlendirme yapilmamis",
+    "timeliness": "Zamaninda Teslimat",
+    "communication": "Contact",
+    "carefulHandling": "Dikkatli Tasima",
+    "professionalism": "Profesyonellik"
+  },
+  "transportOffers": {
+    "title": "Transport Offers",
+    "description": "Nakliye taleplerine verdginiz teklifleri yonetin",
+    "newOffer": "Yeni Teklif",
+    "transportRequestId": "Nakliye Talep ID",
+    "requestIdPlaceholder": "Nakliye talep ID'sini girin",
+    "offeredPrice": "Teklif Fiyati",
+    "estimatedDays": "Tahmini Sure (Gun)",
+    "days": "gun",
+    "vehicleType": "Arac Tipi",
+    "insuranceIncluded": "Sigorta Dahil",
+    "message": "Mesaj",
+    "cancel": "Cancel",
+    "sending": "Sending...",
+    "sendOffer": "Teklif Gonder",
+    "cancelOffer": "Iptal Et",
+    "pendingTab": "Bekleyen",
+    "historyTab": "Gecmis",
+    "noPendingOffers": "Bekleyen teklifiniz yok",
+    "noHistory": "Gecmis teklif bulunmuyor",
+    "status": {
+      "pending": "Pending",
+      "accepted": "Accepted",
+      "rejected": "Rejected",
+      "expired": "Expired",
+      "cancelled": "Iptal Edildi"
+    },
+    "createSuccess": "Teklif basariyla gonderildi",
+    "createError": "Teklif gonderilirken bir hata olustu",
+    "cancelSuccess": "Teklif iptal edildi",
+    "cancelError": "Teklif iptal edilirken bir hata olustu",
+    "fetchError": "Teklifler yuklenirken bir hata olustu"
+  },
+  "animalInfo": {
+    "title": "Hayvan & Urun Bilgileri",
+    "animalTab": "Hayvan",
+    "healthTab": "Saglik",
+    "vaccinationsTab": "Asilar",
+    "veterinaryTab": "Veteriner",
+    "breed": "Breed",
+    "genderLabel": "Gender",
+    "gender": {
+      "male": "Erkek",
+      "female": "Disi",
+      "unknown": "Bilinmiyor"
+    },
+    "age": "Age",
+    "months": "ay",
+    "weight": "Weight",
+    "color": "Renk",
+    "tagNumber": "Kulak Numarasi",
+    "healthStatus": "Saglik Durumu",
+    "health": {
+      "healthy": "Saglikli",
+      "underTreatment": "Tedavi Altinda",
+      "recovering": "Iyilesiyor",
+      "quarantined": "Karantinada",
+      "unknown": "Bilinmiyor"
+    },
+    "purposeLabel": "Kullanim Amaci",
+    "purpose": {
+      "breeding": "Damizlik",
+      "dairy": "Sut",
+      "meat": "Et",
+      "egg": "Yumurta",
+      "wool": "Yun",
+      "working": "Is",
+      "pet": "Evcil",
+      "other": "Diger"
+    },
+    "pregnancy": "Gebelik",
+    "pregnant": "Gebe",
+    "microchip": "Mikrocip No",
+    "passport": "Pasaport No",
+    "sireDetails": "Baba Bilgileri",
+    "damDetails": "Ana Bilgileri",
+    "diagnosis": "Teshis",
+    "treatment": "Tedavi",
+    "medications": "Ilaclar",
+    "veterinarian": "Veteriner",
+    "nextDue": "Sonraki Asi Tarihi",
+    "prescriptionRequired": "Recete Gerekli",
+    "targetSpecies": "Hedef Turler",
+    "activeIngredients": "Aktif Maddeler",
+    "registrationNo": "Kayit No",
+    "storage": "Saklama",
+    "chemicalTab": "Kimyasal",
+    "feedTab": "Yem",
+    "seedTab": "Tohum",
+    "machineryTab": "Makine",
+    "organic": "Organic",
+    "toxicity": "Toksisite",
+    "gmoFree": "GDO'suz",
+    "protein": "Protein",
+    "fat": "Yag",
+    "fiber": "Lif",
+    "hybrid": "Hibrit",
+    "germination": "Cimlendirme",
+    "daysToMaturity": "Olgunlasma",
+    "daysLabel": "gun",
+    "warranty": "Garantili",
+    "power": "Guc",
+    "hoursUsed": "Kullanim Saati",
+    "hours": "saat",
+    "powerSource": "Guc Kaynagi"
+  },
+  "productVariants": {
+    "title": "Product Variants",
+    "variantCount": "varyant",
+    "inStock": "Stokta",
+    "outOfStock": "Tukendi"
+  },
+  "productPrices": {
+    "title": "Fiyatlar (Coklu Para Birimi)",
+    "autoConversion": "Otomatik Donusum",
+    "validUntil": "Validity"
+  },
+  "requestTransport": {
+    "title": "Nakliye Talebi Olustur",
+    "pickupLocation": "Yuklenme Noktasi",
+    "deliveryLocation": "Teslimat Noktasi",
+    "city": "Sehir",
+    "address": "Address",
+    "transportType": "Nakliye Turu",
+    "types": {
+      "standard": "Standart",
+      "refrigerated": "Soguk Zincir",
+      "liveAnimal": "Canli Hayvan",
+      "hazardous": "Tehlikeli Madde",
+      "oversized": "Buyuk Boyut"
+    },
+    "weight": "Agirlik (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Tercih Edilen Yukleme Tarihi",
+    "preferredDeliveryDate": "Tercih Edilen Teslimat Tarihi",
+    "urgent": "Acil Nakliye",
+    "specialInstructions": "Ozel Talimatlar",
+    "instructionsPlaceholder": "Ozel talimatlarinizi buraya yazin...",
+    "cancel": "Vazgec",
+    "submit": "Talep Olustur",
+    "submitting": "Olusturuluyor...",
+    "success": "Nakliye talebi basariyla olusturuldu",
+    "error": "Nakliye talebi olusturulurken bir hata olustu"
+  },
+  "transportTracking": {
+    "title": "Gonderim Takibi",
+    "noTracking": "Henuz takip bilgisi bulunmuyor",
+    "update": "Guncelleme"
+  },
+  "locations": {
+    "title": "Adreslerim",
+    "description": "Kayitli adreslerinizi yonetin",
+    "addLocation": "Adres Ekle",
+    "editLocation": "Adresi Duzenle",
+    "noLocations": "Henuz kayitli adresiniz bulunmuyor",
+    "name": "Adres Adi",
+    "namePlaceholder": "Ornegin: Ev, Is, Ciftlik",
+    "address": "Address",
+    "addressLine2": "Adres Satir 2",
+    "city": "Sehir",
+    "state": "Ilce / Bolge",
+    "postalCode": "Postal Code",
+    "phone": "Phone",
+    "email": "Email",
+    "cancel": "Vazgec",
+    "save": "Save",
+    "saving": "Saving...",
+    "typePickup": "Yukleme",
+    "typeDelivery": "Delivery",
+    "typeBoth": "Genel",
+    "createSuccess": "Adres basariyla eklendi",
+    "createError": "Adres eklenirken bir hata olustu",
+    "updateSuccess": "Adres basariyla guncellendi",
+    "updateError": "Adres guncellenirken bir hata olustu",
+    "deleteLocation": "Adresi Sil",
+    "deleteSuccess": "Adres silindi",
+    "deleteError": "Adres silinirken bir hata olustu",
+    "fetchError": "Adresler yuklenirken bir hata olustu"
+  },
+  "systemSettings": {
+    "title": "System Settings",
+    "description": "Platform para birimleri, diller, odeme yontemleri, kargo ve vergi ayarlarini goruntuleyin",
+    "unauthorized": "Bu sayfaya erisim yetkiniz bulunmamaktadir",
+    "currenciesTab": "Para Birimleri",
+    "languagesTab": "Diller",
+    "paymentTab": "Odeme Yontemleri",
+    "shippingTab": "Kargo",
+    "taxTab": "Vergi",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "default": "Varsayilan",
+    "noCurrencies": "Henuz para birimi tanimlanmamis",
+    "noLanguages": "Henuz dil tanimlanmamis",
+    "noPaymentMethods": "Henuz odeme yontemi tanimlanmamis",
+    "noCarriers": "Henuz kargo firmasi tanimlanmamis",
+    "noZones": "Henuz kargo bolgesi tanimlanmamis",
+    "noTaxRates": "Henuz vergi orani tanimlanmamis",
+    "carriers": "Kargo Firmalari",
+    "zones": "Kargo Bolgeleri",
+    "countries": "Ulkeler",
+    "rates": "Kargo Ucretleri",
+    "noRates": "Henuz kargo ucreti tanimlanmamis",
+    "freeShipping": "Ucretsiz Kargo",
+    "deliveryDays": "gun teslimat suresi"
   }
 }

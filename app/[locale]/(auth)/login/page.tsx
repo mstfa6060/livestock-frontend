@@ -73,6 +73,7 @@ function LoginForm() {
     setValue,
     formState: { errors },
   } = useForm<LoginFormData>({
+    mode: "onBlur",
     resolver: zodResolver(loginFormSchema),
     defaultValues: {
       email: "",
@@ -177,7 +178,7 @@ function LoginForm() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <CardContent className="space-y-4">
             {error && (
-              <div className="p-3 text-sm text-red-500 bg-red-50 rounded-md dark:bg-red-950/50">
+              <div className="p-3 text-sm text-destructive bg-destructive/10 rounded-md dark:bg-red-950/50">
                 {error}
               </div>
             )}
@@ -224,7 +225,7 @@ function LoginForm() {
                 className={errors.email ? "border-red-500" : ""}
               />
               {errors.email && (
-                <p className="text-sm text-red-500">{errors.email.message}</p>
+                <p className="text-sm text-destructive">{errors.email.message}</p>
               )}
             </div>
             <div className="space-y-2">
@@ -247,7 +248,7 @@ function LoginForm() {
                 </button>
               </div>
               {errors.password && (
-                <p className="text-sm text-red-500">{errors.password.message}</p>
+                <p className="text-sm text-destructive">{errors.password.message}</p>
               )}
             </div>
             <div className="flex items-center justify-between">

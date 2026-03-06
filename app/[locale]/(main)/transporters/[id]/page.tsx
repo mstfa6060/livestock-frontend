@@ -99,7 +99,7 @@ export default function TransporterDetailPage() {
     return (
       <div className="min-h-screen bg-background">
         <MainHeader />
-        <main className="container mx-auto px-4 py-8">
+        <main id="main-content" className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto space-y-6">
             <Skeleton className="h-8 w-64" />
             <Card>
@@ -151,7 +151,7 @@ export default function TransporterDetailPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <MainHeader />
 
-      <main className="flex-1 container mx-auto px-4 py-8">
+      <main id="main-content" className="flex-1 container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           {/* Back button */}
           <Button variant="ghost" asChild className="mb-6">

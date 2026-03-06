@@ -1,16 +1,24 @@
+import * as Sentry from "@sentry/nextjs";
+
 const isDevelopment = process.env.NEXT_PUBLIC_ENVIRONMENT === 'development';
 
 /**
  * Environment-gated logger.
  * - Development: verbose console output
- * - Production: minimal logging, ready for error tracking (Sentry etc.)
+ * - Production: errors sent to Sentry
  */
 export const logger = {
   /** Always logs errors (both dev and prod) — for critical failures */
   error(message: string, ...args: unknown[]) {
     console.error(message, ...args);
-    // TODO: Send to error tracking service (Sentry, LogRocket, etc.)
-    // if (!isDevelopment) { Sentry.captureException(...) }
+    if (!isDevelopment) {
+      const error = args.find((a) => a instanceof Error);
+      if (error) {
+        Sentry.captureException(error, { extra: { message } });
+      } else {
+        Sentry.captureMessage(message, { level: "error", extra: { args } });
+      }
+    }
   },
 
   /** Logs warnings only in development */
@@ -32,7 +40,6 @@ export const logger = {
     if (isDevelopment) {
       console.error(`[${context}]`, error);
     }
-    // TODO: Send to error tracking service
-    // Sentry.captureException(error, { tags: { context } });
+    Sentry.captureException(error, { tags: { context } });
   },
 };

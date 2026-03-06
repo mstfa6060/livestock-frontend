@@ -27,6 +27,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Search, SlidersHorizontal, X, Loader2 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { AppConfig } from "@/config/livestock-config";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
@@ -55,6 +56,7 @@ interface FilterContentProps {
   categories: Category[];
   localCategory: string;
   setLocalCategory: (v: string) => void;
+  onCategorySelect: (categoryId: string) => void;
   localCondition: ConditionOption;
   setLocalCondition: (v: ConditionOption) => void;
   localMinPrice: string;
@@ -71,6 +73,7 @@ function FilterContent({
   categories,
   localCategory,
   setLocalCategory,
+  onCategorySelect,
   localCondition,
   setLocalCondition,
   localMinPrice,
@@ -85,21 +88,40 @@ function FilterContent({
   return (
     <div className="space-y-6">
       {/* Category */}
-      <div className="space-y-2">
-        <Label>{tf("category")}</Label>
-        <Select value={localCategory} onValueChange={setLocalCategory}>
-          <SelectTrigger>
-            <SelectValue placeholder={tf("allCategories")} />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">{tf("allCategories")}</SelectItem>
-            {categories.map((cat) => (
-              <SelectItem key={cat.id} value={cat.id}>
+      <div className="space-y-1">
+        <Label className="text-base font-semibold">{tf("category")}</Label>
+        <ul className="border-l border-border ml-1">
+          <li>
+            <button
+              type="button"
+              onClick={() => onCategorySelect("all")}
+              className={cn(
+                "block w-full text-left py-1.5 pl-3 text-sm border-l-2 -ml-px transition-colors",
+                localCategory === "all"
+                  ? "border-primary text-foreground font-bold bg-primary/5"
+                  : "border-transparent text-muted-foreground hover:text-foreground hover:border-muted-foreground"
+              )}
+            >
+              {tf("allCategories")}
+            </button>
+          </li>
+          {categories.map((cat) => (
+            <li key={cat.id}>
+              <button
+                type="button"
+                onClick={() => onCategorySelect(cat.id)}
+                className={cn(
+                  "block w-full text-left py-1.5 pl-3 text-sm border-l-2 -ml-px transition-colors",
+                  localCategory === cat.id
+                    ? "border-primary text-foreground font-bold bg-primary/5"
+                    : "border-transparent text-muted-foreground hover:text-foreground hover:border-muted-foreground"
+                )}
+              >
                 {cat.name}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Condition */}
@@ -305,6 +327,12 @@ export default function ProductsPage() {
   };
   const isLoadingMore = false;
 
+  // Select category and apply immediately
+  const handleCategorySelect = (categoryId: string) => {
+    setLocalCategory(categoryId);
+    updateParams({ category: categoryId });
+  };
+
   // Apply filters
   const applyFilters = () => {
     updateParams({
@@ -363,7 +391,7 @@ export default function ProductsPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <MainHeader />
 
-      <main className="flex-1 container mx-auto px-4 py-8">
+      <main id="main-content" className="flex-1 container mx-auto px-4 py-8">
         {/* Page Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">{t("title")}</h1>
@@ -426,6 +454,7 @@ export default function ProductsPage() {
                   categories={categories}
                   localCategory={localCategory}
                   setLocalCategory={setLocalCategory}
+                  onCategorySelect={handleCategorySelect}
                   localCondition={localCondition}
                   setLocalCondition={setLocalCondition}
                   localMinPrice={localMinPrice}
@@ -490,6 +519,7 @@ export default function ProductsPage() {
                   categories={categories}
                   localCategory={localCategory}
                   setLocalCategory={setLocalCategory}
+                  onCategorySelect={handleCategorySelect}
                   localCondition={localCondition}
                   setLocalCondition={setLocalCondition}
                   localMinPrice={localMinPrice}

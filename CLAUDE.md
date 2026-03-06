@@ -2,6 +2,16 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Current Priority: PROJECT-ANALYSIS.md
+
+When starting a new chat without a specific task, refer to `PROJECT-ANALYSIS.md` in the project root. This file contains:
+- Full project analysis (pages, components, API hooks)
+- UX scoring and improvement areas
+- Prioritized task list with checkboxes
+- Technical debt items
+
+Work through the unchecked items in priority order (Section 8: Priority Matrix). Mark items as completed when done.
+
 ## Build and Development Commands
 
 ```bash

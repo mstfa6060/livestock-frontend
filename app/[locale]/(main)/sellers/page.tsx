@@ -114,7 +114,7 @@ export default function SellersPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <MainHeader />
 
-      <main className="flex-1 container mx-auto px-4 py-8">
+      <main id="main-content" className="flex-1 container mx-auto px-4 py-8">
         {/* Page Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">{t("title")}</h1>

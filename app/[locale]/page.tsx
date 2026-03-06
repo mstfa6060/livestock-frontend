@@ -17,7 +17,7 @@ export default async function Home() {
       <MainHeader />
 
       {/* Hero Section */}
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="container mx-auto px-4 py-16 md:py-24">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">

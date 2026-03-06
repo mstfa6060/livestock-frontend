@@ -148,7 +148,7 @@ export default function TransportersPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <MainHeader />
 
-      <main className="flex-1 container mx-auto px-4 py-8">
+      <main id="main-content" className="flex-1 container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
           <div>
             <h1 className="text-3xl font-bold flex items-center gap-2">

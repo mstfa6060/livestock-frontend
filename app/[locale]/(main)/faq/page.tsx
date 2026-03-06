@@ -101,7 +101,7 @@ export default function FAQPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <MainHeader />
 
-      <main className="flex-1 container mx-auto px-4 py-12">
+      <main id="main-content" className="flex-1 container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl font-bold text-center mb-2">{t("title")}</h1>
           <p className="text-muted-foreground text-center mb-8">

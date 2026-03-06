@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withSentryConfig } from "@sentry/nextjs";
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
@@ -38,7 +39,7 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: blob: https://minio.livestock-trading.com https://*.livestock-trading.com https://lh3.googleusercontent.com",
-      "connect-src 'self' https://dev-api.livestock-trading.com https://api.livestock-trading.com https://accounts.google.com https://www.googleapis.com",
+      "connect-src 'self' https://dev-api.livestock-trading.com https://api.livestock-trading.com https://accounts.google.com https://www.googleapis.com https://*.ingest.de.sentry.io",
       "frame-src 'self' https://accounts.google.com",
       "object-src 'none'",
       "base-uri 'self'",
@@ -86,4 +87,16 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withNextIntl(nextConfig);
+export default withSentryConfig(withNextIntl(nextConfig), {
+  org: "maden-tech",
+  project: "javascript-nextjs",
+  silent: true,
+
+  // Tunnel route to avoid ad blockers
+  tunnelRoute: "/monitoring",
+
+  // Source maps config
+  sourcemaps: {
+    deleteSourcemapsAfterUpload: true,
+  },
+});

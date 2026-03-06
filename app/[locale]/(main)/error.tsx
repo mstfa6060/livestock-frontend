@@ -20,7 +20,7 @@ export default function MainError({
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <MainHeader />
-      <main className="flex-1 flex items-center justify-center">
+      <main id="main-content" className="flex-1 flex items-center justify-center">
         <ErrorDisplay error={error} reset={reset} showHomeButton />
       </main>
       <SimpleFooter />

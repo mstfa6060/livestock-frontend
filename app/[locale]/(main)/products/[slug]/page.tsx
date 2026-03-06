@@ -293,7 +293,7 @@ export default function ProductDetailPage() {
     return (
       <div className="min-h-screen bg-background">
         <MainHeader />
-        <main className="container mx-auto px-4 py-8">
+        <main id="main-content" className="container mx-auto px-4 py-8">
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 space-y-6">
               <Skeleton className="aspect-[4/3] w-full rounded-lg" />
@@ -350,7 +350,7 @@ export default function ProductDetailPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <MainHeader />
 
-      <main className="flex-1 container mx-auto px-4 py-8">
+      <main id="main-content" className="flex-1 container mx-auto px-4 py-8">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-1 text-sm text-muted-foreground mb-6">
           <Link href="/" className="hover:text-foreground transition-colors">

@@ -80,7 +80,8 @@
         "lowercase": "Kucuk harf (a-z)",
         "number": "Rakam (0-9)",
         "special": "Ozel karakter (!@#$%)"
-      }
+      },
+      "registerSuccess": "Hesabiniz basariyla olusturuldu! Giris sayfasina yonlendiriliyorsunuz..."
     },
     "forgotPassword": {
       "title": "Sifremi Unuttum",
@@ -303,23 +304,19 @@
   },
   "notifications": {
     "title": "Bildirimler",
-    "description": "Tum bildirimlerinizi buradan takip edin",
-    "noNotifications": "Henuz bildiriminiz yok",
-    "fetchError": "Bildirimler yuklenirken bir hata olustu",
-    "markAsRead": "Okundu olarak isaretle",
+    "description": "Bildirimlerinizi goruntuleyin ve yonetin",
     "markAllAsRead": "Tumunu okundu isaretle",
-    "deleteAll": "Tumunu sil",
+    "noNotifications": "Henuz bildiriminiz yok",
+    "viewAll": "Tum bildirimleri gor",
     "today": "Bugun",
     "yesterday": "Dun",
     "older": "Daha eski",
-    "unread": "okunmamis",
-    "viewAll": "Tumunu Gor",
     "types": {
-      "message": "Yeni mesaj",
-      "offer": "Yeni teklif",
-      "order": "Siparis guncelleme",
-      "system": "Sistem bildirimi",
-      "listing": "Ilan guncelleme"
+      "system": "Sistem",
+      "message": "Mesaj",
+      "offer": "Teklif",
+      "order": "Siparis",
+      "listing": "Ilan"
     }
   },
   "settings": {
@@ -1526,23 +1523,6 @@
     "noRates": "Henuz kargo ucreti tanimlanmamis",
     "freeShipping": "Ucretsiz Kargo",
     "deliveryDays": "gun teslimat suresi"
-  },
-  "notifications": {
-    "title": "Bildirimler",
-    "description": "Bildirimlerinizi goruntuleyin ve yonetin",
-    "markAllAsRead": "Tumunu okundu isaretle",
-    "noNotifications": "Henuz bildiriminiz yok",
-    "viewAll": "Tum bildirimleri gor",
-    "today": "Bugun",
-    "yesterday": "Dun",
-    "older": "Daha eski",
-    "types": {
-      "system": "Sistem",
-      "message": "Mesaj",
-      "offer": "Teklif",
-      "order": "Siparis",
-      "listing": "Ilan"
-    }
   },
   "pushPermission": {
     "title": "Bildirimleri Etkinlestir",

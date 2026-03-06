@@ -360,7 +360,11 @@ export default function LocationsPage() {
         ) : locations.length === 0 ? (
           <div className="text-center py-16">
             <MapPin className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
-            <p className="text-muted-foreground">{t("noLocations")}</p>
+            <p className="text-muted-foreground mb-4">{t("noLocations")}</p>
+            <Button onClick={() => setShowForm(true)}>
+              <Plus className="h-4 w-4 mr-2" />
+              {t("addLocation")}
+            </Button>
           </div>
         ) : (
           <div className="space-y-4">

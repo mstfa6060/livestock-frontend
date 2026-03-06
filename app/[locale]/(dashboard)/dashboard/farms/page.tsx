@@ -437,7 +437,11 @@ export default function FarmsPage() {
         {farms.length === 0 && !showForm ? (
           <div className="text-center py-16">
             <Tractor className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
-            <p className="text-muted-foreground">{t("noFarms")}</p>
+            <p className="text-muted-foreground mb-4">{t("noFarms")}</p>
+            <Button onClick={() => setShowForm(true)}>
+              <PlusCircle className="h-4 w-4 mr-2" />
+              {t("addFarm")}
+            </Button>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 gap-4">

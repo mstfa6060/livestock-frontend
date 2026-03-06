@@ -159,7 +159,7 @@ export default function SellerDetailPage() {
     return (
       <div className="min-h-screen bg-background flex flex-col">
         <MainHeader />
-        <main className="flex-1 container mx-auto px-4 py-8">
+        <main id="main-content" className="flex-1 container mx-auto px-4 py-8">
           <Skeleton className="h-9 w-32 mb-6" />
           <Skeleton className="h-48 w-full rounded-lg mb-6" />
           <div className="flex flex-col md:flex-row gap-6 mb-8">
@@ -198,7 +198,7 @@ export default function SellerDetailPage() {
     return (
       <div className="min-h-screen bg-background flex flex-col">
         <MainHeader />
-        <main className="flex-1 container mx-auto px-4 py-8">
+        <main id="main-content" className="flex-1 container mx-auto px-4 py-8">
           <div className="text-center py-16">
             <ShoppingBag className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
             <p className="text-muted-foreground text-lg mb-4">
@@ -220,7 +220,7 @@ export default function SellerDetailPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <MainHeader />
 
-      <main className="flex-1 container mx-auto px-4 py-8">
+      <main id="main-content" className="flex-1 container mx-auto px-4 py-8">
         {/* Back button */}
         <Button variant="ghost" asChild className="mb-6">
           <Link href="/sellers">
