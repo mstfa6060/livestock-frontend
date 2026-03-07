@@ -45,11 +45,11 @@ interface ProductCardProps {
 }
 
 // Product status mapping
-const STATUS_MAP: Record<number, { label: string; variant: "default" | "secondary" | "destructive" | "outline" }> = {
-  0: { label: "draft", variant: "secondary" },
-  1: { label: "active", variant: "default" },
-  2: { label: "sold", variant: "destructive" },
-  3: { label: "pending", variant: "outline" },
+const STATUS_MAP: Record<number, { label: string; variant: "default" | "secondary" | "destructive" | "outline"; bannerClass: string }> = {
+  0: { label: "draft", variant: "secondary", bannerClass: "bg-slate-700/80" },
+  1: { label: "active", variant: "default", bannerClass: "" },
+  2: { label: "sold", variant: "destructive", bannerClass: "bg-red-800/85" },
+  3: { label: "pending", variant: "outline", bannerClass: "bg-amber-700/80" },
 };
 
 // Product condition mapping
@@ -109,7 +109,7 @@ export const ProductCard = memo(function ProductCard({ product, onFavorite, isFa
 
   return (
     <Link href={`/products/${product.slug}`}>
-      <Card className="group overflow-hidden hover:shadow-lg transition-shadow h-full">
+      <Card className="group overflow-hidden border hover:shadow-xl transition-all duration-300 h-full bg-card">
         {/* Image Container */}
         <div className="relative aspect-[4/3] overflow-hidden bg-muted">
           {hasImage ? (
@@ -117,13 +117,13 @@ export const ProductCard = memo(function ProductCard({ product, onFavorite, isFa
               src={product.imageUrl!}
               alt={product.title}
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           ) : (
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-muted">
-              <ImageOff className="h-12 w-12 text-muted-foreground/50" />
-              <span className="text-xs text-muted-foreground/50 mt-2">{tpd("noImage")}</span>
+              <ImageOff className="h-12 w-12 text-muted-foreground/30" />
+              <span className="text-xs text-muted-foreground/40 mt-2">{tpd("noImage")}</span>
             </div>
           )}
 
@@ -131,32 +131,36 @@ export const ProductCard = memo(function ProductCard({ product, onFavorite, isFa
           <Button
             variant="ghost"
             size="icon"
-            className="absolute top-2 right-2 bg-white/80 hover:bg-white"
+            className="absolute top-2 right-2 bg-white/90 hover:bg-white shadow-sm rounded-full h-9 w-9"
             onClick={handleFavorite}
             disabled={isTogglingFavorite}
             aria-label={favorite ? t("removedFromFavorites") : t("addedToFavorites")}
           >
             <Heart
-              className={`h-5 w-5 transition-colors ${
-                favorite ? "fill-red-500 text-red-500" : "text-gray-600"
+              className={`h-4 w-4 transition-colors ${
+                favorite ? "fill-red-500 text-red-500" : "text-gray-500"
               } ${isTogglingFavorite ? "opacity-50" : ""}`}
             />
           </Button>
 
-          {/* Status Badge */}
+          {/* Condition Badge - Bottom left */}
+          <Badge variant="secondary" className="absolute bottom-2 left-2 bg-white/90 text-foreground shadow-sm text-xs">
+            {t(`condition.${condition}`)}
+          </Badge>
+
+          {/* Sold / Draft / Pending Banner */}
           {product.status !== 1 && (
-            <Badge
-              variant={status.variant}
-              className="absolute top-2 left-2"
-            >
-              {t(`status.${status.label}`)}
-            </Badge>
+            <div className={`absolute top-0 inset-x-0 ${status.bannerClass} py-1.5 text-center`}>
+              <span className="text-white font-semibold text-xs uppercase tracking-wider">
+                {t(`status.${status.label}`)}
+              </span>
+            </div>
           )}
 
-          {/* Out of Stock Overlay */}
-          {!product.isInStock && (
-            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-              <span className="text-white font-semibold text-lg">
+          {/* Out of Stock Banner */}
+          {!product.isInStock && product.status === 1 && (
+            <div className="absolute top-0 inset-x-0 bg-slate-800/80 py-1.5 text-center">
+              <span className="text-white font-semibold text-xs uppercase tracking-wider">
                 {t("outOfStock")}
               </span>
             </div>
@@ -165,11 +169,11 @@ export const ProductCard = memo(function ProductCard({ product, onFavorite, isFa
 
         <CardContent className="p-4">
           {/* Title */}
-          <h3 className="font-semibold text-base line-clamp-2 mb-2 group-hover:text-primary transition-colors">
+          <h3 className="font-semibold text-sm line-clamp-2 mb-2 group-hover:text-primary transition-colors leading-snug">
             {product.title}
           </h3>
 
-          {/* Price */}
+          {/* Price - Prominent */}
           <PriceDisplay
             price={product.basePrice}
             currency={product.currency}
@@ -178,33 +182,28 @@ export const ProductCard = memo(function ProductCard({ product, onFavorite, isFa
             className="mb-3"
           />
 
-          {/* Location */}
-          <div className="flex items-center gap-1 text-sm text-muted-foreground mb-2">
-            <MapPin className="h-4 w-4" />
-            <span>{product.locationCity}</span>
-          </div>
-
-          {/* Stats Row */}
-          <div className="flex items-center justify-between text-sm text-muted-foreground">
-            {/* Rating */}
-            {product.averageRating != null && product.reviewCount > 0 && (
-              <div className="flex items-center gap-1">
-                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                <span>{product.averageRating.toFixed(1)}</span>
-                <span className="text-xs">({product.reviewCount})</span>
-              </div>
-            )}
-
-            {/* Views */}
-            <div className="flex items-center gap-1">
-              <Eye className="h-4 w-4" />
-              <span>{product.viewCount}</span>
+          {/* Location & Stats */}
+          <div className="flex items-center justify-between pt-2 border-t border-border/50">
+            <div className="flex items-center gap-1 text-xs text-muted-foreground">
+              <MapPin className="h-3.5 w-3.5 text-primary/60" />
+              <span>{product.locationCity}</span>
             </div>
 
-            {/* Condition */}
-            <Badge variant="outline" className="text-xs">
-              {t(`condition.${condition}`)}
-            </Badge>
+            <div className="flex items-center gap-2">
+              {/* Rating */}
+              {product.averageRating != null && product.reviewCount > 0 && (
+                <div className="flex items-center gap-0.5 text-xs">
+                  <Star className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
+                  <span className="font-medium">{product.averageRating.toFixed(1)}</span>
+                </div>
+              )}
+
+              {/* Views */}
+              <div className="flex items-center gap-0.5 text-xs text-muted-foreground">
+                <Eye className="h-3.5 w-3.5" />
+                <span>{product.viewCount}</span>
+              </div>
+            </div>
           </div>
         </CardContent>
       </Card>

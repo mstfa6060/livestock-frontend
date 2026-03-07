@@ -28,11 +28,13 @@ export function FeaturedProducts() {
   if (!isLoading && products.length === 0) return null;
 
   return (
-    <section className="py-16">
+    <section className="py-16 md:py-20">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl font-bold">{t("title")}</h2>
-          <Button variant="outline" asChild>
+        <div className="flex items-center justify-between mb-10">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold">{t("title")}</h2>
+          </div>
+          <Button variant="outline" className="shadow-sm" asChild>
             <Link href="/products">
               {t("viewAll")}
               <ArrowRight className="h-4 w-4 ml-2" />
@@ -41,17 +43,17 @@ export function FeaturedProducts() {
         </div>
 
         {isLoading ? (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {Array.from({ length: 4 }).map((_, i) => (
               <div key={i} className="space-y-3">
-                <Skeleton className="aspect-square w-full rounded-lg" />
+                <Skeleton className="aspect-[4/3] w-full rounded-xl" />
                 <Skeleton className="h-4 w-3/4" />
                 <Skeleton className="h-4 w-1/2" />
               </div>
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

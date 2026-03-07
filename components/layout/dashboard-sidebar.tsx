@@ -114,41 +114,43 @@ export function DashboardSidebar() {
   };
 
   return (
-    <aside className="w-64 border-r bg-background min-h-[calc(100vh-4rem)] p-4 hidden lg:block">
-      {/* New Listing Button */}
-      <Button className="w-full mb-6" asChild>
-        <Link href="/dashboard/listings/new">
-          <PlusCircle className="h-4 w-4 mr-2" />
-          {t("newListing")}
-        </Link>
-      </Button>
+    <aside className="w-64 border-r bg-card min-h-[calc(100vh-6rem)] hidden lg:block overflow-y-auto">
+      <div className="p-4">
+        {/* New Listing Button */}
+        <Button className="w-full mb-6 shadow-sm" asChild>
+          <Link href="/dashboard/listings/new">
+            <PlusCircle className="h-4 w-4 mr-2" />
+            {t("newListing")}
+          </Link>
+        </Button>
 
-      {/* Navigation */}
-      <nav className="space-y-1">
-        {visibleItems.map((item) => {
-          const isActive =
-            currentPath === item.href ||
-            (item.href !== "/dashboard" && currentPath.startsWith(item.href));
+        {/* Navigation */}
+        <nav className="space-y-0.5">
+          {visibleItems.map((item) => {
+            const isActive =
+              currentPath === item.href ||
+              (item.href !== "/dashboard" && currentPath.startsWith(item.href));
 
-          return (
-            <Link
-              key={item.key}
-              href={item.href}
-              aria-current={isActive ? "page" : undefined}
-              className={cn(
-                "flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium transition-colors",
-                isActive
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
-              )}
-            >
-              <item.icon className="h-4 w-4" />
-              {t(item.key)}
-              <UnreadBadge count={getBadgeCount(item.badgeKey)} />
-            </Link>
-          );
-        })}
-      </nav>
+            return (
+              <Link
+                key={item.key}
+                href={item.href}
+                aria-current={isActive ? "page" : undefined}
+                className={cn(
+                  "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all",
+                  isActive
+                    ? "bg-primary/10 text-primary font-semibold"
+                    : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                )}
+              >
+                <item.icon className={cn("h-4 w-4", isActive && "text-primary")} />
+                {t(item.key)}
+                <UnreadBadge count={getBadgeCount(item.badgeKey)} />
+              </Link>
+            );
+          })}
+        </nav>
+      </div>
     </aside>
   );
 }

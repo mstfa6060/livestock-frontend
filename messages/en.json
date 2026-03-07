@@ -284,7 +284,8 @@
       "title": "Live Animal Trading Platform",
       "subtitle": "The most reliable live animal trading platform. Buy and sell your cattle and sheep safely.",
       "cta": "Start Now",
-      "viewListings": "View Ads"
+      "viewListings": "View Ads",
+      "searchPlaceholder": "Search animals... (cattle, sheep, goat...)"
     },
     "features": {
       "secure": {

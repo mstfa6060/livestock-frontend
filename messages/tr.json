@@ -373,7 +373,8 @@
       "title": "Canli Hayvan Ticaret Platformu",
       "subtitle": "En guvenilir canli hayvan ticaret platformu. Buyukbas ve kucukbas hayvanlarinizi guvenle alin ve satin.",
       "cta": "Hemen Basla",
-      "viewListings": "Ilanlari Gor"
+      "viewListings": "Ilanlari Gor",
+      "searchPlaceholder": "Hayvan ara... (inek, koyun, keci...)"
     },
     "features": {
       "secure": {

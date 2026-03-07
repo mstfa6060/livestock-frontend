@@ -21,36 +21,36 @@ export function HomepageCategories() {
   if (!isLoading && topCategories.length === 0) return null;
 
   return (
-    <section className="bg-muted/50 py-16">
+    <section className="bg-muted/40 py-16 md:py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold text-center mb-8">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
           {t("title")}
         </h2>
 
         {isLoading ? (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {Array.from({ length: 4 }).map((_, i) => (
-              <Skeleton key={i} className="h-24 rounded-lg" />
+              <Skeleton key={i} className="h-28 rounded-xl" />
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {topCategories.map((category) => (
               <Link key={category.id} href={`/products?category=${category.slug}`}>
-                <Card className="hover:border-primary transition-colors cursor-pointer h-full">
+                <Card className="hover:border-primary hover:shadow-md transition-all cursor-pointer h-full border-0 shadow-sm bg-card">
                   <CardContent className="flex flex-col items-center justify-center p-6">
                     {category.iconUrl ? (
                       <img
                         src={category.iconUrl}
                         alt={category.name}
-                        className="h-10 w-10 mb-2 object-contain"
+                        className="h-12 w-12 mb-3 object-contain"
                       />
                     ) : (
-                      <div className="h-10 w-10 mb-2 rounded-full bg-primary/10 flex items-center justify-center">
-                        <Tag className="h-5 w-5 text-primary" />
+                      <div className="h-12 w-12 mb-3 rounded-2xl bg-primary/10 flex items-center justify-center">
+                        <Tag className="h-6 w-6 text-primary" />
                       </div>
                     )}
-                    <span className="font-medium text-center">
+                    <span className="font-medium text-center text-sm">
                       {category.name}
                     </span>
                   </CardContent>

@@ -19,7 +19,7 @@ export function DashboardLayout({
 }: DashboardLayoutProps) {
   return (
     <ProtectedRoute>
-      <div className="min-h-screen bg-background flex flex-col">
+      <div className="min-h-screen bg-muted/30 flex flex-col">
         <MainHeader />
 
         <div className="flex flex-1">
@@ -28,8 +28,8 @@ export function DashboardLayout({
           <main id="main-content" className="flex-1 p-4 lg:p-8 pb-20 lg:pb-8">
             <PushPermission />
             {(title || description) && (
-              <div className="mb-6">
-                {title && <h1 className="text-2xl font-bold">{title}</h1>}
+              <div className="mb-8">
+                {title && <h1 className="text-2xl font-bold tracking-tight">{title}</h1>}
                 {description && (
                   <p className="text-muted-foreground mt-1">{description}</p>
                 )}

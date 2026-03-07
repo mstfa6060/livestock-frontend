@@ -8,58 +8,64 @@ export function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="border-t bg-background">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-foreground text-background/80">
+      {/* Main Footer */}
+      <div className="container mx-auto px-4 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="text-xl font-bold text-primary">
-              LivestockTrading
+            <Link href="/" className="flex items-center gap-2">
+              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-sm">LT</span>
+              </div>
+              <span className="text-xl font-bold text-background">
+                Livestock<span className="text-primary">Trading</span>
+              </span>
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-background/60 leading-relaxed">
               {t("tagline")}
             </p>
             {/* Social Links */}
-            <div className="flex gap-4">
+            <div className="flex gap-3 pt-2">
               <a
                 href="#"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="h-9 w-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 aria-label="Facebook"
               >
-                <Facebook className="h-5 w-5" />
+                <Facebook className="h-4 w-4" />
               </a>
               <a
                 href="#"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="h-9 w-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 aria-label="Twitter"
               >
-                <Twitter className="h-5 w-5" />
+                <Twitter className="h-4 w-4" />
               </a>
               <a
                 href="#"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="h-9 w-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-4 w-4" />
               </a>
               <a
                 href="#"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="h-9 w-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 aria-label="YouTube"
               >
-                <Youtube className="h-5 w-5" />
+                <Youtube className="h-4 w-4" />
               </a>
             </div>
           </div>
 
           {/* Company Links */}
           <div>
-            <h3 className="font-semibold mb-4">{t("company")}</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold mb-5 text-background">{t("company")}</h3>
+            <ul className="space-y-3">
               <li>
                 <Link
                   href="/about"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm text-background/60 hover:text-primary transition-colors"
                 >
                   {t("about")}
                 </Link>
@@ -67,7 +73,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/sellers"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm text-background/60 hover:text-primary transition-colors"
                 >
                   {t("sellers")}
                 </Link>
@@ -75,7 +81,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/products"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm text-background/60 hover:text-primary transition-colors"
                 >
                   {t("products")}
                 </Link>
@@ -85,12 +91,12 @@ export function Footer() {
 
           {/* Support Links */}
           <div>
-            <h3 className="font-semibold mb-4">{t("support")}</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold mb-5 text-background">{t("support")}</h3>
+            <ul className="space-y-3">
               <li>
                 <Link
                   href="/contact"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm text-background/60 hover:text-primary transition-colors"
                 >
                   {t("contact")}
                 </Link>
@@ -98,7 +104,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/faq"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm text-background/60 hover:text-primary transition-colors"
                 >
                   {t("faq")}
                 </Link>
@@ -106,7 +112,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${t("supportEmail")}`}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm text-background/60 hover:text-primary transition-colors"
                 >
                   {t("supportEmail")}
                 </a>
@@ -116,12 +122,12 @@ export function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h3 className="font-semibold mb-4">{t("legal")}</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold mb-5 text-background">{t("legal")}</h3>
+            <ul className="space-y-3">
               <li>
                 <Link
                   href="/terms"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm text-background/60 hover:text-primary transition-colors"
                 >
                   {t("terms")}
                 </Link>
@@ -129,7 +135,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/privacy"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm text-background/60 hover:text-primary transition-colors"
                 >
                   {t("privacy")}
                 </Link>
@@ -137,32 +143,34 @@ export function Footer() {
             </ul>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">{t("copyright")}</p>
+      {/* Bottom Bar */}
+      <div className="border-t border-background/10">
+        <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-background/40">{t("copyright")}</p>
           <nav className="flex gap-6">
             <Link
               href="/about"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-background/40 hover:text-primary transition-colors"
             >
               {t("about")}
             </Link>
             <Link
               href="/contact"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-background/40 hover:text-primary transition-colors"
             >
               {t("contact")}
             </Link>
             <Link
               href="/terms"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-background/40 hover:text-primary transition-colors"
             >
               {t("terms")}
             </Link>
             <Link
               href="/privacy"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-background/40 hover:text-primary transition-colors"
             >
               {t("privacy")}
             </Link>
