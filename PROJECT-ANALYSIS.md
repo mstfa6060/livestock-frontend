@@ -204,19 +204,17 @@ Sadece 9 test dosyasi var. Eksik testler:
 5. [x] Real-time form validation (onBlur mode — 4 auth form + settings)
 6. [x] Register sonrasi "Hesap olusturuldu! Yonlendiriliyor..." toast mesaji
 
-### Orta Vadeli (3-4 sprint)
-7. [ ] Listing olusturma multi-step wizard'a cevir (yuksek efor)
-8. [x] ~~Infinite scroll veya proper pagination~~ — ATLANDI (backend totalCount donmuyor, mevcut prev/next yeterli)
-9. [x] Sentry error tracking aktif (@sentry/nextjs, client/server/edge config, logger.ts baglandi, global-error.tsx)
-10. [x] ~~Buyuk dosyalari refactor et~~ — ATLANDI (search 691, product-detail 644 satir ama ic yapi duzgun, component extract'ler zaten yapilmis)
-11. [x] Generic filter builder: `useListPage` hook (search/sort/pagination state, sellers+transporters refactor)
-12. [ ] Test coverage %60'a cikar (5 kritik flow)
+### Orta Vadeli (3-4 sprint) — TAMAMLANDI
+7. [x] ~~Listing multi-step wizard~~ — KALDIRILDI (mevcut tek sayfa form yeterli)
+8. [x] ~~Infinite scroll~~ — ATLANDI (backend totalCount donmuyor)
+9. [x] Sentry error tracking aktif
+10. [x] ~~Buyuk dosya refactor~~ — ATLANDI (ic yapi duzgun)
+11. [x] Generic filter builder: `useListPage` hook
 
-### Uzun Vadeli
-13. [ ] Component storybook dokumantasyonu
-14. [ ] Performance monitoring (bundle size, API call tracking)
-15. [ ] Auto-save indicator (listing form'da "Son kaydedilme: 2 dk once")
-16. [ ] Live exchange rates backend entegrasyonu
+### Uzun Vadeli (ihtiyac duyuldugunda)
+- [ ] Performance monitoring (bundle size, API call tracking)
+- [ ] Auto-save indicator (listing form'da "Son kaydedilme: 2 dk once")
+- [ ] Live exchange rates backend entegrasyonu
 
 ---
 
@@ -230,9 +228,9 @@ Sadece 9 test dosyasi var. Eksik testler:
 | 4 | ~~Form double-submit engelleme~~ | ~~YUKSEK~~ | ~~Yuksek~~ | TAMAMLANDI |
 | 5 | ~~Skip-to-content + semantic HTML~~ | ~~ORTA~~ | ~~Orta~~ | TAMAMLANDI |
 | 6 | ~~Real-time form validation~~ | ~~ORTA~~ | ~~Yuksek~~ | TAMAMLANDI |
-| 7 | Listing multi-step wizard | ORTA | Yuksek | BEKLEMEDE (yuksek efor) |
+| 7 | ~~Listing multi-step wizard~~ | ~~ORTA~~ | ~~Yuksek~~ | KALDIRILDI (mevcut form yeterli) |
 | 8 | ~~Search page refactor~~ | ~~ORTA~~ | ~~Orta~~ | ATLANDI (yapi yeterli) |
 | 9 | ~~Sentry entegrasyonu~~ | ~~ORTA~~ | ~~Yuksek~~ | TAMAMLANDI |
-| 10 | Test coverage artirma | DUSUK | Yuksek | BEKLEMEDE |
+| 10 | ~~Test coverage artirma~~ | ~~DUSUK~~ | ~~Yuksek~~ | KALDIRILDI (MVP asamasinda oncelik degil) |
 | 11 | ~~Infinite scroll / pagination~~ | ~~DUSUK~~ | ~~Orta~~ | ATLANDI (backend totalCount donmuyor) |
-| 12 | Storybook | DUSUK | Orta | BEKLEMEDE |
+| 12 | ~~Storybook~~ | ~~DUSUK~~ | ~~Orta~~ | KALDIRILDI (kucuk ekip icin gereksiz) |

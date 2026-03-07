@@ -1,16 +1,66 @@
 import { api } from '@/config/livestock-config';
 import { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { logger } from '@/lib/logger';
-import commonErrors from '../errors/locales/modules/backend/common/tr';
-import livestocktradingErrors from '../errors/locales/modules/backend/livestocktrading/tr';
+
+// Import error locales — Turkish is the source, others loaded on demand
+import commonErrorsTr from '../errors/locales/modules/backend/common/tr';
+import livestocktradingErrorsTr from '../errors/locales/modules/backend/livestocktrading/tr';
+
+type ErrorMap = Record<string, string>;
+
+// Cache for loaded locale error maps
+const localeErrorCache: Record<string, { common: ErrorMap; module: ErrorMap }> = {
+  tr: {
+    common: commonErrorsTr.translation.error as ErrorMap,
+    module: livestocktradingErrorsTr.translation.error as ErrorMap,
+  },
+};
 
 /**
- * Backend hata kodunu okunabilir mesaja çevirir
+ * Get current UI locale from <html lang="...">
+ */
+const getCurrentLocale = (): string => {
+  if (typeof document !== 'undefined') {
+    return document.documentElement.lang || 'tr';
+  }
+  return 'tr';
+};
+
+/**
+ * Dynamically load error locale files (cached after first load)
+ */
+const loadLocaleErrors = async (locale: string): Promise<void> => {
+  if (localeErrorCache[locale]) return;
+  try {
+    const [common, module] = await Promise.all([
+      import(`../errors/locales/modules/backend/common/${locale}`),
+      import(`../errors/locales/modules/backend/livestocktrading/${locale}`),
+    ]);
+    localeErrorCache[locale] = {
+      common: common.default.translation.error as ErrorMap,
+      module: module.default.translation.error as ErrorMap,
+    };
+  } catch {
+    // Locale not available, will fallback to Turkish
+  }
+};
+
+// Pre-load the active locale on module init (non-blocking)
+if (typeof window !== 'undefined') {
+  const locale = getCurrentLocale();
+  if (locale !== 'tr') {
+    loadLocaleErrors(locale);
+  }
+}
+
+/**
+ * Backend hata kodunu kullanıcının diline çevirir.
+ * Aktif locale cache'de yoksa Turkish fallback kullanır.
  */
 const getErrorMessage = (key: string): string => {
-  const commonMap = commonErrors.translation.error as Record<string, string>;
-  const moduleMap = livestocktradingErrors.translation.error as Record<string, string>;
-  return moduleMap[key] || commonMap[key] || key;
+  const locale = getCurrentLocale();
+  const cached = localeErrorCache[locale] || localeErrorCache['tr'];
+  return cached.module[key] || cached.common[key] || key;
 };
 
 export class ApiService {
