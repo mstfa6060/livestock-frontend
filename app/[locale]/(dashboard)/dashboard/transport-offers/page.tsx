@@ -154,8 +154,8 @@ export default function TransportOffersPage() {
       resetForm();
 
       queryClient.invalidateQueries({ queryKey: transportOffersQueryKey });
-    } catch {
-      toast.error(t("createError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("createError"));
     } finally {
       setIsSubmitting(false);
     }
@@ -181,8 +181,8 @@ export default function TransportOffersPage() {
 
       queryClient.invalidateQueries({ queryKey: transportOffersQueryKey });
       toast.success(t("cancelSuccess"));
-    } catch {
-      toast.error(t("cancelError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("cancelError"));
     }
   };
 

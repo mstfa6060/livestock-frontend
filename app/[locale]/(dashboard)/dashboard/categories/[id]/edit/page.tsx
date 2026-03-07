@@ -140,8 +140,8 @@ export default function EditCategoryPage() {
       toast.success(t("updateSuccess"));
       queryClient.invalidateQueries({ queryKey: queryKeys.categories.all });
       router.push("/dashboard/categories");
-    } catch {
-      toast.error(t("updateError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("updateError"));
     } finally {
       setIsSubmitting(false);
     }

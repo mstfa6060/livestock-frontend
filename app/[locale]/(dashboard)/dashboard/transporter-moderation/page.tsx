@@ -89,8 +89,8 @@ export default function TransporterModerationPage() {
       await LivestockTradingAPI.Transporters.Verify.Request({ id: transporterId });
       queryClient.invalidateQueries({ queryKey: queryKeys.transporters.lists() });
       toast.success(t("verifySuccess"));
-    } catch {
-      toast.error(t("actionError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("actionError"));
     } finally {
       setActionLoading(null);
     }
@@ -112,8 +112,8 @@ export default function TransporterModerationPage() {
       setSuspendingId(null);
       setSuspendReason("");
       toast.success(t("suspendSuccess"));
-    } catch {
-      toast.error(t("actionError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("actionError"));
     } finally {
       setActionLoading(null);
     }

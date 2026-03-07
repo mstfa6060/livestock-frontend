@@ -142,8 +142,8 @@ export default function ShippingRatesPage() {
       });
       setEditingId(rateId);
       setShowForm(true);
-    } catch {
-      toast.error(t("fetchError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("fetchError"));
     }
   };
 
@@ -189,8 +189,8 @@ export default function ShippingRatesPage() {
       queryClient.invalidateQueries({
         queryKey: queryKeys.shippingRates.all,
       });
-    } catch {
-      toast.error(t("saveError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("saveError"));
     } finally {
       setIsSubmitting(false);
     }
@@ -203,8 +203,8 @@ export default function ShippingRatesPage() {
         queryKey: queryKeys.shippingRates.all,
       });
       toast.success(t("deleteSuccess"));
-    } catch {
-      toast.error(t("deleteError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("deleteError"));
     }
   };
 

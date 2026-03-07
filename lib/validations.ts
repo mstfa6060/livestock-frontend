@@ -230,6 +230,7 @@ export const farmFormSchema = z.object({
   name: requiredStringSchema(2, 200),
   description: z.string().max(2000, { message: messages.maxLength(2000) }),
   registrationNumber: z.string(),
+  locationId: z.string().min(1, { message: messages.required }),
   type: z.number().min(0).max(5),
   totalAreaHectares: z.string()
     .refine((val) => !val || val === "" || (!isNaN(parseFloat(val)) && parseFloat(val) >= 0), {

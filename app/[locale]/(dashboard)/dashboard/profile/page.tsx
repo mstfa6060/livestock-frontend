@@ -116,8 +116,8 @@ export default function ProfilePage() {
         currencySymbol: response.currencySymbol,
       });
       toast.success(t("saveSuccess"));
-    } catch {
-      toast.error(t("saveError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("saveError"));
     } finally {
       setIsLoading(false);
     }

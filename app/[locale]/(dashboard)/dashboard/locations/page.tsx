@@ -168,8 +168,8 @@ export default function LocationsPage() {
       }
       resetForm();
       queryClient.invalidateQueries({ queryKey: queryKeys.locations.list({ userId: user?.id }) });
-    } catch {
-      toast.error(editingId ? t("updateError") : t("createError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : (editingId ? t("updateError") : t("createError")));
     } finally {
       setIsSubmitting(false);
     }
@@ -180,8 +180,8 @@ export default function LocationsPage() {
       await LivestockTradingAPI.Locations.Delete.Request({ id });
       queryClient.invalidateQueries({ queryKey: queryKeys.locations.list({ userId: user?.id }) });
       toast.success(t("deleteSuccess"));
-    } catch {
-      toast.error(t("deleteError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("deleteError"));
     }
   };
 

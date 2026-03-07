@@ -130,8 +130,8 @@ export default function BrandsPage() {
       });
       setEditingId(brandId);
       setShowForm(true);
-    } catch {
-      toast.error(t("fetchError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("fetchError"));
     }
   };
 
@@ -182,8 +182,8 @@ export default function BrandsPage() {
       resetForm();
 
       queryClient.invalidateQueries({ queryKey: queryKeys.brands.list({ sortBy: "name" }) });
-    } catch {
-      toast.error(t("saveError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("saveError"));
     } finally {
       setIsSubmitting(false);
     }
@@ -194,8 +194,8 @@ export default function BrandsPage() {
       await LivestockTradingAPI.Brands.Delete.Request({ id: brandId });
       queryClient.invalidateQueries({ queryKey: queryKeys.brands.list({ sortBy: "name" }) });
       toast.success(t("deleteSuccess"));
-    } catch {
-      toast.error(t("deleteError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("deleteError"));
     }
   };
 

@@ -258,8 +258,8 @@ export default function SearchPage() {
     try {
       await LivestockTradingAPI.SearchHistories.Delete.Request({ id });
       queryClient.invalidateQueries({ queryKey: queryKeys.searchHistories.list() });
-    } catch {
-      toast.error(t("deleteHistoryError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("deleteHistoryError"));
     }
   };
 

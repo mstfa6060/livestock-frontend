@@ -276,8 +276,8 @@ export default function ConversationPage() {
       });
 
       inputRef.current?.focus();
-    } catch {
-      toast.error(t("sendError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("sendError"));
       setNewMessage(messageContent); // Restore message on error
     } finally {
       setIsSending(false);

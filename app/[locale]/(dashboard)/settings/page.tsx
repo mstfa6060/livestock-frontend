@@ -168,8 +168,8 @@ export default function SettingsPage() {
       });
       setLocalPrefs(null);
       toast.success(tpref("saveSuccess"));
-    } catch {
-      toast.error(tpref("saveError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : tpref("saveError"));
     } finally {
       setPrefsSaving(false);
     }

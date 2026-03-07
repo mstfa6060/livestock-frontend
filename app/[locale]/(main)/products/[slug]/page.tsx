@@ -242,8 +242,8 @@ export default function ProductDetailPage() {
     try {
       await toggleFavorite(product.id);
       toast.success(isFavorite ? t("removedFromFavorites") : t("addedToFavorites"));
-    } catch {
-      toast.error(t("favoriteError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("favoriteError"));
     }
   };
 
@@ -280,8 +280,8 @@ export default function ProductDetailPage() {
 
       // Navigate to the conversation
       router.push(`/dashboard/messages?conversation=${response.conversationId}`);
-    } catch {
-      toast.error(t("contactError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("contactError"));
     } finally {
       setIsContacting(false);
     }

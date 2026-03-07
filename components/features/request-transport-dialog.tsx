@@ -124,8 +124,8 @@ export function RequestTransportDialog({ deal, children }: RequestTransportDialo
 
       toast.success(t("success"));
       setOpen(false);
-    } catch {
-      toast.error(t("error"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("error"));
     } finally {
       setIsSubmitting(false);
     }

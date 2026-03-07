@@ -102,8 +102,8 @@ export default function ModerationPage() {
       await LivestockTradingAPI.Products.Approve.Request({ id: productId });
       queryClient.invalidateQueries({ queryKey: moderationQueryKey });
       toast.success(t("approveSuccess"));
-    } catch {
-      toast.error(t("actionError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("actionError"));
     } finally {
       setActionLoading(null);
     }
@@ -125,8 +125,8 @@ export default function ModerationPage() {
       setRejectingId(null);
       setRejectReason("");
       toast.success(t("rejectSuccess"));
-    } catch {
-      toast.error(t("actionError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("actionError"));
     } finally {
       setActionLoading(null);
     }

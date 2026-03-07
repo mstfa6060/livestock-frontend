@@ -103,8 +103,8 @@ export default function HealthRecordsPage() {
       });
       setEditingId(recordId);
       setShowForm(true);
-    } catch {
-      toast.error(t("fetchError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("fetchError"));
     }
   };
 
@@ -143,8 +143,8 @@ export default function HealthRecordsPage() {
       queryClient.invalidateQueries({
         queryKey: queryKeys.healthRecords.all,
       });
-    } catch {
-      toast.error(t("saveError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("saveError"));
     } finally {
       setIsSubmitting(false);
     }
@@ -157,8 +157,8 @@ export default function HealthRecordsPage() {
         queryKey: queryKeys.healthRecords.all,
       });
       toast.success(t("deleteSuccess"));
-    } catch {
-      toast.error(t("deleteError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("deleteError"));
     }
   };
 

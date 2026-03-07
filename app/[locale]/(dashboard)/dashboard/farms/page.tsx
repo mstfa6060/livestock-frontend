@@ -88,6 +88,30 @@ export default function FarmsPage() {
   });
   const sellerId = sellerProfile?.id ?? null;
 
+  // Fetch user locations for the location selector
+  const { data: locations = [] } = useQuery({
+    queryKey: queryKeys.locations.list({ userId: user?.id }),
+    queryFn: async () => {
+      const response = await LivestockTradingAPI.Locations.All.Request({
+        sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
+        filters: [
+          {
+            key: "userId",
+            type: "guid",
+            isUsed: true,
+            values: [user!.id],
+            min: {},
+            max: {},
+            conditionType: "equals",
+          },
+        ],
+        pageRequest: { currentPage: 1, perPageCount: 50, listAll: false },
+      });
+      return response.map((l) => ({ id: l.id, name: l.name, city: l.city }));
+    },
+    enabled: !!user?.id,
+  });
+
   // Fetch farms for this seller
   const { data: farmsRaw = [], isLoading } = useQuery({
     queryKey: queryKeys.farms.list({ sellerId }),
@@ -136,6 +160,7 @@ export default function FarmsPage() {
     name: "",
     description: "",
     registrationNumber: "",
+    locationId: "",
     type: FarmType.Livestock,
     totalAreaHectares: "",
     cultivatedAreaHectares: "",
@@ -167,6 +192,7 @@ export default function FarmsPage() {
         name: detail.name,
         description: detail.description || "",
         registrationNumber: detail.registrationNumber || "",
+        locationId: detail.locationId || "",
         type: detail.type,
         totalAreaHectares: detail.totalAreaHectares ? String(detail.totalAreaHectares) : "",
         cultivatedAreaHectares: detail.cultivatedAreaHectares ? String(detail.cultivatedAreaHectares) : "",
@@ -175,8 +201,8 @@ export default function FarmsPage() {
       });
       setEditingId(farmId);
       setShowForm(true);
-    } catch {
-      toast.error(t("fetchError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("fetchError"));
     }
   };
 
@@ -194,7 +220,7 @@ export default function FarmsPage() {
           description: data.description || "",
           registrationNumber: data.registrationNumber || "",
           sellerId,
-          locationId: detail.locationId,
+          locationId: data.locationId,
           type: data.type,
           totalAreaHectares: data.totalAreaHectares ? parseFloat(data.totalAreaHectares) : undefined,
           cultivatedAreaHectares: data.cultivatedAreaHectares ? parseFloat(data.cultivatedAreaHectares) : undefined,
@@ -213,7 +239,7 @@ export default function FarmsPage() {
           description: data.description || "",
           registrationNumber: data.registrationNumber || "",
           sellerId,
-          locationId: "00000000-0000-0000-0000-000000000000",
+          locationId: data.locationId,
           type: data.type,
           totalAreaHectares: data.totalAreaHectares ? parseFloat(data.totalAreaHectares) : undefined,
           cultivatedAreaHectares: data.cultivatedAreaHectares ? parseFloat(data.cultivatedAreaHectares) : undefined,
@@ -229,8 +255,8 @@ export default function FarmsPage() {
       resetForm();
 
       queryClient.invalidateQueries({ queryKey: queryKeys.farms.list({ sellerId }) });
-    } catch {
-      toast.error(t("saveError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("saveError"));
     } finally {
       setIsSubmitting(false);
     }
@@ -241,8 +267,8 @@ export default function FarmsPage() {
       await LivestockTradingAPI.Farms.Delete.Request({ id: farmId });
       queryClient.invalidateQueries({ queryKey: queryKeys.farms.list({ sellerId }) });
       toast.success(t("deleteSuccess"));
-    } catch {
-      toast.error(t("deleteError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("deleteError"));
     }
   };
 
@@ -334,6 +360,38 @@ export default function FarmsPage() {
                       id="farm-reg"
                       {...register("registrationNumber")}
                     />
+                  </div>
+                  <div>
+                    <Label htmlFor="farm-location">{t("location")}</Label>
+                    <Controller
+                      name="locationId"
+                      control={control}
+                      render={({ field }) => (
+                        <Select
+                          value={field.value}
+                          onValueChange={field.onChange}
+                        >
+                          <SelectTrigger id="farm-location">
+                            <SelectValue placeholder={t("selectLocation")} />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {locations.map((loc) => (
+                              <SelectItem key={loc.id} value={loc.id}>
+                                {loc.name}{loc.city ? ` - ${loc.city}` : ""}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
+                    {errors.locationId && (
+                      <p className="text-sm text-destructive mt-1">{errors.locationId.message}</p>
+                    )}
+                    {locations.length === 0 && (
+                      <p className="text-sm text-muted-foreground mt-1">
+                        <a href="/dashboard/locations" className="text-primary underline">{t("addLocationFirst")}</a>
+                      </p>
+                    )}
                   </div>
                   <div>
                     <Label htmlFor="farm-type">{t("farmTypeLabel")}</Label>

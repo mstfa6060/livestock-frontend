@@ -127,8 +127,8 @@ export default function CategoriesPage() {
       setHasMore(response.length === PAGE_SIZE);
       setExtraPages((prev) => [...prev, ...mapCategories(response)]);
       setCurrentPage(nextPage);
-    } catch {
-      toast.error(t("fetchError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("fetchError"));
     } finally {
       setIsLoadingMore(false);
     }
@@ -155,8 +155,8 @@ export default function CategoriesPage() {
       setDeleteDialogOpen(false);
       setCategoryToDelete(null);
       queryClient.invalidateQueries({ queryKey: queryKeys.categories.all });
-    } catch {
-      toast.error(t("deleteError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("deleteError"));
     }
   };
 
@@ -188,8 +188,8 @@ export default function CategoriesPage() {
         !category.isActive ? t("activateSuccess") : t("deactivateSuccess")
       );
       queryClient.invalidateQueries({ queryKey: queryKeys.categories.all });
-    } catch {
-      toast.error(t("statusError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("statusError"));
     }
   };
 

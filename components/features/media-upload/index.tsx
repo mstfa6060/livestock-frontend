@@ -460,8 +460,8 @@ export function MediaUpload({
 
       onMediaChange(bucketId, newCoverFileId, updatedFiles);
       toast.success(t("deleted"));
-    } catch {
-      toast.error(t("deleteError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("deleteError"));
     }
   };
 
@@ -476,8 +476,8 @@ export function MediaUpload({
       try {
         await setCoverMutation.mutateAsync({ bucketId, fileId });
         toast.success(t("coverUpdated"));
-      } catch {
-        toast.error(t("coverUpdateError"));
+      } catch (error) {
+        toast.error(error instanceof Error ? error.message : t("coverUpdateError"));
       }
     } else {
       toast.success(t("coverUpdated"));

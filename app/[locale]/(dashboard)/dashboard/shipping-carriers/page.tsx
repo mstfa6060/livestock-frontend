@@ -79,8 +79,8 @@ export default function ShippingCarriersPage() {
       });
       setEditingId(carrierId);
       setShowForm(true);
-    } catch {
-      toast.error(t("fetchError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("fetchError"));
     }
   };
 
@@ -102,8 +102,8 @@ export default function ShippingCarriersPage() {
       queryClient.invalidateQueries({
         queryKey: queryKeys.shippingCarriers.all,
       });
-    } catch {
-      toast.error(t("saveError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("saveError"));
     } finally {
       setIsSubmitting(false);
     }
@@ -118,8 +118,8 @@ export default function ShippingCarriersPage() {
         queryKey: queryKeys.shippingCarriers.all,
       });
       toast.success(t("deleteSuccess"));
-    } catch {
-      toast.error(t("deleteError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("deleteError"));
     }
   };
 

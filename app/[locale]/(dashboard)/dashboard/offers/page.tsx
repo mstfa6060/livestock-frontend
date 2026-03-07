@@ -136,8 +136,8 @@ export default function OffersPage() {
       });
       queryClient.invalidateQueries({ queryKey: queryKeys.offers.all });
       toast.success(t("acceptSuccess"));
-    } catch {
-      toast.error(t("actionError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("actionError"));
     } finally {
       setActionLoading(null);
     }
@@ -164,8 +164,8 @@ export default function OffersPage() {
       });
       queryClient.invalidateQueries({ queryKey: queryKeys.offers.all });
       toast.success(t("rejectSuccess"));
-    } catch {
-      toast.error(t("actionError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("actionError"));
     } finally {
       setActionLoading(null);
     }
@@ -191,8 +191,8 @@ export default function OffersPage() {
       });
       queryClient.invalidateQueries({ queryKey: queryKeys.offers.all });
       toast.success(t("withdrawSuccess"));
-    } catch {
-      toast.error(t("actionError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("actionError"));
     } finally {
       setActionLoading(null);
     }

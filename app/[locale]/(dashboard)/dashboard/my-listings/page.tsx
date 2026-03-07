@@ -147,8 +147,8 @@ export default function MyListingsPage() {
       toast.success(t("deleteSuccess"));
       setDeleteDialogOpen(false);
       setProductToDelete(null);
-    } catch {
-      toast.error(t("deleteError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("deleteError"));
     }
   };
 
@@ -199,8 +199,8 @@ export default function MyListingsPage() {
       toast.success(
         newStatus === 1 ? t("publishSuccess") : t("unpublishSuccess")
       );
-    } catch {
-      toast.error(t("statusError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("statusError"));
     }
   };
 

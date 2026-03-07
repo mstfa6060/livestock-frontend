@@ -125,8 +125,8 @@ export default function NewCategoryPage() {
       toast.success(t("createSuccess"));
       queryClient.invalidateQueries({ queryKey: queryKeys.categories.all });
       router.push("/dashboard/categories");
-    } catch {
-      toast.error(t("createError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("createError"));
     } finally {
       setIsSubmitting(false);
     }

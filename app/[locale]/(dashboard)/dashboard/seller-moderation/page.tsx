@@ -89,8 +89,8 @@ export default function SellerModerationPage() {
       await LivestockTradingAPI.Sellers.Verify.Request({ id: sellerId });
       queryClient.invalidateQueries({ queryKey: queryKeys.sellers.lists() });
       toast.success(t("verifySuccess"));
-    } catch {
-      toast.error(t("actionError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("actionError"));
     } finally {
       setActionLoading(null);
     }
@@ -112,8 +112,8 @@ export default function SellerModerationPage() {
       setSuspendingId(null);
       setSuspendReason("");
       toast.success(t("suspendSuccess"));
-    } catch {
-      toast.error(t("actionError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("actionError"));
     } finally {
       setActionLoading(null);
     }

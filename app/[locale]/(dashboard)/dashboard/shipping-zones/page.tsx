@@ -69,8 +69,8 @@ export default function ShippingZonesPage() {
       });
       setEditingId(zoneId);
       setShowForm(true);
-    } catch {
-      toast.error(t("fetchError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("fetchError"));
     }
   };
 
@@ -98,8 +98,8 @@ export default function ShippingZonesPage() {
       queryClient.invalidateQueries({
         queryKey: queryKeys.shippingZones.all,
       });
-    } catch {
-      toast.error(t("saveError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("saveError"));
     } finally {
       setIsSubmitting(false);
     }
@@ -112,8 +112,8 @@ export default function ShippingZonesPage() {
         queryKey: queryKeys.shippingZones.all,
       });
       toast.success(t("deleteSuccess"));
-    } catch {
-      toast.error(t("deleteError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("deleteError"));
     }
   };
 

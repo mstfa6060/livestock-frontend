@@ -60,8 +60,8 @@ export function IconUpload({ value, onChange }: IconUploadProps) {
             : `${AppConfig.FileStorageBaseUrl}${uploaded.path}`;
         onChange(fileUrl);
       }
-    } catch {
-      toast.error(t("uploadError"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("uploadError"));
     } finally {
       setIsUploading(false);
     }
