@@ -584,6 +584,7 @@ export namespace IAMAPI {
 				phoneNumber: string;
 				birthDate?: Date;
 				externalProviderUserId: string;
+				email?: string;
 			}
 			export interface IResponseModel {
 				jwt: string;
