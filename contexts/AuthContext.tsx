@@ -215,10 +215,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   );
 
   const loginWithSocial = useCallback(
-    async ({ provider, token, externalUserId, firstName, surname }: SocialLoginParams) => {
+    async ({ provider, token, externalUserId, firstName, surname, email }: SocialLoginParams) => {
       const response = await IAMAPI.Auth.Login.Request({
         provider: provider,
-        userName: "",
+        userName: email || "",
         password: "",
         token: token,
         platform: IAMAPI.Enums.ClientPlatforms.Web,
@@ -226,6 +226,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         surname: surname || "",
         phoneNumber: "",
         externalProviderUserId: externalUserId,
+        email: email || "",
       });
 
       // Store tokens
