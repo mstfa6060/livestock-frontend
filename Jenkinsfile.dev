@@ -17,6 +17,12 @@ pipeline {
         SERVER_SSH_KEY_ID = 'maden-server-key'
         SERVER_HOST_ID = 'dev-server-host'
 
+        // NEXT_PUBLIC env vars (client-side, not secrets)
+        NEXT_PUBLIC_GOOGLE_CLIENT_ID = '125129858406-3f2dshkik7m37ch5am3v9rtv5p47ad8i.apps.googleusercontent.com'
+        NEXT_PUBLIC_GOOGLE_PLACES_API_KEY = 'AIzaSyCAth2kFsXa9W9uQTftAVpJ9fFaBi76KG0'
+        NEXT_PUBLIC_DEFAULT_COMPANY_ID = '9dae9cbd-82b1-4ead-bd2b-9c5fe5146a2a'
+        NEXT_PUBLIC_SENTRY_DSN = 'https://d6270f5fc5245a74c8c8748626a15f64@o4511000000462848.ingest.de.sentry.io/4511000004001872'
+
         CONTAINER_NAME = 'livestock_dev_web'
         HOST_PORT = '3099'
         CONTAINER_PORT = '3000'
@@ -73,6 +79,10 @@ pipeline {
                                 ${cacheArgs} \
                                 --file Dockerfile \
                                 --build-arg NEXT_PUBLIC_ENVIRONMENT=development \
+                                --build-arg NEXT_PUBLIC_GOOGLE_CLIENT_ID=${NEXT_PUBLIC_GOOGLE_CLIENT_ID} \
+                                --build-arg NEXT_PUBLIC_GOOGLE_PLACES_API_KEY=${NEXT_PUBLIC_GOOGLE_PLACES_API_KEY} \
+                                --build-arg NEXT_PUBLIC_DEFAULT_COMPANY_ID=${NEXT_PUBLIC_DEFAULT_COMPANY_ID} \
+                                --build-arg "NEXT_PUBLIC_SENTRY_DSN=${NEXT_PUBLIC_SENTRY_DSN}" \
                                 --tag ${IMAGE_NAME}:${TAG_SUFFIX} \
                                 --tag ${IMAGE_NAME}:${IMMUTABLE_TAG} \
                                 --label org.opencontainers.image.revision=${GIT_COMMIT} \
