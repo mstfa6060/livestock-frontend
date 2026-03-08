@@ -133,6 +133,11 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Bu e-posta adresi zaten kullanılıyor.",
       USER_USER_NAME_ALREADY_EXISTS: "Bu kullanıcı adı zaten kullanılıyor.",
       USER_COUNTRY_ID_REQUIRED: "Ülke seçimi zorunludur.",
+      RESET_TOKEN_EXPIRED: "Şifre sıfırlama bağlantısının süresi dolmuş. Lütfen yeni bir sıfırlama talebi oluşturun.",
+      RESET_TOKEN_INVALID: "Geçersiz şifre sıfırlama bağlantısı.",
+      LOGIN_RATE_LIMIT_EXCEEDED: "Çok fazla giriş denemesi. Lütfen 15 dakika sonra tekrar deneyin.",
+      OTP_RATE_LIMIT_EXCEEDED: "Çok fazla OTP talebi. Lütfen 15 dakika sonra tekrar deneyin.",
+      FORGOT_PASSWORD_RATE_LIMIT_EXCEEDED: "Çok fazla şifre sıfırlama talebi. Lütfen 15 dakika sonra tekrar deneyin.",
     }
   }
 };
