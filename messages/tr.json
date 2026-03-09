@@ -1674,6 +1674,56 @@
   },
   "metadata": {
     "title": "Livestock Trading - Canli Hayvan Ticaret Platformu",
-    "description": "Dunyanin en guvenilir canli hayvan ticaret platformu. Guvenli ve seffaf hayvan alim satimi."
+    "description": "Dunyanin en guvenilir canli hayvan ticaret platformu. Guvenli ve seffaf hayvan alim satimi.",
+    "pages": {
+      "about": {
+        "title": "Hakkimizda",
+        "description": "Livestock Trading hakkinda bilgi edinin. Guvenilir canli hayvan ticaret platformu."
+      },
+      "contact": {
+        "title": "Iletisim",
+        "description": "Bizimle iletisime gecin. Livestock Trading musteri destek ekibi size yardimci olmaya hazir."
+      },
+      "terms": {
+        "title": "Kullanim Sartlari",
+        "description": "Livestock Trading kullanim sartlari ve kosullari."
+      },
+      "privacy": {
+        "title": "Gizlilik Politikasi",
+        "description": "Livestock Trading gizlilik politikasi. Kisisel verilerinizin nasil korundugunuöogreni."
+      },
+      "products": {
+        "title": "Urunler",
+        "description": "Canli hayvan ilanlarina gozatin. Buyukbas, kucukbas ve daha fazlasi icin guvenilir ilanlar."
+      },
+      "sellers": {
+        "title": "Saticilar",
+        "description": "Guvenilir hayvan saticilarini kesfedi. Dogrulanmis satici profilleri ve degerlendirmeler."
+      },
+      "transporters": {
+        "title": "Nakliyeciler",
+        "description": "Hayvan nakliye firmalarini kesfedi. Guvenli ve profesyonel canli hayvan tasimaciligi."
+      },
+      "search": {
+        "title": "Ara",
+        "description": "Canli hayvan ilanlari arasinda arayin. Filtreleme ve siralama secenekleri ile kolay arama."
+      },
+      "faq": {
+        "title": "Sikca Sorulan Sorular",
+        "description": "Livestock Trading hakkinda sikca sorulan sorular ve cevaplari."
+      },
+      "productDetail": {
+        "title": "{title} - Satilik",
+        "description": "{title} - {city} konumunda satilik. Detayli bilgi ve iletisim icin tiklayiniz."
+      },
+      "sellerDetail": {
+        "title": "{name} - Satici Profili",
+        "description": "{name} satici profili. Degerlendirmeler, ilanlar ve iletisim bilgileri."
+      },
+      "transporterDetail": {
+        "title": "{name} - Nakliyeci Profili",
+        "description": "{name} nakliyeci profili. Hizmet alanlari, degerlendirmeler ve iletisim."
+      }
+    }
   }
 }

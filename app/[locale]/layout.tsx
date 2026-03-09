@@ -7,6 +7,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { locales, defaultLocale, type Locale } from "@/i18n/config";
 import { Providers } from "@/components/providers/Providers";
 import { ErrorCapture } from "@/components/debug/error-capture";
+import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/seo/json-ld";
 import "../globals.css";
 
 const inter = Inter({
@@ -107,6 +108,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
+      <head>
+        <OrganizationJsonLd />
+        <WebSiteJsonLd />
+      </head>
       <body className={`${inter.variable} ${plusJakarta.variable} antialiased`}>
         <a
           href="#main-content"

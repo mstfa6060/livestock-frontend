@@ -871,7 +871,57 @@
   },
   "metadata": {
     "title": "Livestock Trading - Live Animal Trading Platform",
-    "description": "The most trusted live animal trading platform. Buy and sell livestock safely and transparently."
+    "description": "The most trusted live animal trading platform. Buy and sell livestock safely and transparently.",
+    "pages": {
+      "about": {
+        "title": "About Us",
+        "description": "Learn about Livestock Trading. The trusted live animal trading platform."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "description": "Get in touch with us. Livestock Trading support team is ready to help."
+      },
+      "terms": {
+        "title": "Terms of Service",
+        "description": "Livestock Trading terms of service and conditions."
+      },
+      "privacy": {
+        "title": "Privacy Policy",
+        "description": "Livestock Trading privacy policy. Learn how your personal data is protected."
+      },
+      "products": {
+        "title": "Products",
+        "description": "Browse live animal listings. Trusted listings for cattle, sheep, goats and more."
+      },
+      "sellers": {
+        "title": "Sellers",
+        "description": "Discover trusted animal sellers. Verified seller profiles and reviews."
+      },
+      "transporters": {
+        "title": "Transporters",
+        "description": "Find animal transport companies. Safe and professional livestock transportation."
+      },
+      "search": {
+        "title": "Search",
+        "description": "Search through live animal listings. Easy filtering and sorting options."
+      },
+      "faq": {
+        "title": "FAQ",
+        "description": "Frequently asked questions about Livestock Trading."
+      },
+      "productDetail": {
+        "title": "{title} - For Sale",
+        "description": "{title} - For sale in {city}. Click for details and contact information."
+      },
+      "sellerDetail": {
+        "title": "{name} - Seller Profile",
+        "description": "{name} seller profile. Reviews, listings and contact information."
+      },
+      "transporterDetail": {
+        "title": "{name} - Transporter Profile",
+        "description": "{name} transporter profile. Service areas, reviews and contact."
+      }
+    }
   },
   "profile": {
     "title": "Profile Information",
