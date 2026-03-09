@@ -1,10 +1,17 @@
-// All supported locales (matching backend error locales)
+// All supported locales (106 languages)
 export const locales = [
   'en', 'tr', 'ar', 'de', 'es', 'fr', 'pt', 'pt-BR', 'ru', 'zh', 'zh-CN', 'zh-TW', 'ja',
   'ko', 'hi', 'it', 'nl', 'sv', 'no', 'da', 'fi', 'pl', 'cs',
   'el', 'he', 'hu', 'ro', 'sk', 'uk', 'vi', 'id', 'ms', 'th',
   'bn', 'ta', 'te', 'mr', 'fa', 'ur', 'bg', 'hr', 'sr', 'sl',
-  'lt', 'lv', 'et', 'sw', 'af', 'is', 'ga', 'mt', 'am', 'hy'
+  'lt', 'lv', 'et', 'sw', 'af', 'is', 'ga', 'mt', 'am', 'hy',
+  // New 53 languages
+  'az', 'ka', 'kk', 'uz', 'ky', 'tk', 'mn', 'my', 'km', 'lo',
+  'ne', 'si', 'mk', 'sq', 'bs', 'tl', 'zu', 'yo', 'ha', 'ig',
+  'ny', 'sn', 'so', 'mg', 'mi', 'gl', 'ca', 'eu', 'cy', 'gd',
+  'lb', 'fy', 'pa', 'gu', 'kn', 'ml', 'or', 'sd', 'ps', 'ku',
+  'eo', 'ht', 'ceb', 'jw', 'su', 'xh', 'yi', 'be', 'co', 'la',
+  'sm', 'st', 'tg'
 ] as const;
 
 export type Locale = (typeof locales)[number];
@@ -65,11 +72,65 @@ export const languageNames: Record<Locale, string> = {
   ga: 'Gaeilge',
   mt: 'Malti',
   am: 'አማርኛ',
-  hy: 'Հայերեն'
+  hy: 'Հայերեն',
+  // New 53 languages
+  az: 'Azərbaycan',
+  ka: 'ქართული',
+  kk: 'Қазақша',
+  uz: 'Oʻzbek',
+  ky: 'Кыргызча',
+  tk: 'Türkmen',
+  mn: 'Монгол',
+  my: 'မြန်မာ',
+  km: 'ខ្មែរ',
+  lo: 'ລາວ',
+  ne: 'नेपाली',
+  si: 'සිංහල',
+  mk: 'Македонски',
+  sq: 'Shqip',
+  bs: 'Bosanski',
+  tl: 'Filipino',
+  zu: 'isiZulu',
+  yo: 'Yorùbá',
+  ha: 'Hausa',
+  ig: 'Igbo',
+  ny: 'Chichewa',
+  sn: 'chiShona',
+  so: 'Soomaali',
+  mg: 'Malagasy',
+  mi: 'Māori',
+  gl: 'Galego',
+  ca: 'Català',
+  eu: 'Euskara',
+  cy: 'Cymraeg',
+  gd: 'Gàidhlig',
+  lb: 'Lëtzebuergesch',
+  fy: 'Frysk',
+  pa: 'ਪੰਜਾਬੀ',
+  gu: 'ગુજરાતી',
+  kn: 'ಕನ್ನಡ',
+  ml: 'മലയാളം',
+  or: 'ଓଡ଼ିଆ',
+  sd: 'سنڌي',
+  ps: 'پښتو',
+  ku: 'Kurdî',
+  eo: 'Esperanto',
+  ht: 'Kreyòl ayisyen',
+  ceb: 'Cebuano',
+  jw: 'Jawa',
+  su: 'Sunda',
+  xh: 'isiXhosa',
+  yi: 'ייִדיש',
+  be: 'Беларуская',
+  co: 'Corsu',
+  la: 'Latina',
+  sm: 'Gagana Samoa',
+  st: 'Sesotho',
+  tg: 'Тоҷикӣ'
 };
 
 // RTL languages
-export const rtlLocales: Locale[] = ['ar', 'he', 'fa', 'ur'];
+export const rtlLocales: Locale[] = ['ar', 'he', 'fa', 'ur', 'sd', 'ps', 'yi'];
 
 export function isRtlLocale(locale: Locale): boolean {
   return rtlLocales.includes(locale);

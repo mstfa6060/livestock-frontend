@@ -11,17 +11,30 @@
     "back": "戻る",
     "next": "フォワード",
     "close": "近い",
+    "unauthorized": "このページにアクセスする権限がありません。",
     "emailPlaceholder": "ornek@email.com",
     "login": "ログイン",
-    "register": "登録する"
+    "register": "登録する",
+    "previous": "前者",
+    "zoomIn": "ズームイン",
+    "previousImage": "前の画像",
+    "nextImage": "次の画像",
+    "closeLightbox": "ギャラリーを閉じる",
+    "imageLightbox": "画像ギャラリー",
+    "slideN": "スライド{n}",
+    "viewMore": "もっと見る"
   },
   "header": {
     "products": "製品",
     "sellers": "売り手",
+    "transporters": "トランスポーター",
     "about": "私たちについて",
+    "search": "検索",
     "dashboard": "パネル",
     "settings": "設定",
-    "logout": "ログアウト"
+    "logout": "ログアウト",
+    "menu": "メニュー",
+    "language": "言語の選択"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "パスワードを忘れてしまいました。",
       "noAccount": "アカウントをお持ちではありませんか？",
       "register": "登録する",
-      "errorDefault": "ログインに失敗しました。情報をご確認ください。"
+      "errorDefault": "ログインに失敗しました。情報をご確認ください。",
+      "orContinueWith": "または続行",
+      "continueWithGoogle": "Googleで続行",
+      "continueWithApple": "Appleで続けます。",
+      "socialLoginError": "ソーシャルログインに失敗しました。もう一度お試しください。",
+      "appleComingSoon": "もうすぐ",
+      "showPassword": "パスワードを表示",
+      "hidePassword": "パスワードを非表示にする"
     },
     "register": {
       "title": "登録する",
@@ -51,7 +71,17 @@
       "login": "ログイン",
       "passwordMismatch": "パスワードが一致しません。",
       "passwordTooShort": "パスワードは6文字以上である必要があります。",
-      "errorDefault": "登録に失敗しました。もう一度お試しください。"
+      "errorDefault": "登録に失敗しました。もう一度お試しください。",
+      "showPassword": "パスワードを表示",
+      "hidePassword": "パスワードを非表示にする",
+      "passwordStrength": {
+        "minLength": "少なくとも8文字",
+        "uppercase": "大文字（A～Z）",
+        "lowercase": "小文字（a～z）",
+        "number": "数字（0～9）",
+        "special": "特殊文字 (!@#$%)"
+      },
+      "registerSuccess": "アカウントが正常に作成されました。ログインページにリダイレクトされます..."
     },
     "forgotPassword": {
       "title": "パスワードを忘れてしまいました。",
@@ -78,7 +108,9 @@
       "requestNewLink": "新しい接続をリクエストする",
       "passwordMismatch": "パスワードが一致しません。",
       "passwordTooShort": "パスワードは6文字以上である必要があります。",
-      "errorDefault": "パスワードのリセットに失敗しました。接続が無効または期限切れである可能性があります。"
+      "errorDefault": "パスワードのリセットに失敗しました。接続が無効または期限切れである可能性があります。",
+      "showPassword": "パスワードを表示",
+      "hidePassword": "パスワードを非表示にする"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "アクティブ",
       "totalViews": "総視聴回数",
       "thisWeek": "今週",
+      "allTime": "いつでも",
       "favorites": "お気に入り",
       "onYourListings": "あなたの広告で",
+      "savedItems": "登録製品",
       "messages": "メッセージ",
-      "unread": "未読"
+      "notifications": "通知",
+      "unread": "未読",
+      "views": "ビュー",
+      "draft": "下書き",
+      "sold": "販売済み",
+      "pending": "保留中",
+      "awaitingApproval": "承認待ち",
+      "totalSales": "総売上高",
+      "completedSales": "完了した販売",
+      "revenue": "所得",
+      "totalRevenue": "総収入"
     },
     "recentListings": "最新のリスト",
+    "recentActivity": "最近の活動",
     "recentMessages": "最近のメッセージ",
+    "quickLinks": "クイックアクセス",
     "noListings": "まだ広告を追加していません。",
+    "noActivity": "まだアクティビティはありません。",
     "noMessages": "まだメッセージを受け取っていません。",
     "noNotifications": "まだ通知を受け取っていません。",
     "viewAllListings": "すべてのリストを表示",
-    "viewAllMessages": "すべてのメッセージを表示"
+    "viewAllMessages": "すべてのメッセージを表示",
+    "viewNotifications": "通知を表示",
+    "viewFavorites": "お気に入り Gor",
+    "recentlyViewed": "最近閲覧した項目",
+    "fetchError": "パネルデータの読み込み中にエラーが発生しました。"
   },
   "dashboardNav": {
     "overview": "概要",
@@ -115,7 +166,61 @@
     "notifications": "通知",
     "profile": "プロフィール",
     "settings": "設定",
-    "newListing": "新しいリストを追加"
+    "newListing": "新しいリストを追加",
+    "becomeSeller": "販売者になる",
+    "categories": "カテゴリー",
+    "offers": "提案",
+    "deals": "合意",
+    "farms": "私の農場",
+    "transport": "輸送",
+    "moderation": "節度",
+    "sellerModeration": "販売者のモデレーション",
+    "transporterModeration": "キャリアモデレーション",
+    "brands": "ブランド",
+    "transportOffers": "配送見積もり",
+    "healthRecords": "健康記録",
+    "vaccinations": "ワクチン接種者",
+    "shippingCarriers": "運送会社",
+    "shippingZones": "貨物ゾーン",
+    "shippingRates": "送料",
+    "systemSettings": "システム設定",
+    "locations": "私の住所"
+  },
+  "profile": {
+    "title": "プロフィール情報",
+    "description": "ここで個人情報を更新できます。",
+    "personalInfo": "個人情報",
+    "contactInfo": "連絡先",
+    "preferences": "設定",
+    "firstName": "名前",
+    "firstNamePlaceholder": "名前を入力してください",
+    "surname": "姓",
+    "surnamePlaceholder": "姓を入力してください。",
+    "displayName": "表示名",
+    "phone": "電話番号",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "検証済み",
+    "phoneNotVerified": "未確認",
+    "verifyPhone": "電話番号を確認する",
+    "country": "国",
+    "selectCountry": "国を選択",
+    "language": "言語設定",
+    "selectLanguage": "言語を選択",
+    "currency": "通貨",
+    "selectCurrency": "通貨を選択してください。",
+    "saveChanges": "変更を保存",
+    "saving": "保存中...",
+    "saveSuccess": "プロフィール情報が更新されました。",
+    "saveError": "プロフィールの更新中にエラーが発生しました。",
+    "avatar": "プロフィール写真",
+    "changeAvatar": "写真を変更",
+    "removeAvatar": "写真を削除",
+    "currencies": {
+      "try": "トルコリラ",
+      "usd": "米ドル",
+      "eur": "ユーロ",
+      "gbp": "イギリスポンド"
+    }
   },
   "myListings": {
     "title": "私の広告",
@@ -125,35 +230,94 @@
     "fetchError": "広告の読み込み中にエラーが発生しました。",
     "deleteSuccess": "広告は正常に削除されました。",
     "deleteError": "広告の削除中にエラーが発生しました。",
-    "activateSuccess": "広告が有効になりました。",
-    "deactivateSuccess": "リストは非アクティブ化されました。",
+    "publishSuccess": "広告は承認のために送信されました。",
+    "unpublishSuccess": "広告の原稿が完成しました。",
     "statusError": "ステータスの変更中にエラーが発生しました。",
     "filters": {
       "all": "全員",
-      "active": "アクティブ",
       "draft": "下書き",
       "pending": "承認待ち",
+      "active": "アクティブ",
+      "rejected": "拒否されました",
       "sold": "販売済み"
     },
     "actions": {
       "edit": "編集",
       "delete": "消去",
-      "activate": "活性化",
-      "deactivate": "パッシブ構造"
+      "publish": "承認のために送信",
+      "unpublish": "下書き",
+      "menu": "取引"
     },
     "deleteDialog": {
       "title": "広告を削除する",
       "description": "このリストを削除してもよろしいですか? この操作は元に戻せません。",
       "cancel": "キャンセル",
       "confirm": "消去"
-    }
+    },
+    "loadMore": "さらにダウンロード",
+    "loadingMore": "読み込み中..."
   },
   "favorites": {
     "title": "お気に入り",
     "description": "気に入った商品をここでフォローしてください。",
     "noFavorites": "お気に入りの製品はまだ追加されていません。",
     "browseProducts": "製品を見る",
-    "fetchError": "お気に入りの読み込み中にエラーが発生しました。"
+    "fetchError": "お気に入りの読み込み中にエラーが発生しました。",
+    "loadMore": "さらにダウンロード",
+    "loadingMore": "読み込み中..."
+  },
+  "messages": {
+    "title": "メッセージ",
+    "description": "買い手と売り手に連絡を取りましょう。",
+    "noConversations": "まだメッセージを受け取っていません。",
+    "startConversation": "広告について質問するには、広告にアクセスしてください。",
+    "fetchError": "メッセージの読み込み中にエラーが発生しました",
+    "sendError": "メッセージの送信中にエラーが発生しました。",
+    "connectionError": "接続に失敗しました。再試行しています...",
+    "connected": "接続しました",
+    "connecting": "接続中...",
+    "searchPlaceholder": "メッセージを検索します...",
+    "typeMessage": "メッセージを入力してください...",
+    "send": "送信",
+    "sending": "送信中...",
+    "typing": "それは...と書いてあります。",
+    "read": "読む",
+    "delivered": "送信済み",
+    "today": "今日",
+    "yesterday": "昨日",
+    "noMessages": "まだメッセージはありません。会話を始めましょう！",
+    "loadMore": "もっとアップロード",
+    "loadingMessages": "メッセージを読み込んでいます...",
+    "about": "について",
+    "product": "製品",
+    "startNewConversation": "新しい会話を始める",
+    "selectConversation": "会話を選択するか、新しい会話を開始します。",
+    "online": "オンライン",
+    "offline": "オフライン",
+    "lastSeen": "最後に見た場所",
+    "deleteConversation": "会話を削除",
+    "deleteConfirm": "この会話を削除してもよろしいですか?",
+    "deleted": "会話は削除されました。",
+    "defaultUser": "ユーザー",
+    "noResults": "結果が見つかりませんでした。",
+    "newConversation": "新しい会話"
+  },
+  "notifications": {
+    "title": "通知",
+    "description": "通知を表示および管理します。",
+    "markAllAsRead": "すべてを既読にする",
+    "noNotifications": "まだ通知を受け取っていません。",
+    "viewAll": "すべての通知を表示",
+    "today": "今日",
+    "yesterday": "昨日",
+    "older": "古い",
+    "types": {
+      "system": "システム",
+      "message": "メッセージ",
+      "offer": "オファー",
+      "order": "注文",
+      "listing": "広告"
+    }
   },
   "settings": {
     "title": "設定",
@@ -169,7 +333,28 @@
       "passwordMismatch": "新しいパスワードが一致しません。",
       "passwordTooShort": "新しいパスワードは 6 文字以上である必要があります。",
       "sessionError": "セッション情報が見つかりませんでした。",
-      "errorDefault": "パスワードを更新できませんでした。現在のパスワードを確認してください。"
+      "errorDefault": "パスワードを更新できませんでした。現在のパスワードを確認してください。",
+      "showPassword": "パスワードを表示",
+      "hidePassword": "パスワードを非表示にする"
+    },
+    "preferences": {
+      "title": "通知と表示の設定",
+      "description": "通知チャネルと表示設定を管理します。",
+      "notifications": "通知",
+      "emailNotifications": "メール通知",
+      "emailNotificationsDesc": "新しいメッセージや広告の更新に関する電子メール通知を受け取ります。",
+      "smsNotifications": "SMS通知",
+      "smsNotificationsDesc": "重要な通知の SMS メッセージを受信します。",
+      "pushNotifications": "プッシュ通知",
+      "pushNotificationsDesc": "即時更新のプッシュ通知を受信します。",
+      "appearance": "外観",
+      "darkMode": "ダークモード",
+      "darkModeDesc": "ダークテーマに切り替えます。",
+      "saveChanges": "設定を保存",
+      "saving": "保存中...",
+      "saveSuccess": "設定が更新されました。",
+      "saveError": "設定の更新中にエラーが発生しました。",
+      "loadError": "設定を読み込めませんでした。"
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "生きた動物の取引プラットフォーム",
       "subtitle": "最も信頼できる生きた動物の取引プラットフォーム。牛や羊を安全に売買できます。",
       "cta": "今すぐ始める",
-      "viewListings": "広告を表示"
+      "viewListings": "広告を表示",
+      "searchPlaceholder": "動物を探しましょう...（牛、羊、ヤギ...）"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "注目の広告",
       "viewAll": "すべてを見る"
+    },
+    "cta": {
+      "title": "今すぐ始める",
+      "subtitle": "何千もの売り手と買い手が出会うプラットフォームに参加しましょう。",
+      "button": "無料で登録する"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "私たちについて",
     "contact": "コミュニケーション",
     "terms": "利用規約",
-    "privacy": "プライバシーポリシー"
+    "privacy": "プライバシーポリシー",
+    "company": "会社",
+    "support": "サポート",
+    "legal": "法律上の",
+    "followUs": "私たちに従ってください",
+    "newsletter": "速報",
+    "newsletterDescription": "最新のリストやプロモーションをお見逃しなく。",
+    "subscribe": "購読する",
+    "emailPlaceholder": "あなたのメールアドレス",
+    "tagline": "トルコで最も信頼できる生きた動物の取引プラットフォーム。",
+    "sellers": "売り手",
+    "products": "製品",
+    "map": "地図",
+    "appleLoginComingSoon": "Apple でのログインはまもなく有効になります。",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "よくある質問"
+  },
+  "faq": {
+    "title": "よくある質問",
+    "description": "当社のプラットフォームに関するよくある質問への回答。",
+    "noFaqs": "まだ質問は追加されていません。"
+  },
+  "about": {
+    "title": "私たちについて",
+    "subtitle": "トルコで最も信頼できる生きた動物の取引プラットフォーム。",
+    "mission": {
+      "title": "私たちの使命",
+      "description": "生きた動物の取引をデジタル化することで、生産者と購入者の間に安全で透明性が高く、効率的なつながりを作り出すことを目指しています。"
+    },
+    "vision": {
+      "title": "私たちのビジョン",
+      "description": "農業分野におけるデジタル変革の先駆者となり、生きた動物の取引における世界的なプラットフォームになること。"
+    },
+    "values": {
+      "title": "私たちの価値観",
+      "trust": {
+        "title": "信頼",
+        "description": "透明性と信頼性はあらゆる取引において不可欠です。"
+      },
+      "quality": {
+        "title": "品質",
+        "description": "最高のサービスを提供するために継続的に改善します。"
+      },
+      "innovation": {
+        "title": "革新",
+        "description": "テクノロジーを活用して業界を変革する。"
+      }
+    },
+    "stats": {
+      "users": "登録ユーザー",
+      "sellers": "アクティブセラー",
+      "products": "広告",
+      "transactions": "取引成功"
+    }
+  },
+  "contact": {
+    "title": "コミュニケーション",
+    "subtitle": "ご質問がございましたらお問い合わせください。",
+    "form": {
+      "title": "メールでお問い合わせください",
+      "name": "あなたの名前",
+      "namePlaceholder": "アフメット・ユルマズ",
+      "email": "メール",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "主題",
+      "subjectPlaceholder": "メッセージの件名",
+      "message": "あなたのメッセージ",
+      "messagePlaceholder": "ここにメッセージを書いてください...",
+      "submit": "送信",
+      "submitting": "送信中...",
+      "success": "メッセージは送信されました。できるだけ早くご連絡いたします。",
+      "error": "メッセージの送信中にエラーが発生しました。もう一度お試しください。"
+    },
+    "info": {
+      "title": "連絡先",
+      "address": "住所",
+      "addressValue": "イスタンブール、トルコ",
+      "email": "メール",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "電話",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "勤務時間",
+      "workingHoursValue": "月曜日 - 金曜日: 09:00 - 18:00",
+      "map": "地図"
+    }
+  },
+  "terms": {
+    "title": "利用規約",
+    "lastUpdated": "最終更新日: {日付}",
+    "sections": {
+      "acceptance": {
+        "title": "1. 利用規約の承諾",
+        "content": "本ウェブサイトをご利用いただくことにより、以下の利用規約に同意いただいたものとさせていただきます。これらの利用規約に同意いただけない場合は、本ウェブサイトをご利用いただけません。"
+      },
+      "services": {
+        "title": "2. サービス",
+        "content": "Livestock Tradingは、生きた動物の売買のためのプラットフォームを提供します。プラットフォーム上でのすべての取引は、ユーザーの責任となります。"
+      },
+      "accounts": {
+        "title": "3. ユーザーアカウント",
+        "content": "アカウントを作成するには、正確かつ最新の情報をご提供いただく必要があります。アカウントのセキュリティはお客様の責任となります。"
+      },
+      "prohibited": {
+        "title": "4. 禁止行為",
+        "content": "誤解を招く広告、虚偽の情報、詐欺、違法行為は固く禁じられています。"
+      },
+      "liability": {
+        "title": "5. 責任の制限",
+        "content": "プラットフォームはユーザー間の取引について直接責任を負いません。すべての取引は当事者間で行われます。"
+      },
+      "changes": {
+        "title": "6. 変更",
+        "content": "本利用規約は予告なく変更される場合があります。変更は掲載後直ちに有効となります。"
+      }
+    }
+  },
+  "privacy": {
+    "title": "プライバシーポリシー",
+    "lastUpdated": "最終更新日: {日付}",
+    "sections": {
+      "collection": {
+        "title": "1. 情報収集",
+        "content": "アカウントを作成すると、お名前、メールアドレス、電話番号などの個人情報を収集します。また、サイトの利用状況に関する匿名データを収集する場合もあります。"
+      },
+      "usage": {
+        "title": "2. 情報の利用",
+        "content": "当社が収集する情報は、当社のサービスの提供、お客様のアカウントの管理、セキュリティの確保、パーソナライズされたオファーの提供に使用されます。"
+      },
+      "sharing": {
+        "title": "3. 情報共有",
+        "content": "お客様の個人情報は第三者に販売または貸与されることはありません。また、法的に必要な目的以外でお客様の情報が共有されることはありません。"
+      },
+      "security": {
+        "title": "4. セキュリティ",
+        "content": "お客様のデータを保護するために、業界標準のセキュリティ対策が実施されています。"
+      },
+      "cookies": {
+        "title": "5. クッキー",
+        "content": "当社のウェブサイトでは、ユーザーエクスペリエンスの向上のためCookieを使用しています。Cookieの設定はブラウザの設定で管理できます。"
+      },
+      "rights": {
+        "title": "6. お客様の権利",
+        "content": "トルコの個人データ保護法 (KVKK) に基づき、お客様には個人データにアクセスし、修正し、削除する権利があります。"
+      }
+    }
   },
   "products": {
     "title": "製品",
@@ -235,11 +570,19 @@
       "priceDesc": "価格（高から安）",
       "popular": "最も人気のある"
     },
+    "pagination": {
+      "prev": "前者",
+      "next": "次"
+    },
     "status": {
       "draft": "下書き",
+      "pending": "承認待ち",
       "active": "アクティブ",
+      "inactive": "受け身",
+      "outOfStock": "在庫切れ",
+      "expired": "彼の任期は終了した。",
       "sold": "販売済み",
-      "pending": "承認待ち"
+      "rejected": "拒否されました"
     },
     "condition": {
       "new": "新しい",
@@ -250,12 +593,16 @@
     "outOfStock": "在庫切れ",
     "inStock": "在庫あり",
     "noResults": "商品が見つかりません。",
-    "loading": "製品を読み込んでいます...",
+    "loading": "商品を読み込み中です...",
     "perPage": "ページあたり",
     "showing": "{from} から {to} までの間の {total} 個の商品の合計。",
+    "fetchError": "商品のアップロード中にエラーが発生しました。",
+    "loadMore": "もっと見る",
+    "showingOf": "{count} / {total} 個の商品が表示されています。",
     "loginToFavorite": "お気に入りに追加するにはログインしてください。",
     "addedToFavorites": "お気に入りに追加されました",
-    "removedFromFavorites": "お気に入りから削除されました"
+    "removedFromFavorites": "お気に入りから削除されました",
+    "favoriteError": "お気に入り操作に失敗しました。"
   },
   "productDetail": {
     "addToFavorites": "お気に入りに追加",
@@ -279,16 +626,31 @@
     "maxOrder": "最大注文数",
     "publishedAt": "発行日",
     "views": "閲覧済み",
-    "reviews": "評価",
+    "reviews": {
+      "title": "評価",
+      "reviewCount": "評価",
+      "noReviews": "まだ評価はありません。",
+      "verified": "確認済みの購入者"
+    },
     "similarProducts": "類似製品",
     "sellerProducts": "出品者のその他の商品",
     "contactSeller": "販売者に連絡する",
-    "loginRequired": "お気に入りに追加するにはログインしてください。",
+    "makeOffer": "オファーを提出する",
+    "loginRequired": "この操作を実行するにはログインしてください。",
     "addedToFavorites": "お気に入りに追加されました",
     "removedFromFavorites": "お気に入りから削除されました",
     "linkCopied": "リンクがコピーされました。",
     "messagingComingSoon": "メッセージング機能は近日中にリリース予定です。",
-    "productNotFound": "商品が見つかりません。"
+    "productNotFound": "商品が見つかりません。",
+    "contacting": "連絡中です…",
+    "contactError": "通信に失敗しました。もう一度お試しください。",
+    "noImage": "画像がありません。",
+    "defaultLocation": "七面鳥",
+    "inquiryMessage": "{title}に関する情報を入手したいと思います。",
+    "breadcrumb": {
+      "home": "家",
+      "products": "製品"
+    }
   },
   "seller": {
     "title": "販売者情報",
@@ -300,6 +662,70 @@
     "call": "検索",
     "viewProfile": "プロフィールを見る"
   },
+  "sellers": {
+    "title": "売り手",
+    "description": "信頼できる販売者を見つけましょう。",
+    "search": "販売者を探す...",
+    "sort": "選別",
+    "sortOptions": {
+      "newest": "最新",
+      "mostSales": "ベストセラー",
+      "topRated": "最高得点",
+      "mostProducts": "ほとんどの広告"
+    },
+    "noResults": "販売者が見つかりません。",
+    "loading": "販売者を読み込んでいます...",
+    "showing": "{count} の販売者が見つかりました",
+    "verified": "検証済み",
+    "sales": "販売",
+    "products": "広告",
+    "reviews": "評価",
+    "rating": "ポイント",
+    "viewProducts": "製品を見る",
+    "contactSeller": "メッセージを送信",
+    "memberSince": "{year}からのメンバー",
+    "fetchError": "ベンダーの読み込み中にエラーが発生しました",
+    "detail": {
+      "title": "販売者プロフィール",
+      "about": "について",
+      "businessInfo": "ビジネス情報",
+      "businessName": "会社名",
+      "businessType": "ビジネスツアー",
+      "email": "メール",
+      "phone": "電話",
+      "website": "Webサイト",
+      "description": "説明",
+      "policies": "ポリシー",
+      "returnPolicy": "返品規則",
+      "shippingPolicy": "配送ポリシー",
+      "businessHours": "勤務時間",
+      "paymentMethods": "支払い方法",
+      "allProducts": "すべての製品",
+      "stats": {
+        "totalSales": "総売上高",
+        "totalProducts": "合計製品",
+        "totalReviews": "評価",
+        "rating": "ポイント"
+      },
+      "notFound": "販売者が見つかりません。",
+      "backToList": "売り手へのドン",
+      "contactInfo": "コミュニケーション",
+      "noProducts": "この出品者はまだ商品を出品していません。",
+      "noPolicies": "販売者はポリシーをまだ定義していません。",
+      "fetchError": "販売者情報のアップロード中にエラーが発生しました。",
+      "productsLoadError": "販売者の商品のアップロード中にエラーが発生しました。",
+      "reviewsTab": "評価",
+      "reviews": {
+        "summary": "評価概要",
+        "reviewCount": "評価",
+        "communication": "コミュニケーション",
+        "shippingSpeed": "配送速度",
+        "productQuality": "製品の品質",
+        "noReviews": "まだ評価はありません。",
+        "verified": "確認済みの購入者"
+      }
+    }
+  },
   "editListing": {
     "title": "広告を編集する",
     "saveChanges": "変更を保存",
@@ -307,6 +733,10 @@
     "updateSuccess": "広告は正常に更新されました。",
     "updateFailed": "リストの更新中にエラーが発生しました。",
     "loadError": "広告の読み込み中にエラーが発生しました。",
+    "sellerNotFound": "販売者プロフィールが見つかりません。",
+    "sellerLoadError": "販売者プロフィールを読み込めませんでした。",
+    "userNotFound": "ユーザー情報が見つかりません。再度ログインしてください。",
+    "locationNotFound": "位置情報が見つかりませんでした。ページを更新してください。",
     "basicInfo": "基本情報",
     "categoryAndCondition": "カテゴリーとステータス",
     "pricing": "価格",
@@ -314,6 +744,8 @@
     "images": "画像",
     "existingImages": "利用可能な画像",
     "addImage": "画像を追加",
+    "maxImages": "最大10枚の画像をアップロードできます。",
+    "imageHint": "最低1枚、最大10枚の画像。PNG、JPG、またはWEBP形式。",
     "uploadingImages": "画像を読み込んでいます...",
     "uploadingImage": "画像を読み込んでいます。",
     "imageUploadFailed": "画像を読み込めませんでした。",
@@ -358,6 +790,7 @@
     "addImage": "画像を追加",
     "maxImages": "最大10枚の画像をアップロードできます。",
     "imageHint": "最低1枚、最大10枚の画像。PNG、JPG、またはWEBP形式。",
+    "location": "位置情報",
     "fields": {
       "title": "広告タイトル",
       "shortDescription": "簡単な説明",
@@ -370,13 +803,29 @@
       "shippingAvailable": "配送も可能です。",
       "shippingCost": "送料",
       "weight": "重さ",
-      "weightUnit": "重量の単位"
+      "weightUnit": "重量の単位",
+      "city": "市",
+      "address": "住所",
+      "postalCode": "郵便番号"
     },
     "placeholders": {
       "title": "例: 2歳のホルスタイン牛",
       "shortDescription": "製品の説明（最大200文字）",
       "description": "製品に関する詳細な情報を提供します...",
-      "category": "カテゴリを選択してください。"
+      "category": "カテゴリを選択してください。",
+      "city": "街に入る",
+      "address": "完全な住所を入力してください。",
+      "postalCode": "郵便番号"
+    },
+    "errors": {
+      "titleRequired": "広告タイトルは必須です。",
+      "shortDescriptionRequired": "簡単な説明が必要です。",
+      "descriptionRequired": "詳しい説明が必要です。",
+      "categoryRequired": "カテゴリの選択は必須です。",
+      "priceRequired": "価格は必須です。",
+      "cityRequired": "都市の情報が必要です。",
+      "addressRequired": "住所情報は必須です。",
+      "locationError": "場所の作成中にエラーが発生しました。"
     },
     "success": "広告は正常に作成されました。",
     "error": "広告の作成中にエラーが発生しました。",
@@ -388,24 +837,53 @@
     "draftSaved": "下書きを保存しました",
     "productCreated": "製品が正常に作成されました。",
     "creationFailed": "製品を作成できませんでした。もう一度お試しください。",
-    "errors": {
-      "titleRequired": "広告タイトルは必須です。",
-      "shortDescriptionRequired": "簡単な説明が必要です。",
-      "descriptionRequired": "詳しい説明が必要です。",
-      "categoryRequired": "カテゴリの選択は必須です。",
-      "priceRequired": "有効な価格を入力してください。"
-    }
+    "userNotFound": "ユーザー情報が見つかりません。再度ログインしてください。",
+    "defaultBusinessName": "私のビジネス"
+  },
+  "becomeSeller": {
+    "title": "販売者になる",
+    "description": "企業声明",
+    "alreadySeller": "すでに販売者プロフィールをお持ちです。",
+    "goToListings": "私のリストを見る",
+    "businessInfo": "ビジネス情報",
+    "contactInfo": "連絡先",
+    "businessName": "会社名",
+    "businessNamePlaceholder": "例: ユルマズ農場",
+    "businessType": "ビジネスツアー",
+    "businessTypePlaceholder": "ビジネスの種類を選択してください。",
+    "businessTypes": {
+      "individual": "個人",
+      "company": "会社",
+      "cooperative": "協同組合",
+      "farm": "農場"
+    },
+    "taxNumber": "納税者番号",
+    "taxNumberPlaceholder": "納税者番号を入力してください（オプション）",
+    "descriptionPlaceholder": "あなたのビジネスについての簡単な説明を書いてください...",
+    "phone": "電話",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Webサイト",
+    "websitePlaceholder": "https://www.examplesite.com（オプション）",
+    "submit": "販売者プロフィールを作成する",
+    "submitting": "プロフィールを作成しています...",
+    "success": "販売者プロフィールが正常に作成されました。",
+    "error": "販売者プロフィールの作成中にエラーが発生しました。",
+    "taxNumberHelp": "10桁または11桁の納税者番号を入力してください（オプション）",
+    "phoneHelp": "例: +90 555 123 45 67 または 0555 123 45 67",
+    "websiteHelp": "例: www.isletmem.com または https://isletmem.com",
+    "alreadySellerDescription": "下のボタンを使用してリストを管理できます。",
+    "newListing": "新しいリストを追加"
   },
   "fileUpload": {
     "dragDrop": "写真またはビデオをアップロードします。",
     "dragDropHint": "ドラッグアンドドロップするか、クリックして選択します。",
     "dropHere": "放っておいて…",
     "imageLimit": "写真: 最大10MB",
-    "videoLimit": "Video: max 100MB",
+    "videoLimit": "ビデオ: 最大100MB",
     "uploadCount": "{現在} / {最大} が読み込まれました",
     "maxFilesError": "最大 {max} 個のメディアをアップロードできます。",
     "imageTooLarge": "写真は10MB未満である必要があります。",
-    "videoTooLarge": "The video must be smaller than 100MB.",
+    "videoTooLarge": "ビデオは100MB未満である必要があります。",
     "optimizing": "最適化しています...",
     "uploading": "読み込み中...",
     "queued": "列に並んで待っています...",
@@ -419,9 +897,833 @@
     "videoBadge": "ビデオ",
     "coverUpdated": "カバー写真の調整が完了しました。",
     "optimizationInfo": "写真はウェブ標準に準拠するように最適化されています",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "視覚的な選択",
+    "changeImage": "変化",
+    "removeImage": "取り除く",
+    "videoProcessing": "ビデオを処理中です...",
+    "videoProcessingFailed": "操作に失敗しました。",
+    "videoProcessingPollError": "ビデオ処理ステータスを取得できませんでした。ページを更新してください。",
+    "reorderError": "ファイルをソートできませんでした。",
+    "coverUpdateError": "カバー写真を更新できませんでした。"
+  },
+  "error": {
+    "title": "エラーが発生しました。",
+    "description": "予期しないエラーが発生しました。ページを更新するか、しばらくしてからもう一度お試しください。",
+    "retry": "もう一度やり直してください",
+    "goBack": "戻らないで",
+    "goHome": "家",
+    "notFound": {
+      "title": "ページが見つかりません",
+      "description": "お探しのページは利用できないか、移動しました。",
+      "goHome": "ホームページに戻る"
+    }
+  },
+  "search": {
+    "title": "検索",
+    "placeholder": "製品、カテゴリ、または販売者を検索します...",
+    "searchButton": "検索",
+    "searchingFor": "募集中",
+    "loading": "募集中...",
+    "resultsCount": "{count} 件の結果が見つかりました。",
+    "noResults": "結果が見つかりませんでした。",
+    "tryDifferentSearch": "別のキーワードを試すか、フィルターを変更してください。",
+    "filters": {
+      "title": "フィルター",
+      "category": "カテゴリ",
+      "allCategories": "すべてのカテゴリー",
+      "condition": "状況",
+      "allConditions": "すべてのケース",
+      "priceRange": "価格帯",
+      "price": "価格",
+      "min": "分",
+      "max": "マックス",
+      "apply": "適用する",
+      "clear": "クリーン",
+      "clearAll": "すべてクリア"
+    },
+    "fetchError": "検索結果の読み込み中にエラーが発生しました",
+    "recentSearches": "最近の検索",
+    "clearHistory": "履歴を消去",
+    "noSearchHistory": "検索履歴はまだありません。",
+    "deleteHistoryError": "検索履歴の削除中にエラーが発生しました。"
+  },
+  "categories": {
+    "title": "カテゴリーマネジメント",
+    "description": "ここからカテゴリを管理します。",
+    "noCategories": "カテゴリはまだ追加されていません。",
+    "createFirst": "最初のカテゴリを作成します。",
+    "fetchError": "カテゴリの読み込み中にエラーが発生しました。",
+    "createSuccess": "カテゴリが正常に作成されました",
+    "createError": "カテゴリの作成中にエラーが発生しました。",
+    "updateSuccess": "カテゴリが正常に更新されました",
+    "updateError": "カテゴリの更新中にエラーが発生しました。",
+    "deleteSuccess": "カテゴリは正常に削除されました。",
+    "deleteError": "カテゴリの削除中にエラーが発生しました。",
+    "activateSuccess": "カテゴリが有効化されました。",
+    "deactivateSuccess": "カテゴリは非アクティブ化されました。",
+    "statusError": "ステータスの変更中にエラーが発生しました。",
+    "loadError": "カテゴリの読み込み中にエラーが発生しました",
+    "filters": {
+      "all": "全員",
+      "active": "アクティブ",
+      "inactive": "非アクティブ"
+    },
+    "table": {
+      "name": "カテゴリ名",
+      "slug": "スラッグ",
+      "sortOrder": "シリアルナンバー",
+      "subCategories": "サブカテゴリ",
+      "status": "状況",
+      "actions": "取引"
+    },
+    "actions": {
+      "edit": "編集",
+      "delete": "消去",
+      "activate": "活性化",
+      "deactivate": "パッシブ構造"
+    },
+    "deleteDialog": {
+      "title": "カテゴリを削除",
+      "description": "このカテゴリを削除してもよろしいですか? この操作は元に戻せません。",
+      "cancel": "キャンセル",
+      "confirm": "消去"
+    },
+    "addNew": "新しいカテゴリを追加",
+    "loadMore": "さらにダウンロード",
+    "loadingMore": "読み込み中...",
+    "form": {
+      "newTitle": "新しいカテゴリーを作成する",
+      "editTitle": "カテゴリを編集",
+      "name": "カテゴリ名",
+      "namePlaceholder": "例: 牛",
+      "slug": "スラッグ",
+      "slugPlaceholder": "例: 大型家畜",
+      "description": "説明",
+      "descriptionPlaceholder": "カテゴリの簡単な説明...",
+      "parentCategory": "上位カテゴリー",
+      "parentCategoryPlaceholder": "上位カテゴリを選択してください（オプション）",
+      "noParent": "トップカテゴリなし（メインカテゴリ）",
+      "sortOrder": "シーケンス番号",
+      "isActive": "アクティブ",
+      "iconUrl": "アイコンURL",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "保存",
+      "submitting": "保存中...",
+      "updating": "更新中...",
+      "errors": {
+        "nameRequired": "カテゴリ名は必須です。",
+        "slugRequired": "ナメクジは必須です。"
+      }
+    }
+  },
+  "offers": {
+    "title": "提案",
+    "description": "受信オファーと送信オファーを管理します。",
+    "received": "受信オファー",
+    "sent": "提出されたオファー",
+    "noReceivedOffers": "まだオファーは受け取っていません。",
+    "noSentOffers": "まだオファーを送信していません。",
+    "browseProducts": "製品を見る",
+    "viewProduct": "製品を見る",
+    "accept": "受け入れる",
+    "reject": "拒否する",
+    "withdraw": "撤回する",
+    "makeOffer": "オファーを提出する",
+    "sendOffer": "オファーを送信",
+    "sending": "送信中...",
+    "cancel": "キャンセル",
+    "listingPrice": "広告価格",
+    "yourOffer": "あなたのオファー",
+    "quantity": "額",
+    "messageOptional": "メッセージ（任意）",
+    "messagePlaceholder": "販売者と共有したいメモ...",
+    "expiresAt": "最終有効日",
+    "offerSent": "オファーは正常に送信されました。",
+    "offerError": "オファーの送信中にエラーが発生しました。",
+    "acceptSuccess": "その申し出は受け入れられた。",
+    "rejectSuccess": "その申し出は拒否されました。",
+    "withdrawSuccess": "その申し出は撤回された。",
+    "actionError": "プロセス中にエラーが発生しました。",
+    "fetchError": "オファーの読み込み中にエラーが発生しました。",
+    "loginRequired": "入札するにはログインしてください。",
+    "invalidPrice": "有効な価格を入力してください。",
+    "invalidQuantity": "有効な金額を入力してください。",
+    "status": {
+      "pending": "保留中",
+      "accepted": "承認済み",
+      "rejected": "拒否されました",
+      "countered": "反対提案",
+      "expired": "任期は終了しました。",
+      "withdrawn": "撤退"
+    }
+  },
+  "deals": {
+    "title": "合意",
+    "description": "購入契約に従ってください。",
+    "buying": "学者",
+    "selling": "販売",
+    "noBuyingDeals": "学生登録手続きはまだありません。",
+    "noSellingDeals": "まだ販売取引はありません。",
+    "browseProducts": "製品を見る",
+    "viewProduct": "製品を見る",
+    "activeDeals": "アクティブな契約",
+    "completedDeals": "完了",
+    "purchases": "学者",
+    "sales": "販売",
+    "fetchError": "契約書の読み込み中にエラーが発生しました",
+    "dealStatus": {
+      "pending": "保留中",
+      "confirmed": "確認済み",
+      "processing": "準備中",
+      "shipped": "貨物の中で",
+      "delivered": "配達済み",
+      "completed": "完了",
+      "cancelled": "キャンセル",
+      "disputed": "合意"
+    },
+    "delivery": {
+      "pickup": "手渡し",
+      "shipping": "貨物で",
+      "transport": "交通機関"
+    },
+    "requestTransport": "発送リクエスト"
+  },
+  "farms": {
+    "title": "私の農場",
+    "description": "農場を管理および更新します。",
+    "addFarm": "ファームを追加",
+    "editFarm": "農場経営",
+    "noFarms": "まだ農場を追加していません。",
+    "farmName": "農場名",
+    "registrationNumber": "登録番号",
+    "location": "位置",
+    "selectLocation": "場所を選択します。",
+    "addLocationFirst": "まず、場所を追加します。",
+    "farmTypeLabel": "農場ツアー",
+    "farmDescription": "説明",
+    "totalArea": "総面積",
+    "cultivatedArea": "耕作地",
+    "certifications": "証明書",
+    "certificationsPlaceholder": "ISO 22000、GlobalGAPなど",
+    "organic": "オーガニック",
+    "verified": "検証済み",
+    "save": "保存",
+    "saving": "保存中...",
+    "cancel": "キャンセル",
+    "edit": "編集",
+    "delete": "消去",
+    "sellerRequired": "販売者プロフィールが必要です",
+    "sellerRequiredDesc": "農場を追加するには、まず販売者プロフィールを作成する必要があります。",
+    "becomeSeller": "販売者になる",
+    "createSuccess": "ファームが正常に追加されました。",
+    "updateSuccess": "ファームは正常に更新されました。",
+    "deleteSuccess": "ファームは正常に削除されました。",
+    "saveError": "ファームの登録中にエラーが発生しました。",
+    "deleteError": "ファームの削除中にエラーが発生しました。",
+    "fetchError": "ファーム情報のアップロード中にエラーが発生しました。",
+    "farmType": {
+      "livestock": "畜産",
+      "crop": "農業",
+      "mixed": "混合",
+      "poultry": "翼のある",
+      "dairy": "酪農",
+      "aquaculture": "水産物"
+    }
+  },
+  "transporters": {
+    "title": "トランスポーター",
+    "description": "動物および製品の輸送サービス",
+    "searchPlaceholder": "トランスポーターを探します...",
+    "noTransporters": "登録済みの運送業者はまだありません。",
+    "verified": "検証済み",
+    "transports": "輸送",
+    "viewProfile": "プロフィールを見る",
+    "sort": {
+      "newest": "最新",
+      "rating": "最高得点",
+      "mostTransports": "最も頻繁な配送"
+    },
+    "pagination": {
+      "previous": "前者",
+      "next": "次",
+      "page": "ページ {page}"
+    }
+  },
+  "transport": {
+    "title": "発送リクエスト",
+    "description": "発送リクエストを追跡します。",
+    "findTransporter": "トランスポーターを探す",
+    "active": "アクティブ",
+    "completed": "完了",
+    "total": "合計",
+    "asSeller": "販売者として",
+    "asBuyer": "購入者として",
+    "noSellerRequests": "販売者として、配送要件はありません。",
+    "noBuyerRequests": "受取人として、発送リクエストはありません。",
+    "viewProduct": "製品を見る",
+    "pickup": "受け取る",
+    "delivery": "配達",
+    "urgent": "緊急",
+    "fetchError": "発送リクエストのアップロード中にエラーが発生しました。",
+    "trackShipment": "フォローする",
+    "transportStatus": {
+      "pending": "保留中",
+      "inPool": "プールで",
+      "assigned": "任命",
+      "pickedUp": "レシート",
+      "inTransit": "路上で",
+      "delivered": "配達済み",
+      "completed": "完了",
+      "cancelled": "キャンセル"
+    },
+    "transportType": {
+      "standard": "標準",
+      "refrigerated": "コールドチェーン",
+      "liveAnimal": "生きた動物",
+      "hazardous": "危険物",
+      "oversized": "大きいサイズ"
+    }
+  },
+  "moderation": {
+    "title": "製品のモデレーション",
+    "description": "承認待ちの製品を確認します。",
+    "pending": "待っている",
+    "allClear": "すべての製品は検査済みです。",
+    "noPending": "承認待ちの製品はありません。",
+    "awaitingReview": "審査待ち",
+    "by": "営業担当者:",
+    "stock": "ストック",
+    "preview": "あなたと",
+    "approve": "確認する",
+    "reject": "拒否する",
+    "confirmReject": "拒否する",
+    "cancelReject": "あきらめる",
+    "rejectReasonPlaceholder": "拒否の理由を書き留めてください...",
+    "rejectReasonRequired": "拒否の理由は必須です。",
+    "approveSuccess": "製品は正常に承認されました。",
+    "rejectSuccess": "製品は拒否されました。",
+    "actionError": "プロセス中にエラーが発生しました。",
+    "fetchError": "商品のアップロード中にエラーが発生しました。",
+    "unauthorized": "このページにアクセスする権限がありません。"
+  },
+  "sellerModeration": {
+    "title": "販売者のモデレーション",
+    "description": "販売者アカウントを確認して管理します。",
+    "pending": "待っている",
+    "allClear": "すべての販売者が調査されました。",
+    "noPending": "待っている売り手はいません。",
+    "verify": "確認する",
+    "suspend": "つるす",
+    "verifySuccess": "販売者は正常に確認されました。",
+    "suspendSuccess": "販売者が停止されました。",
+    "actionError": "プロセス中にエラーが発生しました。",
+    "suspendReasonRequired": "停止理由は必須です。",
+    "suspendReasonPlaceholder": "停止の理由を書いてください。",
+    "confirmSuspend": "つるす",
+    "cancelSuspend": "あきらめる",
+    "statusLabels": {
+      "pendingVerification": "検証待ち",
+      "active": "アクティブ",
+      "suspended": "吊り下げ",
+      "banned": "禁断"
+    },
+    "filterAll": "すべて表示",
+    "filterPending": "待っている人たち",
+    "filterActive": "資産",
+    "filterSuspended": "一時停止中",
+    "unauthorized": "このページにアクセスする権限がありません。",
+    "businessName": "会社名",
+    "businessType": "ビジネスツアー",
+    "email": "メール",
+    "phone": "電話",
+    "status": "状況",
+    "createdAt": "登録日"
+  },
+  "transporterModeration": {
+    "title": "キャリアモデレーション",
+    "description": "キャリアアカウントを確認および管理します。",
+    "pending": "待っている",
+    "allClear": "すべてのトランスポーターが調査されました。",
+    "noPending": "待機しているトランスポーターはいません。",
+    "verify": "確認する",
+    "suspend": "つるす",
+    "verifySuccess": "トランスポーターが正常に検証されました。",
+    "suspendSuccess": "トランスポーターは停止されました。",
+    "actionError": "プロセス中にエラーが発生しました。",
+    "suspendReasonRequired": "停止理由は必須です。",
+    "suspendReasonPlaceholder": "停止の理由を書いてください。",
+    "confirmSuspend": "つるす",
+    "cancelSuspend": "あきらめる",
+    "statusLabels": {
+      "pendingVerification": "検証待ち",
+      "active": "アクティブ",
+      "suspended": "吊り下げ",
+      "banned": "禁断"
+    },
+    "filterAll": "すべて表示",
+    "filterPending": "待っている人たち",
+    "filterActive": "資産",
+    "filterSuspended": "一時停止中",
+    "unauthorized": "このページにアクセスする権限がありません。",
+    "companyName": "会社名",
+    "contactPerson": "権限のある人物",
+    "email": "メール",
+    "phone": "電話",
+    "city": "市",
+    "status": "状況",
+    "createdAt": "登録日"
+  },
+  "transporterDetail": {
+    "notFound": "トランスポーターが見つかりませんでした。",
+    "backToList": "ドンから運送業者へ",
+    "verified": "検証済み",
+    "totalTransports": "送料合計",
+    "completed": "完了",
+    "about": "について",
+    "contact": "連絡先",
+    "businessInfo": "ビジネス情報",
+    "license": "ライセンス番号",
+    "insurance": "保険情報",
+    "fleet": "艦隊情報",
+    "serviceRegions": "サービスエリア",
+    "specializations": "専門分野",
+    "certifications": "証明書"
+  },
+  "brands": {
+    "title": "ブランド管理",
+    "description": "製品ブランドを管理します。",
+    "addBrand": "ブランドを追加",
+    "editBrand": "ブランドを編集",
+    "noBrands": "まだブランドが追加されていません。",
+    "brandName": "ブランド名",
+    "brandDescription": "説明",
+    "website": "Webサイト",
+    "logoUrl": "ロゴURL",
+    "save": "保存",
+    "saving": "保存中...",
+    "cancel": "キャンセル",
+    "edit": "編集",
+    "delete": "消去",
+    "inactive": "受け身",
+    "products": "製品",
+    "createSuccess": "ブランドが正常に追加されました",
+    "updateSuccess": "ブランドは正常に更新されました。",
+    "deleteSuccess": "ブランドは正常に削除されました。",
+    "saveError": "商標登録中にエラーが発生しました。",
+    "deleteError": "商標の削除中にエラーが発生しました。",
+    "fetchError": "ブランドの読み込み中にエラーが発生しました",
+    "unauthorized": "このページにアクセスする権限がありません。"
+  },
+  "transporterReviews": {
+    "title": "評価",
+    "reviewCount": "評価",
+    "noReviews": "まだ評価はありません。",
+    "timeliness": "時間通りの配達",
+    "communication": "コミュニケーション",
+    "carefulHandling": "慎重な取り扱い",
+    "professionalism": "プロフェッショナリズム"
+  },
+  "transportOffers": {
+    "title": "配送見積もり",
+    "description": "出荷リクエストに対して送信した見積を管理します。",
+    "newOffer": "新しい提案",
+    "transportRequestId": "配送リクエストID",
+    "requestIdPlaceholder": "発送依頼IDを入力してください。",
+    "offeredPrice": "提示価格",
+    "estimatedDays": "推定所要時間（日数）",
+    "days": "日",
+    "vehicleType": "車両タイプ",
+    "insuranceIncluded": "保険込み",
+    "message": "メッセージ",
+    "cancel": "キャンセル",
+    "sending": "送信中...",
+    "sendOffer": "オファーを送信",
+    "cancelOffer": "キャンセル",
+    "pendingTab": "待っている",
+    "historyTab": "過去",
+    "noPendingOffers": "保留中のオファーはありません。",
+    "noHistory": "過去のオファーは見つかりませんでした。",
+    "status": {
+      "pending": "待っている",
+      "accepted": "承認済み",
+      "rejected": "拒否されました",
+      "expired": "任期は終了しました。",
+      "cancelled": "キャンセル"
+    },
+    "createSuccess": "オファーは正常に送信されました。",
+    "createError": "オファーの送信中にエラーが発生しました。",
+    "cancelSuccess": "オファーはキャンセルされました。",
+    "cancelError": "オファーのキャンセル中にエラーが発生しました。",
+    "fetchError": "オファーの読み込み中にエラーが発生しました。"
+  },
+  "animalInfo": {
+    "title": "動物および製品情報",
+    "animalTab": "動物",
+    "healthTab": "健康",
+    "vaccinationsTab": "ワクチン接種者",
+    "veterinaryTab": "獣医",
+    "breed": "人種",
+    "genderLabel": "性別",
+    "gender": {
+      "male": "男",
+      "female": "女性",
+      "unknown": "未知"
+    },
+    "age": "年",
+    "months": "月",
+    "weight": "重さ",
+    "color": "色",
+    "tagNumber": "耳番号",
+    "healthStatus": "健康状態",
+    "health": {
+      "healthy": "健康",
+      "underTreatment": "治療中",
+      "recovering": "彼/彼女は回復しています。",
+      "quarantined": "検疫中",
+      "unknown": "未知"
+    },
+    "purposeLabel": "使用目的",
+    "purpose": {
+      "breeding": "スタッド",
+      "dairy": "牛乳",
+      "meat": "肉",
+      "egg": "卵",
+      "wool": "ウール",
+      "working": "仕事",
+      "pet": "国内",
+      "other": "他の"
+    },
+    "pregnancy": "妊娠",
+    "pregnant": "妊娠中",
+    "microchip": "マイクロチップ番号",
+    "passport": "パスポート番号",
+    "sireDetails": "父親の情報",
+    "damDetails": "主な情報",
+    "diagnosis": "診断",
+    "treatment": "処理",
+    "medications": "薬",
+    "veterinarian": "獣医",
+    "nextDue": "次なる反逆者の歴史",
+    "prescriptionRequired": "処方箋が必要",
+    "targetSpecies": "ターゲットツアー",
+    "activeIngredients": "有効成分",
+    "registrationNo": "登録番号",
+    "storage": "ストレージ",
+    "chemicalTab": "化学薬品",
+    "feedTab": "餌",
+    "seedTab": "シード",
+    "machineryTab": "機械",
+    "organic": "オーガニック",
+    "toxicity": "毒性",
+    "gmoFree": "GMOフリー",
+    "protein": "タンパク質",
+    "fat": "油",
+    "fiber": "ファイバ",
+    "hybrid": "ハイブリッド",
+    "germination": "発芽",
+    "daysToMaturity": "成熟",
+    "daysLabel": "日",
+    "warranty": "保証",
+    "power": "強さ",
+    "hoursUsed": "利用時間",
+    "hours": "時間",
+    "powerSource": "電源"
+  },
+  "productVariants": {
+    "title": "製品バリエーション",
+    "variantCount": "変異体",
+    "inStock": "在庫あり",
+    "outOfStock": "完売"
+  },
+  "productPrices": {
+    "title": "価格（複数通貨）",
+    "autoConversion": "自動変換",
+    "validUntil": "有効"
+  },
+  "requestTransport": {
+    "title": "配送リクエストを作成する",
+    "pickupLocation": "積載ポイント",
+    "deliveryLocation": "配達ポイント",
+    "city": "市",
+    "address": "住所",
+    "transportType": "交通ツアー",
+    "types": {
+      "standard": "標準",
+      "refrigerated": "コールドチェーン",
+      "liveAnimal": "生きた動物",
+      "hazardous": "危険物",
+      "oversized": "大きいサイズ"
+    },
+    "weight": "重量（kg）",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "希望アップロード日",
+    "preferredDeliveryDate": "希望配達日",
+    "urgent": "緊急輸送",
+    "specialInstructions": "特別な指示",
+    "instructionsPlaceholder": "ここに具体的な指示を記入してください...",
+    "cancel": "あきらめる",
+    "submit": "需要を創出する",
+    "submitting": "創作の途中ですが…",
+    "success": "発送リクエストが正常に作成されました。",
+    "error": "発送リクエストの作成中にエラーが発生しました。"
+  },
+  "transportTracking": {
+    "title": "発送追跡",
+    "noTracking": "追跡情報はまだ利用できません。",
+    "update": "アップデート"
+  },
+  "locations": {
+    "title": "私の住所",
+    "description": "登録したアドレスを管理します。",
+    "addLocation": "住所を追加",
+    "editLocation": "住所を編集",
+    "noLocations": "登録住所がまだありません。",
+    "name": "住所名",
+    "namePlaceholder": "例: 家、仕事、農場",
+    "address": "住所",
+    "addressLine2": "住所2",
+    "city": "市",
+    "state": "地区/地域",
+    "postalCode": "郵便番号",
+    "phone": "電話",
+    "email": "メール",
+    "cancel": "あきらめる",
+    "save": "保存",
+    "saving": "保存中...",
+    "typePickup": "読み込み中",
+    "typeDelivery": "配達",
+    "typeBoth": "一般的な",
+    "createSuccess": "アドレスが正常に追加されました。",
+    "createError": "アドレスの追加中にエラーが発生しました。",
+    "updateSuccess": "アドレスは正常に更新されました。",
+    "updateError": "アドレスの更新中にエラーが発生しました。",
+    "deleteLocation": "アドレスを削除",
+    "deleteSuccess": "住所を削除しました",
+    "deleteError": "アドレスの削除中にエラーが発生しました。",
+    "fetchError": "アドレスの読み込み中にエラーが発生しました。"
+  },
+  "systemSettings": {
+    "title": "システム設定",
+    "description": "プラットフォームの通貨、言語、支払い方法、配送、税金の設定を表示します。",
+    "unauthorized": "このページにアクセスする権限がありません。",
+    "currenciesTab": "通貨",
+    "languagesTab": "言語",
+    "paymentTab": "支払い方法",
+    "shippingTab": "貨物",
+    "taxTab": "税",
+    "active": "アクティブ",
+    "inactive": "受け身",
+    "default": "デフォルト",
+    "noCurrencies": "通貨はまだ定義されていません。",
+    "noLanguages": "言語はまだ定義されていません。",
+    "noPaymentMethods": "支払い方法はまだ定義されていません。",
+    "noCarriers": "配送会社はまだ特定されていません。",
+    "noZones": "貨物エリアはまだ定義されていません。",
+    "noTaxRates": "税率はまだ定義されていません。",
+    "carriers": "運送会社",
+    "zones": "貨物ゾーン",
+    "countries": "国",
+    "rates": "送料",
+    "noRates": "送料はまだ確定していません。",
+    "freeShipping": "送料無料",
+    "deliveryDays": "配達時間"
+  },
+  "pushPermission": {
+    "title": "通知を有効にする",
+    "description": "新しいメッセージ、オファー、注文の更新に関する通知を受け取ります。",
+    "allow": "許可する",
+    "dismiss": "近い"
+  },
+  "healthRecords": {
+    "title": "健康記録",
+    "description": "動物の健康記録と病歴を管理します。",
+    "addRecord": "レコードを追加",
+    "editRecord": "記録を編集",
+    "deleteRecord": "レコードを削除",
+    "noRecords": "健康記録はまだ追加されていません。",
+    "animalInfoId": "動物ID",
+    "animalInfoIdPlaceholder": "動物情報IDを入力してください。",
+    "recordType": "登録ツアー",
+    "recordTypePlaceholder": "例: 検査、治療、手術",
+    "recordDate": "登録日",
+    "followUpDate": "日付を確認",
+    "veterinarianName": "獣医",
+    "veterinarianLicense": "ライセンス番号",
+    "clinicName": "臨床",
+    "diagnosis": "診断",
+    "treatment": "処理",
+    "medications": "薬",
+    "medicationsPlaceholder": "例：ペニシリン500mg、イブプロフェン",
+    "notes": "注記",
+    "documentUrl": "ドキュメントURL",
+    "saving": "保存中...",
+    "createSuccess": "健康記録が正常に追加されました。",
+    "updateSuccess": "健康記録が正常に更新されました。",
+    "deleteSuccess": "健康記録は正常に削除されました。",
+    "saveError": "レコードの保存中にエラーが発生しました。",
+    "deleteError": "レコードの削除中にエラーが発生しました。",
+    "fetchError": "レコードの読み込み中にエラーが発生しました"
+  },
+  "vaccinations": {
+    "title": "ワクチン記録",
+    "description": "動物のワクチン接種記録とカレンダーを管理します。",
+    "addVaccination": "反乱軍を追加",
+    "editVaccination": "反乱軍の取り決め",
+    "deleteVaccination": "反逆者シル",
+    "noVaccinations": "ワクチン接種記録はまだ追加されていません。",
+    "animalInfoId": "動物ID",
+    "animalInfoIdPlaceholder": "動物情報IDを入力してください。",
+    "vaccineName": "アシ・アディ",
+    "vaccineNamePlaceholder": "例: SATワクチン、ブルセラ",
+    "vaccineType": "反逆者ツアー",
+    "vaccineTypePlaceholder": "例: ライブ、非アクティブ",
+    "batchNumber": "パーティー番号",
+    "vaccinationDate": "反逆者の歴史",
+    "nextDueDate": "次なる反逆者の歴史",
+    "veterinarianName": "獣医",
+    "veterinarianLicense": "ライセンス番号",
+    "notes": "注記",
+    "certificateUrl": "証明書のURL",
+    "saving": "保存中...",
+    "createSuccess": "ワクチン記録が正常に追加されました。",
+    "updateSuccess": "ワクチン記録が正常に更新されました。",
+    "deleteSuccess": "ワクチン記録が正常に削除されました。",
+    "saveError": "ワクチンの登録中にエラーが発生しました。",
+    "deleteError": "ワクチンの削除中にエラーが発生しました。",
+    "fetchError": "ワクチンの読み込み中にエラーが発生しました。"
+  },
+  "shippingCarriers": {
+    "title": "運送会社",
+    "description": "配送会社の情報を管理します。",
+    "addCarrier": "会社を追加",
+    "editCarrier": "会社を編集",
+    "noCarriers": "配送会社はまだ追加されていません。",
+    "carrierName": "会社名",
+    "carrierNamePlaceholder": "例: Aras Kargo、MNG",
+    "code": "コード",
+    "codePlaceholder": "例: ARAS",
+    "website": "Webサイト",
+    "trackingUrlTemplate": "URLテンプレートに従う",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "サポートされている国",
+    "supportedCountriesPlaceholder": "例: TR、US、DE",
+    "active": "アクティブ",
+    "inactive": "受け身",
+    "saving": "保存中...",
+    "edit": "編集",
+    "delete": "消去",
+    "createSuccess": "配送会社が正常に追加されました。",
+    "updateSuccess": "配送会社が正常に更新されました。",
+    "deleteSuccess": "配送会社は正常に削除されました。",
+    "saveError": "配送会社の登録中にエラーが発生しました。",
+    "deleteError": "配送会社情報の削除中にエラーが発生しました。",
+    "fetchError": "貨物会社の読み込み中にエラーが発生しました。"
+  },
+  "shippingZones": {
+    "title": "貨物ゾーン",
+    "description": "貨物ゾーンとエリアを管理します。",
+    "addZone": "地域を追加",
+    "editZone": "領域を編集",
+    "noZones": "貨物エリアはまだ追加されていません。",
+    "zoneName": "地域名",
+    "zoneNamePlaceholder": "例: ヨーロッパ、北米",
+    "countryCodes": "国コード",
+    "countryCodesPlaceholder": "例: TR、DE、FR",
+    "active": "アクティブ",
+    "inactive": "受け身",
+    "saving": "保存中...",
+    "edit": "編集",
+    "delete": "消去",
+    "createSuccess": "リージョンが正常に追加されました。",
+    "updateSuccess": "リージョンは正常に更新されました。",
+    "deleteSuccess": "当該エリアは無事に掃討されました。",
+    "saveError": "領域の保存中にエラーが発生しました。",
+    "deleteError": "領域の削除中にエラーが発生しました。",
+    "fetchError": "リージョンの読み込み中にエラーが発生しました"
+  },
+  "shippingRates": {
+    "title": "送料",
+    "description": "配送コストと配送オプションを管理します。",
+    "addRate": "料金を追加",
+    "editRate": "手数料の調整",
+    "noRates": "送料はまだ加算されていません。",
+    "zone": "エリア",
+    "carrier": "固い",
+    "selectZone": "地域を選択",
+    "selectCarrier": "会社を選択",
+    "shippingCost": "送料",
+    "currency": "通貨",
+    "estimatedDeliveryDays": "配送予定日数（日数）",
+    "minWeight": "最小重量",
+    "maxWeight": "最大重量",
+    "minOrderAmount": "最低注文金額",
+    "freeShipping": "送料無料",
+    "free": "無料",
+    "active": "アクティブ",
+    "inactive": "受け身",
+    "cost": "手数料",
+    "deliveryDays": "配達",
+    "status": "状況",
+    "saving": "保存中...",
+    "createSuccess": "料金が正常に追加されました。",
+    "updateSuccess": "給与が正常に更新されました。",
+    "deleteSuccess": "料金は正常に削除されました。",
+    "saveError": "料金の保存中にエラーが発生しました。",
+    "deleteError": "料金の削除中にエラーが発生しました。",
+    "fetchError": "料金のアップロード中にエラーが発生しました。"
+  },
+  "metadata": {
+    "title": "家畜取引 - 生きた動物の取引プラットフォーム",
+    "description": "世界で最も信頼されている生きた動物の取引プラットフォーム。安全で透明性のある動物の売買。",
+    "pages": {
+      "about": {
+        "title": "私たちについて",
+        "description": "家畜取引について学びましょう。信頼できる生きた動物の取引プラットフォームです。"
+      },
+      "contact": {
+        "title": "コミュニケーション",
+        "description": "お問い合わせください。Livestock Tradingのカスタマーサポートチームが喜んでお手伝いいたします。"
+      },
+      "terms": {
+        "title": "利用規約",
+        "description": "家畜取引規約。"
+      },
+      "privacy": {
+        "title": "プライバシーポリシー",
+        "description": "家畜取引のプライバシーポリシー。個人データがどのように保護されるかをご覧ください。"
+      },
+      "products": {
+        "title": "製品",
+        "description": "生きた動物のリストを閲覧してください。牛、羊などの信頼できる広告。"
+      },
+      "sellers": {
+        "title": "売り手",
+        "description": "信頼できる動物販売業者を見つけましょう。販売業者のプロフィールとレビューが検証されています。"
+      },
+      "transporters": {
+        "title": "トランスポーター",
+        "description": "動物輸送会社をお探しですか？安全でプロフェッショナルな生きた動物の輸送を。"
+      },
+      "search": {
+        "title": "検索",
+        "description": "生きた動物のリストを検索します。フィルタリングと並べ替えオプションで簡単に検索できます。"
+      },
+      "faq": {
+        "title": "よくある質問",
+        "description": "家畜取引に関するよくある質問と回答。"
+      },
+      "productDetail": {
+        "title": "{title} - 販売中",
+        "description": "{title} - {city}で販売中。詳細と連絡先についてはクリックしてください。"
+      },
+      "sellerDetail": {
+        "title": "{name} - 販売者プロフィール",
+        "description": "{name} の販売者プロフィール。レビュー、出品リスト、連絡先情報。"
+      },
+      "transporterDetail": {
+        "title": "{name} - キャリアプロフィール",
+        "description": "{name}運送業者のプロフィール。サービスエリア、レビュー、連絡先情報。"
+      }
+    }
   }
 }

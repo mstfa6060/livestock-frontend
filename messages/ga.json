@@ -11,17 +11,30 @@
     "back": "Ar ais",
     "next": "Ar Aghaidh",
     "close": "Dún",
+    "unauthorized": "Níl cead agat rochtain a fháil ar an leathanach seo.",
     "emailPlaceholder": "ornek@ríomhphost.com",
     "login": "Logáil isteach",
-    "register": "Cláraigh"
+    "register": "Cláraigh",
+    "previous": "Iar-",
+    "zoomIn": "Zúmáil isteach",
+    "previousImage": "Íomhá roimhe seo",
+    "nextImage": "An chéad íomhá eile",
+    "closeLightbox": "Dún gailearaí",
+    "imageLightbox": "Gailearaí íomhánna",
+    "slideN": "Sleamhnán {n}",
+    "viewMore": "Féach níos mó"
   },
   "header": {
     "products": "Táirgí",
     "sellers": "Díoltóirí",
+    "transporters": "iompróirí",
     "about": "Fúinn",
+    "search": "Cuardaigh",
     "dashboard": "Painéal",
     "settings": "Socruithe",
-    "logout": "Logáil Amach"
+    "logout": "Logáil Amach",
+    "menu": "Roghchlár",
+    "language": "Rogha teanga"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Dhearmad mé mo phasfhocal.",
       "noAccount": "Nach bhfuil cuntas agat?",
       "register": "Cláraigh",
-      "errorDefault": "Theip ar an logáil isteach. Seiceáil do chuid faisnéise le do thoil."
+      "errorDefault": "Theip ar an logáil isteach. Seiceáil do chuid faisnéise le do thoil.",
+      "orContinueWith": "nó lean ar aghaidh",
+      "continueWithGoogle": "Lean ar aghaidh le Google",
+      "continueWithApple": "Lean ar aghaidh le Apple.",
+      "socialLoginError": "Theip ar logáil isteach ar an líonra sóisialta. Déan iarracht arís.",
+      "appleComingSoon": "Go han-luath",
+      "showPassword": "Taispeáin an focal faire",
+      "hidePassword": "Folaigh an focal faire"
     },
     "register": {
       "title": "Cláraigh",
@@ -51,7 +71,17 @@
       "login": "Logáil isteach",
       "passwordMismatch": "Ní hionann na pasfhocail.",
       "passwordTooShort": "Ní mór don phasfhocal a bheith 6 charachtar ar a laghad.",
-      "errorDefault": "Theip ar an gclárú. Déan iarracht arís."
+      "errorDefault": "Theip ar an gclárú. Déan iarracht arís.",
+      "showPassword": "Taispeáin an focal faire",
+      "hidePassword": "Folaigh an focal faire",
+      "passwordStrength": {
+        "minLength": "8 gcarachtar ar a laghad",
+        "uppercase": "Litreacha móra (A-Z)",
+        "lowercase": "Litreacha beaga (a-z)",
+        "number": "Uimhir (0-9)",
+        "special": "Carachtair speisialta (!@#$%)"
+      },
+      "registerSuccess": "Tá do chuntas cruthaithe go rathúil! Tá tú á atreorú chuig an leathanach logála isteach..."
     },
     "forgotPassword": {
       "title": "Dhearmad mé mo phasfhocal.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Iarr Ceangal Nua",
       "passwordMismatch": "Ní hionann na pasfhocail.",
       "passwordTooShort": "Ní mór don phasfhocal a bheith 6 charachtar ar a laghad.",
-      "errorDefault": "Theip ar athshocrú an phasfhocail. Seans go bhfuil an nasc neamhbhailí nó imithe in éag."
+      "errorDefault": "Theip ar athshocrú an phasfhocail. Seans go bhfuil an nasc neamhbhailí nó imithe in éag.",
+      "showPassword": "Taispeáin an focal faire",
+      "hidePassword": "Folaigh an focal faire"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "gníomhach",
       "totalViews": "Líon Iomlán na nAmharc",
       "thisWeek": "an tseachtain seo",
+      "allTime": "i gcónaí",
       "favorites": "Is fearr leat",
       "onYourListings": "i do fhógraí",
+      "savedItems": "táirge cláraithe",
       "messages": "Teachtaireacht",
-      "unread": "gan léamh"
+      "notifications": "Fógraí",
+      "unread": "gan léamh",
+      "views": "radhairc",
+      "draft": "Dréacht",
+      "sold": "Díolta",
+      "pending": "Ar feitheamh",
+      "awaitingApproval": "ag fanacht le ceadú",
+      "totalSales": "Díolacháin Iomlána",
+      "completedSales": "díolacháin críochnaithe",
+      "revenue": "Ioncam",
+      "totalRevenue": "ioncam iomlán"
     },
     "recentListings": "Do Liostaí is Déanaí",
+    "recentActivity": "Gníomhaíochtaí Le Déanaí",
     "recentMessages": "Teachtaireachtaí Le Déanaí",
+    "quickLinks": "Rochtain Thapa",
     "noListings": "Níl aon fhógraí curtha leis agat go fóill.",
+    "noActivity": "Gan aon ghníomhaíocht fós.",
     "noMessages": "Ní bhfuair tú teachtaireacht fós.",
     "noNotifications": "Níl aon fhógraí faighte agat go fóill.",
     "viewAllListings": "Féach ar na Liostaí Uile",
-    "viewAllMessages": "Féach ar na teachtaireachtaí uile"
+    "viewAllMessages": "Féach ar na teachtaireachtaí uile",
+    "viewNotifications": "Féach ar Fhógraí",
+    "viewFavorites": "Rogha Gor",
+    "recentlyViewed": "Breathnaíodh le Déanaí",
+    "fetchError": "Tharla earráid agus sonraí an phainéil á lódáil."
   },
   "dashboardNav": {
     "overview": "Forbhreathnú",
@@ -115,7 +166,61 @@
     "notifications": "Fógraí",
     "profile": "Próifíl",
     "settings": "Socruithe",
-    "newListing": "Cuir Liostú Nua leis"
+    "newListing": "Cuir Liostú Nua leis",
+    "becomeSeller": "Bí i do Dhíoltóir",
+    "categories": "Catagóirí",
+    "offers": "Tograí",
+    "deals": "Comhaontuithe",
+    "farms": "Mo fheirmeacha",
+    "transport": "Iompar",
+    "moderation": "Modhnóireacht",
+    "sellerModeration": "Modhnóireacht Díoltóra",
+    "transporterModeration": "Modhnóireacht Iompróra",
+    "brands": "Brandaí",
+    "transportOffers": "Sleachta Loingseoireachta",
+    "healthRecords": "Taifid Sláinte",
+    "vaccinations": "Vacsaíneoirí",
+    "shippingCarriers": "Cuideachtaí Loingseoireachta",
+    "shippingZones": "Criosanna Lastais",
+    "shippingRates": "Táillí Loingseoireachta",
+    "systemSettings": "Socruithe Córais",
+    "locations": "Mo sheoltaí"
+  },
+  "profile": {
+    "title": "Faisnéis Phróifíle",
+    "description": "Is féidir leat do chuid faisnéise pearsanta a nuashonrú anseo.",
+    "personalInfo": "Faisnéis Phearsanta",
+    "contactInfo": "Eolas Teagmhála",
+    "preferences": "Roghanna",
+    "firstName": "Ainm",
+    "firstNamePlaceholder": "Cuir isteach d'ainm",
+    "surname": "Sloinne",
+    "surnamePlaceholder": "Cuir isteach do shloinne.",
+    "displayName": "Ainm Taispeánta",
+    "phone": "Uimhir Theileafóin",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Fíoraithe",
+    "phoneNotVerified": "Gan deimhniú",
+    "verifyPhone": "Fíoraigh Uimhir Theileafóin",
+    "country": "Tír",
+    "selectCountry": "Roghnaigh tír",
+    "language": "Rogha Teanga",
+    "selectLanguage": "Roghnaigh teanga",
+    "currency": "Airgeadra",
+    "selectCurrency": "Roghnaigh airgeadra.",
+    "saveChanges": "Sábháil Athruithe",
+    "saving": "Ag sábháil...",
+    "saveSuccess": "Tá do chuid faisnéise próifíle nuashonraithe.",
+    "saveError": "Tharla earráid agus an phróifíl á nuashonrú.",
+    "avatar": "Grianghraf Próifíle",
+    "changeAvatar": "Athraigh Grianghraf",
+    "removeAvatar": "Bain Grianghraf",
+    "currencies": {
+      "try": "Lira Tuircis",
+      "usd": "Dollar SAM",
+      "eur": "Euro",
+      "gbp": "Punt Briotanach"
+    }
   },
   "myListings": {
     "title": "Mo fhógraí",
@@ -125,35 +230,94 @@
     "fetchError": "Tharla earráid agus fógraí á lódáil.",
     "deleteSuccess": "Scriosadh an fógra go rathúil.",
     "deleteError": "Tharla earráid agus an fógra á scriosadh.",
-    "activateSuccess": "Tá an fógra gníomhachtaithe.",
-    "deactivateSuccess": "Tá an liostú díghníomhachtaithe.",
+    "publishSuccess": "Tá an fógra seolta lena cheadú.",
+    "unpublishSuccess": "Tá an fógra dréachtaithe.",
     "statusError": "Tharla earráid agus an stádas á athrú.",
     "filters": {
       "all": "Iad uile",
-      "active": "Gníomhach",
       "draft": "Dréacht",
       "pending": "Ag fanacht le ceadú",
+      "active": "Gníomhach",
+      "rejected": "Diúltaithe",
       "sold": "Díolta"
     },
     "actions": {
       "edit": "Cuir in Eagar",
       "delete": "Scrios",
-      "activate": "Gníomhachtaigh",
-      "deactivate": "Struchtúr Éighníomhach"
+      "publish": "Seol le haghaidh formheasa",
+      "unpublish": "Dréacht",
+      "menu": "Idirbhearta"
     },
     "deleteDialog": {
       "title": "Scrios an fógra",
       "description": "An bhfuil tú cinnte gur mian leat an liostú seo a scriosadh? Ní féidir an gníomh seo a aisiompú.",
       "cancel": "Cealaigh",
       "confirm": "Scrios"
-    }
+    },
+    "loadMore": "Íoslódáil Tuilleadh",
+    "loadingMore": "Ag lódáil..."
   },
   "favorites": {
     "title": "Mo rogha pearsanta",
     "description": "Lean na táirgí is maith leat anseo.",
     "noFavorites": "Níl aon táirgí is fearr leat curtha leis agat go fóill.",
     "browseProducts": "Brabhsáil Táirgí",
-    "fetchError": "Tharla earráid agus na cinn is ansa leat á lódáil."
+    "fetchError": "Tharla earráid agus na cinn is ansa leat á lódáil.",
+    "loadMore": "Íoslódáil Tuilleadh",
+    "loadingMore": "Ag lódáil..."
+  },
+  "messages": {
+    "title": "Teachtaireachtaí",
+    "description": "Téigh i dteagmháil le ceannaitheoirí agus díoltóirí.",
+    "noConversations": "Ní bhfuair tú teachtaireacht fós.",
+    "startConversation": "Chun ceist a chur faoi fhógra, téigh chuig an bhfógra.",
+    "fetchError": "Tharla earráid agus teachtaireachtaí á lódáil",
+    "sendError": "Tharla earráid agus an teachtaireacht á seoladh.",
+    "connectionError": "Theip ar an nasc. Ag iarraidh arís...",
+    "connected": "Cheangail sé",
+    "connecting": "Ag ceangal...",
+    "searchPlaceholder": "Cuardaigh trí na teachtaireachtaí...",
+    "typeMessage": "Scríobh do theachtaireacht...",
+    "send": "Seol",
+    "sending": "Ag seoladh...",
+    "typing": "Deir sé...",
+    "read": "Léigh",
+    "delivered": "Seolta",
+    "today": "Inniu",
+    "yesterday": "Inné",
+    "noMessages": "Gan aon teachtaireachtaí fós. Tosaigh comhrá!",
+    "loadMore": "Uaslódáil níos mó",
+    "loadingMessages": "Tá teachtaireachtaí ag lódáil...",
+    "about": "Maidir",
+    "product": "Táirge",
+    "startNewConversation": "Tosaigh Comhrá Nua",
+    "selectConversation": "Roghnaigh comhrá nó cuir tús le ceann nua.",
+    "online": "Ar Líne",
+    "offline": "As líne",
+    "lastSeen": "Chonaic mé an uair dheireanach",
+    "deleteConversation": "Scrios an comhrá",
+    "deleteConfirm": "An bhfuil tú cinnte gur mian leat an comhrá seo a scriosadh?",
+    "deleted": "Scriosadh an comhrá.",
+    "defaultUser": "Úsáideoir",
+    "noResults": "Níor aimsíodh aon torthaí.",
+    "newConversation": "Comhrá nua"
+  },
+  "notifications": {
+    "title": "Fógraí",
+    "description": "Féach ar do fhógraí agus bainistigh iad.",
+    "markAllAsRead": "Marcáil gach rud mar léite",
+    "noNotifications": "Níl aon fhógraí faighte agat go fóill.",
+    "viewAll": "Féach ar na fógraí uile",
+    "today": "Inniu",
+    "yesterday": "Inné",
+    "older": "Níos sine",
+    "types": {
+      "system": "Córas",
+      "message": "Teachtaireacht",
+      "offer": "Tairiscint",
+      "order": "Ordú",
+      "listing": "Fógra"
+    }
   },
   "settings": {
     "title": "Socruithe",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Ní hionann na pasfhocail nua.",
       "passwordTooShort": "Ní mór don phasfhocal nua a bheith 6 charachtar ar a laghad.",
       "sessionError": "Níorbh fhéidir faisnéis an tseisiúin a fháil.",
-      "errorDefault": "Níorbh fhéidir an focal faire a nuashonrú. Seiceáil do phasfhocal reatha le do thoil."
+      "errorDefault": "Níorbh fhéidir an focal faire a nuashonrú. Seiceáil do phasfhocal reatha le do thoil.",
+      "showPassword": "Taispeáin an focal faire",
+      "hidePassword": "Folaigh an focal faire"
+    },
+    "preferences": {
+      "title": "Roghanna Fógra agus Amhairc",
+      "description": "Bainistigh do chainéil fógra agus do chuid roghanna taispeána.",
+      "notifications": "Fógraí",
+      "emailNotifications": "Fógraí Ríomhphoist",
+      "emailNotificationsDesc": "Faigh fógraí ríomhphoist le haghaidh teachtaireachtaí nua agus nuashonruithe fógraí.",
+      "smsNotifications": "Fógraí SMS",
+      "smsNotificationsDesc": "Faigh teachtaireachtaí SMS le haghaidh fógraí tábhachtacha.",
+      "pushNotifications": "Fógraí Brúigh",
+      "pushNotificationsDesc": "Faigh fógraí brú le haghaidh nuashonruithe láithreacha.",
+      "appearance": "Dealramh",
+      "darkMode": "Mód Dorcha",
+      "darkModeDesc": "Athraigh go téama dorcha.",
+      "saveChanges": "Sábháil Roghanna",
+      "saving": "Ag sábháil...",
+      "saveSuccess": "Tá do chuid roghanna nuashonraithe.",
+      "saveError": "Tharla earráid agus na roghanna á nuashonrú.",
+      "loadError": "Níorbh fhéidir na roghanna a lódáil."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Ardán Trádála Ainmhithe Beo",
       "subtitle": "An t-ardán trádála ainmhithe beo is iontaofa. Ceannaigh agus díol do chuid eallaigh agus caorach go sábháilte.",
       "cta": "Tosaigh Anois",
-      "viewListings": "Féach ar Fhógraí"
+      "viewListings": "Féach ar Fhógraí",
+      "searchPlaceholder": "Cuardaigh ainmhithe... (bó, caoirigh, gabhair...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Fógraí Réadmhaoine",
       "viewAll": "Féach ar gach rud"
+    },
+    "cta": {
+      "title": "Tosaigh Anois",
+      "subtitle": "Glac do shuíomh ar ardán ina mbuaileann na mílte díoltóirí agus ceannaitheoirí le chéile.",
+      "button": "Cláraigh Saor in Aisce"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Fúinn",
     "contact": "Cumarsáid",
     "terms": "Téarmaí Úsáide",
-    "privacy": "Polasaí Príobháideachais"
+    "privacy": "Polasaí Príobháideachais",
+    "company": "Cuideachta",
+    "support": "Tacaíocht",
+    "legal": "Dlíthiúil",
+    "followUs": "Lean muid",
+    "newsletter": "Bullaitín",
+    "newsletterDescription": "Ná caill amach ar na liostaí agus na harduithe céime is déanaí.",
+    "subscribe": "Liostáil",
+    "emailPlaceholder": "Do sheoladh ríomhphoist",
+    "tagline": "Ardán trádála ainmhithe beo is iontaofa na Tuirce.",
+    "sellers": "Díoltóirí",
+    "products": "Táirgí",
+    "map": "Léarscáil",
+    "appleLoginComingSoon": "Beidh logáil isteach le Apple gníomhach go han-luath.",
+    "supportEmail": "info@livestock-trádáil.com",
+    "faq": "Ceisteanna Coitianta"
+  },
+  "faq": {
+    "title": "Ceisteanna Coitianta",
+    "description": "Freagraí ar do cheisteanna coitianta faoinár n-ardán.",
+    "noFaqs": "Níl aon cheisteanna curtha leis go fóill."
+  },
+  "about": {
+    "title": "Fúinn",
+    "subtitle": "Ardán trádála ainmhithe beo is iontaofa na Tuirce.",
+    "mission": {
+      "title": "Ár Misean",
+      "description": "Trí dhigitiú a dhéanamh ar thrádáil ainmhithe beo, tá sé mar aidhm againn nasc slán, trédhearcach agus éifeachtach a chruthú idir táirgeoirí agus ceannaitheoirí."
+    },
+    "vision": {
+      "title": "Ár bhFís",
+      "description": "Bheith i gceannródaí san chlaochlú digiteach san earnáil talmhaíochta agus ardán domhanda a bheith ann i dtrádáil ainmhithe beo."
+    },
+    "values": {
+      "title": "Ár luachanna",
+      "trust": {
+        "title": "Muinín",
+        "description": "Tá trédhearcacht agus iontaofacht riachtanach i ngach idirbheart."
+      },
+      "quality": {
+        "title": "Cáilíocht",
+        "description": "Feabhsú leanúnach chun an tseirbhís is fearr a sholáthar."
+      },
+      "innovation": {
+        "title": "Nuálaíocht",
+        "description": "Ag claochlú an tionscail trí úsáid a bhaint as teicneolaíocht."
+      }
+    },
+    "stats": {
+      "users": "Úsáideoir Cláraithe",
+      "sellers": "Díoltóir Gníomhach",
+      "products": "Fógra",
+      "transactions": "Idirbheart Rathúil"
+    }
+  },
+  "contact": {
+    "title": "Cumarsáid",
+    "subtitle": "Téigh i dteagmháil linn le haon cheist.",
+    "form": {
+      "title": "Scríobh chugainn",
+      "name": "D'ainm",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "Ríomhphost",
+      "emailPlaceholder": "ornek@ríomhphost.com",
+      "subject": "Ábhar",
+      "subjectPlaceholder": "Ábhar do theachtaireachta",
+      "message": "Do theachtaireacht",
+      "messagePlaceholder": "Scríobh do theachtaireacht anseo...",
+      "submit": "Seol",
+      "submitting": "Ag seoladh...",
+      "success": "Tá do theachtaireacht seolta go rathúil. Déanfaimid teagmháil leat a luaithe is féidir.",
+      "error": "Tharla earráid agus an teachtaireacht á seoladh. Déan iarracht arís."
+    },
+    "info": {
+      "title": "Eolas Teagmhála",
+      "address": "Seoladh",
+      "addressValue": "Iostanbúl, an Tuirc",
+      "email": "Ríomhphost",
+      "emailValue": "info@livestock-trádáil.com",
+      "phone": "Teileafón",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Uaireanta Oibre",
+      "workingHoursValue": "Luan - Aoine: 09:00 - 18:00",
+      "map": "Léarscáil"
+    }
+  },
+  "terms": {
+    "title": "Téarmaí Úsáide",
+    "lastUpdated": "Nuashonrú deireanach: {dáta}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Glacadh leis na Téarmaí",
+        "content": "Trí úsáid a bhaint as an suíomh gréasáin seo, aontaíonn tú leis na téarmaí úsáide seo a leanas. Mura n-aontaíonn tú leis na téarmaí seo, ná húsáid an suíomh."
+      },
+      "services": {
+        "title": "2. Seirbhísí",
+        "content": "Cuireann Trádáil Beo ardán ar fáil chun ainmhithe beo a cheannach agus a dhíol. Is freagracht an úsáideora as gach idirbheart ar an ardán."
+      },
+      "accounts": {
+        "title": "3. Cuntais Úsáideora",
+        "content": "Ní mór duit faisnéis chruinn agus cothrom le dáta a sholáthar chun cuntas a chruthú. Is ortsa atá an fhreagracht as slándáil do chuntais."
+      },
+      "prohibited": {
+        "title": "4. Gníomhaíochtaí Toirmiscthe",
+        "content": "Tá cosc dian ar fhógraí míthreoracha, ar fhaisnéis bhréagach, ar chalaois agus ar ghníomhaíochtaí mídhleathacha."
+      },
+      "liability": {
+        "title": "5. Teorainn Dliteanais",
+        "content": "Níl an t-ardán freagrach go díreach as idirbhearta idir úsáideoirí. Déantar gach idirbheart idir na páirtithe."
+      },
+      "changes": {
+        "title": "6. Athruithe",
+        "content": "Tá na téarmaí agus coinníollacha seo faoi réir athraithe gan fógra. Tiocfaidh athruithe i bhfeidhm láithreach a luaithe a fhoilseofar iad."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Polasaí Príobháideachais",
+    "lastUpdated": "Nuashonrú deireanach: {dáta}",
+    "sections": {
+      "collection": {
+        "title": "1. Bailiú Faisnéise",
+        "content": "Nuair a chruthaíonn tú cuntas, bailímid faisnéis phearsanta amhail d’ainm, do sheoladh ríomhphoist agus d’uimhir theileafóin. Féadfaimid sonraí gan ainm a bhailiú freisin maidir le d’úsáid den suíomh."
+      },
+      "usage": {
+        "title": "2. Úsáid Faisnéise",
+        "content": "Úsáidtear an fhaisnéis a bhailímid chun ár seirbhísí a sholáthar, do chuntas a bhainistiú, slándáil a chinntiú, agus tairiscintí pearsantaithe a thairiscint duit."
+      },
+      "sharing": {
+        "title": "3. Comhroinnt Faisnéise",
+        "content": "Ní dhíolfar ná ní ligfear ar cíos do thríú páirtithe do chuid faisnéise pearsanta. Ní roinnfear d’fhaisnéis ach amháin chun críocha atá riachtanach de réir dlí."
+      },
+      "security": {
+        "title": "4. Slándáil",
+        "content": "Tá bearta slándála caighdeánacha tionscail i bhfeidhm chun do shonraí a chosaint."
+      },
+      "cookies": {
+        "title": "5. Fianáin",
+        "content": "Úsáideann ár suíomh Gréasáin fianáin chun feabhas a chur ar thaithí an úsáideora. Is féidir leat do chuid sainroghanna fianán a bhainistiú i socruithe do bhrabhsálaí."
+      },
+      "rights": {
+        "title": "6. Do Chearta",
+        "content": "Faoi Dhlí na Tuirce um Chosaint Sonraí Pearsanta (KVKK), tá an ceart agat rochtain a fháil ar do shonraí pearsanta, iad a cheartú agus a scriosadh."
+      }
+    }
   },
   "products": {
     "title": "Táirgí",
@@ -235,16 +570,24 @@
       "priceDesc": "Praghas (Ard go hÍseal)",
       "popular": "Is Coitianta"
     },
+    "pagination": {
+      "prev": "Iar-",
+      "next": "Ar Aghaidh"
+    },
     "status": {
       "draft": "Dréacht",
+      "pending": "Ag fanacht le ceadú",
       "active": "Gníomhach",
+      "inactive": "Éighníomhach",
+      "outOfStock": "As Stoc",
+      "expired": "Tá a théarma caite.",
       "sold": "Díolta",
-      "pending": "Ag fanacht le ceadú"
+      "rejected": "Diúltaithe"
     },
     "condition": {
       "new": "Nua",
       "likeNew": "Úsáidte go héadrom",
-      "good": "Maith",
+      "good": "Go maith",
       "fair": "Lár"
     },
     "outOfStock": "As Stoc",
@@ -253,9 +596,13 @@
     "loading": "Tá táirgí á luchtú...",
     "perPage": "In aghaidh an leathanaigh",
     "showing": "Líon iomlán na dtáirgí {total} idir {from} agus {to}.",
+    "fetchError": "Tharla earráid agus na táirgí á n-uaslódáil.",
+    "loadMore": "Taispeáin Tuilleadh",
+    "showingOf": "Tá {count} / {total} táirgí á dtaispeáint.",
     "loginToFavorite": "Logáil isteach le cur le do rogha pearsanta.",
     "addedToFavorites": "Curtha le rogha pearsanta",
-    "removedFromFavorites": "Bainte as na cinn is ansa leat"
+    "removedFromFavorites": "Bainte as na cinn is ansa leat",
+    "favoriteError": "Theip ar an oibríocht is fearr leat."
   },
   "productDetail": {
     "addToFavorites": "Cuir le Ceanáin",
@@ -279,16 +626,31 @@
     "maxOrder": "Uasmhéid ordú",
     "publishedAt": "Dáta foilsithe",
     "views": "Breathnaíodh",
-    "reviews": "meastóireacht",
+    "reviews": {
+      "title": "Measúnuithe",
+      "reviewCount": "meastóireacht",
+      "noReviews": "Gan aon mheasúnú fós.",
+      "verified": "Ceannaitheoir Fíoraithe"
+    },
     "similarProducts": "Táirgí Comhchosúla",
     "sellerProducts": "Táirgí Eile an Díoltóra",
     "contactSeller": "Déan teagmháil leis an díoltóir",
-    "loginRequired": "Logáil isteach le cur le do rogha pearsanta.",
+    "makeOffer": "Cuir Tairiscint Isteach",
+    "loginRequired": "Logáil isteach le do thoil chun an gníomh seo a dhéanamh.",
     "addedToFavorites": "Curtha le rogha pearsanta",
     "removedFromFavorites": "Bainte as na cinn is ansa leat",
     "linkCopied": "Tá an nasc cóipeáilte.",
     "messagingComingSoon": "Gné teachtaireachtaí ag teacht go luath.",
-    "productNotFound": "Níor aimsíodh an táirge."
+    "productNotFound": "Níor aimsíodh an táirge.",
+    "contacting": "Tá teagmháil á déanamh...",
+    "contactError": "Theip ar an gcumarsáid. Déan iarracht arís.",
+    "noImage": "Níl aon íomhá ar fáil.",
+    "defaultLocation": "An Tuirc",
+    "inquiryMessage": "Ba mhaith liom eolas a fháil faoi {title}.",
+    "breadcrumb": {
+      "home": "Baile",
+      "products": "Táirgí"
+    }
   },
   "seller": {
     "title": "Faisnéis Díoltóra",
@@ -300,6 +662,70 @@
     "call": "Cuardaigh",
     "viewProfile": "Féach ar Phróifíl"
   },
+  "sellers": {
+    "title": "Díoltóirí",
+    "description": "Faigh amach díoltóirí iontaofa.",
+    "search": "Aimsigh díoltóir...",
+    "sort": "Sórtáil",
+    "sortOptions": {
+      "newest": "Is déanaí",
+      "mostSales": "Díoltóir is Fearr",
+      "topRated": "Scór is Airde",
+      "mostProducts": "An Chuid is Mó de Fhógraí"
+    },
+    "noResults": "Díoltóir gan aimsiú.",
+    "loading": "Tá díoltóirí ag luchtú...",
+    "showing": "{count} díoltóirí aimsithe",
+    "verified": "Fíoraithe",
+    "sales": "díolacháin",
+    "products": "fógra",
+    "reviews": "meastóireacht",
+    "rating": "pointe",
+    "viewProducts": "Féach ar Tháirgí",
+    "contactSeller": "Seol Teachtaireacht",
+    "memberSince": "Ball ó {year}",
+    "fetchError": "Tharla earráid agus díoltóirí á lódáil",
+    "detail": {
+      "title": "Próifíl Díoltóra",
+      "about": "Maidir",
+      "businessInfo": "Faisnéis Ghnó",
+      "businessName": "Ainm Gnó",
+      "businessType": "Turas Gnó",
+      "email": "Ríomhphost",
+      "phone": "Teileafón",
+      "website": "Suíomh Gréasáin",
+      "description": "Míniú",
+      "policies": "Polasaithe",
+      "returnPolicy": "Polasaí um fhilleadh",
+      "shippingPolicy": "Polasaí Loingseoireachta",
+      "businessHours": "Uaireanta Oibre",
+      "paymentMethods": "Modhanna Íocaíochta",
+      "allProducts": "Gach Táirge",
+      "stats": {
+        "totalSales": "Díolacháin Iomlána",
+        "totalProducts": "Táirgí Iomlána",
+        "totalReviews": "Meastóireacht",
+        "rating": "Pointe"
+      },
+      "notFound": "Díoltóir gan aimsiú.",
+      "backToList": "Don chuig na díoltóirí",
+      "contactInfo": "Cumarsáid",
+      "noProducts": "Níl aon liostaí ag an díoltóir seo go fóill.",
+      "noPolicies": "Níl a bheartais sainmhínithe ag an díoltóir go fóill.",
+      "fetchError": "Tharla earráid agus faisnéis an díoltóra á huaslódáil.",
+      "productsLoadError": "Tharla earráid agus táirgí an díoltóra á n-uaslódáil.",
+      "reviewsTab": "Measúnuithe",
+      "reviews": {
+        "summary": "Achoimre ar an Meastóireacht",
+        "reviewCount": "meastóireacht",
+        "communication": "Cumarsáid",
+        "shippingSpeed": "Luas Loingseoireachta",
+        "productQuality": "Cáilíocht an Táirge",
+        "noReviews": "Gan aon mheasúnú fós.",
+        "verified": "Ceannaitheoir Fíoraithe"
+      }
+    }
+  },
   "editListing": {
     "title": "Cuir an fógra in eagar",
     "saveChanges": "Sábháil Athruithe",
@@ -307,6 +733,10 @@
     "updateSuccess": "Tá an fógra nuashonraithe go rathúil.",
     "updateFailed": "Tharla earráid agus an liostú á nuashonrú.",
     "loadError": "Tharla earráid agus an fógra á lódáil.",
+    "sellerNotFound": "Níor aimsíodh próifíl an díoltóra.",
+    "sellerLoadError": "Níorbh fhéidir próifíl an díoltóra a lódáil.",
+    "userNotFound": "Níorbh fhéidir faisnéis úsáideora a aimsiú. Logáil isteach arís le do thoil.",
+    "locationNotFound": "Níorbh fhéidir faisnéis suímh a aimsiú. Athnuaigh an leathanach le do thoil.",
     "basicInfo": "Faisnéis Bhunúsach",
     "categoryAndCondition": "Catagóir agus Stádas",
     "pricing": "Praghsáil",
@@ -314,6 +744,8 @@
     "images": "Íomhánna",
     "existingImages": "Íomhánna atá ar Fáil",
     "addImage": "Cuir Íomhá leis",
+    "maxImages": "Is féidir leat uasmhéid de 10 íomhá a uaslódáil.",
+    "imageHint": "Íomhá amháin ar a laghad, 10 n-íomhá ar a mhéad. I bhformáid PNG, JPG, nó WEBP.",
     "uploadingImages": "Tá na híomhánna ag lódáil...",
     "uploadingImage": "Tá an íomhá á lódáil.",
     "imageUploadFailed": "Níorbh fhéidir an íomhá a luchtú.",
@@ -358,6 +790,7 @@
     "addImage": "Cuir Íomhá leis",
     "maxImages": "Is féidir leat uasmhéid de 10 íomhá a uaslódáil.",
     "imageHint": "Íomhá amháin ar a laghad, 10 n-íomhá ar a mhéad. I bhformáid PNG, JPG, nó WEBP.",
+    "location": "Faisnéis Suímh",
     "fields": {
       "title": "Teideal an Fhógra",
       "shortDescription": "Cur Síos Achomair",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Tá loingseoireacht ar fáil.",
       "shippingCost": "Táille Loingseoireachta",
       "weight": "Meáchan",
-      "weightUnit": "Aonad Meáchain"
+      "weightUnit": "Aonad Meáchain",
+      "city": "Cathair",
+      "address": "Seoladh",
+      "postalCode": "Cód poist"
     },
     "placeholders": {
       "title": "Sampla: Bó Holstein 2 Bhliain d'Aois",
       "shortDescription": "Cur síos ar an táirge (uasmhéid 200 carachtar)",
       "description": "Tabhair faisnéis mhionsonraithe faoin táirge...",
-      "category": "Roghnaigh catagóir."
+      "category": "Roghnaigh catagóir.",
+      "city": "Téigh isteach sa chathair",
+      "address": "Cuir isteach an seoladh iomlán.",
+      "postalCode": "Cód poist"
+    },
+    "errors": {
+      "titleRequired": "Tá teideal an fhógra éigeantach.",
+      "shortDescriptionRequired": "Tá cur síos gairid ag teastáil.",
+      "descriptionRequired": "Tá míniú mionsonraithe ag teastáil.",
+      "categoryRequired": "Tá roghnú catagóire éigeantach.",
+      "priceRequired": "Tá an praghas éigeantach.",
+      "cityRequired": "Tá faisnéis cathrach ag teastáil.",
+      "addressRequired": "Tá faisnéis seolta ag teastáil.",
+      "locationError": "Tharla earráid agus an suíomh á chruthú."
     },
     "success": "Cruthaíodh an fógra go rathúil.",
     "error": "Tharla earráid agus an fógra á chruthú.",
@@ -388,24 +837,53 @@
     "draftSaved": "Dréacht sábháilte",
     "productCreated": "Cruthaíodh an táirge go rathúil.",
     "creationFailed": "Níorbh fhéidir an táirge a chruthú. Déan iarracht arís.",
-    "errors": {
-      "titleRequired": "Tá teideal an fhógra éigeantach.",
-      "shortDescriptionRequired": "Tá cur síos gairid ag teastáil.",
-      "descriptionRequired": "Tá míniú mionsonraithe ag teastáil.",
-      "categoryRequired": "Tá roghnú catagóire éigeantach.",
-      "priceRequired": "Cuir isteach praghas bailí."
-    }
+    "userNotFound": "Níorbh fhéidir faisnéis úsáideora a aimsiú. Logáil isteach arís le do thoil.",
+    "defaultBusinessName": "Mo ghnó"
+  },
+  "becomeSeller": {
+    "title": "Bí i do Dhíoltóir",
+    "description": "Ráiteas na Cuideachta",
+    "alreadySeller": "Tá próifíl díoltóra agat cheana féin.",
+    "goToListings": "Téigh chuig mo liostaí",
+    "businessInfo": "Faisnéis Ghnó",
+    "contactInfo": "Eolas Teagmhála",
+    "businessName": "Ainm Gnó",
+    "businessNamePlaceholder": "Sampla: Feirm Yilmaz",
+    "businessType": "Turas Gnó",
+    "businessTypePlaceholder": "Roghnaigh do chineál gnó.",
+    "businessTypes": {
+      "individual": "Aonair",
+      "company": "Cuideachta",
+      "cooperative": "Comharchumann",
+      "farm": "Feirm"
+    },
+    "taxNumber": "Uimhir Chánach",
+    "taxNumberPlaceholder": "Cuir isteach d'uimhir aitheantais chánach (roghnach)",
+    "descriptionPlaceholder": "Scríobh cur síos gairid faoi do ghnó...",
+    "phone": "Teileafón",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Suíomh Gréasáin",
+    "websitePlaceholder": "https://www.examplesite.com (roghnach)",
+    "submit": "Cruthaigh Próifíl Díoltóra",
+    "submitting": "Ag cruthú próifíl...",
+    "success": "Tá do phróifíl díoltóra cruthaithe go rathúil!",
+    "error": "Tharla earráid agus próifíl an díoltóra á cruthú.",
+    "taxNumberHelp": "Cuir isteach d’uimhir chánach 10 nó 11 dhigit (roghnach)",
+    "phoneHelp": "Sampla: +90 555 123 45 67 nó 0555 123 45 67",
+    "websiteHelp": "Sampla: www.isletmem.com nó https://isletmem.com",
+    "alreadySellerDescription": "Is féidir leat an cnaipe thíos a úsáid chun do liostaí a bhainistiú.",
+    "newListing": "Cuir Liostú Nua leis"
   },
   "fileUpload": {
     "dragDrop": "Uaslódáil grianghraf nó físeán.",
     "dragDropHint": "Tarraing agus scaoil nó cliceáil chun a roghnú.",
     "dropHere": "Fág é...",
     "imageLimit": "Grianghraf: uasmhéid 10MB",
-    "videoLimit": "Video: max 100MB",
+    "videoLimit": "Físeán: uasmhéid 100MB",
     "uploadCount": "luchtaithe {reatha} / {uas}",
     "maxFilesError": "Is féidir leat uasmhéid de {max} meán a uaslódáil.",
     "imageTooLarge": "Ní mór don ghrianghraf a bheith níos lú ná 10MB.",
-    "videoTooLarge": "The video must be smaller than 100MB.",
+    "videoTooLarge": "Ní mór don fhíseán a bheith níos lú ná 100MB.",
     "optimizing": "Ag optamú...",
     "uploading": "Ag lódáil...",
     "queued": "Ag fanacht sa scuaine...",
@@ -419,9 +897,833 @@
     "videoBadge": "FÍSEÁN",
     "coverUpdated": "Tá an grianghraf clúdaigh coigeartaithe go rathúil.",
     "optimizationInfo": "Tá na grianghraif optamaithe chun cloí le caighdeáin ghréasáin",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Roghnú Amhairc",
+    "changeImage": "Athraigh",
+    "removeImage": "Bain",
+    "videoProcessing": "Tá an físeán á phróiseáil...",
+    "videoProcessingFailed": "Theip ar an oibríocht.",
+    "videoProcessingPollError": "Níorbh fhéidir stádas próiseála an fhíseáin a fháil. Athnuachan an leathanach le do thoil.",
+    "reorderError": "Níorbh fhéidir an comhad a shórtáil.",
+    "coverUpdateError": "Níorbh fhéidir an grianghraf clúdaigh a nuashonrú."
+  },
+  "error": {
+    "title": "Tharla earráid.",
+    "description": "Tharla earráid gan choinne. Athnuachan an leathanach nó déan iarracht arís ar ball.",
+    "retry": "Bain triail eile as",
+    "goBack": "Ná téigh ar ais",
+    "goHome": "Baile",
+    "notFound": {
+      "title": "Leathanach Gan Aimsiú",
+      "description": "Níl an leathanach atá á lorg agat ar fáil nó tá sé bogtha.",
+      "goHome": "Fill ar ais chuig an Leathanach Baile"
+    }
+  },
+  "search": {
+    "title": "Cuardaigh",
+    "placeholder": "Cuardaigh táirgí, catagóirí, nó díoltóirí...",
+    "searchButton": "Cuardaigh",
+    "searchingFor": "Ag Teastáil",
+    "loading": "Ag iarraidh...",
+    "resultsCount": "Fuarthas {count} torthaí.",
+    "noResults": "Níor aimsíodh aon torthaí.",
+    "tryDifferentSearch": "Bain triail as eochairfhocail éagsúla nó athraigh na scagairí.",
+    "filters": {
+      "title": "Scagairí",
+      "category": "Catagóir",
+      "allCategories": "Gach Catagóir",
+      "condition": "Staid",
+      "allConditions": "Gach Cás",
+      "priceRange": "Raon Praghsanna",
+      "price": "Praghas",
+      "min": "Min",
+      "max": "Uasmhéid",
+      "apply": "Cuir isteach",
+      "clear": "Glan",
+      "clearAll": "Glan Gach Rud"
+    },
+    "fetchError": "Tharla earráid agus torthaí cuardaigh á lódáil",
+    "recentSearches": "Cuardaigh Le Déanaí",
+    "clearHistory": "Glan an Stair",
+    "noSearchHistory": "Níl stair chuardaigh agat fós.",
+    "deleteHistoryError": "Tharla earráid agus stair na gcuardach á scriosadh."
+  },
+  "categories": {
+    "title": "Bainistíocht Catagóire",
+    "description": "Bainistigh catagóirí as seo.",
+    "noCategories": "Níl aon chatagóirí curtha leis go fóill.",
+    "createFirst": "Cruthaigh an chéad chatagóir.",
+    "fetchError": "Tharla earráid agus na catagóirí á lódáil.",
+    "createSuccess": "Cruthaíodh an chatagóir go rathúil",
+    "createError": "Tharla earráid agus an chatagóir á cruthú.",
+    "updateSuccess": "Nuashonraíodh an chatagóir go rathúil",
+    "updateError": "Tharla earráid agus an chatagóir á nuashonrú.",
+    "deleteSuccess": "Scriosadh an chatagóir go rathúil.",
+    "deleteError": "Tharla earráid agus an chatagóir á scriosadh.",
+    "activateSuccess": "Tá an chatagóir gníomhachtaithe.",
+    "deactivateSuccess": "Tá an chatagóir díghníomhachtaithe.",
+    "statusError": "Tharla earráid agus an stádas á athrú.",
+    "loadError": "Tharla earráid agus an chatagóir á luchtú",
+    "filters": {
+      "all": "Iad uile",
+      "active": "Gníomhach",
+      "inactive": "Neamhghníomhach"
+    },
+    "table": {
+      "name": "Ainm na Catagóire",
+      "slug": "Seilide",
+      "sortOrder": "Uimhir Sraitheach",
+      "subCategories": "Fochatagóir",
+      "status": "Staid",
+      "actions": "Idirbhearta"
+    },
+    "actions": {
+      "edit": "Cuir in Eagar",
+      "delete": "Scrios",
+      "activate": "Gníomhachtaigh",
+      "deactivate": "Struchtúr Éighníomhach"
+    },
+    "deleteDialog": {
+      "title": "Scrios Catagóir",
+      "description": "An bhfuil tú cinnte gur mian leat an chatagóir seo a scriosadh? Ní féidir an gníomh seo a aisiompú.",
+      "cancel": "Cealaigh",
+      "confirm": "Scrios"
+    },
+    "addNew": "Cuir Catagóir Nua leis",
+    "loadMore": "Íoslódáil Tuilleadh",
+    "loadingMore": "Ag lódáil...",
+    "form": {
+      "newTitle": "Cruthaigh Catagóir Nua",
+      "editTitle": "Cuir Catagóir in Eagar",
+      "name": "Ainm na Catagóire",
+      "namePlaceholder": "Sampla: Eallach",
+      "slug": "Seilide",
+      "slugPlaceholder": "Sampla: beostoc mór",
+      "description": "Míniú",
+      "descriptionPlaceholder": "Cur síos gairid ar an gcatagóir...",
+      "parentCategory": "Catagóir Uachtarach",
+      "parentCategoryPlaceholder": "Roghnaigh catagóir is fearr (roghnach)",
+      "noParent": "Gan aon phríomhchatagóir (Príomhchatagóir)",
+      "sortOrder": "Uimhir Shraitheach",
+      "isActive": "Gníomhach",
+      "iconUrl": "URL Deilbhín",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Sábháil",
+      "submitting": "Ag sábháil...",
+      "updating": "Ag nuashonrú...",
+      "errors": {
+        "nameRequired": "Tá ainm na catagóire riachtanach.",
+        "slugRequired": "Tá seilidí éigeantach."
+      }
+    }
+  },
+  "offers": {
+    "title": "Tograí",
+    "description": "Bainistigh do thairiscintí isteach agus amach.",
+    "received": "Tairiscintí atá ag Teacht Isteach",
+    "sent": "Tairiscintí a Cuireadh Isteach",
+    "noReceivedOffers": "Níl aon tairiscintí faighte fós.",
+    "noSentOffers": "Níl tairiscint curtha isteach agat fós.",
+    "browseProducts": "Brabhsáil Táirgí",
+    "viewProduct": "Féach ar an táirge",
+    "accept": "Glac leis",
+    "reject": "Diúltaigh",
+    "withdraw": "Tarraingt siar",
+    "makeOffer": "Cuir Tairiscint Isteach",
+    "sendOffer": "Seol Tairiscint",
+    "sending": "Ag seoladh...",
+    "cancel": "Cealaigh",
+    "listingPrice": "Praghas fógartha",
+    "yourOffer": "Do thairiscint",
+    "quantity": "Méid",
+    "messageOptional": "Teachtaireacht (Roghnach)",
+    "messagePlaceholder": "Nóta ar mhaith leat a roinnt leis an díoltóir...",
+    "expiresAt": "Dáta bailí deireanach",
+    "offerSent": "Tá do thairiscint seolta go rathúil.",
+    "offerError": "Tharla earráid agus an tairiscint á seoladh.",
+    "acceptSuccess": "Glacadh leis an tairiscint.",
+    "rejectSuccess": "Diúltaíodh don tairiscint.",
+    "withdrawSuccess": "Tarraingíodh siar an tairiscint.",
+    "actionError": "Tharla earráid le linn an phróisis.",
+    "fetchError": "Tharla earráid agus na tairiscintí á lódáil.",
+    "loginRequired": "Logáil isteach chun tairiscint a chur isteach.",
+    "invalidPrice": "Cuir isteach praghas bailí.",
+    "invalidQuantity": "Cuir isteach méid bailí.",
+    "status": {
+      "pending": "Ar feitheamh",
+      "accepted": "Glactha",
+      "rejected": "Diúltaithe",
+      "countered": "Friththairiscint",
+      "expired": "Tá a théarma thart.",
+      "withdrawn": "Tharraing siar"
+    }
+  },
+  "deals": {
+    "title": "Comhaontuithe",
+    "description": "Lean do chomhaontuithe ceannaigh.",
+    "buying": "Scoláirí",
+    "selling": "Díolacháin",
+    "noBuyingDeals": "Níl próiseas clárúcháin mac léinn agat go fóill.",
+    "noSellingDeals": "Níl aon idirbhearta díolacháin agat fós.",
+    "browseProducts": "Brabhsáil Táirgí",
+    "viewProduct": "Féach ar an táirge",
+    "activeDeals": "Comhaontuithe Gníomhacha",
+    "completedDeals": "Críochnaithe",
+    "purchases": "Scoláirí",
+    "sales": "Díolacháin",
+    "fetchError": "Tharla earráid agus comhaontuithe á lódáil",
+    "dealStatus": {
+      "pending": "Ar feitheamh",
+      "confirmed": "Deimhnithe",
+      "processing": "Ag ullmhú",
+      "shipped": "Sa lasta",
+      "delivered": "Seachadta",
+      "completed": "Críochnaithe",
+      "cancelled": "Cealaithe",
+      "disputed": "Comhaontú"
+    },
+    "delivery": {
+      "pickup": "Seachadadh láimhe",
+      "shipping": "De réir lasta",
+      "transport": "Ar iompar"
+    },
+    "requestTransport": "Iarratas Loingseoireachta"
+  },
+  "farms": {
+    "title": "Mo fheirmeacha",
+    "description": "Bainistigh agus nuashonraigh do fheirmeacha.",
+    "addFarm": "Cuir Feirm leis",
+    "editFarm": "Bainistíocht Feirme",
+    "noFarms": "Níl feirm curtha leis agat fós.",
+    "farmName": "Ainm na Feirme",
+    "registrationNumber": "Uimhir Chlárúcháin",
+    "location": "Suíomh",
+    "selectLocation": "Roghnaigh suíomh.",
+    "addLocationFirst": "Ar dtús, cuir suíomh leis.",
+    "farmTypeLabel": "Turas Feirme",
+    "farmDescription": "Míniú",
+    "totalArea": "Achar Iomlán",
+    "cultivatedArea": "Limistéar Saothraithe",
+    "certifications": "Teastais",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP, etc.",
+    "organic": "Orgánach",
+    "verified": "Fíoraithe",
+    "save": "Sábháil",
+    "saving": "Ag sábháil...",
+    "cancel": "Cealaigh",
+    "edit": "Cuir in Eagar",
+    "delete": "Scrios",
+    "sellerRequired": "Próifíl Díoltóra Riachtanach",
+    "sellerRequiredDesc": "Chun feirm a chur leis, ní mór duit do phróifíl díoltóra a chruthú ar dtús.",
+    "becomeSeller": "Bí i do Dhíoltóir",
+    "createSuccess": "Cuireadh an fheirm leis go rathúil.",
+    "updateSuccess": "Tá an fheirm nuashonraithe go rathúil.",
+    "deleteSuccess": "Scriosadh an fheirm go rathúil.",
+    "saveError": "Tharla earráid agus an fheirm á clárú.",
+    "deleteError": "Tharla earráid agus an fheirm á scriosadh.",
+    "fetchError": "Tharla earráid agus faisnéis feirme á huaslódáil.",
+    "farmType": {
+      "livestock": "Feirmeoireacht beostoic",
+      "crop": "Talmhaíocht",
+      "mixed": "Measctha",
+      "poultry": "Sciathánach",
+      "dairy": "Feirmeoireacht déiríochta",
+      "aquaculture": "Táirgí Uisceacha"
+    }
+  },
+  "transporters": {
+    "title": "iompróirí",
+    "description": "Seirbhísí iompair ainmhithe agus táirgí",
+    "searchPlaceholder": "Aimsigh iompróir...",
+    "noTransporters": "Níl aon iompróirí cláraithe fós.",
+    "verified": "Fíoraithe",
+    "transports": "iompar",
+    "viewProfile": "Féach ar Phróifíl",
+    "sort": {
+      "newest": "Is déanaí",
+      "rating": "Scór is Airde",
+      "mostTransports": "An Loingseoireacht is Minice"
+    },
+    "pagination": {
+      "previous": "Iar-",
+      "next": "Ar Aghaidh",
+      "page": "Leathanach {leathanach}"
+    }
+  },
+  "transport": {
+    "title": "Mo Iarratais Loingseoireachta",
+    "description": "Rianaigh d’iarratais loingseoireachta.",
+    "findTransporter": "Aimsigh Iompróir",
+    "active": "Gníomhach",
+    "completed": "Críochnaithe",
+    "total": "Iomlán",
+    "asSeller": "Mar Dhíoltóir",
+    "asBuyer": "Mar an Ceannaitheoir",
+    "noSellerRequests": "Mar dhíoltóir, níl aon cheanglas loingseoireachta ort.",
+    "noBuyerRequests": "Mar fhaighteoir, níl iarratas loingseoireachta agat.",
+    "viewProduct": "Féach ar an táirge",
+    "pickup": "Faigh",
+    "delivery": "Seachadadh",
+    "urgent": "Práinneach",
+    "fetchError": "Tharla earráid agus na hiarratais loingseoireachta á n-uaslódáil.",
+    "trackShipment": "Lean",
+    "transportStatus": {
+      "pending": "Ar feitheamh",
+      "inPool": "Sa linn snámha",
+      "assigned": "Ceaptha",
+      "pickedUp": "Admháil",
+      "inTransit": "Ar an mbóthar",
+      "delivered": "Seachadta",
+      "completed": "Críochnaithe",
+      "cancelled": "Cealaithe"
+    },
+    "transportType": {
+      "standard": "Caighdeánach",
+      "refrigerated": "Slabhra Fuar",
+      "liveAnimal": "Ainmhithe Beo",
+      "hazardous": "Ábhair Ghuaiseacha",
+      "oversized": "Méid Mór"
+    }
+  },
+  "moderation": {
+    "title": "Modhnóireacht Táirgí",
+    "description": "Athbhreithnigh táirgí atá ag fanacht le ceadú.",
+    "pending": "ag fanacht",
+    "allClear": "Tá cigireacht déanta ar gach táirge.",
+    "noPending": "Níl aon táirgí ag fanacht le ceadú.",
+    "awaitingReview": "Ag fanacht le hathbhreithniú",
+    "by": "Díoltóir:",
+    "stock": "Stoc",
+    "preview": "Leat",
+    "approve": "Deimhnigh",
+    "reject": "Diúltaigh",
+    "confirmReject": "Diúltaigh",
+    "cancelReject": "Tabhair suas",
+    "rejectReasonPlaceholder": "Scríobh síos cúis an diúltaithe...",
+    "rejectReasonRequired": "Tá cúis le diúltú éigeantach.",
+    "approveSuccess": "Ceadaíodh an táirge go rathúil.",
+    "rejectSuccess": "Diúltaíodh don táirge.",
+    "actionError": "Tharla earráid le linn an phróisis.",
+    "fetchError": "Tharla earráid agus na táirgí á n-uaslódáil.",
+    "unauthorized": "Níl cead agat rochtain a fháil ar an leathanach seo."
+  },
+  "sellerModeration": {
+    "title": "Modhnóireacht Díoltóra",
+    "description": "Athbhreithnigh agus bainistigh cuntais díoltóirí.",
+    "pending": "ag fanacht",
+    "allClear": "Rinneadh imscrúdú ar na díoltóirí uile.",
+    "noPending": "Gan aon díoltóirí ag fanacht.",
+    "verify": "Fíoraigh",
+    "suspend": "Cuir ar fionraí",
+    "verifySuccess": "Díoltóir fíoraithe go rathúil.",
+    "suspendSuccess": "Díoltóir ar fionraí.",
+    "actionError": "Tharla earráid le linn an phróisis.",
+    "suspendReasonRequired": "Tá cúis an fhionraí éigeantach.",
+    "suspendReasonPlaceholder": "Scríobh cúis an fhionraí...",
+    "confirmSuspend": "Cuir ar fionraí",
+    "cancelSuspend": "Tabhair suas",
+    "statusLabels": {
+      "pendingVerification": "Fíorú ar Feitheamh",
+      "active": "Gníomhach",
+      "suspended": "Crochta",
+      "banned": "Toirmiscthe"
+    },
+    "filterAll": "Taispeáin gach rud",
+    "filterPending": "Iad siúd atá ag fanacht",
+    "filterActive": "Sócmhainní",
+    "filterSuspended": "Ar fionraí",
+    "unauthorized": "Níl cead agat rochtain a fháil ar an leathanach seo.",
+    "businessName": "Ainm Gnó",
+    "businessType": "Turas Gnó",
+    "email": "Ríomhphost",
+    "phone": "Teileafón",
+    "status": "Staid",
+    "createdAt": "Dáta Clárúcháin"
+  },
+  "transporterModeration": {
+    "title": "Modhnóireacht Iompróra",
+    "description": "Athbhreithnigh agus bainistigh cuntais iompróra.",
+    "pending": "ag fanacht",
+    "allClear": "Rinneadh imscrúdú ar na hiompróirí uile.",
+    "noPending": "Níl aon iompróir ag fanacht.",
+    "verify": "Fíoraigh",
+    "suspend": "Cuir ar fionraí",
+    "verifySuccess": "Fíoraíodh an t-iompróir go rathúil.",
+    "suspendSuccess": "Cuireadh an t-iompróir ar fionraí.",
+    "actionError": "Tharla earráid le linn an phróisis.",
+    "suspendReasonRequired": "Tá cúis an fhionraí éigeantach.",
+    "suspendReasonPlaceholder": "Scríobh cúis an fhionraí...",
+    "confirmSuspend": "Cuir ar fionraí",
+    "cancelSuspend": "Tabhair suas",
+    "statusLabels": {
+      "pendingVerification": "Fíorú ar Feitheamh",
+      "active": "Gníomhach",
+      "suspended": "Crochta",
+      "banned": "Toirmiscthe"
+    },
+    "filterAll": "Taispeáin gach rud",
+    "filterPending": "Iad siúd atá ag fanacht",
+    "filterActive": "Sócmhainní",
+    "filterSuspended": "Ar fionraí",
+    "unauthorized": "Níl cead agat rochtain a fháil ar an leathanach seo.",
+    "companyName": "Ainm na Cuideachta",
+    "contactPerson": "Duine Údaraithe",
+    "email": "Ríomhphost",
+    "phone": "Teileafón",
+    "city": "Cathair",
+    "status": "Staid",
+    "createdAt": "Dáta Clárúcháin"
+  },
+  "transporterDetail": {
+    "notFound": "Ní raibh aon iompróir le fáil.",
+    "backToList": "Don chuig iompróirí",
+    "verified": "Fíoraithe",
+    "totalTransports": "loingseoireacht iomlán",
+    "completed": "críochnaithe",
+    "about": "Maidir",
+    "contact": "Eolas Teagmhála",
+    "businessInfo": "Faisnéis Ghnó",
+    "license": "Uimhir Cheadúnais",
+    "insurance": "Eolas Árachais",
+    "fleet": "Faisnéis faoi Chabhlach",
+    "serviceRegions": "Limistéir Seirbhíse",
+    "specializations": "Réimsí Saineolais",
+    "certifications": "Teastais"
+  },
+  "brands": {
+    "title": "Bainistíocht Branda",
+    "description": "Bainistigh brandaí táirgí.",
+    "addBrand": "Cuir Branda leis",
+    "editBrand": "Cuir Branda in Eagar",
+    "noBrands": "Níl aon bhrandaí curtha leis go fóill.",
+    "brandName": "Ainm Branda",
+    "brandDescription": "Míniú",
+    "website": "Suíomh Gréasáin",
+    "logoUrl": "URL an lógó",
+    "save": "Sábháil",
+    "saving": "Ag sábháil...",
+    "cancel": "Cealaigh",
+    "edit": "Cuir in Eagar",
+    "delete": "Scrios",
+    "inactive": "Éighníomhach",
+    "products": "táirge",
+    "createSuccess": "Cuireadh branda leis go rathúil",
+    "updateSuccess": "Tá an branda nuashonraithe go rathúil.",
+    "deleteSuccess": "Scriosadh an branda go rathúil.",
+    "saveError": "Tharla earráid agus an trádmharc á chlárú.",
+    "deleteError": "Tharla earráid agus an trádmharc á scriosadh.",
+    "fetchError": "Tharla earráid agus brandaí á lódáil",
+    "unauthorized": "Níl cead agat rochtain a fháil ar an leathanach seo."
+  },
+  "transporterReviews": {
+    "title": "Measúnuithe",
+    "reviewCount": "meastóireacht",
+    "noReviews": "Gan aon mheasúnú fós.",
+    "timeliness": "Seachadadh in am",
+    "communication": "Cumarsáid",
+    "carefulHandling": "Láimhseáil Chúramach",
+    "professionalism": "Gairmiúlacht"
+  },
+  "transportOffers": {
+    "title": "Sleachta Loingseoireachta",
+    "description": "Bainistigh na luachana a chuireann tú isteach le haghaidh iarratais loingseoireachta.",
+    "newOffer": "Togra Nua",
+    "transportRequestId": "Aitheantas Iarratais Loingseoireachta",
+    "requestIdPlaceholder": "Cuir isteach aitheantóir an iarratais loingseoireachta.",
+    "offeredPrice": "Praghas Tairisceana",
+    "estimatedDays": "Fad Measta (Laethanta)",
+    "days": "lá",
+    "vehicleType": "Cineál Feithicle",
+    "insuranceIncluded": "Árachas san áireamh",
+    "message": "Teachtaireacht",
+    "cancel": "Cealaigh",
+    "sending": "Ag seoladh...",
+    "sendOffer": "Cuir Tairiscint Isteach",
+    "cancelOffer": "Cealaigh",
+    "pendingTab": "Ag fanacht",
+    "historyTab": "Am atá thart",
+    "noPendingOffers": "Níl aon tairiscintí ar feitheamh agat.",
+    "noHistory": "Ní bhfuarthas aon tairiscintí roimhe seo.",
+    "status": {
+      "pending": "Ag fanacht",
+      "accepted": "Glactha",
+      "rejected": "Diúltaithe",
+      "expired": "Tá a théarma thart.",
+      "cancelled": "Cealaithe"
+    },
+    "createSuccess": "Cuireadh an tairiscint isteach go rathúil.",
+    "createError": "Tharla earráid agus an tairiscint á seoladh.",
+    "cancelSuccess": "Cuireadh an tairiscint ar ceal.",
+    "cancelError": "Tharla earráid agus an tairiscint á cealú.",
+    "fetchError": "Tharla earráid agus na tairiscintí á lódáil."
+  },
+  "animalInfo": {
+    "title": "Faisnéis faoi Ainmhithe & Táirgí",
+    "animalTab": "Ainmhí",
+    "healthTab": "Sláinte",
+    "vaccinationsTab": "Vacsaíneoirí",
+    "veterinaryTab": "Tréidlia",
+    "breed": "Rás",
+    "genderLabel": "Inscne",
+    "gender": {
+      "male": "Fireann",
+      "female": "Baineann",
+      "unknown": "Anaithnid"
+    },
+    "age": "Aois",
+    "months": "mí",
+    "weight": "Meáchan",
+    "color": "Dath",
+    "tagNumber": "Uimhir na Cluasa",
+    "healthStatus": "Staid na sláinte",
+    "health": {
+      "healthy": "Sláintiúil",
+      "underTreatment": "Faoi Chóireáil",
+      "recovering": "Tá sé/sí ag téarnamh.",
+      "quarantined": "I gcoraintín",
+      "unknown": "Anaithnid"
+    },
+    "purposeLabel": "Úsáid Beartaithe",
+    "purpose": {
+      "breeding": "Graí",
+      "dairy": "Bainne",
+      "meat": "Feoil",
+      "egg": "Ubh",
+      "wool": "Olann",
+      "working": "Obair",
+      "pet": "Intíre",
+      "other": "Eile"
+    },
+    "pregnancy": "Toircheas",
+    "pregnant": "Torrach",
+    "microchip": "Uimhir Micrishlise",
+    "passport": "Uimhir Phas",
+    "sireDetails": "Eolas faoin Athair",
+    "damDetails": "Príomhfhaisnéis",
+    "diagnosis": "Diagnóis",
+    "treatment": "Cóireáil",
+    "medications": "Cógais",
+    "veterinarian": "Tréidlia",
+    "nextDue": "Stair na nÉadaí Reibiliúnaithe Eile",
+    "prescriptionRequired": "Éilíonn sé oideas dochtúra",
+    "targetSpecies": "Turais Sprioc",
+    "activeIngredients": "Comhábhair Ghníomhacha",
+    "registrationNo": "Uimhir Chlárúcháin",
+    "storage": "Stóráil",
+    "chemicalTab": "Ceimiceach",
+    "feedTab": "Baoite",
+    "seedTab": "Síol",
+    "machineryTab": "Meaisín",
+    "organic": "Orgánach",
+    "toxicity": "Tocsaineacht",
+    "gmoFree": "Saor ó GMOanna",
+    "protein": "Próitéin",
+    "fat": "Ola",
+    "fiber": "Snáithín",
+    "hybrid": "Hibrideach",
+    "germination": "Péacadh",
+    "daysToMaturity": "Aibiú",
+    "daysLabel": "lá",
+    "warranty": "Ráthaithe",
+    "power": "Neart",
+    "hoursUsed": "Uaireanta Úsáide",
+    "hours": "uair an chloig",
+    "powerSource": "Soláthar cumhachta"
+  },
+  "productVariants": {
+    "title": "Malartacha Táirgí",
+    "variantCount": "malairt",
+    "inStock": "I stoc",
+    "outOfStock": "Díolta amach"
+  },
+  "productPrices": {
+    "title": "Praghsanna (Il-Airgeadra)",
+    "autoConversion": "Claochlú Uathoibríoch",
+    "validUntil": "Bailíocht"
+  },
+  "requestTransport": {
+    "title": "Cruthaigh Iarratas Loingseoireachta",
+    "pickupLocation": "Pointe Luchtaithe",
+    "deliveryLocation": "Pointe Seachadta",
+    "city": "Cathair",
+    "address": "Seoladh",
+    "transportType": "Turas Iompair",
+    "types": {
+      "standard": "Caighdeánach",
+      "refrigerated": "Slabhra Fuar",
+      "liveAnimal": "Ainmhithe Beo",
+      "hazardous": "Ábhair Ghuaiseacha",
+      "oversized": "Méid Mór"
+    },
+    "weight": "Meáchan (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Dáta Uaslódála is Fearr",
+    "preferredDeliveryDate": "Dáta Seachadta is Fearr",
+    "urgent": "Iompar Práinneach",
+    "specialInstructions": "Treoracha Speisialta",
+    "instructionsPlaceholder": "Scríobh do threoracha sonracha anseo...",
+    "cancel": "Tabhair suas",
+    "submit": "Cruthaigh Éileamh",
+    "submitting": "Sa phróiseas cruthaithe...",
+    "success": "Tá an t-iarratas loingseoireachta cruthaithe go rathúil.",
+    "error": "Tharla earráid agus an t-iarratas loingseoireachta á chruthú."
+  },
+  "transportTracking": {
+    "title": "Rianú Loingsithe",
+    "noTracking": "Níl aon fhaisnéis rianaithe ar fáil go fóill.",
+    "update": "Nuashonrú"
+  },
+  "locations": {
+    "title": "Mo sheoltaí",
+    "description": "Bainistigh do sheoltaí cláraithe.",
+    "addLocation": "Cuir Seoladh leis",
+    "editLocation": "Cuir Seoladh in Eagar",
+    "noLocations": "Níl seoladh cláraithe agat fós.",
+    "name": "Ainm an tSeolta",
+    "namePlaceholder": "Mar shampla: Teach, Post, Feirm",
+    "address": "Seoladh",
+    "addressLine2": "Líne Seolta 2",
+    "city": "Cathair",
+    "state": "Ceantar / Réigiún",
+    "postalCode": "Cód poist",
+    "phone": "Teileafón",
+    "email": "Ríomhphost",
+    "cancel": "Tabhair suas",
+    "save": "Sábháil",
+    "saving": "Ag sábháil...",
+    "typePickup": "Ag luchtú",
+    "typeDelivery": "Seachadadh",
+    "typeBoth": "Ginearálta",
+    "createSuccess": "Cuireadh an seoladh leis go rathúil.",
+    "createError": "Tharla earráid agus an seoladh á chur leis.",
+    "updateSuccess": "Tá an seoladh nuashonraithe go rathúil.",
+    "updateError": "Tharla earráid agus an seoladh á nuashonrú.",
+    "deleteLocation": "Scrios Seoladh",
+    "deleteSuccess": "Seoladh scriosta",
+    "deleteError": "Tharla earráid agus an seoladh á scriosadh.",
+    "fetchError": "Tharla earráid agus na seoltaí á lódáil."
+  },
+  "systemSettings": {
+    "title": "Socruithe Córais",
+    "description": "Féach ar airgeadra, teanga, modhanna íocaíochta, loingseoireacht agus socruithe cánach an ardáin.",
+    "unauthorized": "Níl cead agat rochtain a fháil ar an leathanach seo.",
+    "currenciesTab": "Airgeadraí",
+    "languagesTab": "Teangacha",
+    "paymentTab": "Modhanna Íocaíochta",
+    "shippingTab": "Lastas",
+    "taxTab": "Cáin",
+    "active": "Gníomhach",
+    "inactive": "Éighníomhach",
+    "default": "Réamhshocrú",
+    "noCurrencies": "Níl an t-airgeadra sainmhínithe fós.",
+    "noLanguages": "Níl an teanga sainmhínithe fós.",
+    "noPaymentMethods": "Níl an modh íocaíochta sainmhínithe fós.",
+    "noCarriers": "Níl an comhlacht loingseoireachta aitheanta go fóill.",
+    "noZones": "Níl an limistéar lasta sainmhínithe go fóill.",
+    "noTaxRates": "Níl an ráta cánach sainmhínithe fós.",
+    "carriers": "Cuideachtaí Loingseoireachta",
+    "zones": "Criosanna Lastais",
+    "countries": "Tíortha",
+    "rates": "Táillí Loingseoireachta",
+    "noRates": "Níl costais loingseoireachta sainmhínithe go fóill.",
+    "freeShipping": "Loingseoireacht Saor in Aisce",
+    "deliveryDays": "am seachadta lae"
+  },
+  "pushPermission": {
+    "title": "Cumasaigh fógraí",
+    "description": "Faigh fógraí faoi theachtaireachtaí nua, tairiscintí agus nuashonruithe orduithe.",
+    "allow": "Ceadaigh",
+    "dismiss": "Dún"
+  },
+  "healthRecords": {
+    "title": "Taifid Sláinte",
+    "description": "Bainistigh taifid sláinte ainmhithe agus stair leighis.",
+    "addRecord": "Cuir Taifead Leis",
+    "editRecord": "Cuir Taifead in Eagar",
+    "deleteRecord": "Scrios Taifead",
+    "noRecords": "Níl taifead sláinte curtha leis fós.",
+    "animalInfoId": "Aitheantas Ainmhithe",
+    "animalInfoIdPlaceholder": "Cuir isteach aitheantas faisnéise an ainmhí.",
+    "recordType": "Turas Clárúcháin",
+    "recordTypePlaceholder": "Samplaí: Scrúdú, Cóireáil, Máinliacht",
+    "recordDate": "Dáta Clárúcháin",
+    "followUpDate": "Dáta Seiceála",
+    "veterinarianName": "Tréidlia",
+    "veterinarianLicense": "Uimhir Cheadúnais",
+    "clinicName": "Cliniciúil",
+    "diagnosis": "Diagnóis",
+    "treatment": "Cóireáil",
+    "medications": "Cógais",
+    "medicationsPlaceholder": "Sampla: Peinicillin 500mg, Íobúpróifein",
+    "notes": "Nótaí",
+    "documentUrl": "URL an Doiciméid",
+    "saving": "Ag sábháil...",
+    "createSuccess": "Cuireadh taifead sláinte leis go rathúil.",
+    "updateSuccess": "Nuashonraíodh an taifead sláinte go rathúil.",
+    "deleteSuccess": "Scriosadh an taifead sláinte go rathúil.",
+    "saveError": "Tharla earráid agus an taifead á shábháil.",
+    "deleteError": "Tharla earráid agus an taifead á scriosadh.",
+    "fetchError": "Tharla earráid agus taifid á lódáil"
+  },
+  "vaccinations": {
+    "title": "Taifid Vacsaíne",
+    "description": "Bainistigh taifid agus féilirí vacsaínithe ainmhithe.",
+    "addVaccination": "Cuir Reibiliún leis",
+    "editVaccination": "Socrú Reibiliúnaithe",
+    "deleteVaccination": "Rebel Sil",
+    "noVaccinations": "Níl taifead vacsaínithe curtha leis fós.",
+    "animalInfoId": "Aitheantas Ainmhithe",
+    "animalInfoIdPlaceholder": "Cuir isteach aitheantas faisnéise an ainmhí.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Sampla: Vacsaín SAT, Brucella",
+    "vaccineType": "Turas Reibiliúnaithe",
+    "vaccineTypePlaceholder": "Sampla: Beo, Neamhghníomhach",
+    "batchNumber": "Uimhir Pháirtí",
+    "vaccinationDate": "Stair an Reibiliúnaigh",
+    "nextDueDate": "Stair na nÉadaí Reibiliúnaithe Eile",
+    "veterinarianName": "Tréidlia",
+    "veterinarianLicense": "Uimhir Cheadúnais",
+    "notes": "Nótaí",
+    "certificateUrl": "URL an Teastais",
+    "saving": "Ag sábháil...",
+    "createSuccess": "Cuireadh taifead vacsaíne leis go rathúil.",
+    "updateSuccess": "Nuashonraíodh an taifead vacsaíne go rathúil.",
+    "deleteSuccess": "Scriosadh an taifead vacsaíne go rathúil.",
+    "saveError": "Tharla earráid agus an vacsaín á chlárú.",
+    "deleteError": "Tharla earráid agus an vacsaín á scriosadh.",
+    "fetchError": "Tharla earráid agus vacsaíní á lódáil."
+  },
+  "shippingCarriers": {
+    "title": "Cuideachtaí Loingseoireachta",
+    "description": "Bainistigh faisnéis na cuideachta loingseoireachta.",
+    "addCarrier": "Cuir Cuideachta leis",
+    "editCarrier": "Cuir Cuideachta in Eagar",
+    "noCarriers": "Níl aon chuideachta loingseoireachta curtha leis go fóill.",
+    "carrierName": "Ainm na Cuideachta",
+    "carrierNamePlaceholder": "Sampla: Aras Kargo, MNG",
+    "code": "Cód",
+    "codePlaceholder": "Sampla: ARAS",
+    "website": "Suíomh Gréasáin",
+    "trackingUrlTemplate": "Lean Teimpléad URL",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Tíortha Tacaithe",
+    "supportedCountriesPlaceholder": "Sampla: TR, SAM, DE",
+    "active": "Gníomhach",
+    "inactive": "Éighníomhach",
+    "saving": "Ag sábháil...",
+    "edit": "Cuir in Eagar",
+    "delete": "Scrios",
+    "createSuccess": "Tá an comhlacht loingseoireachta curtha leis go rathúil.",
+    "updateSuccess": "Tá an chuideachta loingseoireachta nuashonraithe go rathúil.",
+    "deleteSuccess": "Scriosadh an chuideachta loingseoireachta go rathúil.",
+    "saveError": "Tharla earráid agus an chuideachta loingseoireachta á clárú.",
+    "deleteError": "Tharla earráid agus faisnéis na cuideachta loingseoireachta á scriosadh.",
+    "fetchError": "Tharla earráid agus cuideachtaí lastais á luchtú."
+  },
+  "shippingZones": {
+    "title": "Criosanna Lastais",
+    "description": "Bainistigh criosanna agus limistéir lasta.",
+    "addZone": "Cuir Réigiún leis",
+    "editZone": "Cuir Réigiún in Eagar",
+    "noZones": "Níl aon limistéar lasta curtha leis go fóill.",
+    "zoneName": "Ainm an Réigiúin",
+    "zoneNamePlaceholder": "Sampla: An Eoraip, Meiriceá Thuaidh",
+    "countryCodes": "Cóid Tíre",
+    "countryCodesPlaceholder": "Sampla: TR, DE, FR",
+    "active": "Gníomhach",
+    "inactive": "Éighníomhach",
+    "saving": "Ag sábháil...",
+    "edit": "Cuir in Eagar",
+    "delete": "Scrios",
+    "createSuccess": "Tá an réigiún curtha leis go rathúil.",
+    "updateSuccess": "Tá an réigiún nuashonraithe go rathúil.",
+    "deleteSuccess": "Tá an limistéar glanta go rathúil.",
+    "saveError": "Tharla earráid agus an réigiún á shábháil.",
+    "deleteError": "Tharla earráid agus an réigiún á scriosadh.",
+    "fetchError": "Tharla earráid agus réigiúin á lódáil"
+  },
+  "shippingRates": {
+    "title": "Táillí Loingseoireachta",
+    "description": "Bainistigh costais loingseoireachta agus roghanna seachadta.",
+    "addRate": "Cuir Táille leis",
+    "editRate": "Coigeartaigh an Táille",
+    "noRates": "Níl costais loingseoireachta curtha leis go fóill.",
+    "zone": "Limistéar",
+    "carrier": "Gnólacht",
+    "selectZone": "Roghnaigh réigiún",
+    "selectCarrier": "Roghnaigh cuideachta",
+    "shippingCost": "Táille Loingseoireachta",
+    "currency": "Airgeadra",
+    "estimatedDeliveryDays": "Seachadadh Measta (Laethanta)",
+    "minWeight": "Íosmheáchan",
+    "maxWeight": "Uasmheáchan",
+    "minOrderAmount": "Méid Íosta Ordaithe",
+    "freeShipping": "Loingseoireacht Saor in Aisce",
+    "free": "Saor in aisce",
+    "active": "Gníomhach",
+    "inactive": "Éighníomhach",
+    "cost": "Táille",
+    "deliveryDays": "Seachadadh",
+    "status": "Staid",
+    "saving": "Ag sábháil...",
+    "createSuccess": "Cuireadh an táille leis go rathúil.",
+    "updateSuccess": "Tá an tuarastal nuashonraithe go rathúil.",
+    "deleteSuccess": "Scriosadh an táille go rathúil.",
+    "saveError": "Tharla earráid agus an táille á sábháil.",
+    "deleteError": "Tharla earráid agus an táille á scriosadh.",
+    "fetchError": "Tharla earráid agus na táillí á n-uaslódáil."
+  },
+  "metadata": {
+    "title": "Trádáil Beo - Ardán Trádála Ainmhithe Beo",
+    "description": "An t-ardán trádála ainmhithe beo is iontaofa ar domhan. Ceannach agus díol ainmhithe sábháilte agus trédhearcach.",
+    "pages": {
+      "about": {
+        "title": "Fúinn",
+        "description": "Foghlaim faoi Thrádáil Beostoic. Ardán trádála ainmhithe beo iontaofa."
+      },
+      "contact": {
+        "title": "Cumarsáid",
+        "description": "Déan teagmháil linn. Tá foireann tacaíochta custaiméirí Trádáil Beostoic réidh le cabhrú leat."
+      },
+      "terms": {
+        "title": "Téarmaí Úsáide",
+        "description": "Téarmaí agus Coinníollacha Trádála Beostoic."
+      },
+      "privacy": {
+        "title": "Polasaí Príobháideachais",
+        "description": "Polasaí príobháideachta Trádála Beostoic. Foghlaim conas a chosnaítear do shonraí pearsanta."
+      },
+      "products": {
+        "title": "Táirgí",
+        "description": "Brabhsáil liostaí ainmhithe beo. Fógraí iontaofa le haghaidh eallach, caorach agus níos mó."
+      },
+      "sellers": {
+        "title": "Díoltóirí",
+        "description": "Faigh amach díoltóirí ainmhithe iontaofa. Próifílí díoltóirí fíoraithe agus léirmheasanna."
+      },
+      "transporters": {
+        "title": "iompróirí",
+        "description": "Faigh amach cuideachtaí iompair ainmhithe. Iompar ainmhithe beo sábháilte agus gairmiúil."
+      },
+      "search": {
+        "title": "Cuardaigh",
+        "description": "Cuardaigh i measc liostaí ainmhithe beo. Cuardach éasca le roghanna scagtha agus sórtála."
+      },
+      "faq": {
+        "title": "Ceisteanna Coitianta",
+        "description": "Ceisteanna agus freagraí coitianta faoi thrádáil beostoic."
+      },
+      "productDetail": {
+        "title": "{teideal} - Ar Díol",
+        "description": "Ar díol i {title} - {city}. Cliceáil le haghaidh sonraí agus faisnéis teagmhála."
+      },
+      "sellerDetail": {
+        "title": "{ainm} - Próifíl an Díoltóra",
+        "description": "Próifíl díoltóra {name}. Léirmheasanna, liostaí agus faisnéis teagmhála."
+      },
+      "transporterDetail": {
+        "title": "{ainm} - Próifíl Iompróra",
+        "description": "Próifíl iompróra {name}. Limistéir seirbhíse, léirmheasanna agus faisnéis teagmhála."
+      }
+    }
   }
 }

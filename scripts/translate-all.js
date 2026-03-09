@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const { Translate } = require('@google-cloud/translate').v2;
 
+// Load env from .env.local
+try { require('dotenv').config({ path: require('path').join(__dirname, '../.env.local') }); } catch {}
+
 // Google Cloud Translation API Key - loaded from environment variable
 const API_KEY = process.env.GOOGLE_TRANSLATE_API_KEY;
 if (!API_KEY) {
@@ -64,7 +67,61 @@ const languages = {
     ga: 'Irish',
     mt: 'Maltese',
     am: 'Amharic',
-    hy: 'Armenian'
+    hy: 'Armenian',
+    // New 53 languages
+    az: 'Azerbaijani',
+    ka: 'Georgian',
+    kk: 'Kazakh',
+    uz: 'Uzbek',
+    ky: 'Kyrgyz',
+    tk: 'Turkmen',
+    mn: 'Mongolian',
+    my: 'Burmese',
+    km: 'Khmer',
+    lo: 'Lao',
+    ne: 'Nepali',
+    si: 'Sinhala',
+    mk: 'Macedonian',
+    sq: 'Albanian',
+    bs: 'Bosnian',
+    tl: 'Filipino',
+    zu: 'Zulu',
+    yo: 'Yoruba',
+    ha: 'Hausa',
+    ig: 'Igbo',
+    ny: 'Chichewa',
+    sn: 'Shona',
+    so: 'Somali',
+    mg: 'Malagasy',
+    mi: 'Maori',
+    gl: 'Galician',
+    ca: 'Catalan',
+    eu: 'Basque',
+    cy: 'Welsh',
+    gd: 'Scottish Gaelic',
+    lb: 'Luxembourgish',
+    fy: 'Frisian',
+    pa: 'Punjabi',
+    gu: 'Gujarati',
+    kn: 'Kannada',
+    ml: 'Malayalam',
+    or: 'Odia',
+    sd: 'Sindhi',
+    ps: 'Pashto',
+    ku: 'Kurdish',
+    eo: 'Esperanto',
+    ht: 'Haitian Creole',
+    ceb: 'Cebuano',
+    jw: 'Javanese',
+    su: 'Sundanese',
+    xh: 'Xhosa',
+    yi: 'Yiddish',
+    be: 'Belarusian',
+    co: 'Corsican',
+    la: 'Latin',
+    sm: 'Samoan',
+    st: 'Sesotho',
+    tg: 'Tajik'
 };
 
 // Dosya yollari

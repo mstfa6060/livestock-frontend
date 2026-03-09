@@ -11,17 +11,30 @@
     "back": "Tilbage",
     "next": "Forward",
     "close": "Tæt",
+    "unauthorized": "Du har ikke tilladelse til at få adgang til denne side.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Log ind",
-    "register": "Register"
+    "register": "Register",
+    "previous": "Tidligere",
+    "zoomIn": "Zoom ind",
+    "previousImage": "Forrige billede",
+    "nextImage": "Næste billede",
+    "closeLightbox": "Luk galleri",
+    "imageLightbox": "Billedgalleri",
+    "slideN": "Slide {n}",
+    "viewMore": "Se mere"
   },
   "header": {
     "products": "Produkter",
     "sellers": "Sælgere",
+    "transporters": "transportører",
     "about": "Om os",
+    "search": "Søge",
     "dashboard": "Panel",
     "settings": "Indstillinger",
-    "logout": "Log ud"
+    "logout": "Log ud",
+    "menu": "Menu",
+    "language": "Valg af sprog"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Jeg har glemt min adgangskode.",
       "noAccount": "Har du ikke en konto?",
       "register": "Register",
-      "errorDefault": "Login mislykkedes. Tjek venligst dine oplysninger."
+      "errorDefault": "Login mislykkedes. Tjek venligst dine oplysninger.",
+      "orContinueWith": "eller fortsæt",
+      "continueWithGoogle": "Fortsæt med Google",
+      "continueWithApple": "Fortsæt med Apple.",
+      "socialLoginError": "Social login mislykkedes. Prøv igen.",
+      "appleComingSoon": "Meget snart",
+      "showPassword": "Vis adgangskode",
+      "hidePassword": "Skjul adgangskode"
     },
     "register": {
       "title": "Register",
@@ -51,7 +71,17 @@
       "login": "Log ind",
       "passwordMismatch": "Adgangskoderne stemmer ikke overens.",
       "passwordTooShort": "Adgangskoden skal være mindst 6 tegn lang.",
-      "errorDefault": "Registreringen mislykkedes. Prøv igen."
+      "errorDefault": "Registreringen mislykkedes. Prøv igen.",
+      "showPassword": "Vis adgangskode",
+      "hidePassword": "Skjul adgangskode",
+      "passwordStrength": {
+        "minLength": "Mindst 8 tegn",
+        "uppercase": "Store bogstaver (A-Z)",
+        "lowercase": "Små bogstaver (a-z)",
+        "number": "Nummer (0-9)",
+        "special": "Specialtegn (!@#$%)"
+      },
+      "registerSuccess": "Din konto er oprettet! Du bliver omdirigeret til loginsiden..."
     },
     "forgotPassword": {
       "title": "Jeg har glemt min adgangskode.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Anmod om en ny forbindelse",
       "passwordMismatch": "Adgangskoderne stemmer ikke overens.",
       "passwordTooShort": "Adgangskoden skal være mindst 6 tegn lang.",
-      "errorDefault": "Nulstilling af adgangskode mislykkedes. Forbindelsen er muligvis ugyldig eller udløbet."
+      "errorDefault": "Nulstilling af adgangskode mislykkedes. Forbindelsen er muligvis ugyldig eller udløbet.",
+      "showPassword": "Vis adgangskode",
+      "hidePassword": "Skjul adgangskode"
     }
   },
   "dashboard": {
@@ -90,22 +122,41 @@
     "id": "ID",
     "logout": "Log ud",
     "stats": {
-      "totalListings": "Samlet antal annoncer",
+      "totalListings": "Samlede annoncer",
       "active": "aktiv",
       "totalViews": "Samlede visninger",
       "thisWeek": "denne uge",
+      "allTime": "alle tider",
       "favorites": "Favorit",
       "onYourListings": "i dine annoncer",
+      "savedItems": "registreret produkt",
       "messages": "Besked",
-      "unread": "ulæst"
+      "notifications": "Notifikationer",
+      "unread": "ulæst",
+      "views": "visninger",
+      "draft": "Udkast",
+      "sold": "Solgt",
+      "pending": "Indtil",
+      "awaitingApproval": "afventer godkendelse",
+      "totalSales": "Samlet salg",
+      "completedSales": "gennemførte salg",
+      "revenue": "Indkomst",
+      "totalRevenue": "samlet omsætning"
     },
     "recentListings": "Dine seneste annoncer",
+    "recentActivity": "Seneste aktiviteter",
     "recentMessages": "Seneste beskeder",
+    "quickLinks": "Hurtig adgang",
     "noListings": "Du har ikke tilføjet nogen annoncer endnu.",
+    "noActivity": "Ingen aktivitet endnu.",
     "noMessages": "Du har ikke modtaget en besked endnu.",
-    "noNotifications": "Du har endnu ikke modtaget nogen notifikationer.",
+    "noNotifications": "Du har ikke modtaget nogen notifikationer endnu.",
     "viewAllListings": "Se alle annoncer",
-    "viewAllMessages": "Se alle beskeder"
+    "viewAllMessages": "Se alle beskeder",
+    "viewNotifications": "Se notifikationer",
+    "viewFavorites": "Favoritter Gor",
+    "recentlyViewed": "Nyligt set",
+    "fetchError": "Der opstod en fejl under indlæsning af paneldataene."
   },
   "dashboardNav": {
     "overview": "Oversigt",
@@ -115,7 +166,61 @@
     "notifications": "Notifikationer",
     "profile": "Profil",
     "settings": "Indstillinger",
-    "newListing": "Tilføj ny fortegnelse"
+    "newListing": "Tilføj ny fortegnelse",
+    "becomeSeller": "Bliv sælger",
+    "categories": "Kategorier",
+    "offers": "Forslag",
+    "deals": "Aftaler",
+    "farms": "Mine gårde",
+    "transport": "Transportere",
+    "moderation": "Moderering",
+    "sellerModeration": "Sælgermoderering",
+    "transporterModeration": "Udbydermoderering",
+    "brands": "Mærker",
+    "transportOffers": "Forsendelsestilbud",
+    "healthRecords": "Sundhedsjournaler",
+    "vaccinations": "Vaccinatorer",
+    "shippingCarriers": "Rederier",
+    "shippingZones": "Fragtzoner",
+    "shippingRates": "Forsendelsesgebyrer",
+    "systemSettings": "Systemindstillinger",
+    "locations": "Mine adresser"
+  },
+  "profile": {
+    "title": "Profiloplysninger",
+    "description": "Du kan opdatere dine personlige oplysninger her.",
+    "personalInfo": "Personlige oplysninger",
+    "contactInfo": "Kontaktoplysninger",
+    "preferences": "Præferencer",
+    "firstName": "Navn",
+    "firstNamePlaceholder": "Indtast dit navn",
+    "surname": "Efternavn",
+    "surnamePlaceholder": "Indtast dit efternavn.",
+    "displayName": "Vist navn",
+    "phone": "Telefonnummer",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Bekræftet",
+    "phoneNotVerified": "Ubekræftet",
+    "verifyPhone": "Bekræft telefonnummer",
+    "country": "Land",
+    "selectCountry": "Vælg et land",
+    "language": "Sprogpræference",
+    "selectLanguage": "Vælg et sprog",
+    "currency": "Valuta",
+    "selectCurrency": "Vælg valuta",
+    "saveChanges": "Gem ændringer",
+    "saving": "Gemmer...",
+    "saveSuccess": "Dine profiloplysninger er blevet opdateret.",
+    "saveError": "Der opstod en fejl under opdatering af profilen.",
+    "avatar": "Profilfoto",
+    "changeAvatar": "Skift foto",
+    "removeAvatar": "Fjern foto",
+    "currencies": {
+      "try": "Tyrkiske lira",
+      "usd": "Amerikanske dollar",
+      "eur": "Euro",
+      "gbp": "Britisk pund"
+    }
   },
   "myListings": {
     "title": "Mine annoncer",
@@ -125,35 +230,94 @@
     "fetchError": "Der opstod en fejl under indlæsning af annoncer.",
     "deleteSuccess": "Annoncen blev slettet.",
     "deleteError": "Der opstod en fejl under sletning af annoncen.",
-    "activateSuccess": "Annoncen er blevet aktiveret.",
-    "deactivateSuccess": "Opslaget er blevet deaktiveret.",
+    "publishSuccess": "Annoncen er sendt til godkendelse.",
+    "unpublishSuccess": "Annoncen er udarbejdet.",
     "statusError": "Der opstod en fejl under ændring af status.",
     "filters": {
       "all": "Alle af dem",
-      "active": "Aktiv",
       "draft": "Udkast",
       "pending": "Venter på godkendelse",
+      "active": "Aktiv",
+      "rejected": "Afvist",
       "sold": "Solgt"
     },
     "actions": {
       "edit": "Redigere",
       "delete": "Slet",
-      "activate": "Aktivér",
-      "deactivate": "Passiv struktur"
+      "publish": "Send til godkendelse",
+      "unpublish": "Udkast",
+      "menu": "Transaktioner"
     },
     "deleteDialog": {
       "title": "Slet annoncen",
       "description": "Er du sikker på, at du vil slette denne fortegnelse? Denne handling kan ikke fortrydes.",
       "cancel": "Ophæve",
       "confirm": "Slet"
-    }
+    },
+    "loadMore": "Download mere",
+    "loadingMore": "Indlæser..."
   },
   "favorites": {
     "title": "Mine favoritter",
     "description": "Følg de produkter, du kan lide her.",
     "noFavorites": "Du har ikke tilføjet nogen favoritprodukter endnu.",
     "browseProducts": "Gennemse produkter",
-    "fetchError": "Der opstod en fejl under indlæsning af favoritter."
+    "fetchError": "Der opstod en fejl under indlæsning af favoritter.",
+    "loadMore": "Download mere",
+    "loadingMore": "Indlæser..."
+  },
+  "messages": {
+    "title": "Beskeder",
+    "description": "Kom i kontakt med købere og sælgere.",
+    "noConversations": "Du har ikke modtaget en besked endnu.",
+    "startConversation": "For at stille et spørgsmål om en annonce, gå til annoncen.",
+    "fetchError": "Der opstod en fejl under indlæsning af beskeder",
+    "sendError": "Der opstod en fejl under afsendelse af beskeden.",
+    "connectionError": "Forbindelsen mislykkedes. Prøver igen...",
+    "connected": "Det forbandt",
+    "connecting": "Forbinder...",
+    "searchPlaceholder": "Søg i beskederne...",
+    "typeMessage": "Skriv din besked...",
+    "send": "Sende",
+    "sending": "Sender...",
+    "typing": "Det siger...",
+    "read": "Læse",
+    "delivered": "Sendt",
+    "today": "I dag",
+    "yesterday": "I går",
+    "noMessages": "Ingen beskeder endnu. Start en samtale!",
+    "loadMore": "Upload mere",
+    "loadingMessages": "Beskeder indlæses...",
+    "about": "Om",
+    "product": "Produkt",
+    "startNewConversation": "Start en ny samtale",
+    "selectConversation": "Vælg en samtale, eller start en ny.",
+    "online": "Online",
+    "offline": "Offline",
+    "lastSeen": "Sidst set",
+    "deleteConversation": "Slet samtale",
+    "deleteConfirm": "Er du sikker på, at du vil slette denne samtale?",
+    "deleted": "Samtalen blev slettet.",
+    "defaultUser": "Bruger",
+    "noResults": "Ingen resultater fundet.",
+    "newConversation": "Ny samtale"
+  },
+  "notifications": {
+    "title": "Notifikationer",
+    "description": "Se og administrer dine notifikationer.",
+    "markAllAsRead": "Markér alle som læst",
+    "noNotifications": "Du har ikke modtaget nogen notifikationer endnu.",
+    "viewAll": "Se alle notifikationer",
+    "today": "I dag",
+    "yesterday": "I går",
+    "older": "Ældre",
+    "types": {
+      "system": "System",
+      "message": "Besked",
+      "offer": "Tilbud",
+      "order": "Bestille",
+      "listing": "Annonce"
+    }
   },
   "settings": {
     "title": "Indstillinger",
@@ -169,7 +333,28 @@
       "passwordMismatch": "De nye adgangskoder stemmer ikke overens.",
       "passwordTooShort": "Den nye adgangskode skal være mindst 6 tegn lang.",
       "sessionError": "Sessionsoplysninger kunne ikke findes.",
-      "errorDefault": "Adgangskoden kunne ikke opdateres. Kontroller venligst din nuværende adgangskode."
+      "errorDefault": "Adgangskoden kunne ikke opdateres. Kontroller venligst din nuværende adgangskode.",
+      "showPassword": "Vis adgangskode",
+      "hidePassword": "Skjul adgangskode"
+    },
+    "preferences": {
+      "title": "Meddelelses- og visningsindstillinger",
+      "description": "Administrer dine notifikationskanaler og visningspræferencer.",
+      "notifications": "Notifikationer",
+      "emailNotifications": "E-mail-notifikationer",
+      "emailNotificationsDesc": "Modtag e-mail-notifikationer om nye beskeder og opdateringer om annonceringer.",
+      "smsNotifications": "SMS-notifikationer",
+      "smsNotificationsDesc": "Modtag SMS-beskeder med vigtige notifikationer.",
+      "pushNotifications": "Push-notifikationer",
+      "pushNotificationsDesc": "Modtag push-notifikationer for øjeblikkelige opdateringer.",
+      "appearance": "Udseende",
+      "darkMode": "Mørk tilstand",
+      "darkModeDesc": "Skift til et mørkt tema.",
+      "saveChanges": "Gem indstillinger",
+      "saving": "Gemmer...",
+      "saveSuccess": "Dine præferencer er blevet opdateret.",
+      "saveError": "Der opstod en fejl under opdatering af præferencer.",
+      "loadError": "Præferencerne kunne ikke indlæses."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Platform til handel med levende dyr",
       "subtitle": "Den mest pålidelige platform til handel med levende dyr. Køb og sælg dit kvæg og får sikkert.",
       "cta": "Start nu",
-      "viewListings": "Se annoncer"
+      "viewListings": "Se annoncer",
+      "searchPlaceholder": "Led efter dyr... (køer, får, geder...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Fremhævede annoncer",
       "viewAll": "Se alle"
+    },
+    "cta": {
+      "title": "Start nu",
+      "subtitle": "Tag din plads på en platform, hvor tusindvis af sælgere og købere mødes.",
+      "button": "Tilmeld dig gratis"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Om os",
     "contact": "Meddelelse",
     "terms": "Brugsbetingelser",
-    "privacy": "Privatlivspolitik"
+    "privacy": "Privatlivspolitik",
+    "company": "Selskab",
+    "support": "Støtte",
+    "legal": "Legal",
+    "followUs": "Følg os",
+    "newsletter": "Bulletin",
+    "newsletterDescription": "Gå ikke glip af de seneste annoncer og kampagner.",
+    "subscribe": "Abonner",
+    "emailPlaceholder": "Din e-mailadresse",
+    "tagline": "Tyrkiets mest pålidelige platform for handel med levende dyr.",
+    "sellers": "Sælgere",
+    "products": "Produkter",
+    "map": "Kort",
+    "appleLoginComingSoon": "Login med Apple vil være aktiv meget snart.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "Ofte stillede spørgsmål"
+  },
+  "faq": {
+    "title": "Ofte stillede spørgsmål",
+    "description": "Svar på dine ofte stillede spørgsmål om vores platform.",
+    "noFaqs": "Der er endnu ikke tilføjet nogen spørgsmål."
+  },
+  "about": {
+    "title": "Om os",
+    "subtitle": "Tyrkiets mest pålidelige platform for handel med levende dyr.",
+    "mission": {
+      "title": "Vores mission",
+      "description": "Ved at digitalisere handlen med levende dyr sigter vi mod at skabe en sikker, transparent og effektiv forbindelse mellem producenter og købere."
+    },
+    "vision": {
+      "title": "Vores vision",
+      "description": "At være en pioner inden for digital transformation i landbrugssektoren og at blive en global platform for handel med levende dyr."
+    },
+    "values": {
+      "title": "Vores værdier",
+      "trust": {
+        "title": "Tillid",
+        "description": "Gennemsigtighed og pålidelighed er afgørende i alle transaktioner."
+      },
+      "quality": {
+        "title": "Kvalitet",
+        "description": "Kontinuerlig forbedring for at yde den bedste service."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Transformation af branchen ved hjælp af teknologi."
+      }
+    },
+    "stats": {
+      "users": "Registreret bruger",
+      "sellers": "Aktiv sælger",
+      "products": "Annonce",
+      "transactions": "Transaktionen var vellykket"
+    }
+  },
+  "contact": {
+    "title": "Meddelelse",
+    "subtitle": "Kontakt os venligst, hvis du har spørgsmål.",
+    "form": {
+      "title": "Skriv til os",
+      "name": "Dit navn",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "E-mail",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Emne",
+      "subjectPlaceholder": "Emnet for din besked",
+      "message": "Din besked",
+      "messagePlaceholder": "Skriv din besked her...",
+      "submit": "Sende",
+      "submitting": "Sender...",
+      "success": "Din besked er blevet sendt. Vi vender tilbage til dig hurtigst muligt.",
+      "error": "Der opstod en fejl under afsendelse af beskeden. Prøv igen."
+    },
+    "info": {
+      "title": "Kontaktoplysninger",
+      "address": "Adresse",
+      "addressValue": "Istanbul, Tyrkiet",
+      "email": "E-mail",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Telefon",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Arbejdstider",
+      "workingHoursValue": "Mandag - fredag: 09:00 - 18:00",
+      "map": "Kort"
+    }
+  },
+  "terms": {
+    "title": "Brugsbetingelser",
+    "lastUpdated": "Sidst opdateret: {dato}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Accept af vilkårene",
+        "content": "Ved at bruge denne hjemmeside accepterer du følgende brugsbetingelser. Hvis du ikke accepterer disse betingelser, bedes du ikke bruge siden."
+      },
+      "services": {
+        "title": "2. Tjenester",
+        "content": "Livestock Trading tilbyder en platform til køb og salg af levende dyr. Alle transaktioner på platformen er brugerens ansvar."
+      },
+      "accounts": {
+        "title": "3. Brugerkonti",
+        "content": "Du skal angive nøjagtige og opdaterede oplysninger for at oprette en konto. Din kontos sikkerhed er dit ansvar."
+      },
+      "prohibited": {
+        "title": "4. Forbudte aktiviteter",
+        "content": "Vildledende reklamer, falske oplysninger, bedrageri og ulovlige aktiviteter er strengt forbudt."
+      },
+      "liability": {
+        "title": "5. Ansvarsbegrænsning",
+        "content": "Platformen er ikke direkte ansvarlig for transaktioner mellem brugere. Alle transaktioner finder sted mellem parterne."
+      },
+      "changes": {
+        "title": "6. Ændringer",
+        "content": "Disse vilkår og betingelser kan ændres uden varsel. Ændringer træder i kraft øjeblikkeligt efter offentliggørelsen."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privatlivspolitik",
+    "lastUpdated": "Sidst opdateret: {dato}",
+    "sections": {
+      "collection": {
+        "title": "1. Informationsindsamling",
+        "content": "Når du opretter en konto, indsamler vi personlige oplysninger såsom dit navn, din e-mailadresse og dit telefonnummer. Vi kan også indsamle anonyme data vedrørende din brug af webstedet."
+      },
+      "usage": {
+        "title": "2. Brug af oplysninger",
+        "content": "De oplysninger, vi indsamler, bruges til at levere vores tjenester, administrere din konto, sikre sikkerhed og tilbyde dig personlige tilbud."
+      },
+      "sharing": {
+        "title": "3. Informationsdeling",
+        "content": "Dine personlige oplysninger vil ikke blive solgt eller udlejet til tredjeparter. Dine oplysninger vil ikke blive delt, undtagen til formål der kræves i henhold til loven."
+      },
+      "security": {
+        "title": "4. Sikkerhed",
+        "content": "Der er indført sikkerhedsforanstaltninger i henhold til branchestandarder for at beskytte dine data."
+      },
+      "cookies": {
+        "title": "5. Cookies",
+        "content": "Vores hjemmeside bruger cookies til at forbedre brugeroplevelsen. Du kan administrere dine cookiepræferencer i dine browserindstillinger."
+      },
+      "rights": {
+        "title": "6. Dine rettigheder",
+        "content": "I henhold til den tyrkiske lov om beskyttelse af personoplysninger (KVKK) har du ret til at få adgang til, rette og slette dine personoplysninger."
+      }
+    }
   },
   "products": {
     "title": "Produkter",
@@ -235,11 +570,19 @@
       "priceDesc": "Pris (høj til lav)",
       "popular": "Mest populære"
     },
+    "pagination": {
+      "prev": "Tidligere",
+      "next": "Næste"
+    },
     "status": {
       "draft": "Udkast",
+      "pending": "Venter på godkendelse",
       "active": "Aktiv",
+      "inactive": "Passiv",
+      "outOfStock": "Udsolgt",
+      "expired": "Hans embedsperiode er udløbet.",
       "sold": "Solgt",
-      "pending": "Venter på godkendelse"
+      "rejected": "Afvist"
     },
     "condition": {
       "new": "Ny",
@@ -253,9 +596,13 @@
     "loading": "Indlæser produkter...",
     "perPage": "Pr. side",
     "showing": "Det samlede antal produkter fra {total} mellem {from} og {to}.",
+    "fetchError": "Der opstod en fejl under upload af produkterne.",
+    "loadMore": "Vis mere",
+    "showingOf": "{count} / {total} produkter vises.",
     "loginToFavorite": "Log ind for at tilføje til favoritter.",
     "addedToFavorites": "Tilføjet til favoritter",
-    "removedFromFavorites": "Fjernet fra favoritter"
+    "removedFromFavorites": "Fjernet fra favoritter",
+    "favoriteError": "Favorithandling mislykkedes."
   },
   "productDetail": {
     "addToFavorites": "Føj til favoritter",
@@ -279,16 +626,31 @@
     "maxOrder": "Maksimal ordre",
     "publishedAt": "Udgivelsesdato",
     "views": "Set",
-    "reviews": "evaluering",
+    "reviews": {
+      "title": "Vurderinger",
+      "reviewCount": "evaluering",
+      "noReviews": "Ingen evaluering endnu.",
+      "verified": "Bekræftet køber"
+    },
     "similarProducts": "Lignende produkter",
     "sellerProducts": "Sælgers andre produkter",
     "contactSeller": "Kontakt sælgeren",
-    "loginRequired": "Log ind for at tilføje til favoritter.",
+    "makeOffer": "Indsend et tilbud",
+    "loginRequired": "Log venligst ind for at udføre denne handling.",
     "addedToFavorites": "Tilføjet til favoritter",
     "removedFromFavorites": "Fjernet fra favoritter",
     "linkCopied": "Linket er blevet kopieret.",
     "messagingComingSoon": "Beskedfunktion kommer snart.",
-    "productNotFound": "Produktet blev ikke fundet."
+    "productNotFound": "Produktet blev ikke fundet.",
+    "contacting": "Der tages kontakt ...",
+    "contactError": "Kommunikationen mislykkedes. Prøv igen.",
+    "noImage": "Intet billede tilgængeligt.",
+    "defaultLocation": "Kalkun",
+    "inquiryMessage": "Jeg vil gerne have oplysninger om {title}.",
+    "breadcrumb": {
+      "home": "Hjem",
+      "products": "Produkter"
+    }
   },
   "seller": {
     "title": "Sælgeroplysninger",
@@ -300,6 +662,70 @@
     "call": "Søge",
     "viewProfile": "Se profil"
   },
+  "sellers": {
+    "title": "Sælgere",
+    "description": "Opdag pålidelige sælgere.",
+    "search": "Find en sælger...",
+    "sort": "Sortere",
+    "sortOptions": {
+      "newest": "Seneste",
+      "mostSales": "Bedst sælgende",
+      "topRated": "Højeste score",
+      "mostProducts": "De fleste annoncer"
+    },
+    "noResults": "Sælger ikke fundet.",
+    "loading": "Sælgere indlæser...",
+    "showing": "{count} sælgere fundet",
+    "verified": "Bekræftet",
+    "sales": "salg",
+    "products": "annonce",
+    "reviews": "evaluering",
+    "rating": "punkt",
+    "viewProducts": "Se produkter",
+    "contactSeller": "Send besked",
+    "memberSince": "Medlem siden {år}",
+    "fetchError": "Der opstod en fejl under indlæsning af leverandører",
+    "detail": {
+      "title": "Sælgerprofil",
+      "about": "Om",
+      "businessInfo": "Virksomhedsoplysninger",
+      "businessName": "Firmanavn",
+      "businessType": "Forretningstur",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "website": "Hjemmeside",
+      "description": "Forklaring",
+      "policies": "Politikker",
+      "returnPolicy": "Returpolitik",
+      "shippingPolicy": "Forsendelsespolitik",
+      "businessHours": "Arbejdstider",
+      "paymentMethods": "Betalingsmetoder",
+      "allProducts": "Alle produkter",
+      "stats": {
+        "totalSales": "Samlet salg",
+        "totalProducts": "Samlede produkter",
+        "totalReviews": "Evaluering",
+        "rating": "Punkt"
+      },
+      "notFound": "Sælger ikke fundet.",
+      "backToList": "Don til sælgerne",
+      "contactInfo": "Meddelelse",
+      "noProducts": "Denne sælger har endnu ingen annoncer.",
+      "noPolicies": "Sælgeren har endnu ikke defineret sine politikker.",
+      "fetchError": "Der opstod en fejl under upload af sælgeroplysninger.",
+      "productsLoadError": "Der opstod en fejl under upload af sælgerens produkter.",
+      "reviewsTab": "Vurderinger",
+      "reviews": {
+        "summary": "Evalueringsoversigt",
+        "reviewCount": "evaluering",
+        "communication": "Meddelelse",
+        "shippingSpeed": "Forsendelseshastighed",
+        "productQuality": "Produktkvalitet",
+        "noReviews": "Ingen evaluering endnu.",
+        "verified": "Bekræftet køber"
+      }
+    }
+  },
   "editListing": {
     "title": "Rediger annoncen",
     "saveChanges": "Gem ændringer",
@@ -307,6 +733,10 @@
     "updateSuccess": "Annoncen er blevet opdateret.",
     "updateFailed": "Der opstod en fejl under opdateringen af listen.",
     "loadError": "Der opstod en fejl under indlæsning af annoncen.",
+    "sellerNotFound": "Sælgerprofil ikke fundet.",
+    "sellerLoadError": "Sælgerprofilen kunne ikke indlæses.",
+    "userNotFound": "Brugeroplysningerne kunne ikke findes. Log venligst ind igen.",
+    "locationNotFound": "Placeringsoplysningerne kunne ikke findes. Opdater venligst siden.",
     "basicInfo": "Grundlæggende oplysninger",
     "categoryAndCondition": "Kategori og status",
     "pricing": "Priser",
@@ -314,6 +744,8 @@
     "images": "Billeder",
     "existingImages": "Tilgængelige billeder",
     "addImage": "Tilføj billede",
+    "maxImages": "Du kan maksimalt uploade 10 billeder.",
+    "imageHint": "Minimum 1, maksimum 10 billeder. I PNG-, JPG- eller WEBP-format.",
     "uploadingImages": "Billeder indlæses...",
     "uploadingImage": "Billedet indlæses.",
     "imageUploadFailed": "Billedet kunne ikke indlæses.",
@@ -358,6 +790,7 @@
     "addImage": "Tilføj billede",
     "maxImages": "Du kan maksimalt uploade 10 billeder.",
     "imageHint": "Minimum 1, maksimum 10 billeder. I PNG-, JPG- eller WEBP-format.",
+    "location": "Placeringsoplysninger",
     "fields": {
       "title": "Annoncetitel",
       "shortDescription": "Kort beskrivelse",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Forsendelse er tilgængelig.",
       "shippingCost": "Forsendelsesgebyr",
       "weight": "Vægt",
-      "weightUnit": "Vægtenhed"
+      "weightUnit": "Vægtenhed",
+      "city": "By",
+      "address": "Adresse",
+      "postalCode": "Postnummer"
     },
     "placeholders": {
       "title": "Eksempel: 2-årig Holstein-ko",
       "shortDescription": "Produktbeskrivelse (maks. 200 tegn)",
       "description": "Giv detaljerede oplysninger om produktet...",
-      "category": "Vælg en kategori."
+      "category": "Vælg en kategori.",
+      "city": "Indtast byen",
+      "address": "Indtast den fulde adresse.",
+      "postalCode": "Postnummer"
+    },
+    "errors": {
+      "titleRequired": "Annoncetitel er obligatorisk.",
+      "shortDescriptionRequired": "En kort beskrivelse er påkrævet.",
+      "descriptionRequired": "En detaljeret forklaring er påkrævet.",
+      "categoryRequired": "Valg af kategori er obligatorisk.",
+      "priceRequired": "Prisen er obligatorisk.",
+      "cityRequired": "Byinformation er påkrævet.",
+      "addressRequired": "Adresseoplysninger er påkrævet.",
+      "locationError": "Der opstod en fejl under oprettelsen af placeringen."
     },
     "success": "Annoncen blev oprettet.",
     "error": "Der opstod en fejl under oprettelsen af annoncen.",
@@ -384,28 +833,57 @@
     "uploadingImages": "Billeder indlæses...",
     "uploadingImage": "Billedet indlæses.",
     "imageUploadFailed": "Billedet kunne ikke indlæses.",
-    "imagesUploaded": "Alle billeder er uploadet",
+    "imagesUploaded": "Alle billeder er blevet uploadet",
     "draftSaved": "Udkast gemt",
     "productCreated": "Produktet blev oprettet.",
     "creationFailed": "Produktet kunne ikke oprettes. Prøv igen.",
-    "errors": {
-      "titleRequired": "Annoncetitel er obligatorisk.",
-      "shortDescriptionRequired": "En kort beskrivelse er påkrævet.",
-      "descriptionRequired": "En detaljeret forklaring er påkrævet.",
-      "categoryRequired": "Valg af kategori er obligatorisk.",
-      "priceRequired": "Indtast en gyldig pris."
-    }
+    "userNotFound": "Brugeroplysningerne kunne ikke findes. Log venligst ind igen.",
+    "defaultBusinessName": "Min virksomhed"
+  },
+  "becomeSeller": {
+    "title": "Bliv sælger",
+    "description": "Selskabserklæring",
+    "alreadySeller": "Du har allerede en sælgerprofil.",
+    "goToListings": "Gå til mine annoncer",
+    "businessInfo": "Virksomhedsoplysninger",
+    "contactInfo": "Kontaktoplysninger",
+    "businessName": "Firmanavn",
+    "businessNamePlaceholder": "Eksempel: Yilmaz Farm",
+    "businessType": "Forretningstur",
+    "businessTypePlaceholder": "Vælg din virksomhedstype.",
+    "businessTypes": {
+      "individual": "Individuel",
+      "company": "Selskab",
+      "cooperative": "Samarbejdsvillig",
+      "farm": "Gård"
+    },
+    "taxNumber": "Skattenummer",
+    "taxNumberPlaceholder": "Indtast dit skatteidentifikationsnummer (valgfrit)",
+    "descriptionPlaceholder": "Skriv en kort beskrivelse af din virksomhed...",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Hjemmeside",
+    "websitePlaceholder": "https://www.examplesite.com (valgfrit)",
+    "submit": "Opret sælgerprofil",
+    "submitting": "Opretter en profil...",
+    "success": "Din sælgerprofil er blevet oprettet!",
+    "error": "Der opstod en fejl under oprettelsen af sælgerprofilen.",
+    "taxNumberHelp": "Indtast dit 10- eller 11-cifrede skattenummer (valgfrit)",
+    "phoneHelp": "Eksempel: +90 555 123 45 67 eller 0555 123 45 67",
+    "websiteHelp": "Eksempel: www.isletmem.com eller https://isletmem.com",
+    "alreadySellerDescription": "Du kan bruge knappen nedenfor til at administrere dine annoncer.",
+    "newListing": "Tilføj ny fortegnelse"
   },
   "fileUpload": {
     "dragDrop": "Upload et foto eller en video.",
     "dragDropHint": "Træk og slip eller klik for at vælge.",
     "dropHere": "Lad det være...",
     "imageLimit": "Foto: maks. 10 MB",
-    "videoLimit": "Video: maks. 50 MB",
+    "videoLimit": "Video: maks. 100 MB",
     "uploadCount": "{nuværende} / {maks.} indlæst",
     "maxFilesError": "Du kan maksimalt uploade {max} medier.",
     "imageTooLarge": "Billedet skal være mindre end 10 MB.",
-    "videoTooLarge": "Videoen skal være mindre end 50 MB.",
+    "videoTooLarge": "Videoen skal være mindre end 100 MB.",
     "optimizing": "Optimering...",
     "uploading": "Indlæser...",
     "queued": "Venter i kø...",
@@ -418,10 +896,834 @@
     "coverBadge": "LÅG",
     "videoBadge": "VIDEO",
     "coverUpdated": "Forsidebilledet er blevet justeret.",
-    "optimizationInfo": "Billeder er optimeret til at overholde webstandarder",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "optimizationInfo": "Billederne er optimeret til at overholde webstandarder",
+    "selectImage": "Visuelt valg",
+    "changeImage": "Forandring",
+    "removeImage": "Fjerne",
+    "videoProcessing": "Videoen bliver behandlet...",
+    "videoProcessingFailed": "Handlingen mislykkedes.",
+    "videoProcessingPollError": "Status for videobehandling kunne ikke hentes. Opdater venligst siden.",
+    "reorderError": "Filen kunne ikke sorteres.",
+    "coverUpdateError": "Forsidebilledet kunne ikke opdateres."
+  },
+  "error": {
+    "title": "Der opstod en fejl.",
+    "description": "Der opstod en uventet fejl. Opdater siden, eller prøv igen senere.",
+    "retry": "Prøv igen",
+    "goBack": "Gå ikke tilbage",
+    "goHome": "Hjem",
+    "notFound": {
+      "title": "Siden blev ikke fundet",
+      "description": "Den side, du leder efter, er enten ikke tilgængelig eller er flyttet.",
+      "goHome": "Tilbage til forsiden"
+    }
+  },
+  "search": {
+    "title": "Søge",
+    "placeholder": "Søg efter produkter, kategorier eller sælgere...",
+    "searchButton": "Søge",
+    "searchingFor": "Ønskes",
+    "loading": "Ønskes...",
+    "resultsCount": "{count} resultater blev fundet.",
+    "noResults": "Ingen resultater fundet.",
+    "tryDifferentSearch": "Prøv andre søgeord, eller skift filtrene.",
+    "filters": {
+      "title": "Filtre",
+      "category": "Kategori",
+      "allCategories": "Alle kategorier",
+      "condition": "Situation",
+      "allConditions": "Alle sager",
+      "priceRange": "Prisinterval",
+      "price": "Pris",
+      "min": "Min.",
+      "max": "Maks.",
+      "apply": "Anvende",
+      "clear": "Ren",
+      "clearAll": "Ryd alt"
+    },
+    "fetchError": "Der opstod en fejl under indlæsning af søgeresultaterne",
+    "recentSearches": "Seneste søgninger",
+    "clearHistory": "Ryd historik",
+    "noSearchHistory": "Du har endnu ikke en søgehistorik.",
+    "deleteHistoryError": "Der opstod en fejl under sletning af søgehistorikken."
+  },
+  "categories": {
+    "title": "Kategoristyring",
+    "description": "Administrer kategorier herfra.",
+    "noCategories": "Der er endnu ikke tilføjet nogen kategorier.",
+    "createFirst": "Opret den første kategori.",
+    "fetchError": "Der opstod en fejl under indlæsning af kategorierne.",
+    "createSuccess": "Kategori oprettet",
+    "createError": "Der opstod en fejl under oprettelsen af kategorien.",
+    "updateSuccess": "Kategori opdateret",
+    "updateError": "Der opstod en fejl under opdatering af kategorien.",
+    "deleteSuccess": "Kategorien er blevet slettet.",
+    "deleteError": "Der opstod en fejl under sletning af kategorien.",
+    "activateSuccess": "Kategorien er blevet aktiveret.",
+    "deactivateSuccess": "Kategorien er blevet deaktiveret.",
+    "statusError": "Der opstod en fejl under ændring af status.",
+    "loadError": "Der opstod en fejl under indlæsning af kategorien",
+    "filters": {
+      "all": "Alle af dem",
+      "active": "Aktiv",
+      "inactive": "Inaktiv"
+    },
+    "table": {
+      "name": "Kategorinavn",
+      "slug": "Snegl",
+      "sortOrder": "Serienummer",
+      "subCategories": "Underkategori",
+      "status": "Situation",
+      "actions": "Transaktioner"
+    },
+    "actions": {
+      "edit": "Redigere",
+      "delete": "Slet",
+      "activate": "Aktivér",
+      "deactivate": "Passiv struktur"
+    },
+    "deleteDialog": {
+      "title": "Slet kategori",
+      "description": "Er du sikker på, at du vil slette denne kategori? Denne handling kan ikke fortrydes.",
+      "cancel": "Ophæve",
+      "confirm": "Slet"
+    },
+    "addNew": "Tilføj ny kategori",
+    "loadMore": "Download mere",
+    "loadingMore": "Indlæser...",
+    "form": {
+      "newTitle": "Opret en ny kategori",
+      "editTitle": "Rediger kategori",
+      "name": "Kategorinavn",
+      "namePlaceholder": "Eksempel: Kvæg",
+      "slug": "Snegl",
+      "slugPlaceholder": "Eksempel: store husdyr",
+      "description": "Forklaring",
+      "descriptionPlaceholder": "En kort beskrivelse af kategorien...",
+      "parentCategory": "Øvre kategori",
+      "parentCategoryPlaceholder": "Vælg en topkategori (valgfrit)",
+      "noParent": "Ingen topkategori (hovedkategori)",
+      "sortOrder": "Sekvensnummer",
+      "isActive": "Aktiv",
+      "iconUrl": "Ikon-URL",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Spare",
+      "submitting": "Gemmer...",
+      "updating": "Opdaterer...",
+      "errors": {
+        "nameRequired": "Kategorinavn er påkrævet.",
+        "slugRequired": "Snegle er obligatoriske."
+      }
+    }
+  },
+  "offers": {
+    "title": "Forslag",
+    "description": "Administrer dine indgående og udgående tilbud.",
+    "received": "Indgående tilbud",
+    "sent": "Indsendte tilbud",
+    "noReceivedOffers": "Der er endnu ikke modtaget nogen tilbud.",
+    "noSentOffers": "Du har ikke afgivet et tilbud endnu.",
+    "browseProducts": "Gennemse produkter",
+    "viewProduct": "Se produktet",
+    "accept": "Acceptere",
+    "reject": "Afvise",
+    "withdraw": "Hæv",
+    "makeOffer": "Indsend et tilbud",
+    "sendOffer": "Send tilbud",
+    "sending": "Sender...",
+    "cancel": "Ophæve",
+    "listingPrice": "Annonceret pris",
+    "yourOffer": "Dit tilbud",
+    "quantity": "Beløb",
+    "messageOptional": "Besked (valgfrit)",
+    "messagePlaceholder": "En besked du gerne vil dele med sælgeren...",
+    "expiresAt": "Sidste gyldige dato",
+    "offerSent": "Dit tilbud er blevet sendt.",
+    "offerError": "Der opstod en fejl under afsendelse af tilbuddet.",
+    "acceptSuccess": "Tilbuddet blev accepteret.",
+    "rejectSuccess": "Tilbuddet blev afvist.",
+    "withdrawSuccess": "Tilbuddet blev trukket tilbage.",
+    "actionError": "Der opstod en fejl under processen.",
+    "fetchError": "Der opstod en fejl under indlæsning af tilbuddene.",
+    "loginRequired": "Log ind for at afgive et bud.",
+    "invalidPrice": "Indtast en gyldig pris.",
+    "invalidQuantity": "Indtast et gyldigt beløb.",
+    "status": {
+      "pending": "Indtil",
+      "accepted": "Accepteret",
+      "rejected": "Afvist",
+      "countered": "Modtilbud",
+      "expired": "Dens periode er slut.",
+      "withdrawn": "Trak sig tilbage"
+    }
+  },
+  "deals": {
+    "title": "Aftaler",
+    "description": "Følg dine købsaftaler.",
+    "buying": "Akademikere",
+    "selling": "Salg",
+    "noBuyingDeals": "Du har endnu ikke en proces til at registrere dig som studerende.",
+    "noSellingDeals": "Du har endnu ingen salgstransaktioner.",
+    "browseProducts": "Gennemse produkter",
+    "viewProduct": "Se produktet",
+    "activeDeals": "Aktive aftaler",
+    "completedDeals": "Færdiggjort",
+    "purchases": "Akademikere",
+    "sales": "Salg",
+    "fetchError": "Der opstod en fejl under indlæsning af aftaler",
+    "dealStatus": {
+      "pending": "Indtil",
+      "confirmed": "Bekræftet",
+      "processing": "Forberedelse",
+      "shipped": "I lasten",
+      "delivered": "Leveret",
+      "completed": "Færdiggjort",
+      "cancelled": "Annulleret",
+      "disputed": "Aftale"
+    },
+    "delivery": {
+      "pickup": "Håndlevering",
+      "shipping": "Med fragt",
+      "transport": "Med transport"
+    },
+    "requestTransport": "Forsendelsesanmodning"
+  },
+  "farms": {
+    "title": "Mine gårde",
+    "description": "Administrer og opdater dine gårde.",
+    "addFarm": "Tilføj gård",
+    "editFarm": "Landbrugsforvaltning",
+    "noFarms": "Du har ikke tilføjet en gård endnu.",
+    "farmName": "Gårdens navn",
+    "registrationNumber": "Registreringsnummer",
+    "location": "Beliggenhed",
+    "selectLocation": "Vælg en placering.",
+    "addLocationFirst": "Tilføj først en placering.",
+    "farmTypeLabel": "Gårdtur",
+    "farmDescription": "Forklaring",
+    "totalArea": "Samlet areal",
+    "cultivatedArea": "Dyrket areal",
+    "certifications": "Certifikater",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP osv.",
+    "organic": "Økologisk",
+    "verified": "Bekræftet",
+    "save": "Spare",
+    "saving": "Gemmer...",
+    "cancel": "Ophæve",
+    "edit": "Redigere",
+    "delete": "Slet",
+    "sellerRequired": "Sælgerprofil påkrævet",
+    "sellerRequiredDesc": "For at tilføje en gård skal du først oprette din sælgerprofil.",
+    "becomeSeller": "Bliv sælger",
+    "createSuccess": "Gården blev tilføjet.",
+    "updateSuccess": "Gården er blevet opdateret.",
+    "deleteSuccess": "Gården blev slettet.",
+    "saveError": "Der opstod en fejl under registrering af gården.",
+    "deleteError": "Der opstod en fejl under sletning af farmen.",
+    "fetchError": "Der opstod en fejl under upload af landbrugsoplysninger.",
+    "farmType": {
+      "livestock": "Husdyrbrug",
+      "crop": "Landbrug",
+      "mixed": "Blandet",
+      "poultry": "Vingede",
+      "dairy": "Mejeriproduktion",
+      "aquaculture": "Akvatiske produkter"
+    }
+  },
+  "transporters": {
+    "title": "transportører",
+    "description": "Transport af dyr og produkter",
+    "searchPlaceholder": "Find en transportør...",
+    "noTransporters": "Der er endnu ingen registrerede transportører.",
+    "verified": "Bekræftet",
+    "transports": "transportere",
+    "viewProfile": "Se profil",
+    "sort": {
+      "newest": "Seneste",
+      "rating": "Højeste score",
+      "mostTransports": "Hyppigste forsendelser"
+    },
+    "pagination": {
+      "previous": "Tidligere",
+      "next": "Næste",
+      "page": "Side {side}"
+    }
+  },
+  "transport": {
+    "title": "Mine forsendelsesanmodninger",
+    "description": "Spor dine forsendelsesanmodninger.",
+    "findTransporter": "Find en transportør",
+    "active": "Aktiv",
+    "completed": "Færdiggjort",
+    "total": "Total",
+    "asSeller": "Som sælger",
+    "asBuyer": "Som køber",
+    "noSellerRequests": "Som sælger har du ingen forsendelsespligt.",
+    "noBuyerRequests": "Som modtager har du ikke en forsendelsesanmodning.",
+    "viewProduct": "Se produktet",
+    "pickup": "Modtage",
+    "delivery": "Levering",
+    "urgent": "Presserende",
+    "fetchError": "Der opstod en fejl under upload af forsendelsesanmodningerne.",
+    "trackShipment": "Følge",
+    "transportStatus": {
+      "pending": "Indtil",
+      "inPool": "I poolen",
+      "assigned": "Udnævnt",
+      "pickedUp": "Modtagelse",
+      "inTransit": "På vejen",
+      "delivered": "Leveret",
+      "completed": "Færdiggjort",
+      "cancelled": "Annulleret"
+    },
+    "transportType": {
+      "standard": "Standard",
+      "refrigerated": "Koldkæde",
+      "liveAnimal": "Levende dyr",
+      "hazardous": "Farlige materialer",
+      "oversized": "Stor størrelse"
+    }
+  },
+  "moderation": {
+    "title": "Produktmoderering",
+    "description": "Gennemgå produkter, der afventer godkendelse.",
+    "pending": "venter",
+    "allClear": "Alle produkter er blevet inspiceret.",
+    "noPending": "Der er ingen produkter, der afventer godkendelse.",
+    "awaitingReview": "Venter på gennemgang",
+    "by": "Sælger:",
+    "stock": "Lager",
+    "preview": "Med dig",
+    "approve": "Bekræfte",
+    "reject": "Afvise",
+    "confirmReject": "Afvise",
+    "cancelReject": "Giv op",
+    "rejectReasonPlaceholder": "Skriv årsagen til afvisningen ned...",
+    "rejectReasonRequired": "En begrundelse for afslag er obligatorisk.",
+    "approveSuccess": "Produktet blev godkendt.",
+    "rejectSuccess": "Produktet blev afvist.",
+    "actionError": "Der opstod en fejl under processen.",
+    "fetchError": "Der opstod en fejl under upload af produkterne.",
+    "unauthorized": "Du har ikke tilladelse til at få adgang til denne side."
+  },
+  "sellerModeration": {
+    "title": "Sælgermoderering",
+    "description": "Gennemgå og administrer sælgerkonti.",
+    "pending": "venter",
+    "allClear": "Alle sælgere blev undersøgt.",
+    "noPending": "Ingen sælgere venter.",
+    "verify": "Verificere",
+    "suspend": "Suspendere",
+    "verifySuccess": "Sælgeren er bekræftet.",
+    "suspendSuccess": "Sælger suspenderet.",
+    "actionError": "Der opstod en fejl under processen.",
+    "suspendReasonRequired": "Årsagen til suspenderingen er obligatorisk.",
+    "suspendReasonPlaceholder": "Skriv årsagen til suspenderingen...",
+    "confirmSuspend": "Suspendere",
+    "cancelSuspend": "Giv op",
+    "statusLabels": {
+      "pendingVerification": "Afventer bekræftelse",
+      "active": "Aktiv",
+      "suspended": "Hængende",
+      "banned": "Forbudt"
+    },
+    "filterAll": "Vis alle",
+    "filterPending": "Dem, der venter",
+    "filterActive": "Aktiver",
+    "filterSuspended": "Suspenderet",
+    "unauthorized": "Du har ikke tilladelse til at få adgang til denne side.",
+    "businessName": "Firmanavn",
+    "businessType": "Forretningstur",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "status": "Situation",
+    "createdAt": "Registreringsdato"
+  },
+  "transporterModeration": {
+    "title": "Udbydermoderering",
+    "description": "Gennemgå og administrer udbyderkonti.",
+    "pending": "venter",
+    "allClear": "Alle transportører blev undersøgt.",
+    "noPending": "Ingen transportør venter.",
+    "verify": "Verificere",
+    "suspend": "Suspendere",
+    "verifySuccess": "Transportøren blev verificeret.",
+    "suspendSuccess": "Transportøren blev suspenderet.",
+    "actionError": "Der opstod en fejl under processen.",
+    "suspendReasonRequired": "Årsagen til suspenderingen er obligatorisk.",
+    "suspendReasonPlaceholder": "Skriv årsagen til suspenderingen...",
+    "confirmSuspend": "Suspendere",
+    "cancelSuspend": "Giv op",
+    "statusLabels": {
+      "pendingVerification": "Afventer bekræftelse",
+      "active": "Aktiv",
+      "suspended": "Hængende",
+      "banned": "Forbudt"
+    },
+    "filterAll": "Vis alle",
+    "filterPending": "Dem, der venter",
+    "filterActive": "Aktiver",
+    "filterSuspended": "Suspenderet",
+    "unauthorized": "Du har ikke tilladelse til at få adgang til denne side.",
+    "companyName": "Firmanavn",
+    "contactPerson": "Autoriseret person",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "city": "By",
+    "status": "Situation",
+    "createdAt": "Registreringsdato"
+  },
+  "transporterDetail": {
+    "notFound": "Ingen transportør kunne findes.",
+    "backToList": "Donér til transportører",
+    "verified": "Bekræftet",
+    "totalTransports": "samlet forsendelse",
+    "completed": "færdiggjort",
+    "about": "Om",
+    "contact": "Kontaktoplysninger",
+    "businessInfo": "Virksomhedsoplysninger",
+    "license": "Licensnummer",
+    "insurance": "Forsikringsoplysninger",
+    "fleet": "Flådeinformation",
+    "serviceRegions": "Serviceområder",
+    "specializations": "Ekspertiseområder",
+    "certifications": "Certifikater"
+  },
+  "brands": {
+    "title": "Brandhåndtering",
+    "description": "Administrer produktmærker.",
+    "addBrand": "Tilføj mærke",
+    "editBrand": "Rediger mærke",
+    "noBrands": "Der er endnu ikke tilføjet nogen mærker.",
+    "brandName": "Mærkenavn",
+    "brandDescription": "Forklaring",
+    "website": "Hjemmeside",
+    "logoUrl": "Logo-URL",
+    "save": "Spare",
+    "saving": "Gemmer...",
+    "cancel": "Ophæve",
+    "edit": "Redigere",
+    "delete": "Slet",
+    "inactive": "Passiv",
+    "products": "produkt",
+    "createSuccess": "Mærket er blevet tilføjet",
+    "updateSuccess": "Mærket er blevet opdateret.",
+    "deleteSuccess": "Mærket blev slettet.",
+    "saveError": "Der opstod en fejl under registreringen af varemærket.",
+    "deleteError": "Der opstod en fejl under sletning af varemærket.",
+    "fetchError": "Der opstod en fejl under indlæsning af mærker",
+    "unauthorized": "Du har ikke tilladelse til at få adgang til denne side."
+  },
+  "transporterReviews": {
+    "title": "Vurderinger",
+    "reviewCount": "evaluering",
+    "noReviews": "Ingen evaluering endnu.",
+    "timeliness": "Levering til tiden",
+    "communication": "Meddelelse",
+    "carefulHandling": "Omhyggelig håndtering",
+    "professionalism": "Professionalitet"
+  },
+  "transportOffers": {
+    "title": "Forsendelsestilbud",
+    "description": "Administrer de tilbud, du indsender for forsendelsesanmodninger.",
+    "newOffer": "Nyt forslag",
+    "transportRequestId": "Forsendelsesanmodnings-ID",
+    "requestIdPlaceholder": "Indtast forsendelsesanmodnings-ID'et.",
+    "offeredPrice": "Tilbudspris",
+    "estimatedDays": "Estimeret varighed (dage)",
+    "days": "dag",
+    "vehicleType": "Køretøjstype",
+    "insuranceIncluded": "Forsikring inkluderet",
+    "message": "Besked",
+    "cancel": "Ophæve",
+    "sending": "Sender...",
+    "sendOffer": "Indsend tilbud",
+    "cancelOffer": "Ophæve",
+    "pendingTab": "Venter",
+    "historyTab": "Forbi",
+    "noPendingOffers": "Du har ingen ventende tilbud.",
+    "noHistory": "Ingen tidligere tilbud fundet.",
+    "status": {
+      "pending": "Venter",
+      "accepted": "Accepteret",
+      "rejected": "Afvist",
+      "expired": "Dens periode er slut.",
+      "cancelled": "Annulleret"
+    },
+    "createSuccess": "Tilbuddet blev afsendt.",
+    "createError": "Der opstod en fejl under afsendelse af tilbuddet.",
+    "cancelSuccess": "Tilbuddet blev annulleret.",
+    "cancelError": "Der opstod en fejl under annullering af tilbuddet.",
+    "fetchError": "Der opstod en fejl under indlæsning af tilbuddene."
+  },
+  "animalInfo": {
+    "title": "Dyre- og produktinformation",
+    "animalTab": "Dyr",
+    "healthTab": "Sundhed",
+    "vaccinationsTab": "Vaccinatorer",
+    "veterinaryTab": "Dyrlæge",
+    "breed": "Race",
+    "genderLabel": "Køn",
+    "gender": {
+      "male": "Han",
+      "female": "Kvinde",
+      "unknown": "Ukendt"
+    },
+    "age": "Alder",
+    "months": "måned",
+    "weight": "Vægt",
+    "color": "Farve",
+    "tagNumber": "Ørenummer",
+    "healthStatus": "Sundhedstilstand",
+    "health": {
+      "healthy": "Sund",
+      "underTreatment": "Under behandling",
+      "recovering": "Han/hun er ved at komme sig.",
+      "quarantined": "I karantæne",
+      "unknown": "Ukendt"
+    },
+    "purposeLabel": "Tilsigtet brug",
+    "purpose": {
+      "breeding": "Hingst",
+      "dairy": "Mælk",
+      "meat": "Kød",
+      "egg": "Æg",
+      "wool": "Uld",
+      "working": "Arbejde",
+      "pet": "Indenlandsk",
+      "other": "Andre"
+    },
+    "pregnancy": "Graviditet",
+    "pregnant": "Gravid",
+    "microchip": "Mikrochip nr.",
+    "passport": "Pasnummer",
+    "sireDetails": "Faderinformation",
+    "damDetails": "Hovedoplysninger",
+    "diagnosis": "Diagnose",
+    "treatment": "Behandling",
+    "medications": "Lægemidler",
+    "veterinarian": "Dyrlæge",
+    "nextDue": "Den næste oprørshistorie",
+    "prescriptionRequired": "Kræver en recept fra lægen",
+    "targetSpecies": "Target Tours",
+    "activeIngredients": "Aktive ingredienser",
+    "registrationNo": "Registreringsnummer",
+    "storage": "Opbevaring",
+    "chemicalTab": "Kemisk",
+    "feedTab": "Lokkemad",
+    "seedTab": "Frø",
+    "machineryTab": "Maskine",
+    "organic": "Økologisk",
+    "toxicity": "Toksicitet",
+    "gmoFree": "GMO-fri",
+    "protein": "Protein",
+    "fat": "Olie",
+    "fiber": "Fiber",
+    "hybrid": "Hybrid",
+    "germination": "Spiring",
+    "daysToMaturity": "Modning",
+    "daysLabel": "dag",
+    "warranty": "Garanteret",
+    "power": "Styrke",
+    "hoursUsed": "Brugstimer",
+    "hours": "time",
+    "powerSource": "Strømforsyning"
+  },
+  "productVariants": {
+    "title": "Produktvarianter",
+    "variantCount": "varianten",
+    "inStock": "På lager",
+    "outOfStock": "Udsolgt"
+  },
+  "productPrices": {
+    "title": "Priser (flere valutaer)",
+    "autoConversion": "Automatisk transformation",
+    "validUntil": "Gyldighed"
+  },
+  "requestTransport": {
+    "title": "Opret en forsendelsesanmodning",
+    "pickupLocation": "Læssepunkt",
+    "deliveryLocation": "Leveringssted",
+    "city": "By",
+    "address": "Adresse",
+    "transportType": "Transporttur",
+    "types": {
+      "standard": "Standard",
+      "refrigerated": "Koldkæde",
+      "liveAnimal": "Levende dyr",
+      "hazardous": "Farlige materialer",
+      "oversized": "Stor størrelse"
+    },
+    "weight": "Vægt (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Foretrukken uploaddato",
+    "preferredDeliveryDate": "Foretrukken leveringsdato",
+    "urgent": "Akut transport",
+    "specialInstructions": "Særlige instruktioner",
+    "instructionsPlaceholder": "Skriv dine specifikke instruktioner her...",
+    "cancel": "Giv op",
+    "submit": "Skab efterspørgsel",
+    "submitting": "I skabelsesprocessen...",
+    "success": "Forsendelsesanmodningen er blevet oprettet.",
+    "error": "Der opstod en fejl under oprettelsen af forsendelsesanmodningen."
+  },
+  "transportTracking": {
+    "title": "Forsendelsessporing",
+    "noTracking": "Der er endnu ingen sporingsoplysninger tilgængelige.",
+    "update": "Opdatering"
+  },
+  "locations": {
+    "title": "Mine adresser",
+    "description": "Administrer dine registrerede adresser.",
+    "addLocation": "Tilføj adresse",
+    "editLocation": "Rediger adresse",
+    "noLocations": "Du har endnu ikke en registreret adresse.",
+    "name": "Adressenavn",
+    "namePlaceholder": "For eksempel: Hus, Job, Gård",
+    "address": "Adresse",
+    "addressLine2": "Adresselinje 2",
+    "city": "By",
+    "state": "Distrikt / Region",
+    "postalCode": "Postnummer",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "cancel": "Giv op",
+    "save": "Spare",
+    "saving": "Gemmer...",
+    "typePickup": "Indlæser",
+    "typeDelivery": "Levering",
+    "typeBoth": "Generel",
+    "createSuccess": "Adressen er tilføjet.",
+    "createError": "Der opstod en fejl under tilføjelsen af adressen.",
+    "updateSuccess": "Adressen er blevet opdateret.",
+    "updateError": "Der opstod en fejl under opdatering af adressen.",
+    "deleteLocation": "Slet adresse",
+    "deleteSuccess": "Adressen er slettet",
+    "deleteError": "Der opstod en fejl under sletning af adressen.",
+    "fetchError": "Der opstod en fejl under indlæsning af adresserne."
+  },
+  "systemSettings": {
+    "title": "Systemindstillinger",
+    "description": "Se platformens valuta, sprog, betalingsmetoder, forsendelse og skatteindstillinger.",
+    "unauthorized": "Du har ikke tilladelse til at få adgang til denne side.",
+    "currenciesTab": "Valutaer",
+    "languagesTab": "Sprog",
+    "paymentTab": "Betalingsmetoder",
+    "shippingTab": "Last",
+    "taxTab": "Skat",
+    "active": "Aktiv",
+    "inactive": "Passiv",
+    "default": "Misligholdelse",
+    "noCurrencies": "Valutaen er endnu ikke blevet defineret.",
+    "noLanguages": "Sproget er endnu ikke blevet defineret.",
+    "noPaymentMethods": "Betalingsmetode endnu ikke defineret.",
+    "noCarriers": "Rederiet er endnu ikke blevet identificeret.",
+    "noZones": "Lastområdet er endnu ikke defineret.",
+    "noTaxRates": "Skattesatsen er endnu ikke fastsat.",
+    "carriers": "Rederier",
+    "zones": "Fragtzoner",
+    "countries": "Lande",
+    "rates": "Forsendelsesgebyrer",
+    "noRates": "Forsendelsesomkostningerne er endnu ikke fastsat.",
+    "freeShipping": "Gratis fragt",
+    "deliveryDays": "leveringstid på dagen"
+  },
+  "pushPermission": {
+    "title": "Aktivér notifikationer",
+    "description": "Modtag notifikationer om nye beskeder, tilbud og ordreopdateringer.",
+    "allow": "Tillade",
+    "dismiss": "Tæt"
+  },
+  "healthRecords": {
+    "title": "Sundhedsjournaler",
+    "description": "Administrer dyrenes sundhedsjournaler og sygehistorie.",
+    "addRecord": "Tilføj post",
+    "editRecord": "Rediger post",
+    "deleteRecord": "Slet post",
+    "noRecords": "Helbredsjournalen er endnu ikke tilføjet.",
+    "animalInfoId": "Dyre-ID",
+    "animalInfoIdPlaceholder": "Indtast dyreinformations-ID'et.",
+    "recordType": "Registreringsrundvisning",
+    "recordTypePlaceholder": "Eksempler: Undersøgelse, behandling, kirurgi",
+    "recordDate": "Registreringsdato",
+    "followUpDate": "Tjek dato",
+    "veterinarianName": "Dyrlæge",
+    "veterinarianLicense": "Licensnr.",
+    "clinicName": "Klinisk",
+    "diagnosis": "Diagnose",
+    "treatment": "Behandling",
+    "medications": "Lægemidler",
+    "medicationsPlaceholder": "Eksempel: Penicillin 500 mg, Ibuprofen",
+    "notes": "Noter",
+    "documentUrl": "Dokument-URL",
+    "saving": "Gemmer...",
+    "createSuccess": "Helbredsjournalen er tilføjet.",
+    "updateSuccess": "Sundhedsjournalen er blevet opdateret.",
+    "deleteSuccess": "Sundhedsjournalen er blevet slettet.",
+    "saveError": "Der opstod en fejl under lagring af posten.",
+    "deleteError": "Der opstod en fejl under sletning af posten.",
+    "fetchError": "Der opstod en fejl under indlæsning af poster"
+  },
+  "vaccinations": {
+    "title": "Vaccineoptegnelser",
+    "description": "Administrer journaler og kalendere for dyrevaccinationer.",
+    "addVaccination": "Tilføj Rebel",
+    "editVaccination": "Rebel-arrangementet",
+    "deleteVaccination": "Rebel Sil",
+    "noVaccinations": "Vaccinationsjournalen er endnu ikke tilføjet.",
+    "animalInfoId": "Dyre-ID",
+    "animalInfoIdPlaceholder": "Indtast dyreinformations-ID'et.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Eksempel: SAT-vaccine, Brucella",
+    "vaccineType": "Rebel Tour",
+    "vaccineTypePlaceholder": "Eksempel: Live, Inaktiv",
+    "batchNumber": "Festnummer",
+    "vaccinationDate": "Oprørernes historie",
+    "nextDueDate": "Den næste oprørshistorie",
+    "veterinarianName": "Dyrlæge",
+    "veterinarianLicense": "Licensnr.",
+    "notes": "Noter",
+    "certificateUrl": "Certifikat-URL",
+    "saving": "Gemmer...",
+    "createSuccess": "Vaccineregistrering tilføjet.",
+    "updateSuccess": "Vaccinejournalen er blevet opdateret.",
+    "deleteSuccess": "Vaccinationsregistreringen er blevet slettet.",
+    "saveError": "Der opstod en fejl under registrering af vaccinen.",
+    "deleteError": "Der opstod en fejl under sletning af vaccinen.",
+    "fetchError": "Der opstod en fejl under indlæsning af vacciner."
+  },
+  "shippingCarriers": {
+    "title": "Rederier",
+    "description": "Administrer oplysninger om fragtfirmaet.",
+    "addCarrier": "Tilføj virksomhed",
+    "editCarrier": "Rediger virksomhed",
+    "noCarriers": "Der er endnu ikke tilføjet noget rederi.",
+    "carrierName": "Firmanavn",
+    "carrierNamePlaceholder": "Eksempel: Aras Kargo, MNG",
+    "code": "Kode",
+    "codePlaceholder": "Eksempel: ARAS",
+    "website": "Hjemmeside",
+    "trackingUrlTemplate": "Følg URL-skabelon",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Understøttede lande",
+    "supportedCountriesPlaceholder": "Eksempel: TR, US, DE",
+    "active": "Aktiv",
+    "inactive": "Passiv",
+    "saving": "Gemmer...",
+    "edit": "Redigere",
+    "delete": "Slet",
+    "createSuccess": "Fragtfirmaet er blevet tilføjet.",
+    "updateSuccess": "Rederiet er blevet opdateret.",
+    "deleteSuccess": "Fragtfirmaet er blevet slettet.",
+    "saveError": "Der opstod en fejl under registrering af fragtfirmaet.",
+    "deleteError": "Der opstod en fejl under sletning af oplysningerne om fragtfirmaet.",
+    "fetchError": "Der opstod en fejl under indlæsning af fragtfirmaer."
+  },
+  "shippingZones": {
+    "title": "Fragtzoner",
+    "description": "Administrer fragtzoner og -områder.",
+    "addZone": "Tilføj region",
+    "editZone": "Rediger region",
+    "noZones": "Der er endnu ikke tilføjet noget lastrum.",
+    "zoneName": "Regionens navn",
+    "zoneNamePlaceholder": "Eksempel: Europa, Nordamerika",
+    "countryCodes": "Landekoder",
+    "countryCodesPlaceholder": "Eksempel: TR, DE, FR",
+    "active": "Aktiv",
+    "inactive": "Passiv",
+    "saving": "Gemmer...",
+    "edit": "Redigere",
+    "delete": "Slet",
+    "createSuccess": "Regionen er blevet tilføjet.",
+    "updateSuccess": "Regionen er blevet opdateret.",
+    "deleteSuccess": "Området er blevet ryddet med succes.",
+    "saveError": "Der opstod en fejl under lagring af regionen.",
+    "deleteError": "Der opstod en fejl under sletning af regionen.",
+    "fetchError": "Der opstod en fejl under indlæsning af regioner"
+  },
+  "shippingRates": {
+    "title": "Forsendelsesgebyrer",
+    "description": "Administrer forsendelsesomkostninger og leveringsmuligheder.",
+    "addRate": "Tilføj gebyr",
+    "editRate": "Juster gebyr",
+    "noRates": "Forsendelsesomkostninger er ikke blevet tilføjet endnu.",
+    "zone": "Areal",
+    "carrier": "Fast",
+    "selectZone": "Vælg en region",
+    "selectCarrier": "Vælg en virksomhed",
+    "shippingCost": "Forsendelsesgebyr",
+    "currency": "Valuta",
+    "estimatedDeliveryDays": "Forventet levering (dage)",
+    "minWeight": "Minimumsvægt",
+    "maxWeight": "Maksimal vægt",
+    "minOrderAmount": "Minimum ordrebeløb",
+    "freeShipping": "Gratis fragt",
+    "free": "Gratis",
+    "active": "Aktiv",
+    "inactive": "Passiv",
+    "cost": "Betaling",
+    "deliveryDays": "Levering",
+    "status": "Situation",
+    "saving": "Gemmer...",
+    "createSuccess": "Gebyr tilføjet.",
+    "updateSuccess": "Lønnen er blevet opdateret.",
+    "deleteSuccess": "Gebyret er blevet slettet.",
+    "saveError": "Der opstod en fejl under lagring af gebyret.",
+    "deleteError": "Der opstod en fejl under sletning af gebyret.",
+    "fetchError": "Der opstod en fejl under upload af gebyrerne."
+  },
+  "metadata": {
+    "title": "Husdyrhandel - Platform til handel med levende dyr",
+    "description": "Verdens mest betroede platform for handel med levende dyr. Sikkert og gennemsigtigt køb og salg af dyr.",
+    "pages": {
+      "about": {
+        "title": "Om os",
+        "description": "Lær om handel med husdyr. En pålidelig platform til handel med levende dyr."
+      },
+      "contact": {
+        "title": "Meddelelse",
+        "description": "Kontakt os. Kundesupportteamet hos Livestock Trading er klar til at hjælpe dig."
+      },
+      "terms": {
+        "title": "Brugsbetingelser",
+        "description": "Vilkår og betingelser for handel med husdyr."
+      },
+      "privacy": {
+        "title": "Privatlivspolitik",
+        "description": "Privatlivspolitik for husdyrhandel. Lær, hvordan dine personoplysninger er beskyttet."
+      },
+      "products": {
+        "title": "Produkter",
+        "description": "Gennemse annoncer for levende dyr. Pålidelige annoncer for kvæg, får og meget mere."
+      },
+      "sellers": {
+        "title": "Sælgere",
+        "description": "Opdag pålidelige dyreforhandlere. Verificerede sælgerprofiler og anmeldelser."
+      },
+      "transporters": {
+        "title": "transportører",
+        "description": "Opdag dyretransportfirmaer. Sikker og professionel transport af levende dyr."
+      },
+      "search": {
+        "title": "Søge",
+        "description": "Søg blandt lister over levende dyr. Nem søgning med filtrerings- og sorteringsmuligheder."
+      },
+      "faq": {
+        "title": "Ofte stillede spørgsmål",
+        "description": "Ofte stillede spørgsmål og svar om handel med husdyr."
+      },
+      "productDetail": {
+        "title": "{titel} - Til salg",
+        "description": "Til salg i {title} - {city}. Klik for detaljer og kontaktoplysninger."
+      },
+      "sellerDetail": {
+        "title": "{name} - Sælgerprofil",
+        "description": "Sælgerprofil for {name}. Anmeldelser, annoncer og kontaktoplysninger."
+      },
+      "transporterDetail": {
+        "title": "{name} - Udbyderprofil",
+        "description": "Profil af transportør for {name}. Serviceområder, anmeldelser og kontaktoplysninger."
+      }
+    }
   }
 }

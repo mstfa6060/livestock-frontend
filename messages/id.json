@@ -11,17 +11,30 @@
     "back": "Kembali",
     "next": "Maju",
     "close": "Menutup",
+    "unauthorized": "Anda tidak memiliki izin untuk mengakses halaman ini.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Masuk",
-    "register": "Daftar"
+    "register": "Daftar",
+    "previous": "Mantan",
+    "zoomIn": "Perbesar",
+    "previousImage": "Gambar sebelumnya",
+    "nextImage": "Gambar berikutnya",
+    "closeLightbox": "Tutup galeri",
+    "imageLightbox": "Galeri gambar",
+    "slideN": "Geser {n}",
+    "viewMore": "Lihat selengkapnya"
   },
   "header": {
     "products": "Produk",
     "sellers": "Penjual",
+    "transporters": "pengangkut",
     "about": "Tentang Kami",
+    "search": "Mencari",
     "dashboard": "Panel",
     "settings": "Pengaturan",
-    "logout": "Keluar"
+    "logout": "Keluar",
+    "menu": "Menu",
+    "language": "Pemilihan bahasa"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Saya lupa kata sandi saya.",
       "noAccount": "Apakah Anda tidak punya akun?",
       "register": "Daftar",
-      "errorDefault": "Login gagal. Silakan periksa informasi Anda."
+      "errorDefault": "Login gagal. Silakan periksa informasi Anda.",
+      "orContinueWith": "atau lanjutkan",
+      "continueWithGoogle": "Lanjutkan dengan Google",
+      "continueWithApple": "Lanjutkan dengan Apple.",
+      "socialLoginError": "Login melalui media sosial gagal. Silakan coba lagi.",
+      "appleComingSoon": "Segera",
+      "showPassword": "Tampilkan kata sandi",
+      "hidePassword": "Sembunyikan kata sandi"
     },
     "register": {
       "title": "Daftar",
@@ -51,7 +71,17 @@
       "login": "Masuk",
       "passwordMismatch": "Kata sandinya tidak cocok.",
       "passwordTooShort": "Kata sandi harus memiliki panjang minimal 6 karakter.",
-      "errorDefault": "Pendaftaran gagal. Silakan coba lagi."
+      "errorDefault": "Pendaftaran gagal. Silakan coba lagi.",
+      "showPassword": "Tampilkan kata sandi",
+      "hidePassword": "Sembunyikan kata sandi",
+      "passwordStrength": {
+        "minLength": "Setidaknya 8 karakter",
+        "uppercase": "Huruf kapital (A-Z)",
+        "lowercase": "Huruf kecil (a-z)",
+        "number": "Angka (0-9)",
+        "special": "Karakter khusus (!@#$%)"
+      },
+      "registerSuccess": "Akun Anda telah berhasil dibuat! Anda akan dialihkan ke halaman login..."
     },
     "forgotPassword": {
       "title": "Saya lupa kata sandi saya.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Ajukan Permohonan Koneksi Baru",
       "passwordMismatch": "Kata sandinya tidak cocok.",
       "passwordTooShort": "Kata sandi harus memiliki panjang minimal 6 karakter.",
-      "errorDefault": "Reset kata sandi gagal. Koneksi mungkin tidak valid atau telah kedaluwarsa."
+      "errorDefault": "Reset kata sandi gagal. Koneksi mungkin tidak valid atau telah kedaluwarsa.",
+      "showPassword": "Tampilkan kata sandi",
+      "hidePassword": "Sembunyikan kata sandi"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "aktif",
       "totalViews": "Jumlah Tayangan Total",
       "thisWeek": "minggu ini",
+      "allTime": "sepanjang waktu",
       "favorites": "Favorit",
       "onYourListings": "dalam iklan Anda",
+      "savedItems": "produk terdaftar",
       "messages": "Pesan",
-      "unread": "belum dibaca"
+      "notifications": "Pemberitahuan",
+      "unread": "belum dibaca",
+      "views": "pandangan",
+      "draft": "Draf",
+      "sold": "Terjual",
+      "pending": "Tertunda",
+      "awaitingApproval": "menunggu persetujuan",
+      "totalSales": "Total Penjualan",
+      "completedSales": "penjualan selesai",
+      "revenue": "Penghasilan",
+      "totalRevenue": "total pendapatan"
     },
     "recentListings": "Daftar Terbaru Anda",
+    "recentActivity": "Aktivitas Terkini",
     "recentMessages": "Pesan Terbaru",
+    "quickLinks": "Akses Cepat",
     "noListings": "Anda belum menambahkan iklan apa pun.",
+    "noActivity": "Belum ada aktivitas.",
     "noMessages": "Anda belum menerima pesan.",
     "noNotifications": "Anda belum menerima notifikasi apa pun.",
     "viewAllListings": "Lihat Semua Daftar",
-    "viewAllMessages": "Lihat semua pesan"
+    "viewAllMessages": "Lihat semua pesan",
+    "viewNotifications": "Lihat Notifikasi",
+    "viewFavorites": "Gor Favorit",
+    "recentlyViewed": "Baru Saja Dilihat",
+    "fetchError": "Terjadi kesalahan saat memuat data panel."
   },
   "dashboardNav": {
     "overview": "Ringkasan",
@@ -115,7 +166,61 @@
     "notifications": "Pemberitahuan",
     "profile": "Profil",
     "settings": "Pengaturan",
-    "newListing": "Tambahkan Daftar Baru"
+    "newListing": "Tambahkan Daftar Baru",
+    "becomeSeller": "Menjadi Penjual",
+    "categories": "Kategori",
+    "offers": "Usulan",
+    "deals": "Perjanjian",
+    "farms": "Ladangku",
+    "transport": "Mengangkut",
+    "moderation": "Moderasi",
+    "sellerModeration": "Moderasi Penjual",
+    "transporterModeration": "Moderasi Operator",
+    "brands": "Merek",
+    "transportOffers": "Penawaran Pengiriman",
+    "healthRecords": "Catatan Kesehatan",
+    "vaccinations": "Vaksinator",
+    "shippingCarriers": "Perusahaan Pelayaran",
+    "shippingZones": "Zona Kargo",
+    "shippingRates": "Biaya Pengiriman",
+    "systemSettings": "Pengaturan Sistem",
+    "locations": "Alamat Saya"
+  },
+  "profile": {
+    "title": "Informasi Profil",
+    "description": "Anda dapat memperbarui informasi pribadi Anda di sini.",
+    "personalInfo": "Informasi Pribadi",
+    "contactInfo": "Informasi Kontak",
+    "preferences": "Preferensi",
+    "firstName": "Nama",
+    "firstNamePlaceholder": "Masukkan nama Anda",
+    "surname": "Nama belakang",
+    "surnamePlaceholder": "Masukkan nama belakang Anda.",
+    "displayName": "Nama yang Ditampilkan",
+    "phone": "Nomor telepon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Terverifikasi",
+    "phoneNotVerified": "Belum dikonfirmasi",
+    "verifyPhone": "Verifikasi Nomor Telepon",
+    "country": "Negara",
+    "selectCountry": "Pilih negara",
+    "language": "Preferensi Bahasa",
+    "selectLanguage": "Pilih bahasa",
+    "currency": "Mata uang",
+    "selectCurrency": "Pilih mata uang.",
+    "saveChanges": "Simpan Perubahan",
+    "saving": "Penghematan...",
+    "saveSuccess": "Informasi profil Anda telah diperbarui.",
+    "saveError": "Terjadi kesalahan saat memperbarui profil.",
+    "avatar": "Foto Profil",
+    "changeAvatar": "Ganti Foto",
+    "removeAvatar": "Hapus Foto",
+    "currencies": {
+      "try": "Lira Turki",
+      "usd": "Dolar AS",
+      "eur": "Euro",
+      "gbp": "Poundsterling Inggris"
+    }
   },
   "myListings": {
     "title": "Iklan saya",
@@ -125,35 +230,94 @@
     "fetchError": "Terjadi kesalahan saat memuat iklan.",
     "deleteSuccess": "Iklan tersebut berhasil dihapus.",
     "deleteError": "Terjadi kesalahan saat menghapus iklan.",
-    "activateSuccess": "Iklan telah diaktifkan.",
-    "deactivateSuccess": "Iklan tersebut telah dinonaktifkan.",
+    "publishSuccess": "Iklan tersebut telah dikirim untuk persetujuan.",
+    "unpublishSuccess": "Iklan tersebut telah dirancang.",
     "statusError": "Terjadi kesalahan saat mengubah status.",
     "filters": {
       "all": "Mereka semua",
-      "active": "Aktif",
       "draft": "Draf",
       "pending": "Menunggu Persetujuan",
+      "active": "Aktif",
+      "rejected": "Ditolak",
       "sold": "Terjual"
     },
     "actions": {
       "edit": "Edit",
       "delete": "Menghapus",
-      "activate": "Mengaktifkan",
-      "deactivate": "Struktur Pasif"
+      "publish": "Kirim untuk Persetujuan",
+      "unpublish": "Draf",
+      "menu": "Transaksi"
     },
     "deleteDialog": {
       "title": "Hapus iklannya",
       "description": "Apakah Anda yakin ingin menghapus daftar ini? Tindakan ini tidak dapat dibatalkan.",
       "cancel": "Membatalkan",
       "confirm": "Menghapus"
-    }
+    },
+    "loadMore": "Unduh Lebih Banyak",
+    "loadingMore": "Memuat..."
   },
   "favorites": {
     "title": "Favoritku",
     "description": "Ikuti produk yang Anda sukai di sini.",
     "noFavorites": "Anda belum menambahkan produk favorit apa pun.",
     "browseProducts": "Telusuri Produk",
-    "fetchError": "Terjadi kesalahan saat memuat favorit."
+    "fetchError": "Terjadi kesalahan saat memuat favorit.",
+    "loadMore": "Unduh Lebih Banyak",
+    "loadingMore": "Memuat..."
+  },
+  "messages": {
+    "title": "Pesan",
+    "description": "Berkomunikasi dengan pembeli dan penjual.",
+    "noConversations": "Anda belum menerima pesan.",
+    "startConversation": "Untuk mengajukan pertanyaan tentang sebuah iklan, kunjungi iklan tersebut.",
+    "fetchError": "Terjadi kesalahan saat memuat pesan.",
+    "sendError": "Terjadi kesalahan saat mengirim pesan.",
+    "connectionError": "Koneksi gagal. Mencoba lagi...",
+    "connected": "Itu terhubung",
+    "connecting": "Menghubungkan...",
+    "searchPlaceholder": "Telusuri pesan-pesan tersebut...",
+    "typeMessage": "Tulis pesan Anda...",
+    "send": "Mengirim",
+    "sending": "Mengirim...",
+    "typing": "Tertulis di situ...",
+    "read": "Membaca",
+    "delivered": "Terkirim",
+    "today": "Hari ini",
+    "yesterday": "Kemarin",
+    "noMessages": "Belum ada pesan. Mulailah percakapan!",
+    "loadMore": "Unggah lebih banyak",
+    "loadingMessages": "Pesan sedang dimuat...",
+    "about": "Tentang",
+    "product": "Produk",
+    "startNewConversation": "Mulailah Percakapan Baru",
+    "selectConversation": "Pilih percakapan yang sudah ada atau mulai percakapan baru.",
+    "online": "On line",
+    "offline": "Offline",
+    "lastSeen": "Terakhir terlihat",
+    "deleteConversation": "Hapus percakapan",
+    "deleteConfirm": "Apakah Anda yakin ingin menghapus percakapan ini?",
+    "deleted": "Percakapan tersebut telah dihapus.",
+    "defaultUser": "Pengguna",
+    "noResults": "Tidak ada hasil yang ditemukan.",
+    "newConversation": "Percakapan baru"
+  },
+  "notifications": {
+    "title": "Pemberitahuan",
+    "description": "Lihat dan kelola notifikasi Anda.",
+    "markAllAsRead": "Tandai semua sebagai sudah dibaca",
+    "noNotifications": "Anda belum menerima notifikasi apa pun.",
+    "viewAll": "Lihat semua notifikasi",
+    "today": "Hari ini",
+    "yesterday": "Kemarin",
+    "older": "Lebih tua",
+    "types": {
+      "system": "Sistem",
+      "message": "Pesan",
+      "offer": "Menawarkan",
+      "order": "Memesan",
+      "listing": "Iklan"
+    }
   },
   "settings": {
     "title": "Pengaturan",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Kata sandi baru tersebut tidak cocok.",
       "passwordTooShort": "Kata sandi baru harus memiliki panjang minimal 6 karakter.",
       "sessionError": "Informasi sesi tidak dapat ditemukan.",
-      "errorDefault": "Kata sandi tidak dapat diperbarui. Silakan periksa kata sandi Anda saat ini."
+      "errorDefault": "Kata sandi tidak dapat diperbarui. Silakan periksa kata sandi Anda saat ini.",
+      "showPassword": "Tampilkan kata sandi",
+      "hidePassword": "Sembunyikan kata sandi"
+    },
+    "preferences": {
+      "title": "Pemberitahuan dan Preferensi Tampilan",
+      "description": "Kelola saluran notifikasi dan preferensi tampilan Anda.",
+      "notifications": "Pemberitahuan",
+      "emailNotifications": "Notifikasi Email",
+      "emailNotificationsDesc": "Dapatkan notifikasi email untuk pesan baru dan pembaruan iklan.",
+      "smsNotifications": "Notifikasi SMS",
+      "smsNotificationsDesc": "Terima pesan SMS untuk pemberitahuan penting.",
+      "pushNotifications": "Notifikasi Push",
+      "pushNotificationsDesc": "Terima notifikasi push untuk pembaruan instan.",
+      "appearance": "Penampilan",
+      "darkMode": "Mode Gelap",
+      "darkModeDesc": "Beralihlah ke tema gelap.",
+      "saveChanges": "Simpan Preferensi",
+      "saving": "Penghematan...",
+      "saveSuccess": "Preferensi Anda telah diperbarui.",
+      "saveError": "Terjadi kesalahan saat memperbarui preferensi.",
+      "loadError": "Pengaturan tidak dapat dimuat."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Platform Perdagangan Hewan Hidup",
       "subtitle": "Platform perdagangan hewan hidup paling andal. Beli dan jual sapi dan domba Anda dengan aman.",
       "cta": "Mulai Sekarang",
-      "viewListings": "Lihat Iklan"
+      "viewListings": "Lihat Iklan",
+      "searchPlaceholder": "Carilah hewan... (sapi, domba, kambing...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Iklan Unggulan",
       "viewAll": "Lihat semua"
+    },
+    "cta": {
+      "title": "Mulai Sekarang",
+      "subtitle": "Bergabunglah di platform tempat ribuan penjual dan pembeli bertemu.",
+      "button": "Daftar Gratis"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Tentang Kami",
     "contact": "Komunikasi",
     "terms": "Syarat Penggunaan",
-    "privacy": "Kebijakan Privasi"
+    "privacy": "Kebijakan Privasi",
+    "company": "Perusahaan",
+    "support": "Mendukung",
+    "legal": "Legal",
+    "followUs": "Ikuti kami",
+    "newsletter": "Buletin",
+    "newsletterDescription": "Jangan lewatkan daftar dan promosi terbaru.",
+    "subscribe": "Berlangganan",
+    "emailPlaceholder": "Alamat email Anda",
+    "tagline": "Platform perdagangan hewan hidup paling terpercaya di Turki.",
+    "sellers": "Penjual",
+    "products": "Produk",
+    "map": "Peta",
+    "appleLoginComingSoon": "Login dengan Apple akan segera aktif.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "Pertanyaan yang Sering Diajukan (FAQ)"
+  },
+  "faq": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "description": "Jawaban atas pertanyaan yang sering Anda ajukan tentang platform kami.",
+    "noFaqs": "Belum ada pertanyaan yang ditambahkan."
+  },
+  "about": {
+    "title": "Tentang Kami",
+    "subtitle": "Platform perdagangan hewan hidup paling terpercaya di Turki.",
+    "mission": {
+      "title": "Misi Kami",
+      "description": "Dengan mendigitalisasi perdagangan hewan hidup, kami bertujuan untuk menciptakan hubungan yang aman, transparan, dan efisien antara produsen dan pembeli."
+    },
+    "vision": {
+      "title": "Visi Kami",
+      "description": "Menjadi pelopor dalam transformasi digital di sektor pertanian dan menjadi platform global dalam perdagangan hewan hidup."
+    },
+    "values": {
+      "title": "Nilai-nilai kami",
+      "trust": {
+        "title": "Memercayai",
+        "description": "Transparansi dan keandalan sangat penting dalam semua transaksi."
+      },
+      "quality": {
+        "title": "Kualitas",
+        "description": "Perbaikan berkelanjutan untuk memberikan layanan terbaik."
+      },
+      "innovation": {
+        "title": "Inovasi",
+        "description": "Mentransformasi industri dengan menggunakan teknologi."
+      }
+    },
+    "stats": {
+      "users": "Pengguna Terdaftar",
+      "sellers": "Penjual Aktif",
+      "products": "Iklan",
+      "transactions": "Transaksi Berhasil"
+    }
+  },
+  "contact": {
+    "title": "Komunikasi",
+    "subtitle": "Silakan hubungi kami jika ada pertanyaan.",
+    "form": {
+      "title": "Tulis kepada kami",
+      "name": "Nama Anda",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "E-mail",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Subjek",
+      "subjectPlaceholder": "Subjek pesan Anda",
+      "message": "Pesan Anda",
+      "messagePlaceholder": "Tulis pesan Anda di sini...",
+      "submit": "Mengirim",
+      "submitting": "Mengirim...",
+      "success": "Pesan Anda telah berhasil terkirim. Kami akan menghubungi Anda sesegera mungkin.",
+      "error": "Terjadi kesalahan saat mengirim pesan. Silakan coba lagi."
+    },
+    "info": {
+      "title": "Informasi Kontak",
+      "address": "Alamat",
+      "addressValue": "Istanbul, Turki",
+      "email": "E-mail",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Telepon",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Jam Kerja",
+      "workingHoursValue": "Senin - Jumat: 09:00 - 18:00",
+      "map": "Peta"
+    }
+  },
+  "terms": {
+    "title": "Syarat Penggunaan",
+    "lastUpdated": "Pembaruan terakhir: {tanggal}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Penerimaan Syarat dan Ketentuan",
+        "content": "Dengan menggunakan situs web ini, Anda menyetujui persyaratan penggunaan berikut. Jika Anda tidak menyetujui persyaratan ini, mohon jangan gunakan situs ini."
+      },
+      "services": {
+        "title": "2. Layanan",
+        "content": "Livestock Trading menyediakan platform untuk membeli dan menjual hewan hidup. Semua transaksi di platform ini merupakan tanggung jawab pengguna."
+      },
+      "accounts": {
+        "title": "3. Akun Pengguna",
+        "content": "Anda harus memberikan informasi yang akurat dan terkini untuk membuat akun. Keamanan akun Anda adalah tanggung jawab Anda."
+      },
+      "prohibited": {
+        "title": "4. Aktivitas Terlarang",
+        "content": "Iklan yang menyesatkan, informasi palsu, penipuan, dan aktivitas ilegal dilarang keras."
+      },
+      "liability": {
+        "title": "5. Batasan Tanggung Jawab",
+        "content": "Platform ini tidak bertanggung jawab secara langsung atas transaksi antar pengguna. Semua transaksi terjadi antara pihak-pihak yang bersangkutan."
+      },
+      "changes": {
+        "title": "6. Perubahan",
+        "content": "Syarat dan ketentuan ini dapat berubah sewaktu-waktu tanpa pemberitahuan. Perubahan akan berlaku segera setelah dipublikasikan."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Kebijakan Privasi",
+    "lastUpdated": "Pembaruan terakhir: {tanggal}",
+    "sections": {
+      "collection": {
+        "title": "1. Pengumpulan Informasi",
+        "content": "Saat Anda membuat akun, kami mengumpulkan informasi pribadi seperti nama, alamat email, dan nomor telepon Anda. Kami juga dapat mengumpulkan data anonim terkait penggunaan situs oleh Anda."
+      },
+      "usage": {
+        "title": "2. Penggunaan Informasi",
+        "content": "Informasi yang kami kumpulkan digunakan untuk menyediakan layanan kami, mengelola akun Anda, memastikan keamanan, dan menawarkan penawaran yang dipersonalisasi kepada Anda."
+      },
+      "sharing": {
+        "title": "3. Berbagi Informasi",
+        "content": "Informasi pribadi Anda tidak akan dijual atau disewakan kepada pihak ketiga. Informasi Anda tidak akan dibagikan kecuali untuk tujuan yang diwajibkan secara hukum."
+      },
+      "security": {
+        "title": "4. Keamanan",
+        "content": "Langkah-langkah keamanan standar industri telah diterapkan untuk melindungi data Anda."
+      },
+      "cookies": {
+        "title": "5. Kue kering",
+        "content": "Situs web kami menggunakan cookie untuk meningkatkan pengalaman pengguna. Anda dapat mengelola preferensi cookie Anda di pengaturan browser Anda."
+      },
+      "rights": {
+        "title": "6. Hak Anda",
+        "content": "Berdasarkan Undang-Undang Perlindungan Data Pribadi Turki (KVKK), Anda berhak untuk mengakses, memperbaiki, dan menghapus data pribadi Anda."
+      }
+    }
   },
   "products": {
     "title": "Produk",
@@ -235,11 +570,19 @@
       "priceDesc": "Harga (Tinggi ke Rendah)",
       "popular": "Paling Populer"
     },
+    "pagination": {
+      "prev": "Mantan",
+      "next": "Berikutnya"
+    },
     "status": {
       "draft": "Draf",
+      "pending": "Menunggu Persetujuan",
       "active": "Aktif",
+      "inactive": "Pasif",
+      "outOfStock": "Stok Habis",
+      "expired": "Masa jabatannya telah berakhir.",
       "sold": "Terjual",
-      "pending": "Menunggu Persetujuan"
+      "rejected": "Ditolak"
     },
     "condition": {
       "new": "Baru",
@@ -253,9 +596,13 @@
     "loading": "Produk sedang dimuat...",
     "perPage": "Per halaman",
     "showing": "Jumlah total produk {total} antara {from} dan {to}.",
+    "fetchError": "Terjadi kesalahan saat mengunggah produk.",
+    "loadMore": "Tampilkan Lebih Banyak",
+    "showingOf": "{count} / {total} produk sedang ditampilkan.",
     "loginToFavorite": "Masuk untuk menambahkan ke favorit.",
     "addedToFavorites": "Ditambahkan ke favorit",
-    "removedFromFavorites": "Dihapus dari favorit"
+    "removedFromFavorites": "Dihapus dari favorit",
+    "favoriteError": "Operasi favorit gagal."
   },
   "productDetail": {
     "addToFavorites": "Tambahkan ke Favorit",
@@ -279,16 +626,31 @@
     "maxOrder": "Pesanan maksimum",
     "publishedAt": "Tanggal penerbitan",
     "views": "Dilihat",
-    "reviews": "evaluasi",
+    "reviews": {
+      "title": "Penilaian",
+      "reviewCount": "evaluasi",
+      "noReviews": "Belum ada evaluasi.",
+      "verified": "Pembeli Terverifikasi"
+    },
     "similarProducts": "Produk Serupa",
     "sellerProducts": "Produk Lain dari Penjual",
     "contactSeller": "Hubungi penjual",
-    "loginRequired": "Masuk untuk menambahkan ke favorit.",
+    "makeOffer": "Ajukan Penawaran",
+    "loginRequired": "Silakan masuk untuk melakukan tindakan ini.",
     "addedToFavorites": "Ditambahkan ke favorit",
     "removedFromFavorites": "Dihapus dari favorit",
     "linkCopied": "Tautan telah disalin.",
     "messagingComingSoon": "Fitur perpesanan akan segera hadir.",
-    "productNotFound": "Produk tidak ditemukan."
+    "productNotFound": "Produk tidak ditemukan.",
+    "contacting": "Upaya kontak sedang dilakukan...",
+    "contactError": "Komunikasi gagal. Silakan coba lagi.",
+    "noImage": "Tidak ada gambar yang tersedia.",
+    "defaultLocation": "Turki",
+    "inquiryMessage": "Saya ingin mendapatkan informasi tentang {title}.",
+    "breadcrumb": {
+      "home": "Rumah",
+      "products": "Produk"
+    }
   },
   "seller": {
     "title": "Informasi Penjual",
@@ -300,6 +662,70 @@
     "call": "Mencari",
     "viewProfile": "Lihat Profil"
   },
+  "sellers": {
+    "title": "Penjual",
+    "description": "Temukan penjual yang terpercaya.",
+    "search": "Temukan penjual...",
+    "sort": "Menyortir",
+    "sortOptions": {
+      "newest": "Terbaru",
+      "mostSales": "Terlaris",
+      "topRated": "Skor Tertinggi",
+      "mostProducts": "Sebagian Besar Iklan"
+    },
+    "noResults": "Penjual tidak ditemukan.",
+    "loading": "Para penjual sedang memuat...",
+    "showing": "{count} penjual ditemukan",
+    "verified": "Terverifikasi",
+    "sales": "penjualan",
+    "products": "iklan",
+    "reviews": "evaluasi",
+    "rating": "titik",
+    "viewProducts": "Lihat Produk",
+    "contactSeller": "Kirim Pesan",
+    "memberSince": "Anggota sejak {tahun}",
+    "fetchError": "Terjadi kesalahan saat memuat vendor.",
+    "detail": {
+      "title": "Profil Penjual",
+      "about": "Tentang",
+      "businessInfo": "Informasi Bisnis",
+      "businessName": "Nama Bisnis",
+      "businessType": "Tur Bisnis",
+      "email": "E-mail",
+      "phone": "Telepon",
+      "website": "Situs web",
+      "description": "Penjelasan",
+      "policies": "Kebijakan",
+      "returnPolicy": "Kebijakan pengembalian",
+      "shippingPolicy": "Kebijakan Pengiriman",
+      "businessHours": "Jam Kerja",
+      "paymentMethods": "Metode Pembayaran",
+      "allProducts": "Semua Produk",
+      "stats": {
+        "totalSales": "Total Penjualan",
+        "totalProducts": "Total Produk",
+        "totalReviews": "Evaluasi",
+        "rating": "Titik"
+      },
+      "notFound": "Penjual tidak ditemukan.",
+      "backToList": "Don kepada para penjual",
+      "contactInfo": "Komunikasi",
+      "noProducts": "Penjual ini belum memiliki daftar barang.",
+      "noPolicies": "Penjual belum menetapkan kebijakannya.",
+      "fetchError": "Terjadi kesalahan saat mengunggah informasi penjual.",
+      "productsLoadError": "Terjadi kesalahan saat mengunggah produk penjual.",
+      "reviewsTab": "Penilaian",
+      "reviews": {
+        "summary": "Ringkasan Evaluasi",
+        "reviewCount": "evaluasi",
+        "communication": "Komunikasi",
+        "shippingSpeed": "Kecepatan Pengiriman",
+        "productQuality": "Kualitas Produk",
+        "noReviews": "Belum ada evaluasi.",
+        "verified": "Pembeli Terverifikasi"
+      }
+    }
+  },
   "editListing": {
     "title": "Edit iklannya",
     "saveChanges": "Simpan Perubahan",
@@ -307,6 +733,10 @@
     "updateSuccess": "Iklan telah berhasil diperbarui.",
     "updateFailed": "Terjadi kesalahan saat memperbarui daftar.",
     "loadError": "Terjadi kesalahan saat memuat iklan.",
+    "sellerNotFound": "Profil penjual tidak ditemukan.",
+    "sellerLoadError": "Profil penjual tidak dapat dimuat.",
+    "userNotFound": "Informasi pengguna tidak dapat ditemukan. Silakan masuk kembali.",
+    "locationNotFound": "Informasi lokasi tidak dapat ditemukan. Silakan segarkan halaman.",
     "basicInfo": "Informasi Dasar",
     "categoryAndCondition": "Kategori dan Status",
     "pricing": "Harga",
@@ -314,6 +744,8 @@
     "images": "Gambar",
     "existingImages": "Gambar yang Tersedia",
     "addImage": "Tambahkan Gambar",
+    "maxImages": "Anda dapat mengunggah maksimal 10 gambar.",
+    "imageHint": "Minimal 1, maksimal 10 gambar. Dalam format PNG, JPG, atau WEBP.",
     "uploadingImages": "Gambar sedang dimuat...",
     "uploadingImage": "Gambar sedang dimuat.",
     "imageUploadFailed": "Gambar tidak dapat dimuat.",
@@ -358,6 +790,7 @@
     "addImage": "Tambahkan Gambar",
     "maxImages": "Anda dapat mengunggah maksimal 10 gambar.",
     "imageHint": "Minimal 1, maksimal 10 gambar. Dalam format PNG, JPG, atau WEBP.",
+    "location": "Informasi Lokasi",
     "fields": {
       "title": "Judul Iklan",
       "shortDescription": "Deskripsi Singkat",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Pengiriman tersedia.",
       "shippingCost": "Biaya Pengiriman",
       "weight": "Berat",
-      "weightUnit": "Satuan Berat"
+      "weightUnit": "Satuan Berat",
+      "city": "Kota",
+      "address": "Alamat",
+      "postalCode": "kode Pos"
     },
     "placeholders": {
       "title": "Contoh: Sapi Holstein Berumur 2 Tahun",
       "shortDescription": "Deskripsi produk (maksimal 200 karakter)",
       "description": "Berikan informasi detail tentang produk tersebut...",
-      "category": "Pilih kategori."
+      "category": "Pilih kategori.",
+      "city": "Masuk ke kota",
+      "address": "Masukkan alamat lengkap.",
+      "postalCode": "kode Pos"
+    },
+    "errors": {
+      "titleRequired": "Judul iklan wajib diisi.",
+      "shortDescriptionRequired": "Deskripsi singkat diperlukan.",
+      "descriptionRequired": "Penjelasan rinci diperlukan.",
+      "categoryRequired": "Pemilihan kategori bersifat wajib.",
+      "priceRequired": "Harga wajib dibayar.",
+      "cityRequired": "Informasi kota diperlukan.",
+      "addressRequired": "Informasi alamat wajib diisi.",
+      "locationError": "Terjadi kesalahan saat membuat lokasi."
     },
     "success": "Iklan tersebut berhasil dibuat.",
     "error": "Terjadi kesalahan saat membuat iklan.",
@@ -384,28 +833,57 @@
     "uploadingImages": "Gambar sedang dimuat...",
     "uploadingImage": "Gambar sedang dimuat.",
     "imageUploadFailed": "Gambar tidak dapat dimuat.",
-    "imagesUploaded": "Semua gambar berhasil diunggah.",
+    "imagesUploaded": "Semua gambar telah berhasil diunggah.",
     "draftSaved": "Draf tersimpan",
     "productCreated": "Produk tersebut berhasil dibuat.",
     "creationFailed": "Produk tidak dapat dibuat. Silakan coba lagi.",
-    "errors": {
-      "titleRequired": "Judul iklan wajib diisi.",
-      "shortDescriptionRequired": "Deskripsi singkat diperlukan.",
-      "descriptionRequired": "Penjelasan rinci diperlukan.",
-      "categoryRequired": "Pemilihan kategori bersifat wajib.",
-      "priceRequired": "Masukkan harga yang valid."
-    }
+    "userNotFound": "Informasi pengguna tidak dapat ditemukan. Silakan masuk kembali.",
+    "defaultBusinessName": "Bisnis saya"
+  },
+  "becomeSeller": {
+    "title": "Menjadi Penjual",
+    "description": "Pernyataan Perusahaan",
+    "alreadySeller": "Anda sudah memiliki profil penjual.",
+    "goToListings": "Buka daftar saya",
+    "businessInfo": "Informasi Bisnis",
+    "contactInfo": "Informasi Kontak",
+    "businessName": "Nama Bisnis",
+    "businessNamePlaceholder": "Contoh: Peternakan Yilmaz",
+    "businessType": "Tur Bisnis",
+    "businessTypePlaceholder": "Pilih jenis bisnis Anda.",
+    "businessTypes": {
+      "individual": "Individu",
+      "company": "Perusahaan",
+      "cooperative": "Koperasi",
+      "farm": "Peternakan"
+    },
+    "taxNumber": "Nomor Pajak",
+    "taxNumberPlaceholder": "Masukkan nomor identifikasi pajak Anda (opsional)",
+    "descriptionPlaceholder": "Tuliskan deskripsi singkat tentang bisnis Anda...",
+    "phone": "Telepon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Situs web",
+    "websitePlaceholder": "https://www.examplesite.com (opsional)",
+    "submit": "Buat Profil Penjual",
+    "submitting": "Membuat profil...",
+    "success": "Profil penjual Anda telah berhasil dibuat!",
+    "error": "Terjadi kesalahan saat membuat profil penjual.",
+    "taxNumberHelp": "Masukkan nomor pajak Anda yang terdiri dari 10 atau 11 digit (opsional)",
+    "phoneHelp": "Contoh: +90 555 123 45 67 atau 0555 123 45 67",
+    "websiteHelp": "Contoh: www.isletmem.com atau https://isletmem.com",
+    "alreadySellerDescription": "Anda dapat menggunakan tombol di bawah ini untuk mengelola daftar properti Anda.",
+    "newListing": "Tambahkan Daftar Baru"
   },
   "fileUpload": {
     "dragDrop": "Unggah foto atau video.",
     "dragDropHint": "Seret dan lepas atau klik untuk memilih.",
     "dropHere": "Biarkan saja...",
     "imageLimit": "Foto: maksimal 10MB",
-    "videoLimit": "Video: max 100MB",
+    "videoLimit": "Video: maksimal 100MB",
     "uploadCount": "{current} / {max} loaded",
     "maxFilesError": "Anda dapat mengunggah maksimal {max} media.",
     "imageTooLarge": "Ukuran foto harus kurang dari 10MB.",
-    "videoTooLarge": "The video must be smaller than 100MB.",
+    "videoTooLarge": "Ukuran video harus kurang dari 100MB.",
     "optimizing": "Mengoptimalkan...",
     "uploading": "Memuat...",
     "queued": "Sedang mengantre...",
@@ -419,9 +897,833 @@
     "videoBadge": "VIDEO",
     "coverUpdated": "Foto sampul telah berhasil disesuaikan.",
     "optimizationInfo": "Foto-foto telah dioptimalkan agar sesuai dengan standar web.",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Pemilihan Visual",
+    "changeImage": "Mengubah",
+    "removeImage": "Menghapus",
+    "videoProcessing": "Video sedang diproses...",
+    "videoProcessingFailed": "Operasi gagal.",
+    "videoProcessingPollError": "Status pemrosesan video tidak dapat diperoleh. Silakan segarkan halaman.",
+    "reorderError": "Berkas tidak dapat diurutkan.",
+    "coverUpdateError": "Foto sampul tidak dapat diperbarui."
+  },
+  "error": {
+    "title": "Terjadi kesalahan.",
+    "description": "Terjadi kesalahan yang tidak terduga. Silakan segarkan halaman atau coba lagi nanti.",
+    "retry": "Coba lagi",
+    "goBack": "Jangan kembali",
+    "goHome": "Rumah",
+    "notFound": {
+      "title": "Halaman Tidak Ditemukan",
+      "description": "Halaman yang Anda cari tidak tersedia atau telah dipindahkan.",
+      "goHome": "Kembali ke Halaman Utama"
+    }
+  },
+  "search": {
+    "title": "Mencari",
+    "placeholder": "Cari produk, kategori, atau penjual...",
+    "searchButton": "Mencari",
+    "searchingFor": "Diinginkan",
+    "loading": "Diinginkan...",
+    "resultsCount": "Hasil sebanyak {count} ditemukan.",
+    "noResults": "Tidak ada hasil yang ditemukan.",
+    "tryDifferentSearch": "Cobalah kata kunci yang berbeda atau ubah filternya.",
+    "filters": {
+      "title": "Filter",
+      "category": "Kategori",
+      "allCategories": "Semua Kategori",
+      "condition": "Situasi",
+      "allConditions": "Semua Kasus",
+      "priceRange": "Kisaran Harga",
+      "price": "Harga",
+      "min": "Min",
+      "max": "Maksimum",
+      "apply": "Menerapkan",
+      "clear": "Membersihkan",
+      "clearAll": "Hapus Semua"
+    },
+    "fetchError": "Terjadi kesalahan saat memuat hasil pencarian.",
+    "recentSearches": "Pencarian Terbaru",
+    "clearHistory": "Hapus Riwayat",
+    "noSearchHistory": "Anda belum memiliki riwayat pencarian.",
+    "deleteHistoryError": "Terjadi kesalahan saat menghapus riwayat pencarian."
+  },
+  "categories": {
+    "title": "Manajemen Kategori",
+    "description": "Kelola kategori dari sini.",
+    "noCategories": "Belum ada kategori yang ditambahkan.",
+    "createFirst": "Buat kategori pertama.",
+    "fetchError": "Terjadi kesalahan saat memuat kategori.",
+    "createSuccess": "Kategori berhasil dibuat.",
+    "createError": "Terjadi kesalahan saat membuat kategori.",
+    "updateSuccess": "Kategori berhasil diperbarui.",
+    "updateError": "Terjadi kesalahan saat memperbarui kategori.",
+    "deleteSuccess": "Kategori tersebut telah berhasil dihapus.",
+    "deleteError": "Terjadi kesalahan saat menghapus kategori.",
+    "activateSuccess": "Kategori tersebut telah diaktifkan.",
+    "deactivateSuccess": "Kategori tersebut telah dinonaktifkan.",
+    "statusError": "Terjadi kesalahan saat mengubah status.",
+    "loadError": "Terjadi kesalahan saat memuat kategori.",
+    "filters": {
+      "all": "Mereka semua",
+      "active": "Aktif",
+      "inactive": "Tidak aktif"
+    },
+    "table": {
+      "name": "Nama Kategori",
+      "slug": "Siput",
+      "sortOrder": "Nomor seri",
+      "subCategories": "Subkategori",
+      "status": "Situasi",
+      "actions": "Transaksi"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Menghapus",
+      "activate": "Mengaktifkan",
+      "deactivate": "Struktur Pasif"
+    },
+    "deleteDialog": {
+      "title": "Hapus Kategori",
+      "description": "Apakah Anda yakin ingin menghapus kategori ini? Tindakan ini tidak dapat dibatalkan.",
+      "cancel": "Membatalkan",
+      "confirm": "Menghapus"
+    },
+    "addNew": "Tambahkan Kategori Baru",
+    "loadMore": "Unduh Lebih Banyak",
+    "loadingMore": "Memuat...",
+    "form": {
+      "newTitle": "Buat Kategori Baru",
+      "editTitle": "Edit Kategori",
+      "name": "Nama Kategori",
+      "namePlaceholder": "Contoh: Sapi",
+      "slug": "Siput",
+      "slugPlaceholder": "Contoh: ternak besar",
+      "description": "Penjelasan",
+      "descriptionPlaceholder": "Deskripsi singkat tentang kategori tersebut...",
+      "parentCategory": "Kategori Atas",
+      "parentCategoryPlaceholder": "Pilih kategori teratas (opsional)",
+      "noParent": "Tidak ada kategori teratas (Kategori utama)",
+      "sortOrder": "Nomor Urut",
+      "isActive": "Aktif",
+      "iconUrl": "URL ikon",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Menyimpan",
+      "submitting": "Penghematan...",
+      "updating": "Sedang memperbarui...",
+      "errors": {
+        "nameRequired": "Nama kategori wajib diisi.",
+        "slugRequired": "Siput adalah hal yang wajib."
+      }
+    }
+  },
+  "offers": {
+    "title": "Usulan",
+    "description": "Kelola penawaran masuk dan keluar Anda.",
+    "received": "Penawaran Masuk",
+    "sent": "Penawaran yang Diajukan",
+    "noReceivedOffers": "Belum ada penawaran yang diterima.",
+    "noSentOffers": "Anda belum mengirimkan penawaran.",
+    "browseProducts": "Telusuri Produk",
+    "viewProduct": "Lihat produknya",
+    "accept": "Menerima",
+    "reject": "Menolak",
+    "withdraw": "Menarik",
+    "makeOffer": "Ajukan Penawaran",
+    "sendOffer": "Kirim Penawaran",
+    "sending": "Mengirim...",
+    "cancel": "Membatalkan",
+    "listingPrice": "Harga yang diiklankan",
+    "yourOffer": "Penawaran Anda",
+    "quantity": "Jumlah",
+    "messageOptional": "Pesan (Opsional)",
+    "messagePlaceholder": "Sebuah catatan yang ingin Anda sampaikan kepada penjual...",
+    "expiresAt": "Tanggal valid terakhir",
+    "offerSent": "Penawaran Anda telah berhasil dikirim.",
+    "offerError": "Terjadi kesalahan saat mengirim penawaran.",
+    "acceptSuccess": "Penawaran tersebut diterima.",
+    "rejectSuccess": "Tawaran itu ditolak.",
+    "withdrawSuccess": "Penawaran tersebut ditarik kembali.",
+    "actionError": "Terjadi kesalahan selama proses berlangsung.",
+    "fetchError": "Terjadi kesalahan saat memuat penawaran.",
+    "loginRequired": "Masuk untuk mengirimkan penawaran.",
+    "invalidPrice": "Masukkan harga yang valid.",
+    "invalidQuantity": "Masukkan jumlah yang valid.",
+    "status": {
+      "pending": "Tertunda",
+      "accepted": "Diterima",
+      "rejected": "Ditolak",
+      "countered": "Usul balasan",
+      "expired": "Masa jabatannya telah berakhir.",
+      "withdrawn": "Menarik diri"
+    }
+  },
+  "deals": {
+    "title": "Perjanjian",
+    "description": "Patuhilah perjanjian pembelian Anda.",
+    "buying": "Para sarjana",
+    "selling": "Penjualan",
+    "noBuyingDeals": "Anda belum memiliki proses pendaftaran siswa.",
+    "noSellingDeals": "Anda belum memiliki transaksi penjualan apa pun.",
+    "browseProducts": "Telusuri Produk",
+    "viewProduct": "Lihat produknya",
+    "activeDeals": "Perjanjian Aktif",
+    "completedDeals": "Selesai",
+    "purchases": "Para sarjana",
+    "sales": "Penjualan",
+    "fetchError": "Terjadi kesalahan saat memuat perjanjian.",
+    "dealStatus": {
+      "pending": "Tertunda",
+      "confirmed": "Dikonfirmasi",
+      "processing": "Persiapan",
+      "shipped": "Di dalam kargo",
+      "delivered": "Terkirim",
+      "completed": "Selesai",
+      "cancelled": "Dibatalkan",
+      "disputed": "Perjanjian"
+    },
+    "delivery": {
+      "pickup": "Pengiriman langsung",
+      "shipping": "Dengan kargo",
+      "transport": "Dengan transportasi"
+    },
+    "requestTransport": "Permintaan Pengiriman"
+  },
+  "farms": {
+    "title": "Ladangku",
+    "description": "Kelola dan perbarui pertanian Anda.",
+    "addFarm": "Tambahkan Peternakan",
+    "editFarm": "Manajemen Pertanian",
+    "noFarms": "Anda belum menambahkan pertanian.",
+    "farmName": "Nama Peternakan",
+    "registrationNumber": "Nomor pendaftaran",
+    "location": "Lokasi",
+    "selectLocation": "Pilih lokasi.",
+    "addLocationFirst": "Pertama, tambahkan lokasi.",
+    "farmTypeLabel": "Tur Pertanian",
+    "farmDescription": "Penjelasan",
+    "totalArea": "Luas Total",
+    "cultivatedArea": "Area yang Dibudidayakan",
+    "certifications": "Sertifikat",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP, dll.",
+    "organic": "Organik",
+    "verified": "Terverifikasi",
+    "save": "Menyimpan",
+    "saving": "Penghematan...",
+    "cancel": "Membatalkan",
+    "edit": "Edit",
+    "delete": "Menghapus",
+    "sellerRequired": "Profil Penjual Diperlukan",
+    "sellerRequiredDesc": "Untuk menambahkan lahan pertanian, Anda perlu membuat profil penjual terlebih dahulu.",
+    "becomeSeller": "Menjadi Penjual",
+    "createSuccess": "Ladang tersebut berhasil ditambahkan.",
+    "updateSuccess": "Peternakan tersebut telah berhasil diperbarui.",
+    "deleteSuccess": "Ladang tersebut berhasil dihapus.",
+    "saveError": "Terjadi kesalahan saat mendaftarkan pertanian.",
+    "deleteError": "Terjadi kesalahan saat menghapus farm.",
+    "fetchError": "Terjadi kesalahan saat mengunggah informasi pertanian.",
+    "farmType": {
+      "livestock": "Peternakan",
+      "crop": "Pertanian",
+      "mixed": "Campur aduk",
+      "poultry": "Bersayap",
+      "dairy": "Peternakan sapi perah",
+      "aquaculture": "Produk Perairan"
+    }
+  },
+  "transporters": {
+    "title": "pengangkut",
+    "description": "Layanan transportasi hewan dan produk",
+    "searchPlaceholder": "Cari jasa pengangkut...",
+    "noTransporters": "Belum ada operator yang terdaftar.",
+    "verified": "Terverifikasi",
+    "transports": "mengangkut",
+    "viewProfile": "Lihat Profil",
+    "sort": {
+      "newest": "Terbaru",
+      "rating": "Skor Tertinggi",
+      "mostTransports": "Pengiriman Paling Sering"
+    },
+    "pagination": {
+      "previous": "Mantan",
+      "next": "Berikutnya",
+      "page": "Halaman {page}"
+    }
+  },
+  "transport": {
+    "title": "Permintaan Pengiriman Saya",
+    "description": "Lacak permintaan pengiriman Anda.",
+    "findTransporter": "Cari Pengangkut",
+    "active": "Aktif",
+    "completed": "Selesai",
+    "total": "Total",
+    "asSeller": "Sebagai Penjual",
+    "asBuyer": "Sebagai Pembeli",
+    "noSellerRequests": "Sebagai penjual, Anda tidak memiliki persyaratan pengiriman.",
+    "noBuyerRequests": "Sebagai penerima, Anda tidak memiliki permintaan pengiriman.",
+    "viewProduct": "Lihat produknya",
+    "pickup": "Menerima",
+    "delivery": "Pengiriman",
+    "urgent": "Mendesak",
+    "fetchError": "Terjadi kesalahan saat mengunggah permintaan pengiriman.",
+    "trackShipment": "Mengikuti",
+    "transportStatus": {
+      "pending": "Tertunda",
+      "inPool": "Di kolam renang",
+      "assigned": "Ditunjuk",
+      "pickedUp": "Kuitansi",
+      "inTransit": "Di jalan",
+      "delivered": "Terkirim",
+      "completed": "Selesai",
+      "cancelled": "Dibatalkan"
+    },
+    "transportType": {
+      "standard": "Standar",
+      "refrigerated": "Rantai Dingin",
+      "liveAnimal": "Hewan Hidup",
+      "hazardous": "Bahan Berbahaya",
+      "oversized": "Ukuran Besar"
+    }
+  },
+  "moderation": {
+    "title": "Moderasi Produk",
+    "description": "Tinjau produk yang menunggu persetujuan.",
+    "pending": "menunggu",
+    "allClear": "Semua produk telah diperiksa.",
+    "noPending": "Tidak ada produk yang sedang menunggu persetujuan.",
+    "awaitingReview": "Menunggu Peninjauan",
+    "by": "Tenaga penjualan:",
+    "stock": "Saham",
+    "preview": "Bersamamu",
+    "approve": "Mengonfirmasi",
+    "reject": "Menolak",
+    "confirmReject": "Menolak",
+    "cancelReject": "Menyerah",
+    "rejectReasonPlaceholder": "Tuliskan alasan penolakan tersebut...",
+    "rejectReasonRequired": "Alasan penolakan wajib dicantumkan.",
+    "approveSuccess": "Produk tersebut berhasil disetujui.",
+    "rejectSuccess": "Produk tersebut ditolak.",
+    "actionError": "Terjadi kesalahan selama proses berlangsung.",
+    "fetchError": "Terjadi kesalahan saat mengunggah produk.",
+    "unauthorized": "Anda tidak memiliki izin untuk mengakses halaman ini."
+  },
+  "sellerModeration": {
+    "title": "Moderasi Penjual",
+    "description": "Tinjau dan kelola akun penjual.",
+    "pending": "menunggu",
+    "allClear": "Semua penjual telah diselidiki.",
+    "noPending": "Tidak ada penjual yang menunggu.",
+    "verify": "Memeriksa",
+    "suspend": "Menskors",
+    "verifySuccess": "Penjual berhasil diverifikasi.",
+    "suspendSuccess": "Penjual ditangguhkan.",
+    "actionError": "Terjadi kesalahan selama proses berlangsung.",
+    "suspendReasonRequired": "Alasan penangguhan bersifat wajib.",
+    "suspendReasonPlaceholder": "Tuliskan alasan penangguhan tersebut...",
+    "confirmSuspend": "Menskors",
+    "cancelSuspend": "Menyerah",
+    "statusLabels": {
+      "pendingVerification": "Menunggu Verifikasi",
+      "active": "Aktif",
+      "suspended": "Gantung",
+      "banned": "Terlarang"
+    },
+    "filterAll": "Tampilkan semua",
+    "filterPending": "Mereka yang menunggu",
+    "filterActive": "Aktiva",
+    "filterSuspended": "Tergantung",
+    "unauthorized": "Anda tidak memiliki izin untuk mengakses halaman ini.",
+    "businessName": "Nama Bisnis",
+    "businessType": "Tur Bisnis",
+    "email": "E-mail",
+    "phone": "Telepon",
+    "status": "Situasi",
+    "createdAt": "Tanggal Pendaftaran"
+  },
+  "transporterModeration": {
+    "title": "Moderasi Operator",
+    "description": "Tinjau dan kelola akun operator.",
+    "pending": "menunggu",
+    "allClear": "Semua pengangkut telah diselidiki.",
+    "noPending": "Tidak ada pengangkut yang menunggu.",
+    "verify": "Memeriksa",
+    "suspend": "Menskors",
+    "verifySuccess": "Pengangkut berhasil diverifikasi.",
+    "suspendSuccess": "Pengangkut tersebut diskors.",
+    "actionError": "Terjadi kesalahan selama proses berlangsung.",
+    "suspendReasonRequired": "Alasan penangguhan bersifat wajib.",
+    "suspendReasonPlaceholder": "Tuliskan alasan penangguhan tersebut...",
+    "confirmSuspend": "Menskors",
+    "cancelSuspend": "Menyerah",
+    "statusLabels": {
+      "pendingVerification": "Menunggu Verifikasi",
+      "active": "Aktif",
+      "suspended": "Gantung",
+      "banned": "Terlarang"
+    },
+    "filterAll": "Tampilkan semua",
+    "filterPending": "Mereka yang menunggu",
+    "filterActive": "Aktiva",
+    "filterSuspended": "Tergantung",
+    "unauthorized": "Anda tidak memiliki izin untuk mengakses halaman ini.",
+    "companyName": "Nama perusahaan",
+    "contactPerson": "Orang yang Berwenang",
+    "email": "E-mail",
+    "phone": "Telepon",
+    "city": "Kota",
+    "status": "Situasi",
+    "createdAt": "Tanggal Pendaftaran"
+  },
+  "transporterDetail": {
+    "notFound": "Tidak ada pengangkut yang ditemukan.",
+    "backToList": "Don untuk pengangkut",
+    "verified": "Terverifikasi",
+    "totalTransports": "total pengiriman",
+    "completed": "selesai",
+    "about": "Tentang",
+    "contact": "Informasi Kontak",
+    "businessInfo": "Informasi Bisnis",
+    "license": "Nomor Lisensi",
+    "insurance": "Informasi Asuransi",
+    "fleet": "Informasi Armada",
+    "serviceRegions": "Area Layanan",
+    "specializations": "Bidang keahlian",
+    "certifications": "Sertifikat"
+  },
+  "brands": {
+    "title": "Manajemen Merek",
+    "description": "Mengelola merek produk.",
+    "addBrand": "Tambahkan Merek",
+    "editBrand": "Edit Merek",
+    "noBrands": "Belum ada merek yang ditambahkan.",
+    "brandName": "Nama Merek",
+    "brandDescription": "Penjelasan",
+    "website": "Situs web",
+    "logoUrl": "URL Logo",
+    "save": "Menyimpan",
+    "saving": "Penghematan...",
+    "cancel": "Membatalkan",
+    "edit": "Edit",
+    "delete": "Menghapus",
+    "inactive": "Pasif",
+    "products": "produk",
+    "createSuccess": "Merek berhasil ditambahkan.",
+    "updateSuccess": "Merek tersebut telah berhasil diperbarui.",
+    "deleteSuccess": "Merek tersebut berhasil dihapus.",
+    "saveError": "Terjadi kesalahan saat mendaftarkan merek dagang.",
+    "deleteError": "Terjadi kesalahan saat menghapus merek dagang.",
+    "fetchError": "Terjadi kesalahan saat memuat merek.",
+    "unauthorized": "Anda tidak memiliki izin untuk mengakses halaman ini."
+  },
+  "transporterReviews": {
+    "title": "Penilaian",
+    "reviewCount": "evaluasi",
+    "noReviews": "Belum ada evaluasi.",
+    "timeliness": "Pengiriman tepat waktu",
+    "communication": "Komunikasi",
+    "carefulHandling": "Penanganan yang Hati-hati",
+    "professionalism": "Profesionalisme"
+  },
+  "transportOffers": {
+    "title": "Penawaran Pengiriman",
+    "description": "Kelola penawaran harga yang Anda ajukan untuk permintaan pengiriman.",
+    "newOffer": "Proposal Baru",
+    "transportRequestId": "ID Permintaan Pengiriman",
+    "requestIdPlaceholder": "Masukkan ID permintaan pengiriman.",
+    "offeredPrice": "Harga Penawaran",
+    "estimatedDays": "Perkiraan Durasi (Hari)",
+    "days": "hari",
+    "vehicleType": "Jenis Kendaraan",
+    "insuranceIncluded": "Termasuk Asuransi",
+    "message": "Pesan",
+    "cancel": "Membatalkan",
+    "sending": "Mengirim...",
+    "sendOffer": "Kirim Penawaran",
+    "cancelOffer": "Membatalkan",
+    "pendingTab": "Menunggu",
+    "historyTab": "Masa lalu",
+    "noPendingOffers": "Anda tidak memiliki penawaran yang tertunda.",
+    "noHistory": "Tidak ditemukan penawaran sebelumnya.",
+    "status": {
+      "pending": "Menunggu",
+      "accepted": "Diterima",
+      "rejected": "Ditolak",
+      "expired": "Masa jabatannya telah berakhir.",
+      "cancelled": "Dibatalkan"
+    },
+    "createSuccess": "Penawaran telah berhasil diajukan.",
+    "createError": "Terjadi kesalahan saat mengirim penawaran.",
+    "cancelSuccess": "Penawaran tersebut dibatalkan.",
+    "cancelError": "Terjadi kesalahan saat membatalkan penawaran.",
+    "fetchError": "Terjadi kesalahan saat memuat penawaran."
+  },
+  "animalInfo": {
+    "title": "Informasi Hewan & Produk",
+    "animalTab": "Hewan",
+    "healthTab": "Kesehatan",
+    "vaccinationsTab": "Vaksinator",
+    "veterinaryTab": "Dokter hewan",
+    "breed": "Balapan",
+    "genderLabel": "Jenis kelamin",
+    "gender": {
+      "male": "Pria",
+      "female": "Perempuan",
+      "unknown": "Tidak dikenal"
+    },
+    "age": "Usia",
+    "months": "bulan",
+    "weight": "Berat",
+    "color": "Warna",
+    "tagNumber": "Nomor Telinga",
+    "healthStatus": "Kondisi kesehatan",
+    "health": {
+      "healthy": "Sehat",
+      "underTreatment": "Sedang dalam perawatan.",
+      "recovering": "Dia sedang dalam masa pemulihan.",
+      "quarantined": "Dalam karantina",
+      "unknown": "Tidak dikenal"
+    },
+    "purposeLabel": "Penggunaan yang Dimaksudkan",
+    "purpose": {
+      "breeding": "Stud",
+      "dairy": "Susu",
+      "meat": "Daging",
+      "egg": "Telur",
+      "wool": "Wol",
+      "working": "Bekerja",
+      "pet": "Domestik",
+      "other": "Lainnya"
+    },
+    "pregnancy": "Kehamilan",
+    "pregnant": "Hamil",
+    "microchip": "Mikrochip No.",
+    "passport": "Nomor Paspor",
+    "sireDetails": "Informasi Ayah",
+    "damDetails": "Informasi Utama",
+    "diagnosis": "Diagnosa",
+    "treatment": "Perlakuan",
+    "medications": "Obat",
+    "veterinarian": "Dokter hewan",
+    "nextDue": "Sejarah Pemberontakan Berikutnya",
+    "prescriptionRequired": "Membutuhkan resep dokter.",
+    "targetSpecies": "Tur Target",
+    "activeIngredients": "Bahan Aktif",
+    "registrationNo": "Nomor pendaftaran",
+    "storage": "Penyimpanan",
+    "chemicalTab": "Kimia",
+    "feedTab": "Umpan",
+    "seedTab": "Benih",
+    "machineryTab": "Mesin",
+    "organic": "Organik",
+    "toxicity": "Toksisitas",
+    "gmoFree": "Bebas GMO",
+    "protein": "Protein",
+    "fat": "Minyak",
+    "fiber": "Serat",
+    "hybrid": "Hibrida",
+    "germination": "Pengecambahan",
+    "daysToMaturity": "Pematangan",
+    "daysLabel": "hari",
+    "warranty": "Terjamin",
+    "power": "Kekuatan",
+    "hoursUsed": "Jam Penggunaan",
+    "hours": "jam",
+    "powerSource": "Catu daya"
+  },
+  "productVariants": {
+    "title": "Varian Produk",
+    "variantCount": "variasi",
+    "inStock": "Tersedia",
+    "outOfStock": "Terjual habis"
+  },
+  "productPrices": {
+    "title": "Harga (Mata Uang Ganda)",
+    "autoConversion": "Transformasi Otomatis",
+    "validUntil": "Keabsahan"
+  },
+  "requestTransport": {
+    "title": "Buat Permintaan Pengiriman",
+    "pickupLocation": "Titik Pemuatan",
+    "deliveryLocation": "Titik Pengiriman",
+    "city": "Kota",
+    "address": "Alamat",
+    "transportType": "Tur Transportasi",
+    "types": {
+      "standard": "Standar",
+      "refrigerated": "Rantai Dingin",
+      "liveAnimal": "Hewan Hidup",
+      "hazardous": "Bahan Berbahaya",
+      "oversized": "Ukuran Besar"
+    },
+    "weight": "Berat (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Tanggal Unggah yang Disarankan",
+    "preferredDeliveryDate": "Tanggal Pengiriman yang Disukai",
+    "urgent": "Transportasi Mendesak",
+    "specialInstructions": "Instruksi Khusus",
+    "instructionsPlaceholder": "Tuliskan instruksi spesifik Anda di sini...",
+    "cancel": "Menyerah",
+    "submit": "Menciptakan Permintaan",
+    "submitting": "Dalam proses penciptaan...",
+    "success": "Permintaan pengiriman telah berhasil dibuat.",
+    "error": "Terjadi kesalahan saat membuat permintaan pengiriman."
+  },
+  "transportTracking": {
+    "title": "Pelacakan Pengiriman",
+    "noTracking": "Belum ada informasi pelacakan yang tersedia.",
+    "update": "Memperbarui"
+  },
+  "locations": {
+    "title": "Alamat saya",
+    "description": "Kelola alamat terdaftar Anda.",
+    "addLocation": "Tambahkan Alamat",
+    "editLocation": "Edit Alamat",
+    "noLocations": "Anda belum memiliki alamat terdaftar.",
+    "name": "Nama Alamat",
+    "namePlaceholder": "Contohnya: Rumah, Pekerjaan, Pertanian",
+    "address": "Alamat",
+    "addressLine2": "Baris Alamat 2",
+    "city": "Kota",
+    "state": "Distrik/Wilayah",
+    "postalCode": "kode Pos",
+    "phone": "Telepon",
+    "email": "E-mail",
+    "cancel": "Menyerah",
+    "save": "Menyimpan",
+    "saving": "Penghematan...",
+    "typePickup": "Memuat",
+    "typeDelivery": "Pengiriman",
+    "typeBoth": "Umum",
+    "createSuccess": "Alamat berhasil ditambahkan.",
+    "createError": "Terjadi kesalahan saat menambahkan alamat.",
+    "updateSuccess": "Alamat telah berhasil diperbarui.",
+    "updateError": "Terjadi kesalahan saat memperbarui alamat.",
+    "deleteLocation": "Hapus Alamat",
+    "deleteSuccess": "Alamat dihapus",
+    "deleteError": "Terjadi kesalahan saat menghapus alamat.",
+    "fetchError": "Terjadi kesalahan saat memuat alamat."
+  },
+  "systemSettings": {
+    "title": "Pengaturan Sistem",
+    "description": "Lihat pengaturan mata uang platform, bahasa, metode pembayaran, pengiriman, dan pajak.",
+    "unauthorized": "Anda tidak memiliki izin untuk mengakses halaman ini.",
+    "currenciesTab": "Mata uang",
+    "languagesTab": "Bahasa",
+    "paymentTab": "Metode Pembayaran",
+    "shippingTab": "Muatan",
+    "taxTab": "Pajak",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "default": "Bawaan",
+    "noCurrencies": "Mata uang tersebut belum ditentukan.",
+    "noLanguages": "Bahasa tersebut belum didefinisikan.",
+    "noPaymentMethods": "Metode pembayaran belum ditentukan.",
+    "noCarriers": "Perusahaan pelayaran tersebut belum diidentifikasi.",
+    "noZones": "Area kargo belum ditentukan.",
+    "noTaxRates": "Tarif pajak belum ditentukan.",
+    "carriers": "Perusahaan Pelayaran",
+    "zones": "Zona Kargo",
+    "countries": "Negara-negara",
+    "rates": "Biaya Pengiriman",
+    "noRates": "Biaya pengiriman belum ditentukan.",
+    "freeShipping": "Pengiriman Gratis",
+    "deliveryDays": "waktu pengiriman hari itu"
+  },
+  "pushPermission": {
+    "title": "Aktifkan notifikasi",
+    "description": "Dapatkan notifikasi tentang pesan baru, penawaran, dan pembaruan pesanan.",
+    "allow": "Mengizinkan",
+    "dismiss": "Menutup"
+  },
+  "healthRecords": {
+    "title": "Catatan Kesehatan",
+    "description": "Mengelola catatan kesehatan hewan dan riwayat medis.",
+    "addRecord": "Tambahkan Catatan",
+    "editRecord": "Edit Catatan",
+    "deleteRecord": "Hapus Catatan",
+    "noRecords": "Catatan kesehatan belum ditambahkan.",
+    "animalInfoId": "Identifikasi Hewan",
+    "animalInfoIdPlaceholder": "Masukkan ID informasi hewan.",
+    "recordType": "Tur Pendaftaran",
+    "recordTypePlaceholder": "Contoh: Pemeriksaan, Pengobatan, Pembedahan",
+    "recordDate": "Tanggal Pendaftaran",
+    "followUpDate": "Periksa Tanggal",
+    "veterinarianName": "Dokter hewan",
+    "veterinarianLicense": "Nomor Lisensi",
+    "clinicName": "Klinis",
+    "diagnosis": "Diagnosa",
+    "treatment": "Perlakuan",
+    "medications": "Obat",
+    "medicationsPlaceholder": "Contoh: Penisilin 500 mg, Ibuprofen",
+    "notes": "Catatan",
+    "documentUrl": "URL Dokumen",
+    "saving": "Penghematan...",
+    "createSuccess": "Catatan kesehatan berhasil ditambahkan.",
+    "updateSuccess": "Catatan kesehatan berhasil diperbarui.",
+    "deleteSuccess": "Catatan kesehatan telah berhasil dihapus.",
+    "saveError": "Terjadi kesalahan saat menyimpan data.",
+    "deleteError": "Terjadi kesalahan saat menghapus data.",
+    "fetchError": "Terjadi kesalahan saat memuat data."
+  },
+  "vaccinations": {
+    "title": "Catatan Vaksin",
+    "description": "Mengelola catatan dan kalender vaksinasi hewan.",
+    "addVaccination": "Tambahkan Pemberontak",
+    "editVaccination": "Pengaturan Pemberontak",
+    "deleteVaccination": "Pemberontak Sil",
+    "noVaccinations": "Catatan vaksinasi belum ditambahkan.",
+    "animalInfoId": "Identifikasi Hewan",
+    "animalInfoIdPlaceholder": "Masukkan ID informasi hewan.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Contoh: Vaksin SAT, Brucella",
+    "vaccineType": "Tur Pemberontak",
+    "vaccineTypePlaceholder": "Contoh: Aktif, Tidak Aktif",
+    "batchNumber": "Nomor Pesta",
+    "vaccinationDate": "Sejarah Sang Pemberontak",
+    "nextDueDate": "Sejarah Pemberontakan Berikutnya",
+    "veterinarianName": "Dokter hewan",
+    "veterinarianLicense": "Nomor Lisensi",
+    "notes": "Catatan",
+    "certificateUrl": "URL Sertifikat",
+    "saving": "Penghematan...",
+    "createSuccess": "Data vaksin berhasil ditambahkan.",
+    "updateSuccess": "Catatan vaksin berhasil diperbarui.",
+    "deleteSuccess": "Catatan vaksinasi telah berhasil dihapus.",
+    "saveError": "Terjadi kesalahan saat mendaftarkan vaksin.",
+    "deleteError": "Terjadi kesalahan saat menghapus vaksin.",
+    "fetchError": "Terjadi kesalahan saat memuat vaksin."
+  },
+  "shippingCarriers": {
+    "title": "Perusahaan Pelayaran",
+    "description": "Kelola informasi perusahaan pengiriman.",
+    "addCarrier": "Tambahkan Perusahaan",
+    "editCarrier": "Perusahaan Editor",
+    "noCarriers": "Belum ada perusahaan pengiriman yang ditambahkan.",
+    "carrierName": "Nama perusahaan",
+    "carrierNamePlaceholder": "Contoh: Aras Kargo, MNG",
+    "code": "Kode",
+    "codePlaceholder": "Contoh: ARAS",
+    "website": "Situs web",
+    "trackingUrlTemplate": "Ikuti Templat URL",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Negara-negara yang Didukung",
+    "supportedCountriesPlaceholder": "Contoh: TR, US, DE",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "saving": "Penghematan...",
+    "edit": "Edit",
+    "delete": "Menghapus",
+    "createSuccess": "Perusahaan pelayaran telah berhasil ditambahkan.",
+    "updateSuccess": "Perusahaan pelayaran telah berhasil diperbarui.",
+    "deleteSuccess": "Perusahaan pengiriman tersebut telah berhasil dihapus.",
+    "saveError": "Terjadi kesalahan saat mendaftarkan perusahaan pengiriman.",
+    "deleteError": "Terjadi kesalahan saat menghapus informasi perusahaan pengiriman.",
+    "fetchError": "Terjadi kesalahan saat memuat perusahaan kargo."
+  },
+  "shippingZones": {
+    "title": "Zona Kargo",
+    "description": "Mengelola zona dan area kargo.",
+    "addZone": "Tambahkan Wilayah",
+    "editZone": "Edit Wilayah",
+    "noZones": "Area kargo belum ditambahkan.",
+    "zoneName": "Nama Wilayah",
+    "zoneNamePlaceholder": "Contoh: Eropa, Amerika Utara",
+    "countryCodes": "Kode Negara",
+    "countryCodesPlaceholder": "Contoh: TR, DE, FR",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "saving": "Penghematan...",
+    "edit": "Edit",
+    "delete": "Menghapus",
+    "createSuccess": "Wilayah tersebut telah berhasil ditambahkan.",
+    "updateSuccess": "Wilayah tersebut telah berhasil diperbarui.",
+    "deleteSuccess": "Area tersebut telah berhasil dibersihkan.",
+    "saveError": "Terjadi kesalahan saat menyimpan wilayah tersebut.",
+    "deleteError": "Terjadi kesalahan saat menghapus wilayah tersebut.",
+    "fetchError": "Terjadi kesalahan saat memuat wilayah."
+  },
+  "shippingRates": {
+    "title": "Biaya Pengiriman",
+    "description": "Kelola biaya pengiriman dan opsi pengantaran.",
+    "addRate": "Biaya Tambahan",
+    "editRate": "Sesuaikan Biaya",
+    "noRates": "Biaya pengiriman belum ditambahkan.",
+    "zone": "Daerah",
+    "carrier": "Tegas",
+    "selectZone": "Pilih wilayah",
+    "selectCarrier": "Pilih perusahaan",
+    "shippingCost": "Biaya Pengiriman",
+    "currency": "Mata uang",
+    "estimatedDeliveryDays": "Perkiraan Waktu Pengiriman (Hari)",
+    "minWeight": "Berat Minimum",
+    "maxWeight": "Berat Maksimum",
+    "minOrderAmount": "Jumlah Pesanan Minimum",
+    "freeShipping": "Pengiriman Gratis",
+    "free": "Bebas",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "cost": "Biaya",
+    "deliveryDays": "Pengiriman",
+    "status": "Situasi",
+    "saving": "Penghematan...",
+    "createSuccess": "Biaya berhasil ditambahkan.",
+    "updateSuccess": "Gaji telah berhasil diperbarui.",
+    "deleteSuccess": "Biaya tersebut telah berhasil dihapus.",
+    "saveError": "Terjadi kesalahan saat menyimpan biaya.",
+    "deleteError": "Terjadi kesalahan saat menghapus biaya.",
+    "fetchError": "Terjadi kesalahan saat mengunggah biaya."
+  },
+  "metadata": {
+    "title": "Perdagangan Ternak - Platform Perdagangan Hewan Hidup",
+    "description": "Platform perdagangan hewan hidup paling tepercaya di dunia. Jual beli hewan yang aman dan transparan.",
+    "pages": {
+      "about": {
+        "title": "Tentang Kami",
+        "description": "Pelajari tentang Perdagangan Hewan Ternak. Platform perdagangan hewan hidup yang andal."
+      },
+      "contact": {
+        "title": "Komunikasi",
+        "description": "Hubungi kami. Tim dukungan pelanggan Livestock Trading siap membantu Anda."
+      },
+      "terms": {
+        "title": "Syarat Penggunaan",
+        "description": "Syarat dan Ketentuan Perdagangan Ternak."
+      },
+      "privacy": {
+        "title": "Kebijakan Privasi",
+        "description": "Kebijakan privasi Livestock Trading. Pelajari bagaimana data pribadi Anda dilindungi."
+      },
+      "products": {
+        "title": "Produk",
+        "description": "Telusuri daftar hewan ternak hidup. Iklan terpercaya untuk sapi, domba, dan lainnya."
+      },
+      "sellers": {
+        "title": "Penjual",
+        "description": "Temukan penjual hewan yang terpercaya. Profil dan ulasan penjual terverifikasi."
+      },
+      "transporters": {
+        "title": "pengangkut",
+        "description": "Temukan perusahaan transportasi hewan. Transportasi hewan hidup yang aman dan profesional."
+      },
+      "search": {
+        "title": "Mencari",
+        "description": "Cari di antara daftar hewan hidup. Pencarian mudah dengan opsi penyaringan dan pengurutan."
+      },
+      "faq": {
+        "title": "Pertanyaan yang Sering Diajukan",
+        "description": "Pertanyaan dan jawaban yang sering diajukan tentang perdagangan ternak."
+      },
+      "productDetail": {
+        "title": "{title} - Dijual",
+        "description": "Dijual di {title} - {city}. Klik untuk detail dan informasi kontak."
+      },
+      "sellerDetail": {
+        "title": "{nama} - Profil Penjual",
+        "description": "Profil penjual {name}. Ulasan, daftar barang, dan informasi kontak."
+      },
+      "transporterDetail": {
+        "title": "{nama} - Profil Operator",
+        "description": "Profil penyedia jasa transportasi {name}. Area layanan, ulasan, dan informasi kontak."
+      }
+    }
   }
 }

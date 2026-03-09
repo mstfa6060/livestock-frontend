@@ -11,17 +11,30 @@
     "back": "בְּחֲזָרָה",
     "next": "קָדִימָה",
     "close": "לִסְגוֹר",
+    "unauthorized": "אין לך הרשאה לגשת לדף זה.",
     "emailPlaceholder": "ornek@email.com",
     "login": "התחברות",
-    "register": "לִרְשׁוֹם"
+    "register": "לִרְשׁוֹם",
+    "previous": "לְשֶׁעָבַר",
+    "zoomIn": "לְהִתְמַקֵד",
+    "previousImage": "תמונה קודמת",
+    "nextImage": "התמונה הבאה",
+    "closeLightbox": "סגור את הגלריה",
+    "imageLightbox": "גלריית תמונות",
+    "slideN": "שקופית {n}",
+    "viewMore": "ראה עוד"
   },
   "header": {
     "products": "מוצרים",
     "sellers": "מוכרים",
+    "transporters": "מובילים",
     "about": "אודותינו",
+    "search": "לְחַפֵּשׂ",
     "dashboard": "לוּחַ",
     "settings": "הגדרות",
-    "logout": "התנתק"
+    "logout": "התנתק",
+    "menu": "תַפרִיט",
+    "language": "בחירת שפה"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "שכחתי את הסיסמה שלי.",
       "noAccount": "אין לך חשבון?",
       "register": "לִרְשׁוֹם",
-      "errorDefault": "הכניסה נכשלה. אנא בדוק את המידע שלך."
+      "errorDefault": "הכניסה נכשלה. אנא בדוק את המידע שלך.",
+      "orContinueWith": "או להמשיך",
+      "continueWithGoogle": "המשך עם גוגל",
+      "continueWithApple": "תמשיך עם אפל.",
+      "socialLoginError": "כניסה לרשתות חברתיות נכשלה. אנא נסה שוב.",
+      "appleComingSoon": "בקרוב מאוד",
+      "showPassword": "הצג סיסמה",
+      "hidePassword": "הסתר סיסמה"
     },
     "register": {
       "title": "לִרְשׁוֹם",
@@ -51,7 +71,17 @@
       "login": "התחברות",
       "passwordMismatch": "הסיסמאות אינן תואמות.",
       "passwordTooShort": "הסיסמה חייבת להיות באורך של לפחות 6 תווים.",
-      "errorDefault": "ההרשמה נכשלה. אנא נסה שוב."
+      "errorDefault": "ההרשמה נכשלה. אנא נסה שוב.",
+      "showPassword": "הצג סיסמה",
+      "hidePassword": "הסתר סיסמה",
+      "passwordStrength": {
+        "minLength": "לפחות 8 תווים",
+        "uppercase": "אותיות גדולות (א'-ת')",
+        "lowercase": "אותיות קטנות (א'-ת')",
+        "number": "מספר (0-9)",
+        "special": "תווים מיוחדים (!@#$%)"
+      },
+      "registerSuccess": "חשבונך נוצר בהצלחה! אתה מועבר לדף ההתחברות..."
     },
     "forgotPassword": {
       "title": "שכחתי את הסיסמה שלי.",
@@ -78,7 +108,9 @@
       "requestNewLink": "בקשת חיבור חדש",
       "passwordMismatch": "הסיסמאות אינן תואמות.",
       "passwordTooShort": "הסיסמה חייבת להיות באורך של לפחות 6 תווים.",
-      "errorDefault": "איפוס הסיסמה נכשל. ייתכן שהחיבור אינו תקין או פג תוקפו."
+      "errorDefault": "איפוס הסיסמה נכשל. ייתכן שהחיבור אינו תקין או פג תוקפו.",
+      "showPassword": "הצג סיסמה",
+      "hidePassword": "הסתר סיסמה"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "פָּעִיל",
       "totalViews": "סך כל הצפיות",
       "thisWeek": "השבוע",
+      "allTime": "כל הזמנים",
       "favorites": "מוּעֲדָף",
       "onYourListings": "בפרסומות שלך",
+      "savedItems": "מוצר רשום",
       "messages": "הוֹדָעָה",
-      "unread": "לא נקרא"
+      "notifications": "התראות",
+      "unread": "לא נקרא",
+      "views": "צפיות",
+      "draft": "טְיוּטָה",
+      "sold": "נמכר",
+      "pending": "תָלוּי וְעוֹמֵד",
+      "awaitingApproval": "ממתינים לאישור",
+      "totalSales": "סך המכירות",
+      "completedSales": "מכירות שהושלמו",
+      "revenue": "הַכנָסָה",
+      "totalRevenue": "סך ההכנסות"
     },
     "recentListings": "המודעות האחרונות שלך",
+    "recentActivity": "פעילויות אחרונות",
     "recentMessages": "הודעות אחרונות",
+    "quickLinks": "גישה מהירה",
     "noListings": "עדיין לא הוספת מודעות.",
+    "noActivity": "אין עדיין פעילות.",
     "noMessages": "עדיין לא קיבלת הודעה.",
     "noNotifications": "עדיין לא קיבלת התראות.",
     "viewAllListings": "הצג את כל הרישומים",
-    "viewAllMessages": "הצג את כל ההודעות"
+    "viewAllMessages": "הצג את כל ההודעות",
+    "viewNotifications": "הצג התראות",
+    "viewFavorites": "מועדפים גור",
+    "recentlyViewed": "נצפה לאחרונה",
+    "fetchError": "אירעה שגיאה בעת טעינת נתוני הפאנל."
   },
   "dashboardNav": {
     "overview": "סקירה כללית",
@@ -115,7 +166,61 @@
     "notifications": "התראות",
     "profile": "פּרוֹפִיל",
     "settings": "הגדרות",
-    "newListing": "הוסף רישום חדש"
+    "newListing": "הוסף רישום חדש",
+    "becomeSeller": "הפוך למוכר",
+    "categories": "קטגוריות",
+    "offers": "הצעות",
+    "deals": "הסכמים",
+    "farms": "החוות שלי",
+    "transport": "תַחְבּוּרָה",
+    "moderation": "מְתִינוּת",
+    "sellerModeration": "ניהול מוכרים",
+    "transporterModeration": "מתינות ספקים",
+    "brands": "מותגים",
+    "transportOffers": "הצעות מחיר למשלוח",
+    "healthRecords": "רישומי בריאות",
+    "vaccinations": "מחסנים",
+    "shippingCarriers": "חברות שילוח",
+    "shippingZones": "אזורי מטען",
+    "shippingRates": "דמי משלוח",
+    "systemSettings": "הגדרות מערכת",
+    "locations": "הכתובות שלי"
+  },
+  "profile": {
+    "title": "מידע על הפרופיל",
+    "description": "ניתן לעדכן את המידע האישי שלך כאן.",
+    "personalInfo": "מידע אישי",
+    "contactInfo": "פרטי קשר",
+    "preferences": "העדפות",
+    "firstName": "שֵׁם",
+    "firstNamePlaceholder": "הזן את שמך",
+    "surname": "שֵׁם מִשׁפָּחָה",
+    "surnamePlaceholder": "הזן את שם המשפחה שלך.",
+    "displayName": "שם מוצג",
+    "phone": "מספר טלפון",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "מְאוּמָת",
+    "phoneNotVerified": "לא אושר",
+    "verifyPhone": "אימות מספר טלפון",
+    "country": "מְדִינָה",
+    "selectCountry": "בחר מדינה",
+    "language": "העדפת שפה",
+    "selectLanguage": "בחר שפה",
+    "currency": "מַטְבֵּעַ",
+    "selectCurrency": "בחר מטבע.",
+    "saveChanges": "שמירת שינויים",
+    "saving": "חִסָכוֹן...",
+    "saveSuccess": "פרטי הפרופיל שלך עודכנו.",
+    "saveError": "אירעה שגיאה בעת עדכון הפרופיל.",
+    "avatar": "תמונת פרופיל",
+    "changeAvatar": "שנה תמונה",
+    "removeAvatar": "הסר תמונה",
+    "currencies": {
+      "try": "לירה טורקית",
+      "usd": "דולר אמריקאי",
+      "eur": "יוֹרוֹ",
+      "gbp": "לירה שטרלינג"
+    }
   },
   "myListings": {
     "title": "המודעות שלי",
@@ -125,35 +230,94 @@
     "fetchError": "אירעה שגיאה בעת טעינת המודעות.",
     "deleteSuccess": "המודעה נמחקה בהצלחה.",
     "deleteError": "אירעה שגיאה בעת מחיקת המודעה.",
-    "activateSuccess": "המודעה הופעלה.",
-    "deactivateSuccess": "הרישום הושבת.",
+    "publishSuccess": "המודעה נשלחה לאישור.",
+    "unpublishSuccess": "המודעה כבר נוסחה.",
     "statusError": "אירעה שגיאה בעת שינוי הסטטוס.",
     "filters": {
       "all": "כולם",
-      "active": "פָּעִיל",
       "draft": "טְיוּטָה",
       "pending": "ממתין לאישור",
+      "active": "פָּעִיל",
+      "rejected": "נִדחֶה",
       "sold": "נמכר"
     },
     "actions": {
       "edit": "לַעֲרוֹך",
       "delete": "לִמְחוֹק",
-      "activate": "לְהַפְעִיל",
-      "deactivate": "מבנה פסיבי"
+      "publish": "שלח לאישור",
+      "unpublish": "טְיוּטָה",
+      "menu": "עסקאות"
     },
     "deleteDialog": {
       "title": "מחק את המודעה",
       "description": "האם אתה בטוח שברצונך למחוק את הרישום הזה? פעולה זו אינה הפיכה.",
       "cancel": "לְבַטֵל",
       "confirm": "לִמְחוֹק"
-    }
+    },
+    "loadMore": "הורד עוד",
+    "loadingMore": "טְעִינָה..."
   },
   "favorites": {
     "title": "המועדפים שלי",
     "description": "עקבו אחרי המוצרים שאתם אוהבים כאן.",
     "noFavorites": "עדיין לא הוספת מוצרים מועדפים.",
     "browseProducts": "עיין במוצרים",
-    "fetchError": "אירעה שגיאה בעת טעינת המועדפים."
+    "fetchError": "אירעה שגיאה בעת טעינת המועדפים.",
+    "loadMore": "הורד עוד",
+    "loadingMore": "טְעִינָה..."
+  },
+  "messages": {
+    "title": "הודעות",
+    "description": "צרו קשר עם קונים ומוכרים.",
+    "noConversations": "עדיין לא קיבלת הודעה.",
+    "startConversation": "כדי לשאול שאלה לגבי פרסומת, עבור אל הפרסומת.",
+    "fetchError": "אירעה שגיאה בעת טעינת הודעות",
+    "sendError": "אירעה שגיאה בעת שליחת ההודעה.",
+    "connectionError": "החיבור נכשל. מנסה שוב...",
+    "connected": "זה התחבר",
+    "connecting": "מְקַשֵׁר...",
+    "searchPlaceholder": "חפש בין ההודעות...",
+    "typeMessage": "כתוב את ההודעה שלך...",
+    "send": "לִשְׁלוֹחַ",
+    "sending": "שְׁלִיחָה...",
+    "typing": "זה אומר...",
+    "read": "לִקְרוֹא",
+    "delivered": "נשלח",
+    "today": "הַיוֹם",
+    "yesterday": "אֶתמוֹל",
+    "noMessages": "אין עדיין הודעות. התחל שיחה!",
+    "loadMore": "העלה עוד",
+    "loadingMessages": "ההודעות נטענות...",
+    "about": "אוֹדוֹת",
+    "product": "מוּצָר",
+    "startNewConversation": "התחל שיחה חדשה",
+    "selectConversation": "בחר שיחה או התחל שיחה חדשה.",
+    "online": "באינטרנט",
+    "offline": "לא מקוון",
+    "lastSeen": "נראה לאחרונה",
+    "deleteConversation": "מחיקת שיחה",
+    "deleteConfirm": "האם אתה בטוח שאתה רוצה למחוק את השיחה הזו?",
+    "deleted": "השיחה נמחקה.",
+    "defaultUser": "מִשׁתַמֵשׁ",
+    "noResults": "לא נמצאו תוצאות.",
+    "newConversation": "שיחה חדשה"
+  },
+  "notifications": {
+    "title": "התראות",
+    "description": "צפה ונהל את ההתראות שלך.",
+    "markAllAsRead": "סמן הכל כנקרא",
+    "noNotifications": "עדיין לא קיבלת התראות.",
+    "viewAll": "ראה את כל ההתראות",
+    "today": "הַיוֹם",
+    "yesterday": "אֶתמוֹל",
+    "older": "ישן יותר",
+    "types": {
+      "system": "מַעֲרֶכֶת",
+      "message": "הוֹדָעָה",
+      "offer": "הַצָעָה",
+      "order": "לְהַזמִין",
+      "listing": "פרסומת"
+    }
   },
   "settings": {
     "title": "הגדרות",
@@ -169,7 +333,28 @@
       "passwordMismatch": "הסיסמאות החדשות אינן תואמות.",
       "passwordTooShort": "הסיסמה החדשה חייבת להיות באורך של לפחות 6 תווים.",
       "sessionError": "לא ניתן היה למצוא את פרטי הישיבה.",
-      "errorDefault": "לא ניתן היה לעדכן את הסיסמה. אנא בדוק את הסיסמה הנוכחית שלך."
+      "errorDefault": "לא ניתן היה לעדכן את הסיסמה. אנא בדוק את הסיסמה הנוכחית שלך.",
+      "showPassword": "הצג סיסמה",
+      "hidePassword": "הסתר סיסמה"
+    },
+    "preferences": {
+      "title": "העדפות התראות ותצוגה",
+      "description": "נהל את ערוצי ההתראות והעדפות התצוגה שלך.",
+      "notifications": "התראות",
+      "emailNotifications": "התראות דוא\"ל",
+      "emailNotificationsDesc": "קבל התראות דוא\"ל על הודעות חדשות ועדכוני מודעות.",
+      "smsNotifications": "התראות SMS",
+      "smsNotificationsDesc": "קבל הודעות SMS לקבלת התראות חשובות.",
+      "pushNotifications": "התראות דחיפה",
+      "pushNotificationsDesc": "קבלו התראות דחיפה לקבלת עדכונים מיידיים.",
+      "appearance": "הוֹפָעָה",
+      "darkMode": "מצב כהה",
+      "darkModeDesc": "עבור לערכת נושא כהה.",
+      "saveChanges": "שמירת העדפות",
+      "saving": "חִסָכוֹן...",
+      "saveSuccess": "ההעדפות שלך עודכנו.",
+      "saveError": "אירעה שגיאה בעת עדכון ההעדפות.",
+      "loadError": "לא ניתן היה לטעון את ההעדפות."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "פלטפורמת מסחר בבעלי חיים",
       "subtitle": "פלטפורמת המסחר האמינה ביותר בבעלי חיים. קנו ומכרו את הבקר והכבשים שלכם בבטחה.",
       "cta": "התחל עכשיו",
-      "viewListings": "הצג מודעות"
+      "viewListings": "הצג מודעות",
+      "searchPlaceholder": "חפשו חיות... (פרות, כבשים, עיזים...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "מודעות נבחרות",
       "viewAll": "ראה הכל"
+    },
+    "cta": {
+      "title": "התחל עכשיו",
+      "subtitle": "תפוס את מקומך בפלטפורמה שבה נפגשים אלפי מוכרים וקונים.",
+      "button": "הירשם בחינם"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "אודותינו",
     "contact": "תִקשׁוֹרֶת",
     "terms": "תנאי שימוש",
-    "privacy": "מדיניות פרטיות"
+    "privacy": "מדיניות פרטיות",
+    "company": "חֶברָה",
+    "support": "תְמִיכָה",
+    "legal": "מִשׁפָּטִי",
+    "followUs": "עקבו אחרינו",
+    "newsletter": "עָלוֹן",
+    "newsletterDescription": "אל תפספסו את הרשימות והמבצעים האחרונים.",
+    "subscribe": "הירשם",
+    "emailPlaceholder": "כתובת הדוא\"ל שלך",
+    "tagline": "פלטפורמת המסחר בבעלי חיים אמינה ביותר בטורקיה.",
+    "sellers": "מוכרים",
+    "products": "מוצרים",
+    "map": "מַפָּה",
+    "appleLoginComingSoon": "הכניסה עם אפל תהיה פעילה בקרוב מאוד.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "שאלות נפוצות"
+  },
+  "faq": {
+    "title": "שאלות נפוצות",
+    "description": "תשובות לשאלות הנפוצות שלכם לגבי הפלטפורמה שלנו.",
+    "noFaqs": "עדיין לא נוספו שאלות."
+  },
+  "about": {
+    "title": "אודותינו",
+    "subtitle": "פלטפורמת המסחר בבעלי חיים אמינה ביותר בטורקיה.",
+    "mission": {
+      "title": "המשימה שלנו",
+      "description": "על ידי דיגיטציה של סחר בעלי חיים, אנו שואפים ליצור קשר מאובטח, שקוף ויעיל בין יצרנים לקונים."
+    },
+    "vision": {
+      "title": "החזון שלנו",
+      "description": "להיות חלוצה בתחום הטרנספורמציה הדיגיטלית במגזר החקלאי ולהפוך לפלטפורמה עולמית לסחר בבעלי חיים חיים."
+    },
+    "values": {
+      "title": "הערכים שלנו",
+      "trust": {
+        "title": "אֵמוּן",
+        "description": "שקיפות ואמינות הן חיוניות בכל העסקאות."
+      },
+      "quality": {
+        "title": "אֵיכוּת",
+        "description": "שיפור מתמיד על מנת לספק את השירות הטוב ביותר."
+      },
+      "innovation": {
+        "title": "חדשנות",
+        "description": "שינוי התעשייה באמצעות טכנולוגיה."
+      }
+    },
+    "stats": {
+      "users": "משתמש רשום",
+      "sellers": "מוכר פעיל",
+      "products": "פרסומת",
+      "transactions": "עסקה מוצלחת"
+    }
+  },
+  "contact": {
+    "title": "תִקשׁוֹרֶת",
+    "subtitle": "אנא צרו קשר בכל שאלה.",
+    "form": {
+      "title": "כתבו לנו",
+      "name": "השם שלך",
+      "namePlaceholder": "אחמט יילמז",
+      "email": "אֶלֶקטרוֹנִי",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "נוֹשֵׂא",
+      "subjectPlaceholder": "נושא ההודעה שלך",
+      "message": "ההודעה שלך",
+      "messagePlaceholder": "כתבו את הודעתכם כאן...",
+      "submit": "לִשְׁלוֹחַ",
+      "submitting": "שְׁלִיחָה...",
+      "success": "הודעתך נשלחה בהצלחה. נחזור אליך בהקדם האפשרי.",
+      "error": "אירעה שגיאה בעת שליחת ההודעה. אנא נסה שוב."
+    },
+    "info": {
+      "title": "פרטי קשר",
+      "address": "כְּתוֹבֶת",
+      "addressValue": "איסטנבול, טורקיה",
+      "email": "אֶלֶקטרוֹנִי",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "טֵלֵפוֹן",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "שעות עבודה",
+      "workingHoursValue": "ימים שני עד שישי: 09:00 - 18:00",
+      "map": "מַפָּה"
+    }
+  },
+  "terms": {
+    "title": "תנאי שימוש",
+    "lastUpdated": "עדכון אחרון: {date}",
+    "sections": {
+      "acceptance": {
+        "title": "1. קבלת התנאים",
+        "content": "בעצם השימוש באתר זה, הנך מסכים לתנאי השימוש הבאים. אם אינך מסכים לתנאים אלה, אנא אל תשתמש באתר."
+      },
+      "services": {
+        "title": "2. שירותים",
+        "content": "מסחר בבעלי חיים מספק פלטפורמה לקנייה ומכירה של בעלי חיים חיים. כל העסקאות בפלטפורמה הן באחריות המשתמש."
+      },
+      "accounts": {
+        "title": "3. חשבונות משתמשים",
+        "content": "עליך לספק מידע מדויק ועדכני כדי ליצור חשבון. אבטחת החשבון שלך היא באחריותך."
+      },
+      "prohibited": {
+        "title": "4. פעילויות אסורות",
+        "content": "פרסומות מטעות, מידע כוזב, הונאה ופעילויות בלתי חוקיות אסורות בהחלט."
+      },
+      "liability": {
+        "title": "5. הגבלת אחריות",
+        "content": "הפלטפורמה אינה אחראית ישירות על עסקאות בין משתמשים. כל העסקאות מתבצעות בין הצדדים."
+      },
+      "changes": {
+        "title": "6. שינויים",
+        "content": "תנאים והגבלות אלה ניתנים לשינוי ללא הודעה מוקדמת. השינויים ייכנסו לתוקף מיד עם פרסומם."
+      }
+    }
+  },
+  "privacy": {
+    "title": "מדיניות פרטיות",
+    "lastUpdated": "עדכון אחרון: {date}",
+    "sections": {
+      "collection": {
+        "title": "1. איסוף מידע",
+        "content": "כאשר אתה יוצר חשבון, אנו אוספים מידע אישי כגון שמך, כתובת הדוא\"ל ומספר הטלפון שלך. אנו עשויים גם לאסוף נתונים אנונימיים בנוגע לשימושך באתר."
+      },
+      "usage": {
+        "title": "2. שימוש במידע",
+        "content": "המידע שאנו אוספים משמש למתן שירותינו, ניהול חשבונך, הבטחת אבטחה והצעת הצעות מותאמות אישית."
+      },
+      "sharing": {
+        "title": "3. שיתוף מידע",
+        "content": "המידע האישי שלך לא יימכר או יושכר לצדדים שלישיים. המידע שלך לא יועבר למעט למטרות הנדרשות על פי חוק."
+      },
+      "security": {
+        "title": "4. אבטחה",
+        "content": "אמצעי אבטחה סטנדרטיים בתעשייה קיימים כדי להגן על הנתונים שלך."
+      },
+      "cookies": {
+        "title": "5. עוגיות",
+        "content": "האתר שלנו משתמש בקובצי Cookie כדי לשפר את חוויית המשתמש. באפשרותך לנהל את העדפות קובצי ה-Cookie שלך בהגדרות הדפדפן שלך."
+      },
+      "rights": {
+        "title": "6. זכויותיך",
+        "content": "על פי חוק הגנת המידע האישי הטורקי (KVKK), יש לך את הזכות לגשת, לתקן ולמחוק את המידע האישי שלך."
+      }
+    }
   },
   "products": {
     "title": "מוצרים",
@@ -235,11 +570,19 @@
       "priceDesc": "מחיר (גבוה לנמוך)",
       "popular": "הכי פופולרי"
     },
+    "pagination": {
+      "prev": "לְשֶׁעָבַר",
+      "next": "הַבָּא"
+    },
     "status": {
       "draft": "טְיוּטָה",
+      "pending": "ממתין לאישור",
       "active": "פָּעִיל",
+      "inactive": "פַּסִיבִי",
+      "outOfStock": "אזל מהמלאי",
+      "expired": "כהונתו פגה.",
       "sold": "נמכר",
-      "pending": "ממתין לאישור"
+      "rejected": "נִדחֶה"
     },
     "condition": {
       "new": "חָדָשׁ",
@@ -250,12 +593,16 @@
     "outOfStock": "אזל מהמלאי",
     "inStock": "בִּמלַאִי",
     "noResults": "המוצר לא נמצא.",
-    "loading": "מוצרים נטענים...",
+    "loading": "טוען מוצרים...",
     "perPage": "לכל עמוד",
     "showing": "סך כל המוצרים של {total} בין {from} ל-{to}.",
+    "fetchError": "אירעה שגיאה בעת העלאת המוצרים.",
+    "loadMore": "הצג עוד",
+    "showingOf": "מוצגים {count} / {total} מוצרים.",
     "loginToFavorite": "התחבר כדי להוסיף למועדפים.",
     "addedToFavorites": "נוסף למועדפים",
-    "removedFromFavorites": "הוסר מהמועדפים"
+    "removedFromFavorites": "הוסר מהמועדפים",
+    "favoriteError": "הפעולה המועדפת נכשלה."
   },
   "productDetail": {
     "addToFavorites": "הוסף למועדפים",
@@ -279,16 +626,31 @@
     "maxOrder": "הזמנה מקסימלית",
     "publishedAt": "תאריך פרסום",
     "views": "נצפה",
-    "reviews": "הַעֲרָכָה",
+    "reviews": {
+      "title": "הערכות",
+      "reviewCount": "הַעֲרָכָה",
+      "noReviews": "עדיין אין הערכה.",
+      "verified": "קונה מאומת"
+    },
     "similarProducts": "מוצרים דומים",
     "sellerProducts": "מוצרים אחרים של המוכר",
     "contactSeller": "צור קשר עם המוכר",
-    "loginRequired": "התחבר כדי להוסיף למועדפים.",
+    "makeOffer": "הגש הצעה",
+    "loginRequired": "אנא התחבר כדי לבצע פעולה זו.",
     "addedToFavorites": "נוסף למועדפים",
     "removedFromFavorites": "הוסר מהמועדפים",
     "linkCopied": "הקישור הועתק.",
     "messagingComingSoon": "תכונת העברת הודעות תגיע בקרוב.",
-    "productNotFound": "המוצר לא נמצא."
+    "productNotFound": "המוצר לא נמצא.",
+    "contacting": "נוצר קשר...",
+    "contactError": "התקשורת נכשלה. אנא נסה שוב.",
+    "noImage": "אין תמונה זמינה.",
+    "defaultLocation": "טוּרְקִיָה",
+    "inquiryMessage": "אני רוצה לקבל מידע על {title}.",
+    "breadcrumb": {
+      "home": "בַּיִת",
+      "products": "מוצרים"
+    }
   },
   "seller": {
     "title": "פרטי המוכר",
@@ -300,6 +662,70 @@
     "call": "לְחַפֵּשׂ",
     "viewProfile": "הצג פרופיל"
   },
+  "sellers": {
+    "title": "מוכרים",
+    "description": "גלו מוכרים אמינים.",
+    "search": "מצא מוכר...",
+    "sort": "סוּג",
+    "sortOptions": {
+      "newest": "אחרון",
+      "mostSales": "רבי מכר",
+      "topRated": "הציון הגבוה ביותר",
+      "mostProducts": "רוב המודעות"
+    },
+    "noResults": "המוכר לא נמצא.",
+    "loading": "המוכרים טוענים...",
+    "showing": "נמצאו {count} מוכרים",
+    "verified": "מְאוּמָת",
+    "sales": "מכירות",
+    "products": "פרסומת",
+    "reviews": "הַעֲרָכָה",
+    "rating": "נְקוּדָה",
+    "viewProducts": "הצג מוצרים",
+    "contactSeller": "שלח הודעה",
+    "memberSince": "חבר מאז {year}",
+    "fetchError": "אירעה שגיאה בעת טעינת ספקים",
+    "detail": {
+      "title": "פרופיל המוכר",
+      "about": "אוֹדוֹת",
+      "businessInfo": "מידע עסקי",
+      "businessName": "שם העסק",
+      "businessType": "סיור עסקי",
+      "email": "אֶלֶקטרוֹנִי",
+      "phone": "טֵלֵפוֹן",
+      "website": "אֲתַר אִינטֶרנֶט",
+      "description": "הֶסבֵּר",
+      "policies": "מדיניות",
+      "returnPolicy": "מדיניות החזרה",
+      "shippingPolicy": "מדיניות משלוחים",
+      "businessHours": "שעות עבודה",
+      "paymentMethods": "אמצעי תשלום",
+      "allProducts": "כל המוצרים",
+      "stats": {
+        "totalSales": "סך המכירות",
+        "totalProducts": "סך כל המוצרים",
+        "totalReviews": "הַעֲרָכָה",
+        "rating": "נְקוּדָה"
+      },
+      "notFound": "המוכר לא נמצא.",
+      "backToList": "דון למוכרים",
+      "contactInfo": "תִקשׁוֹרֶת",
+      "noProducts": "למוכר זה עדיין אין מודעות.",
+      "noPolicies": "המוכר עדיין לא הגדיר את מדיניותו.",
+      "fetchError": "אירעה שגיאה בעת העלאת פרטי המוכר.",
+      "productsLoadError": "אירעה שגיאה בעת העלאת מוצרי המוכר.",
+      "reviewsTab": "הערכות",
+      "reviews": {
+        "summary": "סיכום הערכה",
+        "reviewCount": "הַעֲרָכָה",
+        "communication": "תִקשׁוֹרֶת",
+        "shippingSpeed": "מהירות משלוח",
+        "productQuality": "איכות המוצר",
+        "noReviews": "עדיין אין הערכה.",
+        "verified": "קונה מאומת"
+      }
+    }
+  },
   "editListing": {
     "title": "ערוך את המודעה",
     "saveChanges": "שמירת שינויים",
@@ -307,6 +733,10 @@
     "updateSuccess": "המודעה עודכנה בהצלחה.",
     "updateFailed": "אירעה שגיאה בעת עדכון הרישום.",
     "loadError": "אירעה שגיאה בעת טעינת המודעה.",
+    "sellerNotFound": "פרופיל המוכר לא נמצא.",
+    "sellerLoadError": "לא ניתן היה לטעון את פרופיל המוכר.",
+    "userNotFound": "לא ניתן היה למצוא את פרטי המשתמש. אנא התחבר שוב.",
+    "locationNotFound": "לא ניתן היה למצוא את פרטי המיקום. אנא רענן את הדף.",
     "basicInfo": "מידע בסיסי",
     "categoryAndCondition": "קטגוריה וסטטוס",
     "pricing": "תמחור",
@@ -314,6 +744,8 @@
     "images": "תמונות",
     "existingImages": "תמונות זמינות",
     "addImage": "הוסף תמונה",
+    "maxImages": "ניתן להעלות מקסימום 10 תמונות.",
+    "imageHint": "מינימום תמונה אחת, מקסימום 10. בפורמט PNG, JPG או WEBP.",
     "uploadingImages": "התמונות נטענות...",
     "uploadingImage": "התמונה נטענת.",
     "imageUploadFailed": "לא ניתן היה לטעון את התמונה.",
@@ -358,6 +790,7 @@
     "addImage": "הוסף תמונה",
     "maxImages": "ניתן להעלות מקסימום 10 תמונות.",
     "imageHint": "מינימום תמונה אחת, מקסימום 10. בפורמט PNG, JPG או WEBP.",
+    "location": "מידע על מיקום",
     "fields": {
       "title": "כותרת הפרסומת",
       "shortDescription": "תיאור קצר",
@@ -370,13 +803,29 @@
       "shippingAvailable": "משלוח זמין.",
       "shippingCost": "דמי משלוח",
       "weight": "מִשׁקָל",
-      "weightUnit": "יחידת משקל"
+      "weightUnit": "יחידת משקל",
+      "city": "עִיר",
+      "address": "כְּתוֹבֶת",
+      "postalCode": "מיקוד"
     },
     "placeholders": {
       "title": "דוגמה: פרה הולשטיין בת שנתיים",
       "shortDescription": "תיאור מוצר (מקסימום 200 תווים)",
       "description": "ספק מידע מפורט על המוצר...",
-      "category": "בחר קטגוריה."
+      "category": "בחר קטגוריה.",
+      "city": "היכנסו לעיר",
+      "address": "הזן את הכתובת המלאה.",
+      "postalCode": "מיקוד"
+    },
+    "errors": {
+      "titleRequired": "כותרת המודעה היא חובה.",
+      "shortDescriptionRequired": "נדרש תיאור קצר.",
+      "descriptionRequired": "נדרש הסבר מפורט.",
+      "categoryRequired": "בחירת קטגוריה היא חובה.",
+      "priceRequired": "המחיר הוא חובה.",
+      "cityRequired": "נדרש מידע על העיר.",
+      "addressRequired": "נדרשת פרטי כתובת.",
+      "locationError": "אירעה שגיאה בעת יצירת המיקום."
     },
     "success": "הפרסומת נוצרה בהצלחה.",
     "error": "אירעה שגיאה בעת יצירת המודעה.",
@@ -388,24 +837,53 @@
     "draftSaved": "הטיוטה נשמרה",
     "productCreated": "המוצר נוצר בהצלחה.",
     "creationFailed": "לא ניתן היה ליצור את המוצר. אנא נסה שוב.",
-    "errors": {
-      "titleRequired": "כותרת המודעה היא חובה.",
-      "shortDescriptionRequired": "נדרש תיאור קצר.",
-      "descriptionRequired": "נדרש הסבר מפורט.",
-      "categoryRequired": "בחירת קטגוריה היא חובה.",
-      "priceRequired": "הזן מחיר תקין."
-    }
+    "userNotFound": "לא ניתן היה למצוא את פרטי המשתמש. אנא התחבר שוב.",
+    "defaultBusinessName": "העסק שלי"
+  },
+  "becomeSeller": {
+    "title": "הפוך למוכר",
+    "description": "הצהרת החברה",
+    "alreadySeller": "כבר יש לך פרופיל מוכר.",
+    "goToListings": "עבור לרשימות שלי",
+    "businessInfo": "מידע עסקי",
+    "contactInfo": "פרטי קשר",
+    "businessName": "שם העסק",
+    "businessNamePlaceholder": "דוגמה: חוות יילמז",
+    "businessType": "סיור עסקי",
+    "businessTypePlaceholder": "בחר את סוג העסק שלך.",
+    "businessTypes": {
+      "individual": "אִישִׁי",
+      "company": "חֶברָה",
+      "cooperative": "קוֹאוֹפּרָטִיב",
+      "farm": "לְעַבֵּד"
+    },
+    "taxNumber": "מספר מס",
+    "taxNumberPlaceholder": "הזן את מספר זיהוי המס שלך (אופציונלי)",
+    "descriptionPlaceholder": "כתבו תיאור קצר על העסק שלכם...",
+    "phone": "טֵלֵפוֹן",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "אֲתַר אִינטֶרנֶט",
+    "websitePlaceholder": "https://www.examplesite.com (אופציונלי)",
+    "submit": "צור פרופיל מוכר",
+    "submitting": "יצירת פרופיל...",
+    "success": "פרופיל המוכר שלך נוצר בהצלחה!",
+    "error": "אירעה שגיאה בעת יצירת פרופיל המוכר.",
+    "taxNumberHelp": "הזן את מספר המס שלך בן 10 או 11 ספרות (אופציונלי)",
+    "phoneHelp": "דוגמה: 90+ 555 123 45 67 או 0555 123 45 67",
+    "websiteHelp": "דוגמה: www.isletmem.com או https://isletmem.com",
+    "alreadySellerDescription": "באפשרותך להשתמש בכפתור למטה כדי לנהל את המודעות שלך.",
+    "newListing": "הוסף רישום חדש"
   },
   "fileUpload": {
     "dragDrop": "העלה תמונה או סרטון.",
     "dragDropHint": "גרור ושחרר או לחץ כדי לבחור.",
     "dropHere": "עזוב את זה...",
     "imageLimit": "תמונה: מקסימום 10MB",
-    "videoLimit": "Video: max 100MB",
+    "videoLimit": "וידאו: מקסימום 100MB",
     "uploadCount": "טעון {current} / {max}",
     "maxFilesError": "ניתן להעלות מקסימום של {max} מדיה.",
     "imageTooLarge": "התמונה חייבת להיות קטנה מ-10MB.",
-    "videoTooLarge": "The video must be smaller than 100MB.",
+    "videoTooLarge": "הסרטון חייב להיות קטן מ-100MB.",
     "optimizing": "אופטימיזציה...",
     "uploading": "טְעִינָה...",
     "queued": "מחכים בתור...",
@@ -419,9 +897,833 @@
     "videoBadge": "וִידֵאוֹ",
     "coverUpdated": "תמונת השער הותקנה בהצלחה.",
     "optimizationInfo": "התמונות עברו אופטימיזציה כדי לעמוד בתקני האינטרנט",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "בחירה חזותית",
+    "changeImage": "לְשַׁנוֹת",
+    "removeImage": "לְהַסִיר",
+    "videoProcessing": "הסרטון נמצא בתהליך עיבוד...",
+    "videoProcessingFailed": "הפעולה נכשלה.",
+    "videoProcessingPollError": "לא ניתן היה לקבל את סטטוס עיבוד הסרטון. אנא רענן את הדף.",
+    "reorderError": "לא ניתן היה למיין את הקובץ.",
+    "coverUpdateError": "לא ניתן היה לעדכן את תמונת השער."
+  },
+  "error": {
+    "title": "אירעה שגיאה.",
+    "description": "אירעה שגיאה בלתי צפויה. אנא רענן את הדף או נסה שוב מאוחר יותר.",
+    "retry": "נסה שוב",
+    "goBack": "אל תחזור",
+    "goHome": "בַּיִת",
+    "notFound": {
+      "title": "הדף לא נמצא",
+      "description": "הדף שאתה מחפש אינו זמין או שהועבר.",
+      "goHome": "חזרה לדף הבית"
+    }
+  },
+  "search": {
+    "title": "לְחַפֵּשׂ",
+    "placeholder": "חפש מוצרים, קטגוריות או מוכרים...",
+    "searchButton": "לְחַפֵּשׂ",
+    "searchingFor": "מבוקש",
+    "loading": "מבוקש...",
+    "resultsCount": "נמצאו תוצאות {count}.",
+    "noResults": "לא נמצאו תוצאות.",
+    "tryDifferentSearch": "נסה מילות מפתח שונות או שנה את המסננים.",
+    "filters": {
+      "title": "מסננים",
+      "category": "קָטֵגוֹרִיָה",
+      "allCategories": "כל הקטגוריות",
+      "condition": "מַצָב",
+      "allConditions": "כל המקרים",
+      "priceRange": "טווח מחירים",
+      "price": "מְחִיר",
+      "min": "דקות",
+      "max": "מקס",
+      "apply": "לִפְנוֹת",
+      "clear": "לְנַקוֹת",
+      "clearAll": "נקה הכל"
+    },
+    "fetchError": "אירעה שגיאה בעת טעינת תוצאות החיפוש",
+    "recentSearches": "חיפושים אחרונים",
+    "clearHistory": "נקה היסטוריה",
+    "noSearchHistory": "עדיין אין לך היסטוריית חיפושים.",
+    "deleteHistoryError": "אירעה שגיאה בעת מחיקת היסטוריית החיפוש."
+  },
+  "categories": {
+    "title": "ניהול קטגוריות",
+    "description": "ניהול קטגוריות מכאן.",
+    "noCategories": "עדיין לא נוספו קטגוריות.",
+    "createFirst": "צור את הקטגוריה הראשונה.",
+    "fetchError": "אירעה שגיאה בעת טעינת הקטגוריות.",
+    "createSuccess": "קטגוריה נוצרה בהצלחה",
+    "createError": "אירעה שגיאה בעת יצירת הקטגוריה.",
+    "updateSuccess": "הקטגוריה עודכנה בהצלחה",
+    "updateError": "אירעה שגיאה בעת עדכון הקטגוריה.",
+    "deleteSuccess": "הקטגוריה נמחקה בהצלחה.",
+    "deleteError": "אירעה שגיאה בעת מחיקת הקטגוריה.",
+    "activateSuccess": "הקטגוריה הופעלה.",
+    "deactivateSuccess": "הקטגוריה הושבתה.",
+    "statusError": "אירעה שגיאה בעת שינוי הסטטוס.",
+    "loadError": "אירעה שגיאה בעת טעינת הקטגוריה",
+    "filters": {
+      "all": "כולם",
+      "active": "פָּעִיל",
+      "inactive": "לֹא פָּעִיל"
+    },
+    "table": {
+      "name": "שם הקטגוריה",
+      "slug": "שַׁבְּלוּל",
+      "sortOrder": "מספר סידורי",
+      "subCategories": "תת-קטגוריה",
+      "status": "מַצָב",
+      "actions": "עסקאות"
+    },
+    "actions": {
+      "edit": "לַעֲרוֹך",
+      "delete": "לִמְחוֹק",
+      "activate": "לְהַפְעִיל",
+      "deactivate": "מבנה פסיבי"
+    },
+    "deleteDialog": {
+      "title": "מחיקת קטגוריה",
+      "description": "האם אתה בטוח שברצונך למחוק קטגוריה זו? פעולה זו אינה הפיכה.",
+      "cancel": "לְבַטֵל",
+      "confirm": "לִמְחוֹק"
+    },
+    "addNew": "הוסף קטגוריה חדשה",
+    "loadMore": "הורד עוד",
+    "loadingMore": "טְעִינָה...",
+    "form": {
+      "newTitle": "צור קטגוריה חדשה",
+      "editTitle": "עריכת קטגוריה",
+      "name": "שם הקטגוריה",
+      "namePlaceholder": "דוגמה: בקר",
+      "slug": "שַׁבְּלוּל",
+      "slugPlaceholder": "דוגמה: בעלי חיים גדולים",
+      "description": "הֶסבֵּר",
+      "descriptionPlaceholder": "תיאור קצר של הקטגוריה...",
+      "parentCategory": "קטגוריה עליונה",
+      "parentCategoryPlaceholder": "בחר קטגוריה מובילה (אופציונלי)",
+      "noParent": "אין קטגוריה עליונה (קטגוריה ראשית)",
+      "sortOrder": "מספר רצף",
+      "isActive": "פָּעִיל",
+      "iconUrl": "כתובת אתר של סמל",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "לְהַצִיל",
+      "submitting": "חִסָכוֹן...",
+      "updating": "עִדכּוּן...",
+      "errors": {
+        "nameRequired": "שם קטגוריה נדרש.",
+        "slugRequired": "שבלולים הם חובה."
+      }
+    }
+  },
+  "offers": {
+    "title": "הצעות",
+    "description": "ניהול ההצעות הנכנסות והיוצאות שלך.",
+    "received": "הצעות נכנסות",
+    "sent": "הצעות שהוגשו",
+    "noReceivedOffers": "טרם התקבלו הצעות.",
+    "noSentOffers": "עדיין לא הגשת הצעה.",
+    "browseProducts": "עיין במוצרים",
+    "viewProduct": "צפה במוצר",
+    "accept": "לְקַבֵּל",
+    "reject": "לִדחוֹת",
+    "withdraw": "לָסֶגֶת",
+    "makeOffer": "הגש הצעה",
+    "sendOffer": "שלח הצעה",
+    "sending": "שְׁלִיחָה...",
+    "cancel": "לְבַטֵל",
+    "listingPrice": "מחיר מפורסם",
+    "yourOffer": "ההצעה שלך",
+    "quantity": "סְכוּם",
+    "messageOptional": "הודעה (אופציונלי)",
+    "messagePlaceholder": "הערה שתרצה לשתף עם המוכר...",
+    "expiresAt": "תאריך אחרון בתוקף",
+    "offerSent": "ההצעה שלך נשלחה בהצלחה.",
+    "offerError": "אירעה שגיאה בעת שליחת ההצעה.",
+    "acceptSuccess": "ההצעה התקבלה.",
+    "rejectSuccess": "ההצעה נדחתה.",
+    "withdrawSuccess": "ההצעה בוטלה.",
+    "actionError": "אירעה שגיאה במהלך התהליך.",
+    "fetchError": "אירעה שגיאה בעת טעינת ההצעות.",
+    "loginRequired": "התחבר כדי להגיש הצעה.",
+    "invalidPrice": "הזן מחיר תקין.",
+    "invalidQuantity": "הזן סכום תקין.",
+    "status": {
+      "pending": "תָלוּי וְעוֹמֵד",
+      "accepted": "מְקוּבָּל",
+      "rejected": "נִדחֶה",
+      "countered": "הַצָעָה נִגדִית",
+      "expired": "הקדנציה שלה הסתיימה.",
+      "withdrawn": "נסוג"
+    }
+  },
+  "deals": {
+    "title": "הסכמים",
+    "description": "הקפידו על הסכמי הרכישה שלכם.",
+    "buying": "מלומדים",
+    "selling": "מכירות",
+    "noBuyingDeals": "עדיין אין לך תהליך רישום סטודנטים.",
+    "noSellingDeals": "עדיין אין לך עסקאות מכירה.",
+    "browseProducts": "עיין במוצרים",
+    "viewProduct": "צפה במוצר",
+    "activeDeals": "הסכמים פעילים",
+    "completedDeals": "הושלם",
+    "purchases": "מלומדים",
+    "sales": "מכירות",
+    "fetchError": "אירעה שגיאה בעת טעינת הסכמים",
+    "dealStatus": {
+      "pending": "תָלוּי וְעוֹמֵד",
+      "confirmed": "מְאוּשָׁר",
+      "processing": "עֲרִיכָה",
+      "shipped": "במטען",
+      "delivered": "נמסר",
+      "completed": "הושלם",
+      "cancelled": "בּוּטלָה",
+      "disputed": "הֶסכֵּם"
+    },
+    "delivery": {
+      "pickup": "משלוח ידני",
+      "shipping": "באמצעות מטען",
+      "transport": "באמצעות תחבורה"
+    },
+    "requestTransport": "בקשת משלוח"
+  },
+  "farms": {
+    "title": "החוות שלי",
+    "description": "נהל ועדכן את החוות שלך.",
+    "addFarm": "הוסף חווה",
+    "editFarm": "ניהול חווה",
+    "noFarms": "עדיין לא הוספת חווה.",
+    "farmName": "שם החווה",
+    "registrationNumber": "מספר רישום",
+    "location": "מִקוּם",
+    "selectLocation": "בחר מיקום.",
+    "addLocationFirst": "ראשית, הוסף מיקום.",
+    "farmTypeLabel": "סיור בחווה",
+    "farmDescription": "הֶסבֵּר",
+    "totalArea": "שטח כולל",
+    "cultivatedArea": "שטח מעובד",
+    "certifications": "תעודות",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP ועוד.",
+    "organic": "אוֹרְגָנִי",
+    "verified": "מְאוּמָת",
+    "save": "לְהַצִיל",
+    "saving": "חִסָכוֹן...",
+    "cancel": "לְבַטֵל",
+    "edit": "לַעֲרוֹך",
+    "delete": "לִמְחוֹק",
+    "sellerRequired": "פרופיל מוכר נדרש",
+    "sellerRequiredDesc": "כדי להוסיף חווה, ראשית עליך ליצור את פרופיל המוכר שלך.",
+    "becomeSeller": "הפוך למוכר",
+    "createSuccess": "החווה נוספה בהצלחה.",
+    "updateSuccess": "החווה עודכנה בהצלחה.",
+    "deleteSuccess": "החווה נמחקה בהצלחה.",
+    "saveError": "אירעה שגיאה בעת רישום החווה.",
+    "deleteError": "אירעה שגיאה בעת מחיקת החווה.",
+    "fetchError": "אירעה שגיאה בעת העלאת מידע על החווה.",
+    "farmType": {
+      "livestock": "חקלאות בעלי חיים",
+      "crop": "חַקלָאוּת",
+      "mixed": "מְעוּרָב",
+      "poultry": "מכונף",
+      "dairy": "חקלאות חלב",
+      "aquaculture": "מוצרים ימיים"
+    }
+  },
+  "transporters": {
+    "title": "מובילים",
+    "description": "שירותי הובלת בעלי חיים ומוצרים",
+    "searchPlaceholder": "מצא חברת הובלה...",
+    "noTransporters": "עדיין אין ספקים רשומים.",
+    "verified": "מְאוּמָת",
+    "transports": "תַחְבּוּרָה",
+    "viewProfile": "הצג פרופיל",
+    "sort": {
+      "newest": "אחרון",
+      "rating": "הציון הגבוה ביותר",
+      "mostTransports": "המשלוחים התכופים ביותר"
+    },
+    "pagination": {
+      "previous": "לְשֶׁעָבַר",
+      "next": "הַבָּא",
+      "page": "עמוד {עמוד}"
+    }
+  },
+  "transport": {
+    "title": "בקשות המשלוח שלי",
+    "description": "מעקב אחר בקשות המשלוח שלך.",
+    "findTransporter": "מצא חברת הובלה",
+    "active": "פָּעִיל",
+    "completed": "הושלם",
+    "total": "סַך הַכֹּל",
+    "asSeller": "כמוכר",
+    "asBuyer": "בתור הקונה",
+    "noSellerRequests": "כמוכר, אין לך חובת משלוח.",
+    "noBuyerRequests": "כמקבל, אין לך בקשת משלוח.",
+    "viewProduct": "צפה במוצר",
+    "pickup": "לְקַבֵּל",
+    "delivery": "מְסִירָה",
+    "urgent": "דָחוּף",
+    "fetchError": "אירעה שגיאה בעת העלאת בקשות המשלוח.",
+    "trackShipment": "לַעֲקוֹב",
+    "transportStatus": {
+      "pending": "תָלוּי וְעוֹמֵד",
+      "inPool": "בבריכה",
+      "assigned": "מונה",
+      "pickedUp": "קַבָּלָה",
+      "inTransit": "על הכביש",
+      "delivered": "נמסר",
+      "completed": "הושלם",
+      "cancelled": "בּוּטלָה"
+    },
+    "transportType": {
+      "standard": "תֶקֶן",
+      "refrigerated": "שרשרת קור",
+      "liveAnimal": "חיות חיות",
+      "hazardous": "חומרים מסוכנים",
+      "oversized": "גודל גדול"
+    }
+  },
+  "moderation": {
+    "title": "ניהול מוצרים",
+    "description": "סקירת מוצרים הממתינים לאישור.",
+    "pending": "הַמתָנָה",
+    "allClear": "כל המוצרים נבדקו.",
+    "noPending": "אין מוצרים הממתינים לאישור.",
+    "awaitingReview": "ממתין לבדיקה",
+    "by": "איש מכירות:",
+    "stock": "מְנָיוֹת",
+    "preview": "אִיתְךָ",
+    "approve": "לְאַשֵׁר",
+    "reject": "לִדחוֹת",
+    "confirmReject": "לִדחוֹת",
+    "cancelReject": "לְוַתֵר",
+    "rejectReasonPlaceholder": "רשום את סיבת הדחייה...",
+    "rejectReasonRequired": "נימוק לסירוב הוא חובה.",
+    "approveSuccess": "המוצר אושר בהצלחה.",
+    "rejectSuccess": "המוצר נדחה.",
+    "actionError": "אירעה שגיאה במהלך התהליך.",
+    "fetchError": "אירעה שגיאה בעת העלאת המוצרים.",
+    "unauthorized": "אין לך הרשאה לגשת לדף זה."
+  },
+  "sellerModeration": {
+    "title": "ניהול מוכרים",
+    "description": "סקירה וניהול של חשבונות מוכרים.",
+    "pending": "הַמתָנָה",
+    "allClear": "כל המוכרים נחקרו.",
+    "noPending": "אין מוכרים שמחכים.",
+    "verify": "לְאַמֵת",
+    "suspend": "לְהַשְׁעוֹת",
+    "verifySuccess": "המוכר אומת בהצלחה.",
+    "suspendSuccess": "המוכר מושעה.",
+    "actionError": "אירעה שגיאה במהלך התהליך.",
+    "suspendReasonRequired": "סיבת ההשעיה היא חובה.",
+    "suspendReasonPlaceholder": "כתבו את סיבת ההשעיה...",
+    "confirmSuspend": "לְהַשְׁעוֹת",
+    "cancelSuspend": "לְוַתֵר",
+    "statusLabels": {
+      "pendingVerification": "ממתין לאימות",
+      "active": "פָּעִיל",
+      "suspended": "תְלִיָה",
+      "banned": "אָסוּר"
+    },
+    "filterAll": "הצג הכל",
+    "filterPending": "אלה הממתינים",
+    "filterActive": "נכסים",
+    "filterSuspended": "מוּשׁהֶה",
+    "unauthorized": "אין לך הרשאה לגשת לדף זה.",
+    "businessName": "שם העסק",
+    "businessType": "סיור עסקי",
+    "email": "אֶלֶקטרוֹנִי",
+    "phone": "טֵלֵפוֹן",
+    "status": "מַצָב",
+    "createdAt": "תאריך רישום"
+  },
+  "transporterModeration": {
+    "title": "מתינות ספקים",
+    "description": "סקירה וניהול של חשבונות ספקים.",
+    "pending": "הַמתָנָה",
+    "allClear": "כל המובילים נחקרו.",
+    "noPending": "אף מוביל לא מחכה.",
+    "verify": "לְאַמֵת",
+    "suspend": "לְהַשְׁעוֹת",
+    "verifySuccess": "חברת ההובלה אומתה בהצלחה.",
+    "suspendSuccess": "חברת ההובלה הושעה.",
+    "actionError": "אירעה שגיאה במהלך התהליך.",
+    "suspendReasonRequired": "סיבת ההשעיה היא חובה.",
+    "suspendReasonPlaceholder": "כתבו את סיבת ההשעיה...",
+    "confirmSuspend": "לְהַשְׁעוֹת",
+    "cancelSuspend": "לְוַתֵר",
+    "statusLabels": {
+      "pendingVerification": "ממתין לאימות",
+      "active": "פָּעִיל",
+      "suspended": "תְלִיָה",
+      "banned": "אָסוּר"
+    },
+    "filterAll": "הצג הכל",
+    "filterPending": "אלה הממתינים",
+    "filterActive": "נכסים",
+    "filterSuspended": "מוּשׁהֶה",
+    "unauthorized": "אין לך הרשאה לגשת לדף זה.",
+    "companyName": "שם החברה",
+    "contactPerson": "אדם מורשה",
+    "email": "אֶלֶקטרוֹנִי",
+    "phone": "טֵלֵפוֹן",
+    "city": "עִיר",
+    "status": "מַצָב",
+    "createdAt": "תאריך רישום"
+  },
+  "transporterDetail": {
+    "notFound": "לא ניתן היה למצוא שום מוביל.",
+    "backToList": "דון למובילים",
+    "verified": "מְאוּמָת",
+    "totalTransports": "סך כל המשלוח",
+    "completed": "הושלם",
+    "about": "אוֹדוֹת",
+    "contact": "פרטי קשר",
+    "businessInfo": "מידע עסקי",
+    "license": "מספר רישיון",
+    "insurance": "מידע על ביטוח",
+    "fleet": "מידע על הצי",
+    "serviceRegions": "אזורי שירות",
+    "specializations": "תחומי התמחות",
+    "certifications": "תעודות"
+  },
+  "brands": {
+    "title": "ניהול מותג",
+    "description": "ניהול מותגי מוצרים.",
+    "addBrand": "הוסף מותג",
+    "editBrand": "עריכת מותג",
+    "noBrands": "עדיין לא נוספו מותגים.",
+    "brandName": "שם המותג",
+    "brandDescription": "הֶסבֵּר",
+    "website": "אֲתַר אִינטֶרנֶט",
+    "logoUrl": "כתובת אתר של לוגו",
+    "save": "לְהַצִיל",
+    "saving": "חִסָכוֹן...",
+    "cancel": "לְבַטֵל",
+    "edit": "לַעֲרוֹך",
+    "delete": "לִמְחוֹק",
+    "inactive": "פַּסִיבִי",
+    "products": "מוּצָר",
+    "createSuccess": "המותג נוסף בהצלחה",
+    "updateSuccess": "המותג עודכן בהצלחה.",
+    "deleteSuccess": "המותג נמחק בהצלחה.",
+    "saveError": "אירעה שגיאה בעת רישום הסימן המסחרי.",
+    "deleteError": "אירעה שגיאה בעת מחיקת הסימן המסחרי.",
+    "fetchError": "אירעה שגיאה בעת טעינת מותגים",
+    "unauthorized": "אין לך הרשאה לגשת לדף זה."
+  },
+  "transporterReviews": {
+    "title": "הערכות",
+    "reviewCount": "הַעֲרָכָה",
+    "noReviews": "עדיין אין הערכה.",
+    "timeliness": "אספקה בזמן",
+    "communication": "תִקשׁוֹרֶת",
+    "carefulHandling": "טיפול זהיר",
+    "professionalism": "מִקצוֹעִיוּת"
+  },
+  "transportOffers": {
+    "title": "הצעות מחיר למשלוח",
+    "description": "ניהול הצעות המחיר שאתה מגיש עבור בקשות משלוח.",
+    "newOffer": "הצעה חדשה",
+    "transportRequestId": "מזהה בקשת משלוח",
+    "requestIdPlaceholder": "הזן את מזהה בקשת המשלוח.",
+    "offeredPrice": "מחיר ההצעה",
+    "estimatedDays": "משך זמן משוער (ימים)",
+    "days": "יְוֹם",
+    "vehicleType": "סוג הרכב",
+    "insuranceIncluded": "ביטוח כלול",
+    "message": "הוֹדָעָה",
+    "cancel": "לְבַטֵל",
+    "sending": "שְׁלִיחָה...",
+    "sendOffer": "שלח הצעה",
+    "cancelOffer": "לְבַטֵל",
+    "pendingTab": "הַמתָנָה",
+    "historyTab": "עָבָר",
+    "noPendingOffers": "אין לך הצעות ממתינות.",
+    "noHistory": "לא נמצאו הצעות קודמות.",
+    "status": {
+      "pending": "הַמתָנָה",
+      "accepted": "מְקוּבָּל",
+      "rejected": "נִדחֶה",
+      "expired": "הקדנציה שלה הסתיימה.",
+      "cancelled": "בּוּטלָה"
+    },
+    "createSuccess": "ההצעה הוגשה בהצלחה.",
+    "createError": "אירעה שגיאה בעת שליחת ההצעה.",
+    "cancelSuccess": "ההצעה בוטלה.",
+    "cancelError": "אירעה שגיאה בעת ביטול ההצעה.",
+    "fetchError": "אירעה שגיאה בעת טעינת ההצעות."
+  },
+  "animalInfo": {
+    "title": "מידע על בעלי חיים ומוצרים",
+    "animalTab": "חַיָה",
+    "healthTab": "בְּרִיאוּת",
+    "vaccinationsTab": "מחסנים",
+    "veterinaryTab": "וָתִיק",
+    "breed": "גֶזַע",
+    "genderLabel": "מִין",
+    "gender": {
+      "male": "זָכָר",
+      "female": "נְקֵבָה",
+      "unknown": "לֹא יְדוּעַ"
+    },
+    "age": "גִיל",
+    "months": "חוֹדֶשׁ",
+    "weight": "מִשׁקָל",
+    "color": "צֶבַע",
+    "tagNumber": "מספר אוזן",
+    "healthStatus": "מצב הבריאות",
+    "health": {
+      "healthy": "בָּרִיא",
+      "underTreatment": "תחת טיפול",
+      "recovering": "הוא/היא מתאוששים.",
+      "quarantined": "בבידוד",
+      "unknown": "לֹא יְדוּעַ"
+    },
+    "purposeLabel": "שימוש מיועד",
+    "purpose": {
+      "breeding": "סוּס הַרבָּעָה",
+      "dairy": "חָלָב",
+      "meat": "בָּשָׂר",
+      "egg": "בֵּיצָה",
+      "wool": "צֶמֶר",
+      "working": "עֲבוֹדָה",
+      "pet": "בֵּיתִי",
+      "other": "אַחֵר"
+    },
+    "pregnancy": "הֵרָיוֹן",
+    "pregnant": "בְּהֵרָיוֹן",
+    "microchip": "מספר שבב מיקרו",
+    "passport": "מספר דרכון",
+    "sireDetails": "מידע על האב",
+    "damDetails": "מידע עיקרי",
+    "diagnosis": "אִבחוּן",
+    "treatment": "יַחַס",
+    "medications": "תרופות",
+    "veterinarian": "וָתִיק",
+    "nextDue": "ההיסטוריה של המורדים הבאים",
+    "prescriptionRequired": "דורש מרשם רופא",
+    "targetSpecies": "סיורי טארגט",
+    "activeIngredients": "רכיבים פעילים",
+    "registrationNo": "מספר רישום",
+    "storage": "אִחסוּן",
+    "chemicalTab": "כִּימִי",
+    "feedTab": "פְּתָיוֹן",
+    "seedTab": "זֶרַע",
+    "machineryTab": "מְכוֹנָה",
+    "organic": "אוֹרְגָנִי",
+    "toxicity": "רַעֲלָנוּת",
+    "gmoFree": "ללא הנדסה גנטית",
+    "protein": "חֶלְבּוֹן",
+    "fat": "שֶׁמֶן",
+    "fiber": "סִיב",
+    "hybrid": "היברידי",
+    "germination": "נִבִיטָה",
+    "daysToMaturity": "הַבשָׁלָה",
+    "daysLabel": "יְוֹם",
+    "warranty": "מוּבטָח",
+    "power": "כּוֹחַ",
+    "hoursUsed": "שעות שימוש",
+    "hours": "שָׁעָה",
+    "powerSource": "ספק כוח"
+  },
+  "productVariants": {
+    "title": "גרסאות מוצר",
+    "variantCount": "גִרְסָה אַחֶרֶת",
+    "inStock": "בִּמלַאִי",
+    "outOfStock": "הַכַּרטִיסִים אָזלוּ"
+  },
+  "productPrices": {
+    "title": "מחירים (מטבעות מרובים)",
+    "autoConversion": "טרנספורמציה אוטומטית",
+    "validUntil": "תוֹקֶף"
+  },
+  "requestTransport": {
+    "title": "צור בקשת משלוח",
+    "pickupLocation": "נקודת טעינה",
+    "deliveryLocation": "נקודת מסירה",
+    "city": "עִיר",
+    "address": "כְּתוֹבֶת",
+    "transportType": "סיור תחבורה",
+    "types": {
+      "standard": "תֶקֶן",
+      "refrigerated": "שרשרת קור",
+      "liveAnimal": "חיות חיות",
+      "hazardous": "חומרים מסוכנים",
+      "oversized": "גודל גדול"
+    },
+    "weight": "משקל (ק\"ג)",
+    "weightPlaceholder": "ק\"ג",
+    "preferredPickupDate": "תאריך העלאה מועדף",
+    "preferredDeliveryDate": "תאריך אספקה מועדף",
+    "urgent": "תחבורה דחופה",
+    "specialInstructions": "הוראות מיוחדות",
+    "instructionsPlaceholder": "כתבו כאן את ההוראות הספציפיות שלכם...",
+    "cancel": "לְוַתֵר",
+    "submit": "צור ביקוש",
+    "submitting": "בתהליך היצירה...",
+    "success": "בקשת המשלוח נוצרה בהצלחה.",
+    "error": "אירעה שגיאה בעת יצירת בקשת המשלוח."
+  },
+  "transportTracking": {
+    "title": "מעקב משלוחים",
+    "noTracking": "עדיין אין מידע מעקב זמין.",
+    "update": "לְעַדְכֵּן"
+  },
+  "locations": {
+    "title": "הכתובות שלי",
+    "description": "ניהול הכתובות הרשומות שלך.",
+    "addLocation": "הוסף כתובת",
+    "editLocation": "עריכת כתובת",
+    "noLocations": "עדיין אין לך כתובת רשומה.",
+    "name": "שם כתובת",
+    "namePlaceholder": "לדוגמה: בית, עבודה, חווה",
+    "address": "כְּתוֹבֶת",
+    "addressLine2": "שורת כתובת 2",
+    "city": "עִיר",
+    "state": "מחוז / אזור",
+    "postalCode": "מיקוד",
+    "phone": "טֵלֵפוֹן",
+    "email": "אֶלֶקטרוֹנִי",
+    "cancel": "לְוַתֵר",
+    "save": "לְהַצִיל",
+    "saving": "חִסָכוֹן...",
+    "typePickup": "טְעִינָה",
+    "typeDelivery": "מְסִירָה",
+    "typeBoth": "כְּלָלִי",
+    "createSuccess": "הכתובת נוספה בהצלחה.",
+    "createError": "אירעה שגיאה בעת הוספת הכתובת.",
+    "updateSuccess": "הכתובת עודכנה בהצלחה.",
+    "updateError": "אירעה שגיאה בעת עדכון הכתובת.",
+    "deleteLocation": "מחיקת כתובת",
+    "deleteSuccess": "הכתובת נמחקה",
+    "deleteError": "אירעה שגיאה בעת מחיקת הכתובת.",
+    "fetchError": "אירעה שגיאה בעת טעינת הכתובות."
+  },
+  "systemSettings": {
+    "title": "הגדרות מערכת",
+    "description": "צפה במטבע הפלטפורמה, בשפה, באמצעי תשלום, במשלוח ובהגדרות המס.",
+    "unauthorized": "אין לך הרשאה לגשת לדף זה.",
+    "currenciesTab": "מטבעות",
+    "languagesTab": "שפות",
+    "paymentTab": "אמצעי תשלום",
+    "shippingTab": "מִטְעָן",
+    "taxTab": "מַס",
+    "active": "פָּעִיל",
+    "inactive": "פַּסִיבִי",
+    "default": "בְּרִירַת מֶחדָל",
+    "noCurrencies": "המטבע טרם הוגדר.",
+    "noLanguages": "השפה עדיין לא הוגדרה.",
+    "noPaymentMethods": "אמצעי תשלום טרם הוגדר.",
+    "noCarriers": "חברת הספנות טרם זוהתה.",
+    "noZones": "אזור המטען טרם הוגדר.",
+    "noTaxRates": "שיעור המס טרם הוגדר.",
+    "carriers": "חברות שילוח",
+    "zones": "אזורי מטען",
+    "countries": "מדינות",
+    "rates": "דמי משלוח",
+    "noRates": "עלויות המשלוח טרם הוגדרו.",
+    "freeShipping": "משלוח חינם",
+    "deliveryDays": "זמן אספקה ביום"
+  },
+  "pushPermission": {
+    "title": "הפעל התראות",
+    "description": "קבלו התראות על הודעות חדשות, מבצעים ועדכוני הזמנות.",
+    "allow": "לְהַתִיר",
+    "dismiss": "לִסְגוֹר"
+  },
+  "healthRecords": {
+    "title": "רישומי בריאות",
+    "description": "ניהול רישומי בריאות והיסטוריה רפואית של בעלי חיים.",
+    "addRecord": "הוסף רשומה",
+    "editRecord": "עריכת רשומה",
+    "deleteRecord": "מחיקת רשומה",
+    "noRecords": "תיק הבריאות טרם נוסף.",
+    "animalInfoId": "זיהוי בעל חיים",
+    "animalInfoIdPlaceholder": "הזן את מזהה פרטי בעל החיים.",
+    "recordType": "סיור הרשמה",
+    "recordTypePlaceholder": "דוגמאות: בדיקה, טיפול, ניתוח",
+    "recordDate": "תאריך רישום",
+    "followUpDate": "תאריך בדיקה",
+    "veterinarianName": "וָתִיק",
+    "veterinarianLicense": "מספר רישיון",
+    "clinicName": "קליני",
+    "diagnosis": "אִבחוּן",
+    "treatment": "יַחַס",
+    "medications": "תרופות",
+    "medicationsPlaceholder": "דוגמה: פניצילין 500 מ\"ג, איבופרופן",
+    "notes": "הערות",
+    "documentUrl": "כתובת URL של המסמך",
+    "saving": "חִסָכוֹן...",
+    "createSuccess": "תיק הבריאות נוסף בהצלחה.",
+    "updateSuccess": "תיק הבריאות עודכן בהצלחה.",
+    "deleteSuccess": "תיק הבריאות נמחק בהצלחה.",
+    "saveError": "אירעה שגיאה בעת שמירת הרשומה.",
+    "deleteError": "אירעה שגיאה בעת מחיקת הרשומה.",
+    "fetchError": "אירעה שגיאה בעת טעינת רשומות"
+  },
+  "vaccinations": {
+    "title": "רישומי חיסונים",
+    "description": "ניהול רישומי חיסונים ולוחות שנה של בעלי חיים.",
+    "addVaccination": "הוסף מורד",
+    "editVaccination": "הסדר המורדים",
+    "deleteVaccination": "מורדת סיל",
+    "noVaccinations": "רישום החיסונים טרם נוסף.",
+    "animalInfoId": "זיהוי בעל חיים",
+    "animalInfoIdPlaceholder": "הזן את מזהה פרטי בעל החיים.",
+    "vaccineName": "אסי עדי",
+    "vaccineNamePlaceholder": "דוגמה: חיסון SAT, ברוצלה",
+    "vaccineType": "סיור המורדים",
+    "vaccineTypePlaceholder": "דוגמה: חי, לא פעיל",
+    "batchNumber": "מספר צד",
+    "vaccinationDate": "היסטוריה של המורדים",
+    "nextDueDate": "ההיסטוריה של המורדים הבאים",
+    "veterinarianName": "וָתִיק",
+    "veterinarianLicense": "מספר רישיון",
+    "notes": "הערות",
+    "certificateUrl": "כתובת אתר של האישור",
+    "saving": "חִסָכוֹן...",
+    "createSuccess": "רשומת החיסון נוספה בהצלחה.",
+    "updateSuccess": "רישום החיסונים עודכן בהצלחה.",
+    "deleteSuccess": "רישום החיסון נמחק בהצלחה.",
+    "saveError": "אירעה שגיאה בעת רישום החיסון.",
+    "deleteError": "אירעה שגיאה בעת מחיקת החיסון.",
+    "fetchError": "אירעה שגיאה בעת טעינת החיסונים."
+  },
+  "shippingCarriers": {
+    "title": "חברות שילוח",
+    "description": "ניהול מידע על חברת השילוח.",
+    "addCarrier": "הוסף חברה",
+    "editCarrier": "עריכת חברה",
+    "noCarriers": "עדיין לא נוספה חברת שילוח.",
+    "carrierName": "שם החברה",
+    "carrierNamePlaceholder": "דוגמה: אראס קארגו, MNG",
+    "code": "קוד",
+    "codePlaceholder": "דוגמה: ARAS",
+    "website": "אֲתַר אִינטֶרנֶט",
+    "trackingUrlTemplate": "תבנית כתובת URL למעקב",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "מדינות נתמכות",
+    "supportedCountriesPlaceholder": "דוגמה: TR, US, DE",
+    "active": "פָּעִיל",
+    "inactive": "פַּסִיבִי",
+    "saving": "חִסָכוֹן...",
+    "edit": "לַעֲרוֹך",
+    "delete": "לִמְחוֹק",
+    "createSuccess": "חברת השילוח נוספה בהצלחה.",
+    "updateSuccess": "חברת השילוח עודכנה בהצלחה.",
+    "deleteSuccess": "חברת השילוח נמחקה בהצלחה.",
+    "saveError": "אירעה שגיאה בעת רישום חברת השילוח.",
+    "deleteError": "אירעה שגיאה בעת מחיקת פרטי חברת המשלוחים.",
+    "fetchError": "אירעה שגיאה בעת טעינת חברות מטען."
+  },
+  "shippingZones": {
+    "title": "אזורי מטען",
+    "description": "ניהול אזורי ומשטחי מטען.",
+    "addZone": "הוסף אזור",
+    "editZone": "עריכת אזור",
+    "noZones": "טרם נוסף אזור מטען.",
+    "zoneName": "שם האזור",
+    "zoneNamePlaceholder": "דוגמה: אירופה, צפון אמריקה",
+    "countryCodes": "קודי מדינה",
+    "countryCodesPlaceholder": "דוגמה: טורקיה, גרמניה, צרפת",
+    "active": "פָּעִיל",
+    "inactive": "פַּסִיבִי",
+    "saving": "חִסָכוֹן...",
+    "edit": "לַעֲרוֹך",
+    "delete": "לִמְחוֹק",
+    "createSuccess": "האזור נוסף בהצלחה.",
+    "updateSuccess": "האזור עודכן בהצלחה.",
+    "deleteSuccess": "האזור נוקה בהצלחה.",
+    "saveError": "אירעה שגיאה בעת שמירת האזור.",
+    "deleteError": "אירעה שגיאה בעת מחיקת האזור.",
+    "fetchError": "אירעה שגיאה בעת טעינת אזורים"
+  },
+  "shippingRates": {
+    "title": "דמי משלוח",
+    "description": "ניהול עלויות משלוח ואפשרויות משלוח.",
+    "addRate": "הוסף עמלה",
+    "editRate": "התאמת עמלה",
+    "noRates": "עלויות המשלוח טרם נוספו.",
+    "zone": "אֵזוֹר",
+    "carrier": "מוּצָק",
+    "selectZone": "בחר אזור",
+    "selectCarrier": "בחר חברה",
+    "shippingCost": "דמי משלוח",
+    "currency": "מַטְבֵּעַ",
+    "estimatedDeliveryDays": "זמן אספקה משוער (ימים)",
+    "minWeight": "משקל מינימלי",
+    "maxWeight": "משקל מקסימלי",
+    "minOrderAmount": "סכום הזמנה מינימלי",
+    "freeShipping": "משלוח חינם",
+    "free": "לְשַׁחְרֵר",
+    "active": "פָּעִיל",
+    "inactive": "פַּסִיבִי",
+    "cost": "תַשְׁלוּם",
+    "deliveryDays": "מְסִירָה",
+    "status": "מַצָב",
+    "saving": "חִסָכוֹן...",
+    "createSuccess": "העמלה נוספה בהצלחה.",
+    "updateSuccess": "המשכורת עודכנה בהצלחה.",
+    "deleteSuccess": "העמלה נמחקה בהצלחה.",
+    "saveError": "אירעה שגיאה בעת שמירת העמלה.",
+    "deleteError": "אירעה שגיאה בעת מחיקת העמלה.",
+    "fetchError": "אירעה שגיאה בעת העלאת העמלות."
+  },
+  "metadata": {
+    "title": "מסחר בבעלי חיים - פלטפורמת מסחר בבעלי חיים",
+    "description": "פלטפורמת המסחר בבעלי חיים מהימנה ביותר בעולם. קנייה ומכירה בטוחה ושקופה של בעלי חיים.",
+    "pages": {
+      "about": {
+        "title": "אודותינו",
+        "description": "למד על מסחר בבעלי חיים. פלטפורמה אמינה למסחר בבעלי חיים חיים."
+      },
+      "contact": {
+        "title": "תִקשׁוֹרֶת",
+        "description": "צרו קשר. צוות תמיכת הלקוחות של מסחר בעלי חיים מוכן לסייע לכם."
+      },
+      "terms": {
+        "title": "תנאי שימוש",
+        "description": "תנאים והגבלות לסחר בבעלי חיים."
+      },
+      "privacy": {
+        "title": "מדיניות פרטיות",
+        "description": "מדיניות הפרטיות של מסחר בבעלי חיים. למד כיצד המידע האישי שלך מוגן."
+      },
+      "products": {
+        "title": "מוצרים",
+        "description": "עיין ברשימות של בעלי חיים חיים. מודעות אמינות לבקר, כבשים ועוד."
+      },
+      "sellers": {
+        "title": "מוכרים",
+        "description": "גלו מוכרי בעלי חיים אמינים. פרופילים וביקורות מאומתים של מוכרים."
+      },
+      "transporters": {
+        "title": "מובילים",
+        "description": "גלו חברות להובלת בעלי חיים. הובלת בעלי חיים בטוחה ומקצועית."
+      },
+      "search": {
+        "title": "לְחַפֵּשׂ",
+        "description": "חיפוש בין רשימות של בעלי חיים חיים. חיפוש קל עם אפשרויות סינון ומיון."
+      },
+      "faq": {
+        "title": "שאלות נפוצות",
+        "description": "שאלות ותשובות נפוצות בנושא סחר בבעלי חיים."
+      },
+      "productDetail": {
+        "title": "למכירה - {כותרת}",
+        "description": "למכירה ב-{title} - {city}. לחצו לפרטים ופרטי יצירת קשר."
+      },
+      "sellerDetail": {
+        "title": "פרופיל המוכר - {name}",
+        "description": "פרופיל מוכר של {name}. ביקורות, רישומים ופרטי קשר."
+      },
+      "transporterDetail": {
+        "title": "{name} - פרופיל ספק",
+        "description": "פרופיל של חברת ההובלה {name}. אזורי שירות, ביקורות ופרטי קשר."
+      }
+    }
   }
 }

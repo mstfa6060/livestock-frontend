@@ -11,17 +11,30 @@
     "back": "پیچھے",
     "next": "آگے",
     "close": "بند",
+    "unauthorized": "آپ کو اس صفحہ تک رسائی کی اجازت نہیں ہے۔",
     "emailPlaceholder": "ornek@email.com",
     "login": "لاگ ان کریں۔",
-    "register": "رجسٹر کریں۔"
+    "register": "رجسٹر کریں۔",
+    "previous": "سابقہ",
+    "zoomIn": "زوم ان کریں۔",
+    "previousImage": "پچھلی تصویر",
+    "nextImage": "اگلی تصویر",
+    "closeLightbox": "گیلری بند کریں۔",
+    "imageLightbox": "تصویری گیلری",
+    "slideN": "سلائیڈ {n}",
+    "viewMore": "مزید دیکھیں"
   },
   "header": {
     "products": "مصنوعات",
     "sellers": "بیچنے والے",
+    "transporters": "ٹرانسپورٹرز",
     "about": "ہمارے بارے میں",
+    "search": "تلاش کریں۔",
     "dashboard": "پینل",
     "settings": "ترتیبات",
-    "logout": "لاگ آؤٹ کریں۔"
+    "logout": "لاگ آؤٹ کریں۔",
+    "menu": "مینو",
+    "language": "زبان کا انتخاب"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "میں اپنا پاس ورڈ بھول گیا ہوں۔",
       "noAccount": "کیا آپ کا اکاؤنٹ نہیں ہے؟",
       "register": "رجسٹر کریں۔",
-      "errorDefault": "لاگ ان ناکام ہو گیا۔ براہ کرم اپنی معلومات چیک کریں۔"
+      "errorDefault": "لاگ ان ناکام ہو گیا۔ براہ کرم اپنی معلومات چیک کریں۔",
+      "orContinueWith": "یا جاری رکھیں",
+      "continueWithGoogle": "گوگل کے ساتھ جاری رکھیں",
+      "continueWithApple": "ایپل کے ساتھ جاری رکھیں۔",
+      "socialLoginError": "سماجی لاگ ان ناکام ہوگیا۔ براہ کرم دوبارہ کوشش کریں۔",
+      "appleComingSoon": "بہت جلد",
+      "showPassword": "پاس ورڈ دکھائیں۔",
+      "hidePassword": "پاس ورڈ چھپائیں۔"
     },
     "register": {
       "title": "رجسٹر کریں۔",
@@ -51,7 +71,17 @@
       "login": "لاگ ان کریں۔",
       "passwordMismatch": "پاس ورڈز مماثل نہیں ہیں۔",
       "passwordTooShort": "پاس ورڈ کم از کم 6 حروف کا ہونا چاہیے۔",
-      "errorDefault": "رجسٹریشن ناکام ہو گئی۔ براہ کرم دوبارہ کوشش کریں۔"
+      "errorDefault": "رجسٹریشن ناکام ہو گئی۔ براہ کرم دوبارہ کوشش کریں۔",
+      "showPassword": "پاس ورڈ دکھائیں۔",
+      "hidePassword": "پاس ورڈ چھپائیں۔",
+      "passwordStrength": {
+        "minLength": "کم از کم 8 حروف",
+        "uppercase": "بڑے حروف (A-Z)",
+        "lowercase": "چھوٹے حروف (a-z)",
+        "number": "نمبر (0-9)",
+        "special": "خصوصی حروف (!@#$%)"
+      },
+      "registerSuccess": "آپ کا اکاؤنٹ کامیابی سے بن گیا ہے! آپ کو لاگ ان پیج پر ری ڈائریکٹ کیا جا رہا ہے..."
     },
     "forgotPassword": {
       "title": "میں اپنا پاس ورڈ بھول گیا ہوں۔",
@@ -61,7 +91,7 @@
       "backToLogin": "ہوم پیج پر واپس جائیں۔",
       "successTitle": "ای میل بھیجی گئی۔",
       "successDescription": "پاس ورڈ دوبارہ ترتیب دینے کا لنک آپ کے ای میل ایڈریس پر بھیج دیا گیا ہے۔ براہ کرم اپنا ان باکس چیک کریں۔",
-      "errorDefault": "ایک خرابی پیش آ گئی۔ براہ کرم اپنا ای میل پتہ چیک کریں۔"
+      "errorDefault": "ایک خرابی پیش آگئی۔ براہ کرم اپنا ای میل پتہ چیک کریں۔"
     },
     "resetPassword": {
       "title": "نیا پاس ورڈ سیٹ کریں۔",
@@ -78,7 +108,9 @@
       "requestNewLink": "نئے کنکشن کی درخواست کریں۔",
       "passwordMismatch": "پاس ورڈز مماثل نہیں ہیں۔",
       "passwordTooShort": "پاس ورڈ کم از کم 6 حروف کا ہونا چاہیے۔",
-      "errorDefault": "پاس ورڈ ری سیٹ ناکام ہو گیا۔ کنکشن غلط یا ختم ہو سکتا ہے۔"
+      "errorDefault": "پاس ورڈ دوبارہ ترتیب دینے میں ناکام۔ کنکشن غلط یا ختم ہو سکتا ہے۔",
+      "showPassword": "پاس ورڈ دکھائیں۔",
+      "hidePassword": "پاس ورڈ چھپائیں۔"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "فعال",
       "totalViews": "کل ملاحظات",
       "thisWeek": "اس ہفتے",
+      "allTime": "ہر وقت",
       "favorites": "پسندیدہ",
       "onYourListings": "آپ کے اشتہارات میں",
+      "savedItems": "رجسٹرڈ مصنوعات",
       "messages": "پیغام",
-      "unread": "بغیر پڑھے"
+      "notifications": "اطلاعات",
+      "unread": "بغیر پڑھے ہوئے",
+      "views": "مناظر",
+      "draft": "مسودہ",
+      "sold": "فروخت",
+      "pending": "زیر التواء",
+      "awaitingApproval": "منظوری کے منتظر",
+      "totalSales": "کل فروخت",
+      "completedSales": "مکمل فروخت",
+      "revenue": "آمدنی",
+      "totalRevenue": "کل آمدنی"
     },
     "recentListings": "آپ کی تازہ ترین فہرستیں۔",
+    "recentActivity": "حالیہ سرگرمیاں",
     "recentMessages": "حالیہ پیغامات",
+    "quickLinks": "فوری رسائی",
     "noListings": "آپ نے ابھی تک کوئی اشتہار شامل نہیں کیا ہے۔",
+    "noActivity": "ابھی تک کوئی سرگرمی نہیں ہے۔",
     "noMessages": "آپ کو ابھی تک کوئی پیغام نہیں ملا۔",
     "noNotifications": "آپ کو ابھی تک کوئی اطلاع موصول نہیں ہوئی ہے۔",
     "viewAllListings": "تمام فہرستیں دیکھیں",
-    "viewAllMessages": "تمام پیغامات دیکھیں"
+    "viewAllMessages": "تمام پیغامات دیکھیں",
+    "viewNotifications": "اطلاعات دیکھیں",
+    "viewFavorites": "پسندیدہ گور",
+    "recentlyViewed": "حال ہی میں دیکھا گیا۔",
+    "fetchError": "پینل ڈیٹا لوڈ کرتے وقت ایک خرابی پیش آگئی۔"
   },
   "dashboardNav": {
     "overview": "جائزہ",
@@ -115,7 +166,61 @@
     "notifications": "اطلاعات",
     "profile": "پروفائل",
     "settings": "ترتیبات",
-    "newListing": "نئی فہرست شامل کریں۔"
+    "newListing": "نئی فہرست شامل کریں۔",
+    "becomeSeller": "بیچنے والے بنیں۔",
+    "categories": "زمرہ جات",
+    "offers": "تجاویز",
+    "deals": "معاہدے",
+    "farms": "میرے کھیت",
+    "transport": "ٹرانسپورٹ",
+    "moderation": "اعتدال",
+    "sellerModeration": "بیچنے والے کی اعتدال پسندی۔",
+    "transporterModeration": "کیریئر اعتدال",
+    "brands": "برانڈز",
+    "transportOffers": "شپنگ کوٹس",
+    "healthRecords": "ہیلتھ ریکارڈز",
+    "vaccinations": "ویکسینیٹر",
+    "shippingCarriers": "شپنگ کمپنیاں",
+    "shippingZones": "کارگو زونز",
+    "shippingRates": "شپنگ فیس",
+    "systemSettings": "سسٹم کی ترتیبات",
+    "locations": "میرے پتے"
+  },
+  "profile": {
+    "title": "پروفائل کی معلومات",
+    "description": "آپ اپنی ذاتی معلومات کو یہاں اپ ڈیٹ کر سکتے ہیں۔",
+    "personalInfo": "ذاتی معلومات",
+    "contactInfo": "رابطہ کی معلومات",
+    "preferences": "ترجیحات",
+    "firstName": "نام",
+    "firstNamePlaceholder": "اپنا نام درج کریں۔",
+    "surname": "کنیت",
+    "surnamePlaceholder": "اپنا آخری نام درج کریں۔",
+    "displayName": "ظاہر کردہ نام",
+    "phone": "فون نمبر",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "تصدیق شدہ",
+    "phoneNotVerified": "غیر تصدیق شدہ",
+    "verifyPhone": "فون نمبر کی تصدیق کریں۔",
+    "country": "ملک",
+    "selectCountry": "ایک ملک منتخب کریں۔",
+    "language": "زبان کی ترجیح",
+    "selectLanguage": "ایک زبان کا انتخاب کریں۔",
+    "currency": "کرنسی",
+    "selectCurrency": "کرنسی منتخب کریں۔",
+    "saveChanges": "تبدیلیاں محفوظ کریں۔",
+    "saving": "محفوظ کر رہا ہے...",
+    "saveSuccess": "آپ کی پروفائل کی معلومات کو اپ ڈیٹ کر دیا گیا ہے۔",
+    "saveError": "پروفائل کو اپ ڈیٹ کرتے وقت ایک خرابی پیش آگئی۔",
+    "avatar": "پروفائل فوٹو",
+    "changeAvatar": "تصویر تبدیل کریں۔",
+    "removeAvatar": "تصویر ہٹا دیں۔",
+    "currencies": {
+      "try": "ترک لیرا",
+      "usd": "امریکی ڈالر",
+      "eur": "یورو",
+      "gbp": "برطانوی پاؤنڈ"
+    }
   },
   "myListings": {
     "title": "میرے اشتہارات",
@@ -123,37 +228,96 @@
     "noListings": "آپ نے ابھی تک کوئی اشتہار شامل نہیں کیا ہے۔",
     "createFirst": "اپنی پہلی فہرست بنائیں۔",
     "fetchError": "اشتہارات لوڈ کرتے وقت ایک خرابی پیش آگئی۔",
-    "deleteSuccess": "اشتہار کامیابی کے ساتھ حذف کر دیا گیا تھا۔",
+    "deleteSuccess": "اشتہار کامیابی کے ساتھ حذف کر دیا گیا۔",
     "deleteError": "اشتہار کو حذف کرتے وقت ایک خرابی پیش آگئی۔",
-    "activateSuccess": "اشتہار کو چالو کر دیا گیا ہے۔",
-    "deactivateSuccess": "فہرست کو غیر فعال کر دیا گیا ہے۔",
+    "publishSuccess": "اشتہار منظوری کے لیے بھیج دیا گیا ہے۔",
+    "unpublishSuccess": "اشتہار کا مسودہ تیار کر لیا گیا ہے۔",
     "statusError": "حالت تبدیل کرتے وقت ایک خرابی پیش آ گئی۔",
     "filters": {
       "all": "ان سب کے",
-      "active": "فعال",
       "draft": "مسودہ",
       "pending": "منظوری کا انتظار ہے۔",
+      "active": "فعال",
+      "rejected": "مسترد",
       "sold": "فروخت"
     },
     "actions": {
       "edit": "ترمیم کریں۔",
       "delete": "حذف کریں۔",
-      "activate": "چالو کریں۔",
-      "deactivate": "غیر فعال ڈھانچہ"
+      "publish": "منظوری کے لیے بھیجیں۔",
+      "unpublish": "مسودہ",
+      "menu": "لین دین"
     },
     "deleteDialog": {
       "title": "اشتہار کو حذف کریں۔",
       "description": "کیا آپ واقعی اس فہرست کو حذف کرنا چاہتے ہیں؟ یہ عمل ناقابل واپسی ہے۔",
       "cancel": "منسوخ کریں۔",
       "confirm": "حذف کریں۔"
-    }
+    },
+    "loadMore": "مزید ڈاؤن لوڈ کریں۔",
+    "loadingMore": "لوڈ ہو رہا ہے..."
   },
   "favorites": {
     "title": "میرے پسندیدہ",
     "description": "اپنی پسند کی مصنوعات کو یہاں فالو کریں۔",
     "noFavorites": "آپ نے ابھی تک کوئی پسندیدہ مصنوعات شامل نہیں کی ہیں۔",
     "browseProducts": "مصنوعات کو براؤز کریں۔",
-    "fetchError": "پسندیدہ لوڈ کرتے وقت ایک خرابی پیش آگئی۔"
+    "fetchError": "پسندیدہ لوڈ کرتے وقت ایک خرابی پیش آگئی۔",
+    "loadMore": "مزید ڈاؤن لوڈ کریں۔",
+    "loadingMore": "لوڈ ہو رہا ہے..."
+  },
+  "messages": {
+    "title": "پیغامات",
+    "description": "خریداروں اور فروخت کنندگان سے رابطہ کریں۔",
+    "noConversations": "آپ کو ابھی تک کوئی پیغام نہیں ملا۔",
+    "startConversation": "اشتہار کے بارے میں سوال پوچھنے کے لیے، اشتہار پر جائیں۔",
+    "fetchError": "پیغامات لوڈ کرتے وقت ایک خرابی پیش آگئی",
+    "sendError": "پیغام بھیجتے وقت ایک خرابی پیش آگئی۔",
+    "connectionError": "کنکشن ناکام ہو گیا۔ دوبارہ کوشش کر رہا ہے...",
+    "connected": "یہ جڑا ہوا ہے۔",
+    "connecting": "منسلک ہو رہا ہے...",
+    "searchPlaceholder": "پیغامات کے ذریعے تلاش کریں...",
+    "typeMessage": "اپنا پیغام لکھیں...",
+    "send": "بھیجیں۔",
+    "sending": "بھیج رہا ہے...",
+    "typing": "یہ کہتا ہے...",
+    "read": "پڑھیں",
+    "delivered": "بھیجا",
+    "today": "آج",
+    "yesterday": "کل",
+    "noMessages": "ابھی تک کوئی پیغامات نہیں ہیں۔ بات چیت شروع کریں!",
+    "loadMore": "مزید اپ لوڈ کریں۔",
+    "loadingMessages": "پیغامات لوڈ ہو رہے ہیں...",
+    "about": "کے بارے میں",
+    "product": "پروڈکٹ",
+    "startNewConversation": "ایک نئی گفتگو شروع کریں۔",
+    "selectConversation": "ایک بات چیت کا انتخاب کریں یا ایک نیا شروع کریں۔",
+    "online": "آن لائن",
+    "offline": "آف لائن",
+    "lastSeen": "آخری بار دیکھا",
+    "deleteConversation": "گفتگو کو حذف کریں۔",
+    "deleteConfirm": "کیا آپ واقعی اس گفتگو کو حذف کرنا چاہتے ہیں؟",
+    "deleted": "گفتگو کو حذف کر دیا گیا تھا۔",
+    "defaultUser": "صارف",
+    "noResults": "کوئی نتیجہ نہیں ملا۔",
+    "newConversation": "نئی گفتگو"
+  },
+  "notifications": {
+    "title": "اطلاعات",
+    "description": "اپنی اطلاعات دیکھیں اور ان کا نظم کریں۔",
+    "markAllAsRead": "سبھی کو پڑھا ہوا نشان زد کریں۔",
+    "noNotifications": "آپ کو ابھی تک کوئی اطلاع موصول نہیں ہوئی ہے۔",
+    "viewAll": "تمام اطلاعات دیکھیں",
+    "today": "آج",
+    "yesterday": "کل",
+    "older": "پرانا",
+    "types": {
+      "system": "سسٹم",
+      "message": "پیغام",
+      "offer": "پیشکش",
+      "order": "آرڈر",
+      "listing": "اشتہار"
+    }
   },
   "settings": {
     "title": "ترتیبات",
@@ -169,7 +333,28 @@
       "passwordMismatch": "نئے پاس ورڈز مماثل نہیں ہیں۔",
       "passwordTooShort": "نیا پاس ورڈ کم از کم 6 حروف کا ہونا چاہیے۔",
       "sessionError": "سیشن کی معلومات نہیں مل سکیں۔",
-      "errorDefault": "پاس ورڈ اپ ڈیٹ نہیں کیا جا سکا۔ براہ کرم اپنا موجودہ پاس ورڈ چیک کریں۔"
+      "errorDefault": "پاس ورڈ اپ ڈیٹ نہیں کیا جا سکا۔ براہ کرم اپنا موجودہ پاس ورڈ چیک کریں۔",
+      "showPassword": "پاس ورڈ دکھائیں۔",
+      "hidePassword": "پاس ورڈ چھپائیں۔"
+    },
+    "preferences": {
+      "title": "اطلاع اور ترجیحات دیکھیں",
+      "description": "اپنے اطلاعاتی چینلز کا نظم کریں اور ترجیحات ڈسپلے کریں۔",
+      "notifications": "اطلاعات",
+      "emailNotifications": "ای میل اطلاعات",
+      "emailNotificationsDesc": "نئے پیغامات اور اشتھاراتی اپ ڈیٹس کے لیے ای میل اطلاعات موصول کریں۔",
+      "smsNotifications": "SMS اطلاعات",
+      "smsNotificationsDesc": "اہم اطلاعات کے لیے SMS پیغامات موصول کریں۔",
+      "pushNotifications": "پش اطلاعات",
+      "pushNotificationsDesc": "فوری اپ ڈیٹس کے لیے پش اطلاعات موصول کریں۔",
+      "appearance": "ظاہری شکل",
+      "darkMode": "ڈارک موڈ",
+      "darkModeDesc": "ڈارک تھیم پر سوئچ کریں۔",
+      "saveChanges": "ترجیحات محفوظ کریں۔",
+      "saving": "محفوظ کر رہا ہے...",
+      "saveSuccess": "آپ کی ترجیحات کو اپ ڈیٹ کر دیا گیا ہے۔",
+      "saveError": "ترجیحات کو اپ ڈیٹ کرتے وقت ایک خرابی پیش آگئی۔",
+      "loadError": "ترجیحات کو لوڈ نہیں کیا جا سکا۔"
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "لائیو اینیمل ٹریڈنگ پلیٹ فارم",
       "subtitle": "سب سے قابل اعتماد زندہ جانوروں کی تجارت کا پلیٹ فارم۔ اپنے مویشیوں اور بھیڑوں کو محفوظ طریقے سے خریدیں اور بیچیں۔",
       "cta": "ابھی شروع کریں۔",
-      "viewListings": "اشتہارات دیکھیں"
+      "viewListings": "اشتہارات دیکھیں",
+      "searchPlaceholder": "جانوروں کی تلاش کریں... (گائے، بھیڑ، بکری...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "نمایاں اشتہارات",
       "viewAll": "سب دیکھیں"
+    },
+    "cta": {
+      "title": "ابھی شروع کریں۔",
+      "subtitle": "اپنی جگہ ایک ایسے پلیٹ فارم پر لیں جہاں ہزاروں بیچنے والے اور خریدار ملتے ہیں۔",
+      "button": "مفت میں رجسٹر کریں۔"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "ہمارے بارے میں",
     "contact": "مواصلات",
     "terms": "استعمال کی شرائط",
-    "privacy": "رازداری کی پالیسی"
+    "privacy": "رازداری کی پالیسی",
+    "company": "کمپنی",
+    "support": "حمایت",
+    "legal": "قانونی",
+    "followUs": "ہمیں فالو کریں۔",
+    "newsletter": "بلیٹن",
+    "newsletterDescription": "تازہ ترین فہرستوں اور پروموشنز سے محروم نہ ہوں۔",
+    "subscribe": "سبسکرائب کریں۔",
+    "emailPlaceholder": "آپ کا ای میل پتہ",
+    "tagline": "ترکی کا سب سے قابل اعتماد زندہ جانوروں کی تجارت کا پلیٹ فارم۔",
+    "sellers": "بیچنے والے",
+    "products": "مصنوعات",
+    "map": "نقشہ",
+    "appleLoginComingSoon": "ایپل کے ساتھ لاگ ان بہت جلد فعال ہو جائے گا۔",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "اکثر پوچھے گئے سوالات"
+  },
+  "faq": {
+    "title": "اکثر پوچھے گئے سوالات",
+    "description": "ہمارے پلیٹ فارم کے بارے میں آپ کے اکثر پوچھے گئے سوالات کے جوابات۔",
+    "noFaqs": "ابھی تک کوئی سوال شامل نہیں کیا گیا ہے۔"
+  },
+  "about": {
+    "title": "ہمارے بارے میں",
+    "subtitle": "ترکی کا سب سے قابل اعتماد زندہ جانوروں کی تجارت کا پلیٹ فارم۔",
+    "mission": {
+      "title": "ہمارا مشن",
+      "description": "لائیو جانوروں کی تجارت کو ڈیجیٹائز کرکے، ہمارا مقصد پروڈیوسرز اور خریداروں کے درمیان ایک محفوظ، شفاف، اور موثر ربط پیدا کرنا ہے۔"
+    },
+    "vision": {
+      "title": "ہمارا وژن",
+      "description": "زرعی شعبے میں ڈیجیٹل تبدیلی کا علمبردار بننا اور جانوروں کی لائیو ٹریڈنگ میں عالمی پلیٹ فارم بننا۔"
+    },
+    "values": {
+      "title": "ہماری اقدار",
+      "trust": {
+        "title": "بھروسہ",
+        "description": "تمام لین دین میں شفافیت اور وشوسنییتا ضروری ہے۔"
+      },
+      "quality": {
+        "title": "معیار",
+        "description": "بہترین سروس فراہم کرنے کے لیے مسلسل بہتری۔"
+      },
+      "innovation": {
+        "title": "اختراع",
+        "description": "ٹیکنالوجی کا استعمال کرتے ہوئے صنعت کو تبدیل کرنا۔"
+      }
+    },
+    "stats": {
+      "users": "رجسٹرڈ صارف",
+      "sellers": "فعال فروخت کنندہ",
+      "products": "اشتہار",
+      "transactions": "کامیاب لین دین"
+    }
+  },
+  "contact": {
+    "title": "مواصلات",
+    "subtitle": "کسی بھی سوال کے ساتھ ہم سے رابطہ کریں.",
+    "form": {
+      "title": "ہمیں لکھیں۔",
+      "name": "آپ کا نام",
+      "namePlaceholder": "احمد یلماز",
+      "email": "ای میل",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "موضوع",
+      "subjectPlaceholder": "آپ کے پیغام کا موضوع",
+      "message": "آپ کا پیغام",
+      "messagePlaceholder": "اپنا پیغام یہاں لکھیں...",
+      "submit": "بھیجیں۔",
+      "submitting": "بھیج رہا ہے...",
+      "success": "آپ کا پیغام کامیابی کے ساتھ بھیج دیا گیا ہے۔ ہم جلد از جلد آپ سے رابطہ کریں گے۔",
+      "error": "پیغام بھیجتے وقت ایک خرابی پیش آگئی۔ براہ کرم دوبارہ کوشش کریں۔"
+    },
+    "info": {
+      "title": "رابطہ کی معلومات",
+      "address": "پتہ",
+      "addressValue": "استنبول، ترکی",
+      "email": "ای میل",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "ٹیلی فون",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "کام کے اوقات",
+      "workingHoursValue": "پیر - جمعہ: 09:00 - 18:00",
+      "map": "نقشہ"
+    }
+  },
+  "terms": {
+    "title": "استعمال کی شرائط",
+    "lastUpdated": "آخری اپ ڈیٹ: {date}",
+    "sections": {
+      "acceptance": {
+        "title": "1. شرائط کی قبولیت",
+        "content": "اس ویب سائٹ کو استعمال کرتے ہوئے، آپ مندرجہ ذیل استعمال کی شرائط سے اتفاق کرتے ہیں۔ اگر آپ ان شرائط سے متفق نہیں ہیں، تو براہ کرم سائٹ کا استعمال نہ کریں۔"
+      },
+      "services": {
+        "title": "2. خدمات",
+        "content": "لائیو سٹاک ٹریڈنگ زندہ جانوروں کی خرید و فروخت کے لیے ایک پلیٹ فارم مہیا کرتی ہے۔ پلیٹ فارم پر تمام لین دین صارف کی ذمہ داری ہے۔"
+      },
+      "accounts": {
+        "title": "3. صارف کے اکاؤنٹس",
+        "content": "اکاؤنٹ بنانے کے لیے آپ کو درست اور تازہ ترین معلومات فراہم کرنا ضروری ہے۔ آپ کے اکاؤنٹ کی حفاظت آپ کی ذمہ داری ہے۔"
+      },
+      "prohibited": {
+        "title": "4. ممنوعہ سرگرمیاں",
+        "content": "گمراہ کن اشتہارات، غلط معلومات، دھوکہ دہی اور غیر قانونی سرگرمیاں سختی سے ممنوع ہیں۔"
+      },
+      "liability": {
+        "title": "5. ذمہ داری کی حد",
+        "content": "پلیٹ فارم صارفین کے درمیان لین دین کے لیے براہ راست ذمہ دار نہیں ہے۔ تمام لین دین فریقین کے درمیان ہوتا ہے۔"
+      },
+      "changes": {
+        "title": "6. تبدیلیاں",
+        "content": "یہ شرائط و ضوابط بغیر اطلاع کے تبدیل کیے جا سکتے ہیں۔ تبدیلیاں اشاعت کے فوراً بعد نافذ العمل ہوں گی۔"
+      }
+    }
+  },
+  "privacy": {
+    "title": "رازداری کی پالیسی",
+    "lastUpdated": "آخری اپ ڈیٹ: {date}",
+    "sections": {
+      "collection": {
+        "title": "1. معلومات جمع کرنا",
+        "content": "جب آپ ایک اکاؤنٹ بناتے ہیں، تو ہم آپ کا نام، ای میل پتہ، اور فون نمبر جیسی ذاتی معلومات اکٹھا کرتے ہیں۔ ہم آپ کی سائٹ کے استعمال سے متعلق گمنام ڈیٹا بھی جمع کر سکتے ہیں۔"
+      },
+      "usage": {
+        "title": "2. معلومات کا استعمال",
+        "content": "ہم جو معلومات اکٹھا کرتے ہیں اسے ہماری خدمات فراہم کرنے، آپ کے اکاؤنٹ کا نظم کرنے، سیکیورٹی کو یقینی بنانے اور آپ کو ذاتی نوعیت کی پیشکش کرنے کے لیے استعمال کیا جاتا ہے۔"
+      },
+      "sharing": {
+        "title": "3. معلومات کا اشتراک",
+        "content": "آپ کی ذاتی معلومات تیسرے فریق کو فروخت یا کرائے پر نہیں دی جائیں گی۔ قانونی طور پر مطلوبہ مقاصد کے علاوہ آپ کی معلومات کا اشتراک نہیں کیا جائے گا۔"
+      },
+      "security": {
+        "title": "4. سیکورٹی",
+        "content": "آپ کے ڈیٹا کی حفاظت کے لیے صنعتی معیار کے حفاظتی اقدامات موجود ہیں۔"
+      },
+      "cookies": {
+        "title": "5. کوکیز",
+        "content": "ہماری ویب سائٹ صارف کے تجربے کو بہتر بنانے کے لیے کوکیز کا استعمال کرتی ہے۔ آپ اپنے براؤزر کی ترتیبات میں اپنی کوکی کی ترجیحات کا نظم کر سکتے ہیں۔"
+      },
+      "rights": {
+        "title": "6. آپ کے حقوق",
+        "content": "ترکی کے ذاتی ڈیٹا پروٹیکشن قانون (KVKK) کے تحت، آپ کو اپنے ذاتی ڈیٹا تک رسائی، درست کرنے اور حذف کرنے کا حق حاصل ہے۔"
+      }
+    }
   },
   "products": {
     "title": "مصنوعات",
@@ -235,11 +570,19 @@
       "priceDesc": "قیمت (زیادہ سے کم)",
       "popular": "سب سے زیادہ مقبول"
     },
+    "pagination": {
+      "prev": "سابقہ",
+      "next": "اگلا"
+    },
     "status": {
       "draft": "مسودہ",
+      "pending": "منظوری کا انتظار ہے۔",
       "active": "فعال",
+      "inactive": "غیر فعال",
+      "outOfStock": "اسٹاک سے باہر",
+      "expired": "اس کی میعاد ختم ہو چکی ہے۔",
       "sold": "فروخت",
-      "pending": "منظوری کا انتظار ہے۔"
+      "rejected": "مسترد"
     },
     "condition": {
       "new": "نیا",
@@ -250,12 +593,16 @@
     "outOfStock": "اسٹاک سے باہر",
     "inStock": "اسٹاک میں",
     "noResults": "پروڈکٹ نہیں ملا۔",
-    "loading": "مصنوعات کو لوڈ کیا جا رہا ہے...",
+    "loading": "پروڈکٹس لوڈ ہو رہے ہیں...",
     "perPage": "فی صفحہ",
     "showing": "{from} اور {to} کے درمیان {total} پروڈکٹس کا کل۔",
+    "fetchError": "پروڈکٹس اپ لوڈ کرتے وقت ایک خرابی پیش آگئی۔",
+    "loadMore": "مزید دکھائیں",
+    "showingOf": "{count} / {total} مصنوعات دکھائی جا رہی ہیں۔",
     "loginToFavorite": "پسندیدہ میں شامل کرنے کے لیے لاگ ان کریں۔",
     "addedToFavorites": "پسندیدہ میں شامل کیا گیا۔",
-    "removedFromFavorites": "پسندیدہ سے ہٹا دیا گیا۔"
+    "removedFromFavorites": "پسندیدہ سے ہٹا دیا گیا۔",
+    "favoriteError": "پسندیدہ کارروائی ناکام ہو گئی۔"
   },
   "productDetail": {
     "addToFavorites": "پسندیدہ میں شامل کریں۔",
@@ -278,17 +625,32 @@
     "minOrder": "کم از کم آرڈر",
     "maxOrder": "زیادہ سے زیادہ آرڈر",
     "publishedAt": "اشاعت کی تاریخ",
-    "views": "دیکھا گیا",
-    "reviews": "تشخیص",
+    "views": "دیکھا",
+    "reviews": {
+      "title": "تشخیصات",
+      "reviewCount": "تشخیص",
+      "noReviews": "ابھی تک کوئی تشخیص نہیں۔",
+      "verified": "تصدیق شدہ خریدار"
+    },
     "similarProducts": "ملتے جلتے مصنوعات",
     "sellerProducts": "بیچنے والے کی دیگر مصنوعات",
     "contactSeller": "بیچنے والے سے رابطہ کریں۔",
-    "loginRequired": "پسندیدہ میں شامل کرنے کے لیے لاگ ان کریں۔",
+    "makeOffer": "ایک پیشکش جمع کروائیں۔",
+    "loginRequired": "اس عمل کو انجام دینے کے لیے براہ کرم لاگ ان کریں۔",
     "addedToFavorites": "پسندیدہ میں شامل کیا گیا۔",
     "removedFromFavorites": "پسندیدہ سے ہٹا دیا گیا۔",
     "linkCopied": "لنک کاپی کر دیا گیا ہے۔",
     "messagingComingSoon": "پیغام رسانی کی خصوصیت جلد آرہی ہے۔",
-    "productNotFound": "پروڈکٹ نہیں ملا۔"
+    "productNotFound": "پروڈکٹ نہیں ملا۔",
+    "contacting": "رابطہ کیا جا رہا ہے...",
+    "contactError": "مواصلت ناکام ہو گئی۔ براہ کرم دوبارہ کوشش کریں۔",
+    "noImage": "کوئی تصویر دستیاب نہیں ہے۔",
+    "defaultLocation": "ترکی",
+    "inquiryMessage": "میں {title} کے بارے میں معلومات حاصل کرنا چاہتا ہوں۔",
+    "breadcrumb": {
+      "home": "گھر",
+      "products": "مصنوعات"
+    }
   },
   "seller": {
     "title": "بیچنے والے کی معلومات",
@@ -300,6 +662,70 @@
     "call": "تلاش کریں۔",
     "viewProfile": "پروفائل دیکھیں"
   },
+  "sellers": {
+    "title": "بیچنے والے",
+    "description": "قابل اعتماد بیچنے والے کو دریافت کریں۔",
+    "search": "بیچنے والے کو تلاش کریں...",
+    "sort": "چھانٹنا",
+    "sortOptions": {
+      "newest": "تازہ ترین",
+      "mostSales": "بہترین فروخت کنندہ",
+      "topRated": "سب سے زیادہ سکور",
+      "mostProducts": "زیادہ تر اشتہارات"
+    },
+    "noResults": "بیچنے والا نہیں ملا۔",
+    "loading": "بیچنے والے لوڈ ہو رہے ہیں...",
+    "showing": "{count} بیچنے والے ملے",
+    "verified": "تصدیق شدہ",
+    "sales": "فروخت",
+    "products": "اشتہار ",
+    "reviews": "تشخیص",
+    "rating": "نقطہ",
+    "viewProducts": "مصنوعات دیکھیں",
+    "contactSeller": "پیغام بھیجیں۔",
+    "memberSince": "{سال} سے ممبر",
+    "fetchError": "وینڈرز کو لوڈ کرتے وقت ایک خرابی پیش آگئی",
+    "detail": {
+      "title": "بیچنے والے کا پروفائل",
+      "about": "کے بارے میں",
+      "businessInfo": "کاروباری معلومات",
+      "businessName": "کاروبار کا نام",
+      "businessType": "بزنس ٹور",
+      "email": "ای میل",
+      "phone": "ٹیلی فون",
+      "website": "ویب سائٹ",
+      "description": "وضاحت",
+      "policies": "پالیسیاں",
+      "returnPolicy": "واپسی کی پالیسی",
+      "shippingPolicy": "شپنگ پالیسی",
+      "businessHours": "کام کے اوقات",
+      "paymentMethods": "ادائیگی کے طریقے",
+      "allProducts": "تمام مصنوعات",
+      "stats": {
+        "totalSales": "کل فروخت",
+        "totalProducts": "کل مصنوعات",
+        "totalReviews": "تشخیص",
+        "rating": "نقطہ"
+      },
+      "notFound": "بیچنے والا نہیں ملا۔",
+      "backToList": "بیچنے والوں کو ڈان",
+      "contactInfo": "مواصلات",
+      "noProducts": "اس بیچنے والے کی ابھی تک کوئی فہرست نہیں ہے۔",
+      "noPolicies": "بیچنے والے نے ابھی تک اپنی پالیسیوں کی وضاحت نہیں کی ہے۔",
+      "fetchError": "بیچنے والے کی معلومات اپ لوڈ کرتے وقت ایک خرابی پیش آگئی۔",
+      "productsLoadError": "بیچنے والے کے پروڈکٹس اپ لوڈ کرتے وقت ایک خرابی پیش آگئی۔",
+      "reviewsTab": "تشخیصات",
+      "reviews": {
+        "summary": "تشخیص کا خلاصہ",
+        "reviewCount": "تشخیص",
+        "communication": "مواصلات",
+        "shippingSpeed": "شپنگ کی رفتار",
+        "productQuality": "مصنوعات کے معیار",
+        "noReviews": "ابھی تک کوئی تشخیص نہیں۔",
+        "verified": "تصدیق شدہ خریدار"
+      }
+    }
+  },
   "editListing": {
     "title": "اشتہار میں ترمیم کریں۔",
     "saveChanges": "تبدیلیاں محفوظ کریں۔",
@@ -307,6 +733,10 @@
     "updateSuccess": "اشتہار کو کامیابی کے ساتھ اپ ڈیٹ کر دیا گیا ہے۔",
     "updateFailed": "فہرست کو اپ ڈیٹ کرتے وقت ایک خرابی پیش آگئی۔",
     "loadError": "اشتہار لوڈ کرتے وقت ایک خرابی پیش آگئی۔",
+    "sellerNotFound": "بیچنے والے کا پروفائل نہیں ملا۔",
+    "sellerLoadError": "بیچنے والے کا پروفائل لوڈ نہیں کیا جا سکا۔",
+    "userNotFound": "صارف کی معلومات نہیں مل سکیں۔ براہ کرم دوبارہ لاگ ان کریں۔",
+    "locationNotFound": "مقام کی معلومات نہیں مل سکی۔ براہ کرم صفحہ کو ریفریش کریں۔",
     "basicInfo": "بنیادی معلومات",
     "categoryAndCondition": "زمرہ اور حیثیت",
     "pricing": "قیمتوں کا تعین",
@@ -314,6 +744,8 @@
     "images": "امیجز",
     "existingImages": "دستیاب تصاویر",
     "addImage": "تصویر شامل کریں۔",
+    "maxImages": "آپ زیادہ سے زیادہ 10 تصاویر اپ لوڈ کر سکتے ہیں۔",
+    "imageHint": "کم از کم 1، زیادہ سے زیادہ 10 تصاویر۔ PNG، JPG، یا WEBP فارمیٹ میں۔",
     "uploadingImages": "تصاویر لوڈ ہو رہی ہیں...",
     "uploadingImage": "تصویر لوڈ ہو رہی ہے۔",
     "imageUploadFailed": "تصویر کو لوڈ نہیں کیا جا سکا۔",
@@ -358,6 +790,7 @@
     "addImage": "تصویر شامل کریں۔",
     "maxImages": "آپ زیادہ سے زیادہ 10 تصاویر اپ لوڈ کر سکتے ہیں۔",
     "imageHint": "کم از کم 1، زیادہ سے زیادہ 10 تصاویر۔ PNG، JPG، یا WEBP فارمیٹ میں۔",
+    "location": "مقام کی معلومات",
     "fields": {
       "title": "اشتہار کا عنوان",
       "shortDescription": "مختصر تفصیل",
@@ -370,13 +803,29 @@
       "shippingAvailable": "شپنگ دستیاب ہے۔",
       "shippingCost": "شپنگ فیس",
       "weight": "وزن",
-      "weightUnit": "وزن کی اکائی"
+      "weightUnit": "وزن کی اکائی",
+      "city": "شہر",
+      "address": "پتہ",
+      "postalCode": "پوسٹل کوڈ"
     },
     "placeholders": {
       "title": "مثال: 2 سالہ ہولسٹین گائے",
       "shortDescription": "پروڈکٹ کی تفصیل (زیادہ سے زیادہ 200 حروف)",
       "description": "مصنوعات کے بارے میں تفصیلی معلومات فراہم کریں...",
-      "category": "ایک زمرہ منتخب کریں۔"
+      "category": "ایک زمرہ منتخب کریں۔",
+      "city": "شہر میں داخل ہوں۔",
+      "address": "مکمل پتہ درج کریں۔",
+      "postalCode": "پوسٹل کوڈ"
+    },
+    "errors": {
+      "titleRequired": "اشتہار کا عنوان لازمی ہے۔",
+      "shortDescriptionRequired": "ایک مختصر تفصیل درکار ہے۔",
+      "descriptionRequired": "تفصیلی وضاحت درکار ہے۔",
+      "categoryRequired": "زمرہ کا انتخاب لازمی ہے۔",
+      "priceRequired": "قیمت لازمی ہے۔",
+      "cityRequired": "شہر کی معلومات درکار ہیں۔",
+      "addressRequired": "پتہ کی معلومات درکار ہے۔",
+      "locationError": "مقام بناتے وقت ایک خرابی پیش آگئی۔"
     },
     "success": "اشتہار کامیابی کے ساتھ بنایا گیا۔",
     "error": "اشتہار بناتے وقت ایک خرابی پیش آگئی۔",
@@ -384,28 +833,57 @@
     "uploadingImages": "تصاویر لوڈ ہو رہی ہیں...",
     "uploadingImage": "تصویر لوڈ ہو رہی ہے۔",
     "imageUploadFailed": "تصویر کو لوڈ نہیں کیا جا سکا۔",
-    "imagesUploaded": "تمام تصاویر کامیابی کے ساتھ اپ لوڈ ہو گئیں۔",
+    "imagesUploaded": "تمام تصاویر کامیابی کے ساتھ اپ لوڈ کر دی گئی ہیں۔",
     "draftSaved": "مسودہ محفوظ ہو گیا۔",
     "productCreated": "پروڈکٹ کو کامیابی سے بنایا گیا تھا۔",
     "creationFailed": "پروڈکٹ نہیں بن سکی۔ براہ کرم دوبارہ کوشش کریں۔",
-    "errors": {
-      "titleRequired": "اشتہار کا عنوان لازمی ہے۔",
-      "shortDescriptionRequired": "ایک مختصر تفصیل درکار ہے۔",
-      "descriptionRequired": "تفصیلی وضاحت درکار ہے۔",
-      "categoryRequired": "زمرہ کا انتخاب لازمی ہے۔",
-      "priceRequired": "ایک درست قیمت درج کریں۔"
-    }
+    "userNotFound": "صارف کی معلومات نہیں مل سکیں۔ براہ کرم دوبارہ لاگ ان کریں۔",
+    "defaultBusinessName": "میرا کاروبار"
+  },
+  "becomeSeller": {
+    "title": "بیچنے والے بنیں۔",
+    "description": "کمپنی کا بیان",
+    "alreadySeller": "آپ کے پاس پہلے سے ہی بیچنے والا پروفائل ہے۔",
+    "goToListings": "میری فہرستوں پر جائیں۔",
+    "businessInfo": "کاروباری معلومات",
+    "contactInfo": "رابطہ کی معلومات",
+    "businessName": "کاروبار کا نام",
+    "businessNamePlaceholder": "مثال: یلماز فارم",
+    "businessType": "بزنس ٹور",
+    "businessTypePlaceholder": "اپنے کاروبار کی قسم منتخب کریں۔",
+    "businessTypes": {
+      "individual": "انفرادی",
+      "company": "کمپنی",
+      "cooperative": "کوآپریٹو",
+      "farm": "کھیت"
+    },
+    "taxNumber": "ٹیکس نمبر",
+    "taxNumberPlaceholder": "اپنا ٹیکس شناختی نمبر درج کریں (اختیاری)",
+    "descriptionPlaceholder": "اپنے کاروبار کے بارے میں مختصر تفصیل لکھیں...",
+    "phone": "ٹیلی فون",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "ویب سائٹ",
+    "websitePlaceholder": "https://www.examplesite.com (اختیاری)",
+    "submit": "بیچنے والے کا پروفائل بنائیں",
+    "submitting": "پروفائل بنا رہا ہے...",
+    "success": "آپ کا سیلر پروفائل کامیابی کے ساتھ بنا دیا گیا ہے!",
+    "error": "بیچنے والے کا پروفائل بناتے وقت ایک خرابی پیش آگئی۔",
+    "taxNumberHelp": "اپنا 10 یا 11 ہندسوں کا ٹیکس نمبر درج کریں (اختیاری)",
+    "phoneHelp": "مثال: +90 555 123 45 67 یا 0555 123 45 67",
+    "websiteHelp": "مثال: www.isletmem.com یا https://isletmem.com",
+    "alreadySellerDescription": "آپ اپنی فہرستوں کا نظم کرنے کے لیے نیچے دیا گیا بٹن استعمال کر سکتے ہیں۔",
+    "newListing": "نئی فہرست شامل کریں۔"
   },
   "fileUpload": {
     "dragDrop": "تصویر یا ویڈیو اپ لوڈ کریں۔",
     "dragDropHint": "گھسیٹیں اور چھوڑیں یا منتخب کرنے کے لیے کلک کریں۔",
     "dropHere": "چھوڑو...",
     "imageLimit": "تصویر: زیادہ سے زیادہ 10MB",
-    "videoLimit": "Video: max 100MB",
+    "videoLimit": "ویڈیو: زیادہ سے زیادہ 100MB",
     "uploadCount": "{موجودہ} / {max} لوڈ کیا گیا۔",
     "maxFilesError": "آپ زیادہ سے زیادہ {max} میڈیا اپ لوڈ کر سکتے ہیں۔",
     "imageTooLarge": "تصویر 10MB سے چھوٹی ہونی چاہیے۔",
-    "videoTooLarge": "The video must be smaller than 100MB.",
+    "videoTooLarge": "ویڈیو 100MB سے چھوٹی ہونی چاہیے۔",
     "optimizing": "بہتر ہو رہا ہے...",
     "uploading": "لوڈ ہو رہا ہے...",
     "queued": "لائن میں انتظار کر رہے ہیں...",
@@ -418,10 +896,834 @@
     "coverBadge": "ڑککن",
     "videoBadge": "ویڈیو",
     "coverUpdated": "سرورق کی تصویر کو کامیابی کے ساتھ ایڈجسٹ کر دیا گیا ہے۔",
-    "optimizationInfo": "تصاویر کو ویب معیارات کی تعمیل کے لیے بہتر بنایا گیا ہے۔",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "optimizationInfo": "تصاویر کو ویب معیارات کے مطابق بنانے کے لیے بہتر بنایا گیا ہے۔",
+    "selectImage": "بصری انتخاب",
+    "changeImage": "تبدیلی",
+    "removeImage": "ہٹا دیں۔",
+    "videoProcessing": "ویڈیو پر کارروائی ہو رہی ہے...",
+    "videoProcessingFailed": "آپریشن ناکام ہو گیا۔",
+    "videoProcessingPollError": "ویڈیو پروسیسنگ کی حیثیت حاصل نہیں کی جا سکی۔ براہ کرم صفحہ کو ریفریش کریں۔",
+    "reorderError": "فائل کو ترتیب نہیں دیا جا سکا۔",
+    "coverUpdateError": "سرورق کی تصویر اپ ڈیٹ نہیں ہو سکی۔"
+  },
+  "error": {
+    "title": "ایک خرابی پیش آگئی۔",
+    "description": "ایک غیر متوقع خرابی پیش آگئی۔ براہ کرم صفحہ ریفریش کریں یا بعد میں دوبارہ کوشش کریں۔",
+    "retry": "دوبارہ کوشش کریں۔",
+    "goBack": "واپس مت جانا",
+    "goHome": "گھر",
+    "notFound": {
+      "title": "صفحہ نہیں ملا",
+      "description": "آپ جس صفحہ کی تلاش کر رہے ہیں وہ یا تو دستیاب نہیں ہے یا منتقل ہو گیا ہے۔",
+      "goHome": "ہوم پیج پر واپس جائیں۔"
+    }
+  },
+  "search": {
+    "title": "تلاش کریں۔",
+    "placeholder": "پروڈکٹس، زمرے، یا بیچنے والے تلاش کریں...",
+    "searchButton": "تلاش کریں۔",
+    "searchingFor": "مطلوب تھا۔",
+    "loading": "مطلوب...",
+    "resultsCount": "{count} نتائج ملے۔",
+    "noResults": "کوئی نتیجہ نہیں ملا۔",
+    "tryDifferentSearch": "مختلف مطلوبہ الفاظ آزمائیں یا فلٹرز تبدیل کریں۔",
+    "filters": {
+      "title": "فلٹرز",
+      "category": "زمرہ",
+      "allCategories": "تمام زمرے",
+      "condition": "صورتحال",
+      "allConditions": "تمام کیسز",
+      "priceRange": "قیمت کی حد",
+      "price": "قیمت",
+      "min": "کم از کم",
+      "max": "زیادہ سے زیادہ",
+      "apply": "لگائیں",
+      "clear": "صاف",
+      "clearAll": "تمام صاف کریں۔"
+    },
+    "fetchError": "تلاش کے نتائج لوڈ کرتے وقت ایک خرابی پیش آگئی",
+    "recentSearches": "حالیہ تلاشیں۔",
+    "clearHistory": "تاریخ صاف کریں۔",
+    "noSearchHistory": "آپ کے پاس ابھی تک تلاش کی سرگزشت نہیں ہے۔",
+    "deleteHistoryError": "تلاش کی سرگزشت کو حذف کرتے وقت ایک خرابی پیش آگئی۔"
+  },
+  "categories": {
+    "title": "زمرہ کا انتظام",
+    "description": "یہاں سے زمروں کا نظم کریں۔",
+    "noCategories": "ابھی تک کوئی زمرہ شامل نہیں کیا گیا ہے۔",
+    "createFirst": "پہلی قسم بنائیں۔",
+    "fetchError": "زمرے لوڈ کرتے وقت ایک خرابی پیش آگئی۔",
+    "createSuccess": "زمرہ کامیابی کے ساتھ بنایا گیا۔",
+    "createError": "زمرہ بناتے وقت ایک خرابی پیش آگئی۔",
+    "updateSuccess": "زمرہ کامیابی سے اپ ڈیٹ ہو گیا۔",
+    "updateError": "زمرہ کو اپ ڈیٹ کرتے وقت ایک خرابی پیش آگئی۔",
+    "deleteSuccess": "زمرہ کامیابی کے ساتھ حذف کر دیا گیا ہے۔",
+    "deleteError": "زمرہ حذف کرتے وقت ایک خرابی پیش آگئی۔",
+    "activateSuccess": "زمرہ کو فعال کر دیا گیا ہے۔",
+    "deactivateSuccess": "زمرہ کو غیر فعال کر دیا گیا ہے۔",
+    "statusError": "حالت تبدیل کرتے وقت ایک خرابی پیش آ گئی۔",
+    "loadError": "زمرہ لوڈ کرتے وقت ایک خرابی پیش آگئی",
+    "filters": {
+      "all": "ان سب کے",
+      "active": "فعال",
+      "inactive": "غیر فعال"
+    },
+    "table": {
+      "name": "زمرہ کا نام",
+      "slug": "سلگ",
+      "sortOrder": "سیریل نمبر",
+      "subCategories": "ذیلی زمرہ",
+      "status": "صورتحال",
+      "actions": "لین دین"
+    },
+    "actions": {
+      "edit": "ترمیم کریں۔",
+      "delete": "حذف کریں۔",
+      "activate": "چالو کریں۔",
+      "deactivate": "غیر فعال ڈھانچہ"
+    },
+    "deleteDialog": {
+      "title": "زمرہ حذف کریں۔",
+      "description": "کیا آپ واقعی اس زمرے کو حذف کرنا چاہتے ہیں؟ یہ عمل ناقابل واپسی ہے۔",
+      "cancel": "منسوخ کریں۔",
+      "confirm": "حذف کریں۔"
+    },
+    "addNew": "نیا زمرہ شامل کریں۔",
+    "loadMore": "مزید ڈاؤن لوڈ کریں۔",
+    "loadingMore": "لوڈ ہو رہا ہے...",
+    "form": {
+      "newTitle": "ایک نیا زمرہ بنائیں",
+      "editTitle": "زمرہ میں ترمیم کریں۔",
+      "name": "زمرہ کا نام",
+      "namePlaceholder": "مثال: مویشی",
+      "slug": "سلگ",
+      "slugPlaceholder": "مثال: بڑے مویشی",
+      "description": "وضاحت",
+      "descriptionPlaceholder": "زمرہ کی مختصر تفصیل...",
+      "parentCategory": "اپر کیٹیگری",
+      "parentCategoryPlaceholder": "ایک اعلی زمرہ منتخب کریں (اختیاری)",
+      "noParent": "کوئی اعلی زمرہ نہیں (مین زمرہ)",
+      "sortOrder": "ترتیب نمبر",
+      "isActive": "فعال",
+      "iconUrl": "آئیکن URL",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "محفوظ کریں۔",
+      "submitting": "محفوظ کر رہا ہے...",
+      "updating": "اپ ڈیٹ ہو رہا ہے...",
+      "errors": {
+        "nameRequired": "زمرہ کا نام درکار ہے۔",
+        "slugRequired": "سلگس لازمی ہیں۔"
+      }
+    }
+  },
+  "offers": {
+    "title": "تجاویز",
+    "description": "اپنی آنے والی اور جانے والی پیشکشوں کا نظم کریں۔",
+    "received": "آنے والی پیشکشیں",
+    "sent": "پیشکشیں جمع کرائی گئیں۔",
+    "noReceivedOffers": "ابھی تک کوئی پیشکش موصول نہیں ہوئی ہے۔",
+    "noSentOffers": "آپ نے ابھی تک کوئی پیشکش جمع نہیں کرائی ہے۔",
+    "browseProducts": "مصنوعات کو براؤز کریں۔",
+    "viewProduct": "پروڈکٹ دیکھیں",
+    "accept": "قبول کریں۔",
+    "reject": "رد کرنا",
+    "withdraw": "واپس لینا",
+    "makeOffer": "ایک پیشکش جمع کروائیں۔",
+    "sendOffer": "پیشکش بھیجیں۔",
+    "sending": "بھیج رہا ہے...",
+    "cancel": "منسوخ کریں۔",
+    "listingPrice": "اشتہاری قیمت",
+    "yourOffer": "آپ کی پیشکش",
+    "quantity": "رقم",
+    "messageOptional": "پیغام (اختیاری)",
+    "messagePlaceholder": "ایک نوٹ جسے آپ بیچنے والے کے ساتھ بانٹنا چاہیں گے...",
+    "expiresAt": "آخری درست تاریخ",
+    "offerSent": "آپ کی پیشکش کامیابی کے ساتھ بھیج دی گئی ہے۔",
+    "offerError": "پیشکش بھیجتے وقت ایک خرابی پیش آگئی۔",
+    "acceptSuccess": "پیشکش قبول کر لی گئی۔",
+    "rejectSuccess": "پیشکش مسترد کر دی گئی۔",
+    "withdrawSuccess": "پیشکش واپس لے لی گئی۔",
+    "actionError": "عمل کے دوران ایک خرابی پیش آگئی۔",
+    "fetchError": "پیشکشیں لوڈ کرتے وقت ایک خرابی پیش آگئی۔",
+    "loginRequired": "بولی جمع کرانے کے لیے لاگ ان کریں۔",
+    "invalidPrice": "ایک درست قیمت درج کریں۔",
+    "invalidQuantity": "ایک درست رقم درج کریں۔",
+    "status": {
+      "pending": "زیر التواء",
+      "accepted": "قبول کر لیا",
+      "rejected": "مسترد",
+      "countered": "جوابی پیشکش",
+      "expired": "اس کی مدت ختم ہو چکی ہے۔",
+      "withdrawn": "واپس لے لیا۔"
+    }
+  },
+  "deals": {
+    "title": "معاہدے",
+    "description": "اپنے خریداری کے معاہدوں پر عمل کریں۔",
+    "buying": "علماء کرام",
+    "selling": "سیلز",
+    "noBuyingDeals": "آپ کے پاس ابھی تک طالب علم کی رجسٹریشن کا عمل نہیں ہے۔",
+    "noSellingDeals": "آپ کے پاس ابھی تک کوئی سیلز لین دین نہیں ہے۔",
+    "browseProducts": "مصنوعات کو براؤز کریں۔",
+    "viewProduct": "پروڈکٹ دیکھیں",
+    "activeDeals": "فعال معاہدے",
+    "completedDeals": "مکمل",
+    "purchases": "علماء کرام",
+    "sales": "سیلز",
+    "fetchError": "معاہدوں کو لوڈ کرتے وقت ایک خرابی پیش آگئی",
+    "dealStatus": {
+      "pending": "زیر التواء",
+      "confirmed": "تصدیق شدہ",
+      "processing": "تیاری کر رہا ہے۔",
+      "shipped": "کارگو میں",
+      "delivered": "پہنچایا",
+      "completed": "مکمل",
+      "cancelled": "منسوخ",
+      "disputed": "معاہدہ"
+    },
+    "delivery": {
+      "pickup": "ہینڈ ڈیلیوری",
+      "shipping": "کارگو کے ذریعے",
+      "transport": "نقل و حمل کے ذریعے"
+    },
+    "requestTransport": "شپنگ کی درخواست"
+  },
+  "farms": {
+    "title": "میرے کھیت",
+    "description": "اپنے کھیتوں کا انتظام اور اپ ڈیٹ کریں۔",
+    "addFarm": "فارم شامل کریں۔",
+    "editFarm": "فارم مینجمنٹ",
+    "noFarms": "آپ نے ابھی تک کوئی فارم شامل نہیں کیا ہے۔",
+    "farmName": "فارم کا نام",
+    "registrationNumber": "رجسٹریشن نمبر",
+    "location": "مقام",
+    "selectLocation": "ایک مقام منتخب کریں۔",
+    "addLocationFirst": "سب سے پہلے، ایک مقام شامل کریں.",
+    "farmTypeLabel": "فارم ٹور",
+    "farmDescription": "وضاحت",
+    "totalArea": "کل رقبہ",
+    "cultivatedArea": "کاشت شدہ علاقہ",
+    "certifications": "سرٹیفکیٹس",
+    "certificationsPlaceholder": "آئی ایس او 22000، گلوبل جی اے پی، وغیرہ۔",
+    "organic": "نامیاتی",
+    "verified": "تصدیق شدہ",
+    "save": "محفوظ کریں۔",
+    "saving": "محفوظ کر رہا ہے...",
+    "cancel": "منسوخ کریں۔",
+    "edit": "ترمیم کریں۔",
+    "delete": "حذف کریں۔",
+    "sellerRequired": "بیچنے والے کا پروفائل درکار ہے۔",
+    "sellerRequiredDesc": "فارم شامل کرنے کے لیے، آپ کو پہلے اپنا سیلر پروفائل بنانا ہوگا۔",
+    "becomeSeller": "بیچنے والے بنیں۔",
+    "createSuccess": "فارم کو کامیابی کے ساتھ شامل کیا گیا۔",
+    "updateSuccess": "فارم کو کامیابی کے ساتھ اپ ڈیٹ کر دیا گیا ہے۔",
+    "deleteSuccess": "فارم کو کامیابی کے ساتھ حذف کر دیا گیا تھا۔",
+    "saveError": "فارم کی رجسٹریشن کے دوران ایک خرابی پیش آگئی۔",
+    "deleteError": "فارم کو حذف کرتے وقت ایک خرابی پیش آگئی۔",
+    "fetchError": "فارم کی معلومات اپ لوڈ کرتے وقت ایک خرابی پیش آگئی۔",
+    "farmType": {
+      "livestock": "مویشیوں کی فارمنگ",
+      "crop": "زراعت",
+      "mixed": "ملا ہوا",
+      "poultry": "پروں والا",
+      "dairy": "ڈیری فارمنگ",
+      "aquaculture": "آبی مصنوعات"
+    }
+  },
+  "transporters": {
+    "title": "ٹرانسپورٹرز",
+    "description": "جانوروں اور مصنوعات کی نقل و حمل کی خدمات",
+    "searchPlaceholder": "ایک ٹرانسپورٹر تلاش کریں...",
+    "noTransporters": "ابھی تک کوئی رجسٹرڈ کیریئر نہیں ہیں۔",
+    "verified": "تصدیق شدہ",
+    "transports": "نقل و حمل",
+    "viewProfile": "پروفائل دیکھیں",
+    "sort": {
+      "newest": "تازہ ترین",
+      "rating": "سب سے زیادہ سکور",
+      "mostTransports": "سب سے زیادہ بار بار شپنگ"
+    },
+    "pagination": {
+      "previous": "سابقہ",
+      "next": "اگلا",
+      "page": "صفحہ {صفحہ}"
+    }
+  },
+  "transport": {
+    "title": "میری شپنگ کی درخواستیں",
+    "description": "اپنی شپنگ کی درخواستوں کو ٹریک کریں۔",
+    "findTransporter": "ایک ٹرانسپورٹر تلاش کریں۔",
+    "active": "فعال",
+    "completed": "مکمل",
+    "total": "کل",
+    "asSeller": "بیچنے والے کے طور پر",
+    "asBuyer": "بطور خریدار",
+    "noSellerRequests": "بیچنے والے کے طور پر، آپ کو شپنگ کی ضرورت نہیں ہے۔",
+    "noBuyerRequests": "بطور وصول کنندہ، آپ کے پاس شپنگ کی درخواست نہیں ہے۔",
+    "viewProduct": "پروڈکٹ دیکھیں",
+    "pickup": "وصول کریں۔",
+    "delivery": "ڈیلیوری",
+    "urgent": "ارجنٹ",
+    "fetchError": "شپنگ کی درخواستیں اپ لوڈ کرتے وقت ایک خرابی پیش آگئی۔",
+    "trackShipment": "پیروی کریں۔",
+    "transportStatus": {
+      "pending": "زیر التواء",
+      "inPool": "پول میں",
+      "assigned": "تعینات",
+      "pickedUp": "رسید",
+      "inTransit": "سڑک پر",
+      "delivered": "پہنچایا",
+      "completed": "مکمل",
+      "cancelled": "منسوخ"
+    },
+    "transportType": {
+      "standard": "معیاری",
+      "refrigerated": "کولڈ چین",
+      "liveAnimal": "زندہ جانور",
+      "hazardous": "خطرناک مواد",
+      "oversized": "بڑا سائز"
+    }
+  },
+  "moderation": {
+    "title": "پروڈکٹ اعتدال",
+    "description": "منظوری کے منتظر مصنوعات کا جائزہ لیں۔",
+    "pending": "انتظار",
+    "allClear": "تمام مصنوعات کا معائنہ کیا گیا ہے۔",
+    "noPending": "منظوری کے منتظر کوئی پروڈکٹس نہیں ہیں۔",
+    "awaitingReview": "جائزہ کا انتظار ہے۔",
+    "by": "سیلز پرسن:",
+    "stock": "اسٹاک",
+    "preview": "آپ کے ساتھ",
+    "approve": "تصدیق کریں۔",
+    "reject": "رد کرنا",
+    "confirmReject": "رد کرنا",
+    "cancelReject": "ترک کر دیں۔",
+    "rejectReasonPlaceholder": "انکار کی وجہ لکھیں...",
+    "rejectReasonRequired": "انکار کی وجہ لازمی ہے۔",
+    "approveSuccess": "پروڈکٹ کو کامیابی سے منظور کر لیا گیا۔",
+    "rejectSuccess": "پروڈکٹ کو مسترد کر دیا گیا۔",
+    "actionError": "عمل کے دوران ایک خرابی پیش آگئی۔",
+    "fetchError": "پروڈکٹس اپ لوڈ کرتے وقت ایک خرابی پیش آگئی۔",
+    "unauthorized": "آپ کو اس صفحہ تک رسائی کی اجازت نہیں ہے۔"
+  },
+  "sellerModeration": {
+    "title": "بیچنے والے کی اعتدال پسندی۔",
+    "description": "بیچنے والے اکاؤنٹس کا جائزہ لیں اور ان کا نظم کریں۔",
+    "pending": "انتظار",
+    "allClear": "تمام فروخت کنندگان سے تفتیش کی گئی۔",
+    "noPending": "کوئی بیچنے والا انتظار نہیں کر رہا ہے۔",
+    "verify": "تصدیق کریں۔",
+    "suspend": "معطل کرنا",
+    "verifySuccess": "بیچنے والے کی کامیابی سے تصدیق ہو گئی۔",
+    "suspendSuccess": "بیچنے والے کو معطل کر دیا گیا۔",
+    "actionError": "عمل کے دوران ایک خرابی پیش آگئی۔",
+    "suspendReasonRequired": "معطلی کی وجہ لازمی ہے۔",
+    "suspendReasonPlaceholder": "معطلی کی وجہ لکھیں...",
+    "confirmSuspend": "معطل کرنا",
+    "cancelSuspend": "ترک کر دیں۔",
+    "statusLabels": {
+      "pendingVerification": "زیر التوا تصدیق",
+      "active": "فعال",
+      "suspended": "پھانسی",
+      "banned": "حرام"
+    },
+    "filterAll": "سب دکھائیں۔",
+    "filterPending": "انتظار کرنے والے",
+    "filterActive": "اثاثے",
+    "filterSuspended": "معطل",
+    "unauthorized": "آپ کو اس صفحہ تک رسائی کی اجازت نہیں ہے۔",
+    "businessName": "کاروبار کا نام",
+    "businessType": "بزنس ٹور",
+    "email": "ای میل",
+    "phone": "ٹیلی فون",
+    "status": "صورتحال",
+    "createdAt": "رجسٹریشن کی تاریخ"
+  },
+  "transporterModeration": {
+    "title": "کیریئر اعتدال",
+    "description": "کیریئر اکاؤنٹس کا جائزہ لیں اور ان کا نظم کریں۔",
+    "pending": "انتظار",
+    "allClear": "تمام ٹرانسپورٹرز سے تفتیش کی گئی۔",
+    "noPending": "کوئی ٹرانسپورٹر انتظار میں نہیں ہے۔",
+    "verify": "تصدیق کریں۔",
+    "suspend": "معطل کرنا",
+    "verifySuccess": "ٹرانسپورٹر کی کامیابی سے تصدیق ہو گئی۔",
+    "suspendSuccess": "ٹرانسپورٹر کو معطل کر دیا گیا۔",
+    "actionError": "عمل کے دوران ایک خرابی پیش آگئی۔",
+    "suspendReasonRequired": "معطلی کی وجہ لازمی ہے۔",
+    "suspendReasonPlaceholder": "معطلی کی وجہ لکھیں...",
+    "confirmSuspend": "معطل کرنا",
+    "cancelSuspend": "ترک کر دیں۔",
+    "statusLabels": {
+      "pendingVerification": "زیر التوا تصدیق",
+      "active": "فعال",
+      "suspended": "پھانسی",
+      "banned": "حرام"
+    },
+    "filterAll": "سب دکھائیں۔",
+    "filterPending": "انتظار کرنے والے",
+    "filterActive": "اثاثے",
+    "filterSuspended": "معطل",
+    "unauthorized": "آپ کو اس صفحہ تک رسائی کی اجازت نہیں ہے۔",
+    "companyName": "کمپنی کا نام",
+    "contactPerson": "مجاز شخص",
+    "email": "ای میل",
+    "phone": "ٹیلی فون",
+    "city": "شہر",
+    "status": "صورتحال",
+    "createdAt": "رجسٹریشن کی تاریخ"
+  },
+  "transporterDetail": {
+    "notFound": "کوئی ٹرانسپورٹر نہیں مل سکا۔",
+    "backToList": "ٹرانسپورٹرز کو ڈان",
+    "verified": "تصدیق شدہ",
+    "totalTransports": "کل شپنگ",
+    "completed": "مکمل",
+    "about": "کے بارے میں",
+    "contact": "رابطہ کی معلومات",
+    "businessInfo": "کاروباری معلومات",
+    "license": "لائسنس نمبر",
+    "insurance": "انشورنس کی معلومات",
+    "fleet": "بیڑے کی معلومات",
+    "serviceRegions": "سروس ایریاز",
+    "specializations": "مہارت کے شعبے",
+    "certifications": "سرٹیفکیٹس"
+  },
+  "brands": {
+    "title": "برانڈ مینجمنٹ",
+    "description": "مصنوعات کے برانڈز کا نظم کریں۔",
+    "addBrand": "برانڈ شامل کریں۔",
+    "editBrand": "برانڈ میں ترمیم کریں۔",
+    "noBrands": "ابھی تک کوئی برانڈ شامل نہیں کیا گیا ہے۔",
+    "brandName": "برانڈ کا نام",
+    "brandDescription": "وضاحت",
+    "website": "ویب سائٹ",
+    "logoUrl": "لوگو URL",
+    "save": "محفوظ کریں۔",
+    "saving": "محفوظ کر رہا ہے...",
+    "cancel": "منسوخ کریں۔",
+    "edit": "ترمیم کریں۔",
+    "delete": "حذف کریں۔",
+    "inactive": "غیر فعال",
+    "products": "مصنوعات",
+    "createSuccess": "برانڈ کامیابی کے ساتھ شامل کیا گیا۔",
+    "updateSuccess": "برانڈ کو کامیابی کے ساتھ اپ ڈیٹ کر دیا گیا ہے۔",
+    "deleteSuccess": "برانڈ کامیابی کے ساتھ حذف کر دیا گیا تھا۔",
+    "saveError": "ٹریڈ مارک کو رجسٹر کرتے وقت ایک خرابی پیش آگئی۔",
+    "deleteError": "ٹریڈ مارک کو حذف کرتے وقت ایک خرابی پیش آگئی۔",
+    "fetchError": "برانڈز لوڈ کرتے وقت ایک خرابی پیش آگئی",
+    "unauthorized": "آپ کو اس صفحہ تک رسائی کی اجازت نہیں ہے۔"
+  },
+  "transporterReviews": {
+    "title": "تشخیصات",
+    "reviewCount": "تشخیص",
+    "noReviews": "ابھی تک کوئی تشخیص نہیں ہے۔",
+    "timeliness": "بروقت ترسیل",
+    "communication": "مواصلات",
+    "carefulHandling": "احتیاط سے ہینڈلنگ",
+    "professionalism": "پیشہ ورانہ مہارت"
+  },
+  "transportOffers": {
+    "title": "شپنگ کوٹس",
+    "description": "ان حوالوں کا نظم کریں جو آپ شپنگ کی درخواستوں کے لیے جمع کراتے ہیں۔",
+    "newOffer": "نئی تجویز",
+    "transportRequestId": "شپنگ کی درخواست ID",
+    "requestIdPlaceholder": "شپنگ کی درخواست کی ID درج کریں۔",
+    "offeredPrice": "پیشکش کی قیمت",
+    "estimatedDays": "تخمینی دورانیہ (دن)",
+    "days": "دن",
+    "vehicleType": "گاڑی کی قسم",
+    "insuranceIncluded": "انشورنس شامل ہے۔",
+    "message": "پیغام",
+    "cancel": "منسوخ کریں۔",
+    "sending": "بھیج رہا ہے...",
+    "sendOffer": "پیشکش جمع کروائیں۔",
+    "cancelOffer": "منسوخ کریں۔",
+    "pendingTab": "انتظار کر رہا ہے۔",
+    "historyTab": "ماضی",
+    "noPendingOffers": "آپ کے پاس کوئی زیر التواء پیشکش نہیں ہے۔",
+    "noHistory": "ماضی کی کوئی پیشکش نہیں ملی۔",
+    "status": {
+      "pending": "انتظار کر رہا ہے۔",
+      "accepted": "قبول کر لیا",
+      "rejected": "مسترد",
+      "expired": "اس کی مدت ختم ہو چکی ہے۔",
+      "cancelled": "منسوخ"
+    },
+    "createSuccess": "پیشکش کامیابی کے ساتھ جمع کرائی گئی۔",
+    "createError": "پیشکش بھیجتے وقت ایک خرابی پیش آگئی۔",
+    "cancelSuccess": "پیشکش منسوخ کر دی گئی۔",
+    "cancelError": "پیشکش منسوخ کرتے وقت ایک خرابی پیش آگئی۔",
+    "fetchError": "پیشکشیں لوڈ کرتے وقت ایک خرابی پیش آگئی۔"
+  },
+  "animalInfo": {
+    "title": "جانوروں اور مصنوعات کی معلومات",
+    "animalTab": "جانور",
+    "healthTab": "صحت",
+    "vaccinationsTab": "ویکسینیٹر",
+    "veterinaryTab": "ڈاکٹر",
+    "breed": "ریس",
+    "genderLabel": "جنس",
+    "gender": {
+      "male": "مرد",
+      "female": "خاتون",
+      "unknown": "نامعلوم"
+    },
+    "age": "عمر",
+    "months": "مہینہ",
+    "weight": "وزن",
+    "color": "رنگ",
+    "tagNumber": "کان کا نمبر",
+    "healthStatus": "صحت کی حالت",
+    "health": {
+      "healthy": "صحت مند",
+      "underTreatment": "زیر علاج",
+      "recovering": "وہ/وہ صحت یاب ہو رہا ہے۔",
+      "quarantined": "قرنطینہ میں",
+      "unknown": "نامعلوم"
+    },
+    "purposeLabel": "مطلوبہ استعمال",
+    "purpose": {
+      "breeding": "جڑنا",
+      "dairy": "دودھ",
+      "meat": "گوشت",
+      "egg": "انڈا",
+      "wool": "اون",
+      "working": "کام",
+      "pet": "گھریلو",
+      "other": "دیگر"
+    },
+    "pregnancy": "حمل",
+    "pregnant": "حاملہ",
+    "microchip": "مائیکرو چپ نمبر",
+    "passport": "پاسپورٹ نمبر",
+    "sireDetails": "والد کی معلومات",
+    "damDetails": "اہم معلومات",
+    "diagnosis": "تشخیص",
+    "treatment": "علاج",
+    "medications": "دوائیاں",
+    "veterinarian": "ڈاکٹر",
+    "nextDue": "اگلی باغی تاریخ",
+    "prescriptionRequired": "ڈاکٹر کے نسخے کی ضرورت ہے۔",
+    "targetSpecies": "ٹارگٹ ٹورز",
+    "activeIngredients": "فعال اجزاء",
+    "registrationNo": "رجسٹریشن نمبر",
+    "storage": "ذخیرہ",
+    "chemicalTab": "کیمیکل",
+    "feedTab": "بیت",
+    "seedTab": "بیج",
+    "machineryTab": "مشین",
+    "organic": "نامیاتی",
+    "toxicity": "زہریلا",
+    "gmoFree": "GMO سے پاک",
+    "protein": "پروٹین",
+    "fat": "تیل",
+    "fiber": "فائبر",
+    "hybrid": "ہائبرڈ",
+    "germination": "انکرن",
+    "daysToMaturity": "پختگی",
+    "daysLabel": "دن",
+    "warranty": "گارنٹی",
+    "power": "طاقت",
+    "hoursUsed": "استعمال کے اوقات",
+    "hours": "گھنٹہ",
+    "powerSource": "بجلی کی فراہمی"
+  },
+  "productVariants": {
+    "title": "مصنوعات کی مختلف حالتیں",
+    "variantCount": "متغیر",
+    "inStock": "اسٹاک میں",
+    "outOfStock": "بک گیا۔"
+  },
+  "productPrices": {
+    "title": "قیمتیں (متعدد کرنسی)",
+    "autoConversion": "خودکار تبدیلی",
+    "validUntil": "موزونیت"
+  },
+  "requestTransport": {
+    "title": "شپنگ کی درخواست بنائیں",
+    "pickupLocation": "لوڈنگ پوائنٹ",
+    "deliveryLocation": "ڈیلیوری پوائنٹ",
+    "city": "شہر",
+    "address": "پتہ",
+    "transportType": "ٹرانسپورٹیشن ٹور",
+    "types": {
+      "standard": "معیاری",
+      "refrigerated": "کولڈ چین",
+      "liveAnimal": "زندہ جانور",
+      "hazardous": "خطرناک مواد",
+      "oversized": "بڑا سائز"
+    },
+    "weight": "وزن (کلوگرام)",
+    "weightPlaceholder": "کلو",
+    "preferredPickupDate": "ترجیحی اپ لوڈ کی تاریخ",
+    "preferredDeliveryDate": "ترجیحی ترسیل کی تاریخ",
+    "urgent": "فوری نقل و حمل",
+    "specialInstructions": "خصوصی ہدایات",
+    "instructionsPlaceholder": "اپنی مخصوص ہدایات یہاں لکھیں...",
+    "cancel": "ترک کر دیں۔",
+    "submit": "ڈیمانڈ بنائیں",
+    "submitting": "تخلیق کے عمل میں...",
+    "success": "شپنگ کی درخواست کامیابی کے ساتھ بنائی گئی ہے۔",
+    "error": "شپنگ کی درخواست بناتے وقت ایک خرابی پیش آگئی۔"
+  },
+  "transportTracking": {
+    "title": "شپمنٹ ٹریکنگ",
+    "noTracking": "ابھی تک کوئی ٹریکنگ کی معلومات دستیاب نہیں ہے۔",
+    "update": "اپ ڈیٹ کریں۔"
+  },
+  "locations": {
+    "title": "میرے پتے",
+    "description": "اپنے رجسٹرڈ پتوں کا نظم کریں۔",
+    "addLocation": "ایڈریس شامل کریں۔",
+    "editLocation": "ایڈریس میں ترمیم کریں۔",
+    "noLocations": "آپ کے پاس ابھی تک رجسٹرڈ پتہ نہیں ہے۔",
+    "name": "پتہ کا نام",
+    "namePlaceholder": "مثال کے طور پر: مکان، نوکری، فارم",
+    "address": "پتہ",
+    "addressLine2": "ایڈریس لائن 2",
+    "city": "شہر",
+    "state": "ضلع/علاقہ",
+    "postalCode": "پوسٹل کوڈ",
+    "phone": "ٹیلی فون",
+    "email": "ای میل",
+    "cancel": "ترک کر دیں۔",
+    "save": "محفوظ کریں۔",
+    "saving": "محفوظ کر رہا ہے...",
+    "typePickup": "لوڈ ہو رہا ہے۔",
+    "typeDelivery": "ڈیلیوری",
+    "typeBoth": "جنرل",
+    "createSuccess": "پتہ کامیابی کے ساتھ شامل ہو گیا۔",
+    "createError": "پتہ شامل کرتے وقت ایک خرابی پیش آگئی۔",
+    "updateSuccess": "پتہ کامیابی کے ساتھ اپ ڈیٹ کر دیا گیا ہے۔",
+    "updateError": "پتہ اپ ڈیٹ کرتے وقت ایک خرابی پیش آگئی۔",
+    "deleteLocation": "پتہ حذف کریں۔",
+    "deleteSuccess": "پتہ حذف کر دیا گیا۔",
+    "deleteError": "پتہ حذف کرتے وقت ایک خرابی پیش آگئی۔",
+    "fetchError": "پتے لوڈ کرتے وقت ایک خرابی پیش آگئی۔"
+  },
+  "systemSettings": {
+    "title": "سسٹم کی ترتیبات",
+    "description": "پلیٹ فارم کی کرنسی، زبان، ادائیگی کے طریقے، شپنگ اور ٹیکس کی ترتیبات دیکھیں۔",
+    "unauthorized": "آپ کو اس صفحہ تک رسائی کی اجازت نہیں ہے۔",
+    "currenciesTab": "کرنسیاں",
+    "languagesTab": "زبانیں",
+    "paymentTab": "ادائیگی کے طریقے",
+    "shippingTab": "کارگو",
+    "taxTab": "ٹیکس",
+    "active": "فعال",
+    "inactive": "غیر فعال",
+    "default": "طے شدہ",
+    "noCurrencies": "ابھی تک کرنسی کی تعریف نہیں کی گئی۔",
+    "noLanguages": "زبان کی ابھی تک تعریف نہیں کی گئی۔",
+    "noPaymentMethods": "ادائیگی کا طریقہ ابھی تک متعین نہیں ہے۔",
+    "noCarriers": "شپنگ کمپنی کی ابھی تک شناخت نہیں ہو سکی ہے۔",
+    "noZones": "کارگو ایریا کی ابھی تک وضاحت نہیں کی گئی ہے۔",
+    "noTaxRates": "ٹیکس کی شرح کا ابھی تک تعین نہیں کیا گیا ہے۔",
+    "carriers": "شپنگ کمپنیاں",
+    "zones": "کارگو زونز",
+    "countries": "ممالک",
+    "rates": "شپنگ فیس",
+    "noRates": "شپنگ کے اخراجات کی ابھی تک وضاحت نہیں کی گئی ہے۔",
+    "freeShipping": "مفت شپنگ",
+    "deliveryDays": "دن کی ترسیل کا وقت"
+  },
+  "pushPermission": {
+    "title": "اطلاعات کو فعال کریں۔",
+    "description": "نئے پیغامات، پیشکشوں اور آرڈر اپ ڈیٹس کے بارے میں اطلاعات موصول کریں۔",
+    "allow": "اجازت دیں۔",
+    "dismiss": "بند"
+  },
+  "healthRecords": {
+    "title": "ہیلتھ ریکارڈز",
+    "description": "جانوروں کی صحت کے ریکارڈ اور طبی تاریخ کا نظم کریں۔",
+    "addRecord": "ریکارڈ شامل کریں۔",
+    "editRecord": "ریکارڈ میں ترمیم کریں۔",
+    "deleteRecord": "ریکارڈ کو حذف کریں۔",
+    "noRecords": "صحت کا ریکارڈ ابھی تک شامل نہیں کیا گیا۔",
+    "animalInfoId": "جانوروں کی شناخت",
+    "animalInfoIdPlaceholder": "جانوروں کی معلومات کی شناخت درج کریں۔",
+    "recordType": "رجسٹریشن ٹور",
+    "recordTypePlaceholder": "مثالیں: امتحان، علاج، سرجری",
+    "recordDate": "رجسٹریشن کی تاریخ",
+    "followUpDate": "تاریخ چیک کریں۔",
+    "veterinarianName": "ڈاکٹر",
+    "veterinarianLicense": "لائسنس نمبر",
+    "clinicName": "طبی",
+    "diagnosis": "تشخیص",
+    "treatment": "علاج",
+    "medications": "دوائیاں",
+    "medicationsPlaceholder": "مثال: Penicillin 500mg، Ibuprofen",
+    "notes": "نوٹس",
+    "documentUrl": "دستاویز کا URL",
+    "saving": "محفوظ کر رہا ہے...",
+    "createSuccess": "صحت کا ریکارڈ کامیابی کے ساتھ شامل کیا گیا۔",
+    "updateSuccess": "صحت کا ریکارڈ کامیابی سے اپ ڈیٹ ہو گیا۔",
+    "deleteSuccess": "صحت کا ریکارڈ کامیابی کے ساتھ حذف کر دیا گیا ہے۔",
+    "saveError": "ریکارڈ محفوظ کرتے وقت ایک خرابی پیش آگئی۔",
+    "deleteError": "ریکارڈ کو حذف کرتے وقت ایک خرابی پیش آگئی۔",
+    "fetchError": "ریکارڈ لوڈ کرتے وقت ایک خرابی پیش آگئی"
+  },
+  "vaccinations": {
+    "title": "ویکسین ریکارڈز",
+    "description": "جانوروں کی ویکسینیشن کے ریکارڈ اور کیلنڈرز کا نظم کریں۔",
+    "addVaccination": "باغی شامل کریں۔",
+    "editVaccination": "باغی انتظام",
+    "deleteVaccination": "باغی سل",
+    "noVaccinations": "ویکسینیشن کا ریکارڈ ابھی تک شامل نہیں کیا گیا۔",
+    "animalInfoId": "جانوروں کی شناخت",
+    "animalInfoIdPlaceholder": "جانوروں کی معلومات کی شناخت درج کریں۔",
+    "vaccineName": "آسی عدی",
+    "vaccineNamePlaceholder": "مثال: SAT ویکسین، بروسیلا",
+    "vaccineType": "باغی ٹور",
+    "vaccineTypePlaceholder": "مثال: زندہ، غیر فعال",
+    "batchNumber": "پارٹی نمبر",
+    "vaccinationDate": "باغی کی تاریخ",
+    "nextDueDate": "اگلی باغی تاریخ",
+    "veterinarianName": "ڈاکٹر",
+    "veterinarianLicense": "لائسنس نمبر",
+    "notes": "نوٹس",
+    "certificateUrl": "سرٹیفکیٹ URL",
+    "saving": "محفوظ کر رہا ہے...",
+    "createSuccess": "ویکسین کا ریکارڈ کامیابی کے ساتھ شامل کیا گیا۔",
+    "updateSuccess": "ویکسین کا ریکارڈ کامیابی سے اپ ڈیٹ ہو گیا۔",
+    "deleteSuccess": "ویکسین کا ریکارڈ کامیابی کے ساتھ حذف کر دیا گیا ہے۔",
+    "saveError": "ویکسین کے اندراج کے دوران ایک خرابی پیش آگئی۔",
+    "deleteError": "ویکسین کو حذف کرتے وقت ایک خرابی پیش آگئی۔",
+    "fetchError": "ویکسین لوڈ کرتے وقت ایک خرابی پیش آگئی۔"
+  },
+  "shippingCarriers": {
+    "title": "شپنگ کمپنیاں",
+    "description": "شپنگ کمپنی کی معلومات کا نظم کریں۔",
+    "addCarrier": "کمپنی شامل کریں۔",
+    "editCarrier": "کمپنی میں ترمیم کریں۔",
+    "noCarriers": "ابھی تک کوئی شپنگ کمپنی شامل نہیں کی گئی ہے۔",
+    "carrierName": "کمپنی کا نام",
+    "carrierNamePlaceholder": "مثال: آراس کارگو، ایم این جی",
+    "code": "کوڈ",
+    "codePlaceholder": "مثال: ARAS",
+    "website": "ویب سائٹ",
+    "trackingUrlTemplate": "URL ٹیمپلیٹ کی پیروی کریں۔",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "حمایت یافتہ ممالک",
+    "supportedCountriesPlaceholder": "مثال: TR, US, DE",
+    "active": "فعال",
+    "inactive": "غیر فعال",
+    "saving": "محفوظ کر رہا ہے...",
+    "edit": "ترمیم کریں۔",
+    "delete": "حذف کریں۔",
+    "createSuccess": "شپنگ کمپنی کو کامیابی کے ساتھ شامل کر لیا گیا ہے۔",
+    "updateSuccess": "شپنگ کمپنی کو کامیابی کے ساتھ اپ ڈیٹ کر دیا گیا ہے۔",
+    "deleteSuccess": "شپنگ کمپنی کو کامیابی کے ساتھ حذف کر دیا گیا ہے۔",
+    "saveError": "شپنگ کمپنی کو رجسٹر کرنے کے دوران ایک خرابی پیش آگئی۔",
+    "deleteError": "شپنگ کمپنی کی معلومات کو حذف کرتے وقت ایک خرابی پیش آگئی۔",
+    "fetchError": "کارگو کمپنیوں کو لوڈ کرتے وقت ایک خرابی پیش آگئی۔"
+  },
+  "shippingZones": {
+    "title": "کارگو زونز",
+    "description": "کارگو زونز اور علاقوں کا نظم کریں۔",
+    "addZone": "علاقہ شامل کریں۔",
+    "editZone": "خطے میں ترمیم کریں۔",
+    "noZones": "ابھی تک کوئی کارگو ایریا شامل نہیں کیا گیا ہے۔",
+    "zoneName": "علاقے کا نام",
+    "zoneNamePlaceholder": "مثال: یورپ، شمالی امریکہ",
+    "countryCodes": "ملکی کوڈز",
+    "countryCodesPlaceholder": "مثال: TR، DE، FR",
+    "active": "فعال",
+    "inactive": "غیر فعال",
+    "saving": "محفوظ کر رہا ہے...",
+    "edit": "ترمیم کریں۔",
+    "delete": "حذف کریں۔",
+    "createSuccess": "خطے کو کامیابی کے ساتھ شامل کیا گیا ہے۔",
+    "updateSuccess": "خطے کو کامیابی کے ساتھ اپ ڈیٹ کر دیا گیا ہے۔",
+    "deleteSuccess": "علاقے کو کامیابی سے کلیئر کر دیا گیا ہے۔",
+    "saveError": "خطہ محفوظ کرتے وقت ایک خرابی پیش آگئی۔",
+    "deleteError": "خطہ حذف کرتے وقت ایک خرابی پیش آگئی۔",
+    "fetchError": "علاقوں کو لوڈ کرتے وقت ایک خرابی پیش آگئی"
+  },
+  "shippingRates": {
+    "title": "شپنگ فیس",
+    "description": "شپنگ کے اخراجات اور ترسیل کے اختیارات کا نظم کریں۔",
+    "addRate": "فیس شامل کریں۔",
+    "editRate": "فیس ایڈجسٹ کریں۔",
+    "noRates": "شپنگ کے اخراجات ابھی شامل نہیں کیے گئے ہیں۔",
+    "zone": "علاقہ",
+    "carrier": "فرم",
+    "selectZone": "ایک علاقہ منتخب کریں۔",
+    "selectCarrier": "ایک کمپنی کا انتخاب کریں۔",
+    "shippingCost": "شپنگ فیس",
+    "currency": "کرنسی",
+    "estimatedDeliveryDays": "تخمینی ترسیل (دن)",
+    "minWeight": "کم از کم وزن",
+    "maxWeight": "زیادہ سے زیادہ وزن",
+    "minOrderAmount": "کم از کم آرڈر کی رقم",
+    "freeShipping": "مفت شپنگ",
+    "free": "مفت",
+    "active": "فعال",
+    "inactive": "غیر فعال",
+    "cost": "فیس",
+    "deliveryDays": "ڈیلیوری",
+    "status": "صورتحال",
+    "saving": "محفوظ کر رہا ہے...",
+    "createSuccess": "فیس کامیابی کے ساتھ شامل کر دی گئی۔",
+    "updateSuccess": "تنخواہ کو کامیابی کے ساتھ اپ ڈیٹ کر دیا گیا ہے۔",
+    "deleteSuccess": "فیس کامیابی کے ساتھ حذف کر دی گئی ہے۔",
+    "saveError": "فیس بچانے کے دوران ایک خرابی پیش آگئی۔",
+    "deleteError": "فیس کو حذف کرتے وقت ایک خرابی پیش آگئی۔",
+    "fetchError": "فیس اپ لوڈ کرتے وقت ایک خرابی پیش آگئی۔"
+  },
+  "metadata": {
+    "title": "لائیو سٹاک ٹریڈنگ - لائیو اینیمل ٹریڈنگ پلیٹ فارم",
+    "description": "دنیا کا سب سے قابل اعتماد لائیو جانوروں کی تجارت کا پلیٹ فارم۔ محفوظ اور شفاف جانوروں کی خرید و فروخت۔",
+    "pages": {
+      "about": {
+        "title": "ہمارے بارے میں",
+        "description": "لائیوسٹاک ٹریڈنگ کے بارے میں جانیں۔ ایک قابل اعتماد زندہ جانوروں کی تجارت کا پلیٹ فارم۔"
+      },
+      "contact": {
+        "title": "مواصلات",
+        "description": "ہم سے رابطہ کریں۔ لائیو اسٹاک ٹریڈنگ کسٹمر سپورٹ ٹیم آپ کی مدد کے لیے تیار ہے۔"
+      },
+      "terms": {
+        "title": "استعمال کی شرائط",
+        "description": "مویشیوں کی تجارت کی شرائط و ضوابط۔"
+      },
+      "privacy": {
+        "title": "رازداری کی پالیسی",
+        "description": "لائیو سٹاک ٹریڈنگ کی رازداری کی پالیسی۔ جانیں کہ آپ کا ذاتی ڈیٹا کیسے محفوظ ہے۔"
+      },
+      "products": {
+        "title": "مصنوعات",
+        "description": "لائیو جانوروں کی فہرستوں کو براؤز کریں۔ مویشیوں، بھیڑوں اور مزید کے لیے قابل اعتماد اشتہارات۔"
+      },
+      "sellers": {
+        "title": "بیچنے والے",
+        "description": "قابل اعتماد جانور بیچنے والے کو دریافت کریں۔ تصدیق شدہ بیچنے والے پروفائلز اور جائزے۔"
+      },
+      "transporters": {
+        "title": "ٹرانسپورٹرز",
+        "description": "جانوروں کی نقل و حمل کی کمپنیاں دریافت کریں۔ محفوظ اور پیشہ ورانہ زندہ جانوروں کی نقل و حمل۔"
+      },
+      "search": {
+        "title": "تلاش کریں۔",
+        "description": "زندہ جانوروں کی فہرستوں میں تلاش کریں۔ فلٹرنگ اور چھانٹنے کے اختیارات کے ساتھ آسان تلاش۔"
+      },
+      "faq": {
+        "title": "اکثر پوچھے گئے سوالات",
+        "description": "مویشیوں کی تجارت کے بارے میں اکثر پوچھے جانے والے سوالات اور جوابات۔"
+      },
+      "productDetail": {
+        "title": "{title} - برائے فروخت",
+        "description": "{title} - {city} میں فروخت کے لیے۔ تفصیلات اور رابطہ کی معلومات کے لیے کلک کریں۔"
+      },
+      "sellerDetail": {
+        "title": "{name} - بیچنے والے کا پروفائل",
+        "description": "{name} بیچنے والے کا پروفائل۔ جائزے، فہرستیں، اور رابطے کی معلومات۔"
+      },
+      "transporterDetail": {
+        "title": "{name} - کیریئر پروفائل",
+        "description": "{name} ٹرانسپورٹر پروفائل۔ سروس کے علاقے، جائزے، اور رابطے کی معلومات۔"
+      }
+    }
   }
 }

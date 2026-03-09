@@ -11,17 +11,30 @@
     "back": "Tagasi",
     "next": "Edasi",
     "close": "Sule",
+    "unauthorized": "Teil pole sellele lehele juurdepääsuks luba.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Logi sisse",
-    "register": "Registreeru"
+    "register": "Registreeru",
+    "previous": "Endine",
+    "zoomIn": "Suumi sisse",
+    "previousImage": "Eelmine pilt",
+    "nextImage": "Järgmine pilt",
+    "closeLightbox": "Sulge galerii",
+    "imageLightbox": "Pildigalerii",
+    "slideN": "Slaid {n}",
+    "viewMore": "Vaata lähemalt"
   },
   "header": {
     "products": "Tooted",
     "sellers": "Müüjad",
+    "transporters": "vedajad",
     "about": "Meist",
+    "search": "Otsi",
     "dashboard": "Paneel",
     "settings": "Seaded",
-    "logout": "Logi välja"
+    "logout": "Logi välja",
+    "menu": "Menüü",
+    "language": "Keele valik"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Ma unustasin oma parooli.",
       "noAccount": "Kas sul pole kontot?",
       "register": "Registreeru",
-      "errorDefault": "Sisselogimine ebaõnnestus. Palun kontrollige oma andmeid."
+      "errorDefault": "Sisselogimine ebaõnnestus. Palun kontrollige oma andmeid.",
+      "orContinueWith": "või jätka",
+      "continueWithGoogle": "Jätka Google'iga",
+      "continueWithApple": "Jätka Apple'iga.",
+      "socialLoginError": "Sotsiaalmeedia sisselogimine ebaõnnestus. Palun proovige uuesti.",
+      "appleComingSoon": "Väga varsti",
+      "showPassword": "Näita parooli",
+      "hidePassword": "Peida parool"
     },
     "register": {
       "title": "Registreeru",
@@ -51,7 +71,17 @@
       "login": "Logi sisse",
       "passwordMismatch": "Paroolid ei sobi kokku.",
       "passwordTooShort": "Parool peab olema vähemalt 6 tähemärki pikk.",
-      "errorDefault": "Registreerimine ebaõnnestus. Palun proovige uuesti."
+      "errorDefault": "Registreerimine ebaõnnestus. Palun proovige uuesti.",
+      "showPassword": "Näita parooli",
+      "hidePassword": "Peida parool",
+      "passwordStrength": {
+        "minLength": "Vähemalt 8 tähemärki",
+        "uppercase": "Suurtähed (A–Z)",
+        "lowercase": "Väiketähed (a–z)",
+        "number": "Number (0–9)",
+        "special": "Erimärgid (!@#$%)"
+      },
+      "registerSuccess": "Teie konto on edukalt loodud! Teid suunatakse sisselogimislehele..."
     },
     "forgotPassword": {
       "title": "Ma unustasin oma parooli.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Taotle uut ühendust",
       "passwordMismatch": "Paroolid ei sobi kokku.",
       "passwordTooShort": "Parool peab olema vähemalt 6 tähemärki pikk.",
-      "errorDefault": "Parooli lähtestamine ebaõnnestus. Ühendus võib olla kehtetu või aegunud."
+      "errorDefault": "Parooli lähtestamine ebaõnnestus. Ühendus võib olla kehtetu või aegunud.",
+      "showPassword": "Näita parooli",
+      "hidePassword": "Peida parool"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "aktiivne",
       "totalViews": "Vaatamiste koguarv",
       "thisWeek": "sel nädalal",
+      "allTime": "kõik ajad",
       "favorites": "Lemmik",
       "onYourListings": "oma reklaamides",
+      "savedItems": "registreeritud toode",
       "messages": "Sõnum",
-      "unread": "lugemata"
+      "notifications": "Teavitused",
+      "unread": "lugemata",
+      "views": "vaated",
+      "draft": "Mustand",
+      "sold": "Müüdud",
+      "pending": "Ootel",
+      "awaitingApproval": "ootab kinnitust",
+      "totalSales": "Müügi kogusumma",
+      "completedSales": "lõpetatud müügid",
+      "revenue": "Sissetulek",
+      "totalRevenue": "kogutulu"
     },
     "recentListings": "Teie uusimad kuulutused",
+    "recentActivity": "Hiljutised tegevused",
     "recentMessages": "Hiljutised sõnumid",
+    "quickLinks": "Kiire juurdepääs",
     "noListings": "Sa pole veel ühtegi reklaami lisanud.",
+    "noActivity": "Tegevust veel pole.",
     "noMessages": "Sa pole veel sõnumit saanud.",
     "noNotifications": "Sa pole veel ühtegi märguannet saanud.",
     "viewAllListings": "Kuva kõik kuulutused",
-    "viewAllMessages": "Kuva kõik sõnumid"
+    "viewAllMessages": "Kuva kõik sõnumid",
+    "viewNotifications": "Kuva märguanded",
+    "viewFavorites": "Lemmikud Gor",
+    "recentlyViewed": "Hiljuti vaadatud",
+    "fetchError": "Paneeli andmete laadimisel ilmnes viga."
   },
   "dashboardNav": {
     "overview": "Ülevaade",
@@ -115,7 +166,61 @@
     "notifications": "Teavitused",
     "profile": "Profiil",
     "settings": "Seaded",
-    "newListing": "Lisa uus kuulutus"
+    "newListing": "Lisa uus kuulutus",
+    "becomeSeller": "Hakka müüjaks",
+    "categories": "Kategooriad",
+    "offers": "Ettepanekud",
+    "deals": "Lepingud",
+    "farms": "Minu talud",
+    "transport": "Transport",
+    "moderation": "Mõõdukus",
+    "sellerModeration": "Müüja modereerimine",
+    "transporterModeration": "Vedaja modereerimine",
+    "brands": "Brändid",
+    "transportOffers": "Saatmispakkumised",
+    "healthRecords": "Terviseandmed",
+    "vaccinations": "Vaktsineerijad",
+    "shippingCarriers": "Laevandusettevõtted",
+    "shippingZones": "Lastitsoonid",
+    "shippingRates": "Saatmiskulud",
+    "systemSettings": "Süsteemi seaded",
+    "locations": "Minu aadressid"
+  },
+  "profile": {
+    "title": "Profiiliteave",
+    "description": "Saate oma isikuandmeid siin uuendada.",
+    "personalInfo": "Isiklik teave",
+    "contactInfo": "Kontaktandmed",
+    "preferences": "Eelistused",
+    "firstName": "Nimi",
+    "firstNamePlaceholder": "Sisesta oma nimi",
+    "surname": "Perekonnanimi",
+    "surnamePlaceholder": "Sisesta oma perekonnanimi.",
+    "displayName": "Kuvatav nimi",
+    "phone": "Telefoninumber",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Kinnitatud",
+    "phoneNotVerified": "Kinnitamata",
+    "verifyPhone": "Kinnita telefoninumber",
+    "country": "Riik",
+    "selectCountry": "Valige riik",
+    "language": "Keele-eelistus",
+    "selectLanguage": "Valige keel",
+    "currency": "Valuuta",
+    "selectCurrency": "Valige valuuta.",
+    "saveChanges": "Salvesta muudatused",
+    "saving": "Salvestamine...",
+    "saveSuccess": "Teie profiiliteavet on uuendatud.",
+    "saveError": "Profiili värskendamisel ilmnes viga.",
+    "avatar": "Profiilifoto",
+    "changeAvatar": "Muuda fotot",
+    "removeAvatar": "Eemalda foto",
+    "currencies": {
+      "try": "Türgi liir",
+      "usd": "USA dollar",
+      "eur": "Euro",
+      "gbp": "Briti nael"
+    }
   },
   "myListings": {
     "title": "Minu reklaamid",
@@ -125,35 +230,94 @@
     "fetchError": "Reklaamide laadimisel ilmnes viga.",
     "deleteSuccess": "Reklaam kustutati edukalt.",
     "deleteError": "Reklaami kustutamisel ilmnes viga.",
-    "activateSuccess": "Reklaam on aktiveeritud.",
-    "deactivateSuccess": "Kuulutus on deaktiveeritud.",
+    "publishSuccess": "Reklaam on saadetud kinnitamiseks.",
+    "unpublishSuccess": "Reklaam on koostatud.",
     "statusError": "Staatuse muutmisel ilmnes viga.",
     "filters": {
       "all": "Kõik nad",
-      "active": "Aktiivne",
       "draft": "Mustand",
       "pending": "Ootab kinnitust",
+      "active": "Aktiivne",
+      "rejected": "Tagasilükatud",
       "sold": "Müüdud"
     },
     "actions": {
       "edit": "Redigeeri",
       "delete": "Kustuta",
-      "activate": "Aktiveeri",
-      "deactivate": "Passiivne struktuur"
+      "publish": "Saada kinnitamiseks",
+      "unpublish": "Mustand",
+      "menu": "Tehingud"
     },
     "deleteDialog": {
       "title": "Kustuta reklaam",
       "description": "Kas olete kindel, et soovite selle kuulutuse kustutada? See toiming on pöördumatu.",
       "cancel": "Tühista",
       "confirm": "Kustuta"
-    }
+    },
+    "loadMore": "Laadi alla rohkem",
+    "loadingMore": "Laadimine..."
   },
   "favorites": {
     "title": "Minu lemmikud",
     "description": "Jälgige siin tooteid, mis teile meeldivad.",
     "noFavorites": "Sa pole veel ühtegi lemmiktoodet lisanud.",
     "browseProducts": "Sirvi tooteid",
-    "fetchError": "Lemmikute laadimisel ilmnes viga."
+    "fetchError": "Lemmikute laadimisel ilmnes viga.",
+    "loadMore": "Laadi alla rohkem",
+    "loadingMore": "Laadimine..."
+  },
+  "messages": {
+    "title": "Sõnumid",
+    "description": "Võtke ühendust ostjate ja müüjatega.",
+    "noConversations": "Sa pole veel ühtegi sõnumit saanud.",
+    "startConversation": "Reklaami kohta küsimuse esitamiseks minge reklaami juurde.",
+    "fetchError": "Sõnumite laadimisel ilmnes viga",
+    "sendError": "Sõnumi saatmisel ilmnes viga.",
+    "connectionError": "Ühenduse loomine ebaõnnestus. Proovin uuesti...",
+    "connected": "See ühendas",
+    "connecting": "Ühendamine...",
+    "searchPlaceholder": "Otsi sõnumite seast...",
+    "typeMessage": "Kirjuta oma sõnum...",
+    "send": "Saada",
+    "sending": "Saadetakse...",
+    "typing": "See ütleb...",
+    "read": "Loe",
+    "delivered": "Saadetud",
+    "today": "Täna",
+    "yesterday": "Eile",
+    "noMessages": "Sõnumeid veel pole. Alusta vestlust!",
+    "loadMore": "Laadi üles rohkem",
+    "loadingMessages": "Sõnumeid laetakse...",
+    "about": "Teave",
+    "product": "Toode",
+    "startNewConversation": "Alusta uut vestlust",
+    "selectConversation": "Vali vestlus või alusta uut.",
+    "online": "Veebis",
+    "offline": "Võrguühenduseta",
+    "lastSeen": "Viimati nähtud",
+    "deleteConversation": "Kustuta vestlus",
+    "deleteConfirm": "Kas oled kindel, et soovid selle vestluse kustutada?",
+    "deleted": "Vestlus kustutati.",
+    "defaultUser": "Kasutaja",
+    "noResults": "Tulemusi ei leitud.",
+    "newConversation": "Uus vestlus"
+  },
+  "notifications": {
+    "title": "Teavitused",
+    "description": "Vaadake ja hallake oma teavitusi.",
+    "markAllAsRead": "Märgi kõik loetuks",
+    "noNotifications": "Te pole veel ühtegi märguannet saanud.",
+    "viewAll": "Kuva kõik teated",
+    "today": "Täna",
+    "yesterday": "Eile",
+    "older": "Vanem",
+    "types": {
+      "system": "Süsteem",
+      "message": "Sõnum",
+      "offer": "Pakkumine",
+      "order": "Telli",
+      "listing": "Reklaam"
+    }
   },
   "settings": {
     "title": "Seaded",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Uued paroolid ei sobi kokku.",
       "passwordTooShort": "Uus parool peab olema vähemalt 6 tähemärki pikk.",
       "sessionError": "Seansi infot ei leitud.",
-      "errorDefault": "Parooli ei õnnestunud uuendada. Palun kontrollige oma praegust parooli."
+      "errorDefault": "Parooli ei õnnestunud uuendada. Palun kontrollige oma praegust parooli.",
+      "showPassword": "Näita parooli",
+      "hidePassword": "Peida parool"
+    },
+    "preferences": {
+      "title": "Teavitamise ja vaatamise eelistused",
+      "description": "Halda oma teavituskanaleid ja kuvamiseelistusi.",
+      "notifications": "Teavitused",
+      "emailNotifications": "E-posti teavitused",
+      "emailNotificationsDesc": "Saate e-posti teel teateid uute sõnumite ja reklaamivärskenduste kohta.",
+      "smsNotifications": "SMS-teavitused",
+      "smsNotificationsDesc": "Saate oluliste teavituste kohta SMS-sõnumeid.",
+      "pushNotifications": "Push-teavitused",
+      "pushNotificationsDesc": "Saate koheste värskenduste saamiseks tõukemärguandeid.",
+      "appearance": "Välimus",
+      "darkMode": "Tume režiim",
+      "darkModeDesc": "Lülitu tumedale teemale.",
+      "saveChanges": "Salvesta eelistused",
+      "saving": "Salvestamine...",
+      "saveSuccess": "Teie eelistused on uuendatud.",
+      "saveError": "Eelistuste värskendamisel ilmnes viga.",
+      "loadError": "Eelistusi ei õnnestunud laadida."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Elusloomade kauplemisplatvorm",
       "subtitle": "Kõige usaldusväärsem elusloomadega kauplemise platvorm. Ostke ja müüge oma veiseid ja lambaid turvaliselt.",
       "cta": "Alusta kohe",
-      "viewListings": "Vaata reklaame"
+      "viewListings": "Vaata reklaame",
+      "searchPlaceholder": "Otsi loomi... (lehmi, lambaid, kitsi...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Esiletõstetud reklaamid",
       "viewAll": "Vaata kõiki"
+    },
+    "cta": {
+      "title": "Alusta kohe",
+      "subtitle": "Võta oma koht sisse platvormil, kus kohtuvad tuhanded müüjad ja ostjad.",
+      "button": "Registreeru tasuta"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Meist",
     "contact": "Suhtlus",
     "terms": "Kasutustingimused",
-    "privacy": "Privaatsuspoliitika"
+    "privacy": "Privaatsuspoliitika",
+    "company": "Ettevõte",
+    "support": "Tugi",
+    "legal": "Õiguslik",
+    "followUs": "Jälgi meid",
+    "newsletter": "Teadaanne",
+    "newsletterDescription": "Ära maga maha uusimaid kuulutusi ja sooduspakkumisi.",
+    "subscribe": "Telli",
+    "emailPlaceholder": "Teie e-posti aadress",
+    "tagline": "Türgi kõige usaldusväärsem elusloomade kauplemisplatvorm.",
+    "sellers": "Müüjad",
+    "products": "Tooted",
+    "map": "Kaart",
+    "appleLoginComingSoon": "Apple'iga sisselogimine aktiveerub peagi.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "KKK"
+  },
+  "faq": {
+    "title": "Korduma kippuvad küsimused",
+    "description": "Vastused teie korduma kippuvatele küsimustele meie platvormi kohta.",
+    "noFaqs": "Küsimusi pole veel lisatud."
+  },
+  "about": {
+    "title": "Meist",
+    "subtitle": "Türgi kõige usaldusväärsem elusloomade kauplemisplatvorm.",
+    "mission": {
+      "title": "Meie missioon",
+      "description": "Elusloomade kaubanduse digitaliseerimisega püüame luua turvalise, läbipaistva ja tõhusa ühenduse tootjate ja ostjate vahel."
+    },
+    "vision": {
+      "title": "Meie visioon",
+      "description": "Olla digitaalse transformatsiooni teerajaja põllumajandussektoris ja saada ülemaailmseks platvormiks elusloomade kauplemisel."
+    },
+    "values": {
+      "title": "Meie väärtused",
+      "trust": {
+        "title": "Usaldus",
+        "description": "Läbipaistvus ja usaldusväärsus on igas tehingus olulised."
+      },
+      "quality": {
+        "title": "Kvaliteet",
+        "description": "Pidev täiustamine parima teenuse pakkumiseks."
+      },
+      "innovation": {
+        "title": "Innovatsioon",
+        "description": "Tööstuse ümberkujundamine tehnoloogia abil."
+      }
+    },
+    "stats": {
+      "users": "Registreeritud kasutaja",
+      "sellers": "Aktiivne müüja",
+      "products": "Reklaam",
+      "transactions": "Edukas tehing"
+    }
+  },
+  "contact": {
+    "title": "Suhtlus",
+    "subtitle": "Küsimuste korral võtke meiega ühendust.",
+    "form": {
+      "title": "Kirjuta meile",
+      "name": "Sinu nimi",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "E-post",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Teema",
+      "subjectPlaceholder": "Teie sõnumi teema",
+      "message": "Teie sõnum",
+      "messagePlaceholder": "Kirjuta oma sõnum siia...",
+      "submit": "Saada",
+      "submitting": "Saadetakse...",
+      "success": "Teie sõnum on edukalt saadetud. Võtame teiega esimesel võimalusel ühendust.",
+      "error": "Sõnumi saatmisel ilmnes viga. Palun proovige uuesti."
+    },
+    "info": {
+      "title": "Kontaktandmed",
+      "address": "Aadress",
+      "addressValue": "Istanbul, Türgi",
+      "email": "E-post",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Telefon",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Tööaeg",
+      "workingHoursValue": "Esmaspäev - Reede: 09:00 - 18:00",
+      "map": "Kaart"
+    }
+  },
+  "terms": {
+    "title": "Kasutustingimused",
+    "lastUpdated": "Viimane uuendus: {kuupäev}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Tingimustega nõustumine",
+        "content": "Selle veebisaidi kasutamisega nõustute järgmiste kasutustingimustega. Kui te nende tingimustega ei nõustu, palun ärge saiti kasutage."
+      },
+      "services": {
+        "title": "2. Teenused",
+        "content": "Livestock Trading pakub platvormi elusloomade ostmiseks ja müümiseks. Kõik platvormil tehtavad tehingud on kasutaja vastutusel."
+      },
+      "accounts": {
+        "title": "3. Kasutajakontod",
+        "content": "Konto loomiseks peate esitama täpse ja ajakohase teabe. Teie konto turvalisus on teie enda vastutus."
+      },
+      "prohibited": {
+        "title": "4. Keelatud tegevused",
+        "content": "Eksitavad reklaamid, valeinformatsioon, pettus ja ebaseaduslik tegevus on rangelt keelatud."
+      },
+      "liability": {
+        "title": "5. Vastutuse piiramine",
+        "content": "Platvorm ei vastuta otseselt kasutajate vaheliste tehingute eest. Kõik tehingud toimuvad osapoolte vahel."
+      },
+      "changes": {
+        "title": "6. Muudatused",
+        "content": "Käesolevad tingimused võivad muutuda ette teatamata. Muudatused jõustuvad kohe pärast avaldamist."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privaatsuspoliitika",
+    "lastUpdated": "Viimane uuendus: {kuupäev}",
+    "sections": {
+      "collection": {
+        "title": "1. Teabe kogumine",
+        "content": "Konto loomisel kogume isikuandmeid, nagu teie nimi, e-posti aadress ja telefoninumber. Võime koguda ka anonüümseid andmeid teie saidi kasutamise kohta."
+      },
+      "usage": {
+        "title": "2. Teabe kasutamine",
+        "content": "Kogutud teavet kasutame teenuste osutamiseks, teie konto haldamiseks, turvalisuse tagamiseks ja teile isikupärastatud pakkumiste tegemiseks."
+      },
+      "sharing": {
+        "title": "3. Teabe jagamine",
+        "content": "Teie isikuandmeid ei müüda ega rendita kolmandatele isikutele. Teie teavet ei jagata, välja arvatud seadusega ettenähtud eesmärkidel."
+      },
+      "security": {
+        "title": "4. Turvalisus",
+        "content": "Teie andmete kaitsmiseks on kehtestatud tööstusharu standardsed turvameetmed."
+      },
+      "cookies": {
+        "title": "5. Küpsised",
+        "content": "Meie veebisait kasutab küpsiseid kasutajakogemuse parandamiseks. Saate oma küpsiste eelistusi oma brauseri seadetes hallata."
+      },
+      "rights": {
+        "title": "6. Teie õigused",
+        "content": "Türgi isikuandmete kaitse seaduse (KVKK) kohaselt on teil õigus oma isikuandmetele juurde pääseda, neid parandada ja kustutada."
+      }
+    }
   },
   "products": {
     "title": "Tooted",
@@ -235,11 +570,19 @@
       "priceDesc": "Hind (kõrgemast madalamani)",
       "popular": "Kõige populaarsem"
     },
+    "pagination": {
+      "prev": "Endine",
+      "next": "Järgmine"
+    },
     "status": {
       "draft": "Mustand",
+      "pending": "Ootab kinnitust",
       "active": "Aktiivne",
+      "inactive": "Passiivne",
+      "outOfStock": "Laost otsas",
+      "expired": "Tema ametiaeg on lõppenud.",
       "sold": "Müüdud",
-      "pending": "Ootab kinnitust"
+      "rejected": "Tagasilükatud"
     },
     "condition": {
       "new": "Uus",
@@ -250,12 +593,16 @@
     "outOfStock": "Laost otsas",
     "inStock": "Laos",
     "noResults": "Toodet ei leitud.",
-    "loading": "Toodete laadimine...",
+    "loading": "Tooteid laaditakse...",
     "perPage": "Lehe kohta",
     "showing": "Toodete koguarv vahemikus {from} kuni {to} on {total}.",
+    "fetchError": "Toodete üleslaadimisel ilmnes viga.",
+    "loadMore": "Näita rohkem",
+    "showingOf": "Kuvatakse {count} / {total} toodet.",
     "loginToFavorite": "Lemmikutesse lisamiseks logi sisse.",
     "addedToFavorites": "Lisatud lemmikutesse",
-    "removedFromFavorites": "Eemaldatud lemmikutest"
+    "removedFromFavorites": "Eemaldatud lemmikutest",
+    "favoriteError": "Lemmiku lisamise toiming ebaõnnestus."
   },
   "productDetail": {
     "addToFavorites": "Lisa lemmikutesse",
@@ -279,16 +626,31 @@
     "maxOrder": "Maksimaalne tellimus",
     "publishedAt": "Avaldamiskuupäev",
     "views": "Vaadatud",
-    "reviews": "hindamine",
+    "reviews": {
+      "title": "Hinnangud",
+      "reviewCount": "hindamine",
+      "noReviews": "Hinnangut veel pole.",
+      "verified": "Kinnitatud ostja"
+    },
     "similarProducts": "Sarnased tooted",
     "sellerProducts": "Müüja muud tooted",
     "contactSeller": "Võtke ühendust müüjaga",
-    "loginRequired": "Lemmikutesse lisamiseks logi sisse.",
+    "makeOffer": "Esita pakkumine",
+    "loginRequired": "Selle toimingu sooritamiseks logige sisse.",
     "addedToFavorites": "Lisatud lemmikutesse",
     "removedFromFavorites": "Eemaldatud lemmikutest",
     "linkCopied": "Link on kopeeritud.",
     "messagingComingSoon": "Sõnumite saatmise funktsioon on peagi saadaval.",
-    "productNotFound": "Toodet ei leitud."
+    "productNotFound": "Toodet ei leitud.",
+    "contacting": "Kontakti võetakse...",
+    "contactError": "Side ebaõnnestus. Palun proovige uuesti.",
+    "noImage": "Pilt pole saadaval.",
+    "defaultLocation": "Türgi",
+    "inquiryMessage": "Sooviksin saada teavet teemal {title}.",
+    "breadcrumb": {
+      "home": "Avaleht",
+      "products": "Tooted"
+    }
   },
   "seller": {
     "title": "Müüja andmed",
@@ -300,6 +662,70 @@
     "call": "Otsi",
     "viewProfile": "Vaata profiili"
   },
+  "sellers": {
+    "title": "Müüjad",
+    "description": "Avasta usaldusväärsed müüjad.",
+    "search": "Leia müüja...",
+    "sort": "Sorteeri",
+    "sortOptions": {
+      "newest": "Uusim",
+      "mostSales": "Enimmüüdud",
+      "topRated": "Kõrgeim tulemus",
+      "mostProducts": "Enamik reklaame"
+    },
+    "noResults": "Müüjat ei leitud.",
+    "loading": "Müüjad laadivad...",
+    "showing": "{count} müüjat leitud",
+    "verified": "Kinnitatud",
+    "sales": "müük",
+    "products": "reklaam",
+    "reviews": "hindamine",
+    "rating": "punkt",
+    "viewProducts": "Vaata tooteid",
+    "contactSeller": "Saada sõnum",
+    "memberSince": "Liikmeks alates {aasta}",
+    "fetchError": "Tarnijate laadimisel ilmnes viga",
+    "detail": {
+      "title": "Müüja profiil",
+      "about": "Teave",
+      "businessInfo": "Äriteave",
+      "businessName": "Ettevõtte nimi",
+      "businessType": "Ärireis",
+      "email": "E-post",
+      "phone": "Telefon",
+      "website": "Veebisait",
+      "description": "Selgitus",
+      "policies": "Poliitikad",
+      "returnPolicy": "Tagastuspoliitika",
+      "shippingPolicy": "Saatmispoliitika",
+      "businessHours": "Tööaeg",
+      "paymentMethods": "Makseviisid",
+      "allProducts": "Kõik tooted",
+      "stats": {
+        "totalSales": "Müügi kogusumma",
+        "totalProducts": "Toodete koguarv",
+        "totalReviews": "Hindamine",
+        "rating": "Punkt"
+      },
+      "notFound": "Müüjat ei leitud.",
+      "backToList": "Ära müüjatele",
+      "contactInfo": "Suhtlus",
+      "noProducts": "Sellel müüjal pole veel ühtegi kuulutust.",
+      "noPolicies": "Müüja pole oma reegleid veel määratlenud.",
+      "fetchError": "Müüja teabe üleslaadimisel ilmnes viga.",
+      "productsLoadError": "Müüja toodete üleslaadimisel ilmnes viga.",
+      "reviewsTab": "Hinnangud",
+      "reviews": {
+        "summary": "Hindamise kokkuvõte",
+        "reviewCount": "hindamine",
+        "communication": "Suhtlus",
+        "shippingSpeed": "Saatmiskiirus",
+        "productQuality": "Toote kvaliteet",
+        "noReviews": "Hinnangut veel pole.",
+        "verified": "Kinnitatud ostja"
+      }
+    }
+  },
   "editListing": {
     "title": "Redigeeri reklaami",
     "saveChanges": "Salvesta muudatused",
@@ -307,6 +733,10 @@
     "updateSuccess": "Kuulutus on edukalt uuendatud.",
     "updateFailed": "Kuulutuse värskendamisel ilmnes viga.",
     "loadError": "Reklaami laadimisel ilmnes viga.",
+    "sellerNotFound": "Müüja profiili ei leitud.",
+    "sellerLoadError": "Müüja profiili ei saanud laadida.",
+    "userNotFound": "Kasutajateavet ei leitud. Palun logige uuesti sisse.",
+    "locationNotFound": "Asukohateavet ei leitud. Palun värskenda lehte.",
     "basicInfo": "Põhiteave",
     "categoryAndCondition": "Kategooria ja staatus",
     "pricing": "Hinnakujundus",
@@ -314,6 +744,8 @@
     "images": "Pildid",
     "existingImages": "Saadaval olevad pildid",
     "addImage": "Lisa pilt",
+    "maxImages": "Saate üles laadida maksimaalselt 10 pilti.",
+    "imageHint": "Vähemalt 1, maksimaalselt 10 pilti. PNG-, JPG- või WEBP-vormingus.",
     "uploadingImages": "Pildid laetakse...",
     "uploadingImage": "Pilt laeb.",
     "imageUploadFailed": "Pilti ei saanud laadida.",
@@ -358,6 +790,7 @@
     "addImage": "Lisa pilt",
     "maxImages": "Saate üles laadida maksimaalselt 10 pilti.",
     "imageHint": "Vähemalt 1, maksimaalselt 10 pilti. PNG-, JPG- või WEBP-vormingus.",
+    "location": "Asukohateave",
     "fields": {
       "title": "Reklaami pealkiri",
       "shortDescription": "Lühike kirjeldus",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Saatmine on saadaval.",
       "shippingCost": "Saatmistasu",
       "weight": "Kaal",
-      "weightUnit": "Kaaluühik"
+      "weightUnit": "Kaaluühik",
+      "city": "Linn",
+      "address": "Aadress",
+      "postalCode": "Postiindeks"
     },
     "placeholders": {
       "title": "Näide: 2-aastane holsteini lehm",
       "shortDescription": "Tootekirjeldus (maksimaalselt 200 tähemärki)",
       "description": "Esitage toote kohta üksikasjalikku teavet...",
-      "category": "Valige kategooria."
+      "category": "Valige kategooria.",
+      "city": "Sisene linna",
+      "address": "Sisestage täielik aadress.",
+      "postalCode": "Postiindeks"
+    },
+    "errors": {
+      "titleRequired": "Kuulutuse pealkiri on kohustuslik.",
+      "shortDescriptionRequired": "Lühike kirjeldus on vajalik.",
+      "descriptionRequired": "Vaja on üksikasjalikku selgitust.",
+      "categoryRequired": "Kategooria valimine on kohustuslik.",
+      "priceRequired": "Hind on kohustuslik.",
+      "cityRequired": "Linna teave on nõutav.",
+      "addressRequired": "Aadressiinfo on nõutav.",
+      "locationError": "Asukoha loomisel ilmnes viga."
     },
     "success": "Reklaam on edukalt loodud.",
     "error": "Kuulutuse loomisel ilmnes viga.",
@@ -388,24 +837,53 @@
     "draftSaved": "Mustand salvestatud",
     "productCreated": "Toode on edukalt loodud.",
     "creationFailed": "Toodet ei õnnestunud luua. Palun proovige uuesti.",
-    "errors": {
-      "titleRequired": "Kuulutuse pealkiri on kohustuslik.",
-      "shortDescriptionRequired": "Lühike kirjeldus on vajalik.",
-      "descriptionRequired": "Vaja on üksikasjalikku selgitust.",
-      "categoryRequired": "Kategooria valimine on kohustuslik.",
-      "priceRequired": "Sisestage kehtiv hind."
-    }
+    "userNotFound": "Kasutajateavet ei leitud. Palun logige uuesti sisse.",
+    "defaultBusinessName": "Minu ettevõte"
+  },
+  "becomeSeller": {
+    "title": "Hakka müüjaks",
+    "description": "Ettevõtte avaldus",
+    "alreadySeller": "Sul on juba müüjaprofiil.",
+    "goToListings": "Mine minu kuulutuste juurde",
+    "businessInfo": "Äriteave",
+    "contactInfo": "Kontaktandmed",
+    "businessName": "Ettevõtte nimi",
+    "businessNamePlaceholder": "Näide: Yilmazi talu",
+    "businessType": "Ärireis",
+    "businessTypePlaceholder": "Valige oma ettevõtte tüüp.",
+    "businessTypes": {
+      "individual": "Üksikisik",
+      "company": "Ettevõte",
+      "cooperative": "Ühistu",
+      "farm": "Talu"
+    },
+    "taxNumber": "Maksunumber",
+    "taxNumberPlaceholder": "Sisestage oma maksukohustuslase number (valikuline)",
+    "descriptionPlaceholder": "Kirjutage oma ettevõtte kohta lühike kirjeldus...",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Veebisait",
+    "websitePlaceholder": "https://www.examplesite.com (valikuline)",
+    "submit": "Loo müüja profiil",
+    "submitting": "Profiili loomine...",
+    "success": "Teie müüjaprofiil on edukalt loodud!",
+    "error": "Müüja profiili loomisel ilmnes viga.",
+    "taxNumberHelp": "Sisestage oma 10- või 11-kohaline maksunumber (valikuline)",
+    "phoneHelp": "Näide: +90 555 123 45 67 või 0555 123 45 67",
+    "websiteHelp": "Näide: www.isletmem.com või https://isletmem.com",
+    "alreadySellerDescription": "Oma kuulutuste haldamiseks saate kasutada allolevat nuppu.",
+    "newListing": "Lisa uus kuulutus"
   },
   "fileUpload": {
     "dragDrop": "Laadige üles foto või video.",
     "dragDropHint": "Lohistage ja asetage või klõpsake valimiseks.",
     "dropHere": "Jäta see...",
     "imageLimit": "Foto: max 10 MB",
-    "videoLimit": "Video: maksimaalselt 50 MB",
+    "videoLimit": "Video: maksimaalselt 100 MB",
     "uploadCount": "{praegune} / {max} laaditud",
     "maxFilesError": "Saate üles laadida maksimaalselt {max} meediafaili.",
     "imageTooLarge": "Foto peab olema väiksem kui 10 MB.",
-    "videoTooLarge": "Video peab olema väiksem kui 50 MB.",
+    "videoTooLarge": "Video peab olema väiksem kui 100 MB.",
     "optimizing": "Optimeerimine...",
     "uploading": "Laadimine...",
     "queued": "Ootan järjekorras...",
@@ -419,9 +897,833 @@
     "videoBadge": "VIDEO",
     "coverUpdated": "Kaanefoto on edukalt kohandatud.",
     "optimizationInfo": "Fotod on optimeeritud vastavalt veebistandarditele",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Visuaalne valik",
+    "changeImage": "Muutus",
+    "removeImage": "Eemalda",
+    "videoProcessing": "Videot töödeldakse...",
+    "videoProcessingFailed": "Toiming ebaõnnestus.",
+    "videoProcessingPollError": "Video töötlemise olekut ei õnnestunud hankida. Palun värskenda lehte.",
+    "reorderError": "Faili ei saanud sortida.",
+    "coverUpdateError": "Kaanefotot ei õnnestunud uuendada."
+  },
+  "error": {
+    "title": "Tekkis viga.",
+    "description": "Tekkis ootamatu viga. Palun värskenda lehte või proovi hiljem uuesti.",
+    "retry": "Proovi uuesti",
+    "goBack": "Ära mine tagasi",
+    "goHome": "Avaleht",
+    "notFound": {
+      "title": "Lehte ei leitud",
+      "description": "Otsitav leht pole kas saadaval või on teisaldatud.",
+      "goHome": "Tagasi avalehele"
+    }
+  },
+  "search": {
+    "title": "Otsi",
+    "placeholder": "Otsi tooteid, kategooriaid või müüjaid...",
+    "searchButton": "Otsi",
+    "searchingFor": "Tagaotsitav",
+    "loading": "Tahtis...",
+    "resultsCount": "Leiti {count} tulemust.",
+    "noResults": "Tulemusi ei leitud.",
+    "tryDifferentSearch": "Proovige erinevaid märksõnu või muutke filtreid.",
+    "filters": {
+      "title": "Filtrid",
+      "category": "Kategooria",
+      "allCategories": "Kõik kategooriad",
+      "condition": "Olukord",
+      "allConditions": "Kõik juhtumid",
+      "priceRange": "Hinnavahemik",
+      "price": "Hind",
+      "min": "Min",
+      "max": "Maks",
+      "apply": "Kandideeri",
+      "clear": "Puhas",
+      "clearAll": "Tühjenda kõik"
+    },
+    "fetchError": "Otsingutulemuste laadimisel ilmnes viga",
+    "recentSearches": "Hiljutised otsingud",
+    "clearHistory": "Tühjenda ajalugu",
+    "noSearchHistory": "Sul pole veel otsinguajalugu.",
+    "deleteHistoryError": "Otsinguajaloo kustutamisel ilmnes viga."
+  },
+  "categories": {
+    "title": "Kategooriate haldamine",
+    "description": "Halda kategooriaid siit.",
+    "noCategories": "Kategooriaid pole veel lisatud.",
+    "createFirst": "Loo esimene kategooria.",
+    "fetchError": "Kategooriate laadimisel ilmnes viga.",
+    "createSuccess": "Kategooria loodud edukalt",
+    "createError": "Kategooria loomisel ilmnes viga.",
+    "updateSuccess": "Kategooria edukalt uuendatud",
+    "updateError": "Kategooria värskendamisel ilmnes viga.",
+    "deleteSuccess": "Kategooria on edukalt kustutatud.",
+    "deleteError": "Kategooria kustutamisel ilmnes viga.",
+    "activateSuccess": "Kategooria on aktiveeritud.",
+    "deactivateSuccess": "Kategooria on deaktiveeritud.",
+    "statusError": "Staatuse muutmisel ilmnes viga.",
+    "loadError": "Kategooria laadimisel ilmnes viga",
+    "filters": {
+      "all": "Kõik nad",
+      "active": "Aktiivne",
+      "inactive": "Mitteaktiivne"
+    },
+    "table": {
+      "name": "Kategooria nimi",
+      "slug": "Nälkjas",
+      "sortOrder": "Seerianumber",
+      "subCategories": "Alamkategooria",
+      "status": "Olukord",
+      "actions": "Tehingud"
+    },
+    "actions": {
+      "edit": "Redigeeri",
+      "delete": "Kustuta",
+      "activate": "Aktiveeri",
+      "deactivate": "Passiivne struktuur"
+    },
+    "deleteDialog": {
+      "title": "Kustuta kategooria",
+      "description": "Kas oled kindel, et soovid selle kategooria kustutada? See toiming on pöördumatu.",
+      "cancel": "Tühista",
+      "confirm": "Kustuta"
+    },
+    "addNew": "Lisa uus kategooria",
+    "loadMore": "Laadi alla rohkem",
+    "loadingMore": "Laadimine...",
+    "form": {
+      "newTitle": "Loo uus kategooria",
+      "editTitle": "Muuda kategooriat",
+      "name": "Kategooria nimi",
+      "namePlaceholder": "Näide: Veised",
+      "slug": "Nälkjas",
+      "slugPlaceholder": "Näide: suured kariloomad",
+      "description": "Selgitus",
+      "descriptionPlaceholder": "Kategooria lühikirjeldus...",
+      "parentCategory": "Ülemine kategooria",
+      "parentCategoryPlaceholder": "Valige peamine kategooria (valikuline)",
+      "noParent": "Ülemise kategooria puudumine (põhikategooria)",
+      "sortOrder": "Järjekorranumber",
+      "isActive": "Aktiivne",
+      "iconUrl": "Ikooni URL",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Salvesta",
+      "submitting": "Salvestamine...",
+      "updating": "Värskendamine...",
+      "errors": {
+        "nameRequired": "Kategooria nimi on kohustuslik.",
+        "slugRequired": "Nälkjad on kohustuslikud."
+      }
+    }
+  },
+  "offers": {
+    "title": "Ettepanekud",
+    "description": "Halda oma sissetulevaid ja väljaminevaid pakkumisi.",
+    "received": "Sissetulevad pakkumised",
+    "sent": "Esitatud pakkumised",
+    "noReceivedOffers": "Pakkumisi pole veel laekunud.",
+    "noSentOffers": "Sa pole veel pakkumist esitanud.",
+    "browseProducts": "Sirvi tooteid",
+    "viewProduct": "Vaata toodet",
+    "accept": "Nõustu",
+    "reject": "Keeldu",
+    "withdraw": "Väljavõtmine",
+    "makeOffer": "Esita pakkumine",
+    "sendOffer": "Saada pakkumine",
+    "sending": "Saadetakse...",
+    "cancel": "Tühista",
+    "listingPrice": "Reklaamitud hind",
+    "yourOffer": "Teie pakkumine",
+    "quantity": "Summa",
+    "messageOptional": "Sõnum (valikuline)",
+    "messagePlaceholder": "Märkus, mida soovite müüjaga jagada...",
+    "expiresAt": "Viimane kehtivuskuupäev",
+    "offerSent": "Teie pakkumine on edukalt saadetud.",
+    "offerError": "Pakkumise saatmisel ilmnes viga.",
+    "acceptSuccess": "Pakkumine võeti vastu.",
+    "rejectSuccess": "Pakkumine lükati tagasi.",
+    "withdrawSuccess": "Pakkumine võeti tagasi.",
+    "actionError": "Protsessi käigus ilmnes viga.",
+    "fetchError": "Pakkumiste laadimisel ilmnes viga.",
+    "loginRequired": "Pakkumise esitamiseks logi sisse.",
+    "invalidPrice": "Sisestage kehtiv hind.",
+    "invalidQuantity": "Sisestage kehtiv summa.",
+    "status": {
+      "pending": "Ootel",
+      "accepted": "Vastu võetud",
+      "rejected": "Tagasilükatud",
+      "countered": "Vastupakkumine",
+      "expired": "Selle tähtaeg on läbi.",
+      "withdrawn": "Tagasi võetud"
+    }
+  },
+  "deals": {
+    "title": "Lepingud",
+    "description": "Järgige oma ostu-müügilepinguid.",
+    "buying": "Õpetlased",
+    "selling": "Müük",
+    "noBuyingDeals": "Teil pole veel õpilase registreerimisprotsessi.",
+    "noSellingDeals": "Teil pole veel ühtegi müügitehingut.",
+    "browseProducts": "Sirvi tooteid",
+    "viewProduct": "Vaata toodet",
+    "activeDeals": "Aktiivsed lepingud",
+    "completedDeals": "Lõpetatud",
+    "purchases": "Õpetlased",
+    "sales": "Müük",
+    "fetchError": "Lepingute laadimisel ilmnes viga",
+    "dealStatus": {
+      "pending": "Ootel",
+      "confirmed": "Kinnitatud",
+      "processing": "Ettevalmistus",
+      "shipped": "Lasti sees",
+      "delivered": "Kohale toimetatud",
+      "completed": "Lõpetatud",
+      "cancelled": "Tühistatud",
+      "disputed": "Kokkulepe"
+    },
+    "delivery": {
+      "pickup": "Käest kättetoimetamine",
+      "shipping": "Kaubaga",
+      "transport": "Transpordiga"
+    },
+    "requestTransport": "Saatmistaotlus"
+  },
+  "farms": {
+    "title": "Minu talud",
+    "description": "Halda ja uuenda oma talusid.",
+    "addFarm": "Lisa talu",
+    "editFarm": "Põllumajandusettevõtte juhtimine",
+    "noFarms": "Sa pole veel talu lisanud.",
+    "farmName": "Talu nimi",
+    "registrationNumber": "Registreerimisnumber",
+    "location": "Asukoht",
+    "selectLocation": "Valige asukoht.",
+    "addLocationFirst": "Esmalt lisage asukoht.",
+    "farmTypeLabel": "Talutuur",
+    "farmDescription": "Selgitus",
+    "totalArea": "Kogupindala",
+    "cultivatedArea": "Haritav ala",
+    "certifications": "Sertifikaadid",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP jne.",
+    "organic": "Orgaaniline",
+    "verified": "Kinnitatud",
+    "save": "Salvesta",
+    "saving": "Salvestamine...",
+    "cancel": "Tühista",
+    "edit": "Redigeeri",
+    "delete": "Kustuta",
+    "sellerRequired": "Müüja profiil on nõutav",
+    "sellerRequiredDesc": "Talu lisamiseks peate kõigepealt looma oma müüja profiili.",
+    "becomeSeller": "Hakka müüjaks",
+    "createSuccess": "Talu lisamine õnnestus.",
+    "updateSuccess": "Talu on edukalt uuendatud.",
+    "deleteSuccess": "Talu kustutati edukalt.",
+    "saveError": "Talu registreerimisel ilmnes viga.",
+    "deleteError": "Talu kustutamisel ilmnes viga.",
+    "fetchError": "Taluteabe üleslaadimisel ilmnes viga.",
+    "farmType": {
+      "livestock": "Loomakasvatus",
+      "crop": "Põllumajandus",
+      "mixed": "Segatud",
+      "poultry": "Tiivuline",
+      "dairy": "Piimakarjakasvatus",
+      "aquaculture": "Veetooted"
+    }
+  },
+  "transporters": {
+    "title": "vedajad",
+    "description": "Loomade ja toodete transporditeenused",
+    "searchPlaceholder": "Leia transportija...",
+    "noTransporters": "Registreeritud vedajaid veel pole.",
+    "verified": "Kinnitatud",
+    "transports": "transport",
+    "viewProfile": "Vaata profiili",
+    "sort": {
+      "newest": "Uusim",
+      "rating": "Kõrgeim tulemus",
+      "mostTransports": "Kõige sagedasem saatmine"
+    },
+    "pagination": {
+      "previous": "Endine",
+      "next": "Järgmine",
+      "page": "Lehekülg {leht}"
+    }
+  },
+  "transport": {
+    "title": "Minu saatmistaotlused",
+    "description": "Jälgige oma saatmistaotlusi.",
+    "findTransporter": "Leia transportija",
+    "active": "Aktiivne",
+    "completed": "Lõpetatud",
+    "total": "Kokku",
+    "asSeller": "Müüjana",
+    "asBuyer": "Ostjana",
+    "noSellerRequests": "Müüjana ei ole teil saatmiskohustust.",
+    "noBuyerRequests": "Saajana ei ole teil saatmistaotlust.",
+    "viewProduct": "Vaata toodet",
+    "pickup": "Vastuvõtt",
+    "delivery": "Kohaletoimetamine",
+    "urgent": "Kiireloomuline",
+    "fetchError": "Saatmistaotluste üleslaadimisel ilmnes viga.",
+    "trackShipment": "Jälgi",
+    "transportStatus": {
+      "pending": "Ootel",
+      "inPool": "Basseinis",
+      "assigned": "Ametisse nimetatud",
+      "pickedUp": "Kviitung",
+      "inTransit": "Teel",
+      "delivered": "Kohale toimetatud",
+      "completed": "Lõpetatud",
+      "cancelled": "Tühistatud"
+    },
+    "transportType": {
+      "standard": "Standardne",
+      "refrigerated": "Külmakett",
+      "liveAnimal": "Elusloomad",
+      "hazardous": "Ohtlikud materjalid",
+      "oversized": "Suur suurus"
+    }
+  },
+  "moderation": {
+    "title": "Toote modereerimine",
+    "description": "Vaadake üle tooted, mis ootavad kinnitamist.",
+    "pending": "ootamine",
+    "allClear": "Kõik tooted on kontrollitud.",
+    "noPending": "Heakskiitmist ootavaid tooteid pole.",
+    "awaitingReview": "Ootab ülevaatamist",
+    "by": "Müügiesindaja:",
+    "stock": "Laos",
+    "preview": "Sinuga",
+    "approve": "Kinnita",
+    "reject": "Keeldu",
+    "confirmReject": "Keeldu",
+    "cancelReject": "Anna alla",
+    "rejectReasonPlaceholder": "Kirjuta üles tagasilükkamise põhjus...",
+    "rejectReasonRequired": "Keeldumise põhjus on kohustuslik.",
+    "approveSuccess": "Toode kiideti edukalt heaks.",
+    "rejectSuccess": "Toode lükati tagasi.",
+    "actionError": "Protsessi käigus ilmnes viga.",
+    "fetchError": "Toodete üleslaadimisel ilmnes viga.",
+    "unauthorized": "Teil pole sellele lehele juurdepääsuks luba."
+  },
+  "sellerModeration": {
+    "title": "Müüja modereerimine",
+    "description": "Vaadake üle ja hallake müüjate kontosid.",
+    "pending": "ootamine",
+    "allClear": "Kõiki müüjaid uuriti.",
+    "noPending": "Müüjaid pole ootamas.",
+    "verify": "Kinnita",
+    "suspend": "Peata",
+    "verifySuccess": "Müüja edukalt kinnitatud.",
+    "suspendSuccess": "Müüja konto on peatatud.",
+    "actionError": "Protsessi käigus ilmnes viga.",
+    "suspendReasonRequired": "Peatamise põhjus on kohustuslik.",
+    "suspendReasonPlaceholder": "Kirjutage peatamise põhjus...",
+    "confirmSuspend": "Peata",
+    "cancelSuspend": "Anna alla",
+    "statusLabels": {
+      "pendingVerification": "Kinnitamine ootel",
+      "active": "Aktiivne",
+      "suspended": "Rippumine",
+      "banned": "Keelatud"
+    },
+    "filterAll": "Näita kõiki",
+    "filterPending": "Need, kes ootavad",
+    "filterActive": "Varad",
+    "filterSuspended": "Peatatud",
+    "unauthorized": "Teil pole sellele lehele juurdepääsuks luba.",
+    "businessName": "Ettevõtte nimi",
+    "businessType": "Ärireis",
+    "email": "E-post",
+    "phone": "Telefon",
+    "status": "Olukord",
+    "createdAt": "Registreerimiskuupäev"
+  },
+  "transporterModeration": {
+    "title": "Vedaja modereerimine",
+    "description": "Vaadake üle ja hallake vedajakontosid.",
+    "pending": "ootamine",
+    "allClear": "Kõiki transportijaid uuriti.",
+    "noPending": "Ükski transportija ei oota.",
+    "verify": "Kinnita",
+    "suspend": "Peata",
+    "verifySuccess": "Transportija edukalt kontrollitud.",
+    "suspendSuccess": "Transporter peatati.",
+    "actionError": "Protsessi käigus ilmnes viga.",
+    "suspendReasonRequired": "Peatamise põhjus on kohustuslik.",
+    "suspendReasonPlaceholder": "Kirjutage peatamise põhjus...",
+    "confirmSuspend": "Peata",
+    "cancelSuspend": "Anna alla",
+    "statusLabels": {
+      "pendingVerification": "Kinnitamine ootel",
+      "active": "Aktiivne",
+      "suspended": "Rippumine",
+      "banned": "Keelatud"
+    },
+    "filterAll": "Näita kõiki",
+    "filterPending": "Need, kes ootavad",
+    "filterActive": "Varad",
+    "filterSuspended": "Peatatud",
+    "unauthorized": "Teil pole sellele lehele juurdepääsuks luba.",
+    "companyName": "Ettevõtte nimi",
+    "contactPerson": "Volitatud isik",
+    "email": "E-post",
+    "phone": "Telefon",
+    "city": "Linn",
+    "status": "Olukord",
+    "createdAt": "Registreerimiskuupäev"
+  },
+  "transporterDetail": {
+    "notFound": "Transportijat ei leitud.",
+    "backToList": "Don transportijatele",
+    "verified": "Kinnitatud",
+    "totalTransports": "saatmiskulud kokku",
+    "completed": "lõpetatud",
+    "about": "Teave",
+    "contact": "Kontaktandmed",
+    "businessInfo": "Äriteave",
+    "license": "Litsentsinumber",
+    "insurance": "Kindlustusinfo",
+    "fleet": "Laevastiku teave",
+    "serviceRegions": "Teeninduspiirkonnad",
+    "specializations": "Ekspertiisvaldkonnad",
+    "certifications": "Sertifikaadid"
+  },
+  "brands": {
+    "title": "Brändihaldus",
+    "description": "Tootebrändide haldamine.",
+    "addBrand": "Lisa bränd",
+    "editBrand": "Muuda brändi",
+    "noBrands": "Ühtegi kaubamärki pole veel lisatud.",
+    "brandName": "Brändi nimi",
+    "brandDescription": "Selgitus",
+    "website": "Veebisait",
+    "logoUrl": "Logo URL",
+    "save": "Salvesta",
+    "saving": "Salvestamine...",
+    "cancel": "Tühista",
+    "edit": "Redigeeri",
+    "delete": "Kustuta",
+    "inactive": "Passiivne",
+    "products": "toode",
+    "createSuccess": "Bränd lisati edukalt",
+    "updateSuccess": "Bränd on edukalt uuendatud.",
+    "deleteSuccess": "Bränd kustutati edukalt.",
+    "saveError": "Kaubamärgi registreerimisel ilmnes viga.",
+    "deleteError": "Kaubamärgi kustutamisel ilmnes viga.",
+    "fetchError": "Brändide laadimisel ilmnes viga",
+    "unauthorized": "Teil pole sellele lehele juurdepääsuks luba."
+  },
+  "transporterReviews": {
+    "title": "Hinnangud",
+    "reviewCount": "hindamine",
+    "noReviews": "Hinnangut veel pole.",
+    "timeliness": "Õigeaegne kohaletoimetamine",
+    "communication": "Suhtlus",
+    "carefulHandling": "Ettevaatlik käsitsemine",
+    "professionalism": "Professionaalsus"
+  },
+  "transportOffers": {
+    "title": "Saatmispakkumised",
+    "description": "Halda saatmistaotluste hinnapakkumisi, mille esitad.",
+    "newOffer": "Uus ettepanek",
+    "transportRequestId": "Saatmistaotluse ID",
+    "requestIdPlaceholder": "Sisestage saatmistaotluse ID.",
+    "offeredPrice": "Pakkumishind",
+    "estimatedDays": "Eeldatav kestus (päevades)",
+    "days": "päev",
+    "vehicleType": "Sõiduki tüüp",
+    "insuranceIncluded": "Kindlustus kaasas",
+    "message": "Sõnum",
+    "cancel": "Tühista",
+    "sending": "Saadetakse...",
+    "sendOffer": "Esita pakkumine",
+    "cancelOffer": "Tühista",
+    "pendingTab": "Ootamine",
+    "historyTab": "Minevik",
+    "noPendingOffers": "Teil pole ühtegi ootel pakkumist.",
+    "noHistory": "Varasemaid pakkumisi ei leitud.",
+    "status": {
+      "pending": "Ootamine",
+      "accepted": "Vastu võetud",
+      "rejected": "Tagasilükatud",
+      "expired": "Selle tähtaeg on läbi.",
+      "cancelled": "Tühistatud"
+    },
+    "createSuccess": "Pakkumine esitati edukalt.",
+    "createError": "Pakkumise saatmisel ilmnes viga.",
+    "cancelSuccess": "Pakkumine tühistati.",
+    "cancelError": "Pakkumise tühistamisel ilmnes viga.",
+    "fetchError": "Pakkumiste laadimisel ilmnes viga."
+  },
+  "animalInfo": {
+    "title": "Loomade ja toodete teave",
+    "animalTab": "Loom",
+    "healthTab": "Tervis",
+    "vaccinationsTab": "Vaktsineerijad",
+    "veterinaryTab": "Loomaarst",
+    "breed": "Võistlus",
+    "genderLabel": "Sugu",
+    "gender": {
+      "male": "Mees",
+      "female": "Naine",
+      "unknown": "Tundmatu"
+    },
+    "age": "Vanus",
+    "months": "kuu",
+    "weight": "Kaal",
+    "color": "Värv",
+    "tagNumber": "Kõrva number",
+    "healthStatus": "Tervislik seisund",
+    "health": {
+      "healthy": "Tervislik",
+      "underTreatment": "Ravi all",
+      "recovering": "Ta on paranemas.",
+      "quarantined": "Karantiinis",
+      "unknown": "Tundmatu"
+    },
+    "purposeLabel": "Ettenähtud kasutus",
+    "purpose": {
+      "breeding": "Naast",
+      "dairy": "Piim",
+      "meat": "Liha",
+      "egg": "Muna",
+      "wool": "Vill",
+      "working": "Töö",
+      "pet": "Kodumaine",
+      "other": "Muu"
+    },
+    "pregnancy": "Rasedus",
+    "pregnant": "Rase",
+    "microchip": "Mikrokiibi nr.",
+    "passport": "Passi nr.",
+    "sireDetails": "Isa teave",
+    "damDetails": "Põhiteave",
+    "diagnosis": "Diagnoos",
+    "treatment": "Ravi",
+    "medications": "Ravimid",
+    "veterinarian": "Loomaarst",
+    "nextDue": "Järgmine mässuliste ajalugu",
+    "prescriptionRequired": "Nõuab arsti retsepti",
+    "targetSpecies": "Target Tours",
+    "activeIngredients": "Toimeained",
+    "registrationNo": "Registreerimisnumber",
+    "storage": "Ladustamine",
+    "chemicalTab": "Keemiline",
+    "feedTab": "Sööt",
+    "seedTab": "Seeme",
+    "machineryTab": "Masin",
+    "organic": "Orgaaniline",
+    "toxicity": "Toksilisus",
+    "gmoFree": "GMO-vaba",
+    "protein": "Valk",
+    "fat": "Õli",
+    "fiber": "Kiudained",
+    "hybrid": "Hübriid",
+    "germination": "Idanemine",
+    "daysToMaturity": "Küpsemine",
+    "daysLabel": "päev",
+    "warranty": "Garanteeritud",
+    "power": "Tugevus",
+    "hoursUsed": "Kasutustunnid",
+    "hours": "tund",
+    "powerSource": "Toiteallikas"
+  },
+  "productVariants": {
+    "title": "Tootevariandid",
+    "variantCount": "variant",
+    "inStock": "Laos",
+    "outOfStock": "Välja müüdud"
+  },
+  "productPrices": {
+    "title": "Hinnad (mitmes valuutas)",
+    "autoConversion": "Automaatne teisendus",
+    "validUntil": "Kehtivus"
+  },
+  "requestTransport": {
+    "title": "Loo saatmistaotlus",
+    "pickupLocation": "Laadimispunkt",
+    "deliveryLocation": "Tarnepunkt",
+    "city": "Linn",
+    "address": "Aadress",
+    "transportType": "Transpordituur",
+    "types": {
+      "standard": "Standardne",
+      "refrigerated": "Külmakett",
+      "liveAnimal": "Elusloomad",
+      "hazardous": "Ohtlikud materjalid",
+      "oversized": "Suur suurus"
+    },
+    "weight": "Kaal (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Eelistatud üleslaadimise kuupäev",
+    "preferredDeliveryDate": "Eelistatud kättetoimetamise kuupäev",
+    "urgent": "Kiireloomuline transport",
+    "specialInstructions": "Erijuhised",
+    "instructionsPlaceholder": "Kirjuta oma konkreetsed juhised siia...",
+    "cancel": "Anna alla",
+    "submit": "Loo nõudlus",
+    "submitting": "Loomise protsessis...",
+    "success": "Saatmistaotlus on edukalt loodud.",
+    "error": "Saatmistaotluse loomisel ilmnes viga."
+  },
+  "transportTracking": {
+    "title": "Saadetise jälgimine",
+    "noTracking": "Jälgimisteavet pole veel saadaval.",
+    "update": "Värskendus"
+  },
+  "locations": {
+    "title": "Minu aadressid",
+    "description": "Halda oma registreeritud aadresse.",
+    "addLocation": "Lisa aadress",
+    "editLocation": "Muuda aadressi",
+    "noLocations": "Teil pole veel registreeritud aadressi.",
+    "name": "Aadress Nimi",
+    "namePlaceholder": "Näiteks: Maja, Töö, Talu",
+    "address": "Aadress",
+    "addressLine2": "Aadressirida 2",
+    "city": "Linn",
+    "state": "Piirkond / piirkond",
+    "postalCode": "Postiindeks",
+    "phone": "Telefon",
+    "email": "E-post",
+    "cancel": "Anna alla",
+    "save": "Salvesta",
+    "saving": "Salvestamine...",
+    "typePickup": "Laadimine",
+    "typeDelivery": "Kohaletoimetamine",
+    "typeBoth": "Üldine",
+    "createSuccess": "Aadress on edukalt lisatud.",
+    "createError": "Aadressi lisamisel ilmnes viga.",
+    "updateSuccess": "Aadress on edukalt uuendatud.",
+    "updateError": "Aadressi värskendamisel ilmnes viga.",
+    "deleteLocation": "Kustuta aadress",
+    "deleteSuccess": "Aadress kustutatud",
+    "deleteError": "Aadressi kustutamisel ilmnes viga.",
+    "fetchError": "Aadresside laadimisel ilmnes viga."
+  },
+  "systemSettings": {
+    "title": "Süsteemi seaded",
+    "description": "Vaadake platvormi valuutat, keelt, makseviise, saatmis- ja maksuseadeid.",
+    "unauthorized": "Teil pole sellele lehele juurdepääsuks luba.",
+    "currenciesTab": "Valuutad",
+    "languagesTab": "Keeled",
+    "paymentTab": "Makseviisid",
+    "shippingTab": "Lasti",
+    "taxTab": "Maks",
+    "active": "Aktiivne",
+    "inactive": "Passiivne",
+    "default": "Vaikimisi",
+    "noCurrencies": "Valuutat pole veel määratletud.",
+    "noLanguages": "Keelt pole veel defineeritud.",
+    "noPaymentMethods": "Makseviis pole veel määratletud.",
+    "noCarriers": "Laevafirmat pole veel kindlaks tehtud.",
+    "noZones": "Lastiruumi pole veel määratletud.",
+    "noTaxRates": "Maksumäära pole veel kindlaks määratud.",
+    "carriers": "Laevandusettevõtted",
+    "zones": "Lastitsoonid",
+    "countries": "Riigid",
+    "rates": "Saatmiskulud",
+    "noRates": "Saatmiskulusid pole veel kindlaks määratud.",
+    "freeShipping": "Tasuta saatmine",
+    "deliveryDays": "päeva tarneaeg"
+  },
+  "pushPermission": {
+    "title": "Luba märguanded",
+    "description": "Saate teateid uute sõnumite, pakkumiste ja tellimuste värskenduste kohta.",
+    "allow": "Luba",
+    "dismiss": "Sule"
+  },
+  "healthRecords": {
+    "title": "Terviseandmed",
+    "description": "Halda loomade terviseandmeid ja haiguslugu.",
+    "addRecord": "Lisa kirje",
+    "editRecord": "Redigeeri kirjet",
+    "deleteRecord": "Kustuta kirje",
+    "noRecords": "Terviseandmeid pole veel lisatud.",
+    "animalInfoId": "Loomade identifitseerimine",
+    "animalInfoIdPlaceholder": "Sisestage looma ID teave.",
+    "recordType": "Registreerimistuur",
+    "recordTypePlaceholder": "Näited: läbivaatus, ravi, operatsioon",
+    "recordDate": "Registreerimiskuupäev",
+    "followUpDate": "Kontrolli kuupäeva",
+    "veterinarianName": "Loomaarst",
+    "veterinarianLicense": "Litsentsi nr.",
+    "clinicName": "Kliiniline",
+    "diagnosis": "Diagnoos",
+    "treatment": "Ravi",
+    "medications": "Ravimid",
+    "medicationsPlaceholder": "Näide: penitsilliin 500 mg, ibuprofeen",
+    "notes": "Märkused",
+    "documentUrl": "Dokumendi URL",
+    "saving": "Salvestamine...",
+    "createSuccess": "Terviseandmete lisamine õnnestus.",
+    "updateSuccess": "Terviseandmete värskendamine õnnestus.",
+    "deleteSuccess": "Tervisekaart on edukalt kustutatud.",
+    "saveError": "Kirje salvestamisel ilmnes viga.",
+    "deleteError": "Kirje kustutamisel ilmnes viga.",
+    "fetchError": "Kirjete laadimisel ilmnes viga"
+  },
+  "vaccinations": {
+    "title": "Vaktsineerimisdokumendid",
+    "description": "Halda loomade vaktsineerimisandmeid ja kalendreid.",
+    "addVaccination": "Lisa mässaja",
+    "editVaccination": "Mässuliste kokkulepe",
+    "deleteVaccination": "Mässaja Sil",
+    "noVaccinations": "Vaktsineerimislogi pole veel lisatud.",
+    "animalInfoId": "Loomade identifitseerimine",
+    "animalInfoIdPlaceholder": "Sisestage looma ID teave.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Näide: SAT-vaktsiin, Brucella",
+    "vaccineType": "Mässuliste tuur",
+    "vaccineTypePlaceholder": "Näide: Aktiivne, mitteaktiivne",
+    "batchNumber": "Partei number",
+    "vaccinationDate": "Mässaja ajalugu",
+    "nextDueDate": "Järgmine mässuliste ajalugu",
+    "veterinarianName": "Loomaarst",
+    "veterinarianLicense": "Litsentsi nr.",
+    "notes": "Märkused",
+    "certificateUrl": "Sertifikaadi URL",
+    "saving": "Salvestamine...",
+    "createSuccess": "Vaktsineerimiskirje edukalt lisatud.",
+    "updateSuccess": "Vaktsineerimisandmed on edukalt uuendatud.",
+    "deleteSuccess": "Vaktsineerimisaruanne on edukalt kustutatud.",
+    "saveError": "Vaktsiini registreerimisel ilmnes viga.",
+    "deleteError": "Vaktsiini kustutamisel ilmnes viga.",
+    "fetchError": "Vaktsiinide laadimisel ilmnes viga."
+  },
+  "shippingCarriers": {
+    "title": "Laevandusettevõtted",
+    "description": "Halda laevafirma teavet.",
+    "addCarrier": "Lisa ettevõte",
+    "editCarrier": "Redigeeri ettevõtet",
+    "noCarriers": "Ühtegi laevandusettevõtet pole veel lisatud.",
+    "carrierName": "Ettevõtte nimi",
+    "carrierNamePlaceholder": "Näide: Aras Kargo, MNG",
+    "code": "Kood",
+    "codePlaceholder": "Näide: ARAS",
+    "website": "Veebisait",
+    "trackingUrlTemplate": "Jälgi URL-i malli",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Toetatud riigid",
+    "supportedCountriesPlaceholder": "Näide: TR, US, DE",
+    "active": "Aktiivne",
+    "inactive": "Passiivne",
+    "saving": "Salvestamine...",
+    "edit": "Redigeeri",
+    "delete": "Kustuta",
+    "createSuccess": "Laevafirma on edukalt lisatud.",
+    "updateSuccess": "Laevandusettevõtte andmed on edukalt uuendatud.",
+    "deleteSuccess": "Laevandusettevõte on edukalt kustutatud.",
+    "saveError": "Laevafirma registreerimisel ilmnes viga.",
+    "deleteError": "Saatmisettevõtte teabe kustutamisel ilmnes viga.",
+    "fetchError": "Kaubafirmade laadimisel ilmnes viga."
+  },
+  "shippingZones": {
+    "title": "Lastitsoonid",
+    "description": "Halda lastipiirkondi ja -alasid.",
+    "addZone": "Lisa piirkond",
+    "editZone": "Redigeeri piirkonda",
+    "noZones": "Lastiruumi pole veel lisatud.",
+    "zoneName": "Piirkonna nimi",
+    "zoneNamePlaceholder": "Näide: Euroopa, Põhja-Ameerika",
+    "countryCodes": "Riikide koodid",
+    "countryCodesPlaceholder": "Näide: TR, DE, FR",
+    "active": "Aktiivne",
+    "inactive": "Passiivne",
+    "saving": "Salvestamine...",
+    "edit": "Redigeeri",
+    "delete": "Kustuta",
+    "createSuccess": "Piirkond on edukalt lisatud.",
+    "updateSuccess": "Piirkond on edukalt uuendatud.",
+    "deleteSuccess": "Ala on edukalt puhastatud.",
+    "saveError": "Piirkonna salvestamisel ilmnes viga.",
+    "deleteError": "Piirkonna kustutamisel ilmnes viga.",
+    "fetchError": "Piirkondade laadimisel ilmnes viga"
+  },
+  "shippingRates": {
+    "title": "Saatmiskulud",
+    "description": "Halda saatmiskulusid ja kättetoimetamisvõimalusi.",
+    "addRate": "Lisa tasu",
+    "editRate": "Tasu kohandamine",
+    "noRates": "Saatmiskulusid pole veel lisatud.",
+    "zone": "Piirkond",
+    "carrier": "Firma",
+    "selectZone": "Valige piirkond",
+    "selectCarrier": "Valige ettevõte",
+    "shippingCost": "Saatmistasu",
+    "currency": "Valuuta",
+    "estimatedDeliveryDays": "Eeldatav kohaletoimetamine (päevades)",
+    "minWeight": "Minimaalne kaal",
+    "maxWeight": "Maksimaalne kaal",
+    "minOrderAmount": "Minimaalne tellimuse summa",
+    "freeShipping": "Tasuta saatmine",
+    "free": "Tasuta",
+    "active": "Aktiivne",
+    "inactive": "Passiivne",
+    "cost": "Tasu",
+    "deliveryDays": "Kohaletoimetamine",
+    "status": "Olukord",
+    "saving": "Salvestamine...",
+    "createSuccess": "Tasu lisamine õnnestus.",
+    "updateSuccess": "Palk on edukalt uuendatud.",
+    "deleteSuccess": "Tasu on edukalt kustutatud.",
+    "saveError": "Tasu salvestamisel ilmnes viga.",
+    "deleteError": "Tasu kustutamisel ilmnes viga.",
+    "fetchError": "Tasude üleslaadimisel ilmnes viga."
+  },
+  "metadata": {
+    "title": "Kariloomadega kauplemine - elusloomade kauplemisplatvorm",
+    "description": "Maailma usaldusväärseim elusloomade kauplemisplatvorm. Turvaline ja läbipaistev loomade ostmine ja müümine.",
+    "pages": {
+      "about": {
+        "title": "Meist",
+        "description": "Lisateavet elusloomadega kauplemise kohta. Usaldusväärne elusloomadega kauplemise platvorm."
+      },
+      "contact": {
+        "title": "Suhtlus",
+        "description": "Võtke meiega ühendust. Livestock Tradingi klienditoe meeskond on valmis teid aitama."
+      },
+      "terms": {
+        "title": "Kasutustingimused",
+        "description": "Kariloomadega kauplemise tingimused."
+      },
+      "privacy": {
+        "title": "Privaatsuspoliitika",
+        "description": "Loomakaubanduse privaatsuspoliitika. Siit saate teada, kuidas teie isikuandmeid kaitstakse."
+      },
+      "products": {
+        "title": "Tooted",
+        "description": "Sirvi elusloomade kuulutusi. Usaldusväärsed kuulutused veiste, lammaste ja muu kohta."
+      },
+      "sellers": {
+        "title": "Müüjad",
+        "description": "Avasta usaldusväärsed loomamüüjad. Kontrollitud müüjate profiilid ja arvustused."
+      },
+      "transporters": {
+        "title": "vedajad",
+        "description": "Avastage loomade transpordiettevõtteid. Ohutu ja professionaalne elusloomade transport."
+      },
+      "search": {
+        "title": "Otsi",
+        "description": "Otsi elusloomade nimekirjast. Lihtne otsing filtreerimis- ja sortimisvõimalustega."
+      },
+      "faq": {
+        "title": "Korduma kippuvad küsimused",
+        "description": "Korduma kippuvad küsimused ja vastused loomakaubanduse kohta."
+      },
+      "productDetail": {
+        "title": "{title} - Müüa",
+        "description": "Müüa linnas {title} - {city}. Lisateabe ja kontaktandmete saamiseks klõpsake siin."
+      },
+      "sellerDetail": {
+        "title": "{name} - Müüja profiil",
+        "description": "Müüja {name} profiil. Arvustused, kuulutused ja kontaktandmed."
+      },
+      "transporterDetail": {
+        "title": "{name} - operaatori profiil",
+        "description": "{name} vedaja profiil. Teeninduspiirkonnad, arvustused ja kontaktandmed."
+      }
+    }
   }
 }

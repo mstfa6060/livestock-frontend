@@ -11,17 +11,30 @@
     "back": "برگشت",
     "next": "به جلو",
     "close": "بستن",
+    "unauthorized": "شما اجازه دسترسی به این صفحه را ندارید.",
     "emailPlaceholder": "ornek@mail.com",
     "login": "ورود",
-    "register": "ثبت نام"
+    "register": "ثبت نام",
+    "previous": "سابق",
+    "zoomIn": "بزرگنمایی",
+    "previousImage": "تصویر قبلی",
+    "nextImage": "تصویر بعدی",
+    "closeLightbox": "بستن گالری",
+    "imageLightbox": "گالری تصاویر",
+    "slideN": "اسلاید {n}",
+    "viewMore": "بیشتر ببینید"
   },
   "header": {
     "products": "محصولات",
     "sellers": "فروشندگان",
+    "transporters": "حمل کننده ها",
     "about": "درباره ما",
+    "search": "جستجو",
     "dashboard": "پنل",
     "settings": "تنظیمات",
-    "logout": "خروج"
+    "logout": "خروج",
+    "menu": "منو",
+    "language": "انتخاب زبان"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "رمز عبورم را فراموش کرده‌ام.",
       "noAccount": "مگه حساب کاربری نداری؟",
       "register": "ثبت نام",
-      "errorDefault": "ورود ناموفق بود. لطفا اطلاعات خود را بررسی کنید."
+      "errorDefault": "ورود ناموفق بود. لطفا اطلاعات خود را بررسی کنید.",
+      "orContinueWith": "یا ادامه بده",
+      "continueWithGoogle": "ادامه با گوگل",
+      "continueWithApple": "با اپل ادامه دهید.",
+      "socialLoginError": "ورود با شبکه‌های اجتماعی ناموفق بود. لطفا دوباره امتحان کنید.",
+      "appleComingSoon": "خیلی زود",
+      "showPassword": "نمایش رمز عبور",
+      "hidePassword": "مخفی کردن رمز عبور"
     },
     "register": {
       "title": "ثبت نام",
@@ -51,7 +71,17 @@
       "login": "ورود",
       "passwordMismatch": "رمزهای عبور مطابقت ندارند.",
       "passwordTooShort": "رمز عبور باید حداقل ۶ کاراکتر داشته باشد.",
-      "errorDefault": "ثبت نام ناموفق بود. لطفا دوباره امتحان کنید."
+      "errorDefault": "ثبت نام ناموفق بود. لطفا دوباره امتحان کنید.",
+      "showPassword": "نمایش رمز عبور",
+      "hidePassword": "مخفی کردن رمز عبور",
+      "passwordStrength": {
+        "minLength": "حداقل ۸ کاراکتر",
+        "uppercase": "حروف بزرگ (A-Z)",
+        "lowercase": "حروف کوچک (a-z)",
+        "number": "شماره (0-9)",
+        "special": "کاراکترهای ویژه (!@#$%)"
+      },
+      "registerSuccess": "حساب کاربری شما با موفقیت ایجاد شد! شما به صفحه ورود هدایت می‌شوید..."
     },
     "forgotPassword": {
       "title": "رمز عبورم را فراموش کرده‌ام.",
@@ -78,7 +108,9 @@
       "requestNewLink": "درخواست اتصال جدید",
       "passwordMismatch": "رمزهای عبور مطابقت ندارند.",
       "passwordTooShort": "رمز عبور باید حداقل ۶ کاراکتر داشته باشد.",
-      "errorDefault": "تنظیم مجدد رمز عبور ناموفق بود. اتصال ممکن است نامعتبر یا منقضی شده باشد."
+      "errorDefault": "تنظیم مجدد رمز عبور ناموفق بود. اتصال ممکن است نامعتبر یا منقضی شده باشد.",
+      "showPassword": "نمایش رمز عبور",
+      "hidePassword": "مخفی کردن رمز عبور"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "فعال",
       "totalViews": "کل بازدیدها",
       "thisWeek": "این هفته",
+      "allTime": "تمام زمان‌ها",
       "favorites": "مورد علاقه",
       "onYourListings": "در تبلیغات شما",
+      "savedItems": "محصول ثبت شده",
       "messages": "پیام",
-      "unread": "خوانده نشده"
+      "notifications": "اعلان‌ها",
+      "unread": "خوانده نشده",
+      "views": "دیدگاه‌ها",
+      "draft": "پیش نویس",
+      "sold": "فروخته شد",
+      "pending": "در حال بررسی",
+      "awaitingApproval": "در انتظار تأیید",
+      "totalSales": "کل فروش",
+      "completedSales": "فروش‌های تکمیل‌شده",
+      "revenue": "درآمد",
+      "totalRevenue": "کل درآمد"
     },
     "recentListings": "آخرین آگهی‌های شما",
+    "recentActivity": "فعالیت‌های اخیر",
     "recentMessages": "پیام‌های اخیر",
+    "quickLinks": "دسترسی سریع",
     "noListings": "شما هنوز هیچ تبلیغی اضافه نکرده‌اید.",
+    "noActivity": "هنوز فعالیتی انجام نشده است.",
     "noMessages": "هنوز پیامی دریافت نکرده‌اید.",
     "noNotifications": "شما هنوز هیچ اعلانی دریافت نکرده‌اید.",
     "viewAllListings": "مشاهده همه آگهی‌ها",
-    "viewAllMessages": "مشاهده همه پیام‌ها"
+    "viewAllMessages": "مشاهده همه پیام‌ها",
+    "viewNotifications": "مشاهده اعلان‌ها",
+    "viewFavorites": "گور مورد علاقه‌ها",
+    "recentlyViewed": "اخیراً مشاهده شده",
+    "fetchError": "هنگام بارگذاری داده‌های پنل خطایی رخ داد."
   },
   "dashboardNav": {
     "overview": "نمای کلی",
@@ -115,45 +166,158 @@
     "notifications": "اعلان‌ها",
     "profile": "پروفایل",
     "settings": "تنظیمات",
-    "newListing": "افزودن آگهی جدید"
+    "newListing": "افزودن آگهی جدید",
+    "becomeSeller": "فروشنده شوید",
+    "categories": "دسته‌ها",
+    "offers": "پیشنهادات",
+    "deals": "توافق‌نامه‌ها",
+    "farms": "مزارع من",
+    "transport": "حمل و نقل",
+    "moderation": "اعتدال",
+    "sellerModeration": "تعدیل فروشنده",
+    "transporterModeration": "تعدیل اپراتور",
+    "brands": "برندها",
+    "transportOffers": "نقل قول های حمل و نقل",
+    "healthRecords": "سوابق سلامت",
+    "vaccinations": "واکسیناتورها",
+    "shippingCarriers": "شرکت‌های حمل و نقل",
+    "shippingZones": "مناطق باربری",
+    "shippingRates": "هزینه حمل و نقل",
+    "systemSettings": "تنظیمات سیستم",
+    "locations": "آدرس‌های من"
+  },
+  "profile": {
+    "title": "اطلاعات پروفایل",
+    "description": "شما می‌توانید اطلاعات شخصی خود را از اینجا به‌روزرسانی کنید.",
+    "personalInfo": "اطلاعات شخصی",
+    "contactInfo": "اطلاعات تماس",
+    "preferences": "تنظیمات برگزیده",
+    "firstName": "نام",
+    "firstNamePlaceholder": "نام خود را وارد کنید",
+    "surname": "نام خانوادگی",
+    "surnamePlaceholder": "نام خانوادگی خود را وارد کنید.",
+    "displayName": "نام نمایش داده شده",
+    "phone": "شماره تلفن",
+    "phonePlaceholder": "+۹۰ ۵XX XXX XX XX",
+    "phoneVerified": "تأیید شده",
+    "phoneNotVerified": "تایید نشده",
+    "verifyPhone": "شماره تلفن را تأیید کنید",
+    "country": "کشور",
+    "selectCountry": "یک کشور را انتخاب کنید",
+    "language": "ترجیح زبان",
+    "selectLanguage": "یک زبان انتخاب کنید",
+    "currency": "ارز",
+    "selectCurrency": "انتخاب ارز.",
+    "saveChanges": "ذخیره تغییرات",
+    "saving": "در حال ذخیره...",
+    "saveSuccess": "اطلاعات پروفایل شما به‌روزرسانی شد.",
+    "saveError": "هنگام به‌روزرسانی نمایه خطایی رخ داد.",
+    "avatar": "عکس پروفایل",
+    "changeAvatar": "تغییر عکس",
+    "removeAvatar": "حذف عکس",
+    "currencies": {
+      "try": "لیره ترکیه",
+      "usd": "دلار آمریکا",
+      "eur": "یورو",
+      "gbp": "پوند بریتانیا"
+    }
   },
   "myListings": {
     "title": "آگهی‌های من",
     "description": "تمام آگهی‌های خود را از اینجا مدیریت کنید.",
     "noListings": "شما هنوز هیچ تبلیغی اضافه نکرده‌اید.",
     "createFirst": "اولین فهرست خود را ایجاد کنید.",
-    "fetchError": "هنگام بارگذاری تبلیغات خطایی رخ داد.",
+    "fetchError": "هنگام بارگیری تبلیغات خطایی رخ داد.",
     "deleteSuccess": "آگهی با موفقیت حذف شد.",
     "deleteError": "هنگام حذف آگهی خطایی رخ داد.",
-    "activateSuccess": "آگهی فعال شد.",
-    "deactivateSuccess": "فهرست غیرفعال شده است.",
+    "publishSuccess": "آگهی برای تأیید ارسال شده است.",
+    "unpublishSuccess": "متن آگهی تدوین شده است.",
     "statusError": "هنگام تغییر وضعیت خطایی رخ داد.",
     "filters": {
       "all": "همه آنها",
-      "active": "فعال",
       "draft": "پیش نویس",
       "pending": "در انتظار تأیید",
+      "active": "فعال",
+      "rejected": "رد شد",
       "sold": "فروخته شد"
     },
     "actions": {
       "edit": "ویرایش",
       "delete": "حذف",
-      "activate": "فعال کردن",
-      "deactivate": "ساختار غیرفعال"
+      "publish": "ارسال برای تأیید",
+      "unpublish": "پیش نویس",
+      "menu": "تراکنش‌ها"
     },
     "deleteDialog": {
       "title": "تبلیغ را حذف کنید",
       "description": "آیا از حذف این آگهی مطمئن هستید؟ این اقدام غیرقابل برگشت است.",
       "cancel": "لغو",
       "confirm": "حذف"
-    }
+    },
+    "loadMore": "دانلود بیشتر",
+    "loadingMore": "در حال بارگذاری..."
   },
   "favorites": {
     "title": "مورد علاقه‌های من",
     "description": "محصولاتی که دوست دارید را اینجا دنبال کنید.",
     "noFavorites": "شما هنوز هیچ محصول مورد علاقه‌ای اضافه نکرده‌اید.",
     "browseProducts": "مرور محصولات",
-    "fetchError": "هنگام بارگیری موارد دلخواه خطایی روی داد."
+    "fetchError": "هنگام بارگیری موارد دلخواه خطایی روی داد.",
+    "loadMore": "دانلود بیشتر",
+    "loadingMore": "در حال بارگذاری..."
+  },
+  "messages": {
+    "title": "پیام‌ها",
+    "description": "با خریداران و فروشندگان در ارتباط باشید.",
+    "noConversations": "هنوز پیامی دریافت نکرده‌اید.",
+    "startConversation": "برای پرسیدن سوال در مورد یک آگهی، به آگهی مورد نظر بروید.",
+    "fetchError": "هنگام بارگیری پیام‌ها خطایی رخ داد",
+    "sendError": "هنگام ارسال پیام خطایی رخ داد.",
+    "connectionError": "اتصال ناموفق بود. دوباره امتحان کنید...",
+    "connected": "وصل شد.",
+    "connecting": "در حال اتصال...",
+    "searchPlaceholder": "جستجو در میان پیام‌ها...",
+    "typeMessage": "پیام خود را بنویسید...",
+    "send": "ارسال",
+    "sending": "در حال ارسال...",
+    "typing": "میگه...",
+    "read": "بخوانید",
+    "delivered": "ارسال شد",
+    "today": "امروز",
+    "yesterday": "دیروز",
+    "noMessages": "هنوز پیامی ارسال نشده است. مکالمه را شروع کنید!",
+    "loadMore": "آپلود بیشتر",
+    "loadingMessages": "پیام‌ها در حال بارگذاری هستند...",
+    "about": "درباره ما",
+    "product": "محصول",
+    "startNewConversation": "شروع یک مکالمه جدید",
+    "selectConversation": "یک مکالمه را انتخاب کنید یا یک مکالمه جدید را شروع کنید.",
+    "online": "آنلاین",
+    "offline": "آفلاین",
+    "lastSeen": "آخرین بازدید",
+    "deleteConversation": "حذف مکالمه",
+    "deleteConfirm": "آیا از حذف این مکالمه مطمئن هستید؟",
+    "deleted": "گفتگو حذف شد.",
+    "defaultUser": "کاربر",
+    "noResults": "هیچ نتیجه‌ای یافت نشد.",
+    "newConversation": "مکالمه جدید"
+  },
+  "notifications": {
+    "title": "اعلان‌ها",
+    "description": "اعلان‌های خود را مشاهده و مدیریت کنید.",
+    "markAllAsRead": "علامت گذاری همه به عنوان خوانده شده",
+    "noNotifications": "شما هنوز هیچ اعلانی دریافت نکرده‌اید.",
+    "viewAll": "مشاهده همه اعلان‌ها",
+    "today": "امروز",
+    "yesterday": "دیروز",
+    "older": "قدیمی‌تر",
+    "types": {
+      "system": "سیستم",
+      "message": "پیام",
+      "offer": "پیشنهاد",
+      "order": "سفارش دهید",
+      "listing": "آگهی"
+    }
   },
   "settings": {
     "title": "تنظیمات",
@@ -169,7 +333,28 @@
       "passwordMismatch": "رمزهای عبور جدید مطابقت ندارند.",
       "passwordTooShort": "رمز عبور جدید باید حداقل ۶ کاراکتر داشته باشد.",
       "sessionError": "اطلاعات جلسه یافت نشد.",
-      "errorDefault": "رمز عبور قابل به‌روزرسانی نیست. لطفاً رمز عبور فعلی خود را بررسی کنید."
+      "errorDefault": "رمز عبور قابل به‌روزرسانی نیست. لطفاً رمز عبور فعلی خود را بررسی کنید.",
+      "showPassword": "نمایش رمز عبور",
+      "hidePassword": "مخفی کردن رمز عبور"
+    },
+    "preferences": {
+      "title": "تنظیمات اعلان و مشاهده",
+      "description": "کانال‌های اعلان و تنظیمات نمایش خود را مدیریت کنید.",
+      "notifications": "اعلان‌ها",
+      "emailNotifications": "اعلان‌های ایمیلی",
+      "emailNotificationsDesc": "برای پیام‌های جدید و به‌روزرسانی‌های آگهی، اعلان‌های ایمیلی دریافت کنید.",
+      "smsNotifications": "اعلان‌های پیامکی",
+      "smsNotificationsDesc": "دریافت پیامک برای اطلاع رسانی های مهم.",
+      "pushNotifications": "اعلان‌های فشاری",
+      "pushNotificationsDesc": "برای به‌روزرسانی‌های فوری، اعلان‌های فوری دریافت کنید.",
+      "appearance": "ظاهر",
+      "darkMode": "حالت تاریک",
+      "darkModeDesc": "به یک تم تاریک تغییر دهید.",
+      "saveChanges": "تنظیمات برگزیده را ذخیره کنید",
+      "saving": "در حال ذخیره...",
+      "saveSuccess": "تنظیمات برگزیده شما به‌روزرسانی شد.",
+      "saveError": "هنگام به‌روزرسانی تنظیمات برگزیده، خطایی روی داد.",
+      "loadError": "تنظیمات برگزیده قابل بارگیری نبودند."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "پلتفرم معاملات حیوانات زنده",
       "subtitle": "مطمئن‌ترین پلتفرم خرید و فروش حیوانات زنده. گاو و گوسفند خود را با خیال راحت بخرید و بفروشید.",
       "cta": "همین حالا شروع کنید",
-      "viewListings": "مشاهده تبلیغات"
+      "viewListings": "مشاهده تبلیغات",
+      "searchPlaceholder": "دنبال حیوانات بگرد... (گاو، گوسفند، بز...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "آگهی‌های ویژه",
       "viewAll": "همه را ببینید"
+    },
+    "cta": {
+      "title": "همین حالا شروع کنید",
+      "subtitle": "جای خود را در سکویی بگیرید که هزاران فروشنده و خریدار در آن ملاقات می‌کنند.",
+      "button": "ثبت نام رایگان"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "درباره ما",
     "contact": "ارتباطات",
     "terms": "شرایط استفاده",
-    "privacy": "سیاست حفظ حریم خصوصی"
+    "privacy": "سیاست حفظ حریم خصوصی",
+    "company": "شرکت",
+    "support": "پشتیبانی",
+    "legal": "قانونی",
+    "followUs": "ما را دنبال کنید",
+    "newsletter": "بولتن",
+    "newsletterDescription": "جدیدترین آگهی‌ها و تخفیف‌ها را از دست ندهید.",
+    "subscribe": "اشتراک",
+    "emailPlaceholder": "آدرس ایمیل شما",
+    "tagline": "معتبرترین پلتفرم تجارت حیوانات زنده در ترکیه.",
+    "sellers": "فروشندگان",
+    "products": "محصولات",
+    "map": "نقشه",
+    "appleLoginComingSoon": "ورود با اپل خیلی زود فعال خواهد شد.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "سوالات متداول"
+  },
+  "faq": {
+    "title": "سوالات متداول",
+    "description": "پاسخ به سوالات متداول شما در مورد پلتفرم ما.",
+    "noFaqs": "هنوز هیچ سوالی اضافه نشده است."
+  },
+  "about": {
+    "title": "درباره ما",
+    "subtitle": "معتبرترین پلتفرم تجارت حیوانات زنده در ترکیه.",
+    "mission": {
+      "title": "ماموریت ما",
+      "description": "با دیجیتالی کردن تجارت حیوانات زنده، هدف ما ایجاد ارتباطی امن، شفاف و کارآمد بین تولیدکنندگان و خریداران است."
+    },
+    "vision": {
+      "title": "دیدگاه ما",
+      "description": "پیشگام بودن در تحول دیجیتال در بخش کشاورزی و تبدیل شدن به یک پلتفرم جهانی در تجارت حیوانات زنده."
+    },
+    "values": {
+      "title": "ارزش‌های ما",
+      "trust": {
+        "title": "اعتماد",
+        "description": "شفافیت و قابلیت اطمینان در همه معاملات ضروری است."
+      },
+      "quality": {
+        "title": "کیفیت",
+        "description": "بهبود مستمر برای ارائه بهترین خدمات."
+      },
+      "innovation": {
+        "title": "نوآوری",
+        "description": "با استفاده از فناوری، صنعت را متحول کنید."
+      }
+    },
+    "stats": {
+      "users": "کاربر ثبت نام شده",
+      "sellers": "فروشنده فعال",
+      "products": "آگهی",
+      "transactions": "تراکنش موفق"
+    }
+  },
+  "contact": {
+    "title": "ارتباطات",
+    "subtitle": "لطفا در صورت هرگونه سوال با ما تماس بگیرید.",
+    "form": {
+      "title": "برای ما بنویسید",
+      "name": "نام شما",
+      "namePlaceholder": "احمد ییلماز",
+      "email": "ایمیل",
+      "emailPlaceholder": "ornek@mail.com",
+      "subject": "موضوع",
+      "subjectPlaceholder": "موضوع پیام شما",
+      "message": "پیام شما",
+      "messagePlaceholder": "پیام خود را اینجا بنویسید...",
+      "submit": "ارسال",
+      "submitting": "در حال ارسال...",
+      "success": "پیام شما با موفقیت ارسال شد. در اسرع وقت با شما تماس خواهیم گرفت.",
+      "error": "هنگام ارسال پیام خطایی رخ داد. لطفاً دوباره امتحان کنید."
+    },
+    "info": {
+      "title": "اطلاعات تماس",
+      "address": "آدرس",
+      "addressValue": "استانبول، ترکیه",
+      "email": "ایمیل",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "تلفن",
+      "phoneValue": "‎+90 (212) 123 45 67‎",
+      "workingHours": "ساعات کاری",
+      "workingHoursValue": "دوشنبه - جمعه: ۰۹:۰۰ - ۱۸:۰۰",
+      "map": "نقشه"
+    }
+  },
+  "terms": {
+    "title": "شرایط استفاده",
+    "lastUpdated": "آخرین به‌روزرسانی: {date}",
+    "sections": {
+      "acceptance": {
+        "title": "۱. پذیرش شرایط",
+        "content": "با استفاده از این وب‌سایت، شما با شرایط استفاده زیر موافقت می‌کنید. اگر با این شرایط موافق نیستید، لطفاً از سایت استفاده نکنید."
+      },
+      "services": {
+        "title": "۲. خدمات",
+        "content": "تجارت دام بستری برای خرید و فروش حیوانات زنده فراهم می‌کند. مسئولیت تمام تراکنش‌های این پلتفرم بر عهده کاربر است."
+      },
+      "accounts": {
+        "title": "۳. حساب‌های کاربری",
+        "content": "برای ایجاد حساب کاربری باید اطلاعات دقیق و به‌روز ارائه دهید. امنیت حساب شما بر عهده خودتان است."
+      },
+      "prohibited": {
+        "title": "۴. فعالیت‌های ممنوعه",
+        "content": "تبلیغات گمراه‌کننده، اطلاعات نادرست، کلاهبرداری و فعالیت‌های غیرقانونی اکیداً ممنوع است."
+      },
+      "liability": {
+        "title": "۵. محدودیت مسئولیت",
+        "content": "این پلتفرم مستقیماً مسئول تراکنش‌های بین کاربران نیست. تمام تراکنش‌ها بین طرفین انجام می‌شود."
+      },
+      "changes": {
+        "title": "۶. تغییرات",
+        "content": "این شرایط و ضوابط بدون اطلاع قبلی قابل تغییر هستند. تغییرات بلافاصله پس از انتشار اعمال خواهند شد."
+      }
+    }
+  },
+  "privacy": {
+    "title": "سیاست حفظ حریم خصوصی",
+    "lastUpdated": "آخرین به‌روزرسانی: {date}",
+    "sections": {
+      "collection": {
+        "title": "۱. جمع‌آوری اطلاعات",
+        "content": "وقتی شما یک حساب کاربری ایجاد می‌کنید، ما اطلاعات شخصی مانند نام، آدرس ایمیل و شماره تلفن شما را جمع‌آوری می‌کنیم. ما همچنین ممکن است داده‌های ناشناس مربوط به استفاده شما از سایت را جمع‌آوری کنیم."
+      },
+      "usage": {
+        "title": "۲. استفاده از اطلاعات",
+        "content": "اطلاعاتی که ما جمع‌آوری می‌کنیم برای ارائه خدمات ما، مدیریت حساب شما، تضمین امنیت و ارائه پیشنهادات شخصی‌سازی‌شده به شما استفاده می‌شود."
+      },
+      "sharing": {
+        "title": "۳. اشتراک‌گذاری اطلاعات",
+        "content": "اطلاعات شخصی شما به اشخاص ثالث فروخته یا اجاره داده نخواهد شد. اطلاعات شما به جز برای مقاصد قانونی مورد نیاز، به اشتراک گذاشته نخواهد شد."
+      },
+      "security": {
+        "title": "۴. امنیت",
+        "content": "اقدامات امنیتی استاندارد صنعتی برای محافظت از داده‌های شما در نظر گرفته شده است."
+      },
+      "cookies": {
+        "title": "۵. کوکی‌ها",
+        "content": "وب‌سایت ما از کوکی‌ها برای بهبود تجربه کاربری استفاده می‌کند. می‌توانید تنظیمات کوکی خود را در تنظیمات مرورگرتان مدیریت کنید."
+      },
+      "rights": {
+        "title": "۶. حقوق شما",
+        "content": "طبق قانون حفاظت از داده‌های شخصی ترکیه (KVKK)، شما حق دسترسی، اصلاح و حذف داده‌های شخصی خود را دارید."
+      }
+    }
   },
   "products": {
     "title": "محصولات",
@@ -235,11 +570,19 @@
       "priceDesc": "قیمت (از بالا به پایین)",
       "popular": "محبوب‌ترین‌ها"
     },
+    "pagination": {
+      "prev": "سابق",
+      "next": "بعدی"
+    },
     "status": {
       "draft": "پیش نویس",
+      "pending": "در انتظار تأیید",
       "active": "فعال",
+      "inactive": "منفعل",
+      "outOfStock": "موجود نیست",
+      "expired": "دوره اش تمام شده.",
       "sold": "فروخته شد",
-      "pending": "در انتظار تأیید"
+      "rejected": "رد شد"
     },
     "condition": {
       "new": "جدید",
@@ -250,12 +593,16 @@
     "outOfStock": "موجود نیست",
     "inStock": "موجود در انبار",
     "noResults": "محصول یافت نشد.",
-    "loading": "محصولات در حال بارگذاری هستند...",
+    "loading": "در حال بارگیری محصولات...",
     "perPage": "به ازای هر صفحه",
     "showing": "مجموع {total} محصولات بین {from} و {to}.",
+    "fetchError": "هنگام آپلود محصولات خطایی رخ داد.",
+    "loadMore": "نمایش بیشتر",
+    "showingOf": "محصولات {count} / {total} نمایش داده می‌شوند.",
     "loginToFavorite": "برای افزودن به علاقه‌مندی‌ها، وارد شوید.",
     "addedToFavorites": "به علاقه‌مندی‌ها اضافه شد",
-    "removedFromFavorites": "از موارد دلخواه حذف شد"
+    "removedFromFavorites": "از موارد دلخواه حذف شد",
+    "favoriteError": "عملیات مورد علاقه شکست خورد."
   },
   "productDetail": {
     "addToFavorites": "افزودن به علاقه‌مندی‌ها",
@@ -279,16 +626,31 @@
     "maxOrder": "حداکثر سفارش",
     "publishedAt": "تاریخ انتشار",
     "views": "مشاهده شده",
-    "reviews": "ارزیابی",
+    "reviews": {
+      "title": "ارزیابی‌ها",
+      "reviewCount": "ارزیابی",
+      "noReviews": "هنوز ارزیابی انجام نشده است.",
+      "verified": "خریدار تایید شده"
+    },
     "similarProducts": "محصولات مشابه",
     "sellerProducts": "سایر محصولات فروشنده",
     "contactSeller": "با فروشنده تماس بگیرید",
-    "loginRequired": "برای افزودن به علاقه‌مندی‌ها، وارد شوید.",
+    "makeOffer": "ارسال پیشنهاد",
+    "loginRequired": "برای انجام این اقدام، لطفاً وارد سیستم شوید.",
     "addedToFavorites": "به علاقه‌مندی‌ها اضافه شد",
     "removedFromFavorites": "از موارد دلخواه حذف شد",
     "linkCopied": "لینک کپی شده است.",
     "messagingComingSoon": "قابلیت پیام‌رسانی به زودی اضافه می‌شود.",
-    "productNotFound": "محصول یافت نشد."
+    "productNotFound": "محصول یافت نشد.",
+    "contacting": "تماس برقرار می‌شود...",
+    "contactError": "ارتباط برقرار نشد. لطفا دوباره امتحان کنید.",
+    "noImage": "تصویری موجود نیست.",
+    "defaultLocation": "ترکیه",
+    "inquiryMessage": "می‌خواهم در مورد {title} اطلاعات کسب کنم.",
+    "breadcrumb": {
+      "home": "خانه",
+      "products": "محصولات"
+    }
   },
   "seller": {
     "title": "اطلاعات فروشنده",
@@ -300,13 +662,81 @@
     "call": "جستجو",
     "viewProfile": "مشاهده پروفایل"
   },
+  "sellers": {
+    "title": "فروشندگان",
+    "description": "فروشندگان قابل اعتماد را کشف کنید.",
+    "search": "فروشنده پیدا کن...",
+    "sort": "مرتب سازی",
+    "sortOptions": {
+      "newest": "جدیدترین‌ها",
+      "mostSales": "پرفروش‌ترین",
+      "topRated": "بالاترین امتیاز",
+      "mostProducts": "بیشترین تبلیغات"
+    },
+    "noResults": "فروشنده پیدا نشد.",
+    "loading": "فروشندگان در حال بارگیری هستند...",
+    "showing": "{count} فروشنده پیدا شد",
+    "verified": "تأیید شده",
+    "sales": "فروش",
+    "products": "آگهی",
+    "reviews": "ارزیابی",
+    "rating": "نقطه",
+    "viewProducts": "مشاهده محصولات",
+    "contactSeller": "ارسال پیام",
+    "memberSince": "عضو از {سال}",
+    "fetchError": "هنگام بارگیری فروشندگان خطایی روی داد.",
+    "detail": {
+      "title": "مشخصات فروشنده",
+      "about": "درباره ما",
+      "businessInfo": "اطلاعات تجاری",
+      "businessName": "نام کسب و کار",
+      "businessType": "تور تجاری",
+      "email": "ایمیل",
+      "phone": "تلفن",
+      "website": "وب‌سایت",
+      "description": "توضیح",
+      "policies": "سیاست‌ها",
+      "returnPolicy": "سیاست بازگشت کالا",
+      "shippingPolicy": "سیاست حمل و نقل",
+      "businessHours": "ساعات کاری",
+      "paymentMethods": "روش‌های پرداخت",
+      "allProducts": "همه محصولات",
+      "stats": {
+        "totalSales": "کل فروش",
+        "totalProducts": "کل محصولات",
+        "totalReviews": "ارزیابی",
+        "rating": "نقطه"
+      },
+      "notFound": "فروشنده پیدا نشد.",
+      "backToList": "به فروشندگان توجه نکنید",
+      "contactInfo": "ارتباطات",
+      "noProducts": "این فروشنده هنوز هیچ آگهی ثبت نکرده است.",
+      "noPolicies": "فروشنده هنوز سیاست‌های خود را مشخص نکرده است.",
+      "fetchError": "هنگام بارگذاری اطلاعات فروشنده خطایی روی داد.",
+      "productsLoadError": "هنگام آپلود محصولات فروشنده خطایی رخ داد.",
+      "reviewsTab": "ارزیابی‌ها",
+      "reviews": {
+        "summary": "خلاصه ارزیابی",
+        "reviewCount": "ارزیابی",
+        "communication": "ارتباطات",
+        "shippingSpeed": "سرعت ارسال",
+        "productQuality": "کیفیت محصول",
+        "noReviews": "هنوز ارزیابی انجام نشده است.",
+        "verified": "خریدار تایید شده"
+      }
+    }
+  },
   "editListing": {
     "title": "ویرایش آگهی",
     "saveChanges": "ذخیره تغییرات",
     "updating": "در حال به‌روزرسانی...",
     "updateSuccess": "آگهی با موفقیت به‌روزرسانی شد.",
-    "updateFailed": "هنگام به‌روزرسانی فهرست، خطایی رخ داد.",
+    "updateFailed": "هنگام به‌روزرسانی فهرست، خطایی روی داد.",
     "loadError": "هنگام بارگذاری آگهی خطایی رخ داد.",
+    "sellerNotFound": "مشخصات فروشنده یافت نشد.",
+    "sellerLoadError": "مشخصات فروشنده قابل بارگیری نیست.",
+    "userNotFound": "اطلاعات کاربر یافت نشد. لطفا دوباره وارد شوید.",
+    "locationNotFound": "اطلاعات مکان یافت نشد. لطفاً صفحه را رفرش کنید.",
     "basicInfo": "اطلاعات پایه",
     "categoryAndCondition": "دسته بندی و وضعیت",
     "pricing": "قیمت‌گذاری",
@@ -314,6 +744,8 @@
     "images": "تصاویر",
     "existingImages": "تصاویر موجود",
     "addImage": "افزودن تصویر",
+    "maxImages": "شما می‌توانید حداکثر ۱۰ تصویر آپلود کنید.",
+    "imageHint": "حداقل ۱، حداکثر ۱۰ تصویر. با فرمت PNG، JPG یا WEBP.",
     "uploadingImages": "تصاویر در حال بارگذاری هستند...",
     "uploadingImage": "تصویر در حال بارگذاری است.",
     "imageUploadFailed": "تصویر قابل بارگذاری نبود.",
@@ -358,6 +790,7 @@
     "addImage": "افزودن تصویر",
     "maxImages": "شما می‌توانید حداکثر ۱۰ تصویر آپلود کنید.",
     "imageHint": "حداقل ۱، حداکثر ۱۰ تصویر. با فرمت PNG، JPG یا WEBP.",
+    "location": "اطلاعات مکان",
     "fields": {
       "title": "عنوان آگهی",
       "shortDescription": "شرح مختصر",
@@ -370,13 +803,29 @@
       "shippingAvailable": "ارسال موجود است.",
       "shippingCost": "هزینه ارسال",
       "weight": "وزن",
-      "weightUnit": "واحد وزن"
+      "weightUnit": "واحد وزن",
+      "city": "شهر",
+      "address": "آدرس",
+      "postalCode": "کد پستی"
     },
     "placeholders": {
       "title": "مثال: گاو هلشتاین ۲ ساله",
       "shortDescription": "توضیحات محصول (حداکثر ۲۰۰ کاراکتر)",
       "description": "ارائه اطلاعات دقیق در مورد محصول ...",
-      "category": "یک دسته بندی انتخاب کنید."
+      "category": "یک دسته بندی انتخاب کنید.",
+      "city": "وارد شهر شوید",
+      "address": "آدرس کامل را وارد کنید.",
+      "postalCode": "کد پستی"
+    },
+    "errors": {
+      "titleRequired": "عنوان آگهی الزامی است.",
+      "shortDescriptionRequired": "شرح مختصری لازم است.",
+      "descriptionRequired": "توضیح مفصلی لازم است.",
+      "categoryRequired": "انتخاب دسته بندی الزامی است.",
+      "priceRequired": "قیمت الزامی است.",
+      "cityRequired": "اطلاعات شهر مورد نیاز است.",
+      "addressRequired": "اطلاعات آدرس الزامی است.",
+      "locationError": "هنگام ایجاد مکان، خطایی روی داد."
     },
     "success": "آگهی با موفقیت ایجاد شد.",
     "error": "هنگام ایجاد آگهی خطایی رخ داد.",
@@ -388,24 +837,53 @@
     "draftSaved": "پیش‌نویس ذخیره شد",
     "productCreated": "محصول با موفقیت ایجاد شد.",
     "creationFailed": "محصول ایجاد نشد. لطفا دوباره امتحان کنید.",
-    "errors": {
-      "titleRequired": "عنوان آگهی الزامی است.",
-      "shortDescriptionRequired": "شرح مختصری لازم است.",
-      "descriptionRequired": "توضیح مفصلی لازم است.",
-      "categoryRequired": "انتخاب دسته بندی الزامی است.",
-      "priceRequired": "قیمت معتبر وارد کنید."
-    }
+    "userNotFound": "اطلاعات کاربر یافت نشد. لطفا دوباره وارد شوید.",
+    "defaultBusinessName": "کسب و کار من"
+  },
+  "becomeSeller": {
+    "title": "فروشنده شوید",
+    "description": "بیانیه شرکت",
+    "alreadySeller": "شما از قبل یک پروفایل فروشنده دارید.",
+    "goToListings": "به فهرست‌های من بروید",
+    "businessInfo": "اطلاعات تجاری",
+    "contactInfo": "اطلاعات تماس",
+    "businessName": "نام کسب و کار",
+    "businessNamePlaceholder": "مثال: مزرعه ییلماز",
+    "businessType": "تور تجاری",
+    "businessTypePlaceholder": "نوع کسب و کار خود را انتخاب کنید.",
+    "businessTypes": {
+      "individual": "فردی",
+      "company": "شرکت",
+      "cooperative": "تعاونی",
+      "farm": "مزرعه"
+    },
+    "taxNumber": "شماره مالیاتی",
+    "taxNumberPlaceholder": "شماره شناسایی مالیاتی خود را وارد کنید (اختیاری)",
+    "descriptionPlaceholder": "توضیح مختصری در مورد کسب و کار خود بنویسید...",
+    "phone": "تلفن",
+    "phonePlaceholder": "+۹۰ ۵XX XXX XX XX",
+    "website": "وب‌سایت",
+    "websitePlaceholder": "https://www.examplesite.com (اختیاری)",
+    "submit": "ایجاد پروفایل فروشنده",
+    "submitting": "ساخت پروفایل...",
+    "success": "پروفایل فروشنده شما با موفقیت ایجاد شد!",
+    "error": "هنگام ایجاد پروفایل فروشنده خطایی روی داد.",
+    "taxNumberHelp": "شماره مالیاتی ۱۰ یا ۱۱ رقمی خود را وارد کنید (اختیاری)",
+    "phoneHelp": "مثال: +90 555 123 45 67 یا 0555 123 45 67",
+    "websiteHelp": "مثال: www.isletmem.com یا https://isletmem.com",
+    "alreadySellerDescription": "برای مدیریت آگهی‌های خود می‌توانید از دکمه زیر استفاده کنید.",
+    "newListing": "افزودن آگهی جدید"
   },
   "fileUpload": {
     "dragDrop": "عکس یا ویدیو آپلود کنید.",
     "dragDropHint": "برای انتخاب، بکشید و رها کنید یا کلیک کنید.",
     "dropHere": "رهایش کن...",
     "imageLimit": "عکس: حداکثر ۱۰ مگابایت",
-    "videoLimit": "ویدیو: حداکثر ۵۰ مگابایت",
+    "videoLimit": "ویدیو: حداکثر ۱۰۰ مگابایت",
     "uploadCount": "{فعلی} / {حداکثر} بارگذاری شده",
     "maxFilesError": "شما می‌توانید حداکثر {max} رسانه آپلود کنید.",
     "imageTooLarge": "عکس باید کمتر از ۱۰ مگابایت باشد.",
-    "videoTooLarge": "حجم ویدیو باید کمتر از ۵۰ مگابایت باشد.",
+    "videoTooLarge": "حجم ویدیو باید کمتر از ۱۰۰ مگابایت باشد.",
     "optimizing": "بهینه‌سازی...",
     "uploading": "در حال بارگذاری...",
     "queued": "در صف انتظار...",
@@ -419,9 +897,833 @@
     "videoBadge": "ویدئو",
     "coverUpdated": "عکس روی جلد با موفقیت تنظیم شد.",
     "optimizationInfo": "عکس‌ها برای مطابقت با استانداردهای وب بهینه شده‌اند",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "انتخاب بصری",
+    "changeImage": "تغییر",
+    "removeImage": "حذف",
+    "videoProcessing": "ویدیو در حال پردازش است...",
+    "videoProcessingFailed": "عملیات شکست خورد.",
+    "videoProcessingPollError": "وضعیت پردازش ویدیو قابل مشاهده نیست. لطفاً صفحه را رفرش کنید.",
+    "reorderError": "فایل قابل مرتب‌سازی نبود.",
+    "coverUpdateError": "عکس روی جلد قابل به‌روزرسانی نبود."
+  },
+  "error": {
+    "title": "خطایی رخ داده است.",
+    "description": "خطای غیرمنتظره‌ای رخ داد. لطفاً صفحه را رفرش کنید یا بعداً دوباره امتحان کنید.",
+    "retry": "دوباره امتحان کنید",
+    "goBack": "برنگرد.",
+    "goHome": "خانه",
+    "notFound": {
+      "title": "صفحه یافت نشد",
+      "description": "صفحه مورد نظر شما یا در دسترس نیست یا تغییر مکان داده است.",
+      "goHome": "بازگشت به صفحه اصلی"
+    }
+  },
+  "search": {
+    "title": "جستجو",
+    "placeholder": "جستجو برای محصولات، دسته بندی ها یا فروشندگان ...",
+    "searchButton": "جستجو",
+    "searchingFor": "تحت تعقیب",
+    "loading": "مورد نظر ...",
+    "resultsCount": "{count} نتیجه پیدا شد.",
+    "noResults": "هیچ نتیجه‌ای یافت نشد.",
+    "tryDifferentSearch": "کلمات کلیدی مختلف را امتحان کنید یا فیلترها را تغییر دهید.",
+    "filters": {
+      "title": "فیلترها",
+      "category": "دسته بندی",
+      "allCategories": "همه دسته‌ها",
+      "condition": "وضعیت",
+      "allConditions": "همه موارد",
+      "priceRange": "محدوده قیمت",
+      "price": "قیمت",
+      "min": "حداقل",
+      "max": "مکس",
+      "apply": "اعمال کردن",
+      "clear": "تمیز",
+      "clearAll": "پاک کردن همه"
+    },
+    "fetchError": "هنگام بارگیری نتایج جستجو خطایی رخ داد",
+    "recentSearches": "جستجوهای اخیر",
+    "clearHistory": "پاک کردن تاریخچه",
+    "noSearchHistory": "شما هنوز سابقه جستجو ندارید.",
+    "deleteHistoryError": "هنگام حذف سابقه جستجو خطایی روی داد."
+  },
+  "categories": {
+    "title": "مدیریت دسته‌بندی",
+    "description": "دسته بندی ها را از اینجا مدیریت کنید.",
+    "noCategories": "هنوز هیچ دسته‌ای اضافه نشده است.",
+    "createFirst": "اولین دسته را ایجاد کنید.",
+    "fetchError": "هنگام بارگذاری دسته‌ها خطایی رخ داد.",
+    "createSuccess": "دسته بندی با موفقیت ایجاد شد",
+    "createError": "هنگام ایجاد دسته بندی خطایی رخ داد.",
+    "updateSuccess": "دسته بندی با موفقیت بروزرسانی شد",
+    "updateError": "هنگام به‌روزرسانی دسته‌بندی، خطایی رخ داد.",
+    "deleteSuccess": "دسته بندی با موفقیت حذف شد.",
+    "deleteError": "هنگام حذف دسته بندی خطایی رخ داد.",
+    "activateSuccess": "دسته بندی فعال شد.",
+    "deactivateSuccess": "دسته بندی غیرفعال شده است.",
+    "statusError": "هنگام تغییر وضعیت خطایی رخ داد.",
+    "loadError": "هنگام بارگیری دسته بندی خطایی رخ داد",
+    "filters": {
+      "all": "همه آنها",
+      "active": "فعال",
+      "inactive": "غیرفعال"
+    },
+    "table": {
+      "name": "نام دسته بندی",
+      "slug": "حلزون",
+      "sortOrder": "شماره سریال",
+      "subCategories": "زیرشاخه",
+      "status": "وضعیت",
+      "actions": "تراکنش‌ها"
+    },
+    "actions": {
+      "edit": "ویرایش",
+      "delete": "حذف",
+      "activate": "فعال کردن",
+      "deactivate": "ساختار غیرفعال"
+    },
+    "deleteDialog": {
+      "title": "حذف دسته",
+      "description": "آیا از حذف این دسته مطمئن هستید؟ این اقدام غیرقابل برگشت است.",
+      "cancel": "لغو",
+      "confirm": "حذف"
+    },
+    "addNew": "افزودن دسته جدید",
+    "loadMore": "دانلود بیشتر",
+    "loadingMore": "در حال بارگذاری...",
+    "form": {
+      "newTitle": "ایجاد یک دسته جدید",
+      "editTitle": "ویرایش رده",
+      "name": "نام دسته بندی",
+      "namePlaceholder": "مثال: گاو",
+      "slug": "حلزون",
+      "slugPlaceholder": "مثال: دام‌های بزرگ",
+      "description": "توضیح",
+      "descriptionPlaceholder": "توضیح مختصری در مورد دسته بندی ...",
+      "parentCategory": "رده بالا",
+      "parentCategoryPlaceholder": "انتخاب دسته برتر (اختیاری)",
+      "noParent": "بدون دسته برتر (دسته اصلی)",
+      "sortOrder": "شماره توالی",
+      "isActive": "فعال",
+      "iconUrl": "آدرس آیکون",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "ذخیره",
+      "submitting": "در حال ذخیره...",
+      "updating": "در حال به‌روزرسانی...",
+      "errors": {
+        "nameRequired": "نام دسته بندی الزامی است.",
+        "slugRequired": "استفاده از حلزون‌ها اجباری است."
+      }
+    }
+  },
+  "offers": {
+    "title": "پیشنهادات",
+    "description": "پیشنهادات ورودی و خروجی خود را مدیریت کنید.",
+    "received": "پیشنهادات دریافتی",
+    "sent": "پیشنهادات ارائه شده",
+    "noReceivedOffers": "هنوز هیچ پیشنهادی دریافت نشده است.",
+    "noSentOffers": "شما هنوز پیشنهادی ارسال نکرده‌اید.",
+    "browseProducts": "مرور محصولات",
+    "viewProduct": "مشاهده محصول",
+    "accept": "پذیرفتن",
+    "reject": "رد کردن",
+    "withdraw": "برداشت",
+    "makeOffer": "ارسال پیشنهاد",
+    "sendOffer": "ارسال پیشنهاد",
+    "sending": "در حال ارسال...",
+    "cancel": "لغو",
+    "listingPrice": "قیمت اعلام شده",
+    "yourOffer": "پیشنهاد شما",
+    "quantity": "مبلغ",
+    "messageOptional": "پیام (اختیاری)",
+    "messagePlaceholder": "نکته‌ای که دوست دارید با فروشنده در میان بگذارید...",
+    "expiresAt": "آخرین تاریخ معتبر",
+    "offerSent": "پیشنهاد شما با موفقیت ارسال شد.",
+    "offerError": "هنگام ارسال پیشنهاد، خطایی رخ داد.",
+    "acceptSuccess": "پیشنهاد پذیرفته شد.",
+    "rejectSuccess": "پیشنهاد رد شد.",
+    "withdrawSuccess": "پیشنهاد پس گرفته شد.",
+    "actionError": "در طول فرآیند خطایی رخ داد.",
+    "fetchError": "هنگام بارگذاری پیشنهادات خطایی روی داد.",
+    "loginRequired": "برای ارسال پیشنهاد وارد شوید.",
+    "invalidPrice": "قیمت معتبر وارد کنید.",
+    "invalidQuantity": "مبلغ معتبری وارد کنید.",
+    "status": {
+      "pending": "در حال بررسی",
+      "accepted": "پذیرفته شده",
+      "rejected": "رد شد",
+      "countered": "پیشنهاد متقابل",
+      "expired": "دوره اش تمام شده.",
+      "withdrawn": "انصراف داد"
+    }
+  },
+  "deals": {
+    "title": "توافق‌نامه‌ها",
+    "description": "توافق‌نامه‌های خرید خود را دنبال کنید.",
+    "buying": "محققان",
+    "selling": "فروش",
+    "noBuyingDeals": "شما هنوز فرآیند ثبت نام دانش آموز ندارید.",
+    "noSellingDeals": "شما هنوز هیچ تراکنش فروشی ندارید.",
+    "browseProducts": "مرور محصولات",
+    "viewProduct": "مشاهده محصول",
+    "activeDeals": "توافق‌نامه‌های فعال",
+    "completedDeals": "تکمیل شده",
+    "purchases": "محققان",
+    "sales": "فروش",
+    "fetchError": "هنگام بارگیری توافق‌نامه‌ها خطایی روی داد",
+    "dealStatus": {
+      "pending": "در حال بررسی",
+      "confirmed": "تأیید شد",
+      "processing": "آماده‌سازی",
+      "shipped": "در محموله",
+      "delivered": "تحویل داده شد",
+      "completed": "تکمیل شده",
+      "cancelled": "لغو شد",
+      "disputed": "توافق‌نامه"
+    },
+    "delivery": {
+      "pickup": "تحویل حضوری",
+      "shipping": "با محموله",
+      "transport": "با حمل و نقل"
+    },
+    "requestTransport": "درخواست حمل و نقل"
+  },
+  "farms": {
+    "title": "مزارع من",
+    "description": "مزارع خود را مدیریت و به‌روزرسانی کنید.",
+    "addFarm": "مزرعه اضافه کنید",
+    "editFarm": "مدیریت مزرعه",
+    "noFarms": "شما هنوز مزرعه‌ای اضافه نکرده‌اید.",
+    "farmName": "نام مزرعه",
+    "registrationNumber": "شماره ثبت",
+    "location": "مکان",
+    "selectLocation": "یک مکان را انتخاب کنید.",
+    "addLocationFirst": "ابتدا، یک مکان اضافه کنید.",
+    "farmTypeLabel": "تور مزرعه",
+    "farmDescription": "توضیح",
+    "totalArea": "مساحت کل",
+    "cultivatedArea": "منطقه کشت شده",
+    "certifications": "گواهینامه‌ها",
+    "certificationsPlaceholder": "ایزو ۲۲۰۰۰، گلوبال گپ و غیره",
+    "organic": "ارگانیک",
+    "verified": "تأیید شده",
+    "save": "ذخیره",
+    "saving": "در حال ذخیره...",
+    "cancel": "لغو",
+    "edit": "ویرایش",
+    "delete": "حذف",
+    "sellerRequired": "مشخصات فروشنده الزامی است",
+    "sellerRequiredDesc": "برای افزودن مزرعه، ابتدا باید پروفایل فروشنده خود را ایجاد کنید.",
+    "becomeSeller": "فروشنده شوید",
+    "createSuccess": "مزرعه با موفقیت اضافه شد.",
+    "updateSuccess": "مزرعه با موفقیت به‌روزرسانی شد.",
+    "deleteSuccess": "مزرعه با موفقیت حذف شد.",
+    "saveError": "هنگام ثبت مزرعه خطایی رخ داد.",
+    "deleteError": "هنگام حذف مزرعه خطایی روی داد.",
+    "fetchError": "هنگام بارگذاری اطلاعات مزرعه خطایی رخ داد.",
+    "farmType": {
+      "livestock": "دامداری",
+      "crop": "کشاورزی",
+      "mixed": "مختلط",
+      "poultry": "بالدار",
+      "dairy": "دامداری",
+      "aquaculture": "محصولات آبزی"
+    }
+  },
+  "transporters": {
+    "title": "حمل کننده ها",
+    "description": "خدمات حمل و نقل حیوانات و محصولات",
+    "searchPlaceholder": "یک شرکت حمل و نقل پیدا کنید...",
+    "noTransporters": "هنوز هیچ اپراتور ثبت‌شده‌ای وجود ندارد.",
+    "verified": "تأیید شده",
+    "transports": "حمل و نقل",
+    "viewProfile": "مشاهده پروفایل",
+    "sort": {
+      "newest": "جدیدترین‌ها",
+      "rating": "بالاترین امتیاز",
+      "mostTransports": "متداول‌ترین ارسال‌ها"
+    },
+    "pagination": {
+      "previous": "سابق",
+      "next": "بعدی",
+      "page": "صفحه {صفحه}"
+    }
+  },
+  "transport": {
+    "title": "درخواست‌های حمل و نقل من",
+    "description": "درخواست‌های حمل و نقل خود را پیگیری کنید.",
+    "findTransporter": "یک شرکت حمل و نقل پیدا کنید",
+    "active": "فعال",
+    "completed": "تکمیل شده",
+    "total": "مجموع",
+    "asSeller": "به عنوان فروشنده",
+    "asBuyer": "به عنوان خریدار",
+    "noSellerRequests": "به عنوان فروشنده، شما نیازی به ارسال کالا ندارید.",
+    "noBuyerRequests": "به عنوان گیرنده، شما درخواست ارسال ندارید.",
+    "viewProduct": "مشاهده محصول",
+    "pickup": "دریافت",
+    "delivery": "تحویل",
+    "urgent": "فوری",
+    "fetchError": "هنگام آپلود درخواست‌های ارسال، خطایی روی داد.",
+    "trackShipment": "دنبال کردن",
+    "transportStatus": {
+      "pending": "در حال بررسی",
+      "inPool": "در استخر",
+      "assigned": "منصوب شد",
+      "pickedUp": "رسید",
+      "inTransit": "در جاده",
+      "delivered": "تحویل داده شد",
+      "completed": "تکمیل شده",
+      "cancelled": "لغو شد"
+    },
+    "transportType": {
+      "standard": "استاندارد",
+      "refrigerated": "زنجیره سرد",
+      "liveAnimal": "حیوانات زنده",
+      "hazardous": "مواد خطرناک",
+      "oversized": "سایز بزرگ"
+    }
+  },
+  "moderation": {
+    "title": "تعدیل محصول",
+    "description": "بررسی محصولات منتظر تأیید.",
+    "pending": "منتظر",
+    "allClear": "تمام محصولات بررسی شده‌اند.",
+    "noPending": "هیچ محصولی در انتظار تأیید نیست.",
+    "awaitingReview": "در انتظار بررسی",
+    "by": "مسئول فروش:",
+    "stock": "سهام",
+    "preview": "با تو",
+    "approve": "تأیید",
+    "reject": "رد کردن",
+    "confirmReject": "رد کردن",
+    "cancelReject": "تسلیم شو",
+    "rejectReasonPlaceholder": "دلیل رد شدن را بنویسید...",
+    "rejectReasonRequired": "ذکر دلیل برای امتناع الزامی است.",
+    "approveSuccess": "محصول با موفقیت تایید شد.",
+    "rejectSuccess": "محصول رد شد.",
+    "actionError": "در طول فرآیند خطایی رخ داد.",
+    "fetchError": "هنگام آپلود محصولات خطایی رخ داد.",
+    "unauthorized": "شما اجازه دسترسی به این صفحه را ندارید."
+  },
+  "sellerModeration": {
+    "title": "تعدیل فروشنده",
+    "description": "بررسی و مدیریت حساب‌های فروشنده.",
+    "pending": "منتظر",
+    "allClear": "از همه فروشندگان تحقیق شد.",
+    "noPending": "هیچ فروشنده‌ای منتظر نمی‌ماند.",
+    "verify": "تأیید",
+    "suspend": "تعلیق",
+    "verifySuccess": "فروشنده با موفقیت تأیید شد.",
+    "suspendSuccess": "فروشنده به حالت تعلیق درآمد.",
+    "actionError": "در طول فرآیند خطایی رخ داد.",
+    "suspendReasonRequired": "دلیل تعلیق الزامی است.",
+    "suspendReasonPlaceholder": "دلیل قطع همکاری را بنویسید...",
+    "confirmSuspend": "تعلیق",
+    "cancelSuspend": "تسلیم شو",
+    "statusLabels": {
+      "pendingVerification": "در انتظار تأیید",
+      "active": "فعال",
+      "suspended": "آویزان",
+      "banned": "ممنوعه"
+    },
+    "filterAll": "نمایش همه",
+    "filterPending": "منتظران",
+    "filterActive": "دارایی‌ها",
+    "filterSuspended": "معلق",
+    "unauthorized": "شما اجازه دسترسی به این صفحه را ندارید.",
+    "businessName": "نام کسب و کار",
+    "businessType": "تور تجاری",
+    "email": "ایمیل",
+    "phone": "تلفن",
+    "status": "وضعیت",
+    "createdAt": "تاریخ ثبت نام"
+  },
+  "transporterModeration": {
+    "title": "تعدیل اپراتور",
+    "description": "بررسی و مدیریت حساب‌های اپراتورها",
+    "pending": "منتظر",
+    "allClear": "تمام ناقلین مورد بررسی قرار گرفتند.",
+    "noPending": "هیچ حمل و نقلی منتظر نیست.",
+    "verify": "تأیید",
+    "suspend": "تعلیق",
+    "verifySuccess": "صحت عملکرد فرستنده با موفقیت تأیید شد.",
+    "suspendSuccess": "شرکت حمل و نقل به حالت تعلیق درآمد.",
+    "actionError": "در طول فرآیند خطایی رخ داد.",
+    "suspendReasonRequired": "دلیل تعلیق الزامی است.",
+    "suspendReasonPlaceholder": "دلیل قطع همکاری را بنویسید...",
+    "confirmSuspend": "تعلیق",
+    "cancelSuspend": "تسلیم شو",
+    "statusLabels": {
+      "pendingVerification": "در انتظار تأیید",
+      "active": "فعال",
+      "suspended": "آویزان",
+      "banned": "ممنوعه"
+    },
+    "filterAll": "نمایش همه",
+    "filterPending": "منتظران",
+    "filterActive": "دارایی‌ها",
+    "filterSuspended": "معلق",
+    "unauthorized": "شما اجازه دسترسی به این صفحه را ندارید.",
+    "companyName": "نام شرکت",
+    "contactPerson": "شخص مجاز",
+    "email": "ایمیل",
+    "phone": "تلفن",
+    "city": "شهر",
+    "status": "وضعیت",
+    "createdAt": "تاریخ ثبت نام"
+  },
+  "transporterDetail": {
+    "notFound": "هیچ وسیله‌ی حمل و نقلی پیدا نشد.",
+    "backToList": "به حمل و نقل ها نروید",
+    "verified": "تأیید شده",
+    "totalTransports": "کل هزینه ارسال",
+    "completed": "تکمیل شده",
+    "about": "درباره ما",
+    "contact": "اطلاعات تماس",
+    "businessInfo": "اطلاعات تجاری",
+    "license": "شماره مجوز",
+    "insurance": "اطلاعات بیمه",
+    "fleet": "اطلاعات ناوگان",
+    "serviceRegions": "مناطق خدماتی",
+    "specializations": "حوزه‌های تخصص",
+    "certifications": "گواهینامه‌ها"
+  },
+  "brands": {
+    "title": "مدیریت برند",
+    "description": "مدیریت برندهای محصول.",
+    "addBrand": "افزودن برند",
+    "editBrand": "ویرایش برند",
+    "noBrands": "هنوز هیچ برندی اضافه نشده است.",
+    "brandName": "نام تجاری",
+    "brandDescription": "توضیح",
+    "website": "وب‌سایت",
+    "logoUrl": "آدرس لوگو",
+    "save": "ذخیره",
+    "saving": "در حال ذخیره...",
+    "cancel": "لغو",
+    "edit": "ویرایش",
+    "delete": "حذف",
+    "inactive": "منفعل",
+    "products": "محصول",
+    "createSuccess": "برند با موفقیت اضافه شد",
+    "updateSuccess": "برند با موفقیت به‌روزرسانی شد.",
+    "deleteSuccess": "برند با موفقیت حذف شد.",
+    "saveError": "هنگام ثبت علامت تجاری خطایی رخ داده است.",
+    "deleteError": "هنگام حذف علامت تجاری خطایی روی داد.",
+    "fetchError": "هنگام بارگیری برندها خطایی روی داد.",
+    "unauthorized": "شما اجازه دسترسی به این صفحه را ندارید."
+  },
+  "transporterReviews": {
+    "title": "ارزیابی‌ها",
+    "reviewCount": "ارزیابی",
+    "noReviews": "هنوز ارزیابی انجام نشده است.",
+    "timeliness": "تحویل به موقع",
+    "communication": "ارتباطات",
+    "carefulHandling": "جابجایی دقیق",
+    "professionalism": "حرفه‌ای‌گری"
+  },
+  "transportOffers": {
+    "title": "نقل قول های حمل و نقل",
+    "description": "مدیریت پیش فاکتور هایی که برای درخواست های حمل و نقل ارسال می کنید.",
+    "newOffer": "پیشنهاد جدید",
+    "transportRequestId": "شناسه درخواست ارسال",
+    "requestIdPlaceholder": "شناسه درخواست ارسال را وارد کنید.",
+    "offeredPrice": "قیمت پیشنهادی",
+    "estimatedDays": "مدت زمان تخمینی (روز)",
+    "days": "روز",
+    "vehicleType": "نوع خودرو",
+    "insuranceIncluded": "بیمه شامل می‌شود",
+    "message": "پیام",
+    "cancel": "لغو",
+    "sending": "در حال ارسال...",
+    "sendOffer": "ارسال پیشنهاد",
+    "cancelOffer": "لغو",
+    "pendingTab": "منتظر",
+    "historyTab": "گذشته",
+    "noPendingOffers": "شما هیچ پیشنهاد معوقه‌ای ندارید.",
+    "noHistory": "هیچ پیشنهاد قبلی یافت نشد.",
+    "status": {
+      "pending": "منتظر",
+      "accepted": "پذیرفته شده",
+      "rejected": "رد شد",
+      "expired": "دوره اش تمام شده.",
+      "cancelled": "لغو شد"
+    },
+    "createSuccess": "پیشنهاد با موفقیت ارسال شد.",
+    "createError": "هنگام ارسال پیشنهاد، خطایی رخ داد.",
+    "cancelSuccess": "پیشنهاد لغو شد.",
+    "cancelError": "هنگام لغو پیشنهاد، خطایی روی داد.",
+    "fetchError": "هنگام بارگذاری پیشنهادات خطایی روی داد."
+  },
+  "animalInfo": {
+    "title": "اطلاعات حیوانات و محصولات",
+    "animalTab": "حیوان",
+    "healthTab": "سلامت",
+    "vaccinationsTab": "واکسیناتورها",
+    "veterinaryTab": "دامپزشک",
+    "breed": "مسابقه",
+    "genderLabel": "جنسیت",
+    "gender": {
+      "male": "مرد",
+      "female": "زن",
+      "unknown": "ناشناخته"
+    },
+    "age": "سن",
+    "months": "ماه",
+    "weight": "وزن",
+    "color": "رنگ",
+    "tagNumber": "شماره گوش",
+    "healthStatus": "وضعیت سلامت",
+    "health": {
+      "healthy": "سالم",
+      "underTreatment": "تحت درمان",
+      "recovering": "او/او در حال بهبودی است.",
+      "quarantined": "در قرنطینه",
+      "unknown": "ناشناخته"
+    },
+    "purposeLabel": "کاربرد مورد نظر",
+    "purpose": {
+      "breeding": "گل میخ",
+      "dairy": "شیر",
+      "meat": "گوشت",
+      "egg": "تخم مرغ",
+      "wool": "پشم",
+      "working": "کار",
+      "pet": "داخلی",
+      "other": "دیگر"
+    },
+    "pregnancy": "بارداری",
+    "pregnant": "باردار",
+    "microchip": "شماره میکروچیپ",
+    "passport": "شماره گذرنامه",
+    "sireDetails": "اطلاعات پدر",
+    "damDetails": "اطلاعات اصلی",
+    "diagnosis": "تشخیص",
+    "treatment": "درمان",
+    "medications": "داروها",
+    "veterinarian": "دامپزشک",
+    "nextDue": "تاریخ شورشی بعدی",
+    "prescriptionRequired": "نیاز به نسخه پزشک دارد",
+    "targetSpecies": "تورهای هدف",
+    "activeIngredients": "مواد تشکیل دهنده فعال",
+    "registrationNo": "شماره ثبت",
+    "storage": "ذخیره‌سازی",
+    "chemicalTab": "شیمیایی",
+    "feedTab": "طعمه",
+    "seedTab": "بذر",
+    "machineryTab": "ماشین",
+    "organic": "ارگانیک",
+    "toxicity": "سمیت",
+    "gmoFree": "بدون GMO",
+    "protein": "پروتئین",
+    "fat": "نفت",
+    "fiber": "فیبر",
+    "hybrid": "هیبریدی",
+    "germination": "جوانه زنی",
+    "daysToMaturity": "بلوغ",
+    "daysLabel": "روز",
+    "warranty": "تضمین شده",
+    "power": "قدرت",
+    "hoursUsed": "ساعات استفاده",
+    "hours": "ساعت",
+    "powerSource": "منبع تغذیه"
+  },
+  "productVariants": {
+    "title": "انواع محصول",
+    "variantCount": "نوع",
+    "inStock": "موجود در انبار",
+    "outOfStock": "فروخته شد"
+  },
+  "productPrices": {
+    "title": "قیمت‌ها (ارزهای چندگانه)",
+    "autoConversion": "تبدیل خودکار",
+    "validUntil": "اعتبار"
+  },
+  "requestTransport": {
+    "title": "ایجاد درخواست حمل و نقل",
+    "pickupLocation": "نقطه بارگیری",
+    "deliveryLocation": "نقطه تحویل",
+    "city": "شهر",
+    "address": "آدرس",
+    "transportType": "تور حمل و نقل",
+    "types": {
+      "standard": "استاندارد",
+      "refrigerated": "زنجیره سرد",
+      "liveAnimal": "حیوانات زنده",
+      "hazardous": "مواد خطرناک",
+      "oversized": "سایز بزرگ"
+    },
+    "weight": "وزن (کیلوگرم)",
+    "weightPlaceholder": "کیلوگرم",
+    "preferredPickupDate": "تاریخ آپلود ترجیحی",
+    "preferredDeliveryDate": "تاریخ تحویل ترجیحی",
+    "urgent": "حمل و نقل فوری",
+    "specialInstructions": "دستورالعمل‌های ویژه",
+    "instructionsPlaceholder": "دستورالعمل‌های خاص خود را اینجا بنویسید...",
+    "cancel": "تسلیم شو",
+    "submit": "ایجاد تقاضا",
+    "submitting": "در فرآیند خلقت...",
+    "success": "درخواست ارسال با موفقیت ایجاد شد.",
+    "error": "هنگام ایجاد درخواست ارسال، خطایی روی داد."
+  },
+  "transportTracking": {
+    "title": "پیگیری محموله",
+    "noTracking": "هنوز هیچ اطلاعاتی در مورد ردیابی در دسترس نیست.",
+    "update": "به‌روزرسانی"
+  },
+  "locations": {
+    "title": "آدرس‌های من",
+    "description": "آدرس‌های ثبت‌شده خود را مدیریت کنید.",
+    "addLocation": "افزودن آدرس",
+    "editLocation": "ویرایش آدرس",
+    "noLocations": "شما هنوز آدرس ثبت شده ای ندارید.",
+    "name": "نام آدرس",
+    "namePlaceholder": "مثال: خانه، شغل، مزرعه",
+    "address": "آدرس",
+    "addressLine2": "خط آدرس ۲",
+    "city": "شهر",
+    "state": "ناحیه / منطقه",
+    "postalCode": "کد پستی",
+    "phone": "تلفن",
+    "email": "ایمیل",
+    "cancel": "تسلیم شو",
+    "save": "ذخیره",
+    "saving": "در حال ذخیره...",
+    "typePickup": "بارگیری",
+    "typeDelivery": "تحویل",
+    "typeBoth": "عمومی",
+    "createSuccess": "آدرس با موفقیت اضافه شد.",
+    "createError": "هنگام اضافه کردن آدرس خطایی رخ داد.",
+    "updateSuccess": "آدرس با موفقیت به‌روزرسانی شد.",
+    "updateError": "هنگام به‌روزرسانی آدرس، خطایی رخ داد.",
+    "deleteLocation": "حذف آدرس",
+    "deleteSuccess": "آدرس حذف شد",
+    "deleteError": "هنگام حذف آدرس خطایی رخ داد.",
+    "fetchError": "هنگام بارگذاری آدرس‌ها خطایی رخ داد."
+  },
+  "systemSettings": {
+    "title": "تنظیمات سیستم",
+    "description": "مشاهده واحد پول، زبان، روش‌های پرداخت، ارسال و تنظیمات مالیات پلتفرم.",
+    "unauthorized": "شما اجازه دسترسی به این صفحه را ندارید.",
+    "currenciesTab": "ارزها",
+    "languagesTab": "زبان‌ها",
+    "paymentTab": "روش‌های پرداخت",
+    "shippingTab": "محموله",
+    "taxTab": "مالیات",
+    "active": "فعال",
+    "inactive": "منفعل",
+    "default": "پیش‌فرض",
+    "noCurrencies": "هنوز واحد پول مشخص نشده است.",
+    "noLanguages": "زبان هنوز تعریف نشده است.",
+    "noPaymentMethods": "روش پرداخت هنوز مشخص نشده است.",
+    "noCarriers": "هنوز شرکت حمل و نقل مشخص نشده است.",
+    "noZones": "هنوز محدوده بار مشخص نشده است.",
+    "noTaxRates": "نرخ مالیات هنوز مشخص نشده است.",
+    "carriers": "شرکت‌های حمل و نقل",
+    "zones": "مناطق باربری",
+    "countries": "کشورها",
+    "rates": "هزینه حمل و نقل",
+    "noRates": "هزینه ارسال هنوز مشخص نشده است.",
+    "freeShipping": "ارسال رایگان",
+    "deliveryDays": "زمان تحویل روز"
+  },
+  "pushPermission": {
+    "title": "فعال کردن اعلان‌ها",
+    "description": "دریافت اعلان‌ها درباره پیام‌های جدید، پیشنهادات ویژه و به‌روزرسانی‌های سفارش.",
+    "allow": "اجازه دادن",
+    "dismiss": "بستن"
+  },
+  "healthRecords": {
+    "title": "سوابق سلامت",
+    "description": "سوابق سلامت حیوانات و تاریخچه پزشکی را مدیریت کنید.",
+    "addRecord": "اضافه کردن رکورد",
+    "editRecord": "ویرایش رکورد",
+    "deleteRecord": "حذف رکورد",
+    "noRecords": "پرونده سلامت هنوز اضافه نشده است.",
+    "animalInfoId": "شناسه حیوان",
+    "animalInfoIdPlaceholder": "شناسه اطلاعات حیوان را وارد کنید.",
+    "recordType": "تور ثبت نام",
+    "recordTypePlaceholder": "مثال‌ها: معاینه، درمان، جراحی",
+    "recordDate": "تاریخ ثبت نام",
+    "followUpDate": "تاریخ بررسی",
+    "veterinarianName": "دامپزشک",
+    "veterinarianLicense": "شماره مجوز",
+    "clinicName": "بالینی",
+    "diagnosis": "تشخیص",
+    "treatment": "درمان",
+    "medications": "داروها",
+    "medicationsPlaceholder": "مثال: پنی‌سیلین ۵۰۰ میلی‌گرم، ایبوپروفن",
+    "notes": "یادداشت‌ها",
+    "documentUrl": "آدرس اینترنتی سند",
+    "saving": "در حال ذخیره...",
+    "createSuccess": "پرونده سلامت با موفقیت اضافه شد.",
+    "updateSuccess": "پرونده سلامت با موفقیت به‌روزرسانی شد.",
+    "deleteSuccess": "پرونده سلامت با موفقیت حذف شد.",
+    "saveError": "هنگام ذخیره رکورد خطایی رخ داد.",
+    "deleteError": "هنگام حذف رکورد خطایی رخ داد.",
+    "fetchError": "هنگام بارگیری رکوردها خطایی رخ داد"
+  },
+  "vaccinations": {
+    "title": "سوابق واکسن",
+    "description": "سوابق و تقویم‌های واکسیناسیون حیوانات را مدیریت کنید.",
+    "addVaccination": "اضافه کردن شورشی",
+    "editVaccination": "آرایش شورشیان",
+    "deleteVaccination": "شورشی سیل",
+    "noVaccinations": "هنوز اطلاعات واکسیناسیون ثبت نشده است.",
+    "animalInfoId": "شناسه حیوان",
+    "animalInfoIdPlaceholder": "شناسه اطلاعات حیوان را وارد کنید.",
+    "vaccineName": "آسی آدی",
+    "vaccineNamePlaceholder": "مثال: واکسن SAT، بروسلا",
+    "vaccineType": "تور آسی",
+    "vaccineTypePlaceholder": "مثال: زنده، غیرفعال",
+    "batchNumber": "شماره حزب",
+    "vaccinationDate": "تاریخ شورشیان",
+    "nextDueDate": "تاریخ شورشی بعدی",
+    "veterinarianName": "دامپزشک",
+    "veterinarianLicense": "شماره مجوز",
+    "notes": "یادداشت‌ها",
+    "certificateUrl": "آدرس اینترنتی گواهی",
+    "saving": "در حال ذخیره...",
+    "createSuccess": "رکورد واکسن با موفقیت اضافه شد.",
+    "updateSuccess": "پرونده واکسن با موفقیت به‌روزرسانی شد.",
+    "deleteSuccess": "رکورد واکسن با موفقیت حذف شد.",
+    "saveError": "هنگام ثبت واکسن خطایی رخ داد.",
+    "deleteError": "هنگام حذف واکسن خطایی روی داد.",
+    "fetchError": "هنگام بارگیری واکسن‌ها خطایی رخ داد."
+  },
+  "shippingCarriers": {
+    "title": "شرکت‌های حمل و نقل",
+    "description": "مدیریت اطلاعات شرکت‌های حمل و نقل",
+    "addCarrier": "شرکت را اضافه کنید",
+    "editCarrier": "ویرایش شرکت",
+    "noCarriers": "هنوز هیچ شرکت حمل و نقلی اضافه نشده است.",
+    "carrierName": "نام شرکت",
+    "carrierNamePlaceholder": "مثال: ارس کارگو، MNG",
+    "code": "کد",
+    "codePlaceholder": "مثال: آراس",
+    "website": "وب‌سایت",
+    "trackingUrlTemplate": "الگوی URL را دنبال کنید",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "کشورهای پشتیبانی‌شده",
+    "supportedCountriesPlaceholder": "مثال: TR، US، DE",
+    "active": "فعال",
+    "inactive": "منفعل",
+    "saving": "در حال ذخیره...",
+    "edit": "ویرایش",
+    "delete": "حذف",
+    "createSuccess": "شرکت حمل و نقل با موفقیت اضافه شد.",
+    "updateSuccess": "شرکت حمل و نقل با موفقیت به‌روزرسانی شد.",
+    "deleteSuccess": "شرکت حمل و نقل با موفقیت حذف شد.",
+    "saveError": "هنگام ثبت شرکت حمل و نقل خطایی رخ داد.",
+    "deleteError": "هنگام حذف اطلاعات شرکت حمل و نقل، خطایی روی داد.",
+    "fetchError": "هنگام بارگیری شرکت‌های باربری خطایی رخ داد."
+  },
+  "shippingZones": {
+    "title": "مناطق باربری",
+    "description": "مدیریت مناطق و محوطه‌های باربری.",
+    "addZone": "منطقه اضافه کنید",
+    "editZone": "ویرایش منطقه",
+    "noZones": "هنوز هیچ فضای باری اضافه نشده است.",
+    "zoneName": "نام منطقه",
+    "zoneNamePlaceholder": "مثال: اروپا، آمریکای شمالی",
+    "countryCodes": "کدهای کشور",
+    "countryCodesPlaceholder": "مثال: TR، DE، FR",
+    "active": "فعال",
+    "inactive": "منفعل",
+    "saving": "در حال ذخیره...",
+    "edit": "ویرایش",
+    "delete": "حذف",
+    "createSuccess": "منطقه با موفقیت اضافه شد.",
+    "updateSuccess": "منطقه با موفقیت به‌روزرسانی شد.",
+    "deleteSuccess": "منطقه با موفقیت پاکسازی شد.",
+    "saveError": "هنگام ذخیره منطقه خطایی روی داد.",
+    "deleteError": "هنگام حذف منطقه خطایی روی داد.",
+    "fetchError": "هنگام بارگیری مناطق خطایی رخ داد"
+  },
+  "shippingRates": {
+    "title": "هزینه حمل و نقل",
+    "description": "هزینه‌های ارسال و گزینه‌های تحویل را مدیریت کنید.",
+    "addRate": "اضافه کردن هزینه",
+    "editRate": "تنظیم هزینه",
+    "noRates": "هزینه ارسال هنوز اضافه نشده.",
+    "zone": "مساحت",
+    "carrier": "شرکت",
+    "selectZone": "یک منطقه را انتخاب کنید",
+    "selectCarrier": "یک شرکت انتخاب کنید",
+    "shippingCost": "هزینه ارسال",
+    "currency": "ارز",
+    "estimatedDeliveryDays": "تحویل تخمینی (روز)",
+    "minWeight": "حداقل وزن",
+    "maxWeight": "حداکثر وزن",
+    "minOrderAmount": "حداقل مبلغ سفارش",
+    "freeShipping": "ارسال رایگان",
+    "free": "رایگان",
+    "active": "فعال",
+    "inactive": "منفعل",
+    "cost": "هزینه",
+    "deliveryDays": "تحویل",
+    "status": "وضعیت",
+    "saving": "در حال ذخیره...",
+    "createSuccess": "هزینه با موفقیت اضافه شد.",
+    "updateSuccess": "حقوق و دستمزد با موفقیت به‌روزرسانی شد.",
+    "deleteSuccess": "هزینه با موفقیت حذف شد.",
+    "saveError": "هنگام ذخیره هزینه، خطایی روی داد.",
+    "deleteError": "هنگام حذف هزینه، خطایی روی داد.",
+    "fetchError": "هنگام بارگذاری هزینه‌ها خطایی رخ داد."
+  },
+  "metadata": {
+    "title": "تجارت دام - پلتفرم تجارت حیوانات زنده",
+    "description": "معتبرترین پلتفرم تجارت حیوانات زنده در جهان. خرید و فروش ایمن و شفاف حیوانات.",
+    "pages": {
+      "about": {
+        "title": "درباره ما",
+        "description": "درباره تجارت دام اطلاعات کسب کنید. یک پلتفرم قابل اعتماد برای تجارت حیوانات زنده."
+      },
+      "contact": {
+        "title": "ارتباطات",
+        "description": "با ما تماس بگیرید. تیم پشتیبانی مشتری Livestock Trading آماده کمک به شماست."
+      },
+      "terms": {
+        "title": "شرایط استفاده",
+        "description": "شرایط و ضوابط تجارت دام."
+      },
+      "privacy": {
+        "title": "سیاست حفظ حریم خصوصی",
+        "description": "سیاست حفظ حریم خصوصی تجارت دام. بیاموزید که چگونه از اطلاعات شخصی شما محافظت می‌شود."
+      },
+      "products": {
+        "title": "محصولات",
+        "description": "فهرست حیوانات زنده را مرور کنید. آگهی‌های قابل اعتماد برای گاو، گوسفند و موارد دیگر."
+      },
+      "sellers": {
+        "title": "فروشندگان",
+        "description": "فروشندگان معتبر حیوانات را کشف کنید. پروفایل‌ها و نظرات فروشندگان تأیید شده."
+      },
+      "transporters": {
+        "title": "حمل کننده ها",
+        "description": "شرکت‌های حمل و نقل حیوانات را کشف کنید. حمل و نقل ایمن و حرفه‌ای حیوانات زنده."
+      },
+      "search": {
+        "title": "جستجو",
+        "description": "جستجو در میان فهرست حیوانات زنده. جستجوی آسان با گزینه‌های فیلتر و مرتب‌سازی."
+      },
+      "faq": {
+        "title": "سوالات متداول",
+        "description": "پرسش و پاسخ‌های متداول در مورد تجارت دام."
+      },
+      "productDetail": {
+        "title": "{title} - برای فروش",
+        "description": "برای فروش در {title} - {city}. برای جزئیات و اطلاعات تماس کلیک کنید."
+      },
+      "sellerDetail": {
+        "title": "{name} - مشخصات فروشنده",
+        "description": "مشخصات فروشنده {name}. نظرات، آگهی‌ها و اطلاعات تماس."
+      },
+      "transporterDetail": {
+        "title": "{name} - مشخصات اپراتور",
+        "description": "مشخصات شرکت حمل و نقل {name}. مناطق تحت پوشش، نظرات و اطلاعات تماس."
+      }
+    }
   }
 }

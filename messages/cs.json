@@ -11,17 +11,30 @@
     "back": "Zadní",
     "next": "Vpřed",
     "close": "Blízko",
+    "unauthorized": "Nemáte oprávnění k přístupu k této stránce.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Přihlásit se",
-    "register": "Rejstřík"
+    "register": "Rejstřík",
+    "previous": "Bývalý",
+    "zoomIn": "Přiblížit",
+    "previousImage": "Předchozí obrázek",
+    "nextImage": "Další obrázek",
+    "closeLightbox": "Zavřít galerii",
+    "imageLightbox": "Galerie obrázků",
+    "slideN": "Snímek {n}",
+    "viewMore": "Zobrazit více"
   },
   "header": {
     "products": "Produkty",
     "sellers": "Prodejci",
+    "transporters": "transportéry",
     "about": "O nás",
+    "search": "Vyhledávání",
     "dashboard": "Panel",
     "settings": "Nastavení",
-    "logout": "Odhlásit se"
+    "logout": "Odhlásit se",
+    "menu": "Menu",
+    "language": "Výběr jazyka"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Zapomněl/a jsem heslo.",
       "noAccount": "Nemáte účet?",
       "register": "Rejstřík",
-      "errorDefault": "Přihlášení se nezdařilo. Zkontrolujte prosím své údaje."
+      "errorDefault": "Přihlášení se nezdařilo. Zkontrolujte prosím své údaje.",
+      "orContinueWith": "nebo pokračovat",
+      "continueWithGoogle": "Pokračovat s Googlem",
+      "continueWithApple": "Pokračujte s Applem.",
+      "socialLoginError": "Přihlášení přes sociální sítě se nezdařilo. Zkuste to prosím znovu.",
+      "appleComingSoon": "Velmi brzy",
+      "showPassword": "Zobrazit heslo",
+      "hidePassword": "Skrýt heslo"
     },
     "register": {
       "title": "Rejstřík",
@@ -51,7 +71,17 @@
       "login": "Přihlásit se",
       "passwordMismatch": "Hesla se neshodují.",
       "passwordTooShort": "Heslo musí mít alespoň 6 znaků.",
-      "errorDefault": "Registrace se nezdařila. Zkuste to prosím znovu."
+      "errorDefault": "Registrace se nezdařila. Zkuste to prosím znovu.",
+      "showPassword": "Zobrazit heslo",
+      "hidePassword": "Skrýt heslo",
+      "passwordStrength": {
+        "minLength": "Alespoň 8 znaků",
+        "uppercase": "Velká písmena (A-Z)",
+        "lowercase": "Malá písmena (a-z)",
+        "number": "Číslo (0-9)",
+        "special": "Speciální znaky (!@#$%)"
+      },
+      "registerSuccess": "Váš účet byl úspěšně vytvořen! Budete přesměrováni na přihlašovací stránku..."
     },
     "forgotPassword": {
       "title": "Zapomněl/a jsem heslo.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Požádat o nové připojení",
       "passwordMismatch": "Hesla se neshodují.",
       "passwordTooShort": "Heslo musí mít alespoň 6 znaků.",
-      "errorDefault": "Reset hesla selhal. Připojení je pravděpodobně neplatné nebo vypršelo."
+      "errorDefault": "Reset hesla selhal. Připojení je pravděpodobně neplatné nebo vypršelo.",
+      "showPassword": "Zobrazit heslo",
+      "hidePassword": "Skrýt heslo"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "aktivní",
       "totalViews": "Celkový počet zhlédnutí",
       "thisWeek": "tento týden",
+      "allTime": "všechny časy",
       "favorites": "Oblíbený",
       "onYourListings": "ve vašich reklamách",
+      "savedItems": "registrovaný produkt",
       "messages": "Zpráva",
-      "unread": "nepřečtený"
+      "notifications": "Oznámení",
+      "unread": "nepřečtený",
+      "views": "zobrazení",
+      "draft": "Návrh",
+      "sold": "Prodáno",
+      "pending": "Čeká na vyřízení",
+      "awaitingApproval": "čeká na schválení",
+      "totalSales": "Celkový prodej",
+      "completedSales": "dokončené prodeje",
+      "revenue": "Příjem",
+      "totalRevenue": "celkové příjmy"
     },
     "recentListings": "Vaše nejnovější nabídky",
+    "recentActivity": "Nedávné aktivity",
     "recentMessages": "Nedávné zprávy",
+    "quickLinks": "Rychlý přístup",
     "noListings": "Zatím jste nepřidali žádné reklamy.",
-    "noMessages": "Zatím jste neobdrželi žádné zprávy.",
+    "noActivity": "Zatím žádná aktivita.",
+    "noMessages": "Ještě jste neobdrželi žádnou zprávu.",
     "noNotifications": "Zatím jste neobdrželi žádná oznámení.",
     "viewAllListings": "Zobrazit všechny nabídky",
-    "viewAllMessages": "Zobrazit všechny zprávy"
+    "viewAllMessages": "Zobrazit všechny zprávy",
+    "viewNotifications": "Zobrazit oznámení",
+    "viewFavorites": "Oblíbené Gor",
+    "recentlyViewed": "Naposledy zobrazené",
+    "fetchError": "Při načítání dat panelu došlo k chybě."
   },
   "dashboardNav": {
     "overview": "Přehled",
@@ -115,7 +166,61 @@
     "notifications": "Oznámení",
     "profile": "Profil",
     "settings": "Nastavení",
-    "newListing": "Přidat nový záznam"
+    "newListing": "Přidat nový záznam",
+    "becomeSeller": "Staňte se prodejcem",
+    "categories": "Kategorie",
+    "offers": "Návrhy",
+    "deals": "Dohody",
+    "farms": "Moje farmy",
+    "transport": "Doprava",
+    "moderation": "Umírněnost",
+    "sellerModeration": "Moderování prodejce",
+    "transporterModeration": "Moderování nosiče",
+    "brands": "Značky",
+    "transportOffers": "Cenové nabídky na dopravu",
+    "healthRecords": "Zdravotní záznamy",
+    "vaccinations": "Očkovači",
+    "shippingCarriers": "Přepravní společnosti",
+    "shippingZones": "Nákladní zóny",
+    "shippingRates": "Poplatky za dopravu",
+    "systemSettings": "Nastavení systému",
+    "locations": "Moje adresy"
+  },
+  "profile": {
+    "title": "Informace o profilu",
+    "description": "Své osobní údaje můžete aktualizovat zde.",
+    "personalInfo": "Osobní údaje",
+    "contactInfo": "Kontaktní informace",
+    "preferences": "Předvolby",
+    "firstName": "Jméno",
+    "firstNamePlaceholder": "Zadejte své jméno",
+    "surname": "Příjmení",
+    "surnamePlaceholder": "Zadejte své příjmení.",
+    "displayName": "Zobrazované jméno",
+    "phone": "Telefonní číslo",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Ověřeno",
+    "phoneNotVerified": "Nepotvrzeno",
+    "verifyPhone": "Ověření telefonního čísla",
+    "country": "Země",
+    "selectCountry": "Vyberte zemi",
+    "language": "Jazykové preference",
+    "selectLanguage": "Vyberte jazyk",
+    "currency": "Měna",
+    "selectCurrency": "Vyberte měnu.",
+    "saveChanges": "Uložit změny",
+    "saving": "Ukládání...",
+    "saveSuccess": "Informace ve vašem profilu byly aktualizovány.",
+    "saveError": "Při aktualizaci profilu došlo k chybě.",
+    "avatar": "Profilová fotografie",
+    "changeAvatar": "Změnit fotografii",
+    "removeAvatar": "Odebrat fotografii",
+    "currencies": {
+      "try": "Turecká lira",
+      "usd": "Americký dolar",
+      "eur": "Euro",
+      "gbp": "Britská libra"
+    }
   },
   "myListings": {
     "title": "Moje reklamy",
@@ -125,35 +230,94 @@
     "fetchError": "Při načítání reklam došlo k chybě.",
     "deleteSuccess": "Reklama byla úspěšně smazána.",
     "deleteError": "Při mazání reklamy došlo k chybě.",
-    "activateSuccess": "Reklama byla aktivována.",
-    "deactivateSuccess": "Seznam byl deaktivován.",
+    "publishSuccess": "Reklama byla odeslána ke schválení.",
+    "unpublishSuccess": "Reklama byla vypracována.",
     "statusError": "Při změně stavu došlo k chybě.",
     "filters": {
       "all": "Všechny z nich",
-      "active": "Aktivní",
       "draft": "Návrh",
       "pending": "Čeká na schválení",
+      "active": "Aktivní",
+      "rejected": "Zamítnuto",
       "sold": "Prodáno"
     },
     "actions": {
       "edit": "Upravit",
       "delete": "Vymazat",
-      "activate": "Aktivovat",
-      "deactivate": "Pasivní struktura"
+      "publish": "Odeslat ke schválení",
+      "unpublish": "Návrh",
+      "menu": "Transakce"
     },
     "deleteDialog": {
       "title": "Smazat reklamu",
       "description": "Opravdu chcete tento záznam smazat? Tuto akci nelze vrátit zpět.",
       "cancel": "Zrušit",
       "confirm": "Vymazat"
-    }
+    },
+    "loadMore": "Stáhnout více",
+    "loadingMore": "Načítání..."
   },
   "favorites": {
     "title": "Moje oblíbené",
     "description": "Sledujte zde produkty, které se vám líbí.",
     "noFavorites": "Zatím jste nepřidali žádné oblíbené produkty.",
     "browseProducts": "Procházet produkty",
-    "fetchError": "Při načítání oblíbených položek došlo k chybě."
+    "fetchError": "Při načítání oblíbených položek došlo k chybě.",
+    "loadMore": "Stáhnout více",
+    "loadingMore": "Načítání..."
+  },
+  "messages": {
+    "title": "Zprávy",
+    "description": "Spojte se s kupujícími a prodávajícími.",
+    "noConversations": "Ještě jste neobdrželi žádnou zprávu.",
+    "startConversation": "Chcete-li položit otázku ohledně inzerátu, přejděte na daný inzerát.",
+    "fetchError": "Při načítání zpráv došlo k chybě.",
+    "sendError": "Při odesílání zprávy došlo k chybě.",
+    "connectionError": "Připojení se nezdařilo. Zkouším znovu...",
+    "connected": "Spojilo se to",
+    "connecting": "Spojovací...",
+    "searchPlaceholder": "Prohledejte zprávy...",
+    "typeMessage": "Napište svou zprávu...",
+    "send": "Poslat",
+    "sending": "Odesílání...",
+    "typing": "Říká se tam...",
+    "read": "Číst",
+    "delivered": "Odesláno",
+    "today": "Dnes",
+    "yesterday": "Včera",
+    "noMessages": "Zatím žádné zprávy. Začněte konverzaci!",
+    "loadMore": "Nahrát další",
+    "loadingMessages": "Načítání zpráv...",
+    "about": "O",
+    "product": "Produkt",
+    "startNewConversation": "Zahájit novou konverzaci",
+    "selectConversation": "Vyberte konverzaci nebo začněte novou.",
+    "online": "Online",
+    "offline": "Offline",
+    "lastSeen": "Naposledy viděn",
+    "deleteConversation": "Smazat konverzaci",
+    "deleteConfirm": "Jste si jistý/á, že chcete tuto konverzaci smazat?",
+    "deleted": "Konverzace byla smazána.",
+    "defaultUser": "Uživatel",
+    "noResults": "Nebyly nalezeny žádné výsledky.",
+    "newConversation": "Nová konverzace"
+  },
+  "notifications": {
+    "title": "Oznámení",
+    "description": "Zobrazte a spravujte svá oznámení.",
+    "markAllAsRead": "Označit vše jako přečtené",
+    "noNotifications": "Zatím jste neobdrželi žádná oznámení.",
+    "viewAll": "Zobrazit všechna oznámení",
+    "today": "Dnes",
+    "yesterday": "Včera",
+    "older": "Starší",
+    "types": {
+      "system": "Systém",
+      "message": "Zpráva",
+      "offer": "Nabídka",
+      "order": "Objednávka",
+      "listing": "Reklama"
+    }
   },
   "settings": {
     "title": "Nastavení",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Nová hesla se neshodují.",
       "passwordTooShort": "Nové heslo musí mít alespoň 6 znaků.",
       "sessionError": "Informace o relaci se nepodařilo nalézt.",
-      "errorDefault": "Heslo se nepodařilo aktualizovat. Zkontrolujte prosím své aktuální heslo."
+      "errorDefault": "Heslo se nepodařilo aktualizovat. Zkontrolujte prosím své aktuální heslo.",
+      "showPassword": "Zobrazit heslo",
+      "hidePassword": "Skrýt heslo"
+    },
+    "preferences": {
+      "title": "Předvolby oznámení a zobrazení",
+      "description": "Spravujte své oznamovací kanály a předvolby zobrazení.",
+      "notifications": "Oznámení",
+      "emailNotifications": "E-mailová oznámení",
+      "emailNotificationsDesc": "Dostávejte e-mailová upozornění na nové zprávy a aktualizace reklam.",
+      "smsNotifications": "SMS oznámení",
+      "smsNotificationsDesc": "Přijímejte SMS zprávy s důležitými oznámeními.",
+      "pushNotifications": "Push notifikace",
+      "pushNotificationsDesc": "Dostávejte push notifikace pro okamžité aktualizace.",
+      "appearance": "Vzhled",
+      "darkMode": "Tmavý režim",
+      "darkModeDesc": "Přepněte na tmavý motiv.",
+      "saveChanges": "Uložit předvolby",
+      "saving": "Ukládání...",
+      "saveSuccess": "Vaše preference byly aktualizovány.",
+      "saveError": "Při aktualizaci předvoleb došlo k chybě.",
+      "loadError": "Předvolby se nepodařilo načíst."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Platforma pro obchodování s živými zvířaty",
       "subtitle": "Nejspolehlivější platforma pro obchodování s živými zvířaty. Bezpečně nakupujte a prodávejte svůj dobytek a ovce.",
       "cta": "Začít hned",
-      "viewListings": "Zobrazit reklamy"
+      "viewListings": "Zobrazit reklamy",
+      "searchPlaceholder": "Hledejte zvířata... (krávy, ovce, kozy...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Doporučené reklamy",
       "viewAll": "Zobrazit vše"
+    },
+    "cta": {
+      "title": "Začít hned",
+      "subtitle": "Zaujměte své místo na platformě, kde se setkávají tisíce prodávajících a kupujících.",
+      "button": "Zaregistrujte se zdarma"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "O nás",
     "contact": "Sdělení",
     "terms": "Podmínky použití",
-    "privacy": "Zásady ochrany osobních údajů"
+    "privacy": "Zásady ochrany osobních údajů",
+    "company": "Společnost",
+    "support": "Podpora",
+    "legal": "Právní",
+    "followUs": "Sledujte nás",
+    "newsletter": "Bulletin",
+    "newsletterDescription": "Nenechte si ujít nejnovější nabídky a akce.",
+    "subscribe": "Upsat",
+    "emailPlaceholder": "Vaše e-mailová adresa",
+    "tagline": "Nejspolehlivější platforma pro obchodování s živými zvířaty v Turecku.",
+    "sellers": "Prodejci",
+    "products": "Produkty",
+    "map": "Mapa",
+    "appleLoginComingSoon": "Přihlášení přes Apple bude brzy aktivní.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "Často kladené otázky"
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "description": "Odpovědi na vaše často kladené otázky o naší platformě.",
+    "noFaqs": "Zatím nebyly přidány žádné otázky."
+  },
+  "about": {
+    "title": "O nás",
+    "subtitle": "Nejspolehlivější platforma pro obchodování s živými zvířaty v Turecku.",
+    "mission": {
+      "title": "Naše poslání",
+      "description": "Digitalizací obchodu s živými zvířaty se snažíme vytvořit bezpečné, transparentní a efektivní spojení mezi producenty a kupujícími."
+    },
+    "vision": {
+      "title": "Naše vize",
+      "description": "Být průkopníkem v digitální transformaci v zemědělském sektoru a stát se globální platformou pro obchod s živými zvířaty."
+    },
+    "values": {
+      "title": "Naše hodnoty",
+      "trust": {
+        "title": "Důvěra",
+        "description": "Transparentnost a spolehlivost jsou u všech transakcí zásadní."
+      },
+      "quality": {
+        "title": "Kvalitní",
+        "description": "Neustálé zlepšování pro poskytování nejlepších služeb."
+      },
+      "innovation": {
+        "title": "Inovace",
+        "description": "Transformace odvětví pomocí technologií."
+      }
+    },
+    "stats": {
+      "users": "Registrovaný uživatel",
+      "sellers": "Aktivní prodejce",
+      "products": "Reklama",
+      "transactions": "Úspěšná transakce"
+    }
+  },
+  "contact": {
+    "title": "Sdělení",
+    "subtitle": "V případě jakýchkoli dotazů nás prosím kontaktujte.",
+    "form": {
+      "title": "Napište nám",
+      "name": "Vaše jméno",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "E-mail",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Podrobit",
+      "subjectPlaceholder": "Předmět vaší zprávy",
+      "message": "Vaše zpráva",
+      "messagePlaceholder": "Napište sem svou zprávu...",
+      "submit": "Poslat",
+      "submitting": "Odesílání...",
+      "success": "Vaše zpráva byla úspěšně odeslána. Ozveme se vám co nejdříve.",
+      "error": "Při odesílání zprávy došlo k chybě. Zkuste to prosím znovu."
+    },
+    "info": {
+      "title": "Kontaktní informace",
+      "address": "Adresa",
+      "addressValue": "Istanbul, Turecko",
+      "email": "E-mail",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Telefon",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Pracovní doba",
+      "workingHoursValue": "Pondělí - Pátek: 09:00 - 18:00",
+      "map": "Mapa"
+    }
+  },
+  "terms": {
+    "title": "Podmínky použití",
+    "lastUpdated": "Poslední aktualizace: {date}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Souhlas s podmínkami",
+        "content": "Používáním těchto webových stránek souhlasíte s následujícími podmínkami používání. Pokud s těmito podmínkami nesouhlasíte, prosím, stránky nepoužívejte."
+      },
+      "services": {
+        "title": "2. Služby",
+        "content": "Obchodování s hospodářskými zvířaty poskytuje platformu pro nákup a prodej živých zvířat. Veškeré transakce na platformě jsou odpovědností uživatele."
+      },
+      "accounts": {
+        "title": "3. Uživatelské účty",
+        "content": "Pro vytvoření účtu musíte poskytnout přesné a aktuální informace. Zabezpečení vašeho účtu je vaší odpovědností."
+      },
+      "prohibited": {
+        "title": "4. Zakázané činnosti",
+        "content": "Klamavá reklama, nepravdivé informace, podvody a nezákonné aktivity jsou přísně zakázány."
+      },
+      "liability": {
+        "title": "5. Omezení odpovědnosti",
+        "content": "Platforma není přímo zodpovědná za transakce mezi uživateli. Všechny transakce probíhají mezi stranami."
+      },
+      "changes": {
+        "title": "6. Změny",
+        "content": "Tyto obchodní podmínky se mohou změnit bez předchozího upozornění. Změny nabudou účinnosti okamžitě po zveřejnění."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Zásady ochrany osobních údajů",
+    "lastUpdated": "Poslední aktualizace: {date}",
+    "sections": {
+      "collection": {
+        "title": "1. Shromažďování informací",
+        "content": "Když si vytvoříte účet, shromažďujeme osobní údaje, jako je vaše jméno, e-mailová adresa a telefonní číslo. Můžeme také shromažďovat anonymní údaje týkající se vašeho používání webu."
+      },
+      "usage": {
+        "title": "2. Použití informací",
+        "content": "Informace, které shromažďujeme, používáme k poskytování našich služeb, správě vašeho účtu, zajištění bezpečnosti a nabízení personalizovaných nabídek."
+      },
+      "sharing": {
+        "title": "3. Sdílení informací",
+        "content": "Vaše osobní údaje nebudou prodány ani pronajaty třetím stranám. Vaše informace nebudou sdíleny s výjimkou případů vyžadovaných zákonem."
+      },
+      "security": {
+        "title": "4. Bezpečnost",
+        "content": "Pro ochranu vašich dat jsou zavedena bezpečnostní opatření odpovídající průmyslovým standardům."
+      },
+      "cookies": {
+        "title": "5. Soubory cookie",
+        "content": "Naše webové stránky používají soubory cookie ke zlepšení uživatelského prostředí. Předvolby týkající se souborů cookie můžete spravovat v nastavení prohlížeče."
+      },
+      "rights": {
+        "title": "6. Vaše práva",
+        "content": "Podle tureckého zákona o ochraně osobních údajů (KVKK) máte právo na přístup ke svým osobním údajům, na jejich opravu a smazání."
+      }
+    }
   },
   "products": {
     "title": "Produkty",
@@ -235,11 +570,19 @@
       "priceDesc": "Cena (od nejvyšší po nejnižší)",
       "popular": "Nejoblíbenější"
     },
+    "pagination": {
+      "prev": "Bývalý",
+      "next": "Další"
+    },
     "status": {
       "draft": "Návrh",
+      "pending": "Čeká na schválení",
       "active": "Aktivní",
+      "inactive": "Pasivní",
+      "outOfStock": "Není skladem",
+      "expired": "Jeho funkční období vypršelo.",
       "sold": "Prodáno",
-      "pending": "Čeká na schválení"
+      "rejected": "Zamítnuto"
     },
     "condition": {
       "new": "Nový",
@@ -250,12 +593,16 @@
     "outOfStock": "Není skladem",
     "inStock": "Skladem",
     "noResults": "Produkt nenalezen.",
-    "loading": "Produkty se načítají...",
+    "loading": "Načítání produktů...",
     "perPage": "Na stránku",
     "showing": "Celkový počet produktů ({total}) mezi {from} a {to}.",
+    "fetchError": "Při nahrávání produktů došlo k chybě.",
+    "loadMore": "Zobrazit více",
+    "showingOf": "Zobrazuje se {count} / {total} produktů.",
     "loginToFavorite": "Přihlaste se pro přidání do oblíbených.",
     "addedToFavorites": "Přidáno k oblíbeným",
-    "removedFromFavorites": "Odebráno z oblíbených"
+    "removedFromFavorites": "Odebráno z oblíbených",
+    "favoriteError": "Operace s oblíbenými se nezdařila."
   },
   "productDetail": {
     "addToFavorites": "Přidat k oblíbeným",
@@ -279,16 +626,31 @@
     "maxOrder": "Maximální objednávka",
     "publishedAt": "Datum vydání",
     "views": "Zobrazeno",
-    "reviews": "hodnocení",
+    "reviews": {
+      "title": "Hodnocení",
+      "reviewCount": "hodnocení",
+      "noReviews": "Zatím žádné hodnocení.",
+      "verified": "Ověřený kupující"
+    },
     "similarProducts": "Podobné produkty",
     "sellerProducts": "Další produkty prodejce",
     "contactSeller": "Kontaktujte prodejce",
-    "loginRequired": "Přihlaste se pro přidání do oblíbených.",
+    "makeOffer": "Odeslat nabídku",
+    "loginRequired": "Pro provedení této akce se prosím přihlaste.",
     "addedToFavorites": "Přidáno k oblíbeným",
     "removedFromFavorites": "Odebráno z oblíbených",
     "linkCopied": "Odkaz byl zkopírován.",
     "messagingComingSoon": "Funkce zasílání zpráv bude brzy k dispozici.",
-    "productNotFound": "Produkt nenalezen."
+    "productNotFound": "Produkt nenalezen.",
+    "contacting": "Probíhá navazování kontaktu...",
+    "contactError": "Komunikace selhala. Zkuste to prosím znovu.",
+    "noImage": "Žádný obrázek není k dispozici.",
+    "defaultLocation": "Turecko",
+    "inquiryMessage": "Rád/a bych získal/a informace o {title}.",
+    "breadcrumb": {
+      "home": "Domov",
+      "products": "Produkty"
+    }
   },
   "seller": {
     "title": "Informace o prodejci",
@@ -300,6 +662,70 @@
     "call": "Vyhledávání",
     "viewProfile": "Zobrazit profil"
   },
+  "sellers": {
+    "title": "Prodejci",
+    "description": "Najděte spolehlivé prodejce.",
+    "search": "Najít prodejce...",
+    "sort": "Seřadit",
+    "sortOptions": {
+      "newest": "Nejnovější",
+      "mostSales": "Bestseller",
+      "topRated": "Nejvyšší skóre",
+      "mostProducts": "Většina reklam"
+    },
+    "noResults": "Prodejce nebyl nalezen.",
+    "loading": "Prodejci nakládají...",
+    "showing": "Nalezeno {count} prodejců",
+    "verified": "Ověřeno",
+    "sales": "prodeje",
+    "products": "reklama",
+    "reviews": "hodnocení",
+    "rating": "bod",
+    "viewProducts": "Zobrazit produkty",
+    "contactSeller": "Odeslat zprávu",
+    "memberSince": "Člen od {year}",
+    "fetchError": "Při načítání dodavatelů došlo k chybě.",
+    "detail": {
+      "title": "Profil prodejce",
+      "about": "O",
+      "businessInfo": "Obchodní informace",
+      "businessName": "Název firmy",
+      "businessType": "Obchodní zájezd",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "website": "Webové stránky",
+      "description": "Vysvětlení",
+      "policies": "Zásady",
+      "returnPolicy": "Zásady vrácení zboží",
+      "shippingPolicy": "Zásady dopravy",
+      "businessHours": "Pracovní doba",
+      "paymentMethods": "Platební metody",
+      "allProducts": "Všechny produkty",
+      "stats": {
+        "totalSales": "Celkový prodej",
+        "totalProducts": "Celkem produktů",
+        "totalReviews": "Hodnocení",
+        "rating": "Bod"
+      },
+      "notFound": "Prodejce nebyl nalezen.",
+      "backToList": "Don prodejcům",
+      "contactInfo": "Sdělení",
+      "noProducts": "Tento prodejce zatím nemá žádné nabídky.",
+      "noPolicies": "Prodejce zatím nedefinoval své zásady.",
+      "fetchError": "Při nahrávání informací o prodejci došlo k chybě.",
+      "productsLoadError": "Při nahrávání produktů prodejce došlo k chybě.",
+      "reviewsTab": "Hodnocení",
+      "reviews": {
+        "summary": "Shrnutí hodnocení",
+        "reviewCount": "hodnocení",
+        "communication": "Sdělení",
+        "shippingSpeed": "Rychlost dopravy",
+        "productQuality": "Kvalita produktu",
+        "noReviews": "Zatím žádné hodnocení.",
+        "verified": "Ověřený kupující"
+      }
+    }
+  },
   "editListing": {
     "title": "Upravit reklamu",
     "saveChanges": "Uložit změny",
@@ -307,6 +733,10 @@
     "updateSuccess": "Reklama byla úspěšně aktualizována.",
     "updateFailed": "Při aktualizaci záznamu došlo k chybě.",
     "loadError": "Při načítání reklamy došlo k chybě.",
+    "sellerNotFound": "Profil prodejce nenalezen.",
+    "sellerLoadError": "Profil prodejce se nepodařilo načíst.",
+    "userNotFound": "Informace o uživateli se nepodařilo nalézt. Přihlaste se prosím znovu.",
+    "locationNotFound": "Informace o poloze se nepodařilo nalézt. Obnovte prosím stránku.",
     "basicInfo": "Základní informace",
     "categoryAndCondition": "Kategorie a stav",
     "pricing": "Ceny",
@@ -314,6 +744,8 @@
     "images": "Obrázky",
     "existingImages": "Dostupné obrázky",
     "addImage": "Přidat obrázek",
+    "maxImages": "Můžete nahrát maximálně 10 obrázků.",
+    "imageHint": "Minimálně 1, maximálně 10 obrázků. Ve formátu PNG, JPG nebo WEBP.",
     "uploadingImages": "Načítání obrázků...",
     "uploadingImage": "Obrázek se načítá.",
     "imageUploadFailed": "Obrázek se nepodařilo načíst.",
@@ -358,6 +790,7 @@
     "addImage": "Přidat obrázek",
     "maxImages": "Můžete nahrát maximálně 10 obrázků.",
     "imageHint": "Minimálně 1, maximálně 10 obrázků. Ve formátu PNG, JPG nebo WEBP.",
+    "location": "Informace o poloze",
     "fields": {
       "title": "Název reklamy",
       "shortDescription": "Stručný popis",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Doprava je k dispozici.",
       "shippingCost": "Poplatek za dopravu",
       "weight": "Hmotnost",
-      "weightUnit": "Jednotka hmotnosti"
+      "weightUnit": "Jednotka hmotnosti",
+      "city": "Město",
+      "address": "Adresa",
+      "postalCode": "Poštovní směrovací číslo"
     },
     "placeholders": {
       "title": "Příklad: Dvouletá kráva holštýnského plemene",
       "shortDescription": "Popis produktu (max. 200 znaků)",
       "description": "Poskytněte podrobné informace o produktu...",
-      "category": "Vyberte kategorii."
+      "category": "Vyberte kategorii.",
+      "city": "Vstupte do města",
+      "address": "Zadejte celou adresu.",
+      "postalCode": "Poštovní směrovací číslo"
+    },
+    "errors": {
+      "titleRequired": "Název inzerátu je povinný.",
+      "shortDescriptionRequired": "Je vyžadován stručný popis.",
+      "descriptionRequired": "Je nutné podrobné vysvětlení.",
+      "categoryRequired": "Výběr kategorie je povinný.",
+      "priceRequired": "Cena je povinná.",
+      "cityRequired": "Informace o městě jsou vyžadovány.",
+      "addressRequired": "Informace o adrese jsou povinné.",
+      "locationError": "Při vytváření lokality došlo k chybě."
     },
     "success": "Reklama byla úspěšně vytvořena.",
     "error": "Při vytváření reklamy došlo k chybě.",
@@ -388,24 +837,53 @@
     "draftSaved": "Koncept uložen",
     "productCreated": "Produkt byl úspěšně vytvořen.",
     "creationFailed": "Produkt se nepodařilo vytvořit. Zkuste to prosím znovu.",
-    "errors": {
-      "titleRequired": "Název inzerátu je povinný.",
-      "shortDescriptionRequired": "Je vyžadován stručný popis.",
-      "descriptionRequired": "Je nutné podrobné vysvětlení.",
-      "categoryRequired": "Výběr kategorie je povinný.",
-      "priceRequired": "Zadejte platnou cenu."
-    }
+    "userNotFound": "Informace o uživateli se nepodařilo nalézt. Přihlaste se prosím znovu.",
+    "defaultBusinessName": "Moje firma"
+  },
+  "becomeSeller": {
+    "title": "Staňte se prodejcem",
+    "description": "Prohlášení společnosti",
+    "alreadySeller": "Už máte profil prodejce.",
+    "goToListings": "Přejít na mé nabídky",
+    "businessInfo": "Obchodní informace",
+    "contactInfo": "Kontaktní informace",
+    "businessName": "Název firmy",
+    "businessNamePlaceholder": "Příklad: Farma Yilmaz",
+    "businessType": "Obchodní zájezd",
+    "businessTypePlaceholder": "Vyberte typ podnikání.",
+    "businessTypes": {
+      "individual": "Individuální",
+      "company": "Společnost",
+      "cooperative": "Družstevní",
+      "farm": "Hospodařit"
+    },
+    "taxNumber": "Daňové číslo",
+    "taxNumberPlaceholder": "Zadejte své daňové identifikační číslo (volitelné)",
+    "descriptionPlaceholder": "Napište krátký popis vaší firmy...",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Webové stránky",
+    "websitePlaceholder": "https://www.examplesite.com (volitelné)",
+    "submit": "Vytvořit profil prodejce",
+    "submitting": "Vytváření profilu...",
+    "success": "Váš profil prodejce byl úspěšně vytvořen!",
+    "error": "Při vytváření profilu prodejce došlo k chybě.",
+    "taxNumberHelp": "Zadejte své 10- nebo 11místné daňové číslo (volitelné)",
+    "phoneHelp": "Příklad: +90 555 123 45 67 nebo 0555 123 45 67",
+    "websiteHelp": "Příklad: www.isletmem.com nebo https://isletmem.com",
+    "alreadySellerDescription": "Pomocí tlačítka níže můžete spravovat své inzeráty.",
+    "newListing": "Přidat nový záznam"
   },
   "fileUpload": {
     "dragDrop": "Nahrajte fotografii nebo video.",
     "dragDropHint": "Přetáhněte a upusťte nebo klikněte pro výběr.",
     "dropHere": "Nechte to...",
     "imageLimit": "Fotografie: max. 10 MB",
-    "videoLimit": "Video: max. 50 MB",
+    "videoLimit": "Video: max. 100 MB",
     "uploadCount": "{current} / {max} načteno",
     "maxFilesError": "Můžete nahrát maximálně {max} médií.",
     "imageTooLarge": "Fotografie musí být menší než 10 MB.",
-    "videoTooLarge": "Video musí být menší než 50 MB.",
+    "videoTooLarge": "Video musí být menší než 100 MB.",
     "optimizing": "Optimalizace...",
     "uploading": "Načítání...",
     "queued": "Čekání ve frontě...",
@@ -419,9 +897,833 @@
     "videoBadge": "VIDEO",
     "coverUpdated": "Titulní fotografie byla úspěšně upravena.",
     "optimizationInfo": "Fotografie byly optimalizovány tak, aby splňovaly webové standardy.",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Vizuální výběr",
+    "changeImage": "Přeměna",
+    "removeImage": "Odstranit",
+    "videoProcessing": "Video se zpracovává...",
+    "videoProcessingFailed": "Operace se nezdařila.",
+    "videoProcessingPollError": "Stav zpracování videa se nepodařilo zjistit. Obnovte prosím stránku.",
+    "reorderError": "Soubor se nepodařilo seřadit.",
+    "coverUpdateError": "Titulní fotku se nepodařilo aktualizovat."
+  },
+  "error": {
+    "title": "Došlo k chybě.",
+    "description": "Došlo k neočekávané chybě. Obnovte stránku nebo to zkuste znovu později.",
+    "retry": "Zkuste to znovu",
+    "goBack": "Nevracej se",
+    "goHome": "Domov",
+    "notFound": {
+      "title": "Stránka nenalezena",
+      "description": "Stránka, kterou hledáte, je buď nedostupná, nebo byla přesunuta.",
+      "goHome": "Zpět na domovskou stránku"
+    }
+  },
+  "search": {
+    "title": "Vyhledávání",
+    "placeholder": "Hledat produkty, kategorie nebo prodejce...",
+    "searchButton": "Vyhledávání",
+    "searchingFor": "Hledá se",
+    "loading": "Hledaný...",
+    "resultsCount": "Bylo nalezeno {count} výsledků.",
+    "noResults": "Nebyly nalezeny žádné výsledky.",
+    "tryDifferentSearch": "Zkuste jiná klíčová slova nebo změňte filtry.",
+    "filters": {
+      "title": "Filtry",
+      "category": "Kategorie",
+      "allCategories": "Všechny kategorie",
+      "condition": "Situace",
+      "allConditions": "Všechny případy",
+      "priceRange": "Cenové rozpětí",
+      "price": "Cena",
+      "min": "Min.",
+      "max": "Max",
+      "apply": "Použít",
+      "clear": "Čistý",
+      "clearAll": "Vymazat vše"
+    },
+    "fetchError": "Při načítání výsledků vyhledávání došlo k chybě.",
+    "recentSearches": "Nedávná vyhledávání",
+    "clearHistory": "Vymazat historii",
+    "noSearchHistory": "Zatím nemáte historii vyhledávání.",
+    "deleteHistoryError": "Při mazání historie vyhledávání došlo k chybě."
+  },
+  "categories": {
+    "title": "Správa kategorií",
+    "description": "Spravujte kategorie odtud.",
+    "noCategories": "Zatím nebyly přidány žádné kategorie.",
+    "createFirst": "Vytvořte první kategorii.",
+    "fetchError": "Při načítání kategorií došlo k chybě.",
+    "createSuccess": "Kategorie byla úspěšně vytvořena",
+    "createError": "Při vytváření kategorie došlo k chybě.",
+    "updateSuccess": "Kategorie byla úspěšně aktualizována",
+    "updateError": "Při aktualizaci kategorie došlo k chybě.",
+    "deleteSuccess": "Kategorie byla úspěšně smazána.",
+    "deleteError": "Při mazání kategorie došlo k chybě.",
+    "activateSuccess": "Kategorie byla aktivována.",
+    "deactivateSuccess": "Kategorie byla deaktivována.",
+    "statusError": "Při změně stavu došlo k chybě.",
+    "loadError": "Při načítání kategorie došlo k chybě.",
+    "filters": {
+      "all": "Všechny z nich",
+      "active": "Aktivní",
+      "inactive": "Neaktivní"
+    },
+    "table": {
+      "name": "Název kategorie",
+      "slug": "Slimák",
+      "sortOrder": "Sériové číslo",
+      "subCategories": "Podkategorie",
+      "status": "Situace",
+      "actions": "Transakce"
+    },
+    "actions": {
+      "edit": "Upravit",
+      "delete": "Vymazat",
+      "activate": "Aktivovat",
+      "deactivate": "Pasivní struktura"
+    },
+    "deleteDialog": {
+      "title": "Smazat kategorii",
+      "description": "Opravdu chcete tuto kategorii smazat? Tuto akci nelze vrátit zpět.",
+      "cancel": "Zrušit",
+      "confirm": "Vymazat"
+    },
+    "addNew": "Přidat novou kategorii",
+    "loadMore": "Stáhnout více",
+    "loadingMore": "Načítání...",
+    "form": {
+      "newTitle": "Vytvořit novou kategorii",
+      "editTitle": "Upravit kategorii",
+      "name": "Název kategorie",
+      "namePlaceholder": "Příklad: Dobytek",
+      "slug": "Slimák",
+      "slugPlaceholder": "Příklad: velká hospodářská zvířata",
+      "description": "Vysvětlení",
+      "descriptionPlaceholder": "Stručný popis kategorie...",
+      "parentCategory": "Vyšší kategorie",
+      "parentCategoryPlaceholder": "Vyberte nejvyšší kategorii (volitelné)",
+      "noParent": "Žádná nejvyšší kategorie (hlavní kategorie)",
+      "sortOrder": "Pořadové číslo",
+      "isActive": "Aktivní",
+      "iconUrl": "URL ikony",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Uložit",
+      "submitting": "Ukládání...",
+      "updating": "Aktualizace...",
+      "errors": {
+        "nameRequired": "Název kategorie je povinný.",
+        "slugRequired": "Slimáci jsou povinní."
+      }
+    }
+  },
+  "offers": {
+    "title": "Návrhy",
+    "description": "Spravujte své příchozí a odchozí nabídky.",
+    "received": "Příchozí nabídky",
+    "sent": "Odeslané nabídky",
+    "noReceivedOffers": "Zatím nebyly obdrženy žádné nabídky.",
+    "noSentOffers": "Ještě jste nepodali nabídku.",
+    "browseProducts": "Procházet produkty",
+    "viewProduct": "Zobrazit produkt",
+    "accept": "Přijmout",
+    "reject": "Odmítnout",
+    "withdraw": "Výběr",
+    "makeOffer": "Odeslat nabídku",
+    "sendOffer": "Odeslat nabídku",
+    "sending": "Odesílání...",
+    "cancel": "Zrušit",
+    "listingPrice": "Inzerovaná cena",
+    "yourOffer": "Vaše nabídka",
+    "quantity": "Množství",
+    "messageOptional": "Zpráva (volitelné)",
+    "messagePlaceholder": "Poznámka, kterou byste chtěli sdělit prodejci...",
+    "expiresAt": "Poslední platné datum",
+    "offerSent": "Vaše nabídka byla úspěšně odeslána.",
+    "offerError": "Při odesílání nabídky došlo k chybě.",
+    "acceptSuccess": "Nabídka byla přijata.",
+    "rejectSuccess": "Nabídka byla odmítnuta.",
+    "withdrawSuccess": "Nabídka byla stažena.",
+    "actionError": "Během procesu došlo k chybě.",
+    "fetchError": "Při načítání nabídek došlo k chybě.",
+    "loginRequired": "Přihlaste se pro odeslání nabídky.",
+    "invalidPrice": "Zadejte platnou cenu.",
+    "invalidQuantity": "Zadejte platnou částku.",
+    "status": {
+      "pending": "Čeká na vyřízení",
+      "accepted": "Přijato",
+      "rejected": "Zamítnuto",
+      "countered": "Protinabídka",
+      "expired": "Jeho funkční období skončilo.",
+      "withdrawn": "Stáhl"
+    }
+  },
+  "deals": {
+    "title": "Dohody",
+    "description": "Dodržujte své nákupní smlouvy.",
+    "buying": "Učenci",
+    "selling": "Prodej",
+    "noBuyingDeals": "Ještě nemáte proces registrace studentů.",
+    "noSellingDeals": "Zatím nemáte žádné prodejní transakce.",
+    "browseProducts": "Procházet produkty",
+    "viewProduct": "Zobrazit produkt",
+    "activeDeals": "Aktivní dohody",
+    "completedDeals": "Dokončeno",
+    "purchases": "Učenci",
+    "sales": "Prodej",
+    "fetchError": "Při načítání smluv došlo k chybě.",
+    "dealStatus": {
+      "pending": "Čeká na vyřízení",
+      "confirmed": "Potvrzeno",
+      "processing": "Příprava",
+      "shipped": "V nákladu",
+      "delivered": "Doručeno",
+      "completed": "Dokončeno",
+      "cancelled": "Zrušeno",
+      "disputed": "Dohoda"
+    },
+    "delivery": {
+      "pickup": "Doručení do ruky",
+      "shipping": "Nákladem",
+      "transport": "Dopravou"
+    },
+    "requestTransport": "Žádost o přepravu"
+  },
+  "farms": {
+    "title": "Moje farmy",
+    "description": "Spravujte a aktualizujte své farmy.",
+    "addFarm": "Přidat farmu",
+    "editFarm": "Management farmy",
+    "noFarms": "Ještě jste nepřidali farmu.",
+    "farmName": "Název farmy",
+    "registrationNumber": "Evidenční číslo",
+    "location": "Umístění",
+    "selectLocation": "Vyberte místo.",
+    "addLocationFirst": "Nejprve přidejte lokalitu.",
+    "farmTypeLabel": "Prohlídka farmy",
+    "farmDescription": "Vysvětlení",
+    "totalArea": "Celková plocha",
+    "cultivatedArea": "Obdělávaná plocha",
+    "certifications": "Certifikáty",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP atd.",
+    "organic": "Organické",
+    "verified": "Ověřeno",
+    "save": "Uložit",
+    "saving": "Ukládání...",
+    "cancel": "Zrušit",
+    "edit": "Upravit",
+    "delete": "Vymazat",
+    "sellerRequired": "Profil prodejce je povinný",
+    "sellerRequiredDesc": "Chcete-li přidat farmu, musíte si nejprve vytvořit profil prodejce.",
+    "becomeSeller": "Staňte se prodejcem",
+    "createSuccess": "Farma byla úspěšně přidána.",
+    "updateSuccess": "Farma byla úspěšně aktualizována.",
+    "deleteSuccess": "Farma byla úspěšně smazána.",
+    "saveError": "Při registraci farmy došlo k chybě.",
+    "deleteError": "Při mazání farmy došlo k chybě.",
+    "fetchError": "Při nahrávání informací o farmě došlo k chybě.",
+    "farmType": {
+      "livestock": "Chov hospodářských zvířat",
+      "crop": "Zemědělství",
+      "mixed": "Smíšený",
+      "poultry": "Okřídlený",
+      "dairy": "Chov mléčného skotu",
+      "aquaculture": "Vodní produkty"
+    }
+  },
+  "transporters": {
+    "title": "transportéry",
+    "description": "Přepravní služby pro zvířata a produkty",
+    "searchPlaceholder": "Najít přepravce...",
+    "noTransporters": "Zatím nejsou žádní registrovaní dopravci.",
+    "verified": "Ověřeno",
+    "transports": "doprava",
+    "viewProfile": "Zobrazit profil",
+    "sort": {
+      "newest": "Nejnovější",
+      "rating": "Nejvyšší skóre",
+      "mostTransports": "Nejčastější zásilky"
+    },
+    "pagination": {
+      "previous": "Bývalý",
+      "next": "Další",
+      "page": "Stránka {stránka}"
+    }
+  },
+  "transport": {
+    "title": "Moje požadavky na dopravu",
+    "description": "Sledujte své požadavky na přepravu.",
+    "findTransporter": "Najít přepravce",
+    "active": "Aktivní",
+    "completed": "Dokončeno",
+    "total": "Celkový",
+    "asSeller": "Jako prodejce",
+    "asBuyer": "Jako kupující",
+    "noSellerRequests": "Jako prodejce nemáte povinnost platit za dopravu.",
+    "noBuyerRequests": "Jako příjemce nemáte požadavek na doručení.",
+    "viewProduct": "Zobrazit produkt",
+    "pickup": "Dostávat",
+    "delivery": "Dodání",
+    "urgent": "Naléhavé",
+    "fetchError": "Při nahrávání požadavků na dopravu došlo k chybě.",
+    "trackShipment": "Následovat",
+    "transportStatus": {
+      "pending": "Čeká na vyřízení",
+      "inPool": "V bazénu",
+      "assigned": "Jmenován",
+      "pickedUp": "Příjem",
+      "inTransit": "Na cestách",
+      "delivered": "Doručeno",
+      "completed": "Dokončeno",
+      "cancelled": "Zrušeno"
+    },
+    "transportType": {
+      "standard": "Norma",
+      "refrigerated": "Chladicí řetězec",
+      "liveAnimal": "Živá zvířata",
+      "hazardous": "Nebezpečné materiály",
+      "oversized": "Velká velikost"
+    }
+  },
+  "moderation": {
+    "title": "Moderování produktů",
+    "description": "Zkontrolujte produkty čekající na schválení.",
+    "pending": "čekání",
+    "allClear": "Všechny produkty byly zkontrolovány.",
+    "noPending": "Žádné produkty nečekají na schválení.",
+    "awaitingReview": "Čeká na kontrolu",
+    "by": "Prodavač/ka:",
+    "stock": "Sklad",
+    "preview": "S tebou",
+    "approve": "Potvrdit",
+    "reject": "Odmítnout",
+    "confirmReject": "Odmítnout",
+    "cancelReject": "Vzdát se",
+    "rejectReasonPlaceholder": "Napište důvod odmítnutí...",
+    "rejectReasonRequired": "Důvod odmítnutí je povinný.",
+    "approveSuccess": "Produkt byl úspěšně schválen.",
+    "rejectSuccess": "Produkt byl odmítnut.",
+    "actionError": "Během procesu došlo k chybě.",
+    "fetchError": "Při nahrávání produktů došlo k chybě.",
+    "unauthorized": "Nemáte oprávnění k přístupu k této stránce."
+  },
+  "sellerModeration": {
+    "title": "Moderování prodejce",
+    "description": "Kontrolovat a spravovat účty prodejců.",
+    "pending": "čekání",
+    "allClear": "Všichni prodejci byli prošetřeni.",
+    "noPending": "Žádní prodejci nečekají.",
+    "verify": "Ověřit",
+    "suspend": "Pozastavit",
+    "verifySuccess": "Prodejce byl úspěšně ověřen.",
+    "suspendSuccess": "Prodejce pozastaven.",
+    "actionError": "Během procesu došlo k chybě.",
+    "suspendReasonRequired": "Důvod pozastavení je povinný.",
+    "suspendReasonPlaceholder": "Napište důvod pozastavení...",
+    "confirmSuspend": "Pozastavit",
+    "cancelSuspend": "Vzdát se",
+    "statusLabels": {
+      "pendingVerification": "Čeká na ověření",
+      "active": "Aktivní",
+      "suspended": "Závěsný",
+      "banned": "Zakázáno"
+    },
+    "filterAll": "Zobrazit vše",
+    "filterPending": "Ti, kteří čekají",
+    "filterActive": "Aktiva",
+    "filterSuspended": "Pozastaveno",
+    "unauthorized": "Nemáte oprávnění k přístupu k této stránce.",
+    "businessName": "Název firmy",
+    "businessType": "Obchodní zájezd",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "status": "Situace",
+    "createdAt": "Datum registrace"
+  },
+  "transporterModeration": {
+    "title": "Moderování nosiče",
+    "description": "Kontrolovat a spravovat účty operátorů.",
+    "pending": "čekání",
+    "allClear": "Všichni přepravci byli vyšetřováni.",
+    "noPending": "Žádný transportér nečeká.",
+    "verify": "Ověřit",
+    "suspend": "Pozastavit",
+    "verifySuccess": "Přepravce byl úspěšně ověřen.",
+    "suspendSuccess": "Transportér byl pozastaven.",
+    "actionError": "Během procesu došlo k chybě.",
+    "suspendReasonRequired": "Důvod pozastavení je povinný.",
+    "suspendReasonPlaceholder": "Napište důvod pozastavení...",
+    "confirmSuspend": "Pozastavit",
+    "cancelSuspend": "Vzdát se",
+    "statusLabels": {
+      "pendingVerification": "Čeká na ověření",
+      "active": "Aktivní",
+      "suspended": "Závěsný",
+      "banned": "Zakázáno"
+    },
+    "filterAll": "Zobrazit vše",
+    "filterPending": "Ti, kteří čekají",
+    "filterActive": "Aktiva",
+    "filterSuspended": "Pozastaveno",
+    "unauthorized": "Nemáte oprávnění k přístupu k této stránce.",
+    "companyName": "Název společnosti",
+    "contactPerson": "Oprávněná osoba",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "city": "Město",
+    "status": "Situace",
+    "createdAt": "Datum registrace"
+  },
+  "transporterDetail": {
+    "notFound": "Nebyl nalezen žádný transportér.",
+    "backToList": "Don transportérům",
+    "verified": "Ověřeno",
+    "totalTransports": "celková poštovné",
+    "completed": "dokončeno",
+    "about": "O",
+    "contact": "Kontaktní informace",
+    "businessInfo": "Obchodní informace",
+    "license": "Číslo licence",
+    "insurance": "Informace o pojištění",
+    "fleet": "Informace o vozovém parku",
+    "serviceRegions": "Oblasti služeb",
+    "specializations": "Oblasti odbornosti",
+    "certifications": "Certifikáty"
+  },
+  "brands": {
+    "title": "Správa značky",
+    "description": "Spravujte značky produktů.",
+    "addBrand": "Přidat značku",
+    "editBrand": "Upravit značku",
+    "noBrands": "Zatím nebyly přidány žádné značky.",
+    "brandName": "Název značky",
+    "brandDescription": "Vysvětlení",
+    "website": "Webové stránky",
+    "logoUrl": "URL adresa loga",
+    "save": "Uložit",
+    "saving": "Ukládání...",
+    "cancel": "Zrušit",
+    "edit": "Upravit",
+    "delete": "Vymazat",
+    "inactive": "Pasivní",
+    "products": "produkt",
+    "createSuccess": "Značka byla úspěšně přidána",
+    "updateSuccess": "Značka byla úspěšně aktualizována.",
+    "deleteSuccess": "Značka byla úspěšně smazána.",
+    "saveError": "Při registraci ochranné známky došlo k chybě.",
+    "deleteError": "Při mazání ochranné známky došlo k chybě.",
+    "fetchError": "Při načítání značek došlo k chybě.",
+    "unauthorized": "Nemáte oprávnění k přístupu k této stránce."
+  },
+  "transporterReviews": {
+    "title": "Hodnocení",
+    "reviewCount": "hodnocení",
+    "noReviews": "Zatím žádné hodnocení.",
+    "timeliness": "Včasné dodání",
+    "communication": "Sdělení",
+    "carefulHandling": "Pečlivé zacházení",
+    "professionalism": "Profesionalita"
+  },
+  "transportOffers": {
+    "title": "Cenové nabídky na dopravu",
+    "description": "Spravujte nabídky, které odesíláte pro požadavky na dopravu.",
+    "newOffer": "Nový návrh",
+    "transportRequestId": "ID požadavku na přepravu",
+    "requestIdPlaceholder": "Zadejte ID požadavku na přepravu.",
+    "offeredPrice": "Nabídková cena",
+    "estimatedDays": "Odhadovaná doba trvání (dny)",
+    "days": "den",
+    "vehicleType": "Typ vozidla",
+    "insuranceIncluded": "Pojištění v ceně",
+    "message": "Zpráva",
+    "cancel": "Zrušit",
+    "sending": "Odesílání...",
+    "sendOffer": "Odeslat nabídku",
+    "cancelOffer": "Zrušit",
+    "pendingTab": "Čekání",
+    "historyTab": "Minulost",
+    "noPendingOffers": "Nemáte žádné čekající nabídky.",
+    "noHistory": "Nebyly nalezeny žádné minulé nabídky.",
+    "status": {
+      "pending": "Čekání",
+      "accepted": "Přijato",
+      "rejected": "Zamítnuto",
+      "expired": "Jeho funkční období skončilo.",
+      "cancelled": "Zrušeno"
+    },
+    "createSuccess": "Nabídka byla úspěšně odeslána.",
+    "createError": "Při odesílání nabídky došlo k chybě.",
+    "cancelSuccess": "Nabídka byla zrušena.",
+    "cancelError": "Při rušení nabídky došlo k chybě.",
+    "fetchError": "Při načítání nabídek došlo k chybě."
+  },
+  "animalInfo": {
+    "title": "Informace o zvířatech a produktech",
+    "animalTab": "Zvíře",
+    "healthTab": "Zdraví",
+    "vaccinationsTab": "Očkovači",
+    "veterinaryTab": "Veterinář",
+    "breed": "Rasa",
+    "genderLabel": "Pohlaví",
+    "gender": {
+      "male": "Samec",
+      "female": "Žena",
+      "unknown": "Neznámý"
+    },
+    "age": "Stáří",
+    "months": "měsíc",
+    "weight": "Hmotnost",
+    "color": "Barva",
+    "tagNumber": "Číslo ucha",
+    "healthStatus": "Zdravotní stav",
+    "health": {
+      "healthy": "Zdravý",
+      "underTreatment": "V léčbě",
+      "recovering": "On/ona se zotavuje.",
+      "quarantined": "V karanténě",
+      "unknown": "Neznámý"
+    },
+    "purposeLabel": "Zamýšlené použití",
+    "purpose": {
+      "breeding": "hřebec",
+      "dairy": "Mléko",
+      "meat": "Maso",
+      "egg": "Vejce",
+      "wool": "Vlna",
+      "working": "Práce",
+      "pet": "Domácí",
+      "other": "Ostatní"
+    },
+    "pregnancy": "Těhotenství",
+    "pregnant": "Těhotná",
+    "microchip": "Číslo mikročipu",
+    "passport": "Číslo pasu",
+    "sireDetails": "Informace o otci",
+    "damDetails": "Hlavní informace",
+    "diagnosis": "Diagnóza",
+    "treatment": "Zacházení",
+    "medications": "Léky",
+    "veterinarian": "Veterinář",
+    "nextDue": "Historie dalšího rebela",
+    "prescriptionRequired": "Vyžaduje lékařský předpis",
+    "targetSpecies": "Cílové prohlídky",
+    "activeIngredients": "Aktivní složky",
+    "registrationNo": "Evidenční číslo",
+    "storage": "Skladování",
+    "chemicalTab": "Chemikálie",
+    "feedTab": "Návnada",
+    "seedTab": "Semínko",
+    "machineryTab": "Stroj",
+    "organic": "Organické",
+    "toxicity": "Toxicita",
+    "gmoFree": "Bez GMO",
+    "protein": "Protein",
+    "fat": "Olej",
+    "fiber": "Vlákno",
+    "hybrid": "Hybridní",
+    "germination": "Klíčení",
+    "daysToMaturity": "Zrání",
+    "daysLabel": "den",
+    "warranty": "Zaručeno",
+    "power": "Pevnost",
+    "hoursUsed": "Hodiny používání",
+    "hours": "hodina",
+    "powerSource": "Napájení"
+  },
+  "productVariants": {
+    "title": "Varianty produktu",
+    "variantCount": "varianta",
+    "inStock": "Skladem",
+    "outOfStock": "Vyprodáno"
+  },
+  "productPrices": {
+    "title": "Ceny (více měn)",
+    "autoConversion": "Automatická transformace",
+    "validUntil": "Platnost"
+  },
+  "requestTransport": {
+    "title": "Vytvořit požadavek na přepravu",
+    "pickupLocation": "Nakládací místo",
+    "deliveryLocation": "Místo dodání",
+    "city": "Město",
+    "address": "Adresa",
+    "transportType": "Prohlídka dopravy",
+    "types": {
+      "standard": "Norma",
+      "refrigerated": "Chladicí řetězec",
+      "liveAnimal": "Živá zvířata",
+      "hazardous": "Nebezpečné materiály",
+      "oversized": "Velká velikost"
+    },
+    "weight": "Hmotnost (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Preferované datum nahrání",
+    "preferredDeliveryDate": "Preferované datum doručení",
+    "urgent": "Naléhavá přeprava",
+    "specialInstructions": "Zvláštní pokyny",
+    "instructionsPlaceholder": "Sem napište své konkrétní instrukce...",
+    "cancel": "Vzdát se",
+    "submit": "Vytvořte poptávku",
+    "submitting": "V procesu tvorby...",
+    "success": "Žádost o přepravu byla úspěšně vytvořena.",
+    "error": "Při vytváření požadavku na přepravu došlo k chybě."
+  },
+  "transportTracking": {
+    "title": "Sledování zásilky",
+    "noTracking": "Zatím nejsou k dispozici žádné informace o sledování.",
+    "update": "Aktualizovat"
+  },
+  "locations": {
+    "title": "Moje adresy",
+    "description": "Spravujte své registrované adresy.",
+    "addLocation": "Přidat adresu",
+    "editLocation": "Upravit adresu",
+    "noLocations": "Ještě nemáte registrovanou adresu.",
+    "name": "Adresa Název",
+    "namePlaceholder": "Například: Dům, Práce, Farma",
+    "address": "Adresa",
+    "addressLine2": "Řádek adresy 2",
+    "city": "Město",
+    "state": "Okres / Region",
+    "postalCode": "Poštovní směrovací číslo",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "cancel": "Vzdát se",
+    "save": "Uložit",
+    "saving": "Ukládání...",
+    "typePickup": "Načítání",
+    "typeDelivery": "Dodání",
+    "typeBoth": "Generál",
+    "createSuccess": "Adresa byla úspěšně přidána.",
+    "createError": "Při přidávání adresy došlo k chybě.",
+    "updateSuccess": "Adresa byla úspěšně aktualizována.",
+    "updateError": "Při aktualizaci adresy došlo k chybě.",
+    "deleteLocation": "Smazat adresu",
+    "deleteSuccess": "Adresa smazána",
+    "deleteError": "Při mazání adresy došlo k chybě.",
+    "fetchError": "Při načítání adres došlo k chybě."
+  },
+  "systemSettings": {
+    "title": "Nastavení systému",
+    "description": "Zobrazit nastavení měny platformy, jazyka, platebních metod, dopravy a daní.",
+    "unauthorized": "Nemáte oprávnění k přístupu k této stránce.",
+    "currenciesTab": "Měny",
+    "languagesTab": "Jazyky",
+    "paymentTab": "Platební metody",
+    "shippingTab": "Náklad",
+    "taxTab": "Daň",
+    "active": "Aktivní",
+    "inactive": "Pasivní",
+    "default": "Výchozí",
+    "noCurrencies": "Měna dosud nebyla definována.",
+    "noLanguages": "Jazyk ještě nebyl definován.",
+    "noPaymentMethods": "Způsob platby zatím není definován.",
+    "noCarriers": "Přepravní společnost zatím nebyla identifikována.",
+    "noZones": "Nákladní prostor zatím nebyl definován.",
+    "noTaxRates": "Sazba daně zatím nebyla definována.",
+    "carriers": "Přepravní společnosti",
+    "zones": "Nákladní zóny",
+    "countries": "Země",
+    "rates": "Poplatky za dopravu",
+    "noRates": "Náklady na dopravu zatím nebyly definovány.",
+    "freeShipping": "Doprava zdarma",
+    "deliveryDays": "denní dodací lhůta"
+  },
+  "pushPermission": {
+    "title": "Povolit oznámení",
+    "description": "Dostávejte upozornění na nové zprávy, nabídky a aktualizace objednávek.",
+    "allow": "Povolit",
+    "dismiss": "Blízko"
+  },
+  "healthRecords": {
+    "title": "Zdravotní záznamy",
+    "description": "Spravovat záznamy o zdraví zvířat a jejich anamnézu.",
+    "addRecord": "Přidat záznam",
+    "editRecord": "Upravit záznam",
+    "deleteRecord": "Smazat záznam",
+    "noRecords": "Zdravotní záznam zatím nebyl přidán.",
+    "animalInfoId": "Identifikace zvířete",
+    "animalInfoIdPlaceholder": "Zadejte ID informací o zvířeti.",
+    "recordType": "Registrační prohlídka",
+    "recordTypePlaceholder": "Příklady: Vyšetření, léčba, chirurgický zákrok",
+    "recordDate": "Datum registrace",
+    "followUpDate": "Datum kontroly",
+    "veterinarianName": "Veterinář",
+    "veterinarianLicense": "Číslo licence",
+    "clinicName": "Klinický",
+    "diagnosis": "Diagnóza",
+    "treatment": "Zacházení",
+    "medications": "Léky",
+    "medicationsPlaceholder": "Příklad: Penicilin 500 mg, Ibuprofen",
+    "notes": "Poznámky",
+    "documentUrl": "URL adresa dokumentu",
+    "saving": "Ukládání...",
+    "createSuccess": "Zdravotní záznam byl úspěšně přidán.",
+    "updateSuccess": "Zdravotní záznam byl úspěšně aktualizován.",
+    "deleteSuccess": "Zdravotní záznam byl úspěšně smazán.",
+    "saveError": "Při ukládání záznamu došlo k chybě.",
+    "deleteError": "Při mazání záznamu došlo k chybě.",
+    "fetchError": "Při načítání záznamů došlo k chybě."
+  },
+  "vaccinations": {
+    "title": "Záznamy o vakcínách",
+    "description": "Spravujte záznamy a kalendáře očkování zvířat.",
+    "addVaccination": "Přidat rebela",
+    "editVaccination": "Rebelské uspořádání",
+    "deleteVaccination": "Rebel Sil",
+    "noVaccinations": "Záznam o očkování zatím nebyl přidán.",
+    "animalInfoId": "Identifikace zvířete",
+    "animalInfoIdPlaceholder": "Zadejte ID informací o zvířeti.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Příklad: Vakcína SAT, Brucella",
+    "vaccineType": "Rebelské turné",
+    "vaccineTypePlaceholder": "Příklad: Živý, Neaktivní",
+    "batchNumber": "Číslo skupiny",
+    "vaccinationDate": "Historie rebela",
+    "nextDueDate": "Historie dalšího rebela",
+    "veterinarianName": "Veterinář",
+    "veterinarianLicense": "Číslo licence",
+    "notes": "Poznámky",
+    "certificateUrl": "URL certifikátu",
+    "saving": "Ukládání...",
+    "createSuccess": "Záznam o očkování byl úspěšně přidán.",
+    "updateSuccess": "Záznam o očkování byl úspěšně aktualizován.",
+    "deleteSuccess": "Záznam o očkování byl úspěšně smazán.",
+    "saveError": "Při registraci vakcíny došlo k chybě.",
+    "deleteError": "Při mazání vakcíny došlo k chybě.",
+    "fetchError": "Při načítání vakcín došlo k chybě."
+  },
+  "shippingCarriers": {
+    "title": "Přepravní společnosti",
+    "description": "Spravujte informace o přepravní společnosti.",
+    "addCarrier": "Přidat společnost",
+    "editCarrier": "Upravit společnost",
+    "noCarriers": "Zatím nebyla přidána žádná přepravní společnost.",
+    "carrierName": "Název společnosti",
+    "carrierNamePlaceholder": "Příklad: Aras Kargo, MNG",
+    "code": "Kód",
+    "codePlaceholder": "Příklad: ARAS",
+    "website": "Webové stránky",
+    "trackingUrlTemplate": "Šablona URL pro sledování",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Podporované země",
+    "supportedCountriesPlaceholder": "Příklad: TR, US, DE",
+    "active": "Aktivní",
+    "inactive": "Pasivní",
+    "saving": "Ukládání...",
+    "edit": "Upravit",
+    "delete": "Vymazat",
+    "createSuccess": "Přepravní společnost byla úspěšně přidána.",
+    "updateSuccess": "Přepravní společnost byla úspěšně aktualizována.",
+    "deleteSuccess": "Přepravní společnost byla úspěšně smazána.",
+    "saveError": "Při registraci přepravní společnosti došlo k chybě.",
+    "deleteError": "Při mazání informací o přepravní společnosti došlo k chybě.",
+    "fetchError": "Při načítání přepravních společností došlo k chybě."
+  },
+  "shippingZones": {
+    "title": "Nákladní zóny",
+    "description": "Spravujte nákladové zóny a oblasti.",
+    "addZone": "Přidat oblast",
+    "editZone": "Upravit oblast",
+    "noZones": "Zatím nebyl přidán žádný nákladový prostor.",
+    "zoneName": "Název regionu",
+    "zoneNamePlaceholder": "Příklad: Evropa, Severní Amerika",
+    "countryCodes": "Kódy zemí",
+    "countryCodesPlaceholder": "Příklad: TR, DE, FR",
+    "active": "Aktivní",
+    "inactive": "Pasivní",
+    "saving": "Ukládání...",
+    "edit": "Upravit",
+    "delete": "Vymazat",
+    "createSuccess": "Region byl úspěšně přidán.",
+    "updateSuccess": "Region byl úspěšně aktualizován.",
+    "deleteSuccess": "Oblast byla úspěšně vyčištěna.",
+    "saveError": "Při ukládání oblasti došlo k chybě.",
+    "deleteError": "Při mazání oblasti došlo k chybě.",
+    "fetchError": "Při načítání regionů došlo k chybě."
+  },
+  "shippingRates": {
+    "title": "Poplatky za dopravu",
+    "description": "Spravujte náklady na dopravu a možnosti doručení.",
+    "addRate": "Přidat poplatek",
+    "editRate": "Úprava poplatku",
+    "noRates": "Náklady na dopravu zatím nebyly přidány.",
+    "zone": "Plocha",
+    "carrier": "Firma",
+    "selectZone": "Vyberte oblast",
+    "selectCarrier": "Vyberte si společnost",
+    "shippingCost": "Poplatek za dopravu",
+    "currency": "Měna",
+    "estimatedDeliveryDays": "Odhadovaná doba doručení (dny)",
+    "minWeight": "Minimální hmotnost",
+    "maxWeight": "Maximální hmotnost",
+    "minOrderAmount": "Minimální částka objednávky",
+    "freeShipping": "Doprava zdarma",
+    "free": "Uvolnit",
+    "active": "Aktivní",
+    "inactive": "Pasivní",
+    "cost": "Poplatek",
+    "deliveryDays": "Dodání",
+    "status": "Situace",
+    "saving": "Ukládání...",
+    "createSuccess": "Poplatek byl úspěšně přidán.",
+    "updateSuccess": "Plat byl úspěšně aktualizován.",
+    "deleteSuccess": "Poplatek byl úspěšně smazán.",
+    "saveError": "Při ukládání poplatku došlo k chybě.",
+    "deleteError": "Při mazání poplatku došlo k chybě.",
+    "fetchError": "Při nahrávání poplatků došlo k chybě."
+  },
+  "metadata": {
+    "title": "Obchodování s hospodářskými zvířaty - platforma pro obchodování s živými zvířaty",
+    "description": "Nejdůvěryhodnější platforma pro obchodování s živými zvířaty na světě. Bezpečný a transparentní nákup a prodej zvířat.",
+    "pages": {
+      "about": {
+        "title": "O nás",
+        "description": "Zjistěte více o obchodování s hospodářskými zvířaty. Spolehlivá platforma pro obchodování s živými zvířaty."
+      },
+      "contact": {
+        "title": "Sdělení",
+        "description": "Kontaktujte nás. Tým zákaznické podpory pro obchod s hospodářskými zvířaty je připraven vám pomoci."
+      },
+      "terms": {
+        "title": "Podmínky použití",
+        "description": "Obchodní podmínky pro obchodování s hospodářskými zvířaty."
+      },
+      "privacy": {
+        "title": "Zásady ochrany osobních údajů",
+        "description": "Zásady ochrany osobních údajů pro obchod s hospodářskými zvířaty. Zjistěte, jak jsou vaše osobní údaje chráněny."
+      },
+      "products": {
+        "title": "Produkty",
+        "description": "Prohlédněte si nabídky živých zvířat. Spolehlivé inzeráty na skot, ovce a další."
+      },
+      "sellers": {
+        "title": "Prodejci",
+        "description": "Objevte spolehlivé prodejce zvířat. Ověřené profily a recenze prodejců."
+      },
+      "transporters": {
+        "title": "transportéry",
+        "description": "Objevte společnosti zabývající se přepravou zvířat. Bezpečná a profesionální přeprava živých zvířat."
+      },
+      "search": {
+        "title": "Vyhledávání",
+        "description": "Vyhledávání mezi inzeráty živých zvířat. Snadné vyhledávání s možnostmi filtrování a řazení."
+      },
+      "faq": {
+        "title": "Často kladené otázky",
+        "description": "Často kladené otázky a odpovědi o obchodu s hospodářskými zvířaty."
+      },
+      "productDetail": {
+        "title": "{title} - Na prodej",
+        "description": "Na prodej v {title} - {city}. Klikněte pro podrobnosti a kontaktní informace."
+      },
+      "sellerDetail": {
+        "title": "{name} - Profil prodejce",
+        "description": "Profil prodejce {name}. Recenze, nabídky a kontaktní informace."
+      },
+      "transporterDetail": {
+        "title": "{name} - Profil operátora",
+        "description": "Profil dopravce {name}. Oblasti působnosti, recenze a kontaktní informace."
+      }
+    }
   }
 }

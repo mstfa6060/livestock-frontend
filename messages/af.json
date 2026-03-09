@@ -11,17 +11,30 @@
     "back": "Terug",
     "next": "Vorentoe",
     "close": "Maak toe",
+    "unauthorized": "Jy het nie toestemming om toegang tot hierdie bladsy te verkry nie.",
     "emailPlaceholder": "ornek@epos.com",
     "login": "Teken aan",
-    "register": "Registreer"
+    "register": "Registreer",
+    "previous": "Voormalige",
+    "zoomIn": "Zoem in",
+    "previousImage": "Vorige beeld",
+    "nextImage": "Volgende beeld",
+    "closeLightbox": "Maak galery toe",
+    "imageLightbox": "Beeldgalery",
+    "slideN": "Skyfie {n}",
+    "viewMore": "Sien meer"
   },
   "header": {
     "products": "Produkte",
     "sellers": "Verkopers",
+    "transporters": "vervoerders",
     "about": "Oor Ons",
+    "search": "Soek",
     "dashboard": "Paneel",
     "settings": "Instellings",
-    "logout": "Meld af"
+    "logout": "Meld af",
+    "menu": "Kieslys",
+    "language": "Taalkeuse"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Ek het my wagwoord vergeet.",
       "noAccount": "Het jy nie 'n rekening nie?",
       "register": "Registreer",
-      "errorDefault": "Aanmelding het misluk. Kontroleer asseblief u inligting."
+      "errorDefault": "Aanmelding het misluk. Kontroleer asseblief u inligting.",
+      "orContinueWith": "of gaan voort",
+      "continueWithGoogle": "Gaan voort met Google",
+      "continueWithApple": "Gaan voort met Apple.",
+      "socialLoginError": "Sosiale aanmelding het misluk. Probeer asseblief weer.",
+      "appleComingSoon": "Baie binnekort",
+      "showPassword": "Wys wagwoord",
+      "hidePassword": "Versteek wagwoord"
     },
     "register": {
       "title": "Registreer",
@@ -51,7 +71,17 @@
       "login": "Teken aan",
       "passwordMismatch": "Die wagwoorde stem nie ooreen nie.",
       "passwordTooShort": "Die wagwoord moet ten minste 6 karakters lank wees.",
-      "errorDefault": "Registrasie het misluk. Probeer asseblief weer."
+      "errorDefault": "Registrasie het misluk. Probeer asseblief weer.",
+      "showPassword": "Wys wagwoord",
+      "hidePassword": "Versteek wagwoord",
+      "passwordStrength": {
+        "minLength": "Ten minste 8 karakters",
+        "uppercase": "Hoofletters (A-Z)",
+        "lowercase": "Kleinletters (a-z)",
+        "number": "Nommer (0-9)",
+        "special": "Spesiale karakters (!@#$%)"
+      },
+      "registerSuccess": "Jou rekening is suksesvol geskep! Jy word na die aanmeldbladsy herlei..."
     },
     "forgotPassword": {
       "title": "Ek het my wagwoord vergeet.",
@@ -64,7 +94,7 @@
       "errorDefault": "'n Fout het voorgekom. Kontroleer asseblief u e-posadres."
     },
     "resetPassword": {
-      "title": "Stel 'n nuwe wagwoord",
+      "title": "Stel 'n Nuwe Wagwoord",
       "description": "Stel 'n nuwe wagwoord vir jou rekening.",
       "newPassword": "Nuwe Wagwoord",
       "confirmPassword": "Bevestig wagwoord",
@@ -78,7 +108,9 @@
       "requestNewLink": "Versoek 'n Nuwe Verbinding",
       "passwordMismatch": "Die wagwoorde stem nie ooreen nie.",
       "passwordTooShort": "Die wagwoord moet ten minste 6 karakters lank wees.",
-      "errorDefault": "Wagwoordherstel het misluk. Die verbinding is dalk ongeldig of het verval."
+      "errorDefault": "Wagwoordherstel het misluk. Die verbinding is dalk ongeldig of het verval.",
+      "showPassword": "Wys wagwoord",
+      "hidePassword": "Versteek wagwoord"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "aktief",
       "totalViews": "Totale kyke",
       "thisWeek": "hierdie week",
+      "allTime": "alle tye",
       "favorites": "Gunsteling",
       "onYourListings": "in jou advertensies",
+      "savedItems": "geregistreerde produk",
       "messages": "Boodskap",
-      "unread": "ongelees"
+      "notifications": "Kennisgewings",
+      "unread": "ongelees",
+      "views": "uitsigte",
+      "draft": "Konsep",
+      "sold": "Verkoop",
+      "pending": "Hangende",
+      "awaitingApproval": "wag op goedkeuring",
+      "totalSales": "Totale Verkope",
+      "completedSales": "voltooide verkope",
+      "revenue": "Inkomste",
+      "totalRevenue": "totale inkomste"
     },
     "recentListings": "Jou Nuutste Lysinskrywings",
+    "recentActivity": "Onlangse Aktiwiteite",
     "recentMessages": "Onlangse Boodskappe",
+    "quickLinks": "Vinnige Toegang",
     "noListings": "Jy het nog geen advertensies bygevoeg nie.",
-    "noMessages": "Jy het nog geen boodskappe ontvang nie.",
+    "noActivity": "Geen aktiwiteit nog nie.",
+    "noMessages": "Jy het nog nie 'n boodskap ontvang nie.",
     "noNotifications": "Jy het nog geen kennisgewings ontvang nie.",
     "viewAllListings": "Bekyk alle lyste",
-    "viewAllMessages": "Bekyk alle boodskappe"
+    "viewAllMessages": "Bekyk alle boodskappe",
+    "viewNotifications": "Bekyk kennisgewings",
+    "viewFavorites": "Gunstelinge Gor",
+    "recentlyViewed": "Onlangs Bekyk",
+    "fetchError": "'n Fout het voorgekom tydens die laai van die paneeldata."
   },
   "dashboardNav": {
     "overview": "Oorsig",
@@ -115,7 +166,61 @@
     "notifications": "Kennisgewings",
     "profile": "Profiel",
     "settings": "Instellings",
-    "newListing": "Voeg Nuwe Lysinskrywing by"
+    "newListing": "Voeg Nuwe Lysinskrywing by",
+    "becomeSeller": "Word 'n Verkoper",
+    "categories": "Kategorieë",
+    "offers": "Voorstelle",
+    "deals": "Ooreenkomste",
+    "farms": "My plase",
+    "transport": "Vervoer",
+    "moderation": "Moderering",
+    "sellerModeration": "Verkopermoderering",
+    "transporterModeration": "Draermoderering",
+    "brands": "Handelsmerke",
+    "transportOffers": "Versendingskwotasies",
+    "healthRecords": "Gesondheidsrekords",
+    "vaccinations": "Entstowwe",
+    "shippingCarriers": "Verskepingsmaatskappye",
+    "shippingZones": "Vragsones",
+    "shippingRates": "Versendingskoste",
+    "systemSettings": "Stelselinstellings",
+    "locations": "My adresse"
+  },
+  "profile": {
+    "title": "Profielinligting",
+    "description": "Jy kan jou persoonlike inligting hier opdateer.",
+    "personalInfo": "Persoonlike Inligting",
+    "contactInfo": "Kontakbesonderhede",
+    "preferences": "Voorkeure",
+    "firstName": "Naam",
+    "firstNamePlaceholder": "Voer jou naam in",
+    "surname": "Van",
+    "surnamePlaceholder": "Voer jou vannaam in.",
+    "displayName": "Vertoonde Naam",
+    "phone": "Telefoonnommer",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Geverifieer",
+    "phoneNotVerified": "Onbevestig",
+    "verifyPhone": "Verifieer telefoonnommer",
+    "country": "Land",
+    "selectCountry": "Kies 'n land",
+    "language": "Taalvoorkeur",
+    "selectLanguage": "Kies 'n taal",
+    "currency": "Geldeenheid",
+    "selectCurrency": "Kies geldeenheid.",
+    "saveChanges": "Stoor veranderinge",
+    "saving": "Stoor...",
+    "saveSuccess": "Jou profielinligting is opgedateer.",
+    "saveError": "'n Fout het voorgekom tydens die opdatering van die profiel.",
+    "avatar": "Profielfoto",
+    "changeAvatar": "Verander foto",
+    "removeAvatar": "Verwyder foto",
+    "currencies": {
+      "try": "Turkse Lira",
+      "usd": "Amerikaanse dollar",
+      "eur": "Euro",
+      "gbp": "Britse Pond"
+    }
   },
   "myListings": {
     "title": "My advertensies",
@@ -125,35 +230,94 @@
     "fetchError": "'n Fout het voorgekom tydens die laai van advertensies.",
     "deleteSuccess": "Die advertensie is suksesvol verwyder.",
     "deleteError": "'n Fout het voorgekom tydens die verwydering van die advertensie.",
-    "activateSuccess": "Die advertensie is geaktiveer.",
-    "deactivateSuccess": "Die lys is gedeaktiveer.",
+    "publishSuccess": "Die advertensie is vir goedkeuring gestuur.",
+    "unpublishSuccess": "Die advertensie is opgestel.",
     "statusError": "'n Fout het voorgekom tydens die verandering van die status.",
     "filters": {
       "all": "Almal van hulle",
-      "active": "Aktief",
       "draft": "Konsep",
       "pending": "Wag vir goedkeuring",
+      "active": "Aktief",
+      "rejected": "Verwerp",
       "sold": "Verkoop"
     },
     "actions": {
       "edit": "Wysig",
       "delete": "Vee uit",
-      "activate": "Aktiveer",
-      "deactivate": "Passiewe Struktuur"
+      "publish": "Stuur vir goedkeuring",
+      "unpublish": "Konsep",
+      "menu": "Transaksies"
     },
     "deleteDialog": {
       "title": "Vee die advertensie uit",
       "description": "Is jy seker jy wil hierdie lysinskrywing verwyder? Hierdie aksie is onomkeerbaar.",
       "cancel": "Kanselleer",
       "confirm": "Vee uit"
-    }
+    },
+    "loadMore": "Laai Meer af",
+    "loadingMore": "Laai tans..."
   },
   "favorites": {
     "title": "My gunstelinge",
     "description": "Volg die produkte waarvan jy hier hou.",
     "noFavorites": "Jy het nog geen gunstelingprodukte bygevoeg nie.",
     "browseProducts": "Blaai deur produkte",
-    "fetchError": "'n Fout het voorgekom tydens die laai van gunstelinge."
+    "fetchError": "'n Fout het voorgekom tydens die laai van gunstelinge.",
+    "loadMore": "Laai Meer af",
+    "loadingMore": "Laai tans..."
+  },
+  "messages": {
+    "title": "Boodskappe",
+    "description": "Kontak kopers en verkopers.",
+    "noConversations": "Jy het nog nie 'n boodskap ontvang nie.",
+    "startConversation": "Om 'n vraag oor 'n advertensie te vra, gaan na die advertensie.",
+    "fetchError": "'n Fout het voorgekom tydens die laai van boodskappe",
+    "sendError": "'n Fout het voorgekom tydens die stuur van die boodskap.",
+    "connectionError": "Verbinding het misluk. Probeer weer...",
+    "connected": "Dit het verbind",
+    "connecting": "Verbind...",
+    "searchPlaceholder": "Soek deur die boodskappe...",
+    "typeMessage": "Skryf jou boodskap...",
+    "send": "Stuur",
+    "sending": "Stuur tans...",
+    "typing": "Dit sê...",
+    "read": "Lees",
+    "delivered": "Gestuur",
+    "today": "Vandag",
+    "yesterday": "Gister",
+    "noMessages": "Geen boodskappe nog nie. Begin 'n gesprek!",
+    "loadMore": "Laai meer op",
+    "loadingMessages": "Boodskappe laai tans...",
+    "about": "Oor",
+    "product": "Produk",
+    "startNewConversation": "Begin 'n Nuwe Gesprek",
+    "selectConversation": "Kies 'n gesprek of begin 'n nuwe een.",
+    "online": "Aanlyn",
+    "offline": "Vanlyn",
+    "lastSeen": "Laas gesien",
+    "deleteConversation": "Vee gesprek uit",
+    "deleteConfirm": "Is jy seker jy wil hierdie gesprek verwyder?",
+    "deleted": "Die gesprek is uitgevee.",
+    "defaultUser": "Gebruiker",
+    "noResults": "Geen resultate gevind nie.",
+    "newConversation": "Nuwe gesprek"
+  },
+  "notifications": {
+    "title": "Kennisgewings",
+    "description": "Bekyk en bestuur jou kennisgewings.",
+    "markAllAsRead": "Merk alles as gelees",
+    "noNotifications": "Jy het nog geen kennisgewings ontvang nie.",
+    "viewAll": "Sien alle kennisgewings",
+    "today": "Vandag",
+    "yesterday": "Gister",
+    "older": "Ouer",
+    "types": {
+      "system": "Stelsel",
+      "message": "Boodskap",
+      "offer": "Aanbod",
+      "order": "Bestelling",
+      "listing": "Advertensie"
+    }
   },
   "settings": {
     "title": "Instellings",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Die nuwe wagwoorde stem nie ooreen nie.",
       "passwordTooShort": "Die nuwe wagwoord moet ten minste 6 karakters lank wees.",
       "sessionError": "Sessie-inligting kon nie gevind word nie.",
-      "errorDefault": "Die wagwoord kon nie opgedateer word nie. Kontroleer asseblief jou huidige wagwoord."
+      "errorDefault": "Die wagwoord kon nie opgedateer word nie. Kontroleer asseblief jou huidige wagwoord.",
+      "showPassword": "Wys wagwoord",
+      "hidePassword": "Versteek wagwoord"
+    },
+    "preferences": {
+      "title": "Kennisgewing- en Kykvoorkeure",
+      "description": "Bestuur jou kennisgewingkanale en vertoonvoorkeure.",
+      "notifications": "Kennisgewings",
+      "emailNotifications": "E-poskennisgewings",
+      "emailNotificationsDesc": "Ontvang e-poskennisgewings vir nuwe boodskappe en advertensie-opdaterings.",
+      "smsNotifications": "SMS-kennisgewings",
+      "smsNotificationsDesc": "Ontvang SMS-boodskappe vir belangrike kennisgewings.",
+      "pushNotifications": "Stootkennisgewings",
+      "pushNotificationsDesc": "Ontvang stootkennisgewings vir onmiddellike opdaterings.",
+      "appearance": "Voorkoms",
+      "darkMode": "Donkermodus",
+      "darkModeDesc": "Skakel oor na 'n donker tema.",
+      "saveChanges": "Stoor Voorkeure",
+      "saving": "Stoor...",
+      "saveSuccess": "Jou voorkeure is opgedateer.",
+      "saveError": "'n Fout het voorgekom tydens die opdatering van voorkeure.",
+      "loadError": "Voorkeure kon nie gelaai word nie."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Lewende Diere Handelsplatform",
       "subtitle": "Die mees betroubare platform vir die verhandeling van lewende diere. Koop en verkoop jou beeste en skape veilig.",
       "cta": "Begin Nou",
-      "viewListings": "Bekyk advertensies"
+      "viewListings": "Bekyk advertensies",
+      "searchPlaceholder": "Soek vir diere... (koeie, skape, bokke...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Aanbevole advertensies",
       "viewAll": "Sien alles"
+    },
+    "cta": {
+      "title": "Begin Nou",
+      "subtitle": "Neem jou plek in op 'n platform waar duisende verkopers en kopers ontmoet.",
+      "button": "Registreer Gratis"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Oor Ons",
     "contact": "Kommunikasie",
     "terms": "Gebruiksvoorwaardes",
-    "privacy": "Privaatheidsbeleid"
+    "privacy": "Privaatheidsbeleid",
+    "company": "Maatskappy",
+    "support": "Ondersteuning",
+    "legal": "Regs",
+    "followUs": "Volg ons",
+    "newsletter": "Bulletin",
+    "newsletterDescription": "Moenie die nuutste aanbiedinge en promosies misloop nie.",
+    "subscribe": "Teken in",
+    "emailPlaceholder": "Jou e-posadres",
+    "tagline": "Turkye se mees betroubare platform vir die verhandeling van lewende diere.",
+    "sellers": "Verkopers",
+    "products": "Produkte",
+    "map": "Kaart",
+    "appleLoginComingSoon": "Aanmelding met Apple sal binnekort aktief wees.",
+    "supportEmail": "info@veehandel.com",
+    "faq": "Gereelde vrae"
+  },
+  "faq": {
+    "title": "Gereelde vrae",
+    "description": "Antwoorde op jou gereelde vrae oor ons platform.",
+    "noFaqs": "Geen vrae is nog bygevoeg nie."
+  },
+  "about": {
+    "title": "Oor Ons",
+    "subtitle": "Turkye se mees betroubare platform vir die verhandeling van lewende diere.",
+    "mission": {
+      "title": "Ons Missie",
+      "description": "Deur die digitalisering van die handel in lewende diere, beoog ons om 'n veilige, deursigtige en doeltreffende skakel tussen produsente en kopers te skep."
+    },
+    "vision": {
+      "title": "Ons Visie",
+      "description": "Om 'n pionier in digitale transformasie in die landbousektor te wees en 'n wêreldwye platform in lewende dierehandel te word."
+    },
+    "values": {
+      "title": "Ons waardes",
+      "trust": {
+        "title": "Vertroue",
+        "description": "Deursigtigheid en betroubaarheid is noodsaaklik in alle transaksies."
+      },
+      "quality": {
+        "title": "Kwaliteit",
+        "description": "Voortdurende verbetering om die beste diens te lewer."
+      },
+      "innovation": {
+        "title": "Innovasie",
+        "description": "Transformeer die bedryf deur die gebruik van tegnologie."
+      }
+    },
+    "stats": {
+      "users": "Geregistreerde Gebruiker",
+      "sellers": "Aktiewe Verkoper",
+      "products": "Advertensie",
+      "transactions": "Suksesvolle Transaksie"
+    }
+  },
+  "contact": {
+    "title": "Kommunikasie",
+    "subtitle": "Kontak ons gerus met enige vrae.",
+    "form": {
+      "title": "Skryf aan ons",
+      "name": "Jou naam",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "E-pos",
+      "emailPlaceholder": "ornek@epos.com",
+      "subject": "Onderwerp",
+      "subjectPlaceholder": "Die onderwerp van jou boodskap",
+      "message": "Jou boodskap",
+      "messagePlaceholder": "Skryf jou boodskap hier...",
+      "submit": "Stuur",
+      "submitting": "Stuur tans...",
+      "success": "Jou boodskap is suksesvol gestuur. Ons sal so gou as moontlik met jou in verbinding tree.",
+      "error": "'n Fout het voorgekom tydens die stuur van die boodskap. Probeer asseblief weer."
+    },
+    "info": {
+      "title": "Kontakbesonderhede",
+      "address": "Adres",
+      "addressValue": "Istanboel, Turkye",
+      "email": "E-pos",
+      "emailValue": "info@veehandel.com",
+      "phone": "Telefoon",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Werksure",
+      "workingHoursValue": "Maandag - Vrydag: 09:00 - 18:00",
+      "map": "Kaart"
+    }
+  },
+  "terms": {
+    "title": "Gebruiksvoorwaardes",
+    "lastUpdated": "Laaste opdatering: {datum}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Aanvaarding van die Voorwaardes",
+        "content": "Deur hierdie webwerf te gebruik, stem u in tot die volgende gebruiksvoorwaardes. Indien u nie met hierdie voorwaardes saamstem nie, moet asseblief nie die webwerf gebruik nie."
+      },
+      "services": {
+        "title": "2. Dienste",
+        "content": "Veehandel bied 'n platform vir die koop en verkoop van lewende diere. Alle transaksies op die platform is die verantwoordelikheid van die gebruiker."
+      },
+      "accounts": {
+        "title": "3. Gebruikersrekeninge",
+        "content": "Jy moet akkurate en opgedateerde inligting verskaf om 'n rekening te skep. Jou rekeningsekuriteit is jou verantwoordelikheid."
+      },
+      "prohibited": {
+        "title": "4. Verbode Aktiwiteite",
+        "content": "Misleidende advertensies, valse inligting, bedrog en onwettige aktiwiteite is streng verbode."
+      },
+      "liability": {
+        "title": "5. Beperking van Aanspreeklikheid",
+        "content": "Die platform is nie direk verantwoordelik vir transaksies tussen gebruikers nie. Alle transaksies vind plaas tussen die partye."
+      },
+      "changes": {
+        "title": "6. Veranderinge",
+        "content": "Hierdie bepalings en voorwaardes is onderhewig aan verandering sonder kennisgewing. Wysigings sal onmiddellik na publikasie in werking tree."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privaatheidsbeleid",
+    "lastUpdated": "Laaste opdatering: {datum}",
+    "sections": {
+      "collection": {
+        "title": "1. Inligtinginsameling",
+        "content": "Wanneer jy 'n rekening skep, versamel ons persoonlike inligting soos jou naam, e-posadres en telefoonnommer. Ons kan ook anonieme data insamel rakende jou gebruik van die webwerf."
+      },
+      "usage": {
+        "title": "2. Gebruik van inligting",
+        "content": "Die inligting wat ons insamel, word gebruik om ons dienste te lewer, jou rekening te bestuur, sekuriteit te verseker en jou gepersonaliseerde aanbiedinge te bied."
+      },
+      "sharing": {
+        "title": "3. Inligtingsdeling",
+        "content": "Jou persoonlike inligting sal nie aan derde partye verkoop of verhuur word nie. Jou inligting sal nie gedeel word nie, behalwe vir wetlik vereiste doeleindes."
+      },
+      "security": {
+        "title": "4. Sekuriteit",
+        "content": "Bedryfstandaard-sekuriteitsmaatreëls is in plek om u data te beskerm."
+      },
+      "cookies": {
+        "title": "5. Koekies",
+        "content": "Ons webwerf gebruik koekies om gebruikerservaring te verbeter. Jy kan jou koekievoorkeure in jou blaaierinstellings bestuur."
+      },
+      "rights": {
+        "title": "6. Jou Regte",
+        "content": "Ingevolge die Turkse Wet op die Beskerming van Persoonlike Data (KVKK) het u die reg om toegang tot u persoonlike data te verkry, dit reg te stel en te verwyder."
+      }
+    }
   },
   "products": {
     "title": "Produkte",
@@ -235,11 +570,19 @@
       "priceDesc": "Prys (Hoog na Laag)",
       "popular": "Mees gewild"
     },
+    "pagination": {
+      "prev": "Voormalige",
+      "next": "Volgende"
+    },
     "status": {
       "draft": "Konsep",
+      "pending": "Wag vir goedkeuring",
       "active": "Aktief",
+      "inactive": "Passief",
+      "outOfStock": "Uit voorraad",
+      "expired": "Sy termyn het verstryk.",
       "sold": "Verkoop",
-      "pending": "Wag vir goedkeuring"
+      "rejected": "Verwerp"
     },
     "condition": {
       "new": "Nuut",
@@ -250,12 +593,16 @@
     "outOfStock": "Uit voorraad",
     "inStock": "In voorraad",
     "noResults": "Produk nie gevind nie.",
-    "loading": "Produkte word gelaai...",
+    "loading": "Laai produkte...",
     "perPage": "Per bladsy",
     "showing": "Die totaal van {total} produkte tussen {from} en {to}.",
+    "fetchError": "'n Fout het voorgekom tydens die oplaai van die produkte.",
+    "loadMore": "Wys Meer",
+    "showingOf": "{count} / {total} produkte word vertoon.",
     "loginToFavorite": "Meld aan om by gunstelinge te voeg.",
     "addedToFavorites": "By gunstelinge gevoeg",
-    "removedFromFavorites": "Verwyder van gunstelinge"
+    "removedFromFavorites": "Verwyder van gunstelinge",
+    "favoriteError": "Gunstelingbewerking het misluk."
   },
   "productDetail": {
     "addToFavorites": "Voeg by gunstelinge",
@@ -279,16 +626,31 @@
     "maxOrder": "Maksimum bestelling",
     "publishedAt": "Publikasiedatum",
     "views": "Bekyk",
-    "reviews": "evaluering",
+    "reviews": {
+      "title": "Assesserings",
+      "reviewCount": "evaluering",
+      "noReviews": "Geen evaluering nog nie.",
+      "verified": "Geverifieerde Koper"
+    },
     "similarProducts": "Soortgelyke Produkte",
     "sellerProducts": "Verkoper se Ander Produkte",
     "contactSeller": "Kontak die verkoper",
-    "loginRequired": "Meld aan om by gunstelinge te voeg.",
+    "makeOffer": "Dien 'n aanbod in",
+    "loginRequired": "Meld asseblief aan om hierdie aksie uit te voer.",
     "addedToFavorites": "By gunstelinge gevoeg",
     "removedFromFavorites": "Verwyder van gunstelinge",
     "linkCopied": "Die skakel is gekopieer.",
     "messagingComingSoon": "Boodskapfunksie kom binnekort.",
-    "productNotFound": "Produk nie gevind nie."
+    "productNotFound": "Produk nie gevind nie.",
+    "contacting": "Kontak word gemaak...",
+    "contactError": "Kommunikasie het misluk. Probeer asseblief weer.",
+    "noImage": "Geen beeld beskikbaar nie.",
+    "defaultLocation": "Turkye",
+    "inquiryMessage": "Ek wil graag inligting oor {title} kry.",
+    "breadcrumb": {
+      "home": "Tuis",
+      "products": "Produkte"
+    }
   },
   "seller": {
     "title": "Verkoperinligting",
@@ -300,6 +662,70 @@
     "call": "Soek",
     "viewProfile": "Bekyk Profiel"
   },
+  "sellers": {
+    "title": "Verkopers",
+    "description": "Ontdek betroubare verkopers.",
+    "search": "Vind 'n verkoper...",
+    "sort": "Sorteer",
+    "sortOptions": {
+      "newest": "Nuutste",
+      "mostSales": "Beste verkoper",
+      "topRated": "Hoogste telling",
+      "mostProducts": "Meeste advertensies"
+    },
+    "noResults": "Verkoper nie gevind nie.",
+    "loading": "Verkopers laai tans...",
+    "showing": "{count} verkopers gevind",
+    "verified": "Geverifieer",
+    "sales": "verkope",
+    "products": "advertensie",
+    "reviews": "evaluering",
+    "rating": "punt",
+    "viewProducts": "Bekyk Produkte",
+    "contactSeller": "Stuur boodskap",
+    "memberSince": "Lid sedert {jaar}",
+    "fetchError": "'n Fout het voorgekom tydens die laai van verskaffers",
+    "detail": {
+      "title": "Verkoperprofiel",
+      "about": "Oor",
+      "businessInfo": "Besigheidsinligting",
+      "businessName": "Besigheidsnaam",
+      "businessType": "Besigheidstoer",
+      "email": "E-pos",
+      "phone": "Telefoon",
+      "website": "Webwerf",
+      "description": "Verduideliking",
+      "policies": "Beleide",
+      "returnPolicy": "Terugkeerbeleid",
+      "shippingPolicy": "Versendingsbeleid",
+      "businessHours": "Werksure",
+      "paymentMethods": "Betaalmetodes",
+      "allProducts": "Alle Produkte",
+      "stats": {
+        "totalSales": "Totale Verkope",
+        "totalProducts": "Totale Produkte",
+        "totalReviews": "Evaluering",
+        "rating": "Punt"
+      },
+      "notFound": "Verkoper nie gevind nie.",
+      "backToList": "Don aan die verkopers",
+      "contactInfo": "Kommunikasie",
+      "noProducts": "Hierdie verkoper het nog geen lyste nie.",
+      "noPolicies": "Die verkoper het nog nie sy beleid gedefinieer nie.",
+      "fetchError": "'n Fout het voorgekom tydens die oplaai van verkoperinligting.",
+      "productsLoadError": "'n Fout het voorgekom tydens die oplaai van die verkoper se produkte.",
+      "reviewsTab": "Assesserings",
+      "reviews": {
+        "summary": "Evalueringsopsomming",
+        "reviewCount": "evaluering",
+        "communication": "Kommunikasie",
+        "shippingSpeed": "Versendingspoed",
+        "productQuality": "Produkkwaliteit",
+        "noReviews": "Geen evaluering nog nie.",
+        "verified": "Geverifieerde Koper"
+      }
+    }
+  },
   "editListing": {
     "title": "Wysig die advertensie",
     "saveChanges": "Stoor veranderinge",
@@ -307,6 +733,10 @@
     "updateSuccess": "Die advertensie is suksesvol opgedateer.",
     "updateFailed": "'n Fout het voorgekom tydens die opdatering van die lysinskrywing.",
     "loadError": "'n Fout het voorgekom tydens die laai van die advertensie.",
+    "sellerNotFound": "Verkoperprofiel nie gevind nie.",
+    "sellerLoadError": "Verkoperprofiel kon nie gelaai word nie.",
+    "userNotFound": "Gebruikersinligting kon nie gevind word nie. Meld asseblief weer aan.",
+    "locationNotFound": "Ligginginligting kon nie gevind word nie. Verfris asseblief die bladsy.",
     "basicInfo": "Basiese Inligting",
     "categoryAndCondition": "Kategorie en Status",
     "pricing": "Pryse",
@@ -314,6 +744,8 @@
     "images": "Beelde",
     "existingImages": "Beskikbare Beelde",
     "addImage": "Voeg prent by",
+    "maxImages": "Jy kan 'n maksimum van 10 beelde oplaai.",
+    "imageHint": "Minimum 1, maksimum 10 beelde. In PNG-, JPG- of WEBP-formaat.",
     "uploadingImages": "Beelde laai tans...",
     "uploadingImage": "Beeld laai tans.",
     "imageUploadFailed": "Beeld kon nie gelaai word nie.",
@@ -358,6 +790,7 @@
     "addImage": "Voeg prent by",
     "maxImages": "Jy kan 'n maksimum van 10 beelde oplaai.",
     "imageHint": "Minimum 1, maksimum 10 beelde. In PNG-, JPG- of WEBP-formaat.",
+    "location": "Ligginginligting",
     "fields": {
       "title": "Advertensietitel",
       "shortDescription": "Kort beskrywing",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Versending is beskikbaar.",
       "shippingCost": "Versendingsfooi",
       "weight": "Gewig",
-      "weightUnit": "Eenheid van Gewig"
+      "weightUnit": "Eenheid van Gewig",
+      "city": "Stad",
+      "address": "Adres",
+      "postalCode": "Poskode"
     },
     "placeholders": {
       "title": "Voorbeeld: 2-jarige Holstein-koei",
       "shortDescription": "Produkbeskrywing (maks. 200 karakters)",
       "description": "Verskaf gedetailleerde inligting oor die produk...",
-      "category": "Kies 'n kategorie."
+      "category": "Kies 'n kategorie.",
+      "city": "Betree die stad",
+      "address": "Voer die volledige adres in.",
+      "postalCode": "Poskode"
+    },
+    "errors": {
+      "titleRequired": "Advertensietitel is verpligtend.",
+      "shortDescriptionRequired": "'n Kort beskrywing word vereis.",
+      "descriptionRequired": "'n Gedetailleerde verduideliking word benodig.",
+      "categoryRequired": "Kategoriekeuse is verpligtend.",
+      "priceRequired": "Prys is verpligtend.",
+      "cityRequired": "Stadsinligting word benodig.",
+      "addressRequired": "Adresinligting word vereis.",
+      "locationError": "'n Fout het voorgekom tydens die skep van die ligging."
     },
     "success": "Die advertensie is suksesvol geskep.",
     "error": "'n Fout het voorgekom tydens die skep van die advertensie.",
@@ -384,28 +833,57 @@
     "uploadingImages": "Beelde laai tans...",
     "uploadingImage": "Beeld laai tans.",
     "imageUploadFailed": "Beeld kon nie gelaai word nie.",
-    "imagesUploaded": "Alle beelde suksesvol opgelaai",
+    "imagesUploaded": "Alle beelde is suksesvol opgelaai",
     "draftSaved": "Konsep gestoor",
     "productCreated": "Die produk is suksesvol geskep.",
     "creationFailed": "Die produk kon nie geskep word nie. Probeer asseblief weer.",
-    "errors": {
-      "titleRequired": "Advertensietitel is verpligtend.",
-      "shortDescriptionRequired": "'n Kort beskrywing word vereis.",
-      "descriptionRequired": "'n Gedetailleerde verduideliking word benodig.",
-      "categoryRequired": "Kategoriekeuse is verpligtend.",
-      "priceRequired": "Voer 'n geldige prys in."
-    }
+    "userNotFound": "Gebruikersinligting kon nie gevind word nie. Meld asseblief weer aan.",
+    "defaultBusinessName": "My besigheid"
+  },
+  "becomeSeller": {
+    "title": "Word 'n Verkoper",
+    "description": "Maatskappyverklaring",
+    "alreadySeller": "Jy het reeds 'n verkoperprofiel.",
+    "goToListings": "Gaan na my lyste",
+    "businessInfo": "Besigheidsinligting",
+    "contactInfo": "Kontakbesonderhede",
+    "businessName": "Besigheidsnaam",
+    "businessNamePlaceholder": "Voorbeeld: Yilmaz-plaas",
+    "businessType": "Besigheidstoer",
+    "businessTypePlaceholder": "Kies jou besigheidsoort.",
+    "businessTypes": {
+      "individual": "Individueel",
+      "company": "Maatskappy",
+      "cooperative": "Koöperatief",
+      "farm": "Plaas"
+    },
+    "taxNumber": "Belastingnommer",
+    "taxNumberPlaceholder": "Voer jou belastingidentifikasienommer in (opsioneel)",
+    "descriptionPlaceholder": "Skryf 'n kort beskrywing oor jou besigheid...",
+    "phone": "Telefoon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Webwerf",
+    "websitePlaceholder": "https://www.examplesite.com (opsioneel)",
+    "submit": "Skep Verkoperprofiel",
+    "submitting": "Skep 'n profiel...",
+    "success": "Jou verkoperprofiel is suksesvol geskep!",
+    "error": "'n Fout het voorgekom tydens die skep van die verkoperprofiel.",
+    "taxNumberHelp": "Voer jou 10- of 11-syfer belastingnommer in (opsioneel)",
+    "phoneHelp": "Voorbeeld: +90 555 123 45 67 of 0555 123 45 67",
+    "websiteHelp": "Voorbeeld: www.isletmem.com of https://isletmem.com",
+    "alreadySellerDescription": "Jy kan die knoppie hieronder gebruik om jou lyste te bestuur.",
+    "newListing": "Voeg Nuwe Lysinskrywing by"
   },
   "fileUpload": {
     "dragDrop": "Laai 'n foto of video op.",
     "dragDropHint": "Sleep en laat val of klik om te kies.",
     "dropHere": "Los dit...",
     "imageLimit": "Foto: maksimum 10MB",
-    "videoLimit": "Video: max 100MB",
+    "videoLimit": "Video: maksimum 100MB",
     "uploadCount": "{huidige} / {maks} gelaai",
     "maxFilesError": "Jy kan 'n maksimum van {max} media oplaai.",
     "imageTooLarge": "Die foto moet kleiner as 10 MB wees.",
-    "videoTooLarge": "Die video moet kleiner as 50 MB wees.",
+    "videoTooLarge": "Die video moet kleiner as 100 MB wees.",
     "optimizing": "Optimaliseer...",
     "uploading": "Laai tans...",
     "queued": "Wag in die ry...",
@@ -419,9 +897,833 @@
     "videoBadge": "VIDEO",
     "coverUpdated": "Die omslagfoto is suksesvol aangepas.",
     "optimizationInfo": "Foto's is geoptimaliseer om aan webstandaarde te voldoen",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Visuele Seleksie",
+    "changeImage": "Verandering",
+    "removeImage": "Verwyder",
+    "videoProcessing": "Video word verwerk...",
+    "videoProcessingFailed": "Operasie het misluk.",
+    "videoProcessingPollError": "Videoverwerkingstatus kon nie verkry word nie. Verfris asseblief die bladsy.",
+    "reorderError": "Die lêer kon nie gesorteer word nie.",
+    "coverUpdateError": "Die omslagfoto kon nie opgedateer word nie."
+  },
+  "error": {
+    "title": "'n Fout het voorgekom.",
+    "description": "'n Onverwagte fout het voorgekom. Verfris asseblief die bladsy of probeer later weer.",
+    "retry": "Probeer weer",
+    "goBack": "Moenie teruggaan nie",
+    "goHome": "Tuis",
+    "notFound": {
+      "title": "Bladsy nie gevind nie",
+      "description": "Die bladsy waarna jy soek, is óf nie beskikbaar nie óf het geskuif.",
+      "goHome": "Keer terug na tuisblad"
+    }
+  },
+  "search": {
+    "title": "Soek",
+    "placeholder": "Soek vir produkte, kategorieë of verkopers...",
+    "searchButton": "Soek",
+    "searchingFor": "Gesoek",
+    "loading": "Gesoek...",
+    "resultsCount": "{count} resultate is gevind.",
+    "noResults": "Geen resultate gevind nie.",
+    "tryDifferentSearch": "Probeer verskillende sleutelwoorde of verander die filters.",
+    "filters": {
+      "title": "Filters",
+      "category": "Kategorie",
+      "allCategories": "Alle kategorieë",
+      "condition": "Situasie",
+      "allConditions": "Alle gevalle",
+      "priceRange": "Prysreeks",
+      "price": "Prys",
+      "min": "Min.",
+      "max": "Maks",
+      "apply": "Dien toe",
+      "clear": "Skoon",
+      "clearAll": "Vee alles uit"
+    },
+    "fetchError": "'n Fout het voorgekom tydens die laai van soekresultate",
+    "recentSearches": "Onlangse soektogte",
+    "clearHistory": "Vee Geskiedenis uit",
+    "noSearchHistory": "Jy het nog nie 'n soekgeskiedenis nie.",
+    "deleteHistoryError": "'n Fout het voorgekom tydens die uitvee van die soekgeskiedenis."
+  },
+  "categories": {
+    "title": "Kategoriebestuur",
+    "description": "Bestuur kategorieë van hier af.",
+    "noCategories": "Geen kategorieë is nog bygevoeg nie.",
+    "createFirst": "Skep die eerste kategorie.",
+    "fetchError": "'n Fout het voorgekom tydens die laai van die kategorieë.",
+    "createSuccess": "Kategorie suksesvol geskep",
+    "createError": "'n Fout het voorgekom tydens die skep van die kategorie.",
+    "updateSuccess": "Kategorie suksesvol opgedateer",
+    "updateError": "'n Fout het voorgekom tydens die opdatering van die kategorie.",
+    "deleteSuccess": "Die kategorie is suksesvol verwyder.",
+    "deleteError": "'n Fout het voorgekom tydens die verwydering van die kategorie.",
+    "activateSuccess": "Die kategorie is geaktiveer.",
+    "deactivateSuccess": "Die kategorie is gedeaktiveer.",
+    "statusError": "'n Fout het voorgekom tydens die verandering van die status.",
+    "loadError": "'n Fout het voorgekom tydens die laai van die kategorie",
+    "filters": {
+      "all": "Almal van hulle",
+      "active": "Aktief",
+      "inactive": "Onaktief"
+    },
+    "table": {
+      "name": "Kategorie Naam",
+      "slug": "Slak",
+      "sortOrder": "Reeksnommer",
+      "subCategories": "Subkategorie",
+      "status": "Situasie",
+      "actions": "Transaksies"
+    },
+    "actions": {
+      "edit": "Wysig",
+      "delete": "Vee uit",
+      "activate": "Aktiveer",
+      "deactivate": "Passiewe Struktuur"
+    },
+    "deleteDialog": {
+      "title": "Vee kategorie uit",
+      "description": "Is jy seker jy wil hierdie kategorie verwyder? Hierdie aksie is onomkeerbaar.",
+      "cancel": "Kanselleer",
+      "confirm": "Vee uit"
+    },
+    "addNew": "Voeg Nuwe Kategorie by",
+    "loadMore": "Laai Meer af",
+    "loadingMore": "Laai tans...",
+    "form": {
+      "newTitle": "Skep 'n Nuwe Kategorie",
+      "editTitle": "Wysig kategorie",
+      "name": "Kategorie Naam",
+      "namePlaceholder": "Voorbeeld: Beeste",
+      "slug": "Slak",
+      "slugPlaceholder": "Voorbeeld: groot vee",
+      "description": "Verduideliking",
+      "descriptionPlaceholder": "'n Kort beskrywing van die kategorie...",
+      "parentCategory": "Boonste Kategorie",
+      "parentCategoryPlaceholder": "Kies 'n topkategorie (opsioneel)",
+      "noParent": "Geen topkategorie (Hoofkategorie)",
+      "sortOrder": "Volgordenommer",
+      "isActive": "Aktief",
+      "iconUrl": "Ikoon-URL",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Stoor",
+      "submitting": "Stoor...",
+      "updating": "Opdatering...",
+      "errors": {
+        "nameRequired": "Kategorienaam word vereis.",
+        "slugRequired": "Slakke is verpligtend."
+      }
+    }
+  },
+  "offers": {
+    "title": "Voorstelle",
+    "description": "Bestuur jou inkomende en uitgaande aanbiedinge.",
+    "received": "Inkomende aanbiedinge",
+    "sent": "Aanbiedinge ingedien",
+    "noReceivedOffers": "Geen aanbiedinge is nog ontvang nie.",
+    "noSentOffers": "Jy het nog nie 'n aanbod ingedien nie.",
+    "browseProducts": "Blaai deur produkte",
+    "viewProduct": "Bekyk die produk",
+    "accept": "Aanvaar",
+    "reject": "Verwerp",
+    "withdraw": "Onttrek",
+    "makeOffer": "Dien 'n aanbod in",
+    "sendOffer": "Stuur Aanbod",
+    "sending": "Stuur tans...",
+    "cancel": "Kanselleer",
+    "listingPrice": "Geadverteerde prys",
+    "yourOffer": "Jou aanbod",
+    "quantity": "Bedrag",
+    "messageOptional": "Boodskap (Opsioneel)",
+    "messagePlaceholder": "'n Nota wat jy met die verkoper wil deel...",
+    "expiresAt": "Laaste geldige datum",
+    "offerSent": "Jou aanbod is suksesvol gestuur.",
+    "offerError": "'n Fout het voorgekom tydens die stuur van die aanbod.",
+    "acceptSuccess": "Die aanbod is aanvaar.",
+    "rejectSuccess": "Die aanbod is van die hand gewys.",
+    "withdrawSuccess": "Die aanbod is teruggetrek.",
+    "actionError": "'n Fout het tydens die proses voorgekom.",
+    "fetchError": "'n Fout het voorgekom tydens die laai van die aanbiedinge.",
+    "loginRequired": "Meld aan om 'n bod in te dien.",
+    "invalidPrice": "Voer 'n geldige prys in.",
+    "invalidQuantity": "Voer 'n geldige bedrag in.",
+    "status": {
+      "pending": "Hangende",
+      "accepted": "Aanvaar",
+      "rejected": "Verwerp",
+      "countered": "Teenaanbod",
+      "expired": "Sy termyn is verby.",
+      "withdrawn": "Onttrek"
+    }
+  },
+  "deals": {
+    "title": "Ooreenkomste",
+    "description": "Volg jou aankoopooreenkomste.",
+    "buying": "Geleerdes",
+    "selling": "Verkope",
+    "noBuyingDeals": "Jy het nog nie 'n studenteregistrasieproses nie.",
+    "noSellingDeals": "Jy het nog geen verkoopstransaksies nie.",
+    "browseProducts": "Blaai deur produkte",
+    "viewProduct": "Bekyk die produk",
+    "activeDeals": "Aktiewe Ooreenkomste",
+    "completedDeals": "Voltooi",
+    "purchases": "Geleerdes",
+    "sales": "Verkope",
+    "fetchError": "'n Fout het voorgekom tydens die laai van ooreenkomste",
+    "dealStatus": {
+      "pending": "Hangende",
+      "confirmed": "Bevestig",
+      "processing": "Voorbereiding",
+      "shipped": "In die vrag",
+      "delivered": "Afgelewer",
+      "completed": "Voltooi",
+      "cancelled": "Gekanselleer",
+      "disputed": "Ooreenkoms"
+    },
+    "delivery": {
+      "pickup": "Handaflewering",
+      "shipping": "Per vrag",
+      "transport": "Per vervoer"
+    },
+    "requestTransport": "Versendingsversoek"
+  },
+  "farms": {
+    "title": "My plase",
+    "description": "Bestuur en werk jou plase op.",
+    "addFarm": "Voeg plaas by",
+    "editFarm": "Plaasbestuur",
+    "noFarms": "Jy het nog nie 'n plaas bygevoeg nie.",
+    "farmName": "Plaasnaam",
+    "registrationNumber": "Registrasienommer",
+    "location": "Ligging",
+    "selectLocation": "Kies 'n ligging.",
+    "addLocationFirst": "Voeg eers 'n ligging by.",
+    "farmTypeLabel": "Plaastoer",
+    "farmDescription": "Verduideliking",
+    "totalArea": "Totale Oppervlakte",
+    "cultivatedArea": "Bewerkte Gebied",
+    "certifications": "Sertifikate",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP, ens.",
+    "organic": "Organies",
+    "verified": "Geverifieer",
+    "save": "Stoor",
+    "saving": "Stoor...",
+    "cancel": "Kanselleer",
+    "edit": "Wysig",
+    "delete": "Vee uit",
+    "sellerRequired": "Verkoperprofiel Vereis",
+    "sellerRequiredDesc": "Om 'n plaas by te voeg, moet jy eers jou verkoperprofiel skep.",
+    "becomeSeller": "Word 'n Verkoper",
+    "createSuccess": "Die plaas is suksesvol bygevoeg.",
+    "updateSuccess": "Die plaas is suksesvol opgedateer.",
+    "deleteSuccess": "Die plaas is suksesvol verwyder.",
+    "saveError": "'n Fout het voorgekom tydens die registrasie van die plaas.",
+    "deleteError": "'n Fout het voorgekom tydens die verwydering van die plaas.",
+    "fetchError": "'n Fout het voorgekom tydens die oplaai van plaasinligting.",
+    "farmType": {
+      "livestock": "Veeboerdery",
+      "crop": "Landbou",
+      "mixed": "Gemeng",
+      "poultry": "Gevleuelde",
+      "dairy": "Suiwelboerdery",
+      "aquaculture": "Waterprodukte"
+    }
+  },
+  "transporters": {
+    "title": "vervoerders",
+    "description": "Dienste vir die vervoer van diere en produkte",
+    "searchPlaceholder": "Vind 'n vervoerder...",
+    "noTransporters": "Daar is nog geen geregistreerde draers nie.",
+    "verified": "Geverifieer",
+    "transports": "vervoer",
+    "viewProfile": "Bekyk Profiel",
+    "sort": {
+      "newest": "Nuutste",
+      "rating": "Hoogste telling",
+      "mostTransports": "Mees Gereelde Versending"
+    },
+    "pagination": {
+      "previous": "Voormalige",
+      "next": "Volgende",
+      "page": "Bladsy {bladsy}"
+    }
+  },
+  "transport": {
+    "title": "My Versendingsversoeke",
+    "description": "Volg jou versendingsversoeke.",
+    "findTransporter": "Vind 'n vervoerder",
+    "active": "Aktief",
+    "completed": "Voltooi",
+    "total": "Totaal",
+    "asSeller": "As 'n Verkoper",
+    "asBuyer": "As die Koper",
+    "noSellerRequests": "As verkoper het jy geen versendingsvereiste nie.",
+    "noBuyerRequests": "As die ontvanger het u nie 'n versendingsversoek nie.",
+    "viewProduct": "Bekyk die produk",
+    "pickup": "Ontvang",
+    "delivery": "Aflewering",
+    "urgent": "Dringend",
+    "fetchError": "'n Fout het voorgekom tydens die oplaai van die versendingsversoeke.",
+    "trackShipment": "Volg",
+    "transportStatus": {
+      "pending": "Hangende",
+      "inPool": "In die swembad",
+      "assigned": "Aangestel",
+      "pickedUp": "Kwitansie",
+      "inTransit": "Op die pad",
+      "delivered": "Afgelewer",
+      "completed": "Voltooi",
+      "cancelled": "Gekanselleer"
+    },
+    "transportType": {
+      "standard": "Standaard",
+      "refrigerated": "Koue Ketting",
+      "liveAnimal": "Lewende Diere",
+      "hazardous": "Gevaarlike Materiale",
+      "oversized": "Groot Grootte"
+    }
+  },
+  "moderation": {
+    "title": "Produkmoderering",
+    "description": "Hersien produkte wat wag op goedkeuring.",
+    "pending": "wag",
+    "allClear": "Alle produkte is geïnspekteer.",
+    "noPending": "Daar is geen produkte wat op goedkeuring wag nie.",
+    "awaitingReview": "Wag vir hersiening",
+    "by": "Verkoopspersoon:",
+    "stock": "Voorraad",
+    "preview": "Met jou",
+    "approve": "Bevestig",
+    "reject": "Verwerp",
+    "confirmReject": "Verwerp",
+    "cancelReject": "Gee op",
+    "rejectReasonPlaceholder": "Skryf die rede vir die verwerping neer...",
+    "rejectReasonRequired": "'n Rede vir weiering is verpligtend.",
+    "approveSuccess": "Die produk is suksesvol goedgekeur.",
+    "rejectSuccess": "Die produk is verwerp.",
+    "actionError": "'n Fout het tydens die proses voorgekom.",
+    "fetchError": "'n Fout het voorgekom tydens die oplaai van die produkte.",
+    "unauthorized": "Jy het nie toestemming om toegang tot hierdie bladsy te verkry nie."
+  },
+  "sellerModeration": {
+    "title": "Verkopermoderering",
+    "description": "Hersien en bestuur verkoperrekeninge.",
+    "pending": "wag",
+    "allClear": "Alle verkopers is ondersoek.",
+    "noPending": "Geen verkopers wag nie.",
+    "verify": "Verifieer",
+    "suspend": "Opskort",
+    "verifySuccess": "Verkoper suksesvol geverifieer.",
+    "suspendSuccess": "Verkoper geskors.",
+    "actionError": "'n Fout het tydens die proses voorgekom.",
+    "suspendReasonRequired": "Die rede vir skorsing is verpligtend.",
+    "suspendReasonPlaceholder": "Skryf die rede vir die skorsing neer...",
+    "confirmSuspend": "Opskort",
+    "cancelSuspend": "Gee op",
+    "statusLabels": {
+      "pendingVerification": "Hangende Verifikasie",
+      "active": "Aktief",
+      "suspended": "Hangende",
+      "banned": "Verbode"
+    },
+    "filterAll": "Wys alles",
+    "filterPending": "Diegene wat wag",
+    "filterActive": "Bates",
+    "filterSuspended": "Opgeskort",
+    "unauthorized": "Jy het nie toestemming om toegang tot hierdie bladsy te verkry nie.",
+    "businessName": "Besigheidsnaam",
+    "businessType": "Besigheidstoer",
+    "email": "E-pos",
+    "phone": "Telefoon",
+    "status": "Situasie",
+    "createdAt": "Registrasiedatum"
+  },
+  "transporterModeration": {
+    "title": "Draermoderering",
+    "description": "Hersien en bestuur diensverskafferrekeninge.",
+    "pending": "wag",
+    "allClear": "Alle vervoerders is ondersoek.",
+    "noPending": "Geen vervoerder wag nie.",
+    "verify": "Verifieer",
+    "suspend": "Opskort",
+    "verifySuccess": "Die vervoerder is suksesvol geverifieer.",
+    "suspendSuccess": "Die vervoerder is geskors.",
+    "actionError": "'n Fout het tydens die proses voorgekom.",
+    "suspendReasonRequired": "Die rede vir skorsing is verpligtend.",
+    "suspendReasonPlaceholder": "Skryf die rede vir die skorsing neer...",
+    "confirmSuspend": "Opskort",
+    "cancelSuspend": "Gee op",
+    "statusLabels": {
+      "pendingVerification": "Hangende Verifikasie",
+      "active": "Aktief",
+      "suspended": "Hangende",
+      "banned": "Verbode"
+    },
+    "filterAll": "Wys alles",
+    "filterPending": "Diegene wat wag",
+    "filterActive": "Bates",
+    "filterSuspended": "Opgeskort",
+    "unauthorized": "Jy het nie toestemming om toegang tot hierdie bladsy te verkry nie.",
+    "companyName": "Maatskappy Naam",
+    "contactPerson": "Gemagtigde Persoon",
+    "email": "E-pos",
+    "phone": "Telefoon",
+    "city": "Stad",
+    "status": "Situasie",
+    "createdAt": "Registrasiedatum"
+  },
+  "transporterDetail": {
+    "notFound": "Geen vervoerder kon gevind word nie.",
+    "backToList": "Don aan vervoerders",
+    "verified": "Geverifieer",
+    "totalTransports": "totale versending",
+    "completed": "voltooi",
+    "about": "Oor",
+    "contact": "Kontakbesonderhede",
+    "businessInfo": "Besigheidsinligting",
+    "license": "Lisensienommer",
+    "insurance": "Versekeringsinligting",
+    "fleet": "Vlootinligting",
+    "serviceRegions": "Diensgebiede",
+    "specializations": "Kundigheidsgebiede",
+    "certifications": "Sertifikate"
+  },
+  "brands": {
+    "title": "Handelsmerkbestuur",
+    "description": "Bestuur produkhandelsmerke.",
+    "addBrand": "Voeg handelsmerk by",
+    "editBrand": "Wysig Handelsmerk",
+    "noBrands": "Geen handelsmerke is nog bygevoeg nie.",
+    "brandName": "Handelsmerknaam",
+    "brandDescription": "Verduideliking",
+    "website": "Webwerf",
+    "logoUrl": "Logo-URL",
+    "save": "Stoor",
+    "saving": "Stoor...",
+    "cancel": "Kanselleer",
+    "edit": "Wysig",
+    "delete": "Vee uit",
+    "inactive": "Passief",
+    "products": "produk",
+    "createSuccess": "Handelsmerk suksesvol bygevoeg",
+    "updateSuccess": "Die handelsmerk is suksesvol opgedateer.",
+    "deleteSuccess": "Die handelsmerk is suksesvol verwyder.",
+    "saveError": "'n Fout het voorgekom tydens die registrasie van die handelsmerk.",
+    "deleteError": "'n Fout het voorgekom tydens die verwydering van die handelsmerk.",
+    "fetchError": "'n Fout het voorgekom tydens die laai van handelsmerke",
+    "unauthorized": "Jy het nie toestemming om toegang tot hierdie bladsy te verkry nie."
+  },
+  "transporterReviews": {
+    "title": "Assesserings",
+    "reviewCount": "evaluering",
+    "noReviews": "Geen evaluering nog nie.",
+    "timeliness": "Aflewering op tyd",
+    "communication": "Kommunikasie",
+    "carefulHandling": "Versigtige hantering",
+    "professionalism": "Professionaliteit"
+  },
+  "transportOffers": {
+    "title": "Versendingskwotasies",
+    "description": "Bestuur die kwotasies wat jy vir verskepingsversoeke indien.",
+    "newOffer": "Nuwe Voorstel",
+    "transportRequestId": "Versendingsversoek-ID",
+    "requestIdPlaceholder": "Voer die versendingsversoek-ID in.",
+    "offeredPrice": "Aanbodprys",
+    "estimatedDays": "Geraamde duur (dae)",
+    "days": "dag",
+    "vehicleType": "Voertuigtipe",
+    "insuranceIncluded": "Versekering Ingesluit",
+    "message": "Boodskap",
+    "cancel": "Kanselleer",
+    "sending": "Stuur tans...",
+    "sendOffer": "Dien aanbod in",
+    "cancelOffer": "Kanselleer",
+    "pendingTab": "Wag",
+    "historyTab": "Verlede",
+    "noPendingOffers": "Jy het geen hangende aanbiedinge nie.",
+    "noHistory": "Geen vorige aanbiedinge gevind nie.",
+    "status": {
+      "pending": "Wag",
+      "accepted": "Aanvaar",
+      "rejected": "Verwerp",
+      "expired": "Sy termyn is verby.",
+      "cancelled": "Gekanselleer"
+    },
+    "createSuccess": "Die aanbod is suksesvol ingedien.",
+    "createError": "'n Fout het voorgekom tydens die stuur van die aanbod.",
+    "cancelSuccess": "Die aanbod is gekanselleer.",
+    "cancelError": "'n Fout het voorgekom tydens die kansellasie van die aanbod.",
+    "fetchError": "'n Fout het voorgekom tydens die laai van die aanbiedinge."
+  },
+  "animalInfo": {
+    "title": "Diere- en produkinligting",
+    "animalTab": "Dier",
+    "healthTab": "Gesondheid",
+    "vaccinationsTab": "Entstowwe",
+    "veterinaryTab": "Veearts",
+    "breed": "Ras",
+    "genderLabel": "Geslag",
+    "gender": {
+      "male": "Manlik",
+      "female": "Vroulik",
+      "unknown": "Onbekend"
+    },
+    "age": "Ouderdom",
+    "months": "maand",
+    "weight": "Gewig",
+    "color": "Kleur",
+    "tagNumber": "Oornommer",
+    "healthStatus": "Gesondheidstoestand",
+    "health": {
+      "healthy": "Gesond",
+      "underTreatment": "Onder behandeling",
+      "recovering": "Hy/Sy herstel.",
+      "quarantined": "Onder kwarantyn",
+      "unknown": "Onbekend"
+    },
+    "purposeLabel": "Beoogde gebruik",
+    "purpose": {
+      "breeding": "Stoet",
+      "dairy": "Melk",
+      "meat": "Vleis",
+      "egg": "Eier",
+      "wool": "Wol",
+      "working": "Werk",
+      "pet": "Binnelands",
+      "other": "Ander"
+    },
+    "pregnancy": "Swangerskap",
+    "pregnant": "Swanger",
+    "microchip": "Mikroskyfie Nr.",
+    "passport": "Paspoort Nr.",
+    "sireDetails": "Vaderinligting",
+    "damDetails": "Hoofinligting",
+    "diagnosis": "Diagnose",
+    "treatment": "Behandeling",
+    "medications": "Medisynes",
+    "veterinarian": "Veearts",
+    "nextDue": "Die Volgende Rebelgeskiedenis",
+    "prescriptionRequired": "Vereis 'n dokter se voorskrif",
+    "targetSpecies": "Teiken Toere",
+    "activeIngredients": "Aktiewe Bestanddele",
+    "registrationNo": "Registrasienommer",
+    "storage": "Berging",
+    "chemicalTab": "Chemiese",
+    "feedTab": "Aas",
+    "seedTab": "Saad",
+    "machineryTab": "Masjien",
+    "organic": "Organies",
+    "toxicity": "Toksisiteit",
+    "gmoFree": "GMO-vry",
+    "protein": "Proteïen",
+    "fat": "Olie",
+    "fiber": "Vesel",
+    "hybrid": "Hibriede",
+    "germination": "Ontkieming",
+    "daysToMaturity": "Volwassenheid",
+    "daysLabel": "dag",
+    "warranty": "Gegarandeerd",
+    "power": "Sterkte",
+    "hoursUsed": "Gebruiksure",
+    "hours": "uur",
+    "powerSource": "Kragtoevoer"
+  },
+  "productVariants": {
+    "title": "Produkvariante",
+    "variantCount": "variant",
+    "inStock": "In voorraad",
+    "outOfStock": "Uitverkoop"
+  },
+  "productPrices": {
+    "title": "Pryse (Verskeie Geldeenhede)",
+    "autoConversion": "Outomatiese Transformasie",
+    "validUntil": "Geldigheid"
+  },
+  "requestTransport": {
+    "title": "Skep 'n versendingsversoek",
+    "pickupLocation": "Laaipunt",
+    "deliveryLocation": "Afleweringspunt",
+    "city": "Stad",
+    "address": "Adres",
+    "transportType": "Vervoertoer",
+    "types": {
+      "standard": "Standaard",
+      "refrigerated": "Koue Ketting",
+      "liveAnimal": "Lewende Diere",
+      "hazardous": "Gevaarlike Materiale",
+      "oversized": "Groot Grootte"
+    },
+    "weight": "Gewig (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Voorkeur-oplaaidatum",
+    "preferredDeliveryDate": "Voorkeur Afleweringsdatum",
+    "urgent": "Dringende Vervoer",
+    "specialInstructions": "Spesiale Instruksies",
+    "instructionsPlaceholder": "Skryf jou spesifieke instruksies hier neer...",
+    "cancel": "Gee op",
+    "submit": "Skep vraag",
+    "submitting": "In die proses van skepping...",
+    "success": "Die versendingsversoek is suksesvol geskep.",
+    "error": "'n Fout het voorgekom tydens die skep van die versendingsversoek."
+  },
+  "transportTracking": {
+    "title": "Versendingsopsporing",
+    "noTracking": "Geen dopinligting is nog beskikbaar nie.",
+    "update": "Opdatering"
+  },
+  "locations": {
+    "title": "My adresse",
+    "description": "Bestuur jou geregistreerde adresse.",
+    "addLocation": "Voeg adres by",
+    "editLocation": "Wysig adres",
+    "noLocations": "Jy het nog nie 'n geregistreerde adres nie.",
+    "name": "Adresnaam",
+    "namePlaceholder": "Byvoorbeeld: Huis, Werk, Plaas",
+    "address": "Adres",
+    "addressLine2": "Adresreël 2",
+    "city": "Stad",
+    "state": "Distrik / Streek",
+    "postalCode": "Poskode",
+    "phone": "Telefoon",
+    "email": "E-pos",
+    "cancel": "Gee op",
+    "save": "Stoor",
+    "saving": "Stoor...",
+    "typePickup": "Laai",
+    "typeDelivery": "Aflewering",
+    "typeBoth": "Algemeen",
+    "createSuccess": "Adres suksesvol bygevoeg.",
+    "createError": "'n Fout het voorgekom tydens die byvoeging van die adres.",
+    "updateSuccess": "Die adres is suksesvol opgedateer.",
+    "updateError": "'n Fout het voorgekom tydens die opdatering van die adres.",
+    "deleteLocation": "Vee adres uit",
+    "deleteSuccess": "Adres uitgevee",
+    "deleteError": "'n Fout het voorgekom tydens die verwydering van die adres.",
+    "fetchError": "'n Fout het voorgekom tydens die laai van die adresse."
+  },
+  "systemSettings": {
+    "title": "Stelselinstellings",
+    "description": "Bekyk platformgeldeenheid, taal, betaalmetodes, versending en belastinginstellings.",
+    "unauthorized": "Jy het nie toestemming om toegang tot hierdie bladsy te verkry nie.",
+    "currenciesTab": "Geldeenhede",
+    "languagesTab": "Tale",
+    "paymentTab": "Betaalmetodes",
+    "shippingTab": "Vrag",
+    "taxTab": "Belasting",
+    "active": "Aktief",
+    "inactive": "Passief",
+    "default": "Standaard",
+    "noCurrencies": "Die geldeenheid is nog nie gedefinieer nie.",
+    "noLanguages": "Die taal is nog nie gedefinieer nie.",
+    "noPaymentMethods": "Betaalmetode nog nie gedefinieer nie.",
+    "noCarriers": "Die verskepingsmaatskappy is nog nie geïdentifiseer nie.",
+    "noZones": "Die vraggebied is nog nie gedefinieer nie.",
+    "noTaxRates": "Die belastingkoers is nog nie gedefinieer nie.",
+    "carriers": "Verskepingsmaatskappye",
+    "zones": "Vragsones",
+    "countries": "Lande",
+    "rates": "Versendingskoste",
+    "noRates": "Versendingskoste is nog nie gedefinieer nie.",
+    "freeShipping": "Gratis Versending",
+    "deliveryDays": "dag afleweringstyd"
+  },
+  "pushPermission": {
+    "title": "Aktiveer kennisgewings",
+    "description": "Ontvang kennisgewings oor nuwe boodskappe, aanbiedinge en bestellingsopdaterings.",
+    "allow": "Laat toe",
+    "dismiss": "Maak toe"
+  },
+  "healthRecords": {
+    "title": "Gesondheidsrekords",
+    "description": "Bestuur dieregesondheidsrekords en mediese geskiedenis.",
+    "addRecord": "Voeg Rekord by",
+    "editRecord": "Wysig Rekord",
+    "deleteRecord": "Vee Rekord uit",
+    "noRecords": "Gesondheidsrekord nog nie bygevoeg nie.",
+    "animalInfoId": "Dier-ID",
+    "animalInfoIdPlaceholder": "Voer die dier se inligting-ID in.",
+    "recordType": "Registrasietoer",
+    "recordTypePlaceholder": "Voorbeelde: Ondersoek, Behandeling, Chirurgie",
+    "recordDate": "Registrasiedatum",
+    "followUpDate": "Kontroleer Datum",
+    "veterinarianName": "Veearts",
+    "veterinarianLicense": "Lisensienommer",
+    "clinicName": "Kliniese",
+    "diagnosis": "Diagnose",
+    "treatment": "Behandeling",
+    "medications": "Medisynes",
+    "medicationsPlaceholder": "Voorbeeld: Penisillien 500 mg, Ibuprofen",
+    "notes": "Notas",
+    "documentUrl": "Dokument-URL",
+    "saving": "Stoor...",
+    "createSuccess": "Gesondheidsrekord suksesvol bygevoeg.",
+    "updateSuccess": "Gesondheidsrekord suksesvol opgedateer.",
+    "deleteSuccess": "Die gesondheidsrekord is suksesvol verwyder.",
+    "saveError": "'n Fout het voorgekom tydens die stoor van die rekord.",
+    "deleteError": "'n Fout het voorgekom tydens die verwydering van die rekord.",
+    "fetchError": "'n Fout het voorgekom tydens die laai van rekords"
+  },
+  "vaccinations": {
+    "title": "Entstofrekords",
+    "description": "Bestuur diere-inentingsrekords en kalenders.",
+    "addVaccination": "Voeg Rebel by",
+    "editVaccination": "Rebelreëling",
+    "deleteVaccination": "Rebel Sil",
+    "noVaccinations": "Inentingsrekord nog nie bygevoeg nie.",
+    "animalInfoId": "Dier-ID",
+    "animalInfoIdPlaceholder": "Voer die dier se inligting-ID in.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Voorbeeld: SAT-entstof, Brucella",
+    "vaccineType": "Rebeltoer",
+    "vaccineTypePlaceholder": "Voorbeeld: Lewendig, Onaktief",
+    "batchNumber": "Partynommer",
+    "vaccinationDate": "Geskiedenis van die Rebel",
+    "nextDueDate": "Die Volgende Rebelgeskiedenis",
+    "veterinarianName": "Veearts",
+    "veterinarianLicense": "Lisensienommer",
+    "notes": "Notas",
+    "certificateUrl": "Sertifikaat-URL",
+    "saving": "Stoor...",
+    "createSuccess": "Entstofrekord suksesvol bygevoeg.",
+    "updateSuccess": "Entstofrekord suksesvol opgedateer.",
+    "deleteSuccess": "Die entstofrekord is suksesvol verwyder.",
+    "saveError": "'n Fout het voorgekom tydens die registrasie van die entstof.",
+    "deleteError": "'n Fout het voorgekom tydens die verwydering van die entstof.",
+    "fetchError": "'n Fout het voorgekom tydens die laai van entstowwe."
+  },
+  "shippingCarriers": {
+    "title": "Verskepingsmaatskappye",
+    "description": "Bestuur die inligting van die verskepingsmaatskappy.",
+    "addCarrier": "Voeg Maatskappy by",
+    "editCarrier": "Wysig Maatskappy",
+    "noCarriers": "Geen verskepingsmaatskappy is nog bygevoeg nie.",
+    "carrierName": "Maatskappy Naam",
+    "carrierNamePlaceholder": "Voorbeeld: Aras Kargo, MNG",
+    "code": "Kode",
+    "codePlaceholder": "Voorbeeld: ARAS",
+    "website": "Webwerf",
+    "trackingUrlTemplate": "Volg URL-sjabloon",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Ondersteunde Lande",
+    "supportedCountriesPlaceholder": "Voorbeeld: TR, US, DE",
+    "active": "Aktief",
+    "inactive": "Passief",
+    "saving": "Stoor...",
+    "edit": "Wysig",
+    "delete": "Vee uit",
+    "createSuccess": "Die verskepingsmaatskappy is suksesvol bygevoeg.",
+    "updateSuccess": "Die verskepingsmaatskappy is suksesvol opgedateer.",
+    "deleteSuccess": "Die verskepingsmaatskappy is suksesvol verwyder.",
+    "saveError": "'n Fout het voorgekom tydens die registrasie van die verskepingsmaatskappy.",
+    "deleteError": "'n Fout het voorgekom tydens die verwydering van die verskepingsmaatskappy se inligting.",
+    "fetchError": "'n Fout het voorgekom tydens die laai van vragmaatskappye."
+  },
+  "shippingZones": {
+    "title": "Vragsones",
+    "description": "Bestuur vragsones en -gebiede.",
+    "addZone": "Voeg streek by",
+    "editZone": "Wysig streek",
+    "noZones": "Geen vragarea is nog bygevoeg nie.",
+    "zoneName": "Streeknaam",
+    "zoneNamePlaceholder": "Voorbeeld: Europa, Noord-Amerika",
+    "countryCodes": "Landkodes",
+    "countryCodesPlaceholder": "Voorbeeld: TR, DE, FR",
+    "active": "Aktief",
+    "inactive": "Passief",
+    "saving": "Stoor...",
+    "edit": "Wysig",
+    "delete": "Vee uit",
+    "createSuccess": "Die streek is suksesvol bygevoeg.",
+    "updateSuccess": "Die streek is suksesvol opgedateer.",
+    "deleteSuccess": "Die gebied is suksesvol skoongemaak.",
+    "saveError": "'n Fout het voorgekom tydens die stoor van die streek.",
+    "deleteError": "'n Fout het voorgekom tydens die verwydering van die streek.",
+    "fetchError": "'n Fout het voorgekom tydens die laai van streke"
+  },
+  "shippingRates": {
+    "title": "Versendingskoste",
+    "description": "Bestuur versendingskoste en afleweringsopsies.",
+    "addRate": "Voeg fooi by",
+    "editRate": "Pas fooi aan",
+    "noRates": "Versendingskoste is nog nie bygevoeg nie.",
+    "zone": "Gebied",
+    "carrier": "Firma",
+    "selectZone": "Kies 'n streek",
+    "selectCarrier": "Kies 'n maatskappy",
+    "shippingCost": "Versendingsfooi",
+    "currency": "Geldeenheid",
+    "estimatedDeliveryDays": "Geraamde aflewering (dae)",
+    "minWeight": "Minimum Gewig",
+    "maxWeight": "Maksimum Gewig",
+    "minOrderAmount": "Minimum bestelbedrag",
+    "freeShipping": "Gratis Versending",
+    "free": "Gratis",
+    "active": "Aktief",
+    "inactive": "Passief",
+    "cost": "Fooi",
+    "deliveryDays": "Aflewering",
+    "status": "Situasie",
+    "saving": "Stoor...",
+    "createSuccess": "Fooi suksesvol bygevoeg.",
+    "updateSuccess": "Salaris is suksesvol opgedateer.",
+    "deleteSuccess": "Die fooi is suksesvol verwyder.",
+    "saveError": "'n Fout het voorgekom tydens die stoor van die fooi.",
+    "deleteError": "'n Fout het voorgekom tydens die verwydering van die fooi.",
+    "fetchError": "'n Fout het voorgekom tydens die oplaai van die fooie."
+  },
+  "metadata": {
+    "title": "Veehandel - Lewende Dierehandelsplatform",
+    "description": "Die wêreld se mees vertroude platform vir die verhandeling van lewende diere. Veilige en deursigtige diere koop en verkoop.",
+    "pages": {
+      "about": {
+        "title": "Oor Ons",
+        "description": "Leer meer oor veehandel. 'n Betroubare platform vir die verhandeling van lewende diere."
+      },
+      "contact": {
+        "title": "Kommunikasie",
+        "description": "Kontak ons. Die kliëntediensspan van Veehandel is gereed om u te help."
+      },
+      "terms": {
+        "title": "Gebruiksvoorwaardes",
+        "description": "Bepalings en voorwaardes vir veehandel."
+      },
+      "privacy": {
+        "title": "Privaatheidsbeleid",
+        "description": "Privaatheidsbeleid vir Veehandel. Leer hoe jou persoonlike data beskerm word."
+      },
+      "products": {
+        "title": "Produkte",
+        "description": "Blaai deur lewende diere-lyste. Betroubare advertensies vir beeste, skape en meer."
+      },
+      "sellers": {
+        "title": "Verkopers",
+        "description": "Ontdek betroubare diereverkopers. Geverifieerde verkoperprofiele en resensies."
+      },
+      "transporters": {
+        "title": "vervoerders",
+        "description": "Ontdek dierevervoermaatskappye. Veilige en professionele vervoer van lewende diere."
+      },
+      "search": {
+        "title": "Soek",
+        "description": "Soek tussen lewende diere-lyste. Maklike soektog met filter- en sorteeropsies."
+      },
+      "faq": {
+        "title": "Gereelde vrae",
+        "description": "Gereelde vrae en antwoorde oor veehandel."
+      },
+      "productDetail": {
+        "title": "{titel} - Te koop",
+        "description": "Te koop in {title} - {city}. Klik vir besonderhede en kontakbesonderhede."
+      },
+      "sellerDetail": {
+        "title": "{naam} - Verkoperprofiel",
+        "description": "{name} verkoperprofiel. Resensies, lyste en kontakinligting."
+      },
+      "transporterDetail": {
+        "title": "{naam} - Vervoerderprofiel",
+        "description": "{name} vervoerderprofiel. Diensgebiede, resensies en kontakbesonderhede."
+      }
+    }
   }
 }

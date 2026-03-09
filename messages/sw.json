@@ -11,17 +11,30 @@
     "back": "Rudi",
     "next": "Mbele",
     "close": "Funga",
+    "unauthorized": "Huna ruhusa ya kufikia ukurasa huu.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Ingia",
-    "register": "Sajili"
+    "register": "Sajili",
+    "previous": "Zamani",
+    "zoomIn": "Kuza karibu",
+    "previousImage": "Picha iliyotangulia",
+    "nextImage": "Picha inayofuata",
+    "closeLightbox": "Funga ghala",
+    "imageLightbox": "Matunzio ya picha",
+    "slideN": "Slaidi {n}",
+    "viewMore": "Tazama zaidi"
   },
   "header": {
     "products": "Bidhaa",
     "sellers": "Wauzaji",
+    "transporters": "wasafirishaji",
     "about": "Kuhusu Sisi",
+    "search": "Tafuta",
     "dashboard": "Paneli",
     "settings": "Mipangilio",
-    "logout": "Toka"
+    "logout": "Toka",
+    "menu": "Menyu",
+    "language": "Uteuzi wa lugha"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Nimesahau nenosiri langu.",
       "noAccount": "Huna akaunti?",
       "register": "Sajili",
-      "errorDefault": "Imeshindwa kuingia. Tafadhali angalia taarifa zako."
+      "errorDefault": "Imeshindwa kuingia. Tafadhali angalia taarifa zako.",
+      "orContinueWith": "au endelea",
+      "continueWithGoogle": "Endelea na Google",
+      "continueWithApple": "Endelea na Apple.",
+      "socialLoginError": "Kuingia kwenye mitandao jamii hakukufaulu. Tafadhali jaribu tena.",
+      "appleComingSoon": "Hivi karibuni sana",
+      "showPassword": "Onyesha nenosiri",
+      "hidePassword": "Ficha nenosiri"
     },
     "register": {
       "title": "Sajili",
@@ -51,7 +71,17 @@
       "login": "Ingia",
       "passwordMismatch": "Manenosiri hayalingani.",
       "passwordTooShort": "Nenosiri lazima liwe na angalau herufi 6.",
-      "errorDefault": "Usajili umeshindwa. Tafadhali jaribu tena."
+      "errorDefault": "Usajili umeshindwa. Tafadhali jaribu tena.",
+      "showPassword": "Onyesha nenosiri",
+      "hidePassword": "Ficha nenosiri",
+      "passwordStrength": {
+        "minLength": "Angalau herufi 8",
+        "uppercase": "Herufi kubwa (A-Z)",
+        "lowercase": "Herufi ndogo (a-z)",
+        "number": "Nambari (0-9)",
+        "special": "Herufi maalum (!@#$%)"
+      },
+      "registerSuccess": "Akaunti yako imeundwa kwa mafanikio! Unaelekezwa kwenye ukurasa wa kuingia..."
     },
     "forgotPassword": {
       "title": "Nimesahau nenosiri langu.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Omba Muunganisho Mpya",
       "passwordMismatch": "Manenosiri hayalingani.",
       "passwordTooShort": "Nenosiri lazima liwe na angalau herufi 6.",
-      "errorDefault": "Uwekaji upya wa nenosiri umeshindwa. Muunganisho unaweza kuwa batili au muda wake umeisha."
+      "errorDefault": "Uwekaji upya wa nenosiri umeshindwa. Muunganisho unaweza kuwa batili au muda wake umeisha.",
+      "showPassword": "Onyesha nenosiri",
+      "hidePassword": "Ficha nenosiri"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "hai",
       "totalViews": "Jumla ya Mitazamo",
       "thisWeek": "wiki hii",
+      "allTime": "nyakati zote",
       "favorites": "Kipendwa",
       "onYourListings": "katika matangazo yako",
+      "savedItems": "bidhaa iliyosajiliwa",
       "messages": "Ujumbe",
-      "unread": "haijasomwa"
+      "notifications": "Arifa",
+      "unread": "haijasomwa",
+      "views": "mitazamo",
+      "draft": "Rasimu",
+      "sold": "Imeuzwa",
+      "pending": "Inasubiri",
+      "awaitingApproval": "inasubiri idhini",
+      "totalSales": "Jumla ya Mauzo",
+      "completedSales": "mauzo yaliyokamilika",
+      "revenue": "Mapato",
+      "totalRevenue": "mapato yote"
     },
     "recentListings": "Orodha Zako za Hivi Karibuni",
+    "recentActivity": "Shughuli za Hivi Karibuni",
     "recentMessages": "Ujumbe wa Hivi Karibuni",
+    "quickLinks": "Ufikiaji wa Haraka",
     "noListings": "Hujaongeza matangazo yoyote bado.",
+    "noActivity": "Hakuna shughuli bado.",
     "noMessages": "Hujapokea ujumbe bado.",
     "noNotifications": "Hujapokea arifa zozote bado.",
     "viewAllListings": "Tazama Orodha Zote",
-    "viewAllMessages": "Tazama jumbe zote"
+    "viewAllMessages": "Tazama jumbe zote",
+    "viewNotifications": "Tazama Arifa",
+    "viewFavorites": "Vipendwa vya Gor",
+    "recentlyViewed": "Imetazamwa Hivi Karibuni",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia data ya paneli."
   },
   "dashboardNav": {
     "overview": "Muhtasari",
@@ -115,7 +166,61 @@
     "notifications": "Arifa",
     "profile": "Wasifu",
     "settings": "Mipangilio",
-    "newListing": "Ongeza Orodha Mpya"
+    "newListing": "Ongeza Orodha Mpya",
+    "becomeSeller": "Kuwa Muuzaji",
+    "categories": "Aina",
+    "offers": "Mapendekezo",
+    "deals": "Mikataba",
+    "farms": "Mashamba yangu",
+    "transport": "Usafiri",
+    "moderation": "Udhibiti",
+    "sellerModeration": "Udhibiti wa Muuzaji",
+    "transporterModeration": "Udhibiti wa Mtoa Huduma",
+    "brands": "Chapa",
+    "transportOffers": "Nukuu za Usafirishaji",
+    "healthRecords": "Kumbukumbu za Afya",
+    "vaccinations": "Chanjo",
+    "shippingCarriers": "Makampuni ya Usafirishaji",
+    "shippingZones": "Maeneo ya Mizigo",
+    "shippingRates": "Ada za Usafirishaji",
+    "systemSettings": "Mipangilio ya Mfumo",
+    "locations": "Anwani zangu"
+  },
+  "profile": {
+    "title": "Taarifa za Wasifu",
+    "description": "Unaweza kusasisha taarifa zako binafsi hapa.",
+    "personalInfo": "Taarifa Binafsi",
+    "contactInfo": "Taarifa za Mawasiliano",
+    "preferences": "Mapendeleo",
+    "firstName": "Jina",
+    "firstNamePlaceholder": "Ingiza jina lako",
+    "surname": "Jina la ukoo",
+    "surnamePlaceholder": "Ingiza jina lako la ukoo.",
+    "displayName": "Jina Lililoonyeshwa",
+    "phone": "Nambari ya Simu",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Imethibitishwa",
+    "phoneNotVerified": "Haijathibitishwa",
+    "verifyPhone": "Thibitisha Nambari ya Simu",
+    "country": "Nchi",
+    "selectCountry": "Chagua nchi",
+    "language": "Mapendeleo ya Lugha",
+    "selectLanguage": "Chagua lugha",
+    "currency": "Sarafu",
+    "selectCurrency": "Chagua sarafu.",
+    "saveChanges": "Hifadhi Mabadiliko",
+    "saving": "Inahifadhi...",
+    "saveSuccess": "Taarifa za wasifu wako zimesasishwa.",
+    "saveError": "Hitilafu imetokea wakati wa kusasisha wasifu.",
+    "avatar": "Picha ya Wasifu",
+    "changeAvatar": "Badilisha Picha",
+    "removeAvatar": "Ondoa Picha",
+    "currencies": {
+      "try": "Lira ya Kituruki",
+      "usd": "Dola ya Marekani",
+      "eur": "Euro",
+      "gbp": "Pauni ya Uingereza"
+    }
   },
   "myListings": {
     "title": "Matangazo yangu",
@@ -125,35 +230,94 @@
     "fetchError": "Hitilafu imetokea wakati wa kupakia matangazo.",
     "deleteSuccess": "Tangazo lilifutwa kwa mafanikio.",
     "deleteError": "Hitilafu imetokea wakati wa kufuta tangazo.",
-    "activateSuccess": "Tangazo limeamilishwa.",
-    "deactivateSuccess": "Orodha imezimwa.",
+    "publishSuccess": "Tangazo limetumwa kwa ajili ya kuidhinishwa.",
+    "unpublishSuccess": "Tangazo limeandaliwa.",
     "statusError": "Hitilafu imetokea wakati wa kubadilisha hali.",
     "filters": {
       "all": "Wote",
-      "active": "Inayotumika",
       "draft": "Rasimu",
       "pending": "Inasubiri Idhini",
+      "active": "Inayotumika",
+      "rejected": "Imekataliwa",
       "sold": "Imeuzwa"
     },
     "actions": {
       "edit": "Hariri",
       "delete": "Futa",
-      "activate": "Washa",
-      "deactivate": "Muundo Tulivu"
+      "publish": "Tuma kwa Idhini",
+      "unpublish": "Rasimu",
+      "menu": "Miamala"
     },
     "deleteDialog": {
       "title": "Futa tangazo",
       "description": "Una uhakika unataka kufuta orodha hii? Kitendo hiki hakiwezi kutenduliwa.",
       "cancel": "Ghairi",
       "confirm": "Futa"
-    }
+    },
+    "loadMore": "Pakua Zaidi",
+    "loadingMore": "Inapakia..."
   },
   "favorites": {
     "title": "Vipendwa vyangu",
     "description": "Fuata bidhaa unazopenda hapa.",
     "noFavorites": "Bado hujaongeza bidhaa zozote unazopenda.",
     "browseProducts": "Vinjari Bidhaa",
-    "fetchError": "Hitilafu imetokea wakati wa kupakia vipendwa."
+    "fetchError": "Hitilafu imetokea wakati wa kupakia vipendwa.",
+    "loadMore": "Pakua Zaidi",
+    "loadingMore": "Inapakia..."
+  },
+  "messages": {
+    "title": "Ujumbe",
+    "description": "Wasiliana na wanunuzi na wauzaji.",
+    "noConversations": "Hujapokea ujumbe bado.",
+    "startConversation": "Ili kuuliza swali kuhusu tangazo, nenda kwenye tangazo.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia ujumbe",
+    "sendError": "Hitilafu imetokea wakati wa kutuma ujumbe.",
+    "connectionError": "Muunganisho umeshindwa. Inajaribu tena...",
+    "connected": "Iliunganishwa",
+    "connecting": "Inaunganisha...",
+    "searchPlaceholder": "Tafuta kupitia jumbe...",
+    "typeMessage": "Andika ujumbe wako...",
+    "send": "Tuma",
+    "sending": "Inatuma...",
+    "typing": "Inasema...",
+    "read": "Soma",
+    "delivered": "Imetumwa",
+    "today": "Leo",
+    "yesterday": "Jana",
+    "noMessages": "Hakuna ujumbe bado. Anza mazungumzo!",
+    "loadMore": "Pakia zaidi",
+    "loadingMessages": "Ujumbe unapakiwa...",
+    "about": "Kuhusu",
+    "product": "Bidhaa",
+    "startNewConversation": "Anza Mazungumzo Mapya",
+    "selectConversation": "Chagua mazungumzo au anza mazungumzo mapya.",
+    "online": "Mtandaoni",
+    "offline": "Nje ya Mtandao",
+    "lastSeen": "Mara ya mwisho kuonekana",
+    "deleteConversation": "Futa mazungumzo",
+    "deleteConfirm": "Una uhakika unataka kufuta mazungumzo haya?",
+    "deleted": "Mazungumzo yalifutwa.",
+    "defaultUser": "Mtumiaji",
+    "noResults": "Hakuna matokeo yaliyopatikana.",
+    "newConversation": "Mazungumzo mapya"
+  },
+  "notifications": {
+    "title": "Arifa",
+    "description": "Tazama na udhibiti arifa zako.",
+    "markAllAsRead": "Tia alama zote kama zimesomwa",
+    "noNotifications": "Hujapokea arifa zozote bado.",
+    "viewAll": "Tazama arifa zote",
+    "today": "Leo",
+    "yesterday": "Jana",
+    "older": "Mzee zaidi",
+    "types": {
+      "system": "Mfumo",
+      "message": "Ujumbe",
+      "offer": "Ofa",
+      "order": "Agiza",
+      "listing": "Tangazo"
+    }
   },
   "settings": {
     "title": "Mipangilio",
@@ -165,11 +329,32 @@
       "confirmPassword": "Nenosiri Jipya Tena",
       "submit": "Sasisha Nenosiri",
       "submitting": "Inasasisha...",
-      "success": "Nenosiri lako limesasishwa kwa ufanisi.",
+      "success": "Nenosiri lako limesasishwa kwa mafanikio.",
       "passwordMismatch": "Manenosiri mapya hayalingani.",
       "passwordTooShort": "Nenosiri jipya lazima liwe na angalau herufi 6.",
       "sessionError": "Taarifa za kipindi hazikupatikana.",
-      "errorDefault": "Nenosiri halikuweza kusasishwa. Tafadhali angalia nenosiri lako la sasa."
+      "errorDefault": "Nenosiri halikuweza kusasishwa. Tafadhali angalia nenosiri lako la sasa.",
+      "showPassword": "Onyesha nenosiri",
+      "hidePassword": "Ficha nenosiri"
+    },
+    "preferences": {
+      "title": "Arifa na Mapendeleo ya Mwonekano",
+      "description": "Dhibiti njia zako za arifa na mapendeleo ya onyesho.",
+      "notifications": "Arifa",
+      "emailNotifications": "Arifa za Barua Pepe",
+      "emailNotificationsDesc": "Pokea arifa za barua pepe kwa ujumbe mpya na masasisho ya matangazo.",
+      "smsNotifications": "Arifa za SMS",
+      "smsNotificationsDesc": "Pokea ujumbe mfupi wa SMS kwa arifa muhimu.",
+      "pushNotifications": "Arifa za Kushinikiza",
+      "pushNotificationsDesc": "Pokea arifa za kushinikiza kwa masasisho ya papo hapo.",
+      "appearance": "Muonekano",
+      "darkMode": "Hali Nyeusi",
+      "darkModeDesc": "Badilisha hadi mandhari nyeusi.",
+      "saveChanges": "Hifadhi Mapendeleo",
+      "saving": "Inahifadhi...",
+      "saveSuccess": "Mapendeleo yako yamesasishwa.",
+      "saveError": "Hitilafu imetokea wakati wa kusasisha mapendeleo.",
+      "loadError": "Mapendeleo hayakuweza kupakiwa."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Jukwaa la Biashara ya Wanyama Hai",
       "subtitle": "Jukwaa la biashara ya wanyama hai linaloaminika zaidi. Nunua na uza ng'ombe na kondoo wako kwa usalama.",
       "cta": "Anza Sasa",
-      "viewListings": "Tazama Matangazo"
+      "viewListings": "Tazama Matangazo",
+      "searchPlaceholder": "Tafuta wanyama... (ng'ombe, kondoo, mbuzi...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Matangazo Yaliyoangaziwa",
       "viewAll": "Tazama zote"
+    },
+    "cta": {
+      "title": "Anza Sasa",
+      "subtitle": "Chukua nafasi yako kwenye jukwaa ambapo maelfu ya wauzaji na wanunuzi hukutana.",
+      "button": "Jisajili Bure"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Kuhusu Sisi",
     "contact": "Mawasiliano",
     "terms": "Masharti ya Matumizi",
-    "privacy": "Sera ya Faragha"
+    "privacy": "Sera ya Faragha",
+    "company": "Kampuni",
+    "support": "Usaidizi",
+    "legal": "Kisheria",
+    "followUs": "Tufuate",
+    "newsletter": "Jarida",
+    "newsletterDescription": "Usikose kupata matangazo na matangazo ya hivi karibuni.",
+    "subscribe": "Jisajili",
+    "emailPlaceholder": "Anwani yako ya barua pepe",
+    "tagline": "Jukwaa la biashara ya wanyama hai linalotegemewa zaidi nchini Uturuki.",
+    "sellers": "Wauzaji",
+    "products": "Bidhaa",
+    "map": "Ramani",
+    "appleLoginComingSoon": "Kuingia na Apple kutaanza kutumika hivi karibuni.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "Maswali Yanayoulizwa Mara kwa Mara"
+  },
+  "faq": {
+    "title": "Maswali Yanayoulizwa Mara kwa Mara",
+    "description": "Majibu ya maswali yako yanayoulizwa mara kwa mara kuhusu jukwaa letu.",
+    "noFaqs": "Hakuna maswali yaliyoongezwa bado."
+  },
+  "about": {
+    "title": "Kuhusu Sisi",
+    "subtitle": "Jukwaa la biashara ya wanyama hai linalotegemewa zaidi nchini Uturuki.",
+    "mission": {
+      "title": "Dhamira Yetu",
+      "description": "Kwa kuifanya biashara ya wanyama hai kuwa ya kidijitali, tunalenga kuunda uhusiano salama, wazi, na wenye ufanisi kati ya wazalishaji na wanunuzi."
+    },
+    "vision": {
+      "title": "Maono Yetu",
+      "description": "Kuwa painia katika mabadiliko ya kidijitali katika sekta ya kilimo na kuwa jukwaa la kimataifa katika biashara ya wanyama hai."
+    },
+    "values": {
+      "title": "Maadili yetu",
+      "trust": {
+        "title": "Uaminifu",
+        "description": "Uwazi na uaminifu ni muhimu katika miamala yote."
+      },
+      "quality": {
+        "title": "Ubora",
+        "description": "Uboreshaji endelevu ili kutoa huduma bora zaidi."
+      },
+      "innovation": {
+        "title": "Ubunifu",
+        "description": "Kubadilisha sekta kwa kutumia teknolojia."
+      }
+    },
+    "stats": {
+      "users": "Mtumiaji Aliyesajiliwa",
+      "sellers": "Muuzaji Amilifu",
+      "products": "Tangazo",
+      "transactions": "Muamala Uliofanikiwa"
+    }
+  },
+  "contact": {
+    "title": "Mawasiliano",
+    "subtitle": "Tafadhali wasiliana nasi kwa maswali yoyote.",
+    "form": {
+      "title": "Tuandikie",
+      "name": "Jina lako",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "Barua pepe",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Mada",
+      "subjectPlaceholder": "Mada ya ujumbe wako",
+      "message": "Ujumbe wako",
+      "messagePlaceholder": "Andika ujumbe wako hapa...",
+      "submit": "Tuma",
+      "submitting": "Inatuma...",
+      "success": "Ujumbe wako umetumwa kwa mafanikio. Tutawasiliana nawe haraka iwezekanavyo.",
+      "error": "Hitilafu imetokea wakati wa kutuma ujumbe. Tafadhali jaribu tena."
+    },
+    "info": {
+      "title": "Taarifa za Mawasiliano",
+      "address": "Anwani",
+      "addressValue": "Istanbul, Uturuki",
+      "email": "Barua pepe",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Simu",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Saa za Kazi",
+      "workingHoursValue": "Jumatatu - Ijumaa: 09:00 - 18:00",
+      "map": "Ramani"
+    }
+  },
+  "terms": {
+    "title": "Masharti ya Matumizi",
+    "lastUpdated": "Sasisho la mwisho: {tarehe}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Kukubali Masharti",
+        "content": "Kwa kutumia tovuti hii, unakubali masharti yafuatayo ya matumizi. Ikiwa hukubali masharti haya, tafadhali usitumie tovuti."
+      },
+      "services": {
+        "title": "2. Huduma",
+        "content": "Biashara ya Mifugo hutoa jukwaa la kununua na kuuza wanyama hai. Miamala yote kwenye jukwaa ni jukumu la mtumiaji."
+      },
+      "accounts": {
+        "title": "3. Akaunti za Mtumiaji",
+        "content": "Lazima utoe taarifa sahihi na za kisasa ili kufungua akaunti. Usalama wa akaunti yako ni jukumu lako."
+      },
+      "prohibited": {
+        "title": "4. Shughuli Zilizopigwa Marufuku",
+        "content": "Matangazo ya kupotosha, taarifa za uongo, ulaghai, na shughuli haramu ni marufuku kabisa."
+      },
+      "liability": {
+        "title": "5. Kikomo cha Dhima",
+        "content": "Jukwaa haliwajibiki moja kwa moja kwa miamala kati ya watumiaji. Miamala yote hufanyika kati ya wahusika."
+      },
+      "changes": {
+        "title": "6. Mabadiliko",
+        "content": "Sheria na masharti haya yanaweza kubadilika bila taarifa. Mabadiliko yataanza kutumika mara tu baada ya kuchapishwa."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Sera ya Faragha",
+    "lastUpdated": "Sasisho la mwisho: {tarehe}",
+    "sections": {
+      "collection": {
+        "title": "1. Kukusanya Taarifa",
+        "content": "Unapofungua akaunti, tunakusanya taarifa binafsi kama vile jina lako, anwani ya barua pepe, na nambari ya simu. Tunaweza pia kukusanya taarifa zisizojulikana kuhusu matumizi yako ya tovuti."
+      },
+      "usage": {
+        "title": "2. Matumizi ya Taarifa",
+        "content": "Taarifa tunazokusanya hutumika kutoa huduma zetu, kudhibiti akaunti yako, kuhakikisha usalama, na kukupa ofa maalum."
+      },
+      "sharing": {
+        "title": "3. Kushiriki Taarifa",
+        "content": "Taarifa zako binafsi hazitauzwa au kukodishwa kwa watu wengine. Taarifa zako hazitashirikiwa isipokuwa kwa madhumuni yanayohitajika kisheria."
+      },
+      "security": {
+        "title": "4. Usalama",
+        "content": "Hatua za usalama za viwango vya sekta zimewekwa ili kulinda data yako."
+      },
+      "cookies": {
+        "title": "5. Vidakuzi",
+        "content": "Tovuti yetu hutumia vidakuzi ili kuboresha matumizi ya mtumiaji. Unaweza kudhibiti mapendeleo yako ya vidakuzi katika mipangilio ya kivinjari chako."
+      },
+      "rights": {
+        "title": "6. Haki Zako",
+        "content": "Chini ya Sheria ya Ulinzi wa Data Binafsi ya Uturuki (KVKK), una haki ya kufikia, kusahihisha, na kufuta data yako binafsi."
+      }
+    }
   },
   "products": {
     "title": "Bidhaa",
@@ -235,11 +570,19 @@
       "priceDesc": "Bei (Juu hadi Chini)",
       "popular": "Maarufu Zaidi"
     },
+    "pagination": {
+      "prev": "Zamani",
+      "next": "Inayofuata"
+    },
     "status": {
       "draft": "Rasimu",
+      "pending": "Inasubiri Idhini",
       "active": "Inayotumika",
+      "inactive": "Tulivu",
+      "outOfStock": "Haipo",
+      "expired": "Muda wake wa kuhudumu umekwisha.",
       "sold": "Imeuzwa",
-      "pending": "Inasubiri Idhini"
+      "rejected": "Imekataliwa"
     },
     "condition": {
       "new": "Mpya",
@@ -250,12 +593,16 @@
     "outOfStock": "Haipo",
     "inStock": "Inapatikana",
     "noResults": "Bidhaa haipatikani.",
-    "loading": "Inapakia bidhaa...",
+    "loading": "Bidhaa zinapakiwa...",
     "perPage": "Kwa kila ukurasa",
     "showing": "Jumla ya bidhaa {jumla} kati ya {from} na {to}.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia bidhaa.",
+    "loadMore": "Onyesha Zaidi",
+    "showingOf": "Bidhaa {count} / {total} zinaonyeshwa.",
     "loginToFavorite": "Ingia ili kuongeza kwenye vipendwa.",
     "addedToFavorites": "Imeongezwa kwenye vipendwa",
-    "removedFromFavorites": "Imeondolewa kwenye vipendwa"
+    "removedFromFavorites": "Imeondolewa kwenye vipendwa",
+    "favoriteError": "Kitendo unachopenda kimeshindwa."
   },
   "productDetail": {
     "addToFavorites": "Ongeza kwenye Vipendwa",
@@ -279,16 +626,31 @@
     "maxOrder": "Agizo la juu zaidi",
     "publishedAt": "Tarehe ya kuchapishwa",
     "views": "Imetazamwa",
-    "reviews": "tathmini",
+    "reviews": {
+      "title": "Tathmini",
+      "reviewCount": "tathmini",
+      "noReviews": "Hakuna tathmini bado.",
+      "verified": "Mnunuzi Aliyethibitishwa"
+    },
     "similarProducts": "Bidhaa Zinazofanana",
     "sellerProducts": "Bidhaa Nyingine za Muuzaji",
     "contactSeller": "Wasiliana na muuzaji",
-    "loginRequired": "Ingia ili kuongeza kwenye vipendwa.",
+    "makeOffer": "Tuma Ofa",
+    "loginRequired": "Tafadhali ingia ili kutekeleza kitendo hiki.",
     "addedToFavorites": "Imeongezwa kwenye vipendwa",
     "removedFromFavorites": "Imeondolewa kwenye vipendwa",
     "linkCopied": "Kiungo kimenakiliwa.",
     "messagingComingSoon": "Kipengele cha kutuma ujumbe kinakuja hivi karibuni.",
-    "productNotFound": "Bidhaa haipatikani."
+    "productNotFound": "Bidhaa haipatikani.",
+    "contacting": "Mawasiliano yanafanywa...",
+    "contactError": "Mawasiliano yameshindwa. Tafadhali jaribu tena.",
+    "noImage": "Hakuna picha inayopatikana.",
+    "defaultLocation": "Uturuki",
+    "inquiryMessage": "Ningependa kupata taarifa kuhusu {title}.",
+    "breadcrumb": {
+      "home": "Nyumbani",
+      "products": "Bidhaa"
+    }
   },
   "seller": {
     "title": "Taarifa za Muuzaji",
@@ -300,6 +662,70 @@
     "call": "Tafuta",
     "viewProfile": "Tazama Wasifu"
   },
+  "sellers": {
+    "title": "Wauzaji",
+    "description": "Gundua wauzaji wanaoaminika.",
+    "search": "Tafuta muuzaji...",
+    "sort": "Panga",
+    "sortOptions": {
+      "newest": "Hivi karibuni",
+      "mostSales": "Muuzaji Bora",
+      "topRated": "Alama ya Juu Zaidi",
+      "mostProducts": "Matangazo Mengi"
+    },
+    "noResults": "Muuzaji hakupatikana.",
+    "loading": "Wauzaji wanapakia...",
+    "showing": "wauzaji {count} wamepatikana",
+    "verified": "Imethibitishwa",
+    "sales": "mauzo",
+    "products": "tangazo",
+    "reviews": "tathmini",
+    "rating": "nukta",
+    "viewProducts": "Tazama Bidhaa",
+    "contactSeller": "Tuma Ujumbe",
+    "memberSince": "Mwanachama tangu {mwaka}",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia wachuuzi",
+    "detail": {
+      "title": "Wasifu wa Muuzaji",
+      "about": "Kuhusu",
+      "businessInfo": "Taarifa za Biashara",
+      "businessName": "Jina la Biashara",
+      "businessType": "Ziara ya Biashara",
+      "email": "Barua pepe",
+      "phone": "Simu",
+      "website": "Tovuti",
+      "description": "Maelezo",
+      "policies": "Sera",
+      "returnPolicy": "Sera ya kurejesha",
+      "shippingPolicy": "Sera ya Usafirishaji",
+      "businessHours": "Saa za Kazi",
+      "paymentMethods": "Mbinu za Malipo",
+      "allProducts": "Bidhaa Zote",
+      "stats": {
+        "totalSales": "Jumla ya Mauzo",
+        "totalProducts": "Jumla ya Bidhaa",
+        "totalReviews": "Tathmini",
+        "rating": "Pointi"
+      },
+      "notFound": "Muuzaji hakupatikana.",
+      "backToList": "Don kwa wauzaji",
+      "contactInfo": "Mawasiliano",
+      "noProducts": "Muuzaji huyu hana orodha bado.",
+      "noPolicies": "Muuzaji bado hajafafanua sera zake.",
+      "fetchError": "Hitilafu imetokea wakati wa kupakia taarifa za muuzaji.",
+      "productsLoadError": "Hitilafu imetokea wakati wa kupakia bidhaa za muuzaji.",
+      "reviewsTab": "Tathmini",
+      "reviews": {
+        "summary": "Muhtasari wa Tathmini",
+        "reviewCount": "tathmini",
+        "communication": "Mawasiliano",
+        "shippingSpeed": "Kasi ya Usafirishaji",
+        "productQuality": "Ubora wa Bidhaa",
+        "noReviews": "Hakuna tathmini bado.",
+        "verified": "Mnunuzi Aliyethibitishwa"
+      }
+    }
+  },
   "editListing": {
     "title": "Hariri tangazo",
     "saveChanges": "Hifadhi Mabadiliko",
@@ -307,6 +733,10 @@
     "updateSuccess": "Tangazo limesasishwa kwa mafanikio.",
     "updateFailed": "Hitilafu imetokea wakati wa kusasisha orodha.",
     "loadError": "Hitilafu imetokea wakati wa kupakia tangazo.",
+    "sellerNotFound": "Wasifu wa muuzaji haupatikani.",
+    "sellerLoadError": "Wasifu wa muuzaji haukuweza kupakiwa.",
+    "userNotFound": "Taarifa za mtumiaji hazikupatikana. Tafadhali ingia tena.",
+    "locationNotFound": "Taarifa za eneo hazikupatikana. Tafadhali onyesha upya ukurasa.",
     "basicInfo": "Taarifa za Msingi",
     "categoryAndCondition": "Kategoria na Hali",
     "pricing": "Bei",
@@ -314,6 +744,8 @@
     "images": "Picha",
     "existingImages": "Picha Zinazopatikana",
     "addImage": "Ongeza Picha",
+    "maxImages": "Unaweza kupakia picha zisizozidi 10.",
+    "imageHint": "Angalau 1, picha 10 za juu zaidi. Katika umbizo la PNG, JPG, au WEBP.",
     "uploadingImages": "Picha zinapakiwa...",
     "uploadingImage": "Picha inapakiwa.",
     "imageUploadFailed": "Picha haikuweza kupakiwa.",
@@ -358,6 +790,7 @@
     "addImage": "Ongeza Picha",
     "maxImages": "Unaweza kupakia picha zisizozidi 10.",
     "imageHint": "Angalau 1, picha 10 za juu zaidi. Katika umbizo la PNG, JPG, au WEBP.",
+    "location": "Taarifa za Eneo",
     "fields": {
       "title": "Kichwa cha Tangazo",
       "shortDescription": "Maelezo Mafupi",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Usafirishaji unapatikana.",
       "shippingCost": "Ada ya Usafirishaji",
       "weight": "Uzito",
-      "weightUnit": "Kipimo cha Uzito"
+      "weightUnit": "Kipimo cha Uzito",
+      "city": "Jiji",
+      "address": "Anwani",
+      "postalCode": "Nambari ya posta"
     },
     "placeholders": {
       "title": "Mfano: Ng'ombe wa Holstein wa Miaka 2",
       "shortDescription": "Maelezo ya bidhaa (isizidi herufi 200)",
       "description": "Toa maelezo ya kina kuhusu bidhaa...",
-      "category": "Chagua kategoria."
+      "category": "Chagua kategoria.",
+      "city": "Ingia mjini",
+      "address": "Ingiza anwani kamili.",
+      "postalCode": "Nambari ya posta"
+    },
+    "errors": {
+      "titleRequired": "Jina la tangazo ni la lazima.",
+      "shortDescriptionRequired": "Maelezo mafupi yanahitajika.",
+      "descriptionRequired": "Maelezo ya kina yanahitajika.",
+      "categoryRequired": "Uteuzi wa kategoria ni lazima.",
+      "priceRequired": "Bei ni lazima.",
+      "cityRequired": "Taarifa za jiji zinahitajika.",
+      "addressRequired": "Taarifa ya anwani inahitajika.",
+      "locationError": "Hitilafu imetokea wakati wa kuunda eneo."
     },
     "success": "Tangazo liliundwa kwa mafanikio.",
     "error": "Hitilafu imetokea wakati wa kuunda tangazo.",
@@ -388,24 +837,53 @@
     "draftSaved": "Rasimu imehifadhiwa",
     "productCreated": "Bidhaa hiyo iliundwa kwa mafanikio.",
     "creationFailed": "Bidhaa haikuweza kuundwa. Tafadhali jaribu tena.",
-    "errors": {
-      "titleRequired": "Jina la tangazo ni lazima.",
-      "shortDescriptionRequired": "Maelezo mafupi yanahitajika.",
-      "descriptionRequired": "Maelezo ya kina yanahitajika.",
-      "categoryRequired": "Uteuzi wa kategoria ni lazima.",
-      "priceRequired": "Weka bei halali."
-    }
+    "userNotFound": "Taarifa za mtumiaji hazikupatikana. Tafadhali ingia tena.",
+    "defaultBusinessName": "Biashara yangu"
+  },
+  "becomeSeller": {
+    "title": "Kuwa Muuzaji",
+    "description": "Taarifa ya Kampuni",
+    "alreadySeller": "Tayari una wasifu wa muuzaji.",
+    "goToListings": "Nenda kwenye orodha zangu",
+    "businessInfo": "Taarifa za Biashara",
+    "contactInfo": "Taarifa za Mawasiliano",
+    "businessName": "Jina la Biashara",
+    "businessNamePlaceholder": "Mfano: Shamba la Yilmaz",
+    "businessType": "Ziara ya Biashara",
+    "businessTypePlaceholder": "Chagua aina ya biashara yako.",
+    "businessTypes": {
+      "individual": "Mtu binafsi",
+      "company": "Kampuni",
+      "cooperative": "Ushirika",
+      "farm": "Shamba"
+    },
+    "taxNumber": "Nambari ya Kodi",
+    "taxNumberPlaceholder": "Ingiza nambari yako ya utambulisho wa kodi (si lazima)",
+    "descriptionPlaceholder": "Andika maelezo mafupi kuhusu biashara yako...",
+    "phone": "Simu",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Tovuti",
+    "websitePlaceholder": "https://www.examplesite.com (hiari)",
+    "submit": "Unda Wasifu wa Muuzaji",
+    "submitting": "Kuunda wasifu...",
+    "success": "Wasifu wako wa muuzaji umeundwa kwa mafanikio!",
+    "error": "Hitilafu imetokea wakati wa kuunda wasifu wa muuzaji.",
+    "taxNumberHelp": "Ingiza nambari yako ya kodi yenye tarakimu 10 au 11 (si lazima)",
+    "phoneHelp": "Mfano: +90 555 123 45 67 au 0555 123 45 67",
+    "websiteHelp": "Mfano: www.isletmem.com au https://isletmem.com",
+    "alreadySellerDescription": "Unaweza kutumia kitufe kilicho hapa chini kudhibiti matangazo yako.",
+    "newListing": "Ongeza Orodha Mpya"
   },
   "fileUpload": {
     "dragDrop": "Pakia picha au video.",
     "dragDropHint": "Buruta na uangushe au bofya ili kuchagua.",
     "dropHere": "Acha...",
     "imageLimit": "Picha: kiwango cha juu cha 10MB",
-    "videoLimit": "Video: max 100MB",
+    "videoLimit": "Video: kiwango cha juu cha 100MB",
     "uploadCount": "{current} / {max} imepakiwa",
     "maxFilesError": "Unaweza kupakia kiwango cha juu cha vyombo vya habari {max}.",
     "imageTooLarge": "Picha lazima iwe ndogo kuliko 10MB.",
-    "videoTooLarge": "The video must be smaller than 100MB.",
+    "videoTooLarge": "Video lazima iwe ndogo kuliko 100MB.",
     "optimizing": "Inaboresha...",
     "uploading": "Inapakia...",
     "queued": "Wanasubiri kwenye foleni...",
@@ -419,9 +897,833 @@
     "videoBadge": "VIDEO",
     "coverUpdated": "Picha ya jalada imerekebishwa kwa ufanisi.",
     "optimizationInfo": "Picha zimeboreshwa ili ziendane na viwango vya wavuti",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Uteuzi wa Kuonekana",
+    "changeImage": "Badilisha",
+    "removeImage": "Ondoa",
+    "videoProcessing": "Video inachakatwa...",
+    "videoProcessingFailed": "Operesheni imeshindwa.",
+    "videoProcessingPollError": "Hali ya usindikaji wa video haikupatikana. Tafadhali onyesha upya ukurasa.",
+    "reorderError": "Faili haikuweza kupangwa.",
+    "coverUpdateError": "Picha ya jalada haikuweza kusasishwa."
+  },
+  "error": {
+    "title": "Hitilafu imetokea.",
+    "description": "Hitilafu isiyotarajiwa imetokea. Tafadhali onyesha upya ukurasa au jaribu tena baadaye.",
+    "retry": "Jaribu tena",
+    "goBack": "Usirudi nyuma",
+    "goHome": "Nyumbani",
+    "notFound": {
+      "title": "Ukurasa Haujapatikana",
+      "description": "Ukurasa unaoutafuta haupatikani au umehamishwa.",
+      "goHome": "Rudi kwenye Ukurasa wa Mwanzo"
+    }
+  },
+  "search": {
+    "title": "Tafuta",
+    "placeholder": "Tafuta bidhaa, kategoria, au wauzaji...",
+    "searchButton": "Tafuta",
+    "searchingFor": "Inatafutwa",
+    "loading": "Alitaka...",
+    "resultsCount": "Matokeo ya {count} yalipatikana.",
+    "noResults": "Hakuna matokeo yaliyopatikana.",
+    "tryDifferentSearch": "Jaribu maneno muhimu tofauti au ubadilishe vichujio.",
+    "filters": {
+      "title": "Vichujio",
+      "category": "Kategoria",
+      "allCategories": "Aina Zote",
+      "condition": "Hali",
+      "allConditions": "Kesi Zote",
+      "priceRange": "Kiwango cha Bei",
+      "price": "Bei",
+      "min": "Kiwango cha chini",
+      "max": "Upeo",
+      "apply": "Tuma maombi",
+      "clear": "Safi",
+      "clearAll": "Futa Zote"
+    },
+    "fetchError": "Hitilafu imetokea wakati wa kupakia matokeo ya utafutaji",
+    "recentSearches": "Utafutaji wa Hivi Karibuni",
+    "clearHistory": "Futa Historia",
+    "noSearchHistory": "Huna historia ya utafutaji bado.",
+    "deleteHistoryError": "Hitilafu imetokea wakati wa kufuta historia ya utafutaji."
+  },
+  "categories": {
+    "title": "Usimamizi wa Kategoria",
+    "description": "Dhibiti kategoria kutoka hapa.",
+    "noCategories": "Hakuna kategoria zilizoongezwa bado.",
+    "createFirst": "Unda kategoria ya kwanza.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia kategoria.",
+    "createSuccess": "Kategoria imeundwa kwa mafanikio",
+    "createError": "Hitilafu imetokea wakati wa kuunda kategoria.",
+    "updateSuccess": "Kategoria imesasishwa kwa mafanikio",
+    "updateError": "Hitilafu imetokea wakati wa kusasisha kategoria.",
+    "deleteSuccess": "Kategoria imefutwa kwa mafanikio.",
+    "deleteError": "Hitilafu imetokea wakati wa kufuta kategoria.",
+    "activateSuccess": "Kategoria imeamilishwa.",
+    "deactivateSuccess": "Kategoria imezimwa.",
+    "statusError": "Hitilafu imetokea wakati wa kubadilisha hali.",
+    "loadError": "Hitilafu imetokea wakati wa kupakia kategoria",
+    "filters": {
+      "all": "Wote",
+      "active": "Inayotumika",
+      "inactive": "Haitumiki"
+    },
+    "table": {
+      "name": "Jina la Kategoria",
+      "slug": "Konokono",
+      "sortOrder": "Nambari ya Mfululizo",
+      "subCategories": "Kikundi kidogo",
+      "status": "Hali",
+      "actions": "Miamala"
+    },
+    "actions": {
+      "edit": "Hariri",
+      "delete": "Futa",
+      "activate": "Washa",
+      "deactivate": "Muundo Tulivu"
+    },
+    "deleteDialog": {
+      "title": "Futa Kategoria",
+      "description": "Una uhakika unataka kufuta kategoria hii? Kitendo hiki hakiwezi kutenduliwa.",
+      "cancel": "Ghairi",
+      "confirm": "Futa"
+    },
+    "addNew": "Ongeza Kategoria Mpya",
+    "loadMore": "Pakua Zaidi",
+    "loadingMore": "Inapakia...",
+    "form": {
+      "newTitle": "Unda Kategoria Mpya",
+      "editTitle": "Hariri Kategoria",
+      "name": "Jina la Kategoria",
+      "namePlaceholder": "Mfano: Ng'ombe",
+      "slug": "Konokono",
+      "slugPlaceholder": "Mfano: mifugo mikubwa",
+      "description": "Maelezo",
+      "descriptionPlaceholder": "Maelezo mafupi ya kategoria...",
+      "parentCategory": "Jamii ya Juu",
+      "parentCategoryPlaceholder": "Chagua kategoria ya juu (si lazima)",
+      "noParent": "Hakuna kategoria ya juu (Kategoria Kuu)",
+      "sortOrder": "Nambari ya Mfuatano",
+      "isActive": "Inayotumika",
+      "iconUrl": "URL ya aikoni",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Hifadhi",
+      "submitting": "Inahifadhi...",
+      "updating": "Inasasisha...",
+      "errors": {
+        "nameRequired": "Jina la kategoria linahitajika.",
+        "slugRequired": "Konokono ni lazima."
+      }
+    }
+  },
+  "offers": {
+    "title": "Mapendekezo",
+    "description": "Dhibiti ofa zako zinazoingia na zinazotoka.",
+    "received": "Ofa Zinazoingia",
+    "sent": "Ofa Zilizowasilishwa",
+    "noReceivedOffers": "Hakuna ofa zilizopokelewa bado.",
+    "noSentOffers": "Hujawasilisha ofa bado.",
+    "browseProducts": "Vinjari Bidhaa",
+    "viewProduct": "Tazama bidhaa",
+    "accept": "Kubali",
+    "reject": "Kataa",
+    "withdraw": "Ondoa",
+    "makeOffer": "Tuma Ofa",
+    "sendOffer": "Tuma Ofa",
+    "sending": "Inatuma...",
+    "cancel": "Ghairi",
+    "listingPrice": "Bei iliyotangazwa",
+    "yourOffer": "Ofa yako",
+    "quantity": "Kiasi",
+    "messageOptional": "Ujumbe (Si lazima)",
+    "messagePlaceholder": "Ujumbe ambao ungependa kushiriki na muuzaji...",
+    "expiresAt": "Tarehe halali ya mwisho",
+    "offerSent": "Ofa yako imetumwa kwa mafanikio.",
+    "offerError": "Hitilafu imetokea wakati wa kutuma ofa.",
+    "acceptSuccess": "Ofa hiyo ilikubaliwa.",
+    "rejectSuccess": "Ofa hiyo ilikataliwa.",
+    "withdrawSuccess": "Ofa hiyo iliondolewa.",
+    "actionError": "Hitilafu imetokea wakati wa mchakato.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia ofa.",
+    "loginRequired": "Ingia ili kuwasilisha zabuni.",
+    "invalidPrice": "Weka bei halali.",
+    "invalidQuantity": "Ingiza kiasi halali.",
+    "status": {
+      "pending": "Inasubiri",
+      "accepted": "Imekubaliwa",
+      "rejected": "Imekataliwa",
+      "countered": "Ofa ya Kupinga",
+      "expired": "Muda wake umekwisha.",
+      "withdrawn": "Alijiondoa"
+    }
+  },
+  "deals": {
+    "title": "Mikataba",
+    "description": "Fuata makubaliano yako ya ununuzi.",
+    "buying": "Wasomi",
+    "selling": "Mauzo",
+    "noBuyingDeals": "Huna mchakato wa usajili wa mwanafunzi bado.",
+    "noSellingDeals": "Huna miamala yoyote ya mauzo bado.",
+    "browseProducts": "Vinjari Bidhaa",
+    "viewProduct": "Tazama bidhaa",
+    "activeDeals": "Mikataba Inayotumika",
+    "completedDeals": "Imekamilika",
+    "purchases": "Wasomi",
+    "sales": "Mauzo",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia makubaliano",
+    "dealStatus": {
+      "pending": "Inasubiri",
+      "confirmed": "Imethibitishwa",
+      "processing": "Kuandaa",
+      "shipped": "Katika mizigo",
+      "delivered": "Imewasilishwa",
+      "completed": "Imekamilika",
+      "cancelled": "Imeghairiwa",
+      "disputed": "Mkataba"
+    },
+    "delivery": {
+      "pickup": "Uwasilishaji kwa mkono",
+      "shipping": "Kwa mizigo",
+      "transport": "Kwa usafiri"
+    },
+    "requestTransport": "Ombi la Usafirishaji"
+  },
+  "farms": {
+    "title": "Mashamba yangu",
+    "description": "Dhibiti na usasishe mashamba yako.",
+    "addFarm": "Ongeza Shamba",
+    "editFarm": "Usimamizi wa Shamba",
+    "noFarms": "Hujaongeza shamba bado.",
+    "farmName": "Jina la Shamba",
+    "registrationNumber": "Nambari ya Usajili",
+    "location": "Mahali",
+    "selectLocation": "Chagua eneo.",
+    "addLocationFirst": "Kwanza, ongeza eneo.",
+    "farmTypeLabel": "Ziara ya Shamba",
+    "farmDescription": "Maelezo",
+    "totalArea": "Jumla ya Eneo",
+    "cultivatedArea": "Eneo Lililolimwa",
+    "certifications": "Vyeti",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP, n.k.",
+    "organic": "Kikaboni",
+    "verified": "Imethibitishwa",
+    "save": "Hifadhi",
+    "saving": "Inahifadhi...",
+    "cancel": "Ghairi",
+    "edit": "Hariri",
+    "delete": "Futa",
+    "sellerRequired": "Wasifu wa Muuzaji Unahitajika",
+    "sellerRequiredDesc": "Ili kuongeza shamba, kwanza unahitaji kuunda wasifu wako wa muuzaji.",
+    "becomeSeller": "Kuwa Muuzaji",
+    "createSuccess": "Shamba liliongezwa kwa mafanikio.",
+    "updateSuccess": "Shamba limesasishwa kwa mafanikio.",
+    "deleteSuccess": "Shamba lilifutwa kwa mafanikio.",
+    "saveError": "Hitilafu imetokea wakati wa kusajili shamba.",
+    "deleteError": "Hitilafu imetokea wakati wa kufuta shamba.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia taarifa za shamba.",
+    "farmType": {
+      "livestock": "Kilimo cha mifugo",
+      "crop": "Kilimo",
+      "mixed": "Mchanganyiko",
+      "poultry": "Mwenye mabawa",
+      "dairy": "Kilimo cha maziwa",
+      "aquaculture": "Bidhaa za Majini"
+    }
+  },
+  "transporters": {
+    "title": "wasafirishaji",
+    "description": "Huduma za usafirishaji wa wanyama na bidhaa",
+    "searchPlaceholder": "Tafuta msafirishaji...",
+    "noTransporters": "Bado hakuna wabebaji waliosajiliwa.",
+    "verified": "Imethibitishwa",
+    "transports": "usafiri",
+    "viewProfile": "Tazama Wasifu",
+    "sort": {
+      "newest": "Hivi karibuni",
+      "rating": "Alama ya Juu Zaidi",
+      "mostTransports": "Usafirishaji Unaofanywa Mara kwa Mara Zaidi"
+    },
+    "pagination": {
+      "previous": "Zamani",
+      "next": "Inayofuata",
+      "page": "Ukurasa {ukurasa}"
+    }
+  },
+  "transport": {
+    "title": "Maombi Yangu ya Usafirishaji",
+    "description": "Fuatilia maombi yako ya usafirishaji.",
+    "findTransporter": "Tafuta Msafirishaji",
+    "active": "Inayotumika",
+    "completed": "Imekamilika",
+    "total": "Jumla",
+    "asSeller": "Kama Muuzaji",
+    "asBuyer": "Kama Mnunuzi",
+    "noSellerRequests": "Kama muuzaji, huna sharti la usafirishaji.",
+    "noBuyerRequests": "Kama mpokeaji, huna ombi la usafirishaji.",
+    "viewProduct": "Tazama bidhaa",
+    "pickup": "Pokea",
+    "delivery": "Uwasilishaji",
+    "urgent": "Haraka",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia maombi ya usafirishaji.",
+    "trackShipment": "Fuata",
+    "transportStatus": {
+      "pending": "Inasubiri",
+      "inPool": "Katika bwawa la kuogelea",
+      "assigned": "Imeteuliwa",
+      "pickedUp": "Risiti",
+      "inTransit": "Barabarani",
+      "delivered": "Imewasilishwa",
+      "completed": "Imekamilika",
+      "cancelled": "Imeghairiwa"
+    },
+    "transportType": {
+      "standard": "Kiwango",
+      "refrigerated": "Mnyororo Baridi",
+      "liveAnimal": "Wanyama Hai",
+      "hazardous": "Vifaa Hatari",
+      "oversized": "Ukubwa Mkubwa"
+    }
+  },
+  "moderation": {
+    "title": "Udhibiti wa Bidhaa",
+    "description": "Kagua bidhaa zinazosubiri kuidhinishwa.",
+    "pending": "kusubiri",
+    "allClear": "Bidhaa zote zimekaguliwa.",
+    "noPending": "Hakuna bidhaa zinazosubiri kuidhinishwa.",
+    "awaitingReview": "Inasubiri Mapitio",
+    "by": "Muuzaji:",
+    "stock": "Hisa",
+    "preview": "Nawe",
+    "approve": "Thibitisha",
+    "reject": "Kataa",
+    "confirmReject": "Kataa",
+    "cancelReject": "Acha tamaa",
+    "rejectReasonPlaceholder": "Andika sababu ya kukataliwa...",
+    "rejectReasonRequired": "Sababu ya kukataa ni lazima.",
+    "approveSuccess": "Bidhaa hiyo iliidhinishwa kwa mafanikio.",
+    "rejectSuccess": "Bidhaa hiyo ilikataliwa.",
+    "actionError": "Hitilafu imetokea wakati wa mchakato.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia bidhaa.",
+    "unauthorized": "Huna ruhusa ya kufikia ukurasa huu."
+  },
+  "sellerModeration": {
+    "title": "Udhibiti wa Muuzaji",
+    "description": "Kagua na udhibiti akaunti za muuzaji.",
+    "pending": "kusubiri",
+    "allClear": "Wauzaji wote walichunguzwa.",
+    "noPending": "Hakuna wauzaji wanaosubiri.",
+    "verify": "Thibitisha",
+    "suspend": "Simamisha",
+    "verifySuccess": "Muuzaji amethibitishwa kwa mafanikio.",
+    "suspendSuccess": "Muuzaji amesimamishwa kazi.",
+    "actionError": "Hitilafu imetokea wakati wa mchakato.",
+    "suspendReasonRequired": "Sababu ya kusimamishwa ni lazima.",
+    "suspendReasonPlaceholder": "Andika sababu ya kusimamishwa...",
+    "confirmSuspend": "Simamisha",
+    "cancelSuspend": "Acha tamaa",
+    "statusLabels": {
+      "pendingVerification": "Uthibitishaji Unaosubiriwa",
+      "active": "Inayotumika",
+      "suspended": "Kunyongwa",
+      "banned": "Imepigwa marufuku"
+    },
+    "filterAll": "Onyesha zote",
+    "filterPending": "Wale wanaosubiri",
+    "filterActive": "Mali",
+    "filterSuspended": "Imesimamishwa",
+    "unauthorized": "Huna ruhusa ya kufikia ukurasa huu.",
+    "businessName": "Jina la Biashara",
+    "businessType": "Ziara ya Biashara",
+    "email": "Barua pepe",
+    "phone": "Simu",
+    "status": "Hali",
+    "createdAt": "Tarehe ya Usajili"
+  },
+  "transporterModeration": {
+    "title": "Udhibiti wa Mtoa Huduma",
+    "description": "Kagua na udhibiti akaunti za mtoa huduma.",
+    "pending": "kusubiri",
+    "allClear": "Wasafirishaji wote walichunguzwa.",
+    "noPending": "Hakuna msafirishaji anayesubiri.",
+    "verify": "Thibitisha",
+    "suspend": "Simamisha",
+    "verifySuccess": "Kisafirishaji kilithibitishwa kwa mafanikio.",
+    "suspendSuccess": "Kisafirishaji kilisimamishwa.",
+    "actionError": "Hitilafu imetokea wakati wa mchakato.",
+    "suspendReasonRequired": "Sababu ya kusimamishwa ni lazima.",
+    "suspendReasonPlaceholder": "Andika sababu ya kusimamishwa...",
+    "confirmSuspend": "Simamisha",
+    "cancelSuspend": "Acha tamaa",
+    "statusLabels": {
+      "pendingVerification": "Uthibitishaji Unaosubiriwa",
+      "active": "Inayotumika",
+      "suspended": "Kunyongwa",
+      "banned": "Imepigwa marufuku"
+    },
+    "filterAll": "Onyesha zote",
+    "filterPending": "Wale wanaosubiri",
+    "filterActive": "Mali",
+    "filterSuspended": "Imesimamishwa",
+    "unauthorized": "Huna ruhusa ya kufikia ukurasa huu.",
+    "companyName": "Jina la Kampuni",
+    "contactPerson": "Mtu Aliyeidhinishwa",
+    "email": "Barua pepe",
+    "phone": "Simu",
+    "city": "Jiji",
+    "status": "Hali",
+    "createdAt": "Tarehe ya Usajili"
+  },
+  "transporterDetail": {
+    "notFound": "Hakuna msafirishaji aliyepatikana.",
+    "backToList": "Don kwa wasafirishaji",
+    "verified": "Imethibitishwa",
+    "totalTransports": "jumla ya usafirishaji",
+    "completed": "imekamilika",
+    "about": "Kuhusu",
+    "contact": "Taarifa za Mawasiliano",
+    "businessInfo": "Taarifa za Biashara",
+    "license": "Nambari ya Leseni",
+    "insurance": "Taarifa za Bima",
+    "fleet": "Taarifa za Meli",
+    "serviceRegions": "Maeneo ya Huduma",
+    "specializations": "Maeneo ya Utaalamu",
+    "certifications": "Vyeti"
+  },
+  "brands": {
+    "title": "Usimamizi wa Chapa",
+    "description": "Dhibiti chapa za bidhaa.",
+    "addBrand": "Ongeza Chapa",
+    "editBrand": "Hariri Chapa",
+    "noBrands": "Hakuna chapa zilizoongezwa bado.",
+    "brandName": "Jina la Chapa",
+    "brandDescription": "Maelezo",
+    "website": "Tovuti",
+    "logoUrl": "URL ya Nembo",
+    "save": "Hifadhi",
+    "saving": "Inahifadhi...",
+    "cancel": "Ghairi",
+    "edit": "Hariri",
+    "delete": "Futa",
+    "inactive": "Tulivu",
+    "products": "bidhaa",
+    "createSuccess": "Chapa imeongezwa kwa mafanikio",
+    "updateSuccess": "Chapa imesasishwa kwa mafanikio.",
+    "deleteSuccess": "Chapa ilifutwa kwa mafanikio.",
+    "saveError": "Hitilafu imetokea wakati wa kusajili chapa ya biashara.",
+    "deleteError": "Hitilafu imetokea wakati wa kufuta chapa ya biashara.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia chapa",
+    "unauthorized": "Huna ruhusa ya kufikia ukurasa huu."
+  },
+  "transporterReviews": {
+    "title": "Tathmini",
+    "reviewCount": "tathmini",
+    "noReviews": "Hakuna tathmini bado.",
+    "timeliness": "Uwasilishaji kwa wakati",
+    "communication": "Mawasiliano",
+    "carefulHandling": "Ushughulikiaji Makini",
+    "professionalism": "Utaalamu"
+  },
+  "transportOffers": {
+    "title": "Nukuu za Usafirishaji",
+    "description": "Dhibiti nukuu unazowasilisha kwa ajili ya maombi ya usafirishaji.",
+    "newOffer": "Pendekezo Jipya",
+    "transportRequestId": "Kitambulisho cha Ombi la Usafirishaji",
+    "requestIdPlaceholder": "Ingiza kitambulisho cha ombi la usafirishaji.",
+    "offeredPrice": "Bei ya Ofa",
+    "estimatedDays": "Muda Uliokadiriwa (Siku)",
+    "days": "siku",
+    "vehicleType": "Aina ya Gari",
+    "insuranceIncluded": "Bima Imejumuishwa",
+    "message": "Ujumbe",
+    "cancel": "Ghairi",
+    "sending": "Inatuma...",
+    "sendOffer": "Wasilisha Ofa",
+    "cancelOffer": "Ghairi",
+    "pendingTab": "Kusubiri",
+    "historyTab": "Zamani",
+    "noPendingOffers": "Huna ofa zinazosubiri kuwasilishwa.",
+    "noHistory": "Hakuna ofa za awali zilizopatikana.",
+    "status": {
+      "pending": "Kusubiri",
+      "accepted": "Imekubaliwa",
+      "rejected": "Imekataliwa",
+      "expired": "Muda wake umekwisha.",
+      "cancelled": "Imeghairiwa"
+    },
+    "createSuccess": "Ofa iliwasilishwa kwa mafanikio.",
+    "createError": "Hitilafu imetokea wakati wa kutuma ofa.",
+    "cancelSuccess": "Ofa hiyo ilifutwa.",
+    "cancelError": "Hitilafu imetokea wakati wa kughairi ofa.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia ofa."
+  },
+  "animalInfo": {
+    "title": "Taarifa za Wanyama na Bidhaa",
+    "animalTab": "Mnyama",
+    "healthTab": "Afya",
+    "vaccinationsTab": "Chanjo",
+    "veterinaryTab": "Daktari wa mifugo",
+    "breed": "Mbio",
+    "genderLabel": "Jinsia",
+    "gender": {
+      "male": "Mwanaume",
+      "female": "Mwanamke",
+      "unknown": "Haijulikani"
+    },
+    "age": "Umri",
+    "months": "mwezi",
+    "weight": "Uzito",
+    "color": "Rangi",
+    "tagNumber": "Nambari ya Sikio",
+    "healthStatus": "Hali ya afya",
+    "health": {
+      "healthy": "Afya",
+      "underTreatment": "Chini ya Matibabu",
+      "recovering": "Anapona.",
+      "quarantined": "Yuko chini ya katantini",
+      "unknown": "Haijulikani"
+    },
+    "purposeLabel": "Matumizi Yaliyokusudiwa",
+    "purpose": {
+      "breeding": "Stud",
+      "dairy": "Maziwa",
+      "meat": "Nyama",
+      "egg": "Yai",
+      "wool": "Sufu",
+      "working": "Kazi",
+      "pet": "Ndani",
+      "other": "Nyingine"
+    },
+    "pregnancy": "Mimba",
+    "pregnant": "Mjamzito",
+    "microchip": "Nambari ya Microchip",
+    "passport": "Nambari ya Pasipoti",
+    "sireDetails": "Taarifa za Baba",
+    "damDetails": "Taarifa Kuu",
+    "diagnosis": "Utambuzi",
+    "treatment": "Matibabu",
+    "medications": "Dawa",
+    "veterinarian": "Daktari wa mifugo",
+    "nextDue": "Historia Inayofuata ya Waasi",
+    "prescriptionRequired": "Inahitaji agizo la daktari",
+    "targetSpecies": "Ziara za Lengo",
+    "activeIngredients": "Viungo Vinavyofanya Kazi",
+    "registrationNo": "Nambari ya Usajili",
+    "storage": "Hifadhi",
+    "chemicalTab": "Kemikali",
+    "feedTab": "Chambo",
+    "seedTab": "Mbegu",
+    "machineryTab": "Mashine",
+    "organic": "Kikaboni",
+    "toxicity": "Sumu",
+    "gmoFree": "Isiyo na GMO",
+    "protein": "Protini",
+    "fat": "Mafuta",
+    "fiber": "Nyuzinyuzi",
+    "hybrid": "Mseto",
+    "germination": "Kuota",
+    "daysToMaturity": "Ukomavu",
+    "daysLabel": "siku",
+    "warranty": "Imehakikishwa",
+    "power": "Nguvu",
+    "hoursUsed": "Saa za Matumizi",
+    "hours": "saa",
+    "powerSource": "Ugavi wa umeme"
+  },
+  "productVariants": {
+    "title": "Lahaja za Bidhaa",
+    "variantCount": "lahaja",
+    "inStock": "Ipo kwenye hisa",
+    "outOfStock": "Imeuzwa yote"
+  },
+  "productPrices": {
+    "title": "Bei (Sarafu Nyingi)",
+    "autoConversion": "Mabadiliko ya Kiotomatiki",
+    "validUntil": "Uhalali"
+  },
+  "requestTransport": {
+    "title": "Unda Ombi la Usafirishaji",
+    "pickupLocation": "Sehemu ya Kupakia",
+    "deliveryLocation": "Sehemu ya Uwasilishaji",
+    "city": "Jiji",
+    "address": "Anwani",
+    "transportType": "Ziara ya Usafiri",
+    "types": {
+      "standard": "Kiwango",
+      "refrigerated": "Mnyororo Baridi",
+      "liveAnimal": "Wanyama Hai",
+      "hazardous": "Vifaa Hatari",
+      "oversized": "Ukubwa Mkubwa"
+    },
+    "weight": "Uzito (kg)",
+    "weightPlaceholder": "kilo",
+    "preferredPickupDate": "Tarehe ya Kupakia Inayopendelewa",
+    "preferredDeliveryDate": "Tarehe ya Uwasilishaji Inayopendelewa",
+    "urgent": "Usafiri wa Haraka",
+    "specialInstructions": "Maelekezo Maalum",
+    "instructionsPlaceholder": "Andika maagizo yako maalum hapa...",
+    "cancel": "Acha tamaa",
+    "submit": "Unda Mahitaji",
+    "submitting": "Katika mchakato wa uumbaji...",
+    "success": "Ombi la usafirishaji limeundwa kwa mafanikio.",
+    "error": "Hitilafu imetokea wakati wa kuunda ombi la usafirishaji."
+  },
+  "transportTracking": {
+    "title": "Ufuatiliaji wa Usafirishaji",
+    "noTracking": "Hakuna taarifa ya ufuatiliaji inayopatikana bado.",
+    "update": "Sasisho"
+  },
+  "locations": {
+    "title": "Anwani zangu",
+    "description": "Dhibiti anwani zako zilizosajiliwa.",
+    "addLocation": "Ongeza Anwani",
+    "editLocation": "Hariri Anwani",
+    "noLocations": "Bado huna anwani iliyosajiliwa.",
+    "name": "Jina la Anwani",
+    "namePlaceholder": "Kwa mfano: Nyumba, Kazi, Shamba",
+    "address": "Anwani",
+    "addressLine2": "Mstari wa Anwani 2",
+    "city": "Jiji",
+    "state": "Wilaya / Mkoa",
+    "postalCode": "Nambari ya posta",
+    "phone": "Simu",
+    "email": "Barua pepe",
+    "cancel": "Acha tamaa",
+    "save": "Hifadhi",
+    "saving": "Inahifadhi...",
+    "typePickup": "Inapakia",
+    "typeDelivery": "Uwasilishaji",
+    "typeBoth": "Jumla",
+    "createSuccess": "Anwani imeongezwa kwa mafanikio.",
+    "createError": "Hitilafu imetokea wakati wa kuongeza anwani.",
+    "updateSuccess": "Anwani imesasishwa kwa mafanikio.",
+    "updateError": "Hitilafu imetokea wakati wa kusasisha anwani.",
+    "deleteLocation": "Futa Anwani",
+    "deleteSuccess": "Anwani imefutwa",
+    "deleteError": "Hitilafu imetokea wakati wa kufuta anwani.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia anwani."
+  },
+  "systemSettings": {
+    "title": "Mipangilio ya Mfumo",
+    "description": "Tazama sarafu ya mfumo, lugha, njia za malipo, usafirishaji, na mipangilio ya kodi.",
+    "unauthorized": "Huna ruhusa ya kufikia ukurasa huu.",
+    "currenciesTab": "Sarafu",
+    "languagesTab": "Lugha",
+    "paymentTab": "Mbinu za Malipo",
+    "shippingTab": "Mizigo",
+    "taxTab": "Kodi",
+    "active": "Inayotumika",
+    "inactive": "Tulivu",
+    "default": "Chaguo-msingi",
+    "noCurrencies": "Sarafu bado haijabainishwa.",
+    "noLanguages": "Lugha bado haijafafanuliwa.",
+    "noPaymentMethods": "Njia ya malipo bado haijafafanuliwa.",
+    "noCarriers": "Kampuni ya usafirishaji bado haijatambuliwa.",
+    "noZones": "Eneo la mizigo bado halijabainishwa.",
+    "noTaxRates": "Kiwango cha kodi bado hakijafafanuliwa.",
+    "carriers": "Makampuni ya Usafirishaji",
+    "zones": "Maeneo ya Mizigo",
+    "countries": "Nchi",
+    "rates": "Ada za Usafirishaji",
+    "noRates": "Gharama za usafirishaji bado hazijabainishwa.",
+    "freeShipping": "Usafirishaji Bila Malipo",
+    "deliveryDays": "muda wa utoaji wa siku"
+  },
+  "pushPermission": {
+    "title": "Washa arifa",
+    "description": "Pokea arifa kuhusu ujumbe mpya, ofa, na masasisho ya oda.",
+    "allow": "Ruhusu",
+    "dismiss": "Funga"
+  },
+  "healthRecords": {
+    "title": "Kumbukumbu za Afya",
+    "description": "Dhibiti rekodi za afya ya wanyama na historia ya matibabu.",
+    "addRecord": "Ongeza Rekodi",
+    "editRecord": "Hariri Rekodi",
+    "deleteRecord": "Futa Rekodi",
+    "noRecords": "Rekodi ya afya bado haijaongezwa.",
+    "animalInfoId": "Kitambulisho cha Mnyama",
+    "animalInfoIdPlaceholder": "Ingiza kitambulisho cha taarifa za wanyama.",
+    "recordType": "Ziara ya Usajili",
+    "recordTypePlaceholder": "Mifano: Uchunguzi, Matibabu, Upasuaji",
+    "recordDate": "Tarehe ya Usajili",
+    "followUpDate": "Tarehe ya Kuangalia",
+    "veterinarianName": "Daktari wa mifugo",
+    "veterinarianLicense": "Nambari ya Leseni",
+    "clinicName": "Kliniki",
+    "diagnosis": "Utambuzi",
+    "treatment": "Matibabu",
+    "medications": "Dawa",
+    "medicationsPlaceholder": "Mfano: Penicillin 500mg, Ibuprofen",
+    "notes": "Vidokezo",
+    "documentUrl": "URL ya Hati",
+    "saving": "Inahifadhi...",
+    "createSuccess": "Rekodi ya afya imeongezwa kwa mafanikio.",
+    "updateSuccess": "Rekodi ya afya imesasishwa kwa mafanikio.",
+    "deleteSuccess": "Rekodi ya afya imefutwa kwa mafanikio.",
+    "saveError": "Hitilafu imetokea wakati wa kuhifadhi rekodi.",
+    "deleteError": "Hitilafu imetokea wakati wa kufuta rekodi.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia rekodi"
+  },
+  "vaccinations": {
+    "title": "Kumbukumbu za Chanjo",
+    "description": "Dhibiti rekodi na kalenda za chanjo za wanyama.",
+    "addVaccination": "Ongeza Mwasi",
+    "editVaccination": "Mpangilio wa Waasi",
+    "deleteVaccination": "Sil waasi",
+    "noVaccinations": "Rekodi ya chanjo bado haijaongezwa.",
+    "animalInfoId": "Kitambulisho cha Mnyama",
+    "animalInfoIdPlaceholder": "Ingiza kitambulisho cha taarifa za wanyama.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Mfano: Chanjo ya SAT, Brucella",
+    "vaccineType": "Ziara ya Waasi",
+    "vaccineTypePlaceholder": "Mfano: Hai, Haitumiki",
+    "batchNumber": "Nambari ya Chama",
+    "vaccinationDate": "Historia ya Mwasi",
+    "nextDueDate": "Historia Inayofuata ya Waasi",
+    "veterinarianName": "Daktari wa mifugo",
+    "veterinarianLicense": "Nambari ya Leseni",
+    "notes": "Vidokezo",
+    "certificateUrl": "URL ya Cheti",
+    "saving": "Inahifadhi...",
+    "createSuccess": "Rekodi ya chanjo imeongezwa kwa mafanikio.",
+    "updateSuccess": "Rekodi ya chanjo imesasishwa kwa mafanikio.",
+    "deleteSuccess": "Rekodi ya chanjo imefutwa kwa mafanikio.",
+    "saveError": "Hitilafu imetokea wakati wa kusajili chanjo.",
+    "deleteError": "Hitilafu imetokea wakati wa kufuta chanjo.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia chanjo."
+  },
+  "shippingCarriers": {
+    "title": "Makampuni ya Usafirishaji",
+    "description": "Dhibiti taarifa za kampuni ya usafirishaji.",
+    "addCarrier": "Ongeza Kampuni",
+    "editCarrier": "Hariri Kampuni",
+    "noCarriers": "Hakuna kampuni ya usafirishaji iliyoongezwa bado.",
+    "carrierName": "Jina la Kampuni",
+    "carrierNamePlaceholder": "Mfano: Aras Kargo, MNG",
+    "code": "Msimbo",
+    "codePlaceholder": "Mfano: ARAS",
+    "website": "Tovuti",
+    "trackingUrlTemplate": "Fuata Kiolezo cha URL",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Nchi Zinazoungwa Mkono",
+    "supportedCountriesPlaceholder": "Mfano: TR, Marekani, DE",
+    "active": "Inayotumika",
+    "inactive": "Tulivu",
+    "saving": "Inahifadhi...",
+    "edit": "Hariri",
+    "delete": "Futa",
+    "createSuccess": "Kampuni ya usafirishaji imeongezwa kwa mafanikio.",
+    "updateSuccess": "Kampuni ya usafirishaji imesasishwa kwa mafanikio.",
+    "deleteSuccess": "Kampuni ya usafirishaji imefutwa kwa mafanikio.",
+    "saveError": "Hitilafu imetokea wakati wa kusajili kampuni ya usafirishaji.",
+    "deleteError": "Hitilafu imetokea wakati wa kufuta taarifa za kampuni ya usafirishaji.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia makampuni ya mizigo."
+  },
+  "shippingZones": {
+    "title": "Maeneo ya Mizigo",
+    "description": "Dhibiti maeneo na maeneo ya mizigo.",
+    "addZone": "Ongeza Eneo",
+    "editZone": "Hariri Eneo",
+    "noZones": "Hakuna eneo la mizigo lililoongezwa bado.",
+    "zoneName": "Jina la Mkoa",
+    "zoneNamePlaceholder": "Mfano: Ulaya, Amerika Kaskazini",
+    "countryCodes": "Misimbo ya Nchi",
+    "countryCodesPlaceholder": "Mfano: TR, DE, FR",
+    "active": "Inayotumika",
+    "inactive": "Tulivu",
+    "saving": "Inahifadhi...",
+    "edit": "Hariri",
+    "delete": "Futa",
+    "createSuccess": "Eneo hilo limeongezwa kwa mafanikio.",
+    "updateSuccess": "Eneo hilo limesasishwa kwa mafanikio.",
+    "deleteSuccess": "Eneo hilo limesafishwa kwa mafanikio.",
+    "saveError": "Hitilafu imetokea wakati wa kuhifadhi eneo hilo.",
+    "deleteError": "Hitilafu imetokea wakati wa kufuta eneo hilo.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia maeneo"
+  },
+  "shippingRates": {
+    "title": "Ada za Usafirishaji",
+    "description": "Dhibiti gharama za usafirishaji na chaguzi za uwasilishaji.",
+    "addRate": "Ongeza Ada",
+    "editRate": "Ada ya Kurekebisha",
+    "noRates": "Gharama za usafirishaji bado hazijaongezwa.",
+    "zone": "Eneo",
+    "carrier": "Kampuni",
+    "selectZone": "Chagua eneo",
+    "selectCarrier": "Chagua kampuni",
+    "shippingCost": "Ada ya Usafirishaji",
+    "currency": "Sarafu",
+    "estimatedDeliveryDays": "Makadirio ya Uwasilishaji (Siku)",
+    "minWeight": "Uzito wa Chini",
+    "maxWeight": "Uzito wa Juu",
+    "minOrderAmount": "Kiasi cha Chini cha Oda",
+    "freeShipping": "Usafirishaji Bila Malipo",
+    "free": "Bure",
+    "active": "Inayotumika",
+    "inactive": "Tulivu",
+    "cost": "Ada",
+    "deliveryDays": "Uwasilishaji",
+    "status": "Hali",
+    "saving": "Inahifadhi...",
+    "createSuccess": "Ada imeongezwa kwa mafanikio.",
+    "updateSuccess": "Mshahara umesasishwa kwa mafanikio.",
+    "deleteSuccess": "Ada imefutwa kwa mafanikio.",
+    "saveError": "Hitilafu imetokea wakati wa kuhifadhi ada.",
+    "deleteError": "Hitilafu imetokea wakati wa kufuta ada.",
+    "fetchError": "Hitilafu imetokea wakati wa kupakia ada."
+  },
+  "metadata": {
+    "title": "Biashara ya Mifugo - Jukwaa la Biashara ya Wanyama Hai",
+    "description": "Jukwaa la biashara ya wanyama hai linaloaminika zaidi duniani. Ununuzi na uuzaji wa wanyama salama na wazi.",
+    "pages": {
+      "about": {
+        "title": "Kuhusu Sisi",
+        "description": "Jifunze kuhusu Biashara ya Mifugo. Jukwaa la biashara ya wanyama hai linaloaminika."
+      },
+      "contact": {
+        "title": "Mawasiliano",
+        "description": "Wasiliana nasi. Timu ya usaidizi kwa wateja ya Livestock Trading iko tayari kukusaidia."
+      },
+      "terms": {
+        "title": "Masharti ya Matumizi",
+        "description": "Sheria na Masharti ya Biashara ya Mifugo."
+      },
+      "privacy": {
+        "title": "Sera ya Faragha",
+        "description": "Sera ya faragha ya Biashara ya Mifugo. Jifunze jinsi data yako binafsi inavyolindwa."
+      },
+      "products": {
+        "title": "Bidhaa",
+        "description": "Vinjari orodha za wanyama hai. Matangazo ya kuaminika ya ng'ombe, kondoo, na zaidi."
+      },
+      "sellers": {
+        "title": "Wauzaji",
+        "description": "Gundua wauzaji wa wanyama wanaoaminika. Wasifu na maoni ya muuzaji yaliyothibitishwa."
+      },
+      "transporters": {
+        "title": "wasafirishaji",
+        "description": "Gundua kampuni za usafiri wa wanyama. Usafiri salama na wa kitaalamu wa wanyama hai."
+      },
+      "search": {
+        "title": "Tafuta",
+        "description": "Tafuta miongoni mwa orodha za wanyama hai. Utafutaji rahisi kwa chaguzi za kuchuja na kupanga."
+      },
+      "faq": {
+        "title": "Maswali Yanayoulizwa Mara kwa Mara",
+        "description": "Maswali na majibu yanayoulizwa mara kwa mara kuhusu biashara ya mifugo."
+      },
+      "productDetail": {
+        "title": "{title} - Inauzwa",
+        "description": "Inauzwa katika {title} - {city}. Bofya kwa maelezo na maelezo ya mawasiliano."
+      },
+      "sellerDetail": {
+        "title": "{jina} - Wasifu wa Muuzaji",
+        "description": "Wasifu wa muuzaji wa {name}. Mapitio, orodha, na maelezo ya mawasiliano."
+      },
+      "transporterDetail": {
+        "title": "{jina} - Wasifu wa Mtoa Huduma",
+        "description": "Wasifu wa msafirishaji wa {name}. Maeneo ya huduma, mapitio, na maelezo ya mawasiliano."
+      }
+    }
   }
 }

@@ -11,17 +11,30 @@
     "back": "Takaisin",
     "next": "Eteenpäin",
     "close": "Lähellä",
+    "unauthorized": "Sinulla ei ole oikeutta käyttää tätä sivua.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Kirjaudu sisään",
-    "register": "Rekisteröidy"
+    "register": "Rekisteröidy",
+    "previous": "Entinen",
+    "zoomIn": "Lähennä",
+    "previousImage": "Edellinen kuva",
+    "nextImage": "Seuraava kuva",
+    "closeLightbox": "Sulje galleria",
+    "imageLightbox": "Kuvagalleria",
+    "slideN": "Dia {n}",
+    "viewMore": "Näytä lisää"
   },
   "header": {
     "products": "Tuotteet",
     "sellers": "Myyjät",
+    "transporters": "kuljettajat",
     "about": "Tietoa meistä",
+    "search": "Haku",
     "dashboard": "Paneeli",
     "settings": "Asetukset",
-    "logout": "Kirjaudu ulos"
+    "logout": "Kirjaudu ulos",
+    "menu": "Valikko",
+    "language": "Kielen valinta"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Unohdin salasanani.",
       "noAccount": "Eikö sinulla ole tiliä?",
       "register": "Rekisteröidy",
-      "errorDefault": "Kirjautuminen epäonnistui. Tarkista tietosi."
+      "errorDefault": "Kirjautuminen epäonnistui. Tarkista tietosi.",
+      "orContinueWith": "tai jatka",
+      "continueWithGoogle": "Jatka Googlen kanssa",
+      "continueWithApple": "Jatka Applen kanssa.",
+      "socialLoginError": "Sosiaalisen median kirjautuminen epäonnistui. Yritä uudelleen.",
+      "appleComingSoon": "Hyvin pian",
+      "showPassword": "Näytä salasana",
+      "hidePassword": "Piilota salasana"
     },
     "register": {
       "title": "Rekisteröidy",
@@ -51,7 +71,17 @@
       "login": "Kirjaudu sisään",
       "passwordMismatch": "Salasanat eivät täsmää.",
       "passwordTooShort": "Salasanan on oltava vähintään 6 merkkiä pitkä.",
-      "errorDefault": "Rekisteröinti epäonnistui. Yritä uudelleen."
+      "errorDefault": "Rekisteröinti epäonnistui. Yritä uudelleen.",
+      "showPassword": "Näytä salasana",
+      "hidePassword": "Piilota salasana",
+      "passwordStrength": {
+        "minLength": "Vähintään 8 merkkiä",
+        "uppercase": "Isot kirjaimet (A–Ö)",
+        "lowercase": "Pienet kirjaimet (a-z)",
+        "number": "Numero (0–9)",
+        "special": "Erikoismerkit (!@#$%)"
+      },
+      "registerSuccess": "Tilisi on luotu onnistuneesti! Sinut ohjataan kirjautumissivulle..."
     },
     "forgotPassword": {
       "title": "Unohdin salasanani.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Pyydä uutta yhteyttä",
       "passwordMismatch": "Salasanat eivät täsmää.",
       "passwordTooShort": "Salasanan on oltava vähintään 6 merkkiä pitkä.",
-      "errorDefault": "Salasanan palautus epäonnistui. Yhteys voi olla virheellinen tai vanhentunut."
+      "errorDefault": "Salasanan palautus epäonnistui. Yhteys voi olla virheellinen tai vanhentunut.",
+      "showPassword": "Näytä salasana",
+      "hidePassword": "Piilota salasana"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "aktiivinen",
       "totalViews": "Katselukertoja yhteensä",
       "thisWeek": "tällä viikolla",
+      "allTime": "kaikkina aikoina",
       "favorites": "Suosikki",
       "onYourListings": "mainoksissasi",
+      "savedItems": "rekisteröity tuote",
       "messages": "Viesti",
-      "unread": "lukematon"
+      "notifications": "Ilmoitukset",
+      "unread": "lukematon",
+      "views": "näkymät",
+      "draft": "Luonnos",
+      "sold": "Myyty",
+      "pending": "Odottaa",
+      "awaitingApproval": "odottaa hyväksyntää",
+      "totalSales": "Kokonaismyynti",
+      "completedSales": "toteutetut myynnit",
+      "revenue": "Tulot",
+      "totalRevenue": "kokonaistulot"
     },
     "recentListings": "Viimeisimmät ilmoituksesi",
+    "recentActivity": "Viimeaikaiset toiminnot",
     "recentMessages": "Viimeisimmät viestit",
+    "quickLinks": "Pikakäyttö",
     "noListings": "Et ole vielä lisännyt mainoksia.",
+    "noActivity": "Ei vielä toimintaa.",
     "noMessages": "Et ole vielä saanut viestiä.",
     "noNotifications": "Et ole vielä saanut ilmoituksia.",
     "viewAllListings": "Näytä kaikki ilmoitukset",
-    "viewAllMessages": "Näytä kaikki viestit"
+    "viewAllMessages": "Näytä kaikki viestit",
+    "viewNotifications": "Näytä ilmoitukset",
+    "viewFavorites": "Suosikit Gor",
+    "recentlyViewed": "Äskettäin katsotut",
+    "fetchError": "Paneelitietojen latauksessa tapahtui virhe."
   },
   "dashboardNav": {
     "overview": "Yleiskatsaus",
@@ -115,7 +166,61 @@
     "notifications": "Ilmoitukset",
     "profile": "Profiili",
     "settings": "Asetukset",
-    "newListing": "Lisää uusi ilmoitus"
+    "newListing": "Lisää uusi ilmoitus",
+    "becomeSeller": "Ryhdy myyjäksi",
+    "categories": "Luokat",
+    "offers": "Ehdotukset",
+    "deals": "Sopimukset",
+    "farms": "Tilani",
+    "transport": "Kuljetus",
+    "moderation": "Moderointi",
+    "sellerModeration": "Myyjän moderointi",
+    "transporterModeration": "Kantoaallon moderointi",
+    "brands": "Tuotemerkit",
+    "transportOffers": "Toimitustarjoukset",
+    "healthRecords": "Terveystiedot",
+    "vaccinations": "Rokottajat",
+    "shippingCarriers": "Laivayhtiöt",
+    "shippingZones": "Rahtialueet",
+    "shippingRates": "Toimituskulut",
+    "systemSettings": "Järjestelmäasetukset",
+    "locations": "Omat osoitteeni"
+  },
+  "profile": {
+    "title": "Profiilitiedot",
+    "description": "Voit päivittää henkilötietojasi täällä.",
+    "personalInfo": "Henkilötiedot",
+    "contactInfo": "Yhteystiedot",
+    "preferences": "Asetukset",
+    "firstName": "Nimi",
+    "firstNamePlaceholder": "Anna nimesi",
+    "surname": "Sukunimi",
+    "surnamePlaceholder": "Anna sukunimesi.",
+    "displayName": "Näytettävä nimi",
+    "phone": "Puhelinnumero",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Vahvistettu",
+    "phoneNotVerified": "Vahvistamaton",
+    "verifyPhone": "Vahvista puhelinnumero",
+    "country": "Maa",
+    "selectCountry": "Valitse maa",
+    "language": "Kieliasetus",
+    "selectLanguage": "Valitse kieli",
+    "currency": "Valuutta",
+    "selectCurrency": "Valitse valuutta.",
+    "saveChanges": "Tallenna muutokset",
+    "saving": "Tallennetaan...",
+    "saveSuccess": "Profiilitietosi on päivitetty.",
+    "saveError": "Profiilin päivityksessä tapahtui virhe.",
+    "avatar": "Profiilikuva",
+    "changeAvatar": "Vaihda kuva",
+    "removeAvatar": "Poista kuva",
+    "currencies": {
+      "try": "Turkin liira",
+      "usd": "Yhdysvaltain dollari",
+      "eur": "Euro",
+      "gbp": "Britannian punta"
+    }
   },
   "myListings": {
     "title": "Mainokseni",
@@ -124,36 +229,95 @@
     "createFirst": "Luo ensimmäinen ilmoituksesi.",
     "fetchError": "Mainosten lataamisessa tapahtui virhe.",
     "deleteSuccess": "Mainos poistettiin onnistuneesti.",
-    "deleteError": "Mainoksen poistamisessa tapahtui virhe.",
-    "activateSuccess": "Mainos on aktivoitu.",
-    "deactivateSuccess": "Listaus on poistettu käytöstä.",
+    "deleteError": "Mainosta poistettaessa tapahtui virhe.",
+    "publishSuccess": "Mainos on lähetetty hyväksyttäväksi.",
+    "unpublishSuccess": "Mainos on luonnosteltu.",
     "statusError": "Tilaa muutettaessa tapahtui virhe.",
     "filters": {
       "all": "Kaikki ne",
-      "active": "Aktiivinen",
       "draft": "Luonnos",
       "pending": "Odotetaan hyväksyntää",
+      "active": "Aktiivinen",
+      "rejected": "Hylätty",
       "sold": "Myyty"
     },
     "actions": {
       "edit": "Muokata",
       "delete": "Poistaa",
-      "activate": "Aktivoida",
-      "deactivate": "Passiivinen rakenne"
+      "publish": "Lähetä hyväksyttäväksi",
+      "unpublish": "Luonnos",
+      "menu": "Transaktiot"
     },
     "deleteDialog": {
       "title": "Poista mainos",
       "description": "Haluatko varmasti poistaa tämän ilmoituksen? Tätä toimintoa ei voi peruuttaa.",
       "cancel": "Peruuttaa",
       "confirm": "Poistaa"
-    }
+    },
+    "loadMore": "Lataa lisää",
+    "loadingMore": "Ladataan..."
   },
   "favorites": {
     "title": "Suosikkini",
     "description": "Seuraa täällä tuotteita, joista pidät.",
     "noFavorites": "Et ole vielä lisännyt suosikkituotteita.",
     "browseProducts": "Selaa tuotteita",
-    "fetchError": "Suosikkien lataamisessa tapahtui virhe."
+    "fetchError": "Suosikkien lataamisessa tapahtui virhe.",
+    "loadMore": "Lataa lisää",
+    "loadingMore": "Ladataan..."
+  },
+  "messages": {
+    "title": "Viestit",
+    "description": "Ota yhteyttä ostajiin ja myyjiin.",
+    "noConversations": "Et ole vielä saanut viestiä.",
+    "startConversation": "Jos haluat kysyä mainoksesta, siirry mainokseen.",
+    "fetchError": "Viestien lataamisessa tapahtui virhe",
+    "sendError": "Viestin lähettämisessä tapahtui virhe.",
+    "connectionError": "Yhteys epäonnistui. Yritetään uudelleen...",
+    "connected": "Se yhdisti",
+    "connecting": "Yhdistetään...",
+    "searchPlaceholder": "Hae viestien läpi...",
+    "typeMessage": "Kirjoita viestisi...",
+    "send": "Lähetä",
+    "sending": "Lähetetään...",
+    "typing": "Siinä sanotaan...",
+    "read": "Lukea",
+    "delivered": "Lähetetty",
+    "today": "Tänään",
+    "yesterday": "Eilen",
+    "noMessages": "Ei vielä viestejä. Aloita keskustelu!",
+    "loadMore": "Lataa lisää",
+    "loadingMessages": "Viestejä ladataan...",
+    "about": "Noin",
+    "product": "Tuote",
+    "startNewConversation": "Aloita uusi keskustelu",
+    "selectConversation": "Valitse keskustelu tai aloita uusi.",
+    "online": "Verkossa",
+    "offline": "Offline-tilassa",
+    "lastSeen": "Viimeksi nähty",
+    "deleteConversation": "Poista keskustelu",
+    "deleteConfirm": "Haluatko varmasti poistaa tämän keskustelun?",
+    "deleted": "Keskustelu poistettiin.",
+    "defaultUser": "Käyttäjä",
+    "noResults": "Ei tuloksia.",
+    "newConversation": "Uusi keskustelu"
+  },
+  "notifications": {
+    "title": "Ilmoitukset",
+    "description": "Tarkastele ja hallinnoi ilmoituksiasi.",
+    "markAllAsRead": "Merkitse kaikki luetuiksi",
+    "noNotifications": "Et ole vielä saanut ilmoituksia.",
+    "viewAll": "Näytä kaikki ilmoitukset",
+    "today": "Tänään",
+    "yesterday": "Eilen",
+    "older": "Vanhempi",
+    "types": {
+      "system": "Järjestelmä",
+      "message": "Viesti",
+      "offer": "Tarjous",
+      "order": "Tilata",
+      "listing": "Ilmoitus"
+    }
   },
   "settings": {
     "title": "Asetukset",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Uudet salasanat eivät täsmää.",
       "passwordTooShort": "Uuden salasanan on oltava vähintään 6 merkkiä pitkä.",
       "sessionError": "Istuntotietoja ei löytynyt.",
-      "errorDefault": "Salasanaa ei voitu päivittää. Tarkista nykyinen salasanasi."
+      "errorDefault": "Salasanaa ei voitu päivittää. Tarkista nykyinen salasanasi.",
+      "showPassword": "Näytä salasana",
+      "hidePassword": "Piilota salasana"
+    },
+    "preferences": {
+      "title": "Ilmoitus- ja näkymäasetukset",
+      "description": "Hallinnoi ilmoituskanaviasi ja näyttöasetuksiasi.",
+      "notifications": "Ilmoitukset",
+      "emailNotifications": "Sähköposti-ilmoitukset",
+      "emailNotificationsDesc": "Vastaanota sähköposti-ilmoituksia uusista viesteistä ja mainospäivityksistä.",
+      "smsNotifications": "Tekstiviesti-ilmoitukset",
+      "smsNotificationsDesc": "Vastaanota tekstiviestejä tärkeistä ilmoituksista.",
+      "pushNotifications": "Push-ilmoitukset",
+      "pushNotificationsDesc": "Vastaanota push-ilmoituksia välittömistä päivityksistä.",
+      "appearance": "Ulkonäkö",
+      "darkMode": "Tumma tila",
+      "darkModeDesc": "Vaihda tummaan teemaan.",
+      "saveChanges": "Tallenna asetukset",
+      "saving": "Tallennetaan...",
+      "saveSuccess": "Asetuksesi on päivitetty.",
+      "saveError": "Asetusten päivittämisessä tapahtui virhe.",
+      "loadError": "Asetuksia ei voitu ladata."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Elävien eläinten kauppapaikka",
       "subtitle": "Luotettavin elävien eläinten kauppapaikka. Osta ja myy nautoja ja lampaita turvallisesti.",
       "cta": "Aloita nyt",
-      "viewListings": "Näytä mainokset"
+      "viewListings": "Näytä mainokset",
+      "searchPlaceholder": "Etsi eläimiä... (lehmiä, lampaita, vuohia...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Mainosten esittely",
       "viewAll": "Katso kaikki"
+    },
+    "cta": {
+      "title": "Aloita nyt",
+      "subtitle": "Ota paikkasi alustalla, jossa tuhannet myyjät ja ostajat kohtaavat.",
+      "button": "Rekisteröidy ilmaiseksi"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Tietoa meistä",
     "contact": "Viestintä",
     "terms": "Käyttöehdot",
-    "privacy": "Tietosuojakäytäntö"
+    "privacy": "Tietosuojakäytäntö",
+    "company": "Yritys",
+    "support": "Tukea",
+    "legal": "Oikeudellinen",
+    "followUs": "Seuraa meitä",
+    "newsletter": "Tiedote",
+    "newsletterDescription": "Älä missaa uusimpia ilmoituksia ja tarjouksia.",
+    "subscribe": "Tilaa",
+    "emailPlaceholder": "Sähköpostiosoitteesi",
+    "tagline": "Turkin luotettavin elävien eläinten kauppapaikka.",
+    "sellers": "Myyjät",
+    "products": "Tuotteet",
+    "map": "Kartta",
+    "appleLoginComingSoon": "Kirjautuminen Applella aktivoituu pian.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "Usein kysytyt kysymykset"
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "description": "Vastauksia usein kysyttyihin kysymyksiin alustastamme.",
+    "noFaqs": "Kysymyksiä ei ole vielä lisätty."
+  },
+  "about": {
+    "title": "Tietoa meistä",
+    "subtitle": "Turkin luotettavin elävien eläinten kauppapaikka.",
+    "mission": {
+      "title": "Missiomme",
+      "description": "Digitalisoimalla elävien eläinten kauppaa pyrimme luomaan turvallisen, läpinäkyvän ja tehokkaan yhteyden tuottajien ja ostajien välille."
+    },
+    "vision": {
+      "title": "Visiomme",
+      "description": "Olla digitaalisen transformaation edelläkävijä maatalousalalla ja tulla globaaliksi alustaksi elävien eläinten kaupassa."
+    },
+    "values": {
+      "title": "Arvomme",
+      "trust": {
+        "title": "Luottamus",
+        "description": "Läpinäkyvyys ja luotettavuus ovat olennaisia kaikissa liiketoimissa."
+      },
+      "quality": {
+        "title": "Laatu",
+        "description": "Jatkuva parantaminen parhaan palvelun tarjoamiseksi."
+      },
+      "innovation": {
+        "title": "Innovaatio",
+        "description": "Teollisuuden muuttaminen teknologian avulla."
+      }
+    },
+    "stats": {
+      "users": "Rekisteröitynyt käyttäjä",
+      "sellers": "Aktiivinen myyjä",
+      "products": "Ilmoitus",
+      "transactions": "Onnistunut tapahtuma"
+    }
+  },
+  "contact": {
+    "title": "Viestintä",
+    "subtitle": "Ota meihin yhteyttä, jos sinulla on kysyttävää.",
+    "form": {
+      "title": "Kirjoita meille",
+      "name": "Sinun nimesi",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "Sähköposti",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Aihe",
+      "subjectPlaceholder": "Viestisi aihe",
+      "message": "Viestisi",
+      "messagePlaceholder": "Kirjoita viestisi tähän...",
+      "submit": "Lähetä",
+      "submitting": "Lähetetään...",
+      "success": "Viestisi on lähetetty onnistuneesti. Otamme sinuun yhteyttä mahdollisimman pian.",
+      "error": "Viestin lähettämisessä tapahtui virhe. Yritä uudelleen."
+    },
+    "info": {
+      "title": "Yhteystiedot",
+      "address": "Osoite",
+      "addressValue": "Istanbul, Turkki",
+      "email": "Sähköposti",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Puhelin",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Työajat",
+      "workingHoursValue": "Maanantai - perjantai: 09:00 - 18:00",
+      "map": "Kartta"
+    }
+  },
+  "terms": {
+    "title": "Käyttöehdot",
+    "lastUpdated": "Viimeisin päivitys: {date}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Ehtojen hyväksyminen",
+        "content": "Käyttämällä tätä verkkosivustoa hyväksyt seuraavat käyttöehdot. Jos et hyväksy näitä ehtoja, älä käytä sivustoa."
+      },
+      "services": {
+        "title": "2. Palvelut",
+        "content": "Livestock Trading tarjoaa alustan elävien eläinten ostamiseen ja myymiseen. Kaikki alustalla tehtävät tapahtumat ovat käyttäjän vastuulla."
+      },
+      "accounts": {
+        "title": "3. Käyttäjätilit",
+        "content": "Sinun on annettava tarkat ja ajantasaiset tiedot tilin luomiseksi. Tilisi turvallisuus on sinun vastuullasi."
+      },
+      "prohibited": {
+        "title": "4. Kielletyt toiminnot",
+        "content": "Harhaanjohtavat mainokset, väärät tiedot, petokset ja laiton toiminta ovat ehdottomasti kiellettyjä."
+      },
+      "liability": {
+        "title": "5. Vastuunrajoitus",
+        "content": "Alusta ei ole suoraan vastuussa käyttäjien välisistä tapahtumista. Kaikki tapahtumat tapahtuvat osapuolten välillä."
+      },
+      "changes": {
+        "title": "6. Muutokset",
+        "content": "Näitä ehtoja voidaan muuttaa ilman erillistä ilmoitusta. Muutokset tulevat voimaan välittömästi julkaisun jälkeen."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Tietosuojakäytäntö",
+    "lastUpdated": "Viimeisin päivitys: {date}",
+    "sections": {
+      "collection": {
+        "title": "1. Tiedonkeruu",
+        "content": "Kun luot tilin, keräämme henkilötietoja, kuten nimesi, sähköpostiosoitteesi ja puhelinnumerosi. Voimme myös kerätä anonyymejä tietoja sivuston käytöstäsi."
+      },
+      "usage": {
+        "title": "2. Tietojen käyttö",
+        "content": "Keräämiämme tietoja käytetään palveluidemme tarjoamiseen, tilisi hallintaan, turvallisuuden varmistamiseen ja räätälöityjen tarjousten tarjoamiseen sinulle."
+      },
+      "sharing": {
+        "title": "3. Tiedonjako",
+        "content": "Henkilötietojasi ei myydä tai vuokrata kolmansille osapuolille. Tietojasi ei jaeta paitsi lain edellyttämiin tarkoituksiin."
+      },
+      "security": {
+        "title": "4. Turvallisuus",
+        "content": "Tietojesi suojaamiseksi on käytössä alan standardin mukaiset turvatoimenpiteet."
+      },
+      "cookies": {
+        "title": "5. Evästeet",
+        "content": "Verkkosivustomme käyttää evästeitä käyttökokemuksen parantamiseksi. Voit hallita evästeasetuksiasi selaimesi asetuksissa."
+      },
+      "rights": {
+        "title": "6. Oikeutesi",
+        "content": "Turkin henkilötietojen suojaa koskevan lain (KVKK) nojalla sinulla on oikeus tarkastella, korjata ja poistaa henkilötietojasi."
+      }
+    }
   },
   "products": {
     "title": "Tuotteet",
@@ -235,11 +570,19 @@
       "priceDesc": "Hinta (korkeimmasta matalimmaiseen)",
       "popular": "Suosituimmat"
     },
+    "pagination": {
+      "prev": "Entinen",
+      "next": "Seuraava"
+    },
     "status": {
       "draft": "Luonnos",
+      "pending": "Odotetaan hyväksyntää",
       "active": "Aktiivinen",
+      "inactive": "Passiivinen",
+      "outOfStock": "Loppu varastosta",
+      "expired": "Hänen toimikautensa on päättynyt.",
       "sold": "Myyty",
-      "pending": "Odotetaan hyväksyntää"
+      "rejected": "Hylätty"
     },
     "condition": {
       "new": "Uusi",
@@ -253,9 +596,13 @@
     "loading": "Tuotteita ladataan...",
     "perPage": "Sivua kohden",
     "showing": "Tuotteiden kokonaismäärä {total} välillä {from} ja {to}.",
+    "fetchError": "Tuotteiden latauksessa tapahtui virhe.",
+    "loadMore": "Näytä lisää",
+    "showingOf": "{count} / {total} tuotetta näytetään.",
     "loginToFavorite": "Kirjaudu sisään lisätäksesi suosikkeihin.",
     "addedToFavorites": "Lisätty suosikkeihin",
-    "removedFromFavorites": "Poistettu suosikeista"
+    "removedFromFavorites": "Poistettu suosikeista",
+    "favoriteError": "Suosikki-toiminto epäonnistui."
   },
   "productDetail": {
     "addToFavorites": "Lisää suosikkeihin",
@@ -279,16 +626,31 @@
     "maxOrder": "Maksimitilaus",
     "publishedAt": "Julkaisupäivämäärä",
     "views": "Katsottu",
-    "reviews": "arviointi",
+    "reviews": {
+      "title": "Arvioinnit",
+      "reviewCount": "arviointi",
+      "noReviews": "Ei vielä arviointia.",
+      "verified": "Vahvistettu ostaja"
+    },
     "similarProducts": "Samankaltaisia tuotteita",
     "sellerProducts": "Myyjän muut tuotteet",
     "contactSeller": "Ota yhteyttä myyjään",
-    "loginRequired": "Kirjaudu sisään lisätäksesi suosikkeihin.",
+    "makeOffer": "Lähetä tarjous",
+    "loginRequired": "Kirjaudu sisään suorittaaksesi tämän toiminnon.",
     "addedToFavorites": "Lisätty suosikkeihin",
     "removedFromFavorites": "Poistettu suosikeista",
     "linkCopied": "Linkki on kopioitu.",
     "messagingComingSoon": "Viestitoiminto tulossa pian.",
-    "productNotFound": "Tuotetta ei löytynyt."
+    "productNotFound": "Tuotetta ei löytynyt.",
+    "contacting": "Yhteyttä otetaan...",
+    "contactError": "Viestintä epäonnistui. Yritä uudelleen.",
+    "noImage": "Ei kuvaa saatavilla.",
+    "defaultLocation": "Turkki",
+    "inquiryMessage": "Haluaisin saada tietoa aiheesta {title}.",
+    "breadcrumb": {
+      "home": "Kotiin",
+      "products": "Tuotteet"
+    }
   },
   "seller": {
     "title": "Myyjän tiedot",
@@ -300,6 +662,70 @@
     "call": "Haku",
     "viewProfile": "Näytä profiili"
   },
+  "sellers": {
+    "title": "Myyjät",
+    "description": "Löydä luotettavat myyjät.",
+    "search": "Etsi myyjä...",
+    "sort": "Järjestellä",
+    "sortOptions": {
+      "newest": "Uusin",
+      "mostSales": "Bestseller",
+      "topRated": "Korkein pistemäärä",
+      "mostProducts": "Useimmat mainokset"
+    },
+    "noResults": "Myyjää ei löytynyt.",
+    "loading": "Myyjät lataavat...",
+    "showing": "{count} myyjää löytyi",
+    "verified": "Vahvistettu",
+    "sales": "myynti",
+    "products": "mainos",
+    "reviews": "arviointi",
+    "rating": "kohta",
+    "viewProducts": "Näytä tuotteet",
+    "contactSeller": "Lähetä viesti",
+    "memberSince": "Jäsen vuodesta {year}",
+    "fetchError": "Toimittajien lataamisessa tapahtui virhe",
+    "detail": {
+      "title": "Myyjän profiili",
+      "about": "Noin",
+      "businessInfo": "Yritystiedot",
+      "businessName": "Yrityksen nimi",
+      "businessType": "Liikematka",
+      "email": "Sähköposti",
+      "phone": "Puhelin",
+      "website": "Verkkosivusto",
+      "description": "Selitys",
+      "policies": "Käytännöt",
+      "returnPolicy": "Palautusehdot",
+      "shippingPolicy": "Toimituskäytäntö",
+      "businessHours": "Työajat",
+      "paymentMethods": "Maksutavat",
+      "allProducts": "Kaikki tuotteet",
+      "stats": {
+        "totalSales": "Kokonaismyynti",
+        "totalProducts": "Tuotteita yhteensä",
+        "totalReviews": "Arviointi",
+        "rating": "Kohta"
+      },
+      "notFound": "Myyjää ei löytynyt.",
+      "backToList": "Don myyjille",
+      "contactInfo": "Viestintä",
+      "noProducts": "Tällä myyjällä ei ole vielä ilmoituksia.",
+      "noPolicies": "Myyjä ei ole vielä määritellyt käytäntöjään.",
+      "fetchError": "Myyjän tietojen latauksessa tapahtui virhe.",
+      "productsLoadError": "Myyjän tuotteiden latauksessa tapahtui virhe.",
+      "reviewsTab": "Arvioinnit",
+      "reviews": {
+        "summary": "Arvioinnin yhteenveto",
+        "reviewCount": "arviointi",
+        "communication": "Viestintä",
+        "shippingSpeed": "Toimitusnopeus",
+        "productQuality": "Tuotteen laatu",
+        "noReviews": "Ei vielä arviointia.",
+        "verified": "Vahvistettu ostaja"
+      }
+    }
+  },
   "editListing": {
     "title": "Muokkaa mainosta",
     "saveChanges": "Tallenna muutokset",
@@ -307,6 +733,10 @@
     "updateSuccess": "Mainos on päivitetty onnistuneesti.",
     "updateFailed": "Ilmoituksen päivityksessä tapahtui virhe.",
     "loadError": "Mainoksen lataamisessa tapahtui virhe.",
+    "sellerNotFound": "Myyjän profiilia ei löytynyt.",
+    "sellerLoadError": "Myyjän profiilia ei voitu ladata.",
+    "userNotFound": "Käyttäjätietoja ei löytynyt. Kirjaudu uudelleen sisään.",
+    "locationNotFound": "Sijaintitietoja ei löytynyt. Päivitä sivu.",
     "basicInfo": "Perustiedot",
     "categoryAndCondition": "Luokka ja tila",
     "pricing": "Hinnoittelu",
@@ -314,6 +744,8 @@
     "images": "Kuvat",
     "existingImages": "Saatavilla olevat kuvat",
     "addImage": "Lisää kuva",
+    "maxImages": "Voit ladata enintään 10 kuvaa.",
+    "imageHint": "Vähintään 1, enintään 10 kuvaa. PNG-, JPG- tai WEBP-muodossa.",
     "uploadingImages": "Kuvat latautuvat...",
     "uploadingImage": "Kuva latautuu.",
     "imageUploadFailed": "Kuvaa ei voitu ladata.",
@@ -358,6 +790,7 @@
     "addImage": "Lisää kuva",
     "maxImages": "Voit ladata enintään 10 kuvaa.",
     "imageHint": "Vähintään 1, enintään 10 kuvaa. PNG-, JPG- tai WEBP-muodossa.",
+    "location": "Sijaintitiedot",
     "fields": {
       "title": "Mainoksen otsikko",
       "shortDescription": "Lyhyt kuvaus",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Toimitus on saatavilla.",
       "shippingCost": "Toimitusmaksu",
       "weight": "Paino",
-      "weightUnit": "Painoyksikkö"
+      "weightUnit": "Painoyksikkö",
+      "city": "Kaupunki",
+      "address": "Osoite",
+      "postalCode": "Postinumero"
     },
     "placeholders": {
       "title": "Esimerkki: 2-vuotias holsteinlehmä",
       "shortDescription": "Tuotekuvaus (enintään 200 merkkiä)",
       "description": "Anna tarkempia tietoja tuotteesta...",
-      "category": "Valitse kategoria."
+      "category": "Valitse kategoria.",
+      "city": "Astu kaupunkiin",
+      "address": "Anna koko osoite.",
+      "postalCode": "Postinumero"
+    },
+    "errors": {
+      "titleRequired": "Mainoksen otsikko on pakollinen.",
+      "shortDescriptionRequired": "Lyhyt kuvaus vaaditaan.",
+      "descriptionRequired": "Yksityiskohtainen selvitys vaaditaan.",
+      "categoryRequired": "Kategorian valinta on pakollinen.",
+      "priceRequired": "Hinta on pakollinen.",
+      "cityRequired": "Kaupungin tiedot vaaditaan.",
+      "addressRequired": "Osoitetiedot vaaditaan.",
+      "locationError": "Sijainnin luomisessa tapahtui virhe."
     },
     "success": "Mainos luotiin onnistuneesti.",
     "error": "Mainoksen luomisessa tapahtui virhe.",
@@ -384,28 +833,57 @@
     "uploadingImages": "Kuvat latautuvat...",
     "uploadingImage": "Kuva latautuu.",
     "imageUploadFailed": "Kuvaa ei voitu ladata.",
-    "imagesUploaded": "Kaikki kuvat ladattiin onnistuneesti",
+    "imagesUploaded": "Kaikki kuvat on ladattu onnistuneesti",
     "draftSaved": "Luonnos tallennettu",
     "productCreated": "Tuote luotiin onnistuneesti.",
     "creationFailed": "Tuotetta ei voitu luoda. Yritä uudelleen.",
-    "errors": {
-      "titleRequired": "Mainoksen otsikko on pakollinen.",
-      "shortDescriptionRequired": "Lyhyt kuvaus vaaditaan.",
-      "descriptionRequired": "Yksityiskohtainen selvitys vaaditaan.",
-      "categoryRequired": "Kategorian valinta on pakollinen.",
-      "priceRequired": "Anna kelvollinen hinta."
-    }
+    "userNotFound": "Käyttäjätietoja ei löytynyt. Kirjaudu uudelleen sisään.",
+    "defaultBusinessName": "Yritykseni"
+  },
+  "becomeSeller": {
+    "title": "Ryhdy myyjäksi",
+    "description": "Yhtiön lausunto",
+    "alreadySeller": "Sinulla on jo myyjäprofiili.",
+    "goToListings": "Siirry ilmoituksiini",
+    "businessInfo": "Yritystiedot",
+    "contactInfo": "Yhteystiedot",
+    "businessName": "Yrityksen nimi",
+    "businessNamePlaceholder": "Esimerkki: Yilmazin maatila",
+    "businessType": "Liikematka",
+    "businessTypePlaceholder": "Valitse yrityksesi tyyppi.",
+    "businessTypes": {
+      "individual": "Yksilö",
+      "company": "Yritys",
+      "cooperative": "Osuuskunta",
+      "farm": "Maatila"
+    },
+    "taxNumber": "Veronumero",
+    "taxNumberPlaceholder": "Anna verotunnistenumerosi (valinnainen)",
+    "descriptionPlaceholder": "Kirjoita lyhyt kuvaus yrityksestäsi...",
+    "phone": "Puhelin",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Verkkosivusto",
+    "websitePlaceholder": "https://www.esimerkkisivusto.com (valinnainen)",
+    "submit": "Luo myyjäprofiili",
+    "submitting": "Profiilin luominen...",
+    "success": "Myyjäprofiilisi on luotu onnistuneesti!",
+    "error": "Myyjäprofiilin luomisessa tapahtui virhe.",
+    "taxNumberHelp": "Anna 10- tai 11-numeroinen veronumerosi (valinnainen)",
+    "phoneHelp": "Esimerkki: +90 555 123 45 67 tai 0555 123 45 67",
+    "websiteHelp": "Esimerkki: www.isletmem.com tai https://isletmem.com",
+    "alreadySellerDescription": "Voit hallita ilmoituksiasi alla olevalla painikkeella.",
+    "newListing": "Lisää uusi ilmoitus"
   },
   "fileUpload": {
     "dragDrop": "Lataa kuva tai video.",
     "dragDropHint": "Vedä ja pudota tai napsauta valitaksesi.",
     "dropHere": "Jätä se...",
     "imageLimit": "Kuva: enintään 10 Mt",
-    "videoLimit": "Video: enintään 50 Mt",
+    "videoLimit": "Video: enintään 100 Mt",
     "uploadCount": "{current} / {max} ladattu",
     "maxFilesError": "Voit ladata enintään {max} mediaa.",
     "imageTooLarge": "Kuvan on oltava alle 10 Mt.",
-    "videoTooLarge": "Videon on oltava kooltaan alle 50 Mt.",
+    "videoTooLarge": "Videon on oltava kooltaan alle 100 Mt.",
     "optimizing": "Optimoidaan...",
     "uploading": "Ladataan...",
     "queued": "Jonossa odottamassa...",
@@ -419,9 +897,833 @@
     "videoBadge": "VIDEO",
     "coverUpdated": "Kansikuvan muokkaus onnistui.",
     "optimizationInfo": "Kuvat on optimoitu vastaamaan verkkostandardeja",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Visuaalinen valinta",
+    "changeImage": "Muuttaa",
+    "removeImage": "Poistaa",
+    "videoProcessing": "Videota käsitellään...",
+    "videoProcessingFailed": "Toiminto epäonnistui.",
+    "videoProcessingPollError": "Videon käsittelyn tilaa ei voitu hakea. Päivitä sivu.",
+    "reorderError": "Tiedostoa ei voitu lajitella.",
+    "coverUpdateError": "Kansikuvaa ei voitu päivittää."
+  },
+  "error": {
+    "title": "Tapahtui virhe.",
+    "description": "Odottamaton virhe tapahtui. Päivitä sivu tai yritä myöhemmin uudelleen.",
+    "retry": "Yritä uudelleen",
+    "goBack": "Älä mene takaisin",
+    "goHome": "Kotiin",
+    "notFound": {
+      "title": "Sivua ei löytynyt",
+      "description": "Etsimäsi sivu ei ole käytettävissä tai se on siirretty.",
+      "goHome": "Palaa kotisivulle"
+    }
+  },
+  "search": {
+    "title": "Haku",
+    "placeholder": "Hae tuotteita, luokkia tai myyjiä...",
+    "searchButton": "Haku",
+    "searchingFor": "Etsitään",
+    "loading": "Halusi...",
+    "resultsCount": "{count} tulosta löytyi.",
+    "noResults": "Ei tuloksia.",
+    "tryDifferentSearch": "Kokeile eri avainsanoja tai muuta suodattimia.",
+    "filters": {
+      "title": "Suodattimet",
+      "category": "Kategoria",
+      "allCategories": "Kaikki kategoriat",
+      "condition": "Tilanne",
+      "allConditions": "Kaikki tapaukset",
+      "priceRange": "Hintaluokka",
+      "price": "Hinta",
+      "min": "Minimi",
+      "max": "Maksi",
+      "apply": "Käytä",
+      "clear": "Puhdas",
+      "clearAll": "Tyhjennä kaikki"
+    },
+    "fetchError": "Hakutulosten lataamisessa tapahtui virhe",
+    "recentSearches": "Viimeaikaiset haut",
+    "clearHistory": "Tyhjennä historia",
+    "noSearchHistory": "Sinulla ei ole vielä hakuhistoriaa.",
+    "deleteHistoryError": "Hakuhistorian poistamisessa tapahtui virhe."
+  },
+  "categories": {
+    "title": "Kategoriahallinta",
+    "description": "Hallitse luokkia täältä.",
+    "noCategories": "Yhtään luokkia ei ole vielä lisätty.",
+    "createFirst": "Luo ensimmäinen kategoria.",
+    "fetchError": "Luokkien lataamisessa tapahtui virhe.",
+    "createSuccess": "Kategoria luotu onnistuneesti",
+    "createError": "Luokan luomisessa tapahtui virhe.",
+    "updateSuccess": "Luokka päivitetty onnistuneesti",
+    "updateError": "Luokan päivityksessä tapahtui virhe.",
+    "deleteSuccess": "Kategoria on poistettu onnistuneesti.",
+    "deleteError": "Luokan poistamisessa tapahtui virhe.",
+    "activateSuccess": "Kategoria on aktivoitu.",
+    "deactivateSuccess": "Luokka on poistettu käytöstä.",
+    "statusError": "Tilaa muutettaessa tapahtui virhe.",
+    "loadError": "Luokan lataamisessa tapahtui virhe",
+    "filters": {
+      "all": "Kaikki ne",
+      "active": "Aktiivinen",
+      "inactive": "Passiivinen"
+    },
+    "table": {
+      "name": "Luokan nimi",
+      "slug": "Etana",
+      "sortOrder": "Sarjanumero",
+      "subCategories": "Alaluokka",
+      "status": "Tilanne",
+      "actions": "Transaktiot"
+    },
+    "actions": {
+      "edit": "Muokata",
+      "delete": "Poistaa",
+      "activate": "Aktivoida",
+      "deactivate": "Passiivinen rakenne"
+    },
+    "deleteDialog": {
+      "title": "Poista luokka",
+      "description": "Haluatko varmasti poistaa tämän luokan? Tätä toimintoa ei voi perua.",
+      "cancel": "Peruuttaa",
+      "confirm": "Poistaa"
+    },
+    "addNew": "Lisää uusi kategoria",
+    "loadMore": "Lataa lisää",
+    "loadingMore": "Ladataan...",
+    "form": {
+      "newTitle": "Luo uusi luokka",
+      "editTitle": "Muokkaa kategoriaa",
+      "name": "Luokan nimi",
+      "namePlaceholder": "Esimerkki: Nautakarja",
+      "slug": "Etana",
+      "slugPlaceholder": "Esimerkki: suuri karja",
+      "description": "Selitys",
+      "descriptionPlaceholder": "Lyhyt kuvaus kategoriasta...",
+      "parentCategory": "Ylempi kategoria",
+      "parentCategoryPlaceholder": "Valitse ylin kategoria (valinnainen)",
+      "noParent": "Ei pääluokkaa (pääluokka)",
+      "sortOrder": "Järjestysnumero",
+      "isActive": "Aktiivinen",
+      "iconUrl": "Kuvakkeen URL-osoite",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Tallentaa",
+      "submitting": "Tallennetaan...",
+      "updating": "Päivitetään...",
+      "errors": {
+        "nameRequired": "Luokan nimi on pakollinen.",
+        "slugRequired": "Etanat ovat pakollisia."
+      }
+    }
+  },
+  "offers": {
+    "title": "Ehdotukset",
+    "description": "Hallitse saapuvia ja lähteviä tarjouksiasi.",
+    "received": "Saapuvat tarjoukset",
+    "sent": "Lähetetyt tarjoukset",
+    "noReceivedOffers": "Tarjouksia ei ole vielä vastaanotettu.",
+    "noSentOffers": "Et ole vielä lähettänyt tarjousta.",
+    "browseProducts": "Selaa tuotteita",
+    "viewProduct": "Katso tuote",
+    "accept": "Hyväksyä",
+    "reject": "Hylätä",
+    "withdraw": "Peruuttaa",
+    "makeOffer": "Lähetä tarjous",
+    "sendOffer": "Lähetä tarjous",
+    "sending": "Lähetetään...",
+    "cancel": "Peruuttaa",
+    "listingPrice": "Mainostettu hinta",
+    "yourOffer": "Tarjouksesi",
+    "quantity": "Määrä",
+    "messageOptional": "Viesti (valinnainen)",
+    "messagePlaceholder": "Viesti, jonka haluat jakaa myyjän kanssa...",
+    "expiresAt": "Viimeinen voimassaolopäivä",
+    "offerSent": "Tarjouksesi on lähetetty onnistuneesti.",
+    "offerError": "Tarjouksen lähettämisessä tapahtui virhe.",
+    "acceptSuccess": "Tarjous hyväksyttiin.",
+    "rejectSuccess": "Tarjous hylättiin.",
+    "withdrawSuccess": "Tarjous vedettiin pois.",
+    "actionError": "Prosessin aikana tapahtui virhe.",
+    "fetchError": "Tarjousten lataamisessa tapahtui virhe.",
+    "loginRequired": "Kirjaudu sisään lähettääksesi tarjouksen.",
+    "invalidPrice": "Anna kelvollinen hinta.",
+    "invalidQuantity": "Syötä kelvollinen summa.",
+    "status": {
+      "pending": "Odottaa",
+      "accepted": "Hyväksytty",
+      "rejected": "Hylätty",
+      "countered": "Vastatarjous",
+      "expired": "Sen toimikausi on päättynyt.",
+      "withdrawn": "Vetäytyi"
+    }
+  },
+  "deals": {
+    "title": "Sopimukset",
+    "description": "Noudata ostosopimuksiasi.",
+    "buying": "Tutkijat",
+    "selling": "Myynti",
+    "noBuyingDeals": "Sinulla ei ole vielä opiskelijarekisteröintiprosessia.",
+    "noSellingDeals": "Sinulla ei ole vielä myyntitapahtumia.",
+    "browseProducts": "Selaa tuotteita",
+    "viewProduct": "Katso tuote",
+    "activeDeals": "Aktiiviset sopimukset",
+    "completedDeals": "Valmis",
+    "purchases": "Tutkijat",
+    "sales": "Myynti",
+    "fetchError": "Sopimusten lataamisessa tapahtui virhe",
+    "dealStatus": {
+      "pending": "Odottaa",
+      "confirmed": "Vahvistettu",
+      "processing": "Valmistellaan",
+      "shipped": "Lasti",
+      "delivered": "Toimitettu",
+      "completed": "Valmis",
+      "cancelled": "Peruutettu",
+      "disputed": "Sopimus"
+    },
+    "delivery": {
+      "pickup": "Käsintoimitus",
+      "shipping": "Rahdilla",
+      "transport": "Kuljetuksella"
+    },
+    "requestTransport": "Toimituspyyntö"
+  },
+  "farms": {
+    "title": "Tilani",
+    "description": "Hallitse ja päivitä maatilojasi.",
+    "addFarm": "Lisää maatila",
+    "editFarm": "Maatilan hallinta",
+    "noFarms": "Et ole vielä lisännyt maatilaa.",
+    "farmName": "Tilan nimi",
+    "registrationNumber": "Rekisterinumero",
+    "location": "Sijainti",
+    "selectLocation": "Valitse sijainti.",
+    "addLocationFirst": "Lisää ensin sijainti.",
+    "farmTypeLabel": "Maatilakierros",
+    "farmDescription": "Selitys",
+    "totalArea": "Kokonaispinta-ala",
+    "cultivatedArea": "Viljelty alue",
+    "certifications": "Todisteet",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP jne.",
+    "organic": "Luomu",
+    "verified": "Vahvistettu",
+    "save": "Tallentaa",
+    "saving": "Tallennetaan...",
+    "cancel": "Peruuttaa",
+    "edit": "Muokata",
+    "delete": "Poistaa",
+    "sellerRequired": "Myyjän profiili vaaditaan",
+    "sellerRequiredDesc": "Lisätäksesi maatilan sinun on ensin luotava myyjäprofiili.",
+    "becomeSeller": "Ryhdy myyjäksi",
+    "createSuccess": "Maatila lisättiin onnistuneesti.",
+    "updateSuccess": "Maatila on päivitetty onnistuneesti.",
+    "deleteSuccess": "Maatila on poistettu onnistuneesti.",
+    "saveError": "Maatilan rekisteröinnissä tapahtui virhe.",
+    "deleteError": "Maatilaa poistettaessa tapahtui virhe.",
+    "fetchError": "Maatilan tietojen latauksessa tapahtui virhe.",
+    "farmType": {
+      "livestock": "Karjankasvatus",
+      "crop": "Maatalous",
+      "mixed": "Sekoitettu",
+      "poultry": "Siivekäs",
+      "dairy": "Maidontuotanto",
+      "aquaculture": "Vesituotteet"
+    }
+  },
+  "transporters": {
+    "title": "kuljettajat",
+    "description": "Eläinten ja tuotteiden kuljetuspalvelut",
+    "searchPlaceholder": "Etsi kuljetuspalvelu...",
+    "noTransporters": "Rekisteröityjä kuljettajia ei vielä ole.",
+    "verified": "Vahvistettu",
+    "transports": "kuljetus",
+    "viewProfile": "Näytä profiili",
+    "sort": {
+      "newest": "Uusin",
+      "rating": "Korkein pistemäärä",
+      "mostTransports": "Yleisimmät toimitukset"
+    },
+    "pagination": {
+      "previous": "Entinen",
+      "next": "Seuraava",
+      "page": "Sivu {sivu}"
+    }
+  },
+  "transport": {
+    "title": "Toimituspyyntöni",
+    "description": "Seuraa toimituspyyntöjäsi.",
+    "findTransporter": "Etsi kuljetusyritys",
+    "active": "Aktiivinen",
+    "completed": "Valmis",
+    "total": "Kokonais",
+    "asSeller": "Myyjänä",
+    "asBuyer": "Ostajana",
+    "noSellerRequests": "Myyjänä sinulla ei ole toimitusvelvollisuutta.",
+    "noBuyerRequests": "Vastaanottajana sinulla ei ole toimituspyyntöä.",
+    "viewProduct": "Katso tuote",
+    "pickup": "Vastaanota",
+    "delivery": "Toimitus",
+    "urgent": "Kiireellinen",
+    "fetchError": "Toimituspyyntöjen lataamisessa tapahtui virhe.",
+    "trackShipment": "Seuraa",
+    "transportStatus": {
+      "pending": "Odottaa",
+      "inPool": "Uima-altaassa",
+      "assigned": "Nimitetty",
+      "pickedUp": "Kuitti",
+      "inTransit": "Tien päällä",
+      "delivered": "Toimitettu",
+      "completed": "Valmis",
+      "cancelled": "Peruutettu"
+    },
+    "transportType": {
+      "standard": "Standardi",
+      "refrigerated": "Kylmäketju",
+      "liveAnimal": "Elävät eläimet",
+      "hazardous": "Vaaralliset aineet",
+      "oversized": "Suuri koko"
+    }
+  },
+  "moderation": {
+    "title": "Tuotteen moderointi",
+    "description": "Tarkista hyväksyntää odottavat tuotteet.",
+    "pending": "odottaminen",
+    "allClear": "Kaikki tuotteet on tarkastettu.",
+    "noPending": "Ei hyväksyntää odottavia tuotteita.",
+    "awaitingReview": "Odotetaan tarkistusta",
+    "by": "Myyntihenkilö:",
+    "stock": "Varasto",
+    "preview": "Sinun kanssasi",
+    "approve": "Vahvistaa",
+    "reject": "Hylätä",
+    "confirmReject": "Hylätä",
+    "cancelReject": "Luovuta",
+    "rejectReasonPlaceholder": "Kirjoita ylös hylkäämisen syy...",
+    "rejectReasonRequired": "Kieltäytymisen syy on pakollinen.",
+    "approveSuccess": "Tuote hyväksyttiin onnistuneesti.",
+    "rejectSuccess": "Tuote hylättiin.",
+    "actionError": "Prosessin aikana tapahtui virhe.",
+    "fetchError": "Tuotteiden latauksessa tapahtui virhe.",
+    "unauthorized": "Sinulla ei ole oikeutta käyttää tätä sivua."
+  },
+  "sellerModeration": {
+    "title": "Myyjän moderointi",
+    "description": "Tarkista ja hallinnoi myyjätilejä.",
+    "pending": "odottaminen",
+    "allClear": "Kaikkia myyjiä tutkittiin.",
+    "noPending": "Ei odottavia myyjiä.",
+    "verify": "Vahvista",
+    "suspend": "Keskeyttää",
+    "verifySuccess": "Myyjä vahvistettu onnistuneesti.",
+    "suspendSuccess": "Myyjä jäädytettynä.",
+    "actionError": "Prosessin aikana tapahtui virhe.",
+    "suspendReasonRequired": "Keskeyttämisen syy on pakollinen.",
+    "suspendReasonPlaceholder": "Kirjoita syy keskeytykseen...",
+    "confirmSuspend": "Keskeyttää",
+    "cancelSuspend": "Luovuta",
+    "statusLabels": {
+      "pendingVerification": "Vahvistusta odotetaan",
+      "active": "Aktiivinen",
+      "suspended": "Riippuva",
+      "banned": "Kielletty"
+    },
+    "filterAll": "Näytä kaikki",
+    "filterPending": "Odottavat",
+    "filterActive": "varat",
+    "filterSuspended": "Keskeytetty",
+    "unauthorized": "Sinulla ei ole oikeutta käyttää tätä sivua.",
+    "businessName": "Yrityksen nimi",
+    "businessType": "Liikematka",
+    "email": "Sähköposti",
+    "phone": "Puhelin",
+    "status": "Tilanne",
+    "createdAt": "Rekisteröintipäivämäärä"
+  },
+  "transporterModeration": {
+    "title": "Kantoaallon moderointi",
+    "description": "Tarkista ja hallinnoi operaattorien tilejä.",
+    "pending": "odottaminen",
+    "allClear": "Kaikki kuljetusyrittäjät tutkittiin.",
+    "noPending": "Yksikään kuljettaja ei odota.",
+    "verify": "Vahvista",
+    "suspend": "Keskeyttää",
+    "verifySuccess": "Kuljetin varmistettiin onnistuneesti.",
+    "suspendSuccess": "Kuljetusauto keskeytettiin.",
+    "actionError": "Prosessin aikana tapahtui virhe.",
+    "suspendReasonRequired": "Keskeyttämisen syy on pakollinen.",
+    "suspendReasonPlaceholder": "Kirjoita syy keskeytykseen...",
+    "confirmSuspend": "Keskeyttää",
+    "cancelSuspend": "Luovuta",
+    "statusLabels": {
+      "pendingVerification": "Vahvistusta odotetaan",
+      "active": "Aktiivinen",
+      "suspended": "Riippuva",
+      "banned": "Kielletty"
+    },
+    "filterAll": "Näytä kaikki",
+    "filterPending": "Odottavat",
+    "filterActive": "varat",
+    "filterSuspended": "Keskeytetty",
+    "unauthorized": "Sinulla ei ole oikeutta käyttää tätä sivua.",
+    "companyName": "Yrityksen nimi",
+    "contactPerson": "Valtuutettu henkilö",
+    "email": "Sähköposti",
+    "phone": "Puhelin",
+    "city": "Kaupunki",
+    "status": "Tilanne",
+    "createdAt": "Rekisteröintipäivämäärä"
+  },
+  "transporterDetail": {
+    "notFound": "Kuljettajaa ei löytynyt.",
+    "backToList": "Don kuljettajille",
+    "verified": "Vahvistettu",
+    "totalTransports": "toimituskulut yhteensä",
+    "completed": "valmistunut",
+    "about": "Noin",
+    "contact": "Yhteystiedot",
+    "businessInfo": "Yritystiedot",
+    "license": "Rekisterinumero",
+    "insurance": "Vakuutustiedot",
+    "fleet": "Kalustotiedot",
+    "serviceRegions": "Palvelualueet",
+    "specializations": "Asiantuntemusalueet",
+    "certifications": "Todisteet"
+  },
+  "brands": {
+    "title": "Brändinhallinta",
+    "description": "Hallitse tuotemerkkejä.",
+    "addBrand": "Lisää tuotemerkki",
+    "editBrand": "Muokkaa tuotemerkkiä",
+    "noBrands": "Yhtään tuotemerkkiä ei ole vielä lisätty.",
+    "brandName": "Tuotemerkki",
+    "brandDescription": "Selitys",
+    "website": "Verkkosivusto",
+    "logoUrl": "Logon URL-osoite",
+    "save": "Tallentaa",
+    "saving": "Tallennetaan...",
+    "cancel": "Peruuttaa",
+    "edit": "Muokata",
+    "delete": "Poistaa",
+    "inactive": "Passiivinen",
+    "products": "tuote",
+    "createSuccess": "Tuotemerkki lisätty onnistuneesti",
+    "updateSuccess": "Tuotemerkki on päivitetty onnistuneesti.",
+    "deleteSuccess": "Tuotemerkki poistettiin onnistuneesti.",
+    "saveError": "Tavaramerkin rekisteröinnissä tapahtui virhe.",
+    "deleteError": "Tavaramerkin poistamisessa tapahtui virhe.",
+    "fetchError": "Tuotemerkkien lataamisessa tapahtui virhe",
+    "unauthorized": "Sinulla ei ole oikeutta käyttää tätä sivua."
+  },
+  "transporterReviews": {
+    "title": "Arvioinnit",
+    "reviewCount": "arviointi",
+    "noReviews": "Ei vielä arviointia.",
+    "timeliness": "Toimitus ajallaan",
+    "communication": "Viestintä",
+    "carefulHandling": "Huolellinen käsittely",
+    "professionalism": "Ammattimaisuus"
+  },
+  "transportOffers": {
+    "title": "Toimitustarjoukset",
+    "description": "Hallinnoi toimituspyyntöihin lähettämiäsi tarjouksia.",
+    "newOffer": "Uusi ehdotus",
+    "transportRequestId": "Toimituspyynnön tunnus",
+    "requestIdPlaceholder": "Anna toimituspyynnön tunnus.",
+    "offeredPrice": "Tarjoushinta",
+    "estimatedDays": "Arvioitu kesto (päivinä)",
+    "days": "päivä",
+    "vehicleType": "Ajoneuvotyyppi",
+    "insuranceIncluded": "Vakuutus sisältyy hintaan",
+    "message": "Viesti",
+    "cancel": "Peruuttaa",
+    "sending": "Lähetetään...",
+    "sendOffer": "Lähetä tarjous",
+    "cancelOffer": "Peruuttaa",
+    "pendingTab": "Odotus",
+    "historyTab": "Menneisyys",
+    "noPendingOffers": "Sinulla ei ole vireillä olevia tarjouksia.",
+    "noHistory": "Ei löytynyt aiempia tarjouksia.",
+    "status": {
+      "pending": "Odotus",
+      "accepted": "Hyväksytty",
+      "rejected": "Hylätty",
+      "expired": "Sen toimikausi on päättynyt.",
+      "cancelled": "Peruutettu"
+    },
+    "createSuccess": "Tarjous lähetettiin onnistuneesti.",
+    "createError": "Tarjouksen lähettämisessä tapahtui virhe.",
+    "cancelSuccess": "Tarjous peruttiin.",
+    "cancelError": "Tarjouksen peruuttamisessa tapahtui virhe.",
+    "fetchError": "Tarjousten lataamisessa tapahtui virhe."
+  },
+  "animalInfo": {
+    "title": "Eläin- ja tuotetiedot",
+    "animalTab": "Eläin",
+    "healthTab": "Terveys",
+    "vaccinationsTab": "Rokottajat",
+    "veterinaryTab": "Eläinlääkäri",
+    "breed": "Rotu",
+    "genderLabel": "Sukupuoli",
+    "gender": {
+      "male": "Uros",
+      "female": "Naaras",
+      "unknown": "Tuntematon"
+    },
+    "age": "Ikä",
+    "months": "kuukausi",
+    "weight": "Paino",
+    "color": "Väri",
+    "tagNumber": "Korvan numero",
+    "healthStatus": "Terveydentila",
+    "health": {
+      "healthy": "Terveellinen",
+      "underTreatment": "Hoidon alla",
+      "recovering": "Hän on toipumassa.",
+      "quarantined": "Karanteenissa",
+      "unknown": "Tuntematon"
+    },
+    "purposeLabel": "Käyttötarkoitus",
+    "purpose": {
+      "breeding": "Nasta",
+      "dairy": "Maito",
+      "meat": "Liha",
+      "egg": "Muna",
+      "wool": "Villa",
+      "working": "Työ",
+      "pet": "Kotimainen",
+      "other": "Muut"
+    },
+    "pregnancy": "Raskaus",
+    "pregnant": "Raskaana",
+    "microchip": "Mikrosirun numero",
+    "passport": "Passin numero",
+    "sireDetails": "Isän tiedot",
+    "damDetails": "Päätiedot",
+    "diagnosis": "Diagnoosi",
+    "treatment": "Hoito",
+    "medications": "Lääkkeet",
+    "veterinarian": "Eläinlääkäri",
+    "nextDue": "Seuraava kapinallinen historia",
+    "prescriptionRequired": "Vaatii lääkärin reseptin",
+    "targetSpecies": "Target Tours",
+    "activeIngredients": "Vaikuttavat aineosat",
+    "registrationNo": "Rekisterinumero",
+    "storage": "Säilytys",
+    "chemicalTab": "Kemiallinen",
+    "feedTab": "Syötti",
+    "seedTab": "Siemen",
+    "machineryTab": "Kone",
+    "organic": "Luomu",
+    "toxicity": "Myrkyllisyys",
+    "gmoFree": "GMO-vapaa",
+    "protein": "Proteiini",
+    "fat": "Öljy",
+    "fiber": "Kuitu",
+    "hybrid": "Hybridi",
+    "germination": "Itävyys",
+    "daysToMaturity": "Kypsyminen",
+    "daysLabel": "päivä",
+    "warranty": "Taattu",
+    "power": "Vahvuus",
+    "hoursUsed": "Käyttötunnit",
+    "hours": "tunnin",
+    "powerSource": "Virtalähde"
+  },
+  "productVariants": {
+    "title": "Tuotevariantit",
+    "variantCount": "variantti",
+    "inStock": "Varastossa",
+    "outOfStock": "Loppuunmyyty"
+  },
+  "productPrices": {
+    "title": "Hinnat (useissa valuutoissa)",
+    "autoConversion": "Automaattinen muunnos",
+    "validUntil": "Voimassaolo"
+  },
+  "requestTransport": {
+    "title": "Luo toimituspyyntö",
+    "pickupLocation": "Lastauspiste",
+    "deliveryLocation": "Toimituspiste",
+    "city": "Kaupunki",
+    "address": "Osoite",
+    "transportType": "Kuljetuskierros",
+    "types": {
+      "standard": "Standardi",
+      "refrigerated": "Kylmäketju",
+      "liveAnimal": "Elävät eläimet",
+      "hazardous": "Vaaralliset aineet",
+      "oversized": "Suuri koko"
+    },
+    "weight": "Paino (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Toivottu latauspäivämäärä",
+    "preferredDeliveryDate": "Toivottu toimituspäivä",
+    "urgent": "Kiireellinen kuljetus",
+    "specialInstructions": "Erityisohjeet",
+    "instructionsPlaceholder": "Kirjoita tähän tarkemmat ohjeesi...",
+    "cancel": "Luovuta",
+    "submit": "Luo kysyntä",
+    "submitting": "Luomisprosessissa...",
+    "success": "Toimituspyyntö on luotu onnistuneesti.",
+    "error": "Toimituspyyntöä luotaessa tapahtui virhe."
+  },
+  "transportTracking": {
+    "title": "Lähetyksen seuranta",
+    "noTracking": "Seurantatietoja ei ole vielä saatavilla.",
+    "update": "Päivittää"
+  },
+  "locations": {
+    "title": "Omat osoitteeni",
+    "description": "Hallinnoi rekisteröityjä osoitteitasi.",
+    "addLocation": "Lisää osoite",
+    "editLocation": "Muokkaa osoitetta",
+    "noLocations": "Sinulla ei ole vielä rekisteröityä osoitetta.",
+    "name": "Osoite Nimi",
+    "namePlaceholder": "Esimerkiksi: Talo, Työ, Maatila",
+    "address": "Osoite",
+    "addressLine2": "Osoiterivi 2",
+    "city": "Kaupunki",
+    "state": "Alue/piirikunta",
+    "postalCode": "Postinumero",
+    "phone": "Puhelin",
+    "email": "Sähköposti",
+    "cancel": "Luovuta",
+    "save": "Tallentaa",
+    "saving": "Tallennetaan...",
+    "typePickup": "Ladataan",
+    "typeDelivery": "Toimitus",
+    "typeBoth": "Yleistä",
+    "createSuccess": "Osoite lisätty onnistuneesti.",
+    "createError": "Osoitteen lisäämisessä tapahtui virhe.",
+    "updateSuccess": "Osoite on päivitetty onnistuneesti.",
+    "updateError": "Osoitteen päivityksessä tapahtui virhe.",
+    "deleteLocation": "Poista osoite",
+    "deleteSuccess": "Osoite poistettu",
+    "deleteError": "Osoitteen poistamisessa tapahtui virhe.",
+    "fetchError": "Osoitteiden latauksessa tapahtui virhe."
+  },
+  "systemSettings": {
+    "title": "Järjestelmäasetukset",
+    "description": "Näytä alustan valuutta, kieli, maksutavat, toimitus ja veroasetukset.",
+    "unauthorized": "Sinulla ei ole oikeutta käyttää tätä sivua.",
+    "currenciesTab": "Valuutat",
+    "languagesTab": "Kielet",
+    "paymentTab": "Maksutavat",
+    "shippingTab": "Rahti",
+    "taxTab": "Verottaa",
+    "active": "Aktiivinen",
+    "inactive": "Passiivinen",
+    "default": "Oletus",
+    "noCurrencies": "Valuuttaa ei ole vielä määritelty.",
+    "noLanguages": "Kieltä ei ole vielä määritelty.",
+    "noPaymentMethods": "Maksutapaa ei ole vielä määritelty.",
+    "noCarriers": "Kuljetusyhtiötä ei ole vielä tunnistettu.",
+    "noZones": "Rahtitilaa ei ole vielä määritelty.",
+    "noTaxRates": "Verokantaa ei ole vielä määritelty.",
+    "carriers": "Laivayhtiöt",
+    "zones": "Rahtialueet",
+    "countries": "Maat",
+    "rates": "Toimituskulut",
+    "noRates": "Toimituskuluja ei ole vielä määritelty.",
+    "freeShipping": "Ilmainen toimitus",
+    "deliveryDays": "päivän toimitusaika"
+  },
+  "pushPermission": {
+    "title": "Ota ilmoitukset käyttöön",
+    "description": "Vastaanota ilmoituksia uusista viesteistä, tarjouksista ja tilauspäivityksistä.",
+    "allow": "Salli",
+    "dismiss": "Lähellä"
+  },
+  "healthRecords": {
+    "title": "Terveystiedot",
+    "description": "Hallitse eläinten terveystietoja ja sairaushistoriaa.",
+    "addRecord": "Lisää tietue",
+    "editRecord": "Muokkaa tietuetta",
+    "deleteRecord": "Poista tietue",
+    "noRecords": "Terveystietoja ei ole vielä lisätty.",
+    "animalInfoId": "Eläimen tunnistus",
+    "animalInfoIdPlaceholder": "Syötä eläimen tiedot ja tunnus.",
+    "recordType": "Rekisteröintikierros",
+    "recordTypePlaceholder": "Esimerkkejä: Tutkimus, Hoito, Leikkaus",
+    "recordDate": "Rekisteröintipäivämäärä",
+    "followUpDate": "Tarkistuspäivämäärä",
+    "veterinarianName": "Eläinlääkäri",
+    "veterinarianLicense": "Lisenssinumero",
+    "clinicName": "Kliininen",
+    "diagnosis": "Diagnoosi",
+    "treatment": "Hoito",
+    "medications": "Lääkkeet",
+    "medicationsPlaceholder": "Esimerkki: Penisilliini 500 mg, Ibuprofeeni",
+    "notes": "Muistiinpanoja",
+    "documentUrl": "Asiakirjan URL-osoite",
+    "saving": "Tallennetaan...",
+    "createSuccess": "Terveystiedot lisätty onnistuneesti.",
+    "updateSuccess": "Terveystiedot päivitetty onnistuneesti.",
+    "deleteSuccess": "Terveystiedot on poistettu onnistuneesti.",
+    "saveError": "Tietueen tallennuksessa tapahtui virhe.",
+    "deleteError": "Tietueen poistamisessa tapahtui virhe.",
+    "fetchError": "Tietueiden lataamisessa tapahtui virhe"
+  },
+  "vaccinations": {
+    "title": "Rokotustiedot",
+    "description": "Hallitse eläinten rokotustietoja ja -kalentereita.",
+    "addVaccination": "Lisää kapinallinen",
+    "editVaccination": "Kapinallinen järjestely",
+    "deleteVaccination": "Kapinallinen Sil",
+    "noVaccinations": "Rokotustietoja ei ole vielä lisätty.",
+    "animalInfoId": "Eläimen tunnistus",
+    "animalInfoIdPlaceholder": "Syötä eläimen tiedot ja tunnus.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Esimerkki: SAT-rokote, Brucella",
+    "vaccineType": "Kapinallisten kiertue",
+    "vaccineTypePlaceholder": "Esimerkki: Aktiivinen, Ei-aktiivinen",
+    "batchNumber": "Osapuolen numero",
+    "vaccinationDate": "Kapinallisen historia",
+    "nextDueDate": "Seuraava kapinallinen historia",
+    "veterinarianName": "Eläinlääkäri",
+    "veterinarianLicense": "Lisenssinumero",
+    "notes": "Muistiinpanoja",
+    "certificateUrl": "Varmenteen URL-osoite",
+    "saving": "Tallennetaan...",
+    "createSuccess": "Rokotustietue lisätty onnistuneesti.",
+    "updateSuccess": "Rokotustiedot päivitetty onnistuneesti.",
+    "deleteSuccess": "Rokotustietue on poistettu onnistuneesti.",
+    "saveError": "Rokotteen rekisteröinnissä tapahtui virhe.",
+    "deleteError": "Rokotteen poistamisessa tapahtui virhe.",
+    "fetchError": "Rokotteiden lataamisessa tapahtui virhe."
+  },
+  "shippingCarriers": {
+    "title": "Laivayhtiöt",
+    "description": "Hallinnoi varustamon tietoja.",
+    "addCarrier": "Lisää yritys",
+    "editCarrier": "Muokkaa yritystä",
+    "noCarriers": "Yhtäkään varustamoa ei ole vielä lisätty.",
+    "carrierName": "Yrityksen nimi",
+    "carrierNamePlaceholder": "Esimerkki: Aras Kargo, MNG",
+    "code": "Koodi",
+    "codePlaceholder": "Esimerkki: ARAS",
+    "website": "Verkkosivusto",
+    "trackingUrlTemplate": "Seuraa URL-mallia",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Tuetut maat",
+    "supportedCountriesPlaceholder": "Esimerkki: TR, US, DE",
+    "active": "Aktiivinen",
+    "inactive": "Passiivinen",
+    "saving": "Tallennetaan...",
+    "edit": "Muokata",
+    "delete": "Poistaa",
+    "createSuccess": "Laivayhtiö on lisätty onnistuneesti.",
+    "updateSuccess": "Laivayhtiö on päivitetty onnistuneesti.",
+    "deleteSuccess": "Laivayhtiö on poistettu onnistuneesti.",
+    "saveError": "Laivayhtiön rekisteröinnissä tapahtui virhe.",
+    "deleteError": "Lähetysyhtiön tietoja poistettaessa tapahtui virhe.",
+    "fetchError": "Rahtiyhtiöiden lataamisessa tapahtui virhe."
+  },
+  "shippingZones": {
+    "title": "Rahtialueet",
+    "description": "Hallitse lastivyöhykkeitä ja -alueita.",
+    "addZone": "Lisää alue",
+    "editZone": "Muokkaa aluetta",
+    "noZones": "Tavaratilaa ei ole vielä lisätty.",
+    "zoneName": "Alueen nimi",
+    "zoneNamePlaceholder": "Esimerkki: Eurooppa, Pohjois-Amerikka",
+    "countryCodes": "Maakoodit",
+    "countryCodesPlaceholder": "Esimerkki: TR, DE, FR",
+    "active": "Aktiivinen",
+    "inactive": "Passiivinen",
+    "saving": "Tallennetaan...",
+    "edit": "Muokata",
+    "delete": "Poistaa",
+    "createSuccess": "Alue on lisätty onnistuneesti.",
+    "updateSuccess": "Alue on päivitetty onnistuneesti.",
+    "deleteSuccess": "Alue on raivattu onnistuneesti.",
+    "saveError": "Alueen tallennuksessa tapahtui virhe.",
+    "deleteError": "Alueen poistamisessa tapahtui virhe.",
+    "fetchError": "Alueiden lataamisessa tapahtui virhe"
+  },
+  "shippingRates": {
+    "title": "Toimituskulut",
+    "description": "Hallinnoi toimituskuluja ja toimitusvaihtoehtoja.",
+    "addRate": "Lisää maksu",
+    "editRate": "Muuta maksua",
+    "noRates": "Toimituskuluja ei ole vielä lisätty.",
+    "zone": "Alue",
+    "carrier": "Yritys",
+    "selectZone": "Valitse alue",
+    "selectCarrier": "Valitse yritys",
+    "shippingCost": "Toimitusmaksu",
+    "currency": "Valuutta",
+    "estimatedDeliveryDays": "Arvioitu toimitusaika (päivinä)",
+    "minWeight": "Minimipaino",
+    "maxWeight": "Enimmäispaino",
+    "minOrderAmount": "Minimitilausmäärä",
+    "freeShipping": "Ilmainen toimitus",
+    "free": "Ilmainen",
+    "active": "Aktiivinen",
+    "inactive": "Passiivinen",
+    "cost": "Maksu",
+    "deliveryDays": "Toimitus",
+    "status": "Tilanne",
+    "saving": "Tallennetaan...",
+    "createSuccess": "Maksu lisätty onnistuneesti.",
+    "updateSuccess": "Palkka on päivitetty onnistuneesti.",
+    "deleteSuccess": "Maksu on poistettu onnistuneesti.",
+    "saveError": "Maksun tallentamisessa tapahtui virhe.",
+    "deleteError": "Maksun poistamisessa tapahtui virhe.",
+    "fetchError": "Maksujen lataamisessa tapahtui virhe."
+  },
+  "metadata": {
+    "title": "Karjakauppa - Elävien eläinten kauppapaikka",
+    "description": "Maailman luotetuin elävien eläinten kauppapaikka. Turvallinen ja läpinäkyvä eläinten osto ja myynti.",
+    "pages": {
+      "about": {
+        "title": "Tietoa meistä",
+        "description": "Opi lisää karjakaupasta. Luotettava elävien eläinten kauppapaikka."
+      },
+      "contact": {
+        "title": "Viestintä",
+        "description": "Ota yhteyttä. Livestock Tradingin asiakastukitiimi on valmiina auttamaan sinua."
+      },
+      "terms": {
+        "title": "Käyttöehdot",
+        "description": "Karjakaupan ehdot."
+      },
+      "privacy": {
+        "title": "Tietosuojakäytäntö",
+        "description": "Karjakaupan tietosuojakäytäntö. Lue lisää henkilötietojesi suojaamisesta."
+      },
+      "products": {
+        "title": "Tuotteet",
+        "description": "Selaa elävien eläinten ilmoituksia. Luotettavia ilmoituksia naudoista, lampaista ja muusta."
+      },
+      "sellers": {
+        "title": "Myyjät",
+        "description": "Löydä luotettavia eläintenmyyjiä. Vahvistetut myyjäprofiilit ja arvostelut."
+      },
+      "transporters": {
+        "title": "kuljettajat",
+        "description": "Tutustu eläinkuljetusyrityksiin. Turvallinen ja ammattimainen elävien eläinten kuljetus."
+      },
+      "search": {
+        "title": "Haku",
+        "description": "Hae elävien eläinten joukosta. Helppo haku suodatus- ja lajitteluvaihtoehtojen avulla."
+      },
+      "faq": {
+        "title": "Usein kysytyt kysymykset",
+        "description": "Usein kysyttyjä kysymyksiä ja vastauksia karjakaupasta."
+      },
+      "productDetail": {
+        "title": "{title} - Myytävänä",
+        "description": "Myytävänä kohteessa {title} - {city}. Klikkaa nähdäksesi lisätietoja ja yhteystiedot."
+      },
+      "sellerDetail": {
+        "title": "{name} - Myyjän profiili",
+        "description": "{name} myyjäprofiili. Arvostelut, ilmoitukset ja yhteystiedot."
+      },
+      "transporterDetail": {
+        "title": "{name} - Operaattoriprofiili",
+        "description": "{name} -kuljetusyrityksen profiili. Palvelualueet, arvostelut ja yhteystiedot."
+      }
+    }
   }
 }

@@ -11,17 +11,30 @@
     "back": "خلف",
     "next": "إلى الأمام",
     "close": "يغلق",
+    "unauthorized": "ليس لديك إذن بالوصول إلى هذه الصفحة.",
     "emailPlaceholder": "ornek@email.com",
     "login": "تسجيل الدخول",
-    "register": "يسجل"
+    "register": "يسجل",
+    "previous": "سابق",
+    "zoomIn": "تكبير الصورة",
+    "previousImage": "الصورة السابقة",
+    "nextImage": "الصورة التالية",
+    "closeLightbox": "إغلاق المعرض",
+    "imageLightbox": "معرض الصور",
+    "slideN": "الشريحة {ن}",
+    "viewMore": "شاهد المزيد"
   },
   "header": {
     "products": "منتجات",
     "sellers": "البائعون",
+    "transporters": "ناقلات",
     "about": "معلومات عنا",
+    "search": "يبحث",
     "dashboard": "لوحة",
     "settings": "إعدادات",
-    "logout": "تسجيل الخروج"
+    "logout": "تسجيل الخروج",
+    "menu": "قائمة طعام",
+    "language": "اختيار اللغة"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "لقد نسيت كلمة المرور الخاصة بي.",
       "noAccount": "أليس لديك حساب؟",
       "register": "يسجل",
-      "errorDefault": "فشل تسجيل الدخول. يرجى التحقق من معلوماتك."
+      "errorDefault": "فشل تسجيل الدخول. يرجى التحقق من معلوماتك.",
+      "orContinueWith": "أو تابع",
+      "continueWithGoogle": "تابع مع جوجل",
+      "continueWithApple": "تابع مع أبل.",
+      "socialLoginError": "فشل تسجيل الدخول عبر وسائل التواصل الاجتماعي. يرجى المحاولة مرة أخرى.",
+      "appleComingSoon": "قريباً جداً",
+      "showPassword": "إظهار كلمة المرور",
+      "hidePassword": "إخفاء كلمة المرور"
     },
     "register": {
       "title": "يسجل",
@@ -51,7 +71,17 @@
       "login": "تسجيل الدخول",
       "passwordMismatch": "كلمات المرور غير متطابقة.",
       "passwordTooShort": "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل.",
-      "errorDefault": "فشلت عملية التسجيل. يرجى المحاولة مرة أخرى."
+      "errorDefault": "فشلت عملية التسجيل. يرجى المحاولة مرة أخرى.",
+      "showPassword": "إظهار كلمة المرور",
+      "hidePassword": "إخفاء كلمة المرور",
+      "passwordStrength": {
+        "minLength": "ثمانية أحرف على الأقل",
+        "uppercase": "الأحرف الكبيرة (من الألف إلى الياء)",
+        "lowercase": "الأحرف الصغيرة (من أ إلى ي)",
+        "number": "الرقم (0-9)",
+        "special": "الأحرف الخاصة (!@#$%)"
+      },
+      "registerSuccess": "تم إنشاء حسابك بنجاح! سيتم تحويلك إلى صفحة تسجيل الدخول..."
     },
     "forgotPassword": {
       "title": "لقد نسيت كلمة المرور الخاصة بي.",
@@ -78,7 +108,9 @@
       "requestNewLink": "طلب اتصال جديد",
       "passwordMismatch": "كلمات المرور غير متطابقة.",
       "passwordTooShort": "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل.",
-      "errorDefault": "فشلت إعادة تعيين كلمة المرور. قد يكون الاتصال غير صالح أو منتهي الصلاحية."
+      "errorDefault": "فشلت إعادة تعيين كلمة المرور. قد يكون الاتصال غير صالح أو منتهي الصلاحية.",
+      "showPassword": "إظهار كلمة المرور",
+      "hidePassword": "إخفاء كلمة المرور"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "نشيط",
       "totalViews": "إجمالي المشاهدات",
       "thisWeek": ".هذا الاسبوع",
+      "allTime": "في جميع الأوقات",
       "favorites": "مفضل",
       "onYourListings": "في إعلاناتك",
+      "savedItems": "منتج مسجل",
       "messages": "رسالة",
-      "unread": "غير مقروء"
+      "notifications": "إشعارات",
+      "unread": "غير مقروء",
+      "views": "المشاهدات",
+      "draft": "مسودة",
+      "sold": "مُباع",
+      "pending": "قيد الانتظار",
+      "awaitingApproval": "في انتظار الموافقة",
+      "totalSales": "إجمالي المبيعات",
+      "completedSales": "مبيعات مكتملة",
+      "revenue": "دخل",
+      "totalRevenue": "إجمالي الإيرادات"
     },
     "recentListings": "أحدث قوائمك",
+    "recentActivity": "الأنشطة الأخيرة",
     "recentMessages": "الرسائل الأخيرة",
+    "quickLinks": "الوصول السريع",
     "noListings": "لم تقم بإضافة أي إعلانات حتى الآن.",
+    "noActivity": "لا يوجد نشاط حتى الآن.",
     "noMessages": "لم تتلق رسالة بعد.",
     "noNotifications": "لم تتلق أي إشعارات حتى الآن.",
     "viewAllListings": "عرض جميع القوائم",
-    "viewAllMessages": "عرض جميع الرسائل"
+    "viewAllMessages": "عرض جميع الرسائل",
+    "viewNotifications": "عرض الإشعارات",
+    "viewFavorites": "مفضلات غور",
+    "recentlyViewed": "تمت مشاهدته مؤخراً",
+    "fetchError": "حدث خطأ أثناء تحميل بيانات اللوحة."
   },
   "dashboardNav": {
     "overview": "ملخص",
@@ -115,7 +166,61 @@
     "notifications": "إشعارات",
     "profile": "حساب تعريفي",
     "settings": "إعدادات",
-    "newListing": "إضافة إعلان جديد"
+    "newListing": "إضافة إعلان جديد",
+    "becomeSeller": "كن بائعًا",
+    "categories": "فئات",
+    "offers": "المقترحات",
+    "deals": "الاتفاقيات",
+    "farms": "مزارعي",
+    "transport": "ينقل",
+    "moderation": "الاعتدال",
+    "sellerModeration": "إدارة البائعين",
+    "transporterModeration": "تعديل الناقل",
+    "brands": "العلامات التجارية",
+    "transportOffers": "عروض أسعار الشحن",
+    "healthRecords": "السجلات الصحية",
+    "vaccinations": "الملقحين",
+    "shippingCarriers": "شركات الشحن",
+    "shippingZones": "مناطق الشحن",
+    "shippingRates": "رسوم الشحن",
+    "systemSettings": "إعدادات النظام",
+    "locations": "عناويني"
+  },
+  "profile": {
+    "title": "معلومات الملف الشخصي",
+    "description": "يمكنك تحديث معلوماتك الشخصية هنا.",
+    "personalInfo": "معلومات شخصية",
+    "contactInfo": "معلومات الاتصال",
+    "preferences": "التفضيلات",
+    "firstName": "اسم",
+    "firstNamePlaceholder": "أدخل اسمك",
+    "surname": "اسم العائلة",
+    "surnamePlaceholder": "أدخل اسم عائلتك.",
+    "displayName": "الاسم المعروض",
+    "phone": "رقم التليفون",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "تم التحقق",
+    "phoneNotVerified": "غير مؤكد",
+    "verifyPhone": "تحقق من رقم الهاتف",
+    "country": "دولة",
+    "selectCountry": "اختر دولة",
+    "language": "تفضيل اللغة",
+    "selectLanguage": "اختر لغة",
+    "currency": "عملة",
+    "selectCurrency": "اختر العملة.",
+    "saveChanges": "حفظ التغييرات",
+    "saving": "توفير...",
+    "saveSuccess": "تم تحديث معلومات ملفك الشخصي.",
+    "saveError": "حدث خطأ أثناء تحديث الملف الشخصي.",
+    "avatar": "صورة الملف الشخصي",
+    "changeAvatar": "تغيير الصورة",
+    "removeAvatar": "إزالة الصورة",
+    "currencies": {
+      "try": "الليرة التركية",
+      "usd": "الدولار الأمريكي",
+      "eur": "اليورو",
+      "gbp": "الجنيه الإسترليني"
+    }
   },
   "myListings": {
     "title": "إعلاناتي",
@@ -125,35 +230,94 @@
     "fetchError": "حدث خطأ أثناء تحميل الإعلانات.",
     "deleteSuccess": "تم حذف الإعلان بنجاح.",
     "deleteError": "حدث خطأ أثناء حذف الإعلان.",
-    "activateSuccess": "تم تفعيل الإعلان.",
-    "deactivateSuccess": "تم إلغاء تفعيل القائمة.",
+    "publishSuccess": "تم إرسال الإعلان للموافقة عليه.",
+    "unpublishSuccess": "تمت صياغة الإعلان.",
     "statusError": "حدث خطأ أثناء تغيير الحالة.",
     "filters": {
       "all": "جميعهم",
-      "active": "نشيط",
       "draft": "مسودة",
       "pending": "في انتظار الموافقة",
+      "active": "نشيط",
+      "rejected": "مرفوض",
       "sold": "مُباع"
     },
     "actions": {
       "edit": "يحرر",
       "delete": "يمسح",
-      "activate": "فعل",
-      "deactivate": "البنية المبنية للمجهول"
+      "publish": "إرسال للموافقة",
+      "unpublish": "مسودة",
+      "menu": "المعاملات"
     },
     "deleteDialog": {
       "title": "احذف الإعلان",
       "description": "هل أنت متأكد من رغبتك في حذف هذا الإعلان؟ هذا الإجراء غير قابل للتراجع.",
       "cancel": "يلغي",
       "confirm": "يمسح"
-    }
+    },
+    "loadMore": "حمل المزيد",
+    "loadingMore": "تحميل..."
   },
   "favorites": {
     "title": "مفضلاتي",
     "description": "تابع المنتجات التي تعجبك هنا.",
     "noFavorites": "لم تقم بإضافة أي منتجات مفضلة حتى الآن.",
     "browseProducts": "تصفح المنتجات",
-    "fetchError": "حدث خطأ أثناء تحميل المفضلة."
+    "fetchError": "حدث خطأ أثناء تحميل المفضلة.",
+    "loadMore": "حمل المزيد",
+    "loadingMore": "تحميل..."
+  },
+  "messages": {
+    "title": "رسائل",
+    "description": "تواصل مع المشترين والبائعين.",
+    "noConversations": "لم تتلق رسالة بعد.",
+    "startConversation": "لطرح سؤال حول إعلان، انتقل إلى الإعلان.",
+    "fetchError": "حدث خطأ أثناء تحميل الرسائل",
+    "sendError": "حدث خطأ أثناء إرسال الرسالة.",
+    "connectionError": "فشل الاتصال. جارٍ المحاولة مرة أخرى...",
+    "connected": "لقد اتصل",
+    "connecting": "جارٍ الاتصال...",
+    "searchPlaceholder": "ابحث في الرسائل...",
+    "typeMessage": "اكتب رسالتك...",
+    "send": "يرسل",
+    "sending": "إرسال...",
+    "typing": "يقول...",
+    "read": "يقرأ",
+    "delivered": "مرسل",
+    "today": "اليوم",
+    "yesterday": "أمس",
+    "noMessages": "لا توجد رسائل حتى الآن. ابدأ محادثة!",
+    "loadMore": "حمّل المزيد",
+    "loadingMessages": "جارٍ تحميل الرسائل...",
+    "about": "عن",
+    "product": "منتج",
+    "startNewConversation": "ابدأ محادثة جديدة",
+    "selectConversation": "اختر محادثة أو ابدأ محادثة جديدة.",
+    "online": "متصل",
+    "offline": "غير متصل بالإنترنت",
+    "lastSeen": "آخر ظهور",
+    "deleteConversation": "حذف المحادثة",
+    "deleteConfirm": "هل أنت متأكد من رغبتك في حذف هذه المحادثة؟",
+    "deleted": "تم حذف المحادثة.",
+    "defaultUser": "مستخدم",
+    "noResults": "لم يتم العثور على نتائج.",
+    "newConversation": "محادثة جديدة"
+  },
+  "notifications": {
+    "title": "إشعارات",
+    "description": "استعرض إشعاراتك وقم بإدارتها.",
+    "markAllAsRead": "ضع علامة \"مقروء\" على الكل",
+    "noNotifications": "لم تتلق أي إشعارات حتى الآن.",
+    "viewAll": "عرض جميع الإشعارات",
+    "today": "اليوم",
+    "yesterday": "أمس",
+    "older": "كبار السن",
+    "types": {
+      "system": "نظام",
+      "message": "رسالة",
+      "offer": "يعرض",
+      "order": "طلب",
+      "listing": "إعلان"
+    }
   },
   "settings": {
     "title": "إعدادات",
@@ -169,7 +333,28 @@
       "passwordMismatch": "كلمات المرور الجديدة لا تتطابق.",
       "passwordTooShort": "يجب أن تتكون كلمة المرور الجديدة من 6 أحرف على الأقل.",
       "sessionError": "لم يتم العثور على معلومات الجلسة.",
-      "errorDefault": "تعذر تحديث كلمة المرور. يرجى التحقق من كلمة المرور الحالية."
+      "errorDefault": "تعذر تحديث كلمة المرور. يرجى التحقق من كلمة المرور الحالية.",
+      "showPassword": "إظهار كلمة المرور",
+      "hidePassword": "إخفاء كلمة المرور"
+    },
+    "preferences": {
+      "title": "تفضيلات الإشعارات والعرض",
+      "description": "قم بإدارة قنوات الإشعارات وتفضيلات العرض.",
+      "notifications": "إشعارات",
+      "emailNotifications": "إشعارات البريد الإلكتروني",
+      "emailNotificationsDesc": "تلقي إشعارات عبر البريد الإلكتروني للرسائل الجديدة وتحديثات الإعلانات.",
+      "smsNotifications": "إشعارات الرسائل النصية القصيرة",
+      "smsNotificationsDesc": "تلقي رسائل نصية قصيرة للإشعارات المهمة.",
+      "pushNotifications": "الإشعارات الفورية",
+      "pushNotificationsDesc": "استقبل إشعارات فورية للحصول على التحديثات العاجلة.",
+      "appearance": "مظهر",
+      "darkMode": "الوضع الداكن",
+      "darkModeDesc": "قم بالتبديل إلى الوضع الداكن.",
+      "saveChanges": "حفظ التفضيلات",
+      "saving": "توفير...",
+      "saveSuccess": "تم تحديث تفضيلاتك.",
+      "saveError": "حدث خطأ أثناء تحديث الإعدادات.",
+      "loadError": "تعذر تحميل الإعدادات المفضلة."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "منصة تداول الحيوانات الحية",
       "subtitle": "المنصة الأكثر موثوقية لتجارة الحيوانات الحية. اشترِ وبِع أبقارك وأغنامك بأمان.",
       "cta": "ابدأ الآن",
-      "viewListings": "عرض الإعلانات"
+      "viewListings": "عرض الإعلانات",
+      "searchPlaceholder": "ابحث عن الحيوانات... (الأبقار، الأغنام، الماعز...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "الإعلانات المميزة",
       "viewAll": "عرض الكل"
+    },
+    "cta": {
+      "title": "ابدأ الآن",
+      "subtitle": "انضم إلى منصة يلتقي فيها آلاف البائعين والمشترين.",
+      "button": "سجل مجاناً"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "معلومات عنا",
     "contact": "تواصل",
     "terms": "شروط الاستخدام",
-    "privacy": "سياسة الخصوصية"
+    "privacy": "سياسة الخصوصية",
+    "company": "شركة",
+    "support": "يدعم",
+    "legal": "قانوني",
+    "followUs": "تابعنا",
+    "newsletter": "نشرة",
+    "newsletterDescription": "لا تفوتوا أحدث العروض والتخفيضات.",
+    "subscribe": "يشترك",
+    "emailPlaceholder": "عنوان بريدك  الإلكتروني",
+    "tagline": "المنصة الأكثر موثوقية في تركيا لتجارة الحيوانات الحية.",
+    "sellers": "البائعون",
+    "products": "منتجات",
+    "map": "رسم خريطة",
+    "appleLoginComingSoon": "سيتم تفعيل ميزة تسجيل الدخول باستخدام Apple قريباً جداً.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "التعليمات"
+  },
+  "faq": {
+    "title": "الأسئلة الشائعة",
+    "description": "إجابات على أسئلتكم المتكررة حول منصتنا.",
+    "noFaqs": "لم تتم إضافة أي أسئلة حتى الآن."
+  },
+  "about": {
+    "title": "معلومات عنا",
+    "subtitle": "المنصة الأكثر موثوقية في تركيا لتجارة الحيوانات الحية.",
+    "mission": {
+      "title": "مهمتنا",
+      "description": "من خلال رقمنة تجارة الحيوانات الحية، نهدف إلى إنشاء رابط آمن وشفاف وفعال بين المنتجين والمشترين."
+    },
+    "vision": {
+      "title": "رؤيتنا",
+      "description": "أن نكون رواداً في التحول الرقمي في القطاع الزراعي وأن نصبح منصة عالمية في تجارة الحيوانات الحية."
+    },
+    "values": {
+      "title": "قيمنا",
+      "trust": {
+        "title": "يثق",
+        "description": "الشفافية والموثوقية أمران أساسيان في جميع المعاملات."
+      },
+      "quality": {
+        "title": "جودة",
+        "description": "التحسين المستمر لتقديم أفضل خدمة."
+      },
+      "innovation": {
+        "title": "ابتكار",
+        "description": "تحويل الصناعة باستخدام التكنولوجيا."
+      }
+    },
+    "stats": {
+      "users": "مستخدم مسجل",
+      "sellers": "بائع نشط",
+      "products": "إعلان",
+      "transactions": "صفقة ناجحة"
+    }
+  },
+  "contact": {
+    "title": "تواصل",
+    "subtitle": "يرجى الاتصال بنا في حال وجود أي استفسارات.",
+    "form": {
+      "title": "راسلنا",
+      "name": "اسمك",
+      "namePlaceholder": "أحمد يلماز",
+      "email": "بريد إلكتروني",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "موضوع",
+      "subjectPlaceholder": "موضوع رسالتك",
+      "message": "رسالتك",
+      "messagePlaceholder": "اكتب رسالتك هنا...",
+      "submit": "يرسل",
+      "submitting": "إرسال...",
+      "success": "تم إرسال رسالتك بنجاح. سنعاود الاتصال بك في أقرب وقت ممكن.",
+      "error": "حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى."
+    },
+    "info": {
+      "title": "معلومات الاتصال",
+      "address": "عنوان",
+      "addressValue": "إسطنبول، تركيا",
+      "email": "بريد إلكتروني",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "الهاتف",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "ساعات العمل",
+      "workingHoursValue": "من الإثنين إلى الجمعة: 09:00 - 18:00",
+      "map": "رسم خريطة"
+    }
+  },
+  "terms": {
+    "title": "شروط الاستخدام",
+    "lastUpdated": "آخر تحديث: {date}",
+    "sections": {
+      "acceptance": {
+        "title": "1. قبول الشروط",
+        "content": "باستخدامك هذا الموقع، فإنك توافق على شروط الاستخدام التالية. إذا كنت لا توافق على هذه الشروط، يُرجى عدم استخدام الموقع."
+      },
+      "services": {
+        "title": "2. الخدمات",
+        "content": "يوفر موقع تجارة المواشي منصة لشراء وبيع الحيوانات الحية. يتحمل المستخدم مسؤولية جميع المعاملات التي تتم على المنصة."
+      },
+      "accounts": {
+        "title": "3. حسابات المستخدمين",
+        "content": "يجب عليك تقديم معلومات دقيقة ومحدثة لإنشاء حساب. أمان حسابك مسؤوليتك."
+      },
+      "prohibited": {
+        "title": "4. الأنشطة المحظورة",
+        "content": "يُحظر منعاً باتاً الإعلانات المضللة والمعلومات الكاذبة والاحتيال والأنشطة غير القانونية."
+      },
+      "liability": {
+        "title": "5. تحديد المسؤولية",
+        "content": "المنصة ليست مسؤولة بشكل مباشر عن المعاملات بين المستخدمين. جميع المعاملات تتم بين الأطراف المعنية."
+      },
+      "changes": {
+        "title": "6. التغييرات",
+        "content": "تخضع هذه الشروط والأحكام للتغيير دون إشعار مسبق. وتدخل التغييرات حيز التنفيذ فور نشرها."
+      }
+    }
+  },
+  "privacy": {
+    "title": "سياسة الخصوصية",
+    "lastUpdated": "آخر تحديث: {date}",
+    "sections": {
+      "collection": {
+        "title": "1. جمع المعلومات",
+        "content": "عند إنشاء حساب، نقوم بجمع معلومات شخصية مثل اسمك وعنوان بريدك الإلكتروني ورقم هاتفك. وقد نقوم أيضاً بجمع بيانات مجهولة المصدر تتعلق باستخدامك للموقع."
+      },
+      "usage": {
+        "title": "2. استخدام المعلومات",
+        "content": "تُستخدم المعلومات التي نجمعها لتقديم خدماتنا، وإدارة حسابك، وضمان الأمان، وتقديم عروض مخصصة لك."
+      },
+      "sharing": {
+        "title": "3. تبادل المعلومات",
+        "content": "لن يتم بيع معلوماتك الشخصية أو تأجيرها لأطراف ثالثة. ولن تتم مشاركة معلوماتك إلا للأغراض التي يقتضيها القانون."
+      },
+      "security": {
+        "title": "4. الأمن",
+        "content": "تم تطبيق إجراءات أمنية متوافقة مع معايير الصناعة لحماية بياناتك."
+      },
+      "cookies": {
+        "title": "5. ملفات تعريف الارتباط",
+        "content": "يستخدم موقعنا الإلكتروني ملفات تعريف الارتباط لتحسين تجربة المستخدم. يمكنك إدارة تفضيلات ملفات تعريف الارتباط في إعدادات متصفحك."
+      },
+      "rights": {
+        "title": "6. حقوقك",
+        "content": "بموجب قانون حماية البيانات الشخصية التركي (KVKK)، يحق لك الوصول إلى بياناتك الشخصية وتصحيحها وحذفها."
+      }
+    }
   },
   "products": {
     "title": "منتجات",
@@ -235,11 +570,19 @@
       "priceDesc": "السعر (من الأعلى إلى الأدنى)",
       "popular": "الأكثر شعبية"
     },
+    "pagination": {
+      "prev": "سابق",
+      "next": "التالي"
+    },
     "status": {
       "draft": "مسودة",
+      "pending": "في انتظار الموافقة",
       "active": "نشيط",
+      "inactive": "سلبي",
+      "outOfStock": "إنتهى من المخزن",
+      "expired": "انتهت ولايته.",
       "sold": "مُباع",
-      "pending": "في انتظار الموافقة"
+      "rejected": "مرفوض"
     },
     "condition": {
       "new": "جديد",
@@ -253,9 +596,13 @@
     "loading": "يتم تحميل المنتجات...",
     "perPage": "لكل صفحة",
     "showing": "إجمالي المنتجات {الإجمالي} بين {من} و {إلى}.",
+    "fetchError": "حدث خطأ أثناء تحميل المنتجات.",
+    "loadMore": "عرض المزيد",
+    "showingOf": "يتم عرض {count} / {total} منتجًا.",
     "loginToFavorite": "سجّل الدخول لإضافة المحتوى إلى المفضلة.",
     "addedToFavorites": "تمت إضافته إلى المفضلة",
-    "removedFromFavorites": "تمت إزالته من المفضلة"
+    "removedFromFavorites": "تمت إزالته من المفضلة",
+    "favoriteError": "فشلت العملية المفضلة."
   },
   "productDetail": {
     "addToFavorites": "أضف إلى المفضلة",
@@ -279,16 +626,31 @@
     "maxOrder": "الحد الأقصى للطلب",
     "publishedAt": "تاريخ النشر",
     "views": "تمت المشاهدة",
-    "reviews": "تقييم",
+    "reviews": {
+      "title": "التقييمات",
+      "reviewCount": "تقييم",
+      "noReviews": "لم يتم إجراء أي تقييم بعد.",
+      "verified": "مشتري موثق"
+    },
     "similarProducts": "منتجات مماثلة",
     "sellerProducts": "منتجات أخرى للبائع",
     "contactSeller": "اتصل بالبائع",
-    "loginRequired": "سجّل الدخول لإضافة المحتوى إلى المفضلة.",
+    "makeOffer": "قدّم عرضًا",
+    "loginRequired": "يرجى تسجيل الدخول لتنفيذ هذا الإجراء.",
     "addedToFavorites": "تمت إضافته إلى المفضلة",
     "removedFromFavorites": "تمت إزالته من المفضلة",
     "linkCopied": "تم نسخ الرابط.",
     "messagingComingSoon": "ميزة المراسلة ستتوفر قريباً.",
-    "productNotFound": "المنتج غير موجود."
+    "productNotFound": "المنتج غير موجود.",
+    "contacting": "يجري التواصل...",
+    "contactError": "فشل الاتصال. يرجى المحاولة مرة أخرى.",
+    "noImage": "لا توجد صورة متاحة.",
+    "defaultLocation": "ديك رومى",
+    "inquiryMessage": "أود الحصول على معلومات حول {title}.",
+    "breadcrumb": {
+      "home": "بيت",
+      "products": "منتجات"
+    }
   },
   "seller": {
     "title": "معلومات البائع",
@@ -300,6 +662,70 @@
     "call": "يبحث",
     "viewProfile": "عرض الملف الشخصي"
   },
+  "sellers": {
+    "title": "البائعون",
+    "description": "اكتشف البائعين الموثوقين.",
+    "search": "ابحث عن بائع...",
+    "sort": "نوع",
+    "sortOptions": {
+      "newest": "أحدث",
+      "mostSales": "الأكثر مبيعًا",
+      "topRated": "أعلى نتيجة",
+      "mostProducts": "معظم الإعلانات"
+    },
+    "noResults": "لم يتم العثور على البائع.",
+    "loading": "البائعون يقومون بالتحميل...",
+    "showing": "تم العثور على {count} بائعًا",
+    "verified": "تم التحقق",
+    "sales": "مبيعات",
+    "products": "إعلان",
+    "reviews": "تقييم",
+    "rating": "نقطة",
+    "viewProducts": "عرض المنتجات",
+    "contactSeller": "إرسال رسالة",
+    "memberSince": "عضو منذ {year}",
+    "fetchError": "حدث خطأ أثناء تحميل الموردين",
+    "detail": {
+      "title": "ملف تعريف البائع",
+      "about": "عن",
+      "businessInfo": "معلومات الأعمال",
+      "businessName": "اسم الشركة",
+      "businessType": "جولة عمل",
+      "email": "بريد إلكتروني",
+      "phone": "الهاتف",
+      "website": "موقع إلكتروني",
+      "description": "توضيح",
+      "policies": "السياسات",
+      "returnPolicy": "سياسة العائدات",
+      "shippingPolicy": "سياسة الشحن",
+      "businessHours": "ساعات العمل",
+      "paymentMethods": "طرق الدفع",
+      "allProducts": "جميع المنتجات",
+      "stats": {
+        "totalSales": "إجمالي المبيعات",
+        "totalProducts": "إجمالي المنتجات",
+        "totalReviews": "تقييم",
+        "rating": "نقطة"
+      },
+      "notFound": "لم يتم العثور على البائع.",
+      "backToList": "دون للبائعين",
+      "contactInfo": "تواصل",
+      "noProducts": "لا يوجد لدى هذا البائع أي منتجات معروضة حتى الآن.",
+      "noPolicies": "لم يحدد البائع سياساته بعد.",
+      "fetchError": "حدث خطأ أثناء تحميل معلومات البائع.",
+      "productsLoadError": "حدث خطأ أثناء تحميل منتجات البائع.",
+      "reviewsTab": "التقييمات",
+      "reviews": {
+        "summary": "ملخص التقييم",
+        "reviewCount": "تقييم",
+        "communication": "تواصل",
+        "shippingSpeed": "سرعة الشحن",
+        "productQuality": "جودة المنتجات",
+        "noReviews": "لم يتم إجراء أي تقييم بعد.",
+        "verified": "مشتري موثق"
+      }
+    }
+  },
   "editListing": {
     "title": "عدّل الإعلان",
     "saveChanges": "حفظ التغييرات",
@@ -307,6 +733,10 @@
     "updateSuccess": "تم تحديث الإعلان بنجاح.",
     "updateFailed": "حدث خطأ أثناء تحديث القائمة.",
     "loadError": "حدث خطأ أثناء تحميل الإعلان.",
+    "sellerNotFound": "لم يتم العثور على ملف تعريف البائع.",
+    "sellerLoadError": "تعذر تحميل ملف تعريف البائع.",
+    "userNotFound": "لم يتم العثور على معلومات المستخدم. يرجى تسجيل الدخول مرة أخرى.",
+    "locationNotFound": "لم يتم العثور على معلومات الموقع. يرجى تحديث الصفحة.",
     "basicInfo": "معلومات أساسية",
     "categoryAndCondition": "الفئة والحالة",
     "pricing": "التسعير",
@@ -314,6 +744,8 @@
     "images": "صور",
     "existingImages": "الصور المتاحة",
     "addImage": "إضافة صورة",
+    "maxImages": "يمكنك تحميل 10 صور كحد أقصى.",
+    "imageHint": "الحد الأدنى صورة واحدة، والحد الأقصى عشر صور. بصيغة PNG أو JPG أو WEBP.",
     "uploadingImages": "يتم تحميل الصور...",
     "uploadingImage": "يتم تحميل الصورة.",
     "imageUploadFailed": "تعذر تحميل الصورة.",
@@ -358,6 +790,7 @@
     "addImage": "إضافة صورة",
     "maxImages": "يمكنك تحميل 10 صور كحد أقصى.",
     "imageHint": "الحد الأدنى صورة واحدة، والحد الأقصى عشر صور. بصيغة PNG أو JPG أو WEBP.",
+    "location": "معلومات الموقع",
     "fields": {
       "title": "عنوان الإعلان",
       "shortDescription": "وصف موجز",
@@ -370,13 +803,29 @@
       "shippingAvailable": "تتوفر خدمة الشحن.",
       "shippingCost": "رسوم الشحن",
       "weight": "وزن",
-      "weightUnit": "وحدة الوزن"
+      "weightUnit": "وحدة الوزن",
+      "city": "مدينة",
+      "address": "عنوان",
+      "postalCode": "رمز بريدي"
     },
     "placeholders": {
       "title": "مثال: بقرة هولشتاين عمرها سنتان",
       "shortDescription": "وصف المنتج (بحد أقصى 200 حرف)",
       "description": "قدّم معلومات مفصلة عن المنتج...",
-      "category": "اختر فئة."
+      "category": "اختر فئة.",
+      "city": "ادخل المدينة",
+      "address": "أدخل العنوان كاملاً.",
+      "postalCode": "رمز بريدي"
+    },
+    "errors": {
+      "titleRequired": "عنوان الإعلان إلزامي.",
+      "shortDescriptionRequired": "مطلوب وصف موجز.",
+      "descriptionRequired": "يلزم تقديم شرح مفصل.",
+      "categoryRequired": "اختيار الفئة إلزامي.",
+      "priceRequired": "السعر إلزامي.",
+      "cityRequired": "المعلومات المتعلقة بالمدينة مطلوبة.",
+      "addressRequired": "المعلومات المتعلقة بالعنوان مطلوبة.",
+      "locationError": "حدث خطأ أثناء إنشاء الموقع."
     },
     "success": "تم إنشاء الإعلان بنجاح.",
     "error": "حدث خطأ أثناء إنشاء الإعلان.",
@@ -388,24 +837,53 @@
     "draftSaved": "تم حفظ المسودة",
     "productCreated": "تم إنشاء المنتج بنجاح.",
     "creationFailed": "تعذر إنشاء المنتج. يرجى المحاولة مرة أخرى.",
-    "errors": {
-      "titleRequired": "عنوان الإعلان إلزامي.",
-      "shortDescriptionRequired": "مطلوب وصف موجز.",
-      "descriptionRequired": "يلزم تقديم شرح مفصل.",
-      "categoryRequired": "اختيار الفئة إلزامي.",
-      "priceRequired": "أدخل سعراً صحيحاً."
-    }
+    "userNotFound": "لم يتم العثور على معلومات المستخدم. يرجى تسجيل الدخول مرة أخرى.",
+    "defaultBusinessName": "عملي"
+  },
+  "becomeSeller": {
+    "title": "كن بائعًا",
+    "description": "بيان الشركة",
+    "alreadySeller": "لديك بالفعل ملف تعريف للبائع.",
+    "goToListings": "انتقل إلى قوائمي",
+    "businessInfo": "معلومات الأعمال",
+    "contactInfo": "معلومات الاتصال",
+    "businessName": "اسم الشركة",
+    "businessNamePlaceholder": "مثال: مزرعة يلماز",
+    "businessType": "جولة عمل",
+    "businessTypePlaceholder": "اختر نوع عملك.",
+    "businessTypes": {
+      "individual": "فردي",
+      "company": "شركة",
+      "cooperative": "التعاونية",
+      "farm": "مزرعة"
+    },
+    "taxNumber": "رقم الضريبة",
+    "taxNumberPlaceholder": "أدخل رقم التعريف الضريبي الخاص بك (اختياري)",
+    "descriptionPlaceholder": "اكتب وصفًا موجزًا عن عملك...",
+    "phone": "الهاتف",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "موقع إلكتروني",
+    "websitePlaceholder": "https://www.examplesite.com (اختياري)",
+    "submit": "إنشاء ملف تعريف البائع",
+    "submitting": "إنشاء ملف تعريف...",
+    "success": "تم إنشاء ملف تعريف البائع الخاص بك بنجاح!",
+    "error": "حدث خطأ أثناء إنشاء ملف تعريف البائع.",
+    "taxNumberHelp": "أدخل رقمك الضريبي المكون من 10 أو 11 رقماً (اختياري)",
+    "phoneHelp": "مثال: +90 555 123 45 67 أو 0555 123 45 67",
+    "websiteHelp": "مثال: www.isletmem.com أو https://isletmem.com",
+    "alreadySellerDescription": "يمكنك استخدام الزر أدناه لإدارة قوائمك.",
+    "newListing": "إضافة إعلان جديد"
   },
   "fileUpload": {
     "dragDrop": "قم بتحميل صورة أو مقطع فيديو.",
     "dragDropHint": "اسحب وأفلت أو انقر للاختيار.",
     "dropHere": "اتركه...",
     "imageLimit": "صورة: بحد أقصى 10 ميجابايت",
-    "videoLimit": "الفيديو: بحد أقصى 50 ميجابايت",
+    "videoLimit": "الفيديو: بحد أقصى 100 ميجابايت",
     "uploadCount": "{الحالي} / {الحد الأقصى} محمل",
     "maxFilesError": "يمكنك تحميل ما يصل إلى {max} من الوسائط.",
     "imageTooLarge": "يجب ألا يتجاوز حجم الصورة 10 ميجابايت.",
-    "videoTooLarge": "يجب أن يكون حجم الفيديو أقل من 50 ميجابايت.",
+    "videoTooLarge": "يجب ألا يتجاوز حجم الفيديو 100 ميجابايت.",
     "optimizing": "جارٍ التحسين...",
     "uploading": "تحميل...",
     "queued": "أنتظر في الطابور...",
@@ -419,9 +897,833 @@
     "videoBadge": "فيديو",
     "coverUpdated": "تم تعديل صورة الغلاف بنجاح.",
     "optimizationInfo": "تم تحسين الصور لتتوافق مع معايير الويب",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "الاختيار المرئي",
+    "changeImage": "يتغير",
+    "removeImage": "يزيل",
+    "videoProcessing": "تتم معالجة الفيديو...",
+    "videoProcessingFailed": "فشلت العملية.",
+    "videoProcessingPollError": "تعذر الحصول على حالة معالجة الفيديو. يرجى تحديث الصفحة.",
+    "reorderError": "تعذر فرز الملف.",
+    "coverUpdateError": "تعذر تحديث صورة الغلاف."
+  },
+  "error": {
+    "title": "حدث خطأ.",
+    "description": "حدث خطأ غير متوقع. يرجى تحديث الصفحة أو المحاولة مرة أخرى لاحقاً.",
+    "retry": "حاول ثانية",
+    "goBack": "لا تعود إلى الوراء",
+    "goHome": "بيت",
+    "notFound": {
+      "title": "الصفحة غير موجودة",
+      "description": "الصفحة التي تبحث عنها إما غير متوفرة أو تم نقلها.",
+      "goHome": "العودة إلى الصفحة الرئيسية"
+    }
+  },
+  "search": {
+    "title": "يبحث",
+    "placeholder": "ابحث عن المنتجات أو الفئات أو البائعين...",
+    "searchButton": "يبحث",
+    "searchingFor": "مطلوب",
+    "loading": "مطلوب...",
+    "resultsCount": "تم العثور على {count} نتيجة.",
+    "noResults": "لم يتم العثور على نتائج.",
+    "tryDifferentSearch": "جرب كلمات مفتاحية مختلفة أو غيّر عوامل التصفية.",
+    "filters": {
+      "title": "الفلاتر",
+      "category": "فئة",
+      "allCategories": "جميع الفئات",
+      "condition": "الموقف",
+      "allConditions": "جميع الحالات",
+      "priceRange": "نطاق السعر",
+      "price": "سعر",
+      "min": "مين",
+      "max": "الأعلى",
+      "apply": "يتقدم",
+      "clear": "ينظف",
+      "clearAll": "مسح الكل"
+    },
+    "fetchError": "حدث خطأ أثناء تحميل نتائج البحث",
+    "recentSearches": "عمليات البحث الأخيرة",
+    "clearHistory": "مسح السجل",
+    "noSearchHistory": "ليس لديك سجل بحث حتى الآن.",
+    "deleteHistoryError": "حدث خطأ أثناء حذف سجل البحث."
+  },
+  "categories": {
+    "title": "إدارة الفئات",
+    "description": "يمكنك إدارة التصنيفات من هنا.",
+    "noCategories": "لم تتم إضافة أي فئات بعد.",
+    "createFirst": "أنشئ الفئة الأولى.",
+    "fetchError": "حدث خطأ أثناء تحميل الفئات.",
+    "createSuccess": "تم إنشاء الفئة بنجاح",
+    "createError": "حدث خطأ أثناء إنشاء الفئة.",
+    "updateSuccess": "تم تحديث الفئة بنجاح",
+    "updateError": "حدث خطأ أثناء تحديث الفئة.",
+    "deleteSuccess": "تم حذف الفئة بنجاح.",
+    "deleteError": "حدث خطأ أثناء حذف الفئة.",
+    "activateSuccess": "تم تفعيل الفئة.",
+    "deactivateSuccess": "تم تعطيل هذه الفئة.",
+    "statusError": "حدث خطأ أثناء تغيير الحالة.",
+    "loadError": "حدث خطأ أثناء تحميل الفئة",
+    "filters": {
+      "all": "جميعهم",
+      "active": "نشيط",
+      "inactive": "غير نشط"
+    },
+    "table": {
+      "name": "اسم الفئة",
+      "slug": "سبيكة",
+      "sortOrder": "رقم سري",
+      "subCategories": "الفئة الفرعية",
+      "status": "الموقف",
+      "actions": "المعاملات"
+    },
+    "actions": {
+      "edit": "يحرر",
+      "delete": "يمسح",
+      "activate": "فعل",
+      "deactivate": "البنية المبنية للمجهول"
+    },
+    "deleteDialog": {
+      "title": "الفئة",
+      "description": "هل أنت متأكد من رغبتك في حذف هذه الفئة؟ هذا الإجراء لا رجعة فيه.",
+      "cancel": "يلغي",
+      "confirm": "يمسح"
+    },
+    "addNew": "إضافة فئة جديدة",
+    "loadMore": "حمل المزيد",
+    "loadingMore": "تحميل...",
+    "form": {
+      "newTitle": "إنشاء فئة جديدة",
+      "editTitle": "تعديل الفئة",
+      "name": "اسم الفئة",
+      "namePlaceholder": "مثال: الماشية",
+      "slug": "سبيكة",
+      "slugPlaceholder": "مثال: الماشية الكبيرة",
+      "description": "توضيح",
+      "descriptionPlaceholder": "وصف موجز للفئة...",
+      "parentCategory": "الفئة العليا",
+      "parentCategoryPlaceholder": "اختر فئة رئيسية (اختياري)",
+      "noParent": "لا توجد فئة رئيسية (الفئة الأساسية)",
+      "sortOrder": "رقم التسلسل",
+      "isActive": "نشيط",
+      "iconUrl": "رابط الأيقونة",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "يحفظ",
+      "submitting": "توفير...",
+      "updating": "جارٍ التحديث...",
+      "errors": {
+        "nameRequired": "اسم الفئة مطلوب.",
+        "slugRequired": "استخدام الرصاص إلزامي."
+      }
+    }
+  },
+  "offers": {
+    "title": "المقترحات",
+    "description": "إدارة عروضك الواردة والصادرة.",
+    "received": "العروض الواردة",
+    "sent": "العروض المقدمة",
+    "noReceivedOffers": "لم يتم استلام أي عروض حتى الآن.",
+    "noSentOffers": "لم تقدم عرضًا بعد.",
+    "browseProducts": "تصفح المنتجات",
+    "viewProduct": "عرض المنتج",
+    "accept": "يقبل",
+    "reject": "يرفض",
+    "withdraw": "ينسحب",
+    "makeOffer": "قدّم عرضًا",
+    "sendOffer": "إرسال عرض",
+    "sending": "إرسال...",
+    "cancel": "يلغي",
+    "listingPrice": "السعر المعلن",
+    "yourOffer": "عرضك",
+    "quantity": "كمية",
+    "messageOptional": "رسالة (اختياري)",
+    "messagePlaceholder": "ملاحظة تود مشاركتها مع البائع...",
+    "expiresAt": "آخر تاريخ صالح",
+    "offerSent": "تم إرسال عرضك بنجاح.",
+    "offerError": "حدث خطأ أثناء إرسال العرض.",
+    "acceptSuccess": "تم قبول العرض.",
+    "rejectSuccess": "تم رفض العرض.",
+    "withdrawSuccess": "تم سحب العرض.",
+    "actionError": "حدث خطأ أثناء العملية.",
+    "fetchError": "حدث خطأ أثناء تحميل العروض.",
+    "loginRequired": "قم بتسجيل الدخول لتقديم عرض.",
+    "invalidPrice": "أدخل سعراً صحيحاً.",
+    "invalidQuantity": "أدخل مبلغاً صحيحاً.",
+    "status": {
+      "pending": "قيد الانتظار",
+      "accepted": "مقبول",
+      "rejected": "مرفوض",
+      "countered": "عرض مضاد",
+      "expired": "انتهت مدة ولايته.",
+      "withdrawn": "انسحب"
+    }
+  },
+  "deals": {
+    "title": "الاتفاقيات",
+    "description": "التزم باتفاقيات الشراء الخاصة بك.",
+    "buying": "العلماء",
+    "selling": "مبيعات",
+    "noBuyingDeals": "ليس لديكم عملية تسجيل للطلاب حتى الآن.",
+    "noSellingDeals": "ليس لديك أي معاملات بيع حتى الآن.",
+    "browseProducts": "تصفح المنتجات",
+    "viewProduct": "عرض المنتج",
+    "activeDeals": "الاتفاقيات النشطة",
+    "completedDeals": "مكتمل",
+    "purchases": "العلماء",
+    "sales": "مبيعات",
+    "fetchError": "حدث خطأ أثناء تحميل الاتفاقيات",
+    "dealStatus": {
+      "pending": "قيد الانتظار",
+      "confirmed": "مؤكد",
+      "processing": "التحضير",
+      "shipped": "في الشحنة",
+      "delivered": "تم التوصيل",
+      "completed": "مكتمل",
+      "cancelled": "تم الإلغاء",
+      "disputed": "اتفاق"
+    },
+    "delivery": {
+      "pickup": "التسليم باليد",
+      "shipping": "عن طريق الشحن",
+      "transport": "عن طريق المواصلات"
+    },
+    "requestTransport": "طلب شحن"
+  },
+  "farms": {
+    "title": "مزارعي",
+    "description": "قم بإدارة وتحديث مزارعك.",
+    "addFarm": "إضافة مزرعة",
+    "editFarm": "إدارة المزارع",
+    "noFarms": "لم تقم بإضافة مزرعة بعد.",
+    "farmName": "اسم المزرعة",
+    "registrationNumber": "رقم التسجيل",
+    "location": "موقع",
+    "selectLocation": "اختر موقعًا.",
+    "addLocationFirst": "أولاً، أضف موقعًا.",
+    "farmTypeLabel": "جولة في المزرعة",
+    "farmDescription": "توضيح",
+    "totalArea": "المساحة الإجمالية",
+    "cultivatedArea": "المنطقة المزروعة",
+    "certifications": "الشهادات",
+    "certificationsPlaceholder": "ISO 22000، GlobalGAP، إلخ.",
+    "organic": "عضوي",
+    "verified": "تم التحقق",
+    "save": "يحفظ",
+    "saving": "توفير...",
+    "cancel": "يلغي",
+    "edit": "يحرر",
+    "delete": "يمسح",
+    "sellerRequired": "ملف تعريف البائع مطلوب",
+    "sellerRequiredDesc": "لإضافة مزرعة، عليك أولاً إنشاء ملف تعريف البائع الخاص بك.",
+    "becomeSeller": "كن بائعًا",
+    "createSuccess": "تمت إضافة المزرعة بنجاح.",
+    "updateSuccess": "تم تحديث المزرعة بنجاح.",
+    "deleteSuccess": "تم حذف المزرعة بنجاح.",
+    "saveError": "حدث خطأ أثناء تسجيل المزرعة.",
+    "deleteError": "حدث خطأ أثناء حذف المزرعة.",
+    "fetchError": "حدث خطأ أثناء تحميل معلومات المزرعة.",
+    "farmType": {
+      "livestock": "تربية الماشية",
+      "crop": "زراعة",
+      "mixed": "مختلط",
+      "poultry": "مجنح",
+      "dairy": "تربية الألبان",
+      "aquaculture": "المنتجات المائية"
+    }
+  },
+  "transporters": {
+    "title": "ناقلات",
+    "description": "خدمات نقل الحيوانات والمنتجات",
+    "searchPlaceholder": "ابحث عن شركة نقل...",
+    "noTransporters": "لا توجد شركات نقل مسجلة حتى الآن.",
+    "verified": "تم التحقق",
+    "transports": "ينقل",
+    "viewProfile": "عرض الملف الشخصي",
+    "sort": {
+      "newest": "أحدث",
+      "rating": "أعلى نتيجة",
+      "mostTransports": "الشحن الأكثر تكرارًا"
+    },
+    "pagination": {
+      "previous": "سابق",
+      "next": "التالي",
+      "page": "الصفحة {page}"
+    }
+  },
+  "transport": {
+    "title": "طلبات الشحن الخاصة بي",
+    "description": "تتبع طلبات الشحن الخاصة بك.",
+    "findTransporter": "ابحث عن ناقل",
+    "active": "نشيط",
+    "completed": "مكتمل",
+    "total": "المجموع",
+    "asSeller": "بصفتك بائعًا",
+    "asBuyer": "بصفتك المشتري",
+    "noSellerRequests": "بصفتك بائعًا، ليس لديك أي متطلبات شحن.",
+    "noBuyerRequests": "بصفتك المستلم، ليس لديك طلب شحن.",
+    "viewProduct": "عرض المنتج",
+    "pickup": "يستلم",
+    "delivery": "توصيل",
+    "urgent": "عاجل",
+    "fetchError": "حدث خطأ أثناء تحميل طلبات الشحن.",
+    "trackShipment": "يتبع",
+    "transportStatus": {
+      "pending": "قيد الانتظار",
+      "inPool": "في المسبح",
+      "assigned": "تم تعيينه",
+      "pickedUp": "إيصال",
+      "inTransit": "على الطريق",
+      "delivered": "تم التوصيل",
+      "completed": "مكتمل",
+      "cancelled": "تم الإلغاء"
+    },
+    "transportType": {
+      "standard": "معيار",
+      "refrigerated": "سلسلة التبريد",
+      "liveAnimal": "حيوانات حية",
+      "hazardous": "المواد الخطرة",
+      "oversized": "حجم كبير"
+    }
+  },
+  "moderation": {
+    "title": "إدارة المنتج",
+    "description": "مراجعة المنتجات التي تنتظر الموافقة.",
+    "pending": "منتظر",
+    "allClear": "تم فحص جميع المنتجات.",
+    "noPending": "لا توجد منتجات بانتظار الموافقة.",
+    "awaitingReview": "في انتظار المراجعة",
+    "by": "مندوب المبيعات:",
+    "stock": "مخزون",
+    "preview": "معك",
+    "approve": "يتأكد",
+    "reject": "يرفض",
+    "confirmReject": "يرفض",
+    "cancelReject": "يستسلم",
+    "rejectReasonPlaceholder": "اكتب سبب الرفض...",
+    "rejectReasonRequired": "يُعد ذكر سبب الرفض أمراً إلزامياً.",
+    "approveSuccess": "تمت الموافقة على المنتج بنجاح.",
+    "rejectSuccess": "تم رفض المنتج.",
+    "actionError": "حدث خطأ أثناء العملية.",
+    "fetchError": "حدث خطأ أثناء تحميل المنتجات.",
+    "unauthorized": "ليس لديك إذن بالوصول إلى هذه الصفحة."
+  },
+  "sellerModeration": {
+    "title": "إدارة البائعين",
+    "description": "مراجعة وإدارة حسابات البائعين.",
+    "pending": "منتظر",
+    "allClear": "تم التحقيق مع جميع البائعين.",
+    "noPending": "لا يوجد بائعون ينتظرون.",
+    "verify": "يؤكد",
+    "suspend": "تعليق",
+    "verifySuccess": "تم التحقق من البائع بنجاح.",
+    "suspendSuccess": "تم إيقاف البائع.",
+    "actionError": "حدث خطأ أثناء العملية.",
+    "suspendReasonRequired": "سبب الإيقاف إلزامي.",
+    "suspendReasonPlaceholder": "اكتب سبب الإيقاف...",
+    "confirmSuspend": "تعليق",
+    "cancelSuspend": "يستسلم",
+    "statusLabels": {
+      "pendingVerification": "في انتظار التحقق",
+      "active": "نشيط",
+      "suspended": "شنقاً",
+      "banned": "مُحرَّم"
+    },
+    "filterAll": "عرض الكل",
+    "filterPending": "المنتظرين",
+    "filterActive": "أصول",
+    "filterSuspended": "معلق",
+    "unauthorized": "ليس لديك إذن بالوصول إلى هذه الصفحة.",
+    "businessName": "اسم الشركة",
+    "businessType": "جولة عمل",
+    "email": "بريد إلكتروني",
+    "phone": "الهاتف",
+    "status": "الموقف",
+    "createdAt": "تاريخ التسجيل"
+  },
+  "transporterModeration": {
+    "title": "تعديل الناقل",
+    "description": "مراجعة وإدارة حسابات شركات الاتصالات.",
+    "pending": "منتظر",
+    "allClear": "تم التحقيق مع جميع شركات النقل.",
+    "noPending": "لا يوجد ناقل ينتظر.",
+    "verify": "يؤكد",
+    "suspend": "تعليق",
+    "verifySuccess": "تم التحقق من الناقل بنجاح.",
+    "suspendSuccess": "تم إيقاف شركة النقل.",
+    "actionError": "حدث خطأ أثناء العملية.",
+    "suspendReasonRequired": "سبب الإيقاف إلزامي.",
+    "suspendReasonPlaceholder": "اكتب سبب الإيقاف...",
+    "confirmSuspend": "تعليق",
+    "cancelSuspend": "يستسلم",
+    "statusLabels": {
+      "pendingVerification": "في انتظار التحقق",
+      "active": "نشيط",
+      "suspended": "شنقاً",
+      "banned": "مُحرَّم"
+    },
+    "filterAll": "عرض الكل",
+    "filterPending": "المنتظرين",
+    "filterActive": "أصول",
+    "filterSuspended": "معلق",
+    "unauthorized": "ليس لديك إذن بالوصول إلى هذه الصفحة.",
+    "companyName": "اسم الشركة",
+    "contactPerson": "الشخص المخول",
+    "email": "بريد إلكتروني",
+    "phone": "الهاتف",
+    "city": "مدينة",
+    "status": "الموقف",
+    "createdAt": "تاريخ التسجيل"
+  },
+  "transporterDetail": {
+    "notFound": "لم يتم العثور على ناقل.",
+    "backToList": "دون إلى شركات النقل",
+    "verified": "تم التحقق",
+    "totalTransports": "إجمالي الشحن",
+    "completed": "مكتمل",
+    "about": "عن",
+    "contact": "معلومات الاتصال",
+    "businessInfo": "معلومات الأعمال",
+    "license": "رقم الترخيص",
+    "insurance": "معلومات التأمين",
+    "fleet": "معلومات الأسطول",
+    "serviceRegions": "مناطق الخدمة",
+    "specializations": "مجالات الخبرة",
+    "certifications": "الشهادات"
+  },
+  "brands": {
+    "title": "إدارة العلامة التجارية",
+    "description": "إدارة العلامات التجارية للمنتجات.",
+    "addBrand": "أضف علامة تجارية",
+    "editBrand": "تعديل العلامة التجارية",
+    "noBrands": "لم تتم إضافة أي علامات تجارية حتى الآن.",
+    "brandName": "اسم العلامة التجارية",
+    "brandDescription": "توضيح",
+    "website": "موقع إلكتروني",
+    "logoUrl": "رابط الشعار",
+    "save": "يحفظ",
+    "saving": "توفير...",
+    "cancel": "يلغي",
+    "edit": "يحرر",
+    "delete": "يمسح",
+    "inactive": "سلبي",
+    "products": "منتج",
+    "createSuccess": "تمت إضافة العلامة التجارية بنجاح",
+    "updateSuccess": "تم تحديث العلامة التجارية بنجاح.",
+    "deleteSuccess": "تم حذف العلامة التجارية بنجاح.",
+    "saveError": "حدث خطأ أثناء تسجيل العلامة التجارية.",
+    "deleteError": "حدث خطأ أثناء حذف العلامة التجارية.",
+    "fetchError": "حدث خطأ أثناء تحميل العلامات التجارية",
+    "unauthorized": "ليس لديك إذن بالوصول إلى هذه الصفحة."
+  },
+  "transporterReviews": {
+    "title": "التقييمات",
+    "reviewCount": "تقييم",
+    "noReviews": "لم يتم إجراء أي تقييم بعد.",
+    "timeliness": "التسليم في الموعد المحدد",
+    "communication": "تواصل",
+    "carefulHandling": "التعامل بحرص",
+    "professionalism": "الاحترافية"
+  },
+  "transportOffers": {
+    "title": "عروض أسعار الشحن",
+    "description": "إدارة عروض الأسعار التي تقدمها لطلبات الشحن.",
+    "newOffer": "اقتراح جديد",
+    "transportRequestId": "رقم طلب الشحن",
+    "requestIdPlaceholder": "أدخل رقم طلب الشحن.",
+    "offeredPrice": "سعر العرض",
+    "estimatedDays": "المدة المقدرة (بالأيام)",
+    "days": "يوم",
+    "vehicleType": "نوع المركبة",
+    "insuranceIncluded": "يشمل التأمين",
+    "message": "رسالة",
+    "cancel": "يلغي",
+    "sending": "إرسال...",
+    "sendOffer": "قدّم عرضك",
+    "cancelOffer": "يلغي",
+    "pendingTab": "منتظر",
+    "historyTab": "ماضي",
+    "noPendingOffers": "ليس لديك أي عروض معلقة.",
+    "noHistory": "لم يتم العثور على عروض سابقة.",
+    "status": {
+      "pending": "منتظر",
+      "accepted": "مقبول",
+      "rejected": "مرفوض",
+      "expired": "انتهت مدة ولايته.",
+      "cancelled": "تم الإلغاء"
+    },
+    "createSuccess": "تم تقديم العرض بنجاح.",
+    "createError": "حدث خطأ أثناء إرسال العرض.",
+    "cancelSuccess": "تم إلغاء العرض.",
+    "cancelError": "حدث خطأ أثناء إلغاء العرض.",
+    "fetchError": "حدث خطأ أثناء تحميل العروض."
+  },
+  "animalInfo": {
+    "title": "معلومات عن الحيوانات والمنتجات",
+    "animalTab": "حيوان",
+    "healthTab": "صحة",
+    "vaccinationsTab": "الملقحين",
+    "veterinaryTab": "طبيب بيطري",
+    "breed": "سباق",
+    "genderLabel": "جنس",
+    "gender": {
+      "male": "ذكر",
+      "female": "أنثى",
+      "unknown": "مجهول"
+    },
+    "age": "عمر",
+    "months": "شهر",
+    "weight": "وزن",
+    "color": "لون",
+    "tagNumber": "رقم الأذن",
+    "healthStatus": "الحالة الصحية",
+    "health": {
+      "healthy": "صحيح",
+      "underTreatment": "تحت العلاج",
+      "recovering": "هو/هي يتعافى.",
+      "quarantined": "في الحجر الصحي",
+      "unknown": "مجهول"
+    },
+    "purposeLabel": "الاستخدام المقصود",
+    "purpose": {
+      "breeding": "عشيق",
+      "dairy": "لبن",
+      "meat": "لحمة",
+      "egg": "بيضة",
+      "wool": "صوف",
+      "working": "عمل",
+      "pet": "محلي",
+      "other": "آخر"
+    },
+    "pregnancy": "الحمل",
+    "pregnant": "حامل",
+    "microchip": "رقم الشريحة الإلكترونية",
+    "passport": "رقم جواز السفر",
+    "sireDetails": "معلومات الأب",
+    "damDetails": "المعلومات الرئيسية",
+    "diagnosis": "تشخبص",
+    "treatment": "علاج",
+    "medications": "الأدوية",
+    "veterinarian": "طبيب بيطري",
+    "nextDue": "تاريخ المتمردين القادم",
+    "prescriptionRequired": "لا يصرف إلا بإذن الطبيب",
+    "targetSpecies": "جولات تارجت",
+    "activeIngredients": "المكونات الفعالة",
+    "registrationNo": "رقم التسجيل",
+    "storage": "تخزين",
+    "chemicalTab": "المواد الكيميائية",
+    "feedTab": "الطعم",
+    "seedTab": "بذرة",
+    "machineryTab": "آلة",
+    "organic": "عضوي",
+    "toxicity": "سمية",
+    "gmoFree": "خالٍ من الكائنات المعدلة وراثيًا",
+    "protein": "بروتين",
+    "fat": "زيت",
+    "fiber": "الفيبر",
+    "hybrid": "هجين",
+    "germination": "إنبات",
+    "daysToMaturity": "إنضاج",
+    "daysLabel": "يوم",
+    "warranty": "مضمون",
+    "power": "قوة",
+    "hoursUsed": "ساعات الاستخدام",
+    "hours": "ساعة",
+    "powerSource": "مزود الطاقة"
+  },
+  "productVariants": {
+    "title": "أنواع المنتجات",
+    "variantCount": "متغير",
+    "inStock": "في الأوراق المالية",
+    "outOfStock": "نفذ"
+  },
+  "productPrices": {
+    "title": "الأسعار (بعملات متعددة)",
+    "autoConversion": "التحويل التلقائي",
+    "validUntil": "صحة"
+  },
+  "requestTransport": {
+    "title": "إنشاء طلب شحن",
+    "pickupLocation": "نقطة التحميل",
+    "deliveryLocation": "نقطة التسليم",
+    "city": "مدينة",
+    "address": "عنوان",
+    "transportType": "النقل",
+    "types": {
+      "standard": "معيار",
+      "refrigerated": "سلسلة التبريد",
+      "liveAnimal": "حيوانات حية",
+      "hazardous": "المواد الخطرة",
+      "oversized": "حجم كبير"
+    },
+    "weight": "الوزن (كجم)",
+    "weightPlaceholder": "كيلوغرام",
+    "preferredPickupDate": "تاريخ التحميل المفضل",
+    "preferredDeliveryDate": "تاريخ التسليم المفضل",
+    "urgent": "خدمات النقل العاجلة",
+    "specialInstructions": "تعليمات خاصة",
+    "instructionsPlaceholder": "اكتب تعليماتك المحددة هنا...",
+    "cancel": "يستسلم",
+    "submit": "خلق الطلب",
+    "submitting": "في عملية الخلق...",
+    "success": "تم إنشاء طلب الشحن بنجاح.",
+    "error": "حدث خطأ أثناء إنشاء طلب الشحن."
+  },
+  "transportTracking": {
+    "title": "تتبع الشحنات",
+    "noTracking": "لا تتوفر معلومات التتبع حتى الآن.",
+    "update": "تحديث"
+  },
+  "locations": {
+    "title": "عناويني",
+    "description": "إدارة عناوينك المسجلة.",
+    "addLocation": "إضافة عنوان",
+    "editLocation": "تعديل العنوان",
+    "noLocations": "ليس لديك عنوان مسجل حتى الآن.",
+    "name": "اسم العنوان",
+    "namePlaceholder": "على سبيل المثال: منزل، وظيفة، مزرعة",
+    "address": "عنوان",
+    "addressLine2": "سطر العنوان 2",
+    "city": "مدينة",
+    "state": "المنطقة / الإقليم",
+    "postalCode": "رمز بريدي",
+    "phone": "الهاتف",
+    "email": "بريد إلكتروني",
+    "cancel": "يستسلم",
+    "save": "يحفظ",
+    "saving": "توفير...",
+    "typePickup": "تحميل",
+    "typeDelivery": "توصيل",
+    "typeBoth": "عام",
+    "createSuccess": "تمت إضافة العنوان بنجاح.",
+    "createError": "حدث خطأ أثناء إضافة العنوان.",
+    "updateSuccess": "تم تحديث العنوان بنجاح.",
+    "updateError": "حدث خطأ أثناء تحديث العنوان.",
+    "deleteLocation": "حذف العنوان",
+    "deleteSuccess": "تم حذف العنوان",
+    "deleteError": "حدث خطأ أثناء حذف العنوان.",
+    "fetchError": "حدث خطأ أثناء تحميل العناوين."
+  },
+  "systemSettings": {
+    "title": "إعدادات النظام",
+    "description": "عرض إعدادات العملة واللغة وطرق الدفع والشحن والضرائب الخاصة بالمنصة.",
+    "unauthorized": "ليس لديك إذن بالوصول إلى هذه الصفحة.",
+    "currenciesTab": "العملات",
+    "languagesTab": "اللغات",
+    "paymentTab": "طرق الدفع",
+    "shippingTab": "شحنة",
+    "taxTab": "ضريبة",
+    "active": "نشيط",
+    "inactive": "سلبي",
+    "default": "تقصير",
+    "noCurrencies": "لم يتم تحديد العملة بعد.",
+    "noLanguages": "لم يتم تعريف اللغة بعد.",
+    "noPaymentMethods": "لم يتم تحديد طريقة الدفع بعد.",
+    "noCarriers": "لم يتم تحديد شركة الشحن بعد.",
+    "noZones": "لم يتم تحديد منطقة الشحن بعد.",
+    "noTaxRates": "لم يتم تحديد معدل الضريبة بعد.",
+    "carriers": "شركات الشحن",
+    "zones": "مناطق الشحن",
+    "countries": "بلدان",
+    "rates": "رسوم الشحن",
+    "noRates": "لم يتم تحديد تكاليف الشحن بعد.",
+    "freeShipping": "ًالشحن مجانا",
+    "deliveryDays": "وقت التسليم خلال اليوم"
+  },
+  "pushPermission": {
+    "title": "تفعيل الإشعارات",
+    "description": "تلقي إشعارات حول الرسائل الجديدة والعروض وتحديثات الطلبات.",
+    "allow": "يسمح",
+    "dismiss": "يغلق"
+  },
+  "healthRecords": {
+    "title": "السجلات الصحية",
+    "description": "إدارة سجلات صحة الحيوانات وتاريخها الطبي.",
+    "addRecord": "إضافة سجل",
+    "editRecord": "سجل التحرير",
+    "deleteRecord": "حذف السجل",
+    "noRecords": "لم تتم إضافة السجل الصحي بعد.",
+    "animalInfoId": "تحديد هوية الحيوان",
+    "animalInfoIdPlaceholder": "أدخل رقم تعريف معلومات الحيوان.",
+    "recordType": "جولة التسجيل",
+    "recordTypePlaceholder": "أمثلة: الفحص، العلاج، الجراحة",
+    "recordDate": "تاريخ التسجيل",
+    "followUpDate": "تاريخ التحقق",
+    "veterinarianName": "طبيب بيطري",
+    "veterinarianLicense": "رقم الترخيص",
+    "clinicName": "سريري",
+    "diagnosis": "تشخبص",
+    "treatment": "علاج",
+    "medications": "الأدوية",
+    "medicationsPlaceholder": "مثال: بنسلين ٥٠٠ مجم، إيبوبروفين",
+    "notes": "ملحوظات",
+    "documentUrl": "رابط المستند",
+    "saving": "توفير...",
+    "createSuccess": "تمت إضافة السجل الصحي بنجاح.",
+    "updateSuccess": "تم تحديث السجل الصحي بنجاح.",
+    "deleteSuccess": "تم حذف السجل الصحي بنجاح.",
+    "saveError": "حدث خطأ أثناء حفظ السجل.",
+    "deleteError": "حدث خطأ أثناء حذف السجل.",
+    "fetchError": "حدث خطأ أثناء تحميل السجلات"
+  },
+  "vaccinations": {
+    "title": "سجلات اللقاحات",
+    "description": "إدارة سجلات وجداول تطعيم الحيوانات.",
+    "addVaccination": "أضف ريبيل",
+    "editVaccination": "ترتيب متمرد",
+    "deleteVaccination": "سيل المتمرد",
+    "noVaccinations": "لم تتم إضافة سجل التطعيم بعد.",
+    "animalInfoId": "تحديد هوية الحيوان",
+    "animalInfoIdPlaceholder": "أدخل رقم تعريف معلومات الحيوان.",
+    "vaccineName": "آسي آدي",
+    "vaccineNamePlaceholder": "مثال: لقاح SAT، بروسيلا",
+    "vaccineType": "جولة المتمردين",
+    "vaccineTypePlaceholder": "مثال: حي، غير نشط",
+    "batchNumber": "رقم الحفلة",
+    "vaccinationDate": "تاريخ المتمردين",
+    "nextDueDate": "تاريخ المتمردين القادم",
+    "veterinarianName": "طبيب بيطري",
+    "veterinarianLicense": "رقم الترخيص",
+    "notes": "ملحوظات",
+    "certificateUrl": "رابط الشهادة",
+    "saving": "توفير...",
+    "createSuccess": "تمت إضافة سجل التطعيم بنجاح.",
+    "updateSuccess": "تم تحديث سجل التطعيم بنجاح.",
+    "deleteSuccess": "تم حذف سجل اللقاح بنجاح.",
+    "saveError": "حدث خطأ أثناء تسجيل اللقاح.",
+    "deleteError": "حدث خطأ أثناء حذف اللقاح.",
+    "fetchError": "حدث خطأ أثناء تحميل اللقاحات."
+  },
+  "shippingCarriers": {
+    "title": "شركات الشحن",
+    "description": "إدارة معلومات شركة الشحن.",
+    "addCarrier": "إضافة شركة",
+    "editCarrier": "شركة التحرير",
+    "noCarriers": "لم تتم إضافة أي شركة شحن حتى الآن.",
+    "carrierName": "اسم الشركة",
+    "carrierNamePlaceholder": "مثال: أراس كارجو، إم إن جي",
+    "code": "شفرة",
+    "codePlaceholder": "مثال: ARAS",
+    "website": "موقع إلكتروني",
+    "trackingUrlTemplate": "اتبع قالب عنوان URL",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "الدول المدعومة",
+    "supportedCountriesPlaceholder": "مثال: TR، US، DE",
+    "active": "نشيط",
+    "inactive": "سلبي",
+    "saving": "توفير...",
+    "edit": "يحرر",
+    "delete": "يمسح",
+    "createSuccess": "تمت إضافة شركة الشحن بنجاح.",
+    "updateSuccess": "تم تحديث بيانات شركة الشحن بنجاح.",
+    "deleteSuccess": "تم حذف شركة الشحن بنجاح.",
+    "saveError": "حدث خطأ أثناء تسجيل شركة الشحن.",
+    "deleteError": "حدث خطأ أثناء حذف معلومات شركة الشحن.",
+    "fetchError": "حدث خطأ أثناء تحميل شركات الشحن."
+  },
+  "shippingZones": {
+    "title": "مناطق الشحن",
+    "description": "إدارة مناطق وأقسام الشحن.",
+    "addZone": "إضافة منطقة",
+    "editZone": "تعديل المنطقة",
+    "noZones": "لم تتم إضافة منطقة شحن حتى الآن.",
+    "zoneName": "اسم المنطقة",
+    "zoneNamePlaceholder": "مثال: أوروبا، أمريكا الشمالية",
+    "countryCodes": "رموز الدول",
+    "countryCodesPlaceholder": "مثال: TR، DE، FR",
+    "active": "نشيط",
+    "inactive": "سلبي",
+    "saving": "توفير...",
+    "edit": "يحرر",
+    "delete": "يمسح",
+    "createSuccess": "تمت إضافة المنطقة بنجاح.",
+    "updateSuccess": "تم تحديث المنطقة بنجاح.",
+    "deleteSuccess": "تم تطهير المنطقة بنجاح.",
+    "saveError": "حدث خطأ أثناء حفظ المنطقة.",
+    "deleteError": "حدث خطأ أثناء حذف المنطقة.",
+    "fetchError": "حدث خطأ أثناء تحميل المناطق"
+  },
+  "shippingRates": {
+    "title": "رسوم الشحن",
+    "description": "إدارة تكاليف الشحن وخيارات التوصيل.",
+    "addRate": "رسوم إضافية",
+    "editRate": "رسوم التعديل",
+    "noRates": "لم تُضَف تكاليف الشحن بعد.",
+    "zone": "منطقة",
+    "carrier": "حازم",
+    "selectZone": "اختر منطقة",
+    "selectCarrier": "اختر شركة",
+    "shippingCost": "رسوم الشحن",
+    "currency": "عملة",
+    "estimatedDeliveryDays": "مدة التسليم المتوقعة (بالأيام)",
+    "minWeight": "الحد الأدنى للميزانية",
+    "maxWeight": "الحد الأقصى للوزن",
+    "minOrderAmount": "الحد الأدنى لقيمة الطلب",
+    "freeShipping": "ًالشحن مجانا",
+    "free": "حر",
+    "active": "نشيط",
+    "inactive": "سلبي",
+    "cost": "مصاريف",
+    "deliveryDays": "توصيل",
+    "status": "الموقف",
+    "saving": "توفير...",
+    "createSuccess": "تمت إضافة الرسوم بنجاح.",
+    "updateSuccess": "تم تحديث الراتب بنجاح.",
+    "deleteSuccess": "تم حذف الرسوم بنجاح.",
+    "saveError": "حدث خطأ أثناء حفظ الرسوم.",
+    "deleteError": "حدث خطأ أثناء حذف الرسوم.",
+    "fetchError": "حدث خطأ أثناء تحميل الرسوم."
+  },
+  "metadata": {
+    "title": "تجارة المواشي - منصة تداول الحيوانات الحية",
+    "description": "المنصة الأكثر موثوقية في العالم لتجارة الحيوانات الحية. بيع وشراء الحيوانات بأمان وشفافية.",
+    "pages": {
+      "about": {
+        "title": "معلومات عنا",
+        "description": "تعرّف على تجارة المواشي. منصة موثوقة لتجارة الحيوانات الحية."
+      },
+      "contact": {
+        "title": "تواصل",
+        "description": "تواصل معنا. فريق دعم عملاء تجارة المواشي جاهز لمساعدتك."
+      },
+      "terms": {
+        "title": "شروط الاستخدام",
+        "description": "شروط وأحكام تجارة المواشي."
+      },
+      "privacy": {
+        "title": "سياسة الخصوصية",
+        "description": "سياسة الخصوصية الخاصة بتجارة المواشي. تعرف على كيفية حماية بياناتك الشخصية."
+      },
+      "products": {
+        "title": "منتجات",
+        "description": "تصفح قوائم الحيوانات الحية. إعلانات موثوقة للماشية والأغنام وغيرها."
+      },
+      "sellers": {
+        "title": "البائعون",
+        "description": "اكتشف بائعي الحيوانات الموثوق بهم. ملفات تعريف البائعين الموثقة وتقييماتهم."
+      },
+      "transporters": {
+        "title": "ناقلات",
+        "description": "اكتشف شركات نقل الحيوانات. نقل آمن واحترافي للحيوانات الحية."
+      },
+      "search": {
+        "title": "يبحث",
+        "description": "ابحث بين قوائم الحيوانات الحية. بحث سهل مع خيارات التصفية والفرز."
+      },
+      "faq": {
+        "title": "الأسئلة الشائعة",
+        "description": "أسئلة وأجوبة متكررة حول تجارة المواشي."
+      },
+      "productDetail": {
+        "title": "{title} - للبيع",
+        "description": "للبيع في {title} - {city}. انقر هنا للاطلاع على التفاصيل ومعلومات الاتصال."
+      },
+      "sellerDetail": {
+        "title": "{name} - ملف تعريف البائع",
+        "description": "ملف تعريف البائع {name}. التقييمات، قوائم المنتجات، ومعلومات الاتصال."
+      },
+      "transporterDetail": {
+        "title": "{name} - ملف تعريف شركة الاتصالات",
+        "description": "ملف تعريف شركة النقل {name}. مناطق الخدمة، والتقييمات، ومعلومات الاتصال."
+      }
+    }
   }
 }
