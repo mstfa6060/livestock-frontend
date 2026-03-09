@@ -1,0 +1,427 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功的",
+    "email": "电子邮件",
+    "password": "密码",
+    "submit": "发送",
+    "cancel": "取消",
+    "save": "节省",
+    "back": "后退",
+    "next": "向前",
+    "close": "关闭",
+    "emailPlaceholder": "ornek@email.com",
+    "login": "登录",
+    "register": "登记"
+  },
+  "header": {
+    "products": "产品",
+    "sellers": "卖家",
+    "about": "关于我们",
+    "dashboard": "控制板",
+    "settings": "设置",
+    "logout": "退出登录"
+  },
+  "auth": {
+    "login": {
+      "title": "登录",
+      "description": "请登录您的账户继续。",
+      "submit": "登录",
+      "submitting": "正在登录……",
+      "rememberMe": "记住账号",
+      "forgotPassword": "我忘记密码了。",
+      "noAccount": "你没有账号吗？",
+      "register": "登记",
+      "errorDefault": "登录失败。请检查您的信息。"
+    },
+    "register": {
+      "title": "登记",
+      "description": "首先创建一个新账户。",
+      "firstName": "姓名",
+      "firstNamePlaceholder": "阿赫迈特",
+      "surname": "姓",
+      "surnamePlaceholder": "伊尔马兹",
+      "username": "用户名",
+      "usernamePlaceholder": "阿赫迈特伊尔马兹",
+      "confirmPassword": "确认密码",
+      "submit": "登记",
+      "submitting": "账户正在创建中……",
+      "hasAccount": "您已有账号了吗？",
+      "login": "登录",
+      "passwordMismatch": "密码不匹配。",
+      "passwordTooShort": "密码长度必须至少为 6 个字符。",
+      "errorDefault": "注册失败，请重试。"
+    },
+    "forgotPassword": {
+      "title": "我忘记密码了。",
+      "description": "请输入您的电子邮件地址，我们将向您发送密码重置链接。",
+      "submit": "发送重置链接",
+      "submitting": "正在发送...",
+      "backToLogin": "返回首页",
+      "successTitle": "邮件已发送",
+      "successDescription": "密码重置链接已发送至您的邮箱，请查收。",
+      "errorDefault": "发生错误。请检查您的电子邮件地址。"
+    },
+    "resetPassword": {
+      "title": "设置新密码",
+      "description": "请为您的账户设置新密码。",
+      "newPassword": "新密码",
+      "confirmPassword": "确认密码",
+      "submit": "更新密码",
+      "submitting": "正在更新……",
+      "successTitle": "密码已更新",
+      "successDescription": "您的密码已成功更新。您可以使用新密码登录。",
+      "goToLogin": "登录",
+      "invalidLinkTitle": "无效连接",
+      "invalidLinkDescription": "密码重置链接无效或不完整。请仔细检查您邮件中的链接。",
+      "requestNewLink": "请求新连接",
+      "passwordMismatch": "密码不匹配。",
+      "passwordTooShort": "密码长度必须至少为 6 个字符。",
+      "errorDefault": "密码重置失败。连接可能无效或已过期。"
+    }
+  },
+  "dashboard": {
+    "title": "仪表板",
+    "welcome": "欢迎，{name}！",
+    "accountInfo": "您的账户摘要如下。",
+    "username": "用户名",
+    "email": "电子邮件",
+    "id": "ID",
+    "logout": "退出登录",
+    "stats": {
+      "totalListings": "广告总数",
+      "active": "积极的",
+      "totalViews": "总浏览量",
+      "thisWeek": "本星期",
+      "favorites": "最喜欢的",
+      "onYourListings": "在你的广告中",
+      "messages": "信息",
+      "unread": "未读"
+    },
+    "recentListings": "您的最新房源",
+    "recentMessages": "最新消息",
+    "noListings": "您尚未添加任何广告。",
+    "noMessages": "您尚未收到任何消息。",
+    "noNotifications": "您尚未收到任何通知。",
+    "viewAllListings": "查看所有房源",
+    "viewAllMessages": "查看所有消息"
+  },
+  "dashboardNav": {
+    "overview": "概述",
+    "myListings": "我的广告",
+    "favorites": "我的最爱",
+    "messages": "消息",
+    "notifications": "通知",
+    "profile": "轮廓",
+    "settings": "设置",
+    "newListing": "添加新列表"
+  },
+  "myListings": {
+    "title": "我的广告",
+    "description": "在这里管理您的所有房源。",
+    "noListings": "您尚未添加任何广告。",
+    "createFirst": "创建您的第一个商品信息。",
+    "fetchError": "加载广告时发生错误。",
+    "deleteSuccess": "广告已成功删除。",
+    "deleteError": "删除广告时发生错误。",
+    "activateSuccess": "广告已上线。",
+    "deactivateSuccess": "该房源已下架。",
+    "statusError": "更改状态时发生错误。",
+    "filters": {
+      "all": "他们所有人",
+      "active": "积极的",
+      "draft": "草稿",
+      "pending": "等待批准",
+      "sold": "卖"
+    },
+    "actions": {
+      "edit": "编辑",
+      "delete": "删除",
+      "activate": "激活",
+      "deactivate": "被动结构"
+    },
+    "deleteDialog": {
+      "title": "删除广告",
+      "description": "您确定要删除此商品信息吗？此操作不可逆。",
+      "cancel": "取消",
+      "confirm": "删除"
+    }
+  },
+  "favorites": {
+    "title": "我的最爱",
+    "description": "关注你喜欢的产品。",
+    "noFavorites": "您还没有添加任何收藏商品。",
+    "browseProducts": "浏览产品",
+    "fetchError": "加载收藏夹时出错。"
+  },
+  "settings": {
+    "title": "设置",
+    "updatePassword": {
+      "title": "更新密码",
+      "description": "为了您的账户安全，请定期更新密码。",
+      "currentPassword": "当前密码",
+      "newPassword": "新密码",
+      "confirmPassword": "新密码",
+      "submit": "更新密码",
+      "submitting": "正在更新……",
+      "success": "您的密码已成功更新。",
+      "passwordMismatch": "新密码不匹配。",
+      "passwordTooShort": "新密码长度必须至少为 6 个字符。",
+      "sessionError": "未找到会话信息。",
+      "errorDefault": "密码更新失败。请检查您当前的密码。"
+    }
+  },
+  "navigation": {
+    "home": "家",
+    "dashboard": "仪表板",
+    "settings": "设置",
+    "profile": "轮廓",
+    "logout": "退出登录"
+  },
+  "language": {
+    "select": "语言选择",
+    "current": "当前语言"
+  },
+  "home": {
+    "hero": {
+      "title": "活体动物交易平台",
+      "subtitle": "最可靠的活畜交易平台。安全买卖牛羊。",
+      "cta": "立即开始",
+      "viewListings": "查看广告"
+    },
+    "features": {
+      "secure": {
+        "title": "安全购物",
+        "description": "所有交易均安全可靠。买卖双方信息均已核实。"
+      },
+      "variety": {
+        "title": "产品范围广泛",
+        "description": "牛、羊等等。轻松找到您想要的动物。"
+      },
+      "support": {
+        "title": "全天候支持",
+        "description": "我们随时为您解答疑问。我们的在线客服热线开通中。"
+      }
+    },
+    "categories": {
+      "title": "类别",
+      "cattle": "牛",
+      "sheep": "小牲畜",
+      "poultry": "家禽",
+      "other": "其他"
+    },
+    "featured": {
+      "title": "精选广告",
+      "viewAll": "查看全部"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 牲畜交易。版权所有。",
+    "about": "关于我们",
+    "contact": "沟通",
+    "terms": "使用条款",
+    "privacy": "隐私政策"
+  },
+  "products": {
+    "title": "产品",
+    "search": "搜索产品...",
+    "filters": "过滤器",
+    "sort": "种类",
+    "sortOptions": {
+      "newest": "最新的",
+      "oldest": "最老",
+      "priceAsc": "价格（从低到高）",
+      "priceDesc": "价格（从高到低）",
+      "popular": "最受欢迎"
+    },
+    "status": {
+      "draft": "草稿",
+      "active": "积极的",
+      "sold": "卖",
+      "pending": "等待批准"
+    },
+    "condition": {
+      "new": "新的",
+      "likeNew": "轻度使用",
+      "good": "好的",
+      "fair": "中间"
+    },
+    "outOfStock": "缺货",
+    "inStock": "有存货",
+    "noResults": "未找到产品。",
+    "loading": "产品正在加载中……",
+    "perPage": "每页",
+    "showing": "从 {from} 到 {to} 之间的 {total} 个产品的总数。",
+    "loginToFavorite": "登录即可添加到收藏夹。",
+    "addedToFavorites": "已添加到收藏夹",
+    "removedFromFavorites": "已从收藏夹中移除"
+  },
+  "productDetail": {
+    "addToFavorites": "添加到收藏夹",
+    "removeFromFavorites": "从收藏夹中移除",
+    "share": "分享",
+    "report": "报告问题",
+    "description": "解释",
+    "specifications": "特征",
+    "category": "类别",
+    "brand": "品牌",
+    "condition": "情况",
+    "location": "地点",
+    "shipping": "货物",
+    "shippingAvailable": "可通过货运方式运输。",
+    "noShipping": "仅限专人递送。",
+    "internationalShipping": "提供国际配送服务。",
+    "weight": "重量",
+    "stock": "库存",
+    "inStock": "库存数量为 {count} 件",
+    "minOrder": "最低订购量",
+    "maxOrder": "最大订单",
+    "publishedAt": "发布日期",
+    "views": "已查看",
+    "reviews": "评估",
+    "similarProducts": "类似产品",
+    "sellerProducts": "卖家其他产品",
+    "contactSeller": "联系卖家",
+    "loginRequired": "登录即可添加到收藏夹。",
+    "addedToFavorites": "已添加到收藏夹",
+    "removedFromFavorites": "已从收藏夹中移除",
+    "linkCopied": "链接已复制。",
+    "messagingComingSoon": "消息功能即将上线。",
+    "productNotFound": "未找到产品。"
+  },
+  "seller": {
+    "title": "卖家信息",
+    "verified": "已验证",
+    "reviews": "评估",
+    "products": "广告",
+    "memberSince": "会员自{year}年起",
+    "contact": "发送消息",
+    "call": "搜索",
+    "viewProfile": "查看个人资料"
+  },
+  "editListing": {
+    "title": "编辑广告",
+    "saveChanges": "保存更改",
+    "updating": "正在更新……",
+    "updateSuccess": "广告已成功更新。",
+    "updateFailed": "更新列表时发生错误。",
+    "loadError": "广告加载时出错。",
+    "basicInfo": "基本信息",
+    "categoryAndCondition": "类别和状态",
+    "pricing": "定价",
+    "shipping": "货物",
+    "images": "图片",
+    "existingImages": "可用图片",
+    "addImage": "添加图片",
+    "uploadingImages": "图片正在加载……",
+    "uploadingImage": "图片正在加载。",
+    "imageUploadFailed": "图片加载失败。",
+    "imagesUploaded": "所有图片均已成功上传。",
+    "fields": {
+      "title": "广告标题",
+      "shortDescription": "简要描述",
+      "description": "详细解释",
+      "category": "类别",
+      "condition": "产品状态",
+      "price": "价格",
+      "stock": "库存数量",
+      "unit": "单元",
+      "shippingAvailable": "提供配送服务。",
+      "shippingCost": "运费",
+      "weight": "重量",
+      "weightUnit": "重量单位"
+    },
+    "placeholders": {
+      "title": "例如：2岁荷斯坦奶牛",
+      "shortDescription": "产品描述（最多 200 个字符）",
+      "description": "请提供产品详细信息……",
+      "category": "请选择类别。"
+    },
+    "errors": {
+      "titleRequired": "广告标题为必填项。",
+      "shortDescriptionRequired": "请提供简要描述。",
+      "descriptionRequired": "需要详细解释。",
+      "categoryRequired": "类别选择为必填项。",
+      "priceRequired": "请输入有效价格。"
+    }
+  },
+  "newListing": {
+    "title": "创建新列表",
+    "saveDraft": "保存草稿",
+    "publish": "发布",
+    "basicInfo": "基本信息",
+    "categoryAndCondition": "类别和状态",
+    "pricing": "定价",
+    "shipping": "货物",
+    "images": "图片",
+    "addImage": "添加图片",
+    "maxImages": "您最多可以上传 10 张图片。",
+    "imageHint": "最少1张，最多10张图片。格式为PNG、JPG或WEBP。",
+    "fields": {
+      "title": "广告标题",
+      "shortDescription": "简要描述",
+      "description": "详细解释",
+      "category": "类别",
+      "condition": "产品状态",
+      "price": "价格",
+      "stock": "库存数量",
+      "unit": "单元",
+      "shippingAvailable": "提供配送服务。",
+      "shippingCost": "运费",
+      "weight": "重量",
+      "weightUnit": "重量单位"
+    },
+    "placeholders": {
+      "title": "例如：2岁荷斯坦奶牛",
+      "shortDescription": "产品描述（最多 200 个字符）",
+      "description": "请提供产品详细信息……",
+      "category": "请选择类别。"
+    },
+    "success": "广告制作成功。",
+    "error": "创建广告时发生错误。",
+    "creating": "产品正在生产中……",
+    "uploadingImages": "图片正在加载……",
+    "uploadingImage": "图片正在加载。",
+    "imageUploadFailed": "图片加载失败。",
+    "imagesUploaded": "所有图片均已成功上传。",
+    "draftSaved": "草稿已保存",
+    "productCreated": "产品已成功制造完成。",
+    "creationFailed": "产品创建失败，请重试。",
+    "errors": {
+      "titleRequired": "广告标题为必填项。",
+      "shortDescriptionRequired": "请提供简要描述。",
+      "descriptionRequired": "需要详细解释。",
+      "categoryRequired": "类别选择为必填项。",
+      "priceRequired": "请输入有效价格。"
+    }
+  },
+  "fileUpload": {
+    "dragDrop": "上传照片或视频。",
+    "dragDropHint": "拖放或点击选择。",
+    "dropHere": "算了……",
+    "imageLimit": "照片：最大 10MB",
+    "videoLimit": "Video: max 100MB",
+    "uploadCount": "当前 / 最大已加载",
+    "maxFilesError": "您最多可以上传 {max} 个媒体文件。",
+    "imageTooLarge": "照片大小必须小于10MB。",
+    "videoTooLarge": "The video must be smaller than 100MB.",
+    "optimizing": "正在优化……",
+    "uploading": "加载中...",
+    "queued": "排队等候……",
+    "uploadSuccess": "上传媒体文件数量：{count}",
+    "uploadError": "加载错误",
+    "uploadFailed": "上传失败。",
+    "deleted": "媒体被成功关闭。",
+    "deleteError": "媒体文件无法删除。",
+    "setCover": "制作封面",
+    "coverBadge": "盖",
+    "videoBadge": "视频",
+    "coverUpdated": "封面照片已成功调整。",
+    "optimizationInfo": "照片已优化以符合网络标准",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
+  }
+}

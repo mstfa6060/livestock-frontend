@@ -1,6 +1,6 @@
 // All supported locales (matching backend error locales)
 export const locales = [
-  'en', 'tr', 'ar', 'de', 'es', 'fr', 'pt', 'ru', 'zh', 'ja',
+  'en', 'tr', 'ar', 'de', 'es', 'fr', 'pt', 'pt-BR', 'ru', 'zh', 'zh-CN', 'zh-TW', 'ja',
   'ko', 'hi', 'it', 'nl', 'sv', 'no', 'da', 'fi', 'pl', 'cs',
   'el', 'he', 'hu', 'ro', 'sk', 'uk', 'vi', 'id', 'ms', 'th',
   'bn', 'ta', 'te', 'mr', 'fa', 'ur', 'bg', 'hr', 'sr', 'sl',
@@ -20,8 +20,11 @@ export const languageNames: Record<Locale, string> = {
   es: 'Español',
   fr: 'Français',
   pt: 'Português',
+  'pt-BR': 'Português (Brasil)',
   ru: 'Русский',
   zh: '中文',
+  'zh-CN': '中文(简体)',
+  'zh-TW': '中文(繁體)',
   ja: '日本語',
   ko: '한국어',
   hi: 'हिन्दी',

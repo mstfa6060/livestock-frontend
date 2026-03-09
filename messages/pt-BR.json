@@ -1,0 +1,427 @@
+{
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Bem-sucedido",
+    "email": "E-mail",
+    "password": "Senha",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "back": "Voltar",
+    "next": "Avançar",
+    "close": "Fechar",
+    "emailPlaceholder": "ornek@email.com",
+    "login": "Conecte-se",
+    "register": "Cadastre-se"
+  },
+  "header": {
+    "products": "Produtos",
+    "sellers": "Vendedores",
+    "about": "Sobre nós",
+    "dashboard": "Painel",
+    "settings": "Configurações",
+    "logout": "Sair"
+  },
+  "auth": {
+    "login": {
+      "title": "Conecte-se",
+      "description": "Para continuar, faça login na sua conta.",
+      "submit": "Conecte-se",
+      "submitting": "Entrando...",
+      "rememberMe": "Lembre de mim",
+      "forgotPassword": "Esqueci minha senha.",
+      "noAccount": "Você não tem uma conta?",
+      "register": "Cadastre-se",
+      "errorDefault": "Falha no login. Por favor, verifique suas informações."
+    },
+    "register": {
+      "title": "Cadastre-se",
+      "description": "Comece criando uma nova conta.",
+      "firstName": "Nome",
+      "firstNamePlaceholder": "Ahmet",
+      "surname": "Sobrenome",
+      "surnamePlaceholder": "Yilmaz",
+      "username": "Nome de usuário",
+      "usernamePlaceholder": "ahmetyilmaz",
+      "confirmPassword": "Confirme sua senha",
+      "submit": "Cadastre-se",
+      "submitting": "A conta está sendo criada...",
+      "hasAccount": "Você já possui uma conta?",
+      "login": "Conecte-se",
+      "passwordMismatch": "As senhas não coincidem.",
+      "passwordTooShort": "A senha deve ter pelo menos 6 caracteres.",
+      "errorDefault": "O cadastro falhou. Tente novamente."
+    },
+    "forgotPassword": {
+      "title": "Esqueci minha senha.",
+      "description": "Insira seu endereço de e-mail e enviaremos um link para redefinir sua senha.",
+      "submit": "Enviar link de redefinição",
+      "submitting": "Enviando...",
+      "backToLogin": "Voltar à página inicial",
+      "successTitle": "E-mail enviado",
+      "successDescription": "O link para redefinir a senha foi enviado para o seu endereço de e-mail. Por favor, verifique sua caixa de entrada.",
+      "errorDefault": "Ocorreu um erro. Por favor, verifique seu endereço de e-mail."
+    },
+    "resetPassword": {
+      "title": "Defina uma nova senha",
+      "description": "Defina uma nova senha para sua conta.",
+      "newPassword": "Nova Senha",
+      "confirmPassword": "Confirme sua senha",
+      "submit": "Atualizar senha",
+      "submitting": "Atualizando...",
+      "successTitle": "Senha atualizada",
+      "successDescription": "Sua senha foi atualizada com sucesso. Você pode fazer login com sua nova senha.",
+      "goToLogin": "Conecte-se",
+      "invalidLinkTitle": "Conexão inválida",
+      "invalidLinkDescription": "O link para redefinição de senha é inválido ou está incompleto. Verifique novamente o link no seu e-mail.",
+      "requestNewLink": "Solicitar uma nova conexão",
+      "passwordMismatch": "As senhas não coincidem.",
+      "passwordTooShort": "A senha deve ter pelo menos 6 caracteres.",
+      "errorDefault": "A redefinição de senha falhou. A conexão pode estar inválida ou expirada."
+    }
+  },
+  "dashboard": {
+    "title": "Painel",
+    "welcome": "Bem-vindo(a), {name}!",
+    "accountInfo": "Abaixo encontra-se o resumo da sua conta.",
+    "username": "Nome de usuário",
+    "email": "E-mail",
+    "id": "EU IA",
+    "logout": "Sair",
+    "stats": {
+      "totalListings": "Total de anúncios",
+      "active": "ativo",
+      "totalViews": "Total de visualizações",
+      "thisWeek": "essa semana",
+      "favorites": "Favorito",
+      "onYourListings": "em seus anúncios",
+      "messages": "Mensagem",
+      "unread": "não lido"
+    },
+    "recentListings": "Seus anúncios mais recentes",
+    "recentMessages": "Mensagens recentes",
+    "noListings": "Você ainda não adicionou nenhum anúncio.",
+    "noMessages": "Você ainda não recebeu nenhuma mensagem.",
+    "noNotifications": "Você ainda não recebeu nenhuma notificação.",
+    "viewAllListings": "Ver todos os anúncios",
+    "viewAllMessages": "Ver todas as mensagens"
+  },
+  "dashboardNav": {
+    "overview": "Visão geral",
+    "myListings": "Meus anúncios",
+    "favorites": "Meus favoritos",
+    "messages": "Mensagens",
+    "notifications": "Notificações",
+    "profile": "Perfil",
+    "settings": "Configurações",
+    "newListing": "Adicionar novo anúncio"
+  },
+  "myListings": {
+    "title": "Meus anúncios",
+    "description": "Gerencie todos os seus anúncios aqui.",
+    "noListings": "Você ainda não adicionou nenhum anúncio.",
+    "createFirst": "Crie seu primeiro anúncio.",
+    "fetchError": "Ocorreu um erro ao carregar os anúncios.",
+    "deleteSuccess": "O anúncio foi removido com sucesso.",
+    "deleteError": "Ocorreu um erro ao excluir o anúncio.",
+    "activateSuccess": "O anúncio foi ativado.",
+    "deactivateSuccess": "O anúncio foi desativado.",
+    "statusError": "Ocorreu um erro ao alterar o status.",
+    "filters": {
+      "all": "Todos eles",
+      "active": "Ativo",
+      "draft": "Rascunho",
+      "pending": "Aguardando aprovação",
+      "sold": "Vendido"
+    },
+    "actions": {
+      "edit": "Editar",
+      "delete": "Excluir",
+      "activate": "Ativar",
+      "deactivate": "Estrutura Passiva"
+    },
+    "deleteDialog": {
+      "title": "Apague o anúncio",
+      "description": "Tem certeza de que deseja excluir este anúncio? Esta ação é irreversível.",
+      "cancel": "Cancelar",
+      "confirm": "Excluir"
+    }
+  },
+  "favorites": {
+    "title": "Meus favoritos",
+    "description": "Siga aqui os produtos que você gosta.",
+    "noFavorites": "Você ainda não adicionou nenhum produto aos favoritos.",
+    "browseProducts": "Veja os produtos",
+    "fetchError": "Ocorreu um erro ao carregar os favoritos."
+  },
+  "settings": {
+    "title": "Configurações",
+    "updatePassword": {
+      "title": "Atualizar senha",
+      "description": "Atualize sua senha regularmente para garantir a segurança da sua conta.",
+      "currentPassword": "Senha atual",
+      "newPassword": "Nova Senha",
+      "confirmPassword": "Nova senha novamente",
+      "submit": "Atualizar senha",
+      "submitting": "Atualizando...",
+      "success": "Sua senha foi atualizada com sucesso.",
+      "passwordMismatch": "As novas senhas não coincidem.",
+      "passwordTooShort": "A nova senha deve ter pelo menos 6 caracteres.",
+      "sessionError": "Não foi possível encontrar informações sobre a sessão.",
+      "errorDefault": "Não foi possível atualizar a senha. Verifique sua senha atual."
+    }
+  },
+  "navigation": {
+    "home": "Lar",
+    "dashboard": "Painel",
+    "settings": "Configurações",
+    "profile": "Perfil",
+    "logout": "Sair"
+  },
+  "language": {
+    "select": "Seleção de idioma",
+    "current": "Idioma atual"
+  },
+  "home": {
+    "hero": {
+      "title": "Plataforma de negociação de animais vivos",
+      "subtitle": "A plataforma mais confiável para negociação de animais vivos. Compre e venda seu gado e ovelhas com segurança.",
+      "cta": "Comece agora",
+      "viewListings": "Ver anúncios"
+    },
+    "features": {
+      "secure": {
+        "title": "Compras seguras",
+        "description": "Todas as transações são seguras. As informações do vendedor e do comprador foram verificadas."
+      },
+      "variety": {
+        "title": "Ampla gama de produtos",
+        "description": "Gado bovino, ovino e muito mais. Encontre facilmente o animal que procura."
+      },
+      "support": {
+        "title": "Suporte 24 horas por dia, 7 dias por semana",
+        "description": "Estamos sempre à disposição para responder às suas perguntas. Nossa linha de suporte ao vivo está ativa."
+      }
+    },
+    "categories": {
+      "title": "Categorias",
+      "cattle": "Gado",
+      "sheep": "Pequenos animais",
+      "poultry": "Aves",
+      "other": "Outro"
+    },
+    "featured": {
+      "title": "Anúncios em destaque",
+      "viewAll": "Veja tudo"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Comércio de Gado. Todos os direitos reservados.",
+    "about": "Sobre nós",
+    "contact": "Comunicação",
+    "terms": "Termos de Uso",
+    "privacy": "política de Privacidade"
+  },
+  "products": {
+    "title": "Produtos",
+    "search": "Pesquisar produtos...",
+    "filters": "Filtros",
+    "sort": "Organizar",
+    "sortOptions": {
+      "newest": "Mais recente",
+      "oldest": "Mais antigo",
+      "priceAsc": "Preço (do menor para o maior)",
+      "priceDesc": "Preço (do mais alto para o mais baixo)",
+      "popular": "Mais populares"
+    },
+    "status": {
+      "draft": "Rascunho",
+      "active": "Ativo",
+      "sold": "Vendido",
+      "pending": "Aguardando aprovação"
+    },
+    "condition": {
+      "new": "Novo",
+      "likeNew": "Pouco usado",
+      "good": "Bom",
+      "fair": "Meio"
+    },
+    "outOfStock": "Fora de estoque",
+    "inStock": "Em estoque",
+    "noResults": "Produto não encontrado.",
+    "loading": "Os produtos estão sendo carregados...",
+    "perPage": "Por página",
+    "showing": "O total de {total} produtos entre {from} e {to}.",
+    "loginToFavorite": "Faça login para adicionar aos favoritos.",
+    "addedToFavorites": "Adicionado aos favoritos",
+    "removedFromFavorites": "Removido dos favoritos"
+  },
+  "productDetail": {
+    "addToFavorites": "Adicionar aos favoritos",
+    "removeFromFavorites": "Remover dos favoritos",
+    "share": "Compartilhar",
+    "report": "Reportar um problema",
+    "description": "Explicação",
+    "specifications": "Características",
+    "category": "Categoria",
+    "brand": "Marca",
+    "condition": "Situação",
+    "location": "Localização",
+    "shipping": "Carga",
+    "shippingAvailable": "Pode ser enviado por via aérea.",
+    "noShipping": "Entrega somente em mãos.",
+    "internationalShipping": "Envio internacional disponível.",
+    "weight": "Peso",
+    "stock": "Estoque",
+    "inStock": "{count} itens em estoque",
+    "minOrder": "Pedido mínimo",
+    "maxOrder": "Pedido máximo",
+    "publishedAt": "Data de publicação",
+    "views": "Visualizado",
+    "reviews": "avaliação",
+    "similarProducts": "Produtos similares",
+    "sellerProducts": "Outros produtos do vendedor",
+    "contactSeller": "Contate o vendedor",
+    "loginRequired": "Faça login para adicionar aos favoritos.",
+    "addedToFavorites": "Adicionado aos favoritos",
+    "removedFromFavorites": "Removido dos favoritos",
+    "linkCopied": "O link foi copiado.",
+    "messagingComingSoon": "Recurso de mensagens em breve.",
+    "productNotFound": "Produto não encontrado."
+  },
+  "seller": {
+    "title": "Informações do vendedor",
+    "verified": "Verificado",
+    "reviews": "avaliação",
+    "products": "anúncio",
+    "memberSince": "Membro desde {ano}",
+    "contact": "Enviar mensagem",
+    "call": "Procurar",
+    "viewProfile": "Ver perfil"
+  },
+  "editListing": {
+    "title": "Editar o anúncio",
+    "saveChanges": "Salvar alterações",
+    "updating": "Atualizando...",
+    "updateSuccess": "O anúncio foi atualizado com sucesso.",
+    "updateFailed": "Ocorreu um erro ao atualizar o anúncio.",
+    "loadError": "Ocorreu um erro ao carregar o anúncio.",
+    "basicInfo": "Informações básicas",
+    "categoryAndCondition": "Categoria e Status",
+    "pricing": "Preços",
+    "shipping": "Carga",
+    "images": "Imagens",
+    "existingImages": "Imagens disponíveis",
+    "addImage": "Adicionar imagem",
+    "uploadingImages": "As imagens estão carregando...",
+    "uploadingImage": "A imagem está carregando.",
+    "imageUploadFailed": "Não foi possível carregar a imagem.",
+    "imagesUploaded": "Todas as imagens foram carregadas com sucesso.",
+    "fields": {
+      "title": "Título do anúncio",
+      "shortDescription": "Descrição resumida",
+      "description": "Explicação detalhada",
+      "category": "Categoria",
+      "condition": "Status do produto",
+      "price": "Preço",
+      "stock": "Quantidade em estoque",
+      "unit": "Unidade",
+      "shippingAvailable": "O envio está disponível.",
+      "shippingCost": "Taxa de envio",
+      "weight": "Peso",
+      "weightUnit": "Unidade de Peso"
+    },
+    "placeholders": {
+      "title": "Exemplo: Vaca Holstein de 2 anos",
+      "shortDescription": "Descrição do produto (máximo de 200 caracteres)",
+      "description": "Forneça informações detalhadas sobre o produto...",
+      "category": "Selecione uma categoria."
+    },
+    "errors": {
+      "titleRequired": "O título do anúncio é obrigatório.",
+      "shortDescriptionRequired": "É necessária uma breve descrição.",
+      "descriptionRequired": "É necessária uma explicação detalhada.",
+      "categoryRequired": "A seleção da categoria é obrigatória.",
+      "priceRequired": "Insira um preço válido."
+    }
+  },
+  "newListing": {
+    "title": "Criar novo anúncio",
+    "saveDraft": "Salvar rascunho",
+    "publish": "Publicar",
+    "basicInfo": "Informações básicas",
+    "categoryAndCondition": "Categoria e Status",
+    "pricing": "Preços",
+    "shipping": "Carga",
+    "images": "Imagens",
+    "addImage": "Adicionar imagem",
+    "maxImages": "Você pode enviar no máximo 10 imagens.",
+    "imageHint": "Mínimo de 1, máximo de 10 imagens. Em formato PNG, JPG ou WEBP.",
+    "fields": {
+      "title": "Título do anúncio",
+      "shortDescription": "Descrição resumida",
+      "description": "Explicação detalhada",
+      "category": "Categoria",
+      "condition": "Status do produto",
+      "price": "Preço",
+      "stock": "Quantidade em estoque",
+      "unit": "Unidade",
+      "shippingAvailable": "O envio está disponível.",
+      "shippingCost": "Taxa de envio",
+      "weight": "Peso",
+      "weightUnit": "Unidade de Peso"
+    },
+    "placeholders": {
+      "title": "Exemplo: Vaca Holstein de 2 anos",
+      "shortDescription": "Descrição do produto (máximo de 200 caracteres)",
+      "description": "Forneça informações detalhadas sobre o produto...",
+      "category": "Selecione uma categoria."
+    },
+    "success": "O anúncio foi criado com sucesso.",
+    "error": "Ocorreu um erro ao criar o anúncio.",
+    "creating": "O produto está sendo criado...",
+    "uploadingImages": "As imagens estão carregando...",
+    "uploadingImage": "A imagem está carregando.",
+    "imageUploadFailed": "Não foi possível carregar a imagem.",
+    "imagesUploaded": "Todas as imagens foram carregadas com sucesso.",
+    "draftSaved": "Rascunho salvo",
+    "productCreated": "O produto foi criado com sucesso.",
+    "creationFailed": "Não foi possível criar o produto. Tente novamente.",
+    "errors": {
+      "titleRequired": "O título do anúncio é obrigatório.",
+      "shortDescriptionRequired": "É necessária uma breve descrição.",
+      "descriptionRequired": "É necessária uma explicação detalhada.",
+      "categoryRequired": "A seleção da categoria é obrigatória.",
+      "priceRequired": "Insira um preço válido."
+    }
+  },
+  "fileUpload": {
+    "dragDrop": "Envie uma foto ou um vídeo.",
+    "dragDropHint": "Arraste e solte ou clique para selecionar.",
+    "dropHere": "Deixe assim...",
+    "imageLimit": "Foto: máximo 10 MB",
+    "videoLimit": "Vídeo: máximo 50 MB",
+    "uploadCount": "{atual} / {máximo} carregado",
+    "maxFilesError": "Você pode enviar no máximo {max} arquivos de mídia.",
+    "imageTooLarge": "A foto deve ter menos de 10 MB.",
+    "videoTooLarge": "O vídeo deve ter menos de 50 MB.",
+    "optimizing": "Otimizando...",
+    "uploading": "Carregando...",
+    "queued": "Aguardando na fila...",
+    "uploadSuccess": "{count} mídias enviadas",
+    "uploadError": "Erro ao carregar",
+    "uploadFailed": "O envio falhou.",
+    "deleted": "Os meios de comunicação foram silenciados com sucesso.",
+    "deleteError": "Os arquivos de mídia não puderam ser apagados.",
+    "setCover": "Faça uma capa",
+    "coverBadge": "TAMPA",
+    "videoBadge": "VÍDEO",
+    "coverUpdated": "A foto da capa foi ajustada com sucesso.",
+    "optimizationInfo": "As fotos são otimizadas para estarem em conformidade com os padrões da web.",
+    "videoProcessing": "Processing video...",
+    "videoProcessingFailed": "Processing failed",
+    "reorderError": "Failed to reorder files",
+    "coverUpdateError": "Failed to update cover photo"
+  }
+}
