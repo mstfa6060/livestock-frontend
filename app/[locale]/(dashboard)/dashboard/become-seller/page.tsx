@@ -29,7 +29,7 @@ import { becomeSellerFormSchema, type BecomeSellerFormData } from "@/lib/validat
 export default function BecomeSellerPage() {
   const router = useRouter();
   const t = useTranslations("becomeSeller");
-  const { user } = useAuth();
+  const { user, refreshSession } = useAuth();
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -83,6 +83,8 @@ export default function BecomeSellerPage() {
         socialMediaLinks: "",
       });
 
+      // Refresh JWT to include new Seller role before navigating
+      await refreshSession();
       toast.success(t("success"));
       router.push("/dashboard/listings/new");
     } catch (error) {

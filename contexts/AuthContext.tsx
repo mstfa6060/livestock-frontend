@@ -72,6 +72,7 @@ interface AuthContextType extends AuthState {
   register: (params: RegisterParams) => Promise<void>;
   logout: () => Promise<void>;
   refreshUser: () => Promise<void>;
+  refreshSession: () => Promise<void>;
   updateUserData: (data: Partial<User>) => void;
 }
 
@@ -321,6 +322,33 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
+  // Refresh session by using refresh token to get new JWT (e.g., after role change)
+  const refreshSession = useCallback(async () => {
+    const refreshToken = localStorage.getItem(STORAGE_KEYS.REFRESH_TOKEN);
+    if (!refreshToken) return;
+
+    try {
+      const response = await IAMAPI.Auth.RefreshToken.Request({
+        refreshToken,
+        platform: IAMAPI.Enums.ClientPlatforms.Web,
+      });
+
+      localStorage.setItem(STORAGE_KEYS.JWT, response.jwt);
+      localStorage.setItem(STORAGE_KEYS.ACCESS_TOKEN, response.jwt);
+      localStorage.setItem(STORAGE_KEYS.REFRESH_TOKEN, response.refreshToken);
+      localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(response.user));
+      setAuthCookie();
+
+      setState({
+        user: response.user,
+        isAuthenticated: true,
+        isLoading: false,
+      });
+    } catch {
+      // If refresh fails, keep existing session
+    }
+  }, []);
+
   // Update user state directly (used after profile update with full response)
   const updateUserData = useCallback((data: Partial<User>) => {
     setState((prev) => {
@@ -340,6 +368,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         register,
         logout,
         refreshUser,
+        refreshSession,
         updateUserData,
       }}
     >
