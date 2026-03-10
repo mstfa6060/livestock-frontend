@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { queryKeys } from "@/lib/query-keys";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { AppConfig } from "@/config/livestock-config";
+import { getProductCoverImagesDirect } from "@/lib/product-images";
 import type { Product } from "@/components/features/product-card";
 
 interface ProductSearchParams {
@@ -47,6 +48,23 @@ function mapProductResponse(p: any): Product {
   };
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function attachCoverImages(products: Product[], rawResponse: any[]): Promise<Product[]> {
+  const mediaInfo = rawResponse
+    .filter((item) => item.mediaBucketId)
+    .map((item) => ({
+      productId: item.id,
+      mediaBucketId: item.mediaBucketId as string,
+      coverImageFileId: item.coverImageFileId as string,
+    }));
+  if (mediaInfo.length === 0) return products;
+  const imageMap = await getProductCoverImagesDirect(mediaInfo);
+  for (const p of products) {
+    if (!p.imageUrl && imageMap[p.id]) p.imageUrl = imageMap[p.id];
+  }
+  return products;
+}
+
 export function useProductSearch(params: ProductSearchParams) {
   return useQuery({
     queryKey: queryKeys.products.search({ ...params }),
@@ -70,7 +88,8 @@ export function useProductSearch(params: ProductSearchParams) {
         },
       });
 
-      return response.map(mapProductResponse);
+      const products = response.map(mapProductResponse);
+      return attachCoverImages(products, response as any[]);
     },
   });
 }
@@ -149,7 +168,8 @@ export function useProductList(
         },
       });
 
-      return response.map(mapProductResponse);
+      const products = response.map(mapProductResponse);
+      return attachCoverImages(products, response as any[]);
     },
     enabled: options?.enabled ?? true,
   });

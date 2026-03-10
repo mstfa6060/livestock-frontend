@@ -1,9 +1,20 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { MainHeader } from "@/components/layout/main-header";
 import { SimpleFooter } from "@/components/layout/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/features/contact-form";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata.pages.contact" });
+  return {
+    title: t("title"),
+    description: t("description"),
+    openGraph: { title: t("title"), description: t("description") },
+  };
+}
 
 export default async function ContactPage() {
   const t = await getTranslations("contact");

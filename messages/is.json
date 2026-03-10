@@ -11,17 +11,30 @@
     "back": "Til baka",
     "next": "Áfram",
     "close": "Loka",
+    "unauthorized": "Þú hefur ekki leyfi til að fá aðgang að þessari síðu.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Innskráning",
-    "register": "Skráning"
+    "register": "Skráning",
+    "previous": "Fyrrverandi",
+    "zoomIn": "Aðdráttur",
+    "previousImage": "Fyrri mynd",
+    "nextImage": "Næsta mynd",
+    "closeLightbox": "Loka myndasafni",
+    "imageLightbox": "Myndasafn",
+    "slideN": "Glæra",
+    "viewMore": "Sjá meira"
   },
   "header": {
     "products": "Vörur",
     "sellers": "Seljendur",
+    "transporters": "flutningsmenn",
     "about": "Um okkur",
+    "search": "Leita",
     "dashboard": "Spjald",
     "settings": "Stillingar",
-    "logout": "Útskráning"
+    "logout": "Útskráning",
+    "menu": "Matseðill",
+    "language": "Tungumálaval"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Ég gleymdi lykilorðinu mínu.",
       "noAccount": "Ertu ekki með aðgang?",
       "register": "Skráning",
-      "errorDefault": "Innskráning mistókst. Vinsamlegast athugaðu upplýsingarnar þínar."
+      "errorDefault": "Innskráning mistókst. Vinsamlegast athugaðu upplýsingarnar þínar.",
+      "orContinueWith": "eða halda áfram",
+      "continueWithGoogle": "Halda áfram með Google",
+      "continueWithApple": "Haltu áfram með Apple.",
+      "socialLoginError": "Innskráning á samfélagsmiðla mistókst. Reyndu aftur.",
+      "appleComingSoon": "Mjög fljótlega",
+      "showPassword": "Sýna lykilorð",
+      "hidePassword": "Fela lykilorð"
     },
     "register": {
       "title": "Skráning",
@@ -51,7 +71,17 @@
       "login": "Innskráning",
       "passwordMismatch": "Lykilorðin stemma ekki.",
       "passwordTooShort": "Lykilorðið verður að vera að minnsta kosti 6 stafir að lengd.",
-      "errorDefault": "Skráning mistókst. Reyndu aftur."
+      "errorDefault": "Skráning mistókst. Reyndu aftur.",
+      "showPassword": "Sýna lykilorð",
+      "hidePassword": "Fela lykilorð",
+      "passwordStrength": {
+        "minLength": "Að minnsta kosti 8 stafir",
+        "uppercase": "Hástafir (A-Ö)",
+        "lowercase": "Lágstafir (a-ö)",
+        "number": "Tala (0-9)",
+        "special": "Sérstafir (!@#$%)"
+      },
+      "registerSuccess": "Aðgangurinn þinn hefur verið stofnaður! Þú ert vísað á innskráningarsíðuna..."
     },
     "forgotPassword": {
       "title": "Ég gleymdi lykilorðinu mínu.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Óska eftir nýrri tengingu",
       "passwordMismatch": "Lykilorðin stemma ekki.",
       "passwordTooShort": "Lykilorðið verður að vera að minnsta kosti 6 stafir að lengd.",
-      "errorDefault": "Endurstilling lykilorðs mistókst. Tengingin gæti verið ógild eða útrunnin."
+      "errorDefault": "Endurstilling lykilorðs mistókst. Tengingin gæti verið ógild eða útrunnin.",
+      "showPassword": "Sýna lykilorð",
+      "hidePassword": "Fela lykilorð"
     }
   },
   "dashboard": {
@@ -93,19 +125,38 @@
       "totalListings": "Heildarauglýsingar",
       "active": "virkur",
       "totalViews": "Heildarfjöldi áhorfa",
-      "thisWeek": "þessa vikuna",
+      "thisWeek": "í þessari viku",
+      "allTime": "alla tíma",
       "favorites": "Uppáhalds",
       "onYourListings": "í auglýsingum þínum",
+      "savedItems": "skráð vara",
       "messages": "Skilaboð",
-      "unread": "ólesið"
+      "notifications": "Tilkynningar",
+      "unread": "ólesið",
+      "views": "skoðanir",
+      "draft": "Drög",
+      "sold": "Selt",
+      "pending": "Í bið",
+      "awaitingApproval": "bíða eftir samþykki",
+      "totalSales": "Heildarsala",
+      "completedSales": "lokið sölu",
+      "revenue": "Tekjur",
+      "totalRevenue": "heildartekjur"
     },
     "recentListings": "Nýjustu skráningar þínar",
+    "recentActivity": "Nýleg virkni",
     "recentMessages": "Nýleg skilaboð",
+    "quickLinks": "Fljótleg aðgangur",
     "noListings": "Þú hefur ekki bætt við neinum auglýsingum ennþá.",
+    "noActivity": "Engin virkni ennþá.",
     "noMessages": "Þú hefur ekki fengið skilaboð ennþá.",
     "noNotifications": "Þú hefur ekki fengið neinar tilkynningar ennþá.",
     "viewAllListings": "Skoða allar skráningar",
-    "viewAllMessages": "Skoða öll skilaboð"
+    "viewAllMessages": "Skoða öll skilaboð",
+    "viewNotifications": "Skoða tilkynningar",
+    "viewFavorites": "Uppáhalds Gor",
+    "recentlyViewed": "Nýlega skoðað",
+    "fetchError": "Villa kom upp við að hlaða inn spjaldgögnunum."
   },
   "dashboardNav": {
     "overview": "Yfirlit",
@@ -115,7 +166,61 @@
     "notifications": "Tilkynningar",
     "profile": "Prófíll",
     "settings": "Stillingar",
-    "newListing": "Bæta við nýrri skráningu"
+    "newListing": "Bæta við nýrri skráningu",
+    "becomeSeller": "Vertu seljandi",
+    "categories": "Flokkar",
+    "offers": "Tillögur",
+    "deals": "Samningar",
+    "farms": "Bæirnir mínir",
+    "transport": "Samgöngur",
+    "moderation": "Hófsemi",
+    "sellerModeration": "Stjórnun seljenda",
+    "transporterModeration": "Stjórnun flutningsaðila",
+    "brands": "Vörumerki",
+    "transportOffers": "Tilboð um sendingarkostnað",
+    "healthRecords": "Heilbrigðisskrár",
+    "vaccinations": "Bólusetningaraðilar",
+    "shippingCarriers": "Skipafélög",
+    "shippingZones": "Vöruflutningasvæði",
+    "shippingRates": "Sendingargjöld",
+    "systemSettings": "Kerfisstillingar",
+    "locations": "Heimilisföngin mín"
+  },
+  "profile": {
+    "title": "Upplýsingar um prófílinn",
+    "description": "Þú getur uppfært persónuupplýsingar þínar hér.",
+    "personalInfo": "Persónuupplýsingar",
+    "contactInfo": "Tengiliðaupplýsingar",
+    "preferences": "Kjörstillingar",
+    "firstName": "Nafn",
+    "firstNamePlaceholder": "Sláðu inn nafnið þitt",
+    "surname": "Eftirnafn",
+    "surnamePlaceholder": "Sláðu inn eftirnafnið þitt.",
+    "displayName": "Sýnt nafn",
+    "phone": "Símanúmer",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Staðfest",
+    "phoneNotVerified": "Óstaðfest",
+    "verifyPhone": "Staðfesta símanúmer",
+    "country": "Land",
+    "selectCountry": "Veldu land",
+    "language": "Tungumálastillingar",
+    "selectLanguage": "Veldu tungumál",
+    "currency": "Gjaldmiðill",
+    "selectCurrency": "Veldu gjaldmiðil.",
+    "saveChanges": "Vista breytingar",
+    "saving": "Vistar...",
+    "saveSuccess": "Upplýsingar um prófílinn þinn hafa verið uppfærðar.",
+    "saveError": "Villa kom upp við að uppfæra prófílinn.",
+    "avatar": "Prófílmynd",
+    "changeAvatar": "Breyta mynd",
+    "removeAvatar": "Fjarlægja mynd",
+    "currencies": {
+      "try": "Tyrknesk líra",
+      "usd": "Bandaríkjadalur",
+      "eur": "Evra",
+      "gbp": "Breska pundið"
+    }
   },
   "myListings": {
     "title": "Auglýsingarnar mínar",
@@ -125,35 +230,94 @@
     "fetchError": "Villa kom upp við að hlaða inn auglýsingum.",
     "deleteSuccess": "Auglýsinginni var eytt.",
     "deleteError": "Villa kom upp við að eyða auglýsingunni.",
-    "activateSuccess": "Auglýsingin hefur verið virkjuð.",
-    "deactivateSuccess": "Skráningunni hefur verið gert óvirk.",
+    "publishSuccess": "Auglýsingin hefur verið send til samþykktar.",
+    "unpublishSuccess": "Auglýsingin hefur verið gerð upp.",
     "statusError": "Villa kom upp við að breyta stöðunni.",
     "filters": {
       "all": "Öll þau",
-      "active": "Virkur",
       "draft": "Drög",
       "pending": "Bíður eftir samþykki",
+      "active": "Virk",
+      "rejected": "Hafnað",
       "sold": "Selt"
     },
     "actions": {
       "edit": "Breyta",
       "delete": "Eyða",
-      "activate": "Virkja",
-      "deactivate": "Óvirk uppbygging"
+      "publish": "Senda til samþykktar",
+      "unpublish": "Drög",
+      "menu": "Færslur"
     },
     "deleteDialog": {
       "title": "Eyða auglýsingunni",
       "description": "Ertu viss um að þú viljir eyða þessari skráningu? Þessi aðgerð er óafturkræf.",
       "cancel": "Hætta við",
       "confirm": "Eyða"
-    }
+    },
+    "loadMore": "Sækja meira",
+    "loadingMore": "Hleður..."
   },
   "favorites": {
     "title": "Uppáhalds mínir",
     "description": "Fylgdu vörunum sem þér líkar hér.",
     "noFavorites": "Þú hefur ekki bætt neinum uppáhaldsvörum ennþá.",
     "browseProducts": "Skoða vörur",
-    "fetchError": "Villa kom upp við að hlaða inn uppáhaldslistum."
+    "fetchError": "Villa kom upp við að hlaða inn uppáhaldslistum.",
+    "loadMore": "Sækja meira",
+    "loadingMore": "Hleður..."
+  },
+  "messages": {
+    "title": "Skilaboð",
+    "description": "Hafðu samband við kaupendur og seljendur.",
+    "noConversations": "Þú hefur ekki fengið skilaboð ennþá.",
+    "startConversation": "Til að spyrja spurningar um auglýsingu, farðu í auglýsinguna.",
+    "fetchError": "Villa kom upp við að hlaða skilaboðum",
+    "sendError": "Villa kom upp við að senda skilaboðin.",
+    "connectionError": "Tenging mistókst. Reyni aftur...",
+    "connected": "Það tengdist",
+    "connecting": "Tengist...",
+    "searchPlaceholder": "Leitaðu í gegnum skilaboðin...",
+    "typeMessage": "Skrifaðu skilaboðin þín...",
+    "send": "Senda",
+    "sending": "Sendi...",
+    "typing": "Það segir...",
+    "read": "Lesa",
+    "delivered": "Sent",
+    "today": "Í dag",
+    "yesterday": "Í gær",
+    "noMessages": "Engin skilaboð ennþá. Byrjaðu samtal!",
+    "loadMore": "Hlaða inn meira",
+    "loadingMessages": "Skilaboð eru að hlaðast...",
+    "about": "Um",
+    "product": "Vara",
+    "startNewConversation": "Hefja nýtt samtal",
+    "selectConversation": "Veldu samtal eða byrjaðu nýtt.",
+    "online": "Á netinu",
+    "offline": "Ótengdur",
+    "lastSeen": "Síðast séð",
+    "deleteConversation": "Eyða samtali",
+    "deleteConfirm": "Ertu viss um að þú viljir eyða þessu samtali?",
+    "deleted": "Samtalinu var eytt.",
+    "defaultUser": "Notandi",
+    "noResults": "Engar niðurstöður fundust.",
+    "newConversation": "Nýtt samtal"
+  },
+  "notifications": {
+    "title": "Tilkynningar",
+    "description": "Skoða og stjórna tilkynningum þínum.",
+    "markAllAsRead": "Merkja allt sem lesið",
+    "noNotifications": "Þú hefur ekki fengið neinar tilkynningar ennþá.",
+    "viewAll": "Sjá allar tilkynningar",
+    "today": "Í dag",
+    "yesterday": "Í gær",
+    "older": "Eldri",
+    "types": {
+      "system": "Kerfi",
+      "message": "Skilaboð",
+      "offer": "Tilboð",
+      "order": "Pöntun",
+      "listing": "Auglýsing"
+    }
   },
   "settings": {
     "title": "Stillingar",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Nýju lykilorðin stemma ekki.",
       "passwordTooShort": "Nýja lykilorðið verður að vera að minnsta kosti 6 stafir að lengd.",
       "sessionError": "Upplýsingar um fund fundust ekki.",
-      "errorDefault": "Ekki var hægt að uppfæra lykilorðið. Vinsamlegast athugaðu núverandi lykilorð."
+      "errorDefault": "Ekki var hægt að uppfæra lykilorðið. Vinsamlegast athugaðu núverandi lykilorð.",
+      "showPassword": "Sýna lykilorð",
+      "hidePassword": "Fela lykilorð"
+    },
+    "preferences": {
+      "title": "Tilkynningar- og skoðunarstillingar",
+      "description": "Stjórnaðu tilkynningarásum þínum og birtingarstillingum.",
+      "notifications": "Tilkynningar",
+      "emailNotifications": "Tölvupósttilkynningar",
+      "emailNotificationsDesc": "Fáðu tilkynningar í tölvupósti um ný skilaboð og uppfærslur á auglýsingum.",
+      "smsNotifications": "SMS-tilkynningar",
+      "smsNotificationsDesc": "Fáðu SMS skilaboð með mikilvægum tilkynningum.",
+      "pushNotifications": "Tilkynningar",
+      "pushNotificationsDesc": "Fáðu tilkynningar um tafarlausar uppfærslur.",
+      "appearance": "Útlit",
+      "darkMode": "Dökk stilling",
+      "darkModeDesc": "Skiptu yfir í dökkt þema.",
+      "saveChanges": "Vista stillingar",
+      "saving": "Vistar...",
+      "saveSuccess": "Stillingarnar þínar hafa verið uppfærðar.",
+      "saveError": "Villa kom upp við að uppfæra stillingar.",
+      "loadError": "Ekki var hægt að hlaða stillingunum."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Viðskiptavettvangur fyrir lifandi dýr",
       "subtitle": "Áreiðanlegasti vettvangurinn fyrir viðskipti með lifandi dýr. Kauptu og seldu nautgripi og sauðfé á öruggan hátt.",
       "cta": "Byrjaðu núna",
-      "viewListings": "Skoða auglýsingar"
+      "viewListings": "Skoða auglýsingar",
+      "searchPlaceholder": "Leitaðu að dýrum... (kýr, kindur, geitur...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Valdar auglýsingar",
       "viewAll": "Sjá allt"
+    },
+    "cta": {
+      "title": "Byrjaðu núna",
+      "subtitle": "Taktu þér sæti á vettvangi þar sem þúsundir seljenda og kaupenda hittast.",
+      "button": "Skráðu þig ókeypis"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Um okkur",
     "contact": "Samskipti",
     "terms": "Notkunarskilmálar",
-    "privacy": "Persónuverndarstefna"
+    "privacy": "Persónuverndarstefna",
+    "company": "Fyrirtæki",
+    "support": "Stuðningur",
+    "legal": "Löglegt",
+    "followUs": "Fylgdu okkur",
+    "newsletter": "Fréttabréf",
+    "newsletterDescription": "Missið ekki af nýjustu auglýsingunum og kynningunum.",
+    "subscribe": "Gerast áskrifandi",
+    "emailPlaceholder": "Netfangið þitt",
+    "tagline": "Áreiðanlegasti viðskiptavettvangur Tyrklands fyrir lifandi dýr.",
+    "sellers": "Seljendur",
+    "products": "Vörur",
+    "map": "Kort",
+    "appleLoginComingSoon": "Innskráning hjá Apple verður virk mjög fljótlega.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "Algengar spurningar"
+  },
+  "faq": {
+    "title": "Algengar spurningar",
+    "description": "Svör við algengum spurningum þínum um vettvang okkar.",
+    "noFaqs": "Engar spurningar hafa verið bættar við ennþá."
+  },
+  "about": {
+    "title": "Um okkur",
+    "subtitle": "Áreiðanlegasti viðskiptavettvangur Tyrklands fyrir lifandi dýr.",
+    "mission": {
+      "title": "Markmið okkar",
+      "description": "Með því að stafræna viðskipti með lifandi dýr stefnum við að því að skapa örugga, gagnsæja og skilvirka tengingu milli framleiðenda og kaupenda."
+    },
+    "vision": {
+      "title": "Sýn okkar",
+      "description": "Að vera brautryðjandi í stafrænni umbreytingu í landbúnaðargeiranum og verða alþjóðlegur vettvangur í viðskiptum með lifandi dýr."
+    },
+    "values": {
+      "title": "Gildi okkar",
+      "trust": {
+        "title": "Traust",
+        "description": "Gagnsæi og áreiðanleiki eru nauðsynleg í öllum viðskiptum."
+      },
+      "quality": {
+        "title": "Gæði",
+        "description": "Stöðugar umbætur til að veita bestu þjónustuna."
+      },
+      "innovation": {
+        "title": "Nýsköpun",
+        "description": "Að umbreyta iðnaðinum með því að nota tækni."
+      }
+    },
+    "stats": {
+      "users": "Skráður notandi",
+      "sellers": "Virkur seljandi",
+      "products": "Auglýsing",
+      "transactions": "Vel heppnuð viðskipti"
+    }
+  },
+  "contact": {
+    "title": "Samskipti",
+    "subtitle": "Vinsamlegast hafið samband við okkur ef þið hafið einhverjar spurningar.",
+    "form": {
+      "title": "Skrifaðu til okkar",
+      "name": "Nafn þitt",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "Tölvupóstur",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Efni",
+      "subjectPlaceholder": "Efni skilaboðanna þinna",
+      "message": "Skilaboðin þín",
+      "messagePlaceholder": "Skrifaðu skilaboðin þín hér...",
+      "submit": "Senda",
+      "submitting": "Sendi...",
+      "success": "Skilaboðin þín hafa verið send. Við munum hafa samband við þig eins fljótt og auðið er.",
+      "error": "Villa kom upp við að senda skilaboðin. Vinsamlegast reyndu aftur."
+    },
+    "info": {
+      "title": "Tengiliðaupplýsingar",
+      "address": "Heimilisfang",
+      "addressValue": "Istanbúl, Tyrkland",
+      "email": "Tölvupóstur",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Sími",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Vinnutími",
+      "workingHoursValue": "Mánudagur - Föstudagur: 09:00 - 18:00",
+      "map": "Kort"
+    }
+  },
+  "terms": {
+    "title": "Notkunarskilmálar",
+    "lastUpdated": "Síðasta uppfærsla: {dagsetning}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Samþykki skilmálanna",
+        "content": "Með því að nota þessa vefsíðu samþykkir þú eftirfarandi notkunarskilmála. Ef þú samþykkir ekki þessa skilmála skaltu ekki nota síðuna."
+      },
+      "services": {
+        "title": "2. Þjónusta",
+        "content": "Viðskipti með búfénað bjóða upp á vettvang fyrir kaup og sölu á lifandi dýrum. Öll viðskipti á vettvanginum eru á ábyrgð notandans."
+      },
+      "accounts": {
+        "title": "3. Notendareikningar",
+        "content": "Þú verður að gefa upp réttar og uppfærðar upplýsingar til að stofna reikning. Öryggi reikningsins er á þína ábyrgð."
+      },
+      "prohibited": {
+        "title": "4. Bönnuð starfsemi",
+        "content": "Villandi auglýsingar, rangar upplýsingar, svik og ólögleg starfsemi eru stranglega bönnuð."
+      },
+      "liability": {
+        "title": "5. Takmörkun ábyrgðar",
+        "content": "Pallurinn ber ekki beina ábyrgð á viðskiptum milli notenda. Allar viðskipti eiga sér stað á milli aðila."
+      },
+      "changes": {
+        "title": "6. Breytingar",
+        "content": "Þessir skilmálar geta breyst án fyrirvara. Breytingar taka gildi um leið og þær eru birtar."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Persónuverndarstefna",
+    "lastUpdated": "Síðasta uppfærsla: {dagsetning}",
+    "sections": {
+      "collection": {
+        "title": "1. Upplýsingasöfnun",
+        "content": "Þegar þú býrð til aðgang söfnum við persónuupplýsingum eins og nafni þínu, netfangi og símanúmeri. Við gætum einnig safnað nafnlausum gögnum varðandi notkun þína á síðunni."
+      },
+      "usage": {
+        "title": "2. Notkun upplýsinga",
+        "content": "Upplýsingarnar sem við söfnum eru notaðar til að veita þjónustu okkar, stjórna reikningnum þínum, tryggja öryggi og bjóða þér sérsniðin tilboð."
+      },
+      "sharing": {
+        "title": "3. Upplýsingamiðlun",
+        "content": "Persónuupplýsingar þínar verða ekki seldar eða leigðar út til þriðja aðila. Upplýsingum þínum verður ekki deilt nema í þeim tilgangi sem lög kveða á um."
+      },
+      "security": {
+        "title": "4. Öryggi",
+        "content": "Öryggisráðstafanir samkvæmt iðnaðarstöðlum eru til staðar til að vernda gögnin þín."
+      },
+      "cookies": {
+        "title": "5. Smákökur",
+        "content": "Vefsíða okkar notar vafrakökur til að bæta upplifun notenda. Þú getur stjórnað stillingum þínum fyrir vafrakökur í stillingum vafrans þíns."
+      },
+      "rights": {
+        "title": "6. Réttindi þín",
+        "content": "Samkvæmt tyrkneskum lögum um persónuvernd (KVKK) hefur þú rétt til aðgangs að, leiðréttingar og eyðingar á persónuupplýsingum þínum."
+      }
+    }
   },
   "products": {
     "title": "Vörur",
@@ -235,11 +570,19 @@
       "priceDesc": "Verð (hár til lágur)",
       "popular": "Vinsælast"
     },
+    "pagination": {
+      "prev": "Fyrrverandi",
+      "next": "Næst"
+    },
     "status": {
       "draft": "Drög",
-      "active": "Virkur",
+      "pending": "Bíður eftir samþykki",
+      "active": "Virk",
+      "inactive": "Óvirkur",
+      "outOfStock": "Uppselt",
+      "expired": "Kjörtímabil hans er útrunnið.",
       "sold": "Selt",
-      "pending": "Bíður eftir samþykki"
+      "rejected": "Hafnað"
     },
     "condition": {
       "new": "Nýtt",
@@ -250,12 +593,16 @@
     "outOfStock": "Uppselt",
     "inStock": "Á lager",
     "noResults": "Vara fannst ekki.",
-    "loading": "Vörur eru að hlaðast inn...",
+    "loading": "Hleður vörur...",
     "perPage": "Á hverri síðu",
     "showing": "Heildarfjöldi vara frá {from} til {to} (fjöldi vara í heild sinni).",
+    "fetchError": "Villa kom upp við að hlaða upp vörunum.",
+    "loadMore": "Sýna meira",
+    "showingOf": "{count} / {total} vörur eru til sýnis.",
     "loginToFavorite": "Skráðu þig inn til að bæta við uppáhalds.",
     "addedToFavorites": "Bætt við uppáhalds",
-    "removedFromFavorites": "Fjarlægt úr uppáhaldslistum"
+    "removedFromFavorites": "Fjarlægt úr uppáhaldslistum",
+    "favoriteError": "Uppáhaldsaðgerð mistókst."
   },
   "productDetail": {
     "addToFavorites": "Bæta við uppáhalds",
@@ -279,16 +626,31 @@
     "maxOrder": "Hámarkspöntun",
     "publishedAt": "Útgáfudagur",
     "views": "Skoðað",
-    "reviews": "mat",
+    "reviews": {
+      "title": "Mat",
+      "reviewCount": "mat",
+      "noReviews": "Engin matsgerð enn.",
+      "verified": "Staðfestur kaupandi"
+    },
     "similarProducts": "Líkar vörur",
     "sellerProducts": "Aðrar vörur seljanda",
     "contactSeller": "Hafðu samband við seljandann",
-    "loginRequired": "Skráðu þig inn til að bæta við uppáhalds.",
+    "makeOffer": "Senda inn tilboð",
+    "loginRequired": "Vinsamlegast skráðu þig inn til að framkvæma þessa aðgerð.",
     "addedToFavorites": "Bætt við uppáhalds",
     "removedFromFavorites": "Fjarlægt úr uppáhaldslistum",
     "linkCopied": "Tengillinn hefur verið afritaður.",
     "messagingComingSoon": "Skilaboðaaðgerð væntanleg.",
-    "productNotFound": "Vara fannst ekki."
+    "productNotFound": "Vara fannst ekki.",
+    "contacting": "Það er verið að hafa samband...",
+    "contactError": "Samskipti mistókust. Vinsamlegast reynið aftur.",
+    "noImage": "Engin mynd tiltæk.",
+    "defaultLocation": "Tyrkland",
+    "inquiryMessage": "Ég vil gjarnan fá upplýsingar um {title}.",
+    "breadcrumb": {
+      "home": "Heim",
+      "products": "Vörur"
+    }
   },
   "seller": {
     "title": "Upplýsingar um seljanda",
@@ -300,6 +662,70 @@
     "call": "Leita",
     "viewProfile": "Skoða prófíl"
   },
+  "sellers": {
+    "title": "Seljendur",
+    "description": "Finndu áreiðanlega söluaðila.",
+    "search": "Finndu seljanda...",
+    "sort": "Raða",
+    "sortOptions": {
+      "newest": "Nýjasta",
+      "mostSales": "Besta söluvara",
+      "topRated": "Hæsta stig",
+      "mostProducts": "Flestar auglýsingar"
+    },
+    "noResults": "Seljandi fannst ekki.",
+    "loading": "Seljendur eru að hlaða...",
+    "showing": "{count} seljendur fundust",
+    "verified": "Staðfest",
+    "sales": "sölu",
+    "products": "auglýsing",
+    "reviews": "mat",
+    "rating": "punktur",
+    "viewProducts": "Skoða vörur",
+    "contactSeller": "Senda skilaboð",
+    "memberSince": "Meðlimur síðan {ár}",
+    "fetchError": "Villa kom upp við að hlaða inn söluaðilum",
+    "detail": {
+      "title": "Seljandi prófíl",
+      "about": "Um",
+      "businessInfo": "Upplýsingar um fyrirtæki",
+      "businessName": "Nafn fyrirtækis",
+      "businessType": "Viðskiptaferð",
+      "email": "Tölvupóstur",
+      "phone": "Sími",
+      "website": "Vefsíða",
+      "description": "Útskýring",
+      "policies": "Reglur",
+      "returnPolicy": "Skilareglur",
+      "shippingPolicy": "Sendingarstefna",
+      "businessHours": "Vinnutími",
+      "paymentMethods": "Greiðslumáti",
+      "allProducts": "Allar vörur",
+      "stats": {
+        "totalSales": "Heildarsala",
+        "totalProducts": "Heildarvörur",
+        "totalReviews": "Mat",
+        "rating": "Punktur"
+      },
+      "notFound": "Seljandi fannst ekki.",
+      "backToList": "Gefðu seljendunum",
+      "contactInfo": "Samskipti",
+      "noProducts": "Þessi seljandi hefur engar eignir skráðar ennþá.",
+      "noPolicies": "Seljandinn hefur ekki enn skilgreint stefnu sína.",
+      "fetchError": "Villa kom upp við að hlaða upp upplýsingum um seljanda.",
+      "productsLoadError": "Villa kom upp við að hlaða upp vörum seljanda.",
+      "reviewsTab": "Mat",
+      "reviews": {
+        "summary": "Yfirlit yfir mat",
+        "reviewCount": "mat",
+        "communication": "Samskipti",
+        "shippingSpeed": "Sendingarhraði",
+        "productQuality": "Vörugæði",
+        "noReviews": "Engin matsgerð enn.",
+        "verified": "Staðfestur kaupandi"
+      }
+    }
+  },
   "editListing": {
     "title": "Breyta auglýsingunni",
     "saveChanges": "Vista breytingar",
@@ -307,6 +733,10 @@
     "updateSuccess": "Auglýsingin hefur verið uppfærð.",
     "updateFailed": "Villa kom upp við að uppfæra skráninguna.",
     "loadError": "Villa kom upp við að hlaða inn auglýsingunni.",
+    "sellerNotFound": "Seljandaprófíll fannst ekki.",
+    "sellerLoadError": "Ekki var hægt að hlaða seljandaprófílinn.",
+    "userNotFound": "Notandaupplýsingar fundust ekki. Vinsamlegast skráðu þig inn aftur.",
+    "locationNotFound": "Staðsetningarupplýsingar fundust ekki. Vinsamlegast endurnýjaðu síðuna.",
     "basicInfo": "Grunnupplýsingar",
     "categoryAndCondition": "Flokkur og staða",
     "pricing": "Verðlagning",
@@ -314,6 +744,8 @@
     "images": "Myndir",
     "existingImages": "Tiltækar myndir",
     "addImage": "Bæta við mynd",
+    "maxImages": "Þú getur hlaðið inn allt að 10 myndum.",
+    "imageHint": "Lágmark 1, hámark 10 myndir. Í PNG, JPG eða WEBP sniði.",
     "uploadingImages": "Myndir eru að hlaðast inn...",
     "uploadingImage": "Myndin er að hlaðast inn.",
     "imageUploadFailed": "Ekki var hægt að hlaða myndinni.",
@@ -358,6 +790,7 @@
     "addImage": "Bæta við mynd",
     "maxImages": "Þú getur hlaðið inn allt að 10 myndum.",
     "imageHint": "Lágmark 1, hámark 10 myndir. Í PNG, JPG eða WEBP sniði.",
+    "location": "Staðsetningarupplýsingar",
     "fields": {
       "title": "Titill auglýsingar",
       "shortDescription": "Stutt lýsing",
@@ -370,15 +803,31 @@
       "shippingAvailable": "Sending er í boði.",
       "shippingCost": "Sendingargjald",
       "weight": "Þyngd",
-      "weightUnit": "Þyngdareining"
+      "weightUnit": "Þyngdareining",
+      "city": "Borg",
+      "address": "Heimilisfang",
+      "postalCode": "Póstnúmer"
     },
     "placeholders": {
       "title": "Dæmi: Tveggja ára Holstein kýr",
       "shortDescription": "Vörulýsing (hámark 200 stafir)",
       "description": "Gefðu ítarlegar upplýsingar um vöruna...",
-      "category": "Veldu flokk."
+      "category": "Veldu flokk.",
+      "city": "Sláðu inn borgina",
+      "address": "Sláðu inn allt heimilisfangið.",
+      "postalCode": "Póstnúmer"
     },
-    "success": "Auglýsingin var búin til.",
+    "errors": {
+      "titleRequired": "Titill auglýsingar er skylda.",
+      "shortDescriptionRequired": "Stutt lýsing er nauðsynleg.",
+      "descriptionRequired": "Ítarleg útskýring er nauðsynleg.",
+      "categoryRequired": "Val á flokki er skylda.",
+      "priceRequired": "Verð er skyldubundið.",
+      "cityRequired": "Upplýsingar um borgina eru nauðsynlegar.",
+      "addressRequired": "Upplýsingar um heimilisfang eru nauðsynlegar.",
+      "locationError": "Villa kom upp við að búa til staðsetninguna."
+    },
+    "success": "Auglýsingin var búin til með góðum árangri.",
     "error": "Villa kom upp við að búa til auglýsinguna.",
     "creating": "Varan er að verða til...",
     "uploadingImages": "Myndir eru að hlaðast inn...",
@@ -388,24 +837,53 @@
     "draftSaved": "Drög vistuð",
     "productCreated": "Varan var búin til með góðum árangri.",
     "creationFailed": "Ekki var hægt að búa til vöruna. Reyndu aftur.",
-    "errors": {
-      "titleRequired": "Titill auglýsingar er skylda.",
-      "shortDescriptionRequired": "Stutt lýsing er nauðsynleg.",
-      "descriptionRequired": "Ítarleg útskýring er nauðsynleg.",
-      "categoryRequired": "Val á flokki er skylda.",
-      "priceRequired": "Sláðu inn gilt verð."
-    }
+    "userNotFound": "Notandaupplýsingar fundust ekki. Vinsamlegast skráðu þig inn aftur.",
+    "defaultBusinessName": "Fyrirtækið mitt"
+  },
+  "becomeSeller": {
+    "title": "Vertu seljandi",
+    "description": "Yfirlýsing fyrirtækisins",
+    "alreadySeller": "Þú ert nú þegar með seljandaprófíl.",
+    "goToListings": "Fara á skráningar mínar",
+    "businessInfo": "Upplýsingar um fyrirtæki",
+    "contactInfo": "Tengiliðaupplýsingar",
+    "businessName": "Nafn fyrirtækis",
+    "businessNamePlaceholder": "Dæmi: Yilmaz-býlið",
+    "businessType": "Viðskiptaferð",
+    "businessTypePlaceholder": "Veldu tegund fyrirtækis þíns.",
+    "businessTypes": {
+      "individual": "Einstaklingur",
+      "company": "Fyrirtæki",
+      "cooperative": "Samvinnufélag",
+      "farm": "Býli"
+    },
+    "taxNumber": "Skattnúmer",
+    "taxNumberPlaceholder": "Sláðu inn skattakennitölu þína (valfrjálst)",
+    "descriptionPlaceholder": "Skrifaðu stutta lýsingu á fyrirtækinu þínu...",
+    "phone": "Sími",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Vefsíða",
+    "websitePlaceholder": "https://www.examplesite.com (valfrjálst)",
+    "submit": "Búa til seljandaprófíl",
+    "submitting": "Að búa til prófíl...",
+    "success": "Seljandaprófílinn þinn hefur verið búinn til!",
+    "error": "Villa kom upp við að búa til seljandaprófílinn.",
+    "taxNumberHelp": "Sláðu inn 10 eða 11 stafa skattanúmer (valfrjálst)",
+    "phoneHelp": "Dæmi: +90 555 123 45 67 eða 0555 123 45 67",
+    "websiteHelp": "Dæmi: www.isletmem.com eða https://isletmem.com",
+    "alreadySellerDescription": "Þú getur notað hnappinn hér að neðan til að stjórna skráningunum þínum.",
+    "newListing": "Bæta við nýrri skráningu"
   },
   "fileUpload": {
     "dragDrop": "Hladdu inn mynd eða myndbandi.",
     "dragDropHint": "Dragðu og slepptu eða smelltu til að velja.",
     "dropHere": "Láttu það vera...",
     "imageLimit": "Mynd: hámark 10MB",
-    "videoLimit": "Video: max 100MB",
+    "videoLimit": "Myndband: hámark 100MB",
     "uploadCount": "{núverandi} / {hámark} hlaðið",
     "maxFilesError": "Þú getur hlaðið upp að hámarki {max} margmiðlunarefni.",
     "imageTooLarge": "Myndin verður að vera minni en 10MB.",
-    "videoTooLarge": "The video must be smaller than 100MB.",
+    "videoTooLarge": "Myndbandið verður að vera minna en 100MB.",
     "optimizing": "Að fínstilla...",
     "uploading": "Hleður...",
     "queued": "Að bíða í röð...",
@@ -418,10 +896,834 @@
     "coverBadge": "LOK",
     "videoBadge": "MYNDBAND",
     "coverUpdated": "Forsíðumyndinni hefur verið leiðrétt.",
-    "optimizationInfo": "Myndir eru fínstilltar til að uppfylla vefstaðla",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "optimizationInfo": "Myndirnar hafa verið fínstilltar til að uppfylla vefstaðla",
+    "selectImage": "Sjónrænt val",
+    "changeImage": "Breyting",
+    "removeImage": "Fjarlægja",
+    "videoProcessing": "Myndbandið er í vinnslu...",
+    "videoProcessingFailed": "Aðgerðin mistókst.",
+    "videoProcessingPollError": "Ekki tókst að fá stöðu myndvinnslunnar. Endurnýjaðu síðuna.",
+    "reorderError": "Ekki var hægt að flokka skrána.",
+    "coverUpdateError": "Ekki var hægt að uppfæra forsíðumyndina."
+  },
+  "error": {
+    "title": "Villa kom upp.",
+    "description": "Óvænt villa kom upp. Endurnýjaðu síðuna eða reyndu aftur síðar.",
+    "retry": "Reyndu aftur",
+    "goBack": "Ekki fara aftur",
+    "goHome": "Heim",
+    "notFound": {
+      "title": "Síða fannst ekki",
+      "description": "Síðan sem þú ert að leita að er annað hvort ekki tiltæk eða hefur verið færð.",
+      "goHome": "Til baka á forsíðu"
+    }
+  },
+  "search": {
+    "title": "Leita",
+    "placeholder": "Leita að vörum, flokkum eða seljendum...",
+    "searchButton": "Leita",
+    "searchingFor": "Óskað eftir",
+    "loading": "Óskaði eftir...",
+    "resultsCount": "{count} niðurstöður fundust.",
+    "noResults": "Engar niðurstöður fundust.",
+    "tryDifferentSearch": "Prófaðu önnur leitarorð eða breyttu síunum.",
+    "filters": {
+      "title": "Síur",
+      "category": "Flokkur",
+      "allCategories": "Allir flokkar",
+      "condition": "Aðstæður",
+      "allConditions": "Öll mál",
+      "priceRange": "Verðbil",
+      "price": "Verð",
+      "min": "Mín.",
+      "max": "Hámark",
+      "apply": "Sækja um",
+      "clear": "Hreint",
+      "clearAll": "Hreinsa allt"
+    },
+    "fetchError": "Villa kom upp við að hlaða inn leitarniðurstöðum",
+    "recentSearches": "Nýlegar leitir",
+    "clearHistory": "Hreinsa sögu",
+    "noSearchHistory": "Þú ert ekki með leitarsögu ennþá.",
+    "deleteHistoryError": "Villa kom upp við að eyða leitarferlinum."
+  },
+  "categories": {
+    "title": "Flokkastjórnun",
+    "description": "Stjórna flokkum héðan.",
+    "noCategories": "Engir flokkar hafa verið bættir við ennþá.",
+    "createFirst": "Búðu til fyrsta flokkinn.",
+    "fetchError": "Villa kom upp við að hlaða inn flokkunum.",
+    "createSuccess": "Flokkurinn var búinn til",
+    "createError": "Villa kom upp við að búa til flokkinn.",
+    "updateSuccess": "Flokkurinn var uppfærður",
+    "updateError": "Villa kom upp við að uppfæra flokkinn.",
+    "deleteSuccess": "Flokknum hefur verið eytt.",
+    "deleteError": "Villa kom upp við að eyða flokknum.",
+    "activateSuccess": "Flokkurinn hefur verið virkjaður.",
+    "deactivateSuccess": "Flokkurinn hefur verið óvirkur.",
+    "statusError": "Villa kom upp við að breyta stöðunni.",
+    "loadError": "Villa kom upp við að hlaða inn flokknum",
+    "filters": {
+      "all": "Öll þau",
+      "active": "Virk",
+      "inactive": "Óvirkt"
+    },
+    "table": {
+      "name": "Nafn flokks",
+      "slug": "Snigill",
+      "sortOrder": "Raðnúmer",
+      "subCategories": "Undirflokkur",
+      "status": "Aðstæður",
+      "actions": "Færslur"
+    },
+    "actions": {
+      "edit": "Breyta",
+      "delete": "Eyða",
+      "activate": "Virkja",
+      "deactivate": "Óvirk uppbygging"
+    },
+    "deleteDialog": {
+      "title": "Eyða flokki",
+      "description": "Ertu viss um að þú viljir eyða þessum flokki? Þessi aðgerð er óafturkræf.",
+      "cancel": "Hætta við",
+      "confirm": "Eyða"
+    },
+    "addNew": "Bæta við nýjum flokki",
+    "loadMore": "Sækja meira",
+    "loadingMore": "Hleður...",
+    "form": {
+      "newTitle": "Búa til nýjan flokk",
+      "editTitle": "Breyta flokki",
+      "name": "Nafn flokks",
+      "namePlaceholder": "Dæmi: Nautgripir",
+      "slug": "Snigill",
+      "slugPlaceholder": "Dæmi: stór búfénaður",
+      "description": "Útskýring",
+      "descriptionPlaceholder": "Stutt lýsing á flokknum...",
+      "parentCategory": "Efri flokkur",
+      "parentCategoryPlaceholder": "Veldu efsta flokk (valfrjálst)",
+      "noParent": "Enginn efsti flokkur (aðalflokkur)",
+      "sortOrder": "Raðnúmer",
+      "isActive": "Virk",
+      "iconUrl": "Táknslóð",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Vista",
+      "submitting": "Vistar...",
+      "updating": "Uppfærir...",
+      "errors": {
+        "nameRequired": "Nafn flokks er krafist.",
+        "slugRequired": "Sniglar eru skyldubundnir."
+      }
+    }
+  },
+  "offers": {
+    "title": "Tillögur",
+    "description": "Stjórnaðu innkomandi og útkomandi tilboðum þínum.",
+    "received": "Innkomandi tilboð",
+    "sent": "Tilboð send inn",
+    "noReceivedOffers": "Engin tilboð hafa borist enn.",
+    "noSentOffers": "Þú hefur ekki sent inn tilboð ennþá.",
+    "browseProducts": "Skoða vörur",
+    "viewProduct": "Skoða vöruna",
+    "accept": "Samþykkja",
+    "reject": "Hafna",
+    "withdraw": "Draga út",
+    "makeOffer": "Senda inn tilboð",
+    "sendOffer": "Senda tilboð",
+    "sending": "Sendi...",
+    "cancel": "Hætta við",
+    "listingPrice": "Auglýst verð",
+    "yourOffer": "Tilboð þitt",
+    "quantity": "Upphæð",
+    "messageOptional": "Skilaboð (valfrjálst)",
+    "messagePlaceholder": "Athugasemd sem þú vilt deila með seljandanum...",
+    "expiresAt": "Síðasta gilda dagsetning",
+    "offerSent": "Tilboðið þitt hefur verið sent.",
+    "offerError": "Villa kom upp við að senda tilboðið.",
+    "acceptSuccess": "Tilboðið var samþykkt.",
+    "rejectSuccess": "Tilboðinu var hafnað.",
+    "withdrawSuccess": "Tilboðið var dregið til baka.",
+    "actionError": "Villa kom upp í ferlinu.",
+    "fetchError": "Villa kom upp við að hlaða inn tilboðunum.",
+    "loginRequired": "Skráðu þig inn til að senda inn tilboð.",
+    "invalidPrice": "Sláðu inn gilt verð.",
+    "invalidQuantity": "Sláðu inn gilda upphæð.",
+    "status": {
+      "pending": "Í bið",
+      "accepted": "Samþykkt",
+      "rejected": "Hafnað",
+      "countered": "Gagntilboð",
+      "expired": "Kjörtímabil þess er lokið.",
+      "withdrawn": "Dró sig til baka"
+    }
+  },
+  "deals": {
+    "title": "Samningar",
+    "description": "Fylgdu kaupsamningum þínum.",
+    "buying": "Fræðimenn",
+    "selling": "Sala",
+    "noBuyingDeals": "Þú ert ekki með skráningarferli nemenda ennþá.",
+    "noSellingDeals": "Þú ert ekki með neinar söluviðskipti ennþá.",
+    "browseProducts": "Skoða vörur",
+    "viewProduct": "Skoða vöruna",
+    "activeDeals": "Virkir samningar",
+    "completedDeals": "Lokið",
+    "purchases": "Fræðimenn",
+    "sales": "Sala",
+    "fetchError": "Villa kom upp við að hlaða inn samningum",
+    "dealStatus": {
+      "pending": "Í bið",
+      "confirmed": "Staðfest",
+      "processing": "Undirbúningur",
+      "shipped": "Í farminum",
+      "delivered": "Afhent",
+      "completed": "Lokið",
+      "cancelled": "Aflýst",
+      "disputed": "Samningur"
+    },
+    "delivery": {
+      "pickup": "Handaafhending",
+      "shipping": "Með farmi",
+      "transport": "Með flutningum"
+    },
+    "requestTransport": "Sendingarbeiðni"
+  },
+  "farms": {
+    "title": "Bæirnir mínir",
+    "description": "Stjórnaðu og uppfærðu bæina þína.",
+    "addFarm": "Bæta við býli",
+    "editFarm": "Bústjórnun",
+    "noFarms": "Þú hefur ekki bætt við býli ennþá.",
+    "farmName": "Nafn býlis",
+    "registrationNumber": "Skráningarnúmer",
+    "location": "Staðsetning",
+    "selectLocation": "Veldu staðsetningu.",
+    "addLocationFirst": "Fyrst skaltu bæta við staðsetningu.",
+    "farmTypeLabel": "Bændaferð",
+    "farmDescription": "Útskýring",
+    "totalArea": "Heildarflatarmál",
+    "cultivatedArea": "Ræktað svæði",
+    "certifications": "Vottorð",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP, o.s.frv.",
+    "organic": "Lífrænt",
+    "verified": "Staðfest",
+    "save": "Vista",
+    "saving": "Vistar...",
+    "cancel": "Hætta við",
+    "edit": "Breyta",
+    "delete": "Eyða",
+    "sellerRequired": "Seljandaprófíll krafist",
+    "sellerRequiredDesc": "Til að bæta við býli þarftu fyrst að búa til seljandaprófíl.",
+    "becomeSeller": "Vertu seljandi",
+    "createSuccess": "Bærinn var bætt við.",
+    "updateSuccess": "Búgarðurinn hefur verið uppfærður með góðum árangri.",
+    "deleteSuccess": "Bærinn var eytt með góðum árangri.",
+    "saveError": "Villa kom upp við skráningu býlisins.",
+    "deleteError": "Villa kom upp við að eyða býlinu.",
+    "fetchError": "Villa kom upp við að hlaða upp upplýsingum um býlið.",
+    "farmType": {
+      "livestock": "Búfénaðarrækt",
+      "crop": "Landbúnaður",
+      "mixed": "Blandað",
+      "poultry": "Vængjaður",
+      "dairy": "Mjólkurrækt",
+      "aquaculture": "Vatnsvörur"
+    }
+  },
+  "transporters": {
+    "title": "flutningsmenn",
+    "description": "Flutningsþjónusta fyrir dýr og vörur",
+    "searchPlaceholder": "Finndu flutningsaðila...",
+    "noTransporters": "Engir flutningsaðilar eru skráðir ennþá.",
+    "verified": "Staðfest",
+    "transports": "flutningar",
+    "viewProfile": "Skoða prófíl",
+    "sort": {
+      "newest": "Nýjasta",
+      "rating": "Hæsta stig",
+      "mostTransports": "Algengustu sendingar"
+    },
+    "pagination": {
+      "previous": "Fyrrverandi",
+      "next": "Næst",
+      "page": "Síða {síða}"
+    }
+  },
+  "transport": {
+    "title": "Sendingarbeiðnir mínar",
+    "description": "Fylgstu með sendingarbeiðnum þínum.",
+    "findTransporter": "Finndu flutningsaðila",
+    "active": "Virk",
+    "completed": "Lokið",
+    "total": "Samtals",
+    "asSeller": "Sem seljandi",
+    "asBuyer": "Sem kaupandi",
+    "noSellerRequests": "Sem seljandi hefur þú enga sendingarskyldu.",
+    "noBuyerRequests": "Sem viðtakandi hefur þú enga sendingarbeiðni.",
+    "viewProduct": "Skoða vöruna",
+    "pickup": "Móttaka",
+    "delivery": "Afhending",
+    "urgent": "Áríðandi",
+    "fetchError": "Villa kom upp við að hlaða upp sendingarbeiðnum.",
+    "trackShipment": "Fylgja",
+    "transportStatus": {
+      "pending": "Í bið",
+      "inPool": "Í sundlauginni",
+      "assigned": "Skipaður",
+      "pickedUp": "Kvittun",
+      "inTransit": "Á veginum",
+      "delivered": "Afhent",
+      "completed": "Lokið",
+      "cancelled": "Aflýst"
+    },
+    "transportType": {
+      "standard": "Staðall",
+      "refrigerated": "Kælikeðja",
+      "liveAnimal": "Lifandi dýr",
+      "hazardous": "Hættuleg efni",
+      "oversized": "Stór stærð"
+    }
+  },
+  "moderation": {
+    "title": "Vörustjórnun",
+    "description": "Farið yfir vörur sem bíða samþykkis.",
+    "pending": "bíða",
+    "allClear": "Allar vörur hafa verið skoðaðar.",
+    "noPending": "Engar vörur bíða samþykkis.",
+    "awaitingReview": "Bíður eftir endurskoðun",
+    "by": "Sölumaður:",
+    "stock": "Hlutabréf",
+    "preview": "Með þér",
+    "approve": "Staðfesta",
+    "reject": "Hafna",
+    "confirmReject": "Hafna",
+    "cancelReject": "Gefstu upp",
+    "rejectReasonPlaceholder": "Skrifaðu niður ástæðuna fyrir höfnuninni...",
+    "rejectReasonRequired": "Skyldulegt er að gefa upp ástæðu fyrir höfnun.",
+    "approveSuccess": "Varan var samþykkt með góðum árangri.",
+    "rejectSuccess": "Vörunni var hafnað.",
+    "actionError": "Villa kom upp í ferlinu.",
+    "fetchError": "Villa kom upp við að hlaða upp vörunum.",
+    "unauthorized": "Þú hefur ekki leyfi til að fá aðgang að þessari síðu."
+  },
+  "sellerModeration": {
+    "title": "Stjórnun seljenda",
+    "description": "Yfirfara og stjórna reikningum seljenda.",
+    "pending": "bíða",
+    "allClear": "Allir seljendur voru rannsakaðir.",
+    "noPending": "Engir seljendur bíða.",
+    "verify": "Staðfesta",
+    "suspend": "Fresta",
+    "verifySuccess": "Seljandi staðfestur.",
+    "suspendSuccess": "Seljandi frestað.",
+    "actionError": "Villa kom upp í ferlinu.",
+    "suspendReasonRequired": "Ástæða frestunar er nauðsynleg.",
+    "suspendReasonPlaceholder": "Skrifaðu ástæðuna fyrir frestuninni...",
+    "confirmSuspend": "Fresta",
+    "cancelSuspend": "Gefstu upp",
+    "statusLabels": {
+      "pendingVerification": "Bíður staðfestingar",
+      "active": "Virk",
+      "suspended": "Hangandi",
+      "banned": "Bannað"
+    },
+    "filterAll": "Sýna allt",
+    "filterPending": "Þeir sem bíða",
+    "filterActive": "Eignir",
+    "filterSuspended": "Frestað",
+    "unauthorized": "Þú hefur ekki leyfi til að fá aðgang að þessari síðu.",
+    "businessName": "Nafn fyrirtækis",
+    "businessType": "Viðskiptaferð",
+    "email": "Tölvupóstur",
+    "phone": "Sími",
+    "status": "Aðstæður",
+    "createdAt": "Skráningardagur"
+  },
+  "transporterModeration": {
+    "title": "Stjórnun flutningsaðila",
+    "description": "Yfirfara og stjórna reikningum flutningsaðila.",
+    "pending": "bíða",
+    "allClear": "Allir flutningsaðilar voru rannsakaðir.",
+    "noPending": "Enginn flutningsmaður bíður.",
+    "verify": "Staðfesta",
+    "suspend": "Fresta",
+    "verifySuccess": "Flutningsaðilinn var staðfestur.",
+    "suspendSuccess": "Flutningafyrirtækið var stöðvað.",
+    "actionError": "Villa kom upp í ferlinu.",
+    "suspendReasonRequired": "Ástæða frestunar er nauðsynleg.",
+    "suspendReasonPlaceholder": "Skrifaðu ástæðuna fyrir frestuninni...",
+    "confirmSuspend": "Fresta",
+    "cancelSuspend": "Gefstu upp",
+    "statusLabels": {
+      "pendingVerification": "Bíður staðfestingar",
+      "active": "Virk",
+      "suspended": "Hangandi",
+      "banned": "Bannað"
+    },
+    "filterAll": "Sýna allt",
+    "filterPending": "Þeir sem bíða",
+    "filterActive": "Eignir",
+    "filterSuspended": "Frestað",
+    "unauthorized": "Þú hefur ekki leyfi til að fá aðgang að þessari síðu.",
+    "companyName": "Nafn fyrirtækis",
+    "contactPerson": "Viðurkenndur aðili",
+    "email": "Tölvupóstur",
+    "phone": "Sími",
+    "city": "Borg",
+    "status": "Aðstæður",
+    "createdAt": "Skráningardagur"
+  },
+  "transporterDetail": {
+    "notFound": "Enginn flutningsmaður fannst.",
+    "backToList": "Gefðu til flutningsaðila",
+    "verified": "Staðfest",
+    "totalTransports": "heildarsendingarkostnaður",
+    "completed": "lokið",
+    "about": "Um",
+    "contact": "Tengiliðaupplýsingar",
+    "businessInfo": "Upplýsingar um fyrirtæki",
+    "license": "Leyfisnúmer",
+    "insurance": "Upplýsingar um tryggingar",
+    "fleet": "Upplýsingar um flotann",
+    "serviceRegions": "Þjónustusvæði",
+    "specializations": "Sérfræðisvið",
+    "certifications": "Vottorð"
+  },
+  "brands": {
+    "title": "Vörumerkjastjórnun",
+    "description": "Stjórna vörumerkjum.",
+    "addBrand": "Bæta við vörumerki",
+    "editBrand": "Breyta vörumerki",
+    "noBrands": "Engin vörumerki hafa verið bætt við ennþá.",
+    "brandName": "Vörumerki",
+    "brandDescription": "Útskýring",
+    "website": "Vefsíða",
+    "logoUrl": "Vefslóð fyrir merki",
+    "save": "Vista",
+    "saving": "Vistar...",
+    "cancel": "Hætta við",
+    "edit": "Breyta",
+    "delete": "Eyða",
+    "inactive": "Óvirkur",
+    "products": "vara",
+    "createSuccess": "Vörumerki bætt við",
+    "updateSuccess": "Vörumerkið hefur verið uppfært með góðum árangri.",
+    "deleteSuccess": "Vörumerkinu var eytt.",
+    "saveError": "Villa kom upp við skráningu vörumerkisins.",
+    "deleteError": "Villa kom upp við að eyða vörumerkinu.",
+    "fetchError": "Villa kom upp við að hlaða inn vörumerkjum",
+    "unauthorized": "Þú hefur ekki leyfi til að fá aðgang að þessari síðu."
+  },
+  "transporterReviews": {
+    "title": "Mat",
+    "reviewCount": "mat",
+    "noReviews": "Engin matsgerð enn.",
+    "timeliness": "Afhending á réttum tíma",
+    "communication": "Samskipti",
+    "carefulHandling": "Varlega meðhöndlun",
+    "professionalism": "Fagmennska"
+  },
+  "transportOffers": {
+    "title": "Tilboð um sendingarkostnað",
+    "description": "Stjórnaðu tilboðum sem þú sendir inn fyrir sendingarbeiðnir.",
+    "newOffer": "Ný tillaga",
+    "transportRequestId": "Sendingarbeiðniauðkenni",
+    "requestIdPlaceholder": "Sláðu inn auðkenni sendingarbeiðninnar.",
+    "offeredPrice": "Tilboðsverð",
+    "estimatedDays": "Áætlaður tími (dagar)",
+    "days": "dagur",
+    "vehicleType": "Tegund ökutækis",
+    "insuranceIncluded": "Tryggingar innifaldar",
+    "message": "Skilaboð",
+    "cancel": "Hætta við",
+    "sending": "Sendi...",
+    "sendOffer": "Senda inn tilboð",
+    "cancelOffer": "Hætta við",
+    "pendingTab": "Bíð",
+    "historyTab": "Fortíð",
+    "noPendingOffers": "Þú ert ekki með nein tilboð í bið.",
+    "noHistory": "Engin fyrri tilboð fundust.",
+    "status": {
+      "pending": "Bíð",
+      "accepted": "Samþykkt",
+      "rejected": "Hafnað",
+      "expired": "Kjörtímabil þess er lokið.",
+      "cancelled": "Aflýst"
+    },
+    "createSuccess": "Tilboðið var sent inn með góðum árangri.",
+    "createError": "Villa kom upp við að senda tilboðið.",
+    "cancelSuccess": "Tilboðið var fellt niður.",
+    "cancelError": "Villa kom upp við að hætta við tilboðið.",
+    "fetchError": "Villa kom upp við að hlaða inn tilboðunum."
+  },
+  "animalInfo": {
+    "title": "Upplýsingar um dýr og vörur",
+    "animalTab": "Dýr",
+    "healthTab": "Heilsa",
+    "vaccinationsTab": "Bólusetningaraðilar",
+    "veterinaryTab": "Dýralæknir",
+    "breed": "Kynþáttur",
+    "genderLabel": "Kyn",
+    "gender": {
+      "male": "Karlkyns",
+      "female": "Kvenkyns",
+      "unknown": "Óþekkt"
+    },
+    "age": "Aldur",
+    "months": "mánuður",
+    "weight": "Þyngd",
+    "color": "Litur",
+    "tagNumber": "Eyrnanúmer",
+    "healthStatus": "Heilbrigðisástand",
+    "health": {
+      "healthy": "Heilbrigður",
+      "underTreatment": "Undir meðferð",
+      "recovering": "Hann/hún er að jafna sig.",
+      "quarantined": "Í sóttkví",
+      "unknown": "Óþekkt"
+    },
+    "purposeLabel": "Ætluð notkun",
+    "purpose": {
+      "breeding": "Næringur",
+      "dairy": "Mjólk",
+      "meat": "Kjöt",
+      "egg": "Egg",
+      "wool": "Ull",
+      "working": "Vinna",
+      "pet": "Innlendir",
+      "other": "Annað"
+    },
+    "pregnancy": "Meðganga",
+    "pregnant": "Ólétt",
+    "microchip": "Örflögunúmer",
+    "passport": "Vegabréfsnúmer",
+    "sireDetails": "Upplýsingar um föður",
+    "damDetails": "Helstu upplýsingar",
+    "diagnosis": "Greining",
+    "treatment": "Meðferð",
+    "medications": "Lyf",
+    "veterinarian": "Dýralæknir",
+    "nextDue": "Næsta uppreisnarsaga",
+    "prescriptionRequired": "Þarf lyfseðil frá lækni",
+    "targetSpecies": "Target Tours",
+    "activeIngredients": "Virk innihaldsefni",
+    "registrationNo": "Skráningarnúmer",
+    "storage": "Geymsla",
+    "chemicalTab": "Efnafræðilegt",
+    "feedTab": "Beita",
+    "seedTab": "Fræ",
+    "machineryTab": "Vél",
+    "organic": "Lífrænt",
+    "toxicity": "Eituráhrif",
+    "gmoFree": "Erfðabreyttarlaust",
+    "protein": "Prótein",
+    "fat": "Olía",
+    "fiber": "Trefjar",
+    "hybrid": "Blendingur",
+    "germination": "Spírun",
+    "daysToMaturity": "Þroska",
+    "daysLabel": "dagur",
+    "warranty": "Tryggt",
+    "power": "Styrkur",
+    "hoursUsed": "Notkunartími",
+    "hours": "klukkustund",
+    "powerSource": "Aflgjafi"
+  },
+  "productVariants": {
+    "title": "Vöruafbrigði",
+    "variantCount": "afbrigði",
+    "inStock": "Á lager",
+    "outOfStock": "Uppselt"
+  },
+  "productPrices": {
+    "title": "Verð (margir gjaldmiðlar)",
+    "autoConversion": "Sjálfvirk umbreyting",
+    "validUntil": "Gildi"
+  },
+  "requestTransport": {
+    "title": "Búa til sendingarbeiðni",
+    "pickupLocation": "Hleðslustaður",
+    "deliveryLocation": "Afhendingarstaður",
+    "city": "Borg",
+    "address": "Heimilisfang",
+    "transportType": "Samgönguferð",
+    "types": {
+      "standard": "Staðall",
+      "refrigerated": "Kælikeðja",
+      "liveAnimal": "Lifandi dýr",
+      "hazardous": "Hættuleg efni",
+      "oversized": "Stór stærð"
+    },
+    "weight": "Þyngd (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Æskilegur upphleðsludagur",
+    "preferredDeliveryDate": "Æskilegur afhendingardagur",
+    "urgent": "Brýn flutningur",
+    "specialInstructions": "Sérstakar leiðbeiningar",
+    "instructionsPlaceholder": "Skrifaðu þínar sérstöku leiðbeiningar hér ...",
+    "cancel": "Gefstu upp",
+    "submit": "Skapa eftirspurn",
+    "submitting": "Í sköpunarferlinu...",
+    "success": "Sendingarbeiðnin hefur verið búin til.",
+    "error": "Villa kom upp við að búa til sendingarbeiðnina."
+  },
+  "transportTracking": {
+    "title": "Sendingarrakningar",
+    "noTracking": "Engar rakningarupplýsingar eru tiltækar enn.",
+    "update": "Uppfæra"
+  },
+  "locations": {
+    "title": "Heimilisföngin mín",
+    "description": "Hafðu umsjón með skráðum heimilisföngum þínum.",
+    "addLocation": "Bæta við heimilisfangi",
+    "editLocation": "Breyta heimilisfangi",
+    "noLocations": "Þú ert ekki enn með skráð heimilisfang.",
+    "name": "Heimilisfang",
+    "namePlaceholder": "Til dæmis: Hús, Atvinna, Býli",
+    "address": "Heimilisfang",
+    "addressLine2": "Heimilisfangslína 2",
+    "city": "Borg",
+    "state": "Hérað / Svæði",
+    "postalCode": "Póstnúmer",
+    "phone": "Sími",
+    "email": "Tölvupóstur",
+    "cancel": "Gefstu upp",
+    "save": "Vista",
+    "saving": "Vistar...",
+    "typePickup": "Hleður",
+    "typeDelivery": "Afhending",
+    "typeBoth": "Almennt",
+    "createSuccess": "Heimilisfangi bætt við.",
+    "createError": "Villa kom upp við að bæta við heimilisfanginu.",
+    "updateSuccess": "Heimilisfangið hefur verið uppfært.",
+    "updateError": "Villa kom upp við að uppfæra heimilisfangið.",
+    "deleteLocation": "Eyða heimilisfangi",
+    "deleteSuccess": "Heimilisfang eytt",
+    "deleteError": "Villa kom upp við að eyða heimilisfanginu.",
+    "fetchError": "Villa kom upp við að hlaða inn netföngunum."
+  },
+  "systemSettings": {
+    "title": "Kerfisstillingar",
+    "description": "Skoðaðu gjaldmiðil kerfisins, tungumál, greiðslumáta, sendingarkostnað og skattastillingar.",
+    "unauthorized": "Þú hefur ekki leyfi til að fá aðgang að þessari síðu.",
+    "currenciesTab": "Gjaldmiðlar",
+    "languagesTab": "Tungumál",
+    "paymentTab": "Greiðslumáti",
+    "shippingTab": "Farmur",
+    "taxTab": "Skattur",
+    "active": "Virk",
+    "inactive": "Óvirkur",
+    "default": "Sjálfgefið",
+    "noCurrencies": "Gjaldmiðillinn hefur ekki enn verið skilgreindur.",
+    "noLanguages": "Tungumálið hefur ekki enn verið skilgreint.",
+    "noPaymentMethods": "Greiðslumáti ekki enn skilgreindur.",
+    "noCarriers": "Ekki hefur enn verið greint frá því hvaða flutningafyrirtæki er um að ræða.",
+    "noZones": "Farangurssvæðið hefur ekki enn verið skilgreint.",
+    "noTaxRates": "Skatthlutfallið hefur ekki enn verið skilgreint.",
+    "carriers": "Skipafélög",
+    "zones": "Vöruflutningasvæði",
+    "countries": "Lönd",
+    "rates": "Sendingargjöld",
+    "noRates": "Sendingarkostnaður hefur ekki enn verið skilgreindur.",
+    "freeShipping": "Ókeypis sending",
+    "deliveryDays": "afhendingartími á dag"
+  },
+  "pushPermission": {
+    "title": "Virkja tilkynningar",
+    "description": "Fáðu tilkynningar um ný skilaboð, tilboð og uppfærslur á pöntunum.",
+    "allow": "Leyfa",
+    "dismiss": "Loka"
+  },
+  "healthRecords": {
+    "title": "Heilbrigðisskrár",
+    "description": "Hafa umsjón með heilbrigðisskrám dýra og sjúkrasögu.",
+    "addRecord": "Bæta við færslu",
+    "editRecord": "Breyta færslu",
+    "deleteRecord": "Eyða færslu",
+    "noRecords": "Heilbrigðisskrá ekki enn bætt við.",
+    "animalInfoId": "Dýraauðkenni",
+    "animalInfoIdPlaceholder": "Sláðu inn upplýsingar um dýrið.",
+    "recordType": "Skráningarferð",
+    "recordTypePlaceholder": "Dæmi: Skoðun, meðferð, skurðaðgerð",
+    "recordDate": "Skráningardagur",
+    "followUpDate": "Dagsetning athugana",
+    "veterinarianName": "Dýralæknir",
+    "veterinarianLicense": "Leyfisnúmer",
+    "clinicName": "Klínískt",
+    "diagnosis": "Greining",
+    "treatment": "Meðferð",
+    "medications": "Lyf",
+    "medicationsPlaceholder": "Dæmi: Penisillín 500 mg, Íbúprófen",
+    "notes": "Athugasemdir",
+    "documentUrl": "Vefslóð skjals",
+    "saving": "Vistar...",
+    "createSuccess": "Heilsufarsskrá bætt við.",
+    "updateSuccess": "Heilsufarsskrá uppfærð.",
+    "deleteSuccess": "Heilsufarsskránni hefur verið eytt.",
+    "saveError": "Villa kom upp við að vista færsluna.",
+    "deleteError": "Villa kom upp við að eyða færslunni.",
+    "fetchError": "Villa kom upp við að hlaða inn færslum"
+  },
+  "vaccinations": {
+    "title": "Bólusetningarskrár",
+    "description": "Hafa umsjón með bólusetningarskrám og dagatölum dýra.",
+    "addVaccination": "Bæta við uppreisnarmanni",
+    "editVaccination": "Uppreisnarsamkomulag",
+    "deleteVaccination": "Rebel Sil",
+    "noVaccinations": "Bólusetningarskrá ekki enn bætt við.",
+    "animalInfoId": "Dýraauðkenni",
+    "animalInfoIdPlaceholder": "Sláðu inn upplýsingar um dýrið.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Dæmi: SAT bóluefni, Brucella",
+    "vaccineType": "Uppreisnarferð",
+    "vaccineTypePlaceholder": "Dæmi: Lifandi, Óvirkt",
+    "batchNumber": "Veislunúmer",
+    "vaccinationDate": "Saga uppreisnarmanna",
+    "nextDueDate": "Næsta uppreisnarsaga",
+    "veterinarianName": "Dýralæknir",
+    "veterinarianLicense": "Leyfisnúmer",
+    "notes": "Athugasemdir",
+    "certificateUrl": "Vefslóð vottorðs",
+    "saving": "Vistar...",
+    "createSuccess": "Bólusetningarskrá bætt við.",
+    "updateSuccess": "Bólusetningarskrá hefur verið uppfærð.",
+    "deleteSuccess": "Bólusetningarskránni hefur verið eytt.",
+    "saveError": "Villa kom upp við skráningu bóluefnisins.",
+    "deleteError": "Villa kom upp við að eyða bóluefninu.",
+    "fetchError": "Villa kom upp við að hlaða inn bóluefnum."
+  },
+  "shippingCarriers": {
+    "title": "Skipafélög",
+    "description": "Hafa umsjón með upplýsingum um flutningafyrirtæki.",
+    "addCarrier": "Bæta við fyrirtæki",
+    "editCarrier": "Breyta fyrirtæki",
+    "noCarriers": "Ekkert flutningafyrirtæki hefur verið bætt við ennþá.",
+    "carrierName": "Nafn fyrirtækis",
+    "carrierNamePlaceholder": "Dæmi: Aras Kargo, MNG",
+    "code": "Kóði",
+    "codePlaceholder": "Dæmi: ARAS",
+    "website": "Vefsíða",
+    "trackingUrlTemplate": "Fylgdu vefslóðarsniðmát",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Stuðningslönd",
+    "supportedCountriesPlaceholder": "Dæmi: TR, US, DE",
+    "active": "Virk",
+    "inactive": "Óvirkur",
+    "saving": "Vistar...",
+    "edit": "Breyta",
+    "delete": "Eyða",
+    "createSuccess": "Flutningafyrirtækinu hefur verið bætt við.",
+    "updateSuccess": "Flutningafyrirtækinu hefur verið uppfært með góðum árangri.",
+    "deleteSuccess": "Flutningafyrirtækinu hefur verið eytt.",
+    "saveError": "Villa kom upp við skráningu flutningafyrirtækisins.",
+    "deleteError": "Villa kom upp við að eyða upplýsingum um flutningsfyrirtækið.",
+    "fetchError": "Villa kom upp við að hlaða inn flutningafyrirtæki."
+  },
+  "shippingZones": {
+    "title": "Vöruflutningasvæði",
+    "description": "Stjórna farmsvæðum og svæðum.",
+    "addZone": "Bæta við svæði",
+    "editZone": "Breyta svæði",
+    "noZones": "Ekkert farmsvæði hefur verið bætt við ennþá.",
+    "zoneName": "Nafn svæðis",
+    "zoneNamePlaceholder": "Dæmi: Evrópa, Norður-Ameríka",
+    "countryCodes": "Landskóðar",
+    "countryCodesPlaceholder": "Dæmi: TR, DE, FR",
+    "active": "Virk",
+    "inactive": "Óvirkur",
+    "saving": "Vistar...",
+    "edit": "Breyta",
+    "delete": "Eyða",
+    "createSuccess": "Svæðinu hefur verið bætt við.",
+    "updateSuccess": "Svæðið hefur verið uppfært með góðum árangri.",
+    "deleteSuccess": "Svæðið hefur verið hreinsað með góðum árangri.",
+    "saveError": "Villa kom upp við að vista svæðið.",
+    "deleteError": "Villa kom upp við að eyða svæðinu.",
+    "fetchError": "Villa kom upp við að hlaða inn svæðum"
+  },
+  "shippingRates": {
+    "title": "Sendingargjöld",
+    "description": "Stjórna sendingarkostnaði og afhendingarmöguleikum.",
+    "addRate": "Bæta við gjaldi",
+    "editRate": "Leiðrétta gjald",
+    "noRates": "Sendingarkostnaður hefur ekki verið bætt við ennþá.",
+    "zone": "Svæði",
+    "carrier": "Fyrirtæki",
+    "selectZone": "Veldu svæði",
+    "selectCarrier": "Veldu fyrirtæki",
+    "shippingCost": "Sendingargjald",
+    "currency": "Gjaldmiðill",
+    "estimatedDeliveryDays": "Áætluð afhending (dagar)",
+    "minWeight": "Lágmarksþyngd",
+    "maxWeight": "Hámarksþyngd",
+    "minOrderAmount": "Lágmarksupphæð pöntunar",
+    "freeShipping": "Ókeypis sending",
+    "free": "Ókeypis",
+    "active": "Virk",
+    "inactive": "Óvirkur",
+    "cost": "Gjald",
+    "deliveryDays": "Afhending",
+    "status": "Aðstæður",
+    "saving": "Vistar...",
+    "createSuccess": "Gjald bætt við.",
+    "updateSuccess": "Laun hafa verið uppfærð.",
+    "deleteSuccess": "Gjaldinu hefur verið eytt.",
+    "saveError": "Villa kom upp við að vista gjaldið.",
+    "deleteError": "Villa kom upp við að eyða gjaldinu.",
+    "fetchError": "Villa kom upp við að hlaða inn gjöldunum."
+  },
+  "metadata": {
+    "title": "Viðskipti með búfé - Viðskiptavettvangur fyrir lifandi dýr",
+    "description": "Traustasta viðskiptavettvangur heims fyrir lifandi dýr. Örugg og gagnsæ kaup og sala á dýrum.",
+    "pages": {
+      "about": {
+        "title": "Um okkur",
+        "description": "Kynntu þér viðskipti með búfénað. Áreiðanlegur vettvangur fyrir viðskipti með lifandi dýr."
+      },
+      "contact": {
+        "title": "Samskipti",
+        "description": "Hafðu samband við okkur. Þjónustuver búfjárviðskipta er reiðubúið að aðstoða þig."
+      },
+      "terms": {
+        "title": "Notkunarskilmálar",
+        "description": "Skilmálar um viðskipti með búfénað."
+      },
+      "privacy": {
+        "title": "Persónuverndarstefna",
+        "description": "Persónuverndarstefna fyrir búfénaðarviðskipti. Kynntu þér hvernig persónuupplýsingar þínar eru verndaðar."
+      },
+      "products": {
+        "title": "Vörur",
+        "description": "Skoðaðu lista yfir lifandi dýr. Áreiðanlegar auglýsingar fyrir nautgripi, sauðfé og fleira."
+      },
+      "sellers": {
+        "title": "Seljendur",
+        "description": "Uppgötvaðu áreiðanlega dýraseljendur. Staðfestar upplýsingar um seljenda og umsagnir."
+      },
+      "transporters": {
+        "title": "flutningsmenn",
+        "description": "Uppgötvaðu fyrirtæki sem flytja dýr. Öruggur og faglegur flutningur lifandi dýra."
+      },
+      "search": {
+        "title": "Leita",
+        "description": "Leitaðu meðal lista yfir lifandi dýr. Einföld leit með síunar- og flokkunarmöguleikum."
+      },
+      "faq": {
+        "title": "Algengar spurningar",
+        "description": "Algengar spurningar og svör um viðskipti með búfénað."
+      },
+      "productDetail": {
+        "title": "{title} - Til sölu",
+        "description": "Til sölu í {title} - {city}. Smelltu til að fá nánari upplýsingar og tengiliðaupplýsingar."
+      },
+      "sellerDetail": {
+        "title": "{name} - Prófíll seljanda",
+        "description": "Seljandaprófíll {name}. Umsagnir, skráningar og tengiliðaupplýsingar."
+      },
+      "transporterDetail": {
+        "title": "{name} - Prófíll flutningsaðila",
+        "description": "Prófíll flutningsaðila {name}. Þjónustusvæði, umsagnir og tengiliðaupplýsingar."
+      }
+    }
   }
 }

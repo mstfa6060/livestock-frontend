@@ -11,17 +11,30 @@
     "back": "Tillbaka",
     "next": "Fram",
     "close": "Nära",
+    "unauthorized": "Du har inte behörighet att komma åt den här sidan.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Logga in",
-    "register": "Register"
+    "register": "Register",
+    "previous": "Tidigare",
+    "zoomIn": "Zooma in",
+    "previousImage": "Föregående bild",
+    "nextImage": "Nästa bild",
+    "closeLightbox": "Stäng galleriet",
+    "imageLightbox": "Bildgalleri",
+    "slideN": "Bild {n}",
+    "viewMore": "Se mer"
   },
   "header": {
     "products": "Produkter",
     "sellers": "Säljare",
+    "transporters": "transportörer",
     "about": "Om oss",
+    "search": "Söka",
     "dashboard": "Panel",
     "settings": "Inställningar",
-    "logout": "Logga ut"
+    "logout": "Logga ut",
+    "menu": "Meny",
+    "language": "Språkval"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Jag har glömt mitt lösenord.",
       "noAccount": "Har du inget konto?",
       "register": "Register",
-      "errorDefault": "Inloggningen misslyckades. Kontrollera dina uppgifter."
+      "errorDefault": "Inloggningen misslyckades. Kontrollera dina uppgifter.",
+      "orContinueWith": "eller fortsätt",
+      "continueWithGoogle": "Fortsätt med Google",
+      "continueWithApple": "Fortsätt med Apple.",
+      "socialLoginError": "Inloggning via sociala medier misslyckades. Försök igen.",
+      "appleComingSoon": "Mycket snart",
+      "showPassword": "Visa lösenord",
+      "hidePassword": "Dölj lösenord"
     },
     "register": {
       "title": "Register",
@@ -51,7 +71,17 @@
       "login": "Logga in",
       "passwordMismatch": "Lösenorden matchar inte.",
       "passwordTooShort": "Lösenordet måste vara minst 6 tecken långt.",
-      "errorDefault": "Registreringen misslyckades. Försök igen."
+      "errorDefault": "Registreringen misslyckades. Försök igen.",
+      "showPassword": "Visa lösenord",
+      "hidePassword": "Dölj lösenord",
+      "passwordStrength": {
+        "minLength": "Minst 8 tecken",
+        "uppercase": "Stora bokstäver (A-Ö)",
+        "lowercase": "Små bokstäver (a-ö)",
+        "number": "Nummer (0-9)",
+        "special": "Specialtecken (!@#$%)"
+      },
+      "registerSuccess": "Ditt konto har skapats! Du omdirigeras till inloggningssidan..."
     },
     "forgotPassword": {
       "title": "Jag har glömt mitt lösenord.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Begär en ny anslutning",
       "passwordMismatch": "Lösenorden matchar inte.",
       "passwordTooShort": "Lösenordet måste vara minst 6 tecken långt.",
-      "errorDefault": "Lösenordsåterställning misslyckades. Anslutningen kan vara ogiltig eller ha upphört att gälla."
+      "errorDefault": "Lösenordsåterställning misslyckades. Anslutningen kan vara ogiltig eller ha upphört att gälla.",
+      "showPassword": "Visa lösenord",
+      "hidePassword": "Dölj lösenord"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "aktiv",
       "totalViews": "Totalt antal visningar",
       "thisWeek": "den här veckan",
+      "allTime": "alla tider",
       "favorites": "Favorit",
       "onYourListings": "i dina annonser",
+      "savedItems": "registrerad produkt",
       "messages": "Meddelande",
-      "unread": "oläst"
+      "notifications": "Aviseringar",
+      "unread": "oläst",
+      "views": "vyer",
+      "draft": "Förslag",
+      "sold": "Såld",
+      "pending": "I avvaktan på",
+      "awaitingApproval": "väntar på godkännande",
+      "totalSales": "Total försäljning",
+      "completedSales": "slutförda försäljningar",
+      "revenue": "Inkomst",
+      "totalRevenue": "totala intäkter"
     },
     "recentListings": "Dina senaste listningar",
+    "recentActivity": "Senaste aktiviteter",
     "recentMessages": "Senaste meddelanden",
+    "quickLinks": "Snabbåtkomst",
     "noListings": "Du har inte lagt till några annonser än.",
-    "noMessages": "Du har inte fått några meddelanden än.",
+    "noActivity": "Ingen aktivitet ännu.",
+    "noMessages": "Du har inte fått något meddelande än.",
     "noNotifications": "Du har inte fått några aviseringar än.",
     "viewAllListings": "Visa alla listningar",
-    "viewAllMessages": "Visa alla meddelanden"
+    "viewAllMessages": "Visa alla meddelanden",
+    "viewNotifications": "Visa aviseringar",
+    "viewFavorites": "Favoriter Gor",
+    "recentlyViewed": "Nyligen visade",
+    "fetchError": "Ett fel uppstod när paneldatan lästes in."
   },
   "dashboardNav": {
     "overview": "Översikt",
@@ -115,7 +166,61 @@
     "notifications": "Aviseringar",
     "profile": "Profil",
     "settings": "Inställningar",
-    "newListing": "Lägg till ny annons"
+    "newListing": "Lägg till ny annons",
+    "becomeSeller": "Bli säljare",
+    "categories": "Kategorier",
+    "offers": "Förslag",
+    "deals": "Avtal",
+    "farms": "Mina gårdar",
+    "transport": "Transport",
+    "moderation": "Måtta",
+    "sellerModeration": "Säljarmoderering",
+    "transporterModeration": "Operatörsmoderering",
+    "brands": "Varumärken",
+    "transportOffers": "Fraktofferter",
+    "healthRecords": "Hälsojournaler",
+    "vaccinations": "Vaccinatörer",
+    "shippingCarriers": "Rederier",
+    "shippingZones": "Lastzoner",
+    "shippingRates": "Fraktkostnader",
+    "systemSettings": "Systeminställningar",
+    "locations": "Mina adresser"
+  },
+  "profile": {
+    "title": "Profilinformation",
+    "description": "Du kan uppdatera dina personuppgifter här.",
+    "personalInfo": "Personlig information",
+    "contactInfo": "Kontaktinformation",
+    "preferences": "Inställningar",
+    "firstName": "Namn",
+    "firstNamePlaceholder": "Ange ditt namn",
+    "surname": "Efternamn",
+    "surnamePlaceholder": "Ange ditt efternamn.",
+    "displayName": "Visat namn",
+    "phone": "Telefonnummer",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Verifierad",
+    "phoneNotVerified": "Obekräftad",
+    "verifyPhone": "Verifiera telefonnummer",
+    "country": "Land",
+    "selectCountry": "Välj ett land",
+    "language": "Språkinställning",
+    "selectLanguage": "Välj ett språk",
+    "currency": "Valuta",
+    "selectCurrency": "Välj valuta.",
+    "saveChanges": "Spara ändringar",
+    "saving": "Sparande...",
+    "saveSuccess": "Din profilinformation har uppdaterats.",
+    "saveError": "Ett fel uppstod när profilen uppdaterades.",
+    "avatar": "Profilfoto",
+    "changeAvatar": "Ändra foto",
+    "removeAvatar": "Ta bort foto",
+    "currencies": {
+      "try": "Turkiska lira",
+      "usd": "Amerikansk dollar",
+      "eur": "Euro",
+      "gbp": "Brittiska pundet"
+    }
   },
   "myListings": {
     "title": "Mina annonser",
@@ -125,35 +230,94 @@
     "fetchError": "Ett fel uppstod när annonserna lästes in.",
     "deleteSuccess": "Annonsen har raderats.",
     "deleteError": "Ett fel uppstod när annonsen togs bort.",
-    "activateSuccess": "Annonsen har aktiverats.",
-    "deactivateSuccess": "Listningen har inaktiverats.",
+    "publishSuccess": "Annonsen har skickats för godkännande.",
+    "unpublishSuccess": "Annonsen har utarbetats.",
     "statusError": "Ett fel uppstod när statusen ändrades.",
     "filters": {
       "all": "Alla av dem",
-      "active": "Aktiv",
       "draft": "Förslag",
       "pending": "Väntar på godkännande",
+      "active": "Aktiv",
+      "rejected": "Avvisad",
       "sold": "Såld"
     },
     "actions": {
       "edit": "Redigera",
       "delete": "Radera",
-      "activate": "Aktivera",
-      "deactivate": "Passiv struktur"
+      "publish": "Skicka för godkännande",
+      "unpublish": "Förslag",
+      "menu": "Transaktioner"
     },
     "deleteDialog": {
       "title": "Ta bort annonsen",
       "description": "Är du säker på att du vill ta bort den här listan? Åtgärden kan inte ångras.",
       "cancel": "Avboka",
       "confirm": "Radera"
-    }
+    },
+    "loadMore": "Ladda ner mer",
+    "loadingMore": "Belastning..."
   },
   "favorites": {
     "title": "Mina favoriter",
     "description": "Följ de produkter du gillar här.",
     "noFavorites": "Du har inte lagt till några favoritprodukter än.",
     "browseProducts": "Bläddra bland produkter",
-    "fetchError": "Ett fel uppstod när favoriterna lästes in."
+    "fetchError": "Ett fel uppstod när favoriterna lästes in.",
+    "loadMore": "Ladda ner mer",
+    "loadingMore": "Belastning..."
+  },
+  "messages": {
+    "title": "Meddelanden",
+    "description": "Ta kontakt med köpare och säljare.",
+    "noConversations": "Du har inte fått något meddelande än.",
+    "startConversation": "För att ställa en fråga om en annons, gå till annonsen.",
+    "fetchError": "Ett fel uppstod när meddelandena lästes in",
+    "sendError": "Ett fel uppstod när meddelandet skickades.",
+    "connectionError": "Anslutningen misslyckades. Försöker igen...",
+    "connected": "Den anslöt",
+    "connecting": "Ansluter...",
+    "searchPlaceholder": "Sök igenom meddelandena...",
+    "typeMessage": "Skriv ditt meddelande...",
+    "send": "Skicka",
+    "sending": "Sändning...",
+    "typing": "Det står...",
+    "read": "Läsa",
+    "delivered": "Skickat",
+    "today": "I dag",
+    "yesterday": "I går",
+    "noMessages": "Inga meddelanden än. Starta en konversation!",
+    "loadMore": "Ladda upp mer",
+    "loadingMessages": "Meddelanden laddas...",
+    "about": "Om",
+    "product": "Produkt",
+    "startNewConversation": "Starta en ny konversation",
+    "selectConversation": "Välj en konversation eller starta en ny.",
+    "online": "Online",
+    "offline": "Off-line",
+    "lastSeen": "Senast sedd",
+    "deleteConversation": "Ta bort konversation",
+    "deleteConfirm": "Är du säker på att du vill radera den här konversationen?",
+    "deleted": "Konversationen raderades.",
+    "defaultUser": "Användare",
+    "noResults": "Inga resultat hittades.",
+    "newConversation": "Ny konversation"
+  },
+  "notifications": {
+    "title": "Aviseringar",
+    "description": "Visa och hantera dina aviseringar.",
+    "markAllAsRead": "Markera alla som lästa",
+    "noNotifications": "Du har inte fått några aviseringar än.",
+    "viewAll": "Se alla aviseringar",
+    "today": "I dag",
+    "yesterday": "I går",
+    "older": "Äldre",
+    "types": {
+      "system": "System",
+      "message": "Meddelande",
+      "offer": "Erbjuda",
+      "order": "Beställa",
+      "listing": "Annons"
+    }
   },
   "settings": {
     "title": "Inställningar",
@@ -169,7 +333,28 @@
       "passwordMismatch": "De nya lösenorden matchar inte.",
       "passwordTooShort": "Det nya lösenordet måste vara minst 6 tecken långt.",
       "sessionError": "Sessionsinformationen kunde inte hittas.",
-      "errorDefault": "Lösenordet kunde inte uppdateras. Kontrollera ditt nuvarande lösenord."
+      "errorDefault": "Lösenordet kunde inte uppdateras. Kontrollera ditt nuvarande lösenord.",
+      "showPassword": "Visa lösenord",
+      "hidePassword": "Dölj lösenord"
+    },
+    "preferences": {
+      "title": "Aviserings- och visningsinställningar",
+      "description": "Hantera dina aviseringskanaler och visningsinställningar.",
+      "notifications": "Aviseringar",
+      "emailNotifications": "E-postmeddelanden",
+      "emailNotificationsDesc": "Få e-postmeddelanden om nya meddelanden och annonsuppdateringar.",
+      "smsNotifications": "SMS-aviseringar",
+      "smsNotificationsDesc": "Ta emot SMS-meddelanden för viktiga aviseringar.",
+      "pushNotifications": "Push-meddelanden",
+      "pushNotificationsDesc": "Få push-notiser för omedelbara uppdateringar.",
+      "appearance": "Utseende",
+      "darkMode": "Mörkt läge",
+      "darkModeDesc": "Byt till ett mörkt tema.",
+      "saveChanges": "Spara inställningar",
+      "saving": "Sparande...",
+      "saveSuccess": "Dina inställningar har uppdaterats.",
+      "saveError": "Ett fel uppstod när inställningarna uppdaterades.",
+      "loadError": "Inställningarna kunde inte läsas in."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Plattform för handel med levande djur",
       "subtitle": "Den mest pålitliga plattformen för handel med levande djur. Köp och sälj dina nötkreatur och får säkert.",
       "cta": "Börja nu",
-      "viewListings": "Visa annonser"
+      "viewListings": "Visa annonser",
+      "searchPlaceholder": "Leta efter djur... (kor, får, getter...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Utvalda annonser",
       "viewAll": "Se alla"
+    },
+    "cta": {
+      "title": "Börja nu",
+      "subtitle": "Ta din plats på en plattform där tusentals säljare och köpare möts.",
+      "button": "Registrera dig gratis"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Om oss",
     "contact": "Kommunikation",
     "terms": "Användarvillkor",
-    "privacy": "Integritetspolicy"
+    "privacy": "Integritetspolicy",
+    "company": "Företag",
+    "support": "Stöd",
+    "legal": "Rättslig",
+    "followUs": "Följ oss",
+    "newsletter": "Bulletin",
+    "newsletterDescription": "Missa inte de senaste annonserna och kampanjerna.",
+    "subscribe": "Prenumerera",
+    "emailPlaceholder": "Din e-postadress",
+    "tagline": "Turkiets mest pålitliga plattform för handel med levande djur.",
+    "sellers": "Säljare",
+    "products": "Produkter",
+    "map": "Karta",
+    "appleLoginComingSoon": "Inloggning med Apple kommer att vara aktiv mycket snart.",
+    "supportEmail": "info@livsmedelshandel.com",
+    "faq": "Vanliga frågor"
+  },
+  "faq": {
+    "title": "Vanliga frågor",
+    "description": "Svar på dina vanliga frågor om vår plattform.",
+    "noFaqs": "Inga frågor har lagts till ännu."
+  },
+  "about": {
+    "title": "Om oss",
+    "subtitle": "Turkiets mest pålitliga plattform för handel med levande djur.",
+    "mission": {
+      "title": "Vårt uppdrag",
+      "description": "Genom att digitalisera handeln med levande djur strävar vi efter att skapa en säker, transparent och effektiv länk mellan producenter och köpare."
+    },
+    "vision": {
+      "title": "Vår vision",
+      "description": "Att vara en pionjär inom digital transformation inom jordbrukssektorn och att bli en global plattform för handel med levande djur."
+    },
+    "values": {
+      "title": "Våra värderingar",
+      "trust": {
+        "title": "Förtroende",
+        "description": "Transparens och pålitlighet är avgörande i alla transaktioner."
+      },
+      "quality": {
+        "title": "Kvalitet",
+        "description": "Ständig förbättring för att ge bästa möjliga service."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Att omvandla branschen med hjälp av teknologi."
+      }
+    },
+    "stats": {
+      "users": "Registrerad användare",
+      "sellers": "Aktiv säljare",
+      "products": "Annons",
+      "transactions": "Lyckad transaktion"
+    }
+  },
+  "contact": {
+    "title": "Kommunikation",
+    "subtitle": "Kontakta oss gärna om du har några frågor.",
+    "form": {
+      "title": "Skriv till oss",
+      "name": "Ditt namn",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "E-post",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Ämne",
+      "subjectPlaceholder": "Ämnet för ditt meddelande",
+      "message": "Ditt meddelande",
+      "messagePlaceholder": "Skriv ditt meddelande här...",
+      "submit": "Skicka",
+      "submitting": "Sändning...",
+      "success": "Ditt meddelande har skickats. Vi återkommer till dig så snart som möjligt.",
+      "error": "Ett fel uppstod när meddelandet skickades. Försök igen."
+    },
+    "info": {
+      "title": "Kontaktinformation",
+      "address": "Adress",
+      "addressValue": "Istanbul, Turkiet",
+      "email": "E-post",
+      "emailValue": "info@livsmedelshandel.com",
+      "phone": "Telefon",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Arbetstid",
+      "workingHoursValue": "Måndag - fredag: 09:00 - 18:00",
+      "map": "Karta"
+    }
+  },
+  "terms": {
+    "title": "Användarvillkor",
+    "lastUpdated": "Senaste uppdatering: {datum}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Godkännande av villkoren",
+        "content": "Genom att använda denna webbplats godkänner du följande användarvillkor. Om du inte godkänner dessa villkor, vänligen använd inte webbplatsen."
+      },
+      "services": {
+        "title": "2. Tjänster",
+        "content": "Livestock Trading tillhandahåller en plattform för köp och försäljning av levande djur. Alla transaktioner på plattformen är användarens ansvar."
+      },
+      "accounts": {
+        "title": "3. Användarkonton",
+        "content": "Du måste ange korrekt och aktuell information för att skapa ett konto. Din kontosäkerhet är ditt ansvar."
+      },
+      "prohibited": {
+        "title": "4. Förbjudna aktiviteter",
+        "content": "Vilseledande reklam, falsk information, bedrägerier och olaglig verksamhet är strängt förbjudna."
+      },
+      "liability": {
+        "title": "5. Ansvarsbegränsning",
+        "content": "Plattformen är inte direkt ansvarig för transaktioner mellan användare. Alla transaktioner sker mellan parterna."
+      },
+      "changes": {
+        "title": "6. Ändringar",
+        "content": "Dessa villkor kan komma att ändras utan föregående meddelande. Ändringarna träder i kraft omedelbart efter publicering."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Integritetspolicy",
+    "lastUpdated": "Senaste uppdatering: {datum}",
+    "sections": {
+      "collection": {
+        "title": "1. Informationsinsamling",
+        "content": "När du skapar ett konto samlar vi in personlig information såsom ditt namn, din e-postadress och ditt telefonnummer. Vi kan också komma att samla in anonyma uppgifter om din användning av webbplatsen."
+      },
+      "usage": {
+        "title": "2. Användning av information",
+        "content": "Informationen vi samlar in används för att tillhandahålla våra tjänster, hantera ditt konto, säkerställa säkerhet och erbjuda dig personliga erbjudanden."
+      },
+      "sharing": {
+        "title": "3. Informationsdelning",
+        "content": "Din personliga information kommer inte att säljas eller hyras ut till tredje part. Din information kommer inte att delas förutom för ändamål som krävs enligt lag."
+      },
+      "security": {
+        "title": "4. Säkerhet",
+        "content": "Branschstandardiserade säkerhetsåtgärder finns på plats för att skydda dina uppgifter."
+      },
+      "cookies": {
+        "title": "5. Kakor",
+        "content": "Vår webbplats använder cookies för att förbättra användarupplevelsen. Du kan hantera dina cookie-inställningar i dina webbläsarinställningar."
+      },
+      "rights": {
+        "title": "6. Dina rättigheter",
+        "content": "Enligt den turkiska personuppgiftslagen (KVKK) har du rätt att få tillgång till, korrigera och radera dina personuppgifter."
+      }
+    }
   },
   "products": {
     "title": "Produkter",
@@ -235,11 +570,19 @@
       "priceDesc": "Pris (högst till lågt)",
       "popular": "Mest populära"
     },
+    "pagination": {
+      "prev": "Tidigare",
+      "next": "Nästa"
+    },
     "status": {
       "draft": "Förslag",
+      "pending": "Väntar på godkännande",
       "active": "Aktiv",
+      "inactive": "Passiv",
+      "outOfStock": "Slut i lager",
+      "expired": "Hans mandatperiod har löpt ut.",
       "sold": "Såld",
-      "pending": "Väntar på godkännande"
+      "rejected": "Avvisad"
     },
     "condition": {
       "new": "Ny",
@@ -250,12 +593,16 @@
     "outOfStock": "Slut i lager",
     "inStock": "I lager",
     "noResults": "Produkten hittades inte.",
-    "loading": "Laddar produkter...",
+    "loading": "Produkter laddas...",
     "perPage": "Per sida",
     "showing": "Totalt antal {total} produkter mellan {from} och {to}.",
+    "fetchError": "Ett fel uppstod när produkterna laddades upp.",
+    "loadMore": "Visa mer",
+    "showingOf": "{count} / {total} produkter visas.",
     "loginToFavorite": "Logga in för att lägga till i favoriter.",
     "addedToFavorites": "Tillagd i favoriter",
-    "removedFromFavorites": "Borttagen från favoriter"
+    "removedFromFavorites": "Borttagen från favoriter",
+    "favoriteError": "Favoritåtgärden misslyckades."
   },
   "productDetail": {
     "addToFavorites": "Lägg till i favoriter",
@@ -279,16 +626,31 @@
     "maxOrder": "Maximal beställning",
     "publishedAt": "Publiceringsdatum",
     "views": "Visad",
-    "reviews": "utvärdering",
+    "reviews": {
+      "title": "Bedömningar",
+      "reviewCount": "utvärdering",
+      "noReviews": "Ingen utvärdering ännu.",
+      "verified": "Verifierad köpare"
+    },
     "similarProducts": "Liknande produkter",
     "sellerProducts": "Säljarens övriga produkter",
     "contactSeller": "Kontakta säljaren",
-    "loginRequired": "Logga in för att lägga till i favoriter.",
+    "makeOffer": "Skicka ett erbjudande",
+    "loginRequired": "Vänligen logga in för att utföra den här åtgärden.",
     "addedToFavorites": "Tillagd i favoriter",
     "removedFromFavorites": "Borttagen från favoriter",
     "linkCopied": "Länken har kopierats.",
     "messagingComingSoon": "Meddelandefunktionen kommer snart.",
-    "productNotFound": "Produkten hittades inte."
+    "productNotFound": "Produkten hittades inte.",
+    "contacting": "Kontakt tas...",
+    "contactError": "Kommunikationen misslyckades. Försök igen.",
+    "noImage": "Ingen bild tillgänglig.",
+    "defaultLocation": "Turkiet",
+    "inquiryMessage": "Jag skulle vilja ha information om {title}.",
+    "breadcrumb": {
+      "home": "Hem",
+      "products": "Produkter"
+    }
   },
   "seller": {
     "title": "Säljarinformation",
@@ -300,6 +662,70 @@
     "call": "Söka",
     "viewProfile": "Visa profil"
   },
+  "sellers": {
+    "title": "Säljare",
+    "description": "Upptäck pålitliga säljare.",
+    "search": "Hitta en säljare...",
+    "sort": "Sortera",
+    "sortOptions": {
+      "newest": "Senast",
+      "mostSales": "Bästsäljare",
+      "topRated": "Högsta poäng",
+      "mostProducts": "De flesta annonser"
+    },
+    "noResults": "Säljaren hittades inte.",
+    "loading": "Säljare laddar...",
+    "showing": "{count} säljare funna",
+    "verified": "Verifierad",
+    "sales": "försäljning",
+    "products": "annons",
+    "reviews": "utvärdering",
+    "rating": "punkt",
+    "viewProducts": "Visa produkter",
+    "contactSeller": "Skicka meddelande",
+    "memberSince": "Medlem sedan {år}",
+    "fetchError": "Ett fel uppstod när leverantörer laddades",
+    "detail": {
+      "title": "Säljarprofil",
+      "about": "Om",
+      "businessInfo": "Företagsinformation",
+      "businessName": "Företagsnamn",
+      "businessType": "Affärsrundtur",
+      "email": "E-post",
+      "phone": "Telefon",
+      "website": "Webbplats",
+      "description": "Förklaring",
+      "policies": "Policyer",
+      "returnPolicy": "Returpolicy",
+      "shippingPolicy": "Leveranspolicy",
+      "businessHours": "Arbetstid",
+      "paymentMethods": "Betalningsmetoder",
+      "allProducts": "Alla produkter",
+      "stats": {
+        "totalSales": "Total försäljning",
+        "totalProducts": "Totalt antal produkter",
+        "totalReviews": "Utvärdering",
+        "rating": "Punkt"
+      },
+      "notFound": "Säljaren hittades inte.",
+      "backToList": "Don till säljarna",
+      "contactInfo": "Kommunikation",
+      "noProducts": "Den här säljaren har inga annonser ännu.",
+      "noPolicies": "Säljaren har ännu inte definierat sina policyer.",
+      "fetchError": "Ett fel uppstod när säljarinformationen laddades upp.",
+      "productsLoadError": "Ett fel uppstod när säljarens produkter skulle laddas upp.",
+      "reviewsTab": "Bedömningar",
+      "reviews": {
+        "summary": "Utvärderingssammanfattning",
+        "reviewCount": "utvärdering",
+        "communication": "Kommunikation",
+        "shippingSpeed": "Leveranshastighet",
+        "productQuality": "Produktkvalitet",
+        "noReviews": "Ingen utvärdering ännu.",
+        "verified": "Verifierad köpare"
+      }
+    }
+  },
   "editListing": {
     "title": "Redigera annonsen",
     "saveChanges": "Spara ändringar",
@@ -307,6 +733,10 @@
     "updateSuccess": "Annonsen har uppdaterats.",
     "updateFailed": "Ett fel uppstod när listan uppdaterades.",
     "loadError": "Ett fel uppstod när annonsen laddades.",
+    "sellerNotFound": "Säljarprofilen hittades inte.",
+    "sellerLoadError": "Säljarprofilen kunde inte laddas.",
+    "userNotFound": "Användarinformationen kunde inte hittas. Vänligen logga in igen.",
+    "locationNotFound": "Platsinformationen hittades inte. Uppdatera sidan.",
     "basicInfo": "Grundläggande information",
     "categoryAndCondition": "Kategori och status",
     "pricing": "Prissättning",
@@ -314,6 +744,8 @@
     "images": "Bilder",
     "existingImages": "Tillgängliga bilder",
     "addImage": "Lägg till bild",
+    "maxImages": "Du kan ladda upp maximalt 10 bilder.",
+    "imageHint": "Minst 1, högst 10 bilder. I PNG-, JPG- eller WEBP-format.",
     "uploadingImages": "Bilderna laddas...",
     "uploadingImage": "Bilden laddas.",
     "imageUploadFailed": "Bilden kunde inte laddas.",
@@ -358,6 +790,7 @@
     "addImage": "Lägg till bild",
     "maxImages": "Du kan ladda upp maximalt 10 bilder.",
     "imageHint": "Minst 1, högst 10 bilder. I PNG-, JPG- eller WEBP-format.",
+    "location": "Platsinformation",
     "fields": {
       "title": "Annonstitel",
       "shortDescription": "Kort beskrivning",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Frakt är tillgänglig.",
       "shippingCost": "Fraktavgift",
       "weight": "Vikt",
-      "weightUnit": "Viktenhet"
+      "weightUnit": "Viktenhet",
+      "city": "Stad",
+      "address": "Adress",
+      "postalCode": "Postnummer"
     },
     "placeholders": {
       "title": "Exempel: 2-årig Holsteinko",
       "shortDescription": "Produktbeskrivning (max 200 tecken)",
       "description": "Ge detaljerad information om produkten...",
-      "category": "Välj en kategori."
+      "category": "Välj en kategori.",
+      "city": "Ange staden",
+      "address": "Ange den fullständiga adressen.",
+      "postalCode": "Postnummer"
+    },
+    "errors": {
+      "titleRequired": "Annonstitel är obligatorisk.",
+      "shortDescriptionRequired": "En kort beskrivning krävs.",
+      "descriptionRequired": "En detaljerad förklaring krävs.",
+      "categoryRequired": "Val av kategori är obligatoriskt.",
+      "priceRequired": "Priset är obligatoriskt.",
+      "cityRequired": "Information om staden krävs.",
+      "addressRequired": "Adressinformation krävs.",
+      "locationError": "Ett fel uppstod när platsen skapades."
     },
     "success": "Annonsen skapades.",
     "error": "Ett fel uppstod när annonsen skapades.",
@@ -388,24 +837,53 @@
     "draftSaved": "Utkast sparat",
     "productCreated": "Produkten skapades.",
     "creationFailed": "Produkten kunde inte skapas. Försök igen.",
-    "errors": {
-      "titleRequired": "Annonstitel är obligatorisk.",
-      "shortDescriptionRequired": "En kort beskrivning krävs.",
-      "descriptionRequired": "En detaljerad förklaring krävs.",
-      "categoryRequired": "Val av kategori är obligatoriskt.",
-      "priceRequired": "Ange ett giltigt pris."
-    }
+    "userNotFound": "Användarinformationen kunde inte hittas. Vänligen logga in igen.",
+    "defaultBusinessName": "Mitt företag"
+  },
+  "becomeSeller": {
+    "title": "Bli säljare",
+    "description": "Bolagsredovisning",
+    "alreadySeller": "Du har redan en säljarprofil.",
+    "goToListings": "Gå till mina annonser",
+    "businessInfo": "Företagsinformation",
+    "contactInfo": "Kontaktinformation",
+    "businessName": "Företagsnamn",
+    "businessNamePlaceholder": "Exempel: Yilmaz-gården",
+    "businessType": "Affärsrundtur",
+    "businessTypePlaceholder": "Välj din företagstyp.",
+    "businessTypes": {
+      "individual": "Enskild",
+      "company": "Företag",
+      "cooperative": "Kooperativ",
+      "farm": "Odla"
+    },
+    "taxNumber": "Skattenummer",
+    "taxNumberPlaceholder": "Ange ditt skatteidentifikationsnummer (valfritt)",
+    "descriptionPlaceholder": "Skriv en kort beskrivning av ditt företag...",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Webbplats",
+    "websitePlaceholder": "https://www.examplesite.com (valfritt)",
+    "submit": "Skapa säljarprofil",
+    "submitting": "Skapar en profil...",
+    "success": "Din säljarprofil har skapats!",
+    "error": "Ett fel uppstod när säljarprofilen skapades.",
+    "taxNumberHelp": "Ange ditt 10- eller 11-siffriga skattenummer (valfritt)",
+    "phoneHelp": "Exempel: +90 555 123 45 67 eller 0555 123 45 67",
+    "websiteHelp": "Exempel: www.isletmem.com eller https://isletmem.com",
+    "alreadySellerDescription": "Du kan använda knappen nedan för att hantera dina annonser.",
+    "newListing": "Lägg till ny annons"
   },
   "fileUpload": {
     "dragDrop": "Ladda upp ett foto eller en video.",
     "dragDropHint": "Dra och släpp eller klicka för att välja.",
     "dropHere": "Lämna det...",
     "imageLimit": "Foto: max 10 MB",
-    "videoLimit": "Video: max 50 MB",
+    "videoLimit": "Video: max 100 MB",
     "uploadCount": "{nuvarande} / {max} laddad",
     "maxFilesError": "Du kan ladda upp maximalt {max} media.",
     "imageTooLarge": "Fotot måste vara mindre än 10 MB.",
-    "videoTooLarge": "Videon måste vara mindre än 50 MB.",
+    "videoTooLarge": "Videon måste vara mindre än 100 MB.",
     "optimizing": "Optimerande...",
     "uploading": "Belastning...",
     "queued": "Väntar i kö...",
@@ -418,10 +896,834 @@
     "coverBadge": "LOCK",
     "videoBadge": "VIDEO",
     "coverUpdated": "Omslagsfotot har justerats.",
-    "optimizationInfo": "Foton är optimerade för att följa webbstandarder",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "optimizationInfo": "Foton har optimerats för att följa webbstandarder",
+    "selectImage": "Visuellt urval",
+    "changeImage": "Ändra",
+    "removeImage": "Ta bort",
+    "videoProcessing": "Videon bearbetas...",
+    "videoProcessingFailed": "Operationen misslyckades.",
+    "videoProcessingPollError": "Det gick inte att hämta videons bearbetningsstatus. Uppdatera sidan.",
+    "reorderError": "Filen kunde inte sorteras.",
+    "coverUpdateError": "Omslagsfotot kunde inte uppdateras."
+  },
+  "error": {
+    "title": "Ett fel uppstod.",
+    "description": "Ett oväntat fel uppstod. Uppdatera sidan eller försök igen senare.",
+    "retry": "Försök igen",
+    "goBack": "Gå inte tillbaka",
+    "goHome": "Hem",
+    "notFound": {
+      "title": "Sidan hittades inte",
+      "description": "Sidan du söker efter är antingen inte tillgänglig eller har flyttats.",
+      "goHome": "Återgå till startsidan"
+    }
+  },
+  "search": {
+    "title": "Söka",
+    "placeholder": "Sök efter produkter, kategorier eller säljare...",
+    "searchButton": "Söka",
+    "searchingFor": "Efterlyst",
+    "loading": "Ville ha...",
+    "resultsCount": "{count} resultat hittades.",
+    "noResults": "Inga resultat hittades.",
+    "tryDifferentSearch": "Prova andra sökord eller ändra filtren.",
+    "filters": {
+      "title": "Filter",
+      "category": "Kategori",
+      "allCategories": "Alla kategorier",
+      "condition": "Situation",
+      "allConditions": "Alla fall",
+      "priceRange": "Prisintervall",
+      "price": "Pris",
+      "min": "Min",
+      "max": "Max",
+      "apply": "Tillämpas",
+      "clear": "Rena",
+      "clearAll": "Rensa alla"
+    },
+    "fetchError": "Ett fel uppstod när sökresultaten lästes in",
+    "recentSearches": "Senaste sökningar",
+    "clearHistory": "Rensa historik",
+    "noSearchHistory": "Du har ingen sökhistorik än.",
+    "deleteHistoryError": "Ett fel uppstod när sökhistoriken raderades."
+  },
+  "categories": {
+    "title": "Kategorihantering",
+    "description": "Hantera kategorier härifrån.",
+    "noCategories": "Inga kategorier har ännu lagts till.",
+    "createFirst": "Skapa den första kategorin.",
+    "fetchError": "Ett fel uppstod när kategorierna lästes in.",
+    "createSuccess": "Kategori skapad",
+    "createError": "Ett fel uppstod när kategorin skapades.",
+    "updateSuccess": "Kategorin har uppdaterats",
+    "updateError": "Ett fel uppstod när kategorin uppdaterades.",
+    "deleteSuccess": "Kategorin har raderats.",
+    "deleteError": "Ett fel uppstod när kategorin togs bort.",
+    "activateSuccess": "Kategorin har aktiverats.",
+    "deactivateSuccess": "Kategorin har inaktiverats.",
+    "statusError": "Ett fel uppstod när statusen ändrades.",
+    "loadError": "Ett fel uppstod när kategorin lästes in",
+    "filters": {
+      "all": "Alla av dem",
+      "active": "Aktiv",
+      "inactive": "Inaktiv"
+    },
+    "table": {
+      "name": "Kategorinamn",
+      "slug": "Snigel",
+      "sortOrder": "Serienummer",
+      "subCategories": "Underkategori",
+      "status": "Situation",
+      "actions": "Transaktioner"
+    },
+    "actions": {
+      "edit": "Redigera",
+      "delete": "Radera",
+      "activate": "Aktivera",
+      "deactivate": "Passiv struktur"
+    },
+    "deleteDialog": {
+      "title": "Ta bort kategori",
+      "description": "Är du säker på att du vill ta bort den här kategorin? Åtgärden kan inte ångras.",
+      "cancel": "Avboka",
+      "confirm": "Radera"
+    },
+    "addNew": "Lägg till ny kategori",
+    "loadMore": "Ladda ner mer",
+    "loadingMore": "Belastning...",
+    "form": {
+      "newTitle": "Skapa en ny kategori",
+      "editTitle": "Redigera kategori",
+      "name": "Kategorinamn",
+      "namePlaceholder": "Exempel: Nötkreatur",
+      "slug": "Snigel",
+      "slugPlaceholder": "Exempel: stor boskap",
+      "description": "Förklaring",
+      "descriptionPlaceholder": "En kort beskrivning av kategorin...",
+      "parentCategory": "Övre kategori",
+      "parentCategoryPlaceholder": "Välj en toppkategori (valfritt)",
+      "noParent": "Ingen toppkategori (Huvudkategori)",
+      "sortOrder": "Sekvensnummer",
+      "isActive": "Aktiv",
+      "iconUrl": "Ikon-URL",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Spara",
+      "submitting": "Sparande...",
+      "updating": "Uppdaterar...",
+      "errors": {
+        "nameRequired": "Kategorinamn är obligatoriskt.",
+        "slugRequired": "Sniglar är obligatoriska."
+      }
+    }
+  },
+  "offers": {
+    "title": "Förslag",
+    "description": "Hantera dina inkommande och utgående erbjudanden.",
+    "received": "Inkommande erbjudanden",
+    "sent": "Inskickade erbjudanden",
+    "noReceivedOffers": "Inga erbjudanden har ännu mottagits.",
+    "noSentOffers": "Du har inte lämnat in något erbjudande än.",
+    "browseProducts": "Bläddra bland produkter",
+    "viewProduct": "Visa produkten",
+    "accept": "Acceptera",
+    "reject": "Avvisa",
+    "withdraw": "Dra tillbaka",
+    "makeOffer": "Skicka ett erbjudande",
+    "sendOffer": "Skicka erbjudande",
+    "sending": "Sändning...",
+    "cancel": "Avboka",
+    "listingPrice": "Annonserat pris",
+    "yourOffer": "Ditt erbjudande",
+    "quantity": "Belopp",
+    "messageOptional": "Meddelande (valfritt)",
+    "messagePlaceholder": "En anteckning du vill dela med säljaren...",
+    "expiresAt": "Sista giltiga datum",
+    "offerSent": "Ditt erbjudande har skickats.",
+    "offerError": "Ett fel uppstod när erbjudandet skickades.",
+    "acceptSuccess": "Erbjudandet accepterades.",
+    "rejectSuccess": "Erbjudandet avvisades.",
+    "withdrawSuccess": "Erbjudandet drogs tillbaka.",
+    "actionError": "Ett fel uppstod under processen.",
+    "fetchError": "Ett fel uppstod när erbjudandena lästes in.",
+    "loginRequired": "Logga in för att lägga ett bud.",
+    "invalidPrice": "Ange ett giltigt pris.",
+    "invalidQuantity": "Ange ett giltigt belopp.",
+    "status": {
+      "pending": "I avvaktan på",
+      "accepted": "Accepterad",
+      "rejected": "Avvisad",
+      "countered": "Motförslag",
+      "expired": "Dess mandatperiod är över.",
+      "withdrawn": "Tillbakadragit sig"
+    }
+  },
+  "deals": {
+    "title": "Avtal",
+    "description": "Följ dina inköpsavtal.",
+    "buying": "Akademiker",
+    "selling": "Försäljning",
+    "noBuyingDeals": "Du har ännu ingen studentregistreringsprocess.",
+    "noSellingDeals": "Du har inga försäljningstransaktioner ännu.",
+    "browseProducts": "Bläddra bland produkter",
+    "viewProduct": "Visa produkten",
+    "activeDeals": "Aktiva avtal",
+    "completedDeals": "Avslutad",
+    "purchases": "Akademiker",
+    "sales": "Försäljning",
+    "fetchError": "Ett fel uppstod när avtalen lästes in",
+    "dealStatus": {
+      "pending": "I avvaktan på",
+      "confirmed": "Bekräftad",
+      "processing": "Förbereder",
+      "shipped": "I lasten",
+      "delivered": "Levererad",
+      "completed": "Avslutad",
+      "cancelled": "Avbruten",
+      "disputed": "Avtal"
+    },
+    "delivery": {
+      "pickup": "Handleverans",
+      "shipping": "Med last",
+      "transport": "Med transport"
+    },
+    "requestTransport": "Leveransförfrågan"
+  },
+  "farms": {
+    "title": "Mina gårdar",
+    "description": "Hantera och uppdatera dina gårdar.",
+    "addFarm": "Lägg till gård",
+    "editFarm": "Gårdsförvaltning",
+    "noFarms": "Du har inte lagt till en gård än.",
+    "farmName": "Gårdens namn",
+    "registrationNumber": "Registreringsnummer",
+    "location": "Plats",
+    "selectLocation": "Välj en plats.",
+    "addLocationFirst": "Lägg först till en plats.",
+    "farmTypeLabel": "Gårdstur",
+    "farmDescription": "Förklaring",
+    "totalArea": "Total yta",
+    "cultivatedArea": "Odlad areal",
+    "certifications": "Certifikat",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP, etc.",
+    "organic": "Organisk",
+    "verified": "Verifierad",
+    "save": "Spara",
+    "saving": "Sparande...",
+    "cancel": "Avboka",
+    "edit": "Redigera",
+    "delete": "Radera",
+    "sellerRequired": "Säljarprofil krävs",
+    "sellerRequiredDesc": "För att lägga till en gård måste du först skapa din säljarprofil.",
+    "becomeSeller": "Bli säljare",
+    "createSuccess": "Gården har lagts till.",
+    "updateSuccess": "Gården har uppdaterats framgångsrikt.",
+    "deleteSuccess": "Gården har raderats.",
+    "saveError": "Ett fel uppstod när gården registrerades.",
+    "deleteError": "Ett fel uppstod när gården togs bort.",
+    "fetchError": "Ett fel uppstod när gårdsinformationen laddades upp.",
+    "farmType": {
+      "livestock": "Boskapsuppfödning",
+      "crop": "Lantbruk",
+      "mixed": "Blandad",
+      "poultry": "Bevingad",
+      "dairy": "Mjölkproduktion",
+      "aquaculture": "Vattenlevande produkter"
+    }
+  },
+  "transporters": {
+    "title": "transportörer",
+    "description": "Transporttjänster för djur och produkter",
+    "searchPlaceholder": "Hitta en transportör...",
+    "noTransporters": "Det finns inga registrerade transportörer ännu.",
+    "verified": "Verifierad",
+    "transports": "transport",
+    "viewProfile": "Visa profil",
+    "sort": {
+      "newest": "Senast",
+      "rating": "Högsta poäng",
+      "mostTransports": "Mest frekventa leveranser"
+    },
+    "pagination": {
+      "previous": "Tidigare",
+      "next": "Nästa",
+      "page": "Sida {sida}"
+    }
+  },
+  "transport": {
+    "title": "Mina leveransförfrågningar",
+    "description": "Spåra dina leveransförfrågningar.",
+    "findTransporter": "Hitta en transportör",
+    "active": "Aktiv",
+    "completed": "Avslutad",
+    "total": "Total",
+    "asSeller": "Som säljare",
+    "asBuyer": "Som köparen",
+    "noSellerRequests": "Som säljare har du inget krav på frakt.",
+    "noBuyerRequests": "Som mottagare har du ingen leveransförfrågan.",
+    "viewProduct": "Visa produkten",
+    "pickup": "Få",
+    "delivery": "Leverans",
+    "urgent": "Brådskande",
+    "fetchError": "Ett fel uppstod när leveransförfrågningarna skulle laddas upp.",
+    "trackShipment": "Följa",
+    "transportStatus": {
+      "pending": "I avvaktan på",
+      "inPool": "I poolen",
+      "assigned": "Utsedd",
+      "pickedUp": "Mottagande",
+      "inTransit": "På vägen",
+      "delivered": "Levererad",
+      "completed": "Avslutad",
+      "cancelled": "Avbruten"
+    },
+    "transportType": {
+      "standard": "Standard",
+      "refrigerated": "Kylkedja",
+      "liveAnimal": "Levande djur",
+      "hazardous": "Farliga material",
+      "oversized": "Stor storlek"
+    }
+  },
+  "moderation": {
+    "title": "Produktmoderering",
+    "description": "Granska produkter som väntar på godkännande.",
+    "pending": "väntan",
+    "allClear": "Alla produkter har inspekterats.",
+    "noPending": "Det finns inga produkter som väntar på godkännande.",
+    "awaitingReview": "Väntar på granskning",
+    "by": "Säljare:",
+    "stock": "Stock",
+    "preview": "Med dig",
+    "approve": "Bekräfta",
+    "reject": "Avvisa",
+    "confirmReject": "Avvisa",
+    "cancelReject": "Ge upp",
+    "rejectReasonPlaceholder": "Skriv ner anledningen till avslaget...",
+    "rejectReasonRequired": "En anledning till avslag är obligatorisk.",
+    "approveSuccess": "Produkten godkändes framgångsrikt.",
+    "rejectSuccess": "Produkten avvisades.",
+    "actionError": "Ett fel uppstod under processen.",
+    "fetchError": "Ett fel uppstod när produkterna laddades upp.",
+    "unauthorized": "Du har inte behörighet att komma åt den här sidan."
+  },
+  "sellerModeration": {
+    "title": "Säljarmoderering",
+    "description": "Granska och hantera säljarkonton.",
+    "pending": "väntan",
+    "allClear": "Alla säljare undersöktes.",
+    "noPending": "Inga säljare väntar.",
+    "verify": "Kontrollera",
+    "suspend": "Uppskjuta",
+    "verifySuccess": "Säljaren har verifierats.",
+    "suspendSuccess": "Säljaren avstängd.",
+    "actionError": "Ett fel uppstod under processen.",
+    "suspendReasonRequired": "Anledningen till avstängningen är obligatorisk.",
+    "suspendReasonPlaceholder": "Skriv orsaken till avstängningen...",
+    "confirmSuspend": "Uppskjuta",
+    "cancelSuspend": "Ge upp",
+    "statusLabels": {
+      "pendingVerification": "Väntar på verifiering",
+      "active": "Aktiv",
+      "suspended": "Hängande",
+      "banned": "Förbjuden"
+    },
+    "filterAll": "Visa alla",
+    "filterPending": "De som väntar",
+    "filterActive": "Tillgångar",
+    "filterSuspended": "Upphängd",
+    "unauthorized": "Du har inte behörighet att komma åt den här sidan.",
+    "businessName": "Företagsnamn",
+    "businessType": "Affärsrundtur",
+    "email": "E-post",
+    "phone": "Telefon",
+    "status": "Situation",
+    "createdAt": "Registreringsdatum"
+  },
+  "transporterModeration": {
+    "title": "Operatörsmoderering",
+    "description": "Granska och hantera operatörskonton.",
+    "pending": "väntan",
+    "allClear": "Alla transportörer undersöktes.",
+    "noPending": "Ingen transportör väntar.",
+    "verify": "Kontrollera",
+    "suspend": "Uppskjuta",
+    "verifySuccess": "Transportören har verifierats.",
+    "suspendSuccess": "Transportören avbröts.",
+    "actionError": "Ett fel uppstod under processen.",
+    "suspendReasonRequired": "Anledningen till avstängningen är obligatorisk.",
+    "suspendReasonPlaceholder": "Skriv orsaken till avstängningen...",
+    "confirmSuspend": "Uppskjuta",
+    "cancelSuspend": "Ge upp",
+    "statusLabels": {
+      "pendingVerification": "Väntar på verifiering",
+      "active": "Aktiv",
+      "suspended": "Hängande",
+      "banned": "Förbjuden"
+    },
+    "filterAll": "Visa alla",
+    "filterPending": "De som väntar",
+    "filterActive": "Tillgångar",
+    "filterSuspended": "Upphängd",
+    "unauthorized": "Du har inte behörighet att komma åt den här sidan.",
+    "companyName": "Företagsnamn",
+    "contactPerson": "Auktoriserad person",
+    "email": "E-post",
+    "phone": "Telefon",
+    "city": "Stad",
+    "status": "Situation",
+    "createdAt": "Registreringsdatum"
+  },
+  "transporterDetail": {
+    "notFound": "Ingen transportör kunde hittas.",
+    "backToList": "Don till transportörer",
+    "verified": "Verifierad",
+    "totalTransports": "total frakt",
+    "completed": "avslutad",
+    "about": "Om",
+    "contact": "Kontaktinformation",
+    "businessInfo": "Företagsinformation",
+    "license": "Licensnummer",
+    "insurance": "Försäkringsinformation",
+    "fleet": "Flottinformation",
+    "serviceRegions": "Serviceområden",
+    "specializations": "Expertområden",
+    "certifications": "Certifikat"
+  },
+  "brands": {
+    "title": "Varumärkeshantering",
+    "description": "Hantera produktvarumärken.",
+    "addBrand": "Lägg till varumärke",
+    "editBrand": "Redigera varumärke",
+    "noBrands": "Inga varumärken har lagts till ännu.",
+    "brandName": "Varumärke",
+    "brandDescription": "Förklaring",
+    "website": "Webbplats",
+    "logoUrl": "Logotyp-URL",
+    "save": "Spara",
+    "saving": "Sparande...",
+    "cancel": "Avboka",
+    "edit": "Redigera",
+    "delete": "Radera",
+    "inactive": "Passiv",
+    "products": "produkt",
+    "createSuccess": "Varumärket har lagts till",
+    "updateSuccess": "Varumärket har uppdaterats.",
+    "deleteSuccess": "Varumärket har raderats.",
+    "saveError": "Ett fel uppstod vid registreringen av varumärket.",
+    "deleteError": "Ett fel uppstod när varumärket togs bort.",
+    "fetchError": "Ett fel uppstod när varumärken laddades",
+    "unauthorized": "Du har inte behörighet att komma åt den här sidan."
+  },
+  "transporterReviews": {
+    "title": "Bedömningar",
+    "reviewCount": "utvärdering",
+    "noReviews": "Ingen utvärdering ännu.",
+    "timeliness": "Leverans i tid",
+    "communication": "Kommunikation",
+    "carefulHandling": "Noggrann hantering",
+    "professionalism": "Professionalism"
+  },
+  "transportOffers": {
+    "title": "Fraktofferter",
+    "description": "Hantera de offerter du skickar in för leveransförfrågningar.",
+    "newOffer": "Nytt förslag",
+    "transportRequestId": "Leveransförfrågnings-ID",
+    "requestIdPlaceholder": "Ange leveransförfrågnings-ID.",
+    "offeredPrice": "Erbjudandepris",
+    "estimatedDays": "Beräknad varaktighet (dagar)",
+    "days": "dag",
+    "vehicleType": "Fordonstyp",
+    "insuranceIncluded": "Försäkring ingår",
+    "message": "Meddelande",
+    "cancel": "Avboka",
+    "sending": "Sändning...",
+    "sendOffer": "Skicka in erbjudande",
+    "cancelOffer": "Avboka",
+    "pendingTab": "Väntan",
+    "historyTab": "Förbi",
+    "noPendingOffers": "Du har inga väntande erbjudanden.",
+    "noHistory": "Inga tidigare erbjudanden hittades.",
+    "status": {
+      "pending": "Väntan",
+      "accepted": "Accepterad",
+      "rejected": "Avvisad",
+      "expired": "Dess mandatperiod är över.",
+      "cancelled": "Avbruten"
+    },
+    "createSuccess": "Erbjudandet skickades in.",
+    "createError": "Ett fel uppstod när erbjudandet skickades.",
+    "cancelSuccess": "Erbjudandet avbröts.",
+    "cancelError": "Ett fel uppstod när erbjudandet skulle avbrytas.",
+    "fetchError": "Ett fel uppstod när erbjudandena lästes in."
+  },
+  "animalInfo": {
+    "title": "Djur- och produktinformation",
+    "animalTab": "Djur",
+    "healthTab": "Hälsa",
+    "vaccinationsTab": "Vaccinatörer",
+    "veterinaryTab": "Veterinär",
+    "breed": "Ras",
+    "genderLabel": "Kön",
+    "gender": {
+      "male": "Manlig",
+      "female": "Kvinnlig",
+      "unknown": "Okänd"
+    },
+    "age": "Åldras",
+    "months": "månad",
+    "weight": "Vikt",
+    "color": "Färg",
+    "tagNumber": "Öronnummer",
+    "healthStatus": "Hälsotillstånd",
+    "health": {
+      "healthy": "Hälsosam",
+      "underTreatment": "Under behandling",
+      "recovering": "Han/hon återhämtar sig.",
+      "quarantined": "I karantän",
+      "unknown": "Okänd"
+    },
+    "purposeLabel": "Avsedd användning",
+    "purpose": {
+      "breeding": "Hingst",
+      "dairy": "Mjölk",
+      "meat": "Kött",
+      "egg": "Ägg",
+      "wool": "Ull",
+      "working": "Arbete",
+      "pet": "Inhemsk",
+      "other": "Andra"
+    },
+    "pregnancy": "Graviditet",
+    "pregnant": "Gravid",
+    "microchip": "Mikrochip nr.",
+    "passport": "Passnummer",
+    "sireDetails": "Information om fadern",
+    "damDetails": "Huvudinformation",
+    "diagnosis": "Diagnos",
+    "treatment": "Behandling",
+    "medications": "Mediciner",
+    "veterinarian": "Veterinär",
+    "nextDue": "Nästa rebellhistoria",
+    "prescriptionRequired": "Kräver recept från läkare",
+    "targetSpecies": "Target Tours",
+    "activeIngredients": "Aktiva ingredienser",
+    "registrationNo": "Registreringsnummer",
+    "storage": "Lagring",
+    "chemicalTab": "Kemisk",
+    "feedTab": "Bete",
+    "seedTab": "Utsäde",
+    "machineryTab": "Maskin",
+    "organic": "Organisk",
+    "toxicity": "Giftighet",
+    "gmoFree": "GMO-fri",
+    "protein": "Protein",
+    "fat": "Olja",
+    "fiber": "Fiber",
+    "hybrid": "Hybrid",
+    "germination": "Groning",
+    "daysToMaturity": "Mognande",
+    "daysLabel": "dag",
+    "warranty": "Garanterat",
+    "power": "Styrka",
+    "hoursUsed": "Användningstimmar",
+    "hours": "timme",
+    "powerSource": "Strömförsörjning"
+  },
+  "productVariants": {
+    "title": "Produktvarianter",
+    "variantCount": "variant",
+    "inStock": "I lager",
+    "outOfStock": "Slutsåld"
+  },
+  "productPrices": {
+    "title": "Priser (flera valutor)",
+    "autoConversion": "Automatisk transformation",
+    "validUntil": "Giltighet"
+  },
+  "requestTransport": {
+    "title": "Skapa en leveransförfrågan",
+    "pickupLocation": "Lastningspunkt",
+    "deliveryLocation": "Leveranspunkt",
+    "city": "Stad",
+    "address": "Adress",
+    "transportType": "Transporttur",
+    "types": {
+      "standard": "Standard",
+      "refrigerated": "Kylkedja",
+      "liveAnimal": "Levande djur",
+      "hazardous": "Farliga material",
+      "oversized": "Stor storlek"
+    },
+    "weight": "Vikt (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Önskat uppladdningsdatum",
+    "preferredDeliveryDate": "Föredraget leveransdatum",
+    "urgent": "Akut transport",
+    "specialInstructions": "Särskilda instruktioner",
+    "instructionsPlaceholder": "Skriv dina specifika instruktioner här...",
+    "cancel": "Ge upp",
+    "submit": "Skapa efterfrågan",
+    "submitting": "I skapandets gång...",
+    "success": "Leveransförfrågan har skapats.",
+    "error": "Ett fel uppstod när leveransförfrågan skapades."
+  },
+  "transportTracking": {
+    "title": "Leveransspårning",
+    "noTracking": "Ingen spårningsinformation finns tillgänglig ännu.",
+    "update": "Uppdatera"
+  },
+  "locations": {
+    "title": "Mina adresser",
+    "description": "Hantera dina registrerade adresser.",
+    "addLocation": "Lägg till adress",
+    "editLocation": "Redigera adress",
+    "noLocations": "Du har ännu ingen registrerad adress.",
+    "name": "Adressnamn",
+    "namePlaceholder": "Till exempel: Hus, Jobb, Gård",
+    "address": "Adress",
+    "addressLine2": "Adressrad 2",
+    "city": "Stad",
+    "state": "Distrikt / Region",
+    "postalCode": "Postnummer",
+    "phone": "Telefon",
+    "email": "E-post",
+    "cancel": "Ge upp",
+    "save": "Spara",
+    "saving": "Sparande...",
+    "typePickup": "Belastning",
+    "typeDelivery": "Leverans",
+    "typeBoth": "Allmän",
+    "createSuccess": "Adressen har lagts till.",
+    "createError": "Ett fel uppstod när adressen lades till.",
+    "updateSuccess": "Adressen har uppdaterats.",
+    "updateError": "Ett fel uppstod när adressen uppdaterades.",
+    "deleteLocation": "Ta bort adress",
+    "deleteSuccess": "Adressen raderad",
+    "deleteError": "Ett fel uppstod när adressen togs bort.",
+    "fetchError": "Ett fel uppstod när adresserna lästes in."
+  },
+  "systemSettings": {
+    "title": "Systeminställningar",
+    "description": "Visa plattformens valuta, språk, betalningsmetoder, frakt och skatteinställningar.",
+    "unauthorized": "Du har inte behörighet att komma åt den här sidan.",
+    "currenciesTab": "Valutor",
+    "languagesTab": "Språk",
+    "paymentTab": "Betalningsmetoder",
+    "shippingTab": "Frakt",
+    "taxTab": "Beskatta",
+    "active": "Aktiv",
+    "inactive": "Passiv",
+    "default": "Standard",
+    "noCurrencies": "Valutan har ännu inte definierats.",
+    "noLanguages": "Språket har ännu inte definierats.",
+    "noPaymentMethods": "Betalningsmetod ännu inte definierad.",
+    "noCarriers": "Rederiet har ännu inte identifierats.",
+    "noZones": "Lastområdet är ännu inte definierat.",
+    "noTaxRates": "Skattesatsen är ännu inte fastställd.",
+    "carriers": "Rederier",
+    "zones": "Lastzoner",
+    "countries": "Länder",
+    "rates": "Fraktkostnader",
+    "noRates": "Fraktkostnaderna är ännu inte fastställda.",
+    "freeShipping": "Fri frakt",
+    "deliveryDays": "leveranstid på dagen"
+  },
+  "pushPermission": {
+    "title": "Aktivera aviseringar",
+    "description": "Få aviseringar om nya meddelanden, erbjudanden och orderuppdateringar.",
+    "allow": "Tillåta",
+    "dismiss": "Nära"
+  },
+  "healthRecords": {
+    "title": "Hälsojournaler",
+    "description": "Hantera djurens hälsojournaler och sjukdomshistorik.",
+    "addRecord": "Lägg till post",
+    "editRecord": "Redigera post",
+    "deleteRecord": "Ta bort post",
+    "noRecords": "Hälsojournalen har ännu inte tillagts.",
+    "animalInfoId": "Djur-ID",
+    "animalInfoIdPlaceholder": "Ange djurets informations-ID.",
+    "recordType": "Registreringsturné",
+    "recordTypePlaceholder": "Exempel: Undersökning, Behandling, Kirurgi",
+    "recordDate": "Registreringsdatum",
+    "followUpDate": "Kontrollera datum",
+    "veterinarianName": "Veterinär",
+    "veterinarianLicense": "Licensnummer",
+    "clinicName": "Klinisk",
+    "diagnosis": "Diagnos",
+    "treatment": "Behandling",
+    "medications": "Mediciner",
+    "medicationsPlaceholder": "Exempel: Penicillin 500 mg, Ibuprofen",
+    "notes": "Anteckningar",
+    "documentUrl": "Dokument-URL",
+    "saving": "Sparande...",
+    "createSuccess": "Hälsojournalen har lagts till.",
+    "updateSuccess": "Hälsojournalen har uppdaterats.",
+    "deleteSuccess": "Hälsojournalen har raderats.",
+    "saveError": "Ett fel uppstod när posten sparades.",
+    "deleteError": "Ett fel uppstod när posten raderades.",
+    "fetchError": "Ett fel uppstod när poster lästes in"
+  },
+  "vaccinations": {
+    "title": "Vaccinregister",
+    "description": "Hantera djurvaccinationsregister och kalendrar.",
+    "addVaccination": "Lägg till rebell",
+    "editVaccination": "Rebellarrangemang",
+    "deleteVaccination": "Rebell Sil",
+    "noVaccinations": "Vaccinationsregister ännu inte tillagt.",
+    "animalInfoId": "Djur-ID",
+    "animalInfoIdPlaceholder": "Ange djurets informations-ID.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Exempel: SAT-vaccin, Brucella",
+    "vaccineType": "Rebellturné",
+    "vaccineTypePlaceholder": "Exempel: Live, Inaktiv",
+    "batchNumber": "Partinummer",
+    "vaccinationDate": "Rebellens historia",
+    "nextDueDate": "Nästa rebellhistoria",
+    "veterinarianName": "Veterinär",
+    "veterinarianLicense": "Licensnummer",
+    "notes": "Anteckningar",
+    "certificateUrl": "Certifikat-URL",
+    "saving": "Sparande...",
+    "createSuccess": "Vaccinposten har lagts till.",
+    "updateSuccess": "Vaccinationsjournalen har uppdaterats.",
+    "deleteSuccess": "Vaccinregistreringen har raderats.",
+    "saveError": "Ett fel uppstod vid registrering av vaccinet.",
+    "deleteError": "Ett fel uppstod när vaccinet togs bort.",
+    "fetchError": "Ett fel uppstod när vaccinerna laddades."
+  },
+  "shippingCarriers": {
+    "title": "Rederier",
+    "description": "Hantera information om fraktföretag.",
+    "addCarrier": "Lägg till företag",
+    "editCarrier": "Redigera företag",
+    "noCarriers": "Inget rederi har ännu lagts till.",
+    "carrierName": "Företagsnamn",
+    "carrierNamePlaceholder": "Exempel: Aras Kargo, MNG",
+    "code": "Koda",
+    "codePlaceholder": "Exempel: ARAS",
+    "website": "Webbplats",
+    "trackingUrlTemplate": "Följ URL-mall",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Länder som stöds",
+    "supportedCountriesPlaceholder": "Exempel: TR, US, DE",
+    "active": "Aktiv",
+    "inactive": "Passiv",
+    "saving": "Sparande...",
+    "edit": "Redigera",
+    "delete": "Radera",
+    "createSuccess": "Fraktbolaget har lagts till.",
+    "updateSuccess": "Fraktbolaget har uppdaterats.",
+    "deleteSuccess": "Fraktbolaget har raderats.",
+    "saveError": "Ett fel uppstod vid registrering av fraktföretaget.",
+    "deleteError": "Ett fel uppstod när informationen om fraktföretaget raderades.",
+    "fetchError": "Ett fel uppstod vid lastning av fraktföretag."
+  },
+  "shippingZones": {
+    "title": "Lastzoner",
+    "description": "Hantera lastzoner och områden.",
+    "addZone": "Lägg till region",
+    "editZone": "Redigera region",
+    "noZones": "Inget lastutrymme har ännu lagts till.",
+    "zoneName": "Regionens namn",
+    "zoneNamePlaceholder": "Exempel: Europa, Nordamerika",
+    "countryCodes": "Landskoder",
+    "countryCodesPlaceholder": "Exempel: TR, DE, FR",
+    "active": "Aktiv",
+    "inactive": "Passiv",
+    "saving": "Sparande...",
+    "edit": "Redigera",
+    "delete": "Radera",
+    "createSuccess": "Regionen har lagts till.",
+    "updateSuccess": "Regionen har uppdaterats.",
+    "deleteSuccess": "Området har framgångsrikt rensats.",
+    "saveError": "Ett fel uppstod när regionen skulle sparas.",
+    "deleteError": "Ett fel uppstod när regionen togs bort.",
+    "fetchError": "Ett fel uppstod när regionerna lästes in"
+  },
+  "shippingRates": {
+    "title": "Fraktkostnader",
+    "description": "Hantera fraktkostnader och leveransalternativ.",
+    "addRate": "Lägg till avgift",
+    "editRate": "Justera avgift",
+    "noRates": "Fraktkostnader har inte lagts till ännu.",
+    "zone": "Område",
+    "carrier": "Fast",
+    "selectZone": "Välj en region",
+    "selectCarrier": "Välj ett företag",
+    "shippingCost": "Fraktavgift",
+    "currency": "Valuta",
+    "estimatedDeliveryDays": "Beräknad leverans (dagar)",
+    "minWeight": "Minsta vikt",
+    "maxWeight": "Maximal vikt",
+    "minOrderAmount": "Minsta orderbelopp",
+    "freeShipping": "Fri frakt",
+    "free": "Gratis",
+    "active": "Aktiv",
+    "inactive": "Passiv",
+    "cost": "Avgift",
+    "deliveryDays": "Leverans",
+    "status": "Situation",
+    "saving": "Sparande...",
+    "createSuccess": "Avgiften har lagts till.",
+    "updateSuccess": "Lönen har uppdaterats.",
+    "deleteSuccess": "Avgiften har raderats.",
+    "saveError": "Ett fel uppstod när avgiften skulle sparas.",
+    "deleteError": "Ett fel uppstod när avgiften raderades.",
+    "fetchError": "Ett fel uppstod när avgifterna laddades upp."
+  },
+  "metadata": {
+    "title": "Boskapshandel - Plattform för handel med levande djur",
+    "description": "Världens mest betrodda plattform för handel med levande djur. Säker och transparent köp och försäljning av djur.",
+    "pages": {
+      "about": {
+        "title": "Om oss",
+        "description": "Lär dig mer om boskapshandel. En pålitlig plattform för handel med levande djur."
+      },
+      "contact": {
+        "title": "Kommunikation",
+        "description": "Kontakta oss. Kundsupportteamet för Livestock Trading är redo att hjälpa dig."
+      },
+      "terms": {
+        "title": "Användarvillkor",
+        "description": "Villkor för boskapshandel."
+      },
+      "privacy": {
+        "title": "Integritetspolicy",
+        "description": "Integritetspolicy för boskapshandel. Läs mer om hur dina personuppgifter skyddas."
+      },
+      "products": {
+        "title": "Produkter",
+        "description": "Bläddra bland annonser för levande djur. Pålitliga annonser för nötkreatur, får och mer."
+      },
+      "sellers": {
+        "title": "Säljare",
+        "description": "Upptäck pålitliga djurförsäljare. Verifierade säljarprofiler och recensioner."
+      },
+      "transporters": {
+        "title": "transportörer",
+        "description": "Upptäck djurtransportföretag. Säker och professionell transport av levande djur."
+      },
+      "search": {
+        "title": "Söka",
+        "description": "Sök bland listor över levande djur. Enkel sökning med filtrerings- och sorteringsalternativ."
+      },
+      "faq": {
+        "title": "Vanliga frågor",
+        "description": "Vanliga frågor och svar om handel med boskap."
+      },
+      "productDetail": {
+        "title": "{titel} - Till salu",
+        "description": "Till salu i {title} - {city}. Klicka för mer information och kontaktuppgifter."
+      },
+      "sellerDetail": {
+        "title": "{namn} - Säljarprofil",
+        "description": "Säljarprofil för {name}. Recensioner, annonser och kontaktuppgifter."
+      },
+      "transporterDetail": {
+        "title": "{namn} - Operatörsprofil",
+        "description": "Profil för transportören {name}. Serviceområden, recensioner och kontaktuppgifter."
+      }
+    }
   }
 }

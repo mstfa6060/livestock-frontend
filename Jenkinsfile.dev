@@ -141,31 +141,33 @@ echo "\$DOCKER_PASSWORD" | docker login -u "\$DOCKER_USERNAME" --password-stdin 
 }
 
 IMAGE="${IMAGE_NAME}:${TAG_SUFFIX}"
-CONTAINER="${CONTAINER_NAME}"
+COMPOSE_DIR="/opt/livestocktrading/repo/_devops/docker/compose"
+ENV_FILE="/opt/livestocktrading/.env.dev"
 
 echo "Yeni image cekiliyor: \$IMAGE"
 docker pull \$IMAGE
 
-echo "Mevcut container durduruluyor..."
-docker stop \$CONTAINER 2>/dev/null || true
-docker rm \$CONTAINER 2>/dev/null || true
+# Eski manual container varsa kaldir (migration)
+docker stop ${CONTAINER_NAME} 2>/dev/null || true
+docker rm ${CONTAINER_NAME} 2>/dev/null || true
 
-echo "Yeni container baslatiliyor..."
-docker run -d \
-    --name \$CONTAINER \
-    --restart unless-stopped \
-    -p ${HOST_PORT}:${CONTAINER_PORT} \
-    \$IMAGE
+echo "Docker Compose ile web servisi yeniden baslatiliyor..."
+cd \$COMPOSE_DIR
+docker compose -p livestock_dev \
+    -f docker-compose.yml \
+    -f docker-compose.dev.yml \
+    --env-file \$ENV_FILE \
+    up -d --force-recreate web
 
 echo "Container baslatildi, saglik kontrolu yapiliyor..."
 sleep 5
 
-if docker ps --filter "name=\$CONTAINER" --filter "status=running" -q | grep -q .; then
+if docker compose -p livestock_dev ps web --format json | grep -q '"running"'; then
     echo "DEV WEB deploy basariyla tamamlandi!"
     echo "Erisim: http://\$(hostname -I | awk '{print \$1}'):${HOST_PORT}"
 else
     echo "Container baslatma basarisiz!"
-    docker logs \$CONTAINER
+    docker compose -p livestock_dev logs web --tail=50
     exit 1
 fi
 

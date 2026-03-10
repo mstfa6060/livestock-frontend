@@ -11,17 +11,30 @@
     "back": "Lura",
     "next": "'Il Quddiem",
     "close": "Agħlaq",
+    "unauthorized": "M'għandekx permess biex taċċessa din il-paġna.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Idħol",
-    "register": "Reġistru"
+    "register": "Reġistru",
+    "previous": "Eks",
+    "zoomIn": "Żum 'il ġewwa",
+    "previousImage": "Immaġni preċedenti",
+    "nextImage": "L-immaġni li jmiss",
+    "closeLightbox": "Agħlaq il-gallerija",
+    "imageLightbox": "Gallerija tal-immaġni",
+    "slideN": "Slajd {n}",
+    "viewMore": "Ara aktar"
   },
   "header": {
     "products": "Prodotti",
     "sellers": "Bejjiegħa",
+    "transporters": "trasportaturi",
     "about": "Dwarna",
+    "search": "Fittex",
     "dashboard": "Panel",
     "settings": "Issettjar",
-    "logout": "Oħroġ"
+    "logout": "Oħroġ",
+    "menu": "Menù",
+    "language": "L-għażla tal-lingwa"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Insejt il-password tiegħi.",
       "noAccount": "M'għandekx kont?",
       "register": "Reġistru",
-      "errorDefault": "Il-login falla. Jekk jogħġbok iċċekkja l-informazzjoni tiegħek."
+      "errorDefault": "Il-login falla. Jekk jogħġbok iċċekkja l-informazzjoni tiegħek.",
+      "orContinueWith": "jew kompli",
+      "continueWithGoogle": "Kompli bil-Google",
+      "continueWithApple": "Kompli ma' Apple.",
+      "socialLoginError": "Il-login soċjali falla. Jekk jogħġbok erġa' pprova.",
+      "appleComingSoon": "Dalwaqt ħafna",
+      "showPassword": "Uri l-password",
+      "hidePassword": "Aħbi l-password"
     },
     "register": {
       "title": "Reġistru",
@@ -51,7 +71,17 @@
       "login": "Idħol",
       "passwordMismatch": "Il-passwords ma jaqblux.",
       "passwordTooShort": "Il-password trid tkun twila mill-inqas 6 karattri.",
-      "errorDefault": "Ir-reġistrazzjoni falliet. Jekk jogħġbok erġa' pprova."
+      "errorDefault": "Ir-reġistrazzjoni falliet. Jekk jogħġbok erġa' pprova.",
+      "showPassword": "Uri l-password",
+      "hidePassword": "Aħbi l-password",
+      "passwordStrength": {
+        "minLength": "Mill-inqas 8 karattri",
+        "uppercase": "Ittri kapitali (A-Z)",
+        "lowercase": "Ittri żgħar (a-z)",
+        "number": "Numru (0-9)",
+        "special": "Karattri speċjali (!@#$%)"
+      },
+      "registerSuccess": "Il-kont tiegħek inħoloq b'suċċess! Qed tiġi ridirett lejn il-paġna tal-login..."
     },
     "forgotPassword": {
       "title": "Insejt il-password tiegħi.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Itlob Konnessjoni Ġdida",
       "passwordMismatch": "Il-passwords ma jaqblux.",
       "passwordTooShort": "Il-password trid tkun twila mill-inqas 6 karattri.",
-      "errorDefault": "Ir-reset tal-password falla. Il-konnessjoni tista' tkun invalida jew skadiet."
+      "errorDefault": "Ir-reset tal-password falla. Il-konnessjoni tista' tkun invalida jew skadiet.",
+      "showPassword": "Uri l-password",
+      "hidePassword": "Aħbi l-password"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "attiv",
       "totalViews": "Veduti Totali",
       "thisWeek": "din il-ġimgħa",
+      "allTime": "il-ħin kollu",
       "favorites": "Favorit",
       "onYourListings": "fir-reklami tiegħek",
+      "savedItems": "prodott irreġistrat",
       "messages": "Messaġġ",
-      "unread": "mhux moqri"
+      "notifications": "Notifiki",
+      "unread": "mhux moqri",
+      "views": "veduti",
+      "draft": "Abbozz",
+      "sold": "Mibjugħ",
+      "pending": "Pendenti",
+      "awaitingApproval": "qed nistenna l-approvazzjoni",
+      "totalSales": "Bejgħ Totali",
+      "completedSales": "bejgħ komplut",
+      "revenue": "Dħul",
+      "totalRevenue": "dħul totali"
     },
     "recentListings": "L-Aħħar Listings Tiegħek",
+    "recentActivity": "Attivitajiet Riċenti",
     "recentMessages": "Messaġġi Riċenti",
+    "quickLinks": "Aċċess Rapidu",
     "noListings": "Għadek ma żidt l-ebda reklam.",
+    "noActivity": "Għad m'hemm l-ebda attività.",
     "noMessages": "Għadek ma rċevejt l-ebda messaġġ.",
     "noNotifications": "Għadek ma rċevejt l-ebda notifika.",
     "viewAllListings": "Ara l-Listings Kollha",
-    "viewAllMessages": "Ara l-messaġġi kollha"
+    "viewAllMessages": "Ara l-messaġġi kollha",
+    "viewNotifications": "Ara n-Notifiki",
+    "viewFavorites": "Favoriti Gor",
+    "recentlyViewed": "Riċentement Meqjusa",
+    "fetchError": "Seħħ żball waqt it-tagħbija tad-dejta tal-pannell."
   },
   "dashboardNav": {
     "overview": "Ħarsa ġenerali",
@@ -115,7 +166,61 @@
     "notifications": "Notifiki",
     "profile": "Profil",
     "settings": "Issettjar",
-    "newListing": "Żid Lista Ġdida"
+    "newListing": "Żid Lista Ġdida",
+    "becomeSeller": "Issir Bejjiegħ",
+    "categories": "Kategoriji",
+    "offers": "Proposti",
+    "deals": "Ftehimiet",
+    "farms": "Ir-razzetti tiegħi",
+    "transport": "Trasport",
+    "moderation": "Moderazzjoni",
+    "sellerModeration": "Moderazzjoni tal-Bejjiegħ",
+    "transporterModeration": "Moderazzjoni tat-Trasportatur",
+    "brands": "Marki",
+    "transportOffers": "Kwotazzjonijiet tat-Tbaħħir",
+    "healthRecords": "Rekords tas-Saħħa",
+    "vaccinations": "Vaċċinaturi",
+    "shippingCarriers": "Kumpaniji tat-Tbaħħir",
+    "shippingZones": "Żoni tal-Merkanzija",
+    "shippingRates": "Tariffi tat-Tbaħħir",
+    "systemSettings": "Issettjar tas-Sistema",
+    "locations": "L-indirizzi tiegħi"
+  },
+  "profile": {
+    "title": "Informazzjoni tal-Profil",
+    "description": "Tista' taġġorna l-informazzjoni personali tiegħek hawn.",
+    "personalInfo": "Informazzjoni Personali",
+    "contactInfo": "Informazzjoni ta' Kuntatt",
+    "preferences": "Preferenzi",
+    "firstName": "Isem",
+    "firstNamePlaceholder": "Daħħal ismek",
+    "surname": "Kunjom",
+    "surnamePlaceholder": "Daħħal kunjomok.",
+    "displayName": "Isem Murija",
+    "phone": "Numru tat-Telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Verifikat",
+    "phoneNotVerified": "Mhux ikkonfermat",
+    "verifyPhone": "Ivverifika n-Numru tat-Telefon",
+    "country": "Pajjiż",
+    "selectCountry": "Agħżel pajjiż",
+    "language": "Preferenza tal-Lingwa",
+    "selectLanguage": "Agħżel lingwa",
+    "currency": "Munita",
+    "selectCurrency": "Agħżel il-munita.",
+    "saveChanges": "Salva l-Bidliet",
+    "saving": "Qed niffranka...",
+    "saveSuccess": "L-informazzjoni tal-profil tiegħek ġiet aġġornata.",
+    "saveError": "Seħħ żball waqt l-aġġornament tal-profil.",
+    "avatar": "Ritratt tal-Profil",
+    "changeAvatar": "Ibdel ir-Ritratt",
+    "removeAvatar": "Neħħi r-Ritratt",
+    "currencies": {
+      "try": "Lira Torka",
+      "usd": "Dollaru Amerikan",
+      "eur": "Ewro",
+      "gbp": "Lira sterlina"
+    }
   },
   "myListings": {
     "title": "Ir-reklami tiegħi",
@@ -125,35 +230,94 @@
     "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew ir-reklami.",
     "deleteSuccess": "Ir-riklam tħassar b'suċċess.",
     "deleteError": "Seħħ żball waqt it-tħassir tar-riklam.",
-    "activateSuccess": "Ir-riklam ġie attivat.",
-    "deactivateSuccess": "Il-lista ġiet diżattivata.",
+    "publishSuccess": "Ir-riklam intbagħat għall-approvazzjoni.",
+    "unpublishSuccess": "Ir-riklam ġie abbozzat.",
     "statusError": "Seħħ żball waqt li kien qed jinbidel l-istatus.",
     "filters": {
       "all": "Kollha kemm huma",
-      "active": "Attiv",
       "draft": "Abbozz",
       "pending": "Qed Nistennew l-Approvazzjoni",
+      "active": "Attiv",
+      "rejected": "Miċħud",
       "sold": "Mibjugħ"
     },
     "actions": {
       "edit": "Editja",
       "delete": "Ħassar",
-      "activate": "Attiva",
-      "deactivate": "Struttura Passiva"
+      "publish": "Ibgħat għall-Approvazzjoni",
+      "unpublish": "Abbozz",
+      "menu": "Tranżazzjonijiet"
     },
     "deleteDialog": {
       "title": "Ħassar ir-riklam",
       "description": "Żgur li trid tħassar din il-lista? Din l-azzjoni hija irriversibbli.",
       "cancel": "Ikkanċella",
       "confirm": "Ħassar"
-    }
+    },
+    "loadMore": "Niżżel Aktar",
+    "loadingMore": "Qed jitgħabba..."
   },
   "favorites": {
     "title": "Il-favoriti tiegħi",
     "description": "Segwi l-prodotti li jogħġbuk hawn.",
     "noFavorites": "Għadek ma żidt l-ebda prodott favorit.",
     "browseProducts": "Fittex il-Prodotti",
-    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew il-favoriti."
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew il-favoriti.",
+    "loadMore": "Niżżel Aktar",
+    "loadingMore": "Qed jitgħabba..."
+  },
+  "messages": {
+    "title": "Messaġġi",
+    "description": "Ikkuntattja lix-xerrejja u l-bejjiegħa.",
+    "noConversations": "Għadek ma rċevejt l-ebda messaġġ.",
+    "startConversation": "Biex tistaqsi mistoqsija dwar reklam, mur fir-reklam.",
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew il-messaġġi",
+    "sendError": "Seħħ żball waqt li kien qed jintbagħat il-messaġġ.",
+    "connectionError": "Il-konnessjoni falliet. Qed nipprova mill-ġdid...",
+    "connected": "Huwa konness",
+    "connecting": "Qed nikkonnettja...",
+    "searchPlaceholder": "Fittex fil-messaġġi...",
+    "typeMessage": "Ikteb il-messaġġ tiegħek...",
+    "send": "Ibgħat",
+    "sending": "Qed nibgħat...",
+    "typing": "Jgħid...",
+    "read": "Aqra",
+    "delivered": "Mibgħut",
+    "today": "Illum",
+    "yesterday": "Ilbieraħ",
+    "noMessages": "Għad m'hemm l-ebda messaġġ. Ibda konverżazzjoni!",
+    "loadMore": "Tella' aktar",
+    "loadingMessages": "Il-messaġġi qed jitgħabbew...",
+    "about": "Dwar",
+    "product": "Prodott",
+    "startNewConversation": "Ibda Konversazzjoni Ġdida",
+    "selectConversation": "Agħżel konverżazzjoni jew ibda waħda ġdida.",
+    "online": "Onlajn",
+    "offline": "Offline",
+    "lastSeen": "Deher l-aħħar",
+    "deleteConversation": "Ħassar il-konverżazzjoni",
+    "deleteConfirm": "Żgur li trid tħassar din il-konverżazzjoni?",
+    "deleted": "Il-konverżazzjoni tħassret.",
+    "defaultUser": "Utent",
+    "noResults": "Ma nstab l-ebda riżultat.",
+    "newConversation": "Konverżazzjoni ġdida"
+  },
+  "notifications": {
+    "title": "Notifiki",
+    "description": "Ara u immaniġġja n-notifiki tiegħek.",
+    "markAllAsRead": "Immarka kollox bħala moqri",
+    "noNotifications": "Għadek ma rċevejt l-ebda notifika.",
+    "viewAll": "Ara n-notifiki kollha",
+    "today": "Illum",
+    "yesterday": "Ilbieraħ",
+    "older": "Aktar anzjani",
+    "types": {
+      "system": "Sistema",
+      "message": "Messaġġ",
+      "offer": "Offerta",
+      "order": "Ordni",
+      "listing": "Reklamar"
+    }
   },
   "settings": {
     "title": "Issettjar",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Il-passwords il-ġodda ma jaqblux.",
       "passwordTooShort": "Il-password il-ġdida trid tkun twila mill-inqas 6 karattri.",
       "sessionError": "Ma setgħetx tinstab informazzjoni dwar is-sessjoni.",
-      "errorDefault": "Il-password ma setgħetx tiġi aġġornata. Jekk jogħġbok iċċekkja l-password attwali tiegħek."
+      "errorDefault": "Il-password ma setgħetx tiġi aġġornata. Jekk jogħġbok iċċekkja l-password attwali tiegħek.",
+      "showPassword": "Uri l-password",
+      "hidePassword": "Aħbi l-password"
+    },
+    "preferences": {
+      "title": "Preferenzi ta' Notifika u Veduta",
+      "description": "Immaniġġja l-kanali ta' notifika tiegħek u l-preferenzi tal-wiri.",
+      "notifications": "Notifiki",
+      "emailNotifications": "Notifiki bl-Email",
+      "emailNotificationsDesc": "Irċievi notifiki bl-email għal messaġġi ġodda u aġġornamenti tar-reklami.",
+      "smsNotifications": "Notifiki bl-SMS",
+      "smsNotificationsDesc": "Irċievi messaġġi SMS għal notifiki importanti.",
+      "pushNotifications": "Notifiki Push",
+      "pushNotificationsDesc": "Irċievi notifiki push għal aġġornamenti immedjati.",
+      "appearance": "Dehra",
+      "darkMode": "Modalità Skura",
+      "darkModeDesc": "Ibdel għal tema skura.",
+      "saveChanges": "Issejvja l-Preferenzi",
+      "saving": "Qed niffranka...",
+      "saveSuccess": "Il-preferenzi tiegħek ġew aġġornati.",
+      "saveError": "Seħħ żball waqt l-aġġornament tal-preferenzi.",
+      "loadError": "Il-preferenzi ma setgħux jiġu mgħobbija."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Pjattaforma tal-Kummerċ tal-Annimali Ħajjin",
       "subtitle": "L-aktar pjattaforma affidabbli għall-kummerċ tal-annimali ħajjin. Ixtri u bigħ il-baqar u n-nagħaġ tiegħek b'mod sigur.",
       "cta": "Ibda Issa",
-      "viewListings": "Ara r-Reklami"
+      "viewListings": "Ara r-Reklami",
+      "searchPlaceholder": "Fittex l-annimali... (baqar, nagħaġ, mogħoż...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Reklami Dehru",
       "viewAll": "Ara kollox"
+    },
+    "cta": {
+      "title": "Ibda Issa",
+      "subtitle": "Ħu postek fuq pjattaforma fejn jiltaqgħu eluf ta’ bejjiegħa u xerrejja.",
+      "button": "Irreġistra b'xejn"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Dwarna",
     "contact": "Komunikazzjoni",
     "terms": "Termini ta' Użu",
-    "privacy": "Politika tal-Privatezza"
+    "privacy": "Politika tal-Privatezza",
+    "company": "Kumpanija",
+    "support": "Appoġġ",
+    "legal": "Legali",
+    "followUs": "Segwina",
+    "newsletter": "Bullettin",
+    "newsletterDescription": "Titlifx l-aħħar listi u promozzjonijiet.",
+    "subscribe": "Abbona",
+    "emailPlaceholder": "L-indirizz elettroniku tiegħek",
+    "tagline": "L-aktar pjattaforma affidabbli għall-kummerċ tal-annimali ħajjin fit-Turkija.",
+    "sellers": "Bejjiegħa",
+    "products": "Prodotti",
+    "map": "Mappa",
+    "appleLoginComingSoon": "Il-login ma' Apple se jkun attiv dalwaqt.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "Mistoqsijiet Frekwenti"
+  },
+  "faq": {
+    "title": "Mistoqsijiet Frekwenti",
+    "description": "Tweġibiet għall-mistoqsijiet frekwenti tiegħek dwar il-pjattaforma tagħna.",
+    "noFaqs": "Għadhom ma ġew miżjuda l-ebda mistoqsijiet."
+  },
+  "about": {
+    "title": "Dwarna",
+    "subtitle": "L-aktar pjattaforma affidabbli għall-kummerċ tal-annimali ħajjin fit-Turkija.",
+    "mission": {
+      "title": "Il-Missjoni Tagħna",
+      "description": "Billi niddiġitalizzaw il-kummerċ tal-annimali ħajjin, nimmiraw li noħolqu rabta sigura, trasparenti u effiċjenti bejn il-produtturi u x-xerrejja."
+    },
+    "vision": {
+      "title": "Il-Viżjoni Tagħna",
+      "description": "Li nkunu pijunieri fit-trasformazzjoni diġitali fis-settur agrikolu u li nsiru pjattaforma globali fil-kummerċ tal-annimali ħajjin."
+    },
+    "values": {
+      "title": "Il-valuri tagħna",
+      "trust": {
+        "title": "Fiduċja",
+        "description": "It-trasparenza u l-affidabbiltà huma essenzjali fit-tranżazzjonijiet kollha."
+      },
+      "quality": {
+        "title": "Kwalità",
+        "description": "Titjib kontinwu biex nipprovdu l-aqwa servizz."
+      },
+      "innovation": {
+        "title": "Innovazzjoni",
+        "description": "Nittrasformaw l-industrija bl-użu tat-teknoloġija."
+      }
+    },
+    "stats": {
+      "users": "Utent Reġistrat",
+      "sellers": "Bejjiegħ Attiv",
+      "products": "Reklamar",
+      "transactions": "Tranżazzjoni ta' Suċċess"
+    }
+  },
+  "contact": {
+    "title": "Komunikazzjoni",
+    "subtitle": "Jekk jogħġbok ikkuntattjana jekk għandek xi mistoqsijiet.",
+    "form": {
+      "title": "Iktbilna",
+      "name": "Ismek",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "Email",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Suġġett",
+      "subjectPlaceholder": "Is-suġġett tal-messaġġ tiegħek",
+      "message": "Il-messaġġ tiegħek",
+      "messagePlaceholder": "Ikteb il-messaġġ tiegħek hawn...",
+      "submit": "Ibgħat",
+      "submitting": "Qed nibgħat...",
+      "success": "Il-messaġġ tiegħek intbagħat b'suċċess. Se nikkuntattjawk mill-aktar fis possibbli.",
+      "error": "Seħħ żball waqt li kien qed jintbagħat il-messaġġ. Jekk jogħġbok erġa' pprova."
+    },
+    "info": {
+      "title": "Informazzjoni ta' Kuntatt",
+      "address": "Indirizz",
+      "addressValue": "Istanbul, it-Turkija",
+      "email": "Email",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Telefon",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Ħinijiet tax-Xogħol",
+      "workingHoursValue": "Mit-Tnejn sal-Ġimgħa: 09:00 - 18:00",
+      "map": "Mappa"
+    }
+  },
+  "terms": {
+    "title": "Termini ta' Użu",
+    "lastUpdated": "L-aħħar aġġornament: {data}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Aċċettazzjoni tat-Termini",
+        "content": "Billi tuża dan is-sit web, inti taqbel mat-termini ta' użu li ġejjin. Jekk ma taqbilx ma' dawn it-termini, jekk jogħġbok tużax is-sit."
+      },
+      "services": {
+        "title": "2. Servizzi",
+        "content": "Livestock Trading jipprovdi pjattaforma għax-xiri u l-bejgħ ta' annimali ħajjin. It-tranżazzjonijiet kollha fuq il-pjattaforma huma r-responsabbiltà tal-utent."
+      },
+      "accounts": {
+        "title": "3. Kontijiet tal-Utenti",
+        "content": "Trid tipprovdi informazzjoni preċiża u aġġornata biex toħloq kont. Is-sigurtà tal-kont tiegħek hija r-responsabbiltà tiegħek."
+      },
+      "prohibited": {
+        "title": "4. Attivitajiet Projbiti",
+        "content": "Reklami qarrieqa, informazzjoni falza, frodi, u attivitajiet illegali huma strettament ipprojbiti."
+      },
+      "liability": {
+        "title": "5. Limitazzjoni tar-Responsabbiltà",
+        "content": "Il-pjattaforma mhijiex direttament responsabbli għat-tranżazzjonijiet bejn l-utenti. It-tranżazzjonijiet kollha jsiru bejn il-partijiet."
+      },
+      "changes": {
+        "title": "6. Tibdil",
+        "content": "Dawn it-termini u kundizzjonijiet huma soġġetti għal tibdil mingħajr avviż. Il-bidliet jidħlu fis-seħħ immedjatament mal-pubblikazzjoni."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Politika tal-Privatezza",
+    "lastUpdated": "L-aħħar aġġornament: {data}",
+    "sections": {
+      "collection": {
+        "title": "1. Ġbir ta' Informazzjoni",
+        "content": "Meta toħloq kont, niġbru informazzjoni personali bħal ismek, l-indirizz elettroniku tiegħek, u n-numru tat-telefon tiegħek. Nistgħu niġbru wkoll dejta anonima dwar l-użu tiegħek tas-sit."
+      },
+      "usage": {
+        "title": "2. Użu tal-Informazzjoni",
+        "content": "L-informazzjoni li niġbru tintuża biex nipprovdu s-servizzi tagħna, nimmaniġġjaw il-kont tiegħek, niżguraw is-sigurtà, u noffrulek offerti personalizzati."
+      },
+      "sharing": {
+        "title": "3. Kondiviżjoni tal-Informazzjoni",
+        "content": "L-informazzjoni personali tiegħek mhux se tinbiegħ jew tinkera lil terzi. L-informazzjoni tiegħek mhux se tinqasam ħlief għal skopijiet meħtieġa legalment."
+      },
+      "security": {
+        "title": "4. Sigurtà",
+        "content": "Hemm fis-seħħ miżuri ta' sigurtà standard tal-industrija biex jipproteġu d-dejta tiegħek."
+      },
+      "cookies": {
+        "title": "5. Il-Cookies",
+        "content": "Il-websajt tagħna tuża l-cookies biex ittejjeb l-esperjenza tal-utent. Tista' timmaniġġja l-preferenzi tal-cookies tiegħek fis-settings tal-browser tiegħek."
+      },
+      "rights": {
+        "title": "6. Id-Drittijiet Tiegħek",
+        "content": "Skont il-Liġi Torka dwar il-Protezzjoni tad-Data Personali (KVKK), għandek id-dritt li taċċessa, tikkoreġi u tħassar id-data personali tiegħek."
+      }
+    }
   },
   "products": {
     "title": "Prodotti",
@@ -235,11 +570,19 @@
       "priceDesc": "Prezz (Għoli għal Baxx)",
       "popular": "L-Aktar Popolari"
     },
+    "pagination": {
+      "prev": "Eks",
+      "next": "Li jmiss"
+    },
     "status": {
       "draft": "Abbozz",
+      "pending": "Qed Nistennew l-Approvazzjoni",
       "active": "Attiv",
+      "inactive": "Passiv",
+      "outOfStock": "Mhux fl-Istokk",
+      "expired": "Il-mandat tiegħu skada.",
       "sold": "Mibjugħ",
-      "pending": "Qed Nistennew l-Approvazzjoni"
+      "rejected": "Miċħud"
     },
     "condition": {
       "new": "Ġdid",
@@ -253,9 +596,13 @@
     "loading": "Il-prodotti qed jiġu mgħobbija...",
     "perPage": "Għal kull paġna",
     "showing": "It-total ta' prodotti {total} bejn {from} u {to}.",
+    "fetchError": "Seħħ żball waqt it-tlugħ tal-prodotti.",
+    "loadMore": "Uri Aktar",
+    "showingOf": "Qed jintwerew prodotti {count} / {total}.",
     "loginToFavorite": "Idħol biex iżżid mal-favoriti.",
     "addedToFavorites": "Miżjud mal-favoriti",
-    "removedFromFavorites": "Imneħħi mill-favoriti"
+    "removedFromFavorites": "Imneħħi mill-favoriti",
+    "favoriteError": "L-azzjoni favorita falliet."
   },
   "productDetail": {
     "addToFavorites": "Żid mal-Favoriti",
@@ -279,16 +626,31 @@
     "maxOrder": "Ordni massima",
     "publishedAt": "Data tal-pubblikazzjoni",
     "views": "Meqjusa",
-    "reviews": "evalwazzjoni",
+    "reviews": {
+      "title": "Valutazzjonijiet",
+      "reviewCount": "evalwazzjoni",
+      "noReviews": "Għad m'hemm l-ebda evalwazzjoni.",
+      "verified": "Xerrej Verifikat"
+    },
     "similarProducts": "Prodotti Simili",
     "sellerProducts": "Prodotti Oħra tal-Bejjiegħ",
     "contactSeller": "Ikkuntattja lill-bejjiegħ",
-    "loginRequired": "Idħol biex iżżid mal-favoriti.",
+    "makeOffer": "Ibgħat Offerta",
+    "loginRequired": "Jekk jogħġbok idħol biex twettaq din l-azzjoni.",
     "addedToFavorites": "Miżjud mal-favoriti",
     "removedFromFavorites": "Imneħħi mill-favoriti",
     "linkCopied": "Il-link ġie kkupjat.",
     "messagingComingSoon": "Il-karatteristika tal-messaġġi dalwaqt.",
-    "productNotFound": "Prodott ma nstabx."
+    "productNotFound": "Prodott ma nstabx.",
+    "contacting": "Qed isir kuntatt...",
+    "contactError": "Il-komunikazzjoni falliet. Jekk jogħġbok erġa' pprova.",
+    "noImage": "L-ebda immaġni disponibbli.",
+    "defaultLocation": "Turkija",
+    "inquiryMessage": "Nixtieq nikseb informazzjoni dwar {title}.",
+    "breadcrumb": {
+      "home": "Dar",
+      "products": "Prodotti"
+    }
   },
   "seller": {
     "title": "Informazzjoni dwar il-Bejjiegħ",
@@ -300,6 +662,70 @@
     "call": "Fittex",
     "viewProfile": "Ara l-Profil"
   },
+  "sellers": {
+    "title": "Bejjiegħa",
+    "description": "Skopri bejjiegħa affidabbli.",
+    "search": "Sib bejjiegħ...",
+    "sort": "Issortja",
+    "sortOptions": {
+      "newest": "L-Aħħar",
+      "mostSales": "L-Aqwa Bejjiegħ",
+      "topRated": "L-Ogħla Punteġġ",
+      "mostProducts": "Il-biċċa l-kbira tar-Reklami"
+    },
+    "noResults": "Bejjiegħ ma nstabx.",
+    "loading": "Il-bejjiegħa qed jitgħabbew...",
+    "showing": "Instabu {count} bejjiegħa",
+    "verified": "Verifikat",
+    "sales": "bejgħ",
+    "products": "reklam",
+    "reviews": "evalwazzjoni",
+    "rating": "punt",
+    "viewProducts": "Ara l-Prodotti",
+    "contactSeller": "Ibgħat Messaġġ",
+    "memberSince": "Membru minn {sena}",
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew il-bejjiegħa",
+    "detail": {
+      "title": "Profil tal-Bejjiegħ",
+      "about": "Dwar",
+      "businessInfo": "Informazzjoni dwar in-Negozju",
+      "businessName": "Isem tan-Negozju",
+      "businessType": "Żjara tan-Negozju",
+      "email": "Email",
+      "phone": "Telefon",
+      "website": "Sit elettroniku",
+      "description": "Spjegazzjoni",
+      "policies": "Politiki",
+      "returnPolicy": "Politika ta' ritorn",
+      "shippingPolicy": "Politika tat-Tbaħħir",
+      "businessHours": "Ħinijiet tax-Xogħol",
+      "paymentMethods": "Metodi ta' Ħlas",
+      "allProducts": "Il-Prodotti Kollha",
+      "stats": {
+        "totalSales": "Bejgħ Totali",
+        "totalProducts": "Prodotti Totali",
+        "totalReviews": "Evalwazzjoni",
+        "rating": "Punt"
+      },
+      "notFound": "Bejjiegħ ma nstabx.",
+      "backToList": "Don lill-bejjiegħa",
+      "contactInfo": "Komunikazzjoni",
+      "noProducts": "Dan il-bejjiegħ għadu m'għandu l-ebda lista.",
+      "noPolicies": "Il-bejjiegħ għadu ma ddefiniex il-politiki tiegħu.",
+      "fetchError": "Seħħ żball waqt li kienet qed tittella' l-informazzjoni tal-bejjiegħ.",
+      "productsLoadError": "Seħħ żball waqt li kienu qed jittellgħu l-prodotti tal-bejjiegħ.",
+      "reviewsTab": "Valutazzjonijiet",
+      "reviews": {
+        "summary": "Sommarju tal-Evalwazzjoni",
+        "reviewCount": "evalwazzjoni",
+        "communication": "Komunikazzjoni",
+        "shippingSpeed": "Veloċità tat-Tbaħħir",
+        "productQuality": "Kwalità tal-Prodott",
+        "noReviews": "Għad m'hemm l-ebda evalwazzjoni.",
+        "verified": "Xerrej Verifikat"
+      }
+    }
+  },
   "editListing": {
     "title": "Editja r-riklam",
     "saveChanges": "Salva l-Bidliet",
@@ -307,6 +733,10 @@
     "updateSuccess": "Ir-riklam ġie aġġornat b'suċċess.",
     "updateFailed": "Seħħ żball waqt l-aġġornament tal-lista.",
     "loadError": "Seħħ żball waqt li kien qed jitgħabba r-riklam.",
+    "sellerNotFound": "Profil tal-bejjiegħ ma nstabx.",
+    "sellerLoadError": "Il-profil tal-bejjiegħ ma setax jiġi mgħobbi.",
+    "userNotFound": "L-informazzjoni tal-utent ma setgħetx tinstab. Jekk jogħġbok erġa' idħol.",
+    "locationNotFound": "Ma setgħetx tinstab informazzjoni dwar il-post. Jekk jogħġbok aġġorna l-paġna.",
     "basicInfo": "Informazzjoni Bażika",
     "categoryAndCondition": "Kategorija u Status",
     "pricing": "Prezzijiet",
@@ -314,6 +744,8 @@
     "images": "Stampi",
     "existingImages": "Stampi Disponibbli",
     "addImage": "Żid Immaġni",
+    "maxImages": "Tista' ttella' massimu ta' 10 immaġini.",
+    "imageHint": "Minimu 1, massimu 10 immaġni. Fil-format PNG, JPG, jew WEBP.",
     "uploadingImages": "L-immaġini qed jitgħabbew...",
     "uploadingImage": "L-immaġni qed titgħabba.",
     "imageUploadFailed": "L-immaġni ma setgħetx tiġi mgħobbija.",
@@ -358,6 +790,7 @@
     "addImage": "Żid Immaġni",
     "maxImages": "Tista' ttella' massimu ta' 10 immaġini.",
     "imageHint": "Minimu 1, massimu 10 immaġni. Fil-format PNG, JPG, jew WEBP.",
+    "location": "Informazzjoni dwar il-Lokazzjoni",
     "fields": {
       "title": "Titlu tar-Reklamar",
       "shortDescription": "Deskrizzjoni qasira",
@@ -370,13 +803,29 @@
       "shippingAvailable": "It-tbaħħir huwa disponibbli.",
       "shippingCost": "Ħlas tat-Tbaħħir",
       "weight": "Piż",
-      "weightUnit": "Unità tal-Piż"
+      "weightUnit": "Unità tal-Piż",
+      "city": "Belt",
+      "address": "Indirizz",
+      "postalCode": "Kodiċi postali"
     },
     "placeholders": {
       "title": "Eżempju: Baqra Holstein ta' sentejn",
       "shortDescription": "Deskrizzjoni tal-prodott (massimu ta' 200 karattru)",
       "description": "Agħti informazzjoni dettaljata dwar il-prodott...",
-      "category": "Agħżel kategorija."
+      "category": "Agħżel kategorija.",
+      "city": "Idħol fil-belt",
+      "address": "Daħħal l-indirizz sħiħ.",
+      "postalCode": "Kodiċi postali"
+    },
+    "errors": {
+      "titleRequired": "It-titlu tar-reklamar huwa obbligatorju.",
+      "shortDescriptionRequired": "Deskrizzjoni qasira hija meħtieġa.",
+      "descriptionRequired": "Hija meħtieġa spjegazzjoni dettaljata.",
+      "categoryRequired": "L-għażla tal-kategorija hija obbligatorja.",
+      "priceRequired": "Il-prezz huwa obbligatorju.",
+      "cityRequired": "Informazzjoni dwar il-belt hija meħtieġa.",
+      "addressRequired": "L-informazzjoni dwar l-indirizz hija meħtieġa.",
+      "locationError": "Seħħ żball waqt il-ħolqien tal-post."
     },
     "success": "Ir-riklam inħoloq b'suċċess.",
     "error": "Seħħ żball waqt il-ħolqien tar-riklam.",
@@ -388,24 +837,53 @@
     "draftSaved": "Abbozz salvat",
     "productCreated": "Il-prodott inħoloq b'suċċess.",
     "creationFailed": "Il-prodott ma setax jinħoloq. Jekk jogħġbok erġa' pprova.",
-    "errors": {
-      "titleRequired": "It-titlu tar-reklamar huwa obbligatorju.",
-      "shortDescriptionRequired": "Deskrizzjoni qasira hija meħtieġa.",
-      "descriptionRequired": "Hija meħtieġa spjegazzjoni dettaljata.",
-      "categoryRequired": "L-għażla tal-kategorija hija obbligatorja.",
-      "priceRequired": "Daħħal prezz validu."
-    }
+    "userNotFound": "L-informazzjoni tal-utent ma setgħetx tinstab. Jekk jogħġbok erġa' idħol.",
+    "defaultBusinessName": "In-negozju tiegħi"
+  },
+  "becomeSeller": {
+    "title": "Issir Bejjiegħ",
+    "description": "Dikjarazzjoni tal-Kumpanija",
+    "alreadySeller": "Diġà għandek profil ta' bejjiegħ.",
+    "goToListings": "Mur fil-listi tiegħi",
+    "businessInfo": "Informazzjoni dwar in-Negozju",
+    "contactInfo": "Informazzjoni ta' Kuntatt",
+    "businessName": "Isem tan-Negozju",
+    "businessNamePlaceholder": "Eżempju: Ir-Razzett ta' Yilmaz",
+    "businessType": "Żjara tan-Negozju",
+    "businessTypePlaceholder": "Agħżel it-tip ta' negozju tiegħek.",
+    "businessTypes": {
+      "individual": "Individwu",
+      "company": "Kumpanija",
+      "cooperative": "Kooperattiva",
+      "farm": "Razzett"
+    },
+    "taxNumber": "Numru tat-Taxxa",
+    "taxNumberPlaceholder": "Daħħal in-numru tal-identifikazzjoni tat-taxxa tiegħek (mhux obbligatorju)",
+    "descriptionPlaceholder": "Ikteb deskrizzjoni qasira dwar in-negozju tiegħek...",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Sit elettroniku",
+    "websitePlaceholder": "https://www.examplesite.com (mhux obbligatorju)",
+    "submit": "Oħloq Profil tal-Bejjiegħ",
+    "submitting": "Qed noħloq profil...",
+    "success": "Il-profil tal-bejjiegħ tiegħek inħoloq b'suċċess!",
+    "error": "Seħħ żball waqt il-ħolqien tal-profil tal-bejjiegħ.",
+    "taxNumberHelp": "Daħħal in-numru tat-taxxa tiegħek ta' 10 jew 11-il ċifra (mhux obbligatorju)",
+    "phoneHelp": "Eżempju: +90 555 123 45 67 jew 0555 123 45 67",
+    "websiteHelp": "Eżempju: www.isletmem.com jew https://isletmem.com",
+    "alreadySellerDescription": "Tista' tuża l-buttuna t'hawn taħt biex timmaniġġja l-listi tiegħek.",
+    "newListing": "Żid Lista Ġdida"
   },
   "fileUpload": {
     "dragDrop": "Tella’ ritratt jew vidjo.",
     "dragDropHint": "Iddreggja u qiegħed jew ikklikkja biex tagħżel.",
     "dropHere": "Ħalliha...",
     "imageLimit": "Ritratt: massimu ta' 10MB",
-    "videoLimit": "Video: max 100MB",
+    "videoLimit": "Vidjo: massimu ta' 100MB",
     "uploadCount": "{kurrenti} / {max} mgħobbija",
     "maxFilesError": "Tista' ttella' massimu ta' {max} midja.",
     "imageTooLarge": "Ir-ritratt irid ikun iżgħar minn 10MB.",
-    "videoTooLarge": "The video must be smaller than 100MB.",
+    "videoTooLarge": "Il-vidjow irid ikun iżgħar minn 100MB.",
     "optimizing": "Ottimizzazzjoni...",
     "uploading": "Qed jitgħabba...",
     "queued": "Nistenna fil-kju...",
@@ -418,10 +896,834 @@
     "coverBadge": "GĦATU",
     "videoBadge": "VIDJOW",
     "coverUpdated": "Ir-ritratt tal-qoxra ġie aġġustat b'suċċess.",
-    "optimizationInfo": "Ir-ritratti huma ottimizzati biex jikkonformaw mal-istandards tal-web",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "optimizationInfo": "Ir-ritratti ġew ottimizzati biex jikkonformaw mal-istandards tal-web",
+    "selectImage": "Għażla Viżwali",
+    "changeImage": "Bidla",
+    "removeImage": "Neħħi",
+    "videoProcessing": "Il-vidjo qed jiġi pproċessat...",
+    "videoProcessingFailed": "L-operazzjoni falliet.",
+    "videoProcessingPollError": "L-istatus tal-ipproċessar tal-vidjow ma setax jinkiseb. Jekk jogħġbok aġġorna l-paġna.",
+    "reorderError": "Il-fajl ma setax jiġi ssortjat.",
+    "coverUpdateError": "Ir-ritratt tal-qoxra ma setax jiġi aġġornat."
+  },
+  "error": {
+    "title": "Seħħ żball.",
+    "description": "Seħħ żball mhux mistenni. Jekk jogħġbok aġġorna l-paġna jew erġa' pprova aktar tard.",
+    "retry": "Erġa' pprova",
+    "goBack": "Tmurx lura",
+    "goHome": "Dar",
+    "notFound": {
+      "title": "Paġna Ma Nstabitx",
+      "description": "Il-paġna li qed tfittex jew mhijiex disponibbli jew inkella mxiet.",
+      "goHome": "Ritorn lejn il-Paġna Ewlenija"
+    }
+  },
+  "search": {
+    "title": "Fittex",
+    "placeholder": "Fittex għal prodotti, kategoriji, jew bejjiegħa...",
+    "searchButton": "Fittex",
+    "searchingFor": "Meħtieġ",
+    "loading": "Ried...",
+    "resultsCount": "Instabu {count} riżultati.",
+    "noResults": "Ma nstab l-ebda riżultat.",
+    "tryDifferentSearch": "Ipprova kliem kjavi differenti jew ibdel il-filtri.",
+    "filters": {
+      "title": "Filtri",
+      "category": "Kategorija",
+      "allCategories": "Il-Kategoriji Kollha",
+      "condition": "Sitwazzjoni",
+      "allConditions": "Il-Każijiet Kollha",
+      "priceRange": "Firxa tal-Prezzijiet",
+      "price": "Prezz",
+      "min": "Min",
+      "max": "Massimu",
+      "apply": "Applika",
+      "clear": "Nadif",
+      "clearAll": "Neħħi Kollox"
+    },
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew ir-riżultati tat-tfittxija",
+    "recentSearches": "Tiftix Riċenti",
+    "clearHistory": "Ħassar l-Istorja",
+    "noSearchHistory": "Għad m'għandekx storja tat-tiftix.",
+    "deleteHistoryError": "Seħħ żball waqt it-tħassir tal-istorja tat-tiftix."
+  },
+  "categories": {
+    "title": "Ġestjoni tal-Kategoriji",
+    "description": "Immaniġġja l-kategoriji minn hawn.",
+    "noCategories": "Għadhom ma ġew miżjuda l-ebda kategoriji.",
+    "createFirst": "Oħloq l-ewwel kategorija.",
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew il-kategoriji.",
+    "createSuccess": "Il-kategorija nħolqot b'suċċess",
+    "createError": "Seħħ żball waqt il-ħolqien tal-kategorija.",
+    "updateSuccess": "Il-kategorija ġiet aġġornata b'suċċess",
+    "updateError": "Seħħ żball waqt l-aġġornament tal-kategorija.",
+    "deleteSuccess": "Il-kategorija tħassret b'suċċess.",
+    "deleteError": "Seħħ żball waqt it-tħassir tal-kategorija.",
+    "activateSuccess": "Il-kategorija ġiet attivata.",
+    "deactivateSuccess": "Il-kategorija ġiet diżattivata.",
+    "statusError": "Seħħ żball waqt li kien qed jinbidel l-istatus.",
+    "loadError": "Seħħ żball waqt li kienet qed titgħabba l-kategorija",
+    "filters": {
+      "all": "Kollha kemm huma",
+      "active": "Attiv",
+      "inactive": "Inattiv"
+    },
+    "table": {
+      "name": "Isem tal-Kategorija",
+      "slug": "Bebbuxu",
+      "sortOrder": "Numru tas-Serje",
+      "subCategories": "Sottokategorija",
+      "status": "Sitwazzjoni",
+      "actions": "Tranżazzjonijiet"
+    },
+    "actions": {
+      "edit": "Editja",
+      "delete": "Ħassar",
+      "activate": "Attiva",
+      "deactivate": "Struttura Passiva"
+    },
+    "deleteDialog": {
+      "title": "Ħassar il-Kategorija",
+      "description": "Żgur li trid tħassar din il-kategorija? Din l-azzjoni hija irriversibbli.",
+      "cancel": "Ikkanċella",
+      "confirm": "Ħassar"
+    },
+    "addNew": "Żid Kategorija Ġdida",
+    "loadMore": "Niżżel Aktar",
+    "loadingMore": "Qed jitgħabba...",
+    "form": {
+      "newTitle": "Oħloq Kategorija Ġdida",
+      "editTitle": "Editja l-Kategorija",
+      "name": "Isem tal-Kategorija",
+      "namePlaceholder": "Eżempju: Baqar",
+      "slug": "Bebbuxu",
+      "slugPlaceholder": "Eżempju: bhejjem kbar",
+      "description": "Spjegazzjoni",
+      "descriptionPlaceholder": "Deskrizzjoni qasira tal-kategorija...",
+      "parentCategory": "Kategorija Superjuri",
+      "parentCategoryPlaceholder": "Agħżel kategorija ewlenija (mhux obbligatorju)",
+      "noParent": "L-ebda kategorija ewlenija (Kategorija ewlenija)",
+      "sortOrder": "Numru tas-Sekwenza",
+      "isActive": "Attiv",
+      "iconUrl": "URL tal-Ikona",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Issejvja",
+      "submitting": "Qed niffranka...",
+      "updating": "Aġġornament...",
+      "errors": {
+        "nameRequired": "L-isem tal-kategorija huwa meħtieġ.",
+        "slugRequired": "Il-balel huma obbligatorji."
+      }
+    }
+  },
+  "offers": {
+    "title": "Proposti",
+    "description": "Immaniġġja l-offerti li deħlin u li joħorġu tiegħek.",
+    "received": "Offerti li ġejjin",
+    "sent": "Offerti Mressqa",
+    "noReceivedOffers": "Għadhom ma waslu l-ebda offerti.",
+    "noSentOffers": "Għadek ma ssottomettejt l-ebda offerta.",
+    "browseProducts": "Fittex il-Prodotti",
+    "viewProduct": "Ara l-prodott",
+    "accept": "Aċċetta",
+    "reject": "Irrifjuta",
+    "withdraw": "Irtira",
+    "makeOffer": "Ibgħat Offerta",
+    "sendOffer": "Ibgħat Offerta",
+    "sending": "Qed nibgħat...",
+    "cancel": "Ikkanċella",
+    "listingPrice": "Prezz reklamat",
+    "yourOffer": "L-offerta tiegħek",
+    "quantity": "Ammont",
+    "messageOptional": "Messaġġ (Mhux obbligatorju)",
+    "messagePlaceholder": "Nota li tixtieq taqsam mal-bejjiegħ...",
+    "expiresAt": "L-aħħar data valida",
+    "offerSent": "L-offerta tiegħek intbagħtet b'suċċess.",
+    "offerError": "Seħħ żball waqt li ntbagħtet l-offerta.",
+    "acceptSuccess": "L-offerta ġiet aċċettata.",
+    "rejectSuccess": "L-offerta ġiet miċħuda.",
+    "withdrawSuccess": "L-offerta ġiet irtirata.",
+    "actionError": "Seħħ żball matul il-proċess.",
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew l-offerti.",
+    "loginRequired": "Idħol biex tissottometti offerta.",
+    "invalidPrice": "Daħħal prezz validu.",
+    "invalidQuantity": "Daħħal ammont validu.",
+    "status": {
+      "pending": "Pendenti",
+      "accepted": "Aċċettat",
+      "rejected": "Miċħud",
+      "countered": "Kontroofferta",
+      "expired": "It-terminu tiegħu spiċċa.",
+      "withdrawn": "Irtira"
+    }
+  },
+  "deals": {
+    "title": "Ftehimiet",
+    "description": "Segwi l-ftehimiet tax-xiri tiegħek.",
+    "buying": "Studjużi",
+    "selling": "Bejgħ",
+    "noBuyingDeals": "Għad m'għandekx proċess ta' reġistrazzjoni tal-istudenti.",
+    "noSellingDeals": "Għad m'għandekx tranżazzjonijiet ta' bejgħ.",
+    "browseProducts": "Fittex il-Prodotti",
+    "viewProduct": "Ara l-prodott",
+    "activeDeals": "Ftehimiet Attivi",
+    "completedDeals": "Imlesta",
+    "purchases": "Studjużi",
+    "sales": "Bejgħ",
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew il-ftehimiet",
+    "dealStatus": {
+      "pending": "Pendenti",
+      "confirmed": "Ikkonfermat",
+      "processing": "Tħejjija",
+      "shipped": "Fil-merkanzija",
+      "delivered": "Imwassal",
+      "completed": "Imlesta",
+      "cancelled": "Ikkanċellat",
+      "disputed": "Ftehim"
+    },
+    "delivery": {
+      "pickup": "Kunsinna bl-idejn",
+      "shipping": "Bil-merkanzija",
+      "transport": "Bit-trasport"
+    },
+    "requestTransport": "Talba għat-Tbaħħir"
+  },
+  "farms": {
+    "title": "Ir-razzetti tiegħi",
+    "description": "Immaniġġja u aġġorna l-irziezet tiegħek.",
+    "addFarm": "Żid ir-Razzett",
+    "editFarm": "Ġestjoni tal-Irziezet",
+    "noFarms": "Għadek ma żidtx razzett.",
+    "farmName": "Isem ir-Razzett",
+    "registrationNumber": "Numru ta' Reġistrazzjoni",
+    "location": "Post",
+    "selectLocation": "Agħżel post.",
+    "addLocationFirst": "L-ewwel, żid post.",
+    "farmTypeLabel": "Żjara fir-Razzett",
+    "farmDescription": "Spjegazzjoni",
+    "totalArea": "Żona Totali",
+    "cultivatedArea": "Żona Kkultivata",
+    "certifications": "Ċertifikati",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP, eċċ.",
+    "organic": "Organiku",
+    "verified": "Verifikat",
+    "save": "Issejvja",
+    "saving": "Qed niffranka...",
+    "cancel": "Ikkanċella",
+    "edit": "Editja",
+    "delete": "Ħassar",
+    "sellerRequired": "Profil tal-Bejjiegħ Meħtieġ",
+    "sellerRequiredDesc": "Biex iżżid razzett, l-ewwel trid toħloq il-profil tal-bejjiegħ tiegħek.",
+    "becomeSeller": "Issir Bejjiegħ",
+    "createSuccess": "Ir-razzett ġie miżjud b'suċċess.",
+    "updateSuccess": "Ir-razzett ġie aġġornat b'suċċess.",
+    "deleteSuccess": "Ir-razzett tħassar b'suċċess.",
+    "saveError": "Seħħ żball waqt ir-reġistrazzjoni tar-razzett.",
+    "deleteError": "Seħħ żball waqt it-tħassir tar-razzett.",
+    "fetchError": "Seħħ żball waqt li kienet qed tittella' l-informazzjoni dwar ir-razzett.",
+    "farmType": {
+      "livestock": "Trobbija tal-bhejjem",
+      "crop": "Agrikoltura",
+      "mixed": "Imħallat",
+      "poultry": "Bil-ġwienaħ",
+      "dairy": "Biedja tal-ħalib",
+      "aquaculture": "Prodotti Akwatiċi"
+    }
+  },
+  "transporters": {
+    "title": "trasportaturi",
+    "description": "Servizzi ta' trasport ta' annimali u prodotti",
+    "searchPlaceholder": "Sib trasportatur...",
+    "noTransporters": "Għad m'hemm l-ebda trasportatur irreġistrat.",
+    "verified": "Verifikat",
+    "transports": "trasport",
+    "viewProfile": "Ara l-Profil",
+    "sort": {
+      "newest": "L-Aħħar",
+      "rating": "L-Ogħla Punteġġ",
+      "mostTransports": "L-Aktar Tbaħħir Frekwenti"
+    },
+    "pagination": {
+      "previous": "Eks",
+      "next": "Li jmiss",
+      "page": "Paġna {paġna}"
+    }
+  },
+  "transport": {
+    "title": "It-Talbiet Tiegħi għat-Tbaħħir",
+    "description": "Traċċa t-talbiet tiegħek għat-tbaħħir.",
+    "findTransporter": "Sib Trasportatur",
+    "active": "Attiv",
+    "completed": "Imlesta",
+    "total": "Total",
+    "asSeller": "Bħala Bejjiegħ",
+    "asBuyer": "Bħala x-Xerrej",
+    "noSellerRequests": "Bħala bejjiegħ, m'għandekx rekwiżit ta' tbaħħir.",
+    "noBuyerRequests": "Bħala r-riċevitur, m'għandekx talba għat-tbaħħir.",
+    "viewProduct": "Ara l-prodott",
+    "pickup": "Irċievi",
+    "delivery": "Kunsinna",
+    "urgent": "Urġenti",
+    "fetchError": "Seħħ żball waqt it-tlugħ tat-talbiet għat-tbaħħir.",
+    "trackShipment": "Segwi",
+    "transportStatus": {
+      "pending": "Pendenti",
+      "inPool": "Fil-pixxina",
+      "assigned": "Maħtur",
+      "pickedUp": "Irċevuta",
+      "inTransit": "Fit-triq",
+      "delivered": "Imwassal",
+      "completed": "Imlesta",
+      "cancelled": "Ikkanċellat"
+    },
+    "transportType": {
+      "standard": "Standard",
+      "refrigerated": "Katina tal-Bard",
+      "liveAnimal": "Annimali Ħajjin",
+      "hazardous": "Materjali Perikolużi",
+      "oversized": "Daqs Kbir"
+    }
+  },
+  "moderation": {
+    "title": "Moderazzjoni tal-Prodott",
+    "description": "Irrevedi l-prodotti li qed jistennew l-approvazzjoni.",
+    "pending": "qed nistenna",
+    "allClear": "Il-prodotti kollha ġew spezzjonati.",
+    "noPending": "M'hemm l-ebda prodott li qed jistenna l-approvazzjoni.",
+    "awaitingReview": "Qed nistenna r-reviżjoni",
+    "by": "Bejjiegħ/a:",
+    "stock": "Stokk",
+    "preview": "Miegħek",
+    "approve": "Ikkonferma",
+    "reject": "Irrifjuta",
+    "confirmReject": "Irrifjuta",
+    "cancelReject": "Aqta' qalbek",
+    "rejectReasonPlaceholder": "Ikteb ir-raġuni għar-rifjut...",
+    "rejectReasonRequired": "Raġuni għar-rifjut hija obbligatorja.",
+    "approveSuccess": "Il-prodott ġie approvat b'suċċess.",
+    "rejectSuccess": "Il-prodott ġie miċħud.",
+    "actionError": "Seħħ żball matul il-proċess.",
+    "fetchError": "Seħħ żball waqt it-tlugħ tal-prodotti.",
+    "unauthorized": "M'għandekx permess biex taċċessa din il-paġna."
+  },
+  "sellerModeration": {
+    "title": "Moderazzjoni tal-Bejjiegħ",
+    "description": "Irrevedi u immaniġġja l-kontijiet tal-bejjiegħa.",
+    "pending": "qed nistenna",
+    "allClear": "Il-bejjiegħa kollha ġew investigati.",
+    "noPending": "L-ebda bejjiegħ ma jistenna.",
+    "verify": "Ivverifika",
+    "suspend": "Issospendi",
+    "verifySuccess": "Il-bejjiegħ ġie verifikat b'suċċess.",
+    "suspendSuccess": "Bejjiegħ sospiż.",
+    "actionError": "Seħħ żball matul il-proċess.",
+    "suspendReasonRequired": "Ir-raġuni għas-sospensjoni hija obbligatorja.",
+    "suspendReasonPlaceholder": "Ikteb ir-raġuni għas-sospensjoni...",
+    "confirmSuspend": "Issospendi",
+    "cancelSuspend": "Aqta' qalbek",
+    "statusLabels": {
+      "pendingVerification": "Verifika Pendenti",
+      "active": "Attiv",
+      "suspended": "Mdendlin",
+      "banned": "Projbit"
+    },
+    "filterAll": "Uri kollox",
+    "filterPending": "Dawk li qed jistennew",
+    "filterActive": "Assi",
+    "filterSuspended": "Sospiż",
+    "unauthorized": "M'għandekx permess biex taċċessa din il-paġna.",
+    "businessName": "Isem tan-Negozju",
+    "businessType": "Żjara tan-Negozju",
+    "email": "Email",
+    "phone": "Telefon",
+    "status": "Sitwazzjoni",
+    "createdAt": "Data tar-Reġistrazzjoni"
+  },
+  "transporterModeration": {
+    "title": "Moderazzjoni tat-Trasportatur",
+    "description": "Irrevedi u ġestixxi l-kontijiet tat-trasportaturi.",
+    "pending": "qed nistenna",
+    "allClear": "It-trasportaturi kollha ġew investigati.",
+    "noPending": "L-ebda trasportatur mhu qed jistenna.",
+    "verify": "Ivverifika",
+    "suspend": "Issospendi",
+    "verifySuccess": "It-trasportatur ġie vverifikat b'suċċess.",
+    "suspendSuccess": "It-trasportatur kien sospiż.",
+    "actionError": "Seħħ żball matul il-proċess.",
+    "suspendReasonRequired": "Ir-raġuni għas-sospensjoni hija obbligatorja.",
+    "suspendReasonPlaceholder": "Ikteb ir-raġuni għas-sospensjoni...",
+    "confirmSuspend": "Issospendi",
+    "cancelSuspend": "Aqta' qalbek",
+    "statusLabels": {
+      "pendingVerification": "Verifika Pendenti",
+      "active": "Attiv",
+      "suspended": "Mdendlin",
+      "banned": "Projbit"
+    },
+    "filterAll": "Uri kollox",
+    "filterPending": "Dawk li qed jistennew",
+    "filterActive": "Assi",
+    "filterSuspended": "Sospiż",
+    "unauthorized": "M'għandekx permess biex taċċessa din il-paġna.",
+    "companyName": "Isem tal-Kumpanija",
+    "contactPerson": "Persuna Awtorizzata",
+    "email": "Email",
+    "phone": "Telefon",
+    "city": "Belt",
+    "status": "Sitwazzjoni",
+    "createdAt": "Data tar-Reġistrazzjoni"
+  },
+  "transporterDetail": {
+    "notFound": "Ma seta' jinstab l-ebda trasportatur.",
+    "backToList": "Don għat-trasportaturi",
+    "verified": "Verifikat",
+    "totalTransports": "tbaħħir totali",
+    "completed": "komplut",
+    "about": "Dwar",
+    "contact": "Informazzjoni ta' Kuntatt",
+    "businessInfo": "Informazzjoni dwar in-Negozju",
+    "license": "Numru tal-Liċenzja",
+    "insurance": "Informazzjoni dwar l-Assigurazzjoni",
+    "fleet": "Informazzjoni dwar il-Flotta",
+    "serviceRegions": "Żoni ta' Servizz",
+    "specializations": "Oqsma ta' Kompetenza",
+    "certifications": "Ċertifikati"
+  },
+  "brands": {
+    "title": "Ġestjoni tal-Marka",
+    "description": "Immaniġġja l-marki tal-prodotti.",
+    "addBrand": "Żid il-Marka",
+    "editBrand": "Editja l-Marka",
+    "noBrands": "Għadhom ma żdiedu l-ebda marki.",
+    "brandName": "Isem tad-Ditta",
+    "brandDescription": "Spjegazzjoni",
+    "website": "Sit elettroniku",
+    "logoUrl": "URL tal-Logo",
+    "save": "Issejvja",
+    "saving": "Qed niffranka...",
+    "cancel": "Ikkanċella",
+    "edit": "Editja",
+    "delete": "Ħassar",
+    "inactive": "Passiv",
+    "products": "prodott",
+    "createSuccess": "Il-marka ġiet miżjuda b'suċċess",
+    "updateSuccess": "Il-marka ġiet aġġornata b'suċċess.",
+    "deleteSuccess": "Il-marka tħassret b'suċċess.",
+    "saveError": "Seħħ żball waqt ir-reġistrazzjoni tat-trademark.",
+    "deleteError": "Seħħ żball waqt it-tħassir tat-trademark.",
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew il-marki",
+    "unauthorized": "M'għandekx permess biex taċċessa din il-paġna."
+  },
+  "transporterReviews": {
+    "title": "Valutazzjonijiet",
+    "reviewCount": "evalwazzjoni",
+    "noReviews": "Għad m'hemm l-ebda evalwazzjoni.",
+    "timeliness": "Kunsinna fil-ħin",
+    "communication": "Komunikazzjoni",
+    "carefulHandling": "Immaniġġjar bir-reqqa",
+    "professionalism": "Professjonaliżmu"
+  },
+  "transportOffers": {
+    "title": "Kwotazzjonijiet tat-Tbaħħir",
+    "description": "Immaniġġja l-kwotazzjonijiet li tissottometti għal talbiet ta' tbaħħir.",
+    "newOffer": "Proposta Ġdida",
+    "transportRequestId": "ID tat-Talba għat-Tbaħħir",
+    "requestIdPlaceholder": "Daħħal l-ID tat-talba għat-tbaħħir.",
+    "offeredPrice": "Prezz tal-Offerta",
+    "estimatedDays": "Tul Stmat (Jiem)",
+    "days": "jum",
+    "vehicleType": "Tip ta' Vettura",
+    "insuranceIncluded": "Assigurazzjoni Inkluża",
+    "message": "Messaġġ",
+    "cancel": "Ikkanċella",
+    "sending": "Qed nibgħat...",
+    "sendOffer": "Ibgħat Offerta",
+    "cancelOffer": "Ikkanċella",
+    "pendingTab": "Nistenna",
+    "historyTab": "Passat",
+    "noPendingOffers": "M'għandekx offerti pendenti.",
+    "noHistory": "Ma nstabet l-ebda offerta tal-passat.",
+    "status": {
+      "pending": "Nistenna",
+      "accepted": "Aċċettat",
+      "rejected": "Miċħud",
+      "expired": "It-terminu tiegħu spiċċa.",
+      "cancelled": "Ikkanċellat"
+    },
+    "createSuccess": "L-offerta ġiet sottomessa b'suċċess.",
+    "createError": "Seħħ żball waqt li ntbagħtet l-offerta.",
+    "cancelSuccess": "L-offerta ġiet ikkanċellata.",
+    "cancelError": "Seħħ żball waqt li kienet qed tiġi kkanċellata l-offerta.",
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew l-offerti."
+  },
+  "animalInfo": {
+    "title": "Informazzjoni dwar l-Annimali u l-Prodotti",
+    "animalTab": "Annimal",
+    "healthTab": "Saħħa",
+    "vaccinationsTab": "Vaċċinaturi",
+    "veterinaryTab": "Veterinarju",
+    "breed": "Razza",
+    "genderLabel": "Sess",
+    "gender": {
+      "male": "Raġel",
+      "female": "Mara",
+      "unknown": "Mhux magħruf"
+    },
+    "age": "Età",
+    "months": "xahar",
+    "weight": "Piż",
+    "color": "Kulur",
+    "tagNumber": "Numru tal-Widna",
+    "healthStatus": "Stat tas-saħħa",
+    "health": {
+      "healthy": "B'saħħtu",
+      "underTreatment": "Taħt Kura",
+      "recovering": "Hu/Hi qed jirkupra.",
+      "quarantined": "Fil-kwarantina",
+      "unknown": "Mhux magħruf"
+    },
+    "purposeLabel": "Użu Maħsub",
+    "purpose": {
+      "breeding": "Stud",
+      "dairy": "Ħalib",
+      "meat": "Laħam",
+      "egg": "Bajda",
+      "wool": "Suf",
+      "working": "Xogħol",
+      "pet": "Domestiku",
+      "other": "Oħrajn"
+    },
+    "pregnancy": "Tqala",
+    "pregnant": "Tqila",
+    "microchip": "Numru tal-Mikroċipp",
+    "passport": "Numru tal-Passaport",
+    "sireDetails": "Informazzjoni dwar il-Missier",
+    "damDetails": "Informazzjoni Prinċipali",
+    "diagnosis": "Dijanjosi",
+    "treatment": "Trattament",
+    "medications": "Mediċini",
+    "veterinarian": "Veterinarju",
+    "nextDue": "L-Istorja Ribell li Jmiss",
+    "prescriptionRequired": "Jeħtieġ riċetta tat-tabib",
+    "targetSpecies": "Tours fil-Mira",
+    "activeIngredients": "Ingredjenti Attivi",
+    "registrationNo": "Numru ta' Reġistrazzjoni",
+    "storage": "Ħażna",
+    "chemicalTab": "Kimika",
+    "feedTab": "Lixka",
+    "seedTab": "Żerriegħa",
+    "machineryTab": "Magna",
+    "organic": "Organiku",
+    "toxicity": "Tossiċità",
+    "gmoFree": "Ħieles mill-GMO",
+    "protein": "Proteina",
+    "fat": "Żejt",
+    "fiber": "Fibra",
+    "hybrid": "Ibridu",
+    "germination": "Ġerminazzjoni",
+    "daysToMaturity": "Maturazzjoni",
+    "daysLabel": "jum",
+    "warranty": "Garantit",
+    "power": "Saħħa",
+    "hoursUsed": "Sigħat ta' Użu",
+    "hours": "siegħa",
+    "powerSource": "Provvista tal-enerġija"
+  },
+  "productVariants": {
+    "title": "Varjanti tal-Prodott",
+    "variantCount": "varjant",
+    "inStock": "Fl-istokk",
+    "outOfStock": "Mibjugħ kollu"
+  },
+  "productPrices": {
+    "title": "Prezzijiet (Muniti Multipli)",
+    "autoConversion": "Trasformazzjoni Awtomatika",
+    "validUntil": "Validità"
+  },
+  "requestTransport": {
+    "title": "Oħloq Talba għal Tbaħħir",
+    "pickupLocation": "Punt tat-Tagħbija",
+    "deliveryLocation": "Punt ta' Kunsinna",
+    "city": "Belt",
+    "address": "Indirizz",
+    "transportType": "Tour tat-Trasport",
+    "types": {
+      "standard": "Standard",
+      "refrigerated": "Katina tal-Bard",
+      "liveAnimal": "Annimali Ħajjin",
+      "hazardous": "Materjali Perikolużi",
+      "oversized": "Daqs Kbir"
+    },
+    "weight": "Piż (kg)",
+    "weightPlaceholder": "kilogramm",
+    "preferredPickupDate": "Data Preferuta tat-Tlugħ",
+    "preferredDeliveryDate": "Data tal-Kunsinna Preferuta",
+    "urgent": "Trasport Urġenti",
+    "specialInstructions": "Istruzzjonijiet Speċjali",
+    "instructionsPlaceholder": "Ikteb l-istruzzjonijiet speċifiċi tiegħek hawn...",
+    "cancel": "Aqta' qalbek",
+    "submit": "Oħloq Domanda",
+    "submitting": "Fil-proċess tal-ħolqien...",
+    "success": "It-talba għat-tbaħħir inħolqot b'suċċess.",
+    "error": "Seħħ żball waqt il-ħolqien tat-talba għat-tbaħħir."
+  },
+  "transportTracking": {
+    "title": "Traċċar tal-Ġarr",
+    "noTracking": "Għad m'hemm l-ebda informazzjoni ta' traċċar disponibbli.",
+    "update": "Aġġornament"
+  },
+  "locations": {
+    "title": "L-indirizzi tiegħi",
+    "description": "Immaniġġja l-indirizzi rreġistrati tiegħek.",
+    "addLocation": "Żid l-Indirizz",
+    "editLocation": "Editja l-Indirizz",
+    "noLocations": "Għad m'għandekx indirizz irreġistrat.",
+    "name": "Isem tal-Indirizz",
+    "namePlaceholder": "Pereżempju: Dar, Xogħol, Razzett",
+    "address": "Indirizz",
+    "addressLine2": "Linja tal-Indirizz 2",
+    "city": "Belt",
+    "state": "Distrett / Reġjun",
+    "postalCode": "Kodiċi postali",
+    "phone": "Telefon",
+    "email": "Email",
+    "cancel": "Aqta' qalbek",
+    "save": "Issejvja",
+    "saving": "Qed niffranka...",
+    "typePickup": "Tagħbija",
+    "typeDelivery": "Kunsinna",
+    "typeBoth": "Ġenerali",
+    "createSuccess": "L-indirizz ġie miżjud b'suċċess.",
+    "createError": "Seħħ żball waqt li kien qed jiżdied l-indirizz.",
+    "updateSuccess": "L-indirizz ġie aġġornat b'suċċess.",
+    "updateError": "Seħħ żball waqt l-aġġornament tal-indirizz.",
+    "deleteLocation": "Ħassar l-Indirizz",
+    "deleteSuccess": "L-indirizz tħassar",
+    "deleteError": "Seħħ żball waqt it-tħassir tal-indirizz.",
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew l-indirizzi."
+  },
+  "systemSettings": {
+    "title": "Issettjar tas-Sistema",
+    "description": "Ara l-munita tal-pjattaforma, il-lingwa, il-metodi ta' ħlas, it-tbaħħir, u s-settings tat-taxxa.",
+    "unauthorized": "M'għandekx permess biex taċċessa din il-paġna.",
+    "currenciesTab": "Muniti",
+    "languagesTab": "Lingwi",
+    "paymentTab": "Metodi ta' Ħlas",
+    "shippingTab": "Merkanzija",
+    "taxTab": "Taxxa",
+    "active": "Attiv",
+    "inactive": "Passiv",
+    "default": "Default",
+    "noCurrencies": "Il-munita għadha ma ġietx definita.",
+    "noLanguages": "Il-lingwa għadha ma ġietx definita.",
+    "noPaymentMethods": "Il-metodu ta' ħlas għadu mhux definit.",
+    "noCarriers": "Il-kumpanija tat-tbaħħir għadha ma ġietx identifikata.",
+    "noZones": "Iż-żona tal-merkanzija għadha ma ġietx definita.",
+    "noTaxRates": "Ir-rata tat-taxxa għadha ma ġietx definita.",
+    "carriers": "Kumpaniji tat-Tbaħħir",
+    "zones": "Żoni tal-Merkanzija",
+    "countries": "Pajjiżi",
+    "rates": "Tariffi tat-Tbaħħir",
+    "noRates": "L-ispejjeż tat-tbaħħir għadhom ma ġewx definiti.",
+    "freeShipping": "Tbaħħir B'Xejn",
+    "deliveryDays": "ħin tal-kunsinna tal-ġurnata"
+  },
+  "pushPermission": {
+    "title": "Ippermetti n-notifiki",
+    "description": "Irċievi notifiki dwar messaġġi ġodda, offerti, u aġġornamenti tal-ordnijiet.",
+    "allow": "Ħalli",
+    "dismiss": "Agħlaq"
+  },
+  "healthRecords": {
+    "title": "Rekords tas-Saħħa",
+    "description": "Immaniġġja r-rekords tas-saħħa tal-annimali u l-istorja medika.",
+    "addRecord": "Żid Rekord",
+    "editRecord": "Editja r-Rekord",
+    "deleteRecord": "Ħassar ir-Rekord",
+    "noRecords": "Rekord tas-saħħa għadu ma ġiex miżjud.",
+    "animalInfoId": "ID tal-Annimali",
+    "animalInfoIdPlaceholder": "Daħħal l-ID tal-informazzjoni tal-annimal.",
+    "recordType": "Tour tar-Reġistrazzjoni",
+    "recordTypePlaceholder": "Eżempji: Eżami, Kura, Kirurġija",
+    "recordDate": "Data tar-Reġistrazzjoni",
+    "followUpDate": "Data tal-Kontroll",
+    "veterinarianName": "Veterinarju",
+    "veterinarianLicense": "Numru tal-Liċenzja",
+    "clinicName": "Kliniku",
+    "diagnosis": "Dijanjosi",
+    "treatment": "Trattament",
+    "medications": "Mediċini",
+    "medicationsPlaceholder": "Eżempju: Peniċillina 500mg, Ibuprofen",
+    "notes": "Noti",
+    "documentUrl": "URL tad-Dokument",
+    "saving": "Qed niffranka...",
+    "createSuccess": "Ir-rekord tas-saħħa ġie miżjud b'suċċess.",
+    "updateSuccess": "Ir-rekord tas-saħħa ġie aġġornat b'suċċess.",
+    "deleteSuccess": "Ir-rekord tas-saħħa tħassar b'suċċess.",
+    "saveError": "Seħħ żball waqt is-salvataġġ tar-rekord.",
+    "deleteError": "Seħħ żball waqt it-tħassir tar-rekord.",
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew ir-rekords"
+  },
+  "vaccinations": {
+    "title": "Rekords tal-Vaċċini",
+    "description": "Immaniġġja r-rekords u l-kalendarji tat-tilqim tal-annimali.",
+    "addVaccination": "Żid Ribell",
+    "editVaccination": "Arranġament Ribelli",
+    "deleteVaccination": "Ribell Sil",
+    "noVaccinations": "Ir-rekord tat-tilqim għadu ma ġiex miżjud.",
+    "animalInfoId": "ID tal-Annimali",
+    "animalInfoIdPlaceholder": "Daħħal l-ID tal-informazzjoni tal-annimal.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Eżempju: Vaċċin SAT, Brucella",
+    "vaccineType": "Tour tar-Ribelli",
+    "vaccineTypePlaceholder": "Eżempju: Ħaj, Inattiv",
+    "batchNumber": "Numru tal-Partit",
+    "vaccinationDate": "Storja tar-Ribell",
+    "nextDueDate": "L-Istorja Ribell li Jmiss",
+    "veterinarianName": "Veterinarju",
+    "veterinarianLicense": "Numru tal-Liċenzja",
+    "notes": "Noti",
+    "certificateUrl": "URL taċ-Ċertifikat",
+    "saving": "Qed niffranka...",
+    "createSuccess": "Ir-rekord tal-vaċċin ġie miżjud b'suċċess.",
+    "updateSuccess": "Ir-rekord tal-vaċċin ġie aġġornat b'suċċess.",
+    "deleteSuccess": "Ir-rekord tal-vaċċin tħassar b'suċċess.",
+    "saveError": "Seħħ żball waqt ir-reġistrazzjoni tal-vaċċin.",
+    "deleteError": "Seħħ żball waqt it-tħassir tal-vaċċin.",
+    "fetchError": "Seħħ żball waqt it-tagħbija tal-vaċċini."
+  },
+  "shippingCarriers": {
+    "title": "Kumpaniji tat-Tbaħħir",
+    "description": "Immaniġġja l-informazzjoni tal-kumpanija tat-tbaħħir.",
+    "addCarrier": "Żid Kumpanija",
+    "editCarrier": "Editja l-Kumpanija",
+    "noCarriers": "Għadha ma ġiet miżjuda l-ebda kumpanija tat-tbaħħir.",
+    "carrierName": "Isem tal-Kumpanija",
+    "carrierNamePlaceholder": "Eżempju: Aras Kargo, MNG",
+    "code": "Kodiċi",
+    "codePlaceholder": "Eżempju: ARAS",
+    "website": "Sit elettroniku",
+    "trackingUrlTemplate": "Segwi l-Mudell tal-URL",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Pajjiżi Appoġġjati",
+    "supportedCountriesPlaceholder": "Eżempju: TR, US, DE",
+    "active": "Attiv",
+    "inactive": "Passiv",
+    "saving": "Qed niffranka...",
+    "edit": "Editja",
+    "delete": "Ħassar",
+    "createSuccess": "Il-kumpanija tat-tbaħħir ġiet miżjuda b'suċċess.",
+    "updateSuccess": "Il-kumpanija tat-tbaħħir ġiet aġġornata b'suċċess.",
+    "deleteSuccess": "Il-kumpanija tat-tbaħħir tħassret b'suċċess.",
+    "saveError": "Seħħ żball waqt ir-reġistrazzjoni tal-kumpanija tat-tbaħħir.",
+    "deleteError": "Seħħ żball waqt li kienet qed titħassar l-informazzjoni tal-kumpanija tat-tbaħħir.",
+    "fetchError": "Seħħ żball waqt it-tagħbija tal-kumpaniji tal-merkanzija."
+  },
+  "shippingZones": {
+    "title": "Żoni tal-Merkanzija",
+    "description": "Immaniġġja ż-żoni u l-erjas tal-merkanzija.",
+    "addZone": "Żid Reġjun",
+    "editZone": "Editja r-Reġjun",
+    "noZones": "Għadha ma ġiet miżjuda l-ebda żona tal-merkanzija.",
+    "zoneName": "Isem tar-Reġjun",
+    "zoneNamePlaceholder": "Eżempju: L-Ewropa, l-Amerika ta' Fuq",
+    "countryCodes": "Kodiċijiet tal-Pajjiż",
+    "countryCodesPlaceholder": "Eżempju: TR, DE, FR",
+    "active": "Attiv",
+    "inactive": "Passiv",
+    "saving": "Qed niffranka...",
+    "edit": "Editja",
+    "delete": "Ħassar",
+    "createSuccess": "Ir-reġjun ġie miżjud b'suċċess.",
+    "updateSuccess": "Ir-reġjun ġie aġġornat b'suċċess.",
+    "deleteSuccess": "Iż-żona ġiet imnaddfa b'suċċess.",
+    "saveError": "Seħħ żball waqt is-salvataġġ tar-reġjun.",
+    "deleteError": "Seħħ żball waqt it-tħassir tar-reġjun.",
+    "fetchError": "Seħħ żball waqt li kienu qed jitgħabbew ir-reġjuni"
+  },
+  "shippingRates": {
+    "title": "Tariffi tat-Tbaħħir",
+    "description": "Immaniġġja l-ispejjeż tat-tbaħħir u l-għażliet tal-kunsinna.",
+    "addRate": "Żid Ħlas",
+    "editRate": "Aġġusta t-Tariffa",
+    "noRates": "L-ispejjeż tat-tbaħħir għadhom ma ġewx miżjuda.",
+    "zone": "Żona",
+    "carrier": "Ditta",
+    "selectZone": "Agħżel reġjun",
+    "selectCarrier": "Agħżel kumpanija",
+    "shippingCost": "Ħlas tat-Tbaħħir",
+    "currency": "Munita",
+    "estimatedDeliveryDays": "Kunsinna Stmata (Jiem)",
+    "minWeight": "Piż Minimu",
+    "maxWeight": "Piż Massimu",
+    "minOrderAmount": "Ammont Minimu tal-Ordni",
+    "freeShipping": "Tbaħħir B'Xejn",
+    "free": "B'xejn",
+    "active": "Attiv",
+    "inactive": "Passiv",
+    "cost": "Ħlas",
+    "deliveryDays": "Kunsinna",
+    "status": "Sitwazzjoni",
+    "saving": "Qed niffranka...",
+    "createSuccess": "Il-ħlas ġie miżjud b'suċċess.",
+    "updateSuccess": "Is-salarju ġie aġġornat b'suċċess.",
+    "deleteSuccess": "It-tariffa tħassret b'suċċess.",
+    "saveError": "Seħħ żball waqt is-salvataġġ tat-tariffa.",
+    "deleteError": "Seħħ żball waqt it-tħassir tat-tariffa.",
+    "fetchError": "Seħħ żball waqt it-tlugħ tal-miżati."
+  },
+  "metadata": {
+    "title": "Kummerċ tal-Bhejjem - Pjattaforma għall-Kummerċ tal-Annimali Ħajjin",
+    "description": "L-aktar pjattaforma affidabbli fid-dinja għall-kummerċ ta' annimali ħajjin. Xiri u bejgħ ta' annimali sikur u trasparenti.",
+    "pages": {
+      "about": {
+        "title": "Dwarna",
+        "description": "Tgħallem dwar il-Kummerċ tal-Bhejjem. Pjattaforma affidabbli għall-kummerċ tal-annimali ħajjin."
+      },
+      "contact": {
+        "title": "Komunikazzjoni",
+        "description": "Ikkuntattjana. It-tim tal-appoġġ għall-klijenti ta' Livestock Trading lest biex jgħinek."
+      },
+      "terms": {
+        "title": "Termini ta' Użu",
+        "description": "Termini u Kundizzjonijiet tal-Kummerċ tal-Bhejjem."
+      },
+      "privacy": {
+        "title": "Politika tal-Privatezza",
+        "description": "Politika ta' privatezza tal-Kummerċ tal-Bhejjem. Tgħallem kif id-dejta personali tiegħek hija protetta."
+      },
+      "products": {
+        "title": "Prodotti",
+        "description": "Fittex listi ta' annimali ħajjin. Reklami affidabbli għal baqar, nagħaġ, u aktar."
+      },
+      "sellers": {
+        "title": "Bejjiegħa",
+        "description": "Skopri bejjiegħa tal-annimali affidabbli. Profili u reviżjonijiet tal-bejjiegħa verifikati."
+      },
+      "transporters": {
+        "title": "trasportaturi",
+        "description": "Skopri kumpaniji tat-trasport tal-annimali. Trasport ta' annimali ħajjin sikur u professjonali."
+      },
+      "search": {
+        "title": "Fittex",
+        "description": "Fittex fost listi ta' annimali ħajjin. Tiftix faċli b'għażliet ta' filtrazzjoni u klassifikazzjoni."
+      },
+      "faq": {
+        "title": "Mistoqsijiet Frekwenti",
+        "description": "Mistoqsijiet u tweġibiet frekwenti dwar il-kummerċ tal-bhejjem."
+      },
+      "productDetail": {
+        "title": "{titlu} - Għall-Bejgħ",
+        "description": "Għall-bejgħ fi {title} - {city}. Ikklikkja għad-dettalji u l-informazzjoni ta' kuntatt."
+      },
+      "sellerDetail": {
+        "title": "{isem} - Profil tal-Bejjiegħ",
+        "description": "Profil tal-bejjiegħ ta' {name}. Reviżjonijiet, listi, u informazzjoni ta' kuntatt."
+      },
+      "transporterDetail": {
+        "title": "{isem} - Profil tat-Trasportatur",
+        "description": "Profil tat-trasportatur ta' {name}. Żoni ta' servizz, reviżjonijiet, u informazzjoni ta' kuntatt."
+      }
+    }
   }
 }

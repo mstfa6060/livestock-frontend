@@ -11,17 +11,30 @@
     "back": "Spate",
     "next": "Redirecţiona",
     "close": "Aproape",
+    "unauthorized": "Nu aveți permisiunea de a accesa această pagină.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Log in",
-    "register": "Registru"
+    "register": "Registru",
+    "previous": "Fost",
+    "zoomIn": "Măriți",
+    "previousImage": "Imaginea anterioară",
+    "nextImage": "Imaginea următoare",
+    "closeLightbox": "Închide galeria",
+    "imageLightbox": "Galerie de imagini",
+    "slideN": "Diapozitiv {n}",
+    "viewMore": "Vezi mai multe"
   },
   "header": {
     "products": "Produse",
     "sellers": "Vânzători",
+    "transporters": "transportatori",
     "about": "Despre noi",
+    "search": "Căutare",
     "dashboard": "Panou",
     "settings": "Setări",
-    "logout": "Deconectare"
+    "logout": "Deconectare",
+    "menu": "Meniu",
+    "language": "Selectarea limbii"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Mi-am uitat parola.",
       "noAccount": "Nu ai un cont?",
       "register": "Registru",
-      "errorDefault": "Conectarea a eșuat. Vă rugăm să vă verificați informațiile."
+      "errorDefault": "Conectarea a eșuat. Vă rugăm să vă verificați informațiile.",
+      "orContinueWith": "sau continuați",
+      "continueWithGoogle": "Continuă cu Google",
+      "continueWithApple": "Continuă cu Apple.",
+      "socialLoginError": "Conectarea socială a eșuat. Vă rugăm să încercați din nou.",
+      "appleComingSoon": "Foarte curând",
+      "showPassword": "Afișează parola",
+      "hidePassword": "Ascunde parola"
     },
     "register": {
       "title": "Registru",
@@ -51,7 +71,17 @@
       "login": "Log in",
       "passwordMismatch": "Parolele nu se potrivesc.",
       "passwordTooShort": "Parola trebuie să aibă cel puțin 6 caractere.",
-      "errorDefault": "Înregistrarea a eșuat. Vă rugăm să încercați din nou."
+      "errorDefault": "Înregistrarea a eșuat. Vă rugăm să încercați din nou.",
+      "showPassword": "Afișează parola",
+      "hidePassword": "Ascunde parola",
+      "passwordStrength": {
+        "minLength": "Cel puțin 8 caractere",
+        "uppercase": "Litere mari (A-Z)",
+        "lowercase": "Litere mici (a-z)",
+        "number": "Număr (0-9)",
+        "special": "Caractere speciale (!@#$%)"
+      },
+      "registerSuccess": "Contul dumneavoastră a fost creat cu succes! Veți fi redirecționat către pagina de conectare..."
     },
     "forgotPassword": {
       "title": "Mi-am uitat parola.",
@@ -78,14 +108,16 @@
       "requestNewLink": "Solicitați o conexiune nouă",
       "passwordMismatch": "Parolele nu se potrivesc.",
       "passwordTooShort": "Parola trebuie să aibă cel puțin 6 caractere.",
-      "errorDefault": "Resetarea parolei a eșuat. Conexiunea poate fi invalidă sau expirată."
+      "errorDefault": "Resetarea parolei a eșuat. Conexiunea poate fi invalidă sau expirată.",
+      "showPassword": "Afișează parola",
+      "hidePassword": "Ascunde parola"
     }
   },
   "dashboard": {
     "title": "Bord",
     "welcome": "Bun venit, {name}!",
     "accountInfo": "Rezumatul contului dvs. este mai jos.",
-    "username": "Nume utilizator",
+    "username": "Nume de utilizator",
     "email": "E-mail",
     "id": "ID-ul",
     "logout": "Deconectare",
@@ -94,18 +126,37 @@
       "active": "activ",
       "totalViews": "Vizualizări totale",
       "thisWeek": "în această săptămână",
+      "allTime": "toate timpurile",
       "favorites": "Favorit",
       "onYourListings": "în reclamele dvs.",
+      "savedItems": "produs înregistrat",
       "messages": "Mesaj",
-      "unread": "necitit"
+      "notifications": "Notificări",
+      "unread": "necitit",
+      "views": "vizualizări",
+      "draft": "Proiect",
+      "sold": "Vândut",
+      "pending": "În așteptare",
+      "awaitingApproval": "în așteptarea aprobării",
+      "totalSales": "Vânzări totale",
+      "completedSales": "vânzări finalizate",
+      "revenue": "Venituri",
+      "totalRevenue": "venituri totale"
     },
     "recentListings": "Ultimele tale anunțuri",
+    "recentActivity": "Activități recente",
     "recentMessages": "Mesaje recente",
+    "quickLinks": "Acces rapid",
     "noListings": "Nu ați adăugat încă nicio reclamă.",
+    "noActivity": "Nicio activitate încă.",
     "noMessages": "Nu ai primit încă un mesaj.",
     "noNotifications": "Nu ai primit încă nicio notificare.",
     "viewAllListings": "Vezi toate anunțurile",
-    "viewAllMessages": "Vizualizați toate mesajele"
+    "viewAllMessages": "Vizualizați toate mesajele",
+    "viewNotifications": "Vizualizați notificările",
+    "viewFavorites": "Favorite Gor",
+    "recentlyViewed": "Vizualizate recent",
+    "fetchError": "A apărut o eroare la încărcarea datelor panoului."
   },
   "dashboardNav": {
     "overview": "Prezentare generală",
@@ -115,7 +166,61 @@
     "notifications": "Notificări",
     "profile": "Profil",
     "settings": "Setări",
-    "newListing": "Adăugați o listă nouă"
+    "newListing": "Adăugați o listă nouă",
+    "becomeSeller": "Devino vânzător",
+    "categories": "Categorii",
+    "offers": "Propuneri",
+    "deals": "Acorduri",
+    "farms": "Fermele mele",
+    "transport": "Transport",
+    "moderation": "Moderare",
+    "sellerModeration": "Moderarea vânzătorului",
+    "transporterModeration": "Moderare operator",
+    "brands": "Mărci",
+    "transportOffers": "Oferte de transport",
+    "healthRecords": "Dosare medicale",
+    "vaccinations": "Vaccinatori",
+    "shippingCarriers": "Companii de transport maritim",
+    "shippingZones": "Zone de marfă",
+    "shippingRates": "Taxe de livrare",
+    "systemSettings": "Setări de sistem",
+    "locations": "Adresele mele"
+  },
+  "profile": {
+    "title": "Informații despre profil",
+    "description": "Îți poți actualiza informațiile personale aici.",
+    "personalInfo": "Informații personale",
+    "contactInfo": "Informații de contact",
+    "preferences": "Preferințe",
+    "firstName": "Nume",
+    "firstNamePlaceholder": "Introduceți numele dvs.",
+    "surname": "Nume de familie",
+    "surnamePlaceholder": "Introduceți numele dumneavoastră de familie.",
+    "displayName": "Nume afișat",
+    "phone": "Număr de telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Verificat",
+    "phoneNotVerified": "Neconfirmat",
+    "verifyPhone": "Verificați numărul de telefon",
+    "country": "Ţară",
+    "selectCountry": "Selectați o țară",
+    "language": "Preferință de limbă",
+    "selectLanguage": "Alegeți o limbă",
+    "currency": "Valută",
+    "selectCurrency": "Selectați moneda.",
+    "saveChanges": "Salvați modificările",
+    "saving": "Economisire...",
+    "saveSuccess": "Informațiile profilului tău au fost actualizate.",
+    "saveError": "A apărut o eroare la actualizarea profilului.",
+    "avatar": "Fotografie de profil",
+    "changeAvatar": "Schimbă fotografia",
+    "removeAvatar": "Eliminați fotografia",
+    "currencies": {
+      "try": "Liră turcească",
+      "usd": "Dolar american",
+      "eur": "Euro",
+      "gbp": "Liră sterlină"
+    }
   },
   "myListings": {
     "title": "Anunțurile mele",
@@ -125,35 +230,94 @@
     "fetchError": "A apărut o eroare la încărcarea anunțurilor.",
     "deleteSuccess": "Anunțul a fost șters cu succes.",
     "deleteError": "A apărut o eroare la ștergerea anunțului.",
-    "activateSuccess": "Reclama a fost activată.",
-    "deactivateSuccess": "Listarea a fost dezactivată.",
+    "publishSuccess": "Anunțul a fost trimis spre aprobare.",
+    "unpublishSuccess": "Reclama a fost redactată.",
     "statusError": "A apărut o eroare la schimbarea stării.",
     "filters": {
       "all": "Toți",
-      "active": "Activ",
       "draft": "Proiect",
       "pending": "În așteptarea aprobării",
+      "active": "Activ",
+      "rejected": "Respins",
       "sold": "Vândut"
     },
     "actions": {
       "edit": "Edita",
       "delete": "Şterge",
-      "activate": "Activa",
-      "deactivate": "Structură pasivă"
+      "publish": "Trimiteți pentru aprobare",
+      "unpublish": "Proiect",
+      "menu": "Tranzacții"
     },
     "deleteDialog": {
       "title": "Ștergeți anunțul",
       "description": "Sigur vrei să ștergi această înregistrare? Această acțiune este ireversibilă.",
       "cancel": "Anula",
       "confirm": "Şterge"
-    }
+    },
+    "loadMore": "Descarcă mai mult",
+    "loadingMore": "Încărcare..."
   },
   "favorites": {
     "title": "Preferatele mele",
     "description": "Urmărește produsele care îți plac aici.",
     "noFavorites": "Nu ați adăugat încă niciun produs preferat.",
     "browseProducts": "Răsfoiți produsele",
-    "fetchError": "A apărut o eroare la încărcarea favoritelor."
+    "fetchError": "A apărut o eroare la încărcarea favoritelor.",
+    "loadMore": "Descarcă mai mult",
+    "loadingMore": "Încărcare..."
+  },
+  "messages": {
+    "title": "Mesaje",
+    "description": "Ia legătura cu cumpărătorii și vânzătorii.",
+    "noConversations": "Nu ai primit încă un mesaj.",
+    "startConversation": "Pentru a pune o întrebare despre o reclamă, accesați reclama respectivă.",
+    "fetchError": "A apărut o eroare la încărcarea mesajelor",
+    "sendError": "A apărut o eroare la trimiterea mesajului.",
+    "connectionError": "Conexiunea a eșuat. Se încearcă din nou...",
+    "connected": "S-a conectat",
+    "connecting": "Se conectează...",
+    "searchPlaceholder": "Caută prin mesaje...",
+    "typeMessage": "Scrie mesajul tău...",
+    "send": "Trimite",
+    "sending": "Se trimite...",
+    "typing": "Se spune...",
+    "read": "Citire",
+    "delivered": "Trimis",
+    "today": "Astăzi",
+    "yesterday": "Ieri",
+    "noMessages": "Niciun mesaj încă. Începe o conversație!",
+    "loadMore": "Încarcă mai multe",
+    "loadingMessages": "Mesajele se încarcă...",
+    "about": "Despre",
+    "product": "Produs",
+    "startNewConversation": "Începeți o conversație nouă",
+    "selectConversation": "Alege o conversație sau începe una nouă.",
+    "online": "Online",
+    "offline": "Offline",
+    "lastSeen": "Ultima dată văzut",
+    "deleteConversation": "Șterge conversația",
+    "deleteConfirm": "Sigur vrei să ștergi această conversație?",
+    "deleted": "Conversația a fost ștearsă.",
+    "defaultUser": "Utilizator",
+    "noResults": "Nu s-au găsit rezultate.",
+    "newConversation": "Conversație nouă"
+  },
+  "notifications": {
+    "title": "Notificări",
+    "description": "Vizualizați și gestionați notificările.",
+    "markAllAsRead": "Marchează toate ca citite",
+    "noNotifications": "Nu ai primit încă nicio notificare.",
+    "viewAll": "Vedeți toate notificările",
+    "today": "Astăzi",
+    "yesterday": "Ieri",
+    "older": "Mai în vârstă",
+    "types": {
+      "system": "Sistem",
+      "message": "Mesaj",
+      "offer": "Oferi",
+      "order": "Comanda",
+      "listing": "Anunţ"
+    }
   },
   "settings": {
     "title": "Setări",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Noile parole nu se potrivesc.",
       "passwordTooShort": "Noua parolă trebuie să aibă cel puțin 6 caractere.",
       "sessionError": "Informațiile despre sesiune nu au putut fi găsite.",
-      "errorDefault": "Parola nu a putut fi actualizată. Vă rugăm să verificați parola curentă."
+      "errorDefault": "Parola nu a putut fi actualizată. Vă rugăm să verificați parola curentă.",
+      "showPassword": "Afișează parola",
+      "hidePassword": "Ascunde parola"
+    },
+    "preferences": {
+      "title": "Preferințe de notificare și vizualizare",
+      "description": "Gestionați canalele de notificare și preferințele de afișare.",
+      "notifications": "Notificări",
+      "emailNotifications": "Notificări prin e-mail",
+      "emailNotificationsDesc": "Primiți notificări prin e-mail pentru mesaje noi și actualizări de anunțuri.",
+      "smsNotifications": "Notificări SMS",
+      "smsNotificationsDesc": "Primește mesaje SMS pentru notificări importante.",
+      "pushNotifications": "Notificări push",
+      "pushNotificationsDesc": "Primește notificări push pentru actualizări instantanee.",
+      "appearance": "Aspect",
+      "darkMode": "Mod întunecat",
+      "darkModeDesc": "Treceți la o temă întunecată.",
+      "saveChanges": "Salvați preferințele",
+      "saving": "Economisire...",
+      "saveSuccess": "Preferințele dumneavoastră au fost actualizate.",
+      "saveError": "A apărut o eroare la actualizarea preferințelor.",
+      "loadError": "Preferințele nu au putut fi încărcate."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Platformă de comercializare a animalelor vii",
       "subtitle": "Cea mai fiabilă platformă de tranzacționare cu animale vii. Cumpără și vinde-ți bovinele și oile în siguranță.",
       "cta": "Începeți acum",
-      "viewListings": "Vizualizați anunțurile"
+      "viewListings": "Vizualizați anunțurile",
+      "searchPlaceholder": "Caută animale... (vaci, oi, capre...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Anunțuri recomandate",
       "viewAll": "Vezi tot"
+    },
+    "cta": {
+      "title": "Începeți acum",
+      "subtitle": "Ocupă-ți locul pe o platformă unde se întâlnesc mii de vânzători și cumpărători.",
+      "button": "Înregistrează-te gratuit"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Despre noi",
     "contact": "Comunicare",
     "terms": "Termeni de utilizare",
-    "privacy": "Politica de confidențialitate"
+    "privacy": "Politica de confidențialitate",
+    "company": "Companie",
+    "support": "Sprijin",
+    "legal": "Juridic",
+    "followUs": "Urmați-ne",
+    "newsletter": "Buletin",
+    "newsletterDescription": "Nu ratați cele mai recente anunțuri și promoții.",
+    "subscribe": "Abonează-te",
+    "emailPlaceholder": "Adresa dvs. de e-mail",
+    "tagline": "Cea mai fiabilă platformă de comercializare a animalelor vii din Turcia.",
+    "sellers": "Vânzători",
+    "products": "Produse",
+    "map": "Hartă",
+    "appleLoginComingSoon": "Conectarea cu Apple va fi activă foarte curând.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "FAQ"
+  },
+  "faq": {
+    "title": "Întrebări frecvente",
+    "description": "Răspunsuri la întrebările frecvente despre platforma noastră.",
+    "noFaqs": "Nu au fost adăugate încă întrebări."
+  },
+  "about": {
+    "title": "Despre noi",
+    "subtitle": "Cea mai fiabilă platformă de comercializare a animalelor vii din Turcia.",
+    "mission": {
+      "title": "Misiunea noastră",
+      "description": "Prin digitalizarea comerțului cu animale vii, ne propunem să creăm o legătură sigură, transparentă și eficientă între producători și cumpărători."
+    },
+    "vision": {
+      "title": "Viziunea noastră",
+      "description": "Să fim un pionier în transformarea digitală în sectorul agricol și să devenim o platformă globală în comerțul cu animale vii."
+    },
+    "values": {
+      "title": "Valorile noastre",
+      "trust": {
+        "title": "Încredere",
+        "description": "Transparența și fiabilitatea sunt esențiale în toate tranzacțiile."
+      },
+      "quality": {
+        "title": "Calitate",
+        "description": "Îmbunătățire continuă pentru a oferi cele mai bune servicii."
+      },
+      "innovation": {
+        "title": "Inovaţie",
+        "description": "Transformarea industriei prin utilizarea tehnologiei."
+      }
+    },
+    "stats": {
+      "users": "Utilizator înregistrat",
+      "sellers": "Vânzător activ",
+      "products": "Anunţ",
+      "transactions": "Tranzacție reușită"
+    }
+  },
+  "contact": {
+    "title": "Comunicare",
+    "subtitle": "Vă rugăm să ne contactați pentru orice întrebări.",
+    "form": {
+      "title": "Scrieți-ne",
+      "name": "Numele dumneavoastră",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "E-mail",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Subiect",
+      "subjectPlaceholder": "Subiectul mesajului tău",
+      "message": "Mesajul dvs",
+      "messagePlaceholder": "Scrie mesajul tău aici...",
+      "submit": "Trimite",
+      "submitting": "Se trimite...",
+      "success": "Mesajul dumneavoastră a fost trimis cu succes. Vă vom contacta cât mai curând posibil.",
+      "error": "A apărut o eroare la trimiterea mesajului. Vă rugăm să încercați din nou."
+    },
+    "info": {
+      "title": "Informații de contact",
+      "address": "Adresa",
+      "addressValue": "Istanbul, Turcia",
+      "email": "E-mail",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Telefon",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Ore de lucru",
+      "workingHoursValue": "Luni - Vineri: 09:00 - 18:00",
+      "map": "Hartă"
+    }
+  },
+  "terms": {
+    "title": "Termeni de utilizare",
+    "lastUpdated": "Ultima actualizare: {data}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptarea Termenilor",
+        "content": "Prin utilizarea acestui site web, sunteți de acord cu următorii termeni de utilizare. Dacă nu sunteți de acord cu acești termeni, vă rugăm să nu utilizați site-ul."
+      },
+      "services": {
+        "title": "2. Servicii",
+        "content": "Livestock Trading oferă o platformă pentru cumpărarea și vânzarea de animale vii. Toate tranzacțiile de pe platformă sunt responsabilitatea utilizatorului."
+      },
+      "accounts": {
+        "title": "3. Conturi de utilizator",
+        "content": "Trebuie să furnizați informații corecte și actualizate pentru a crea un cont. Securitatea contului dvs. este responsabilitatea dvs."
+      },
+      "prohibited": {
+        "title": "4. Activități interzise",
+        "content": "Reclamele înșelătoare, informațiile false, frauda și activitățile ilegale sunt strict interzise."
+      },
+      "liability": {
+        "title": "5. Limitarea răspunderii",
+        "content": "Platforma nu este direct responsabilă pentru tranzacțiile dintre utilizatori. Toate tranzacțiile au loc între părți."
+      },
+      "changes": {
+        "title": "6. Modificări",
+        "content": "Acești termeni și condiții pot fi modificați fără notificare prealabilă. Modificările vor intra în vigoare imediat după publicare."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Politica de confidențialitate",
+    "lastUpdated": "Ultima actualizare: {data}",
+    "sections": {
+      "collection": {
+        "title": "1. Colectarea informațiilor",
+        "content": "Când vă creați un cont, colectăm informații personale precum numele, adresa de e-mail și numărul de telefon. De asemenea, putem colecta date anonime privind utilizarea site-ului."
+      },
+      "usage": {
+        "title": "2. Utilizarea informațiilor",
+        "content": "Informațiile pe care le colectăm sunt utilizate pentru a furniza serviciile noastre, a gestiona contul dvs., a asigura securitatea și a vă oferi oferte personalizate."
+      },
+      "sharing": {
+        "title": "3. Schimbul de informații",
+        "content": "Informațiile dumneavoastră personale nu vor fi vândute sau închiriate către terți. Informațiile dumneavoastră nu vor fi partajate, cu excepția scopurilor impuse de lege."
+      },
+      "security": {
+        "title": "4. Securitate",
+        "content": "Sunt implementate măsuri de securitate standard în industrie pentru a vă proteja datele."
+      },
+      "cookies": {
+        "title": "5. Cookie-uri",
+        "content": "Site-ul nostru web folosește cookie-uri pentru a îmbunătăți experiența utilizatorului. Puteți gestiona preferințele privind cookie-urile în setările browserului dvs."
+      },
+      "rights": {
+        "title": "6. Drepturile dumneavoastră",
+        "content": "Conform Legii turce privind protecția datelor cu caracter personal (KVKK), aveți dreptul de a accesa, corecta și șterge datele dumneavoastră cu caracter personal."
+      }
+    }
   },
   "products": {
     "title": "Produse",
@@ -235,11 +570,19 @@
       "priceDesc": "Preț (de la cel mare la cel mic)",
       "popular": "Cele mai populare"
     },
+    "pagination": {
+      "prev": "Fost",
+      "next": "Următorul"
+    },
     "status": {
       "draft": "Proiect",
+      "pending": "În așteptarea aprobării",
       "active": "Activ",
+      "inactive": "Pasiv",
+      "outOfStock": "Epuizat",
+      "expired": "Mandatul său a expirat.",
       "sold": "Vândut",
-      "pending": "În așteptarea aprobării"
+      "rejected": "Respins"
     },
     "condition": {
       "new": "Nou",
@@ -253,9 +596,13 @@
     "loading": "Se încarcă produsele...",
     "perPage": "Pe pagină",
     "showing": "Totalul de {total} produse între {from} și {to}.",
+    "fetchError": "A apărut o eroare la încărcarea produselor.",
+    "loadMore": "Afișează mai multe",
+    "showingOf": "Sunt afișate {count} / {total} produse.",
     "loginToFavorite": "Conectați-vă pentru a adăuga la favorite.",
     "addedToFavorites": "Adăugat la favorite",
-    "removedFromFavorites": "Eliminat din favorite"
+    "removedFromFavorites": "Eliminat din favorite",
+    "favoriteError": "Operațiunea de favorite a eșuat."
   },
   "productDetail": {
     "addToFavorites": "Adaugă la favorite",
@@ -279,16 +626,31 @@
     "maxOrder": "Comandă maximă",
     "publishedAt": "Data publicării",
     "views": "Vizualizat",
-    "reviews": "evaluare",
+    "reviews": {
+      "title": "Evaluări",
+      "reviewCount": "evaluare",
+      "noReviews": "Încă nu există o evaluare.",
+      "verified": "Cumpărător verificat"
+    },
     "similarProducts": "Produse similare",
     "sellerProducts": "Alte produse ale vânzătorului",
     "contactSeller": "Contactați vânzătorul",
-    "loginRequired": "Conectați-vă pentru a adăuga la favorite.",
+    "makeOffer": "Trimiteți o ofertă",
+    "loginRequired": "Vă rugăm să vă conectați pentru a efectua această acțiune.",
     "addedToFavorites": "Adăugat la favorite",
     "removedFromFavorites": "Eliminat din favorite",
     "linkCopied": "Linkul a fost copiat.",
     "messagingComingSoon": "Funcția de mesagerie va fi disponibilă în curând.",
-    "productNotFound": "Produs negăsit."
+    "productNotFound": "Produs negăsit.",
+    "contacting": "Se ia legătura...",
+    "contactError": "Comunicarea a eșuat. Vă rugăm să încercați din nou.",
+    "noImage": "Nicio imagine disponibilă.",
+    "defaultLocation": "Curcan",
+    "inquiryMessage": "Aș dori să obțin informații despre {title}.",
+    "breadcrumb": {
+      "home": "Acasă",
+      "products": "Produse"
+    }
   },
   "seller": {
     "title": "Informații despre vânzător",
@@ -300,6 +662,70 @@
     "call": "Căutare",
     "viewProfile": "Vizualizare profil"
   },
+  "sellers": {
+    "title": "Vânzători",
+    "description": "Descoperă vânzători de încredere.",
+    "search": "Găsește un vânzător...",
+    "sort": "Sorta",
+    "sortOptions": {
+      "newest": "Cele mai recente",
+      "mostSales": "Cel mai vândut",
+      "topRated": "Cel mai mare scor",
+      "mostProducts": "Majoritatea reclamelor"
+    },
+    "noResults": "Vânzător negăsit.",
+    "loading": "Vânzătorii se încarcă...",
+    "showing": "S-au găsit {count} vânzători",
+    "verified": "Verificat",
+    "sales": "vânzări",
+    "products": "reclamă",
+    "reviews": "evaluare",
+    "rating": "punct",
+    "viewProducts": "Vizualizați produsele",
+    "contactSeller": "Trimite mesaj",
+    "memberSince": "Membru din {anul}",
+    "fetchError": "A apărut o eroare la încărcarea furnizorilor",
+    "detail": {
+      "title": "Profilul vânzătorului",
+      "about": "Despre",
+      "businessInfo": "Informații despre afaceri",
+      "businessName": "Numele companiei",
+      "businessType": "Tur de afaceri",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "website": "Site web",
+      "description": "Explicaţie",
+      "policies": "Politici",
+      "returnPolicy": "POLITICA DE RETURNARE",
+      "shippingPolicy": "Politica de livrare",
+      "businessHours": "Ore de lucru",
+      "paymentMethods": "Metode de plată",
+      "allProducts": "Toate produsele",
+      "stats": {
+        "totalSales": "Vânzări totale",
+        "totalProducts": "Produse totale",
+        "totalReviews": "Evaluare",
+        "rating": "Punct"
+      },
+      "notFound": "Vânzător negăsit.",
+      "backToList": "Don către vânzători",
+      "contactInfo": "Comunicare",
+      "noProducts": "Acest vânzător nu are încă anunțuri.",
+      "noPolicies": "Vânzătorul nu și-a definit încă politicile.",
+      "fetchError": "A apărut o eroare la încărcarea informațiilor despre vânzător.",
+      "productsLoadError": "A apărut o eroare la încărcarea produselor vânzătorului.",
+      "reviewsTab": "Evaluări",
+      "reviews": {
+        "summary": "Rezumatul evaluării",
+        "reviewCount": "evaluare",
+        "communication": "Comunicare",
+        "shippingSpeed": "Viteză de livrare",
+        "productQuality": "Calitatea produsului",
+        "noReviews": "Încă nu există o evaluare.",
+        "verified": "Cumpărător verificat"
+      }
+    }
+  },
   "editListing": {
     "title": "Editați anunțul",
     "saveChanges": "Salvați modificările",
@@ -307,6 +733,10 @@
     "updateSuccess": "Reclama a fost actualizată cu succes.",
     "updateFailed": "A apărut o eroare la actualizarea listării.",
     "loadError": "A apărut o eroare la încărcarea anunțului.",
+    "sellerNotFound": "Profilul vânzătorului nu a fost găsit.",
+    "sellerLoadError": "Profilul vânzătorului nu a putut fi încărcat.",
+    "userNotFound": "Informațiile despre utilizator nu au putut fi găsite. Vă rugăm să vă conectați din nou.",
+    "locationNotFound": "Informațiile despre locație nu au putut fi găsite. Vă rugăm să actualizați pagina.",
     "basicInfo": "Informații de bază",
     "categoryAndCondition": "Categorie și statut",
     "pricing": "Prețuri",
@@ -314,6 +744,8 @@
     "images": "Imagini",
     "existingImages": "Imagini disponibile",
     "addImage": "Adăugați o imagine",
+    "maxImages": "Puteți încărca maximum 10 imagini.",
+    "imageHint": "Minim 1, maxim 10 imagini. În format PNG, JPG sau WEBP.",
     "uploadingImages": "Imaginile se încarcă...",
     "uploadingImage": "Imaginea se încarcă.",
     "imageUploadFailed": "Imaginea nu a putut fi încărcată.",
@@ -358,6 +790,7 @@
     "addImage": "Adăugați o imagine",
     "maxImages": "Puteți încărca maximum 10 imagini.",
     "imageHint": "Minim 1, maxim 10 imagini. În format PNG, JPG sau WEBP.",
+    "location": "Informații despre locație",
     "fields": {
       "title": "Titlul reclamei",
       "shortDescription": "Scurtă descriere",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Livrarea este disponibilă.",
       "shippingCost": "Taxă de livrare",
       "weight": "Greutate",
-      "weightUnit": "Unitate de greutate"
+      "weightUnit": "Unitate de greutate",
+      "city": "Oraş",
+      "address": "Adresa",
+      "postalCode": "Cod poștal"
     },
     "placeholders": {
       "title": "Exemplu: Vacă Holstein de 2 ani",
       "shortDescription": "Descrierea produsului (maxim 200 de caractere)",
       "description": "Furnizați informații detaliate despre produs...",
-      "category": "Selectați o categorie."
+      "category": "Selectați o categorie.",
+      "city": "Intrați în oraș",
+      "address": "Introduceți adresa completă.",
+      "postalCode": "Cod poștal"
+    },
+    "errors": {
+      "titleRequired": "Titlul anunțului este obligatoriu.",
+      "shortDescriptionRequired": "Este necesară o scurtă descriere.",
+      "descriptionRequired": "Este necesară o explicație detaliată.",
+      "categoryRequired": "Selectarea categoriei este obligatorie.",
+      "priceRequired": "Prețul este obligatoriu.",
+      "cityRequired": "Sunt necesare informații despre oraș.",
+      "addressRequired": "Informațiile despre adresă sunt obligatorii.",
+      "locationError": "A apărut o eroare la crearea locației."
     },
     "success": "Reclama a fost creată cu succes.",
     "error": "A apărut o eroare la crearea reclamei.",
@@ -388,24 +837,53 @@
     "draftSaved": "Schiță salvată",
     "productCreated": "Produsul a fost creat cu succes.",
     "creationFailed": "Produsul nu a putut fi creat. Vă rugăm să încercați din nou.",
-    "errors": {
-      "titleRequired": "Titlul anunțului este obligatoriu.",
-      "shortDescriptionRequired": "Este necesară o scurtă descriere.",
-      "descriptionRequired": "Este necesară o explicație detaliată.",
-      "categoryRequired": "Selectarea categoriei este obligatorie.",
-      "priceRequired": "Introduceți un preț valid."
-    }
+    "userNotFound": "Informațiile despre utilizator nu au putut fi găsite. Vă rugăm să vă conectați din nou.",
+    "defaultBusinessName": "Afacerea mea"
+  },
+  "becomeSeller": {
+    "title": "Devino vânzător",
+    "description": "Declarația companiei",
+    "alreadySeller": "Ai deja un profil de vânzător.",
+    "goToListings": "Accesați anunțurile mele",
+    "businessInfo": "Informații despre afaceri",
+    "contactInfo": "Informații de contact",
+    "businessName": "Numele companiei",
+    "businessNamePlaceholder": "Exemplu: Ferma Yilmaz",
+    "businessType": "Tur de afaceri",
+    "businessTypePlaceholder": "Selectați tipul afacerii dvs.",
+    "businessTypes": {
+      "individual": "Individual",
+      "company": "Companie",
+      "cooperative": "De cooperare",
+      "farm": "Fermă"
+    },
+    "taxNumber": "Cod fiscal",
+    "taxNumberPlaceholder": "Introduceți codul dumneavoastră de identificare fiscală (opțional)",
+    "descriptionPlaceholder": "Scrie o scurtă descriere a afacerii tale...",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Site web",
+    "websitePlaceholder": "https://www.examplesite.com (opțional)",
+    "submit": "Creați un profil de vânzător",
+    "submitting": "Se creează un profil...",
+    "success": "Profilul tău de vânzător a fost creat cu succes!",
+    "error": "A apărut o eroare la crearea profilului de vânzător.",
+    "taxNumberHelp": "Introduceți codul fiscal din 10 sau 11 cifre (opțional)",
+    "phoneHelp": "Exemplu: +90 555 123 45 67 sau 0555 123 45 67",
+    "websiteHelp": "Exemplu: www.isletmem.com sau https://isletmem.com",
+    "alreadySellerDescription": "Puteți folosi butonul de mai jos pentru a vă gestiona anunțurile.",
+    "newListing": "Adăugați o listă nouă"
   },
   "fileUpload": {
     "dragDrop": "Încarcă o fotografie sau un videoclip.",
     "dragDropHint": "Trageți și plasați sau faceți clic pentru a selecta.",
     "dropHere": "Lasă...",
     "imageLimit": "Fotografie: maxim 10 MB",
-    "videoLimit": "Video: maxim 50 MB",
+    "videoLimit": "Video: maxim 100 MB",
     "uploadCount": "{current} / {max} încărcat",
     "maxFilesError": "Puteți încărca maximum {max} fișiere media.",
     "imageTooLarge": "Fotografia trebuie să aibă o dimensiune mai mică de 10 MB.",
-    "videoTooLarge": "Videoclipul trebuie să aibă o dimensiune mai mică de 50 MB.",
+    "videoTooLarge": "Videoclipul trebuie să aibă o dimensiune mai mică de 100 MB.",
     "optimizing": "Optimizare...",
     "uploading": "Încărcare...",
     "queued": "Așteptând la coadă...",
@@ -418,10 +896,834 @@
     "coverBadge": "CAPAC",
     "videoBadge": "VIDEO",
     "coverUpdated": "Fotografia de copertă a fost ajustată cu succes.",
-    "optimizationInfo": "Fotografiile au fost optimizate pentru a respecta standardele web",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "optimizationInfo": "Fotografiile sunt optimizate pentru a respecta standardele web",
+    "selectImage": "Selecție vizuală",
+    "changeImage": "Schimba",
+    "removeImage": "Elimina",
+    "videoProcessing": "Videoclipul este în curs de procesare...",
+    "videoProcessingFailed": "Operațiunea a eșuat.",
+    "videoProcessingPollError": "Starea procesării videoclipului nu a putut fi obținută. Vă rugăm să actualizați pagina.",
+    "reorderError": "Fișierul nu a putut fi sortat.",
+    "coverUpdateError": "Fotografia de copertă nu a putut fi actualizată."
+  },
+  "error": {
+    "title": "A apărut o eroare.",
+    "description": "A apărut o eroare neașteptată. Vă rugăm să reîmprospătați pagina sau să încercați din nou mai târziu.",
+    "retry": "Încearcă din nou",
+    "goBack": "Nu te întoarce",
+    "goHome": "Acasă",
+    "notFound": {
+      "title": "Pagina nu a fost găsită",
+      "description": "Pagina pe care o căutați fie nu este disponibilă, fie s-a mutat.",
+      "goHome": "Reveniți la pagina principală"
+    }
+  },
+  "search": {
+    "title": "Căutare",
+    "placeholder": "Căutați produse, categorii sau vânzători...",
+    "searchButton": "Căutare",
+    "searchingFor": "Căutat",
+    "loading": "Căutat...",
+    "resultsCount": "Au fost găsite {count} rezultate.",
+    "noResults": "Nu s-au găsit rezultate.",
+    "tryDifferentSearch": "Încercați cuvinte cheie diferite sau schimbați filtrele.",
+    "filters": {
+      "title": "Filtre",
+      "category": "Categorie",
+      "allCategories": "Toate categoriile",
+      "condition": "Situaţie",
+      "allConditions": "Toate cazurile",
+      "priceRange": "Interval de prețuri",
+      "price": "Preţ",
+      "min": "Min.",
+      "max": "Maxim",
+      "apply": "Aplică",
+      "clear": "Curat",
+      "clearAll": "Ștergeți tot"
+    },
+    "fetchError": "A apărut o eroare la încărcarea rezultatelor căutării",
+    "recentSearches": "Căutări recente",
+    "clearHistory": "Ștergeți istoricul",
+    "noSearchHistory": "Nu aveți încă un istoric al căutărilor.",
+    "deleteHistoryError": "A apărut o eroare la ștergerea istoricului căutărilor."
+  },
+  "categories": {
+    "title": "Managementul Categoriilor",
+    "description": "Gestionați categoriile de aici.",
+    "noCategories": "Nu au fost adăugate încă categorii.",
+    "createFirst": "Creați prima categorie.",
+    "fetchError": "A apărut o eroare la încărcarea categoriilor.",
+    "createSuccess": "Categorie creată cu succes",
+    "createError": "A apărut o eroare la crearea categoriei.",
+    "updateSuccess": "Categoria a fost actualizată cu succes",
+    "updateError": "A apărut o eroare la actualizarea categoriei.",
+    "deleteSuccess": "Categoria a fost ștearsă cu succes.",
+    "deleteError": "A apărut o eroare la ștergerea categoriei.",
+    "activateSuccess": "Categoria a fost activată.",
+    "deactivateSuccess": "Categoria a fost dezactivată.",
+    "statusError": "A apărut o eroare la schimbarea stării.",
+    "loadError": "A apărut o eroare la încărcarea categoriei",
+    "filters": {
+      "all": "Toți",
+      "active": "Activ",
+      "inactive": "Inactiv"
+    },
+    "table": {
+      "name": "Numele categoriei",
+      "slug": "Melc",
+      "sortOrder": "Număr de serie",
+      "subCategories": "Subcategorie",
+      "status": "Situaţie",
+      "actions": "Tranzacții"
+    },
+    "actions": {
+      "edit": "Edita",
+      "delete": "Şterge",
+      "activate": "Activa",
+      "deactivate": "Structură pasivă"
+    },
+    "deleteDialog": {
+      "title": "Ștergeți categoria",
+      "description": "Sigur doriți să ștergeți această categorie? Această acțiune este ireversibilă.",
+      "cancel": "Anula",
+      "confirm": "Şterge"
+    },
+    "addNew": "Adăugați o categorie nouă",
+    "loadMore": "Descarcă mai mult",
+    "loadingMore": "Încărcare...",
+    "form": {
+      "newTitle": "Creați o categorie nouă",
+      "editTitle": "Editați categoria",
+      "name": "Numele categoriei",
+      "namePlaceholder": "Exemplu: Bovine",
+      "slug": "Melc",
+      "slugPlaceholder": "Exemplu: animale mari",
+      "description": "Explicaţie",
+      "descriptionPlaceholder": "O scurtă descriere a categoriei...",
+      "parentCategory": "Categorie superioară",
+      "parentCategoryPlaceholder": "Selectați o categorie superioară (opțional)",
+      "noParent": "Fără categorie superioară (Categoria principală)",
+      "sortOrder": "Număr de secvență",
+      "isActive": "Activ",
+      "iconUrl": "URL-ul pictogramei",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Salva",
+      "submitting": "Economisire...",
+      "updating": "Se actualizează...",
+      "errors": {
+        "nameRequired": "Numele categoriei este obligatoriu.",
+        "slugRequired": "Limacșii sunt obligatorii."
+      }
+    }
+  },
+  "offers": {
+    "title": "Propuneri",
+    "description": "Gestionează-ți ofertele primite și trimise.",
+    "received": "Oferte primite",
+    "sent": "Oferte trimise",
+    "noReceivedOffers": "Încă nu s-au primit oferte.",
+    "noSentOffers": "Nu ați trimis încă o ofertă.",
+    "browseProducts": "Răsfoiți produsele",
+    "viewProduct": "Vizualizați produsul",
+    "accept": "Accepta",
+    "reject": "Respinge",
+    "withdraw": "Retrage",
+    "makeOffer": "Trimiteți o ofertă",
+    "sendOffer": "Trimiteți ofertă",
+    "sending": "Se trimite...",
+    "cancel": "Anula",
+    "listingPrice": "Prețul anunțat",
+    "yourOffer": "Oferta dumneavoastră",
+    "quantity": "Cantitate",
+    "messageOptional": "Mesaj (opțional)",
+    "messagePlaceholder": "O notă pe care ați dori să o împărtășiți cu vânzătorul...",
+    "expiresAt": "Ultima dată valabilă",
+    "offerSent": "Oferta dumneavoastră a fost trimisă cu succes.",
+    "offerError": "A apărut o eroare la trimiterea ofertei.",
+    "acceptSuccess": "Oferta a fost acceptată.",
+    "rejectSuccess": "Oferta a fost respinsă.",
+    "withdrawSuccess": "Oferta a fost retrasă.",
+    "actionError": "A apărut o eroare în timpul procesului.",
+    "fetchError": "A apărut o eroare la încărcarea ofertelor.",
+    "loginRequired": "Conectați-vă pentru a trimite o ofertă.",
+    "invalidPrice": "Introduceți un preț valid.",
+    "invalidQuantity": "Introduceți o sumă validă.",
+    "status": {
+      "pending": "În așteptare",
+      "accepted": "Acceptat",
+      "rejected": "Respins",
+      "countered": "Contraofertă",
+      "expired": "Mandatul său s-a încheiat.",
+      "withdrawn": "S-a retras"
+    }
+  },
+  "deals": {
+    "title": "Acorduri",
+    "description": "Respectați acordurile dumneavoastră de cumpărare.",
+    "buying": "Savanți",
+    "selling": "Vânzări",
+    "noBuyingDeals": "Nu aveți încă un proces de înregistrare a studenților.",
+    "noSellingDeals": "Nu aveți încă nicio tranzacție de vânzare.",
+    "browseProducts": "Răsfoiți produsele",
+    "viewProduct": "Vizualizați produsul",
+    "activeDeals": "Acorduri active",
+    "completedDeals": "Finalizat",
+    "purchases": "Savanți",
+    "sales": "Vânzări",
+    "fetchError": "A apărut o eroare la încărcarea acordurilor",
+    "dealStatus": {
+      "pending": "În așteptare",
+      "confirmed": "Confirmat",
+      "processing": "Pregătirea",
+      "shipped": "În marfă",
+      "delivered": "Livrat",
+      "completed": "Finalizat",
+      "cancelled": "Anulat",
+      "disputed": "Acord"
+    },
+    "delivery": {
+      "pickup": "Livrare personală",
+      "shipping": "Prin marfă",
+      "transport": "Prin transport"
+    },
+    "requestTransport": "Cerere de livrare"
+  },
+  "farms": {
+    "title": "Fermele mele",
+    "description": "Gestionează și actualizează-ți fermele.",
+    "addFarm": "Adăugați o fermă",
+    "editFarm": "Managementul fermei",
+    "noFarms": "Nu ai adăugat încă o fermă.",
+    "farmName": "Numele fermei",
+    "registrationNumber": "Număr de înregistrare",
+    "location": "Locaţie",
+    "selectLocation": "Selectați o locație.",
+    "addLocationFirst": "Mai întâi, adăugați o locație.",
+    "farmTypeLabel": "Turul fermei",
+    "farmDescription": "Explicaţie",
+    "totalArea": "Suprafață totală",
+    "cultivatedArea": "Suprafață cultivată",
+    "certifications": "Certificate",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP etc.",
+    "organic": "Organic",
+    "verified": "Verificat",
+    "save": "Salva",
+    "saving": "Economisire...",
+    "cancel": "Anula",
+    "edit": "Edita",
+    "delete": "Şterge",
+    "sellerRequired": "Profilul vânzătorului este obligatoriu",
+    "sellerRequiredDesc": "Pentru a adăuga o fermă, trebuie mai întâi să vă creați profilul de vânzător.",
+    "becomeSeller": "Devino vânzător",
+    "createSuccess": "Ferma a fost adăugată cu succes.",
+    "updateSuccess": "Ferma a fost actualizată cu succes.",
+    "deleteSuccess": "Ferma a fost ștearsă cu succes.",
+    "saveError": "A apărut o eroare la înregistrarea fermei.",
+    "deleteError": "A apărut o eroare la ștergerea fermei.",
+    "fetchError": "A apărut o eroare la încărcarea informațiilor despre fermă.",
+    "farmType": {
+      "livestock": "creșterea animalelor",
+      "crop": "Agricultură",
+      "mixed": "Amestecat",
+      "poultry": "Înaripat",
+      "dairy": "Creșterea produselor lactate",
+      "aquaculture": "Produse acvatice"
+    }
+  },
+  "transporters": {
+    "title": "transportatori",
+    "description": "Servicii de transport animale și produse",
+    "searchPlaceholder": "Găsește un transportator...",
+    "noTransporters": "Nu există încă transportatori înregistrați.",
+    "verified": "Verificat",
+    "transports": "transport",
+    "viewProfile": "Vizualizare profil",
+    "sort": {
+      "newest": "Cele mai recente",
+      "rating": "Cel mai mare scor",
+      "mostTransports": "Cele mai frecvente livrări"
+    },
+    "pagination": {
+      "previous": "Fost",
+      "next": "Următorul",
+      "page": "Pagina {page}"
+    }
+  },
+  "transport": {
+    "title": "Cererile mele de livrare",
+    "description": "Urmăriți solicitările dvs. de livrare.",
+    "findTransporter": "Găsește un transportator",
+    "active": "Activ",
+    "completed": "Finalizat",
+    "total": "Total",
+    "asSeller": "Ca vânzător",
+    "asBuyer": "În calitate de cumpărător",
+    "noSellerRequests": "Ca vânzător, nu aveți obligația de livrare.",
+    "noBuyerRequests": "În calitate de destinatar, nu aveți o solicitare de livrare.",
+    "viewProduct": "Vizualizați produsul",
+    "pickup": "Primi",
+    "delivery": "Livrare",
+    "urgent": "Urgent",
+    "fetchError": "A apărut o eroare la încărcarea cererilor de livrare.",
+    "trackShipment": "Urmărește",
+    "transportStatus": {
+      "pending": "În așteptare",
+      "inPool": "În piscină",
+      "assigned": "Numit",
+      "pickedUp": "Chitanță",
+      "inTransit": "Pe drum",
+      "delivered": "Livrat",
+      "completed": "Finalizat",
+      "cancelled": "Anulat"
+    },
+    "transportType": {
+      "standard": "Standard",
+      "refrigerated": "Lanțul de frig",
+      "liveAnimal": "Animale vii",
+      "hazardous": "Materiale periculoase",
+      "oversized": "Dimensiune mare"
+    }
+  },
+  "moderation": {
+    "title": "Moderare produs",
+    "description": "Revizuirea produselor aflate în așteptarea aprobării.",
+    "pending": "aşteptare",
+    "allClear": "Toate produsele au fost inspectate.",
+    "noPending": "Nu există produse care așteaptă aprobarea.",
+    "awaitingReview": "În așteptarea recenziei",
+    "by": "Persoană de vânzări:",
+    "stock": "Stoc",
+    "preview": "Cu tine",
+    "approve": "Confirma",
+    "reject": "Respinge",
+    "confirmReject": "Respinge",
+    "cancelReject": "Renunța",
+    "rejectReasonPlaceholder": "Scrieți motivul respingerii...",
+    "rejectReasonRequired": "Motivul refuzului este obligatoriu.",
+    "approveSuccess": "Produsul a fost aprobat cu succes.",
+    "rejectSuccess": "Produsul a fost respins.",
+    "actionError": "A apărut o eroare în timpul procesului.",
+    "fetchError": "A apărut o eroare la încărcarea produselor.",
+    "unauthorized": "Nu aveți permisiunea de a accesa această pagină."
+  },
+  "sellerModeration": {
+    "title": "Moderarea vânzătorului",
+    "description": "Revizuirea și gestionarea conturilor vânzătorilor.",
+    "pending": "aşteptare",
+    "allClear": "Toți vânzătorii au fost investigați.",
+    "noPending": "Niciun vânzător care așteaptă.",
+    "verify": "Verifica",
+    "suspend": "Suspenda",
+    "verifySuccess": "Vânzătorul a fost verificat cu succes.",
+    "suspendSuccess": "Vânzător suspendat.",
+    "actionError": "A apărut o eroare în timpul procesului.",
+    "suspendReasonRequired": "Motivul suspendării este obligatoriu.",
+    "suspendReasonPlaceholder": "Scrieți motivul suspendării...",
+    "confirmSuspend": "Suspenda",
+    "cancelSuspend": "Renunța",
+    "statusLabels": {
+      "pendingVerification": "În așteptarea verificării",
+      "active": "Activ",
+      "suspended": "Agăţat",
+      "banned": "Interzis"
+    },
+    "filterAll": "Afișează tot",
+    "filterPending": "Cei care așteaptă",
+    "filterActive": "Active",
+    "filterSuspended": "Suspendat",
+    "unauthorized": "Nu aveți permisiunea de a accesa această pagină.",
+    "businessName": "Numele companiei",
+    "businessType": "Tur de afaceri",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "status": "Situaţie",
+    "createdAt": "Data înregistrării"
+  },
+  "transporterModeration": {
+    "title": "Moderare operator",
+    "description": "Revizuiți și gestionați conturile operatorilor.",
+    "pending": "aşteptare",
+    "allClear": "Toți transportatorii au fost investigați.",
+    "noPending": "Niciun transportator nu așteaptă.",
+    "verify": "Verifica",
+    "suspend": "Suspenda",
+    "verifySuccess": "Transportatorul a fost verificat cu succes.",
+    "suspendSuccess": "Transportorul a fost suspendat.",
+    "actionError": "A apărut o eroare în timpul procesului.",
+    "suspendReasonRequired": "Motivul suspendării este obligatoriu.",
+    "suspendReasonPlaceholder": "Scrieți motivul suspendării...",
+    "confirmSuspend": "Suspenda",
+    "cancelSuspend": "Renunța",
+    "statusLabels": {
+      "pendingVerification": "În așteptarea verificării",
+      "active": "Activ",
+      "suspended": "Agăţat",
+      "banned": "Interzis"
+    },
+    "filterAll": "Afișează tot",
+    "filterPending": "Cei care așteaptă",
+    "filterActive": "Active",
+    "filterSuspended": "Suspendat",
+    "unauthorized": "Nu aveți permisiunea de a accesa această pagină.",
+    "companyName": "Numele companiei",
+    "contactPerson": "Persoană autorizată",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "city": "Oraş",
+    "status": "Situaţie",
+    "createdAt": "Data înregistrării"
+  },
+  "transporterDetail": {
+    "notFound": "Nu a putut fi găsit niciun transportor.",
+    "backToList": "Don către transportatori",
+    "verified": "Verificat",
+    "totalTransports": "transport total",
+    "completed": "finalizat",
+    "about": "Despre",
+    "contact": "Informații de contact",
+    "businessInfo": "Informații despre afaceri",
+    "license": "Număr de licență",
+    "insurance": "Informații despre asigurări",
+    "fleet": "Informații despre flotă",
+    "serviceRegions": "Zone de servicii",
+    "specializations": "Domenii de expertiză",
+    "certifications": "Certificate"
+  },
+  "brands": {
+    "title": "Managementul mărcii",
+    "description": "Gestionați mărcile de produse.",
+    "addBrand": "Adăugați o marcă",
+    "editBrand": "Editează marca",
+    "noBrands": "Nu au fost adăugate încă mărci.",
+    "brandName": "Nume de marcă",
+    "brandDescription": "Explicaţie",
+    "website": "Site web",
+    "logoUrl": "URL-ul siglei",
+    "save": "Salva",
+    "saving": "Economisire...",
+    "cancel": "Anula",
+    "edit": "Edita",
+    "delete": "Şterge",
+    "inactive": "Pasiv",
+    "products": "produs",
+    "createSuccess": "Marca a fost adăugată cu succes",
+    "updateSuccess": "Marca a fost actualizată cu succes.",
+    "deleteSuccess": "Marca a fost ștearsă cu succes.",
+    "saveError": "A apărut o eroare la înregistrarea mărcii comerciale.",
+    "deleteError": "A apărut o eroare la ștergerea mărcii comerciale.",
+    "fetchError": "A apărut o eroare la încărcarea mărcilor",
+    "unauthorized": "Nu aveți permisiunea de a accesa această pagină."
+  },
+  "transporterReviews": {
+    "title": "Evaluări",
+    "reviewCount": "evaluare",
+    "noReviews": "Încă nu există o evaluare.",
+    "timeliness": "Livrare la timp",
+    "communication": "Comunicare",
+    "carefulHandling": "Manipulare atentă",
+    "professionalism": "Profesionalism"
+  },
+  "transportOffers": {
+    "title": "Oferte de transport",
+    "description": "Gestionați ofertele pe care le trimiteți pentru solicitările de livrare.",
+    "newOffer": "Propunere nouă",
+    "transportRequestId": "ID-ul cererii de livrare",
+    "requestIdPlaceholder": "Introduceți ID-ul solicitării de livrare.",
+    "offeredPrice": "Preț de ofertă",
+    "estimatedDays": "Durată estimată (zile)",
+    "days": "zi",
+    "vehicleType": "Tipul vehiculului",
+    "insuranceIncluded": "Asigurare inclusă",
+    "message": "Mesaj",
+    "cancel": "Anula",
+    "sending": "Se trimite...",
+    "sendOffer": "Trimiteți ofertă",
+    "cancelOffer": "Anula",
+    "pendingTab": "Aşteptare",
+    "historyTab": "Trecut",
+    "noPendingOffers": "Nu aveți oferte în așteptare.",
+    "noHistory": "Nu s-au găsit oferte anterioare.",
+    "status": {
+      "pending": "Aşteptare",
+      "accepted": "Acceptat",
+      "rejected": "Respins",
+      "expired": "Mandatul său s-a încheiat.",
+      "cancelled": "Anulat"
+    },
+    "createSuccess": "Oferta a fost trimisă cu succes.",
+    "createError": "A apărut o eroare la trimiterea ofertei.",
+    "cancelSuccess": "Oferta a fost anulată.",
+    "cancelError": "A apărut o eroare la anularea ofertei.",
+    "fetchError": "A apărut o eroare la încărcarea ofertelor."
+  },
+  "animalInfo": {
+    "title": "Informații despre animale și produse",
+    "animalTab": "Animal",
+    "healthTab": "Sănătate",
+    "vaccinationsTab": "Vaccinatori",
+    "veterinaryTab": "Veterinar",
+    "breed": "Rasă",
+    "genderLabel": "Gen",
+    "gender": {
+      "male": "Bărbat",
+      "female": "Femeie",
+      "unknown": "Necunoscut"
+    },
+    "age": "Vârstă",
+    "months": "lună",
+    "weight": "Greutate",
+    "color": "Culoare",
+    "tagNumber": "Numărul urechii",
+    "healthStatus": "Starea de sănătate",
+    "health": {
+      "healthy": "Sănătos",
+      "underTreatment": "Sub tratament",
+      "recovering": "El/Ea se recuperează.",
+      "quarantined": "În carantină",
+      "unknown": "Necunoscut"
+    },
+    "purposeLabel": "Utilizare preconizată",
+    "purpose": {
+      "breeding": "Armăsar",
+      "dairy": "Lapte",
+      "meat": "Carne",
+      "egg": "Ou",
+      "wool": "Lână",
+      "working": "Lucru",
+      "pet": "Intern",
+      "other": "Alte"
+    },
+    "pregnancy": "Sarcină",
+    "pregnant": "Gravidă",
+    "microchip": "Nr. microcip",
+    "passport": "Nr. pașaport",
+    "sireDetails": "Informații despre tată",
+    "damDetails": "Informații principale",
+    "diagnosis": "Diagnostic",
+    "treatment": "Tratament",
+    "medications": "Medicamente",
+    "veterinarian": "Veterinar",
+    "nextDue": "Următoarea istorie rebelă",
+    "prescriptionRequired": "Se eliberează doar cu rețetă",
+    "targetSpecies": "Tururi țintă",
+    "activeIngredients": "Ingrediente active",
+    "registrationNo": "Număr de înregistrare",
+    "storage": "Depozitare",
+    "chemicalTab": "Chimic",
+    "feedTab": "Momeală",
+    "seedTab": "Sămânță",
+    "machineryTab": "Maşină",
+    "organic": "Organic",
+    "toxicity": "Toxicitate",
+    "gmoFree": "Fără OMG-uri",
+    "protein": "Proteină",
+    "fat": "Ulei",
+    "fiber": "Fibră",
+    "hybrid": "Hibrid",
+    "germination": "Germinaţie",
+    "daysToMaturity": "Maturare",
+    "daysLabel": "zi",
+    "warranty": "Garantat",
+    "power": "Rezistenţă",
+    "hoursUsed": "Ore de utilizare",
+    "hours": "oră",
+    "powerSource": "Alimentare electrică"
+  },
+  "productVariants": {
+    "title": "Variante de produs",
+    "variantCount": "variantă",
+    "inStock": "În stoc",
+    "outOfStock": "Epuizat"
+  },
+  "productPrices": {
+    "title": "Prețuri (mai multe valute)",
+    "autoConversion": "Transformare automată",
+    "validUntil": "Valabilitate"
+  },
+  "requestTransport": {
+    "title": "Creați o cerere de livrare",
+    "pickupLocation": "Punct de încărcare",
+    "deliveryLocation": "Punct de livrare",
+    "city": "Oraş",
+    "address": "Adresa",
+    "transportType": "Tur de transport",
+    "types": {
+      "standard": "Standard",
+      "refrigerated": "Lanțul de frig",
+      "liveAnimal": "Animale vii",
+      "hazardous": "Materiale periculoase",
+      "oversized": "Dimensiune mare"
+    },
+    "weight": "Greutate (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Data preferată de încărcare",
+    "preferredDeliveryDate": "Data de livrare preferată",
+    "urgent": "Transport Urgent",
+    "specialInstructions": "Instrucțiuni speciale",
+    "instructionsPlaceholder": "Scrieți instrucțiunile specifice aici...",
+    "cancel": "Renunța",
+    "submit": "Creați o cerere",
+    "submitting": "În procesul de creație...",
+    "success": "Cererea de livrare a fost creată cu succes.",
+    "error": "A apărut o eroare la crearea cererii de livrare."
+  },
+  "transportTracking": {
+    "title": "Urmărirea expedierilor",
+    "noTracking": "Nu sunt disponibile încă informații de urmărire.",
+    "update": "Actualizare"
+  },
+  "locations": {
+    "title": "Adresele mele",
+    "description": "Gestionați adresele înregistrate.",
+    "addLocation": "Adăugați o adresă",
+    "editLocation": "Editați adresa",
+    "noLocations": "Nu aveți încă o adresă înregistrată.",
+    "name": "Adresă Nume",
+    "namePlaceholder": "De exemplu: Casă, Loc de muncă, Fermă",
+    "address": "Adresa",
+    "addressLine2": "Adresă linia 2",
+    "city": "Oraş",
+    "state": "District / Regiune",
+    "postalCode": "Cod poștal",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "cancel": "Renunța",
+    "save": "Salva",
+    "saving": "Economisire...",
+    "typePickup": "Încărcare",
+    "typeDelivery": "Livrare",
+    "typeBoth": "General",
+    "createSuccess": "Adresa a fost adăugată cu succes.",
+    "createError": "A apărut o eroare la adăugarea adresei.",
+    "updateSuccess": "Adresa a fost actualizată cu succes.",
+    "updateError": "A apărut o eroare la actualizarea adresei.",
+    "deleteLocation": "Ștergeți adresa",
+    "deleteSuccess": "Adresă ștearsă",
+    "deleteError": "A apărut o eroare la ștergerea adresei.",
+    "fetchError": "A apărut o eroare la încărcarea adreselor."
+  },
+  "systemSettings": {
+    "title": "Setări de sistem",
+    "description": "Vizualizați moneda platformei, limba, metodele de plată, livrarea și setările fiscale.",
+    "unauthorized": "Nu aveți permisiunea de a accesa această pagină.",
+    "currenciesTab": "Monede",
+    "languagesTab": "Limbi",
+    "paymentTab": "Metode de plată",
+    "shippingTab": "Marfă",
+    "taxTab": "Taxa",
+    "active": "Activ",
+    "inactive": "Pasiv",
+    "default": "Implicit",
+    "noCurrencies": "Moneda nu a fost încă definită.",
+    "noLanguages": "Limbajul nu a fost încă definit.",
+    "noPaymentMethods": "Metoda de plată nu a fost încă definită.",
+    "noCarriers": "Compania de transport maritim nu a fost încă identificată.",
+    "noZones": "Zona de marfă nu a fost încă definită.",
+    "noTaxRates": "Cota de impozitare nu a fost încă definită.",
+    "carriers": "Companii de transport maritim",
+    "zones": "Zone de marfă",
+    "countries": "Țări",
+    "rates": "Taxe de livrare",
+    "noRates": "Costurile de livrare nu au fost încă definite.",
+    "freeShipping": "Livrare gratuită",
+    "deliveryDays": "ora de livrare a zilei"
+  },
+  "pushPermission": {
+    "title": "Activează notificările",
+    "description": "Primește notificări despre mesaje noi, oferte și actualizări ale comenzilor.",
+    "allow": "Permite",
+    "dismiss": "Aproape"
+  },
+  "healthRecords": {
+    "title": "Dosare medicale",
+    "description": "Gestionați dosarele medicale și evidența sănătății animalelor.",
+    "addRecord": "Adăugați înregistrare",
+    "editRecord": "Editare înregistrare",
+    "deleteRecord": "Ștergeți înregistrarea",
+    "noRecords": "Fișa medicală nu a fost încă adăugată.",
+    "animalInfoId": "Identificarea animalelor",
+    "animalInfoIdPlaceholder": "Introduceți ID-ul informațiilor despre animal.",
+    "recordType": "Tur de înregistrare",
+    "recordTypePlaceholder": "Exemple: examinare, tratament, intervenție chirurgicală",
+    "recordDate": "Data înregistrării",
+    "followUpDate": "Data verificării",
+    "veterinarianName": "Veterinar",
+    "veterinarianLicense": "Nr. licență",
+    "clinicName": "Clinic",
+    "diagnosis": "Diagnostic",
+    "treatment": "Tratament",
+    "medications": "Medicamente",
+    "medicationsPlaceholder": "Exemplu: Penicilină 500 mg, Ibuprofen",
+    "notes": "Note",
+    "documentUrl": "URL-ul documentului",
+    "saving": "Economisire...",
+    "createSuccess": "Fișa medicală a fost adăugată cu succes.",
+    "updateSuccess": "Fișa medicală a fost actualizată cu succes.",
+    "deleteSuccess": "Fișa medicală a fost ștearsă cu succes.",
+    "saveError": "A apărut o eroare la salvarea înregistrării.",
+    "deleteError": "A apărut o eroare la ștergerea înregistrării.",
+    "fetchError": "A apărut o eroare la încărcarea înregistrărilor"
+  },
+  "vaccinations": {
+    "title": "Înregistrări vaccinale",
+    "description": "Gestionați înregistrările și calendarele de vaccinare a animalelor.",
+    "addVaccination": "Adaugă Rebel",
+    "editVaccination": "Aranjamentul Rebelilor",
+    "deleteVaccination": "Rebel Sil",
+    "noVaccinations": "Fișa de vaccinare nu a fost încă adăugată.",
+    "animalInfoId": "Identificarea animalelor",
+    "animalInfoIdPlaceholder": "Introduceți ID-ul informațiilor despre animal.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Exemplu: Vaccin SAT, Brucella",
+    "vaccineType": "Turneul Rebelilor",
+    "vaccineTypePlaceholder": "Exemplu: Live, Inactiv",
+    "batchNumber": "Număr de partid",
+    "vaccinationDate": "Istoria Rebelului",
+    "nextDueDate": "Următoarea istorie rebelă",
+    "veterinarianName": "Veterinar",
+    "veterinarianLicense": "Nr. licență",
+    "notes": "Note",
+    "certificateUrl": "URL-ul certificatului",
+    "saving": "Economisire...",
+    "createSuccess": "Fișa vaccinală a fost adăugată cu succes.",
+    "updateSuccess": "Fișa vaccinală a fost actualizată cu succes.",
+    "deleteSuccess": "Înregistrarea vaccinului a fost ștearsă cu succes.",
+    "saveError": "A apărut o eroare la înregistrarea vaccinului.",
+    "deleteError": "A apărut o eroare la ștergerea vaccinului.",
+    "fetchError": "A apărut o eroare la încărcarea vaccinurilor."
+  },
+  "shippingCarriers": {
+    "title": "Companii de transport maritim",
+    "description": "Gestionați informațiile companiei de transport maritim.",
+    "addCarrier": "Adăugați o companie",
+    "editCarrier": "Editați compania",
+    "noCarriers": "Nicio companie de transport nu a fost adăugată încă.",
+    "carrierName": "Numele companiei",
+    "carrierNamePlaceholder": "Exemplu: Aras Kargo, MNG",
+    "code": "Cod",
+    "codePlaceholder": "Exemplu: ARAS",
+    "website": "Site web",
+    "trackingUrlTemplate": "Urmăriți șablonul URL",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Țări acceptate",
+    "supportedCountriesPlaceholder": "Exemplu: TR, US, DE",
+    "active": "Activ",
+    "inactive": "Pasiv",
+    "saving": "Economisire...",
+    "edit": "Edita",
+    "delete": "Şterge",
+    "createSuccess": "Compania de transport maritim a fost adăugată cu succes.",
+    "updateSuccess": "Compania de transport maritim a fost actualizată cu succes.",
+    "deleteSuccess": "Compania de transport maritim a fost ștearsă cu succes.",
+    "saveError": "A apărut o eroare la înregistrarea companiei de transport.",
+    "deleteError": "A apărut o eroare la ștergerea informațiilor despre compania de transport.",
+    "fetchError": "A apărut o eroare la încărcarea companiilor de transport marfă."
+  },
+  "shippingZones": {
+    "title": "Zone de marfă",
+    "description": "Gestionați zonele și zonele de marfă.",
+    "addZone": "Adăugați regiune",
+    "editZone": "Editați regiunea",
+    "noZones": "Nu a fost adăugată încă nicio zonă de marfă.",
+    "zoneName": "Numele regiunii",
+    "zoneNamePlaceholder": "Exemplu: Europa, America de Nord",
+    "countryCodes": "Coduri de țară",
+    "countryCodesPlaceholder": "Exemplu: TR, DE, FR",
+    "active": "Activ",
+    "inactive": "Pasiv",
+    "saving": "Economisire...",
+    "edit": "Edita",
+    "delete": "Şterge",
+    "createSuccess": "Regiunea a fost adăugată cu succes.",
+    "updateSuccess": "Regiunea a fost actualizată cu succes.",
+    "deleteSuccess": "Zona a fost curățată cu succes.",
+    "saveError": "A apărut o eroare la salvarea regiunii.",
+    "deleteError": "A apărut o eroare la ștergerea regiunii.",
+    "fetchError": "A apărut o eroare la încărcarea regiunilor"
+  },
+  "shippingRates": {
+    "title": "Taxe de livrare",
+    "description": "Gestionați costurile de expediere și opțiunile de livrare.",
+    "addRate": "Adăugați o taxă",
+    "editRate": "Ajustați taxa",
+    "noRates": "Costurile de livrare nu au fost încă adăugate.",
+    "zone": "Zonă",
+    "carrier": "Firmă",
+    "selectZone": "Selectați o regiune",
+    "selectCarrier": "Alegeți o companie",
+    "shippingCost": "Taxă de livrare",
+    "currency": "Valută",
+    "estimatedDeliveryDays": "Livrare estimată (zile)",
+    "minWeight": "Greutate minimă",
+    "maxWeight": "Greutate maximă",
+    "minOrderAmount": "Suma minimă a comenzii",
+    "freeShipping": "Livrare gratuită",
+    "free": "Gratuit",
+    "active": "Activ",
+    "inactive": "Pasiv",
+    "cost": "Taxă",
+    "deliveryDays": "Livrare",
+    "status": "Situaţie",
+    "saving": "Economisire...",
+    "createSuccess": "Taxă adăugată cu succes.",
+    "updateSuccess": "Salariul a fost actualizat cu succes.",
+    "deleteSuccess": "Taxa a fost ștearsă cu succes.",
+    "saveError": "A apărut o eroare la salvarea taxei.",
+    "deleteError": "A apărut o eroare la ștergerea taxei.",
+    "fetchError": "A apărut o eroare la încărcarea taxelor."
+  },
+  "metadata": {
+    "title": "Comerț cu animale - Platformă de tranzacționare cu animale vii",
+    "description": "Cea mai de încredere platformă de comercializare a animalelor vii din lume. Cumpărare și vânzare de animale sigură și transparentă.",
+    "pages": {
+      "about": {
+        "title": "Despre noi",
+        "description": "Aflați despre tranzacționarea cu animale vii. O platformă fiabilă pentru tranzacționarea cu animale vii."
+      },
+      "contact": {
+        "title": "Comunicare",
+        "description": "Contactați-ne. Echipa de asistență clienți Livestock Trading este gata să vă ajute."
+      },
+      "terms": {
+        "title": "Termeni de utilizare",
+        "description": "Termeni și condiții de comercializare a animalelor."
+      },
+      "privacy": {
+        "title": "Politica de confidențialitate",
+        "description": "Politica de confidențialitate Livestock Trading. Aflați cum sunt protejate datele dvs. personale."
+      },
+      "products": {
+        "title": "Produse",
+        "description": "Răsfoiți anunțuri cu animale vii. Anunțuri fiabile pentru bovine, ovine și multe altele."
+      },
+      "sellers": {
+        "title": "Vânzători",
+        "description": "Descoperiți vânzători de animale de încredere. Profiluri și recenzii ale vânzătorilor verificate."
+      },
+      "transporters": {
+        "title": "transportatori",
+        "description": "Descoperiți companii de transport animale. Transport de animale vii sigur și profesional."
+      },
+      "search": {
+        "title": "Căutare",
+        "description": "Căutați printre ofertele de animale vii. Căutare ușoară cu opțiuni de filtrare și sortare."
+      },
+      "faq": {
+        "title": "Întrebări frecvente",
+        "description": "Întrebări frecvente și răspunsuri despre comerțul cu animale."
+      },
+      "productDetail": {
+        "title": "{title} - De vânzare",
+        "description": "De vânzare în {title} - {city}. Faceți clic pentru detalii și informații de contact."
+      },
+      "sellerDetail": {
+        "title": "{name} - Profilul vânzătorului",
+        "description": "Profilul vânzătorului {name}. Recenzii, anunțuri și informații de contact."
+      },
+      "transporterDetail": {
+        "title": "{name} - Profilul transportatorului",
+        "description": "Profilul transportatorului {name}. Zone de servicii, recenzii și informații de contact."
+      }
+    }
   }
 }

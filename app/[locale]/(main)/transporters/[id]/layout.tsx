@@ -1,0 +1,65 @@
+import type { Metadata } from "next";
+import { AppConfig } from "@/config/livestock-config";
+
+const BASE_URL = "https://livestock-trading.com";
+
+async function fetchTransporter(id: string) {
+  try {
+    const res = await fetch(`${AppConfig.LivestockTradingUrl}/Transporters/Detail`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data?.data ?? data;
+  } catch {
+    return null;
+  }
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; id: string }>;
+}): Promise<Metadata> {
+  const { locale, id } = await params;
+  const transporter = await fetchTransporter(id);
+
+  if (!transporter) {
+    return { title: "Transporter Not Found" };
+  }
+
+  const name = transporter.companyName || transporter.businessName || "Transporter";
+  const title = `${name} - Livestock Trading`;
+  const description =
+    transporter.description?.slice(0, 160) || `${name} transporter profile on Livestock Trading.`;
+  const image = transporter.logoUrl || undefined;
+  const url =
+    locale === "en"
+      ? `${BASE_URL}/transporters/${id}`
+      : `${BASE_URL}/${locale}/transporters/${id}`;
+
+  return {
+    title: name,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "profile",
+      ...(image && { images: [{ url: image, alt: name }] }),
+    },
+    twitter: {
+      card: image ? "summary_large_image" : "summary",
+      title,
+      description,
+    },
+  };
+}
+
+export default function TransporterDetailLayout({ children }: { children: React.ReactNode }) {
+  return children;
+}

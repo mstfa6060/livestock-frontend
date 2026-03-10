@@ -10,6 +10,7 @@ import { Heart } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
 import { AppConfig } from "@/config/livestock-config";
+import { getProductCoverImagesDirect } from "@/lib/product-images";
 import { queryKeys } from "@/lib/query-keys";
 
 export default function FavoritesPage() {
@@ -39,7 +40,7 @@ export default function FavoritesPage() {
         pageRequest: { currentPage: 1, perPageCount: productIds.length, listAll: false },
       });
 
-      return products.map((p) => ({
+      const mapped = products.map((p) => ({
         id: p.id,
         title: p.title,
         slug: p.slug,
@@ -65,6 +66,18 @@ export default function FavoritesPage() {
           ? `${AppConfig.FileStorageBaseUrl}${p.coverImageUrl}`
           : undefined,
       })) as Product[];
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const mediaInfo = (products as any[])
+        .filter((item) => item.mediaBucketId)
+        .map((item) => ({ productId: item.id, mediaBucketId: item.mediaBucketId as string, coverImageFileId: item.coverImageFileId as string }));
+      if (mediaInfo.length > 0) {
+        const imageMap = await getProductCoverImagesDirect(mediaInfo);
+        for (const p of mapped) {
+          if (!p.imageUrl && imageMap[p.id]) p.imageUrl = imageMap[p.id];
+        }
+      }
+      return mapped;
     },
     enabled: !!user?.id,
   });

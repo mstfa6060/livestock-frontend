@@ -11,17 +11,30 @@
     "back": "Nazaj",
     "next": "Naprej",
     "close": "Zapri",
+    "unauthorized": "Nimate dovoljenja za dostop do te strani.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Prijava",
-    "register": "Registracija"
+    "register": "Registracija",
+    "previous": "Nekdanji",
+    "zoomIn": "Povečaj",
+    "previousImage": "Prejšnja slika",
+    "nextImage": "Naslednja slika",
+    "closeLightbox": "Zapri galerijo",
+    "imageLightbox": "Galerija slik",
+    "slideN": "Diapozitiv {n}",
+    "viewMore": "Več o tem"
   },
   "header": {
     "products": "Izdelki",
     "sellers": "Prodajalci",
+    "transporters": "prevozniki",
     "about": "O nas",
+    "search": "Iskanje",
     "dashboard": "Panel",
     "settings": "Nastavitve",
-    "logout": "Odjava"
+    "logout": "Odjava",
+    "menu": "Meni",
+    "language": "Izbira jezika"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Pozabil/a sem geslo.",
       "noAccount": "Nimate računa?",
       "register": "Registracija",
-      "errorDefault": "Prijava ni uspela. Prosimo, preverite svoje podatke."
+      "errorDefault": "Prijava ni uspela. Prosimo, preverite svoje podatke.",
+      "orContinueWith": "ali nadaljujte",
+      "continueWithGoogle": "Nadaljuj z Googlom",
+      "continueWithApple": "Nadaljujte z Appleom.",
+      "socialLoginError": "Prijava prek družbenih omrežij ni uspela. Poskusite znova.",
+      "appleComingSoon": "Zelo kmalu",
+      "showPassword": "Prikaži geslo",
+      "hidePassword": "Skrij geslo"
     },
     "register": {
       "title": "Registracija",
@@ -51,7 +71,17 @@
       "login": "Prijava",
       "passwordMismatch": "Gesli se ne ujemata.",
       "passwordTooShort": "Geslo mora biti dolgo vsaj 6 znakov.",
-      "errorDefault": "Registracija ni uspela. Poskusite znova."
+      "errorDefault": "Registracija ni uspela. Poskusite znova.",
+      "showPassword": "Prikaži geslo",
+      "hidePassword": "Skrij geslo",
+      "passwordStrength": {
+        "minLength": "Vsaj 8 znakov",
+        "uppercase": "Velike črke (A–Ž)",
+        "lowercase": "Male črke (a–ž)",
+        "number": "Številka (0–9)",
+        "special": "Posebni znaki (!@#$%)"
+      },
+      "registerSuccess": "Vaš račun je bil uspešno ustvarjen! Preusmerjeni boste na stran za prijavo ..."
     },
     "forgotPassword": {
       "title": "Pozabil/a sem geslo.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Zahtevajte novo povezavo",
       "passwordMismatch": "Gesli se ne ujemata.",
       "passwordTooShort": "Geslo mora biti dolgo vsaj 6 znakov.",
-      "errorDefault": "Ponastavitev gesla ni uspela. Povezava je morda neveljavna ali potekla."
+      "errorDefault": "Ponastavitev gesla ni uspela. Povezava je morda neveljavna ali potekla.",
+      "showPassword": "Prikaži geslo",
+      "hidePassword": "Skrij geslo"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "aktiven",
       "totalViews": "Skupno število ogledov",
       "thisWeek": "ta teden",
+      "allTime": "ves čas",
       "favorites": "Priljubljeno",
       "onYourListings": "v vaših oglasih",
+      "savedItems": "registriran izdelek",
       "messages": "Sporočilo",
-      "unread": "neprebrano"
+      "notifications": "Obvestila",
+      "unread": "neprebrano",
+      "views": "ogledi",
+      "draft": "Osnutek",
+      "sold": "Prodano",
+      "pending": "V teku",
+      "awaitingApproval": "čaka na odobritev",
+      "totalSales": "Skupna prodaja",
+      "completedSales": "zaključena prodaja",
+      "revenue": "Dohodek",
+      "totalRevenue": "skupni prihodki"
     },
     "recentListings": "Vaši najnovejši oglasi",
+    "recentActivity": "Nedavne dejavnosti",
     "recentMessages": "Nedavna sporočila",
+    "quickLinks": "Hitri dostop",
     "noListings": "Še niste dodali nobenega oglasa.",
+    "noActivity": "Še ni aktivnosti.",
     "noMessages": "Še niste prejeli sporočila.",
     "noNotifications": "Še niste prejeli nobenih obvestil.",
     "viewAllListings": "Ogled vseh oglasov",
-    "viewAllMessages": "Ogled vseh sporočil"
+    "viewAllMessages": "Ogled vseh sporočil",
+    "viewNotifications": "Ogled obvestil",
+    "viewFavorites": "Priljubljene Gor",
+    "recentlyViewed": "Nedavno ogledano",
+    "fetchError": "Pri nalaganju podatkov plošče je prišlo do napake."
   },
   "dashboardNav": {
     "overview": "Pregled",
@@ -115,45 +166,158 @@
     "notifications": "Obvestila",
     "profile": "Profil",
     "settings": "Nastavitve",
-    "newListing": "Dodaj nov oglas"
+    "newListing": "Dodaj nov oglas",
+    "becomeSeller": "Postanite prodajalec",
+    "categories": "Kategorije",
+    "offers": "Predlogi",
+    "deals": "Sporazumi",
+    "farms": "Moje kmetije",
+    "transport": "Prevoz",
+    "moderation": "Moderiranje",
+    "sellerModeration": "Moderiranje prodajalca",
+    "transporterModeration": "Moderiranje operaterja",
+    "brands": "Blagovne znamke",
+    "transportOffers": "Ponudbe za dostavo",
+    "healthRecords": "Zdravstveni zapisi",
+    "vaccinations": "Cepilci",
+    "shippingCarriers": "Ladijske družbe",
+    "shippingZones": "Tovorne cone",
+    "shippingRates": "Stroški pošiljanja",
+    "systemSettings": "Sistemske nastavitve",
+    "locations": "Moji naslovi"
+  },
+  "profile": {
+    "title": "Informacije o profilu",
+    "description": "Svoje osebne podatke lahko posodobite tukaj.",
+    "personalInfo": "Osebni podatki",
+    "contactInfo": "Kontaktni podatki",
+    "preferences": "Nastavitve",
+    "firstName": "Ime",
+    "firstNamePlaceholder": "Vnesite svoje ime",
+    "surname": "Priimek",
+    "surnamePlaceholder": "Vnesite svoj priimek.",
+    "displayName": "Prikazano ime",
+    "phone": "Telefonska številka",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Preverjeno",
+    "phoneNotVerified": "Nepotrjeno",
+    "verifyPhone": "Preverite telefonsko številko",
+    "country": "Država",
+    "selectCountry": "Izberite državo",
+    "language": "Jezikovne nastavitve",
+    "selectLanguage": "Izberite jezik",
+    "currency": "Valuta",
+    "selectCurrency": "Izberite valuto.",
+    "saveChanges": "Shrani spremembe",
+    "saving": "Shranjevanje ...",
+    "saveSuccess": "Podatki v vašem profilu so bili posodobljeni.",
+    "saveError": "Pri posodabljanju profila je prišlo do napake.",
+    "avatar": "Profilna fotografija",
+    "changeAvatar": "Spremeni fotografijo",
+    "removeAvatar": "Odstrani fotografijo",
+    "currencies": {
+      "try": "Turška lira",
+      "usd": "Ameriški dolar",
+      "eur": "Evro",
+      "gbp": "Britanski funt"
+    }
   },
   "myListings": {
     "title": "Moji oglasi",
     "description": "Upravljajte vse svoje oglase od tukaj.",
     "noListings": "Še niste dodali nobenega oglasa.",
-    "createFirst": "Ustvarite svoj prvi oglas.",
+    "createFirst": "Ustvarite svoj prvi vnos.",
     "fetchError": "Pri nalaganju oglasov je prišlo do napake.",
     "deleteSuccess": "Oglas je bil uspešno izbrisan.",
     "deleteError": "Pri brisanju oglasa je prišlo do napake.",
-    "activateSuccess": "Oglas je bil aktiviran.",
-    "deactivateSuccess": "Seznam je bil deaktiviran.",
+    "publishSuccess": "Oglas je bil poslan v odobritev.",
+    "unpublishSuccess": "Osnutek oglasa je bil pripravljen.",
     "statusError": "Pri spreminjanju stanja je prišlo do napake.",
     "filters": {
       "all": "Vsi oni",
-      "active": "Aktivno",
       "draft": "Osnutek",
       "pending": "Čaka na odobritev",
+      "active": "Aktivno",
+      "rejected": "Zavrnjeno",
       "sold": "Prodano"
     },
     "actions": {
       "edit": "Uredi",
       "delete": "Izbriši",
-      "activate": "Aktiviraj",
-      "deactivate": "Pasivna struktura"
+      "publish": "Pošlji v odobritev",
+      "unpublish": "Osnutek",
+      "menu": "Transakcije"
     },
     "deleteDialog": {
       "title": "Izbriši oglas",
       "description": "Ali ste prepričani, da želite izbrisati ta vnos? Tega dejanja ni mogoče razveljaviti.",
       "cancel": "Prekliči",
       "confirm": "Izbriši"
-    }
+    },
+    "loadMore": "Prenesi več",
+    "loadingMore": "Nalaganje ..."
   },
   "favorites": {
     "title": "Moji favoriti",
     "description": "Sledite izdelkom, ki so vam všeč, tukaj.",
     "noFavorites": "Še niste dodali nobenega priljubljenega izdelka.",
     "browseProducts": "Brskaj po izdelkih",
-    "fetchError": "Pri nalaganju priljubljenih je prišlo do napake."
+    "fetchError": "Pri nalaganju priljubljenih je prišlo do napake.",
+    "loadMore": "Prenesi več",
+    "loadingMore": "Nalaganje ..."
+  },
+  "messages": {
+    "title": "Sporočila",
+    "description": "Stopite v stik s kupci in prodajalci.",
+    "noConversations": "Še niste prejeli sporočila.",
+    "startConversation": "Če želite zastaviti vprašanje o oglasu, pojdite na oglas.",
+    "fetchError": "Pri nalaganju sporočil je prišlo do napake",
+    "sendError": "Pri pošiljanju sporočila je prišlo do napake.",
+    "connectionError": "Povezava ni uspela. Poskusim znova ...",
+    "connected": "Povezalo se je",
+    "connecting": "Povezovanje ...",
+    "searchPlaceholder": "Išči po sporočilih ...",
+    "typeMessage": "Napišite svoje sporočilo ...",
+    "send": "Pošlji",
+    "sending": "Pošiljanje ...",
+    "typing": "Piše ...",
+    "read": "Preberi",
+    "delivered": "Poslano",
+    "today": "Danes",
+    "yesterday": "Včeraj",
+    "noMessages": "Še ni sporočil. Začni pogovor!",
+    "loadMore": "Naloži več",
+    "loadingMessages": "Sporočila se nalagajo ...",
+    "about": "O nas",
+    "product": "Izdelek",
+    "startNewConversation": "Začni nov pogovor",
+    "selectConversation": "Izberite pogovor ali začnite novega.",
+    "online": "Spletno",
+    "offline": "Brez povezave",
+    "lastSeen": "Nazadnje viden",
+    "deleteConversation": "Izbriši pogovor",
+    "deleteConfirm": "Ali ste prepričani, da želite izbrisati ta pogovor?",
+    "deleted": "Pogovor je bil izbrisan.",
+    "defaultUser": "Uporabnik",
+    "noResults": "Ni najdenih rezultatov.",
+    "newConversation": "Nov pogovor"
+  },
+  "notifications": {
+    "title": "Obvestila",
+    "description": "Oglejte si in upravljajte svoja obvestila.",
+    "markAllAsRead": "Označi vse kot prebrano",
+    "noNotifications": "Še niste prejeli nobenih obvestil.",
+    "viewAll": "Oglejte si vsa obvestila",
+    "today": "Danes",
+    "yesterday": "Včeraj",
+    "older": "Starejši",
+    "types": {
+      "system": "Sistem",
+      "message": "Sporočilo",
+      "offer": "Ponudba",
+      "order": "Naročilo",
+      "listing": "Oglas"
+    }
   },
   "settings": {
     "title": "Nastavitve",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Nova gesla se ne ujemata.",
       "passwordTooShort": "Novo geslo mora biti dolgo vsaj 6 znakov.",
       "sessionError": "Podatkov o seji ni bilo mogoče najti.",
-      "errorDefault": "Gesla ni bilo mogoče posodobiti. Preverite svoje trenutno geslo."
+      "errorDefault": "Gesla ni bilo mogoče posodobiti. Preverite svoje trenutno geslo.",
+      "showPassword": "Prikaži geslo",
+      "hidePassword": "Skrij geslo"
+    },
+    "preferences": {
+      "title": "Nastavitve obveščanja in pogleda",
+      "description": "Upravljajte svoje kanale za obveščanje in nastavitve prikaza.",
+      "notifications": "Obvestila",
+      "emailNotifications": "Obvestila po e-pošti",
+      "emailNotificationsDesc": "Prejemajte e-poštna obvestila o novih sporočilih in posodobitvah oglasov.",
+      "smsNotifications": "SMS obvestila",
+      "smsNotificationsDesc": "Prejemajte SMS sporočila za pomembna obvestila.",
+      "pushNotifications": "Potisna obvestila",
+      "pushNotificationsDesc": "Prejemajte potisna obvestila za takojšnje posodobitve.",
+      "appearance": "Videz",
+      "darkMode": "Temni način",
+      "darkModeDesc": "Preklopite na temno temo.",
+      "saveChanges": "Shrani nastavitve",
+      "saving": "Shranjevanje ...",
+      "saveSuccess": "Vaše nastavitve so bile posodobljene.",
+      "saveError": "Pri posodabljanju nastavitev je prišlo do napake.",
+      "loadError": "Nastavitev ni bilo mogoče naložiti."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Platforma za trgovanje z živimi živalmi",
       "subtitle": "Najbolj zanesljiva platforma za trgovanje z živimi živalmi. Varno kupujte in prodajajte svoje govedo in ovce.",
       "cta": "Začni zdaj",
-      "viewListings": "Ogled oglasov"
+      "viewListings": "Ogled oglasov",
+      "searchPlaceholder": "Išči živali ... (krave, ovce, koze ...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Izbrani oglasi",
       "viewAll": "Prikaži vse"
+    },
+    "cta": {
+      "title": "Začni zdaj",
+      "subtitle": "Zavzemite svoje mesto na platformi, kjer se srečujejo tisoči prodajalcev in kupcev.",
+      "button": "Registrirajte se brezplačno"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "O nas",
     "contact": "Komunikacija",
     "terms": "Pogoji uporabe",
-    "privacy": "Pravilnik o zasebnosti"
+    "privacy": "Pravilnik o zasebnosti",
+    "company": "Podjetje",
+    "support": "Podpora",
+    "legal": "Pravno",
+    "followUs": "Spremljajte nas",
+    "newsletter": "Bilten",
+    "newsletterDescription": "Ne zamudite najnovejših oglasov in promocij.",
+    "subscribe": "Naročite se",
+    "emailPlaceholder": "Vaš e-poštni naslov",
+    "tagline": "Najbolj zanesljiva platforma za trgovanje z živimi živalmi v Turčiji.",
+    "sellers": "Prodajalci",
+    "products": "Izdelki",
+    "map": "Zemljevid",
+    "appleLoginComingSoon": "Prijava z Apple bo kmalu aktivna.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "Pogosta vprašanja"
+  },
+  "faq": {
+    "title": "Pogosto zastavljena vprašanja",
+    "description": "Odgovori na vaša pogosto zastavljena vprašanja o naši platformi.",
+    "noFaqs": "Še ni bilo dodanih nobenih vprašanj."
+  },
+  "about": {
+    "title": "O nas",
+    "subtitle": "Najbolj zanesljiva platforma za trgovanje z živimi živalmi v Turčiji.",
+    "mission": {
+      "title": "Naše poslanstvo",
+      "description": "Z digitalizacijo trgovine z živimi živalmi si prizadevamo ustvariti varno, pregledno in učinkovito povezavo med proizvajalci in kupci."
+    },
+    "vision": {
+      "title": "Naša vizija",
+      "description": "Biti pionir digitalne transformacije v kmetijskem sektorju in postati globalna platforma za trgovino z živimi živalmi."
+    },
+    "values": {
+      "title": "Naše vrednote",
+      "trust": {
+        "title": "Zaupanje",
+        "description": "Transparentnost in zanesljivost sta bistvenega pomena pri vseh transakcijah."
+      },
+      "quality": {
+        "title": "Kakovost",
+        "description": "Nenehno izboljševanje za zagotavljanje najboljše storitve."
+      },
+      "innovation": {
+        "title": "Inovacije",
+        "description": "Preoblikovanje industrije z uporabo tehnologije."
+      }
+    },
+    "stats": {
+      "users": "Registrirani uporabnik",
+      "sellers": "Aktivni prodajalec",
+      "products": "Oglas",
+      "transactions": "Uspešna transakcija"
+    }
+  },
+  "contact": {
+    "title": "Komunikacija",
+    "subtitle": "Za vsa vprašanja nas kontaktirajte.",
+    "form": {
+      "title": "Pišite nam",
+      "name": "Vaše ime",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "E-pošta",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Zadeva",
+      "subjectPlaceholder": "Zadeva vašega sporočila",
+      "message": "Vaše sporočilo",
+      "messagePlaceholder": "Napišite svoje sporočilo tukaj ...",
+      "submit": "Pošlji",
+      "submitting": "Pošiljanje ...",
+      "success": "Vaše sporočilo je bilo uspešno poslano. Odgovorili vam bomo v najkrajšem možnem času.",
+      "error": "Pri pošiljanju sporočila je prišlo do napake. Poskusite znova."
+    },
+    "info": {
+      "title": "Kontaktni podatki",
+      "address": "Naslov",
+      "addressValue": "Istanbul, Turčija",
+      "email": "E-pošta",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Telefon",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Delovni čas",
+      "workingHoursValue": "Ponedeljek - petek: 09:00 - 18:00",
+      "map": "Zemljevid"
+    }
+  },
+  "terms": {
+    "title": "Pogoji uporabe",
+    "lastUpdated": "Zadnja posodobitev: {date}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Sprejem pogojev",
+        "content": "Z uporabo tega spletnega mesta se strinjate z naslednjimi pogoji uporabe. Če se s temi pogoji ne strinjate, prosimo, da spletnega mesta ne uporabljate."
+      },
+      "services": {
+        "title": "2. Storitve",
+        "content": "Trgovanje z živino ponuja platformo za nakup in prodajo živih živali. Vse transakcije na platformi so odgovornost uporabnika."
+      },
+      "accounts": {
+        "title": "3. Uporabniški računi",
+        "content": "Za ustvarjanje računa morate navesti točne in ažurne podatke. Varnost vašega računa je vaša odgovornost."
+      },
+      "prohibited": {
+        "title": "4. Prepovedane dejavnosti",
+        "content": "Zavajajoči oglasi, lažne informacije, goljufije in nezakonite dejavnosti so strogo prepovedani."
+      },
+      "liability": {
+        "title": "5. Omejitev odgovornosti",
+        "content": "Platforma ni neposredno odgovorna za transakcije med uporabniki. Vse transakcije potekajo med strankama."
+      },
+      "changes": {
+        "title": "6. Spremembe",
+        "content": "Ti pogoji se lahko spremenijo brez predhodnega obvestila. Spremembe začnejo veljati takoj po objavi."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Pravilnik o zasebnosti",
+    "lastUpdated": "Zadnja posodobitev: {date}",
+    "sections": {
+      "collection": {
+        "title": "1. Zbiranje informacij",
+        "content": "Ko ustvarite račun, zbiramo osebne podatke, kot so vaše ime, e-poštni naslov in telefonska številka. Zbiramo lahko tudi anonimne podatke o vaši uporabi spletnega mesta."
+      },
+      "usage": {
+        "title": "2. Uporaba informacij",
+        "content": "Podatke, ki jih zbiramo, uporabljamo za zagotavljanje naših storitev, upravljanje vašega računa, zagotavljanje varnosti in ponujanje prilagojenih ponudb."
+      },
+      "sharing": {
+        "title": "3. Izmenjava informacij",
+        "content": "Vaših osebnih podatkov ne bomo prodajali ali dajali v najem tretjim osebam. Vaših podatkov ne bomo delili z drugimi, razen v zakonsko določene namene."
+      },
+      "security": {
+        "title": "4. Varnost",
+        "content": "Za zaščito vaših podatkov so vzpostavljeni varnostni ukrepi, ki so v skladu z industrijskimi standardi."
+      },
+      "cookies": {
+        "title": "5. Piškotki",
+        "content": "Naše spletno mesto uporablja piškotke za izboljšanje uporabniške izkušnje. Nastavitve piškotkov lahko upravljate v nastavitvah brskalnika."
+      },
+      "rights": {
+        "title": "6. Vaše pravice",
+        "content": "V skladu s turškim zakonom o varstvu osebnih podatkov (KVKK) imate pravico do dostopa do svojih osebnih podatkov, njihovega popravka in izbrisa."
+      }
+    }
   },
   "products": {
     "title": "Izdelki",
@@ -235,11 +570,19 @@
       "priceDesc": "Cena (od najvišje do najnižje)",
       "popular": "Najbolj priljubljeno"
     },
+    "pagination": {
+      "prev": "Nekdanji",
+      "next": "Naprej"
+    },
     "status": {
       "draft": "Osnutek",
+      "pending": "Čaka na odobritev",
       "active": "Aktivno",
+      "inactive": "Pasivno",
+      "outOfStock": "Ni na zalogi",
+      "expired": "Njegov mandat se je iztekel.",
       "sold": "Prodano",
-      "pending": "Čaka na odobritev"
+      "rejected": "Zavrnjeno"
     },
     "condition": {
       "new": "Novo",
@@ -253,9 +596,13 @@
     "loading": "Izdelki se nalagajo ...",
     "perPage": "Na stran",
     "showing": "Skupno število izdelkov {total} med {from} in {to}.",
+    "fetchError": "Pri nalaganju izdelkov je prišlo do napake.",
+    "loadMore": "Prikaži več",
+    "showingOf": "Prikazanih je {count} / {total} izdelkov.",
     "loginToFavorite": "Prijavite se, da dodate med priljubljene.",
     "addedToFavorites": "Dodano med priljubljene",
-    "removedFromFavorites": "Odstranjeno iz priljubljenih"
+    "removedFromFavorites": "Odstranjeno iz priljubljenih",
+    "favoriteError": "Priljubljena operacija ni uspela."
   },
   "productDetail": {
     "addToFavorites": "Dodaj med priljubljene",
@@ -279,16 +626,31 @@
     "maxOrder": "Največje naročilo",
     "publishedAt": "Datum objave",
     "views": "Ogledano",
-    "reviews": "vrednotenje",
+    "reviews": {
+      "title": "Ocene",
+      "reviewCount": "vrednotenje",
+      "noReviews": "Še ni ocene.",
+      "verified": "Preverjen kupec"
+    },
     "similarProducts": "Podobni izdelki",
     "sellerProducts": "Drugi izdelki prodajalca",
     "contactSeller": "Kontaktirajte prodajalca",
-    "loginRequired": "Prijavite se, da dodate med priljubljene.",
+    "makeOffer": "Oddajte ponudbo",
+    "loginRequired": "Za izvedbo tega dejanja se prijavite.",
     "addedToFavorites": "Dodano med priljubljene",
     "removedFromFavorites": "Odstranjeno iz priljubljenih",
     "linkCopied": "Povezava je bila kopirana.",
     "messagingComingSoon": "Funkcija sporočanja kmalu na voljo.",
-    "productNotFound": "Izdelka ni bilo mogoče najti."
+    "productNotFound": "Izdelka ni bilo mogoče najti.",
+    "contacting": "Vzpostavlja se stik ...",
+    "contactError": "Komunikacija ni uspela. Poskusite znova.",
+    "noImage": "Ni na voljo slike.",
+    "defaultLocation": "Turčija",
+    "inquiryMessage": "Rad bi dobil informacije o {title}.",
+    "breadcrumb": {
+      "home": "Domov",
+      "products": "Izdelki"
+    }
   },
   "seller": {
     "title": "Podatki o prodajalcu",
@@ -300,6 +662,70 @@
     "call": "Iskanje",
     "viewProfile": "Ogled profila"
   },
+  "sellers": {
+    "title": "Prodajalci",
+    "description": "Poiščite zanesljive prodajalce.",
+    "search": "Poiščite prodajalca ...",
+    "sort": "Razvrsti",
+    "sortOptions": {
+      "newest": "Najnovejše",
+      "mostSales": "Najbolje prodajano",
+      "topRated": "Najvišji rezultat",
+      "mostProducts": "Večina oglasov"
+    },
+    "noResults": "Prodajalca ni bilo mogoče najti.",
+    "loading": "Prodajalci nalagajo ...",
+    "showing": "Najdenih je bilo {count} prodajalcev",
+    "verified": "Preverjeno",
+    "sales": "prodaja",
+    "products": "oglas",
+    "reviews": "vrednotenje",
+    "rating": "točka",
+    "viewProducts": "Ogled izdelkov",
+    "contactSeller": "Pošlji sporočilo",
+    "memberSince": "Član od {year}",
+    "fetchError": "Pri nalaganju ponudnikov je prišlo do napake",
+    "detail": {
+      "title": "Profil prodajalca",
+      "about": "O nas",
+      "businessInfo": "Poslovne informacije",
+      "businessName": "Ime podjetja",
+      "businessType": "Poslovna tura",
+      "email": "E-pošta",
+      "phone": "Telefon",
+      "website": "Spletna stran",
+      "description": "Razlaga",
+      "policies": "Pravilniki",
+      "returnPolicy": "Politika vračila",
+      "shippingPolicy": "Politika pošiljanja",
+      "businessHours": "Delovni čas",
+      "paymentMethods": "Načini plačila",
+      "allProducts": "Vsi izdelki",
+      "stats": {
+        "totalSales": "Skupna prodaja",
+        "totalProducts": "Skupaj izdelkov",
+        "totalReviews": "Vrednotenje",
+        "rating": "Točka"
+      },
+      "notFound": "Prodajalca ni bilo mogoče najti.",
+      "backToList": "Ne prodajalcem",
+      "contactInfo": "Komunikacija",
+      "noProducts": "Ta prodajalec še nima oglasov.",
+      "noPolicies": "Prodajalec še ni opredelil svojih pravil.",
+      "fetchError": "Pri nalaganju podatkov o prodajalcu je prišlo do napake.",
+      "productsLoadError": "Pri nalaganju izdelkov prodajalca je prišlo do napake.",
+      "reviewsTab": "Ocene",
+      "reviews": {
+        "summary": "Povzetek evalvacije",
+        "reviewCount": "vrednotenje",
+        "communication": "Komunikacija",
+        "shippingSpeed": "Hitrost pošiljanja",
+        "productQuality": "Kakovost izdelka",
+        "noReviews": "Še ni ocene.",
+        "verified": "Preverjen kupec"
+      }
+    }
+  },
   "editListing": {
     "title": "Uredi oglas",
     "saveChanges": "Shrani spremembe",
@@ -307,6 +733,10 @@
     "updateSuccess": "Oglas je bil uspešno posodobljen.",
     "updateFailed": "Pri posodabljanju vnosa je prišlo do napake.",
     "loadError": "Pri nalaganju oglasa je prišlo do napake.",
+    "sellerNotFound": "Profila prodajalca ni bilo mogoče najti.",
+    "sellerLoadError": "Profila prodajalca ni bilo mogoče naložiti.",
+    "userNotFound": "Podatkov o uporabniku ni bilo mogoče najti. Prosimo, prijavite se znova.",
+    "locationNotFound": "Podatkov o lokaciji ni bilo mogoče najti. Osvežite stran.",
     "basicInfo": "Osnovne informacije",
     "categoryAndCondition": "Kategorija in stanje",
     "pricing": "Cenik",
@@ -314,6 +744,8 @@
     "images": "Slike",
     "existingImages": "Razpoložljive slike",
     "addImage": "Dodaj sliko",
+    "maxImages": "Naložite lahko največ 10 slik.",
+    "imageHint": "Najmanj 1, največ 10 slik. V formatu PNG, JPG ali WEBP.",
     "uploadingImages": "Slike se nalagajo ...",
     "uploadingImage": "Slika se nalaga.",
     "imageUploadFailed": "Slike ni bilo mogoče naložiti.",
@@ -358,6 +790,7 @@
     "addImage": "Dodaj sliko",
     "maxImages": "Naložite lahko največ 10 slik.",
     "imageHint": "Najmanj 1, največ 10 slik. V formatu PNG, JPG ali WEBP.",
+    "location": "Informacije o lokaciji",
     "fields": {
       "title": "Naslov oglasa",
       "shortDescription": "Kratek opis",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Dostava je na voljo.",
       "shippingCost": "Stroški pošiljanja",
       "weight": "Teža",
-      "weightUnit": "Enota teže"
+      "weightUnit": "Enota teže",
+      "city": "Mesto",
+      "address": "Naslov",
+      "postalCode": "Poštna številka"
     },
     "placeholders": {
-      "title": "Primer: 2-letna holštajnska krava",
+      "title": "Primer: 2-letna krava holštajnske pasme",
       "shortDescription": "Opis izdelka (največ 200 znakov)",
       "description": "Navedite podrobne informacije o izdelku ...",
-      "category": "Izberite kategorijo."
+      "category": "Izberite kategorijo.",
+      "city": "Vstopite v mesto",
+      "address": "Vnesite celoten naslov.",
+      "postalCode": "Poštna številka"
+    },
+    "errors": {
+      "titleRequired": "Naslov oglasa je obvezen.",
+      "shortDescriptionRequired": "Potreben je kratek opis.",
+      "descriptionRequired": "Potrebna je podrobna razlaga.",
+      "categoryRequired": "Izbira kategorije je obvezna.",
+      "priceRequired": "Cena je obvezna.",
+      "cityRequired": "Potrebni so podatki o mestu.",
+      "addressRequired": "Podatki o naslovu so obvezni.",
+      "locationError": "Pri ustvarjanju lokacije je prišlo do napake."
     },
     "success": "Oglas je bil uspešno ustvarjen.",
     "error": "Pri ustvarjanju oglasa je prišlo do napake.",
@@ -388,24 +837,53 @@
     "draftSaved": "Osnutek shranjen",
     "productCreated": "Izdelek je bil uspešno ustvarjen.",
     "creationFailed": "Izdelka ni bilo mogoče ustvariti. Poskusite znova.",
-    "errors": {
-      "titleRequired": "Naslov oglasa je obvezen.",
-      "shortDescriptionRequired": "Potreben je kratek opis.",
-      "descriptionRequired": "Potrebna je podrobna razlaga.",
-      "categoryRequired": "Izbira kategorije je obvezna.",
-      "priceRequired": "Vnesite veljavno ceno."
-    }
+    "userNotFound": "Podatkov o uporabniku ni bilo mogoče najti. Prosimo, prijavite se znova.",
+    "defaultBusinessName": "Moje podjetje"
+  },
+  "becomeSeller": {
+    "title": "Postanite prodajalec",
+    "description": "Izjava podjetja",
+    "alreadySeller": "Profil prodajalca že imate.",
+    "goToListings": "Pojdi na moje oglase",
+    "businessInfo": "Poslovne informacije",
+    "contactInfo": "Kontaktni podatki",
+    "businessName": "Ime podjetja",
+    "businessNamePlaceholder": "Primer: Kmetija Yilmaz",
+    "businessType": "Poslovna tura",
+    "businessTypePlaceholder": "Izberite vrsto svojega podjetja.",
+    "businessTypes": {
+      "individual": "Posameznik",
+      "company": "Podjetje",
+      "cooperative": "Zadruga",
+      "farm": "Kmetija"
+    },
+    "taxNumber": "Davčna številka",
+    "taxNumberPlaceholder": "Vnesite svojo davčno številko (neobvezno)",
+    "descriptionPlaceholder": "Napišite kratek opis svojega podjetja ...",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Spletna stran",
+    "websitePlaceholder": "https://www.examplesite.com (neobvezno)",
+    "submit": "Ustvari profil prodajalca",
+    "submitting": "Ustvarjanje profila ...",
+    "success": "Vaš profil prodajalca je bil uspešno ustvarjen!",
+    "error": "Pri ustvarjanju profila prodajalca je prišlo do napake.",
+    "taxNumberHelp": "Vnesite svojo 10- ali 11-mestno davčno številko (neobvezno)",
+    "phoneHelp": "Primer: +90 555 123 45 67 ali 0555 123 45 67",
+    "websiteHelp": "Primer: www.isletmem.com ali https://isletmem.com",
+    "alreadySellerDescription": "Za upravljanje oglasov lahko uporabite spodnji gumb.",
+    "newListing": "Dodaj nov oglas"
   },
   "fileUpload": {
     "dragDrop": "Naložite fotografijo ali videoposnetek.",
     "dragDropHint": "Povlecite in spustite ali kliknite za izbiro.",
-    "dropHere": "Pusti ...",
+    "dropHere": "Pusti to ...",
     "imageLimit": "Fotografija: največ 10 MB",
-    "videoLimit": "Video: največ 50 MB",
+    "videoLimit": "Video: največ 100 MB",
     "uploadCount": "naloženo {current} / {max}",
     "maxFilesError": "Naložite lahko največ {max} medijev.",
     "imageTooLarge": "Fotografija mora biti manjša od 10 MB.",
-    "videoTooLarge": "Videoposnetek mora biti manjši od 50 MB.",
+    "videoTooLarge": "Videoposnetek mora biti manjši od 100 MB.",
     "optimizing": "Optimizacija ...",
     "uploading": "Nalaganje ...",
     "queued": "Čakanje v vrsti ...",
@@ -419,9 +897,833 @@
     "videoBadge": "VIDEO",
     "coverUpdated": "Naslovna fotografija je bila uspešno prilagojena.",
     "optimizationInfo": "Fotografije so optimizirane v skladu s spletnimi standardi",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Vizualna izbira",
+    "changeImage": "Sprememba",
+    "removeImage": "Odstrani",
+    "videoProcessing": "Videoposnetek se obdeluje ...",
+    "videoProcessingFailed": "Operacija ni uspela.",
+    "videoProcessingPollError": "Stanja obdelave videa ni bilo mogoče pridobiti. Osvežite stran.",
+    "reorderError": "Datoteke ni bilo mogoče razvrstiti.",
+    "coverUpdateError": "Naslovne fotografije ni bilo mogoče posodobiti."
+  },
+  "error": {
+    "title": "Prišlo je do napake.",
+    "description": "Prišlo je do nepričakovane napake. Osvežite stran ali poskusite znova pozneje.",
+    "retry": "Poskusi znova",
+    "goBack": "Ne vračaj se",
+    "goHome": "Domov",
+    "notFound": {
+      "title": "Strani ni bilo mogoče najti",
+      "description": "Stran, ki jo iščete, ni na voljo ali pa je bila premaknjena.",
+      "goHome": "Nazaj na domačo stran"
+    }
+  },
+  "search": {
+    "title": "Iskanje",
+    "placeholder": "Išči izdelke, kategorije ali prodajalce ...",
+    "searchButton": "Iskanje",
+    "searchingFor": "Iskano",
+    "loading": "Iskano...",
+    "resultsCount": "Najdenih je bilo {count} rezultatov.",
+    "noResults": "Ni najdenih rezultatov.",
+    "tryDifferentSearch": "Poskusite z drugimi ključnimi besedami ali spremenite filtre.",
+    "filters": {
+      "title": "Filtri",
+      "category": "Kategorija",
+      "allCategories": "Vse kategorije",
+      "condition": "Situacija",
+      "allConditions": "Vsi primeri",
+      "priceRange": "Cenovni razpon",
+      "price": "Cena",
+      "min": "Min.",
+      "max": "Maks.",
+      "apply": "Uporabi",
+      "clear": "Čisto",
+      "clearAll": "Počisti vse"
+    },
+    "fetchError": "Pri nalaganju rezultatov iskanja je prišlo do napake",
+    "recentSearches": "Nedavna iskanja",
+    "clearHistory": "Počisti zgodovino",
+    "noSearchHistory": "Še nimate zgodovine iskanja.",
+    "deleteHistoryError": "Pri brisanju zgodovine iskanja je prišlo do napake."
+  },
+  "categories": {
+    "title": "Upravljanje kategorij",
+    "description": "Upravljajte kategorije od tukaj.",
+    "noCategories": "Še ni bila dodana nobena kategorija.",
+    "createFirst": "Ustvarite prvo kategorijo.",
+    "fetchError": "Pri nalaganju kategorij je prišlo do napake.",
+    "createSuccess": "Kategorija je bila uspešno ustvarjena",
+    "createError": "Pri ustvarjanju kategorije je prišlo do napake.",
+    "updateSuccess": "Kategorija je bila uspešno posodobljena",
+    "updateError": "Pri posodabljanju kategorije je prišlo do napake.",
+    "deleteSuccess": "Kategorija je bila uspešno izbrisana.",
+    "deleteError": "Pri brisanju kategorije je prišlo do napake.",
+    "activateSuccess": "Kategorija je bila aktivirana.",
+    "deactivateSuccess": "Kategorija je bila deaktivirana.",
+    "statusError": "Pri spreminjanju stanja je prišlo do napake.",
+    "loadError": "Pri nalaganju kategorije je prišlo do napake",
+    "filters": {
+      "all": "Vsi oni",
+      "active": "Aktivno",
+      "inactive": "Neaktivno"
+    },
+    "table": {
+      "name": "Ime kategorije",
+      "slug": "Polž",
+      "sortOrder": "Serijska številka",
+      "subCategories": "Podkategorija",
+      "status": "Situacija",
+      "actions": "Transakcije"
+    },
+    "actions": {
+      "edit": "Uredi",
+      "delete": "Izbriši",
+      "activate": "Aktiviraj",
+      "deactivate": "Pasivna struktura"
+    },
+    "deleteDialog": {
+      "title": "Izbriši kategorijo",
+      "description": "Ali ste prepričani, da želite izbrisati to kategorijo? Tega dejanja ni mogoče razveljaviti.",
+      "cancel": "Prekliči",
+      "confirm": "Izbriši"
+    },
+    "addNew": "Dodaj novo kategorijo",
+    "loadMore": "Prenesi več",
+    "loadingMore": "Nalaganje ...",
+    "form": {
+      "newTitle": "Ustvari novo kategorijo",
+      "editTitle": "Uredi kategorijo",
+      "name": "Ime kategorije",
+      "namePlaceholder": "Primer: Govedo",
+      "slug": "Polž",
+      "slugPlaceholder": "Primer: velika živina",
+      "description": "Razlaga",
+      "descriptionPlaceholder": "Kratek opis kategorije ...",
+      "parentCategory": "Zgornja kategorija",
+      "parentCategoryPlaceholder": "Izberite najvišjo kategorijo (neobvezno)",
+      "noParent": "Brez najvišje kategorije (glavna kategorija)",
+      "sortOrder": "Zaporedna številka",
+      "isActive": "Aktivno",
+      "iconUrl": "URL ikone",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Shrani",
+      "submitting": "Shranjevanje ...",
+      "updating": "Posodabljanje ...",
+      "errors": {
+        "nameRequired": "Ime kategorije je obvezno.",
+        "slugRequired": "Polži so obvezni."
+      }
+    }
+  },
+  "offers": {
+    "title": "Predlogi",
+    "description": "Upravljajte svoje dohodne in odhodne ponudbe.",
+    "received": "Prihajajoče ponudbe",
+    "sent": "Oddane ponudbe",
+    "noReceivedOffers": "Ponudb še ni bilo prejetih.",
+    "noSentOffers": "Še niste oddali ponudbe.",
+    "browseProducts": "Brskaj po izdelkih",
+    "viewProduct": "Oglejte si izdelek",
+    "accept": "Sprejmi",
+    "reject": "Zavrni",
+    "withdraw": "Umik",
+    "makeOffer": "Oddajte ponudbo",
+    "sendOffer": "Pošlji ponudbo",
+    "sending": "Pošiljanje ...",
+    "cancel": "Prekliči",
+    "listingPrice": "Oglaševana cena",
+    "yourOffer": "Vaša ponudba",
+    "quantity": "Znesek",
+    "messageOptional": "Sporočilo (neobvezno)",
+    "messagePlaceholder": "Opomba, ki jo želite deliti s prodajalcem ...",
+    "expiresAt": "Zadnji veljaven datum",
+    "offerSent": "Vaša ponudba je bila uspešno poslana.",
+    "offerError": "Pri pošiljanju ponudbe je prišlo do napake.",
+    "acceptSuccess": "Ponudba je bila sprejeta.",
+    "rejectSuccess": "Ponudba je bila zavrnjena.",
+    "withdrawSuccess": "Ponudba je bila umaknjena.",
+    "actionError": "Med postopkom je prišlo do napake.",
+    "fetchError": "Pri nalaganju ponudb je prišlo do napake.",
+    "loginRequired": "Prijavite se za oddajo ponudbe.",
+    "invalidPrice": "Vnesite veljavno ceno.",
+    "invalidQuantity": "Vnesite veljaven znesek.",
+    "status": {
+      "pending": "V teku",
+      "accepted": "Sprejeto",
+      "rejected": "Zavrnjeno",
+      "countered": "Protiponudba",
+      "expired": "Njegov mandat je končan.",
+      "withdrawn": "Umaknjeno"
+    }
+  },
+  "deals": {
+    "title": "Sporazumi",
+    "description": "Upoštevajte svoje nabavne pogodbe.",
+    "buying": "Učenjaki",
+    "selling": "Prodaja",
+    "noBuyingDeals": "Še nimate postopka registracije študenta.",
+    "noSellingDeals": "Še nimate nobenih prodajnih transakcij.",
+    "browseProducts": "Brskaj po izdelkih",
+    "viewProduct": "Oglejte si izdelek",
+    "activeDeals": "Aktivni sporazumi",
+    "completedDeals": "Dokončano",
+    "purchases": "Učenjaki",
+    "sales": "Prodaja",
+    "fetchError": "Pri nalaganju pogodb je prišlo do napake",
+    "dealStatus": {
+      "pending": "V teku",
+      "confirmed": "Potrjeno",
+      "processing": "Priprava",
+      "shipped": "V tovoru",
+      "delivered": "Dostavljeno",
+      "completed": "Dokončano",
+      "cancelled": "Preklicano",
+      "disputed": "Sporazum"
+    },
+    "delivery": {
+      "pickup": "Ročna dostava",
+      "shipping": "S tovorom",
+      "transport": "S prevozom"
+    },
+    "requestTransport": "Zahteva za pošiljanje"
+  },
+  "farms": {
+    "title": "Moje kmetije",
+    "description": "Upravljajte in posodabljajte svoje kmetije.",
+    "addFarm": "Dodaj kmetijo",
+    "editFarm": "Upravljanje kmetije",
+    "noFarms": "Še niste dodali kmetije.",
+    "farmName": "Ime kmetije",
+    "registrationNumber": "Registrska številka",
+    "location": "Lokacija",
+    "selectLocation": "Izberite lokacijo.",
+    "addLocationFirst": "Najprej dodajte lokacijo.",
+    "farmTypeLabel": "Ogled kmetije",
+    "farmDescription": "Razlaga",
+    "totalArea": "Skupna površina",
+    "cultivatedArea": "Obdelovalna površina",
+    "certifications": "Potrdila",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP itd.",
+    "organic": "Organsko",
+    "verified": "Preverjeno",
+    "save": "Shrani",
+    "saving": "Shranjevanje ...",
+    "cancel": "Prekliči",
+    "edit": "Uredi",
+    "delete": "Izbriši",
+    "sellerRequired": "Zahtevan profil prodajalca",
+    "sellerRequiredDesc": "Če želite dodati kmetijo, morate najprej ustvariti svoj profil prodajalca.",
+    "becomeSeller": "Postanite prodajalec",
+    "createSuccess": "Kmetija je bila uspešno dodana.",
+    "updateSuccess": "Kmetija je bila uspešno posodobljena.",
+    "deleteSuccess": "Kmetija je bila uspešno izbrisana.",
+    "saveError": "Pri registraciji kmetije je prišlo do napake.",
+    "deleteError": "Pri brisanju kmetije je prišlo do napake.",
+    "fetchError": "Pri nalaganju podatkov o kmetiji je prišlo do napake.",
+    "farmType": {
+      "livestock": "Živinoreja",
+      "crop": "Kmetijstvo",
+      "mixed": "Mešano",
+      "poultry": "Krilati",
+      "dairy": "Mlečna živinoreja",
+      "aquaculture": "Vodni izdelki"
+    }
+  },
+  "transporters": {
+    "title": "prevozniki",
+    "description": "Storitve prevoza živali in proizvodov",
+    "searchPlaceholder": "Poiščite prevoznika ...",
+    "noTransporters": "Še ni registriranih prevoznikov.",
+    "verified": "Preverjeno",
+    "transports": "prevoz",
+    "viewProfile": "Ogled profila",
+    "sort": {
+      "newest": "Najnovejše",
+      "rating": "Najvišji rezultat",
+      "mostTransports": "Najpogostejše pošiljanje"
+    },
+    "pagination": {
+      "previous": "Nekdanji",
+      "next": "Naprej",
+      "page": "Stran {stran}"
+    }
+  },
+  "transport": {
+    "title": "Moje zahteve za pošiljanje",
+    "description": "Sledite svojim zahtevam za pošiljanje.",
+    "findTransporter": "Poiščite prevoznika",
+    "active": "Aktivno",
+    "completed": "Dokončano",
+    "total": "Skupaj",
+    "asSeller": "Kot prodajalec",
+    "asBuyer": "Kot kupec",
+    "noSellerRequests": "Kot prodajalec nimate obveznosti pošiljanja.",
+    "noBuyerRequests": "Kot prejemnik nimate zahteve za pošiljanje.",
+    "viewProduct": "Oglejte si izdelek",
+    "pickup": "Prejmi",
+    "delivery": "Dostava",
+    "urgent": "Nujno",
+    "fetchError": "Pri nalaganju zahtev za pošiljanje je prišlo do napake.",
+    "trackShipment": "Sledi",
+    "transportStatus": {
+      "pending": "V teku",
+      "inPool": "V bazenu",
+      "assigned": "Imenovan",
+      "pickedUp": "Potrdilo",
+      "inTransit": "Na poti",
+      "delivered": "Dostavljeno",
+      "completed": "Dokončano",
+      "cancelled": "Preklicano"
+    },
+    "transportType": {
+      "standard": "Standardno",
+      "refrigerated": "Hladna veriga",
+      "liveAnimal": "Žive živali",
+      "hazardous": "Nevarni materiali",
+      "oversized": "Velika velikost"
+    }
+  },
+  "moderation": {
+    "title": "Moderiranje izdelkov",
+    "description": "Preglejte izdelke, ki čakajo na odobritev.",
+    "pending": "čakanje",
+    "allClear": "Vsi izdelki so bili pregledani.",
+    "noPending": "Ni izdelkov, ki čakajo na odobritev.",
+    "awaitingReview": "Čaka na pregled",
+    "by": "Prodajalec:",
+    "stock": "Zaloga",
+    "preview": "S tabo",
+    "approve": "Potrdi",
+    "reject": "Zavrni",
+    "confirmReject": "Zavrni",
+    "cancelReject": "Odnehaj",
+    "rejectReasonPlaceholder": "Napiši razlog za zavrnitev ...",
+    "rejectReasonRequired": "Razlog za zavrnitev je obvezen.",
+    "approveSuccess": "Izdelek je bil uspešno odobren.",
+    "rejectSuccess": "Izdelek je bil zavrnjen.",
+    "actionError": "Med postopkom je prišlo do napake.",
+    "fetchError": "Pri nalaganju izdelkov je prišlo do napake.",
+    "unauthorized": "Nimate dovoljenja za dostop do te strani."
+  },
+  "sellerModeration": {
+    "title": "Moderiranje prodajalca",
+    "description": "Pregledujte in upravljajte račune prodajalcev.",
+    "pending": "čakanje",
+    "allClear": "Vse prodajalce so preiskali.",
+    "noPending": "Noben prodajalec ne čaka.",
+    "verify": "Preveri",
+    "suspend": "Začasno ustavi",
+    "verifySuccess": "Prodajalec je bil uspešno preverjen.",
+    "suspendSuccess": "Prodajalec je suspendiran.",
+    "actionError": "Med postopkom je prišlo do napake.",
+    "suspendReasonRequired": "Razlog za prekinitev je obvezen.",
+    "suspendReasonPlaceholder": "Napišite razlog za prekinitev ...",
+    "confirmSuspend": "Začasno ustavi",
+    "cancelSuspend": "Odnehaj",
+    "statusLabels": {
+      "pendingVerification": "Čaka na preverjanje",
+      "active": "Aktivno",
+      "suspended": "Viseče",
+      "banned": "Prepovedano"
+    },
+    "filterAll": "Prikaži vse",
+    "filterPending": "Tisti, ki čakajo",
+    "filterActive": "Sredstva",
+    "filterSuspended": "Suspendirano",
+    "unauthorized": "Nimate dovoljenja za dostop do te strani.",
+    "businessName": "Ime podjetja",
+    "businessType": "Poslovna tura",
+    "email": "E-pošta",
+    "phone": "Telefon",
+    "status": "Situacija",
+    "createdAt": "Datum registracije"
+  },
+  "transporterModeration": {
+    "title": "Moderiranje operaterja",
+    "description": "Pregledujte in upravljajte račune operaterjev.",
+    "pending": "čakanje",
+    "allClear": "Vse prevoznike so preiskali.",
+    "noPending": "Noben prevoznik ne čaka.",
+    "verify": "Preveri",
+    "suspend": "Začasno ustavi",
+    "verifySuccess": "Prevoznik je bil uspešno preverjen.",
+    "suspendSuccess": "Prevoznik je bil zaustavljen.",
+    "actionError": "Med postopkom je prišlo do napake.",
+    "suspendReasonRequired": "Razlog za prekinitev je obvezen.",
+    "suspendReasonPlaceholder": "Napišite razlog za prekinitev ...",
+    "confirmSuspend": "Začasno ustavi",
+    "cancelSuspend": "Odnehaj",
+    "statusLabels": {
+      "pendingVerification": "Čaka na preverjanje",
+      "active": "Aktivno",
+      "suspended": "Viseče",
+      "banned": "Prepovedano"
+    },
+    "filterAll": "Prikaži vse",
+    "filterPending": "Tisti, ki čakajo",
+    "filterActive": "Sredstva",
+    "filterSuspended": "Suspendirano",
+    "unauthorized": "Nimate dovoljenja za dostop do te strani.",
+    "companyName": "Ime podjetja",
+    "contactPerson": "Pooblaščena oseba",
+    "email": "E-pošta",
+    "phone": "Telefon",
+    "city": "Mesto",
+    "status": "Situacija",
+    "createdAt": "Datum registracije"
+  },
+  "transporterDetail": {
+    "notFound": "Prevoznika ni bilo mogoče najti.",
+    "backToList": "Don za prevoznike",
+    "verified": "Preverjeno",
+    "totalTransports": "skupni znesek pošiljanja",
+    "completed": "dokončano",
+    "about": "O nas",
+    "contact": "Kontaktni podatki",
+    "businessInfo": "Poslovne informacije",
+    "license": "Številka licence",
+    "insurance": "Informacije o zavarovanju",
+    "fleet": "Informacije o floti",
+    "serviceRegions": "Območja storitev",
+    "specializations": "Področja strokovnega znanja",
+    "certifications": "Potrdila"
+  },
+  "brands": {
+    "title": "Upravljanje blagovnih znamk",
+    "description": "Upravljajte blagovne znamke izdelkov.",
+    "addBrand": "Dodaj blagovno znamko",
+    "editBrand": "Uredi blagovno znamko",
+    "noBrands": "Dodanih še ni bilo nobenih blagovnih znamk.",
+    "brandName": "Ime blagovne znamke",
+    "brandDescription": "Razlaga",
+    "website": "Spletna stran",
+    "logoUrl": "URL logotipa",
+    "save": "Shrani",
+    "saving": "Shranjevanje ...",
+    "cancel": "Prekliči",
+    "edit": "Uredi",
+    "delete": "Izbriši",
+    "inactive": "Pasivno",
+    "products": "izdelek",
+    "createSuccess": "Blagovna znamka je bila uspešno dodana",
+    "updateSuccess": "Blagovna znamka je bila uspešno posodobljena.",
+    "deleteSuccess": "Blagovna znamka je bila uspešno izbrisana.",
+    "saveError": "Pri registraciji blagovne znamke je prišlo do napake.",
+    "deleteError": "Pri brisanju blagovne znamke je prišlo do napake.",
+    "fetchError": "Pri nalaganju blagovnih znamk je prišlo do napake",
+    "unauthorized": "Nimate dovoljenja za dostop do te strani."
+  },
+  "transporterReviews": {
+    "title": "Ocene",
+    "reviewCount": "vrednotenje",
+    "noReviews": "Še ni ocene.",
+    "timeliness": "Pravočasna dostava",
+    "communication": "Komunikacija",
+    "carefulHandling": "Skrbno ravnanje",
+    "professionalism": "Profesionalnost"
+  },
+  "transportOffers": {
+    "title": "Ponudbe za dostavo",
+    "description": "Upravljajte ponudbe, ki jih oddate za zahtevke za pošiljanje.",
+    "newOffer": "Nov predlog",
+    "transportRequestId": "ID zahteve za pošiljanje",
+    "requestIdPlaceholder": "Vnesite ID zahteve za pošiljanje.",
+    "offeredPrice": "Ponujena cena",
+    "estimatedDays": "Predvideno trajanje (dnevi)",
+    "days": "dan",
+    "vehicleType": "Vrsta vozila",
+    "insuranceIncluded": "Zavarovanje vključeno",
+    "message": "Sporočilo",
+    "cancel": "Prekliči",
+    "sending": "Pošiljanje ...",
+    "sendOffer": "Oddaj ponudbo",
+    "cancelOffer": "Prekliči",
+    "pendingTab": "Čakanje",
+    "historyTab": "Preteklost",
+    "noPendingOffers": "Nimate čakajočih ponudb.",
+    "noHistory": "Ni najdenih preteklih ponudb.",
+    "status": {
+      "pending": "Čakanje",
+      "accepted": "Sprejeto",
+      "rejected": "Zavrnjeno",
+      "expired": "Njegov mandat je končan.",
+      "cancelled": "Preklicano"
+    },
+    "createSuccess": "Ponudba je bila uspešno oddana.",
+    "createError": "Pri pošiljanju ponudbe je prišlo do napake.",
+    "cancelSuccess": "Ponudba je bila preklicana.",
+    "cancelError": "Pri preklicu ponudbe je prišlo do napake.",
+    "fetchError": "Pri nalaganju ponudb je prišlo do napake."
+  },
+  "animalInfo": {
+    "title": "Informacije o živalih in izdelkih",
+    "animalTab": "Žival",
+    "healthTab": "Zdravje",
+    "vaccinationsTab": "Cepilci",
+    "veterinaryTab": "Veterinar",
+    "breed": "Dirka",
+    "genderLabel": "Spol",
+    "gender": {
+      "male": "Moški",
+      "female": "Ženska",
+      "unknown": "Neznano"
+    },
+    "age": "Starost",
+    "months": "mesec",
+    "weight": "Teža",
+    "color": "Barva",
+    "tagNumber": "Številka ušesa",
+    "healthStatus": "Zdravstveno stanje",
+    "health": {
+      "healthy": "Zdravo",
+      "underTreatment": "V zdravljenju",
+      "recovering": "On/ona okreva/okreva.",
+      "quarantined": "V karanteni",
+      "unknown": "Neznano"
+    },
+    "purposeLabel": "Predvidena uporaba",
+    "purpose": {
+      "breeding": "Žrebec",
+      "dairy": "Mleko",
+      "meat": "Meso",
+      "egg": "Jajce",
+      "wool": "Volna",
+      "working": "Delo",
+      "pet": "Domače",
+      "other": "Drugo"
+    },
+    "pregnancy": "Nosečnost",
+    "pregnant": "Noseča",
+    "microchip": "Št. mikročipa",
+    "passport": "Številka potnega lista",
+    "sireDetails": "Informacije o očetu",
+    "damDetails": "Glavne informacije",
+    "diagnosis": "Diagnoza",
+    "treatment": "Zdravljenje",
+    "medications": "Zdravila",
+    "veterinarian": "Veterinar",
+    "nextDue": "Naslednja zgodovina upornikov",
+    "prescriptionRequired": "Zahteva zdravniški recept",
+    "targetSpecies": "Target Tours",
+    "activeIngredients": "Aktivne sestavine",
+    "registrationNo": "Registrska številka",
+    "storage": "Shranjevanje",
+    "chemicalTab": "Kemijsko",
+    "feedTab": "Vaba",
+    "seedTab": "Seme",
+    "machineryTab": "Stroj",
+    "organic": "Organsko",
+    "toxicity": "Toksičnost",
+    "gmoFree": "brez GSO",
+    "protein": "Beljakovine",
+    "fat": "Olje",
+    "fiber": "Vlaknine",
+    "hybrid": "Hibrid",
+    "germination": "Kalitev",
+    "daysToMaturity": "Zorenje",
+    "daysLabel": "dan",
+    "warranty": "Zagotovljeno",
+    "power": "Moč",
+    "hoursUsed": "Ure uporabe",
+    "hours": "ura",
+    "powerSource": "Napajalnik"
+  },
+  "productVariants": {
+    "title": "Različice izdelkov",
+    "variantCount": "različica",
+    "inStock": "Na zalogi",
+    "outOfStock": "Razprodano"
+  },
+  "productPrices": {
+    "title": "Cene (več valut)",
+    "autoConversion": "Samodejna transformacija",
+    "validUntil": "Veljavnost"
+  },
+  "requestTransport": {
+    "title": "Ustvarite zahtevo za pošiljanje",
+    "pickupLocation": "Nakladalno mesto",
+    "deliveryLocation": "Dostavna točka",
+    "city": "Mesto",
+    "address": "Naslov",
+    "transportType": "Ogled prevoza",
+    "types": {
+      "standard": "Standardno",
+      "refrigerated": "Hladna veriga",
+      "liveAnimal": "Žive živali",
+      "hazardous": "Nevarni materiali",
+      "oversized": "Velika velikost"
+    },
+    "weight": "Teža (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Želeni datum nalaganja",
+    "preferredDeliveryDate": "Želeni datum dostave",
+    "urgent": "Nujni prevoz",
+    "specialInstructions": "Posebna navodila",
+    "instructionsPlaceholder": "Tukaj napišite svoja konkretna navodila ...",
+    "cancel": "Odnehaj",
+    "submit": "Ustvari povpraševanje",
+    "submitting": "V procesu ustvarjanja ...",
+    "success": "Zahteva za pošiljanje je bila uspešno ustvarjena.",
+    "error": "Pri ustvarjanju zahteve za pošiljanje je prišlo do napake."
+  },
+  "transportTracking": {
+    "title": "Sledenje pošiljki",
+    "noTracking": "Podatki o sledenju še niso na voljo.",
+    "update": "Posodobitev"
+  },
+  "locations": {
+    "title": "Moji naslovi",
+    "description": "Upravljajte svoje registrirane naslove.",
+    "addLocation": "Dodaj naslov",
+    "editLocation": "Uredi naslov",
+    "noLocations": "Še nimate registriranega naslova.",
+    "name": "Naslov Ime",
+    "namePlaceholder": "Na primer: Hiša, Služba, Kmetija",
+    "address": "Naslov",
+    "addressLine2": "2. vrstica naslova",
+    "city": "Mesto",
+    "state": "Okrožje / Regija",
+    "postalCode": "Poštna številka",
+    "phone": "Telefon",
+    "email": "E-pošta",
+    "cancel": "Odnehaj",
+    "save": "Shrani",
+    "saving": "Shranjevanje ...",
+    "typePickup": "Nalaganje",
+    "typeDelivery": "Dostava",
+    "typeBoth": "Splošno",
+    "createSuccess": "Naslov je bil uspešno dodan.",
+    "createError": "Pri dodajanju naslova je prišlo do napake.",
+    "updateSuccess": "Naslov je bil uspešno posodobljen.",
+    "updateError": "Pri posodabljanju naslova je prišlo do napake.",
+    "deleteLocation": "Izbriši naslov",
+    "deleteSuccess": "Naslov izbrisan",
+    "deleteError": "Pri brisanju naslova je prišlo do napake.",
+    "fetchError": "Pri nalaganju naslovov je prišlo do napake."
+  },
+  "systemSettings": {
+    "title": "Sistemske nastavitve",
+    "description": "Oglejte si nastavitve valute platforme, jezika, načinov plačila, pošiljanja in davkov.",
+    "unauthorized": "Nimate dovoljenja za dostop do te strani.",
+    "currenciesTab": "Valute",
+    "languagesTab": "Jeziki",
+    "paymentTab": "Načini plačila",
+    "shippingTab": "Tovor",
+    "taxTab": "Davek",
+    "active": "Aktivno",
+    "inactive": "Pasivno",
+    "default": "Privzeto",
+    "noCurrencies": "Valuta še ni bila opredeljena.",
+    "noLanguages": "Jezik še ni bil definiran.",
+    "noPaymentMethods": "Način plačila še ni določen.",
+    "noCarriers": "Ladjar še ni bil identificiran.",
+    "noZones": "Tovorni prostor še ni določen.",
+    "noTaxRates": "Davčna stopnja še ni določena.",
+    "carriers": "Ladijske družbe",
+    "zones": "Tovorne cone",
+    "countries": "Države",
+    "rates": "Stroški pošiljanja",
+    "noRates": "Stroški pošiljanja še niso določeni.",
+    "freeShipping": "Brezplačna dostava",
+    "deliveryDays": "dnevni dobavni rok"
+  },
+  "pushPermission": {
+    "title": "Omogoči obvestila",
+    "description": "Prejemajte obvestila o novih sporočilih, ponudbah in posodobitvah naročil.",
+    "allow": "Dovoli",
+    "dismiss": "Zapri"
+  },
+  "healthRecords": {
+    "title": "Zdravstveni zapisi",
+    "description": "Upravljajte zdravstvene kartoteke živali in zdravstveno anamnezo.",
+    "addRecord": "Dodaj zapis",
+    "editRecord": "Uredi zapis",
+    "deleteRecord": "Izbriši zapis",
+    "noRecords": "Zdravstveni karton še ni dodan.",
+    "animalInfoId": "Identifikacija živali",
+    "animalInfoIdPlaceholder": "Vnesite ID podatkov o živali.",
+    "recordType": "Registracijski ogled",
+    "recordTypePlaceholder": "Primeri: pregled, zdravljenje, operacija",
+    "recordDate": "Datum registracije",
+    "followUpDate": "Datum preverjanja",
+    "veterinarianName": "Veterinar",
+    "veterinarianLicense": "Številka licence",
+    "clinicName": "Klinično",
+    "diagnosis": "Diagnoza",
+    "treatment": "Zdravljenje",
+    "medications": "Zdravila",
+    "medicationsPlaceholder": "Primer: penicilin 500 mg, ibuprofen",
+    "notes": "Opombe",
+    "documentUrl": "URL dokumenta",
+    "saving": "Shranjevanje ...",
+    "createSuccess": "Zdravstveni zapis je bil uspešno dodan.",
+    "updateSuccess": "Zdravstveni zapis je bil uspešno posodobljen.",
+    "deleteSuccess": "Zdravstveni zapis je bil uspešno izbrisan.",
+    "saveError": "Pri shranjevanju zapisa je prišlo do napake.",
+    "deleteError": "Pri brisanju zapisa je prišlo do napake.",
+    "fetchError": "Pri nalaganju zapisov je prišlo do napake"
+  },
+  "vaccinations": {
+    "title": "Zapisi o cepivih",
+    "description": "Upravljajte evidence in koledarje cepljenja živali.",
+    "addVaccination": "Dodaj upornika",
+    "editVaccination": "Uporniški dogovor",
+    "deleteVaccination": "Rebel Sil",
+    "noVaccinations": "Evidenca cepljenja še ni dodana.",
+    "animalInfoId": "Identifikacija živali",
+    "animalInfoIdPlaceholder": "Vnesite ID podatkov o živali.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Primer: Cepivo SAT, Brucella",
+    "vaccineType": "Turneja upornikov",
+    "vaccineTypePlaceholder": "Primer: V živo, Neaktivno",
+    "batchNumber": "Številka stranke",
+    "vaccinationDate": "Zgodovina upornika",
+    "nextDueDate": "Naslednja zgodovina upornikov",
+    "veterinarianName": "Veterinar",
+    "veterinarianLicense": "Številka licence",
+    "notes": "Opombe",
+    "certificateUrl": "URL potrdila",
+    "saving": "Shranjevanje ...",
+    "createSuccess": "Zapis o cepljenju je bil uspešno dodan.",
+    "updateSuccess": "Zapis o cepljenju je bil uspešno posodobljen.",
+    "deleteSuccess": "Zapis o cepljenju je bil uspešno izbrisan.",
+    "saveError": "Pri registraciji cepiva je prišlo do napake.",
+    "deleteError": "Pri brisanju cepiva je prišlo do napake.",
+    "fetchError": "Pri nalaganju cepiv je prišlo do napake."
+  },
+  "shippingCarriers": {
+    "title": "Ladijske družbe",
+    "description": "Upravljajte podatke o ladjarski družbi.",
+    "addCarrier": "Dodaj podjetje",
+    "editCarrier": "Uredi podjetje",
+    "noCarriers": "Dostavna družba še ni bila dodana.",
+    "carrierName": "Ime podjetja",
+    "carrierNamePlaceholder": "Primer: Aras Kargo, MNG",
+    "code": "Koda",
+    "codePlaceholder": "Primer: ARAS",
+    "website": "Spletna stran",
+    "trackingUrlTemplate": "Sledi predlogi URL-ja",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Podprte države",
+    "supportedCountriesPlaceholder": "Primer: TR, ZDA, Nemčija",
+    "active": "Aktivno",
+    "inactive": "Pasivno",
+    "saving": "Shranjevanje ...",
+    "edit": "Uredi",
+    "delete": "Izbriši",
+    "createSuccess": "Dostavno podjetje je bilo uspešno dodano.",
+    "updateSuccess": "Podatki o dostavni družbi so bili uspešno posodobljeni.",
+    "deleteSuccess": "Dostavno podjetje je bilo uspešno izbrisano.",
+    "saveError": "Pri registraciji dostavne službe je prišlo do napake.",
+    "deleteError": "Pri brisanju podatkov o dostavni družbi je prišlo do napake.",
+    "fetchError": "Pri nalaganju tovornih podjetij je prišlo do napake."
+  },
+  "shippingZones": {
+    "title": "Tovorne cone",
+    "description": "Upravljajte tovorne cone in območja.",
+    "addZone": "Dodaj regijo",
+    "editZone": "Uredi regijo",
+    "noZones": "Tovorni prostor še ni bil dodan.",
+    "zoneName": "Ime regije",
+    "zoneNamePlaceholder": "Primer: Evropa, Severna Amerika",
+    "countryCodes": "Kode držav",
+    "countryCodesPlaceholder": "Primer: TR, DE, FR",
+    "active": "Aktivno",
+    "inactive": "Pasivno",
+    "saving": "Shranjevanje ...",
+    "edit": "Uredi",
+    "delete": "Izbriši",
+    "createSuccess": "Regija je bila uspešno dodana.",
+    "updateSuccess": "Regija je bila uspešno posodobljena.",
+    "deleteSuccess": "Območje je bilo uspešno očiščeno.",
+    "saveError": "Pri shranjevanju regije je prišlo do napake.",
+    "deleteError": "Pri brisanju regije je prišlo do napake.",
+    "fetchError": "Pri nalaganju regij je prišlo do napake"
+  },
+  "shippingRates": {
+    "title": "Stroški pošiljanja",
+    "description": "Upravljajte stroške pošiljanja in možnosti dostave.",
+    "addRate": "Dodaj pristojbino",
+    "editRate": "Prilagodi pristojbino",
+    "noRates": "Stroški pošiljanja še niso bili dodani.",
+    "zone": "Območje",
+    "carrier": "Trdno",
+    "selectZone": "Izberite regijo",
+    "selectCarrier": "Izberite podjetje",
+    "shippingCost": "Stroški pošiljanja",
+    "currency": "Valuta",
+    "estimatedDeliveryDays": "Predvidena dostava (dni)",
+    "minWeight": "Najmanjša teža",
+    "maxWeight": "Največja teža",
+    "minOrderAmount": "Minimalni znesek naročila",
+    "freeShipping": "Brezplačna dostava",
+    "free": "Brezplačno",
+    "active": "Aktivno",
+    "inactive": "Pasivno",
+    "cost": "Pristojbina",
+    "deliveryDays": "Dostava",
+    "status": "Situacija",
+    "saving": "Shranjevanje ...",
+    "createSuccess": "Provizija je bila uspešno dodana.",
+    "updateSuccess": "Plača je bila uspešno posodobljena.",
+    "deleteSuccess": "Pristojbina je bila uspešno izbrisana.",
+    "saveError": "Pri shranjevanju pristojbine je prišlo do napake.",
+    "deleteError": "Pri brisanju pristojbine je prišlo do napake.",
+    "fetchError": "Pri nalaganju pristojbin je prišlo do napake."
+  },
+  "metadata": {
+    "title": "Trgovanje z živino - platforma za trgovanje z živimi živalmi",
+    "description": "Najbolj zaupanja vredna platforma za trgovanje z živimi živalmi na svetu. Varen in pregleden nakup in prodaja živali.",
+    "pages": {
+      "about": {
+        "title": "O nas",
+        "description": "Spoznajte trgovanje z živino. Zanesljiva platforma za trgovanje z živimi živalmi."
+      },
+      "contact": {
+        "title": "Komunikacija",
+        "description": "Kontaktirajte nas. Ekipa za podporo strankam Livestock Trading vam je na voljo."
+      },
+      "terms": {
+        "title": "Pogoji uporabe",
+        "description": "Pogoji trgovanja z živino."
+      },
+      "privacy": {
+        "title": "Pravilnik o zasebnosti",
+        "description": "Pravilnik o zasebnosti za trgovanje z živino. Preberite, kako so vaši osebni podatki zaščiteni."
+      },
+      "products": {
+        "title": "Izdelki",
+        "description": "Brskajte po oglasih za žive živali. Zanesljivi oglasi za govedo, ovce in drugo."
+      },
+      "sellers": {
+        "title": "Prodajalci",
+        "description": "Odkrijte zanesljive prodajalce živali. Preverjeni profili in ocene prodajalcev."
+      },
+      "transporters": {
+        "title": "prevozniki",
+        "description": "Odkrijte podjetja za prevoz živali. Varen in profesionalen prevoz živih živali."
+      },
+      "search": {
+        "title": "Iskanje",
+        "description": "Iskanje med oglasi za žive živali. Enostavno iskanje z možnostmi filtriranja in razvrščanja."
+      },
+      "faq": {
+        "title": "Pogosto zastavljena vprašanja",
+        "description": "Pogosto zastavljena vprašanja in odgovori o trgovini z živino."
+      },
+      "productDetail": {
+        "title": "{title} - Naprodaj",
+        "description": "Naprodaj v {title} - {city}. Kliknite za podrobnosti in kontaktne podatke."
+      },
+      "sellerDetail": {
+        "title": "{name} - Profil prodajalca",
+        "description": "Profil prodajalca {name}. Ocene, oglasi in kontaktni podatki."
+      },
+      "transporterDetail": {
+        "title": "{name} - Profil operaterja",
+        "description": "Profil prevoznika {name}. Območja storitev, ocene in kontaktni podatki."
+      }
+    }
   }
 }

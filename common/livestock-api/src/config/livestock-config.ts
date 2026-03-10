@@ -16,9 +16,7 @@ export const AppConfig = {
   apiUrl: baseURL,
 
   // LivestockTrading için URL
-  LivestockTradingUrl: isDevelopment
-    ? `${baseURL}/livestocktrading`   // Development: /livestocktrading prefix var
-    : baseURL,                         // Production: prefix yok
+  LivestockTradingUrl: `${baseURL}/livestocktrading`,
   IAMUrl: `${baseURL}/iam`,
   FileProviderUrl: `${baseURL}/fileprovider`,
   FileStorageBaseUrl: `${baseURL}/file-storage/`,

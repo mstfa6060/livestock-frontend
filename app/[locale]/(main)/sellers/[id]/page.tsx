@@ -32,6 +32,7 @@ import {
 } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { AppConfig } from "@/config/livestock-config";
+import { getProductCoverImagesDirect } from "@/lib/product-images";
 import { SellerReviews } from "@/components/features/seller-reviews";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 
@@ -112,7 +113,7 @@ export default function SellerDetailPage() {
         },
       });
 
-      return response.map((item): Product => ({
+      const products = response.map((item): Product => ({
         id: item.id,
         title: item.title,
         slug: item.slug,
@@ -136,6 +137,18 @@ export default function SellerDetailPage() {
         createdAt: item.createdAt,
         imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
       }));
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const mediaInfo = (response as any[])
+        .filter((item) => item.mediaBucketId)
+        .map((item) => ({ productId: item.id, mediaBucketId: item.mediaBucketId as string, coverImageFileId: item.coverImageFileId as string }));
+      if (mediaInfo.length > 0) {
+        const imageMap = await getProductCoverImagesDirect(mediaInfo);
+        for (const p of products) {
+          if (!p.imageUrl && imageMap[p.id]) p.imageUrl = imageMap[p.id];
+        }
+      }
+      return products;
     },
     enabled: !!sellerId,
   });

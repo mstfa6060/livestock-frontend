@@ -11,17 +11,30 @@
     "back": "Atpakaļ",
     "next": "Uz priekšu",
     "close": "Aizvērt",
+    "unauthorized": "Jums nav atļaujas piekļūt šai lapai.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Pieslēgties",
-    "register": "Reģistrēties"
+    "register": "Reģistrēties",
+    "previous": "Bijušais",
+    "zoomIn": "Tuvināt",
+    "previousImage": "Iepriekšējais attēls",
+    "nextImage": "Nākamais attēls",
+    "closeLightbox": "Aizvērt galeriju",
+    "imageLightbox": "Attēlu galerija",
+    "slideN": "Slaids {n}",
+    "viewMore": "Skatīt vairāk"
   },
   "header": {
     "products": "Produkti",
     "sellers": "Pārdevēji",
+    "transporters": "pārvadātāji",
     "about": "Par mums",
+    "search": "Meklēt",
     "dashboard": "Panelis",
     "settings": "Iestatījumi",
-    "logout": "Izrakstīties"
+    "logout": "Izrakstīties",
+    "menu": "Izvēlne",
+    "language": "Valodas izvēle"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Es aizmirsu savu paroli.",
       "noAccount": "Vai jums nav konta?",
       "register": "Reģistrēties",
-      "errorDefault": "Pieteikšanās neizdevās. Lūdzu, pārbaudiet savu informāciju."
+      "errorDefault": "Pieteikšanās neizdevās. Lūdzu, pārbaudiet savu informāciju.",
+      "orContinueWith": "vai turpināt",
+      "continueWithGoogle": "Turpināt ar Google",
+      "continueWithApple": "Turpiniet ar Apple.",
+      "socialLoginError": "Pieteikšanās sociālajos tīklos neizdevās. Lūdzu, mēģiniet vēlreiz.",
+      "appleComingSoon": "Ļoti drīz",
+      "showPassword": "Rādīt paroli",
+      "hidePassword": "Slēpt paroli"
     },
     "register": {
       "title": "Reģistrēties",
@@ -51,7 +71,17 @@
       "login": "Pieslēgties",
       "passwordMismatch": "Paroles nesakrīt.",
       "passwordTooShort": "Parolei jābūt vismaz 6 rakstzīmes garai.",
-      "errorDefault": "Reģistrācija neizdevās. Lūdzu, mēģiniet vēlreiz."
+      "errorDefault": "Reģistrācija neizdevās. Lūdzu, mēģiniet vēlreiz.",
+      "showPassword": "Rādīt paroli",
+      "hidePassword": "Slēpt paroli",
+      "passwordStrength": {
+        "minLength": "Vismaz 8 rakstzīmes",
+        "uppercase": "Lielie burti (A–Z)",
+        "lowercase": "Mazie burti (a–z)",
+        "number": "Skaitlis (0–9)",
+        "special": "Speciālās rakstzīmes (!@#$%)"
+      },
+      "registerSuccess": "Jūsu konts ir veiksmīgi izveidots! Jūs tiekat novirzīts uz pieteikšanās lapu..."
     },
     "forgotPassword": {
       "title": "Es aizmirsu savu paroli.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Pieprasīt jaunu savienojumu",
       "passwordMismatch": "Paroles nesakrīt.",
       "passwordTooShort": "Parolei jābūt vismaz 6 rakstzīmes garai.",
-      "errorDefault": "Paroles atiestatīšana neizdevās. Savienojums, iespējams, nav derīgs vai ir beidzies derīguma termiņš."
+      "errorDefault": "Paroles atiestatīšana neizdevās. Savienojums, iespējams, nav derīgs vai ir beidzies derīguma termiņš.",
+      "showPassword": "Rādīt paroli",
+      "hidePassword": "Slēpt paroli"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "aktīvs",
       "totalViews": "Kopējais skatījumu skaits",
       "thisWeek": "šonedēļ",
+      "allTime": "visu laiku",
       "favorites": "Iecienītākais",
       "onYourListings": "jūsu reklāmās",
+      "savedItems": "reģistrēts produkts",
       "messages": "Ziņojums",
-      "unread": "nelasīts"
+      "notifications": "Paziņojumi",
+      "unread": "nelasīts",
+      "views": "skatījumi",
+      "draft": "Melnraksts",
+      "sold": "Pārdots",
+      "pending": "Gaida apstiprinājumu",
+      "awaitingApproval": "gaida apstiprinājumu",
+      "totalSales": "Kopējais pārdošanas apjoms",
+      "completedSales": "pabeigti pārdošanas darījumi",
+      "revenue": "Ienākumi",
+      "totalRevenue": "kopējie ieņēmumi"
     },
     "recentListings": "Jūsu jaunākie sludinājumi",
+    "recentActivity": "Jaunākās aktivitātes",
     "recentMessages": "Jaunākie ziņojumi",
+    "quickLinks": "Ātrā piekļuve",
     "noListings": "Jūs vēl neesat pievienojis nevienu reklāmu.",
+    "noActivity": "Vēl nav aktivitātes.",
     "noMessages": "Jūs vēl neesat saņēmis ziņojumu.",
     "noNotifications": "Jūs vēl neesat saņēmis nevienu paziņojumu.",
     "viewAllListings": "Skatīt visus sludinājumus",
-    "viewAllMessages": "Skatīt visus ziņojumus"
+    "viewAllMessages": "Skatīt visus ziņojumus",
+    "viewNotifications": "Skatīt paziņojumus",
+    "viewFavorites": "Izlase Gor",
+    "recentlyViewed": "Nesen skatītie",
+    "fetchError": "Ielādējot paneļa datus, radās kļūda."
   },
   "dashboardNav": {
     "overview": "Pārskats",
@@ -115,7 +166,61 @@
     "notifications": "Paziņojumi",
     "profile": "Profils",
     "settings": "Iestatījumi",
-    "newListing": "Pievienot jaunu ierakstu"
+    "newListing": "Pievienot jaunu ierakstu",
+    "becomeSeller": "Kļūsti par pārdevēju",
+    "categories": "Kategorijas",
+    "offers": "Priekšlikumi",
+    "deals": "Līgumi",
+    "farms": "Manas saimniecības",
+    "transport": "Transports",
+    "moderation": "Moderācija",
+    "sellerModeration": "Pārdevēja moderācija",
+    "transporterModeration": "Pārvadātāju moderācija",
+    "brands": "Zīmoli",
+    "transportOffers": "Piegādes cenas",
+    "healthRecords": "Veselības ieraksti",
+    "vaccinations": "Vakcinētāji",
+    "shippingCarriers": "Kuģniecības kompānijas",
+    "shippingZones": "Kravas zonas",
+    "shippingRates": "Piegādes maksa",
+    "systemSettings": "Sistēmas iestatījumi",
+    "locations": "Manas adreses"
+  },
+  "profile": {
+    "title": "Profila informācija",
+    "description": "Šeit varat atjaunināt savu personisko informāciju.",
+    "personalInfo": "Personīgā informācija",
+    "contactInfo": "Kontaktinformācija",
+    "preferences": "Preferences",
+    "firstName": "Vārds",
+    "firstNamePlaceholder": "Ievadiet savu vārdu",
+    "surname": "Uzvārds",
+    "surnamePlaceholder": "Ievadiet savu uzvārdu.",
+    "displayName": "Attēlotais vārds",
+    "phone": "Tālruņa numurs",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Verificēts",
+    "phoneNotVerified": "Neapstiprināts",
+    "verifyPhone": "Verificēt tālruņa numuru",
+    "country": "Valsts",
+    "selectCountry": "Izvēlieties valsti",
+    "language": "Valodas izvēle",
+    "selectLanguage": "Izvēlieties valodu",
+    "currency": "Valūta",
+    "selectCurrency": "Izvēlieties valūtu.",
+    "saveChanges": "Saglabāt izmaiņas",
+    "saving": "Saglabāšana...",
+    "saveSuccess": "Jūsu profila informācija ir atjaunināta.",
+    "saveError": "Atjauninot profilu, radās kļūda.",
+    "avatar": "Profila fotoattēls",
+    "changeAvatar": "Mainīt fotoattēlu",
+    "removeAvatar": "Noņemt fotoattēlu",
+    "currencies": {
+      "try": "Turcijas lira",
+      "usd": "ASV dolārs",
+      "eur": "Eiro",
+      "gbp": "Lielbritānijas mārciņa"
+    }
   },
   "myListings": {
     "title": "Manas reklāmas",
@@ -125,35 +230,94 @@
     "fetchError": "Ielādējot reklāmas, radās kļūda.",
     "deleteSuccess": "Sludinājums ir veiksmīgi izdzēsts.",
     "deleteError": "Dzēšot reklāmu, radās kļūda.",
-    "activateSuccess": "Reklāma ir aktivizēta.",
-    "deactivateSuccess": "Saraksts ir deaktivizēts.",
+    "publishSuccess": "Sludinājums ir nosūtīts apstiprināšanai.",
+    "unpublishSuccess": "Reklāmas teksts ir sagatavots.",
     "statusError": "Mainot statusu, radās kļūda.",
     "filters": {
       "all": "Visi no viņiem",
-      "active": "Aktīvs",
       "draft": "Melnraksts",
       "pending": "Gaida apstiprinājumu",
+      "active": "Aktīvs",
+      "rejected": "Noraidīts",
       "sold": "Pārdots"
     },
     "actions": {
       "edit": "Rediģēt",
       "delete": "Dzēst",
-      "activate": "Aktivizēt",
-      "deactivate": "Pasīvā struktūra"
+      "publish": "Nosūtīt apstiprināšanai",
+      "unpublish": "Melnraksts",
+      "menu": "Darījumi"
     },
     "deleteDialog": {
       "title": "Dzēst reklāmu",
       "description": "Vai tiešām vēlaties dzēst šo ierakstu? Šī darbība ir neatgriezeniska.",
       "cancel": "Atcelt",
       "confirm": "Dzēst"
-    }
+    },
+    "loadMore": "Lejupielādēt vairāk",
+    "loadingMore": "Notiek ielāde..."
   },
   "favorites": {
     "title": "Mani favorīti",
     "description": "Sekojiet līdzi produktiem, kas jums patīk šeit.",
     "noFavorites": "Jūs vēl neesat pievienojis nevienu iecienītāko produktu.",
     "browseProducts": "Pārlūkot produktus",
-    "fetchError": "Ielādējot izlasi, radās kļūda."
+    "fetchError": "Ielādējot izlasi, radās kļūda.",
+    "loadMore": "Lejupielādēt vairāk",
+    "loadingMore": "Notiek ielāde..."
+  },
+  "messages": {
+    "title": "Ziņojumi",
+    "description": "Sazinieties ar pircējiem un pārdevējiem.",
+    "noConversations": "Jūs vēl neesat saņēmis ziņojumu.",
+    "startConversation": "Lai uzdotu jautājumu par reklāmu, dodieties uz reklāmu.",
+    "fetchError": "Ielādējot ziņojumus, radās kļūda.",
+    "sendError": "Sūtot ziņojumu, radās kļūda.",
+    "connectionError": "Savienojums neizdevās. Mēģinām vēlreiz...",
+    "connected": "Tas savienojās",
+    "connecting": "Notiek savienojuma izveide...",
+    "searchPlaceholder": "Meklējiet ziņojumos...",
+    "typeMessage": "Uzrakstiet savu ziņojumu...",
+    "send": "Sūtīt",
+    "sending": "Sūtīšana...",
+    "typing": "Tajā teikts...",
+    "read": "Lasīt",
+    "delivered": "Nosūtīts",
+    "today": "Šodien",
+    "yesterday": "Vakar",
+    "noMessages": "Vēl nav ziņojumu. Sāciet sarunu!",
+    "loadMore": "Augšupielādēt vairāk",
+    "loadingMessages": "Ziņojumi tiek ielādēti...",
+    "about": "Par mums",
+    "product": "Produkts",
+    "startNewConversation": "Sākt jaunu sarunu",
+    "selectConversation": "Izvēlieties sarunu vai sāciet jaunu.",
+    "online": "Tiešsaistē",
+    "offline": "Bezsaistē",
+    "lastSeen": "Pēdējo reizi redzēts",
+    "deleteConversation": "Dzēst sarunu",
+    "deleteConfirm": "Vai tiešām vēlaties dzēst šo sarunu?",
+    "deleted": "Saruna tika izdzēsta.",
+    "defaultUser": "Lietotājs",
+    "noResults": "Nav atrasts neviens rezultāts.",
+    "newConversation": "Jauna saruna"
+  },
+  "notifications": {
+    "title": "Paziņojumi",
+    "description": "Skatiet un pārvaldiet savus paziņojumus.",
+    "markAllAsRead": "Atzīmēt visu kā izlasītu",
+    "noNotifications": "Jūs vēl neesat saņēmis nevienu paziņojumu.",
+    "viewAll": "Skatīt visus paziņojumus",
+    "today": "Šodien",
+    "yesterday": "Vakar",
+    "older": "Vecāks",
+    "types": {
+      "system": "Sistēma",
+      "message": "Ziņojums",
+      "offer": "Piedāvājums",
+      "order": "Pasūtījums",
+      "listing": "Reklāma"
+    }
   },
   "settings": {
     "title": "Iestatījumi",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Jaunās paroles nesakrīt.",
       "passwordTooShort": "Jaunajai parolei jābūt vismaz 6 rakstzīmes garai.",
       "sessionError": "Sesijas informāciju nevarēja atrast.",
-      "errorDefault": "Paroli nevarēja atjaunināt. Lūdzu, pārbaudiet savu pašreizējo paroli."
+      "errorDefault": "Paroli nevarēja atjaunināt. Lūdzu, pārbaudiet savu pašreizējo paroli.",
+      "showPassword": "Rādīt paroli",
+      "hidePassword": "Slēpt paroli"
+    },
+    "preferences": {
+      "title": "Paziņojumu un skata preferences",
+      "description": "Pārvaldiet savus paziņojumu kanālus un attēlošanas preferences.",
+      "notifications": "Paziņojumi",
+      "emailNotifications": "E-pasta paziņojumi",
+      "emailNotificationsDesc": "Saņemiet e-pasta paziņojumus par jaunām ziņām un reklāmu atjauninājumiem.",
+      "smsNotifications": "SMS paziņojumi",
+      "smsNotificationsDesc": "Saņemiet īsziņas par svarīgiem paziņojumiem.",
+      "pushNotifications": "Push paziņojumi",
+      "pushNotificationsDesc": "Saņemiet push paziņojumus, lai nekavējoties atjauninātu informāciju.",
+      "appearance": "Izskats",
+      "darkMode": "Tumšais režīms",
+      "darkModeDesc": "Pārslēdzieties uz tumšu tēmu.",
+      "saveChanges": "Saglabāt preferences",
+      "saving": "Saglabāšana...",
+      "saveSuccess": "Jūsu preferences ir atjauninātas.",
+      "saveError": "Atjauninot preferences, radās kļūda.",
+      "loadError": "Nevarēja ielādēt preferences."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Dzīvu dzīvnieku tirdzniecības platforma",
       "subtitle": "Visuzticamākā dzīvu dzīvnieku tirdzniecības platforma. Pērciet un pārdodiet savus liellopus un aitas droši.",
       "cta": "Sākt tūlīt",
-      "viewListings": "Skatīt reklāmas"
+      "viewListings": "Skatīt reklāmas",
+      "searchPlaceholder": "Meklējiet dzīvniekus... (govis, aitas, kazas...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Piedāvātās reklāmas",
       "viewAll": "Skatīt visu"
+    },
+    "cta": {
+      "title": "Sākt tūlīt",
+      "subtitle": "Ieņemiet savu vietu platformā, kur satiekas tūkstošiem pārdevēju un pircēju.",
+      "button": "Reģistrējieties bez maksas"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Par mums",
     "contact": "Komunikācija",
     "terms": "Lietošanas noteikumi",
-    "privacy": "Privātuma politika"
+    "privacy": "Privātuma politika",
+    "company": "Uzņēmums",
+    "support": "Atbalsts",
+    "legal": "Juridiskā informācija",
+    "followUs": "Sekojiet mums",
+    "newsletter": "Biļetens",
+    "newsletterDescription": "Nepalaidiet garām jaunākos sludinājumus un akcijas.",
+    "subscribe": "Abonēt",
+    "emailPlaceholder": "Jūsu e-pasta adrese",
+    "tagline": "Turcijas uzticamākā dzīvu dzīvnieku tirdzniecības platforma.",
+    "sellers": "Pārdevēji",
+    "products": "Produkti",
+    "map": "Karte",
+    "appleLoginComingSoon": "Pieteikšanās ar Apple būs aktīva pavisam drīz.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "Bieži uzdotie jautājumi"
+  },
+  "faq": {
+    "title": "Bieži uzdotie jautājumi",
+    "description": "Atbildes uz jūsu bieži uzdotajiem jautājumiem par mūsu platformu.",
+    "noFaqs": "Vēl nav pievienots neviens jautājums."
+  },
+  "about": {
+    "title": "Par mums",
+    "subtitle": "Turcijas uzticamākā dzīvu dzīvnieku tirdzniecības platforma.",
+    "mission": {
+      "title": "Mūsu misija",
+      "description": "Digitalizējot dzīvu dzīvnieku tirdzniecību, mūsu mērķis ir izveidot drošu, pārredzamu un efektīvu saikni starp ražotājiem un pircējiem."
+    },
+    "vision": {
+      "title": "Mūsu vīzija",
+      "description": "Būt digitālās transformācijas pionierim lauksaimniecības nozarē un kļūt par globālu platformu dzīvu dzīvnieku tirdzniecībā."
+    },
+    "values": {
+      "title": "Mūsu vērtības",
+      "trust": {
+        "title": "Uzticība",
+        "description": "Visos darījumos būtiska ir pārredzamība un uzticamība."
+      },
+      "quality": {
+        "title": "Kvalitāte",
+        "description": "Nepārtraukta pilnveidošanās, lai nodrošinātu vislabāko pakalpojumu."
+      },
+      "innovation": {
+        "title": "Inovācija",
+        "description": "Pārveidojot nozari, izmantojot tehnoloģijas."
+      }
+    },
+    "stats": {
+      "users": "Reģistrēts lietotājs",
+      "sellers": "Aktīvs pārdevējs",
+      "products": "Reklāma",
+      "transactions": "Veiksmīgs darījums"
+    }
+  },
+  "contact": {
+    "title": "Komunikācija",
+    "subtitle": "Lūdzu, sazinieties ar mums, ja jums ir kādi jautājumi.",
+    "form": {
+      "title": "Rakstiet mums",
+      "name": "Tavs vārds",
+      "namePlaceholder": "Ahmets Jilmazs",
+      "email": "E-pasts",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Tēma",
+      "subjectPlaceholder": "Jūsu ziņojuma tēma",
+      "message": "Jūsu ziņojums",
+      "messagePlaceholder": "Rakstiet savu ziņojumu šeit...",
+      "submit": "Sūtīt",
+      "submitting": "Sūtīšana...",
+      "success": "Jūsu ziņojums ir veiksmīgi nosūtīts. Mēs ar jums sazināsimies, cik drīz vien iespējams.",
+      "error": "Sūtot ziņojumu, radās kļūda. Lūdzu, mēģiniet vēlreiz."
+    },
+    "info": {
+      "title": "Kontaktinformācija",
+      "address": "Adrese",
+      "addressValue": "Stambula, Turcija",
+      "email": "E-pasts",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Telefons",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Darba laiks",
+      "workingHoursValue": "Pirmdiena - Piektdiena: 09:00 - 18:00",
+      "map": "Karte"
+    }
+  },
+  "terms": {
+    "title": "Lietošanas noteikumi",
+    "lastUpdated": "Pēdējais atjauninājums: {datums}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Noteikumu pieņemšana",
+        "content": "Izmantojot šo tīmekļa vietni, jūs piekrītat šādiem lietošanas noteikumiem. Ja nepiekrītat šiem noteikumiem, lūdzu, neizmantojiet vietni."
+      },
+      "services": {
+        "title": "2. Pakalpojumi",
+        "content": "Livestock Trading nodrošina platformu dzīvu dzīvnieku pirkšanai un pārdošanai. Visi darījumi platformā ir lietotāja atbildība."
+      },
+      "accounts": {
+        "title": "3. Lietotāju konti",
+        "content": "Lai izveidotu kontu, jums ir jāsniedz precīza un aktuāla informācija. Jūsu konta drošība ir jūsu atbildība."
+      },
+      "prohibited": {
+        "title": "4. Aizliegtās darbības",
+        "content": "Maldinošas reklāmas, nepatiesa informācija, krāpšana un nelikumīgas darbības ir stingri aizliegtas."
+      },
+      "liability": {
+        "title": "5. Atbildības ierobežojums",
+        "content": "Platforma nav tieši atbildīga par darījumiem starp lietotājiem. Visi darījumi notiek starp pusēm."
+      },
+      "changes": {
+        "title": "6. Izmaiņas",
+        "content": "Šie noteikumi un nosacījumi var tikt mainīti bez iepriekšēja brīdinājuma. Izmaiņas stājas spēkā nekavējoties pēc publicēšanas."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privātuma politika",
+    "lastUpdated": "Pēdējais atjauninājums: {datums}",
+    "sections": {
+      "collection": {
+        "title": "1. Informācijas vākšana",
+        "content": "Kad jūs izveidojat kontu, mēs apkopojam personas informāciju, piemēram, jūsu vārdu, e-pasta adresi un tālruņa numuru. Mēs varam apkopot arī anonīmus datus par jūsu vietnes lietošanu."
+      },
+      "usage": {
+        "title": "2. Informācijas izmantošana",
+        "content": "Mūsu apkopotā informācija tiek izmantota, lai sniegtu mūsu pakalpojumus, pārvaldītu jūsu kontu, nodrošinātu drošību un piedāvātu jums personalizētus piedāvājumus."
+      },
+      "sharing": {
+        "title": "3. Informācijas apmaiņa",
+        "content": "Jūsu personas dati netiks pārdoti vai iznomāti trešajām personām. Jūsu informācija netiks kopīgota, izņemot juridiski paredzētos nolūkos."
+      },
+      "security": {
+        "title": "4. Drošība",
+        "content": "Jūsu datu aizsardzībai ir ieviesti nozares standarta drošības pasākumi."
+      },
+      "cookies": {
+        "title": "5. Sīkfaili",
+        "content": "Mūsu tīmekļa vietne izmanto sīkfailus, lai uzlabotu lietotāju pieredzi. Jūs varat pārvaldīt sīkfailu preferences savas pārlūkprogrammas iestatījumos."
+      },
+      "rights": {
+        "title": "6. Jūsu tiesības",
+        "content": "Saskaņā ar Turcijas Personas datu aizsardzības likumu (KVKK) jums ir tiesības piekļūt saviem personas datiem, tos labot un dzēst."
+      }
+    }
   },
   "products": {
     "title": "Produkti",
@@ -235,11 +570,19 @@
       "priceDesc": "Cena (no augstākās uz zemāko)",
       "popular": "Populārākie"
     },
+    "pagination": {
+      "prev": "Bijušais",
+      "next": "Nākamais"
+    },
     "status": {
       "draft": "Melnraksts",
+      "pending": "Gaida apstiprinājumu",
       "active": "Aktīvs",
+      "inactive": "Pasīvs",
+      "outOfStock": "Nav noliktavā",
+      "expired": "Viņa pilnvaru termiņš ir beidzies.",
       "sold": "Pārdots",
-      "pending": "Gaida apstiprinājumu"
+      "rejected": "Noraidīts"
     },
     "condition": {
       "new": "Jauns",
@@ -253,9 +596,13 @@
     "loading": "Produkti tiek ielādēti...",
     "perPage": "Katrā lapā",
     "showing": "Kopējais produktu skaits {total} no {from} līdz {to}.",
+    "fetchError": "Augšupielādējot produktus, radās kļūda.",
+    "loadMore": "Rādīt vairāk",
+    "showingOf": "Tiek rādīti {count} / {total} produkti.",
     "loginToFavorite": "Piesakieties, lai pievienotu izlasei.",
     "addedToFavorites": "Pievienots izlasei",
-    "removedFromFavorites": "Noņemts no izlases"
+    "removedFromFavorites": "Noņemts no izlases",
+    "favoriteError": "Izlases pievienošanas darbība neizdevās."
   },
   "productDetail": {
     "addToFavorites": "Pievienot izlasei",
@@ -279,16 +626,31 @@
     "maxOrder": "Maksimālais pasūtījums",
     "publishedAt": "Publicēšanas datums",
     "views": "Skatīts",
-    "reviews": "novērtējums",
+    "reviews": {
+      "title": "Novērtējumi",
+      "reviewCount": "novērtējums",
+      "noReviews": "Vēl nav izvērtējuma.",
+      "verified": "Pārbaudīts pircējs"
+    },
     "similarProducts": "Līdzīgi produkti",
     "sellerProducts": "Pārdevēja citi produkti",
     "contactSeller": "Sazinieties ar pārdevēju",
-    "loginRequired": "Piesakieties, lai pievienotu izlasei.",
+    "makeOffer": "Iesniegt piedāvājumu",
+    "loginRequired": "Lūdzu, piesakieties, lai veiktu šo darbību.",
     "addedToFavorites": "Pievienots izlasei",
     "removedFromFavorites": "Noņemts no izlases",
     "linkCopied": "Saite ir nokopēta.",
     "messagingComingSoon": "Ziņojumapmaiņas funkcija būs pieejama drīzumā.",
-    "productNotFound": "Produkts nav atrasts."
+    "productNotFound": "Produkts nav atrasts.",
+    "contacting": "Notiek saziņa...",
+    "contactError": "Saziņa neizdevās. Lūdzu, mēģiniet vēlreiz.",
+    "noImage": "Nav pieejams attēls.",
+    "defaultLocation": "Turcija",
+    "inquiryMessage": "Es vēlētos saņemt informāciju par {title}.",
+    "breadcrumb": {
+      "home": "Sākums",
+      "products": "Produkti"
+    }
   },
   "seller": {
     "title": "Pārdevēja informācija",
@@ -300,6 +662,70 @@
     "call": "Meklēt",
     "viewProfile": "Skatīt profilu"
   },
+  "sellers": {
+    "title": "Pārdevēji",
+    "description": "Atklājiet uzticamus pārdevējus.",
+    "search": "Atrast pārdevēju...",
+    "sort": "Kārtot",
+    "sortOptions": {
+      "newest": "Jaunākais",
+      "mostSales": "Pārdotākais",
+      "topRated": "Augstākais rezultāts",
+      "mostProducts": "Lielākā daļa reklāmu"
+    },
+    "noResults": "Pārdevējs nav atrasts.",
+    "loading": "Pārdevēji ielādē...",
+    "showing": "Atrasti {count} pārdevēji",
+    "verified": "Verificēts",
+    "sales": "pārdošana",
+    "products": "reklāma",
+    "reviews": "novērtējums",
+    "rating": "punkts",
+    "viewProducts": "Skatīt produktus",
+    "contactSeller": "Sūtīt ziņojumu",
+    "memberSince": "Dalībnieks kopš {gads}",
+    "fetchError": "Ielādējot piegādātājus, radās kļūda.",
+    "detail": {
+      "title": "Pārdevēja profils",
+      "about": "Par mums",
+      "businessInfo": "Uzņēmuma informācija",
+      "businessName": "Uzņēmuma nosaukums",
+      "businessType": "Biznesa tūre",
+      "email": "E-pasts",
+      "phone": "Telefons",
+      "website": "Tīmekļa vietne",
+      "description": "Paskaidrojums",
+      "policies": "Politikas",
+      "returnPolicy": "Atgriešanas politika",
+      "shippingPolicy": "Piegādes politika",
+      "businessHours": "Darba laiks",
+      "paymentMethods": "Maksājuma metodes",
+      "allProducts": "Visi produkti",
+      "stats": {
+        "totalSales": "Kopējais pārdošanas apjoms",
+        "totalProducts": "Kopējais produktu skaits",
+        "totalReviews": "Novērtējums",
+        "rating": "Punkts"
+      },
+      "notFound": "Pārdevējs nav atrasts.",
+      "backToList": "Dons pārdevējiem",
+      "contactInfo": "Komunikācija",
+      "noProducts": "Šim pārdevējam vēl nav sludinājumu.",
+      "noPolicies": "Pārdevējs vēl nav definējis savus noteikumus.",
+      "fetchError": "Augšupielādējot pārdevēja informāciju, radās kļūda.",
+      "productsLoadError": "Augšupielādējot pārdevēja produktus, radās kļūda.",
+      "reviewsTab": "Novērtējumi",
+      "reviews": {
+        "summary": "Novērtējuma kopsavilkums",
+        "reviewCount": "novērtējums",
+        "communication": "Komunikācija",
+        "shippingSpeed": "Piegādes ātrums",
+        "productQuality": "Produkta kvalitāte",
+        "noReviews": "Vēl nav izvērtējuma.",
+        "verified": "Pārbaudīts pircējs"
+      }
+    }
+  },
   "editListing": {
     "title": "Rediģēt reklāmu",
     "saveChanges": "Saglabāt izmaiņas",
@@ -307,6 +733,10 @@
     "updateSuccess": "Sludinājums ir veiksmīgi atjaunināts.",
     "updateFailed": "Atjauninot ierakstu, radās kļūda.",
     "loadError": "Ielādējot reklāmu, radās kļūda.",
+    "sellerNotFound": "Pārdevēja profils nav atrasts.",
+    "sellerLoadError": "Pārdevēja profilu nevarēja ielādēt.",
+    "userNotFound": "Lietotāja informāciju nevarēja atrast. Lūdzu, piesakieties vēlreiz.",
+    "locationNotFound": "Atrašanās vietas informāciju nevarēja atrast. Lūdzu, atsvaidziniet lapu.",
     "basicInfo": "Pamatinformācija",
     "categoryAndCondition": "Kategorija un statuss",
     "pricing": "Cenu noteikšana",
@@ -314,6 +744,8 @@
     "images": "Attēli",
     "existingImages": "Pieejamie attēli",
     "addImage": "Pievienot attēlu",
+    "maxImages": "Varat augšupielādēt ne vairāk kā 10 attēlus.",
+    "imageHint": "Minimāli 1, ne vairāk kā 10 attēli. PNG, JPG vai WEBP formātā.",
     "uploadingImages": "Attēli tiek ielādēti...",
     "uploadingImage": "Attēls tiek ielādēts.",
     "imageUploadFailed": "Attēlu nevarēja ielādēt.",
@@ -358,6 +790,7 @@
     "addImage": "Pievienot attēlu",
     "maxImages": "Varat augšupielādēt ne vairāk kā 10 attēlus.",
     "imageHint": "Minimāli 1, ne vairāk kā 10 attēli. PNG, JPG vai WEBP formātā.",
+    "location": "Atrašanās vietas informācija",
     "fields": {
       "title": "Reklāmas nosaukums",
       "shortDescription": "Īss apraksts",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Piegāde ir pieejama.",
       "shippingCost": "Piegādes maksa",
       "weight": "Svars",
-      "weightUnit": "Svara mērvienība"
+      "weightUnit": "Svara mērvienība",
+      "city": "Pilsēta",
+      "address": "Adrese",
+      "postalCode": "Pasta indekss"
     },
     "placeholders": {
       "title": "Piemērs: 2 gadus veca Holšteinas šķirnes govs",
       "shortDescription": "Produkta apraksts (maksimums 200 rakstzīmes)",
       "description": "Sniedziet detalizētu informāciju par produktu...",
-      "category": "Izvēlieties kategoriju."
+      "category": "Izvēlieties kategoriju.",
+      "city": "Iebrauciet pilsētā",
+      "address": "Ievadiet pilnu adresi.",
+      "postalCode": "Pasta indekss"
+    },
+    "errors": {
+      "titleRequired": "Sludinājuma nosaukums ir obligāts.",
+      "shortDescriptionRequired": "Nepieciešams īss apraksts.",
+      "descriptionRequired": "Nepieciešams detalizēts skaidrojums.",
+      "categoryRequired": "Kategorijas izvēle ir obligāta.",
+      "priceRequired": "Cena ir obligāta.",
+      "cityRequired": "Nepieciešama informācija par pilsētu.",
+      "addressRequired": "Adreses informācija ir obligāta.",
+      "locationError": "Veidojot atrašanās vietu, radās kļūda."
     },
     "success": "Reklāma ir veiksmīgi izveidota.",
     "error": "Veidojot reklāmu, radās kļūda.",
@@ -388,24 +837,53 @@
     "draftSaved": "Melnraksts saglabāts",
     "productCreated": "Produkts tika veiksmīgi izveidots.",
     "creationFailed": "Produktu nevarēja izveidot. Lūdzu, mēģiniet vēlreiz.",
-    "errors": {
-      "titleRequired": "Sludinājuma nosaukums ir obligāts.",
-      "shortDescriptionRequired": "Nepieciešams īss apraksts.",
-      "descriptionRequired": "Nepieciešams detalizēts skaidrojums.",
-      "categoryRequired": "Kategorijas izvēle ir obligāta.",
-      "priceRequired": "Ievadiet derīgu cenu."
-    }
+    "userNotFound": "Lietotāja informāciju nevarēja atrast. Lūdzu, piesakieties vēlreiz.",
+    "defaultBusinessName": "Mans bizness"
+  },
+  "becomeSeller": {
+    "title": "Kļūsti par pārdevēju",
+    "description": "Uzņēmuma paziņojums",
+    "alreadySeller": "Jums jau ir pārdevēja profils.",
+    "goToListings": "Doties uz maniem sludinājumiem",
+    "businessInfo": "Uzņēmuma informācija",
+    "contactInfo": "Kontaktinformācija",
+    "businessName": "Uzņēmuma nosaukums",
+    "businessNamePlaceholder": "Piemērs: Yilmaz ferma",
+    "businessType": "Biznesa tūre",
+    "businessTypePlaceholder": "Izvēlieties savu uzņēmējdarbības veidu.",
+    "businessTypes": {
+      "individual": "Individuāls",
+      "company": "Uzņēmums",
+      "cooperative": "Kooperatīvs",
+      "farm": "Ferma"
+    },
+    "taxNumber": "Nodokļu maksātāja numurs",
+    "taxNumberPlaceholder": "Ievadiet savu nodokļu maksātāja identifikācijas numuru (pēc izvēles)",
+    "descriptionPlaceholder": "Uzrakstiet īsu aprakstu par savu uzņēmumu...",
+    "phone": "Telefons",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Tīmekļa vietne",
+    "websitePlaceholder": "https://www.examplesite.com (pēc izvēles)",
+    "submit": "Izveidot pārdevēja profilu",
+    "submitting": "Notiek profila izveide...",
+    "success": "Jūsu pārdevēja profils ir veiksmīgi izveidots!",
+    "error": "Veidojot pārdevēja profilu, radās kļūda.",
+    "taxNumberHelp": "Ievadiet savu 10 vai 11 ciparu nodokļu maksātāja numuru (pēc izvēles)",
+    "phoneHelp": "Piemērs: +90 555 123 45 67 vai 0555 123 45 67",
+    "websiteHelp": "Piemērs: www.isletmem.com vai https://isletmem.com",
+    "alreadySellerDescription": "Savus ierakstus varat pārvaldīt, izmantojot zemāk esošo pogu.",
+    "newListing": "Pievienot jaunu ierakstu"
   },
   "fileUpload": {
     "dragDrop": "Augšupielādējiet fotoattēlu vai videoklipu.",
     "dragDropHint": "Velciet un nometiet vai noklikšķiniet, lai atlasītu.",
     "dropHere": "Atstājiet to...",
     "imageLimit": "Fotoattēls: maks. 10 MB",
-    "videoLimit": "Video: maks. 50 MB",
+    "videoLimit": "Video: maks. 100 MB",
     "uploadCount": "{current} / {max} noslogots",
     "maxFilesError": "Jūs varat augšupielādēt ne vairāk kā {max} multivides failus.",
     "imageTooLarge": "Fotoattēlam jābūt mazākam par 10 MB.",
-    "videoTooLarge": "Videoklipam jābūt mazākam par 50 MB.",
+    "videoTooLarge": "Videoklipam jābūt mazākam par 100 MB.",
     "optimizing": "Optimizācija...",
     "uploading": "Notiek ielāde...",
     "queued": "Gaidot rindā...",
@@ -419,9 +897,833 @@
     "videoBadge": "VIDEO",
     "coverUpdated": "Vāka fotoattēls ir veiksmīgi pielāgots.",
     "optimizationInfo": "Fotoattēli ir optimizēti, lai atbilstu tīmekļa standartiem",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Vizuālā atlase",
+    "changeImage": "Mainīt",
+    "removeImage": "Noņemt",
+    "videoProcessing": "Video tiek apstrādāts...",
+    "videoProcessingFailed": "Darbība neizdevās.",
+    "videoProcessingPollError": "Nevarēja iegūt video apstrādes statusu. Lūdzu, atsvaidziniet lapu.",
+    "reorderError": "Failu nevarēja kārtot.",
+    "coverUpdateError": "Vāka fotoattēlu nevarēja atjaunināt."
+  },
+  "error": {
+    "title": "Radās kļūda.",
+    "description": "Radās negaidīta kļūda. Lūdzu, atsvaidziniet lapu vai mēģiniet vēlreiz vēlāk.",
+    "retry": "Mēģiniet vēlreiz",
+    "goBack": "Neej atpakaļ",
+    "goHome": "Sākums",
+    "notFound": {
+      "title": "Lapa nav atrasta",
+      "description": "Meklētā lapa nav pieejama vai ir pārvietota.",
+      "goHome": "Atgriezties sākumlapā"
+    }
+  },
+  "search": {
+    "title": "Meklēt",
+    "placeholder": "Meklēt produktus, kategorijas vai pārdevējus...",
+    "searchButton": "Meklēt",
+    "searchingFor": "Meklēja",
+    "loading": "Vēlējās...",
+    "resultsCount": "Atrasti {count} rezultāti.",
+    "noResults": "Nav atrasts neviens rezultāts.",
+    "tryDifferentSearch": "Izmēģiniet citus atslēgvārdus vai mainiet filtrus.",
+    "filters": {
+      "title": "Filtri",
+      "category": "Kategorija",
+      "allCategories": "Visas kategorijas",
+      "condition": "Situācija",
+      "allConditions": "Visi gadījumi",
+      "priceRange": "Cenu diapazons",
+      "price": "Cena",
+      "min": "Min",
+      "max": "Makss",
+      "apply": "Pieteikties",
+      "clear": "Tīrs",
+      "clearAll": "Notīrīt visu"
+    },
+    "fetchError": "Ielādējot meklēšanas rezultātus, radās kļūda.",
+    "recentSearches": "Nesenie meklējumi",
+    "clearHistory": "Notīrīt vēsturi",
+    "noSearchHistory": "Jums vēl nav meklēšanas vēstures.",
+    "deleteHistoryError": "Dzēšot meklēšanas vēsturi, radās kļūda."
+  },
+  "categories": {
+    "title": "Kategoriju pārvaldība",
+    "description": "Pārvaldiet kategorijas šeit.",
+    "noCategories": "Vēl nav pievienota neviena kategorija.",
+    "createFirst": "Izveidojiet pirmo kategoriju.",
+    "fetchError": "Ielādējot kategorijas, radās kļūda.",
+    "createSuccess": "Kategorija veiksmīgi izveidota",
+    "createError": "Veidojot kategoriju, radās kļūda.",
+    "updateSuccess": "Kategorija veiksmīgi atjaunināta",
+    "updateError": "Atjauninot kategoriju, radās kļūda.",
+    "deleteSuccess": "Kategorija ir veiksmīgi izdzēsta.",
+    "deleteError": "Dzēšot kategoriju, radās kļūda.",
+    "activateSuccess": "Kategorija ir aktivizēta.",
+    "deactivateSuccess": "Kategorija ir deaktivizēta.",
+    "statusError": "Mainot statusu, radās kļūda.",
+    "loadError": "Ielādējot kategoriju, radās kļūda.",
+    "filters": {
+      "all": "Visi no viņiem",
+      "active": "Aktīvs",
+      "inactive": "Neaktīvs"
+    },
+    "table": {
+      "name": "Kategorijas nosaukums",
+      "slug": "Gliemezis",
+      "sortOrder": "Sērijas numurs",
+      "subCategories": "Apakškategorija",
+      "status": "Situācija",
+      "actions": "Darījumi"
+    },
+    "actions": {
+      "edit": "Rediģēt",
+      "delete": "Dzēst",
+      "activate": "Aktivizēt",
+      "deactivate": "Pasīvā struktūra"
+    },
+    "deleteDialog": {
+      "title": "Dzēst kategoriju",
+      "description": "Vai tiešām vēlaties dzēst šo kategoriju? Šī darbība ir neatgriezeniska.",
+      "cancel": "Atcelt",
+      "confirm": "Dzēst"
+    },
+    "addNew": "Pievienot jaunu kategoriju",
+    "loadMore": "Lejupielādēt vairāk",
+    "loadingMore": "Notiek ielāde...",
+    "form": {
+      "newTitle": "Izveidot jaunu kategoriju",
+      "editTitle": "Rediģēt kategoriju",
+      "name": "Kategorijas nosaukums",
+      "namePlaceholder": "Piemērs: Liellopi",
+      "slug": "Gliemezis",
+      "slugPlaceholder": "Piemērs: lieli mājlopi",
+      "description": "Paskaidrojums",
+      "descriptionPlaceholder": "Īss kategorijas apraksts...",
+      "parentCategory": "Augšējā kategorija",
+      "parentCategoryPlaceholder": "Izvēlieties galveno kategoriju (pēc izvēles)",
+      "noParent": "Nav augstākās kategorijas (galvenā kategorija)",
+      "sortOrder": "Secības numurs",
+      "isActive": "Aktīvs",
+      "iconUrl": "Ikonas URL",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Saglabāt",
+      "submitting": "Saglabāšana...",
+      "updating": "Notiek atjaunināšana...",
+      "errors": {
+        "nameRequired": "Obligāti jānorāda kategorijas nosaukums.",
+        "slugRequired": "Gliemeži ir obligāti."
+      }
+    }
+  },
+  "offers": {
+    "title": "Priekšlikumi",
+    "description": "Pārvaldiet savus ienākošos un izejošos piedāvājumus.",
+    "received": "Ienākošie piedāvājumi",
+    "sent": "Iesniegtie piedāvājumi",
+    "noReceivedOffers": "Vēl nav saņemti piedāvājumi.",
+    "noSentOffers": "Jūs vēl neesat iesniedzis piedāvājumu.",
+    "browseProducts": "Pārlūkot produktus",
+    "viewProduct": "Apskatīt produktu",
+    "accept": "Pieņemt",
+    "reject": "Noraidīt",
+    "withdraw": "Izņemt",
+    "makeOffer": "Iesniegt piedāvājumu",
+    "sendOffer": "Sūtīt piedāvājumu",
+    "sending": "Sūtīšana...",
+    "cancel": "Atcelt",
+    "listingPrice": "Reklamētā cena",
+    "yourOffer": "Jūsu piedāvājums",
+    "quantity": "Summa",
+    "messageOptional": "Ziņojums (pēc izvēles)",
+    "messagePlaceholder": "Piezīme, ar kuru vēlaties dalīties ar pārdevēju...",
+    "expiresAt": "Pēdējais derīguma datums",
+    "offerSent": "Jūsu piedāvājums ir veiksmīgi nosūtīts.",
+    "offerError": "Nosūtot piedāvājumu, radās kļūda.",
+    "acceptSuccess": "Piedāvājums tika pieņemts.",
+    "rejectSuccess": "Piedāvājums tika noraidīts.",
+    "withdrawSuccess": "Piedāvājums tika atsaukts.",
+    "actionError": "Procesa laikā radās kļūda.",
+    "fetchError": "Ielādējot piedāvājumus, radās kļūda.",
+    "loginRequired": "Piesakieties, lai iesniegtu piedāvājumu.",
+    "invalidPrice": "Ievadiet derīgu cenu.",
+    "invalidQuantity": "Ievadiet derīgu summu.",
+    "status": {
+      "pending": "Gaida apstiprinājumu",
+      "accepted": "Pieņemts",
+      "rejected": "Noraidīts",
+      "countered": "Pretpiedāvājums",
+      "expired": "Tā termiņš ir beidzies.",
+      "withdrawn": "Atsauca"
+    }
+  },
+  "deals": {
+    "title": "Līgumi",
+    "description": "Ievērojiet savus pirkuma līgumus.",
+    "buying": "Zinātnieki",
+    "selling": "Pārdošana",
+    "noBuyingDeals": "Jums vēl nav studentu reģistrācijas procesa.",
+    "noSellingDeals": "Jums vēl nav neviena pārdošanas darījuma.",
+    "browseProducts": "Pārlūkot produktus",
+    "viewProduct": "Apskatīt produktu",
+    "activeDeals": "Aktīvie līgumi",
+    "completedDeals": "Pabeigts",
+    "purchases": "Zinātnieki",
+    "sales": "Pārdošana",
+    "fetchError": "Ielādējot līgumus, radās kļūda.",
+    "dealStatus": {
+      "pending": "Gaida apstiprinājumu",
+      "confirmed": "Apstiprināts",
+      "processing": "Gatavošanās",
+      "shipped": "Kravā",
+      "delivered": "Piegādāts",
+      "completed": "Pabeigts",
+      "cancelled": "Atcelts",
+      "disputed": "Līgums"
+    },
+    "delivery": {
+      "pickup": "Piegāde personīgi",
+      "shipping": "Ar kravu",
+      "transport": "Ar transportu"
+    },
+    "requestTransport": "Piegādes pieprasījums"
+  },
+  "farms": {
+    "title": "Manas saimniecības",
+    "description": "Pārvaldiet un atjauniniet savas saimniecības.",
+    "addFarm": "Pievienot fermu",
+    "editFarm": "Saimniecības pārvaldība",
+    "noFarms": "Jūs vēl neesat pievienojis saimniecību.",
+    "farmName": "Saimniecības nosaukums",
+    "registrationNumber": "Reģistrācijas numurs",
+    "location": "Atrašanās vieta",
+    "selectLocation": "Izvēlieties atrašanās vietu.",
+    "addLocationFirst": "Vispirms pievienojiet atrašanās vietu.",
+    "farmTypeLabel": "Fermas ekskursija",
+    "farmDescription": "Paskaidrojums",
+    "totalArea": "Kopējā platība",
+    "cultivatedArea": "Apstrādāta platība",
+    "certifications": "Sertifikāti",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP utt.",
+    "organic": "Organisks",
+    "verified": "Verificēts",
+    "save": "Saglabāt",
+    "saving": "Saglabāšana...",
+    "cancel": "Atcelt",
+    "edit": "Rediģēt",
+    "delete": "Dzēst",
+    "sellerRequired": "Nepieciešams pārdevēja profils",
+    "sellerRequiredDesc": "Lai pievienotu saimniecību, vispirms ir jāizveido pārdevēja profils.",
+    "becomeSeller": "Kļūsti par pārdevēju",
+    "createSuccess": "Ferma ir veiksmīgi pievienota.",
+    "updateSuccess": "Ferma ir veiksmīgi atjaunināta.",
+    "deleteSuccess": "Ferma tika veiksmīgi izdzēsta.",
+    "saveError": "Reģistrējot saimniecību, radās kļūda.",
+    "deleteError": "Dzēšot fermu, radās kļūda.",
+    "fetchError": "Augšupielādējot informāciju par saimniecību, radās kļūda.",
+    "farmType": {
+      "livestock": "Lopkopība",
+      "crop": "Lauksaimniecība",
+      "mixed": "Jaukts",
+      "poultry": "Spārnotais",
+      "dairy": "Piena lopkopība",
+      "aquaculture": "Ūdens produkti"
+    }
+  },
+  "transporters": {
+    "title": "pārvadātāji",
+    "description": "Dzīvnieku un produktu pārvadāšanas pakalpojumi",
+    "searchPlaceholder": "Atrodi pārvadātāju...",
+    "noTransporters": "Vēl nav reģistrētu pārvadātāju.",
+    "verified": "Verificēts",
+    "transports": "transports",
+    "viewProfile": "Skatīt profilu",
+    "sort": {
+      "newest": "Jaunākais",
+      "rating": "Augstākais rezultāts",
+      "mostTransports": "Visbiežākā piegāde"
+    },
+    "pagination": {
+      "previous": "Bijušais",
+      "next": "Nākamais",
+      "page": "Lapa {lapa}"
+    }
+  },
+  "transport": {
+    "title": "Mani piegādes pieprasījumi",
+    "description": "Izsekojiet savus piegādes pieprasījumus.",
+    "findTransporter": "Atrast pārvadātāju",
+    "active": "Aktīvs",
+    "completed": "Pabeigts",
+    "total": "Kopā",
+    "asSeller": "Kā pārdevējs",
+    "asBuyer": "Kā Pircējs",
+    "noSellerRequests": "Kā pārdevējam jums nav piegādes prasības.",
+    "noBuyerRequests": "Kā saņēmējam jums nav piegādes pieprasījuma.",
+    "viewProduct": "Apskatīt produktu",
+    "pickup": "Saņemt",
+    "delivery": "Piegāde",
+    "urgent": "Steidzami",
+    "fetchError": "Augšupielādējot piegādes pieprasījumus, radās kļūda.",
+    "trackShipment": "Sekot",
+    "transportStatus": {
+      "pending": "Gaida apstiprinājumu",
+      "inPool": "Baseinā",
+      "assigned": "Iecelts",
+      "pickedUp": "Kvīts",
+      "inTransit": "Uz ceļa",
+      "delivered": "Piegādāts",
+      "completed": "Pabeigts",
+      "cancelled": "Atcelts"
+    },
+    "transportType": {
+      "standard": "Standarta",
+      "refrigerated": "Aukstā ķēde",
+      "liveAnimal": "Dzīvi dzīvnieki",
+      "hazardous": "Bīstamie materiāli",
+      "oversized": "Liels izmērs"
+    }
+  },
+  "moderation": {
+    "title": "Produkta moderēšana",
+    "description": "Apskatiet produktus, kas gaida apstiprinājumu.",
+    "pending": "gaidīšana",
+    "allClear": "Visi produkti ir pārbaudīti.",
+    "noPending": "Nav produktu, kas gaida apstiprinājumu.",
+    "awaitingReview": "Gaida pārskatīšanu",
+    "by": "Pārdošanas persona:",
+    "stock": "Krājums",
+    "preview": "Ar tevi",
+    "approve": "Apstiprināt",
+    "reject": "Noraidīt",
+    "confirmReject": "Noraidīt",
+    "cancelReject": "Padodies",
+    "rejectReasonPlaceholder": "Pierakstiet atteikuma iemeslu...",
+    "rejectReasonRequired": "Atteikuma iemesls ir obligāts.",
+    "approveSuccess": "Produkts tika veiksmīgi apstiprināts.",
+    "rejectSuccess": "Produkts tika noraidīts.",
+    "actionError": "Procesa laikā radās kļūda.",
+    "fetchError": "Augšupielādējot produktus, radās kļūda.",
+    "unauthorized": "Jums nav atļaujas piekļūt šai lapai."
+  },
+  "sellerModeration": {
+    "title": "Pārdevēja moderācija",
+    "description": "Pārskatīt un pārvaldīt pārdevēju kontus.",
+    "pending": "gaidīšana",
+    "allClear": "Visi pārdevēji tika pārbaudīti.",
+    "noPending": "Nav pārdevēju, kas gaida.",
+    "verify": "Pārbaudīt",
+    "suspend": "Apturēt",
+    "verifySuccess": "Pārdevējs veiksmīgi verificēts.",
+    "suspendSuccess": "Pārdevēja darbība apturēta.",
+    "actionError": "Procesa laikā radās kļūda.",
+    "suspendReasonRequired": "Apturēšanas iemesls ir obligāts.",
+    "suspendReasonPlaceholder": "Uzrakstiet apturēšanas iemeslu...",
+    "confirmSuspend": "Apturēt",
+    "cancelSuspend": "Padodies",
+    "statusLabels": {
+      "pendingVerification": "Gaida verifikāciju",
+      "active": "Aktīvs",
+      "suspended": "Pakarināšana",
+      "banned": "Aizliegts"
+    },
+    "filterAll": "Rādīt visu",
+    "filterPending": "Tie, kas gaida",
+    "filterActive": "Aktīvi",
+    "filterSuspended": "Apturēta darbība",
+    "unauthorized": "Jums nav atļaujas piekļūt šai lapai.",
+    "businessName": "Uzņēmuma nosaukums",
+    "businessType": "Biznesa tūre",
+    "email": "E-pasts",
+    "phone": "Telefons",
+    "status": "Situācija",
+    "createdAt": "Reģistrācijas datums"
+  },
+  "transporterModeration": {
+    "title": "Pārvadātāju moderācija",
+    "description": "Pārskatīt un pārvaldīt pārvadātāju kontus.",
+    "pending": "gaidīšana",
+    "allClear": "Visi pārvadātāji tika pārbaudīti.",
+    "noPending": "Neviens pārvadātājs negaida.",
+    "verify": "Pārbaudīt",
+    "suspend": "Apturēt",
+    "verifySuccess": "Pārvadātājs tika veiksmīgi verificēts.",
+    "suspendSuccess": "Transportētājs tika apturēts.",
+    "actionError": "Procesa laikā radās kļūda.",
+    "suspendReasonRequired": "Apturēšanas iemesls ir obligāts.",
+    "suspendReasonPlaceholder": "Uzrakstiet apturēšanas iemeslu...",
+    "confirmSuspend": "Apturēt",
+    "cancelSuspend": "Padodies",
+    "statusLabels": {
+      "pendingVerification": "Gaida verifikāciju",
+      "active": "Aktīvs",
+      "suspended": "Pakarināšana",
+      "banned": "Aizliegts"
+    },
+    "filterAll": "Rādīt visu",
+    "filterPending": "Tie, kas gaida",
+    "filterActive": "Aktīvi",
+    "filterSuspended": "Apturēta darbība",
+    "unauthorized": "Jums nav atļaujas piekļūt šai lapai.",
+    "companyName": "Uzņēmuma nosaukums",
+    "contactPerson": "Pilnvarota persona",
+    "email": "E-pasts",
+    "phone": "Telefons",
+    "city": "Pilsēta",
+    "status": "Situācija",
+    "createdAt": "Reģistrācijas datums"
+  },
+  "transporterDetail": {
+    "notFound": "Nevienu pārvadātāju nevarēja atrast.",
+    "backToList": "Dons transportētājiem",
+    "verified": "Verificēts",
+    "totalTransports": "kopējā piegādes maksa",
+    "completed": "pabeigts",
+    "about": "Par mums",
+    "contact": "Kontaktinformācija",
+    "businessInfo": "Uzņēmuma informācija",
+    "license": "Licences numurs",
+    "insurance": "Apdrošināšanas informācija",
+    "fleet": "Informācija par floti",
+    "serviceRegions": "Apkalpošanas zonas",
+    "specializations": "Ekspertīzes jomas",
+    "certifications": "Sertifikāti"
+  },
+  "brands": {
+    "title": "Zīmola vadība",
+    "description": "Pārvaldiet produktu zīmolus.",
+    "addBrand": "Pievienot zīmolu",
+    "editBrand": "Rediģēt zīmolu",
+    "noBrands": "Vēl nav pievienots neviens zīmols.",
+    "brandName": "Zīmola nosaukums",
+    "brandDescription": "Paskaidrojums",
+    "website": "Tīmekļa vietne",
+    "logoUrl": "Logotipa URL",
+    "save": "Saglabāt",
+    "saving": "Saglabāšana...",
+    "cancel": "Atcelt",
+    "edit": "Rediģēt",
+    "delete": "Dzēst",
+    "inactive": "Pasīvs",
+    "products": "produkts",
+    "createSuccess": "Zīmols veiksmīgi pievienots",
+    "updateSuccess": "Zīmols ir veiksmīgi atjaunināts.",
+    "deleteSuccess": "Zīmols tika veiksmīgi dzēsts.",
+    "saveError": "Reģistrējot preču zīmi, radās kļūda.",
+    "deleteError": "Dzēšot preču zīmi, radās kļūda.",
+    "fetchError": "Ielādējot zīmolus, radās kļūda.",
+    "unauthorized": "Jums nav atļaujas piekļūt šai lapai."
+  },
+  "transporterReviews": {
+    "title": "Novērtējumi",
+    "reviewCount": "novērtējums",
+    "noReviews": "Vēl nav izvērtējuma.",
+    "timeliness": "Savlaicīga piegāde",
+    "communication": "Komunikācija",
+    "carefulHandling": "Rūpīga apiešanās",
+    "professionalism": "Profesionalitāte"
+  },
+  "transportOffers": {
+    "title": "Piegādes cenas",
+    "description": "Pārvaldiet cenu piedāvājumus, ko iesniedzat piegādes pieprasījumiem.",
+    "newOffer": "Jauns priekšlikums",
+    "transportRequestId": "Piegādes pieprasījuma ID",
+    "requestIdPlaceholder": "Ievadiet piegādes pieprasījuma ID.",
+    "offeredPrice": "Piedāvājuma cena",
+    "estimatedDays": "Paredzamais ilgums (dienas)",
+    "days": "diena",
+    "vehicleType": "Transportlīdzekļa tips",
+    "insuranceIncluded": "Apdrošināšana iekļauta",
+    "message": "Ziņojums",
+    "cancel": "Atcelt",
+    "sending": "Sūtīšana...",
+    "sendOffer": "Iesniegt piedāvājumu",
+    "cancelOffer": "Atcelt",
+    "pendingTab": "Gaidīšana",
+    "historyTab": "Pagātne",
+    "noPendingOffers": "Jums nav neapstiprinātu piedāvājumu.",
+    "noHistory": "Nav atrasti iepriekšējie piedāvājumi.",
+    "status": {
+      "pending": "Gaidīšana",
+      "accepted": "Pieņemts",
+      "rejected": "Noraidīts",
+      "expired": "Tā termiņš ir beidzies.",
+      "cancelled": "Atcelts"
+    },
+    "createSuccess": "Piedāvājums tika veiksmīgi iesniegts.",
+    "createError": "Nosūtot piedāvājumu, radās kļūda.",
+    "cancelSuccess": "Piedāvājums tika atcelts.",
+    "cancelError": "Atceļot piedāvājumu, radās kļūda.",
+    "fetchError": "Ielādējot piedāvājumus, radās kļūda."
+  },
+  "animalInfo": {
+    "title": "Informācija par dzīvniekiem un produktiem",
+    "animalTab": "Dzīvnieks",
+    "healthTab": "Veselība",
+    "vaccinationsTab": "Vakcinētāji",
+    "veterinaryTab": "Veterinārārsts",
+    "breed": "Sacensības",
+    "genderLabel": "Dzimums",
+    "gender": {
+      "male": "Vīrietis",
+      "female": "Sieviete",
+      "unknown": "Nezināms"
+    },
+    "age": "Vecums",
+    "months": "mēnesis",
+    "weight": "Svars",
+    "color": "Krāsa",
+    "tagNumber": "Ausu skaits",
+    "healthStatus": "Veselības stāvoklis",
+    "health": {
+      "healthy": "Veselīgs",
+      "underTreatment": "Ārstēšanas laikā",
+      "recovering": "Viņš/viņa atveseļojas.",
+      "quarantined": "Karantīnā",
+      "unknown": "Nezināms"
+    },
+    "purposeLabel": "Paredzētais lietojums",
+    "purpose": {
+      "breeding": "Stud",
+      "dairy": "Piens",
+      "meat": "Gaļa",
+      "egg": "Ola",
+      "wool": "Vilna",
+      "working": "Darbs",
+      "pet": "Vietējais",
+      "other": "Citi"
+    },
+    "pregnancy": "Grūtniecība",
+    "pregnant": "Grūtniece",
+    "microchip": "Mikročipa Nr.",
+    "passport": "Pases Nr.",
+    "sireDetails": "Informācija par tēvu",
+    "damDetails": "Galvenā informācija",
+    "diagnosis": "Diagnoze",
+    "treatment": "Ārstēšana",
+    "medications": "Zāles",
+    "veterinarian": "Veterinārārsts",
+    "nextDue": "Nākamā dumpinieku vēsture",
+    "prescriptionRequired": "Nepieciešama ārsta recepte",
+    "targetSpecies": "Mērķa tūres",
+    "activeIngredients": "Aktīvās sastāvdaļas",
+    "registrationNo": "Reģistrācijas numurs",
+    "storage": "Uzglabāšana",
+    "chemicalTab": "Ķīmiskā",
+    "feedTab": "Ēsma",
+    "seedTab": "Sēkla",
+    "machineryTab": "Mašīna",
+    "organic": "Organisks",
+    "toxicity": "Toksicitāte",
+    "gmoFree": "Bez ĢMO",
+    "protein": "Olbaltumvielas",
+    "fat": "Eļļa",
+    "fiber": "Šķiedra",
+    "hybrid": "Hibrīds",
+    "germination": "Dīgtspēja",
+    "daysToMaturity": "Nobriešana",
+    "daysLabel": "diena",
+    "warranty": "Garantēts",
+    "power": "Stiprums",
+    "hoursUsed": "Lietošanas stundas",
+    "hours": "stunda",
+    "powerSource": "Barošanas avots"
+  },
+  "productVariants": {
+    "title": "Produkta varianti",
+    "variantCount": "variants",
+    "inStock": "Noliktavā",
+    "outOfStock": "Izpārdots"
+  },
+  "productPrices": {
+    "title": "Cenas (vairākas valūtas)",
+    "autoConversion": "Automātiska pārveidošana",
+    "validUntil": "Derīgums"
+  },
+  "requestTransport": {
+    "title": "Izveidot piegādes pieprasījumu",
+    "pickupLocation": "Iekraušanas punkts",
+    "deliveryLocation": "Piegādes punkts",
+    "city": "Pilsēta",
+    "address": "Adrese",
+    "transportType": "Transporta tūre",
+    "types": {
+      "standard": "Standarta",
+      "refrigerated": "Aukstā ķēde",
+      "liveAnimal": "Dzīvi dzīvnieki",
+      "hazardous": "Bīstamie materiāli",
+      "oversized": "Liels izmērs"
+    },
+    "weight": "Svars (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Vēlamais augšupielādes datums",
+    "preferredDeliveryDate": "Vēlamais piegādes datums",
+    "urgent": "Steidzama transportēšana",
+    "specialInstructions": "Īpaši norādījumi",
+    "instructionsPlaceholder": "Šeit ierakstiet savus īpašos norādījumus...",
+    "cancel": "Padodies",
+    "submit": "Izveidojiet pieprasījumu",
+    "submitting": "Radīšanas procesā...",
+    "success": "Piegādes pieprasījums ir veiksmīgi izveidots.",
+    "error": "Veidojot piegādes pieprasījumu, radās kļūda."
+  },
+  "transportTracking": {
+    "title": "Sūtījumu izsekošana",
+    "noTracking": "Izsekošanas informācija vēl nav pieejama.",
+    "update": "Atjauninājums"
+  },
+  "locations": {
+    "title": "Manas adreses",
+    "description": "Pārvaldiet savas reģistrētās adreses.",
+    "addLocation": "Pievienot adresi",
+    "editLocation": "Rediģēt adresi",
+    "noLocations": "Jums vēl nav reģistrētas adreses.",
+    "name": "Adrese Vārds",
+    "namePlaceholder": "Piemēram: Māja, Darbs, Ferma",
+    "address": "Adrese",
+    "addressLine2": "Adreses 2. rinda",
+    "city": "Pilsēta",
+    "state": "Rajons/reģions",
+    "postalCode": "Pasta indekss",
+    "phone": "Telefons",
+    "email": "E-pasts",
+    "cancel": "Padodies",
+    "save": "Saglabāt",
+    "saving": "Saglabāšana...",
+    "typePickup": "Ielādēšana",
+    "typeDelivery": "Piegāde",
+    "typeBoth": "Vispārīgi",
+    "createSuccess": "Adrese veiksmīgi pievienota.",
+    "createError": "Pievienojot adresi, radās kļūda.",
+    "updateSuccess": "Adrese ir veiksmīgi atjaunināta.",
+    "updateError": "Atjauninot adresi, radās kļūda.",
+    "deleteLocation": "Dzēst adresi",
+    "deleteSuccess": "Adrese dzēsta",
+    "deleteError": "Dzēšot adresi, radās kļūda.",
+    "fetchError": "Ielādējot adreses, radās kļūda."
+  },
+  "systemSettings": {
+    "title": "Sistēmas iestatījumi",
+    "description": "Skatīt platformas valūtu, valodu, maksājuma metodes, piegādes un nodokļu iestatījumus.",
+    "unauthorized": "Jums nav atļaujas piekļūt šai lapai.",
+    "currenciesTab": "Valūtas",
+    "languagesTab": "Valodas",
+    "paymentTab": "Maksājuma metodes",
+    "shippingTab": "Krava",
+    "taxTab": "Nodoklis",
+    "active": "Aktīvs",
+    "inactive": "Pasīvs",
+    "default": "Noklusējuma",
+    "noCurrencies": "Valūta vēl nav definēta.",
+    "noLanguages": "Valoda vēl nav definēta.",
+    "noPaymentMethods": "Maksājuma metode vēl nav definēta.",
+    "noCarriers": "Kuģniecības kompānija vēl nav identificēta.",
+    "noZones": "Kravas nodalījuma platība vēl nav noteikta.",
+    "noTaxRates": "Nodokļa likme vēl nav noteikta.",
+    "carriers": "Kuģniecības kompānijas",
+    "zones": "Kravas zonas",
+    "countries": "Valstis",
+    "rates": "Piegādes maksa",
+    "noRates": "Piegādes izmaksas vēl nav noteiktas.",
+    "freeShipping": "Bezmaksas piegāde",
+    "deliveryDays": "dienas piegādes laiks"
+  },
+  "pushPermission": {
+    "title": "Iespējot paziņojumus",
+    "description": "Saņemt paziņojumus par jaunām ziņām, piedāvājumiem un pasūtījumu atjauninājumiem.",
+    "allow": "Atļaut",
+    "dismiss": "Aizvērt"
+  },
+  "healthRecords": {
+    "title": "Veselības ieraksti",
+    "description": "Pārvaldīt dzīvnieku veselības ierakstus un slimības vēsturi.",
+    "addRecord": "Pievienot ierakstu",
+    "editRecord": "Rediģēt ierakstu",
+    "deleteRecord": "Dzēst ierakstu",
+    "noRecords": "Veselības reģistrs vēl nav pievienots.",
+    "animalInfoId": "Dzīvnieka identifikācija",
+    "animalInfoIdPlaceholder": "Ievadiet dzīvnieka informācijas ID.",
+    "recordType": "Reģistrācijas tūre",
+    "recordTypePlaceholder": "Piemēri: Izmeklēšana, Ārstēšana, Ķirurģija",
+    "recordDate": "Reģistrācijas datums",
+    "followUpDate": "Pārbaudes datums",
+    "veterinarianName": "Veterinārārsts",
+    "veterinarianLicense": "Licences Nr.",
+    "clinicName": "Klīniskā",
+    "diagnosis": "Diagnoze",
+    "treatment": "Ārstēšana",
+    "medications": "Zāles",
+    "medicationsPlaceholder": "Piemērs: penicilīns 500 mg, ibuprofēns",
+    "notes": "Piezīmes",
+    "documentUrl": "Dokumenta URL",
+    "saving": "Saglabāšana...",
+    "createSuccess": "Veselības ieraksts veiksmīgi pievienots.",
+    "updateSuccess": "Veselības ieraksts ir veiksmīgi atjaunināts.",
+    "deleteSuccess": "Veselības ieraksts ir veiksmīgi izdzēsts.",
+    "saveError": "Saglabājot ierakstu, radās kļūda.",
+    "deleteError": "Dzēšot ierakstu, radās kļūda.",
+    "fetchError": "Ielādējot ierakstus, radās kļūda."
+  },
+  "vaccinations": {
+    "title": "Vakcīnu ieraksti",
+    "description": "Pārvaldīt dzīvnieku vakcinācijas ierakstus un kalendārus.",
+    "addVaccination": "Pievienot dumpinieku",
+    "editVaccination": "Dumpinieku vienošanās",
+    "deleteVaccination": "Dumpinieks Sils",
+    "noVaccinations": "Vakcinācijas reģistrs vēl nav pievienots.",
+    "animalInfoId": "Dzīvnieka identifikācija",
+    "animalInfoIdPlaceholder": "Ievadiet dzīvnieka informācijas ID.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Piemērs: SAT vakcīna, Brucella",
+    "vaccineType": "Dumpinieku tūre",
+    "vaccineTypePlaceholder": "Piemērs: Aktīvs, Neaktīvs",
+    "batchNumber": "Puses numurs",
+    "vaccinationDate": "Dumpinieka vēsture",
+    "nextDueDate": "Nākamā dumpinieku vēsture",
+    "veterinarianName": "Veterinārārsts",
+    "veterinarianLicense": "Licences Nr.",
+    "notes": "Piezīmes",
+    "certificateUrl": "Sertifikāta URL",
+    "saving": "Saglabāšana...",
+    "createSuccess": "Vakcinācijas ieraksts veiksmīgi pievienots.",
+    "updateSuccess": "Vakcinācijas reģistrs ir veiksmīgi atjaunināts.",
+    "deleteSuccess": "Vakcinācijas ieraksts ir veiksmīgi izdzēsts.",
+    "saveError": "Reģistrējot vakcīnu, radās kļūda.",
+    "deleteError": "Dzēšot vakcīnu, radās kļūda.",
+    "fetchError": "Vakcīnu ielādes laikā radās kļūda."
+  },
+  "shippingCarriers": {
+    "title": "Kuģniecības kompānijas",
+    "description": "Pārvaldīt kuģniecības uzņēmuma informāciju.",
+    "addCarrier": "Pievienot uzņēmumu",
+    "editCarrier": "Rediģēt uzņēmumu",
+    "noCarriers": "Vēl nav pievienots neviens kuģniecības uzņēmums.",
+    "carrierName": "Uzņēmuma nosaukums",
+    "carrierNamePlaceholder": "Piemērs: Aras Kargo, MNG",
+    "code": "Kods",
+    "codePlaceholder": "Piemērs: ARAS",
+    "website": "Tīmekļa vietne",
+    "trackingUrlTemplate": "Sekot URL veidnei",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Atbalstītās valstis",
+    "supportedCountriesPlaceholder": "Piemērs: TR, US, DE",
+    "active": "Aktīvs",
+    "inactive": "Pasīvs",
+    "saving": "Saglabāšana...",
+    "edit": "Rediģēt",
+    "delete": "Dzēst",
+    "createSuccess": "Kuģniecības uzņēmums ir veiksmīgi pievienots.",
+    "updateSuccess": "Kuģniecības uzņēmums ir veiksmīgi atjaunināts.",
+    "deleteSuccess": "Kuģniecības uzņēmums ir veiksmīgi dzēsts.",
+    "saveError": "Reģistrējot kuģniecības uzņēmumu, radās kļūda.",
+    "deleteError": "Dzēšot piegādes uzņēmuma informāciju, radās kļūda.",
+    "fetchError": "Ielādējot kravas uzņēmumu datus, radās kļūda."
+  },
+  "shippingZones": {
+    "title": "Kravas zonas",
+    "description": "Pārvaldīt kravas zonas un apgabalus.",
+    "addZone": "Pievienot reģionu",
+    "editZone": "Rediģēt reģionu",
+    "noZones": "Kravas nodalījums vēl nav pievienots.",
+    "zoneName": "Reģiona nosaukums",
+    "zoneNamePlaceholder": "Piemērs: Eiropa, Ziemeļamerika",
+    "countryCodes": "Valstu kodi",
+    "countryCodesPlaceholder": "Piemērs: TR, DE, FR",
+    "active": "Aktīvs",
+    "inactive": "Pasīvs",
+    "saving": "Saglabāšana...",
+    "edit": "Rediģēt",
+    "delete": "Dzēst",
+    "createSuccess": "Reģions ir veiksmīgi pievienots.",
+    "updateSuccess": "Reģions ir veiksmīgi atjaunināts.",
+    "deleteSuccess": "Teritorija ir veiksmīgi attīrīta.",
+    "saveError": "Saglabājot reģionu, radās kļūda.",
+    "deleteError": "Dzēšot reģionu, radās kļūda.",
+    "fetchError": "Ielādējot reģionus, radās kļūda."
+  },
+  "shippingRates": {
+    "title": "Piegādes maksa",
+    "description": "Pārvaldiet piegādes izmaksas un piegādes iespējas.",
+    "addRate": "Pievienot maksu",
+    "editRate": "Pielāgot maksu",
+    "noRates": "Piegādes izmaksas vēl nav pievienotas.",
+    "zone": "Apgabals",
+    "carrier": "Firma",
+    "selectZone": "Izvēlieties reģionu",
+    "selectCarrier": "Izvēlieties uzņēmumu",
+    "shippingCost": "Piegādes maksa",
+    "currency": "Valūta",
+    "estimatedDeliveryDays": "Paredzamā piegāde (dienas)",
+    "minWeight": "Minimālais svars",
+    "maxWeight": "Maksimālais svars",
+    "minOrderAmount": "Minimālā pasūtījuma summa",
+    "freeShipping": "Bezmaksas piegāde",
+    "free": "Bezmaksas",
+    "active": "Aktīvs",
+    "inactive": "Pasīvs",
+    "cost": "Maksa",
+    "deliveryDays": "Piegāde",
+    "status": "Situācija",
+    "saving": "Saglabāšana...",
+    "createSuccess": "Maksa veiksmīgi pievienota.",
+    "updateSuccess": "Alga ir veiksmīgi atjaunināta.",
+    "deleteSuccess": "Maksa ir veiksmīgi dzēsta.",
+    "saveError": "Saglabājot maksu, radās kļūda.",
+    "deleteError": "Dzēšot maksu, radās kļūda.",
+    "fetchError": "Augšupielādējot maksas, radās kļūda."
+  },
+  "metadata": {
+    "title": "Lopkopības tirdzniecība — dzīvu dzīvnieku tirdzniecības platforma",
+    "description": "Pasaulē uzticamākā dzīvu dzīvnieku tirdzniecības platforma. Droša un caurspīdīga dzīvnieku pirkšana un pārdošana.",
+    "pages": {
+      "about": {
+        "title": "Par mums",
+        "description": "Uzziniet par lopkopības tirdzniecību. Uzticama dzīvu dzīvnieku tirdzniecības platforma."
+      },
+      "contact": {
+        "title": "Komunikācija",
+        "description": "Sazinieties ar mums. Livestock Trading klientu atbalsta komanda ir gatava jums palīdzēt."
+      },
+      "terms": {
+        "title": "Lietošanas noteikumi",
+        "description": "Lopkopības tirdzniecības noteikumi un nosacījumi."
+      },
+      "privacy": {
+        "title": "Privātuma politika",
+        "description": "Lopkopības tirdzniecības privātuma politika. Uzziniet, kā tiek aizsargāti jūsu personas dati."
+      },
+      "products": {
+        "title": "Produkti",
+        "description": "Pārlūkojiet dzīvu dzīvnieku sludinājumus. Uzticami sludinājumi par liellopiem, aitām un citiem dzīvniekiem."
+      },
+      "sellers": {
+        "title": "Pārdevēji",
+        "description": "Atklājiet uzticamus dzīvnieku pārdevējus. Pārbaudīti pārdevēju profili un atsauksmes."
+      },
+      "transporters": {
+        "title": "pārvadātāji",
+        "description": "Atklājiet dzīvnieku pārvadāšanas uzņēmumus. Droša un profesionāla dzīvu dzīvnieku pārvadāšana."
+      },
+      "search": {
+        "title": "Meklēt",
+        "description": "Meklējiet starp dzīvu dzīvnieku sarakstiem. Vienkārša meklēšana ar filtrēšanas un kārtošanas iespējām."
+      },
+      "faq": {
+        "title": "Bieži uzdotie jautājumi",
+        "description": "Bieži uzdotie jautājumi un atbildes par lopkopības tirdzniecību."
+      },
+      "productDetail": {
+        "title": "{title} - Pārdošanā",
+        "description": "Pārdod {title} - {city}. Noklikšķiniet, lai skatītu sīkāku informāciju un kontaktinformāciju."
+      },
+      "sellerDetail": {
+        "title": "{name} — pārdevēja profils",
+        "description": "Pārdevēja {name} profils. Atsauksmes, sludinājumi un kontaktinformācija."
+      },
+      "transporterDetail": {
+        "title": "{name} — pārvadātāja profils",
+        "description": "{name} pārvadātāja profils. Apkalpošanas zonas, atsauksmes un kontaktinformācija."
+      }
+    }
   }
 }

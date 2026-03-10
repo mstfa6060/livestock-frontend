@@ -44,12 +44,16 @@ interface ProductCardProps {
   isFavorite?: boolean;
 }
 
-// Product status mapping
+// Product status mapping (must match backend ProductStatus enum)
 const STATUS_MAP: Record<number, { label: string; variant: "default" | "secondary" | "destructive" | "outline"; bannerClass: string }> = {
   0: { label: "draft", variant: "secondary", bannerClass: "bg-slate-700/80" },
-  1: { label: "active", variant: "default", bannerClass: "" },
-  2: { label: "sold", variant: "destructive", bannerClass: "bg-red-800/85" },
-  3: { label: "pending", variant: "outline", bannerClass: "bg-amber-700/80" },
+  1: { label: "pending", variant: "outline", bannerClass: "bg-amber-700/80" },
+  2: { label: "active", variant: "default", bannerClass: "" },
+  3: { label: "inactive", variant: "secondary", bannerClass: "bg-slate-600/80" },
+  4: { label: "outOfStock", variant: "secondary", bannerClass: "bg-slate-700/80" },
+  5: { label: "expired", variant: "outline", bannerClass: "bg-gray-700/80" },
+  6: { label: "sold", variant: "destructive", bannerClass: "bg-red-800/85" },
+  7: { label: "rejected", variant: "destructive", bannerClass: "bg-red-800/85" },
 };
 
 // Product condition mapping
@@ -149,7 +153,7 @@ export const ProductCard = memo(function ProductCard({ product, onFavorite, isFa
           </Badge>
 
           {/* Sold / Draft / Pending Banner */}
-          {product.status !== 1 && (
+          {product.status !== 2 && (
             <div className={`absolute top-0 inset-x-0 ${status.bannerClass} py-1.5 text-center`}>
               <span className="text-white font-semibold text-xs uppercase tracking-wider">
                 {t(`status.${status.label}`)}
@@ -158,7 +162,7 @@ export const ProductCard = memo(function ProductCard({ product, onFavorite, isFa
           )}
 
           {/* Out of Stock Banner */}
-          {!product.isInStock && product.status === 1 && (
+          {!product.isInStock && product.status === 2 && (
             <div className="absolute top-0 inset-x-0 bg-slate-800/80 py-1.5 text-center">
               <span className="text-white font-semibold text-xs uppercase tracking-wider">
                 {t("outOfStock")}

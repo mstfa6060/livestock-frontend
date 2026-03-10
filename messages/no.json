@@ -11,17 +11,30 @@
     "back": "Tilbake",
     "next": "Framover",
     "close": "Lukke",
+    "unauthorized": "Du har ikke tillatelse til å få tilgang til denne siden.",
     "emailPlaceholder": "ornek@epost.com",
     "login": "Logg inn",
-    "register": "Register"
+    "register": "Register",
+    "previous": "Tidligere",
+    "zoomIn": "Zoom inn",
+    "previousImage": "Forrige bilde",
+    "nextImage": "Neste bilde",
+    "closeLightbox": "Lukk galleriet",
+    "imageLightbox": "Bildegalleri",
+    "slideN": "Lysbilde",
+    "viewMore": "Se mer"
   },
   "header": {
     "products": "Produkter",
     "sellers": "Selgere",
+    "transporters": "transportører",
     "about": "Om oss",
+    "search": "Søk",
     "dashboard": "Panelet",
     "settings": "Innstillinger",
-    "logout": "Logg ut"
+    "logout": "Logg ut",
+    "menu": "Meny",
+    "language": "Språkvalg"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Jeg har glemt passordet mitt.",
       "noAccount": "Har du ikke en konto?",
       "register": "Register",
-      "errorDefault": "Innlogging mislyktes. Vennligst sjekk informasjonen din."
+      "errorDefault": "Innlogging mislyktes. Vennligst sjekk informasjonen din.",
+      "orContinueWith": "eller fortsett",
+      "continueWithGoogle": "Fortsett med Google",
+      "continueWithApple": "Fortsett med Apple.",
+      "socialLoginError": "Sosial pålogging mislyktes. Prøv på nytt.",
+      "appleComingSoon": "Veldig snart",
+      "showPassword": "Vis passord",
+      "hidePassword": "Skjul passord"
     },
     "register": {
       "title": "Register",
@@ -51,7 +71,17 @@
       "login": "Logg inn",
       "passwordMismatch": "Passordene stemmer ikke overens.",
       "passwordTooShort": "Passordet må være minst 6 tegn langt.",
-      "errorDefault": "Registreringen mislyktes. Prøv på nytt."
+      "errorDefault": "Registreringen mislyktes. Prøv på nytt.",
+      "showPassword": "Vis passord",
+      "hidePassword": "Skjul passord",
+      "passwordStrength": {
+        "minLength": "Minst 8 tegn",
+        "uppercase": "Store bokstaver (A–Å)",
+        "lowercase": "Små bokstaver (a–å)",
+        "number": "Tall (0–9)",
+        "special": "Spesialtegn (!@#$%)"
+      },
+      "registerSuccess": "Kontoen din er opprettet! Du blir omdirigert til innloggingssiden..."
     },
     "forgotPassword": {
       "title": "Jeg har glemt passordet mitt.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Be om en ny tilkobling",
       "passwordMismatch": "Passordene stemmer ikke overens.",
       "passwordTooShort": "Passordet må være minst 6 tegn langt.",
-      "errorDefault": "Tilbakestilling av passord mislyktes. Tilkoblingen kan være ugyldig eller utløpt."
+      "errorDefault": "Tilbakestilling av passord mislyktes. Tilkoblingen kan være ugyldig eller utløpt.",
+      "showPassword": "Vis passord",
+      "hidePassword": "Skjul passord"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "aktiv",
       "totalViews": "Totalt antall visninger",
       "thisWeek": "denne uken",
+      "allTime": "alle tider",
       "favorites": "Favoritt",
       "onYourListings": "i annonsene dine",
+      "savedItems": "registrert produkt",
       "messages": "Beskjed",
-      "unread": "ulest"
+      "notifications": "Varsler",
+      "unread": "ulest",
+      "views": "visninger",
+      "draft": "Utkast",
+      "sold": "Solgt",
+      "pending": "I påvente av",
+      "awaitingApproval": "venter på godkjenning",
+      "totalSales": "Totalt salg",
+      "completedSales": "fullførte salg",
+      "revenue": "Inntekt",
+      "totalRevenue": "total inntekt"
     },
     "recentListings": "Dine nyeste oppføringer",
+    "recentActivity": "Nylige aktiviteter",
     "recentMessages": "Nylige meldinger",
+    "quickLinks": "Hurtigtilgang",
     "noListings": "Du har ikke lagt til noen annonser ennå.",
+    "noActivity": "Ingen aktivitet ennå.",
     "noMessages": "Du har ikke mottatt en melding ennå.",
     "noNotifications": "Du har ikke mottatt noen varsler ennå.",
     "viewAllListings": "Se alle oppføringer",
-    "viewAllMessages": "Vis alle meldinger"
+    "viewAllMessages": "Vis alle meldinger",
+    "viewNotifications": "Vis varsler",
+    "viewFavorites": "Favoritter Gor",
+    "recentlyViewed": "Nylig vist",
+    "fetchError": "Det oppsto en feil under lasting av paneldataene."
   },
   "dashboardNav": {
     "overview": "Oversikt",
@@ -115,7 +166,61 @@
     "notifications": "Varsler",
     "profile": "Profil",
     "settings": "Innstillinger",
-    "newListing": "Legg til ny oppføring"
+    "newListing": "Legg til ny oppføring",
+    "becomeSeller": "Bli en selger",
+    "categories": "Kategorier",
+    "offers": "Forslag",
+    "deals": "Avtaler",
+    "farms": "Mine gårder",
+    "transport": "Transportere",
+    "moderation": "Moderering",
+    "sellerModeration": "Selgermoderering",
+    "transporterModeration": "Moderering av operatører",
+    "brands": "Merker",
+    "transportOffers": "Frakttilbud",
+    "healthRecords": "Helsejournaler",
+    "vaccinations": "Vaksinatorer",
+    "shippingCarriers": "Rederiselskaper",
+    "shippingZones": "Lastesoner",
+    "shippingRates": "Fraktgebyrer",
+    "systemSettings": "Systeminnstillinger",
+    "locations": "Mine adresser"
+  },
+  "profile": {
+    "title": "Profilinformasjon",
+    "description": "Du kan oppdatere din personlige informasjon her.",
+    "personalInfo": "Personopplysninger",
+    "contactInfo": "Kontaktinformasjon",
+    "preferences": "Innstillinger",
+    "firstName": "Navn",
+    "firstNamePlaceholder": "Skriv inn navnet ditt",
+    "surname": "Etternavn",
+    "surnamePlaceholder": "Skriv inn etternavnet ditt.",
+    "displayName": "Vist navn",
+    "phone": "Telefonnummer",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Verifisert",
+    "phoneNotVerified": "Ubekreftet",
+    "verifyPhone": "Bekreft telefonnummer",
+    "country": "Land",
+    "selectCountry": "Velg et land",
+    "language": "Språkpreferanse",
+    "selectLanguage": "Velg et språk",
+    "currency": "Valuta",
+    "selectCurrency": "Velg valuta",
+    "saveChanges": "Lagre endringer",
+    "saving": "Lagrer...",
+    "saveSuccess": "Profilinformasjonen din er oppdatert.",
+    "saveError": "Det oppsto en feil under oppdatering av profilen.",
+    "avatar": "Profilbilde",
+    "changeAvatar": "Endre bilde",
+    "removeAvatar": "Fjern bilde",
+    "currencies": {
+      "try": "Tyrkisk lira",
+      "usd": "Amerikansk dollar",
+      "eur": "Euro",
+      "gbp": "Britisk pund"
+    }
   },
   "myListings": {
     "title": "Mine annonser",
@@ -125,35 +230,94 @@
     "fetchError": "Det oppsto en feil under innlasting av annonser.",
     "deleteSuccess": "Annonsen ble slettet.",
     "deleteError": "Det oppsto en feil under sletting av annonsen.",
-    "activateSuccess": "Annonsen er aktivert.",
-    "deactivateSuccess": "Oppføringen er deaktivert.",
+    "publishSuccess": "Annonsen er sendt inn til godkjenning.",
+    "unpublishSuccess": "Annonsen er utarbeidet.",
     "statusError": "Det oppsto en feil under endring av statusen.",
     "filters": {
       "all": "Alle av dem",
-      "active": "Aktiv",
       "draft": "Utkast",
       "pending": "Venter på godkjenning",
+      "active": "Aktiv",
+      "rejected": "Avvist",
       "sold": "Solgt"
     },
     "actions": {
       "edit": "Redigere",
       "delete": "Slett",
-      "activate": "Aktiver",
-      "deactivate": "Passiv struktur"
+      "publish": "Send til godkjenning",
+      "unpublish": "Utkast",
+      "menu": "Transaksjoner"
     },
     "deleteDialog": {
       "title": "Slett annonsen",
       "description": "Er du sikker på at du vil slette denne oppføringen? Denne handlingen kan ikke angres.",
       "cancel": "Kansellere",
       "confirm": "Slett"
-    }
+    },
+    "loadMore": "Last ned mer",
+    "loadingMore": "Laster inn..."
   },
   "favorites": {
     "title": "Mine favoritter",
     "description": "Følg produktene du liker her.",
     "noFavorites": "Du har ikke lagt til noen favorittprodukter ennå.",
     "browseProducts": "Bla gjennom produkter",
-    "fetchError": "Det oppsto en feil under lasting av favoritter."
+    "fetchError": "Det oppsto en feil under lasting av favoritter.",
+    "loadMore": "Last ned mer",
+    "loadingMore": "Laster inn..."
+  },
+  "messages": {
+    "title": "Meldinger",
+    "description": "Ta kontakt med kjøpere og selgere.",
+    "noConversations": "Du har ikke mottatt en melding ennå.",
+    "startConversation": "For å stille et spørsmål om en annonse, gå til annonsen.",
+    "fetchError": "Det oppsto en feil under lasting av meldinger",
+    "sendError": "Det oppsto en feil under sending av meldingen.",
+    "connectionError": "Tilkoblingen mislyktes. Prøver på nytt...",
+    "connected": "Den koblet seg til",
+    "connecting": "Kobler til...",
+    "searchPlaceholder": "Søk gjennom meldingene...",
+    "typeMessage": "Skriv meldingen din...",
+    "send": "Sende",
+    "sending": "Sender...",
+    "typing": "Det står...",
+    "read": "Lese",
+    "delivered": "Sendt",
+    "today": "I dag",
+    "yesterday": "I går",
+    "noMessages": "Ingen meldinger ennå. Start en samtale!",
+    "loadMore": "Last opp mer",
+    "loadingMessages": "Meldinger lastes inn ...",
+    "about": "Om",
+    "product": "Produkt",
+    "startNewConversation": "Start en ny samtale",
+    "selectConversation": "Velg en samtale eller start en ny.",
+    "online": "På nett",
+    "offline": "Frakoblet",
+    "lastSeen": "Sist sett",
+    "deleteConversation": "Slett samtalen",
+    "deleteConfirm": "Er du sikker på at du vil slette denne samtalen?",
+    "deleted": "Samtalen ble slettet.",
+    "defaultUser": "Bruker",
+    "noResults": "Ingen resultater funnet.",
+    "newConversation": "Ny samtale"
+  },
+  "notifications": {
+    "title": "Varsler",
+    "description": "Se og administrer varslene dine.",
+    "markAllAsRead": "Merk alle som lest",
+    "noNotifications": "Du har ikke mottatt noen varsler ennå.",
+    "viewAll": "Se alle varsler",
+    "today": "I dag",
+    "yesterday": "I går",
+    "older": "Eldre",
+    "types": {
+      "system": "System",
+      "message": "Beskjed",
+      "offer": "Tilby",
+      "order": "Bestille",
+      "listing": "Annonse"
+    }
   },
   "settings": {
     "title": "Innstillinger",
@@ -169,7 +333,28 @@
       "passwordMismatch": "De nye passordene samsvarer ikke.",
       "passwordTooShort": "Det nye passordet må være minst 6 tegn langt.",
       "sessionError": "Finner ikke øktinformasjon.",
-      "errorDefault": "Passordet kunne ikke oppdateres. Vennligst sjekk det nåværende passordet ditt."
+      "errorDefault": "Passordet kunne ikke oppdateres. Vennligst sjekk det nåværende passordet ditt.",
+      "showPassword": "Vis passord",
+      "hidePassword": "Skjul passord"
+    },
+    "preferences": {
+      "title": "Varslings- og visningsinnstillinger",
+      "description": "Administrer varslingskanalene og visningsinnstillingene dine.",
+      "notifications": "Varsler",
+      "emailNotifications": "E-postvarsler",
+      "emailNotificationsDesc": "Motta e-postvarsler om nye meldinger og annonseoppdateringer.",
+      "smsNotifications": "SMS-varsler",
+      "smsNotificationsDesc": "Motta SMS-meldinger for viktige varsler.",
+      "pushNotifications": "Push-varsler",
+      "pushNotificationsDesc": "Motta push-varsler for umiddelbare oppdateringer.",
+      "appearance": "Utseende",
+      "darkMode": "Mørk modus",
+      "darkModeDesc": "Bytt til et mørkt tema.",
+      "saveChanges": "Lagre innstillinger",
+      "saving": "Lagrer...",
+      "saveSuccess": "Preferansene dine er oppdatert.",
+      "saveError": "Det oppsto en feil under oppdatering av innstillingene.",
+      "loadError": "Kunne ikke laste inn innstillingene."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Plattform for handel med levende dyr",
       "subtitle": "Den mest pålitelige plattformen for handel med levende dyr. Kjøp og selg storfe og sauer trygt.",
       "cta": "Start nå",
-      "viewListings": "Vis annonser"
+      "viewListings": "Vis annonser",
+      "searchPlaceholder": "Se etter dyr ... (kyr, sauer, geiter ...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Utvalgte annonser",
       "viewAll": "Se alle"
+    },
+    "cta": {
+      "title": "Start nå",
+      "subtitle": "Ta plass på en plattform der tusenvis av selgere og kjøpere møtes.",
+      "button": "Registrer deg gratis"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Om oss",
     "contact": "Kommunikasjon",
     "terms": "Bruksvilkår",
-    "privacy": "Personvernerklæring"
+    "privacy": "Personvernerklæring",
+    "company": "Bedrift",
+    "support": "Støtte",
+    "legal": "Juridisk",
+    "followUs": "Følg oss",
+    "newsletter": "Bulletin",
+    "newsletterDescription": "Ikke gå glipp av de siste annonsene og kampanjene.",
+    "subscribe": "Abonner",
+    "emailPlaceholder": "Din e-postadresse",
+    "tagline": "Tyrkias mest pålitelige plattform for handel med levende dyr.",
+    "sellers": "Selgere",
+    "products": "Produkter",
+    "map": "Kart",
+    "appleLoginComingSoon": "Pålogging med Apple vil være aktiv veldig snart.",
+    "supportEmail": "info@livskrafthandel.com",
+    "faq": "Vanlige spørsmål"
+  },
+  "faq": {
+    "title": "Ofte stilte spørsmål",
+    "description": "Svar på ofte stilte spørsmål om plattformen vår.",
+    "noFaqs": "Ingen spørsmål er lagt til ennå."
+  },
+  "about": {
+    "title": "Om oss",
+    "subtitle": "Tyrkias mest pålitelige plattform for handel med levende dyr.",
+    "mission": {
+      "title": "Vårt oppdrag",
+      "description": "Ved å digitalisere handelen med levende dyr, tar vi sikte på å skape en sikker, transparent og effektiv kobling mellom produsenter og kjøpere."
+    },
+    "vision": {
+      "title": "Vår visjon",
+      "description": "Å være en pioner innen digital transformasjon i landbrukssektoren og å bli en global plattform for handel med levende dyr."
+    },
+    "values": {
+      "title": "Våre verdier",
+      "trust": {
+        "title": "Tillit",
+        "description": "Åpenhet og pålitelighet er avgjørende i alle transaksjoner."
+      },
+      "quality": {
+        "title": "Kvalitet",
+        "description": "Kontinuerlig forbedring for å tilby den beste servicen."
+      },
+      "innovation": {
+        "title": "Innovasjon",
+        "description": "Transformerer bransjen ved bruk av teknologi."
+      }
+    },
+    "stats": {
+      "users": "Registrert bruker",
+      "sellers": "Aktiv selger",
+      "products": "Annonse",
+      "transactions": "Vellykket transaksjon"
+    }
+  },
+  "contact": {
+    "title": "Kommunikasjon",
+    "subtitle": "Ta kontakt med oss hvis du har spørsmål.",
+    "form": {
+      "title": "Skriv til oss",
+      "name": "Navnet ditt",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "E-post",
+      "emailPlaceholder": "ornek@epost.com",
+      "subject": "Tema",
+      "subjectPlaceholder": "Emnet for meldingen din",
+      "message": "Din melding",
+      "messagePlaceholder": "Skriv meldingen din her...",
+      "submit": "Sende",
+      "submitting": "Sender...",
+      "success": "Meldingen din er sendt. Vi kontakter deg så snart som mulig.",
+      "error": "Det oppsto en feil under sending av meldingen. Prøv på nytt."
+    },
+    "info": {
+      "title": "Kontaktinformasjon",
+      "address": "Adresse",
+      "addressValue": "Istanbul, Tyrkia",
+      "email": "E-post",
+      "emailValue": "info@livskrafthandel.com",
+      "phone": "Telefon",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Arbeidstider",
+      "workingHoursValue": "Mandag - fredag: 09:00 - 18:00",
+      "map": "Kart"
+    }
+  },
+  "terms": {
+    "title": "Bruksvilkår",
+    "lastUpdated": "Siste oppdatering: {dato}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Aksept av vilkårene",
+        "content": "Ved å bruke dette nettstedet godtar du følgende bruksvilkår. Hvis du ikke godtar disse vilkårene, må du ikke bruke nettstedet."
+      },
+      "services": {
+        "title": "2. Tjenester",
+        "content": "Livestock Trading tilbyr en plattform for kjøp og salg av levende dyr. Alle transaksjoner på plattformen er brukerens ansvar."
+      },
+      "accounts": {
+        "title": "3. Brukerkontoer",
+        "content": "Du må oppgi nøyaktig og oppdatert informasjon for å opprette en konto. Kontosikkerheten din er ditt ansvar."
+      },
+      "prohibited": {
+        "title": "4. Forbudte aktiviteter",
+        "content": "Villedende reklame, falsk informasjon, svindel og ulovlige aktiviteter er strengt forbudt."
+      },
+      "liability": {
+        "title": "5. Ansvarsbegrensning",
+        "content": "Plattformen er ikke direkte ansvarlig for transaksjoner mellom brukere. Alle transaksjoner skjer mellom partene."
+      },
+      "changes": {
+        "title": "6. Endringer",
+        "content": "Disse vilkårene og betingelsene kan endres uten varsel. Endringene trer i kraft umiddelbart etter publisering."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Personvernerklæring",
+    "lastUpdated": "Siste oppdatering: {dato}",
+    "sections": {
+      "collection": {
+        "title": "1. Informasjonsinnsamling",
+        "content": "Når du oppretter en konto, samler vi inn personopplysninger som navn, e-postadresse og telefonnummer. Vi kan også samle inn anonyme data om din bruk av nettstedet."
+      },
+      "usage": {
+        "title": "2. Bruk av informasjon",
+        "content": "Informasjonen vi samler inn brukes til å tilby tjenestene våre, administrere kontoen din, sikre sikkerhet og tilby deg personlige tilbud."
+      },
+      "sharing": {
+        "title": "3. Informasjonsdeling",
+        "content": "Dine personopplysninger vil ikke bli solgt eller leid ut til tredjeparter. Informasjonen din vil ikke bli delt, med unntak av lovpålagte formål."
+      },
+      "security": {
+        "title": "4. Sikkerhet",
+        "content": "Bransjestandard sikkerhetstiltak er på plass for å beskytte dataene dine."
+      },
+      "cookies": {
+        "title": "5. Informasjonskapsler",
+        "content": "Nettstedet vårt bruker informasjonskapsler for å forbedre brukeropplevelsen. Du kan administrere preferansene dine for informasjonskapsler i nettleserinnstillingene dine."
+      },
+      "rights": {
+        "title": "6. Dine rettigheter",
+        "content": "I henhold til den tyrkiske personvernloven (KVKK) har du rett til å få tilgang til, korrigere og slette dine personopplysninger."
+      }
+    }
   },
   "products": {
     "title": "Produkter",
@@ -235,11 +570,19 @@
       "priceDesc": "Pris (høy til lav)",
       "popular": "Mest populær"
     },
+    "pagination": {
+      "prev": "Tidligere",
+      "next": "Neste"
+    },
     "status": {
       "draft": "Utkast",
+      "pending": "Venter på godkjenning",
       "active": "Aktiv",
+      "inactive": "Passiv",
+      "outOfStock": "Utsolgt",
+      "expired": "Perioden hans er utløpt.",
       "sold": "Solgt",
-      "pending": "Venter på godkjenning"
+      "rejected": "Avvist"
     },
     "condition": {
       "new": "Ny",
@@ -253,9 +596,13 @@
     "loading": "Produktene lastes inn ...",
     "perPage": "Per side",
     "showing": "Totalt antall {total} produkter mellom {from} og {to}.",
+    "fetchError": "Det oppsto en feil under opplasting av produktene.",
+    "loadMore": "Vis mer",
+    "showingOf": "{count} / {total} produkter vises.",
     "loginToFavorite": "Logg inn for å legge til i favoritter.",
     "addedToFavorites": "Lagt til i favoritter",
-    "removedFromFavorites": "Fjernet fra favoritter"
+    "removedFromFavorites": "Fjernet fra favoritter",
+    "favoriteError": "Favorittoperasjonen mislyktes."
   },
   "productDetail": {
     "addToFavorites": "Legg til i favoritter",
@@ -279,16 +626,31 @@
     "maxOrder": "Maksimal bestilling",
     "publishedAt": "Publikasjonsdato",
     "views": "Sett",
-    "reviews": "evaluering",
+    "reviews": {
+      "title": "Vurderinger",
+      "reviewCount": "evaluering",
+      "noReviews": "Ingen evaluering ennå.",
+      "verified": "Verifisert kjøper"
+    },
     "similarProducts": "Lignende produkter",
     "sellerProducts": "Selgers andre produkter",
     "contactSeller": "Kontakt selgeren",
-    "loginRequired": "Logg inn for å legge til i favoritter.",
+    "makeOffer": "Send inn et tilbud",
+    "loginRequired": "Vennligst logg inn for å utføre denne handlingen.",
     "addedToFavorites": "Lagt til i favoritter",
     "removedFromFavorites": "Fjernet fra favoritter",
     "linkCopied": "Lenken har blitt kopiert.",
     "messagingComingSoon": "Meldingsfunksjonen kommer snart.",
-    "productNotFound": "Produktet ble ikke funnet."
+    "productNotFound": "Produktet ble ikke funnet.",
+    "contacting": "Kontakt blir tatt ...",
+    "contactError": "Kommunikasjonen mislyktes. Prøv på nytt.",
+    "noImage": "Ingen bilde tilgjengelig.",
+    "defaultLocation": "Kalkun",
+    "inquiryMessage": "Jeg vil gjerne ha informasjon om {title}.",
+    "breadcrumb": {
+      "home": "Hjem",
+      "products": "Produkter"
+    }
   },
   "seller": {
     "title": "Selgerinformasjon",
@@ -300,6 +662,70 @@
     "call": "Søk",
     "viewProfile": "Vis profil"
   },
+  "sellers": {
+    "title": "Selgere",
+    "description": "Oppdag pålitelige selgere.",
+    "search": "Finn en selger...",
+    "sort": "Sortere",
+    "sortOptions": {
+      "newest": "Siste",
+      "mostSales": "Bestselger",
+      "topRated": "Høyeste poengsum",
+      "mostProducts": "De fleste annonser"
+    },
+    "noResults": "Selger ikke funnet.",
+    "loading": "Selgere laster inn ...",
+    "showing": "{count} selgere funnet",
+    "verified": "Verifisert",
+    "sales": "salg",
+    "products": "annonse",
+    "reviews": "evaluering",
+    "rating": "punkt",
+    "viewProducts": "Se produkter",
+    "contactSeller": "Send melding",
+    "memberSince": "Medlem siden {år}",
+    "fetchError": "Det oppsto en feil under lasting av leverandører",
+    "detail": {
+      "title": "Selgerprofil",
+      "about": "Om",
+      "businessInfo": "Bedriftsinformasjon",
+      "businessName": "Firmanavn",
+      "businessType": "Forretningstur",
+      "email": "E-post",
+      "phone": "Telefon",
+      "website": "Nettsted",
+      "description": "Forklaring",
+      "policies": "Retningslinjer",
+      "returnPolicy": "Returpolicy",
+      "shippingPolicy": "Fraktpolicy",
+      "businessHours": "Arbeidstider",
+      "paymentMethods": "Betalingsmetoder",
+      "allProducts": "Alle produkter",
+      "stats": {
+        "totalSales": "Totalt salg",
+        "totalProducts": "Totalt antall produkter",
+        "totalReviews": "Evaluering",
+        "rating": "Punkt"
+      },
+      "notFound": "Selger ikke funnet.",
+      "backToList": "Don til selgerne",
+      "contactInfo": "Kommunikasjon",
+      "noProducts": "Denne selgeren har ingen oppføringer ennå.",
+      "noPolicies": "Selgeren har ennå ikke definert sine retningslinjer.",
+      "fetchError": "Det oppsto en feil under opplasting av selgerinformasjon.",
+      "productsLoadError": "Det oppsto en feil under opplasting av selgerens produkter.",
+      "reviewsTab": "Vurderinger",
+      "reviews": {
+        "summary": "Evalueringssammendrag",
+        "reviewCount": "evaluering",
+        "communication": "Kommunikasjon",
+        "shippingSpeed": "Frakthastighet",
+        "productQuality": "Produktkvalitet",
+        "noReviews": "Ingen evaluering ennå.",
+        "verified": "Verifisert kjøper"
+      }
+    }
+  },
   "editListing": {
     "title": "Rediger annonsen",
     "saveChanges": "Lagre endringer",
@@ -307,6 +733,10 @@
     "updateSuccess": "Annonsen er oppdatert.",
     "updateFailed": "Det oppsto en feil under oppdatering av oppføringen.",
     "loadError": "Det oppsto en feil under innlasting av annonsen.",
+    "sellerNotFound": "Selgerprofilen ble ikke funnet.",
+    "sellerLoadError": "Selgerprofilen kunne ikke lastes inn.",
+    "userNotFound": "Brukerinformasjonen ble ikke funnet. Vennligst logg inn på nytt.",
+    "locationNotFound": "Finner ikke posisjonsinformasjon. Vennligst oppdater siden.",
     "basicInfo": "Grunnleggende informasjon",
     "categoryAndCondition": "Kategori og status",
     "pricing": "Prissetting",
@@ -314,6 +744,8 @@
     "images": "Bilder",
     "existingImages": "Tilgjengelige bilder",
     "addImage": "Legg til bilde",
+    "maxImages": "Du kan laste opp maksimalt 10 bilder.",
+    "imageHint": "Minimum 1, maksimum 10 bilder. I PNG-, JPG- eller WEBP-format.",
     "uploadingImages": "Bildene lastes inn ...",
     "uploadingImage": "Bildet lastes inn.",
     "imageUploadFailed": "Bildet kunne ikke lastes inn.",
@@ -358,6 +790,7 @@
     "addImage": "Legg til bilde",
     "maxImages": "Du kan laste opp maksimalt 10 bilder.",
     "imageHint": "Minimum 1, maksimum 10 bilder. I PNG-, JPG- eller WEBP-format.",
+    "location": "Stedsinformasjon",
     "fields": {
       "title": "Annonsetittel",
       "shortDescription": "Kort beskrivelse",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Frakt er tilgjengelig.",
       "shippingCost": "Fraktgebyr",
       "weight": "Vekt",
-      "weightUnit": "Vektenhet"
+      "weightUnit": "Vektenhet",
+      "city": "By",
+      "address": "Adresse",
+      "postalCode": "Postnummer"
     },
     "placeholders": {
       "title": "Eksempel: 2 år gammel Holstein-ku",
       "shortDescription": "Produktbeskrivelse (maks 200 tegn)",
       "description": "Gi detaljert informasjon om produktet...",
-      "category": "Velg en kategori."
+      "category": "Velg en kategori.",
+      "city": "Gå inn i byen",
+      "address": "Skriv inn hele adressen.",
+      "postalCode": "Postnummer"
+    },
+    "errors": {
+      "titleRequired": "Annonsetittel er obligatorisk.",
+      "shortDescriptionRequired": "En kort beskrivelse er nødvendig.",
+      "descriptionRequired": "En detaljert forklaring er nødvendig.",
+      "categoryRequired": "Valg av kategori er obligatorisk.",
+      "priceRequired": "Pris er obligatorisk.",
+      "cityRequired": "Byinformasjon er nødvendig.",
+      "addressRequired": "Adresseinformasjon er påkrevd.",
+      "locationError": "Det oppsto en feil under opprettelse av stedet."
     },
     "success": "Annonsen ble opprettet.",
     "error": "Det oppsto en feil under oppretting av annonsen.",
@@ -388,24 +837,53 @@
     "draftSaved": "Utkast lagret",
     "productCreated": "Produktet ble opprettet.",
     "creationFailed": "Produktet kunne ikke opprettes. Prøv på nytt.",
-    "errors": {
-      "titleRequired": "Annonsetittel er obligatorisk.",
-      "shortDescriptionRequired": "En kort beskrivelse er nødvendig.",
-      "descriptionRequired": "En detaljert forklaring er nødvendig.",
-      "categoryRequired": "Valg av kategori er obligatorisk.",
-      "priceRequired": "Skriv inn en gyldig pris."
-    }
+    "userNotFound": "Brukerinformasjonen ble ikke funnet. Vennligst logg inn på nytt.",
+    "defaultBusinessName": "Min virksomhet"
+  },
+  "becomeSeller": {
+    "title": "Bli en selger",
+    "description": "Selskapserklæring",
+    "alreadySeller": "Du har allerede en selgerprofil.",
+    "goToListings": "Gå til mine oppføringer",
+    "businessInfo": "Bedriftsinformasjon",
+    "contactInfo": "Kontaktinformasjon",
+    "businessName": "Firmanavn",
+    "businessNamePlaceholder": "Eksempel: Yilmaz-gården",
+    "businessType": "Forretningstur",
+    "businessTypePlaceholder": "Velg din bedriftstype.",
+    "businessTypes": {
+      "individual": "Individuell",
+      "company": "Bedrift",
+      "cooperative": "Kooperativ",
+      "farm": "Gård"
+    },
+    "taxNumber": "Skattenummer",
+    "taxNumberPlaceholder": "Skriv inn skatteidentifikasjonsnummeret ditt (valgfritt)",
+    "descriptionPlaceholder": "Skriv en kort beskrivelse av bedriften din...",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Nettsted",
+    "websitePlaceholder": "https://www.examplesite.com (valgfritt)",
+    "submit": "Opprett selgerprofil",
+    "submitting": "Oppretter en profil ...",
+    "success": "Selgerprofilen din er opprettet!",
+    "error": "Det oppsto en feil under oppretting av selgerprofilen.",
+    "taxNumberHelp": "Skriv inn ditt 10- eller 11-sifrede skattenummer (valgfritt)",
+    "phoneHelp": "Eksempel: +90 555 123 45 67 eller 0555 123 45 67",
+    "websiteHelp": "Eksempel: www.isletmem.com eller https://isletmem.com",
+    "alreadySellerDescription": "Du kan bruke knappen nedenfor for å administrere oppføringene dine.",
+    "newListing": "Legg til ny oppføring"
   },
   "fileUpload": {
     "dragDrop": "Last opp et bilde eller en video.",
     "dragDropHint": "Dra og slipp eller klikk for å velge.",
     "dropHere": "La det være ...",
     "imageLimit": "Foto: maks 10 MB",
-    "videoLimit": "Video: maks 50 MB",
-    "uploadCount": "{current} / {max} lastet",
+    "videoLimit": "Video: maks 100 MB",
+    "uploadCount": "{gjeldende} / {maks} lastet",
     "maxFilesError": "Du kan laste opp maksimalt {max} medier.",
     "imageTooLarge": "Bildet må være mindre enn 10 MB.",
-    "videoTooLarge": "Videoen må være mindre enn 50 MB.",
+    "videoTooLarge": "Videoen må være mindre enn 100 MB.",
     "optimizing": "Optimalisering...",
     "uploading": "Laster inn...",
     "queued": "Venter i kø ...",
@@ -419,9 +897,833 @@
     "videoBadge": "VIDEO",
     "coverUpdated": "Forsidebildet er justert.",
     "optimizationInfo": "Bildene er optimalisert for å overholde nettstandarder",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Visuelt utvalg",
+    "changeImage": "Endre",
+    "removeImage": "Fjerne",
+    "videoProcessing": "Videoen blir behandlet ...",
+    "videoProcessingFailed": "Operasjonen mislyktes.",
+    "videoProcessingPollError": "Kunne ikke hente status for videobehandling. Vennligst oppdater siden.",
+    "reorderError": "Filen kunne ikke sorteres.",
+    "coverUpdateError": "Forsidebildet kunne ikke oppdateres."
+  },
+  "error": {
+    "title": "Det oppsto en feil.",
+    "description": "Det oppsto en uventet feil. Vennligst oppdater siden eller prøv på nytt senere.",
+    "retry": "Prøv igjen",
+    "goBack": "Ikke gå tilbake",
+    "goHome": "Hjem",
+    "notFound": {
+      "title": "Siden ble ikke funnet",
+      "description": "Siden du leter etter er enten utilgjengelig eller har blitt flyttet.",
+      "goHome": "Gå tilbake til hjemmesiden"
+    }
+  },
+  "search": {
+    "title": "Søk",
+    "placeholder": "Søk etter produkter, kategorier eller selgere...",
+    "searchButton": "Søk",
+    "searchingFor": "Ønsket",
+    "loading": "Ønsket...",
+    "resultsCount": "{count} resultater ble funnet.",
+    "noResults": "Ingen resultater funnet.",
+    "tryDifferentSearch": "Prøv andre søkeord eller endre filtrene.",
+    "filters": {
+      "title": "Filtre",
+      "category": "Kategori",
+      "allCategories": "Alle kategorier",
+      "condition": "Situasjon",
+      "allConditions": "Alle saker",
+      "priceRange": "Prisklasse",
+      "price": "Pris",
+      "min": "Min.",
+      "max": "Maks",
+      "apply": "Søke",
+      "clear": "Rengjøre",
+      "clearAll": "Fjern alt"
+    },
+    "fetchError": "Det oppsto en feil under lasting av søkeresultatene",
+    "recentSearches": "Nylige søk",
+    "clearHistory": "Tøm historikk",
+    "noSearchHistory": "Du har ikke en søkehistorikk ennå.",
+    "deleteHistoryError": "Det oppsto en feil under sletting av søkeloggen."
+  },
+  "categories": {
+    "title": "Kategoristyring",
+    "description": "Administrer kategorier herfra.",
+    "noCategories": "Ingen kategorier er lagt til ennå.",
+    "createFirst": "Opprett den første kategorien.",
+    "fetchError": "Det oppsto en feil under lasting av kategoriene.",
+    "createSuccess": "Kategori opprettet",
+    "createError": "Det oppsto en feil under oppretting av kategorien.",
+    "updateSuccess": "Kategori oppdatert",
+    "updateError": "Det oppsto en feil under oppdatering av kategorien.",
+    "deleteSuccess": "Kategorien er slettet.",
+    "deleteError": "Det oppsto en feil under sletting av kategorien.",
+    "activateSuccess": "Kategorien er aktivert.",
+    "deactivateSuccess": "Kategorien er deaktivert.",
+    "statusError": "Det oppsto en feil under endring av statusen.",
+    "loadError": "Det oppsto en feil under lasting av kategorien",
+    "filters": {
+      "all": "Alle av dem",
+      "active": "Aktiv",
+      "inactive": "Inaktiv"
+    },
+    "table": {
+      "name": "Kategorinavn",
+      "slug": "Snegle",
+      "sortOrder": "Serienummer",
+      "subCategories": "Underkategori",
+      "status": "Situasjon",
+      "actions": "Transaksjoner"
+    },
+    "actions": {
+      "edit": "Redigere",
+      "delete": "Slett",
+      "activate": "Aktiver",
+      "deactivate": "Passiv struktur"
+    },
+    "deleteDialog": {
+      "title": "Slett kategori",
+      "description": "Er du sikker på at du vil slette denne kategorien? Denne handlingen kan ikke angres.",
+      "cancel": "Kansellere",
+      "confirm": "Slett"
+    },
+    "addNew": "Legg til ny kategori",
+    "loadMore": "Last ned mer",
+    "loadingMore": "Laster inn...",
+    "form": {
+      "newTitle": "Opprett en ny kategori",
+      "editTitle": "Rediger kategori",
+      "name": "Kategorinavn",
+      "namePlaceholder": "Eksempel: Kveg",
+      "slug": "Snegle",
+      "slugPlaceholder": "Eksempel: store husdyr",
+      "description": "Forklaring",
+      "descriptionPlaceholder": "En kort beskrivelse av kategorien...",
+      "parentCategory": "Øvre kategori",
+      "parentCategoryPlaceholder": "Velg en toppkategori (valgfritt)",
+      "noParent": "Ingen toppkategori (hovedkategori)",
+      "sortOrder": "Sekvensnummer",
+      "isActive": "Aktiv",
+      "iconUrl": "Ikon-URL",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Spare",
+      "submitting": "Lagrer...",
+      "updating": "Oppdaterer...",
+      "errors": {
+        "nameRequired": "Kategorinavn er obligatorisk.",
+        "slugRequired": "Snegler er obligatoriske."
+      }
+    }
+  },
+  "offers": {
+    "title": "Forslag",
+    "description": "Administrer innkommende og utgående tilbud.",
+    "received": "Innkommende tilbud",
+    "sent": "Tilbud innsendt",
+    "noReceivedOffers": "Ingen tilbud er mottatt ennå.",
+    "noSentOffers": "Du har ikke sendt inn et tilbud ennå.",
+    "browseProducts": "Bla gjennom produkter",
+    "viewProduct": "Se produktet",
+    "accept": "Akseptere",
+    "reject": "Avvis",
+    "withdraw": "Uttak",
+    "makeOffer": "Send inn et tilbud",
+    "sendOffer": "Send tilbud",
+    "sending": "Sender...",
+    "cancel": "Kansellere",
+    "listingPrice": "Annonsert pris",
+    "yourOffer": "Tilbudet ditt",
+    "quantity": "Beløp",
+    "messageOptional": "Melding (valgfritt)",
+    "messagePlaceholder": "En beskjed du vil dele med selgeren...",
+    "expiresAt": "Siste gyldige dato",
+    "offerSent": "Tilbudet ditt er sendt.",
+    "offerError": "Det oppsto en feil under sending av tilbudet.",
+    "acceptSuccess": "Tilbudet ble akseptert.",
+    "rejectSuccess": "Tilbudet ble avvist.",
+    "withdrawSuccess": "Tilbudet ble trukket tilbake.",
+    "actionError": "Det oppsto en feil under prosessen.",
+    "fetchError": "Det oppsto en feil under innlasting av tilbudene.",
+    "loginRequired": "Logg inn for å legge inn et bud.",
+    "invalidPrice": "Skriv inn en gyldig pris.",
+    "invalidQuantity": "Skriv inn et gyldig beløp.",
+    "status": {
+      "pending": "I påvente av",
+      "accepted": "Godkjent",
+      "rejected": "Avvist",
+      "countered": "Mottilbud",
+      "expired": "Perioden er over.",
+      "withdrawn": "Trakk seg tilbake"
+    }
+  },
+  "deals": {
+    "title": "Avtaler",
+    "description": "Følg kjøpsavtalene dine.",
+    "buying": "Akademikere",
+    "selling": "Salg",
+    "noBuyingDeals": "Du har ikke en studentregistreringsprosess ennå.",
+    "noSellingDeals": "Du har ingen salgstransaksjoner ennå.",
+    "browseProducts": "Bla gjennom produkter",
+    "viewProduct": "Se produktet",
+    "activeDeals": "Aktive avtaler",
+    "completedDeals": "Fullført",
+    "purchases": "Akademikere",
+    "sales": "Salg",
+    "fetchError": "Det oppsto en feil under innlasting av avtaler",
+    "dealStatus": {
+      "pending": "I påvente av",
+      "confirmed": "Bekreftet",
+      "processing": "Forbereder",
+      "shipped": "I lasten",
+      "delivered": "Levert",
+      "completed": "Fullført",
+      "cancelled": "Avlyst",
+      "disputed": "Avtale"
+    },
+    "delivery": {
+      "pickup": "Håndlevering",
+      "shipping": "Med last",
+      "transport": "Med transport"
+    },
+    "requestTransport": "Forsendelsesforespørsel"
+  },
+  "farms": {
+    "title": "Mine gårder",
+    "description": "Administrer og oppdater gårdene dine.",
+    "addFarm": "Legg til gård",
+    "editFarm": "Gårdsdrift",
+    "noFarms": "Du har ikke lagt til en gård ennå.",
+    "farmName": "Gårdsnavn",
+    "registrationNumber": "Registreringsnummer",
+    "location": "Sted",
+    "selectLocation": "Velg en plassering.",
+    "addLocationFirst": "Først legger du til en plassering.",
+    "farmTypeLabel": "Gårdstur",
+    "farmDescription": "Forklaring",
+    "totalArea": "Totalt areal",
+    "cultivatedArea": "Dyrket område",
+    "certifications": "Sertifikater",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP, osv.",
+    "organic": "Organisk",
+    "verified": "Verifisert",
+    "save": "Spare",
+    "saving": "Lagrer...",
+    "cancel": "Kansellere",
+    "edit": "Redigere",
+    "delete": "Slett",
+    "sellerRequired": "Selgerprofil kreves",
+    "sellerRequiredDesc": "For å legge til en gård må du først opprette selgerprofilen din.",
+    "becomeSeller": "Bli en selger",
+    "createSuccess": "Gården ble lagt til.",
+    "updateSuccess": "Gården har blitt oppdatert.",
+    "deleteSuccess": "Gården ble slettet.",
+    "saveError": "Det oppsto en feil under registrering av gården.",
+    "deleteError": "Det oppsto en feil under sletting av farmen.",
+    "fetchError": "Det oppsto en feil under opplasting av gårdsinformasjon.",
+    "farmType": {
+      "livestock": "Husdyrhold",
+      "crop": "Jordbruk",
+      "mixed": "Blandet",
+      "poultry": "Vinger",
+      "dairy": "Meieriproduksjon",
+      "aquaculture": "Akvatiske produkter"
+    }
+  },
+  "transporters": {
+    "title": "transportører",
+    "description": "Transport av dyr og produkter",
+    "searchPlaceholder": "Finn en transportør...",
+    "noTransporters": "Det er ingen registrerte transportører ennå.",
+    "verified": "Verifisert",
+    "transports": "transportere",
+    "viewProfile": "Vis profil",
+    "sort": {
+      "newest": "Siste",
+      "rating": "Høyeste poengsum",
+      "mostTransports": "Hyppigste frakt"
+    },
+    "pagination": {
+      "previous": "Tidligere",
+      "next": "Neste",
+      "page": "Side {side}"
+    }
+  },
+  "transport": {
+    "title": "Mine fraktforespørsler",
+    "description": "Spor fraktforespørslene dine.",
+    "findTransporter": "Finn en transportør",
+    "active": "Aktiv",
+    "completed": "Fullført",
+    "total": "Total",
+    "asSeller": "Som selger",
+    "asBuyer": "Som kjøper",
+    "noSellerRequests": "Som selger har du ingen fraktplikt.",
+    "noBuyerRequests": "Som mottaker har du ingen leveringsforespørsel.",
+    "viewProduct": "Se produktet",
+    "pickup": "Motta",
+    "delivery": "Leveranse",
+    "urgent": "Som haster",
+    "fetchError": "Det oppsto en feil under opplasting av fraktforespørslene.",
+    "trackShipment": "Følge",
+    "transportStatus": {
+      "pending": "I påvente av",
+      "inPool": "I bassenget",
+      "assigned": "Utnevnt",
+      "pickedUp": "Kvittering",
+      "inTransit": "På veien",
+      "delivered": "Levert",
+      "completed": "Fullført",
+      "cancelled": "Avlyst"
+    },
+    "transportType": {
+      "standard": "Standard",
+      "refrigerated": "Kaldkjede",
+      "liveAnimal": "Levende dyr",
+      "hazardous": "Farlige materialer",
+      "oversized": "Stor størrelse"
+    }
+  },
+  "moderation": {
+    "title": "Produktmoderering",
+    "description": "Gjennomgå produkter som venter på godkjenning.",
+    "pending": "venter",
+    "allClear": "Alle produktene har blitt inspisert.",
+    "noPending": "Det er ingen produkter som venter på godkjenning.",
+    "awaitingReview": "Venter på gjennomgang",
+    "by": "Selger:",
+    "stock": "Lager",
+    "preview": "Med deg",
+    "approve": "Bekrefte",
+    "reject": "Avvis",
+    "confirmReject": "Avvis",
+    "cancelReject": "Gi opp",
+    "rejectReasonPlaceholder": "Skriv ned årsaken til avslaget...",
+    "rejectReasonRequired": "En begrunnelse for avslag er obligatorisk.",
+    "approveSuccess": "Produktet ble godkjent.",
+    "rejectSuccess": "Produktet ble avvist.",
+    "actionError": "Det oppsto en feil under prosessen.",
+    "fetchError": "Det oppsto en feil under opplasting av produktene.",
+    "unauthorized": "Du har ikke tillatelse til å få tilgang til denne siden."
+  },
+  "sellerModeration": {
+    "title": "Selgermoderering",
+    "description": "Gjennomgå og administrer selgerkontoer.",
+    "pending": "venter",
+    "allClear": "Alle selgere ble undersøkt.",
+    "noPending": "Ingen selgere venter.",
+    "verify": "Verifisere",
+    "suspend": "Henge",
+    "verifySuccess": "Selgeren er bekreftet.",
+    "suspendSuccess": "Selger suspendert.",
+    "actionError": "Det oppsto en feil under prosessen.",
+    "suspendReasonRequired": "Årsaken til suspensjonen er obligatorisk.",
+    "suspendReasonPlaceholder": "Skriv årsaken til suspensjonen...",
+    "confirmSuspend": "Henge",
+    "cancelSuspend": "Gi opp",
+    "statusLabels": {
+      "pendingVerification": "Venter på bekreftelse",
+      "active": "Aktiv",
+      "suspended": "Hengende",
+      "banned": "Forbudt"
+    },
+    "filterAll": "Vis alle",
+    "filterPending": "De som venter",
+    "filterActive": "Eiendeler",
+    "filterSuspended": "Suspendert",
+    "unauthorized": "Du har ikke tillatelse til å få tilgang til denne siden.",
+    "businessName": "Firmanavn",
+    "businessType": "Forretningstur",
+    "email": "E-post",
+    "phone": "Telefon",
+    "status": "Situasjon",
+    "createdAt": "Registreringsdato"
+  },
+  "transporterModeration": {
+    "title": "Moderering av operatører",
+    "description": "Gjennomgå og administrer operatørkontoer.",
+    "pending": "venter",
+    "allClear": "Alle transportørene ble etterforsket.",
+    "noPending": "Ingen transportør venter.",
+    "verify": "Verifisere",
+    "suspend": "Henge",
+    "verifySuccess": "Transportøren ble verifisert.",
+    "suspendSuccess": "Transportøren ble suspendert.",
+    "actionError": "Det oppsto en feil under prosessen.",
+    "suspendReasonRequired": "Årsaken til suspensjonen er obligatorisk.",
+    "suspendReasonPlaceholder": "Skriv årsaken til suspensjonen...",
+    "confirmSuspend": "Henge",
+    "cancelSuspend": "Gi opp",
+    "statusLabels": {
+      "pendingVerification": "Venter på bekreftelse",
+      "active": "Aktiv",
+      "suspended": "Hengende",
+      "banned": "Forbudt"
+    },
+    "filterAll": "Vis alle",
+    "filterPending": "De som venter",
+    "filterActive": "Eiendeler",
+    "filterSuspended": "Suspendert",
+    "unauthorized": "Du har ikke tillatelse til å få tilgang til denne siden.",
+    "companyName": "Firmanavn",
+    "contactPerson": "Autorisert person",
+    "email": "E-post",
+    "phone": "Telefon",
+    "city": "By",
+    "status": "Situasjon",
+    "createdAt": "Registreringsdato"
+  },
+  "transporterDetail": {
+    "notFound": "Ingen transportør kunne finnes.",
+    "backToList": "Don til transportører",
+    "verified": "Verifisert",
+    "totalTransports": "total frakt",
+    "completed": "fullført",
+    "about": "Om",
+    "contact": "Kontaktinformasjon",
+    "businessInfo": "Bedriftsinformasjon",
+    "license": "Lisensnummer",
+    "insurance": "Forsikringsinformasjon",
+    "fleet": "Flåteinformasjon",
+    "serviceRegions": "Serviceområder",
+    "specializations": "Ekspertiseområder",
+    "certifications": "Sertifikater"
+  },
+  "brands": {
+    "title": "Merkevarehåndtering",
+    "description": "Administrer produktmerker.",
+    "addBrand": "Legg til merke",
+    "editBrand": "Rediger merke",
+    "noBrands": "Ingen merker er lagt til ennå.",
+    "brandName": "Merkenavn",
+    "brandDescription": "Forklaring",
+    "website": "Nettsted",
+    "logoUrl": "Logo-URL",
+    "save": "Spare",
+    "saving": "Lagrer...",
+    "cancel": "Kansellere",
+    "edit": "Redigere",
+    "delete": "Slett",
+    "inactive": "Passiv",
+    "products": "produkt",
+    "createSuccess": "Merkevaren er lagt til",
+    "updateSuccess": "Merket har blitt oppdatert.",
+    "deleteSuccess": "Merket ble slettet.",
+    "saveError": "Det oppsto en feil under registrering av varemerket.",
+    "deleteError": "Det oppsto en feil under sletting av varemerket.",
+    "fetchError": "Det oppsto en feil under lasting av merker",
+    "unauthorized": "Du har ikke tillatelse til å få tilgang til denne siden."
+  },
+  "transporterReviews": {
+    "title": "Vurderinger",
+    "reviewCount": "evaluering",
+    "noReviews": "Ingen evaluering ennå.",
+    "timeliness": "Levering i tide",
+    "communication": "Kommunikasjon",
+    "carefulHandling": "Forsiktig håndtering",
+    "professionalism": "Profesjonalitet"
+  },
+  "transportOffers": {
+    "title": "Frakttilbud",
+    "description": "Administrer tilbudene du sender inn for fraktforespørsler.",
+    "newOffer": "Nytt forslag",
+    "transportRequestId": "Forsendelsesforespørsels-ID",
+    "requestIdPlaceholder": "Skriv inn ID-en for fraktforespørselen.",
+    "offeredPrice": "Tilbudspris",
+    "estimatedDays": "Estimert varighet (dager)",
+    "days": "dag",
+    "vehicleType": "Kjøretøytype",
+    "insuranceIncluded": "Forsikring inkludert",
+    "message": "Beskjed",
+    "cancel": "Kansellere",
+    "sending": "Sender...",
+    "sendOffer": "Send inn tilbud",
+    "cancelOffer": "Kansellere",
+    "pendingTab": "Venter",
+    "historyTab": "Forbi",
+    "noPendingOffers": "Du har ingen ventende tilbud.",
+    "noHistory": "Ingen tidligere tilbud funnet.",
+    "status": {
+      "pending": "Venter",
+      "accepted": "Godkjent",
+      "rejected": "Avvist",
+      "expired": "Perioden er over.",
+      "cancelled": "Avlyst"
+    },
+    "createSuccess": "Tilbudet ble sendt inn.",
+    "createError": "Det oppsto en feil under sending av tilbudet.",
+    "cancelSuccess": "Tilbudet ble kansellert.",
+    "cancelError": "Det oppsto en feil under kanselleringen av tilbudet.",
+    "fetchError": "Det oppsto en feil under innlasting av tilbudene."
+  },
+  "animalInfo": {
+    "title": "Dyre- og produktinformasjon",
+    "animalTab": "Dyr",
+    "healthTab": "Helse",
+    "vaccinationsTab": "Vaksinatorer",
+    "veterinaryTab": "Veterinær",
+    "breed": "Rase",
+    "genderLabel": "Kjønn",
+    "gender": {
+      "male": "Mann",
+      "female": "Hunn",
+      "unknown": "Ukjent"
+    },
+    "age": "Alder",
+    "months": "måned",
+    "weight": "Vekt",
+    "color": "Farge",
+    "tagNumber": "Ørenummer",
+    "healthStatus": "Helsetilstand",
+    "health": {
+      "healthy": "Sunn",
+      "underTreatment": "Under behandling",
+      "recovering": "Han/hun er i bedring.",
+      "quarantined": "I karantene",
+      "unknown": "Ukjent"
+    },
+    "purposeLabel": "Tiltenkt bruk",
+    "purpose": {
+      "breeding": "Hingst",
+      "dairy": "Melk",
+      "meat": "Kjøtt",
+      "egg": "Egg",
+      "wool": "Ull",
+      "working": "Arbeid",
+      "pet": "Innenlands",
+      "other": "Annen"
+    },
+    "pregnancy": "Svangerskap",
+    "pregnant": "Gravid",
+    "microchip": "Mikrochip nr.",
+    "passport": "Passnummer",
+    "sireDetails": "Farinformasjon",
+    "damDetails": "Hovedinformasjon",
+    "diagnosis": "Diagnose",
+    "treatment": "Behandling",
+    "medications": "Medisiner",
+    "veterinarian": "Veterinær",
+    "nextDue": "Den neste opprørshistorien",
+    "prescriptionRequired": "Krever resept fra lege",
+    "targetSpecies": "Target Tours",
+    "activeIngredients": "Aktive ingredienser",
+    "registrationNo": "Registreringsnummer",
+    "storage": "Lagring",
+    "chemicalTab": "Kjemisk",
+    "feedTab": "Agn",
+    "seedTab": "Frø",
+    "machineryTab": "Maskin",
+    "organic": "Organisk",
+    "toxicity": "Toksisitet",
+    "gmoFree": "GMO-fri",
+    "protein": "Protein",
+    "fat": "Olje",
+    "fiber": "Fiber",
+    "hybrid": "Hybrid",
+    "germination": "Spiring",
+    "daysToMaturity": "Modning",
+    "daysLabel": "dag",
+    "warranty": "Garantert",
+    "power": "Styrke",
+    "hoursUsed": "Brukstimer",
+    "hours": "time",
+    "powerSource": "Strømforsyning"
+  },
+  "productVariants": {
+    "title": "Produktvarianter",
+    "variantCount": "varianten",
+    "inStock": "På lager",
+    "outOfStock": "Utsolgt"
+  },
+  "productPrices": {
+    "title": "Priser (flere valutaer)",
+    "autoConversion": "Automatisk transformasjon",
+    "validUntil": "Gyldighet"
+  },
+  "requestTransport": {
+    "title": "Opprett en leveringsforespørsel",
+    "pickupLocation": "Lastepunkt",
+    "deliveryLocation": "Leveringspunkt",
+    "city": "By",
+    "address": "Adresse",
+    "transportType": "Transporttur",
+    "types": {
+      "standard": "Standard",
+      "refrigerated": "Kaldkjede",
+      "liveAnimal": "Levende dyr",
+      "hazardous": "Farlige materialer",
+      "oversized": "Stor størrelse"
+    },
+    "weight": "Vekt (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Foretrukket opplastingsdato",
+    "preferredDeliveryDate": "Foretrukket leveringsdato",
+    "urgent": "Hastetransport",
+    "specialInstructions": "Spesielle instruksjoner",
+    "instructionsPlaceholder": "Skriv dine spesifikke instruksjoner her ...",
+    "cancel": "Gi opp",
+    "submit": "Skape etterspørsel",
+    "submitting": "I skapelsesprosessen...",
+    "success": "Fraktforespørselen er opprettet.",
+    "error": "Det oppsto en feil under opprettelse av leveringsforespørselen."
+  },
+  "transportTracking": {
+    "title": "Forsendelsessporing",
+    "noTracking": "Ingen sporingsinformasjon er tilgjengelig ennå.",
+    "update": "Oppdatering"
+  },
+  "locations": {
+    "title": "Mine adresser",
+    "description": "Administrer dine registrerte adresser.",
+    "addLocation": "Legg til adresse",
+    "editLocation": "Rediger adresse",
+    "noLocations": "Du har ikke en registrert adresse ennå.",
+    "name": "Adressenavn",
+    "namePlaceholder": "For eksempel: Hus, Jobb, Gård",
+    "address": "Adresse",
+    "addressLine2": "Adresselinje 2",
+    "city": "By",
+    "state": "Distrikt / Region",
+    "postalCode": "Postnummer",
+    "phone": "Telefon",
+    "email": "E-post",
+    "cancel": "Gi opp",
+    "save": "Spare",
+    "saving": "Lagrer...",
+    "typePickup": "Laster",
+    "typeDelivery": "Leveranse",
+    "typeBoth": "General",
+    "createSuccess": "Adressen er lagt til.",
+    "createError": "Det oppsto en feil under tilføying av adressen.",
+    "updateSuccess": "Adressen er oppdatert.",
+    "updateError": "Det oppsto en feil under oppdatering av adressen.",
+    "deleteLocation": "Slett adresse",
+    "deleteSuccess": "Adressen er slettet",
+    "deleteError": "Det oppsto en feil under sletting av adressen.",
+    "fetchError": "Det oppsto en feil under lasting av adressene."
+  },
+  "systemSettings": {
+    "title": "Systeminnstillinger",
+    "description": "Se plattformens valuta, språk, betalingsmåter, frakt og skatteinnstillinger.",
+    "unauthorized": "Du har ikke tillatelse til å få tilgang til denne siden.",
+    "currenciesTab": "Valutaer",
+    "languagesTab": "Språk",
+    "paymentTab": "Betalingsmetoder",
+    "shippingTab": "Last",
+    "taxTab": "Avgift",
+    "active": "Aktiv",
+    "inactive": "Passiv",
+    "default": "Misligholde",
+    "noCurrencies": "Valutaen er ennå ikke definert.",
+    "noLanguages": "Språket er ennå ikke definert.",
+    "noPaymentMethods": "Betalingsmåte ikke definert ennå.",
+    "noCarriers": "Rederiet er ennå ikke identifisert.",
+    "noZones": "Lasteområdet er ennå ikke definert.",
+    "noTaxRates": "Skattesatsen er ennå ikke definert.",
+    "carriers": "Rederiselskaper",
+    "zones": "Lastesoner",
+    "countries": "Land",
+    "rates": "Fraktgebyrer",
+    "noRates": "Fraktkostnadene er ikke definert ennå.",
+    "freeShipping": "Gratis frakt",
+    "deliveryDays": "leveringstid på dagen"
+  },
+  "pushPermission": {
+    "title": "Aktiver varsler",
+    "description": "Motta varsler om nye meldinger, tilbud og bestillingsoppdateringer.",
+    "allow": "Tillate",
+    "dismiss": "Lukke"
+  },
+  "healthRecords": {
+    "title": "Helsejournaler",
+    "description": "Administrer dyrehelsejournaler og sykehistorie.",
+    "addRecord": "Legg til post",
+    "editRecord": "Rediger oppføring",
+    "deleteRecord": "Slett oppføring",
+    "noRecords": "Helsejournalen er ikke lagt til ennå.",
+    "animalInfoId": "Dyre-ID",
+    "animalInfoIdPlaceholder": "Skriv inn dyreinformasjons-ID-en.",
+    "recordType": "Registreringstur",
+    "recordTypePlaceholder": "Eksempler: Undersøkelse, behandling, kirurgi",
+    "recordDate": "Registreringsdato",
+    "followUpDate": "Sjekk dato",
+    "veterinarianName": "Veterinær",
+    "veterinarianLicense": "Lisensnr.",
+    "clinicName": "Klinisk",
+    "diagnosis": "Diagnose",
+    "treatment": "Behandling",
+    "medications": "Medisiner",
+    "medicationsPlaceholder": "Eksempel: Penicillin 500 mg, ibuprofen",
+    "notes": "Notater",
+    "documentUrl": "Dokument-URL",
+    "saving": "Lagrer...",
+    "createSuccess": "Helsejournalen er lagt til.",
+    "updateSuccess": "Helsejournalen er oppdatert.",
+    "deleteSuccess": "Helsejournalen er slettet.",
+    "saveError": "Det oppsto en feil under lagring av posten.",
+    "deleteError": "Det oppsto en feil under sletting av oppføringen.",
+    "fetchError": "Det oppsto en feil under lasting av poster"
+  },
+  "vaccinations": {
+    "title": "Vaksinejournaler",
+    "description": "Administrer vaksinasjonsjournaler og kalendere for dyr.",
+    "addVaccination": "Legg til rebell",
+    "editVaccination": "Opprørsarrangement",
+    "deleteVaccination": "Rebel Sil",
+    "noVaccinations": "Vaksinasjonsloggen er ikke lagt til ennå.",
+    "animalInfoId": "Dyre-ID",
+    "animalInfoIdPlaceholder": "Skriv inn dyreinformasjons-ID-en.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Eksempel: SAT-vaksine, Brucella",
+    "vaccineType": "Rebel-turné",
+    "vaccineTypePlaceholder": "Eksempel: Live, Inaktiv",
+    "batchNumber": "Festnummer",
+    "vaccinationDate": "Opprørernes historie",
+    "nextDueDate": "Den neste opprørshistorien",
+    "veterinarianName": "Veterinær",
+    "veterinarianLicense": "Lisensnr.",
+    "notes": "Notater",
+    "certificateUrl": "URL-adresse for sertifikat",
+    "saving": "Lagrer...",
+    "createSuccess": "Vaksineoppføringen er lagt til.",
+    "updateSuccess": "Vaksinejournalen er oppdatert.",
+    "deleteSuccess": "Vaksineoppføringen er slettet.",
+    "saveError": "Det oppsto en feil under registrering av vaksinen.",
+    "deleteError": "Det oppsto en feil under sletting av vaksinen.",
+    "fetchError": "Det oppsto en feil under lasting av vaksiner."
+  },
+  "shippingCarriers": {
+    "title": "Rederiselskaper",
+    "description": "Administrer informasjon om fraktselskapet.",
+    "addCarrier": "Legg til selskap",
+    "editCarrier": "Rediger selskap",
+    "noCarriers": "Ingen rederier er lagt til ennå.",
+    "carrierName": "Firmanavn",
+    "carrierNamePlaceholder": "Eksempel: Aras Kargo, MNG",
+    "code": "Kode",
+    "codePlaceholder": "Eksempel: ARAS",
+    "website": "Nettsted",
+    "trackingUrlTemplate": "Følg URL-mal",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Støttede land",
+    "supportedCountriesPlaceholder": "Eksempel: TR, US, DE",
+    "active": "Aktiv",
+    "inactive": "Passiv",
+    "saving": "Lagrer...",
+    "edit": "Redigere",
+    "delete": "Slett",
+    "createSuccess": "Fraktselskapet er lagt til.",
+    "updateSuccess": "Rederiet har blitt oppdatert.",
+    "deleteSuccess": "Fraktselskapet er slettet.",
+    "saveError": "Det oppsto en feil under registrering av fraktselskapet.",
+    "deleteError": "Det oppsto en feil under sletting av informasjonen om fraktselskapet.",
+    "fetchError": "Det oppsto en feil under lasting av fraktselskaper."
+  },
+  "shippingZones": {
+    "title": "Lastesoner",
+    "description": "Administrer lastsoner og -områder.",
+    "addZone": "Legg til region",
+    "editZone": "Rediger region",
+    "noZones": "Ingen lasterom er lagt til ennå.",
+    "zoneName": "Regionnavn",
+    "zoneNamePlaceholder": "Eksempel: Europa, Nord-Amerika",
+    "countryCodes": "Landskoder",
+    "countryCodesPlaceholder": "Eksempel: TR, DE, FR",
+    "active": "Aktiv",
+    "inactive": "Passiv",
+    "saving": "Lagrer...",
+    "edit": "Redigere",
+    "delete": "Slett",
+    "createSuccess": "Regionen er lagt til.",
+    "updateSuccess": "Regionen er oppdatert.",
+    "deleteSuccess": "Området er vellykket ryddet.",
+    "saveError": "Det oppsto en feil under lagring av regionen.",
+    "deleteError": "Det oppsto en feil under sletting av regionen.",
+    "fetchError": "Det oppsto en feil under lasting av regioner"
+  },
+  "shippingRates": {
+    "title": "Fraktgebyrer",
+    "description": "Administrer fraktkostnader og leveringsalternativer.",
+    "addRate": "Legg til gebyr",
+    "editRate": "Juster gebyr",
+    "noRates": "Fraktkostnader er ikke lagt til ennå.",
+    "zone": "Område",
+    "carrier": "Fast",
+    "selectZone": "Velg en region",
+    "selectCarrier": "Velg et selskap",
+    "shippingCost": "Fraktgebyr",
+    "currency": "Valuta",
+    "estimatedDeliveryDays": "Estimert levering (dager)",
+    "minWeight": "Minimumsvekt",
+    "maxWeight": "Maksimal vekt",
+    "minOrderAmount": "Minimumsbestillingsbeløp",
+    "freeShipping": "Gratis frakt",
+    "free": "Gratis",
+    "active": "Aktiv",
+    "inactive": "Passiv",
+    "cost": "Avgift",
+    "deliveryDays": "Leveranse",
+    "status": "Situasjon",
+    "saving": "Lagrer...",
+    "createSuccess": "Avgiften er lagt til.",
+    "updateSuccess": "Lønnen er oppdatert.",
+    "deleteSuccess": "Gebyret er slettet.",
+    "saveError": "Det oppsto en feil under lagring av gebyret.",
+    "deleteError": "Det oppsto en feil under sletting av gebyret.",
+    "fetchError": "Det oppsto en feil under opplasting av gebyrene."
+  },
+  "metadata": {
+    "title": "Husdyrhandel - Plattform for handel med levende dyr",
+    "description": "Verdens mest pålitelige plattform for handel med levende dyr. Trygt og transparent kjøp og salg av dyr.",
+    "pages": {
+      "about": {
+        "title": "Om oss",
+        "description": "Lær om handel med husdyr. En pålitelig plattform for handel med levende dyr."
+      },
+      "contact": {
+        "title": "Kommunikasjon",
+        "description": "Kontakt oss. Kundeserviceteamet til Livestock Trading er klare til å hjelpe deg."
+      },
+      "terms": {
+        "title": "Bruksvilkår",
+        "description": "Vilkår og betingelser for husdyrhandel."
+      },
+      "privacy": {
+        "title": "Personvernerklæring",
+        "description": "Personvernerklæring for husdyrhandel. Finn ut hvordan dine personopplysninger er beskyttet."
+      },
+      "products": {
+        "title": "Produkter",
+        "description": "Bla gjennom annonser for levende dyr. Pålitelige annonser for storfe, sauer og mer."
+      },
+      "sellers": {
+        "title": "Selgere",
+        "description": "Oppdag pålitelige dyreselgere. Verifiserte selgerprofiler og anmeldelser."
+      },
+      "transporters": {
+        "title": "transportører",
+        "description": "Oppdag dyretransportselskaper. Sikker og profesjonell transport av levende dyr."
+      },
+      "search": {
+        "title": "Søk",
+        "description": "Søk blant oppføringer av levende dyr. Enkelt søk med filtrerings- og sorteringsalternativer."
+      },
+      "faq": {
+        "title": "Ofte stilte spørsmål",
+        "description": "Ofte stilte spørsmål og svar om handel med husdyr."
+      },
+      "productDetail": {
+        "title": "{tittel} - Til salgs",
+        "description": "Til salgs i {title} - {city}. Klikk for detaljer og kontaktinformasjon."
+      },
+      "sellerDetail": {
+        "title": "{navn} – Selgerprofil",
+        "description": "Selgerprofil for {name}. Anmeldelser, oppføringer og kontaktinformasjon."
+      },
+      "transporterDetail": {
+        "title": "{navn} – Transportørprofil",
+        "description": "Profil for transportøren til {name}. Serviceområder, anmeldelser og kontaktinformasjon."
+      }
+    }
   }
 }

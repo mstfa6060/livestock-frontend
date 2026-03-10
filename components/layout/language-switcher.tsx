@@ -10,60 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
-import { locales, type Locale } from "@/i18n/config";
-
-const languageNames: Record<Locale, string> = {
-  en: "English",
-  tr: "Turkce",
-  ar: "Arabic",
-  de: "Deutsch",
-  es: "Espanol",
-  fr: "Francais",
-  pt: "Portugues",
-  ru: "Russian",
-  zh: "Chinese",
-  ja: "Japanese",
-  ko: "Korean",
-  hi: "Hindi",
-  it: "Italiano",
-  nl: "Nederlands",
-  sv: "Svenska",
-  no: "Norsk",
-  da: "Dansk",
-  fi: "Suomi",
-  pl: "Polski",
-  cs: "Cestina",
-  el: "Greek",
-  he: "Hebrew",
-  hu: "Magyar",
-  ro: "Romana",
-  sk: "Slovencina",
-  uk: "Ukrainian",
-  vi: "Tieng Viet",
-  id: "Bahasa Indonesia",
-  ms: "Bahasa Melayu",
-  th: "Thai",
-  bn: "Bengali",
-  ta: "Tamil",
-  te: "Telugu",
-  mr: "Marathi",
-  fa: "Persian",
-  ur: "Urdu",
-  bg: "Bulgarian",
-  hr: "Hrvatski",
-  sr: "Serbian",
-  sl: "Slovenscina",
-  lt: "Lietuviu",
-  lv: "Latviesu",
-  et: "Eesti",
-  sw: "Kiswahili",
-  af: "Afrikaans",
-  is: "Islenska",
-  ga: "Gaeilge",
-  mt: "Malti",
-  am: "Amharic",
-  hy: "Armenian",
-};
+import { locales, type Locale, languageNames } from "@/i18n/config";
 
 const popularLocales: Locale[] = ["en", "tr", "ar", "de", "es", "fr", "ru", "zh"];
 

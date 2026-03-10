@@ -11,17 +11,30 @@
     "back": "Atgal",
     "next": "Pirmyn",
     "close": "Uždaryti",
+    "unauthorized": "Jūs neturite leidimo pasiekti šio puslapio.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Prisijungti",
-    "register": "Registruotis"
+    "register": "Registruotis",
+    "previous": "Buvęs",
+    "zoomIn": "Priartinti",
+    "previousImage": "Ankstesnis vaizdas",
+    "nextImage": "Kitas vaizdas",
+    "closeLightbox": "Uždaryti galeriją",
+    "imageLightbox": "Vaizdų galerija",
+    "slideN": "Skaidrė {n}",
+    "viewMore": "Žiūrėti daugiau"
   },
   "header": {
     "products": "Produktai",
     "sellers": "Pardavėjai",
+    "transporters": "vežėjai",
     "about": "Apie mus",
+    "search": "Paieška",
     "dashboard": "Skydelis",
     "settings": "Nustatymai",
-    "logout": "Atsijungti"
+    "logout": "Atsijungti",
+    "menu": "Meniu",
+    "language": "Kalbos pasirinkimas"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Pamiršau slaptažodį.",
       "noAccount": "Neturite paskyros?",
       "register": "Registruotis",
-      "errorDefault": "Prisijungti nepavyko. Patikrinkite savo informaciją."
+      "errorDefault": "Prisijungti nepavyko. Patikrinkite savo informaciją.",
+      "orContinueWith": "arba tęsti",
+      "continueWithGoogle": "Tęsti naudojant „Google“",
+      "continueWithApple": "Tęskite su „Apple“.",
+      "socialLoginError": "Prisijungimas prie socialinio tinklo nepavyko. Bandykite dar kartą.",
+      "appleComingSoon": "Labai greitai",
+      "showPassword": "Rodyti slaptažodį",
+      "hidePassword": "Slėpti slaptažodį"
     },
     "register": {
       "title": "Registruotis",
@@ -51,7 +71,17 @@
       "login": "Prisijungti",
       "passwordMismatch": "Slaptažodžiai nesutampa.",
       "passwordTooShort": "Slaptažodis turi būti bent 6 simbolių ilgio.",
-      "errorDefault": "Registracija nepavyko. Bandykite dar kartą."
+      "errorDefault": "Registracija nepavyko. Bandykite dar kartą.",
+      "showPassword": "Rodyti slaptažodį",
+      "hidePassword": "Slėpti slaptažodį",
+      "passwordStrength": {
+        "minLength": "Bent 8 simboliai",
+        "uppercase": "Didžiosios raidės (A–Z)",
+        "lowercase": "Mažosios raidės (a–z)",
+        "number": "Skaičius (0–9)",
+        "special": "Specialūs simboliai (!@#$%)"
+      },
+      "registerSuccess": "Jūsų paskyra sėkmingai sukurta! Jūs nukreipiamas į prisijungimo puslapį..."
     },
     "forgotPassword": {
       "title": "Pamiršau slaptažodį.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Užklausa dėl naujo ryšio",
       "passwordMismatch": "Slaptažodžiai nesutampa.",
       "passwordTooShort": "Slaptažodis turi būti bent 6 simbolių ilgio.",
-      "errorDefault": "Nepavyko atkurti slaptažodžio. Ryšys gali būti negaliojantis arba pasibaigęs."
+      "errorDefault": "Nepavyko atkurti slaptažodžio. Ryšys gali būti negaliojantis arba pasibaigęs.",
+      "showPassword": "Rodyti slaptažodį",
+      "hidePassword": "Slėpti slaptažodį"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "aktyvus",
       "totalViews": "Iš viso peržiūrų",
       "thisWeek": "šią savaitę",
+      "allTime": "visais laikais",
       "favorites": "Mėgstamiausias",
       "onYourListings": "jūsų reklamose",
+      "savedItems": "registruotas produktas",
       "messages": "Žinutė",
-      "unread": "neskaitytas"
+      "notifications": "Pranešimai",
+      "unread": "neskaitytas",
+      "views": "peržiūros",
+      "draft": "Juodraštis",
+      "sold": "Parduota",
+      "pending": "Laukiama",
+      "awaitingApproval": "laukiama patvirtinimo",
+      "totalSales": "Bendras pardavimas",
+      "completedSales": "užbaigti pardavimai",
+      "revenue": "Pajamos",
+      "totalRevenue": "bendros pajamos"
     },
     "recentListings": "Jūsų naujausi skelbimai",
+    "recentActivity": "Naujausia veikla",
     "recentMessages": "Naujausi pranešimai",
+    "quickLinks": "Greita prieiga",
     "noListings": "Dar nepridėjote jokių skelbimų.",
+    "noActivity": "Kol kas jokios veiklos.",
     "noMessages": "Dar negavote žinutės.",
     "noNotifications": "Dar negavote jokių pranešimų.",
     "viewAllListings": "Peržiūrėti visus skelbimus",
-    "viewAllMessages": "Peržiūrėti visus pranešimus"
+    "viewAllMessages": "Peržiūrėti visus pranešimus",
+    "viewNotifications": "Peržiūrėti pranešimus",
+    "viewFavorites": "Mėgstamiausi Gor",
+    "recentlyViewed": "Neseniai peržiūrėti",
+    "fetchError": "Įkeliant skydelio duomenis įvyko klaida."
   },
   "dashboardNav": {
     "overview": "Apžvalga",
@@ -115,45 +166,158 @@
     "notifications": "Pranešimai",
     "profile": "Profilis",
     "settings": "Nustatymai",
-    "newListing": "Pridėti naują skelbimą"
+    "newListing": "Pridėti naują skelbimą",
+    "becomeSeller": "Tapkite pardavėju",
+    "categories": "Kategorijos",
+    "offers": "Pasiūlymai",
+    "deals": "Susitarimai",
+    "farms": "Mano ūkiai",
+    "transport": "Transportas",
+    "moderation": "Moderavimas",
+    "sellerModeration": "Pardavėjo moderavimas",
+    "transporterModeration": "Vežėjų moderavimas",
+    "brands": "Prekių ženklai",
+    "transportOffers": "Pristatymo kainos",
+    "healthRecords": "Sveikatos įrašai",
+    "vaccinations": "Vakcinatoriai",
+    "shippingCarriers": "Laivybos kompanijos",
+    "shippingZones": "Krovinių zonos",
+    "shippingRates": "Siuntimo mokesčiai",
+    "systemSettings": "Sistemos nustatymai",
+    "locations": "Mano adresai"
+  },
+  "profile": {
+    "title": "Profilio informacija",
+    "description": "Čia galite atnaujinti savo asmeninę informaciją.",
+    "personalInfo": "Asmeninė informacija",
+    "contactInfo": "Kontaktinė informacija",
+    "preferences": "Nuostatos",
+    "firstName": "Vardas",
+    "firstNamePlaceholder": "Įveskite savo vardą",
+    "surname": "Pavardė",
+    "surnamePlaceholder": "Įveskite savo pavardę.",
+    "displayName": "Rodomas vardas",
+    "phone": "Telefono numeris",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Patvirtinta",
+    "phoneNotVerified": "Nepatvirtinta",
+    "verifyPhone": "Patvirtinkite telefono numerį",
+    "country": "Šalis",
+    "selectCountry": "Pasirinkite šalį",
+    "language": "Kalbos pasirinkimas",
+    "selectLanguage": "Pasirinkite kalbą",
+    "currency": "Valiuta",
+    "selectCurrency": "Pasirinkite valiutą.",
+    "saveChanges": "Išsaugoti pakeitimus",
+    "saving": "Įrašoma...",
+    "saveSuccess": "Jūsų profilio informacija atnaujinta.",
+    "saveError": "Atnaujinant profilį įvyko klaida.",
+    "avatar": "Profilio nuotrauka",
+    "changeAvatar": "Keisti nuotrauką",
+    "removeAvatar": "Pašalinti nuotrauką",
+    "currencies": {
+      "try": "Turkijos lira",
+      "usd": "JAV doleris",
+      "eur": "Euras",
+      "gbp": "Britų svaras"
+    }
   },
   "myListings": {
     "title": "Mano skelbimai",
-    "description": "Tvarkykite visus savo skelbimus čia.",
+    "description": "Tvarkykite visus savo skelbimus iš čia.",
     "noListings": "Dar nepridėjote jokių skelbimų.",
     "createFirst": "Sukurkite savo pirmąjį skelbimą.",
     "fetchError": "Įkeliant skelbimus įvyko klaida.",
     "deleteSuccess": "Skelbimas sėkmingai ištrintas.",
     "deleteError": "Trinant skelbimą įvyko klaida.",
-    "activateSuccess": "Skelbimas aktyvuotas.",
-    "deactivateSuccess": "Skelbimas buvo deaktyvuotas.",
+    "publishSuccess": "Skelbimas išsiųstas tvirtinti.",
+    "unpublishSuccess": "Reklamos tekstas yra parengtas.",
     "statusError": "Keičiant būseną įvyko klaida.",
     "filters": {
       "all": "Visi jie",
-      "active": "Aktyvus",
       "draft": "Juodraštis",
       "pending": "Laukiama patvirtinimo",
+      "active": "Aktyvus",
+      "rejected": "Atmesta",
       "sold": "Parduota"
     },
     "actions": {
       "edit": "Redaguoti",
       "delete": "Ištrinti",
-      "activate": "Aktyvuoti",
-      "deactivate": "Pasyvi struktūra"
+      "publish": "Siųsti patvirtinimui",
+      "unpublish": "Juodraštis",
+      "menu": "Sandoriai"
     },
     "deleteDialog": {
       "title": "Ištrinti skelbimą",
       "description": "Ar tikrai norite ištrinti šį įrašą? Šis veiksmas yra negrįžtamas.",
       "cancel": "Atšaukti",
       "confirm": "Ištrinti"
-    }
+    },
+    "loadMore": "Atsisiųsti daugiau",
+    "loadingMore": "Kraunama..."
   },
   "favorites": {
     "title": "Mano mėgstamiausi",
     "description": "Sekite jums patinkančius produktus čia.",
     "noFavorites": "Dar nepridėjote jokių mėgstamiausių produktų.",
     "browseProducts": "Naršyti produktus",
-    "fetchError": "Įkeliant mėgstamiausius įvyko klaida."
+    "fetchError": "Įkeliant mėgstamiausius įvyko klaida.",
+    "loadMore": "Atsisiųsti daugiau",
+    "loadingMore": "Kraunama..."
+  },
+  "messages": {
+    "title": "Žinutės",
+    "description": "Susisiekite su pirkėjais ir pardavėjais.",
+    "noConversations": "Dar negavote žinutės.",
+    "startConversation": "Norėdami užduoti klausimą apie reklamą, eikite į reklamą.",
+    "fetchError": "Įkeliant pranešimus įvyko klaida",
+    "sendError": "Siunčiant pranešimą įvyko klaida.",
+    "connectionError": "Ryšys nutrūko. Bandome dar kartą...",
+    "connected": "Tai sujungė",
+    "connecting": "Jungiamasi...",
+    "searchPlaceholder": "Ieškokite tarp žinučių...",
+    "typeMessage": "Parašykite savo žinutę...",
+    "send": "Siųsti",
+    "sending": "Siunčiama...",
+    "typing": "Jame rašoma...",
+    "read": "Skaityti",
+    "delivered": "Išsiųsta",
+    "today": "Šiandien",
+    "yesterday": "Vakar",
+    "noMessages": "Kol kas nėra žinučių. Pradėkite pokalbį!",
+    "loadMore": "Įkelti daugiau",
+    "loadingMessages": "Žinutės kraunamos...",
+    "about": "Apie",
+    "product": "Produktas",
+    "startNewConversation": "Pradėti naują pokalbį",
+    "selectConversation": "Pasirinkite pokalbį arba pradėkite naują.",
+    "online": "Prisijungęs",
+    "offline": "Neprisijungęs",
+    "lastSeen": "Paskutinį kartą matytas",
+    "deleteConversation": "Ištrinti pokalbį",
+    "deleteConfirm": "Ar tikrai norite ištrinti šį pokalbį?",
+    "deleted": "Pokalbis buvo ištrintas.",
+    "defaultUser": "Vartotojas",
+    "noResults": "Nerasta jokių rezultatų.",
+    "newConversation": "Naujas pokalbis"
+  },
+  "notifications": {
+    "title": "Pranešimai",
+    "description": "Peržiūrėkite ir tvarkykite savo pranešimus.",
+    "markAllAsRead": "Pažymėti visus kaip skaitytus",
+    "noNotifications": "Dar negavote jokių pranešimų.",
+    "viewAll": "Žr. visus pranešimus",
+    "today": "Šiandien",
+    "yesterday": "Vakar",
+    "older": "Senesnis",
+    "types": {
+      "system": "Sistema",
+      "message": "Žinutė",
+      "offer": "Pasiūlymas",
+      "order": "Užsakymas",
+      "listing": "Skelbimas"
+    }
   },
   "settings": {
     "title": "Nustatymai",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Nauji slaptažodžiai nesutampa.",
       "passwordTooShort": "Naujas slaptažodis turi būti bent 6 simbolių ilgio.",
       "sessionError": "Nepavyko rasti sesijos informacijos.",
-      "errorDefault": "Nepavyko atnaujinti slaptažodžio. Patikrinkite dabartinį slaptažodį."
+      "errorDefault": "Nepavyko atnaujinti slaptažodžio. Patikrinkite dabartinį slaptažodį.",
+      "showPassword": "Rodyti slaptažodį",
+      "hidePassword": "Slėpti slaptažodį"
+    },
+    "preferences": {
+      "title": "Pranešimų ir peržiūros nuostatos",
+      "description": "Tvarkykite savo pranešimų kanalus ir rodymo nuostatas.",
+      "notifications": "Pranešimai",
+      "emailNotifications": "El. pašto pranešimai",
+      "emailNotificationsDesc": "Gaukite el. pašto pranešimus apie naujus pranešimus ir skelbimų atnaujinimus.",
+      "smsNotifications": "SMS pranešimai",
+      "smsNotificationsDesc": "Gaukite svarbius pranešimus SMS žinutėmis.",
+      "pushNotifications": "Tiesioginiai pranešimai",
+      "pushNotificationsDesc": "Gaukite tiesioginius pranešimus apie atnaujinimus.",
+      "appearance": "Išvaizda",
+      "darkMode": "Tamsusis režimas",
+      "darkModeDesc": "Perjunkite į tamsią temą.",
+      "saveChanges": "Išsaugoti nuostatas",
+      "saving": "Įrašoma...",
+      "saveSuccess": "Jūsų nuostatos buvo atnaujintos.",
+      "saveError": "Atnaujinant nuostatas įvyko klaida.",
+      "loadError": "Nepavyko įkelti nuostatų."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Gyvų gyvūnų prekybos platforma",
       "subtitle": "Patikimiausia gyvų gyvūnų prekybos platforma. Saugiai pirkite ir parduokite savo galvijus ir avis.",
       "cta": "Pradėti dabar",
-      "viewListings": "Peržiūrėti skelbimus"
+      "viewListings": "Peržiūrėti skelbimus",
+      "searchPlaceholder": "Ieškokite gyvūnų... (karvių, avių, ožkų...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Rekomenduojami skelbimai",
       "viewAll": "Žiūrėti visus"
+    },
+    "cta": {
+      "title": "Pradėti dabar",
+      "subtitle": "Užimkite savo vietą platformoje, kurioje susitinka tūkstančiai pardavėjų ir pirkėjų.",
+      "button": "Registruokitės nemokamai"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Apie mus",
     "contact": "Bendravimas",
     "terms": "Naudojimo sąlygos",
-    "privacy": "Privatumo politika"
+    "privacy": "Privatumo politika",
+    "company": "Įmonė",
+    "support": "Pagalba",
+    "legal": "Teisinis",
+    "followUs": "Sekite mus",
+    "newsletter": "Biuletenis",
+    "newsletterDescription": "Nepraleiskite naujausių skelbimų ir akcijų.",
+    "subscribe": "Prenumeruoti",
+    "emailPlaceholder": "Jūsų el. pašto adresas",
+    "tagline": "Patikimiausia Turkijos gyvų gyvūnų prekybos platforma.",
+    "sellers": "Pardavėjai",
+    "products": "Produktai",
+    "map": "Žemėlapis",
+    "appleLoginComingSoon": "Prisijungimas naudojant „Apple“ bus aktyvuotas labai greitai.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "DUK"
+  },
+  "faq": {
+    "title": "Dažnai užduodami klausimai",
+    "description": "Atsakymai į dažniausiai užduodamus klausimus apie mūsų platformą.",
+    "noFaqs": "Kol kas nepridėta jokių klausimų."
+  },
+  "about": {
+    "title": "Apie mus",
+    "subtitle": "Patikimiausia Turkijos gyvų gyvūnų prekybos platforma.",
+    "mission": {
+      "title": "Mūsų misija",
+      "description": "Skaitmenindami prekybą gyvais gyvūnais, siekiame sukurti saugų, skaidrų ir efektyvų ryšį tarp gamintojų ir pirkėjų."
+    },
+    "vision": {
+      "title": "Mūsų vizija",
+      "description": "Būti skaitmeninės transformacijos pradininku žemės ūkio sektoriuje ir tapti pasauline gyvų gyvūnų prekybos platforma."
+    },
+    "values": {
+      "title": "Mūsų vertybės",
+      "trust": {
+        "title": "Pasitikėjimas",
+        "description": "Skaidrumas ir patikimumas yra būtini visuose sandoriuose."
+      },
+      "quality": {
+        "title": "Kokybė",
+        "description": "Nuolatinis tobulėjimas siekiant teikti geriausias paslaugas."
+      },
+      "innovation": {
+        "title": "Inovacijos",
+        "description": "Pramonės transformavimas pasitelkiant technologijas."
+      }
+    },
+    "stats": {
+      "users": "Registruotas vartotojas",
+      "sellers": "Aktyvus pardavėjas",
+      "products": "Skelbimas",
+      "transactions": "Sėkminga operacija"
+    }
+  },
+  "contact": {
+    "title": "Bendravimas",
+    "subtitle": "Jei turite klausimų, susisiekite su mumis.",
+    "form": {
+      "title": "Parašykite mums",
+      "name": "Jūsų vardas",
+      "namePlaceholder": "Ahmetas Yilmazas",
+      "email": "El. paštas",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Tema",
+      "subjectPlaceholder": "Jūsų žinutės tema",
+      "message": "Jūsų žinutė",
+      "messagePlaceholder": "Rašykite savo žinutę čia...",
+      "submit": "Siųsti",
+      "submitting": "Siunčiama...",
+      "success": "Jūsų žinutė sėkmingai išsiųsta. Susisieksime su jumis kaip įmanoma greičiau.",
+      "error": "Siunčiant pranešimą įvyko klaida. Bandykite dar kartą."
+    },
+    "info": {
+      "title": "Kontaktinė informacija",
+      "address": "Adresas",
+      "addressValue": "Stambulas, Turkija",
+      "email": "El. paštas",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Telefonas",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Darbo valandos",
+      "workingHoursValue": "Pirmadienis – penktadienis: 09:00–18:00",
+      "map": "Žemėlapis"
+    }
+  },
+  "terms": {
+    "title": "Naudojimo sąlygos",
+    "lastUpdated": "Paskutinis atnaujinimas: {data}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Sąlygų priėmimas",
+        "content": "Naudodamiesi šia svetaine, jūs sutinkate su šiomis naudojimo sąlygomis. Jei nesutinkate su šiomis sąlygomis, prašome nesinaudoti svetaine."
+      },
+      "services": {
+        "title": "2. Paslaugos",
+        "content": "„Livestock Trading“ teikia platformą gyviems gyvūnams pirkti ir parduoti. Už visus sandorius platformoje atsakingas vartotojas."
+      },
+      "accounts": {
+        "title": "3. Vartotojų paskyros",
+        "content": "Norėdami sukurti paskyrą, turite pateikti tikslią ir naujausią informaciją. Jūsų paskyros saugumas yra jūsų atsakomybė."
+      },
+      "prohibited": {
+        "title": "4. Draudžiama veikla",
+        "content": "Griežtai draudžiami klaidinantys skelbimai, melaginga informacija, sukčiavimas ir neteisėta veikla."
+      },
+      "liability": {
+        "title": "5. Atsakomybės apribojimas",
+        "content": "Platforma nėra tiesiogiai atsakinga už operacijas tarp naudotojų. Visos operacijos vyksta tarp šalių."
+      },
+      "changes": {
+        "title": "6. Pakeitimai",
+        "content": "Šios sąlygos gali būti keičiamos be įspėjimo. Pakeitimai įsigalios iš karto po paskelbimo."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privatumo politika",
+    "lastUpdated": "Paskutinis atnaujinimas: {data}",
+    "sections": {
+      "collection": {
+        "title": "1. Informacijos rinkimas",
+        "content": "Kai kuriate paskyrą, renkame asmeninę informaciją, pvz., jūsų vardą, pavardę, el. pašto adresą ir telefono numerį. Taip pat galime rinkti anoniminius duomenis apie jūsų naudojimąsi svetaine."
+      },
+      "usage": {
+        "title": "2. Informacijos naudojimas",
+        "content": "Mūsų renkama informacija naudojama teikiant paslaugas, tvarkant jūsų paskyrą, užtikrinant saugumą ir siūlant jums suasmenintus pasiūlymus."
+      },
+      "sharing": {
+        "title": "3. Informacijos dalijimasis",
+        "content": "Jūsų asmeninė informacija nebus parduodama ar nuomojama trečiosioms šalims. Jūsų informacija nebus bendrinama, išskyrus teisiškai privalomus tikslus."
+      },
+      "security": {
+        "title": "4. Saugumas",
+        "content": "Jūsų duomenims apsaugoti taikomos pramonės standartų saugumo priemonės."
+      },
+      "cookies": {
+        "title": "5. Slapukai",
+        "content": "Mūsų svetainė naudoja slapukus, kad pagerintų naudotojų patirtį. Savo slapukų nuostatas galite tvarkyti savo naršyklės nustatymuose."
+      },
+      "rights": {
+        "title": "6. Jūsų teisės",
+        "content": "Pagal Turkijos asmens duomenų apsaugos įstatymą (KVKK), turite teisę susipažinti su savo asmens duomenimis, juos ištaisyti ir ištrinti."
+      }
+    }
   },
   "products": {
     "title": "Produktai",
@@ -235,11 +570,19 @@
       "priceDesc": "Kaina (nuo didžiausios iki mažiausios)",
       "popular": "Populiariausi"
     },
+    "pagination": {
+      "prev": "Buvęs",
+      "next": "Toliau"
+    },
     "status": {
       "draft": "Juodraštis",
+      "pending": "Laukiama patvirtinimo",
       "active": "Aktyvus",
+      "inactive": "Pasyvus",
+      "outOfStock": "Nėra sandėlyje",
+      "expired": "Jo kadencija baigėsi.",
       "sold": "Parduota",
-      "pending": "Laukiama patvirtinimo"
+      "rejected": "Atmesta"
     },
     "condition": {
       "new": "Naujas",
@@ -250,12 +593,16 @@
     "outOfStock": "Nėra sandėlyje",
     "inStock": "Sandėlyje",
     "noResults": "Produktas nerastas.",
-    "loading": "Įkeliami produktai...",
+    "loading": "Produktai kraunami...",
     "perPage": "Puslapyje",
     "showing": "Bendras produktų skaičius nuo {from} iki {to}.",
+    "fetchError": "Įkeliant produktus įvyko klaida.",
+    "loadMore": "Rodyti daugiau",
+    "showingOf": "Rodoma {count} / {total} produktų.",
     "loginToFavorite": "Prisijunkite, kad pridėtumėte prie mėgstamiausių.",
     "addedToFavorites": "Pridėta prie mėgstamiausių",
-    "removedFromFavorites": "Pašalinta iš mėgstamiausių"
+    "removedFromFavorites": "Pašalinta iš mėgstamiausių",
+    "favoriteError": "Nepavyko įtraukti į mėgstamiausius."
   },
   "productDetail": {
     "addToFavorites": "Pridėti prie mėgstamiausių",
@@ -279,16 +626,31 @@
     "maxOrder": "Maksimalus užsakymas",
     "publishedAt": "Išleidimo data",
     "views": "Peržiūrėta",
-    "reviews": "vertinimas",
+    "reviews": {
+      "title": "Vertinimai",
+      "reviewCount": "vertinimas",
+      "noReviews": "Vertinimo dar nėra.",
+      "verified": "Patvirtintas pirkėjas"
+    },
     "similarProducts": "Panašūs produktai",
     "sellerProducts": "Pardavėjo kiti produktai",
     "contactSeller": "Susisiekite su pardavėju",
-    "loginRequired": "Prisijunkite, kad pridėtumėte prie mėgstamiausių.",
+    "makeOffer": "Pateikti pasiūlymą",
+    "loginRequired": "Norėdami atlikti šį veiksmą, prisijunkite.",
     "addedToFavorites": "Pridėta prie mėgstamiausių",
     "removedFromFavorites": "Pašalinta iš mėgstamiausių",
     "linkCopied": "Nuoroda nukopijuota.",
     "messagingComingSoon": "Žinučių funkcija pasirodys netrukus.",
-    "productNotFound": "Produktas nerastas."
+    "productNotFound": "Produktas nerastas.",
+    "contacting": "Užmezgamas kontaktas...",
+    "contactError": "Ryšys nepavyko. Bandykite dar kartą.",
+    "noImage": "Nėra vaizdo.",
+    "defaultLocation": "Turkija",
+    "inquiryMessage": "Norėčiau gauti informacijos apie {title}.",
+    "breadcrumb": {
+      "home": "Pradžia",
+      "products": "Produktai"
+    }
   },
   "seller": {
     "title": "Pardavėjo informacija",
@@ -300,6 +662,70 @@
     "call": "Paieška",
     "viewProfile": "Peržiūrėti profilį"
   },
+  "sellers": {
+    "title": "Pardavėjai",
+    "description": "Atraskite patikimus pardavėjus.",
+    "search": "Rasti pardavėją...",
+    "sort": "Rūšiuoti",
+    "sortOptions": {
+      "newest": "Naujausi",
+      "mostSales": "Geriausiai parduodamas",
+      "topRated": "Aukščiausias balas",
+      "mostProducts": "Dauguma skelbimų"
+    },
+    "noResults": "Pardavėjas nerastas.",
+    "loading": "Pardavėjai kraunasi...",
+    "showing": "Rasta {count} pardavėjų",
+    "verified": "Patvirtinta",
+    "sales": "pardavimai",
+    "products": "skelbimas",
+    "reviews": "vertinimas",
+    "rating": "taškas",
+    "viewProducts": "Peržiūrėti produktus",
+    "contactSeller": "Siųsti žinutę",
+    "memberSince": "Narys nuo {year}",
+    "fetchError": "Įkeliant tiekėjus įvyko klaida",
+    "detail": {
+      "title": "Pardavėjo profilis",
+      "about": "Apie",
+      "businessInfo": "Verslo informacija",
+      "businessName": "Įmonės pavadinimas",
+      "businessType": "Verslo kelionė",
+      "email": "El. paštas",
+      "phone": "Telefonas",
+      "website": "Svetainė",
+      "description": "Paaiškinimas",
+      "policies": "Politika",
+      "returnPolicy": "Grąžinimo politika",
+      "shippingPolicy": "Pristatymo politika",
+      "businessHours": "Darbo valandos",
+      "paymentMethods": "Mokėjimo būdai",
+      "allProducts": "Visi produktai",
+      "stats": {
+        "totalSales": "Bendras pardavimas",
+        "totalProducts": "Iš viso produktų",
+        "totalReviews": "Vertinimas",
+        "rating": "Taškas"
+      },
+      "notFound": "Pardavėjas nerastas.",
+      "backToList": "Donas pardavėjams",
+      "contactInfo": "Bendravimas",
+      "noProducts": "Šis pardavėjas dar neturi skelbimų.",
+      "noPolicies": "Pardavėjas dar neapibrėžė savo politikos.",
+      "fetchError": "Įkeliant pardavėjo informaciją įvyko klaida.",
+      "productsLoadError": "Įkeliant pardavėjo produktus įvyko klaida.",
+      "reviewsTab": "Vertinimai",
+      "reviews": {
+        "summary": "Vertinimo santrauka",
+        "reviewCount": "vertinimas",
+        "communication": "Bendravimas",
+        "shippingSpeed": "Pristatymo greitis",
+        "productQuality": "Produkto kokybė",
+        "noReviews": "Vertinimo dar nėra.",
+        "verified": "Patvirtintas pirkėjas"
+      }
+    }
+  },
   "editListing": {
     "title": "Redaguoti skelbimą",
     "saveChanges": "Išsaugoti pakeitimus",
@@ -307,6 +733,10 @@
     "updateSuccess": "Skelbimas sėkmingai atnaujintas.",
     "updateFailed": "Atnaujinant įrašą įvyko klaida.",
     "loadError": "Įkeliant skelbimą įvyko klaida.",
+    "sellerNotFound": "Pardavėjo profilis nerastas.",
+    "sellerLoadError": "Pardavėjo profilio įkelti nepavyko.",
+    "userNotFound": "Nepavyko rasti naudotojo informacijos. Prisijunkite dar kartą.",
+    "locationNotFound": "Nepavyko rasti vietos informacijos. Atnaujinkite puslapį.",
     "basicInfo": "Pagrindinė informacija",
     "categoryAndCondition": "Kategorija ir būsena",
     "pricing": "Kainodara",
@@ -314,6 +744,8 @@
     "images": "Vaizdai",
     "existingImages": "Galimi vaizdai",
     "addImage": "Pridėti paveikslėlį",
+    "maxImages": "Galite įkelti daugiausia 10 paveikslėlių.",
+    "imageHint": "Mažiausiai 1, daugiausiai 10 paveikslėlių. PNG, JPG arba WEBP formatu.",
     "uploadingImages": "Kraunami vaizdai...",
     "uploadingImage": "Įkeliamas paveikslėlis.",
     "imageUploadFailed": "Nepavyko įkelti vaizdo.",
@@ -358,6 +790,7 @@
     "addImage": "Pridėti paveikslėlį",
     "maxImages": "Galite įkelti daugiausia 10 paveikslėlių.",
     "imageHint": "Mažiausiai 1, daugiausiai 10 paveikslėlių. PNG, JPG arba WEBP formatu.",
+    "location": "Vietos informacija",
     "fields": {
       "title": "Reklamos pavadinimas",
       "shortDescription": "Trumpas aprašymas",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Siuntimas galimas.",
       "shippingCost": "Siuntimo mokestis",
       "weight": "Svoris",
-      "weightUnit": "Svorio vienetas"
+      "weightUnit": "Svorio vienetas",
+      "city": "Miestas",
+      "address": "Adresas",
+      "postalCode": "Pašto kodas"
     },
     "placeholders": {
       "title": "Pavyzdys: 2 metų Holšteino veislės karvė",
       "shortDescription": "Produkto aprašymas (daugiausia 200 simbolių)",
       "description": "Pateikite išsamią informaciją apie produktą...",
-      "category": "Pasirinkite kategoriją."
+      "category": "Pasirinkite kategoriją.",
+      "city": "Įeikite į miestą",
+      "address": "Įveskite visą adresą.",
+      "postalCode": "Pašto kodas"
+    },
+    "errors": {
+      "titleRequired": "Reklamos pavadinimas yra privalomas.",
+      "shortDescriptionRequired": "Reikalingas trumpas aprašymas.",
+      "descriptionRequired": "Reikalingas išsamus paaiškinimas.",
+      "categoryRequired": "Kategorijos pasirinkimas yra privalomas.",
+      "priceRequired": "Kaina yra privaloma.",
+      "cityRequired": "Būtina pateikti informaciją apie miestą.",
+      "addressRequired": "Būtina nurodyti adreso informaciją.",
+      "locationError": "Kuriant vietą įvyko klaida."
     },
     "success": "Reklama sėkmingai sukurta.",
     "error": "Kuriant skelbimą įvyko klaida.",
@@ -388,24 +837,53 @@
     "draftSaved": "Juodraštis išsaugotas",
     "productCreated": "Produktas buvo sėkmingai sukurtas.",
     "creationFailed": "Nepavyko sukurti produkto. Bandykite dar kartą.",
-    "errors": {
-      "titleRequired": "Reklamos pavadinimas yra privalomas.",
-      "shortDescriptionRequired": "Reikalingas trumpas aprašymas.",
-      "descriptionRequired": "Reikalingas išsamus paaiškinimas.",
-      "categoryRequired": "Kategorijos pasirinkimas yra privalomas.",
-      "priceRequired": "Įveskite galiojančią kainą."
-    }
+    "userNotFound": "Nepavyko rasti naudotojo informacijos. Prisijunkite dar kartą.",
+    "defaultBusinessName": "Mano verslas"
+  },
+  "becomeSeller": {
+    "title": "Tapkite pardavėju",
+    "description": "Įmonės pareiškimas",
+    "alreadySeller": "Jau turite pardavėjo profilį.",
+    "goToListings": "Eiti į mano skelbimus",
+    "businessInfo": "Verslo informacija",
+    "contactInfo": "Kontaktinė informacija",
+    "businessName": "Įmonės pavadinimas",
+    "businessNamePlaceholder": "Pavyzdys: Yilmazo ūkis",
+    "businessType": "Verslo kelionė",
+    "businessTypePlaceholder": "Pasirinkite savo verslo tipą.",
+    "businessTypes": {
+      "individual": "Individualus",
+      "company": "Įmonė",
+      "cooperative": "Kooperatyvas",
+      "farm": "Ūkis"
+    },
+    "taxNumber": "Mokesčių mokėtojo kodas",
+    "taxNumberPlaceholder": "Įveskite savo mokesčių mokėtojo identifikacinį numerį (nebūtina)",
+    "descriptionPlaceholder": "Parašykite trumpą aprašymą apie savo verslą...",
+    "phone": "Telefonas",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Svetainė",
+    "websitePlaceholder": "https://www.examplesite.com (neprivaloma)",
+    "submit": "Sukurti pardavėjo profilį",
+    "submitting": "Kuriamas profilis...",
+    "success": "Jūsų pardavėjo profilis sėkmingai sukurtas!",
+    "error": "Kuriant pardavėjo profilį įvyko klaida.",
+    "taxNumberHelp": "Įveskite savo 10 arba 11 skaitmenų mokesčių mokėtojo kodą (nebūtina)",
+    "phoneHelp": "Pavyzdys: +90 555 123 45 67 arba 0555 123 45 67",
+    "websiteHelp": "Pavyzdys: www.isletmem.com arba https://isletmem.com",
+    "alreadySellerDescription": "Savo skelbimus galite tvarkyti naudodami žemiau esantį mygtuką.",
+    "newListing": "Pridėti naują skelbimą"
   },
   "fileUpload": {
     "dragDrop": "Įkelkite nuotrauką arba vaizdo įrašą.",
     "dragDropHint": "Nuvilkite arba spustelėkite, kad pasirinktumėte.",
     "dropHere": "Palik tai...",
     "imageLimit": "Nuotrauka: maks. 10 MB",
-    "videoLimit": "Vaizdo įrašas: maks. 50 MB",
+    "videoLimit": "Vaizdo įrašas: maks. 100 MB",
     "uploadCount": "{current} / {max} įkrauta",
     "maxFilesError": "Galite įkelti daugiausia {max} medijos failų.",
     "imageTooLarge": "Nuotrauka turi būti mažesnė nei 10 MB.",
-    "videoTooLarge": "Vaizdo įrašas turi būti mažesnis nei 50 MB.",
+    "videoTooLarge": "Vaizdo įrašas turi būti mažesnis nei 100 MB.",
     "optimizing": "Optimizuojama...",
     "uploading": "Kraunama...",
     "queued": "Laukiant eilėje...",
@@ -419,9 +897,833 @@
     "videoBadge": "VAIZDO ĮRAŠAS",
     "coverUpdated": "Viršelio nuotrauka sėkmingai pakoreguota.",
     "optimizationInfo": "Nuotraukos buvo optimizuotos, kad atitiktų interneto standartus",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Vizualinis pasirinkimas",
+    "changeImage": "Pakeisti",
+    "removeImage": "Pašalinti",
+    "videoProcessing": "Vaizdo įrašas apdorojamas...",
+    "videoProcessingFailed": "Operacija nepavyko.",
+    "videoProcessingPollError": "Nepavyko gauti vaizdo įrašo apdorojimo būsenos. Atnaujinkite puslapį.",
+    "reorderError": "Nepavyko surūšiuoti failo.",
+    "coverUpdateError": "Nepavyko atnaujinti viršelio nuotraukos."
+  },
+  "error": {
+    "title": "Įvyko klaida.",
+    "description": "Įvyko netikėta klaida. Atnaujinkite puslapį arba bandykite dar kartą vėliau.",
+    "retry": "Bandykite dar kartą",
+    "goBack": "Negrįžk atgal",
+    "goHome": "Pradžia",
+    "notFound": {
+      "title": "Puslapis nerastas",
+      "description": "Puslapis, kurio ieškote, yra nepasiekiamas arba perkeltas.",
+      "goHome": "Grįžti į pagrindinį puslapį"
+    }
+  },
+  "search": {
+    "title": "Paieška",
+    "placeholder": "Ieškoti produktų, kategorijų arba pardavėjų...",
+    "searchButton": "Paieška",
+    "searchingFor": "Ieškomas",
+    "loading": "Ieškomas...",
+    "resultsCount": "Rasta {count} rezultatų.",
+    "noResults": "Nerasta jokių rezultatų.",
+    "tryDifferentSearch": "Išbandykite kitus raktinius žodžius arba pakeiskite filtrus.",
+    "filters": {
+      "title": "Filtrai",
+      "category": "Kategorija",
+      "allCategories": "Visos kategorijos",
+      "condition": "Situacija",
+      "allConditions": "Visi atvejai",
+      "priceRange": "Kainų diapazonas",
+      "price": "Kaina",
+      "min": "Min.",
+      "max": "Maks.",
+      "apply": "Taikyti",
+      "clear": "Švarus",
+      "clearAll": "Išvalyti viską"
+    },
+    "fetchError": "Įkeliant paieškos rezultatus įvyko klaida",
+    "recentSearches": "Naujausios paieškos",
+    "clearHistory": "Išvalyti istoriją",
+    "noSearchHistory": "Dar neturite paieškos istorijos.",
+    "deleteHistoryError": "Trinant paieškos istoriją įvyko klaida."
+  },
+  "categories": {
+    "title": "Kategorijų valdymas",
+    "description": "Tvarkykite kategorijas iš čia.",
+    "noCategories": "Kol kas nepridėta jokių kategorijų.",
+    "createFirst": "Sukurkite pirmąją kategoriją.",
+    "fetchError": "Įkeliant kategorijas įvyko klaida.",
+    "createSuccess": "Kategorija sėkmingai sukurta",
+    "createError": "Kuriant kategoriją įvyko klaida.",
+    "updateSuccess": "Kategorija sėkmingai atnaujinta",
+    "updateError": "Atnaujinant kategoriją įvyko klaida.",
+    "deleteSuccess": "Kategorija sėkmingai ištrinta.",
+    "deleteError": "Trinant kategoriją įvyko klaida.",
+    "activateSuccess": "Kategorija buvo aktyvuota.",
+    "deactivateSuccess": "Kategorija buvo deaktyvuota.",
+    "statusError": "Keičiant būseną įvyko klaida.",
+    "loadError": "Įkeliant kategoriją įvyko klaida",
+    "filters": {
+      "all": "Visi jie",
+      "active": "Aktyvus",
+      "inactive": "Neaktyvus"
+    },
+    "table": {
+      "name": "Kategorijos pavadinimas",
+      "slug": "Šliužas",
+      "sortOrder": "Serijos numeris",
+      "subCategories": "Subkategorija",
+      "status": "Situacija",
+      "actions": "Sandoriai"
+    },
+    "actions": {
+      "edit": "Redaguoti",
+      "delete": "Ištrinti",
+      "activate": "Aktyvuoti",
+      "deactivate": "Pasyvi struktūra"
+    },
+    "deleteDialog": {
+      "title": "Ištrinti kategoriją",
+      "description": "Ar tikrai norite ištrinti šią kategoriją? Šis veiksmas yra negrįžtamas.",
+      "cancel": "Atšaukti",
+      "confirm": "Ištrinti"
+    },
+    "addNew": "Pridėti naują kategoriją",
+    "loadMore": "Atsisiųsti daugiau",
+    "loadingMore": "Kraunama...",
+    "form": {
+      "newTitle": "Sukurti naują kategoriją",
+      "editTitle": "Redaguoti kategoriją",
+      "name": "Kategorijos pavadinimas",
+      "namePlaceholder": "Pavyzdys: galvijai",
+      "slug": "Šliužas",
+      "slugPlaceholder": "Pavyzdys: dideli gyvuliai",
+      "description": "Paaiškinimas",
+      "descriptionPlaceholder": "Trumpas kategorijos aprašymas...",
+      "parentCategory": "Aukštesnė kategorija",
+      "parentCategoryPlaceholder": "Pasirinkite populiariausią kategoriją (nebūtina)",
+      "noParent": "Nėra aukščiausios kategorijos (pagrindinė kategorija)",
+      "sortOrder": "Sekos numeris",
+      "isActive": "Aktyvus",
+      "iconUrl": "Piktogramos URL",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Išsaugoti",
+      "submitting": "Įrašoma...",
+      "updating": "Atnaujinama...",
+      "errors": {
+        "nameRequired": "Būtina nurodyti kategorijos pavadinimą.",
+        "slugRequired": "Šliužai yra privalomi."
+      }
+    }
+  },
+  "offers": {
+    "title": "Pasiūlymai",
+    "description": "Tvarkykite gaunamus ir siunčiamus pasiūlymus.",
+    "received": "Gaunami pasiūlymai",
+    "sent": "Pateikti pasiūlymai",
+    "noReceivedOffers": "Pasiūlymų kol kas negauta.",
+    "noSentOffers": "Dar nepateikėte pasiūlymo.",
+    "browseProducts": "Naršyti produktus",
+    "viewProduct": "Peržiūrėti produktą",
+    "accept": "Priimti",
+    "reject": "Atmesti",
+    "withdraw": "Išimti",
+    "makeOffer": "Pateikti pasiūlymą",
+    "sendOffer": "Siųsti pasiūlymą",
+    "sending": "Siunčiama...",
+    "cancel": "Atšaukti",
+    "listingPrice": "Reklamuojama kaina",
+    "yourOffer": "Jūsų pasiūlymas",
+    "quantity": "Suma",
+    "messageOptional": "Žinutė (nebūtina)",
+    "messagePlaceholder": "Užrašas, kuriuo norėtumėte pasidalyti su pardavėju...",
+    "expiresAt": "Paskutinė galiojimo data",
+    "offerSent": "Jūsų pasiūlymas sėkmingai išsiųstas.",
+    "offerError": "Siunčiant pasiūlymą įvyko klaida.",
+    "acceptSuccess": "Pasiūlymas buvo priimtas.",
+    "rejectSuccess": "Pasiūlymas buvo atmestas.",
+    "withdrawSuccess": "Pasiūlymas buvo atsiimtas.",
+    "actionError": "Proceso metu įvyko klaida.",
+    "fetchError": "Įkeliant pasiūlymus įvyko klaida.",
+    "loginRequired": "Prisijunkite, kad pateiktumėte pasiūlymą.",
+    "invalidPrice": "Įveskite galiojančią kainą.",
+    "invalidQuantity": "Įveskite galiojančią sumą.",
+    "status": {
+      "pending": "Laukiama",
+      "accepted": "Priimta",
+      "rejected": "Atmesta",
+      "countered": "Priešpriešinis pasiūlymas",
+      "expired": "Jo terminas baigėsi.",
+      "withdrawn": "Pasitraukė"
+    }
+  },
+  "deals": {
+    "title": "Susitarimai",
+    "description": "Laikykitės pirkimo sutarčių.",
+    "buying": "Mokslininkai",
+    "selling": "Pardavimai",
+    "noBuyingDeals": "Dar neturite studentų registracijos proceso.",
+    "noSellingDeals": "Dar neturite jokių pardavimo operacijų.",
+    "browseProducts": "Naršyti produktus",
+    "viewProduct": "Peržiūrėti produktą",
+    "activeDeals": "Aktyvios sutartys",
+    "completedDeals": "Užbaigta",
+    "purchases": "Mokslininkai",
+    "sales": "Pardavimai",
+    "fetchError": "Įkeliant sutartis įvyko klaida",
+    "dealStatus": {
+      "pending": "Laukiama",
+      "confirmed": "Patvirtinta",
+      "processing": "Ruošiama",
+      "shipped": "Krovinyje",
+      "delivered": "Pristatyta",
+      "completed": "Užbaigta",
+      "cancelled": "Atšaukta",
+      "disputed": "Susitarimas"
+    },
+    "delivery": {
+      "pickup": "Pristatymas į rankas",
+      "shipping": "Kroviniu",
+      "transport": "Transportu"
+    },
+    "requestTransport": "Pristatymo užklausa"
+  },
+  "farms": {
+    "title": "Mano ūkiai",
+    "description": "Tvarkykite ir atnaujinkite savo ūkius.",
+    "addFarm": "Pridėti ūkį",
+    "editFarm": "Ūkio valdymas",
+    "noFarms": "Dar nepridėjote ūkio.",
+    "farmName": "Ūkio pavadinimas",
+    "registrationNumber": "Registracijos numeris",
+    "location": "Vieta",
+    "selectLocation": "Pasirinkite vietą.",
+    "addLocationFirst": "Pirmiausia pridėkite vietą.",
+    "farmTypeLabel": "Ūkio turas",
+    "farmDescription": "Paaiškinimas",
+    "totalArea": "Bendras plotas",
+    "cultivatedArea": "Dirbamas plotas",
+    "certifications": "sertifikatai",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP ir kt.",
+    "organic": "Organinis",
+    "verified": "Patvirtinta",
+    "save": "Išsaugoti",
+    "saving": "Įrašoma...",
+    "cancel": "Atšaukti",
+    "edit": "Redaguoti",
+    "delete": "Ištrinti",
+    "sellerRequired": "Būtinas pardavėjo profilis",
+    "sellerRequiredDesc": "Norėdami pridėti ūkį, pirmiausia turite susikurti pardavėjo profilį.",
+    "becomeSeller": "Tapkite pardavėju",
+    "createSuccess": "Ūkis buvo sėkmingai pridėtas.",
+    "updateSuccess": "Ūkis sėkmingai atnaujintas.",
+    "deleteSuccess": "Ūkis buvo sėkmingai ištrintas.",
+    "saveError": "Registruojant ūkį įvyko klaida.",
+    "deleteError": "Trinant ūkį įvyko klaida.",
+    "fetchError": "Įkeliant ūkio informaciją įvyko klaida.",
+    "farmType": {
+      "livestock": "Gyvulininkystė",
+      "crop": "Žemės ūkis",
+      "mixed": "Mišrus",
+      "poultry": "Sparnuotas",
+      "dairy": "Pienininkystė",
+      "aquaculture": "Vandens produktai"
+    }
+  },
+  "transporters": {
+    "title": "vežėjai",
+    "description": "Gyvūnų ir produktų gabenimo paslaugos",
+    "searchPlaceholder": "Raskite vežėją...",
+    "noTransporters": "Registruotų vežėjų kol kas nėra.",
+    "verified": "Patvirtinta",
+    "transports": "transportas",
+    "viewProfile": "Peržiūrėti profilį",
+    "sort": {
+      "newest": "Naujausi",
+      "rating": "Aukščiausias balas",
+      "mostTransports": "Dažniausias siuntimas"
+    },
+    "pagination": {
+      "previous": "Buvęs",
+      "next": "Toliau",
+      "page": "Puslapis {puslapis}"
+    }
+  },
+  "transport": {
+    "title": "Mano siuntimo užklausos",
+    "description": "Sekite savo siuntimo užklausas.",
+    "findTransporter": "Rasti vežėją",
+    "active": "Aktyvus",
+    "completed": "Užbaigta",
+    "total": "Iš viso",
+    "asSeller": "Kaip pardavėjas",
+    "asBuyer": "Kaip pirkėjas",
+    "noSellerRequests": "Kaip pardavėjas, jums nereikia siuntimo.",
+    "noBuyerRequests": "Kaip gavėjas, jūs neturite siuntimo prašymo.",
+    "viewProduct": "Peržiūrėti produktą",
+    "pickup": "Gauti",
+    "delivery": "Pristatymas",
+    "urgent": "Skubu",
+    "fetchError": "Įkeliant siuntimo užklausas įvyko klaida.",
+    "trackShipment": "Sekti",
+    "transportStatus": {
+      "pending": "Laukiama",
+      "inPool": "Baseine",
+      "assigned": "Paskirtas",
+      "pickedUp": "Kvitas",
+      "inTransit": "Kelyje",
+      "delivered": "Pristatyta",
+      "completed": "Užbaigta",
+      "cancelled": "Atšaukta"
+    },
+    "transportType": {
+      "standard": "Standartinis",
+      "refrigerated": "Šaltoji grandinė",
+      "liveAnimal": "Gyvi gyvūnai",
+      "hazardous": "Pavojingos medžiagos",
+      "oversized": "Didelis dydis"
+    }
+  },
+  "moderation": {
+    "title": "Produkto moderavimas",
+    "description": "Peržiūrėti produktus, laukiančius patvirtinimo.",
+    "pending": "laukimas",
+    "allClear": "Visi produktai buvo patikrinti.",
+    "noPending": "Nėra patvirtinimo laukiančių produktų.",
+    "awaitingReview": "Laukiama peržiūros",
+    "by": "Pardavimų vadybininkas:",
+    "stock": "Atsargos",
+    "preview": "Su tavimi",
+    "approve": "Patvirtinti",
+    "reject": "Atmesti",
+    "confirmReject": "Atmesti",
+    "cancelReject": "Pasiduoti",
+    "rejectReasonPlaceholder": "Užsirašykite atmetimo priežastį...",
+    "rejectReasonRequired": "Atsisakymo priežastis yra privaloma.",
+    "approveSuccess": "Produktas buvo sėkmingai patvirtintas.",
+    "rejectSuccess": "Produktas buvo atmestas.",
+    "actionError": "Proceso metu įvyko klaida.",
+    "fetchError": "Įkeliant produktus įvyko klaida.",
+    "unauthorized": "Jūs neturite leidimo pasiekti šio puslapio."
+  },
+  "sellerModeration": {
+    "title": "Pardavėjo moderavimas",
+    "description": "Peržiūrėkite ir tvarkykite pardavėjų paskyras.",
+    "pending": "laukimas",
+    "allClear": "Visi pardavėjai buvo patikrinti.",
+    "noPending": "Jokių laukiančių pardavėjų.",
+    "verify": "Patvirtinti",
+    "suspend": "Sustabdyti",
+    "verifySuccess": "Pardavėjas sėkmingai patvirtintas.",
+    "suspendSuccess": "Pardavėjas suspenduotas.",
+    "actionError": "Proceso metu įvyko klaida.",
+    "suspendReasonRequired": "Sustabdymo priežastis yra privaloma.",
+    "suspendReasonPlaceholder": "Parašykite sustabdymo priežastį...",
+    "confirmSuspend": "Sustabdyti",
+    "cancelSuspend": "Pasiduoti",
+    "statusLabels": {
+      "pendingVerification": "Laukiama patvirtinimo",
+      "active": "Aktyvus",
+      "suspended": "Kabinimas",
+      "banned": "Draudžiama"
+    },
+    "filterAll": "Rodyti viską",
+    "filterPending": "Laukiantieji",
+    "filterActive": "Turtas",
+    "filterSuspended": "Sustabdyta",
+    "unauthorized": "Jūs neturite leidimo pasiekti šio puslapio.",
+    "businessName": "Įmonės pavadinimas",
+    "businessType": "Verslo kelionė",
+    "email": "El. paštas",
+    "phone": "Telefonas",
+    "status": "Situacija",
+    "createdAt": "Registracijos data"
+  },
+  "transporterModeration": {
+    "title": "Vežėjų moderavimas",
+    "description": "Peržiūrėkite ir tvarkykite vežėjų paskyras.",
+    "pending": "laukimas",
+    "allClear": "Visi vežėjai buvo patikrinti.",
+    "noPending": "Nelaukia joks vežėjas.",
+    "verify": "Patvirtinti",
+    "suspend": "Sustabdyti",
+    "verifySuccess": "Vežėjas sėkmingai patikrintas.",
+    "suspendSuccess": "Transporteris buvo sustabdytas.",
+    "actionError": "Proceso metu įvyko klaida.",
+    "suspendReasonRequired": "Sustabdymo priežastis yra privaloma.",
+    "suspendReasonPlaceholder": "Parašykite sustabdymo priežastį...",
+    "confirmSuspend": "Sustabdyti",
+    "cancelSuspend": "Pasiduoti",
+    "statusLabels": {
+      "pendingVerification": "Laukiama patvirtinimo",
+      "active": "Aktyvus",
+      "suspended": "Kabinimas",
+      "banned": "Draudžiama"
+    },
+    "filterAll": "Rodyti viską",
+    "filterPending": "Laukiantieji",
+    "filterActive": "Turtas",
+    "filterSuspended": "Sustabdyta",
+    "unauthorized": "Jūs neturite leidimo pasiekti šio puslapio.",
+    "companyName": "Įmonės pavadinimas",
+    "contactPerson": "Įgaliotas asmuo",
+    "email": "El. paštas",
+    "phone": "Telefonas",
+    "city": "Miestas",
+    "status": "Situacija",
+    "createdAt": "Registracijos data"
+  },
+  "transporterDetail": {
+    "notFound": "Nepavyko rasti jokio transporterio.",
+    "backToList": "Donas transporteriams",
+    "verified": "Patvirtinta",
+    "totalTransports": "bendra siuntimo kaina",
+    "completed": "baigtas",
+    "about": "Apie",
+    "contact": "Kontaktinė informacija",
+    "businessInfo": "Verslo informacija",
+    "license": "Licencijos numeris",
+    "insurance": "Draudimo informacija",
+    "fleet": "Informacija apie automobilių parką",
+    "serviceRegions": "Aptarnavimo zonos",
+    "specializations": "Ekspertizės sritys",
+    "certifications": "sertifikatai"
+  },
+  "brands": {
+    "title": "Prekės ženklo valdymas",
+    "description": "Tvarkyti produktų prekės ženklus.",
+    "addBrand": "Pridėti prekės ženklą",
+    "editBrand": "Redaguoti prekės ženklą",
+    "noBrands": "Kol kas nepridėta jokių prekių ženklų.",
+    "brandName": "Prekės ženklas",
+    "brandDescription": "Paaiškinimas",
+    "website": "Svetainė",
+    "logoUrl": "Logotipo URL",
+    "save": "Išsaugoti",
+    "saving": "Įrašoma...",
+    "cancel": "Atšaukti",
+    "edit": "Redaguoti",
+    "delete": "Ištrinti",
+    "inactive": "Pasyvus",
+    "products": "produktas",
+    "createSuccess": "Prekės ženklas sėkmingai pridėtas",
+    "updateSuccess": "Prekės ženklas sėkmingai atnaujintas.",
+    "deleteSuccess": "Prekės ženklas sėkmingai ištrintas.",
+    "saveError": "Registruojant prekės ženklą įvyko klaida.",
+    "deleteError": "Trinant prekės ženklą įvyko klaida.",
+    "fetchError": "Įkeliant prekės ženklus įvyko klaida",
+    "unauthorized": "Jūs neturite leidimo pasiekti šio puslapio."
+  },
+  "transporterReviews": {
+    "title": "Vertinimai",
+    "reviewCount": "vertinimas",
+    "noReviews": "Vertinimo dar nėra.",
+    "timeliness": "Pristatymas laiku",
+    "communication": "Bendravimas",
+    "carefulHandling": "Atsargus tvarkymas",
+    "professionalism": "Profesionalumas"
+  },
+  "transportOffers": {
+    "title": "Pristatymo kainos",
+    "description": "Tvarkykite jūsų pateiktas siuntimo užklausų kainas.",
+    "newOffer": "Naujas pasiūlymas",
+    "transportRequestId": "Siuntimo užklausos ID",
+    "requestIdPlaceholder": "Įveskite siuntimo užklausos ID.",
+    "offeredPrice": "Pasiūlymo kaina",
+    "estimatedDays": "Numatoma trukmė (dienomis)",
+    "days": "diena",
+    "vehicleType": "Transporto priemonės tipas",
+    "insuranceIncluded": "Draudimas įskaičiuotas",
+    "message": "Žinutė",
+    "cancel": "Atšaukti",
+    "sending": "Siunčiama...",
+    "sendOffer": "Pateikti pasiūlymą",
+    "cancelOffer": "Atšaukti",
+    "pendingTab": "Laukimas",
+    "historyTab": "Praeitis",
+    "noPendingOffers": "Neturite laukiančių pasiūlymų.",
+    "noHistory": "Nerasta ankstesnių pasiūlymų.",
+    "status": {
+      "pending": "Laukimas",
+      "accepted": "Priimta",
+      "rejected": "Atmesta",
+      "expired": "Jo terminas baigėsi.",
+      "cancelled": "Atšaukta"
+    },
+    "createSuccess": "Pasiūlymas sėkmingai pateiktas.",
+    "createError": "Siunčiant pasiūlymą įvyko klaida.",
+    "cancelSuccess": "Pasiūlymas buvo atšauktas.",
+    "cancelError": "Atšaukiant pasiūlymą įvyko klaida.",
+    "fetchError": "Įkeliant pasiūlymus įvyko klaida."
+  },
+  "animalInfo": {
+    "title": "Informacija apie gyvūnus ir produktus",
+    "animalTab": "Gyvūnas",
+    "healthTab": "Sveikata",
+    "vaccinationsTab": "Vakcinatoriai",
+    "veterinaryTab": "Veterinaras",
+    "breed": "Lenktynės",
+    "genderLabel": "Lytis",
+    "gender": {
+      "male": "Vyras",
+      "female": "Moteris",
+      "unknown": "Nežinoma"
+    },
+    "age": "Amžius",
+    "months": "mėnesį",
+    "weight": "Svoris",
+    "color": "Spalva",
+    "tagNumber": "Ausų skaičius",
+    "healthStatus": "Sveikatos būklė",
+    "health": {
+      "healthy": "Sveikas",
+      "underTreatment": "Gydomas",
+      "recovering": "Jis/ji sveiksta.",
+      "quarantined": "Karantine",
+      "unknown": "Nežinoma"
+    },
+    "purposeLabel": "Paskirtis",
+    "purpose": {
+      "breeding": "Stud",
+      "dairy": "Pienas",
+      "meat": "Mėsa",
+      "egg": "Kiaušinis",
+      "wool": "Vilna",
+      "working": "Darbas",
+      "pet": "Vietinis",
+      "other": "Kita"
+    },
+    "pregnancy": "Nėštumas",
+    "pregnant": "Nėščia",
+    "microchip": "Mikroschemos Nr.",
+    "passport": "Paso Nr.",
+    "sireDetails": "Tėvo informacija",
+    "damDetails": "Pagrindinė informacija",
+    "diagnosis": "Diagnozė",
+    "treatment": "Gydymas",
+    "medications": "Vaistai",
+    "veterinarian": "Veterinaras",
+    "nextDue": "Kita sukilėlių istorija",
+    "prescriptionRequired": "Reikalingas gydytojo receptas",
+    "targetSpecies": "Tikslinės ekskursijos",
+    "activeIngredients": "Aktyvūs ingredientai",
+    "registrationNo": "Registracijos numeris",
+    "storage": "Sandėliavimas",
+    "chemicalTab": "Cheminė medžiaga",
+    "feedTab": "Masalas",
+    "seedTab": "Sėkla",
+    "machineryTab": "Mašina",
+    "organic": "Organinis",
+    "toxicity": "Toksiškumas",
+    "gmoFree": "Be GMO",
+    "protein": "Baltymai",
+    "fat": "Nafta",
+    "fiber": "Pluoštas",
+    "hybrid": "Hibridas",
+    "germination": "Dygimas",
+    "daysToMaturity": "Brandinimas",
+    "daysLabel": "diena",
+    "warranty": "Garantuota",
+    "power": "Stiprumas",
+    "hoursUsed": "Naudojimo valandos",
+    "hours": "valanda",
+    "powerSource": "Maitinimo šaltinis"
+  },
+  "productVariants": {
+    "title": "Produkto variantai",
+    "variantCount": "variantas",
+    "inStock": "Sandėlyje",
+    "outOfStock": "Išparduota"
+  },
+  "productPrices": {
+    "title": "Kainos (kelios valiutos)",
+    "autoConversion": "Automatinė transformacija",
+    "validUntil": "Galiojimas"
+  },
+  "requestTransport": {
+    "title": "Sukurkite siuntimo užklausą",
+    "pickupLocation": "Pakrovimo punktas",
+    "deliveryLocation": "Pristatymo punktas",
+    "city": "Miestas",
+    "address": "Adresas",
+    "transportType": "Transporto turas",
+    "types": {
+      "standard": "Standartinis",
+      "refrigerated": "Šaltoji grandinė",
+      "liveAnimal": "Gyvi gyvūnai",
+      "hazardous": "Pavojingos medžiagos",
+      "oversized": "Didelis dydis"
+    },
+    "weight": "Svoris (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Pageidaujama įkėlimo data",
+    "preferredDeliveryDate": "Pageidaujama pristatymo data",
+    "urgent": "Skubus transportas",
+    "specialInstructions": "Specialios instrukcijos",
+    "instructionsPlaceholder": "Čia rašykite konkrečias instrukcijas...",
+    "cancel": "Pasiduoti",
+    "submit": "Sukurti paklausą",
+    "submitting": "Kūrimo procese...",
+    "success": "Siuntimo užklausa sėkmingai sukurta.",
+    "error": "Kuriant siuntimo užklausą įvyko klaida."
+  },
+  "transportTracking": {
+    "title": "Siuntos sekimas",
+    "noTracking": "Sekimo informacija kol kas nepasiekiama.",
+    "update": "Atnaujinimas"
+  },
+  "locations": {
+    "title": "Mano adresai",
+    "description": "Tvarkykite savo registruotus adresus.",
+    "addLocation": "Pridėti adresą",
+    "editLocation": "Redaguoti adresą",
+    "noLocations": "Jūs dar neturite registruoto adreso.",
+    "name": "Adresas",
+    "namePlaceholder": "Pavyzdžiui: namas, darbas, ūkis",
+    "address": "Adresas",
+    "addressLine2": "Adreso eilutė 2",
+    "city": "Miestas",
+    "state": "Rajonas / regionas",
+    "postalCode": "Pašto kodas",
+    "phone": "Telefonas",
+    "email": "El. paštas",
+    "cancel": "Pasiduoti",
+    "save": "Išsaugoti",
+    "saving": "Įrašoma...",
+    "typePickup": "Kraunama",
+    "typeDelivery": "Pristatymas",
+    "typeBoth": "Bendra",
+    "createSuccess": "Adresas sėkmingai pridėtas.",
+    "createError": "Pridedant adresą įvyko klaida.",
+    "updateSuccess": "Adresas sėkmingai atnaujintas.",
+    "updateError": "Atnaujinant adresą įvyko klaida.",
+    "deleteLocation": "Ištrinti adresą",
+    "deleteSuccess": "Adresas ištrintas",
+    "deleteError": "Trinant adresą įvyko klaida.",
+    "fetchError": "Įkeliant adresus įvyko klaida."
+  },
+  "systemSettings": {
+    "title": "Sistemos nustatymai",
+    "description": "Peržiūrėkite platformos valiutą, kalbą, mokėjimo būdus, pristatymo ir mokesčių nustatymus.",
+    "unauthorized": "Jūs neturite leidimo pasiekti šio puslapio.",
+    "currenciesTab": "Valiutos",
+    "languagesTab": "Kalbos",
+    "paymentTab": "Mokėjimo būdai",
+    "shippingTab": "Krovinys",
+    "taxTab": "Mokestis",
+    "active": "Aktyvus",
+    "inactive": "Pasyvus",
+    "default": "Numatytasis",
+    "noCurrencies": "Valiuta dar nėra apibrėžta.",
+    "noLanguages": "Kalba dar nėra apibrėžta.",
+    "noPaymentMethods": "Mokėjimo būdas dar nenustatytas.",
+    "noCarriers": "Laivybos bendrovė kol kas nenustatyta.",
+    "noZones": "Krovinio zona dar nėra apibrėžta.",
+    "noTaxRates": "Mokesčio tarifas dar nėra nustatytas.",
+    "carriers": "Laivybos kompanijos",
+    "zones": "Krovinių zonos",
+    "countries": "Šalys",
+    "rates": "Siuntimo mokesčiai",
+    "noRates": "Siuntimo išlaidos dar nėra nustatytos.",
+    "freeShipping": "Nemokamas pristatymas",
+    "deliveryDays": "dienos pristatymo laikas"
+  },
+  "pushPermission": {
+    "title": "Įjungti pranešimus",
+    "description": "Gaukite pranešimus apie naujus pranešimus, pasiūlymus ir užsakymų atnaujinimus.",
+    "allow": "Leisti",
+    "dismiss": "Uždaryti"
+  },
+  "healthRecords": {
+    "title": "Sveikatos įrašai",
+    "description": "Tvarkyti gyvūnų sveikatos įrašus ir ligos istoriją.",
+    "addRecord": "Pridėti įrašą",
+    "editRecord": "Redaguoti įrašą",
+    "deleteRecord": "Ištrinti įrašą",
+    "noRecords": "Sveikatos įrašas dar nepridėtas.",
+    "animalInfoId": "Gyvūno ID",
+    "animalInfoIdPlaceholder": "Įveskite gyvūno ID informaciją.",
+    "recordType": "Registracijos turas",
+    "recordTypePlaceholder": "Pavyzdžiai: apžiūra, gydymas, chirurgija",
+    "recordDate": "Registracijos data",
+    "followUpDate": "Patikrinti datą",
+    "veterinarianName": "Veterinaras",
+    "veterinarianLicense": "Licencijos Nr.",
+    "clinicName": "Klinikinis",
+    "diagnosis": "Diagnozė",
+    "treatment": "Gydymas",
+    "medications": "Vaistai",
+    "medicationsPlaceholder": "Pavyzdys: penicilinas 500 mg, ibuprofenas",
+    "notes": "Pastabos",
+    "documentUrl": "Dokumento URL",
+    "saving": "Įrašoma...",
+    "createSuccess": "Sveikatos įrašas sėkmingai pridėtas.",
+    "updateSuccess": "Sveikatos įrašas sėkmingai atnaujintas.",
+    "deleteSuccess": "Sveikatos įrašas sėkmingai ištrintas.",
+    "saveError": "Išsaugant įrašą įvyko klaida.",
+    "deleteError": "Trinant įrašą įvyko klaida.",
+    "fetchError": "Įkeliant įrašus įvyko klaida"
+  },
+  "vaccinations": {
+    "title": "Vakcinacijos įrašai",
+    "description": "Tvarkyti gyvūnų vakcinacijos įrašus ir kalendorius.",
+    "addVaccination": "Pridėti maištininką",
+    "editVaccination": "Sukilėlių susitarimas",
+    "deleteVaccination": "Rebel Sil",
+    "noVaccinations": "Vakcinacijos įrašas dar nepridėtas.",
+    "animalInfoId": "Gyvūno ID",
+    "animalInfoIdPlaceholder": "Įveskite gyvūno ID informaciją.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Pavyzdys: SAT vakcina, Brucella",
+    "vaccineType": "Sukilėlių turas",
+    "vaccineTypePlaceholder": "Pavyzdys: Aktyvus, Neaktyvus",
+    "batchNumber": "Šalies numeris",
+    "vaccinationDate": "Sukilėlių istorija",
+    "nextDueDate": "Kita sukilėlių istorija",
+    "veterinarianName": "Veterinaras",
+    "veterinarianLicense": "Licencijos Nr.",
+    "notes": "Pastabos",
+    "certificateUrl": "Sertifikato URL",
+    "saving": "Įrašoma...",
+    "createSuccess": "Vakcinacijos įrašas sėkmingai pridėtas.",
+    "updateSuccess": "Vakcinacijos įrašas sėkmingai atnaujintas.",
+    "deleteSuccess": "Vakcinacijos įrašas sėkmingai ištrintas.",
+    "saveError": "Registruojant vakciną įvyko klaida.",
+    "deleteError": "Šalinant vakciną įvyko klaida.",
+    "fetchError": "Įkeliant vakcinas įvyko klaida."
+  },
+  "shippingCarriers": {
+    "title": "Laivybos kompanijos",
+    "description": "Tvarkyti laivybos kompanijos informaciją.",
+    "addCarrier": "Pridėti įmonę",
+    "editCarrier": "Redaguoti įmonę",
+    "noCarriers": "Kol kas nepridėta jokia laivybos įmonė.",
+    "carrierName": "Įmonės pavadinimas",
+    "carrierNamePlaceholder": "Pavyzdys: Aras Kargo, MNG",
+    "code": "Kodas",
+    "codePlaceholder": "Pavyzdys: ARAS",
+    "website": "Svetainė",
+    "trackingUrlTemplate": "Sekti URL šabloną",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Palaikomos šalys",
+    "supportedCountriesPlaceholder": "Pavyzdys: TR, US, DE",
+    "active": "Aktyvus",
+    "inactive": "Pasyvus",
+    "saving": "Įrašoma...",
+    "edit": "Redaguoti",
+    "delete": "Ištrinti",
+    "createSuccess": "Siuntimo įmonė sėkmingai pridėta.",
+    "updateSuccess": "Siuntimo įmonės duomenys sėkmingai atnaujinti.",
+    "deleteSuccess": "Siuntimo įmonė sėkmingai ištrinta.",
+    "saveError": "Registruojant siuntimo įmonę įvyko klaida.",
+    "deleteError": "Trinant siuntimo įmonės informaciją įvyko klaida.",
+    "fetchError": "Įkeliant krovinių gabenimo įmones įvyko klaida."
+  },
+  "shippingZones": {
+    "title": "Krovinių zonos",
+    "description": "Tvarkyti krovinių zonas ir teritorijas.",
+    "addZone": "Pridėti regioną",
+    "editZone": "Redaguoti regioną",
+    "noZones": "Krovinių skyriaus dar nepridėta.",
+    "zoneName": "Regiono pavadinimas",
+    "zoneNamePlaceholder": "Pavyzdys: Europa, Šiaurės Amerika",
+    "countryCodes": "Šalių kodai",
+    "countryCodesPlaceholder": "Pavyzdys: TR, DE, FR",
+    "active": "Aktyvus",
+    "inactive": "Pasyvus",
+    "saving": "Įrašoma...",
+    "edit": "Redaguoti",
+    "delete": "Ištrinti",
+    "createSuccess": "Regionas sėkmingai pridėtas.",
+    "updateSuccess": "Regionas sėkmingai atnaujintas.",
+    "deleteSuccess": "Teritorija sėkmingai išvalyta.",
+    "saveError": "Išsaugant regioną įvyko klaida.",
+    "deleteError": "Trinant regioną įvyko klaida.",
+    "fetchError": "Įkeliant regionus įvyko klaida"
+  },
+  "shippingRates": {
+    "title": "Siuntimo mokesčiai",
+    "description": "Tvarkykite siuntimo išlaidas ir pristatymo parinktis.",
+    "addRate": "Pridėti mokestį",
+    "editRate": "Koreguoti mokestį",
+    "noRates": "Siuntimo išlaidos dar nepridėtos.",
+    "zone": "Plotas",
+    "carrier": "Firma",
+    "selectZone": "Pasirinkite regioną",
+    "selectCarrier": "Pasirinkite įmonę",
+    "shippingCost": "Siuntimo mokestis",
+    "currency": "Valiuta",
+    "estimatedDeliveryDays": "Numatomas pristatymas (dienomis)",
+    "minWeight": "Minimalus svoris",
+    "maxWeight": "Maksimalus svoris",
+    "minOrderAmount": "Minimali užsakymo suma",
+    "freeShipping": "Nemokamas pristatymas",
+    "free": "Nemokama",
+    "active": "Aktyvus",
+    "inactive": "Pasyvus",
+    "cost": "Mokestis",
+    "deliveryDays": "Pristatymas",
+    "status": "Situacija",
+    "saving": "Įrašoma...",
+    "createSuccess": "Mokestis sėkmingai pridėtas.",
+    "updateSuccess": "Atlyginimas sėkmingai atnaujintas.",
+    "deleteSuccess": "Mokestis sėkmingai ištrintas.",
+    "saveError": "Išsaugant mokestį įvyko klaida.",
+    "deleteError": "Šalinant mokestį įvyko klaida.",
+    "fetchError": "Įkeliant mokesčius įvyko klaida."
+  },
+  "metadata": {
+    "title": "Prekyba gyvuliais – gyvų gyvūnų prekybos platforma",
+    "description": "Patikimiausia pasaulyje gyvų gyvūnų prekybos platforma. Saugus ir skaidrus gyvūnų pirkimas ir pardavimas.",
+    "pages": {
+      "about": {
+        "title": "Apie mus",
+        "description": "Sužinokite apie prekybą gyvuliais. Patikima gyvų gyvūnų prekybos platforma."
+      },
+      "contact": {
+        "title": "Bendravimas",
+        "description": "Susisiekite su mumis. „Livestock Trading“ klientų aptarnavimo komanda pasiruošusi jums padėti."
+      },
+      "terms": {
+        "title": "Naudojimo sąlygos",
+        "description": "Gyvulių prekybos sąlygos ir nuostatos."
+      },
+      "privacy": {
+        "title": "Privatumo politika",
+        "description": "Gyvulių prekybos privatumo politika. Sužinokite, kaip saugomi jūsų asmens duomenys."
+      },
+      "products": {
+        "title": "Produktai",
+        "description": "Naršykite gyvų gyvūnų skelbimus. Patikimi galvijų, avių ir kitų gyvūnų skelbimai."
+      },
+      "sellers": {
+        "title": "Pardavėjai",
+        "description": "Atraskite patikimus gyvūnų pardavėjus. Patikrinti pardavėjų profiliai ir atsiliepimai."
+      },
+      "transporters": {
+        "title": "vežėjai",
+        "description": "Atraskite gyvūnų gabenimo įmones. Saugus ir profesionalus gyvų gyvūnų gabenimas."
+      },
+      "search": {
+        "title": "Paieška",
+        "description": "Ieškokite tarp gyvų gyvūnų sąrašų. Paprasta paieška su filtravimo ir rūšiavimo parinktimis."
+      },
+      "faq": {
+        "title": "Dažnai užduodami klausimai",
+        "description": "Dažnai užduodami klausimai ir atsakymai apie prekybą gyvuliais."
+      },
+      "productDetail": {
+        "title": "{title} - Parduodama",
+        "description": "Parduodama {title} - {city}. Spustelėkite, jei norite gauti išsamesnės informacijos ir kontaktinės informacijos."
+      },
+      "sellerDetail": {
+        "title": "{name} – Pardavėjo profilis",
+        "description": "{name} pardavėjo profilis. Atsiliepimai, skelbimai ir kontaktinė informacija."
+      },
+      "transporterDetail": {
+        "title": "{name} – operatoriaus profilis",
+        "description": "{name} vežėjo profilis. Aptarnavimo sritys, atsiliepimai ir kontaktinė informacija."
+      }
+    }
   }
 }

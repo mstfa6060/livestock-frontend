@@ -11,17 +11,30 @@
     "back": "Kembali",
     "next": "Ke hadapan",
     "close": "Tutup",
+    "unauthorized": "Anda tidak mempunyai kebenaran untuk mengakses halaman ini.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Log masuk",
-    "register": "Daftar"
+    "register": "Daftar",
+    "previous": "Bekas",
+    "zoomIn": "Zum masuk",
+    "previousImage": "Imej sebelumnya",
+    "nextImage": "Imej seterusnya",
+    "closeLightbox": "Tutup galeri",
+    "imageLightbox": "Galeri imej",
+    "slideN": "Slaid {n}",
+    "viewMore": "Lihat lagi"
   },
   "header": {
     "products": "Produk",
     "sellers": "Penjual",
+    "transporters": "pengangkut",
     "about": "Tentang Kami",
+    "search": "Carian",
     "dashboard": "Panel",
     "settings": "Tetapan",
-    "logout": "Log Keluar"
+    "logout": "Log Keluar",
+    "menu": "Menu",
+    "language": "Pemilihan bahasa"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Saya terlupa kata laluan saya.",
       "noAccount": "Awak tak ada akaun ke?",
       "register": "Daftar",
-      "errorDefault": "Log masuk gagal. Sila semak maklumat anda."
+      "errorDefault": "Log masuk gagal. Sila semak maklumat anda.",
+      "orContinueWith": "atau teruskan",
+      "continueWithGoogle": "Teruskan dengan Google",
+      "continueWithApple": "Teruskan dengan Apple.",
+      "socialLoginError": "Log masuk sosial gagal. Sila cuba lagi.",
+      "appleComingSoon": "Tidak lama lagi",
+      "showPassword": "Tunjukkan kata laluan",
+      "hidePassword": "Sembunyikan kata laluan"
     },
     "register": {
       "title": "Daftar",
@@ -51,7 +71,17 @@
       "login": "Log masuk",
       "passwordMismatch": "Kata laluan tidak sepadan.",
       "passwordTooShort": "Kata laluan mestilah sekurang-kurangnya 6 aksara.",
-      "errorDefault": "Pendaftaran gagal. Sila cuba lagi."
+      "errorDefault": "Pendaftaran gagal. Sila cuba lagi.",
+      "showPassword": "Tunjukkan kata laluan",
+      "hidePassword": "Sembunyikan kata laluan",
+      "passwordStrength": {
+        "minLength": "Sekurang-kurangnya 8 aksara",
+        "uppercase": "Huruf besar (A-Z)",
+        "lowercase": "Huruf kecil (a-z)",
+        "number": "Nombor (0-9)",
+        "special": "Watak khas (!@#$%)"
+      },
+      "registerSuccess": "Akaun anda telah berjaya dicipta! Anda sedang dialihkan ke halaman log masuk..."
     },
     "forgotPassword": {
       "title": "Saya terlupa kata laluan saya.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Minta Sambungan Baharu",
       "passwordMismatch": "Kata laluan tidak sepadan.",
       "passwordTooShort": "Kata laluan mestilah sekurang-kurangnya 6 aksara.",
-      "errorDefault": "Penetapan semula kata laluan gagal. Sambungan mungkin tidak sah atau tamat tempoh."
+      "errorDefault": "Penetapan semula kata laluan gagal. Sambungan mungkin tidak sah atau tamat tempoh.",
+      "showPassword": "Tunjukkan kata laluan",
+      "hidePassword": "Sembunyikan kata laluan"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "aktif",
       "totalViews": "Jumlah Paparan",
       "thisWeek": "minggu ini",
+      "allTime": "sepanjang masa",
       "favorites": "Kegemaran",
       "onYourListings": "dalam iklan anda",
+      "savedItems": "produk berdaftar",
       "messages": "Mesej",
-      "unread": "belum dibaca"
+      "notifications": "Pemberitahuan",
+      "unread": "belum dibaca",
+      "views": "pandangan",
+      "draft": "Draf",
+      "sold": "Dijual",
+      "pending": "Belum selesai",
+      "awaitingApproval": "menunggu kelulusan",
+      "totalSales": "Jumlah Jualan",
+      "completedSales": "jualan yang telah selesai",
+      "revenue": "Pendapatan",
+      "totalRevenue": "jumlah pendapatan"
     },
     "recentListings": "Penyenaraian Terkini Anda",
+    "recentActivity": "Aktiviti Terkini",
     "recentMessages": "Mesej Terkini",
+    "quickLinks": "Akses Pantas",
     "noListings": "Anda belum menambah sebarang iklan lagi.",
+    "noActivity": "Tiada aktiviti lagi.",
     "noMessages": "Anda belum menerima mesej lagi.",
     "noNotifications": "Anda belum menerima sebarang pemberitahuan lagi.",
     "viewAllListings": "Lihat Semua Penyenaraian",
-    "viewAllMessages": "Lihat semua mesej"
+    "viewAllMessages": "Lihat semua mesej",
+    "viewNotifications": "Lihat Pemberitahuan",
+    "viewFavorites": "Kegemaran Gor",
+    "recentlyViewed": "Dilihat Baru-baru Ini",
+    "fetchError": "Ralat berlaku semasa memuatkan data panel."
   },
   "dashboardNav": {
     "overview": "Gambaran Keseluruhan",
@@ -115,7 +166,61 @@
     "notifications": "Pemberitahuan",
     "profile": "Profil",
     "settings": "Tetapan",
-    "newListing": "Tambah Penyenaraian Baharu"
+    "newListing": "Tambah Penyenaraian Baharu",
+    "becomeSeller": "Jadilah Penjual",
+    "categories": "Kategori",
+    "offers": "Cadangan",
+    "deals": "Perjanjian",
+    "farms": "Ladang-ladang saya",
+    "transport": "Pengangkutan",
+    "moderation": "Moderasi",
+    "sellerModeration": "Moderasi Penjual",
+    "transporterModeration": "Moderasi Pembawa",
+    "brands": "Jenama",
+    "transportOffers": "Sebut Harga Penghantaran",
+    "healthRecords": "Rekod Kesihatan",
+    "vaccinations": "Pemvaksin",
+    "shippingCarriers": "Syarikat Perkapalan",
+    "shippingZones": "Zon Kargo",
+    "shippingRates": "Yuran Penghantaran",
+    "systemSettings": "Tetapan Sistem",
+    "locations": "Alamat Saya"
+  },
+  "profile": {
+    "title": "Maklumat Profil",
+    "description": "Anda boleh mengemas kini maklumat peribadi anda di sini.",
+    "personalInfo": "Maklumat Peribadi",
+    "contactInfo": "Maklumat Perhubungan",
+    "preferences": "Keutamaan",
+    "firstName": "Nama",
+    "firstNamePlaceholder": "Masukkan nama anda",
+    "surname": "Nama keluarga",
+    "surnamePlaceholder": "Masukkan nama keluarga anda.",
+    "displayName": "Nama yang Dipaparkan",
+    "phone": "Nombor Telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Disahkan",
+    "phoneNotVerified": "Tidak disahkan",
+    "verifyPhone": "Sahkan Nombor Telefon",
+    "country": "Negara",
+    "selectCountry": "Pilih negara",
+    "language": "Keutamaan Bahasa",
+    "selectLanguage": "Pilih bahasa",
+    "currency": "Mata wang",
+    "selectCurrency": "Pilih mata wang.",
+    "saveChanges": "Simpan Perubahan",
+    "saving": "Menyimpan...",
+    "saveSuccess": "Maklumat profil anda telah dikemas kini.",
+    "saveError": "Ralat berlaku semasa mengemas kini profil.",
+    "avatar": "Foto Profil",
+    "changeAvatar": "Tukar Foto",
+    "removeAvatar": "Alih Keluar Foto",
+    "currencies": {
+      "try": "Lira Turki",
+      "usd": "Dolar AS",
+      "eur": "Euro",
+      "gbp": "Paun British"
+    }
   },
   "myListings": {
     "title": "Iklan saya",
@@ -125,35 +230,94 @@
     "fetchError": "Ralat berlaku semasa memuatkan iklan.",
     "deleteSuccess": "Iklan tersebut berjaya dipadamkan.",
     "deleteError": "Ralat berlaku semasa memadamkan iklan.",
-    "activateSuccess": "Iklan telah diaktifkan.",
-    "deactivateSuccess": "Penyenaraian telah dinyahaktifkan.",
+    "publishSuccess": "Iklan telah dihantar untuk kelulusan.",
+    "unpublishSuccess": "Iklan itu telah didrafkan.",
     "statusError": "Ralat berlaku semasa menukar status.",
     "filters": {
       "all": "Kesemua mereka",
-      "active": "Aktif",
       "draft": "Draf",
       "pending": "Menunggu Kelulusan",
+      "active": "Aktif",
+      "rejected": "Ditolak",
       "sold": "Dijual"
     },
     "actions": {
       "edit": "Sunting",
       "delete": "Padam",
-      "activate": "Aktifkan",
-      "deactivate": "Struktur Pasif"
+      "publish": "Hantar untuk Kelulusan",
+      "unpublish": "Draf",
+      "menu": "Transaksi"
     },
     "deleteDialog": {
       "title": "Padam iklan",
       "description": "Adakah anda pasti mahu memadamkan penyenaraian ini? Tindakan ini tidak boleh dipulihkan.",
       "cancel": "Batal",
       "confirm": "Padam"
-    }
+    },
+    "loadMore": "Muat Turun Lagi",
+    "loadingMore": "Memuatkan..."
   },
   "favorites": {
     "title": "Kegemaran saya",
     "description": "Ikuti produk yang anda suka di sini.",
     "noFavorites": "Anda belum menambah sebarang produk kegemaran lagi.",
     "browseProducts": "Layari Produk",
-    "fetchError": "Ralat berlaku semasa memuatkan kegemaran."
+    "fetchError": "Ralat berlaku semasa memuatkan kegemaran.",
+    "loadMore": "Muat Turun Lagi",
+    "loadingMore": "Memuatkan..."
+  },
+  "messages": {
+    "title": "Mesej",
+    "description": "Berhubung dengan pembeli dan penjual.",
+    "noConversations": "Anda belum menerima mesej lagi.",
+    "startConversation": "Untuk bertanya soalan tentang iklan, sila layari iklan tersebut.",
+    "fetchError": "Ralat berlaku semasa memuatkan mesej",
+    "sendError": "Ralat berlaku semasa menghantar mesej.",
+    "connectionError": "Sambungan gagal. Cuba lagi...",
+    "connected": "Ia berhubung",
+    "connecting": "Menyambung...",
+    "searchPlaceholder": "Cari melalui mesej...",
+    "typeMessage": "Tulis mesej anda...",
+    "send": "Hantar",
+    "sending": "Menghantar...",
+    "typing": "Ia mengatakan...",
+    "read": "Baca",
+    "delivered": "Dihantar",
+    "today": "Hari ini",
+    "yesterday": "Semalam",
+    "noMessages": "Tiada mesej lagi. Mulakan perbualan!",
+    "loadMore": "Muat naik lebih banyak",
+    "loadingMessages": "Mesej sedang dimuatkan...",
+    "about": "Mengenai",
+    "product": "Produk",
+    "startNewConversation": "Mulakan Perbualan Baharu",
+    "selectConversation": "Pilih perbualan atau mulakan perbualan baharu.",
+    "online": "Dalam talian",
+    "offline": "Luar talian",
+    "lastSeen": "Terakhir dilihat",
+    "deleteConversation": "Padam perbualan",
+    "deleteConfirm": "Adakah anda pasti mahu memadamkan perbualan ini?",
+    "deleted": "Perbualan itu telah dipadamkan.",
+    "defaultUser": "Pengguna",
+    "noResults": "Tiada hasil ditemui.",
+    "newConversation": "Perbualan baharu"
+  },
+  "notifications": {
+    "title": "Pemberitahuan",
+    "description": "Lihat dan urus pemberitahuan anda.",
+    "markAllAsRead": "Tandakan semua sebagai telah dibaca",
+    "noNotifications": "Anda belum menerima sebarang pemberitahuan lagi.",
+    "viewAll": "Lihat semua pemberitahuan",
+    "today": "Hari ini",
+    "yesterday": "Semalam",
+    "older": "Lebih tua",
+    "types": {
+      "system": "Sistem",
+      "message": "Mesej",
+      "offer": "Tawaran",
+      "order": "Pesanan",
+      "listing": "Iklan"
+    }
   },
   "settings": {
     "title": "Tetapan",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Kata laluan baharu tidak sepadan.",
       "passwordTooShort": "Kata laluan baharu mestilah sekurang-kurangnya 6 aksara.",
       "sessionError": "Maklumat sesi tidak dapat ditemui.",
-      "errorDefault": "Kata laluan tidak dapat dikemas kini. Sila semak kata laluan semasa anda."
+      "errorDefault": "Kata laluan tidak dapat dikemas kini. Sila semak kata laluan semasa anda.",
+      "showPassword": "Tunjukkan kata laluan",
+      "hidePassword": "Sembunyikan kata laluan"
+    },
+    "preferences": {
+      "title": "Pilihan Pemberitahuan dan Paparan",
+      "description": "Urus saluran pemberitahuan dan pilihan paparan anda.",
+      "notifications": "Pemberitahuan",
+      "emailNotifications": "Pemberitahuan E-mel",
+      "emailNotificationsDesc": "Terima pemberitahuan e-mel untuk mesej baharu dan kemas kini iklan.",
+      "smsNotifications": "Pemberitahuan SMS",
+      "smsNotificationsDesc": "Terima mesej SMS untuk pemberitahuan penting.",
+      "pushNotifications": "Pemberitahuan Tolak",
+      "pushNotificationsDesc": "Terima pemberitahuan tolak untuk kemas kini segera.",
+      "appearance": "Rupa",
+      "darkMode": "Mod Gelap",
+      "darkModeDesc": "Tukar kepada tema gelap.",
+      "saveChanges": "Simpan Keutamaan",
+      "saving": "Menyimpan...",
+      "saveSuccess": "Pilihan anda telah dikemas kini.",
+      "saveError": "Ralat berlaku semasa mengemas kini pilihan.",
+      "loadError": "Keutamaan tidak dapat dimuatkan."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Platform Perdagangan Haiwan Hidup",
       "subtitle": "Platform perdagangan haiwan hidup yang paling boleh dipercayai. Beli dan jual lembu dan biri-biri anda dengan selamat.",
       "cta": "Mula Sekarang",
-      "viewListings": "Lihat Iklan"
+      "viewListings": "Lihat Iklan",
+      "searchPlaceholder": "Cari haiwan... (lembu, biri-biri, kambing...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Iklan Pilihan",
       "viewAll": "Lihat semua"
+    },
+    "cta": {
+      "title": "Mula Sekarang",
+      "subtitle": "Ambil tempat anda di platform tempat beribu-ribu penjual dan pembeli bertemu.",
+      "button": "Daftar Percuma"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Tentang Kami",
     "contact": "Komunikasi",
     "terms": "Syarat Penggunaan",
-    "privacy": "Dasar Privasi"
+    "privacy": "Dasar Privasi",
+    "company": "Syarikat",
+    "support": "Sokongan",
+    "legal": "Undang-undang",
+    "followUs": "Ikuti kami",
+    "newsletter": "Buletin",
+    "newsletterDescription": "Jangan terlepas senarai dan promosi terkini.",
+    "subscribe": "Langgan",
+    "emailPlaceholder": "Alamat e-mel anda",
+    "tagline": "Platform perdagangan haiwan hidup yang paling andal di Turki.",
+    "sellers": "Penjual",
+    "products": "Produk",
+    "map": "Peta",
+    "appleLoginComingSoon": "Log masuk dengan Apple akan aktif tidak lama lagi.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "Soalan Lazim"
+  },
+  "faq": {
+    "title": "Soalan Lazim",
+    "description": "Jawapan kepada soalan lazim anda tentang platform kami.",
+    "noFaqs": "Tiada soalan telah ditambah lagi."
+  },
+  "about": {
+    "title": "Tentang Kami",
+    "subtitle": "Platform perdagangan haiwan hidup yang paling andal di Turki.",
+    "mission": {
+      "title": "Misi Kami",
+      "description": "Dengan mendigitalkan perdagangan haiwan hidup, kami berhasrat untuk mewujudkan hubungan yang selamat, telus dan cekap antara pengeluar dan pembeli."
+    },
+    "vision": {
+      "title": "Visi Kami",
+      "description": "Untuk menjadi perintis dalam transformasi digital dalam sektor pertanian dan menjadi platform global dalam perdagangan haiwan hidup."
+    },
+    "values": {
+      "title": "Nilai-nilai kami",
+      "trust": {
+        "title": "Amanah",
+        "description": "Ketelusan dan kebolehpercayaan adalah penting dalam semua transaksi."
+      },
+      "quality": {
+        "title": "Kualiti",
+        "description": "Penambahbaikan berterusan untuk memberikan perkhidmatan terbaik."
+      },
+      "innovation": {
+        "title": "Inovasi",
+        "description": "Mengubah industri dengan menggunakan teknologi."
+      }
+    },
+    "stats": {
+      "users": "Pengguna Berdaftar",
+      "sellers": "Penjual Aktif",
+      "products": "Iklan",
+      "transactions": "Transaksi Berjaya"
+    }
+  },
+  "contact": {
+    "title": "Komunikasi",
+    "subtitle": "Sila hubungi kami untuk sebarang pertanyaan.",
+    "form": {
+      "title": "Tulis kepada kami",
+      "name": "Nama anda",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "E-mel",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Subjek",
+      "subjectPlaceholder": "Tajuk mesej anda",
+      "message": "Mesej anda",
+      "messagePlaceholder": "Tulis mesej anda di sini...",
+      "submit": "Hantar",
+      "submitting": "Menghantar...",
+      "success": "Mesej anda telah berjaya dihantar. Kami akan menghubungi anda secepat mungkin.",
+      "error": "Ralat berlaku semasa menghantar mesej. Sila cuba lagi."
+    },
+    "info": {
+      "title": "Maklumat Perhubungan",
+      "address": "Alamat",
+      "addressValue": "Istanbul, Turki",
+      "email": "E-mel",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Telefon",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Waktu Bekerja",
+      "workingHoursValue": "Isnin - Jumaat: 09:00 - 18:00",
+      "map": "Peta"
+    }
+  },
+  "terms": {
+    "title": "Syarat Penggunaan",
+    "lastUpdated": "Kemas kini terakhir: {tarikh}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Penerimaan Terma dan Syarat",
+        "content": "Dengan menggunakan laman web ini, anda bersetuju dengan terma penggunaan berikut. Jika anda tidak bersetuju dengan terma ini, sila jangan gunakan laman web ini."
+      },
+      "services": {
+        "title": "2. Perkhidmatan",
+        "content": "Livestock Trading menyediakan platform untuk membeli dan menjual haiwan hidup. Semua transaksi di platform ini adalah tanggungjawab pengguna."
+      },
+      "accounts": {
+        "title": "3. Akaun Pengguna",
+        "content": "Anda mesti memberikan maklumat yang tepat dan terkini untuk membuat akaun. Keselamatan akaun anda adalah tanggungjawab anda."
+      },
+      "prohibited": {
+        "title": "4. Aktiviti Terlarang",
+        "content": "Iklan yang mengelirukan, maklumat palsu, penipuan dan aktiviti haram adalah dilarang sama sekali."
+      },
+      "liability": {
+        "title": "5. Had Liabiliti",
+        "content": "Platform ini tidak bertanggungjawab secara langsung terhadap transaksi antara pengguna. Semua transaksi berlaku antara pihak-pihak yang terlibat."
+      },
+      "changes": {
+        "title": "6. Perubahan",
+        "content": "Terma dan syarat ini tertakluk kepada perubahan tanpa notis. Perubahan akan berkuat kuasa serta-merta setelah diterbitkan."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Dasar Privasi",
+    "lastUpdated": "Kemas kini terakhir: {tarikh}",
+    "sections": {
+      "collection": {
+        "title": "1. Pengumpulan Maklumat",
+        "content": "Apabila anda membuat akaun, kami akan mengumpulkan maklumat peribadi seperti nama, alamat e-mel dan nombor telefon anda. Kami juga mungkin akan mengumpulkan data tanpa nama mengenai penggunaan laman web ini oleh anda."
+      },
+      "usage": {
+        "title": "2. Penggunaan Maklumat",
+        "content": "Maklumat yang kami kumpulkan digunakan untuk menyediakan perkhidmatan kami, mengurus akaun anda, memastikan keselamatan dan menawarkan tawaran peribadi kepada anda."
+      },
+      "sharing": {
+        "title": "3. Perkongsian Maklumat",
+        "content": "Maklumat peribadi anda tidak akan dijual atau disewakan kepada pihak ketiga. Maklumat anda tidak akan dikongsi kecuali untuk tujuan yang dikehendaki oleh undang-undang."
+      },
+      "security": {
+        "title": "4. Keselamatan",
+        "content": "Langkah-langkah keselamatan standard industri telah dilaksanakan untuk melindungi data anda."
+      },
+      "cookies": {
+        "title": "5. Kuki",
+        "content": "Laman web kami menggunakan kuki untuk meningkatkan pengalaman pengguna. Anda boleh mengurus pilihan kuki anda dalam tetapan pelayar anda."
+      },
+      "rights": {
+        "title": "6. Hak Anda",
+        "content": "Di bawah Undang-undang Perlindungan Data Peribadi Turki (KVKK), anda mempunyai hak untuk mengakses, membetulkan dan memadam data peribadi anda."
+      }
+    }
   },
   "products": {
     "title": "Produk",
@@ -235,11 +570,19 @@
       "priceDesc": "Harga (Tinggi ke Rendah)",
       "popular": "Paling Popular"
     },
+    "pagination": {
+      "prev": "Bekas",
+      "next": "Seterusnya"
+    },
     "status": {
       "draft": "Draf",
+      "pending": "Menunggu Kelulusan",
       "active": "Aktif",
+      "inactive": "Pasif",
+      "outOfStock": "Kehabisan Stok",
+      "expired": "Tempoh jawatannya telah tamat.",
       "sold": "Dijual",
-      "pending": "Menunggu Kelulusan"
+      "rejected": "Ditolak"
     },
     "condition": {
       "new": "Baru",
@@ -250,12 +593,16 @@
     "outOfStock": "Kehabisan Stok",
     "inStock": "Dalam Stok",
     "noResults": "Produk tidak dijumpai.",
-    "loading": "Produk sedang dimuatkan...",
+    "loading": "Memuatkan produk...",
     "perPage": "Setiap halaman",
     "showing": "Jumlah {total} produk antara {from} dan {to}.",
+    "fetchError": "Ralat berlaku semasa memuat naik produk.",
+    "loadMore": "Tunjukkan Lagi",
+    "showingOf": "{count} / {total} produk sedang dipaparkan.",
     "loginToFavorite": "Log masuk untuk menambah ke kegemaran.",
     "addedToFavorites": "Ditambah ke kegemaran",
-    "removedFromFavorites": "Dialih keluar daripada kegemaran"
+    "removedFromFavorites": "Dialih keluar daripada kegemaran",
+    "favoriteError": "Tindakan kegemaran gagal."
   },
   "productDetail": {
     "addToFavorites": "Tambah ke Kegemaran",
@@ -279,16 +626,31 @@
     "maxOrder": "Pesanan maksimum",
     "publishedAt": "Tarikh penerbitan",
     "views": "Dilihat",
-    "reviews": "penilaian",
+    "reviews": {
+      "title": "Penilaian",
+      "reviewCount": "penilaian",
+      "noReviews": "Tiada penilaian lagi.",
+      "verified": "Pembeli Disahkan"
+    },
     "similarProducts": "Produk Serupa",
     "sellerProducts": "Produk Lain Penjual",
     "contactSeller": "Hubungi penjual",
-    "loginRequired": "Log masuk untuk menambah ke kegemaran.",
+    "makeOffer": "Hantar Tawaran",
+    "loginRequired": "Sila log masuk untuk melakukan tindakan ini.",
     "addedToFavorites": "Ditambah ke kegemaran",
     "removedFromFavorites": "Dialih keluar daripada kegemaran",
     "linkCopied": "Pautan telah disalin.",
     "messagingComingSoon": "Ciri pemesejan akan datang tidak lama lagi.",
-    "productNotFound": "Produk tidak dijumpai."
+    "productNotFound": "Produk tidak dijumpai.",
+    "contacting": "Hubungan sedang dibuat...",
+    "contactError": "Komunikasi gagal. Sila cuba lagi.",
+    "noImage": "Tiada imej tersedia.",
+    "defaultLocation": "Turki",
+    "inquiryMessage": "Saya ingin mendapatkan maklumat tentang {title}.",
+    "breadcrumb": {
+      "home": "Laman Utama",
+      "products": "Produk"
+    }
   },
   "seller": {
     "title": "Maklumat Penjual",
@@ -300,6 +662,70 @@
     "call": "Carian",
     "viewProfile": "Lihat Profil"
   },
+  "sellers": {
+    "title": "Penjual",
+    "description": "Temui penjual yang boleh dipercayai.",
+    "search": "Cari penjual...",
+    "sort": "Isih",
+    "sortOptions": {
+      "newest": "Terkini",
+      "mostSales": "Penjual Terbaik",
+      "topRated": "Skor Tertinggi",
+      "mostProducts": "Kebanyakan Iklan"
+    },
+    "noResults": "Penjual tidak dijumpai.",
+    "loading": "Penjual sedang memuatkan...",
+    "showing": "{count} penjual ditemui",
+    "verified": "Disahkan",
+    "sales": "jualan",
+    "products": "iklan",
+    "reviews": "penilaian",
+    "rating": "titik",
+    "viewProducts": "Lihat Produk",
+    "contactSeller": "Hantar Mesej",
+    "memberSince": "Ahli sejak {year}",
+    "fetchError": "Ralat berlaku semasa memuatkan vendor",
+    "detail": {
+      "title": "Profil Penjual",
+      "about": "Mengenai",
+      "businessInfo": "Maklumat Perniagaan",
+      "businessName": "Nama Perniagaan",
+      "businessType": "Lawatan Perniagaan",
+      "email": "E-mel",
+      "phone": "Telefon",
+      "website": "Laman Web",
+      "description": "Penjelasan",
+      "policies": "Dasar-dasar",
+      "returnPolicy": "Polisi pemulangan",
+      "shippingPolicy": "Dasar Penghantaran",
+      "businessHours": "Waktu Bekerja",
+      "paymentMethods": "Kaedah Pembayaran",
+      "allProducts": "Semua Produk",
+      "stats": {
+        "totalSales": "Jumlah Jualan",
+        "totalProducts": "Jumlah Produk",
+        "totalReviews": "Penilaian",
+        "rating": "Titik"
+      },
+      "notFound": "Penjual tidak dijumpai.",
+      "backToList": "Jangan kepada penjual",
+      "contactInfo": "Komunikasi",
+      "noProducts": "Penjual ini belum mempunyai penyenaraian.",
+      "noPolicies": "Penjual masih belum menetapkan polisinya.",
+      "fetchError": "Ralat berlaku semasa memuat naik maklumat penjual.",
+      "productsLoadError": "Ralat berlaku semasa memuat naik produk penjual.",
+      "reviewsTab": "Penilaian",
+      "reviews": {
+        "summary": "Ringkasan Penilaian",
+        "reviewCount": "penilaian",
+        "communication": "Komunikasi",
+        "shippingSpeed": "Kelajuan Penghantaran",
+        "productQuality": "Kualiti Produk",
+        "noReviews": "Tiada penilaian lagi.",
+        "verified": "Pembeli Disahkan"
+      }
+    }
+  },
   "editListing": {
     "title": "Edit iklan",
     "saveChanges": "Simpan Perubahan",
@@ -307,6 +733,10 @@
     "updateSuccess": "Iklan tersebut telah berjaya dikemas kini.",
     "updateFailed": "Ralat berlaku semasa mengemas kini penyenaraian.",
     "loadError": "Ralat berlaku semasa memuatkan iklan.",
+    "sellerNotFound": "Profil penjual tidak ditemui.",
+    "sellerLoadError": "Profil penjual tidak dapat dimuatkan.",
+    "userNotFound": "Maklumat pengguna tidak dapat ditemui. Sila log masuk sekali lagi.",
+    "locationNotFound": "Maklumat lokasi tidak dapat ditemui. Sila muat semula halaman.",
     "basicInfo": "Maklumat Asas",
     "categoryAndCondition": "Kategori dan Status",
     "pricing": "Penentuan harga",
@@ -314,6 +744,8 @@
     "images": "Imej",
     "existingImages": "Imej yang Tersedia",
     "addImage": "Tambah Imej",
+    "maxImages": "Anda boleh memuat naik maksimum 10 imej.",
+    "imageHint": "Minimum 1, maksimum 10 imej. Dalam format PNG, JPG atau WEBP.",
     "uploadingImages": "Imej sedang dimuatkan...",
     "uploadingImage": "Imej sedang dimuatkan.",
     "imageUploadFailed": "Imej tidak dapat dimuatkan.",
@@ -358,6 +790,7 @@
     "addImage": "Tambah Imej",
     "maxImages": "Anda boleh memuat naik maksimum 10 imej.",
     "imageHint": "Minimum 1, maksimum 10 imej. Dalam format PNG, JPG atau WEBP.",
+    "location": "Maklumat Lokasi",
     "fields": {
       "title": "Tajuk Iklan",
       "shortDescription": "Penerangan Ringkas",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Penghantaran disediakan.",
       "shippingCost": "Yuran Penghantaran",
       "weight": "Berat",
-      "weightUnit": "Unit Berat"
+      "weightUnit": "Unit Berat",
+      "city": "Bandar",
+      "address": "Alamat",
+      "postalCode": "Poskod"
     },
     "placeholders": {
       "title": "Contoh: Lembu Holstein Berusia 2 Tahun",
       "shortDescription": "Penerangan produk (maksimum 200 aksara)",
       "description": "Berikan maklumat terperinci tentang produk...",
-      "category": "Pilih kategori."
+      "category": "Pilih kategori.",
+      "city": "Masuk ke bandar",
+      "address": "Masukkan alamat penuh.",
+      "postalCode": "Poskod"
+    },
+    "errors": {
+      "titleRequired": "Tajuk iklan adalah wajib.",
+      "shortDescriptionRequired": "Penerangan ringkas diperlukan.",
+      "descriptionRequired": "Penjelasan terperinci diperlukan.",
+      "categoryRequired": "Pemilihan kategori adalah wajib.",
+      "priceRequired": "Harga adalah wajib.",
+      "cityRequired": "Maklumat bandar diperlukan.",
+      "addressRequired": "Maklumat alamat diperlukan.",
+      "locationError": "Ralat berlaku semasa mencipta lokasi."
     },
     "success": "Iklan itu berjaya dihasilkan.",
     "error": "Ralat telah berlaku semasa membuat iklan.",
@@ -388,24 +837,53 @@
     "draftSaved": "Draf disimpan",
     "productCreated": "Produk tersebut berjaya dihasilkan.",
     "creationFailed": "Produk tidak dapat dicipta. Sila cuba lagi.",
-    "errors": {
-      "titleRequired": "Tajuk iklan adalah wajib.",
-      "shortDescriptionRequired": "Penerangan ringkas diperlukan.",
-      "descriptionRequired": "Penjelasan terperinci diperlukan.",
-      "categoryRequired": "Pemilihan kategori adalah wajib.",
-      "priceRequired": "Masukkan harga yang sah."
-    }
+    "userNotFound": "Maklumat pengguna tidak dapat ditemui. Sila log masuk sekali lagi.",
+    "defaultBusinessName": "Perniagaan saya"
+  },
+  "becomeSeller": {
+    "title": "Jadilah Penjual",
+    "description": "Penyata Syarikat",
+    "alreadySeller": "Anda sudah mempunyai profil penjual.",
+    "goToListings": "Pergi ke penyenaraian saya",
+    "businessInfo": "Maklumat Perniagaan",
+    "contactInfo": "Maklumat Perhubungan",
+    "businessName": "Nama Perniagaan",
+    "businessNamePlaceholder": "Contoh: Ladang Yilmaz",
+    "businessType": "Lawatan Perniagaan",
+    "businessTypePlaceholder": "Pilih jenis perniagaan anda.",
+    "businessTypes": {
+      "individual": "Individu",
+      "company": "Syarikat",
+      "cooperative": "Koperasi",
+      "farm": "Ladang"
+    },
+    "taxNumber": "Nombor Cukai",
+    "taxNumberPlaceholder": "Masukkan nombor pengenalan cukai anda (pilihan)",
+    "descriptionPlaceholder": "Tuliskan penerangan ringkas tentang perniagaan anda...",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Laman Web",
+    "websitePlaceholder": "https://www.examplesite.com (pilihan)",
+    "submit": "Cipta Profil Penjual",
+    "submitting": "Mencipta profil...",
+    "success": "Profil penjual anda telah berjaya dicipta!",
+    "error": "Ralat berlaku semasa membuat profil penjual.",
+    "taxNumberHelp": "Masukkan nombor cukai 10 atau 11 digit anda (pilihan)",
+    "phoneHelp": "Contoh: +90 555 123 45 67 atau 0555 123 45 67",
+    "websiteHelp": "Contoh: www.isletmem.com atau https://isletmem.com",
+    "alreadySellerDescription": "Anda boleh menggunakan butang di bawah untuk mengurus penyenaraian anda.",
+    "newListing": "Tambah Penyenaraian Baharu"
   },
   "fileUpload": {
     "dragDrop": "Muat naik foto atau video.",
     "dragDropHint": "Seret dan lepas atau klik untuk memilih.",
     "dropHere": "Biarkanlah...",
     "imageLimit": "Foto: maksimum 10MB",
-    "videoLimit": "Video: max 100MB",
+    "videoLimit": "Video: maksimum 100MB",
     "uploadCount": "{current} / {max} dimuatkan",
     "maxFilesError": "Anda boleh memuat naik maksimum {maks} media.",
     "imageTooLarge": "Foto mestilah lebih kecil daripada 10MB.",
-    "videoTooLarge": "The video must be smaller than 100MB.",
+    "videoTooLarge": "Video mestilah lebih kecil daripada 100MB.",
     "optimizing": "Mengoptimumkan...",
     "uploading": "Memuatkan...",
     "queued": "Menunggu dalam barisan...",
@@ -418,10 +896,834 @@
     "coverBadge": "TUTUP",
     "videoBadge": "VIDEO",
     "coverUpdated": "Foto muka depan telah berjaya dilaraskan.",
-    "optimizationInfo": "Foto dioptimumkan untuk mematuhi piawaian web",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "optimizationInfo": "Foto telah dioptimumkan untuk mematuhi piawaian web",
+    "selectImage": "Pemilihan Visual",
+    "changeImage": "Perubahan",
+    "removeImage": "Alih keluar",
+    "videoProcessing": "Video sedang diproses...",
+    "videoProcessingFailed": "Operasi gagal.",
+    "videoProcessingPollError": "Status pemprosesan video tidak dapat diperoleh. Sila muat semula halaman.",
+    "reorderError": "Fail itu tidak dapat disusun.",
+    "coverUpdateError": "Foto muka depan tidak dapat dikemas kini."
+  },
+  "error": {
+    "title": "Ralat telah berlaku.",
+    "description": "Ralat yang tidak dijangka telah berlaku. Sila muat semula halaman atau cuba lagi kemudian.",
+    "retry": "Cuba lagi",
+    "goBack": "Jangan kembali",
+    "goHome": "Laman Utama",
+    "notFound": {
+      "title": "Halaman Tidak Ditemui",
+      "description": "Halaman yang anda cari sama ada tidak tersedia atau telah berpindah.",
+      "goHome": "Kembali ke Laman Utama"
+    }
+  },
+  "search": {
+    "title": "Carian",
+    "placeholder": "Cari produk, kategori atau penjual...",
+    "searchButton": "Carian",
+    "searchingFor": "Dikehendaki",
+    "loading": "Dikehendaki...",
+    "resultsCount": "{count} keputusan telah ditemui.",
+    "noResults": "Tiada hasil ditemui.",
+    "tryDifferentSearch": "Cuba kata kunci yang berbeza atau tukar penapis.",
+    "filters": {
+      "title": "Penapis",
+      "category": "Kategori",
+      "allCategories": "Semua Kategori",
+      "condition": "Situasi",
+      "allConditions": "Semua Kes",
+      "priceRange": "Julat Harga",
+      "price": "Harga",
+      "min": "Min",
+      "max": "Maks",
+      "apply": "Mohon",
+      "clear": "Bersih",
+      "clearAll": "Kosongkan Semua"
+    },
+    "fetchError": "Ralat berlaku semasa memuatkan hasil carian",
+    "recentSearches": "Carian Terkini",
+    "clearHistory": "Kosongkan Sejarah",
+    "noSearchHistory": "Anda belum mempunyai sejarah carian.",
+    "deleteHistoryError": "Ralat berlaku semasa memadamkan sejarah carian."
+  },
+  "categories": {
+    "title": "Pengurusan Kategori",
+    "description": "Urus kategori dari sini.",
+    "noCategories": "Tiada kategori telah ditambah lagi.",
+    "createFirst": "Cipta kategori pertama.",
+    "fetchError": "Ralat berlaku semasa memuatkan kategori.",
+    "createSuccess": "Kategori berjaya dicipta",
+    "createError": "Ralat berlaku semasa mencipta kategori.",
+    "updateSuccess": "Kategori berjaya dikemas kini",
+    "updateError": "Ralat berlaku semasa mengemas kini kategori.",
+    "deleteSuccess": "Kategori tersebut telah berjaya dipadamkan.",
+    "deleteError": "Ralat berlaku semasa memadam kategori.",
+    "activateSuccess": "Kategori telah diaktifkan.",
+    "deactivateSuccess": "Kategori ini telah dinyahaktifkan.",
+    "statusError": "Ralat berlaku semasa menukar status.",
+    "loadError": "Ralat berlaku semasa memuatkan kategori",
+    "filters": {
+      "all": "Kesemua mereka",
+      "active": "Aktif",
+      "inactive": "Tidak aktif"
+    },
+    "table": {
+      "name": "Nama Kategori",
+      "slug": "Siput",
+      "sortOrder": "Nombor Siri",
+      "subCategories": "Subkategori",
+      "status": "Situasi",
+      "actions": "Transaksi"
+    },
+    "actions": {
+      "edit": "Sunting",
+      "delete": "Padam",
+      "activate": "Aktifkan",
+      "deactivate": "Struktur Pasif"
+    },
+    "deleteDialog": {
+      "title": "Padam Kategori",
+      "description": "Adakah anda pasti mahu memadamkan kategori ini? Tindakan ini tidak boleh dipulihkan.",
+      "cancel": "Batal",
+      "confirm": "Padam"
+    },
+    "addNew": "Tambah Kategori Baharu",
+    "loadMore": "Muat Turun Lagi",
+    "loadingMore": "Memuatkan...",
+    "form": {
+      "newTitle": "Cipta Kategori Baharu",
+      "editTitle": "Edit Kategori",
+      "name": "Nama Kategori",
+      "namePlaceholder": "Contoh: Lembu",
+      "slug": "Siput",
+      "slugPlaceholder": "Contoh: ternakan besar",
+      "description": "Penjelasan",
+      "descriptionPlaceholder": "Penerangan ringkas tentang kategori...",
+      "parentCategory": "Kategori Atas",
+      "parentCategoryPlaceholder": "Pilih kategori teratas (pilihan)",
+      "noParent": "Tiada kategori teratas (Kategori utama)",
+      "sortOrder": "Nombor Jujukan",
+      "isActive": "Aktif",
+      "iconUrl": "URL Ikon",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Simpan",
+      "submitting": "Menyimpan...",
+      "updating": "Mengemas kini...",
+      "errors": {
+        "nameRequired": "Nama kategori diperlukan.",
+        "slugRequired": "Slug adalah wajib."
+      }
+    }
+  },
+  "offers": {
+    "title": "Cadangan",
+    "description": "Urus tawaran masuk dan keluar anda.",
+    "received": "Tawaran Masuk",
+    "sent": "Tawaran Dihantar",
+    "noReceivedOffers": "Tiada tawaran yang diterima lagi.",
+    "noSentOffers": "Anda belum menghantar tawaran lagi.",
+    "browseProducts": "Layari Produk",
+    "viewProduct": "Lihat produk",
+    "accept": "Terima",
+    "reject": "Tolak",
+    "withdraw": "Tarik balik",
+    "makeOffer": "Hantar Tawaran",
+    "sendOffer": "Hantar Tawaran",
+    "sending": "Menghantar...",
+    "cancel": "Batal",
+    "listingPrice": "Harga yang diiklankan",
+    "yourOffer": "Tawaran anda",
+    "quantity": "Jumlah",
+    "messageOptional": "Mesej (Pilihan)",
+    "messagePlaceholder": "Nota yang anda ingin kongsikan dengan penjual...",
+    "expiresAt": "Tarikh sah terakhir",
+    "offerSent": "Tawaran anda telah berjaya dihantar.",
+    "offerError": "Ralat berlaku semasa menghantar tawaran.",
+    "acceptSuccess": "Tawaran itu diterima.",
+    "rejectSuccess": "Tawaran itu ditolak.",
+    "withdrawSuccess": "Tawaran itu telah ditarik balik.",
+    "actionError": "Ralat telah berlaku semasa proses tersebut.",
+    "fetchError": "Ralat berlaku semasa memuatkan tawaran.",
+    "loginRequired": "Log masuk untuk menghantar tawaran.",
+    "invalidPrice": "Masukkan harga yang sah.",
+    "invalidQuantity": "Masukkan jumlah yang sah.",
+    "status": {
+      "pending": "Belum selesai",
+      "accepted": "Diterima",
+      "rejected": "Ditolak",
+      "countered": "Tawaran balas",
+      "expired": "Tempohnya sudah tamat.",
+      "withdrawn": "Menarik diri"
+    }
+  },
+  "deals": {
+    "title": "Perjanjian",
+    "description": "Ikut perjanjian pembelian anda.",
+    "buying": "Cendekiawan",
+    "selling": "Jualan",
+    "noBuyingDeals": "Anda belum mempunyai proses pendaftaran pelajar.",
+    "noSellingDeals": "Anda belum mempunyai sebarang transaksi jualan.",
+    "browseProducts": "Layari Produk",
+    "viewProduct": "Lihat produk",
+    "activeDeals": "Perjanjian Aktif",
+    "completedDeals": "Selesai",
+    "purchases": "Cendekiawan",
+    "sales": "Jualan",
+    "fetchError": "Ralat berlaku semasa memuatkan perjanjian",
+    "dealStatus": {
+      "pending": "Belum selesai",
+      "confirmed": "Disahkan",
+      "processing": "Menyediakan",
+      "shipped": "Dalam kargo",
+      "delivered": "Dihantar",
+      "completed": "Selesai",
+      "cancelled": "Dibatalkan",
+      "disputed": "Perjanjian"
+    },
+    "delivery": {
+      "pickup": "Penghantaran tangan",
+      "shipping": "Dengan kargo",
+      "transport": "Dengan pengangkutan"
+    },
+    "requestTransport": "Permintaan Penghantaran"
+  },
+  "farms": {
+    "title": "Ladang-ladang saya",
+    "description": "Urus dan kemas kini ladang anda.",
+    "addFarm": "Tambah Ladang",
+    "editFarm": "Pengurusan Ladang",
+    "noFarms": "Anda belum menambah ladang lagi.",
+    "farmName": "Nama Ladang",
+    "registrationNumber": "Nombor Pendaftaran",
+    "location": "Lokasi",
+    "selectLocation": "Pilih lokasi.",
+    "addLocationFirst": "Pertama, tambahkan lokasi.",
+    "farmTypeLabel": "Lawatan Ladang",
+    "farmDescription": "Penjelasan",
+    "totalArea": "Jumlah Kawasan",
+    "cultivatedArea": "Kawasan Tanaman",
+    "certifications": "Sijil",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP, dan sebagainya.",
+    "organic": "Organik",
+    "verified": "Disahkan",
+    "save": "Simpan",
+    "saving": "Menyimpan...",
+    "cancel": "Batal",
+    "edit": "Sunting",
+    "delete": "Padam",
+    "sellerRequired": "Profil Penjual Diperlukan",
+    "sellerRequiredDesc": "Untuk menambah ladang, anda perlu membuat profil penjual anda terlebih dahulu.",
+    "becomeSeller": "Jadilah Penjual",
+    "createSuccess": "Ladang itu berjaya ditambah.",
+    "updateSuccess": "Ladang itu telah berjaya dikemas kini.",
+    "deleteSuccess": "Ladang itu berjaya dipadamkan.",
+    "saveError": "Ralat berlaku semasa mendaftarkan ladang.",
+    "deleteError": "Ralat berlaku semasa memadamkan ladang.",
+    "fetchError": "Ralat berlaku semasa memuat naik maklumat ladang.",
+    "farmType": {
+      "livestock": "Penternakan",
+      "crop": "Pertanian",
+      "mixed": "Campuran",
+      "poultry": "Bersayap",
+      "dairy": "Penternakan tenusu",
+      "aquaculture": "Produk Akuatik"
+    }
+  },
+  "transporters": {
+    "title": "pengangkut",
+    "description": "Perkhidmatan pengangkutan haiwan dan produk",
+    "searchPlaceholder": "Cari pengangkut...",
+    "noTransporters": "Tiada pembawa berdaftar lagi.",
+    "verified": "Disahkan",
+    "transports": "pengangkutan",
+    "viewProfile": "Lihat Profil",
+    "sort": {
+      "newest": "Terkini",
+      "rating": "Skor Tertinggi",
+      "mostTransports": "Penghantaran Paling Kerap"
+    },
+    "pagination": {
+      "previous": "Bekas",
+      "next": "Seterusnya",
+      "page": "Halaman {halaman}"
+    }
+  },
+  "transport": {
+    "title": "Permintaan Penghantaran Saya",
+    "description": "Jejaki permintaan penghantaran anda.",
+    "findTransporter": "Cari Pengangkut",
+    "active": "Aktif",
+    "completed": "Selesai",
+    "total": "Jumlah",
+    "asSeller": "Sebagai Penjual",
+    "asBuyer": "Sebagai Pembeli",
+    "noSellerRequests": "Sebagai penjual, anda tidak mempunyai keperluan penghantaran.",
+    "noBuyerRequests": "Sebagai penerima, anda tidak mempunyai permintaan penghantaran.",
+    "viewProduct": "Lihat produk",
+    "pickup": "Terima",
+    "delivery": "Penghantaran",
+    "urgent": "Segera",
+    "fetchError": "Ralat berlaku semasa memuat naik permintaan penghantaran.",
+    "trackShipment": "Ikuti",
+    "transportStatus": {
+      "pending": "Belum selesai",
+      "inPool": "Di dalam kolam renang",
+      "assigned": "Dilantik",
+      "pickedUp": "Resit",
+      "inTransit": "Di jalan raya",
+      "delivered": "Dihantar",
+      "completed": "Selesai",
+      "cancelled": "Dibatalkan"
+    },
+    "transportType": {
+      "standard": "Piawai",
+      "refrigerated": "Rantaian Sejuk",
+      "liveAnimal": "Haiwan Hidup",
+      "hazardous": "Bahan Berbahaya",
+      "oversized": "Saiz Besar"
+    }
+  },
+  "moderation": {
+    "title": "Moderasi Produk",
+    "description": "Semak produk yang sedang menunggu kelulusan.",
+    "pending": "menunggu",
+    "allClear": "Semua produk telah diperiksa.",
+    "noPending": "Tiada produk yang menunggu kelulusan.",
+    "awaitingReview": "Menunggu Semakan",
+    "by": "Jurujual:",
+    "stock": "Stok",
+    "preview": "Dengan awak",
+    "approve": "Sahkan",
+    "reject": "Tolak",
+    "confirmReject": "Tolak",
+    "cancelReject": "Berputus asa",
+    "rejectReasonPlaceholder": "Tuliskan sebab penolakan tersebut...",
+    "rejectReasonRequired": "Sebab penolakan adalah wajib.",
+    "approveSuccess": "Produk tersebut telah berjaya diluluskan.",
+    "rejectSuccess": "Produk itu ditolak.",
+    "actionError": "Ralat telah berlaku semasa proses tersebut.",
+    "fetchError": "Ralat berlaku semasa memuat naik produk.",
+    "unauthorized": "Anda tidak mempunyai kebenaran untuk mengakses halaman ini."
+  },
+  "sellerModeration": {
+    "title": "Moderasi Penjual",
+    "description": "Semak dan uruskan akaun penjual.",
+    "pending": "menunggu",
+    "allClear": "Semua penjual telah disiasat.",
+    "noPending": "Tiada penjual yang menunggu.",
+    "verify": "Sahkan",
+    "suspend": "Gantungkan",
+    "verifySuccess": "Penjual berjaya disahkan.",
+    "suspendSuccess": "Penjual digantung.",
+    "actionError": "Ralat telah berlaku semasa proses tersebut.",
+    "suspendReasonRequired": "Sebab penggantungan adalah wajib.",
+    "suspendReasonPlaceholder": "Tuliskan sebab penggantungan...",
+    "confirmSuspend": "Gantungkan",
+    "cancelSuspend": "Berputus asa",
+    "statusLabels": {
+      "pendingVerification": "Pengesahan Belum Selesai",
+      "active": "Aktif",
+      "suspended": "Menggantung",
+      "banned": "Dilarang"
+    },
+    "filterAll": "Tunjukkan semua",
+    "filterPending": "Mereka yang menunggu",
+    "filterActive": "Aset",
+    "filterSuspended": "Digantung",
+    "unauthorized": "Anda tidak mempunyai kebenaran untuk mengakses halaman ini.",
+    "businessName": "Nama Perniagaan",
+    "businessType": "Lawatan Perniagaan",
+    "email": "E-mel",
+    "phone": "Telefon",
+    "status": "Situasi",
+    "createdAt": "Tarikh Pendaftaran"
+  },
+  "transporterModeration": {
+    "title": "Moderasi Pembawa",
+    "description": "Semak dan uruskan akaun pembawa.",
+    "pending": "menunggu",
+    "allClear": "Semua pengangkut telah disiasat.",
+    "noPending": "Tiada pengangkut yang sedang menunggu.",
+    "verify": "Sahkan",
+    "suspend": "Gantungkan",
+    "verifySuccess": "Pengangkut telah berjaya disahkan.",
+    "suspendSuccess": "Pengangkut itu telah digantung kerja.",
+    "actionError": "Ralat telah berlaku semasa proses tersebut.",
+    "suspendReasonRequired": "Sebab penggantungan adalah wajib.",
+    "suspendReasonPlaceholder": "Tuliskan sebab penggantungan...",
+    "confirmSuspend": "Gantungkan",
+    "cancelSuspend": "Berputus asa",
+    "statusLabels": {
+      "pendingVerification": "Pengesahan Belum Selesai",
+      "active": "Aktif",
+      "suspended": "Menggantung",
+      "banned": "Dilarang"
+    },
+    "filterAll": "Tunjukkan semua",
+    "filterPending": "Mereka yang menunggu",
+    "filterActive": "Aset",
+    "filterSuspended": "Digantung",
+    "unauthorized": "Anda tidak mempunyai kebenaran untuk mengakses halaman ini.",
+    "companyName": "Nama Syarikat",
+    "contactPerson": "Orang yang Diberi Kuasa",
+    "email": "E-mel",
+    "phone": "Telefon",
+    "city": "Bandar",
+    "status": "Situasi",
+    "createdAt": "Tarikh Pendaftaran"
+  },
+  "transporterDetail": {
+    "notFound": "Tiada pengangkut yang dapat ditemui.",
+    "backToList": "Don kepada pengangkut",
+    "verified": "Disahkan",
+    "totalTransports": "jumlah penghantaran",
+    "completed": "selesai",
+    "about": "Mengenai",
+    "contact": "Maklumat Perhubungan",
+    "businessInfo": "Maklumat Perniagaan",
+    "license": "Nombor Lesen",
+    "insurance": "Maklumat Insurans",
+    "fleet": "Maklumat Armada",
+    "serviceRegions": "Kawasan Perkhidmatan",
+    "specializations": "Bidang Kepakaran",
+    "certifications": "Sijil"
+  },
+  "brands": {
+    "title": "Pengurusan Jenama",
+    "description": "Mengurus jenama produk.",
+    "addBrand": "Tambah Jenama",
+    "editBrand": "Edit Jenama",
+    "noBrands": "Tiada jenama telah ditambah lagi.",
+    "brandName": "Nama Jenama",
+    "brandDescription": "Penjelasan",
+    "website": "Laman Web",
+    "logoUrl": "URL Logo",
+    "save": "Simpan",
+    "saving": "Menyimpan...",
+    "cancel": "Batal",
+    "edit": "Sunting",
+    "delete": "Padam",
+    "inactive": "Pasif",
+    "products": "produk",
+    "createSuccess": "Jenama berjaya ditambah",
+    "updateSuccess": "Jenama telah berjaya dikemas kini.",
+    "deleteSuccess": "Jenama tersebut berjaya dipadamkan.",
+    "saveError": "Ralat berlaku semasa mendaftarkan tanda dagangan.",
+    "deleteError": "Ralat berlaku semasa memadamkan tanda dagangan.",
+    "fetchError": "Ralat berlaku semasa memuatkan jenama",
+    "unauthorized": "Anda tidak mempunyai kebenaran untuk mengakses halaman ini."
+  },
+  "transporterReviews": {
+    "title": "Penilaian",
+    "reviewCount": "penilaian",
+    "noReviews": "Tiada penilaian lagi.",
+    "timeliness": "Penghantaran tepat pada masanya",
+    "communication": "Komunikasi",
+    "carefulHandling": "Pengendalian yang Berhati-hati",
+    "professionalism": "Profesionalisme"
+  },
+  "transportOffers": {
+    "title": "Sebut Harga Penghantaran",
+    "description": "Urus sebut harga yang anda serahkan untuk permintaan penghantaran.",
+    "newOffer": "Cadangan Baharu",
+    "transportRequestId": "ID Permintaan Penghantaran",
+    "requestIdPlaceholder": "Masukkan ID permintaan penghantaran.",
+    "offeredPrice": "Harga Tawaran",
+    "estimatedDays": "Anggaran Tempoh (Hari)",
+    "days": "hari",
+    "vehicleType": "Jenis Kenderaan",
+    "insuranceIncluded": "Insurans Termasuk",
+    "message": "Mesej",
+    "cancel": "Batal",
+    "sending": "Menghantar...",
+    "sendOffer": "Hantar Tawaran",
+    "cancelOffer": "Batal",
+    "pendingTab": "Menunggu",
+    "historyTab": "Masa lalu",
+    "noPendingOffers": "Anda tiada tawaran yang belum selesai.",
+    "noHistory": "Tiada tawaran lepas ditemui.",
+    "status": {
+      "pending": "Menunggu",
+      "accepted": "Diterima",
+      "rejected": "Ditolak",
+      "expired": "Tempohnya sudah tamat.",
+      "cancelled": "Dibatalkan"
+    },
+    "createSuccess": "Tawaran telah berjaya dihantar.",
+    "createError": "Ralat berlaku semasa menghantar tawaran.",
+    "cancelSuccess": "Tawaran itu telah dibatalkan.",
+    "cancelError": "Ralat berlaku semasa membatalkan tawaran.",
+    "fetchError": "Ralat berlaku semasa memuatkan tawaran."
+  },
+  "animalInfo": {
+    "title": "Maklumat Haiwan & Produk",
+    "animalTab": "Haiwan",
+    "healthTab": "Kesihatan",
+    "vaccinationsTab": "Pemvaksin",
+    "veterinaryTab": "Doktor haiwan",
+    "breed": "Perlumbaan",
+    "genderLabel": "Jantina",
+    "gender": {
+      "male": "Lelaki",
+      "female": "Perempuan",
+      "unknown": "Tidak diketahui"
+    },
+    "age": "Umur",
+    "months": "bulan",
+    "weight": "Berat",
+    "color": "Warna",
+    "tagNumber": "Nombor Telinga",
+    "healthStatus": "Keadaan kesihatan",
+    "health": {
+      "healthy": "Sihat",
+      "underTreatment": "Sedang dirawat",
+      "recovering": "Dia sedang pulih.",
+      "quarantined": "Dalam kuarantin",
+      "unknown": "Tidak diketahui"
+    },
+    "purposeLabel": "Penggunaan yang Dimaksudkan",
+    "purpose": {
+      "breeding": "Stud",
+      "dairy": "Susu",
+      "meat": "Daging",
+      "egg": "Telur",
+      "wool": "Bulu",
+      "working": "Kerja",
+      "pet": "Domestik",
+      "other": "Lain-lain"
+    },
+    "pregnancy": "Kehamilan",
+    "pregnant": "Mengandung",
+    "microchip": "Mikrocip No.",
+    "passport": "No. Pasport",
+    "sireDetails": "Maklumat Bapa",
+    "damDetails": "Maklumat Utama",
+    "diagnosis": "Diagnosis",
+    "treatment": "Rawatan",
+    "medications": "Ubat-ubatan",
+    "veterinarian": "Doktor haiwan",
+    "nextDue": "Sejarah Pemberontak Seterusnya",
+    "prescriptionRequired": "Memerlukan preskripsi doktor",
+    "targetSpecies": "Lawatan Sasaran",
+    "activeIngredients": "Bahan Aktif",
+    "registrationNo": "Nombor Pendaftaran",
+    "storage": "Penyimpanan",
+    "chemicalTab": "Bahan kimia",
+    "feedTab": "Umpan",
+    "seedTab": "Benih",
+    "machineryTab": "Mesin",
+    "organic": "Organik",
+    "toxicity": "Ketoksikan",
+    "gmoFree": "Bebas GMO",
+    "protein": "Protein",
+    "fat": "Minyak",
+    "fiber": "Serat",
+    "hybrid": "Hibrid",
+    "germination": "Percambahan",
+    "daysToMaturity": "Kematangan",
+    "daysLabel": "hari",
+    "warranty": "Dijamin",
+    "power": "Kekuatan",
+    "hoursUsed": "Waktu Penggunaan",
+    "hours": "jam",
+    "powerSource": "Bekalan kuasa"
+  },
+  "productVariants": {
+    "title": "Varian Produk",
+    "variantCount": "varian",
+    "inStock": "Dalam stok",
+    "outOfStock": "Habis dijual"
+  },
+  "productPrices": {
+    "title": "Harga (Pelbagai Mata Wang)",
+    "autoConversion": "Transformasi Automatik",
+    "validUntil": "Kesahan"
+  },
+  "requestTransport": {
+    "title": "Cipta Permintaan Penghantaran",
+    "pickupLocation": "Titik Pemuatan",
+    "deliveryLocation": "Titik Penghantaran",
+    "city": "Bandar",
+    "address": "Alamat",
+    "transportType": "Lawatan Pengangkutan",
+    "types": {
+      "standard": "Piawai",
+      "refrigerated": "Rantaian Sejuk",
+      "liveAnimal": "Haiwan Hidup",
+      "hazardous": "Bahan Berbahaya",
+      "oversized": "Saiz Besar"
+    },
+    "weight": "Berat (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Tarikh Muat Naik Pilihan",
+    "preferredDeliveryDate": "Tarikh Penghantaran Pilihan",
+    "urgent": "Pengangkutan Segera",
+    "specialInstructions": "Arahan Khas",
+    "instructionsPlaceholder": "Tulis arahan khusus anda di sini...",
+    "cancel": "Berputus asa",
+    "submit": "Cipta Permintaan",
+    "submitting": "Dalam proses penciptaan...",
+    "success": "Permintaan penghantaran telah berjaya dibuat.",
+    "error": "Ralat berlaku semasa membuat permintaan penghantaran."
+  },
+  "transportTracking": {
+    "title": "Penjejakan Penghantaran",
+    "noTracking": "Tiada maklumat penjejakan tersedia lagi.",
+    "update": "Kemas kini"
+  },
+  "locations": {
+    "title": "Alamat Saya",
+    "description": "Urus alamat berdaftar anda.",
+    "addLocation": "Tambah Alamat",
+    "editLocation": "Edit Alamat",
+    "noLocations": "Anda belum mempunyai alamat berdaftar.",
+    "name": "Nama Alamat",
+    "namePlaceholder": "Contohnya: Rumah, Pekerjaan, Ladang",
+    "address": "Alamat",
+    "addressLine2": "Alamat Baris 2",
+    "city": "Bandar",
+    "state": "Daerah / Wilayah",
+    "postalCode": "Poskod",
+    "phone": "Telefon",
+    "email": "E-mel",
+    "cancel": "Berputus asa",
+    "save": "Simpan",
+    "saving": "Menyimpan...",
+    "typePickup": "Memuatkan",
+    "typeDelivery": "Penghantaran",
+    "typeBoth": "Jeneral",
+    "createSuccess": "Alamat berjaya ditambah.",
+    "createError": "Ralat berlaku semasa menambah alamat.",
+    "updateSuccess": "Alamat telah berjaya dikemas kini.",
+    "updateError": "Ralat berlaku semasa mengemas kini alamat.",
+    "deleteLocation": "Padam Alamat",
+    "deleteSuccess": "Alamat dipadamkan",
+    "deleteError": "Ralat berlaku semasa memadamkan alamat.",
+    "fetchError": "Ralat berlaku semasa memuatkan alamat."
+  },
+  "systemSettings": {
+    "title": "Tetapan Sistem",
+    "description": "Lihat mata wang platform, bahasa, kaedah pembayaran, penghantaran dan tetapan cukai.",
+    "unauthorized": "Anda tidak mempunyai kebenaran untuk mengakses halaman ini.",
+    "currenciesTab": "Mata wang",
+    "languagesTab": "Bahasa-bahasa",
+    "paymentTab": "Kaedah Pembayaran",
+    "shippingTab": "Kargo",
+    "taxTab": "Cukai",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "default": "Lalai",
+    "noCurrencies": "Mata wang tersebut masih belum ditakrifkan.",
+    "noLanguages": "Bahasa itu masih belum ditakrifkan.",
+    "noPaymentMethods": "Kaedah pembayaran belum ditakrifkan.",
+    "noCarriers": "Syarikat perkapalan itu masih belum dikenal pasti.",
+    "noZones": "Kawasan kargo masih belum ditakrifkan.",
+    "noTaxRates": "Kadar cukai masih belum ditakrifkan.",
+    "carriers": "Syarikat Perkapalan",
+    "zones": "Zon Kargo",
+    "countries": "Negara-negara",
+    "rates": "Yuran Penghantaran",
+    "noRates": "Kos penghantaran masih belum ditakrifkan.",
+    "freeShipping": "Penghantaran Percuma",
+    "deliveryDays": "masa penghantaran hari"
+  },
+  "pushPermission": {
+    "title": "Dayakan pemberitahuan",
+    "description": "Terima pemberitahuan tentang mesej baharu, tawaran dan kemas kini pesanan.",
+    "allow": "Benarkan",
+    "dismiss": "Tutup"
+  },
+  "healthRecords": {
+    "title": "Rekod Kesihatan",
+    "description": "Mengurus rekod kesihatan haiwan dan sejarah perubatan.",
+    "addRecord": "Tambah Rekod",
+    "editRecord": "Edit Rekod",
+    "deleteRecord": "Padam Rekod",
+    "noRecords": "Rekod kesihatan belum ditambah.",
+    "animalInfoId": "ID Haiwan",
+    "animalInfoIdPlaceholder": "Masukkan ID maklumat haiwan.",
+    "recordType": "Lawatan Pendaftaran",
+    "recordTypePlaceholder": "Contoh: Pemeriksaan, Rawatan, Pembedahan",
+    "recordDate": "Tarikh Pendaftaran",
+    "followUpDate": "Tarikh Semak",
+    "veterinarianName": "Doktor haiwan",
+    "veterinarianLicense": "No. Lesen",
+    "clinicName": "Klinikal",
+    "diagnosis": "Diagnosis",
+    "treatment": "Rawatan",
+    "medications": "Ubat-ubatan",
+    "medicationsPlaceholder": "Contoh: Penisilin 500mg, Ibuprofen",
+    "notes": "Nota",
+    "documentUrl": "URL Dokumen",
+    "saving": "Menyimpan...",
+    "createSuccess": "Rekod kesihatan berjaya ditambah.",
+    "updateSuccess": "Rekod kesihatan berjaya dikemas kini.",
+    "deleteSuccess": "Rekod kesihatan telah berjaya dipadamkan.",
+    "saveError": "Ralat berlaku semasa menyimpan rekod.",
+    "deleteError": "Ralat berlaku semasa memadam rekod.",
+    "fetchError": "Ralat berlaku semasa memuatkan rekod"
+  },
+  "vaccinations": {
+    "title": "Rekod Vaksin",
+    "description": "Mengurus rekod dan kalendar vaksinasi haiwan.",
+    "addVaccination": "Tambah Pemberontak",
+    "editVaccination": "Pengaturan Pemberontak",
+    "deleteVaccination": "Pemberontak Sil",
+    "noVaccinations": "Rekod vaksinasi belum ditambah.",
+    "animalInfoId": "ID Haiwan",
+    "animalInfoIdPlaceholder": "Masukkan ID maklumat haiwan.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Contoh: Vaksin SAT, Brucella",
+    "vaccineType": "Jelajah Pemberontak",
+    "vaccineTypePlaceholder": "Contoh: Hidup, Tidak Aktif",
+    "batchNumber": "Nombor Parti",
+    "vaccinationDate": "Sejarah Pemberontak",
+    "nextDueDate": "Sejarah Pemberontak Seterusnya",
+    "veterinarianName": "Doktor haiwan",
+    "veterinarianLicense": "No. Lesen",
+    "notes": "Nota",
+    "certificateUrl": "URL Sijil",
+    "saving": "Menyimpan...",
+    "createSuccess": "Rekod vaksin berjaya ditambah.",
+    "updateSuccess": "Rekod vaksin berjaya dikemas kini.",
+    "deleteSuccess": "Rekod vaksin telah berjaya dipadamkan.",
+    "saveError": "Ralat berlaku semasa mendaftarkan vaksin.",
+    "deleteError": "Ralat berlaku semasa memadamkan vaksin.",
+    "fetchError": "Ralat berlaku semasa memuatkan vaksin."
+  },
+  "shippingCarriers": {
+    "title": "Syarikat Perkapalan",
+    "description": "Mengurus maklumat syarikat perkapalan.",
+    "addCarrier": "Tambah Syarikat",
+    "editCarrier": "Sunting Syarikat",
+    "noCarriers": "Tiada syarikat perkapalan telah ditambah lagi.",
+    "carrierName": "Nama Syarikat",
+    "carrierNamePlaceholder": "Contoh: Aras Kargo, MNG",
+    "code": "Kod",
+    "codePlaceholder": "Contoh: ARAS",
+    "website": "Laman Web",
+    "trackingUrlTemplate": "Ikuti Templat URL",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Negara yang Disokong",
+    "supportedCountriesPlaceholder": "Contoh: TR, AS, DE",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "saving": "Menyimpan...",
+    "edit": "Sunting",
+    "delete": "Padam",
+    "createSuccess": "Syarikat perkapalan telah berjaya ditambah.",
+    "updateSuccess": "Syarikat perkapalan telah berjaya dikemas kini.",
+    "deleteSuccess": "Syarikat perkapalan telah berjaya dipadamkan.",
+    "saveError": "Ralat berlaku semasa mendaftarkan syarikat perkapalan.",
+    "deleteError": "Ralat berlaku semasa memadamkan maklumat syarikat perkapalan.",
+    "fetchError": "Ralat berlaku semasa memuatkan syarikat kargo."
+  },
+  "shippingZones": {
+    "title": "Zon Kargo",
+    "description": "Mengurus zon dan kawasan kargo.",
+    "addZone": "Tambah Wilayah",
+    "editZone": "Sunting Wilayah",
+    "noZones": "Tiada kawasan kargo telah ditambah lagi.",
+    "zoneName": "Nama Wilayah",
+    "zoneNamePlaceholder": "Contoh: Eropah, Amerika Utara",
+    "countryCodes": "Kod Negara",
+    "countryCodesPlaceholder": "Contoh: TR, DE, FR",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "saving": "Menyimpan...",
+    "edit": "Sunting",
+    "delete": "Padam",
+    "createSuccess": "Wilayah ini telah berjaya ditambah.",
+    "updateSuccess": "Wilayah ini telah berjaya dikemas kini.",
+    "deleteSuccess": "Kawasan tersebut telah berjaya dibersihkan.",
+    "saveError": "Ralat berlaku semasa menyimpan rantau ini.",
+    "deleteError": "Ralat berlaku semasa memadamkan rantau ini.",
+    "fetchError": "Ralat berlaku semasa memuatkan kawasan"
+  },
+  "shippingRates": {
+    "title": "Yuran Penghantaran",
+    "description": "Menguruskan kos penghantaran dan pilihan penghantaran.",
+    "addRate": "Tambah Yuran",
+    "editRate": "Laraskan Yuran",
+    "noRates": "Kos penghantaran belum ditambah lagi.",
+    "zone": "Kawasan",
+    "carrier": "Tegas",
+    "selectZone": "Pilih rantau",
+    "selectCarrier": "Pilih syarikat",
+    "shippingCost": "Yuran Penghantaran",
+    "currency": "Mata wang",
+    "estimatedDeliveryDays": "Anggaran Penghantaran (Hari)",
+    "minWeight": "Berat Minimum",
+    "maxWeight": "Berat Maksimum",
+    "minOrderAmount": "Jumlah Pesanan Minimum",
+    "freeShipping": "Penghantaran Percuma",
+    "free": "Percuma",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "cost": "Yuran",
+    "deliveryDays": "Penghantaran",
+    "status": "Situasi",
+    "saving": "Menyimpan...",
+    "createSuccess": "Yuran berjaya ditambah.",
+    "updateSuccess": "Gaji telah berjaya dikemas kini.",
+    "deleteSuccess": "Yuran tersebut telah berjaya dipadamkan.",
+    "saveError": "Ralat berlaku semasa menyimpan yuran.",
+    "deleteError": "Ralat berlaku semasa memadamkan yuran.",
+    "fetchError": "Ralat berlaku semasa memuat naik yuran."
+  },
+  "metadata": {
+    "title": "Perdagangan Ternakan - Platform Perdagangan Haiwan Hidup",
+    "description": "Platform perdagangan haiwan hidup paling dipercayai di dunia. Jual beli haiwan yang selamat dan telus.",
+    "pages": {
+      "about": {
+        "title": "Tentang Kami",
+        "description": "Ketahui tentang Perdagangan Ternakan. Platform perdagangan haiwan hidup yang boleh dipercayai."
+      },
+      "contact": {
+        "title": "Komunikasi",
+        "description": "Hubungi kami. Pasukan khidmat pelanggan Livestock Trading sedia membantu anda."
+      },
+      "terms": {
+        "title": "Syarat Penggunaan",
+        "description": "Terma dan Syarat Perdagangan Ternakan."
+      },
+      "privacy": {
+        "title": "Dasar Privasi",
+        "description": "Dasar privasi Perdagangan Ternakan. Ketahui cara data peribadi anda dilindungi."
+      },
+      "products": {
+        "title": "Produk",
+        "description": "Layari senarai haiwan secara langsung. Iklan yang boleh dipercayai untuk lembu, biri-biri dan banyak lagi."
+      },
+      "sellers": {
+        "title": "Penjual",
+        "description": "Temui penjual haiwan yang boleh dipercayai. Profil dan ulasan penjual yang disahkan."
+      },
+      "transporters": {
+        "title": "pengangkut",
+        "description": "Temui syarikat pengangkutan haiwan. Pengangkutan haiwan hidup yang selamat dan profesional."
+      },
+      "search": {
+        "title": "Carian",
+        "description": "Cari antara senarai haiwan hidup. Carian mudah dengan pilihan penapisan dan pengisihan."
+      },
+      "faq": {
+        "title": "Soalan Lazim",
+        "description": "Soalan dan jawapan yang kerap ditanya tentang perdagangan ternakan."
+      },
+      "productDetail": {
+        "title": "{title} - Untuk Dijual",
+        "description": "Untuk dijual di {title} - {city}. Klik untuk butiran dan maklumat perhubungan."
+      },
+      "sellerDetail": {
+        "title": "{name} - Profil Penjual",
+        "description": "Profil penjual {name}. Ulasan, penyenaraian dan maklumat hubungan."
+      },
+      "transporterDetail": {
+        "title": "{name} - Profil Pembawa",
+        "description": "Profil pengangkut {name}. Kawasan perkhidmatan, ulasan dan maklumat hubungan."
+      }
+    }
   }
 }

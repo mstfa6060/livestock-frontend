@@ -37,6 +37,7 @@ import {
 import { toast } from "sonner";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { AppConfig } from "@/config/livestock-config";
+import { getProductCoverImagesDirect } from "@/lib/product-images";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { useAuth } from "@/contexts/AuthContext";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
@@ -329,6 +330,18 @@ export default function SearchPage() {
           imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
         }));
 
+        // Fetch cover images
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const mediaInfo = (searchResponse as any[])
+          .filter((item) => item.mediaBucketId)
+          .map((item) => ({ productId: item.id, mediaBucketId: item.mediaBucketId as string, coverImageFileId: item.coverImageFileId as string }));
+        if (mediaInfo.length > 0) {
+          const imageMap = await getProductCoverImagesDirect(mediaInfo);
+          for (const p of transformed) {
+            if (!p.imageUrl && imageMap[p.id]) p.imageUrl = imageMap[p.id];
+          }
+        }
+
         // Save to search history (fire-and-forget)
         saveSearchHistory(queryParam, transformed.length);
         return transformed;
@@ -369,7 +382,7 @@ export default function SearchPage() {
           },
         });
 
-        return response.map((item): Product => ({
+        const products = response.map((item): Product => ({
           id: item.id,
           title: item.title,
           slug: item.slug,
@@ -391,6 +404,18 @@ export default function SearchPage() {
           createdAt: item.createdAt,
           imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
         }));
+
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const mediaInfo2 = (response as any[])
+          .filter((item) => item.mediaBucketId)
+          .map((item) => ({ productId: item.id, mediaBucketId: item.mediaBucketId as string, coverImageFileId: item.coverImageFileId as string }));
+        if (mediaInfo2.length > 0) {
+          const imgMap = await getProductCoverImagesDirect(mediaInfo2);
+          for (const p of products) {
+            if (!p.imageUrl && imgMap[p.id]) p.imageUrl = imgMap[p.id];
+          }
+        }
+        return products;
       }
     },
   });

@@ -11,17 +11,30 @@
     "back": "Mặt sau",
     "next": "Phía trước",
     "close": "Đóng",
+    "unauthorized": "Bạn không có quyền truy cập vào trang này.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Đăng nhập",
-    "register": "Đăng ký"
+    "register": "Đăng ký",
+    "previous": "Trước",
+    "zoomIn": "Phóng to",
+    "previousImage": "Hình ảnh trước đó",
+    "nextImage": "Hình ảnh tiếp theo",
+    "closeLightbox": "Đóng thư viện ảnh",
+    "imageLightbox": "Bộ sưu tập hình ảnh",
+    "slideN": "Trang chiếu {n}",
+    "viewMore": "Xem thêm"
   },
   "header": {
     "products": "Các sản phẩm",
     "sellers": "Người bán",
+    "transporters": "người vận chuyển",
     "about": "Về chúng tôi",
+    "search": "Tìm kiếm",
     "dashboard": "Bảng",
     "settings": "Cài đặt",
-    "logout": "Đăng xuất"
+    "logout": "Đăng xuất",
+    "menu": "Thực đơn",
+    "language": "Lựa chọn ngôn ngữ"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Tôi quên mật khẩu.",
       "noAccount": "Bạn không có tài khoản à?",
       "register": "Đăng ký",
-      "errorDefault": "Đăng nhập không thành công. Vui lòng kiểm tra lại thông tin của bạn."
+      "errorDefault": "Đăng nhập không thành công. Vui lòng kiểm tra lại thông tin của bạn.",
+      "orContinueWith": "hoặc tiếp tục",
+      "continueWithGoogle": "Tiếp tục với Google",
+      "continueWithApple": "Tiếp tục với Apple.",
+      "socialLoginError": "Đăng nhập bằng tài khoản mạng xã hội không thành công. Vui lòng thử lại.",
+      "appleComingSoon": "Rất sớm thôi",
+      "showPassword": "Hiển thị mật khẩu",
+      "hidePassword": "Ẩn mật khẩu"
     },
     "register": {
       "title": "Đăng ký",
@@ -51,7 +71,17 @@
       "login": "Đăng nhập",
       "passwordMismatch": "Mật khẩu không khớp.",
       "passwordTooShort": "Mật khẩu phải có ít nhất 6 ký tự.",
-      "errorDefault": "Đăng ký không thành công. Vui lòng thử lại."
+      "errorDefault": "Đăng ký không thành công. Vui lòng thử lại.",
+      "showPassword": "Hiển thị mật khẩu",
+      "hidePassword": "Ẩn mật khẩu",
+      "passwordStrength": {
+        "minLength": "Ít nhất 8 ký tự",
+        "uppercase": "Chữ cái viết hoa (A-Z)",
+        "lowercase": "Chữ cái viết thường (a-z)",
+        "number": "Số (0-9)",
+        "special": "Các ký tự đặc biệt (!@#$%)"
+      },
+      "registerSuccess": "Tài khoản của bạn đã được tạo thành công! Bạn đang được chuyển hướng đến trang đăng nhập..."
     },
     "forgotPassword": {
       "title": "Tôi quên mật khẩu.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Yêu cầu kết nối mới",
       "passwordMismatch": "Mật khẩu không khớp.",
       "passwordTooShort": "Mật khẩu phải có ít nhất 6 ký tự.",
-      "errorDefault": "Đặt lại mật khẩu không thành công. Kết nối có thể không hợp lệ hoặc đã hết hạn."
+      "errorDefault": "Đặt lại mật khẩu không thành công. Kết nối có thể không hợp lệ hoặc đã hết hạn.",
+      "showPassword": "Hiển thị mật khẩu",
+      "hidePassword": "Ẩn mật khẩu"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "tích cực",
       "totalViews": "Tổng lượt xem",
       "thisWeek": "tuần này",
+      "allTime": "mọi lúc",
       "favorites": "Yêu thích",
       "onYourListings": "trong quảng cáo của bạn",
+      "savedItems": "sản phẩm đã đăng ký",
       "messages": "Tin nhắn",
-      "unread": "chưa đọc"
+      "notifications": "Thông báo",
+      "unread": "chưa đọc",
+      "views": "lượt xem",
+      "draft": "Bản nháp",
+      "sold": "Đã bán",
+      "pending": "Chưa giải quyết",
+      "awaitingApproval": "Đang chờ phê duyệt",
+      "totalSales": "Tổng doanh thu",
+      "completedSales": "doanh số đã hoàn tất",
+      "revenue": "Thu nhập",
+      "totalRevenue": "tổng doanh thu"
     },
     "recentListings": "Danh sách mới nhất của bạn",
+    "recentActivity": "Các hoạt động gần đây",
     "recentMessages": "Tin nhắn gần đây",
+    "quickLinks": "Truy cập nhanh",
     "noListings": "Bạn chưa thêm bất kỳ quảng cáo nào.",
-    "noMessages": "Bạn chưa nhận được bất kỳ tin nhắn nào.",
+    "noActivity": "Chưa có hoạt động nào.",
+    "noMessages": "Bạn chưa nhận được tin nhắn nào.",
     "noNotifications": "Bạn chưa nhận được bất kỳ thông báo nào.",
     "viewAllListings": "Xem tất cả tin đăng",
-    "viewAllMessages": "Xem tất cả tin nhắn"
+    "viewAllMessages": "Xem tất cả tin nhắn",
+    "viewNotifications": "Xem thông báo",
+    "viewFavorites": "Những món ăn yêu thích Gor",
+    "recentlyViewed": "Đã xem gần đây",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải dữ liệu bảng điều khiển."
   },
   "dashboardNav": {
     "overview": "Tổng quan",
@@ -115,7 +166,61 @@
     "notifications": "Thông báo",
     "profile": "Hồ sơ",
     "settings": "Cài đặt",
-    "newListing": "Thêm tin đăng mới"
+    "newListing": "Thêm tin đăng mới",
+    "becomeSeller": "Trở thành người bán",
+    "categories": "Thể loại",
+    "offers": "Đề xuất",
+    "deals": "Thỏa thuận",
+    "farms": "Trang trại của tôi",
+    "transport": "Chuyên chở",
+    "moderation": "Sự điều độ",
+    "sellerModeration": "Kiểm duyệt của người bán",
+    "transporterModeration": "Điều tiết chất mang",
+    "brands": "Thương hiệu",
+    "transportOffers": "Báo giá vận chuyển",
+    "healthRecords": "Hồ sơ sức khỏe",
+    "vaccinations": "Người tiêm chủng",
+    "shippingCarriers": "Các công ty vận tải biển",
+    "shippingZones": "Khu vực hàng hóa",
+    "shippingRates": "Phí vận chuyển",
+    "systemSettings": "Cài đặt hệ thống",
+    "locations": "Địa chỉ của tôi"
+  },
+  "profile": {
+    "title": "Thông tin hồ sơ",
+    "description": "Bạn có thể cập nhật thông tin cá nhân của mình tại đây.",
+    "personalInfo": "Thông tin cá nhân",
+    "contactInfo": "Thông tin liên hệ",
+    "preferences": "Tùy chọn",
+    "firstName": "Tên",
+    "firstNamePlaceholder": "Nhập tên của bạn",
+    "surname": "Họ",
+    "surnamePlaceholder": "Nhập họ của bạn.",
+    "displayName": "Tên hiển thị",
+    "phone": "Số điện thoại",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Đã xác minh",
+    "phoneNotVerified": "Chưa được xác nhận",
+    "verifyPhone": "Xác minh số điện thoại",
+    "country": "Quốc gia",
+    "selectCountry": "Chọn một quốc gia",
+    "language": "Ngôn ngữ ưu tiên",
+    "selectLanguage": "Chọn ngôn ngữ",
+    "currency": "Tiền tệ",
+    "selectCurrency": "Chọn loại tiền tệ.",
+    "saveChanges": "Lưu thay đổi",
+    "saving": "Đang lưu...",
+    "saveSuccess": "Thông tin hồ sơ của bạn đã được cập nhật.",
+    "saveError": "Đã xảy ra lỗi trong quá trình cập nhật hồ sơ.",
+    "avatar": "Ảnh đại diện",
+    "changeAvatar": "Thay đổi ảnh",
+    "removeAvatar": "Xóa ảnh",
+    "currencies": {
+      "try": "đồng lira Thổ Nhĩ Kỳ",
+      "usd": "Đô la Mỹ",
+      "eur": "Euro",
+      "gbp": "Bảng Anh"
+    }
   },
   "myListings": {
     "title": "Quảng cáo của tôi",
@@ -125,35 +230,94 @@
     "fetchError": "Đã xảy ra lỗi khi tải quảng cáo.",
     "deleteSuccess": "Quảng cáo đã được xóa thành công.",
     "deleteError": "Đã xảy ra lỗi trong quá trình xóa quảng cáo.",
-    "activateSuccess": "Quảng cáo đã được kích hoạt.",
-    "deactivateSuccess": "Tin đăng đã bị vô hiệu hóa.",
+    "publishSuccess": "Mẫu quảng cáo đã được gửi để phê duyệt.",
+    "unpublishSuccess": "Bản quảng cáo đã được soạn thảo xong.",
     "statusError": "Đã xảy ra lỗi trong quá trình thay đổi trạng thái.",
     "filters": {
       "all": "Tất cả bọn họ",
-      "active": "Tích cực",
       "draft": "Bản nháp",
       "pending": "Đang chờ phê duyệt",
+      "active": "Tích cực",
+      "rejected": "Vật bị loại bỏ",
       "sold": "Đã bán"
     },
     "actions": {
       "edit": "Biên tập",
       "delete": "Xóa bỏ",
-      "activate": "Kích hoạt",
-      "deactivate": "Cấu trúc thụ động"
+      "publish": "Gửi để phê duyệt",
+      "unpublish": "Bản nháp",
+      "menu": "Giao dịch"
     },
     "deleteDialog": {
       "title": "Xóa quảng cáo",
       "description": "Bạn có chắc chắn muốn xóa tin đăng này không? Hành động này không thể đảo ngược.",
       "cancel": "Hủy bỏ",
       "confirm": "Xóa bỏ"
-    }
+    },
+    "loadMore": "Tải xuống thêm",
+    "loadingMore": "Đang tải..."
   },
   "favorites": {
     "title": "Những món tôi yêu thích",
     "description": "Theo dõi những sản phẩm bạn thích tại đây.",
     "noFavorites": "Bạn chưa thêm sản phẩm yêu thích nào.",
     "browseProducts": "Xem sản phẩm",
-    "fetchError": "Đã xảy ra lỗi khi tải mục yêu thích."
+    "fetchError": "Đã xảy ra lỗi khi tải mục yêu thích.",
+    "loadMore": "Tải xuống thêm",
+    "loadingMore": "Đang tải..."
+  },
+  "messages": {
+    "title": "Tin nhắn",
+    "description": "Hãy liên hệ với người mua và người bán.",
+    "noConversations": "Bạn chưa nhận được tin nhắn nào.",
+    "startConversation": "Để đặt câu hỏi về một quảng cáo, hãy truy cập vào quảng cáo đó.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải tin nhắn.",
+    "sendError": "Đã xảy ra lỗi trong quá trình gửi tin nhắn.",
+    "connectionError": "Kết nối thất bại. Đang thử lại...",
+    "connected": "Nó đã kết nối",
+    "connecting": "Đang kết nối...",
+    "searchPlaceholder": "Tìm kiếm trong các tin nhắn...",
+    "typeMessage": "Hãy viết tin nhắn của bạn...",
+    "send": "Gửi",
+    "sending": "Đang gửi...",
+    "typing": "Nó nói rằng...",
+    "read": "Đọc",
+    "delivered": "Đã gửi",
+    "today": "Hôm nay",
+    "yesterday": "Hôm qua",
+    "noMessages": "Chưa có tin nhắn nào. Hãy bắt đầu cuộc trò chuyện!",
+    "loadMore": "Tải lên thêm",
+    "loadingMessages": "Đang tải tin nhắn...",
+    "about": "Về",
+    "product": "Sản phẩm",
+    "startNewConversation": "Bắt đầu một cuộc trò chuyện mới",
+    "selectConversation": "Chọn một cuộc trò chuyện hoặc bắt đầu một cuộc trò chuyện mới.",
+    "online": "Trực tuyến",
+    "offline": "Ngoại tuyến",
+    "lastSeen": "Lần cuối nhìn thấy",
+    "deleteConversation": "Xóa cuộc trò chuyện",
+    "deleteConfirm": "Bạn có chắc chắn muốn xóa cuộc trò chuyện này không?",
+    "deleted": "Cuộc trò chuyện đã bị xóa.",
+    "defaultUser": "Người dùng",
+    "noResults": "Không tìm thấy kết quả nào.",
+    "newConversation": "Cuộc trò chuyện mới"
+  },
+  "notifications": {
+    "title": "Thông báo",
+    "description": "Xem và quản lý thông báo của bạn.",
+    "markAllAsRead": "Đánh dấu tất cả là đã đọc",
+    "noNotifications": "Bạn chưa nhận được bất kỳ thông báo nào.",
+    "viewAll": "Xem tất cả thông báo",
+    "today": "Hôm nay",
+    "yesterday": "Hôm qua",
+    "older": "Lớn hơn",
+    "types": {
+      "system": "Hệ thống",
+      "message": "Tin nhắn",
+      "offer": "Lời đề nghị",
+      "order": "Đặt hàng",
+      "listing": "Quảng cáo"
+    }
   },
   "settings": {
     "title": "Cài đặt",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Mật khẩu mới không khớp.",
       "passwordTooShort": "Mật khẩu mới phải có ít nhất 6 ký tự.",
       "sessionError": "Không tìm thấy thông tin phiên.",
-      "errorDefault": "Không thể cập nhật mật khẩu. Vui lòng kiểm tra mật khẩu hiện tại của bạn."
+      "errorDefault": "Không thể cập nhật mật khẩu. Vui lòng kiểm tra mật khẩu hiện tại của bạn.",
+      "showPassword": "Hiển thị mật khẩu",
+      "hidePassword": "Ẩn mật khẩu"
+    },
+    "preferences": {
+      "title": "Tùy chọn thông báo và hiển thị",
+      "description": "Quản lý các kênh thông báo và tùy chọn hiển thị của bạn.",
+      "notifications": "Thông báo",
+      "emailNotifications": "Thông báo qua email",
+      "emailNotificationsDesc": "Nhận thông báo qua email về tin nhắn mới và cập nhật quảng cáo.",
+      "smsNotifications": "Thông báo SMS",
+      "smsNotificationsDesc": "Nhận tin nhắn SMS cho các thông báo quan trọng.",
+      "pushNotifications": "Thông báo đẩy",
+      "pushNotificationsDesc": "Nhận thông báo đẩy để cập nhật tức thì.",
+      "appearance": "Vẻ bề ngoài",
+      "darkMode": "Chế độ tối",
+      "darkModeDesc": "Chuyển sang giao diện tối.",
+      "saveChanges": "Lưu tùy chọn",
+      "saving": "Đang lưu...",
+      "saveSuccess": "Tùy chọn của bạn đã được cập nhật.",
+      "saveError": "Đã xảy ra lỗi trong quá trình cập nhật tùy chọn.",
+      "loadError": "Không thể tải tùy chọn."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Nền tảng giao dịch động vật sống",
       "subtitle": "Nền tảng giao dịch động vật sống đáng tin cậy nhất. Mua và bán gia súc, cừu một cách an toàn.",
       "cta": "Bắt đầu ngay",
-      "viewListings": "Xem quảng cáo"
+      "viewListings": "Xem quảng cáo",
+      "searchPlaceholder": "Hãy tìm các loài động vật... (bò, cừu, dê...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Quảng cáo nổi bật",
       "viewAll": "Xem tất cả"
+    },
+    "cta": {
+      "title": "Bắt đầu ngay",
+      "subtitle": "Hãy tham gia vào nền tảng nơi hàng ngàn người bán và người mua gặp gỡ.",
+      "button": "Đăng ký miễn phí"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Về chúng tôi",
     "contact": "Giao tiếp",
     "terms": "Điều khoản sử dụng",
-    "privacy": "Chính sách bảo mật"
+    "privacy": "Chính sách bảo mật",
+    "company": "Công ty",
+    "support": "Ủng hộ",
+    "legal": "Hợp pháp",
+    "followUs": "Hãy theo dõi chúng tôi",
+    "newsletter": "Bản tin",
+    "newsletterDescription": "Đừng bỏ lỡ những tin rao bán và chương trình khuyến mãi mới nhất.",
+    "subscribe": "Đặt mua",
+    "emailPlaceholder": "Địa chỉ email của bạn",
+    "tagline": "Nền tảng giao dịch động vật sống đáng tin cậy nhất của Thổ Nhĩ Kỳ.",
+    "sellers": "Người bán",
+    "products": "Các sản phẩm",
+    "map": "Bản đồ",
+    "appleLoginComingSoon": "Tính năng đăng nhập bằng Apple sẽ sớm được kích hoạt.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "Câu hỏi thường gặp"
+  },
+  "faq": {
+    "title": "Câu hỏi thường gặp",
+    "description": "Giải đáp các câu hỏi thường gặp về nền tảng của chúng tôi.",
+    "noFaqs": "Chưa có câu hỏi nào được thêm vào."
+  },
+  "about": {
+    "title": "Về chúng tôi",
+    "subtitle": "Nền tảng giao dịch động vật sống đáng tin cậy nhất của Thổ Nhĩ Kỳ.",
+    "mission": {
+      "title": "Sứ mệnh của chúng tôi",
+      "description": "Bằng cách số hóa hoạt động buôn bán động vật sống, chúng tôi hướng đến việc tạo ra một liên kết an toàn, minh bạch và hiệu quả giữa người sản xuất và người mua."
+    },
+    "vision": {
+      "title": "Tầm nhìn của chúng tôi",
+      "description": "Trở thành người tiên phong trong chuyển đổi số trong lĩnh vực nông nghiệp và trở thành nền tảng toàn cầu trong giao dịch động vật sống."
+    },
+    "values": {
+      "title": "Giá trị của chúng tôi",
+      "trust": {
+        "title": "Lòng tin",
+        "description": "Tính minh bạch và độ tin cậy là yếu tố thiết yếu trong mọi giao dịch."
+      },
+      "quality": {
+        "title": "Chất lượng",
+        "description": "Liên tục cải tiến để cung cấp dịch vụ tốt nhất."
+      },
+      "innovation": {
+        "title": "Sự đổi mới",
+        "description": "Chuyển đổi ngành công nghiệp bằng cách sử dụng công nghệ."
+      }
+    },
+    "stats": {
+      "users": "Người dùng đã đăng ký",
+      "sellers": "Người bán tích cực",
+      "products": "Quảng cáo",
+      "transactions": "Giao dịch thành công"
+    }
+  },
+  "contact": {
+    "title": "Giao tiếp",
+    "subtitle": "Vui lòng liên hệ với chúng tôi nếu có bất kỳ thắc mắc nào.",
+    "form": {
+      "title": "Hãy viết thư cho chúng tôi",
+      "name": "Tên của bạn",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "E-mail",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Chủ thể",
+      "subjectPlaceholder": "Chủ đề tin nhắn của bạn",
+      "message": "Tin nhắn của bạn",
+      "messagePlaceholder": "Hãy viết tin nhắn của bạn ở đây...",
+      "submit": "Gửi",
+      "submitting": "Đang gửi...",
+      "success": "Tin nhắn của bạn đã được gửi thành công. Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.",
+      "error": "Đã xảy ra lỗi khi gửi tin nhắn. Vui lòng thử lại."
+    },
+    "info": {
+      "title": "Thông tin liên hệ",
+      "address": "Địa chỉ",
+      "addressValue": "Istanbul, Thổ Nhĩ Kỳ",
+      "email": "E-mail",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Điện thoại",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Giờ làm việc",
+      "workingHoursValue": "Thứ Hai - Thứ Sáu: 09:00 - 18:00",
+      "map": "Bản đồ"
+    }
+  },
+  "terms": {
+    "title": "Điều khoản sử dụng",
+    "lastUpdated": "Cập nhật lần cuối: {date}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Chấp nhận các Điều khoản",
+        "content": "Bằng cách sử dụng trang web này, bạn đồng ý với các điều khoản sử dụng sau đây. Nếu bạn không đồng ý với các điều khoản này, vui lòng không sử dụng trang web."
+      },
+      "services": {
+        "title": "2. Dịch vụ",
+        "content": "Sàn giao dịch gia súc cung cấp nền tảng mua bán động vật sống. Mọi giao dịch trên nền tảng này đều thuộc trách nhiệm của người dùng."
+      },
+      "accounts": {
+        "title": "3. Tài khoản người dùng",
+        "content": "Bạn phải cung cấp thông tin chính xác và cập nhật để tạo tài khoản. Bảo mật tài khoản của bạn là trách nhiệm của chính bạn."
+      },
+      "prohibited": {
+        "title": "4. Các hoạt động bị cấm",
+        "content": "Quảng cáo sai sự thật, thông tin không chính xác, gian lận và các hoạt động bất hợp pháp đều bị nghiêm cấm."
+      },
+      "liability": {
+        "title": "5. Giới hạn trách nhiệm",
+        "content": "Nền tảng này không chịu trách nhiệm trực tiếp về các giao dịch giữa người dùng. Tất cả các giao dịch đều diễn ra giữa các bên liên quan."
+      },
+      "changes": {
+        "title": "6. Thay đổi",
+        "content": "Các điều khoản và điều kiện này có thể thay đổi mà không cần báo trước. Các thay đổi sẽ có hiệu lực ngay lập tức sau khi được công bố."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Chính sách bảo mật",
+    "lastUpdated": "Cập nhật lần cuối: {date}",
+    "sections": {
+      "collection": {
+        "title": "1. Thu thập thông tin",
+        "content": "Khi bạn tạo tài khoản, chúng tôi thu thập thông tin cá nhân như tên, địa chỉ email và số điện thoại của bạn. Chúng tôi cũng có thể thu thập dữ liệu ẩn danh liên quan đến việc bạn sử dụng trang web."
+      },
+      "usage": {
+        "title": "2. Sử dụng thông tin",
+        "content": "Thông tin chúng tôi thu thập được sử dụng để cung cấp dịch vụ, quản lý tài khoản của bạn, đảm bảo an ninh và cung cấp cho bạn các ưu đãi cá nhân hóa."
+      },
+      "sharing": {
+        "title": "3. Chia sẻ thông tin",
+        "content": "Thông tin cá nhân của bạn sẽ không được bán hoặc cho thuê cho bên thứ ba. Thông tin của bạn sẽ không được chia sẻ trừ trường hợp pháp luật yêu cầu."
+      },
+      "security": {
+        "title": "4. An ninh",
+        "content": "Các biện pháp bảo mật theo tiêu chuẩn ngành được áp dụng để bảo vệ dữ liệu của bạn."
+      },
+      "cookies": {
+        "title": "5. Bánh quy",
+        "content": "Trang web của chúng tôi sử dụng cookie để cải thiện trải nghiệm người dùng. Bạn có thể quản lý tùy chọn cookie của mình trong cài đặt trình duyệt."
+      },
+      "rights": {
+        "title": "6. Quyền của bạn",
+        "content": "Theo Luật Bảo vệ Dữ liệu Cá nhân của Thổ Nhĩ Kỳ (KVKK), bạn có quyền truy cập, chỉnh sửa và xóa dữ liệu cá nhân của mình."
+      }
+    }
   },
   "products": {
     "title": "Các sản phẩm",
@@ -235,11 +570,19 @@
       "priceDesc": "Giá (Từ cao đến thấp)",
       "popular": "Phổ biến nhất"
     },
+    "pagination": {
+      "prev": "Trước",
+      "next": "Kế tiếp"
+    },
     "status": {
       "draft": "Bản nháp",
+      "pending": "Đang chờ phê duyệt",
       "active": "Tích cực",
+      "inactive": "Thụ động",
+      "outOfStock": "Hết hàng",
+      "expired": "Nhiệm kỳ của ông ấy đã hết hạn.",
       "sold": "Đã bán",
-      "pending": "Đang chờ phê duyệt"
+      "rejected": "Vật bị loại bỏ"
     },
     "condition": {
       "new": "Mới",
@@ -253,9 +596,13 @@
     "loading": "Đang tải sản phẩm...",
     "perPage": "Mỗi trang",
     "showing": "Tổng số sản phẩm {total} nằm trong khoảng thời gian từ {from} đến {to}.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải lên sản phẩm.",
+    "loadMore": "Hiển thị thêm",
+    "showingOf": "Số lượng sản phẩm được hiển thị là {count} / {total}.",
     "loginToFavorite": "Đăng nhập để thêm vào mục yêu thích.",
     "addedToFavorites": "Đã thêm vào mục yêu thích",
-    "removedFromFavorites": "Đã xóa khỏi mục yêu thích"
+    "removedFromFavorites": "Đã xóa khỏi mục yêu thích",
+    "favoriteError": "Thao tác yêu thích đã thất bại."
   },
   "productDetail": {
     "addToFavorites": "Thêm vào mục yêu thích",
@@ -279,16 +626,31 @@
     "maxOrder": "Đơn hàng tối đa",
     "publishedAt": "Ngày xuất bản",
     "views": "Đã xem",
-    "reviews": "sự đánh giá",
+    "reviews": {
+      "title": "Đánh giá",
+      "reviewCount": "sự đánh giá",
+      "noReviews": "Chưa có đánh giá nào.",
+      "verified": "Người mua đã được xác minh"
+    },
     "similarProducts": "Sản phẩm tương tự",
     "sellerProducts": "Các sản phẩm khác của người bán",
     "contactSeller": "Liên hệ với người bán",
-    "loginRequired": "Đăng nhập để thêm vào mục yêu thích.",
+    "makeOffer": "Gửi đề nghị",
+    "loginRequired": "Vui lòng đăng nhập để thực hiện thao tác này.",
     "addedToFavorites": "Đã thêm vào mục yêu thích",
     "removedFromFavorites": "Đã xóa khỏi mục yêu thích",
     "linkCopied": "Liên kết đã được sao chép.",
     "messagingComingSoon": "Tính năng nhắn tin sẽ sớm ra mắt.",
-    "productNotFound": "Không tìm thấy sản phẩm."
+    "productNotFound": "Không tìm thấy sản phẩm.",
+    "contacting": "Đang tiến hành liên lạc...",
+    "contactError": "Kết nối bị lỗi. Vui lòng thử lại.",
+    "noImage": "Không có hình ảnh.",
+    "defaultLocation": "Thổ Nhĩ Kỳ",
+    "inquiryMessage": "Tôi muốn nhận thông tin về {title}.",
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "products": "Các sản phẩm"
+    }
   },
   "seller": {
     "title": "Thông tin người bán",
@@ -300,6 +662,70 @@
     "call": "Tìm kiếm",
     "viewProfile": "Xem hồ sơ"
   },
+  "sellers": {
+    "title": "Người bán",
+    "description": "Tìm kiếm những người bán đáng tin cậy.",
+    "search": "Tìm người bán...",
+    "sort": "Loại",
+    "sortOptions": {
+      "newest": "Mới nhất",
+      "mostSales": "Sản phẩm bán chạy nhất",
+      "topRated": "Điểm cao nhất",
+      "mostProducts": "Hầu hết các quảng cáo"
+    },
+    "noResults": "Không tìm thấy người bán.",
+    "loading": "Người bán đang tải...",
+    "showing": "{count} người bán đã được tìm thấy",
+    "verified": "Đã xác minh",
+    "sales": "việc bán hàng ",
+    "products": "quảng cáo",
+    "reviews": "sự đánh giá",
+    "rating": "điểm",
+    "viewProducts": "Xem sản phẩm",
+    "contactSeller": "Gửi tin nhắn",
+    "memberSince": "Thành viên từ năm {year}",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải nhà cung cấp",
+    "detail": {
+      "title": "Hồ sơ người bán",
+      "about": "Về",
+      "businessInfo": "Thông tin doanh nghiệp",
+      "businessName": "Tên doanh nghiệp",
+      "businessType": "Chuyến công tác",
+      "email": "E-mail",
+      "phone": "Điện thoại",
+      "website": "Trang web",
+      "description": "Giải thích",
+      "policies": "Chính sách",
+      "returnPolicy": "Chính sách đổi trả",
+      "shippingPolicy": "Chính sách vận chuyển",
+      "businessHours": "Giờ làm việc",
+      "paymentMethods": "Phương thức thanh toán",
+      "allProducts": "Tất cả sản phẩm",
+      "stats": {
+        "totalSales": "Tổng doanh thu",
+        "totalProducts": "Tổng sản phẩm",
+        "totalReviews": "Sự đánh giá",
+        "rating": "Điểm"
+      },
+      "notFound": "Không tìm thấy người bán.",
+      "backToList": "Don gửi cho người bán",
+      "contactInfo": "Giao tiếp",
+      "noProducts": "Người bán này hiện chưa có sản phẩm nào được đăng bán.",
+      "noPolicies": "Người bán chưa xác định chính sách của mình.",
+      "fetchError": "Đã xảy ra lỗi trong quá trình tải thông tin người bán lên.",
+      "productsLoadError": "Đã xảy ra lỗi trong quá trình tải lên sản phẩm của người bán.",
+      "reviewsTab": "Đánh giá",
+      "reviews": {
+        "summary": "Tóm tắt đánh giá",
+        "reviewCount": "sự đánh giá",
+        "communication": "Giao tiếp",
+        "shippingSpeed": "Tốc độ vận chuyển",
+        "productQuality": "Chất lượng sản phẩm",
+        "noReviews": "Chưa có đánh giá nào.",
+        "verified": "Người mua đã được xác minh"
+      }
+    }
+  },
   "editListing": {
     "title": "Chỉnh sửa quảng cáo",
     "saveChanges": "Lưu thay đổi",
@@ -307,6 +733,10 @@
     "updateSuccess": "Quảng cáo đã được cập nhật thành công.",
     "updateFailed": "Đã xảy ra lỗi trong quá trình cập nhật danh sách.",
     "loadError": "Đã xảy ra lỗi khi tải quảng cáo.",
+    "sellerNotFound": "Không tìm thấy hồ sơ người bán.",
+    "sellerLoadError": "Không thể tải thông tin người bán.",
+    "userNotFound": "Không tìm thấy thông tin người dùng. Vui lòng đăng nhập lại.",
+    "locationNotFound": "Không tìm thấy thông tin vị trí. Vui lòng làm mới trang.",
     "basicInfo": "Thông tin cơ bản",
     "categoryAndCondition": "Hạng mục và trạng thái",
     "pricing": "Giá cả",
@@ -314,6 +744,8 @@
     "images": "Hình ảnh",
     "existingImages": "Hình ảnh có sẵn",
     "addImage": "Thêm hình ảnh",
+    "maxImages": "Bạn có thể tải lên tối đa 10 hình ảnh.",
+    "imageHint": "Tối thiểu 1, tối đa 10 hình ảnh. Định dạng PNG, JPG hoặc WEBP.",
     "uploadingImages": "Đang tải hình ảnh...",
     "uploadingImage": "Hình ảnh đang tải.",
     "imageUploadFailed": "Không thể tải hình ảnh.",
@@ -358,6 +790,7 @@
     "addImage": "Thêm hình ảnh",
     "maxImages": "Bạn có thể tải lên tối đa 10 hình ảnh.",
     "imageHint": "Tối thiểu 1, tối đa 10 hình ảnh. Định dạng PNG, JPG hoặc WEBP.",
+    "location": "Thông tin vị trí",
     "fields": {
       "title": "Tiêu đề quảng cáo",
       "shortDescription": "Mô tả ngắn gọn",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Có dịch vụ giao hàng.",
       "shippingCost": "Phí vận chuyển",
       "weight": "Cân nặng",
-      "weightUnit": "Đơn vị trọng lượng"
+      "weightUnit": "Đơn vị trọng lượng",
+      "city": "Thành phố",
+      "address": "Địa chỉ",
+      "postalCode": "Mã bưu chính"
     },
     "placeholders": {
       "title": "Ví dụ: Bò Holstein 2 tuổi",
       "shortDescription": "Mô tả sản phẩm (tối đa 200 ký tự)",
       "description": "Cung cấp thông tin chi tiết về sản phẩm...",
-      "category": "Chọn một danh mục."
+      "category": "Chọn một danh mục.",
+      "city": "Vào thành phố",
+      "address": "Nhập đầy đủ địa chỉ.",
+      "postalCode": "Mã bưu chính"
+    },
+    "errors": {
+      "titleRequired": "Tiêu đề quảng cáo là bắt buộc.",
+      "shortDescriptionRequired": "Cần có một mô tả ngắn gọn.",
+      "descriptionRequired": "Cần có lời giải thích chi tiết.",
+      "categoryRequired": "Việc chọn danh mục là bắt buộc.",
+      "priceRequired": "Giá cả là bắt buộc.",
+      "cityRequired": "Cần cung cấp thông tin về thành phố.",
+      "addressRequired": "Cần cung cấp thông tin địa chỉ.",
+      "locationError": "Đã xảy ra lỗi trong quá trình tạo vị trí."
     },
     "success": "Quảng cáo đã được tạo thành công.",
     "error": "Đã xảy ra lỗi trong quá trình tạo quảng cáo.",
@@ -388,24 +837,53 @@
     "draftSaved": "Bản nháp đã được lưu",
     "productCreated": "Sản phẩm đã được tạo ra thành công.",
     "creationFailed": "Không thể tạo sản phẩm. Vui lòng thử lại.",
-    "errors": {
-      "titleRequired": "Tiêu đề quảng cáo là bắt buộc.",
-      "shortDescriptionRequired": "Cần có một mô tả ngắn gọn.",
-      "descriptionRequired": "Cần có lời giải thích chi tiết.",
-      "categoryRequired": "Việc chọn danh mục là bắt buộc.",
-      "priceRequired": "Nhập giá hợp lệ."
-    }
+    "userNotFound": "Không tìm thấy thông tin người dùng. Vui lòng đăng nhập lại.",
+    "defaultBusinessName": "Doanh nghiệp của tôi"
+  },
+  "becomeSeller": {
+    "title": "Trở thành người bán",
+    "description": "Thông cáo của công ty",
+    "alreadySeller": "Bạn đã có hồ sơ người bán rồi.",
+    "goToListings": "Xem danh sách sản phẩm của tôi",
+    "businessInfo": "Thông tin doanh nghiệp",
+    "contactInfo": "Thông tin liên hệ",
+    "businessName": "Tên doanh nghiệp",
+    "businessNamePlaceholder": "Ví dụ: Trang trại Yilmaz",
+    "businessType": "Chuyến công tác",
+    "businessTypePlaceholder": "Chọn loại hình doanh nghiệp của bạn.",
+    "businessTypes": {
+      "individual": "Cá nhân",
+      "company": "Công ty",
+      "cooperative": "Hợp tác xã",
+      "farm": "Nông trại"
+    },
+    "taxNumber": "Mã số thuế",
+    "taxNumberPlaceholder": "Nhập mã số thuế của bạn (tùy chọn)",
+    "descriptionPlaceholder": "Hãy viết một đoạn mô tả ngắn về doanh nghiệp của bạn...",
+    "phone": "Điện thoại",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Trang web",
+    "websitePlaceholder": "https://www.examplesite.com (tùy chọn)",
+    "submit": "Tạo hồ sơ người bán",
+    "submitting": "Đang tạo hồ sơ...",
+    "success": "Hồ sơ người bán của bạn đã được tạo thành công!",
+    "error": "Đã xảy ra lỗi trong quá trình tạo hồ sơ người bán.",
+    "taxNumberHelp": "Nhập mã số thuế gồm 10 hoặc 11 chữ số của bạn (tùy chọn)",
+    "phoneHelp": "Ví dụ: +90 555 123 45 67 hoặc 0555 123 45 67",
+    "websiteHelp": "Ví dụ: www.isletmem.com hoặc https://isletmem.com",
+    "alreadySellerDescription": "Bạn có thể sử dụng nút bên dưới để quản lý danh sách tin đăng của mình.",
+    "newListing": "Thêm tin đăng mới"
   },
   "fileUpload": {
     "dragDrop": "Tải lên ảnh hoặc video.",
     "dragDropHint": "Kéo và thả hoặc nhấp chuột để chọn.",
     "dropHere": "Thôi bỏ đi...",
     "imageLimit": "Ảnh: tối đa 10MB",
-    "videoLimit": "Video: max 100MB",
+    "videoLimit": "Video: tối đa 100MB",
     "uploadCount": "{hiện tại} / {tối đa} đã tải",
     "maxFilesError": "Bạn có thể tải lên tối đa {max} tệp đa phương tiện.",
     "imageTooLarge": "Ảnh phải có dung lượng nhỏ hơn 10MB.",
-    "videoTooLarge": "The video must be smaller than 100MB.",
+    "videoTooLarge": "Video phải có dung lượng nhỏ hơn 100MB.",
     "optimizing": "Đang tối ưu hóa...",
     "uploading": "Đang tải...",
     "queued": "Đang xếp hàng chờ...",
@@ -419,9 +897,833 @@
     "videoBadge": "BĂNG HÌNH",
     "coverUpdated": "Ảnh bìa đã được điều chỉnh thành công.",
     "optimizationInfo": "Ảnh đã được tối ưu hóa để tuân thủ các tiêu chuẩn web.",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Lựa chọn trực quan",
+    "changeImage": "Thay đổi",
+    "removeImage": "Di dời",
+    "videoProcessing": "Video đang được xử lý...",
+    "videoProcessingFailed": "Thao tác thất bại.",
+    "videoProcessingPollError": "Không thể lấy được trạng thái xử lý video. Vui lòng làm mới trang.",
+    "reorderError": "Không thể sắp xếp tập tin.",
+    "coverUpdateError": "Ảnh bìa không thể được cập nhật."
+  },
+  "error": {
+    "title": "Đã xảy ra lỗi.",
+    "description": "Đã xảy ra lỗi không mong muốn. Vui lòng làm mới trang hoặc thử lại sau.",
+    "retry": "Hãy thử lại",
+    "goBack": "Đừng quay lại",
+    "goHome": "Trang chủ",
+    "notFound": {
+      "title": "Không tìm thấy trang",
+      "description": "Trang bạn đang tìm kiếm hiện không khả dụng hoặc đã được chuyển đi.",
+      "goHome": "Trở lại trang chủ"
+    }
+  },
+  "search": {
+    "title": "Tìm kiếm",
+    "placeholder": "Tìm kiếm sản phẩm, danh mục hoặc người bán...",
+    "searchButton": "Tìm kiếm",
+    "searchingFor": "Muốn",
+    "loading": "Muốn...",
+    "resultsCount": "Đã tìm thấy {count} kết quả.",
+    "noResults": "Không tìm thấy kết quả nào.",
+    "tryDifferentSearch": "Hãy thử các từ khóa khác hoặc thay đổi bộ lọc.",
+    "filters": {
+      "title": "Bộ lọc",
+      "category": "Loại",
+      "allCategories": "Tất cả các danh mục",
+      "condition": "Tình huống",
+      "allConditions": "Tất cả các trường hợp",
+      "priceRange": "Khoảng giá",
+      "price": "Giá",
+      "min": "Tối thiểu",
+      "max": "Tối đa",
+      "apply": "Áp dụng",
+      "clear": "Lau dọn",
+      "clearAll": "Xóa tất cả"
+    },
+    "fetchError": "Đã xảy ra lỗi khi tải kết quả tìm kiếm.",
+    "recentSearches": "Tìm kiếm gần đây",
+    "clearHistory": "Xóa lịch sử",
+    "noSearchHistory": "Bạn chưa có lịch sử tìm kiếm.",
+    "deleteHistoryError": "Đã xảy ra lỗi khi xóa lịch sử tìm kiếm."
+  },
+  "categories": {
+    "title": "Quản lý danh mục",
+    "description": "Quản lý danh mục từ đây.",
+    "noCategories": "Chưa có danh mục nào được thêm vào.",
+    "createFirst": "Tạo danh mục đầu tiên.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải danh mục.",
+    "createSuccess": "Danh mục đã được tạo thành công",
+    "createError": "Đã xảy ra lỗi trong quá trình tạo danh mục.",
+    "updateSuccess": "Danh mục đã được cập nhật thành công",
+    "updateError": "Đã xảy ra lỗi trong quá trình cập nhật danh mục.",
+    "deleteSuccess": "Danh mục đã được xóa thành công.",
+    "deleteError": "Đã xảy ra lỗi trong quá trình xóa danh mục.",
+    "activateSuccess": "Danh mục đã được kích hoạt",
+    "deactivateSuccess": "Danh mục này đã bị vô hiệu hóa.",
+    "statusError": "Đã xảy ra lỗi trong quá trình thay đổi trạng thái.",
+    "loadError": "Đã xảy ra lỗi khi tải danh mục",
+    "filters": {
+      "all": "Tất cả bọn họ",
+      "active": "Tích cực",
+      "inactive": "Không hoạt động"
+    },
+    "table": {
+      "name": "Tên danh mục",
+      "slug": "Ốc sên",
+      "sortOrder": "Số seri",
+      "subCategories": "Danh mục phụ",
+      "status": "Tình huống",
+      "actions": "Giao dịch"
+    },
+    "actions": {
+      "edit": "Biên tập",
+      "delete": "Xóa bỏ",
+      "activate": "Kích hoạt",
+      "deactivate": "Cấu trúc thụ động"
+    },
+    "deleteDialog": {
+      "title": "Xóa danh mục",
+      "description": "Bạn có chắc chắn muốn xóa danh mục này không? Thao tác này không thể đảo ngược.",
+      "cancel": "Hủy bỏ",
+      "confirm": "Xóa bỏ"
+    },
+    "addNew": "Thêm danh mục mới",
+    "loadMore": "Tải xuống thêm",
+    "loadingMore": "Đang tải...",
+    "form": {
+      "newTitle": "Tạo danh mục mới",
+      "editTitle": "Chỉnh sửa danh mục",
+      "name": "Tên danh mục",
+      "namePlaceholder": "Ví dụ: Gia súc",
+      "slug": "Ốc sên",
+      "slugPlaceholder": "Ví dụ: gia súc lớn",
+      "description": "Giải thích",
+      "descriptionPlaceholder": "Mô tả ngắn gọn về hạng mục...",
+      "parentCategory": "Hạng cao cấp",
+      "parentCategoryPlaceholder": "Chọn danh mục hàng đầu (tùy chọn)",
+      "noParent": "Không có danh mục hàng đầu (Danh mục chính)",
+      "sortOrder": "Số thứ tự",
+      "isActive": "Tích cực",
+      "iconUrl": "URL biểu tượng",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Cứu",
+      "submitting": "Đang lưu...",
+      "updating": "Đang cập nhật...",
+      "errors": {
+        "nameRequired": "Tên danh mục là bắt buộc.",
+        "slugRequired": "Ốc sên là bắt buộc."
+      }
+    }
+  },
+  "offers": {
+    "title": "Đề xuất",
+    "description": "Quản lý các đơn đặt hàng đến và đi của bạn.",
+    "received": "Các lời đề nghị sắp tới",
+    "sent": "Đã gửi đề nghị",
+    "noReceivedOffers": "Hiện chưa nhận được bất kỳ lời đề nghị nào.",
+    "noSentOffers": "Bạn chưa gửi đề nghị nào.",
+    "browseProducts": "Xem sản phẩm",
+    "viewProduct": "Xem sản phẩm",
+    "accept": "Chấp nhận",
+    "reject": "Từ chối",
+    "withdraw": "Rút",
+    "makeOffer": "Gửi đề nghị",
+    "sendOffer": "Gửi đề nghị",
+    "sending": "Đang gửi...",
+    "cancel": "Hủy bỏ",
+    "listingPrice": "Giá niêm yết",
+    "yourOffer": "Đề nghị của bạn",
+    "quantity": "Số lượng",
+    "messageOptional": "Lời nhắn (Tùy chọn)",
+    "messagePlaceholder": "Một lời nhắn bạn muốn chia sẻ với người bán...",
+    "expiresAt": "Ngày có hiệu lực cuối cùng",
+    "offerSent": "Đơn đặt hàng của bạn đã được gửi thành công.",
+    "offerError": "Đã xảy ra lỗi trong quá trình gửi đề nghị.",
+    "acceptSuccess": "Lời đề nghị đã được chấp nhận.",
+    "rejectSuccess": "Lời đề nghị đã bị từ chối.",
+    "withdrawSuccess": "Lời đề nghị đã bị rút lại.",
+    "actionError": "Đã xảy ra lỗi trong quá trình xử lý.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải các ưu đãi.",
+    "loginRequired": "Đăng nhập để gửi giá thầu.",
+    "invalidPrice": "Nhập giá hợp lệ.",
+    "invalidQuantity": "Nhập số tiền hợp lệ.",
+    "status": {
+      "pending": "Chưa giải quyết",
+      "accepted": "Đã được chấp nhận",
+      "rejected": "Vật bị loại bỏ",
+      "countered": "Đề nghị phản hồi",
+      "expired": "Nhiệm kỳ của nó đã kết thúc.",
+      "withdrawn": "Rút lui"
+    }
+  },
+  "deals": {
+    "title": "Thỏa thuận",
+    "description": "Hãy tuân thủ các thỏa thuận mua bán của bạn.",
+    "buying": "Các học giả",
+    "selling": "Việc bán hàng",
+    "noBuyingDeals": "Hiện tại, hệ thống chưa có quy trình đăng ký sinh viên.",
+    "noSellingDeals": "Bạn chưa có giao dịch bán hàng nào.",
+    "browseProducts": "Xem sản phẩm",
+    "viewProduct": "Xem sản phẩm",
+    "activeDeals": "Các thỏa thuận đang có hiệu lực",
+    "completedDeals": "Hoàn thành",
+    "purchases": "Các học giả",
+    "sales": "Việc bán hàng",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải các thỏa thuận.",
+    "dealStatus": {
+      "pending": "Chưa giải quyết",
+      "confirmed": "Đã xác nhận",
+      "processing": "Chuẩn bị",
+      "shipped": "Trong hàng hóa",
+      "delivered": "Đã giao hàng",
+      "completed": "Hoàn thành",
+      "cancelled": "Đã hủy",
+      "disputed": "Hiệp định"
+    },
+    "delivery": {
+      "pickup": "Giao hàng tận tay",
+      "shipping": "Vận chuyển hàng hóa",
+      "transport": "Bằng phương tiện giao thông"
+    },
+    "requestTransport": "Yêu cầu vận chuyển"
+  },
+  "farms": {
+    "title": "Trang trại của tôi",
+    "description": "Quản lý và cập nhật trang trại của bạn.",
+    "addFarm": "Thêm trang trại",
+    "editFarm": "Quản lý trang trại",
+    "noFarms": "Bạn chưa thêm trang trại nào cả.",
+    "farmName": "Tên trang trại",
+    "registrationNumber": "Số đăng ký",
+    "location": "Vị trí",
+    "selectLocation": "Chọn địa điểm.",
+    "addLocationFirst": "Trước tiên, hãy thêm địa điểm.",
+    "farmTypeLabel": "Tham quan trang trại",
+    "farmDescription": "Giải thích",
+    "totalArea": "Tổng diện tích",
+    "cultivatedArea": "Khu vực canh tác",
+    "certifications": "Chứng chỉ",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP, v.v.",
+    "organic": "Hữu cơ",
+    "verified": "Đã xác minh",
+    "save": "Cứu",
+    "saving": "Đang lưu...",
+    "cancel": "Hủy bỏ",
+    "edit": "Biên tập",
+    "delete": "Xóa bỏ",
+    "sellerRequired": "Cần có thông tin người bán.",
+    "sellerRequiredDesc": "Để thêm trang trại, trước tiên bạn cần tạo hồ sơ người bán.",
+    "becomeSeller": "Trở thành người bán",
+    "createSuccess": "Trang trại đã được thêm vào thành công.",
+    "updateSuccess": "Trang trại đã được nâng cấp thành công.",
+    "deleteSuccess": "Trang trại đã được xóa thành công.",
+    "saveError": "Đã xảy ra lỗi trong quá trình đăng ký trang trại.",
+    "deleteError": "Đã xảy ra lỗi trong quá trình xóa trang trại.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải thông tin trang trại lên.",
+    "farmType": {
+      "livestock": "Chăn nuôi gia súc",
+      "crop": "Nông nghiệp",
+      "mixed": "Hỗn hợp",
+      "poultry": "Có cánh",
+      "dairy": "Chăn nuôi bò sữa",
+      "aquaculture": "Sản phẩm thủy sản"
+    }
+  },
+  "transporters": {
+    "title": "người vận chuyển",
+    "description": "Dịch vụ vận chuyển động vật và sản phẩm",
+    "searchPlaceholder": "Tìm phương tiện vận chuyển...",
+    "noTransporters": "Hiện chưa có hãng vận chuyển nào được đăng ký.",
+    "verified": "Đã xác minh",
+    "transports": "chuyên chở",
+    "viewProfile": "Xem hồ sơ",
+    "sort": {
+      "newest": "Mới nhất",
+      "rating": "Điểm cao nhất",
+      "mostTransports": "Vận chuyển thường xuyên nhất"
+    },
+    "pagination": {
+      "previous": "Trước",
+      "next": "Kế tiếp",
+      "page": "Trang {trang}"
+    }
+  },
+  "transport": {
+    "title": "Yêu cầu vận chuyển của tôi",
+    "description": "Theo dõi yêu cầu vận chuyển của bạn.",
+    "findTransporter": "Tìm một người vận chuyển",
+    "active": "Tích cực",
+    "completed": "Hoàn thành",
+    "total": "Tổng cộng",
+    "asSeller": "Với tư cách là người bán",
+    "asBuyer": "Với tư cách là người mua",
+    "noSellerRequests": "Với tư cách là người bán, bạn không có yêu cầu về vận chuyển.",
+    "noBuyerRequests": "Với tư cách là người nhận, bạn không có yêu cầu giao hàng.",
+    "viewProduct": "Xem sản phẩm",
+    "pickup": "Nhận được",
+    "delivery": "Vận chuyển",
+    "urgent": "Cấp bách",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải lên các yêu cầu vận chuyển.",
+    "trackShipment": "Theo",
+    "transportStatus": {
+      "pending": "Chưa giải quyết",
+      "inPool": "Trong hồ bơi",
+      "assigned": "Được bổ nhiệm",
+      "pickedUp": "Biên lai",
+      "inTransit": "Trên đường",
+      "delivered": "Đã giao hàng",
+      "completed": "Hoàn thành",
+      "cancelled": "Đã hủy"
+    },
+    "transportType": {
+      "standard": "Tiêu chuẩn",
+      "refrigerated": "Chuỗi cung ứng lạnh",
+      "liveAnimal": "Động vật sống",
+      "hazardous": "Vật liệu nguy hiểm",
+      "oversized": "Kích thước lớn"
+    }
+  },
+  "moderation": {
+    "title": "Kiểm duyệt sản phẩm",
+    "description": "Xem xét các sản phẩm đang chờ phê duyệt.",
+    "pending": "chờ",
+    "allClear": "Tất cả sản phẩm đã được kiểm tra.",
+    "noPending": "Hiện không có sản phẩm nào đang chờ phê duyệt.",
+    "awaitingReview": "Đang chờ xem xét",
+    "by": "Nhân viên bán hàng:",
+    "stock": "Cổ phần",
+    "preview": "Với bạn",
+    "approve": "Xác nhận",
+    "reject": "Từ chối",
+    "confirmReject": "Từ chối",
+    "cancelReject": "Bỏ cuộc",
+    "rejectReasonPlaceholder": "Hãy ghi rõ lý do bị từ chối...",
+    "rejectReasonRequired": "Lý do từ chối là bắt buộc.",
+    "approveSuccess": "Sản phẩm đã được phê duyệt thành công.",
+    "rejectSuccess": "Sản phẩm đã bị từ chối.",
+    "actionError": "Đã xảy ra lỗi trong quá trình xử lý.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải lên sản phẩm.",
+    "unauthorized": "Bạn không có quyền truy cập vào trang này."
+  },
+  "sellerModeration": {
+    "title": "Kiểm duyệt của người bán",
+    "description": "Xem xét và quản lý tài khoản người bán.",
+    "pending": "chờ",
+    "allClear": "Tất cả người bán đều đã được điều tra.",
+    "noPending": "Không có người bán nào đang chờ.",
+    "verify": "Xác minh",
+    "suspend": "Đình chỉ",
+    "verifySuccess": "Người bán đã được xác minh thành công.",
+    "suspendSuccess": "Người bán bị đình chỉ tài khoản.",
+    "actionError": "Đã xảy ra lỗi trong quá trình xử lý.",
+    "suspendReasonRequired": "Lý do đình chỉ là bắt buộc.",
+    "suspendReasonPlaceholder": "Hãy nêu lý do đình chỉ...",
+    "confirmSuspend": "Đình chỉ",
+    "cancelSuspend": "Bỏ cuộc",
+    "statusLabels": {
+      "pendingVerification": "Đang chờ xác minh",
+      "active": "Tích cực",
+      "suspended": "Treo",
+      "banned": "Cấm"
+    },
+    "filterAll": "Hiển thị tất cả",
+    "filterPending": "Những người đang chờ đợi",
+    "filterActive": "Tài sản",
+    "filterSuspended": "Cấm",
+    "unauthorized": "Bạn không có quyền truy cập vào trang này.",
+    "businessName": "Tên doanh nghiệp",
+    "businessType": "Chuyến công tác",
+    "email": "E-mail",
+    "phone": "Điện thoại",
+    "status": "Tình huống",
+    "createdAt": "Ngày đăng ký"
+  },
+  "transporterModeration": {
+    "title": "Điều tiết chất mang",
+    "description": "Xem xét và quản lý các tài khoản nhà cung cấp dịch vụ.",
+    "pending": "chờ",
+    "allClear": "Tất cả các đơn vị vận chuyển đều đã được điều tra.",
+    "noPending": "Hiện không có xe vận chuyển nào đang chờ sẵn.",
+    "verify": "Xác minh",
+    "suspend": "Đình chỉ",
+    "verifySuccess": "Thiết bị vận chuyển đã được xác minh thành công.",
+    "suspendSuccess": "Công ty vận chuyển đã bị đình chỉ hoạt động.",
+    "actionError": "Đã xảy ra lỗi trong quá trình xử lý.",
+    "suspendReasonRequired": "Lý do đình chỉ là bắt buộc.",
+    "suspendReasonPlaceholder": "Hãy nêu lý do đình chỉ...",
+    "confirmSuspend": "Đình chỉ",
+    "cancelSuspend": "Bỏ cuộc",
+    "statusLabels": {
+      "pendingVerification": "Đang chờ xác minh",
+      "active": "Tích cực",
+      "suspended": "Treo",
+      "banned": "Cấm"
+    },
+    "filterAll": "Hiển thị tất cả",
+    "filterPending": "Những người đang chờ đợi",
+    "filterActive": "Tài sản",
+    "filterSuspended": "Cấm",
+    "unauthorized": "Bạn không có quyền truy cập vào trang này.",
+    "companyName": "Tên công ty",
+    "contactPerson": "Người được ủy quyền",
+    "email": "E-mail",
+    "phone": "Điện thoại",
+    "city": "Thành phố",
+    "status": "Tình huống",
+    "createdAt": "Ngày đăng ký"
+  },
+  "transporterDetail": {
+    "notFound": "Không tìm thấy phương tiện vận chuyển nào.",
+    "backToList": "Don gửi cho các nhà vận chuyển",
+    "verified": "Đã xác minh",
+    "totalTransports": "tổng phí vận chuyển",
+    "completed": "hoàn thành",
+    "about": "Về",
+    "contact": "Thông tin liên hệ",
+    "businessInfo": "Thông tin doanh nghiệp",
+    "license": "Số giấy phép",
+    "insurance": "Thông tin bảo hiểm",
+    "fleet": "Thông tin đội xe",
+    "serviceRegions": "Khu vực phục vụ",
+    "specializations": "Lĩnh vực chuyên môn",
+    "certifications": "Chứng chỉ"
+  },
+  "brands": {
+    "title": "Quản lý thương hiệu",
+    "description": "Quản lý thương hiệu sản phẩm.",
+    "addBrand": "Thêm thương hiệu",
+    "editBrand": "Chỉnh sửa thương hiệu",
+    "noBrands": "Chưa có thương hiệu nào được thêm vào.",
+    "brandName": "Tên thương hiệu",
+    "brandDescription": "Giải thích",
+    "website": "Trang web",
+    "logoUrl": "URL logo",
+    "save": "Cứu",
+    "saving": "Đang lưu...",
+    "cancel": "Hủy bỏ",
+    "edit": "Biên tập",
+    "delete": "Xóa bỏ",
+    "inactive": "Thụ động",
+    "products": "sản phẩm",
+    "createSuccess": "Thương hiệu đã được thêm thành công.",
+    "updateSuccess": "Thương hiệu đã được cập nhật thành công.",
+    "deleteSuccess": "Thương hiệu đã được xóa thành công.",
+    "saveError": "Đã xảy ra lỗi trong quá trình đăng ký nhãn hiệu.",
+    "deleteError": "Đã xảy ra lỗi trong quá trình xóa nhãn hiệu.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải thương hiệu.",
+    "unauthorized": "Bạn không có quyền truy cập vào trang này."
+  },
+  "transporterReviews": {
+    "title": "Đánh giá",
+    "reviewCount": "sự đánh giá",
+    "noReviews": "Chưa có đánh giá nào.",
+    "timeliness": "Giao hàng đúng giờ",
+    "communication": "Giao tiếp",
+    "carefulHandling": "Xử lý cẩn thận",
+    "professionalism": "Tính chuyên nghiệp"
+  },
+  "transportOffers": {
+    "title": "Báo giá vận chuyển",
+    "description": "Quản lý các báo giá bạn gửi cho các yêu cầu vận chuyển.",
+    "newOffer": "Đề xuất mới",
+    "transportRequestId": "Mã số yêu cầu vận chuyển",
+    "requestIdPlaceholder": "Nhập mã số yêu cầu vận chuyển.",
+    "offeredPrice": "Giá chào bán",
+    "estimatedDays": "Thời gian dự kiến (Ngày)",
+    "days": "ngày",
+    "vehicleType": "Loại xe",
+    "insuranceIncluded": "Bao gồm bảo hiểm",
+    "message": "Tin nhắn",
+    "cancel": "Hủy bỏ",
+    "sending": "Đang gửi...",
+    "sendOffer": "Gửi đề nghị",
+    "cancelOffer": "Hủy bỏ",
+    "pendingTab": "Chờ",
+    "historyTab": "Quá khứ",
+    "noPendingOffers": "Bạn hiện không có bất kỳ lời đề nghị nào đang chờ xử lý.",
+    "noHistory": "Không tìm thấy bất kỳ giao dịch nào trước đây.",
+    "status": {
+      "pending": "Chờ",
+      "accepted": "Đã được chấp nhận",
+      "rejected": "Vật bị loại bỏ",
+      "expired": "Nhiệm kỳ của nó đã kết thúc.",
+      "cancelled": "Đã hủy"
+    },
+    "createSuccess": "Đề nghị đã được gửi thành công.",
+    "createError": "Đã xảy ra lỗi trong quá trình gửi đề nghị.",
+    "cancelSuccess": "Ưu đãi đã bị hủy bỏ.",
+    "cancelError": "Đã xảy ra lỗi trong quá trình hủy bỏ ưu đãi.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải các ưu đãi."
+  },
+  "animalInfo": {
+    "title": "Thông tin về động vật và sản phẩm",
+    "animalTab": "Động vật",
+    "healthTab": "Sức khỏe",
+    "vaccinationsTab": "Người tiêm chủng",
+    "veterinaryTab": "Bác sĩ thú y",
+    "breed": "Loài",
+    "genderLabel": "Giới tính",
+    "gender": {
+      "male": "Nam giới",
+      "female": "Nữ giới",
+      "unknown": "Không rõ"
+    },
+    "age": "Tuổi",
+    "months": "tháng",
+    "weight": "Cân nặng",
+    "color": "Màu sắc",
+    "tagNumber": "Số tai",
+    "healthStatus": "Tình trạng sức khỏe",
+    "health": {
+      "healthy": "Khỏe mạnh",
+      "underTreatment": "Đang điều trị",
+      "recovering": "Anh/Cô ấy đang hồi phục.",
+      "quarantined": "Đang cách ly",
+      "unknown": "Không rõ"
+    },
+    "purposeLabel": "Mục đích sử dụng",
+    "purpose": {
+      "breeding": "Đinh tán",
+      "dairy": "Sữa",
+      "meat": "Thịt",
+      "egg": "Trứng",
+      "wool": "Len",
+      "working": "Công việc",
+      "pet": "Nội địa",
+      "other": "Khác"
+    },
+    "pregnancy": "Mang thai",
+    "pregnant": "Có thai",
+    "microchip": "Số hiệu vi mạch.",
+    "passport": "Số hộ chiếu",
+    "sireDetails": "Thông tin về người cha",
+    "damDetails": "Thông tin chính",
+    "diagnosis": "Chẩn đoán",
+    "treatment": "Sự đối đãi",
+    "medications": "Các loại thuốc",
+    "veterinarian": "Bác sĩ thú y",
+    "nextDue": "Lịch sử nổi loạn tiếp theo",
+    "prescriptionRequired": "Cần có đơn thuốc của bác sĩ",
+    "targetSpecies": "Chuyến tham quan mục tiêu",
+    "activeIngredients": "Thành phần hoạt tính",
+    "registrationNo": "Số đăng ký",
+    "storage": "Kho",
+    "chemicalTab": "Hóa chất",
+    "feedTab": "Mồi",
+    "seedTab": "Hạt giống",
+    "machineryTab": "Máy móc",
+    "organic": "Hữu cơ",
+    "toxicity": "Độc tính",
+    "gmoFree": "Không biến đổi gen",
+    "protein": "Protein",
+    "fat": "Dầu",
+    "fiber": "Sợi",
+    "hybrid": "Lai",
+    "germination": "Sự nảy mầm",
+    "daysToMaturity": "Sự trưởng thành",
+    "daysLabel": "ngày",
+    "warranty": "Đảm bảo",
+    "power": "Sức mạnh",
+    "hoursUsed": "Giờ sử dụng",
+    "hours": "giờ",
+    "powerSource": "Nguồn điện"
+  },
+  "productVariants": {
+    "title": "Các biến thể sản phẩm",
+    "variantCount": "khác nhau",
+    "inStock": "Còn hàng",
+    "outOfStock": "Bán hết"
+  },
+  "productPrices": {
+    "title": "Giá cả (Nhiều loại tiền tệ)",
+    "autoConversion": "Chuyển đổi tự động",
+    "validUntil": "Tính hợp lệ"
+  },
+  "requestTransport": {
+    "title": "Tạo yêu cầu vận chuyển",
+    "pickupLocation": "Điểm tải",
+    "deliveryLocation": "Điểm giao hàng",
+    "city": "Thành phố",
+    "address": "Địa chỉ",
+    "transportType": "Tour du lịch giao thông",
+    "types": {
+      "standard": "Tiêu chuẩn",
+      "refrigerated": "Chuỗi cung ứng lạnh",
+      "liveAnimal": "Động vật sống",
+      "hazardous": "Vật liệu nguy hiểm",
+      "oversized": "Kích thước lớn"
+    },
+    "weight": "Trọng lượng (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Ngày tải lên ưu tiên",
+    "preferredDeliveryDate": "Ngày giao hàng ưu tiên",
+    "urgent": "Vận chuyển khẩn cấp",
+    "specialInstructions": "Hướng dẫn đặc biệt",
+    "instructionsPlaceholder": "Hãy viết hướng dẫn cụ thể của bạn ở đây...",
+    "cancel": "Bỏ cuộc",
+    "submit": "Tạo ra nhu cầu",
+    "submitting": "Trong quá trình sáng tạo...",
+    "success": "Yêu cầu vận chuyển đã được tạo thành công.",
+    "error": "Đã xảy ra lỗi trong quá trình tạo yêu cầu vận chuyển."
+  },
+  "transportTracking": {
+    "title": "Theo dõi lô hàng",
+    "noTracking": "Hiện chưa có thông tin theo dõi nào.",
+    "update": "Cập nhật"
+  },
+  "locations": {
+    "title": "Địa chỉ của tôi",
+    "description": "Quản lý các địa chỉ đã đăng ký của bạn.",
+    "addLocation": "Thêm địa chỉ",
+    "editLocation": "Chỉnh sửa địa chỉ",
+    "noLocations": "Bạn chưa có địa chỉ đăng ký.",
+    "name": "Tên địa chỉ",
+    "namePlaceholder": "Ví dụ: Nhà, Việc làm, Nông trại",
+    "address": "Địa chỉ",
+    "addressLine2": "Dòng địa chỉ 2",
+    "city": "Thành phố",
+    "state": "Quận/Vùng",
+    "postalCode": "Mã bưu chính",
+    "phone": "Điện thoại",
+    "email": "E-mail",
+    "cancel": "Bỏ cuộc",
+    "save": "Cứu",
+    "saving": "Đang lưu...",
+    "typePickup": "Đang tải",
+    "typeDelivery": "Vận chuyển",
+    "typeBoth": "Tổng quan",
+    "createSuccess": "Địa chỉ đã được thêm thành công.",
+    "createError": "Đã xảy ra lỗi khi thêm địa chỉ.",
+    "updateSuccess": "Địa chỉ đã được cập nhật thành công.",
+    "updateError": "Đã xảy ra lỗi trong quá trình cập nhật địa chỉ.",
+    "deleteLocation": "Xóa địa chỉ",
+    "deleteSuccess": "Địa chỉ đã bị xóa",
+    "deleteError": "Đã xảy ra lỗi trong quá trình xóa địa chỉ.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải địa chỉ."
+  },
+  "systemSettings": {
+    "title": "Cài đặt hệ thống",
+    "description": "Xem cài đặt về đơn vị tiền tệ, ngôn ngữ, phương thức thanh toán, vận chuyển và thuế của nền tảng.",
+    "unauthorized": "Bạn không có quyền truy cập vào trang này.",
+    "currenciesTab": "Tiền tệ",
+    "languagesTab": "Ngôn ngữ",
+    "paymentTab": "Phương thức thanh toán",
+    "shippingTab": "Hàng hóa",
+    "taxTab": "Thuế",
+    "active": "Tích cực",
+    "inactive": "Thụ động",
+    "default": "Mặc định",
+    "noCurrencies": "Đơn vị tiền tệ vẫn chưa được xác định.",
+    "noLanguages": "Ngôn ngữ này vẫn chưa được định nghĩa.",
+    "noPaymentMethods": "Phương thức thanh toán chưa được xác định.",
+    "noCarriers": "Danh tính của công ty vận chuyển vẫn chưa được xác định.",
+    "noZones": "Khu vực chứa hàng vẫn chưa được xác định.",
+    "noTaxRates": "Mức thuế suất vẫn chưa được xác định.",
+    "carriers": "Các công ty vận tải biển",
+    "zones": "Khu vực hàng hóa",
+    "countries": "Các quốc gia",
+    "rates": "Phí vận chuyển",
+    "noRates": "Chi phí vận chuyển chưa được xác định.",
+    "freeShipping": "Miễn phí vận chuyển",
+    "deliveryDays": "thời gian giao hàng trong ngày"
+  },
+  "pushPermission": {
+    "title": "Bật thông báo",
+    "description": "Nhận thông báo về tin nhắn mới, ưu đãi và cập nhật đơn hàng.",
+    "allow": "Cho phép",
+    "dismiss": "Đóng"
+  },
+  "healthRecords": {
+    "title": "Hồ sơ sức khỏe",
+    "description": "Quản lý hồ sơ sức khỏe và lịch sử bệnh án của động vật.",
+    "addRecord": "Thêm bản ghi",
+    "editRecord": "Chỉnh sửa bản ghi",
+    "deleteRecord": "Xóa bản ghi",
+    "noRecords": "Hồ sơ sức khỏe chưa được thêm.",
+    "animalInfoId": "Nhận dạng động vật",
+    "animalInfoIdPlaceholder": "Nhập mã số nhận dạng thông tin động vật.",
+    "recordType": "Chuyến tham quan đăng ký",
+    "recordTypePlaceholder": "Ví dụ: Khám bệnh, Điều trị, Phẫu thuật",
+    "recordDate": "Ngày đăng ký",
+    "followUpDate": "Kiểm tra ngày",
+    "veterinarianName": "Bác sĩ thú y",
+    "veterinarianLicense": "Số giấy phép",
+    "clinicName": "Lâm sàng",
+    "diagnosis": "Chẩn đoán",
+    "treatment": "Sự đối đãi",
+    "medications": "Các loại thuốc",
+    "medicationsPlaceholder": "Ví dụ: Penicillin 500mg, Ibuprofen",
+    "notes": "Ghi chú",
+    "documentUrl": "URL tài liệu",
+    "saving": "Đang lưu...",
+    "createSuccess": "Hồ sơ sức khỏe đã được thêm thành công.",
+    "updateSuccess": "Hồ sơ sức khỏe đã được cập nhật thành công.",
+    "deleteSuccess": "Hồ sơ sức khỏe đã được xóa thành công.",
+    "saveError": "Đã xảy ra lỗi khi lưu bản ghi.",
+    "deleteError": "Đã xảy ra lỗi trong quá trình xóa bản ghi.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải bản ghi."
+  },
+  "vaccinations": {
+    "title": "Hồ sơ tiêm chủng",
+    "description": "Quản lý hồ sơ và lịch tiêm phòng cho động vật.",
+    "addVaccination": "Thêm Rebel",
+    "editVaccination": "Sự sắp xếp của phe nổi loạn",
+    "deleteVaccination": "Kẻ nổi loạn Sil",
+    "noVaccinations": "Thông tin tiêm chủng chưa được thêm vào.",
+    "animalInfoId": "Nhận dạng động vật",
+    "animalInfoIdPlaceholder": "Nhập mã số nhận dạng thông tin động vật.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Ví dụ: Vắc xin SAT, vi khuẩn Brucella",
+    "vaccineType": "Chuyến du lịch châu Á",
+    "vaccineTypePlaceholder": "Ví dụ: Đang hoạt động, Không hoạt động",
+    "batchNumber": "Số lượng người tham dự",
+    "vaccinationDate": "Lịch sử của kẻ nổi loạn",
+    "nextDueDate": "Lịch sử nổi loạn tiếp theo",
+    "veterinarianName": "Bác sĩ thú y",
+    "veterinarianLicense": "Số giấy phép",
+    "notes": "Ghi chú",
+    "certificateUrl": "URL chứng chỉ",
+    "saving": "Đang lưu...",
+    "createSuccess": "Thông tin tiêm chủng đã được thêm thành công.",
+    "updateSuccess": "Thông tin tiêm chủng đã được cập nhật thành công.",
+    "deleteSuccess": "Hồ sơ tiêm chủng đã được xóa thành công.",
+    "saveError": "Đã xảy ra lỗi trong quá trình đăng ký vắc-xin.",
+    "deleteError": "Đã xảy ra lỗi trong quá trình xóa vắc-xin.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải vắc xin."
+  },
+  "shippingCarriers": {
+    "title": "Các công ty vận tải biển",
+    "description": "Quản lý thông tin công ty vận chuyển.",
+    "addCarrier": "Thêm công ty",
+    "editCarrier": "Công ty chỉnh sửa",
+    "noCarriers": "Chưa có công ty vận chuyển nào được thêm vào.",
+    "carrierName": "Tên công ty",
+    "carrierNamePlaceholder": "Ví dụ: Aras Kargo, MNG",
+    "code": "Mã số",
+    "codePlaceholder": "Ví dụ: ARAS",
+    "website": "Trang web",
+    "trackingUrlTemplate": "Tuân theo mẫu URL",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Các quốc gia được hỗ trợ",
+    "supportedCountriesPlaceholder": "Ví dụ: TR, US, DE",
+    "active": "Tích cực",
+    "inactive": "Thụ động",
+    "saving": "Đang lưu...",
+    "edit": "Biên tập",
+    "delete": "Xóa bỏ",
+    "createSuccess": "Công ty vận chuyển đã được thêm thành công.",
+    "updateSuccess": "Công ty vận chuyển đã được cập nhật thành công.",
+    "deleteSuccess": "Công ty vận chuyển đã được xóa thành công.",
+    "saveError": "Đã xảy ra lỗi trong quá trình đăng ký công ty vận chuyển.",
+    "deleteError": "Đã xảy ra lỗi trong quá trình xóa thông tin công ty vận chuyển.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải thông tin các công ty vận chuyển hàng hóa."
+  },
+  "shippingZones": {
+    "title": "Khu vực hàng hóa",
+    "description": "Quản lý các khu vực và vùng chứa hàng hóa.",
+    "addZone": "Thêm vùng",
+    "editZone": "Chỉnh sửa vùng",
+    "noZones": "Chưa có khu vực chứa hàng nào được thêm vào.",
+    "zoneName": "Tên vùng",
+    "zoneNamePlaceholder": "Ví dụ: Châu Âu, Bắc Mỹ",
+    "countryCodes": "Mã quốc gia",
+    "countryCodesPlaceholder": "Ví dụ: TR, DE, FR",
+    "active": "Tích cực",
+    "inactive": "Thụ động",
+    "saving": "Đang lưu...",
+    "edit": "Biên tập",
+    "delete": "Xóa bỏ",
+    "createSuccess": "Khu vực đã được thêm thành công.",
+    "updateSuccess": "Khu vực này đã được cập nhật thành công.",
+    "deleteSuccess": "Khu vực này đã được dọn dẹp thành công.",
+    "saveError": "Đã xảy ra lỗi trong quá trình lưu vùng.",
+    "deleteError": "Đã xảy ra lỗi trong quá trình xóa vùng.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải các vùng."
+  },
+  "shippingRates": {
+    "title": "Phí vận chuyển",
+    "description": "Quản lý chi phí vận chuyển và các tùy chọn giao hàng.",
+    "addRate": "Thêm phí",
+    "editRate": "Điều chỉnh phí",
+    "noRates": "Chi phí vận chuyển chưa được thêm vào.",
+    "zone": "Khu vực",
+    "carrier": "Vững chãi",
+    "selectZone": "Chọn một khu vực",
+    "selectCarrier": "Chọn một công ty",
+    "shippingCost": "Phí vận chuyển",
+    "currency": "Tiền tệ",
+    "estimatedDeliveryDays": "Thời gian giao hàng dự kiến (ngày)",
+    "minWeight": "Trọng lượng tối thiểu",
+    "maxWeight": "Trọng lượng tối đa",
+    "minOrderAmount": "Số tiền đặt hàng tối thiểu",
+    "freeShipping": "Miễn phí vận chuyển",
+    "free": "Miễn phí",
+    "active": "Tích cực",
+    "inactive": "Thụ động",
+    "cost": "Phí",
+    "deliveryDays": "Vận chuyển",
+    "status": "Tình huống",
+    "saving": "Đang lưu...",
+    "createSuccess": "Phí đã được thêm thành công.",
+    "updateSuccess": "Mức lương đã được cập nhật thành công.",
+    "deleteSuccess": "Phí đã được xóa thành công.",
+    "saveError": "Đã xảy ra lỗi trong quá trình lưu phí.",
+    "deleteError": "Đã xảy ra lỗi trong quá trình xóa phí.",
+    "fetchError": "Đã xảy ra lỗi trong quá trình tải lên phí."
+  },
+  "metadata": {
+    "title": "Giao dịch gia súc - Nền tảng giao dịch động vật sống",
+    "description": "Nền tảng giao dịch động vật sống đáng tin cậy nhất thế giới. Mua bán động vật an toàn và minh bạch.",
+    "pages": {
+      "about": {
+        "title": "Về chúng tôi",
+        "description": "Tìm hiểu về giao dịch gia súc. Một nền tảng giao dịch động vật sống đáng tin cậy."
+      },
+      "contact": {
+        "title": "Giao tiếp",
+        "description": "Hãy liên hệ với chúng tôi. Đội ngũ hỗ trợ khách hàng của Livestock Trading luôn sẵn sàng trợ giúp bạn."
+      },
+      "terms": {
+        "title": "Điều khoản sử dụng",
+        "description": "Điều khoản và điều kiện giao dịch gia súc."
+      },
+      "privacy": {
+        "title": "Chính sách bảo mật",
+        "description": "Chính sách bảo mật của Livestock Trading. Tìm hiểu cách dữ liệu cá nhân của bạn được bảo vệ."
+      },
+      "products": {
+        "title": "Các sản phẩm",
+        "description": "Xem danh sách động vật sống. Các quảng cáo đáng tin cậy về gia súc, cừu và nhiều loại khác."
+      },
+      "sellers": {
+        "title": "Người bán",
+        "description": "Tìm kiếm những người bán động vật đáng tin cậy. Hồ sơ và đánh giá người bán đã được xác minh."
+      },
+      "transporters": {
+        "title": "người vận chuyển",
+        "description": "Tìm hiểu về các công ty vận chuyển động vật. Vận chuyển động vật sống an toàn và chuyên nghiệp."
+      },
+      "search": {
+        "title": "Tìm kiếm",
+        "description": "Tìm kiếm trong danh sách động vật sống. Tìm kiếm dễ dàng với các tùy chọn lọc và sắp xếp."
+      },
+      "faq": {
+        "title": "Câu hỏi thường gặp",
+        "description": "Những câu hỏi và câu trả lời thường gặp về giao dịch gia súc."
+      },
+      "productDetail": {
+        "title": "{title} - Rao bán",
+        "description": "Cần bán tại {title} - {city}. Nhấp chuột để xem chi tiết và thông tin liên hệ."
+      },
+      "sellerDetail": {
+        "title": "{tên} - Hồ sơ người bán",
+        "description": "Hồ sơ người bán {name}. Đánh giá, danh sách sản phẩm và thông tin liên hệ."
+      },
+      "transporterDetail": {
+        "title": "{tên} - Hồ sơ nhà mạng",
+        "description": "Thông tin về đơn vị vận chuyển {name}. Khu vực phục vụ, đánh giá và thông tin liên hệ."
+      }
+    }
   }
 }

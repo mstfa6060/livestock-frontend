@@ -11,17 +11,30 @@
     "back": "ተመለስ",
     "next": "ወደፊት",
     "close": "ገጠመ",
+    "unauthorized": "ወደዚህ ገጽ የመድረስ ፈቃድ የለዎትም።",
     "emailPlaceholder": "ornek@email.com",
     "login": "ግባ",
-    "register": "መዝገብ"
+    "register": "መዝገብ",
+    "previous": "ቀዳሚ",
+    "zoomIn": "አጉላ",
+    "previousImage": "ቀዳሚ ምስል",
+    "nextImage": "የሚቀጥለው ምስል",
+    "closeLightbox": "ጋለሪን ዝጋ",
+    "imageLightbox": "የምስል ጋለሪ",
+    "slideN": "ስላይድ {n}",
+    "viewMore": "ተጨማሪ ይመልከቱ"
   },
   "header": {
     "products": "ምርቶች",
     "sellers": "ሻጮች",
+    "transporters": "አጓጓዦች",
     "about": "ስለ እኛ",
+    "search": "ፈልግ",
     "dashboard": "ፓነል",
     "settings": "ቅንብሮች",
-    "logout": "ውጣ"
+    "logout": "ውጣ",
+    "menu": "ምናሌ",
+    "language": "የቋንቋ ምርጫ"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "የይለፍ ቃሉን እረሳሁ።",
       "noAccount": "አካውንት የለህም?",
       "register": "መዝገብ",
-      "errorDefault": "መግባት አልተሳካም። እባክዎ መረጃዎን ያረጋግጡ።"
+      "errorDefault": "መግባት አልተሳካም። እባክዎ መረጃዎን ያረጋግጡ።",
+      "orContinueWith": "ወይም ይቀጥሉ",
+      "continueWithGoogle": "በGoogle ይቀጥሉ",
+      "continueWithApple": "ከአፕል ጋር ይቀጥሉ።",
+      "socialLoginError": "ማህበራዊ መግቢያ አልተሳካም። እባክዎ እንደገና ይሞክሩ።",
+      "appleComingSoon": "በጣም በቅርቡ",
+      "showPassword": "የይለፍ ቃል አሳይ",
+      "hidePassword": "የይለፍ ቃል ደብቅ"
     },
     "register": {
       "title": "መዝገብ",
@@ -51,7 +71,17 @@
       "login": "ግባ",
       "passwordMismatch": "የይለፍ ቃሎቹ አይዛመዱም።",
       "passwordTooShort": "የይለፍ ቃሉ ቢያንስ 6 ቁምፊዎች ርዝመት ሊኖረው ይገባል።",
-      "errorDefault": "ምዝገባ አልተሳካም። እባክዎ እንደገና ይሞክሩ።"
+      "errorDefault": "ምዝገባ አልተሳካም። እባክዎ እንደገና ይሞክሩ።",
+      "showPassword": "የይለፍ ቃል አሳይ",
+      "hidePassword": "የይለፍ ቃል ደብቅ",
+      "passwordStrength": {
+        "minLength": "ቢያንስ 8 ቁምፊዎች",
+        "uppercase": "አቢይ ሆሄያት (ሀ-ፐ)",
+        "lowercase": "ንዑስ ሆሄያት (ሀ-ዝ)",
+        "number": "ቁጥር (0-9)",
+        "special": "ልዩ ቁምፊዎች (!@#$%)"
+      },
+      "registerSuccess": "መለያዎ በተሳካ ሁኔታ ተፈጥሯል! ወደ መግቢያ ገጹ እየተዘዋወሩ ነው..."
     },
     "forgotPassword": {
       "title": "የይለፍ ቃሉን እረሳሁ።",
@@ -78,7 +108,9 @@
       "requestNewLink": "አዲስ ግንኙነት ይጠይቁ",
       "passwordMismatch": "የይለፍ ቃሎቹ አይዛመዱም።",
       "passwordTooShort": "የይለፍ ቃሉ ቢያንስ 6 ቁምፊዎች ርዝመት ሊኖረው ይገባል።",
-      "errorDefault": "የይለፍ ቃል ዳግም ማስጀመር አልተሳካም። ግንኙነቱ ልክ ያልሆነ ወይም ጊዜው ያለፈበት ሊሆን ይችላል።"
+      "errorDefault": "የይለፍ ቃል ዳግም ማስጀመር አልተሳካም። ግንኙነቱ ልክ ያልሆነ ወይም ጊዜው ያለፈበት ሊሆን ይችላል።",
+      "showPassword": "የይለፍ ቃል አሳይ",
+      "hidePassword": "የይለፍ ቃል ደብቅ"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "ንቁ",
       "totalViews": "ጠቅላላ እይታዎች",
       "thisWeek": "በዚህ ሳምንት",
+      "allTime": "በሁሉም ጊዜ",
       "favorites": "ተወዳጅ",
       "onYourListings": "በማስታወቂያዎችዎ ውስጥ",
+      "savedItems": "የተመዘገበ ምርት",
       "messages": "መልእክት",
-      "unread": "ያልተነበበ"
+      "notifications": "ማሳወቂያዎች",
+      "unread": "ያልተነበበ",
+      "views": "እይታዎች",
+      "draft": "ረቂቅ",
+      "sold": "ተሸጧል",
+      "pending": "በመጠባበቅ ላይ",
+      "awaitingApproval": "ማጽደቅን በመጠባበቅ ላይ",
+      "totalSales": "ጠቅላላ ሽያጭ",
+      "completedSales": "የተጠናቀቁ ሽያጮች",
+      "revenue": "ገቢ",
+      "totalRevenue": "ጠቅላላ ገቢ"
     },
     "recentListings": "የቅርብ ጊዜ ዝርዝሮችዎ",
+    "recentActivity": "የቅርብ ጊዜ እንቅስቃሴዎች",
     "recentMessages": "የቅርብ ጊዜ መልዕክቶች",
+    "quickLinks": "ፈጣን መዳረሻ",
     "noListings": "እስካሁን ምንም አይነት ማስታወቂያ አላከልክም።",
+    "noActivity": "እስካሁን ምንም እንቅስቃሴ የለም።",
     "noMessages": "እስካሁን መልእክት አልደረሰህም።",
     "noNotifications": "እስካሁን ምንም ማሳወቂያዎችን አልተቀበሉም።",
     "viewAllListings": "ሁሉንም ዝርዝሮች ይመልከቱ",
-    "viewAllMessages": "ሁሉንም መልዕክቶች ይመልከቱ"
+    "viewAllMessages": "ሁሉንም መልዕክቶች ይመልከቱ",
+    "viewNotifications": "ማሳወቂያዎችን ይመልከቱ",
+    "viewFavorites": "ተወዳጆች ጎር",
+    "recentlyViewed": "በቅርቡ የታዩ",
+    "fetchError": "የፓነል ውሂቡን በመጫን ላይ ስህተት ተከስቷል።"
   },
   "dashboardNav": {
     "overview": "አጠቃላይ እይታ",
@@ -115,7 +166,61 @@
     "notifications": "ማሳወቂያዎች",
     "profile": "መገለጫ",
     "settings": "ቅንብሮች",
-    "newListing": "አዲስ ዝርዝር ያክሉ"
+    "newListing": "አዲስ ዝርዝር ያክሉ",
+    "becomeSeller": "ሻጭ ይሁኑ",
+    "categories": "ምድቦች",
+    "offers": "ፕሮፖዛሎች",
+    "deals": "ስምምነቶች",
+    "farms": "እርሻዎቼ",
+    "transport": "ትራንስፖርት",
+    "moderation": "አወያይነት",
+    "sellerModeration": "የሻጭ አወያይነት",
+    "transporterModeration": "የአገልግሎት አቅራቢ ማወያየት",
+    "brands": "ብራንዶች",
+    "transportOffers": "የማጓጓዣ ዋጋዎች",
+    "healthRecords": "የጤና መዝገቦች",
+    "vaccinations": "ክትባቶች",
+    "shippingCarriers": "የማጓጓዣ ኩባንያዎች",
+    "shippingZones": "የጭነት ዞኖች",
+    "shippingRates": "የማጓጓዣ ክፍያዎች",
+    "systemSettings": "የስርዓት ቅንብሮች",
+    "locations": "አድራሻዎቼ"
+  },
+  "profile": {
+    "title": "የመገለጫ መረጃ",
+    "description": "የግል መረጃዎን እዚህ ማዘመን ይችላሉ።",
+    "personalInfo": "የግል መረጃ",
+    "contactInfo": "የእውቂያ መረጃ",
+    "preferences": "ምርጫዎች",
+    "firstName": "ስም",
+    "firstNamePlaceholder": "ስምዎን ያስገቡ",
+    "surname": "የአያት ስም",
+    "surnamePlaceholder": "የአያት ስምዎን ያስገቡ።",
+    "displayName": "የሚታየው ስም",
+    "phone": "የስልክ ቁጥር",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "የተረጋገጠ",
+    "phoneNotVerified": "ያልተረጋገጠ",
+    "verifyPhone": "የስልክ ቁጥርን ያረጋግጡ",
+    "country": "አገር",
+    "selectCountry": "አገር ይምረጡ",
+    "language": "የቋንቋ ምርጫ",
+    "selectLanguage": "ቋንቋ ይምረጡ",
+    "currency": "ምንዛሬ",
+    "selectCurrency": "ምንዛሬ ይምረጡ።",
+    "saveChanges": "ለውጦችን አስቀምጥ",
+    "saving": "በማስቀመጥ ላይ...",
+    "saveSuccess": "የመገለጫ መረጃዎ ተዘምኗል።",
+    "saveError": "መገለጫውን በማዘመን ላይ ስህተት ተከስቷል።",
+    "avatar": "የመገለጫ ፎቶ",
+    "changeAvatar": "ፎቶ ቀይር",
+    "removeAvatar": "ፎቶ አስወግድ",
+    "currencies": {
+      "try": "የቱርክ ሊራ",
+      "usd": "የአሜሪካ ዶላር",
+      "eur": "ዩሮ",
+      "gbp": "የብሪቲሽ ፓውንድ"
+    }
   },
   "myListings": {
     "title": "የእኔ ማስታወቂያዎች",
@@ -125,35 +230,94 @@
     "fetchError": "ማስታወቂያዎችን በመጫን ላይ ስህተት ተከስቷል።",
     "deleteSuccess": "ማስታወቂያው በተሳካ ሁኔታ ተሰርዟል።",
     "deleteError": "ማስታወቂያውን በመሰረዝ ላይ ሳለ አንድ ስህተት ተከስቷል።",
-    "activateSuccess": "ማስታወቂያው ነቅቷል።",
-    "deactivateSuccess": "ዝርዝሩ ተሰናክሏል።",
+    "publishSuccess": "ማስታወቂያው ለማጽደቅ ተልኳል።",
+    "unpublishSuccess": "ማስታወቂያው ተቀርጿል።",
     "statusError": "ሁኔታውን በመቀየር ላይ ስህተት ተከስቷል።",
     "filters": {
       "all": "ሁሉም",
-      "active": "ንቁ",
       "draft": "ረቂቅ",
       "pending": "ማጽደቅን በመጠባበቅ ላይ",
+      "active": "ንቁ",
+      "rejected": "ውድቅ ተደርጓል",
       "sold": "ተሸጧል"
     },
     "actions": {
       "edit": "አርትዕ",
       "delete": "ሰርዝ",
-      "activate": "አግብር",
-      "deactivate": "ተገብሮ መዋቅር"
+      "publish": "ለማጽደቅ ላክ",
+      "unpublish": "ረቂቅ",
+      "menu": "ግብይቶች"
     },
     "deleteDialog": {
       "title": "ማስታወቂያውን ሰርዝ",
       "description": "ይህንን ዝርዝር መሰረዝ እንደሚፈልጉ እርግጠኛ ነዎት? ይህ እርምጃ የማይቀለበስ ነው።",
       "cancel": "ሰርዝ",
       "confirm": "ሰርዝ"
-    }
+    },
+    "loadMore": "ተጨማሪ ያውርዱ",
+    "loadingMore": "በመጫን ላይ..."
   },
   "favorites": {
     "title": "የእኔ ተወዳጆች",
     "description": "የሚወዷቸውን ምርቶች እዚህ ይከተሉ።",
     "noFavorites": "እስካሁን ምንም ተወዳጅ ምርቶችን አላከሉም።",
     "browseProducts": "ምርቶችን ያስሱ",
-    "fetchError": "ተወዳጆችን በመጫን ላይ ስህተት ተከስቷል።"
+    "fetchError": "ተወዳጆችን በመጫን ላይ ስህተት ተከስቷል።",
+    "loadMore": "ተጨማሪ ያውርዱ",
+    "loadingMore": "በመጫን ላይ..."
+  },
+  "messages": {
+    "title": "መልዕክቶች",
+    "description": "ከገዢዎችና ሻጮች ጋር ይገናኙ።",
+    "noConversations": "እስካሁን መልእክት አልደረሰህም።",
+    "startConversation": "ስለ ማስታወቂያ ጥያቄ ለመጠየቅ ወደ ማስታወቂያው ይሂዱ።",
+    "fetchError": "መልዕክቶችን በመጫን ላይ ሳለ ስህተት ተከስቷል",
+    "sendError": "መልዕክቱን በመላክ ላይ ስህተት ተከስቷል።",
+    "connectionError": "ግንኙነቱ አልተሳካም። እንደገና መሞከር...",
+    "connected": "ተገናኝቷል",
+    "connecting": "በማገናኘት ላይ...",
+    "searchPlaceholder": "በመልዕክቶቹ ውስጥ ፈልግ...",
+    "typeMessage": "መልእክትህን ጻፍ...",
+    "send": "ላክ",
+    "sending": "በመላክ ላይ...",
+    "typing": "እንዲህ ይላል...",
+    "read": "አንብብ",
+    "delivered": "ተልኳል",
+    "today": "ዛሬ",
+    "yesterday": "ትላንት",
+    "noMessages": "እስካሁን ምንም መልዕክቶች የሉም። ውይይት ይጀምሩ!",
+    "loadMore": "ተጨማሪ ይስቀሉ",
+    "loadingMessages": "መልዕክቶች እየተጫኑ ነው...",
+    "about": "ስለ",
+    "product": "ምርት",
+    "startNewConversation": "አዲስ ውይይት ይጀምሩ",
+    "selectConversation": "ውይይት ይምረጡ ወይም አዲስ ይጀምሩ።",
+    "online": "በመስመር ላይ",
+    "offline": "ከመስመር ውጭ",
+    "lastSeen": "ለመጨረሻ ጊዜ የታየው",
+    "deleteConversation": "ውይይቱን ሰርዝ",
+    "deleteConfirm": "ይህንን ውይይት መሰረዝ እንደሚፈልጉ እርግጠኛ ነዎት?",
+    "deleted": "ውይይቱ ተሰርዟል።",
+    "defaultUser": "ተጠቃሚ",
+    "noResults": "ምንም ውጤት አልተገኘም።",
+    "newConversation": "አዲስ ውይይት"
+  },
+  "notifications": {
+    "title": "ማሳወቂያዎች",
+    "description": "ማሳወቂያዎችዎን ይመልከቱ እና ያስተዳድሩ።",
+    "markAllAsRead": "ሁሉንም እንደተነበቡ ምልክት ያድርጉባቸው",
+    "noNotifications": "እስካሁን ምንም ማሳወቂያዎችን አልተቀበሉም።",
+    "viewAll": "ሁሉንም ማሳወቂያዎች ይመልከቱ",
+    "today": "ዛሬ",
+    "yesterday": "ትላንት",
+    "older": "የቆየ",
+    "types": {
+      "system": "ስርዓት",
+      "message": "መልእክት",
+      "offer": "ቅናሽ",
+      "order": "ይዘዙ",
+      "listing": "ማስታወቂያ"
+    }
   },
   "settings": {
     "title": "ቅንብሮች",
@@ -169,7 +333,28 @@
       "passwordMismatch": "አዲሶቹ የይለፍ ቃላት አይዛመዱም።",
       "passwordTooShort": "አዲሱ የይለፍ ቃል ቢያንስ 6 ቁምፊዎች ርዝመት ሊኖረው ይገባል።",
       "sessionError": "የክፍለ ጊዜ መረጃ ሊገኝ አልቻለም።",
-      "errorDefault": "የይለፍ ቃሉ ሊዘመን አልቻለም። እባክዎ የአሁኑን የይለፍ ቃልዎን ያረጋግጡ።"
+      "errorDefault": "የይለፍ ቃሉ ሊዘመን አልቻለም። እባክዎ የአሁኑን የይለፍ ቃልዎን ያረጋግጡ።",
+      "showPassword": "የይለፍ ቃል አሳይ",
+      "hidePassword": "የይለፍ ቃል ደብቅ"
+    },
+    "preferences": {
+      "title": "ማሳወቂያ እና የማሳያ ምርጫዎች",
+      "description": "የማሳወቂያ ቻናሎችዎን እና የማሳያ ምርጫዎችዎን ያስተዳድሩ።",
+      "notifications": "ማሳወቂያዎች",
+      "emailNotifications": "የኢሜይል ማሳወቂያዎች",
+      "emailNotificationsDesc": "ለአዳዲስ መልዕክቶች እና የማስታወቂያ ዝማኔዎች የኢሜይል ማሳወቂያዎችን ይቀበሉ።",
+      "smsNotifications": "የኤስኤምኤስ ማሳወቂያዎች",
+      "smsNotificationsDesc": "አስፈላጊ ለሆኑ ማሳወቂያዎች የኤስኤምኤስ መልዕክቶችን ይቀበሉ።",
+      "pushNotifications": "የግፋ ማሳወቂያዎች",
+      "pushNotificationsDesc": "ለፈጣን ዝማኔዎች የግፊት ማሳወቂያዎችን ይቀበሉ።",
+      "appearance": "መልክ",
+      "darkMode": "የጨለማ ሁነታ",
+      "darkModeDesc": "ወደ ጨለማ ገጽታ ቀይር።",
+      "saveChanges": "ምርጫዎችን አስቀምጥ",
+      "saving": "በማስቀመጥ ላይ...",
+      "saveSuccess": "ምርጫዎችዎ ተዘምነዋል።",
+      "saveError": "ምርጫዎችን በማዘመን ላይ ስህተት ተከስቷል።",
+      "loadError": "ምርጫዎች ሊጫኑ አልቻሉም።"
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "የቀጥታ የእንስሳት ንግድ መድረክ",
       "subtitle": "በጣም አስተማማኝ የሆነው የቀጥታ የእንስሳት ግብይት መድረክ። ከብቶችዎን እና በጎቻችሁን ደህንነቱ በተጠበቀ ሁኔታ ይግዙ እና ይሽጡ።",
       "cta": "አሁን ጀምር",
-      "viewListings": "ማስታወቂያዎችን ይመልከቱ"
+      "viewListings": "ማስታወቂያዎችን ይመልከቱ",
+      "searchPlaceholder": "እንስሳትን ፈልግ... (ላሞች፣ በጎች፣ ፍየሎች...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "ተለይተው የቀረቡ ማስታወቂያዎች",
       "viewAll": "ሁሉንም ይመልከቱ"
+    },
+    "cta": {
+      "title": "አሁን ጀምር",
+      "subtitle": "በሺዎች የሚቆጠሩ ሻጮችና ገዢዎች በሚገናኙበት መድረክ ላይ ቦታዎን ይያዙ።",
+      "button": "በነፃ ይመዝገቡ"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "ስለ እኛ",
     "contact": "ኮሙኒኬሽን",
     "terms": "የአጠቃቀም ውል",
-    "privacy": "የግላዊነት መመሪያ"
+    "privacy": "የግላዊነት መመሪያ",
+    "company": "ኩባንያ",
+    "support": "ድጋፍ",
+    "legal": "ሕጋዊ",
+    "followUs": "ይከተሉን",
+    "newsletter": "ማስታወቂያ",
+    "newsletterDescription": "የቅርብ ጊዜ ዝርዝሮችን እና ማስተዋወቂያዎችን እንዳያመልጥዎ።",
+    "subscribe": "ሰብስክራይብ ያድርጉ",
+    "emailPlaceholder": "የኢሜይል አድራሻዎ",
+    "tagline": "የቱርክ በጣም አስተማማኝ የቀጥታ የእንስሳት ንግድ መድረክ።",
+    "sellers": "ሻጮች",
+    "products": "ምርቶች",
+    "map": "ካርታ",
+    "appleLoginComingSoon": "በአፕል መግባት በቅርቡ ንቁ ይሆናል።",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "ተደጋጋሚ ጥያቄዎች"
+  },
+  "faq": {
+    "title": "በተደጋጋሚ የሚጠየቁ ጥያቄዎች",
+    "description": "ስለ መድረካችን በተደጋጋሚ ለሚጠየቁ ጥያቄዎችዎ መልሶች።",
+    "noFaqs": "እስካሁን ምንም ጥያቄዎች አልተጨመሩም።"
+  },
+  "about": {
+    "title": "ስለ እኛ",
+    "subtitle": "የቱርክ በጣም አስተማማኝ የቀጥታ የእንስሳት ንግድ መድረክ።",
+    "mission": {
+      "title": "የእኛ ተልዕኮ",
+      "description": "የቀጥታ የእንስሳት ንግድን በዲጂታል መንገድ በማዘመን፣ በአምራቾችና በገዢዎች መካከል ደህንነቱ የተጠበቀ፣ ግልጽ እና ቀልጣፋ ግንኙነት ለመፍጠር እንጥራለን።"
+    },
+    "vision": {
+      "title": "ራዕያችን",
+      "description": "በግብርና ዘርፍ በዲጂታል ትራንስፎርሜሽን ውስጥ አቅኚ መሆን እና በዓለም አቀፍ ደረጃ የቀጥታ የእንስሳት ንግድ መድረክ መሆን።"
+    },
+    "values": {
+      "title": "የእኛ እሴቶች",
+      "trust": {
+        "title": "ትረስት",
+        "description": "ግልጽነት እና አስተማማኝነት በሁሉም ግብይቶች ውስጥ አስፈላጊ ናቸው።"
+      },
+      "quality": {
+        "title": "ጥራት",
+        "description": "ምርጡን አገልግሎት ለመስጠት ቀጣይነት ያለው ማሻሻያ።"
+      },
+      "innovation": {
+        "title": "ፈጠራ",
+        "description": "ቴክኖሎጂን በመጠቀም ኢንዱስትሪውን መለወጥ።"
+      }
+    },
+    "stats": {
+      "users": "የተመዘገበ ተጠቃሚ",
+      "sellers": "ንቁ ሻጭ",
+      "products": "ማስታወቂያ",
+      "transactions": "የተሳካ ግብይት"
+    }
+  },
+  "contact": {
+    "title": "ኮሙኒኬሽን",
+    "subtitle": "ማንኛውም ጥያቄ ካለዎት እባክዎን ያግኙን።",
+    "form": {
+      "title": "ለእኛ ይፃፉልን",
+      "name": "የእርስዎ ስም",
+      "namePlaceholder": "አህመት ይልማዝ",
+      "email": "ኢሜይል",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "ርዕሰ ጉዳይ",
+      "subjectPlaceholder": "የመልእክትዎ ርዕሰ ጉዳይ",
+      "message": "መልእክትዎ",
+      "messagePlaceholder": "መልእክትዎን እዚህ ይፃፉ ...",
+      "submit": "ላክ",
+      "submitting": "በመላክ ላይ...",
+      "success": "መልእክትዎ በተሳካ ሁኔታ ተልኳል። በተቻለ ፍጥነት እንመልስልዎታለን።",
+      "error": "መልዕክቱን በመላክ ላይ ስህተት ተከስቷል። እባክዎ እንደገና ይሞክሩ።"
+    },
+    "info": {
+      "title": "የእውቂያ መረጃ",
+      "address": "አድራሻ",
+      "addressValue": "ኢስታንቡል፣ ቱርክ",
+      "email": "ኢሜይል",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "ስልክ",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "የስራ ሰዓቶች",
+      "workingHoursValue": "ሰኞ - አርብ: 09:00 - 18:00",
+      "map": "ካርታ"
+    }
+  },
+  "terms": {
+    "title": "የአጠቃቀም ውል",
+    "lastUpdated": "የመጨረሻው ዝማኔ፦ {date}",
+    "sections": {
+      "acceptance": {
+        "title": "1. የውሎቹን መቀበል",
+        "content": "ይህንን ድህረ ገጽ በመጠቀም፣ የሚከተሉትን የአጠቃቀም ውሎች ተስማምተዋል። በእነዚህ ውሎች የማይስማሙ ከሆነ፣ እባክዎን ድህረ ገጹን አይጠቀሙ።"
+      },
+      "services": {
+        "title": "2. አገልግሎቶች",
+        "content": "የእንስሳት እርባታ ንግድ የቀጥታ እንስሳትን ለመግዛትና ለመሸጥ የሚያስችል መድረክ ይሰጣል። በመድረኩ ላይ የሚደረጉ ሁሉም ግብይቶች የተጠቃሚው ኃላፊነት ናቸው።"
+      },
+      "accounts": {
+        "title": "3. የተጠቃሚ መለያዎች",
+        "content": "መለያ ለመፍጠር ትክክለኛ እና ወቅታዊ መረጃ ማቅረብ አለብዎት። የመለያዎ ደህንነት የእርስዎ ኃላፊነት ነው።"
+      },
+      "prohibited": {
+        "title": "4. የተከለከሉ ተግባራት",
+        "content": "አሳሳች ማስታወቂያዎች፣ የውሸት መረጃ፣ ማጭበርበር እና ህገወጥ ተግባራት በጥብቅ የተከለከሉ ናቸው።"
+      },
+      "liability": {
+        "title": "5. የተጠያቂነት ገደብ",
+        "content": "መድረኩ በተጠቃሚዎች መካከል ለሚደረጉ ግብይቶች ቀጥተኛ ተጠያቂ አይደለም። ሁሉም ግብይቶች የሚከናወኑት በተዋዋይ ወገኖች መካከል ነው።"
+      },
+      "changes": {
+        "title": "6. ለውጦች",
+        "content": "እነዚህ ውሎች እና ሁኔታዎች ያለማሳወቂያ ሊለወጡ ይችላሉ። ለውጦች ከታተሙ በኋላ ወዲያውኑ ተግባራዊ ይሆናሉ።"
+      }
+    }
+  },
+  "privacy": {
+    "title": "የግላዊነት መመሪያ",
+    "lastUpdated": "የመጨረሻው ዝማኔ፦ {date}",
+    "sections": {
+      "collection": {
+        "title": "1. የመረጃ አሰባሰብ",
+        "content": "መለያ ሲፈጥሩ፣ እንደ ስምዎ፣ የኢሜይል አድራሻዎ እና የስልክ ቁጥርዎ ያሉ የግል መረጃዎችን እንሰበስባለን። እንዲሁም ስለ ጣቢያው አጠቃቀምዎ ስም-አልባ መረጃዎችን ልንሰበስብ እንችላለን።"
+      },
+      "usage": {
+        "title": "2. የመረጃ አጠቃቀም",
+        "content": "የምንሰበስበው መረጃ አገልግሎቶቻችንን ለማቅረብ፣ መለያዎን ለማስተዳደር፣ ደህንነትን ለማረጋገጥ እና ለግል የተበጁ ቅናሾችን ለማቅረብ ይጠቅማል።"
+      },
+      "sharing": {
+        "title": "3. የመረጃ መጋራት",
+        "content": "የግል መረጃዎ ለሶስተኛ ወገኖች አይሸጥም ወይም አይከራይም። በህግ ለሚጠየቁ ዓላማዎች ካልሆነ በስተቀር መረጃዎ አይጋራም።"
+      },
+      "security": {
+        "title": "4. ደህንነት",
+        "content": "መረጃዎን ለመጠበቅ የኢንዱስትሪ ደረጃውን የጠበቀ የደህንነት እርምጃዎች ተዘጋጅተዋል።"
+      },
+      "cookies": {
+        "title": "5. ኩኪዎች",
+        "content": "የእኛ ድህረ ገጽ የተጠቃሚ ተሞክሮን ለማሻሻል ኩኪዎችን ይጠቀማል። የኩኪ ምርጫዎችዎን በአሳሽዎ ቅንብሮች ውስጥ ማስተዳደር ይችላሉ።"
+      },
+      "rights": {
+        "title": "6. የእርስዎ መብቶች",
+        "content": "በቱርክ የግል መረጃ ጥበቃ ህግ (KVKK) መሰረት፣ የግል መረጃዎን የመድረስ፣ የማረም እና የመሰረዝ መብት አለዎት።"
+      }
+    }
   },
   "products": {
     "title": "ምርቶች",
@@ -235,11 +570,19 @@
       "priceDesc": "ዋጋ (ከከፍተኛ እስከ ዝቅተኛ)",
       "popular": "በጣም ተወዳጅ"
     },
+    "pagination": {
+      "prev": "ቀዳሚ",
+      "next": "ቀጣይ"
+    },
     "status": {
       "draft": "ረቂቅ",
+      "pending": "ማጽደቅን በመጠባበቅ ላይ",
       "active": "ንቁ",
+      "inactive": "ተገብሮ",
+      "outOfStock": "በክምችት አልቋል",
+      "expired": "የስልጣን ዘመናቸው አልቋል።",
       "sold": "ተሸጧል",
-      "pending": "ማጽደቅን በመጠባበቅ ላይ"
+      "rejected": "ውድቅ ተደርጓል"
     },
     "condition": {
       "new": "አዲስ",
@@ -250,12 +593,16 @@
     "outOfStock": "በክምችት አልቋል",
     "inStock": "ለሽያጭ የቀረበ እቃ",
     "noResults": "ምርቱ አልተገኘም።",
-    "loading": "ምርቶችን በመጫን ላይ...",
+    "loading": "ምርቶች እየተጫኑ ነው...",
     "perPage": "በገጽ",
     "showing": "በ{from} እና {to} መካከል የ{total} ምርቶች ድምር።",
+    "fetchError": "ምርቶቹን በመስቀል ላይ ስህተት ተከስቷል።",
+    "loadMore": "ተጨማሪ አሳይ",
+    "showingOf": "{count} / {total} ምርቶች እየታዩ ነው።",
     "loginToFavorite": "ወደ ተወዳጆች ለማከል ይግቡ።",
     "addedToFavorites": "ወደ ተወዳጆች ታክሏል",
-    "removedFromFavorites": "ከተወዳጆች ተወግዷል"
+    "removedFromFavorites": "ከተወዳጆች ተወግዷል",
+    "favoriteError": "ተወዳጅ ክወና አልተሳካም።"
   },
   "productDetail": {
     "addToFavorites": "ወደ ተወዳጆች አክል",
@@ -279,16 +626,31 @@
     "maxOrder": "ከፍተኛው ትዕዛዝ",
     "publishedAt": "የታተመበት ቀን",
     "views": "ታይቷል",
-    "reviews": "ግምገማ",
+    "reviews": {
+      "title": "ግምገማዎች",
+      "reviewCount": "ግምገማ",
+      "noReviews": "እስካሁን ምንም ግምገማ የለም።",
+      "verified": "የተረጋገጠ ገዢ"
+    },
     "similarProducts": "ተመሳሳይ ምርቶች",
     "sellerProducts": "የሻጩ ሌሎች ምርቶች",
-    "contactSeller": "ሻጩን ያነጋግሩ",
-    "loginRequired": "ወደ ተወዳጆች ለማከል ይግቡ።",
+    "contactSeller": "ሻጩን ያግኙ",
+    "makeOffer": "ቅናሽ ያስገቡ",
+    "loginRequired": "ይህንን ተግባር ለማከናወን እባክዎ ይግቡ።",
     "addedToFavorites": "ወደ ተወዳጆች ታክሏል",
     "removedFromFavorites": "ከተወዳጆች ተወግዷል",
     "linkCopied": "አገናኙ ተገልብጧል።",
     "messagingComingSoon": "የመልእክት ባህሪ በቅርቡ ይመጣል።",
-    "productNotFound": "ምርቱ አልተገኘም።"
+    "productNotFound": "ምርቱ አልተገኘም።",
+    "contacting": "ግንኙነት እየተደረገ ነው...",
+    "contactError": "ግንኙነት አልተሳካም። እባክዎ እንደገና ይሞክሩ።",
+    "noImage": "ምንም ምስል የለም።",
+    "defaultLocation": "ቱሪክ",
+    "inquiryMessage": "ስለ {title} መረጃ ማግኘት እፈልጋለሁ።",
+    "breadcrumb": {
+      "home": "መነሻ",
+      "products": "ምርቶች"
+    }
   },
   "seller": {
     "title": "የሻጭ መረጃ",
@@ -300,6 +662,70 @@
     "call": "ፈልግ",
     "viewProfile": "መገለጫ ይመልከቱ"
   },
+  "sellers": {
+    "title": "ሻጮች",
+    "description": "አስተማማኝ ሻጮችን ያግኙ።",
+    "search": "ሻጭ ያግኙ...",
+    "sort": "ደርድር",
+    "sortOptions": {
+      "newest": "የቅርብ ጊዜ",
+      "mostSales": "ምርጥ ሻጭ",
+      "topRated": "ከፍተኛ ውጤት",
+      "mostProducts": "አብዛኛዎቹ ማስታወቂያዎች"
+    },
+    "noResults": "ሻጩ አልተገኘም።",
+    "loading": "ሻጮች እየጫኑ ነው...",
+    "showing": "{count} ሻጮች ተገኝተዋል",
+    "verified": "የተረጋገጠ",
+    "sales": "ሽያጭ",
+    "products": "ማስታወቂያ",
+    "reviews": "ግምገማ",
+    "rating": "ነጥብ",
+    "viewProducts": "ምርቶችን ይመልከቱ",
+    "contactSeller": "መልእክት ላክ",
+    "memberSince": "አባል ከ {year} ጀምሮ",
+    "fetchError": "ሻጮችን በመጫን ላይ ሳለ ስህተት ተከስቷል",
+    "detail": {
+      "title": "የሻጭ መገለጫ",
+      "about": "ስለ",
+      "businessInfo": "የንግድ መረጃ",
+      "businessName": "የንግድ ስም",
+      "businessType": "የንግድ ጉብኝት",
+      "email": "ኢሜይል",
+      "phone": "ስልክ",
+      "website": "ድህረገፅ",
+      "description": "ማብራሪያ",
+      "policies": "ፖሊሲዎች",
+      "returnPolicy": "የመመለሻ ፖሊሲ",
+      "shippingPolicy": "የማጓጓዣ መመሪያ",
+      "businessHours": "የስራ ሰዓቶች",
+      "paymentMethods": "የክፍያ ዘዴዎች",
+      "allProducts": "ሁሉም ምርቶች",
+      "stats": {
+        "totalSales": "ጠቅላላ ሽያጭ",
+        "totalProducts": "ጠቅላላ ምርቶች",
+        "totalReviews": "ግምገማ",
+        "rating": "ነጥብ"
+      },
+      "notFound": "ሻጩ አልተገኘም።",
+      "backToList": "ለሻጮች ስጡ",
+      "contactInfo": "ኮሙኒኬሽን",
+      "noProducts": "ይህ ሻጭ እስካሁን ምንም ዝርዝር የለውም።",
+      "noPolicies": "ሻጩ ፖሊሲዎቹን ገና አልገለጸም።",
+      "fetchError": "የሻጭ መረጃን በመስቀል ላይ ስህተት ተከስቷል።",
+      "productsLoadError": "የሻጩን ምርቶች በመስቀል ላይ ስህተት ተከስቷል።",
+      "reviewsTab": "ግምገማዎች",
+      "reviews": {
+        "summary": "የግምገማ ማጠቃለያ",
+        "reviewCount": "ግምገማ",
+        "communication": "ኮሙኒኬሽን",
+        "shippingSpeed": "የማጓጓዣ ፍጥነት",
+        "productQuality": "የምርት ጥራት",
+        "noReviews": "እስካሁን ምንም ግምገማ የለም።",
+        "verified": "የተረጋገጠ ገዢ"
+      }
+    }
+  },
   "editListing": {
     "title": "ማስታወቂያውን ያርትዑ",
     "saveChanges": "ለውጦችን አስቀምጥ",
@@ -307,6 +733,10 @@
     "updateSuccess": "ማስታወቂያው በተሳካ ሁኔታ ተዘምኗል።",
     "updateFailed": "ዝርዝሩን በማዘመን ላይ ስህተት ተከስቷል።",
     "loadError": "ማስታወቂያውን በመጫን ላይ ሳለ ስህተት ተከስቷል።",
+    "sellerNotFound": "የሻጭ መገለጫ አልተገኘም።",
+    "sellerLoadError": "የሻጭ መገለጫ ሊጫን አልቻለም።",
+    "userNotFound": "የተጠቃሚ መረጃ ማግኘት አልተቻለም። እባክዎ እንደገና ይግቡ።",
+    "locationNotFound": "የአካባቢ መረጃ ማግኘት አልተቻለም። እባክዎ ገጹን ያድሱ።",
     "basicInfo": "መሰረታዊ መረጃ",
     "categoryAndCondition": "ምድብ እና ሁኔታ",
     "pricing": "የዋጋ አወጣጥ",
@@ -314,6 +744,8 @@
     "images": "ምስሎች",
     "existingImages": "የሚገኙ ምስሎች",
     "addImage": "ምስል ያክሉ",
+    "maxImages": "ቢበዛ 10 ምስሎችን መስቀል ይችላሉ።",
+    "imageHint": "ቢያንስ 1፣ ቢበዛ 10 ምስሎች። በPNG፣ JPG ወይም WEBP ቅርጸት።",
     "uploadingImages": "ምስሎች እየተጫኑ ነው...",
     "uploadingImage": "ምስሉ እየተጫነ ነው።",
     "imageUploadFailed": "ምስሉ ሊጫን አልቻለም።",
@@ -358,6 +790,7 @@
     "addImage": "ምስል ያክሉ",
     "maxImages": "ቢበዛ 10 ምስሎችን መስቀል ይችላሉ።",
     "imageHint": "ቢያንስ 1፣ ቢበዛ 10 ምስሎች። በPNG፣ JPG ወይም WEBP ቅርጸት።",
+    "location": "የአካባቢ መረጃ",
     "fields": {
       "title": "የማስታወቂያ ርዕስ",
       "shortDescription": "አጭር መግለጫ",
@@ -370,13 +803,29 @@
       "shippingAvailable": "መላኪያ ይገኛል።",
       "shippingCost": "የማጓጓዣ ክፍያ",
       "weight": "ክብደት",
-      "weightUnit": "የክብደት አሃድ"
+      "weightUnit": "የክብደት አሃድ",
+      "city": "ከተማ",
+      "address": "አድራሻ",
+      "postalCode": "የፖስታ መላኪያ ኮድ"
     },
     "placeholders": {
       "title": "ምሳሌ፡ የ2 ዓመት ሆልስቴይን ላም",
       "shortDescription": "የምርት መግለጫ (ቢበዛ 200 ቁምፊዎች)",
       "description": "ስለ ምርቱ ዝርዝር መረጃ ያቅርቡ…",
-      "category": "ምድብ ይምረጡ።"
+      "category": "ምድብ ይምረጡ።",
+      "city": "ወደ ከተማው ግባ",
+      "address": "ሙሉ አድራሻውን ያስገቡ።",
+      "postalCode": "የፖስታ መላኪያ ኮድ"
+    },
+    "errors": {
+      "titleRequired": "የማስታወቂያ ርዕስ ግዴታ ነው።",
+      "shortDescriptionRequired": "አጭር መግለጫ ያስፈልጋል።",
+      "descriptionRequired": "ዝርዝር ማብራሪያ ያስፈልጋል።",
+      "categoryRequired": "የምድብ ምርጫ ግዴታ ነው።",
+      "priceRequired": "ዋጋ ግዴታ ነው።",
+      "cityRequired": "የከተማው መረጃ ያስፈልጋል።",
+      "addressRequired": "የአድራሻ መረጃ ያስፈልጋል።",
+      "locationError": "ቦታውን በመፍጠር ላይ ስህተት ተከስቷል።"
     },
     "success": "ማስታወቂያው በተሳካ ሁኔታ ተፈጥሯል።",
     "error": "ማስታወቂያውን በሚፈጥሩበት ጊዜ ስህተት ተከስቷል።",
@@ -388,24 +837,53 @@
     "draftSaved": "ረቂቅ ተቀምጧል",
     "productCreated": "ምርቱ በተሳካ ሁኔታ ተፈጥሯል።",
     "creationFailed": "ምርቱ ሊፈጠር አልቻለም። እባክዎ እንደገና ይሞክሩ።",
-    "errors": {
-      "titleRequired": "የማስታወቂያ ርዕስ ግዴታ ነው።",
-      "shortDescriptionRequired": "አጭር መግለጫ ያስፈልጋል።",
-      "descriptionRequired": "ዝርዝር ማብራሪያ ያስፈልጋል።",
-      "categoryRequired": "የምድብ ምርጫ ግዴታ ነው።",
-      "priceRequired": "ትክክለኛ ዋጋ ያስገቡ።"
-    }
+    "userNotFound": "የተጠቃሚ መረጃ ማግኘት አልተቻለም። እባክዎ እንደገና ይግቡ።",
+    "defaultBusinessName": "የእኔ ንግድ"
+  },
+  "becomeSeller": {
+    "title": "ሻጭ ይሁኑ",
+    "description": "የኩባንያ መግለጫ",
+    "alreadySeller": "የሻጭ መገለጫ አስቀድሞ አለዎት።",
+    "goToListings": "ወደ ዝርዝሮቼ ሂድ",
+    "businessInfo": "የንግድ መረጃ",
+    "contactInfo": "የእውቂያ መረጃ",
+    "businessName": "የንግድ ስም",
+    "businessNamePlaceholder": "ምሳሌ፡ የይልማዝ እርሻ",
+    "businessType": "የንግድ ጉብኝት",
+    "businessTypePlaceholder": "የንግድዎን አይነት ይምረጡ።",
+    "businessTypes": {
+      "individual": "ግለሰብ",
+      "company": "ኩባንያ",
+      "cooperative": "የህብረት ሥራ ማህበር",
+      "farm": "እርሻ"
+    },
+    "taxNumber": "የግብር ቁጥር",
+    "taxNumberPlaceholder": "የግብር መለያ ቁጥርዎን ያስገቡ (አማራጭ)",
+    "descriptionPlaceholder": "ስለ ንግድዎ አጭር መግለጫ ይፃፉ...",
+    "phone": "ስልክ",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "ድህረገፅ",
+    "websitePlaceholder": "https://www.examplesite.com (አማራጭ)",
+    "submit": "የሻጭ መገለጫ ይፍጠሩ",
+    "submitting": "መገለጫ በመፍጠር ላይ...",
+    "success": "የሻጭ መገለጫዎ በተሳካ ሁኔታ ተፈጥሯል!",
+    "error": "የሻጩን መገለጫ በመፍጠር ላይ ስህተት ተከስቷል።",
+    "taxNumberHelp": "የ10 ወይም የ11 አሃዝ የግብር ቁጥርዎን ያስገቡ (አማራጭ)",
+    "phoneHelp": "ለምሳሌ፡ +90 555 123 45 67 ወይም 0555 123 45 67",
+    "websiteHelp": "ለምሳሌ፡ www.isletmem.com ወይም https://isletmem.com",
+    "alreadySellerDescription": "ዝርዝሮችዎን ለማስተዳደር ከታች ያለውን አዝራር መጠቀም ይችላሉ።",
+    "newListing": "አዲስ ዝርዝር ያክሉ"
   },
   "fileUpload": {
     "dragDrop": "ፎቶ ወይም ቪዲዮ ይስቀሉ።",
     "dragDropHint": "ለመምረጥ ይጎትቱና ይጣሉ ወይም ጠቅ ያድርጉ።",
     "dropHere": "ተወው...",
     "imageLimit": "ፎቶ፡ ቢበዛ 10ሜባ",
-    "videoLimit": "ቪዲዮ፡ ቢበዛ 50ሜባ",
+    "videoLimit": "ቪዲዮ፡ ቢበዛ 100ሜባ",
     "uploadCount": "{current} / {max} ተጭኗል",
     "maxFilesError": "ቢበዛ {max} ሚዲያ መስቀል ይችላሉ።",
     "imageTooLarge": "ፎቶው ከ10ሜባ ያነሰ መሆን አለበት።",
-    "videoTooLarge": "ቪዲዮው ከ50ሜባ ያነሰ መሆን አለበት።",
+    "videoTooLarge": "ቪዲዮው ከ100ሜባ ያነሰ መሆን አለበት።",
     "optimizing": "በማመቻቸት ላይ...",
     "uploading": "በመጫን ላይ...",
     "queued": "ወረፋ እየጠበቅን ነው...",
@@ -418,10 +896,834 @@
     "coverBadge": "ክዳን",
     "videoBadge": "ቪዲዮ",
     "coverUpdated": "የሽፋን ፎቶው በተሳካ ሁኔታ ተስተካክሏል።",
-    "optimizationInfo": "ፎቶዎች ከድር ደረጃዎች ጋር እንዲጣጣሙ ተመቻችተዋል",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "optimizationInfo": "ፎቶዎች ከድር ደረጃዎች ጋር እንዲጣጣሙ የተመቻቹ ናቸው",
+    "selectImage": "የእይታ ምርጫ",
+    "changeImage": "ለውጥ",
+    "removeImage": "አስወግድ",
+    "videoProcessing": "ቪዲዮ እየተሰራ ነው...",
+    "videoProcessingFailed": "ክወናው አልተሳካም።",
+    "videoProcessingPollError": "የቪዲዮ ሂደት ሁኔታ ማግኘት አልተቻለም። እባክዎ ገጹን ያድሱ።",
+    "reorderError": "ፋይሉ መደርደር አልተቻለም።",
+    "coverUpdateError": "የሽፋን ፎቶው ሊዘመን አልቻለም።"
+  },
+  "error": {
+    "title": "ስህተት ተከስቷል።",
+    "description": "ያልተጠበቀ ስህተት ተከስቷል። እባክዎ ገጹን ያድሱ ወይም ቆይተው እንደገና ይሞክሩ።",
+    "retry": "እንደገና ሞክር",
+    "goBack": "ወደ ኋላ አትመለስ",
+    "goHome": "መነሻ",
+    "notFound": {
+      "title": "ገጽ አልተገኘም",
+      "description": "የሚፈልጉት ገጽ ወይም አይገኝም ወይም ተዛውሯል።",
+      "goHome": "ወደ መነሻ ገጽ ተመለስ"
+    }
+  },
+  "search": {
+    "title": "ፈልግ",
+    "placeholder": "ምርቶችን፣ ምድቦችን ወይም ሻጮችን ይፈልጉ...",
+    "searchButton": "ፈልግ",
+    "searchingFor": "ተፈላጊ",
+    "loading": "ፈልጌ ነበር...",
+    "resultsCount": "የ{count} ውጤቶች ተገኝተዋል።",
+    "noResults": "ምንም ውጤት አልተገኘም።",
+    "tryDifferentSearch": "የተለያዩ ቁልፍ ቃላትን ይሞክሩ ወይም ማጣሪያዎቹን ይቀይሩ።",
+    "filters": {
+      "title": "ማጣሪያዎች",
+      "category": "ምድብ",
+      "allCategories": "ሁሉም ምድቦች",
+      "condition": "ሁኔታ",
+      "allConditions": "ሁሉም ጉዳዮች",
+      "priceRange": "የዋጋ ክልል",
+      "price": "ዋጋ",
+      "min": "ዝቅተኛ",
+      "max": "ማክስ",
+      "apply": "ያመልክቱ",
+      "clear": "ንፁህ",
+      "clearAll": "ሁሉንም አጽዳ"
+    },
+    "fetchError": "የፍለጋ ውጤቶችን በመጫን ላይ ሳለ ስህተት ተከስቷል",
+    "recentSearches": "የቅርብ ጊዜ ፍለጋዎች",
+    "clearHistory": "ታሪክን አጽዳ",
+    "noSearchHistory": "እስካሁን የፍለጋ ታሪክ የለህም።",
+    "deleteHistoryError": "የፍለጋ ታሪክን በመሰረዝ ላይ ስህተት ተከስቷል።"
+  },
+  "categories": {
+    "title": "የምድብ አስተዳደር",
+    "description": "ምድቦችን ከዚህ ያስተዳድሩ።",
+    "noCategories": "እስካሁን ምንም ምድቦች አልተጨመሩም።",
+    "createFirst": "የመጀመሪያውን ምድብ ይፍጠሩ።",
+    "fetchError": "ምድቦቹን በመጫን ላይ ሳለ ስህተት ተከስቷል።",
+    "createSuccess": "ምድብ በተሳካ ሁኔታ ተፈጥሯል",
+    "createError": "ምድቡን በመፍጠር ላይ ስህተት ተከስቷል።",
+    "updateSuccess": "ምድብ በተሳካ ሁኔታ ተዘምኗል",
+    "updateError": "ምድቡን በማዘመን ላይ ስህተት ተከስቷል።",
+    "deleteSuccess": "ምድቡ በተሳካ ሁኔታ ተሰርዟል።",
+    "deleteError": "ምድቡን በመሰረዝ ላይ ሳለ አንድ ስህተት ተከስቷል።",
+    "activateSuccess": "ምድቡ ነቅቷል።",
+    "deactivateSuccess": "ምድቡ ተሰናክሏል።",
+    "statusError": "ሁኔታውን በመቀየር ላይ ስህተት ተከስቷል።",
+    "loadError": "ምድቡን በመጫን ላይ ሳለ ስህተት ተከስቷል",
+    "filters": {
+      "all": "ሁሉም",
+      "active": "ንቁ",
+      "inactive": "ንቁ ያልሆነ"
+    },
+    "table": {
+      "name": "የምድብ ስም",
+      "slug": "ስሉግ",
+      "sortOrder": "ተከታታይ ቁጥር",
+      "subCategories": "ንዑስ ምድብ",
+      "status": "ሁኔታ",
+      "actions": "ግብይቶች"
+    },
+    "actions": {
+      "edit": "አርትዕ",
+      "delete": "ሰርዝ",
+      "activate": "አግብር",
+      "deactivate": "ተገብሮ መዋቅር"
+    },
+    "deleteDialog": {
+      "title": "ምድብ ሰርዝ",
+      "description": "ይህንን ምድብ መሰረዝ እንደሚፈልጉ እርግጠኛ ነዎት? ይህ እርምጃ የማይቀለበስ ነው።",
+      "cancel": "ሰርዝ",
+      "confirm": "ሰርዝ"
+    },
+    "addNew": "አዲስ ምድብ ያክሉ",
+    "loadMore": "ተጨማሪ ያውርዱ",
+    "loadingMore": "በመጫን ላይ...",
+    "form": {
+      "newTitle": "አዲስ ምድብ ይፍጠሩ",
+      "editTitle": "ምድብን አርትዕ ያድርጉ",
+      "name": "የምድብ ስም",
+      "namePlaceholder": "ምሳሌ፡ ከብቶች",
+      "slug": "ስሉግ",
+      "slugPlaceholder": "ምሳሌ፡ ትላልቅ የከብት እርባታ",
+      "description": "ማብራሪያ",
+      "descriptionPlaceholder": "ስለ ምድቡ አጭር መግለጫ...",
+      "parentCategory": "የላይኛው ምድብ",
+      "parentCategoryPlaceholder": "ከፍተኛ ምድብ ይምረጡ (አማራጭ)",
+      "noParent": "ከፍተኛ ምድብ የለም (ዋና ምድብ)",
+      "sortOrder": "የተከታታይ ቁጥር",
+      "isActive": "ንቁ",
+      "iconUrl": "የአዶ ዩአርኤል",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "አስቀምጥ",
+      "submitting": "በማስቀመጥ ላይ...",
+      "updating": "በማዘመን ላይ...",
+      "errors": {
+        "nameRequired": "የምድብ ስም ያስፈልጋል።",
+        "slugRequired": "ስሉጎች ግዴታ ናቸው።"
+      }
+    }
+  },
+  "offers": {
+    "title": "ፕሮፖዛሎች",
+    "description": "ገቢ እና ወጪ ቅናሾችዎን ያስተዳድሩ።",
+    "received": "የሚመጡ ቅናሾች",
+    "sent": "ቅናሾች ቀርበዋል",
+    "noReceivedOffers": "እስካሁን ምንም ቅናሾች አልተቀበሉም።",
+    "noSentOffers": "እስካሁን ቅናሽ አላስገቡም።",
+    "browseProducts": "ምርቶችን ያስሱ",
+    "viewProduct": "ምርቱን ይመልከቱ",
+    "accept": "ተቀበል",
+    "reject": "ውድቅ አድርግ",
+    "withdraw": "ገንዘብ ማውጣት",
+    "makeOffer": "ቅናሽ ያስገቡ",
+    "sendOffer": "ቅናሽ ይላኩ",
+    "sending": "በመላክ ላይ...",
+    "cancel": "ሰርዝ",
+    "listingPrice": "የተዋወቀ ዋጋ",
+    "yourOffer": "የእርስዎ ቅናሽ",
+    "quantity": "መጠን",
+    "messageOptional": "መልዕክት (አማራጭ)",
+    "messagePlaceholder": "ከሻጩ ጋር መጋራት የምትፈልጉት ማስታወሻ...",
+    "expiresAt": "የመጨረሻው ትክክለኛ ቀን",
+    "offerSent": "ቅናሽዎ በተሳካ ሁኔታ ተልኳል።",
+    "offerError": "ቅናሹን በመላክ ላይ ስህተት ተከስቷል።",
+    "acceptSuccess": "ቅናሹ ተቀባይነት አገኘ።",
+    "rejectSuccess": "ቅናሹ ውድቅ ተደርጓል።",
+    "withdrawSuccess": "ቅናሹ ተሰረዘ።",
+    "actionError": "በሂደቱ ወቅት አንድ ስህተት ተከስቷል።",
+    "fetchError": "ቅናሾቹን በመጫን ላይ ስህተት ተከስቷል።",
+    "loginRequired": "ጨረታ ለማስገባት ይግቡ።",
+    "invalidPrice": "ትክክለኛ ዋጋ ያስገቡ።",
+    "invalidQuantity": "ትክክለኛ መጠን ያስገቡ።",
+    "status": {
+      "pending": "በመጠባበቅ ላይ",
+      "accepted": "ተቀባይነት አግኝቷል",
+      "rejected": "ውድቅ ተደርጓል",
+      "countered": "የቅናሽ ቅናሽ",
+      "expired": "የስልጣን ዘመናቸው አልቋል።",
+      "withdrawn": "አቋርጧል"
+    }
+  },
+  "deals": {
+    "title": "ስምምነቶች",
+    "description": "የግዢ ስምምነቶችዎን ይከተሉ።",
+    "buying": "ምሁራን",
+    "selling": "ሽያጭ",
+    "noBuyingDeals": "እስካሁን የተማሪ ምዝገባ ሂደት የለዎትም።",
+    "noSellingDeals": "እስካሁን ምንም የሽያጭ ግብይቶች የሉዎትም።",
+    "browseProducts": "ምርቶችን ያስሱ",
+    "viewProduct": "ምርቱን ይመልከቱ",
+    "activeDeals": "ንቁ ስምምነቶች",
+    "completedDeals": "ተጠናቋል",
+    "purchases": "ምሁራን",
+    "sales": "ሽያጭ",
+    "fetchError": "ስምምነቶችን በመጫን ላይ ሳለ ስህተት ተከስቷል",
+    "dealStatus": {
+      "pending": "በመጠባበቅ ላይ",
+      "confirmed": "የተረጋገጠ",
+      "processing": "በዝግጅት ላይ",
+      "shipped": "በጭነቱ ውስጥ",
+      "delivered": "ደርሷል",
+      "completed": "ተጠናቋል",
+      "cancelled": "ተሰርዟል",
+      "disputed": "ስምምነት"
+    },
+    "delivery": {
+      "pickup": "በእጅ ማድረስ",
+      "shipping": "በጭነት",
+      "transport": "በትራንስፖርት"
+    },
+    "requestTransport": "የማጓጓዣ ጥያቄ"
+  },
+  "farms": {
+    "title": "እርሻዎቼ",
+    "description": "እርሻዎችዎን ያስተዳድሩ እና ያዘምኑ።",
+    "addFarm": "እርሻን ያክሉ",
+    "editFarm": "የእርሻ አስተዳደር",
+    "noFarms": "እስካሁን እርሻ አላከልክም።",
+    "farmName": "የእርሻ ስም",
+    "registrationNumber": "የምዝገባ ቁጥር",
+    "location": "አካባቢ",
+    "selectLocation": "ቦታ ይምረጡ።",
+    "addLocationFirst": "በመጀመሪያ፣ ቦታ ያክሉ።",
+    "farmTypeLabel": "የእርሻ ጉብኝት",
+    "farmDescription": "ማብራሪያ",
+    "totalArea": "ጠቅላላ ቦታ",
+    "cultivatedArea": "የእርሻ ቦታ",
+    "certifications": "የምስክር ወረቀቶች",
+    "certificationsPlaceholder": "ISO 22000፣ GlobalGAP፣ ወዘተ.",
+    "organic": "ኦርጋኒክ",
+    "verified": "የተረጋገጠ",
+    "save": "አስቀምጥ",
+    "saving": "በማስቀመጥ ላይ...",
+    "cancel": "ሰርዝ",
+    "edit": "አርትዕ",
+    "delete": "ሰርዝ",
+    "sellerRequired": "የሻጭ መገለጫ ያስፈልጋል",
+    "sellerRequiredDesc": "እርሻን ለመጨመር በመጀመሪያ የሻጭዎን መገለጫ መፍጠር ያስፈልግዎታል።",
+    "becomeSeller": "ሻጭ ይሁኑ",
+    "createSuccess": "እርሻው በተሳካ ሁኔታ ተጨምሯል።",
+    "updateSuccess": "እርሻው በተሳካ ሁኔታ ተዘምኗል።",
+    "deleteSuccess": "እርሻው በተሳካ ሁኔታ ተሰርዟል።",
+    "saveError": "እርሻውን በመመዝገብ ላይ ሳለ ስህተት ተከስቷል።",
+    "deleteError": "እርሻውን በመሰረዝ ላይ ሳለ አንድ ስህተት ተከስቷል።",
+    "fetchError": "የእርሻ መረጃን በመስቀል ላይ ስህተት ተከስቷል።",
+    "farmType": {
+      "livestock": "የእንስሳት እርባታ",
+      "crop": "ግብርና",
+      "mixed": "የተቀላቀለ",
+      "poultry": "ክንፍ ያለው",
+      "dairy": "የወተት እርሻ",
+      "aquaculture": "የውሃ ምርቶች"
+    }
+  },
+  "transporters": {
+    "title": "አጓጓዦች",
+    "description": "የእንስሳትና የምርት ትራንስፖርት አገልግሎቶች",
+    "searchPlaceholder": "መጓጓዣ ያግኙ ...",
+    "noTransporters": "እስካሁን የተመዘገቡ አገልግሎት አቅራቢዎች የሉም።",
+    "verified": "የተረጋገጠ",
+    "transports": "ትራንስፖርት",
+    "viewProfile": "መገለጫ ይመልከቱ",
+    "sort": {
+      "newest": "የቅርብ ጊዜ",
+      "rating": "ከፍተኛ ውጤት",
+      "mostTransports": "በጣም ተደጋጋሚ መላኪያ"
+    },
+    "pagination": {
+      "previous": "ቀዳሚ",
+      "next": "ቀጣይ",
+      "page": "ገጽ {ገጽ}"
+    }
+  },
+  "transport": {
+    "title": "የእኔ የመላኪያ ጥያቄዎች",
+    "description": "የመላኪያ ጥያቄዎችን ይከታተሉ።",
+    "findTransporter": "መጓጓዣ ያግኙ",
+    "active": "ንቁ",
+    "completed": "ተጠናቋል",
+    "total": "ጠቅላላ",
+    "asSeller": "እንደ ሻጭ",
+    "asBuyer": "እንደ ገዢ",
+    "noSellerRequests": "እንደ ሻጭ፣ የመላኪያ መስፈርት የለዎትም።",
+    "noBuyerRequests": "እንደ ተቀባዩ፣ የመላኪያ ጥያቄ የለዎትም።",
+    "viewProduct": "ምርቱን ይመልከቱ",
+    "pickup": "ተቀበል",
+    "delivery": "ማድረስ",
+    "urgent": "አስቸኳይ",
+    "fetchError": "የመላኪያ ጥያቄዎችን በመስቀል ላይ ስህተት ተከስቷል።",
+    "trackShipment": "ተከተል",
+    "transportStatus": {
+      "pending": "በመጠባበቅ ላይ",
+      "inPool": "በመዋኛ ገንዳ ውስጥ",
+      "assigned": "ተሾመ",
+      "pickedUp": "ደረሰኝ",
+      "inTransit": "በመንገድ ላይ",
+      "delivered": "ደርሷል",
+      "completed": "ተጠናቋል",
+      "cancelled": "ተሰርዟል"
+    },
+    "transportType": {
+      "standard": "መደበኛ",
+      "refrigerated": "ቀዝቃዛ ሰንሰለት",
+      "liveAnimal": "ሕያው እንስሳት",
+      "hazardous": "አደገኛ ቁሳቁሶች",
+      "oversized": "ትልቅ መጠን"
+    }
+  },
+  "moderation": {
+    "title": "የምርት ማስተካከያ",
+    "description": "ማጽደቅን የሚጠብቁ ምርቶችን ይገምግሙ።",
+    "pending": "በመጠበቅ ላይ",
+    "allClear": "ሁሉም ምርቶች ተፈትሸዋል።",
+    "noPending": "ለማጽደቅ የሚጠብቁ ምርቶች የሉም።",
+    "awaitingReview": "ግምገማ በመጠባበቅ ላይ",
+    "by": "የሽያጭ ሰው፦",
+    "stock": "አክሲዮን",
+    "preview": "ከእርስዎ ጋር",
+    "approve": "አረጋግጥ",
+    "reject": "ውድቅ አድርግ",
+    "confirmReject": "ውድቅ አድርግ",
+    "cancelReject": "መተው",
+    "rejectReasonPlaceholder": "ውድቅ የተደረገበትን ምክንያት ጻፍ…",
+    "rejectReasonRequired": "ውድቅ ለማድረግ ምክንያት ግዴታ ነው።",
+    "approveSuccess": "ምርቱ በተሳካ ሁኔታ ጸድቋል።",
+    "rejectSuccess": "ምርቱ ውድቅ ተደርጓል።",
+    "actionError": "በሂደቱ ወቅት አንድ ስህተት ተከስቷል።",
+    "fetchError": "ምርቶቹን በመስቀል ላይ ስህተት ተከስቷል።",
+    "unauthorized": "ወደዚህ ገጽ የመድረስ ፈቃድ የለዎትም።"
+  },
+  "sellerModeration": {
+    "title": "የሻጭ አወያይነት",
+    "description": "የሻጭ መለያዎችን ይገምግሙ እና ያስተዳድሩ።",
+    "pending": "በመጠበቅ ላይ",
+    "allClear": "ሁሉም ሻጮች ምርመራ ተደርጎባቸዋል።",
+    "noPending": "ሻጮች አይጠብቁም።",
+    "verify": "አረጋግጥ",
+    "suspend": "አቁም",
+    "verifySuccess": "ሻጩ በተሳካ ሁኔታ ተረጋግጧል።",
+    "suspendSuccess": "ሻጩ ታግዷል።",
+    "actionError": "በሂደቱ ወቅት አንድ ስህተት ተከስቷል።",
+    "suspendReasonRequired": "የመታገድ ምክንያት ግዴታ ነው።",
+    "suspendReasonPlaceholder": "የተቋረጠበትን ምክንያት ጻፍ...",
+    "confirmSuspend": "አቁም",
+    "cancelSuspend": "መተው",
+    "statusLabels": {
+      "pendingVerification": "ማረጋገጫ በመጠባበቅ ላይ",
+      "active": "ንቁ",
+      "suspended": "ተንጠልጥሎ",
+      "banned": "የተከለከለ"
+    },
+    "filterAll": "ሁሉንም አሳይ",
+    "filterPending": "እየጠበቁ የነበሩት",
+    "filterActive": "ንብረቶች",
+    "filterSuspended": "ታግዷል",
+    "unauthorized": "ወደዚህ ገጽ የመድረስ ፈቃድ የለዎትም።",
+    "businessName": "የንግድ ስም",
+    "businessType": "የንግድ ጉብኝት",
+    "email": "ኢሜይል",
+    "phone": "ስልክ",
+    "status": "ሁኔታ",
+    "createdAt": "የምዝገባ ቀን"
+  },
+  "transporterModeration": {
+    "title": "የአገልግሎት አቅራቢ ማወያየት",
+    "description": "የአገልግሎት አቅራቢ መለያዎችን ይገምግሙ እና ያቀናብሩ።",
+    "pending": "በመጠበቅ ላይ",
+    "allClear": "ሁሉም አጓጓዦች ምርመራ ተደርጎባቸዋል።",
+    "noPending": "ምንም አይነት አጓጓዥ እየጠበቀ አይደለም።",
+    "verify": "አረጋግጥ",
+    "suspend": "አቁም",
+    "verifySuccess": "አጓጓዡ በተሳካ ሁኔታ ተረጋግጧል።",
+    "suspendSuccess": "አጓጓዡ ታግዷል።",
+    "actionError": "በሂደቱ ወቅት አንድ ስህተት ተከስቷል።",
+    "suspendReasonRequired": "የመታገድ ምክንያት ግዴታ ነው።",
+    "suspendReasonPlaceholder": "የተቋረጠበትን ምክንያት ጻፍ...",
+    "confirmSuspend": "አቁም",
+    "cancelSuspend": "መተው",
+    "statusLabels": {
+      "pendingVerification": "ማረጋገጫ በመጠባበቅ ላይ",
+      "active": "ንቁ",
+      "suspended": "ተንጠልጥሎ",
+      "banned": "የተከለከለ"
+    },
+    "filterAll": "ሁሉንም አሳይ",
+    "filterPending": "እየጠበቁ የነበሩት",
+    "filterActive": "ንብረቶች",
+    "filterSuspended": "ታግዷል",
+    "unauthorized": "ወደዚህ ገጽ የመድረስ ፈቃድ የለዎትም።",
+    "companyName": "የኩባንያ ስም",
+    "contactPerson": "የተፈቀደለት ሰው",
+    "email": "ኢሜይል",
+    "phone": "ስልክ",
+    "city": "ከተማ",
+    "status": "ሁኔታ",
+    "createdAt": "የምዝገባ ቀን"
+  },
+  "transporterDetail": {
+    "notFound": "ምንም አይነት መጓጓዣ አልተገኘም።",
+    "backToList": "ለትራንስፖርተሮች ይንዱ",
+    "verified": "የተረጋገጠ",
+    "totalTransports": "ጠቅላላ መላኪያ",
+    "completed": "ተጠናቀቀ",
+    "about": "ስለ",
+    "contact": "የእውቂያ መረጃ",
+    "businessInfo": "የንግድ መረጃ",
+    "license": "የፈቃድ ቁጥር",
+    "insurance": "የኢንሹራንስ መረጃ",
+    "fleet": "የመርከብ መረጃ",
+    "serviceRegions": "የአገልግሎት አካባቢዎች",
+    "specializations": "የባለሙያ ዘርፎች",
+    "certifications": "የምስክር ወረቀቶች"
+  },
+  "brands": {
+    "title": "የምርት ስም አስተዳደር",
+    "description": "የምርት ብራንዶችን ያስተዳድሩ።",
+    "addBrand": "የምርት ስም ያክሉ",
+    "editBrand": "የምርት ስም አርትዕ",
+    "noBrands": "እስካሁን ምንም አይነት የምርት ስሞች አልተጨመሩም።",
+    "brandName": "የምርት ስም",
+    "brandDescription": "ማብራሪያ",
+    "website": "ድህረገፅ",
+    "logoUrl": "የአርማ ዩአርኤል",
+    "save": "አስቀምጥ",
+    "saving": "በማስቀመጥ ላይ...",
+    "cancel": "ሰርዝ",
+    "edit": "አርትዕ",
+    "delete": "ሰርዝ",
+    "inactive": "ተገብሮ",
+    "products": "ምርት",
+    "createSuccess": "የምርት ስም በተሳካ ሁኔታ ታክሏል",
+    "updateSuccess": "የምርት ስሙ በተሳካ ሁኔታ ተዘምኗል።",
+    "deleteSuccess": "የምርት ስሙ በተሳካ ሁኔታ ተሰርዟል።",
+    "saveError": "የንግድ ምልክቱን በመመዝገብ ላይ ስህተት ተከስቷል።",
+    "deleteError": "የንግድ ምልክቱን በመሰረዝ ላይ ስህተት ተከስቷል።",
+    "fetchError": "የምርት ስሞችን በመጫን ላይ ስህተት ተከስቷል",
+    "unauthorized": "ወደዚህ ገጽ የመድረስ ፈቃድ የለዎትም።"
+  },
+  "transporterReviews": {
+    "title": "ግምገማዎች",
+    "reviewCount": "ግምገማ",
+    "noReviews": "እስካሁን ምንም ግምገማ የለም።",
+    "timeliness": "በሰዓቱ ማድረስ",
+    "communication": "ኮሙኒኬሽን",
+    "carefulHandling": "ጥንቃቄ የተሞላበት አያያዝ",
+    "professionalism": "ሙያዊነት"
+  },
+  "transportOffers": {
+    "title": "የማጓጓዣ ዋጋዎች",
+    "description": "ለማጓጓዣ ጥያቄዎች የሚያስገቡዋቸውን ዋጋዎች ያስተዳድሩ።",
+    "newOffer": "አዲስ ሀሳብ",
+    "transportRequestId": "የማጓጓዣ ጥያቄ መታወቂያ",
+    "requestIdPlaceholder": "የመላኪያ ጥያቄ መታወቂያውን ያስገቡ።",
+    "offeredPrice": "የቅናሽ ዋጋ",
+    "estimatedDays": "የተገመተው የቆይታ ጊዜ (ቀናት)",
+    "days": "ቀን",
+    "vehicleType": "የተሽከርካሪ አይነት",
+    "insuranceIncluded": "ኢንሹራንስ ተካትቷል",
+    "message": "መልእክት",
+    "cancel": "ሰርዝ",
+    "sending": "በመላክ ላይ...",
+    "sendOffer": "ቅናሽ ያስገቡ",
+    "cancelOffer": "ሰርዝ",
+    "pendingTab": "በመጠበቅ ላይ",
+    "historyTab": "ያለፈው",
+    "noPendingOffers": "ምንም በመጠባበቅ ላይ ያሉ ቅናሾች የሉዎትም።",
+    "noHistory": "ምንም ያለፉ ቅናሾች አልተገኙም።",
+    "status": {
+      "pending": "በመጠበቅ ላይ",
+      "accepted": "ተቀባይነት አግኝቷል",
+      "rejected": "ውድቅ ተደርጓል",
+      "expired": "የስልጣን ዘመናቸው አልቋል።",
+      "cancelled": "ተሰርዟል"
+    },
+    "createSuccess": "ቅናሹ በተሳካ ሁኔታ ቀርቦ ነበር።",
+    "createError": "ቅናሹን በመላክ ላይ ስህተት ተከስቷል።",
+    "cancelSuccess": "ቅናሹ ተሰርዟል።",
+    "cancelError": "ቅናሹን በመሰረዝ ላይ ሳለ አንድ ስህተት ተከስቷል።",
+    "fetchError": "ቅናሾቹን በመጫን ላይ ስህተት ተከስቷል።"
+  },
+  "animalInfo": {
+    "title": "የእንስሳት እና የምርት መረጃ",
+    "animalTab": "እንስሳ",
+    "healthTab": "ጤና",
+    "vaccinationsTab": "ክትባቶች",
+    "veterinaryTab": "የእንስሳት ሐኪም",
+    "breed": "ውድድር",
+    "genderLabel": "ጾታ",
+    "gender": {
+      "male": "ወንድ",
+      "female": "ሴት",
+      "unknown": "ያልታወቀ"
+    },
+    "age": "ዕድሜ",
+    "months": "ወር",
+    "weight": "ክብደት",
+    "color": "ቀለም",
+    "tagNumber": "የጆሮ ቁጥር",
+    "healthStatus": "የጤና ሁኔታ",
+    "health": {
+      "healthy": "ጤናማ",
+      "underTreatment": "በህክምና ላይ",
+      "recovering": "እሱ/እሷ እያገገመ ነው።",
+      "quarantined": "በለይቶ ማቆያ ውስጥ",
+      "unknown": "ያልታወቀ"
+    },
+    "purposeLabel": "የታሰበ አጠቃቀም",
+    "purpose": {
+      "breeding": "ስቲድ",
+      "dairy": "ወተት",
+      "meat": "ስጋ",
+      "egg": "እንቁላል",
+      "wool": "ሱፍ",
+      "working": "ስራ",
+      "pet": "የሀገር ውስጥ",
+      "other": "ሌላ"
+    },
+    "pregnancy": "እርግዝና",
+    "pregnant": "ነፍሰ ጡር",
+    "microchip": "የማይክሮቺፕ ቁጥር",
+    "passport": "የፓስፖርት ቁጥር",
+    "sireDetails": "የአባ መረጃ",
+    "damDetails": "ዋና መረጃ",
+    "diagnosis": "ምርመራ",
+    "treatment": "ሕክምና",
+    "medications": "መድሃኒቶች",
+    "veterinarian": "የእንስሳት ሐኪም",
+    "nextDue": "የሚቀጥለው የሬቤል ታሪክ",
+    "prescriptionRequired": "የሐኪም ማዘዣ ያስፈልገዋል",
+    "targetSpecies": "የታርጌት ጉብኝቶች",
+    "activeIngredients": "ንቁ ንጥረ ነገሮች",
+    "registrationNo": "የምዝገባ ቁጥር",
+    "storage": "ማከማቻ",
+    "chemicalTab": "ኬሚካል",
+    "feedTab": "ማጥመጃ",
+    "seedTab": "ዘር",
+    "machineryTab": "ማሽን",
+    "organic": "ኦርጋኒክ",
+    "toxicity": "መርዛማነት",
+    "gmoFree": "ጂኤምኦ-ነጻ",
+    "protein": "ፕሮቲን",
+    "fat": "ዘይት",
+    "fiber": "ፋይበር",
+    "hybrid": "ሃይብሪድ",
+    "germination": "ዘር ማብቀል",
+    "daysToMaturity": "ብስለት",
+    "daysLabel": "ቀን",
+    "warranty": "ዋስትና የተሰጠው",
+    "power": "ጥንካሬ",
+    "hoursUsed": "የአጠቃቀም ሰዓቶች",
+    "hours": "ሰአት",
+    "powerSource": "የኃይል አቅርቦት"
+  },
+  "productVariants": {
+    "title": "የምርት ልዩነቶች",
+    "variantCount": "ተለዋጭ",
+    "inStock": "ለሽያጭ የቀረበ እቃ",
+    "outOfStock": "ተሸጧል"
+  },
+  "productPrices": {
+    "title": "ዋጋዎች (ብዙ ምንዛሬ)",
+    "autoConversion": "ራስ-ሰር ትራንስፎርሜሽን",
+    "validUntil": "ትክክለኛነት"
+  },
+  "requestTransport": {
+    "title": "የመላኪያ ጥያቄ ይፍጠሩ",
+    "pickupLocation": "የመጫኛ ነጥብ",
+    "deliveryLocation": "የማድረሻ ነጥብ",
+    "city": "ከተማ",
+    "address": "አድራሻ",
+    "transportType": "የትራንስፖርት ጉብኝት",
+    "types": {
+      "standard": "መደበኛ",
+      "refrigerated": "ቀዝቃዛ ሰንሰለት",
+      "liveAnimal": "ሕያው እንስሳት",
+      "hazardous": "አደገኛ ቁሳቁሶች",
+      "oversized": "ትልቅ መጠን"
+    },
+    "weight": "ክብደት (ኪ.ግ)",
+    "weightPlaceholder": "ኪ.ግ.",
+    "preferredPickupDate": "የተመረጠው የሰቀላ ቀን",
+    "preferredDeliveryDate": "የሚመረጠው የማድረሻ ቀን",
+    "urgent": "አስቸኳይ ትራንስፖርት",
+    "specialInstructions": "ልዩ መመሪያዎች",
+    "instructionsPlaceholder": "የተወሰኑ መመሪያዎችን እዚህ ይፃፉ ...",
+    "cancel": "መተው",
+    "submit": "ፍላጎት ይፍጠሩ",
+    "submitting": "በፍጥረት ሂደት ውስጥ...",
+    "success": "የመላኪያ ጥያቄው በተሳካ ሁኔታ ተፈጥሯል።",
+    "error": "የመላኪያ ጥያቄውን በሚፈጥሩበት ጊዜ ስህተት ተከስቷል።"
+  },
+  "transportTracking": {
+    "title": "የመርከብ ክትትል",
+    "noTracking": "እስካሁን ምንም የመከታተያ መረጃ የለም።",
+    "update": "አዘምን"
+  },
+  "locations": {
+    "title": "አድራሻዎቼ",
+    "description": "የተመዘገቡ አድራሻዎችዎን ያስተዳድሩ።",
+    "addLocation": "አድራሻ ያክሉ",
+    "editLocation": "አድራሻን አርትዕ ያድርጉ",
+    "noLocations": "እስካሁን የተመዘገበ አድራሻ የለዎትም።",
+    "name": "የአድራሻ ስም",
+    "namePlaceholder": "ለምሳሌ፡ ቤት፣ ሥራ፣ እርሻ",
+    "address": "አድራሻ",
+    "addressLine2": "የአድራሻ መስመር 2",
+    "city": "ከተማ",
+    "state": "ወረዳ / ክልል",
+    "postalCode": "የፖስታ መላኪያ ኮድ",
+    "phone": "ስልክ",
+    "email": "ኢሜይል",
+    "cancel": "መተው",
+    "save": "አስቀምጥ",
+    "saving": "በማስቀመጥ ላይ...",
+    "typePickup": "በመጫን ላይ",
+    "typeDelivery": "ማድረስ",
+    "typeBoth": "ጄኔራል",
+    "createSuccess": "አድራሻው በተሳካ ሁኔታ ታክሏል።",
+    "createError": "አድራሻውን በማከል ላይ ስህተት ተከስቷል።",
+    "updateSuccess": "አድራሻው በተሳካ ሁኔታ ተዘምኗል።",
+    "updateError": "አድራሻውን በማዘመን ላይ ስህተት ተከስቷል።",
+    "deleteLocation": "አድራሻ ሰርዝ",
+    "deleteSuccess": "አድራሻው ተሰርዟል",
+    "deleteError": "አድራሻውን በመሰረዝ ላይ ስህተት ተከስቷል።",
+    "fetchError": "አድራሻዎቹን በመጫን ላይ ስህተት ተከስቷል።"
+  },
+  "systemSettings": {
+    "title": "የስርዓት ቅንብሮች",
+    "description": "የመድረክ ምንዛሬን፣ ቋንቋን፣ የክፍያ ዘዴዎችን፣ የመላኪያ እና የግብር ቅንብሮችን ይመልከቱ።",
+    "unauthorized": "ወደዚህ ገጽ የመድረስ ፈቃድ የለዎትም።",
+    "currenciesTab": "ምንዛሬዎች",
+    "languagesTab": "ቋንቋዎች",
+    "paymentTab": "የክፍያ ዘዴዎች",
+    "shippingTab": "ጭነት",
+    "taxTab": "ግብር",
+    "active": "ንቁ",
+    "inactive": "ተገብሮ",
+    "default": "ነባሪ",
+    "noCurrencies": "ምንዛሬው ገና አልተገለጸም።",
+    "noLanguages": "ቋንቋው ገና አልተገለጸም።",
+    "noPaymentMethods": "የክፍያ ዘዴው እስካሁን አልተገለጸም።",
+    "noCarriers": "የመርከብ ኩባንያው እስካሁን አልታወቀም።",
+    "noZones": "የጭነት ቦታው ገና አልተገለጸም።",
+    "noTaxRates": "የግብር መጠኑ ገና አልተገለጸም።",
+    "carriers": "የማጓጓዣ ኩባንያዎች",
+    "zones": "የጭነት ዞኖች",
+    "countries": "አገሮች",
+    "rates": "የማጓጓዣ ክፍያዎች",
+    "noRates": "የማጓጓዣ ወጪዎች ገና አልተገለጹም።",
+    "freeShipping": "ነጻ ማጓጓዣ",
+    "deliveryDays": "የቀን የማድረሻ ጊዜ"
+  },
+  "pushPermission": {
+    "title": "ማሳወቂያዎችን አንቃ",
+    "description": "ስለ አዳዲስ መልዕክቶች፣ ቅናሾች እና የትዕዛዝ ዝማኔዎች ማሳወቂያዎችን ይቀበሉ።",
+    "allow": "ፍቀድ",
+    "dismiss": "ገጠመ"
+  },
+  "healthRecords": {
+    "title": "የጤና መዝገቦች",
+    "description": "የእንስሳት ጤና መዝገቦችን እና የህክምና ታሪክን ያስተዳድሩ።",
+    "addRecord": "መዝገብ ያክሉ",
+    "editRecord": "መዝገብን አርትዕ ያድርጉ",
+    "deleteRecord": "መዝገብ ሰርዝ",
+    "noRecords": "የጤና መዝገብ እስካሁን አልተጨመረም።",
+    "animalInfoId": "የእንስሳት መታወቂያ",
+    "animalInfoIdPlaceholder": "የእንስሳትን መረጃ መታወቂያ ያስገቡ።",
+    "recordType": "የምዝገባ ጉብኝት",
+    "recordTypePlaceholder": "ምሳሌዎች፡ ምርመራ፣ ሕክምና፣ ቀዶ ጥገና",
+    "recordDate": "የምዝገባ ቀን",
+    "followUpDate": "ቀንን ያረጋግጡ",
+    "veterinarianName": "የእንስሳት ሐኪም",
+    "veterinarianLicense": "የፈቃድ ቁጥር",
+    "clinicName": "ክሊኒካዊ",
+    "diagnosis": "ምርመራ",
+    "treatment": "ሕክምና",
+    "medications": "መድሃኒቶች",
+    "medicationsPlaceholder": "ለምሳሌ፡ ፔኒሲሊን 500 ሚ.ግ.፣ አይቡፕሮፌን",
+    "notes": "ማስታወሻዎች",
+    "documentUrl": "የሰነድ ዩአርኤል",
+    "saving": "በማስቀመጥ ላይ...",
+    "createSuccess": "የጤና መዝገብ በተሳካ ሁኔታ ታክሏል።",
+    "updateSuccess": "የጤና መዝገብ በተሳካ ሁኔታ ተዘምኗል።",
+    "deleteSuccess": "የጤና መዝገቡ በተሳካ ሁኔታ ተሰርዟል።",
+    "saveError": "መዝገቡን በማስቀመጥ ላይ ስህተት ተከስቷል።",
+    "deleteError": "መዝገቡን በመሰረዝ ላይ ስህተት ተከስቷል።",
+    "fetchError": "መዝገቦችን በመጫን ላይ ስህተት ተከስቷል"
+  },
+  "vaccinations": {
+    "title": "የክትባት መዝገቦች",
+    "description": "የእንስሳት የክትባት መዝገቦችን እና የቀን መቁጠሪያዎችን ያቀናብሩ።",
+    "addVaccination": "ሬቤልን ያክሉ",
+    "editVaccination": "የሬቤል ዝግጅት",
+    "deleteVaccination": "ሬቤል ሲል",
+    "noVaccinations": "የክትባት መዝገብ እስካሁን አልተጨመረም።",
+    "animalInfoId": "የእንስሳት መታወቂያ",
+    "animalInfoIdPlaceholder": "የእንስሳትን መረጃ መታወቂያ ያስገቡ።",
+    "vaccineName": "አሲ አዲ",
+    "vaccineNamePlaceholder": "ለምሳሌ፡ የSAT ክትባት፣ ብሩሴላ",
+    "vaccineType": "የሬቤል ጉብኝት",
+    "vaccineTypePlaceholder": "ምሳሌ፡ በቀጥታ፣ እንቅስቃሴ-አልባ",
+    "batchNumber": "የፓርቲ ቁጥር",
+    "vaccinationDate": "የአማፂው ታሪክ",
+    "nextDueDate": "የሚቀጥለው የሬቤል ታሪክ",
+    "veterinarianName": "የእንስሳት ሐኪም",
+    "veterinarianLicense": "የፈቃድ ቁጥር",
+    "notes": "ማስታወሻዎች",
+    "certificateUrl": "የሰርቲፊኬት ዩአርኤል",
+    "saving": "በማስቀመጥ ላይ...",
+    "createSuccess": "የክትባት መዝገብ በተሳካ ሁኔታ ታክሏል።",
+    "updateSuccess": "የክትባት መዝገብ በተሳካ ሁኔታ ተዘምኗል።",
+    "deleteSuccess": "የክትባቱ መዝገብ በተሳካ ሁኔታ ተሰርዟል።",
+    "saveError": "ክትባቱን በማስመዝገብ ላይ ሳለ ስህተት ተከስቷል።",
+    "deleteError": "ክትባቱን በመሰረዝ ላይ ስህተት ተከስቷል።",
+    "fetchError": "ክትባቶችን በመጫን ላይ ስህተት ተከስቷል።"
+  },
+  "shippingCarriers": {
+    "title": "የማጓጓዣ ኩባንያዎች",
+    "description": "የመላኪያ ኩባንያ መረጃን ያስተዳድሩ።",
+    "addCarrier": "ኩባንያ ያክሉ",
+    "editCarrier": "ኩባንያ አርትዕ",
+    "noCarriers": "እስካሁን ምንም አይነት የመርከብ ኩባንያ አልተጨመረም።",
+    "carrierName": "የኩባንያ ስም",
+    "carrierNamePlaceholder": "ምሳሌ፡ Aras Kargo, MNG",
+    "code": "ኮድ",
+    "codePlaceholder": "ምሳሌ፡ ARAS",
+    "website": "ድህረገፅ",
+    "trackingUrlTemplate": "የዩአርኤል አብነት ተከተል",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "የሚደገፉ አገሮች",
+    "supportedCountriesPlaceholder": "ምሳሌ፡ TR፣ US፣ DE",
+    "active": "ንቁ",
+    "inactive": "ተገብሮ",
+    "saving": "በማስቀመጥ ላይ...",
+    "edit": "አርትዕ",
+    "delete": "ሰርዝ",
+    "createSuccess": "የማጓጓዣ ኩባንያው በተሳካ ሁኔታ ታክሏል።",
+    "updateSuccess": "የማጓጓዣ ኩባንያው በተሳካ ሁኔታ ተዘምኗል።",
+    "deleteSuccess": "የማጓጓዣ ኩባንያው በተሳካ ሁኔታ ተሰርዟል።",
+    "saveError": "የማጓጓዣ ኩባንያውን በመመዝገብ ላይ ሳለ አንድ ስህተት ተከስቷል።",
+    "deleteError": "የማጓጓዣ ኩባንያውን መረጃ በመሰረዝ ላይ ስህተት ተከስቷል።",
+    "fetchError": "የጭነት ኩባንያዎችን በመጫን ላይ ስህተት ተከስቷል።"
+  },
+  "shippingZones": {
+    "title": "የጭነት ዞኖች",
+    "description": "የጭነት ዞኖችን እና ቦታዎችን ያስተዳድሩ።",
+    "addZone": "ክልል ያክሉ",
+    "editZone": "ክልልን አርትዕ",
+    "noZones": "እስካሁን ምንም የጭነት ቦታ አልተጨመረም።",
+    "zoneName": "የክልል ስም",
+    "zoneNamePlaceholder": "ምሳሌ፡ አውሮፓ፣ ሰሜን አሜሪካ",
+    "countryCodes": "የአገር ኮዶች",
+    "countryCodesPlaceholder": "ምሳሌ፡ TR፣ DE፣ FR",
+    "active": "ንቁ",
+    "inactive": "ተገብሮ",
+    "saving": "በማስቀመጥ ላይ...",
+    "edit": "አርትዕ",
+    "delete": "ሰርዝ",
+    "createSuccess": "ክልሉ በተሳካ ሁኔታ ታክሏል።",
+    "updateSuccess": "ክልሉ በተሳካ ሁኔታ ተዘምኗል።",
+    "deleteSuccess": "አካባቢው በተሳካ ሁኔታ ጸድቷል።",
+    "saveError": "ክልሉን በማስቀመጥ ላይ ስህተት ተከስቷል።",
+    "deleteError": "ክልሉን በመሰረዝ ላይ ስህተት ተከስቷል።",
+    "fetchError": "ክልሎችን በመጫን ላይ ሳለ ስህተት ተከስቷል"
+  },
+  "shippingRates": {
+    "title": "የማጓጓዣ ክፍያዎች",
+    "description": "የመላኪያ ወጪዎችን እና የማድረሻ አማራጮችን ያስተዳድሩ።",
+    "addRate": "ክፍያ ጨምር",
+    "editRate": "ክፍያ አስተካክል",
+    "noRates": "የማጓጓዣ ወጪዎች ገና አልተጨመሩም።",
+    "zone": "አካባቢ",
+    "carrier": "ድርጅት",
+    "selectZone": "ክልል ይምረጡ",
+    "selectCarrier": "ኩባንያ ይምረጡ",
+    "shippingCost": "የማጓጓዣ ክፍያ",
+    "currency": "ምንዛሬ",
+    "estimatedDeliveryDays": "የተገመተው የማድረስ መጠን (ቀናት)",
+    "minWeight": "ዝቅተኛ ክብደት",
+    "maxWeight": "ከፍተኛ ክብደት",
+    "minOrderAmount": "ዝቅተኛው የትዕዛዝ መጠን",
+    "freeShipping": "ነጻ ማጓጓዣ",
+    "free": "ፍርይ",
+    "active": "ንቁ",
+    "inactive": "ተገብሮ",
+    "cost": "ክፍያ",
+    "deliveryDays": "ማድረስ",
+    "status": "ሁኔታ",
+    "saving": "በማስቀመጥ ላይ...",
+    "createSuccess": "ክፍያው በተሳካ ሁኔታ ታክሏል።",
+    "updateSuccess": "ደሞዝ በተሳካ ሁኔታ ተዘምኗል።",
+    "deleteSuccess": "ክፍያው በተሳካ ሁኔታ ተሰርዟል።",
+    "saveError": "ክፍያውን በማስቀመጥ ላይ ስህተት ተከስቷል።",
+    "deleteError": "ክፍያውን በመሰረዝ ላይ ስህተት ተከስቷል።",
+    "fetchError": "ክፍያዎቹን በመጫን ላይ ስህተት ተከስቷል።"
+  },
+  "metadata": {
+    "title": "የእንስሳት ግብይት - የቀጥታ የእንስሳት ግብይት መድረክ",
+    "description": "በዓለም ላይ በጣም አስተማማኝ የሆነው የቀጥታ የእንስሳት ንግድ መድረክ። ደህንነቱ የተጠበቀ እና ግልጽ የእንስሳት ግዢ እና ሽያጭ።",
+    "pages": {
+      "about": {
+        "title": "ስለ እኛ",
+        "description": "ስለ እንስሳት ንግድ ይወቁ። አስተማማኝ የቀጥታ እንስሳት ንግድ መድረክ።"
+      },
+      "contact": {
+        "title": "ኮሙኒኬሽን",
+        "description": "ያግኙን። የእንስሳት ንግድ የደንበኞች ድጋፍ ቡድን እርስዎን ለመርዳት ዝግጁ ነው።"
+      },
+      "terms": {
+        "title": "የአጠቃቀም ውል",
+        "description": "የእንስሳት ግብይት ውሎች እና ሁኔታዎች።"
+      },
+      "privacy": {
+        "title": "የግላዊነት መመሪያ",
+        "description": "የእንስሳት ንግድ የግላዊነት መመሪያ። የግል መረጃዎ እንዴት እንደሚጠበቅ ይወቁ።"
+      },
+      "products": {
+        "title": "ምርቶች",
+        "description": "የቀጥታ የእንስሳት ዝርዝሮችን ያስሱ። ለከብቶች፣ ለበጎች እና ለሌሎችም አስተማማኝ ማስታወቂያዎች።"
+      },
+      "sellers": {
+        "title": "ሻጮች",
+        "description": "አስተማማኝ የእንስሳት ሻጮችን ያግኙ። የተረጋገጡ የሻጭ መገለጫዎችን እና ግምገማዎችን ያግኙ።"
+      },
+      "transporters": {
+        "title": "አጓጓዦች",
+        "description": "የእንስሳት ትራንስፖርት ኩባንያዎችን ያግኙ። ደህንነቱ የተጠበቀ እና ሙያዊ የቀጥታ የእንስሳት ትራንስፖርት።"
+      },
+      "search": {
+        "title": "ፈልግ",
+        "description": "ከቀጥታ የእንስሳት ዝርዝሮች መካከል ይፈልጉ። ከማጣሪያ እና ከመደርደር አማራጮች ጋር ቀላል ፍለጋ።"
+      },
+      "faq": {
+        "title": "በተደጋጋሚ የሚጠየቁ ጥያቄዎች",
+        "description": "ስለ እንስሳት ንግድ በተደጋጋሚ የሚጠየቁ ጥያቄዎች እና መልሶች።"
+      },
+      "productDetail": {
+        "title": "{title} - ለሽያጭ የቀረበ",
+        "description": "በ{title} - {city} ውስጥ ለሽያጭ ቀርቧል። ለዝርዝሮች እና ለእውቂያ መረጃ ጠቅ ያድርጉ።"
+      },
+      "sellerDetail": {
+        "title": "{name} - የሻጭ መገለጫ",
+        "description": "የ{name} ሻጭ መገለጫ። ግምገማዎች፣ ዝርዝሮች እና የእውቂያ መረጃ።"
+      },
+      "transporterDetail": {
+        "title": "{name} - የአገልግሎት አቅራቢ መገለጫ",
+        "description": "የ{name} አጓጓዥ መገለጫ። የአገልግሎት አካባቢዎች፣ ግምገማዎች እና የእውቂያ መረጃ።"
+      }
+    }
   }
 }

@@ -11,17 +11,30 @@
     "back": "Vissza",
     "next": "Előre",
     "close": "Közeli",
+    "unauthorized": "Nincs jogosultsága az oldal eléréséhez.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Bejelentkezés",
-    "register": "Nyilvántartás"
+    "register": "Nyilvántartás",
+    "previous": "Korábbi",
+    "zoomIn": "Nagyítás",
+    "previousImage": "Előző kép",
+    "nextImage": "Következő kép",
+    "closeLightbox": "Galéria bezárása",
+    "imageLightbox": "Képgaléria",
+    "slideN": "{n} dia",
+    "viewMore": "Továbbiak megjelenítése"
   },
   "header": {
     "products": "Termékek",
     "sellers": "Eladók",
+    "transporters": "szállítók",
     "about": "Rólunk",
+    "search": "Keresés",
     "dashboard": "Panel",
     "settings": "Beállítások",
-    "logout": "Kijelentkezés"
+    "logout": "Kijelentkezés",
+    "menu": "Menü",
+    "language": "Nyelvválasztás"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Elfelejtettem a jelszavamat.",
       "noAccount": "Nincs fiókod?",
       "register": "Nyilvántartás",
-      "errorDefault": "Sikertelen bejelentkezés. Kérjük, ellenőrizze az adatait."
+      "errorDefault": "Sikertelen bejelentkezés. Kérjük, ellenőrizze az adatait.",
+      "orContinueWith": "vagy folytasd",
+      "continueWithGoogle": "Folytatás a Google-lal",
+      "continueWithApple": "Folytasd az Apple-lel.",
+      "socialLoginError": "Sikertelen bejelentkezés a közösségi médiába. Kérjük, próbáld újra.",
+      "appleComingSoon": "Nagyon hamarosan",
+      "showPassword": "Jelszó megjelenítése",
+      "hidePassword": "Jelszó elrejtése"
     },
     "register": {
       "title": "Nyilvántartás",
@@ -51,7 +71,17 @@
       "login": "Bejelentkezés",
       "passwordMismatch": "A jelszavak nem egyeznek.",
       "passwordTooShort": "A jelszónak legalább 6 karakter hosszúnak kell lennie.",
-      "errorDefault": "A regisztráció sikertelen. Kérjük, próbálja újra."
+      "errorDefault": "A regisztráció sikertelen. Kérjük, próbálja újra.",
+      "showPassword": "Jelszó megjelenítése",
+      "hidePassword": "Jelszó elrejtése",
+      "passwordStrength": {
+        "minLength": "Legalább 8 karakter",
+        "uppercase": "Nagybetűk (A-Z)",
+        "lowercase": "Kisbetűk (a-z)",
+        "number": "Szám (0-9)",
+        "special": "Speciális karakterek (!@#$%)"
+      },
+      "registerSuccess": "Fiókja sikeresen létrehozva! Átirányítjuk a bejelentkezési oldalra..."
     },
     "forgotPassword": {
       "title": "Elfelejtettem a jelszavamat.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Új kapcsolat kérése",
       "passwordMismatch": "A jelszavak nem egyeznek.",
       "passwordTooShort": "A jelszónak legalább 6 karakter hosszúnak kell lennie.",
-      "errorDefault": "A jelszó visszaállítása sikertelen. Lehetséges, hogy a kapcsolat érvénytelen vagy lejárt."
+      "errorDefault": "A jelszó visszaállítása sikertelen. Lehetséges, hogy a kapcsolat érvénytelen vagy lejárt.",
+      "showPassword": "Jelszó megjelenítése",
+      "hidePassword": "Jelszó elrejtése"
     }
   },
   "dashboard": {
@@ -87,25 +119,44 @@
     "accountInfo": "Fiókod összefoglalója alább található.",
     "username": "Felhasználónév",
     "email": "Email",
-    "id": "azonosító",
+    "id": "Személyazonosító",
     "logout": "Kijelentkezés",
     "stats": {
       "totalListings": "Összes hirdetés",
       "active": "aktív",
       "totalViews": "Összes megtekintés",
       "thisWeek": "ezen a héten",
+      "allTime": "mindenkor",
       "favorites": "Kedvenc",
       "onYourListings": "a hirdetéseidben",
+      "savedItems": "regisztrált termék",
       "messages": "Üzenet",
-      "unread": "nem olvasott"
+      "notifications": "Értesítések",
+      "unread": "nem olvasott",
+      "views": "nézetek",
+      "draft": "Vázlat",
+      "sold": "Eladott",
+      "pending": "Függőben levő",
+      "awaitingApproval": "jóváhagyásra vár",
+      "totalSales": "Teljes értékesítés",
+      "completedSales": "befejezett eladások",
+      "revenue": "Jövedelem",
+      "totalRevenue": "összes bevétel"
     },
     "recentListings": "Legújabb hirdetéseid",
+    "recentActivity": "Legutóbbi tevékenységek",
     "recentMessages": "Legutóbbi üzenetek",
+    "quickLinks": "Gyors hozzáférés",
     "noListings": "Még nem adtál hozzá hirdetéseket.",
+    "noActivity": "Még nincs aktivitás.",
     "noMessages": "Még nem kaptál üzenetet.",
     "noNotifications": "Még nem kaptál értesítéseket.",
     "viewAllListings": "Összes hirdetés megtekintése",
-    "viewAllMessages": "Az összes üzenet megtekintése"
+    "viewAllMessages": "Az összes üzenet megtekintése",
+    "viewNotifications": "Értesítések megtekintése",
+    "viewFavorites": "Kedvencek Gor",
+    "recentlyViewed": "Legutóbb megtekintett",
+    "fetchError": "Hiba történt a paneladatok betöltésekor."
   },
   "dashboardNav": {
     "overview": "Áttekintés",
@@ -115,7 +166,61 @@
     "notifications": "Értesítések",
     "profile": "Profil",
     "settings": "Beállítások",
-    "newListing": "Új hirdetés hozzáadása"
+    "newListing": "Új hirdetés hozzáadása",
+    "becomeSeller": "Legyen eladó",
+    "categories": "Kategóriák",
+    "offers": "Javaslatok",
+    "deals": "megállapodások",
+    "farms": "A farmjaim",
+    "transport": "Szállítás",
+    "moderation": "Moderálás",
+    "sellerModeration": "Eladói moderálás",
+    "transporterModeration": "Hordozó moderálás",
+    "brands": "Márkák",
+    "transportOffers": "Szállítási árajánlatok",
+    "healthRecords": "Egészségügyi feljegyzések",
+    "vaccinations": "Oltók",
+    "shippingCarriers": "Szállítási társaságok",
+    "shippingZones": "Rakományzónák",
+    "shippingRates": "Szállítási díjak",
+    "systemSettings": "Rendszerbeállítások",
+    "locations": "Címeim"
+  },
+  "profile": {
+    "title": "Profilinformációk",
+    "description": "Itt frissítheti személyes adatait.",
+    "personalInfo": "Személyes adatok",
+    "contactInfo": "Elérhetőségek",
+    "preferences": "Beállítások",
+    "firstName": "Név",
+    "firstNamePlaceholder": "Add meg a neved",
+    "surname": "Vezetéknév",
+    "surnamePlaceholder": "Add meg a vezetékneved.",
+    "displayName": "Megjelenített név",
+    "phone": "Telefonszám",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Ellenőrzött",
+    "phoneNotVerified": "Megerősítetlen",
+    "verifyPhone": "Telefonszám ellenőrzése",
+    "country": "Ország",
+    "selectCountry": "Válasszon egy országot",
+    "language": "Nyelvi beállítás",
+    "selectLanguage": "Válasszon nyelvet",
+    "currency": "Valuta",
+    "selectCurrency": "Válasszon pénznemet.",
+    "saveChanges": "Változtatások mentése",
+    "saving": "Megtakarítás...",
+    "saveSuccess": "A profilod adatai frissültek.",
+    "saveError": "Hiba történt a profil frissítése közben.",
+    "avatar": "Profilkép",
+    "changeAvatar": "Fotó módosítása",
+    "removeAvatar": "Fotó eltávolítása",
+    "currencies": {
+      "try": "Török líra",
+      "usd": "Amerikai dollár",
+      "eur": "Euro",
+      "gbp": "Brit font"
+    }
   },
   "myListings": {
     "title": "Hirdetéseim",
@@ -125,35 +230,94 @@
     "fetchError": "Hiba történt a hirdetések betöltése során.",
     "deleteSuccess": "A hirdetést sikeresen töröltük.",
     "deleteError": "Hiba történt a hirdetés törlése közben.",
-    "activateSuccess": "A hirdetés aktiválva lett.",
-    "deactivateSuccess": "A hirdetés deaktiválva lett.",
+    "publishSuccess": "A hirdetést elküldtük jóváhagyásra.",
+    "unpublishSuccess": "A hirdetés szövege elkészült.",
     "statusError": "Hiba történt az állapot módosításakor.",
     "filters": {
       "all": "Mindegyikük",
-      "active": "Aktív",
       "draft": "Vázlat",
       "pending": "Jóváhagyásra vár",
+      "active": "Aktív",
+      "rejected": "Elutasítva",
       "sold": "Eladott"
     },
     "actions": {
       "edit": "Szerkesztés",
       "delete": "Töröl",
-      "activate": "Aktiválás",
-      "deactivate": "Passzív szerkezet"
+      "publish": "Jóváhagyásra küldés",
+      "unpublish": "Vázlat",
+      "menu": "Tranzakciók"
     },
     "deleteDialog": {
       "title": "Töröld a hirdetést",
       "description": "Biztosan törölni szeretné ezt a listát? Ez a művelet visszafordíthatatlan.",
       "cancel": "Mégsem",
       "confirm": "Töröl"
-    }
+    },
+    "loadMore": "További letöltések",
+    "loadingMore": "Terhelés..."
   },
   "favorites": {
     "title": "A kedvenceim",
     "description": "Kövesd az itt található termékeket, amiket szeretsz.",
     "noFavorites": "Még nem adtál hozzá kedvenc termékeket.",
     "browseProducts": "Termékek böngészése",
-    "fetchError": "Hiba történt a kedvencek betöltése közben."
+    "fetchError": "Hiba történt a kedvencek betöltése közben.",
+    "loadMore": "További letöltések",
+    "loadingMore": "Terhelés..."
+  },
+  "messages": {
+    "title": "Üzenetek",
+    "description": "Lépjen kapcsolatba a vevőkkel és az eladókkal.",
+    "noConversations": "Még nem kaptál üzenetet.",
+    "startConversation": "Ha kérdést szeretne feltenni egy hirdetéssel kapcsolatban, lépjen a hirdetésre.",
+    "fetchError": "Hiba történt az üzenetek betöltése során",
+    "sendError": "Hiba történt az üzenet küldése közben.",
+    "connectionError": "Kapcsolódási hiba. Újrapróbálkozom...",
+    "connected": "Összekapcsolódott",
+    "connecting": "Kapcsolódás...",
+    "searchPlaceholder": "Keresés az üzenetek között...",
+    "typeMessage": "Írd meg az üzeneted...",
+    "send": "Elküld",
+    "sending": "Küldés...",
+    "typing": "Azt mondja...",
+    "read": "Olvas",
+    "delivered": "Küldött",
+    "today": "Ma",
+    "yesterday": "Tegnap",
+    "noMessages": "Még nincsenek üzenetek. Kezdj el egy beszélgetést!",
+    "loadMore": "Töltsön fel többet",
+    "loadingMessages": "Üzenetek töltődnek...",
+    "about": "Körülbelül",
+    "product": "Termék",
+    "startNewConversation": "Új beszélgetés indítása",
+    "selectConversation": "Válasszon egy beszélgetést, vagy indítson egy újat.",
+    "online": "Online",
+    "offline": "Offline",
+    "lastSeen": "Utoljára látva",
+    "deleteConversation": "Beszélgetés törlése",
+    "deleteConfirm": "Biztosan törölni szeretnéd ezt a beszélgetést?",
+    "deleted": "A beszélgetést törölték.",
+    "defaultUser": "Felhasználó",
+    "noResults": "Nincs találat.",
+    "newConversation": "Új beszélgetés"
+  },
+  "notifications": {
+    "title": "Értesítések",
+    "description": "Értesítések megtekintése és kezelése.",
+    "markAllAsRead": "Összes megjelölése olvasottként",
+    "noNotifications": "Még nem kaptál értesítéseket.",
+    "viewAll": "Az összes értesítés megtekintése",
+    "today": "Ma",
+    "yesterday": "Tegnap",
+    "older": "Régebbi",
+    "types": {
+      "system": "Rendszer",
+      "message": "Üzenet",
+      "offer": "Ajánlat",
+      "order": "Rendelés",
+      "listing": "Hirdetés"
+    }
   },
   "settings": {
     "title": "Beállítások",
@@ -169,7 +333,28 @@
       "passwordMismatch": "Az új jelszavak nem egyeznek.",
       "passwordTooShort": "Az új jelszónak legalább 6 karakter hosszúnak kell lennie.",
       "sessionError": "Nem találhatók a munkamenet adatai.",
-      "errorDefault": "A jelszó frissítése sikertelen volt. Kérjük, ellenőrizze a jelenlegi jelszavát."
+      "errorDefault": "A jelszó frissítése sikertelen volt. Kérjük, ellenőrizze a jelenlegi jelszavát.",
+      "showPassword": "Jelszó megjelenítése",
+      "hidePassword": "Jelszó elrejtése"
+    },
+    "preferences": {
+      "title": "Értesítési és nézetbeállítások",
+      "description": "Értesítési csatornák és megjelenítési beállítások kezelése.",
+      "notifications": "Értesítések",
+      "emailNotifications": "E-mail értesítések",
+      "emailNotificationsDesc": "E-mail értesítéseket kaphat az új üzenetekről és a hirdetések frissítéseiről.",
+      "smsNotifications": "SMS-értesítések",
+      "smsNotificationsDesc": "SMS-ben értesülhet fontos értesítésekről.",
+      "pushNotifications": "Push értesítések",
+      "pushNotificationsDesc": "Kapjon push értesítéseket az azonnali frissítésekről.",
+      "appearance": "Megjelenés",
+      "darkMode": "Sötét mód",
+      "darkModeDesc": "Válts sötét témára.",
+      "saveChanges": "Beállítások mentése",
+      "saving": "Megtakarítás...",
+      "saveSuccess": "A beállításaid frissültek.",
+      "saveError": "Hiba történt a beállítások frissítésekor.",
+      "loadError": "A beállításokat nem sikerült betölteni."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Élő Állat Kereskedelmi Platform",
       "subtitle": "A legmegbízhatóbb élőállat-kereskedési platform. Vásároljon és adjon el szarvasmarháit és juhait biztonságosan.",
       "cta": "Kezdés most",
-      "viewListings": "Hirdetések megtekintése"
+      "viewListings": "Hirdetések megtekintése",
+      "searchPlaceholder": "Keress állatokat... (tehenek, juhok, kecskék...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Kiemelt hirdetések",
       "viewAll": "Összes megtekintése"
+    },
+    "cta": {
+      "title": "Kezdés most",
+      "subtitle": "Foglald el a helyed egy olyan platformon, ahol több ezer eladó és vevő találkozik.",
+      "button": "Regisztráljon ingyenesen"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Rólunk",
     "contact": "Kommunikáció",
     "terms": "Felhasználási feltételek",
-    "privacy": "Adatvédelmi irányelvek"
+    "privacy": "Adatvédelmi irányelvek",
+    "company": "Vállalat",
+    "support": "Támogatás",
+    "legal": "Jogi",
+    "followUs": "Kövess minket",
+    "newsletter": "Közlemény",
+    "newsletterDescription": "Ne maradj le a legújabb ajánlatokról és promóciókról.",
+    "subscribe": "Feliratkozás",
+    "emailPlaceholder": "Az Ön e-mail címe",
+    "tagline": "Törökország legmegbízhatóbb élőállat-kereskedési platformja.",
+    "sellers": "Eladók",
+    "products": "Termékek",
+    "map": "Térkép",
+    "appleLoginComingSoon": "Az Apple-lel való bejelentkezés hamarosan aktív lesz.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "GYIK"
+  },
+  "faq": {
+    "title": "Gyakran Ismételt Kérdések",
+    "description": "Válaszok a platformunkkal kapcsolatos gyakori kérdésekre.",
+    "noFaqs": "Még nem adtak hozzá kérdéseket."
+  },
+  "about": {
+    "title": "Rólunk",
+    "subtitle": "Törökország legmegbízhatóbb élőállat-kereskedési platformja.",
+    "mission": {
+      "title": "Küldetésünk",
+      "description": "Az élőállat-kereskedelem digitalizálásával célunk egy biztonságos, átlátható és hatékony kapcsolat létrehozása a termelők és a vásárlók között."
+    },
+    "vision": {
+      "title": "Víziónk",
+      "description": "Úttörő szerepet vállalni a digitális átalakulásban a mezőgazdasági szektorban, és globális platformmá válni az élőállat-kereskedelemben."
+    },
+    "values": {
+      "title": "Értékeink",
+      "trust": {
+        "title": "Bizalom",
+        "description": "Az átláthatóság és a megbízhatóság minden tranzakcióban elengedhetetlen."
+      },
+      "quality": {
+        "title": "Minőség",
+        "description": "Folyamatos fejlesztés a legjobb szolgáltatás nyújtása érdekében."
+      },
+      "innovation": {
+        "title": "Innováció",
+        "description": "Az iparág átalakítása a technológia használatával."
+      }
+    },
+    "stats": {
+      "users": "Regisztrált felhasználó",
+      "sellers": "Aktív eladó",
+      "products": "Hirdetés",
+      "transactions": "Sikeres tranzakció"
+    }
+  },
+  "contact": {
+    "title": "Kommunikáció",
+    "subtitle": "Bármilyen kérdés esetén kérjük, vegye fel velünk a kapcsolatot.",
+    "form": {
+      "title": "Írjon nekünk",
+      "name": "A neved",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "Email",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Téma",
+      "subjectPlaceholder": "Az üzeneted tárgya",
+      "message": "Az üzeneted",
+      "messagePlaceholder": "Írd ide az üzeneted...",
+      "submit": "Elküld",
+      "submitting": "Küldés...",
+      "success": "Üzenetét sikeresen elküldtük. Amint lehet, válaszolunk.",
+      "error": "Hiba történt az üzenet küldése közben. Kérjük, próbálja újra."
+    },
+    "info": {
+      "title": "Elérhetőségek",
+      "address": "Cím",
+      "addressValue": "Isztambul, Törökország",
+      "email": "Email",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Telefon",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Munkaidő",
+      "workingHoursValue": "Hétfő - Péntek: 09:00 - 18:00",
+      "map": "Térkép"
+    }
+  },
+  "terms": {
+    "title": "Felhasználási feltételek",
+    "lastUpdated": "Utolsó frissítés: {dátum}",
+    "sections": {
+      "acceptance": {
+        "title": "1. A Feltételek elfogadása",
+        "content": "A weboldal használatával Ön elfogadja a következő felhasználási feltételeket. Ha nem ért egyet ezekkel a feltételekkel, kérjük, ne használja a webhelyet."
+      },
+      "services": {
+        "title": "2. Szolgáltatások",
+        "content": "Az Élőállat-kereskedés platformot biztosít élő állatok adásvételére. A platformon végrehajtott összes tranzakció a felhasználó felelőssége."
+      },
+      "accounts": {
+        "title": "3. Felhasználói fiókok",
+        "content": "Fiók létrehozásához pontos és naprakész információkat kell megadnia. Fiókja biztonsága az Ön felelőssége."
+      },
+      "prohibited": {
+        "title": "4. Tiltott tevékenységek",
+        "content": "Szigorúan tilos a megtévesztő hirdetések, a hamis információk, a csalás és az illegális tevékenységek."
+      },
+      "liability": {
+        "title": "5. Felelősség korlátozása",
+        "content": "A platform nem felelős közvetlenül a felhasználók közötti tranzakciókért. Minden tranzakció a felek között zajlik."
+      },
+      "changes": {
+        "title": "6. Változások",
+        "content": "Ezek a feltételek előzetes értesítés nélkül változhatnak. A változások a közzétételt követően azonnal hatályba lépnek."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Adatvédelmi irányelvek",
+    "lastUpdated": "Utolsó frissítés: {dátum}",
+    "sections": {
+      "collection": {
+        "title": "1. Információgyűjtés",
+        "content": "Fiók létrehozásakor személyes adatokat gyűjtünk, például a nevét, e-mail címét és telefonszámát. Névtelen adatokat is gyűjthetünk a webhely használatával kapcsolatban."
+      },
+      "usage": {
+        "title": "2. Információfelhasználás",
+        "content": "Az általunk gyűjtött információkat szolgáltatásaink nyújtására, fiókja kezelésére, biztonságának garantálására és személyre szabott ajánlatok kínálására használjuk fel."
+      },
+      "sharing": {
+        "title": "3. Információmegosztás",
+        "content": "Személyes adatait nem adjuk el és nem adjuk bérbe harmadik félnek. Adatait nem osztjuk meg, kivéve a jogilag előírt célokból."
+      },
+      "security": {
+        "title": "4. Biztonság",
+        "content": "Iparági szabványoknak megfelelő biztonsági intézkedések vannak érvényben az adatai védelme érdekében."
+      },
+      "cookies": {
+        "title": "5. Sütik",
+        "content": "Weboldalunk sütiket használ a felhasználói élmény javítása érdekében. A sütibeállításait a böngésző beállításaiban kezelheti."
+      },
+      "rights": {
+        "title": "6. Az Ön jogai",
+        "content": "A török adatvédelmi törvény (KVKK) értelmében Önnek joga van hozzáférni, helyesbíteni és törölni a személyes adatait."
+      }
+    }
   },
   "products": {
     "title": "Termékek",
@@ -230,16 +565,24 @@
     "sort": "Fajta",
     "sortOptions": {
       "newest": "Legújabb",
-      "oldest": "Legidősebb",
+      "oldest": "Legrégebbi",
       "priceAsc": "Ár (alacsonytól a magasig)",
       "priceDesc": "Ár (magastól a legalacsonyabbig)",
       "popular": "Legnépszerűbb"
     },
+    "pagination": {
+      "prev": "Korábbi",
+      "next": "Következő"
+    },
     "status": {
       "draft": "Vázlat",
+      "pending": "Jóváhagyásra vár",
       "active": "Aktív",
+      "inactive": "Passzív",
+      "outOfStock": "Nincs raktáron",
+      "expired": "Lejárt a mandátuma.",
       "sold": "Eladott",
-      "pending": "Jóváhagyásra vár"
+      "rejected": "Elutasítva"
     },
     "condition": {
       "new": "Új",
@@ -253,9 +596,13 @@
     "loading": "A termékek feltöltése folyamatban van...",
     "perPage": "Oldalanként",
     "showing": "A {from} és {to} közötti {total} termékek összege.",
+    "fetchError": "Hiba történt a termékek feltöltése során.",
+    "loadMore": "Mutass többet",
+    "showingOf": "{count} / {total} termék jelenik meg.",
     "loginToFavorite": "Jelentkezz be, hogy hozzáadhasd a kedvencekhez.",
     "addedToFavorites": "Hozzáadva a kedvencekhez",
-    "removedFromFavorites": "Eltávolítva a kedvencek közül"
+    "removedFromFavorites": "Eltávolítva a kedvencek közül",
+    "favoriteError": "Kedvencként jelölés művelete sikertelen."
   },
   "productDetail": {
     "addToFavorites": "Hozzáadás a kedvencekhez",
@@ -279,16 +626,31 @@
     "maxOrder": "Maximális rendelési érték",
     "publishedAt": "Megjelenés dátuma",
     "views": "Megtekintve",
-    "reviews": "értékelés",
+    "reviews": {
+      "title": "Értékelések",
+      "reviewCount": "értékelés",
+      "noReviews": "Még nincs értékelés.",
+      "verified": "Ellenőrzött vásárló"
+    },
     "similarProducts": "Hasonló termékek",
     "sellerProducts": "Az eladó egyéb termékei",
     "contactSeller": "Lépjen kapcsolatba az eladóval",
-    "loginRequired": "Jelentkezz be, hogy hozzáadhasd a kedvencekhez.",
+    "makeOffer": "Ajánlat beküldése",
+    "loginRequired": "Kérjük, jelentkezzen be a művelet végrehajtásához.",
     "addedToFavorites": "Hozzáadva a kedvencekhez",
     "removedFromFavorites": "Eltávolítva a kedvencek közül",
     "linkCopied": "A linket kimásoltuk.",
     "messagingComingSoon": "Hamarosan elérhető lesz az üzenetküldő funkció.",
-    "productNotFound": "A termék nem található."
+    "productNotFound": "A termék nem található.",
+    "contacting": "Kapcsolatfelvétel folyamatban...",
+    "contactError": "Kommunikációs hiba. Kérjük, próbálja újra.",
+    "noImage": "Nincs elérhető kép.",
+    "defaultLocation": "Törökország",
+    "inquiryMessage": "Szeretnék információt kapni a következőről: {title}.",
+    "breadcrumb": {
+      "home": "Otthon",
+      "products": "Termékek"
+    }
   },
   "seller": {
     "title": "Eladó adatai",
@@ -300,6 +662,70 @@
     "call": "Keresés",
     "viewProfile": "Profil megtekintése"
   },
+  "sellers": {
+    "title": "Eladók",
+    "description": "Megbízható eladók felkutatása.",
+    "search": "Keressen egy eladót...",
+    "sort": "Fajta",
+    "sortOptions": {
+      "newest": "Legújabb",
+      "mostSales": "Bestseller",
+      "topRated": "Legmagasabb pontszám",
+      "mostProducts": "Legtöbb hirdetés"
+    },
+    "noResults": "Az eladó nem található.",
+    "loading": "Az eladók feltöltik...",
+    "showing": "{count} eladót találtunk",
+    "verified": "Ellenőrzött",
+    "sales": "értékesítés",
+    "products": "hirdetés",
+    "reviews": "értékelés",
+    "rating": "pont",
+    "viewProducts": "Termékek megtekintése",
+    "contactSeller": "Üzenet küldése",
+    "memberSince": "Tag {év} óta",
+    "fetchError": "Hiba történt a szolgáltatók betöltésekor",
+    "detail": {
+      "title": "Eladói profil",
+      "about": "Körülbelül",
+      "businessInfo": "Üzleti információk",
+      "businessName": "Cégnév",
+      "businessType": "Üzleti túra",
+      "email": "Email",
+      "phone": "Telefon",
+      "website": "Weboldal",
+      "description": "Magyarázat",
+      "policies": "Szabályzatok",
+      "returnPolicy": "Visszaküldési szabályzat",
+      "shippingPolicy": "Szállítási szabályzat",
+      "businessHours": "Munkaidő",
+      "paymentMethods": "Fizetési módok",
+      "allProducts": "Minden termék",
+      "stats": {
+        "totalSales": "Teljes értékesítés",
+        "totalProducts": "Összes termék",
+        "totalReviews": "Értékelés",
+        "rating": "Pont"
+      },
+      "notFound": "Az eladó nem található.",
+      "backToList": "Ne az eladóknak",
+      "contactInfo": "Kommunikáció",
+      "noProducts": "Ennek az eladónak még nincsenek hirdetései.",
+      "noPolicies": "Az eladó még nem határozta meg a szabályzatát.",
+      "fetchError": "Hiba történt az eladó adatainak feltöltésekor.",
+      "productsLoadError": "Hiba történt az eladó termékeinek feltöltése során.",
+      "reviewsTab": "Értékelések",
+      "reviews": {
+        "summary": "Értékelési összefoglaló",
+        "reviewCount": "értékelés",
+        "communication": "Kommunikáció",
+        "shippingSpeed": "Szállítási sebesség",
+        "productQuality": "Termékminőség",
+        "noReviews": "Még nincs értékelés.",
+        "verified": "Ellenőrzött vásárló"
+      }
+    }
+  },
   "editListing": {
     "title": "Szerkessze a hirdetést",
     "saveChanges": "Változtatások mentése",
@@ -307,6 +733,10 @@
     "updateSuccess": "A hirdetés frissítése sikeresen megtörtént.",
     "updateFailed": "Hiba történt a lista frissítése során.",
     "loadError": "Hiba történt a hirdetés betöltése közben.",
+    "sellerNotFound": "Az eladó profilja nem található.",
+    "sellerLoadError": "Az eladói profil nem tölthető be.",
+    "userNotFound": "A felhasználói adatok nem találhatók. Kérjük, jelentkezzen be újra.",
+    "locationNotFound": "A helyadatok nem találhatók. Kérjük, frissítse az oldalt.",
     "basicInfo": "Alapvető információk",
     "categoryAndCondition": "Kategória és állapot",
     "pricing": "Árazás",
@@ -314,6 +744,8 @@
     "images": "Képek",
     "existingImages": "Elérhető képek",
     "addImage": "Kép hozzáadása",
+    "maxImages": "Maximum 10 képet tölthetsz fel.",
+    "imageHint": "Minimum 1, maximum 10 kép. PNG, JPG vagy WEBP formátumban.",
     "uploadingImages": "Képek töltődnek...",
     "uploadingImage": "A kép betöltés alatt áll.",
     "imageUploadFailed": "A kép nem tölthető be.",
@@ -358,6 +790,7 @@
     "addImage": "Kép hozzáadása",
     "maxImages": "Maximum 10 képet tölthetsz fel.",
     "imageHint": "Minimum 1, maximum 10 kép. PNG, JPG vagy WEBP formátumban.",
+    "location": "Helyszínadatok",
     "fields": {
       "title": "Hirdetés címe",
       "shortDescription": "Rövid leírás",
@@ -370,13 +803,29 @@
       "shippingAvailable": "Szállítás elérhető.",
       "shippingCost": "Szállítási díj",
       "weight": "Súly",
-      "weightUnit": "Súlyegység"
+      "weightUnit": "Súlyegység",
+      "city": "Város",
+      "address": "Cím",
+      "postalCode": "Irányítószám"
     },
     "placeholders": {
       "title": "Példa: 2 éves holstein tehén",
       "shortDescription": "Termékleírás (maximum 200 karakter)",
       "description": "Adjon meg részletes információkat a termékről...",
-      "category": "Válasszon egy kategóriát."
+      "category": "Válasszon egy kategóriát.",
+      "city": "Belépés a városba",
+      "address": "Írja be a teljes címet.",
+      "postalCode": "Irányítószám"
+    },
+    "errors": {
+      "titleRequired": "A hirdetés címe kötelező.",
+      "shortDescriptionRequired": "Rövid leírás szükséges.",
+      "descriptionRequired": "Részletes magyarázat szükséges.",
+      "categoryRequired": "A kategória kiválasztása kötelező.",
+      "priceRequired": "Az ár megadása kötelező.",
+      "cityRequired": "Városi információk szükségesek.",
+      "addressRequired": "A cím megadása kötelező.",
+      "locationError": "Hiba történt a helyszín létrehozásakor."
     },
     "success": "A hirdetés sikeresen létrejött.",
     "error": "Hiba történt a hirdetés létrehozásakor.",
@@ -388,24 +837,53 @@
     "draftSaved": "Vázlat mentve",
     "productCreated": "A termék sikeresen létrejött.",
     "creationFailed": "A termék nem hozható létre. Kérjük, próbálja újra.",
-    "errors": {
-      "titleRequired": "A hirdetés címe kötelező.",
-      "shortDescriptionRequired": "Rövid leírás szükséges.",
-      "descriptionRequired": "Részletes magyarázat szükséges.",
-      "categoryRequired": "A kategória kiválasztása kötelező.",
-      "priceRequired": "Adjon meg egy érvényes árat."
-    }
+    "userNotFound": "A felhasználói adatok nem találhatók. Kérjük, jelentkezzen be újra.",
+    "defaultBusinessName": "Az én vállalkozásom"
+  },
+  "becomeSeller": {
+    "title": "Legyen eladó",
+    "description": "Cégkivonat",
+    "alreadySeller": "Már van eladói profilod.",
+    "goToListings": "Ugrás a listáimhoz",
+    "businessInfo": "Üzleti információk",
+    "contactInfo": "Elérhetőségek",
+    "businessName": "Cégnév",
+    "businessNamePlaceholder": "Példa: Yilmaz Farm",
+    "businessType": "Üzleti túra",
+    "businessTypePlaceholder": "Válassza ki a vállalkozás típusát.",
+    "businessTypes": {
+      "individual": "Egyedi",
+      "company": "Vállalat",
+      "cooperative": "Szövetkezet",
+      "farm": "Farm"
+    },
+    "taxNumber": "Adószám",
+    "taxNumberPlaceholder": "Adja meg adóazonosító számát (opcionális)",
+    "descriptionPlaceholder": "Írj egy rövid leírást a vállalkozásodról...",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Weboldal",
+    "websitePlaceholder": "https://www.examplesite.com (opcionális)",
+    "submit": "Eladói profil létrehozása",
+    "submitting": "Profil létrehozása...",
+    "success": "Eladói profilja sikeresen létrehozva!",
+    "error": "Hiba történt az eladói profil létrehozásakor.",
+    "taxNumberHelp": "Adja meg 10 vagy 11 jegyű adószámát (opcionális)",
+    "phoneHelp": "Példa: +90 555 123 45 67 vagy 0555 123 45 67",
+    "websiteHelp": "Példa: www.isletmem.com vagy https://isletmem.com",
+    "alreadySellerDescription": "Az alábbi gombbal kezelheti hirdetéseit.",
+    "newListing": "Új hirdetés hozzáadása"
   },
   "fileUpload": {
     "dragDrop": "Töltsön fel egy fotót vagy videót.",
     "dragDropHint": "Húzd és vidd el, vagy kattints a kiválasztáshoz.",
     "dropHere": "Hagyd már...",
     "imageLimit": "Fotó: max. 10 MB",
-    "videoLimit": "Videó: maximum 50 MB",
+    "videoLimit": "Videó: max. 100 MB",
     "uploadCount": "{jelenlegi} / {max} betöltve",
     "maxFilesError": "Legfeljebb {max} médiafájlt tölthetsz fel.",
     "imageTooLarge": "A fotónak kisebbnek kell lennie, mint 10 MB.",
-    "videoTooLarge": "A videónak kisebbnek kell lennie, mint 50 MB.",
+    "videoTooLarge": "A videónak kisebbnek kell lennie, mint 100 MB.",
     "optimizing": "Optimalizálás...",
     "uploading": "Terhelés...",
     "queued": "Sorban várakozva...",
@@ -419,9 +897,833 @@
     "videoBadge": "VIDEÓ",
     "coverUpdated": "A borítókép sikeresen beállítva.",
     "optimizationInfo": "A fotók optimalizálva vannak a webes szabványoknak való megfelelés érdekében.",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Vizuális kiválasztás",
+    "changeImage": "Változás",
+    "removeImage": "Eltávolítás",
+    "videoProcessing": "A videó feldolgozása folyamatban van...",
+    "videoProcessingFailed": "A művelet sikertelen.",
+    "videoProcessingPollError": "A videó feldolgozási állapota nem érhető el. Kérjük, frissítse az oldalt.",
+    "reorderError": "A fájl rendezése sikertelen volt.",
+    "coverUpdateError": "A borítókép frissítése sikertelen volt."
+  },
+  "error": {
+    "title": "Hiba történt.",
+    "description": "Váratlan hiba történt. Kérjük, frissítse az oldalt, vagy próbálja újra később.",
+    "retry": "Próbáld újra",
+    "goBack": "Ne menj vissza",
+    "goHome": "Otthon",
+    "notFound": {
+      "title": "Az oldal nem található",
+      "description": "A keresett oldal vagy nem elérhető, vagy áthelyezték.",
+      "goHome": "Vissza a kezdőlapra"
+    }
+  },
+  "search": {
+    "title": "Keresés",
+    "placeholder": "Termékek, kategóriák vagy eladók keresése...",
+    "searchButton": "Keresés",
+    "searchingFor": "Keresett",
+    "loading": "Keresett...",
+    "resultsCount": "{count} találatot találtunk.",
+    "noResults": "Nincs találat.",
+    "tryDifferentSearch": "Próbáljon ki más kulcsszavakat, vagy módosítsa a szűrőket.",
+    "filters": {
+      "title": "Szűrők",
+      "category": "Kategória",
+      "allCategories": "Minden kategória",
+      "condition": "Helyzet",
+      "allConditions": "Minden eset",
+      "priceRange": "Árkategória",
+      "price": "Ár",
+      "min": "Min.",
+      "max": "Max",
+      "apply": "Jelentkezés",
+      "clear": "Tiszta",
+      "clearAll": "Összes törlése"
+    },
+    "fetchError": "Hiba történt a keresési eredmények betöltése során",
+    "recentSearches": "Legutóbbi keresések",
+    "clearHistory": "Előzmények törlése",
+    "noSearchHistory": "Még nincsenek keresési előzményeid.",
+    "deleteHistoryError": "Hiba történt a keresési előzmények törlésekor."
+  },
+  "categories": {
+    "title": "Kategóriakezelés",
+    "description": "Kategóriák kezelése innen.",
+    "noCategories": "Még nem adtak hozzá kategóriákat.",
+    "createFirst": "Hozd létre az első kategóriát.",
+    "fetchError": "Hiba történt a kategóriák betöltése közben.",
+    "createSuccess": "Kategória sikeresen létrehozva",
+    "createError": "Hiba történt a kategória létrehozásakor.",
+    "updateSuccess": "Kategória sikeresen frissítve",
+    "updateError": "Hiba történt a kategória frissítésekor.",
+    "deleteSuccess": "A kategória sikeresen törölve.",
+    "deleteError": "Hiba történt a kategória törlése közben.",
+    "activateSuccess": "A kategória aktiválva lett.",
+    "deactivateSuccess": "A kategória deaktiválva lett.",
+    "statusError": "Hiba történt az állapot módosításakor.",
+    "loadError": "Hiba történt a kategória betöltésekor",
+    "filters": {
+      "all": "Mindegyikük",
+      "active": "Aktív",
+      "inactive": "Inaktív"
+    },
+    "table": {
+      "name": "Kategória neve",
+      "slug": "Meztelen csiga",
+      "sortOrder": "Sorozatszám",
+      "subCategories": "Alkategória",
+      "status": "Helyzet",
+      "actions": "Tranzakciók"
+    },
+    "actions": {
+      "edit": "Szerkesztés",
+      "delete": "Töröl",
+      "activate": "Aktiválás",
+      "deactivate": "Passzív szerkezet"
+    },
+    "deleteDialog": {
+      "title": "Kategória törlése",
+      "description": "Biztosan törölni szeretné ezt a kategóriát? Ez a művelet visszafordíthatatlan.",
+      "cancel": "Mégsem",
+      "confirm": "Töröl"
+    },
+    "addNew": "Új kategória hozzáadása",
+    "loadMore": "További letöltések",
+    "loadingMore": "Terhelés...",
+    "form": {
+      "newTitle": "Új kategória létrehozása",
+      "editTitle": "Kategória szerkesztése",
+      "name": "Kategória neve",
+      "namePlaceholder": "Példa: Szarvasmarha",
+      "slug": "Meztelen csiga",
+      "slugPlaceholder": "Példa: nagy állatállomány",
+      "description": "Magyarázat",
+      "descriptionPlaceholder": "Rövid leírás a kategóriáról...",
+      "parentCategory": "Felső kategória",
+      "parentCategoryPlaceholder": "Válasszon egy felső kategóriát (opcionális)",
+      "noParent": "Nincs felső kategória (Fő kategória)",
+      "sortOrder": "Sorszám",
+      "isActive": "Aktív",
+      "iconUrl": "Ikon URL-címe",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Megtakarítás",
+      "submitting": "Megtakarítás...",
+      "updating": "Frissítés...",
+      "errors": {
+        "nameRequired": "A kategória nevének megadása kötelező.",
+        "slugRequired": "A meztelen csigák kötelezőek."
+      }
+    }
+  },
+  "offers": {
+    "title": "Javaslatok",
+    "description": "Kezelje bejövő és kimenő ajánlatait.",
+    "received": "Bejövő ajánlatok",
+    "sent": "Beküldött ajánlatok",
+    "noReceivedOffers": "Még nem érkezett ajánlat.",
+    "noSentOffers": "Még nem nyújtottál be ajánlatot.",
+    "browseProducts": "Termékek böngészése",
+    "viewProduct": "Tekintse meg a terméket",
+    "accept": "Elfogadás",
+    "reject": "Elutasít",
+    "withdraw": "Visszavonás",
+    "makeOffer": "Ajánlat beküldése",
+    "sendOffer": "Ajánlat küldése",
+    "sending": "Küldés...",
+    "cancel": "Mégsem",
+    "listingPrice": "Hirdetett ár",
+    "yourOffer": "Az ajánlatod",
+    "quantity": "Összeg",
+    "messageOptional": "Üzenet (opcionális)",
+    "messagePlaceholder": "Egy megjegyzés, amit meg szeretne osztani az eladóval...",
+    "expiresAt": "Utolsó érvényességi dátum",
+    "offerSent": "Ajánlatát sikeresen elküldtük.",
+    "offerError": "Hiba történt az ajánlat elküldése során.",
+    "acceptSuccess": "Az ajánlatot elfogadták.",
+    "rejectSuccess": "Az ajánlatot elutasították.",
+    "withdrawSuccess": "Az ajánlatot visszavonták.",
+    "actionError": "Hiba történt a folyamat során.",
+    "fetchError": "Hiba történt az ajánlatok betöltése során.",
+    "loginRequired": "Jelentkezzen be ajánlattételhez.",
+    "invalidPrice": "Adjon meg egy érvényes árat.",
+    "invalidQuantity": "Adjon meg egy érvényes összeget.",
+    "status": {
+      "pending": "Függőben levő",
+      "accepted": "Elfogadott",
+      "rejected": "Elutasítva",
+      "countered": "Ellenajánlat",
+      "expired": "A futamideje lejárt.",
+      "withdrawn": "Visszalépett"
+    }
+  },
+  "deals": {
+    "title": "megállapodások",
+    "description": "Tartsa be a beszerzési szerződéseit.",
+    "buying": "Tudósok",
+    "selling": "Értékesítés",
+    "noBuyingDeals": "Még nincs diákregisztrációs folyamatod.",
+    "noSellingDeals": "Még nincsenek értékesítési tranzakciói.",
+    "browseProducts": "Termékek böngészése",
+    "viewProduct": "Tekintse meg a terméket",
+    "activeDeals": "Aktív megállapodások",
+    "completedDeals": "Befejezve",
+    "purchases": "Tudósok",
+    "sales": "Értékesítés",
+    "fetchError": "Hiba történt a szerződések betöltése során",
+    "dealStatus": {
+      "pending": "Függőben levő",
+      "confirmed": "Megerősített",
+      "processing": "Előkészítés",
+      "shipped": "A rakományban",
+      "delivered": "Kiszállítva",
+      "completed": "Befejezve",
+      "cancelled": "Lemondva",
+      "disputed": "Megállapodás"
+    },
+    "delivery": {
+      "pickup": "Kézbes kézbesítés",
+      "shipping": "Rakományonként",
+      "transport": "Közlekedéssel"
+    },
+    "requestTransport": "Szállítási kérelem"
+  },
+  "farms": {
+    "title": "A farmjaim",
+    "description": "Kezeld és frissítsd a gazdaságaidat.",
+    "addFarm": "Farm hozzáadása",
+    "editFarm": "Farmgazdálkodás",
+    "noFarms": "Még nem adtál hozzá farmot.",
+    "farmName": "Gazdaság neve",
+    "registrationNumber": "Regisztrációs szám",
+    "location": "Elhelyezkedés",
+    "selectLocation": "Válasszon egy helyet.",
+    "addLocationFirst": "Először is, adj hozzá egy helyszínt.",
+    "farmTypeLabel": "Farmtúra",
+    "farmDescription": "Magyarázat",
+    "totalArea": "Teljes terület",
+    "cultivatedArea": "Megművelt terület",
+    "certifications": "Tanúsítványok",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP stb.",
+    "organic": "Szerves",
+    "verified": "Ellenőrzött",
+    "save": "Megtakarítás",
+    "saving": "Megtakarítás...",
+    "cancel": "Mégsem",
+    "edit": "Szerkesztés",
+    "delete": "Töröl",
+    "sellerRequired": "Eladói profil szükséges",
+    "sellerRequiredDesc": "Farm hozzáadásához először létre kell hoznia az eladói profilját.",
+    "becomeSeller": "Legyen eladó",
+    "createSuccess": "A farmot sikeresen hozzáadtuk.",
+    "updateSuccess": "A farm frissítése sikeresen megtörtént.",
+    "deleteSuccess": "A farmot sikeresen töröltük.",
+    "saveError": "Hiba történt a farm regisztrálása során.",
+    "deleteError": "Hiba történt a farm törlése közben.",
+    "fetchError": "Hiba történt a gazdaság adatainak feltöltése során.",
+    "farmType": {
+      "livestock": "Állattenyésztés",
+      "crop": "Mezőgazdaság",
+      "mixed": "Vegyes",
+      "poultry": "Szárnyas",
+      "dairy": "tejgazdálkodás",
+      "aquaculture": "Vízi termékek"
+    }
+  },
+  "transporters": {
+    "title": "szállítók",
+    "description": "Állat- és termékszállítási szolgáltatások",
+    "searchPlaceholder": "Keress egy szállítót...",
+    "noTransporters": "Még nincsenek regisztrált fuvarozók.",
+    "verified": "Ellenőrzött",
+    "transports": "szállítás",
+    "viewProfile": "Profil megtekintése",
+    "sort": {
+      "newest": "Legújabb",
+      "rating": "Legmagasabb pontszám",
+      "mostTransports": "Leggyakoribb szállítás"
+    },
+    "pagination": {
+      "previous": "Korábbi",
+      "next": "Következő",
+      "page": "Oldal {oldal}"
+    }
+  },
+  "transport": {
+    "title": "Szállítási kéréseim",
+    "description": "Kövesse nyomon szállítási kérelmeit.",
+    "findTransporter": "Szállító keresése",
+    "active": "Aktív",
+    "completed": "Befejezve",
+    "total": "Teljes",
+    "asSeller": "Eladóként",
+    "asBuyer": "Vevőként",
+    "noSellerRequests": "Eladóként nincs szállítási kötelezettsége.",
+    "noBuyerRequests": "Címzettként nincs szállítási igényed.",
+    "viewProduct": "Tekintse meg a terméket",
+    "pickup": "Kap",
+    "delivery": "Szállítás",
+    "urgent": "Sürgős",
+    "fetchError": "Hiba történt a szállítási kérelmek feltöltése során.",
+    "trackShipment": "Követés",
+    "transportStatus": {
+      "pending": "Függőben levő",
+      "inPool": "A medencében",
+      "assigned": "Kijelölt",
+      "pickedUp": "Nyugta",
+      "inTransit": "Úton",
+      "delivered": "Kiszállítva",
+      "completed": "Befejezve",
+      "cancelled": "Lemondva"
+    },
+    "transportType": {
+      "standard": "Standard",
+      "refrigerated": "Hűtőlánc",
+      "liveAnimal": "Élő állatok",
+      "hazardous": "Veszélyes anyagok",
+      "oversized": "Nagy méret"
+    }
+  },
+  "moderation": {
+    "title": "Termékmoderálás",
+    "description": "Jóváhagyásra váró termékek áttekintése.",
+    "pending": "várakozás",
+    "allClear": "Minden terméket ellenőriztek.",
+    "noPending": "Nincsenek jóváhagyásra váró termékek.",
+    "awaitingReview": "Felülvizsgálatra vár",
+    "by": "Értékesítő:",
+    "stock": "Készlet",
+    "preview": "Veled",
+    "approve": "Megerősítés",
+    "reject": "Elutasít",
+    "confirmReject": "Elutasít",
+    "cancelReject": "Add fel",
+    "rejectReasonPlaceholder": "Írd le az elutasítás okát...",
+    "rejectReasonRequired": "A megtagadás indoklása kötelező.",
+    "approveSuccess": "A termék sikeresen jóváhagyva lett.",
+    "rejectSuccess": "A terméket elutasították.",
+    "actionError": "Hiba történt a folyamat során.",
+    "fetchError": "Hiba történt a termékek feltöltése során.",
+    "unauthorized": "Nincs jogosultsága az oldal eléréséhez."
+  },
+  "sellerModeration": {
+    "title": "Eladói moderálás",
+    "description": "Eladói fiókok áttekintése és kezelése.",
+    "pending": "várakozás",
+    "allClear": "Minden eladót megvizsgáltak.",
+    "noPending": "Nincsenek várakozó eladók.",
+    "verify": "Ellenőrzés",
+    "suspend": "Felfüggesztés",
+    "verifySuccess": "Az eladó sikeresen ellenőrizve.",
+    "suspendSuccess": "Eladó felfüggesztve.",
+    "actionError": "Hiba történt a folyamat során.",
+    "suspendReasonRequired": "A felfüggesztés okának megadása kötelező.",
+    "suspendReasonPlaceholder": "Írd le a felfüggesztés okát...",
+    "confirmSuspend": "Felfüggesztés",
+    "cancelSuspend": "Add fel",
+    "statusLabels": {
+      "pendingVerification": "Ellenőrzés függőben",
+      "active": "Aktív",
+      "suspended": "Függő",
+      "banned": "Tiltott"
+    },
+    "filterAll": "Összes megjelenítése",
+    "filterPending": "A várakozók",
+    "filterActive": "Eszközök",
+    "filterSuspended": "Felfüggesztett",
+    "unauthorized": "Nincs jogosultsága az oldal eléréséhez.",
+    "businessName": "Cégnév",
+    "businessType": "Üzleti túra",
+    "email": "Email",
+    "phone": "Telefon",
+    "status": "Helyzet",
+    "createdAt": "Regisztráció dátuma"
+  },
+  "transporterModeration": {
+    "title": "Hordozó moderálás",
+    "description": "Szállítói fiókok áttekintése és kezelése.",
+    "pending": "várakozás",
+    "allClear": "Minden szállítmányozót megvizsgáltak.",
+    "noPending": "Egyetlen szállító sem vár.",
+    "verify": "Ellenőrzés",
+    "suspend": "Felfüggesztés",
+    "verifySuccess": "A szállítóeszközt sikeresen ellenőrizték.",
+    "suspendSuccess": "A szállítót felfüggesztették.",
+    "actionError": "Hiba történt a folyamat során.",
+    "suspendReasonRequired": "A felfüggesztés okának megadása kötelező.",
+    "suspendReasonPlaceholder": "Írd le a felfüggesztés okát...",
+    "confirmSuspend": "Felfüggesztés",
+    "cancelSuspend": "Add fel",
+    "statusLabels": {
+      "pendingVerification": "Ellenőrzés függőben",
+      "active": "Aktív",
+      "suspended": "Függő",
+      "banned": "Tiltott"
+    },
+    "filterAll": "Összes megjelenítése",
+    "filterPending": "A várakozók",
+    "filterActive": "Eszközök",
+    "filterSuspended": "Felfüggesztett",
+    "unauthorized": "Nincs jogosultsága az oldal eléréséhez.",
+    "companyName": "Cégnév",
+    "contactPerson": "Meghatalmazott személy",
+    "email": "Email",
+    "phone": "Telefon",
+    "city": "Város",
+    "status": "Helyzet",
+    "createdAt": "Regisztráció dátuma"
+  },
+  "transporterDetail": {
+    "notFound": "Nem találtak szállítót.",
+    "backToList": "Don a szállítóknak",
+    "verified": "Ellenőrzött",
+    "totalTransports": "teljes szállítási költség",
+    "completed": "befejezett",
+    "about": "Körülbelül",
+    "contact": "Elérhetőségek",
+    "businessInfo": "Üzleti információk",
+    "license": "Engedélyszám",
+    "insurance": "Biztosítási információk",
+    "fleet": "Flottainformációk",
+    "serviceRegions": "Szolgáltatási területek",
+    "specializations": "Szakterületek",
+    "certifications": "Tanúsítványok"
+  },
+  "brands": {
+    "title": "Márkamenedzsment",
+    "description": "Termékmárkák kezelése.",
+    "addBrand": "Márka hozzáadása",
+    "editBrand": "Márka szerkesztése",
+    "noBrands": "Még nem adtak hozzá márkákat.",
+    "brandName": "Márkanév",
+    "brandDescription": "Magyarázat",
+    "website": "Weboldal",
+    "logoUrl": "Logó URL-címe",
+    "save": "Megtakarítás",
+    "saving": "Megtakarítás...",
+    "cancel": "Mégsem",
+    "edit": "Szerkesztés",
+    "delete": "Töröl",
+    "inactive": "Passzív",
+    "products": "termék",
+    "createSuccess": "Márka sikeresen hozzáadva",
+    "updateSuccess": "A márka frissítése sikeresen megtörtént.",
+    "deleteSuccess": "A márkanév törlése sikeresen megtörtént.",
+    "saveError": "Hiba történt a védjegy regisztrációja során.",
+    "deleteError": "Hiba történt a védjegy törlésekor.",
+    "fetchError": "Hiba történt a márkák betöltése során",
+    "unauthorized": "Nincs jogosultsága az oldal eléréséhez."
+  },
+  "transporterReviews": {
+    "title": "Értékelések",
+    "reviewCount": "értékelés",
+    "noReviews": "Még nincs értékelés.",
+    "timeliness": "Időben történő szállítás",
+    "communication": "Kommunikáció",
+    "carefulHandling": "Gondos kezelés",
+    "professionalism": "Szakmaiasság"
+  },
+  "transportOffers": {
+    "title": "Szállítási árajánlatok",
+    "description": "Kezelje a szállítási kérelmekre beküldött árajánlatokat.",
+    "newOffer": "Új javaslat",
+    "transportRequestId": "Szállítási kérelem azonosítója",
+    "requestIdPlaceholder": "Adja meg a szállítási kérelem azonosítóját.",
+    "offeredPrice": "Ajánlati ár",
+    "estimatedDays": "Becsült időtartam (nap)",
+    "days": "nap",
+    "vehicleType": "Járműtípus",
+    "insuranceIncluded": "Biztosítás benne van",
+    "message": "Üzenet",
+    "cancel": "Mégsem",
+    "sending": "Küldés...",
+    "sendOffer": "Ajánlat beküldése",
+    "cancelOffer": "Mégsem",
+    "pendingTab": "Várakozás",
+    "historyTab": "Elmúlt",
+    "noPendingOffers": "Nincsenek függőben lévő ajánlatai.",
+    "noHistory": "Nem találhatók korábbi ajánlatok.",
+    "status": {
+      "pending": "Várakozás",
+      "accepted": "Elfogadott",
+      "rejected": "Elutasítva",
+      "expired": "A futamideje lejárt.",
+      "cancelled": "Lemondva"
+    },
+    "createSuccess": "Az ajánlatot sikeresen benyújtottuk.",
+    "createError": "Hiba történt az ajánlat elküldése során.",
+    "cancelSuccess": "Az ajánlatot törölték.",
+    "cancelError": "Hiba történt az ajánlat törlésekor.",
+    "fetchError": "Hiba történt az ajánlatok betöltése során."
+  },
+  "animalInfo": {
+    "title": "Állat- és termékinformációk",
+    "animalTab": "Állati",
+    "healthTab": "Egészség",
+    "vaccinationsTab": "Oltók",
+    "veterinaryTab": "Állatorvos",
+    "breed": "Verseny",
+    "genderLabel": "Nem",
+    "gender": {
+      "male": "Férfi",
+      "female": "Női",
+      "unknown": "Ismeretlen"
+    },
+    "age": "Kor",
+    "months": "hónap",
+    "weight": "Súly",
+    "color": "Szín",
+    "tagNumber": "Fülszám",
+    "healthStatus": "Egészségi állapot",
+    "health": {
+      "healthy": "Egészséges",
+      "underTreatment": "Kezelés alatt",
+      "recovering": "Lábadozik.",
+      "quarantined": "Karantén alatt",
+      "unknown": "Ismeretlen"
+    },
+    "purposeLabel": "Rendeltetésszerű használat",
+    "purpose": {
+      "breeding": "Csavar",
+      "dairy": "Tej",
+      "meat": "Hús",
+      "egg": "Tojás",
+      "wool": "Gyapjú",
+      "working": "Munka",
+      "pet": "Háztartási",
+      "other": "Más"
+    },
+    "pregnancy": "Terhesség",
+    "pregnant": "Terhes",
+    "microchip": "Mikrochip száma",
+    "passport": "Útlevélszám",
+    "sireDetails": "Apa adatai",
+    "damDetails": "Fő információk",
+    "diagnosis": "Diagnózis",
+    "treatment": "Kezelés",
+    "medications": "Gyógyszerek",
+    "veterinarian": "Állatorvos",
+    "nextDue": "A következő lázadó történelem",
+    "prescriptionRequired": "Orvosi recept szükséges",
+    "targetSpecies": "Céltúrák",
+    "activeIngredients": "Hatóanyagok",
+    "registrationNo": "Regisztrációs szám",
+    "storage": "Tárolás",
+    "chemicalTab": "Kémiai",
+    "feedTab": "Csali",
+    "seedTab": "Mag",
+    "machineryTab": "Gép",
+    "organic": "Szerves",
+    "toxicity": "Toxicitás",
+    "gmoFree": "GMO-mentes",
+    "protein": "Fehérje",
+    "fat": "Olaj",
+    "fiber": "Rost",
+    "hybrid": "Hibrid",
+    "germination": "Csírázás",
+    "daysToMaturity": "Érés",
+    "daysLabel": "nap",
+    "warranty": "Garantált",
+    "power": "Erő",
+    "hoursUsed": "Használati órák",
+    "hours": "óra",
+    "powerSource": "Tápegység"
+  },
+  "productVariants": {
+    "title": "Termékváltozatok",
+    "variantCount": "változat",
+    "inStock": "Raktáron",
+    "outOfStock": "Elfogyott"
+  },
+  "productPrices": {
+    "title": "Árak (több pénznemben)",
+    "autoConversion": "Automatikus átalakítás",
+    "validUntil": "Érvényesség"
+  },
+  "requestTransport": {
+    "title": "Szállítási kérelem létrehozása",
+    "pickupLocation": "Rakodási pont",
+    "deliveryLocation": "Kiszállítási pont",
+    "city": "Város",
+    "address": "Cím",
+    "transportType": "Közlekedési túra",
+    "types": {
+      "standard": "Standard",
+      "refrigerated": "Hűtőlánc",
+      "liveAnimal": "Élő állatok",
+      "hazardous": "Veszélyes anyagok",
+      "oversized": "Nagy méret"
+    },
+    "weight": "Súly (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Előnyben részesített feltöltési dátum",
+    "preferredDeliveryDate": "Előnyben részesített szállítási dátum",
+    "urgent": "Sürgős szállítás",
+    "specialInstructions": "Különleges utasítások",
+    "instructionsPlaceholder": "Írd ide a konkrét utasításaidat...",
+    "cancel": "Add fel",
+    "submit": "Igény létrehozása",
+    "submitting": "A teremtés folyamatában...",
+    "success": "A szállítási igénylés sikeresen létrejött.",
+    "error": "Hiba történt a szállítási kérelem létrehozásakor."
+  },
+  "transportTracking": {
+    "title": "Szállítmánykövetés",
+    "noTracking": "Még nem állnak rendelkezésre követési információk.",
+    "update": "Frissítés"
+  },
+  "locations": {
+    "title": "Címeim",
+    "description": "Kezelje regisztrált címeit.",
+    "addLocation": "Cím hozzáadása",
+    "editLocation": "Cím szerkesztése",
+    "noLocations": "Még nincs regisztrált címe.",
+    "name": "Cím neve",
+    "namePlaceholder": "Például: Ház, Munka, Farm",
+    "address": "Cím",
+    "addressLine2": "Cím 2. sor",
+    "city": "Város",
+    "state": "Kerület / Régió",
+    "postalCode": "Irányítószám",
+    "phone": "Telefon",
+    "email": "Email",
+    "cancel": "Add fel",
+    "save": "Megtakarítás",
+    "saving": "Megtakarítás...",
+    "typePickup": "Terhelés",
+    "typeDelivery": "Szállítás",
+    "typeBoth": "Általános",
+    "createSuccess": "Cím sikeresen hozzáadva.",
+    "createError": "Hiba történt a cím hozzáadásakor.",
+    "updateSuccess": "A cím frissítése sikeresen megtörtént.",
+    "updateError": "Hiba történt a cím frissítésekor.",
+    "deleteLocation": "Cím törlése",
+    "deleteSuccess": "Cím törölve",
+    "deleteError": "Hiba történt a cím törlése közben.",
+    "fetchError": "Hiba történt a címek betöltése közben."
+  },
+  "systemSettings": {
+    "title": "Rendszerbeállítások",
+    "description": "Tekintse meg a platform pénznemét, nyelvét, fizetési módjait, szállítási és adóbeállításait.",
+    "unauthorized": "Nincs jogosultsága az oldal eléréséhez.",
+    "currenciesTab": "Valuták",
+    "languagesTab": "Nyelvek",
+    "paymentTab": "Fizetési módok",
+    "shippingTab": "Rakomány",
+    "taxTab": "Adó",
+    "active": "Aktív",
+    "inactive": "Passzív",
+    "default": "Alapértelmezett",
+    "noCurrencies": "A pénznemet még nem határozták meg.",
+    "noLanguages": "A nyelvet még nem definiálták.",
+    "noPaymentMethods": "A fizetési mód még nincs meghatározva.",
+    "noCarriers": "A szállítmányozó céget még nem azonosították.",
+    "noZones": "A raktér területe még nincs meghatározva.",
+    "noTaxRates": "Az adókulcsot még nem határozták meg.",
+    "carriers": "Szállítási társaságok",
+    "zones": "Rakományzónák",
+    "countries": "Országok",
+    "rates": "Szállítási díjak",
+    "noRates": "A szállítási költségeket még nem határozták meg.",
+    "freeShipping": "Ingyenes szállítás",
+    "deliveryDays": "napos szállítási idő"
+  },
+  "pushPermission": {
+    "title": "Értesítések engedélyezése",
+    "description": "Értesítéseket kaphat az új üzenetekről, ajánlatokról és rendelési frissítésekről.",
+    "allow": "Engedélyezés",
+    "dismiss": "Közeli"
+  },
+  "healthRecords": {
+    "title": "Egészségügyi feljegyzések",
+    "description": "Az állatok egészségügyi nyilvántartásának és kórtörténetének kezelése.",
+    "addRecord": "Rekord hozzáadása",
+    "editRecord": "Rekord szerkesztése",
+    "deleteRecord": "Rekord törlése",
+    "noRecords": "Az egészségügyi nyilvántartás még nincs hozzáadva.",
+    "animalInfoId": "Állatazonosító",
+    "animalInfoIdPlaceholder": "Adja meg az állat azonosító adatait.",
+    "recordType": "Regisztrációs túra",
+    "recordTypePlaceholder": "Példák: Vizsgálat, Kezelés, Sebészet",
+    "recordDate": "Regisztráció dátuma",
+    "followUpDate": "Ellenőrzési dátum",
+    "veterinarianName": "Állatorvos",
+    "veterinarianLicense": "Engedélyszám",
+    "clinicName": "Klinikai",
+    "diagnosis": "Diagnózis",
+    "treatment": "Kezelés",
+    "medications": "Gyógyszerek",
+    "medicationsPlaceholder": "Példa: 500 mg penicillin, ibuprofén",
+    "notes": "Megjegyzések",
+    "documentUrl": "Dokumentum URL-címe",
+    "saving": "Megtakarítás...",
+    "createSuccess": "Az egészségügyi feljegyzés sikeresen hozzáadva.",
+    "updateSuccess": "Az egészségügyi nyilvántartás sikeresen frissítve.",
+    "deleteSuccess": "Az egészségügyi nyilvántartást sikeresen töröltük.",
+    "saveError": "Hiba történt a rekord mentése közben.",
+    "deleteError": "Hiba történt a rekord törlése közben.",
+    "fetchError": "Hiba történt a rekordok betöltése közben"
+  },
+  "vaccinations": {
+    "title": "Oltási feljegyzések",
+    "description": "Állatok oltási nyilvántartásainak és naptárainak kezelése.",
+    "addVaccination": "Lázadó hozzáadása",
+    "editVaccination": "Lázadó megállapodás",
+    "deleteVaccination": "Lázadó Sil",
+    "noVaccinations": "Az oltási nyilvántartás még nincs feltöltve.",
+    "animalInfoId": "Állatazonosító",
+    "animalInfoIdPlaceholder": "Adja meg az állat azonosító adatait.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Példa: SAT vakcina, Brucella",
+    "vaccineType": "Lázadó túra",
+    "vaccineTypePlaceholder": "Példa: Élő, Inaktív",
+    "batchNumber": "Partszám",
+    "vaccinationDate": "A lázadó története",
+    "nextDueDate": "A következő lázadó történelem",
+    "veterinarianName": "Állatorvos",
+    "veterinarianLicense": "Engedélyszám",
+    "notes": "Megjegyzések",
+    "certificateUrl": "Tanúsítvány URL-címe",
+    "saving": "Megtakarítás...",
+    "createSuccess": "Oltási rekord sikeresen hozzáadva.",
+    "updateSuccess": "Oltási adatok sikeresen frissítve.",
+    "deleteSuccess": "Az oltási nyilvántartást sikeresen törölték.",
+    "saveError": "Hiba történt a vakcina regisztrálása során.",
+    "deleteError": "Hiba történt a vakcina törlésekor.",
+    "fetchError": "Hiba történt a vakcinák betöltése során."
+  },
+  "shippingCarriers": {
+    "title": "Szállítási társaságok",
+    "description": "A szállítmányozási cég adatainak kezelése.",
+    "addCarrier": "Cég hozzáadása",
+    "editCarrier": "Cég szerkesztése",
+    "noCarriers": "Még nem adtak hozzá szállítmányozó céget.",
+    "carrierName": "Cégnév",
+    "carrierNamePlaceholder": "Példa: Aras Kargo, MNG",
+    "code": "Kód",
+    "codePlaceholder": "Példa: ARAS",
+    "website": "Weboldal",
+    "trackingUrlTemplate": "URL-sablon követése",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Támogatott országok",
+    "supportedCountriesPlaceholder": "Példa: TR, US, DE",
+    "active": "Aktív",
+    "inactive": "Passzív",
+    "saving": "Megtakarítás...",
+    "edit": "Szerkesztés",
+    "delete": "Töröl",
+    "createSuccess": "A szállítmányozó cég hozzáadása sikeresen megtörtént.",
+    "updateSuccess": "A szállítmányozási cég adatait sikeresen frissítettük.",
+    "deleteSuccess": "A szállítmányozási céget sikeresen töröltük.",
+    "saveError": "Hiba történt a szállítmányozó cég regisztrálása során.",
+    "deleteError": "Hiba történt a szállítmányozó cég adatainak törlésekor.",
+    "fetchError": "Hiba történt a teheráru-szállító cégek betöltésekor."
+  },
+  "shippingZones": {
+    "title": "Rakományzónák",
+    "description": "Rakományzónák és -területek kezelése.",
+    "addZone": "Régió hozzáadása",
+    "editZone": "Régió szerkesztése",
+    "noZones": "Még nem adtak hozzá rakteret.",
+    "zoneName": "Régió neve",
+    "zoneNamePlaceholder": "Példa: Európa, Észak-Amerika",
+    "countryCodes": "Országkódok",
+    "countryCodesPlaceholder": "Példa: TR, DE, FR",
+    "active": "Aktív",
+    "inactive": "Passzív",
+    "saving": "Megtakarítás...",
+    "edit": "Szerkesztés",
+    "delete": "Töröl",
+    "createSuccess": "A régió hozzáadása sikeresen megtörtént.",
+    "updateSuccess": "A régió frissítése sikeresen megtörtént.",
+    "deleteSuccess": "A területet sikeresen megtisztították.",
+    "saveError": "Hiba történt a régió mentése közben.",
+    "deleteError": "Hiba történt a régió törlése közben.",
+    "fetchError": "Hiba történt a régiók betöltése közben"
+  },
+  "shippingRates": {
+    "title": "Szállítási díjak",
+    "description": "Szállítási költségek és kézbesítési lehetőségek kezelése.",
+    "addRate": "Díj hozzáadása",
+    "editRate": "Díj módosítása",
+    "noRates": "A szállítási költségeket még nem adtuk hozzá.",
+    "zone": "Terület",
+    "carrier": "Cég",
+    "selectZone": "Válasszon egy régiót",
+    "selectCarrier": "Válasszon egy céget",
+    "shippingCost": "Szállítási díj",
+    "currency": "Valuta",
+    "estimatedDeliveryDays": "Várható kézbesítés (nap)",
+    "minWeight": "Minimális súly",
+    "maxWeight": "Maximális súly",
+    "minOrderAmount": "Minimális rendelési összeg",
+    "freeShipping": "Ingyenes szállítás",
+    "free": "Ingyenes",
+    "active": "Aktív",
+    "inactive": "Passzív",
+    "cost": "Díj",
+    "deliveryDays": "Szállítás",
+    "status": "Helyzet",
+    "saving": "Megtakarítás...",
+    "createSuccess": "A díj sikeresen hozzáadva.",
+    "updateSuccess": "A fizetés sikeresen frissítve.",
+    "deleteSuccess": "A díjat sikeresen töröltük.",
+    "saveError": "Hiba történt a díj mentése során.",
+    "deleteError": "Hiba történt a díj törlésekor.",
+    "fetchError": "Hiba történt a díjak feltöltése során."
+  },
+  "metadata": {
+    "title": "Állatkereskedelem - Élőállat-kereskedési platform",
+    "description": "A világ legmegbízhatóbb élőállat-kereskedési platformja. Biztonságos és átlátható állatvétel és -eladás.",
+    "pages": {
+      "about": {
+        "title": "Rólunk",
+        "description": "Ismerje meg az élőállat-kereskedést. Egy megbízható élőállat-kereskedési platform."
+      },
+      "contact": {
+        "title": "Kommunikáció",
+        "description": "Lépjen kapcsolatba velünk. Az Élőállat-kereskedés ügyfélszolgálati csapata készen áll, hogy segítsen Önnek."
+      },
+      "terms": {
+        "title": "Felhasználási feltételek",
+        "description": "Állatkereskedelmi Feltételek."
+      },
+      "privacy": {
+        "title": "Adatvédelmi irányelvek",
+        "description": "Állatkereskedelem adatvédelmi irányelvei. Tudja meg, hogyan védjük személyes adatait."
+      },
+      "products": {
+        "title": "Termékek",
+        "description": "Böngésszen az élő állatok hirdetései között. Megbízható hirdetések szarvasmarhákról, juhokról és egyebekről."
+      },
+      "sellers": {
+        "title": "Eladók",
+        "description": "Fedezzen fel megbízható állatkereskedőket. Ellenőrzött eladói profilok és vélemények."
+      },
+      "transporters": {
+        "title": "szállítók",
+        "description": "Fedezze fel az állatszállító cégeket. Biztonságos és professzionális élőállat-szállítás."
+      },
+      "search": {
+        "title": "Keresés",
+        "description": "Keresés az élő állatok listájában. Egyszerű keresés szűrési és rendezési lehetőségekkel."
+      },
+      "faq": {
+        "title": "Gyakran Ismételt Kérdések",
+        "description": "Gyakran ismételt kérdések és válaszok az állatkereskedelemmel kapcsolatban."
+      },
+      "productDetail": {
+        "title": "{title} - Eladó",
+        "description": "Eladó {title} - {city} városban. Kattintson ide a részletekért és az elérhetőségekért."
+      },
+      "sellerDetail": {
+        "title": "{name} - Eladói profil",
+        "description": "{name} eladói profil. Vélemények, hirdetések és elérhetőségek."
+      },
+      "transporterDetail": {
+        "title": "{name} - Szolgáltatói profil",
+        "description": "{name} szállítmányozói profil. Szolgáltatási területek, vélemények és elérhetőségek."
+      }
+    }
   }
 }
