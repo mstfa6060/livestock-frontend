@@ -11,17 +11,30 @@
     "back": "Voltar",
     "next": "Avançar",
     "close": "Fechar",
+    "unauthorized": "Você não tem permissão para acessar esta página.",
     "emailPlaceholder": "ornek@email.com",
     "login": "Conecte-se",
-    "register": "Cadastre-se"
+    "register": "Cadastre-se",
+    "previous": "Antigo",
+    "zoomIn": "Ampliar",
+    "previousImage": "Imagem anterior",
+    "nextImage": "Próxima imagem",
+    "closeLightbox": "Fechar galeria",
+    "imageLightbox": "Galeria de imagens",
+    "slideN": "Slide {n}",
+    "viewMore": "Veja mais"
   },
   "header": {
     "products": "Produtos",
     "sellers": "Vendedores",
+    "transporters": "transportadores",
     "about": "Sobre nós",
+    "search": "Procurar",
     "dashboard": "Painel",
     "settings": "Configurações",
-    "logout": "Sair"
+    "logout": "Sair",
+    "menu": "Menu",
+    "language": "Seleção de idioma"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "Esqueci minha senha.",
       "noAccount": "Você não tem uma conta?",
       "register": "Cadastre-se",
-      "errorDefault": "Falha no login. Por favor, verifique suas informações."
+      "errorDefault": "Falha no login. Por favor, verifique suas informações.",
+      "orContinueWith": "ou continuar",
+      "continueWithGoogle": "Continuar com o Google",
+      "continueWithApple": "Continue com a Apple.",
+      "socialLoginError": "Falha no login social. Tente novamente.",
+      "appleComingSoon": "Muito em breve",
+      "showPassword": "Mostrar senha",
+      "hidePassword": "Ocultar senha"
     },
     "register": {
       "title": "Cadastre-se",
@@ -51,7 +71,17 @@
       "login": "Conecte-se",
       "passwordMismatch": "As senhas não coincidem.",
       "passwordTooShort": "A senha deve ter pelo menos 6 caracteres.",
-      "errorDefault": "O cadastro falhou. Tente novamente."
+      "errorDefault": "O cadastro falhou. Tente novamente.",
+      "showPassword": "Mostrar senha",
+      "hidePassword": "Ocultar senha",
+      "passwordStrength": {
+        "minLength": "Pelo menos 8 caracteres",
+        "uppercase": "Letras maiúsculas (A-Z)",
+        "lowercase": "Letras minúsculas (a-z)",
+        "number": "Número (0-9)",
+        "special": "Caracteres especiais (!@#$%)"
+      },
+      "registerSuccess": "Sua conta foi criada com sucesso! Você será redirecionado para a página de login..."
     },
     "forgotPassword": {
       "title": "Esqueci minha senha.",
@@ -78,7 +108,9 @@
       "requestNewLink": "Solicitar uma nova conexão",
       "passwordMismatch": "As senhas não coincidem.",
       "passwordTooShort": "A senha deve ter pelo menos 6 caracteres.",
-      "errorDefault": "A redefinição de senha falhou. A conexão pode estar inválida ou expirada."
+      "errorDefault": "A redefinição de senha falhou. A conexão pode estar inválida ou expirada.",
+      "showPassword": "Mostrar senha",
+      "hidePassword": "Ocultar senha"
     }
   },
   "dashboard": {
@@ -92,20 +124,39 @@
     "stats": {
       "totalListings": "Total de anúncios",
       "active": "ativo",
-      "totalViews": "Total de visualizações",
+      "totalViews": "Visualizações totais",
       "thisWeek": "essa semana",
+      "allTime": "todos os momentos",
       "favorites": "Favorito",
       "onYourListings": "em seus anúncios",
+      "savedItems": "produto registrado",
       "messages": "Mensagem",
-      "unread": "não lido"
+      "notifications": "Notificações",
+      "unread": "não lido",
+      "views": "vistas",
+      "draft": "Rascunho",
+      "sold": "Vendido",
+      "pending": "Pendente",
+      "awaitingApproval": "aguardando aprovação",
+      "totalSales": "Vendas totais",
+      "completedSales": "vendas concluídas",
+      "revenue": "Renda",
+      "totalRevenue": "receita total"
     },
     "recentListings": "Seus anúncios mais recentes",
+    "recentActivity": "Atividades recentes",
     "recentMessages": "Mensagens recentes",
+    "quickLinks": "Acesso rápido",
     "noListings": "Você ainda não adicionou nenhum anúncio.",
+    "noActivity": "Nenhuma atividade ainda.",
     "noMessages": "Você ainda não recebeu nenhuma mensagem.",
     "noNotifications": "Você ainda não recebeu nenhuma notificação.",
     "viewAllListings": "Ver todos os anúncios",
-    "viewAllMessages": "Ver todas as mensagens"
+    "viewAllMessages": "Ver todas as mensagens",
+    "viewNotifications": "Ver notificações",
+    "viewFavorites": "Favoritos Gor",
+    "recentlyViewed": "Visualizados recentemente",
+    "fetchError": "Ocorreu um erro ao carregar os dados do painel."
   },
   "dashboardNav": {
     "overview": "Visão geral",
@@ -115,7 +166,61 @@
     "notifications": "Notificações",
     "profile": "Perfil",
     "settings": "Configurações",
-    "newListing": "Adicionar novo anúncio"
+    "newListing": "Adicionar novo anúncio",
+    "becomeSeller": "Torne-se um vendedor",
+    "categories": "Categorias",
+    "offers": "Propostas",
+    "deals": "Acordos",
+    "farms": "Minhas fazendas",
+    "transport": "Transporte",
+    "moderation": "Moderação",
+    "sellerModeration": "Moderação de vendedores",
+    "transporterModeration": "Moderação de operadoras",
+    "brands": "Marcas",
+    "transportOffers": "Cotações de frete",
+    "healthRecords": "Registros de saúde",
+    "vaccinations": "Vacinadores",
+    "shippingCarriers": "Empresas de transporte marítimo",
+    "shippingZones": "Zonas de Carga",
+    "shippingRates": "Taxas de envio",
+    "systemSettings": "Configurações do sistema",
+    "locations": "Meus endereços"
+  },
+  "profile": {
+    "title": "Informações do perfil",
+    "description": "Você pode atualizar suas informações pessoais aqui.",
+    "personalInfo": "Informações pessoais",
+    "contactInfo": "Informações de contato",
+    "preferences": "Preferências",
+    "firstName": "Nome",
+    "firstNamePlaceholder": "Digite seu nome",
+    "surname": "Sobrenome",
+    "surnamePlaceholder": "Digite seu sobrenome.",
+    "displayName": "Nome exibido",
+    "phone": "Número de telefone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "Verificado",
+    "phoneNotVerified": "Não confirmado",
+    "verifyPhone": "Verificar número de telefone",
+    "country": "País",
+    "selectCountry": "Selecione um país",
+    "language": "Preferência de idioma",
+    "selectLanguage": "Escolha um idioma",
+    "currency": "Moeda",
+    "selectCurrency": "Selecione a moeda.",
+    "saveChanges": "Salvar alterações",
+    "saving": "Salvando...",
+    "saveSuccess": "As informações do seu perfil foram atualizadas.",
+    "saveError": "Ocorreu um erro ao atualizar o perfil.",
+    "avatar": "Foto de perfil",
+    "changeAvatar": "Alterar foto",
+    "removeAvatar": "Remover foto",
+    "currencies": {
+      "try": "Lira turca",
+      "usd": "dólar americano",
+      "eur": "Euro",
+      "gbp": "Libra esterlina"
+    }
   },
   "myListings": {
     "title": "Meus anúncios",
@@ -125,35 +230,94 @@
     "fetchError": "Ocorreu um erro ao carregar os anúncios.",
     "deleteSuccess": "O anúncio foi removido com sucesso.",
     "deleteError": "Ocorreu um erro ao excluir o anúncio.",
-    "activateSuccess": "O anúncio foi ativado.",
-    "deactivateSuccess": "O anúncio foi desativado.",
+    "publishSuccess": "O anúncio foi enviado para aprovação.",
+    "unpublishSuccess": "O anúncio já foi redigido.",
     "statusError": "Ocorreu um erro ao alterar o status.",
     "filters": {
       "all": "Todos eles",
-      "active": "Ativo",
       "draft": "Rascunho",
       "pending": "Aguardando aprovação",
+      "active": "Ativo",
+      "rejected": "Rejeitado",
       "sold": "Vendido"
     },
     "actions": {
       "edit": "Editar",
       "delete": "Excluir",
-      "activate": "Ativar",
-      "deactivate": "Estrutura Passiva"
+      "publish": "Enviar para aprovação",
+      "unpublish": "Rascunho",
+      "menu": "Transações"
     },
     "deleteDialog": {
       "title": "Apague o anúncio",
       "description": "Tem certeza de que deseja excluir este anúncio? Esta ação é irreversível.",
       "cancel": "Cancelar",
       "confirm": "Excluir"
-    }
+    },
+    "loadMore": "Baixar Mais",
+    "loadingMore": "Carregando..."
   },
   "favorites": {
     "title": "Meus favoritos",
     "description": "Siga aqui os produtos que você gosta.",
     "noFavorites": "Você ainda não adicionou nenhum produto aos favoritos.",
     "browseProducts": "Veja os produtos",
-    "fetchError": "Ocorreu um erro ao carregar os favoritos."
+    "fetchError": "Ocorreu um erro ao carregar os favoritos.",
+    "loadMore": "Baixar Mais",
+    "loadingMore": "Carregando..."
+  },
+  "messages": {
+    "title": "Mensagens",
+    "description": "Entre em contato com compradores e vendedores.",
+    "noConversations": "Você ainda não recebeu nenhuma mensagem.",
+    "startConversation": "Para fazer uma pergunta sobre um anúncio, acesse o anúncio.",
+    "fetchError": "Ocorreu um erro ao carregar as mensagens.",
+    "sendError": "Ocorreu um erro ao enviar a mensagem.",
+    "connectionError": "Conexão falhou. Tentando novamente...",
+    "connected": "Isso conectou",
+    "connecting": "Conectando...",
+    "searchPlaceholder": "Procure nas mensagens...",
+    "typeMessage": "Escreva sua mensagem...",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "typing": "Diz...",
+    "read": "Ler",
+    "delivered": "Enviado",
+    "today": "Hoje",
+    "yesterday": "Ontem",
+    "noMessages": "Ainda não há mensagens. Inicie uma conversa!",
+    "loadMore": "Carregar mais",
+    "loadingMessages": "As mensagens estão sendo carregadas...",
+    "about": "Sobre",
+    "product": "Produto",
+    "startNewConversation": "Iniciar uma nova conversa",
+    "selectConversation": "Escolha uma conversa ou inicie uma nova.",
+    "online": "On-line",
+    "offline": "Offline",
+    "lastSeen": "Última vez visto",
+    "deleteConversation": "Apagar conversa",
+    "deleteConfirm": "Tem certeza de que deseja excluir esta conversa?",
+    "deleted": "A conversa foi apagada.",
+    "defaultUser": "Usuário",
+    "noResults": "Nenhum resultado encontrado.",
+    "newConversation": "Nova conversa"
+  },
+  "notifications": {
+    "title": "Notificações",
+    "description": "Veja e gerencie suas notificações.",
+    "markAllAsRead": "Marcar tudo como lido",
+    "noNotifications": "Você ainda não recebeu nenhuma notificação.",
+    "viewAll": "Ver todas as notificações",
+    "today": "Hoje",
+    "yesterday": "Ontem",
+    "older": "Mais velho",
+    "types": {
+      "system": "Sistema",
+      "message": "Mensagem",
+      "offer": "Oferecer",
+      "order": "Ordem",
+      "listing": "Anúncio"
+    }
   },
   "settings": {
     "title": "Configurações",
@@ -169,7 +333,28 @@
       "passwordMismatch": "As novas senhas não coincidem.",
       "passwordTooShort": "A nova senha deve ter pelo menos 6 caracteres.",
       "sessionError": "Não foi possível encontrar informações sobre a sessão.",
-      "errorDefault": "Não foi possível atualizar a senha. Verifique sua senha atual."
+      "errorDefault": "Não foi possível atualizar a senha. Verifique sua senha atual.",
+      "showPassword": "Mostrar senha",
+      "hidePassword": "Ocultar senha"
+    },
+    "preferences": {
+      "title": "Preferências de notificação e visualização",
+      "description": "Gerencie seus canais de notificação e preferências de exibição.",
+      "notifications": "Notificações",
+      "emailNotifications": "Notificações por e-mail",
+      "emailNotificationsDesc": "Receba notificações por e-mail sobre novas mensagens e atualizações de anúncios.",
+      "smsNotifications": "Notificações por SMS",
+      "smsNotificationsDesc": "Receba mensagens SMS com notificações importantes.",
+      "pushNotifications": "Notificações Push",
+      "pushNotificationsDesc": "Receba notificações push para atualizações instantâneas.",
+      "appearance": "Aparência",
+      "darkMode": "Modo escuro",
+      "darkModeDesc": "Mude para um tema escuro.",
+      "saveChanges": "Salvar preferências",
+      "saving": "Salvando...",
+      "saveSuccess": "Suas preferências foram atualizadas.",
+      "saveError": "Ocorreu um erro ao atualizar as preferências.",
+      "loadError": "Não foi possível carregar as preferências."
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "Plataforma de negociação de animais vivos",
       "subtitle": "A plataforma mais confiável para negociação de animais vivos. Compre e venda seu gado e ovelhas com segurança.",
       "cta": "Comece agora",
-      "viewListings": "Ver anúncios"
+      "viewListings": "Ver anúncios",
+      "searchPlaceholder": "Procure animais... (vacas, ovelhas, cabras...)"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "Anúncios em destaque",
       "viewAll": "Veja tudo"
+    },
+    "cta": {
+      "title": "Comece agora",
+      "subtitle": "Ocupe seu lugar em uma plataforma onde milhares de vendedores e compradores se encontram.",
+      "button": "Cadastre-se gratuitamente"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "Sobre nós",
     "contact": "Comunicação",
     "terms": "Termos de Uso",
-    "privacy": "política de Privacidade"
+    "privacy": "política de Privacidade",
+    "company": "Empresa",
+    "support": "Apoiar",
+    "legal": "Jurídico",
+    "followUs": "Siga-nos",
+    "newsletter": "Boletim",
+    "newsletterDescription": "Não perca as últimas ofertas e promoções.",
+    "subscribe": "Inscreva-se",
+    "emailPlaceholder": "Seu endereço de email",
+    "tagline": "A plataforma de comércio de animais vivos mais confiável da Turquia.",
+    "sellers": "Vendedores",
+    "products": "Produtos",
+    "map": "Mapa",
+    "appleLoginComingSoon": "O login com a Apple estará ativo muito em breve.",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "Perguntas frequentes"
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "description": "Respostas às suas perguntas mais frequentes sobre a nossa plataforma.",
+    "noFaqs": "Nenhuma pergunta foi adicionada ainda."
+  },
+  "about": {
+    "title": "Sobre nós",
+    "subtitle": "A plataforma de comércio de animais vivos mais confiável da Turquia.",
+    "mission": {
+      "title": "Nossa missão",
+      "description": "Ao digitalizar o comércio de animais vivos, pretendemos criar uma ligação segura, transparente e eficiente entre produtores e compradores."
+    },
+    "vision": {
+      "title": "Nossa visão",
+      "description": "Ser pioneiro na transformação digital no setor agrícola e tornar-se uma plataforma global no comércio de animais vivos."
+    },
+    "values": {
+      "title": "Nossos valores",
+      "trust": {
+        "title": "Confiar",
+        "description": "Transparência e confiabilidade são essenciais em todas as transações."
+      },
+      "quality": {
+        "title": "Qualidade",
+        "description": "Melhoria contínua para oferecer o melhor serviço."
+      },
+      "innovation": {
+        "title": "Inovação",
+        "description": "Transformando a indústria através do uso da tecnologia."
+      }
+    },
+    "stats": {
+      "users": "Usuário Registrado",
+      "sellers": "Vendedor ativo",
+      "products": "Anúncio",
+      "transactions": "Transação concluída com sucesso"
+    }
+  },
+  "contact": {
+    "title": "Comunicação",
+    "subtitle": "Entre em contato conosco caso tenha alguma dúvida.",
+    "form": {
+      "title": "Escreva-nos",
+      "name": "Seu nome",
+      "namePlaceholder": "Ahmet Yilmaz",
+      "email": "E-mail",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "Assunto",
+      "subjectPlaceholder": "O assunto da sua mensagem",
+      "message": "Sua mensagem",
+      "messagePlaceholder": "Escreva sua mensagem aqui...",
+      "submit": "Enviar",
+      "submitting": "Enviando...",
+      "success": "Sua mensagem foi enviada com sucesso. Entraremos em contato o mais breve possível.",
+      "error": "Ocorreu um erro ao enviar a mensagem. Tente novamente."
+    },
+    "info": {
+      "title": "Informações de contato",
+      "address": "Endereço",
+      "addressValue": "Istambul, Turquia",
+      "email": "E-mail",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "Telefone",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "Horas de trabalho",
+      "workingHoursValue": "Segunda a sexta-feira: 09:00 - 18:00",
+      "map": "Mapa"
+    }
+  },
+  "terms": {
+    "title": "Termos de Uso",
+    "lastUpdated": "Última atualização: {date}",
+    "sections": {
+      "acceptance": {
+        "title": "1. Aceitação dos Termos",
+        "content": "Ao utilizar este site, você concorda com os seguintes termos de uso. Caso não concorde com estes termos, por favor, não utilize o site."
+      },
+      "services": {
+        "title": "2. Serviços",
+        "content": "A Livestock Trading oferece uma plataforma para compra e venda de animais vivos. Todas as transações na plataforma são de responsabilidade do usuário."
+      },
+      "accounts": {
+        "title": "3. Contas de Usuário",
+        "content": "Você deve fornecer informações precisas e atualizadas para criar uma conta. A segurança da sua conta é de sua responsabilidade."
+      },
+      "prohibited": {
+        "title": "4. Atividades Proibidas",
+        "content": "Publicidade enganosa, informações falsas, fraude e atividades ilegais são estritamente proibidas."
+      },
+      "liability": {
+        "title": "5. Limitação de Responsabilidade",
+        "content": "A plataforma não é diretamente responsável pelas transações entre usuários. Todas as transações ocorrem entre as partes envolvidas."
+      },
+      "changes": {
+        "title": "6. Alterações",
+        "content": "Estes termos e condições estão sujeitos a alterações sem aviso prévio. As alterações entrarão em vigor imediatamente após a publicação."
+      }
+    }
+  },
+  "privacy": {
+    "title": "política de Privacidade",
+    "lastUpdated": "Última atualização: {date}",
+    "sections": {
+      "collection": {
+        "title": "1. Coleta de Informações",
+        "content": "Ao criar uma conta, coletamos informações pessoais como seu nome, endereço de e-mail e número de telefone. Também podemos coletar dados anônimos sobre o seu uso do site."
+      },
+      "usage": {
+        "title": "2. Utilização da Informação",
+        "content": "As informações que coletamos são usadas para fornecer nossos serviços, gerenciar sua conta, garantir a segurança e oferecer ofertas personalizadas."
+      },
+      "sharing": {
+        "title": "3. Compartilhamento de informações",
+        "content": "Suas informações pessoais não serão vendidas ou alugadas a terceiros. Suas informações não serão compartilhadas, exceto para fins legalmente exigidos."
+      },
+      "security": {
+        "title": "4. Segurança",
+        "content": "Medidas de segurança padrão do setor estão em vigor para proteger seus dados."
+      },
+      "cookies": {
+        "title": "5. Biscoitos",
+        "content": "Nosso site utiliza cookies para melhorar a experiência do usuário. Você pode gerenciar suas preferências de cookies nas configurações do seu navegador."
+      },
+      "rights": {
+        "title": "6. Seus direitos",
+        "content": "De acordo com a Lei Turca de Proteção de Dados Pessoais (KVKK), você tem o direito de acessar, corrigir e excluir seus dados pessoais."
+      }
+    }
   },
   "products": {
     "title": "Produtos",
@@ -235,11 +570,19 @@
       "priceDesc": "Preço (do mais alto para o mais baixo)",
       "popular": "Mais populares"
     },
+    "pagination": {
+      "prev": "Antigo",
+      "next": "Próximo"
+    },
     "status": {
       "draft": "Rascunho",
+      "pending": "Aguardando aprovação",
       "active": "Ativo",
+      "inactive": "Passiva",
+      "outOfStock": "Fora de estoque",
+      "expired": "Seu mandato expirou.",
       "sold": "Vendido",
-      "pending": "Aguardando aprovação"
+      "rejected": "Rejeitado"
     },
     "condition": {
       "new": "Novo",
@@ -253,9 +596,13 @@
     "loading": "Os produtos estão sendo carregados...",
     "perPage": "Por página",
     "showing": "O total de {total} produtos entre {from} e {to}.",
+    "fetchError": "Ocorreu um erro ao carregar os produtos.",
+    "loadMore": "Mostrar mais",
+    "showingOf": "Estão sendo exibidos {count} / {total} produtos.",
     "loginToFavorite": "Faça login para adicionar aos favoritos.",
     "addedToFavorites": "Adicionado aos favoritos",
-    "removedFromFavorites": "Removido dos favoritos"
+    "removedFromFavorites": "Removido dos favoritos",
+    "favoriteError": "A operação favorita falhou."
   },
   "productDetail": {
     "addToFavorites": "Adicionar aos favoritos",
@@ -279,16 +626,31 @@
     "maxOrder": "Pedido máximo",
     "publishedAt": "Data de publicação",
     "views": "Visualizado",
-    "reviews": "avaliação",
+    "reviews": {
+      "title": "Avaliações",
+      "reviewCount": "avaliação",
+      "noReviews": "Ainda não há avaliação.",
+      "verified": "Comprador Verificado"
+    },
     "similarProducts": "Produtos similares",
     "sellerProducts": "Outros produtos do vendedor",
     "contactSeller": "Contate o vendedor",
-    "loginRequired": "Faça login para adicionar aos favoritos.",
+    "makeOffer": "Enviar uma proposta",
+    "loginRequired": "Faça login para realizar esta ação.",
     "addedToFavorites": "Adicionado aos favoritos",
     "removedFromFavorites": "Removido dos favoritos",
     "linkCopied": "O link foi copiado.",
     "messagingComingSoon": "Recurso de mensagens em breve.",
-    "productNotFound": "Produto não encontrado."
+    "productNotFound": "Produto não encontrado.",
+    "contacting": "O contato está sendo feito...",
+    "contactError": "A comunicação falhou. Por favor, tente novamente.",
+    "noImage": "Nenhuma imagem disponível.",
+    "defaultLocation": "Peru",
+    "inquiryMessage": "Gostaria de obter informações sobre {title}.",
+    "breadcrumb": {
+      "home": "Lar",
+      "products": "Produtos"
+    }
   },
   "seller": {
     "title": "Informações do vendedor",
@@ -300,6 +662,70 @@
     "call": "Procurar",
     "viewProfile": "Ver perfil"
   },
+  "sellers": {
+    "title": "Vendedores",
+    "description": "Descubra vendedores confiáveis.",
+    "search": "Encontre um vendedor...",
+    "sort": "Organizar",
+    "sortOptions": {
+      "newest": "Mais recente",
+      "mostSales": "Best-seller",
+      "topRated": "Pontuação mais alta",
+      "mostProducts": "A maioria dos anúncios"
+    },
+    "noResults": "Vendedor não encontrado.",
+    "loading": "Os vendedores estão carregando...",
+    "showing": "{count} vendedores encontrados",
+    "verified": "Verificado",
+    "sales": "vendas",
+    "products": "anúncio",
+    "reviews": "avaliação",
+    "rating": "apontar",
+    "viewProducts": "Ver produtos",
+    "contactSeller": "Enviar mensagem",
+    "memberSince": "Membro desde {ano}",
+    "fetchError": "Ocorreu um erro ao carregar os fornecedores.",
+    "detail": {
+      "title": "Perfil do vendedor",
+      "about": "Sobre",
+      "businessInfo": "Informações comerciais",
+      "businessName": "Nome da empresa",
+      "businessType": "Viagem de negócios",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "website": "Site",
+      "description": "Explicação",
+      "policies": "Políticas",
+      "returnPolicy": "Política de devolução",
+      "shippingPolicy": "Política de Envio",
+      "businessHours": "Horas de trabalho",
+      "paymentMethods": "Métodos de pagamento",
+      "allProducts": "Todos os produtos",
+      "stats": {
+        "totalSales": "Vendas totais",
+        "totalProducts": "Produtos Totais",
+        "totalReviews": "Avaliação",
+        "rating": "Apontar"
+      },
+      "notFound": "Vendedor não encontrado.",
+      "backToList": "Don para os vendedores",
+      "contactInfo": "Comunicação",
+      "noProducts": "Este vendedor ainda não possui anúncios.",
+      "noPolicies": "O vendedor ainda não definiu suas políticas.",
+      "fetchError": "Ocorreu um erro ao carregar as informações do vendedor.",
+      "productsLoadError": "Ocorreu um erro ao carregar os produtos do vendedor.",
+      "reviewsTab": "Avaliações",
+      "reviews": {
+        "summary": "Resumo da avaliação",
+        "reviewCount": "avaliação",
+        "communication": "Comunicação",
+        "shippingSpeed": "Velocidade de envio",
+        "productQuality": "Qualidade do produto",
+        "noReviews": "Ainda não há avaliação.",
+        "verified": "Comprador Verificado"
+      }
+    }
+  },
   "editListing": {
     "title": "Editar o anúncio",
     "saveChanges": "Salvar alterações",
@@ -307,6 +733,10 @@
     "updateSuccess": "O anúncio foi atualizado com sucesso.",
     "updateFailed": "Ocorreu um erro ao atualizar o anúncio.",
     "loadError": "Ocorreu um erro ao carregar o anúncio.",
+    "sellerNotFound": "Perfil do vendedor não encontrado.",
+    "sellerLoadError": "Não foi possível carregar o perfil do vendedor.",
+    "userNotFound": "Não foi possível encontrar as informações do usuário. Por favor, faça login novamente.",
+    "locationNotFound": "Não foi possível encontrar informações sobre a localização. Atualize a página.",
     "basicInfo": "Informações básicas",
     "categoryAndCondition": "Categoria e Status",
     "pricing": "Preços",
@@ -314,6 +744,8 @@
     "images": "Imagens",
     "existingImages": "Imagens disponíveis",
     "addImage": "Adicionar imagem",
+    "maxImages": "Você pode enviar no máximo 10 imagens.",
+    "imageHint": "Mínimo de 1, máximo de 10 imagens. Em formato PNG, JPG ou WEBP.",
     "uploadingImages": "As imagens estão carregando...",
     "uploadingImage": "A imagem está carregando.",
     "imageUploadFailed": "Não foi possível carregar a imagem.",
@@ -358,6 +790,7 @@
     "addImage": "Adicionar imagem",
     "maxImages": "Você pode enviar no máximo 10 imagens.",
     "imageHint": "Mínimo de 1, máximo de 10 imagens. Em formato PNG, JPG ou WEBP.",
+    "location": "Informações de localização",
     "fields": {
       "title": "Título do anúncio",
       "shortDescription": "Descrição resumida",
@@ -370,13 +803,29 @@
       "shippingAvailable": "O envio está disponível.",
       "shippingCost": "Taxa de envio",
       "weight": "Peso",
-      "weightUnit": "Unidade de Peso"
+      "weightUnit": "Unidade de Peso",
+      "city": "Cidade",
+      "address": "Endereço",
+      "postalCode": "Código postal"
     },
     "placeholders": {
       "title": "Exemplo: Vaca Holstein de 2 anos",
       "shortDescription": "Descrição do produto (máximo de 200 caracteres)",
       "description": "Forneça informações detalhadas sobre o produto...",
-      "category": "Selecione uma categoria."
+      "category": "Selecione uma categoria.",
+      "city": "Entre na cidade",
+      "address": "Insira o endereço completo.",
+      "postalCode": "Código postal"
+    },
+    "errors": {
+      "titleRequired": "O título do anúncio é obrigatório.",
+      "shortDescriptionRequired": "É necessária uma breve descrição.",
+      "descriptionRequired": "É necessária uma explicação detalhada.",
+      "categoryRequired": "A seleção da categoria é obrigatória.",
+      "priceRequired": "O preço é obrigatório.",
+      "cityRequired": "São necessárias informações sobre a cidade.",
+      "addressRequired": "É necessário fornecer o endereço.",
+      "locationError": "Ocorreu um erro ao criar o local."
     },
     "success": "O anúncio foi criado com sucesso.",
     "error": "Ocorreu um erro ao criar o anúncio.",
@@ -388,24 +837,53 @@
     "draftSaved": "Rascunho salvo",
     "productCreated": "O produto foi criado com sucesso.",
     "creationFailed": "Não foi possível criar o produto. Tente novamente.",
-    "errors": {
-      "titleRequired": "O título do anúncio é obrigatório.",
-      "shortDescriptionRequired": "É necessária uma breve descrição.",
-      "descriptionRequired": "É necessária uma explicação detalhada.",
-      "categoryRequired": "A seleção da categoria é obrigatória.",
-      "priceRequired": "Insira um preço válido."
-    }
+    "userNotFound": "Não foi possível encontrar as informações do usuário. Por favor, faça login novamente.",
+    "defaultBusinessName": "Meu negócio"
+  },
+  "becomeSeller": {
+    "title": "Torne-se um vendedor",
+    "description": "Declaração da Empresa",
+    "alreadySeller": "Você já possui um perfil de vendedor.",
+    "goToListings": "Acesse meus anúncios",
+    "businessInfo": "Informações comerciais",
+    "contactInfo": "Informações de contato",
+    "businessName": "Nome da empresa",
+    "businessNamePlaceholder": "Exemplo: Fazenda Yilmaz",
+    "businessType": "Viagem de negócios",
+    "businessTypePlaceholder": "Selecione o tipo de negócio.",
+    "businessTypes": {
+      "individual": "Individual",
+      "company": "Empresa",
+      "cooperative": "Cooperativa",
+      "farm": "Fazenda"
+    },
+    "taxNumber": "Número de identificação fiscal",
+    "taxNumberPlaceholder": "Insira seu número de identificação fiscal (opcional)",
+    "descriptionPlaceholder": "Escreva uma breve descrição sobre o seu negócio...",
+    "phone": "Telefone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "Site",
+    "websitePlaceholder": "https://www.examplesite.com (opcional)",
+    "submit": "Criar perfil de vendedor",
+    "submitting": "Criar um perfil...",
+    "success": "Seu perfil de vendedor foi criado com sucesso!",
+    "error": "Ocorreu um erro ao criar o perfil do vendedor.",
+    "taxNumberHelp": "Insira seu número de identificação fiscal de 10 ou 11 dígitos (opcional)",
+    "phoneHelp": "Exemplo: +90 555 123 45 67 ou 0555 123 45 67",
+    "websiteHelp": "Exemplo: www.isletmem.com ou https://isletmem.com",
+    "alreadySellerDescription": "Você pode usar o botão abaixo para gerenciar seus anúncios.",
+    "newListing": "Adicionar novo anúncio"
   },
   "fileUpload": {
     "dragDrop": "Envie uma foto ou um vídeo.",
     "dragDropHint": "Arraste e solte ou clique para selecionar.",
     "dropHere": "Deixe assim...",
     "imageLimit": "Foto: máximo 10 MB",
-    "videoLimit": "Vídeo: máximo 50 MB",
+    "videoLimit": "Vídeo: máximo 100 MB",
     "uploadCount": "{atual} / {máximo} carregado",
     "maxFilesError": "Você pode enviar no máximo {max} arquivos de mídia.",
     "imageTooLarge": "A foto deve ter menos de 10 MB.",
-    "videoTooLarge": "O vídeo deve ter menos de 50 MB.",
+    "videoTooLarge": "O vídeo deve ter menos de 100 MB.",
     "optimizing": "Otimizando...",
     "uploading": "Carregando...",
     "queued": "Aguardando na fila...",
@@ -419,9 +897,833 @@
     "videoBadge": "VÍDEO",
     "coverUpdated": "A foto da capa foi ajustada com sucesso.",
     "optimizationInfo": "As fotos são otimizadas para estarem em conformidade com os padrões da web.",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "Seleção visual",
+    "changeImage": "Mudar",
+    "removeImage": "Remover",
+    "videoProcessing": "O vídeo está sendo processado...",
+    "videoProcessingFailed": "A operação falhou.",
+    "videoProcessingPollError": "Não foi possível obter o status do processamento de vídeo. Atualize a página.",
+    "reorderError": "Não foi possível classificar o arquivo.",
+    "coverUpdateError": "Não foi possível atualizar a foto da capa."
+  },
+  "error": {
+    "title": "Ocorreu um erro.",
+    "description": "Ocorreu um erro inesperado. Atualize a página ou tente novamente mais tarde.",
+    "retry": "Tente novamente",
+    "goBack": "Não volte",
+    "goHome": "Lar",
+    "notFound": {
+      "title": "Página não encontrada",
+      "description": "A página que você está procurando não está disponível ou foi movida.",
+      "goHome": "Voltar à página inicial"
+    }
+  },
+  "search": {
+    "title": "Procurar",
+    "placeholder": "Pesquise produtos, categorias ou vendedores...",
+    "searchButton": "Procurar",
+    "searchingFor": "Desejado",
+    "loading": "Desejado...",
+    "resultsCount": "Foram encontrados {count} resultados.",
+    "noResults": "Nenhum resultado encontrado.",
+    "tryDifferentSearch": "Experimente palavras-chave diferentes ou altere os filtros.",
+    "filters": {
+      "title": "Filtros",
+      "category": "Categoria",
+      "allCategories": "Todas as categorias",
+      "condition": "Situação",
+      "allConditions": "Todos os casos",
+      "priceRange": "Faixa de preço",
+      "price": "Preço",
+      "min": "Min",
+      "max": "Máximo",
+      "apply": "Aplicar",
+      "clear": "Limpar",
+      "clearAll": "Limpar tudo"
+    },
+    "fetchError": "Ocorreu um erro ao carregar os resultados da pesquisa.",
+    "recentSearches": "Pesquisas recentes",
+    "clearHistory": "Histórico claro",
+    "noSearchHistory": "Você ainda não possui um histórico de pesquisa.",
+    "deleteHistoryError": "Ocorreu um erro ao excluir o histórico de pesquisa."
+  },
+  "categories": {
+    "title": "Gestão de Categorias",
+    "description": "Gerencie as categorias aqui.",
+    "noCategories": "Nenhuma categoria foi adicionada ainda.",
+    "createFirst": "Crie a primeira categoria.",
+    "fetchError": "Ocorreu um erro ao carregar as categorias.",
+    "createSuccess": "Categoria criada com sucesso",
+    "createError": "Ocorreu um erro ao criar a categoria.",
+    "updateSuccess": "Categoria atualizada com sucesso",
+    "updateError": "Ocorreu um erro ao atualizar a categoria.",
+    "deleteSuccess": "A categoria foi excluída com sucesso.",
+    "deleteError": "Ocorreu um erro ao excluir a categoria.",
+    "activateSuccess": "A categoria foi ativada.",
+    "deactivateSuccess": "A categoria foi desativada.",
+    "statusError": "Ocorreu um erro ao alterar o status.",
+    "loadError": "Ocorreu um erro ao carregar a categoria.",
+    "filters": {
+      "all": "Todos eles",
+      "active": "Ativo",
+      "inactive": "Inativo"
+    },
+    "table": {
+      "name": "Nome da categoria",
+      "slug": "Lesma",
+      "sortOrder": "Número de série",
+      "subCategories": "Subcategoria",
+      "status": "Situação",
+      "actions": "Transações"
+    },
+    "actions": {
+      "edit": "Editar",
+      "delete": "Excluir",
+      "activate": "Ativar",
+      "deactivate": "Estrutura Passiva"
+    },
+    "deleteDialog": {
+      "title": "Excluir categoria",
+      "description": "Tem certeza de que deseja excluir esta categoria? Esta ação é irreversível.",
+      "cancel": "Cancelar",
+      "confirm": "Excluir"
+    },
+    "addNew": "Adicionar nova categoria",
+    "loadMore": "Baixar Mais",
+    "loadingMore": "Carregando...",
+    "form": {
+      "newTitle": "Criar uma nova categoria",
+      "editTitle": "Editar categoria",
+      "name": "Nome da categoria",
+      "namePlaceholder": "Exemplo: Gado",
+      "slug": "Lesma",
+      "slugPlaceholder": "Exemplo: gado de grande porte",
+      "description": "Explicação",
+      "descriptionPlaceholder": "Uma breve descrição da categoria...",
+      "parentCategory": "Categoria Superior",
+      "parentCategoryPlaceholder": "Selecione uma categoria principal (opcional)",
+      "noParent": "Sem categoria principal (Categoria principal)",
+      "sortOrder": "Número de sequência",
+      "isActive": "Ativo",
+      "iconUrl": "URL do ícone",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "Salvar",
+      "submitting": "Salvando...",
+      "updating": "Atualizando...",
+      "errors": {
+        "nameRequired": "O nome da categoria é obrigatório.",
+        "slugRequired": "Lesmas são obrigatórias."
+      }
+    }
+  },
+  "offers": {
+    "title": "Propostas",
+    "description": "Gerencie suas ofertas de entrada e saída.",
+    "received": "Ofertas recebidas",
+    "sent": "Propostas enviadas",
+    "noReceivedOffers": "Nenhuma oferta foi recebida ainda.",
+    "noSentOffers": "Você ainda não enviou uma oferta.",
+    "browseProducts": "Veja os produtos",
+    "viewProduct": "Veja o produto",
+    "accept": "Aceitar",
+    "reject": "Rejeitar",
+    "withdraw": "Retirar",
+    "makeOffer": "Enviar uma proposta",
+    "sendOffer": "Enviar oferta",
+    "sending": "Enviando...",
+    "cancel": "Cancelar",
+    "listingPrice": "Preço anunciado",
+    "yourOffer": "Sua oferta",
+    "quantity": "Quantia",
+    "messageOptional": "Mensagem (Opcional)",
+    "messagePlaceholder": "Uma mensagem que você gostaria de compartilhar com o vendedor...",
+    "expiresAt": "Última data de validade",
+    "offerSent": "Sua oferta foi enviada com sucesso.",
+    "offerError": "Ocorreu um erro ao enviar a oferta.",
+    "acceptSuccess": "A oferta foi aceita.",
+    "rejectSuccess": "A oferta foi rejeitada.",
+    "withdrawSuccess": "A oferta foi retirada.",
+    "actionError": "Ocorreu um erro durante o processo.",
+    "fetchError": "Ocorreu um erro ao carregar as ofertas.",
+    "loginRequired": "Faça login para enviar uma proposta.",
+    "invalidPrice": "Insira um preço válido.",
+    "invalidQuantity": "Insira um valor válido.",
+    "status": {
+      "pending": "Pendente",
+      "accepted": "Aceito",
+      "rejected": "Rejeitado",
+      "countered": "Contraproposta",
+      "expired": "Seu mandato terminou.",
+      "withdrawn": "Retirada"
+    }
+  },
+  "deals": {
+    "title": "Acordos",
+    "description": "Cumpra os termos do seu contrato de compra.",
+    "buying": "Acadêmicos",
+    "selling": "Vendas",
+    "noBuyingDeals": "Você ainda não possui um processo de matrícula de alunos.",
+    "noSellingDeals": "Você ainda não possui nenhuma transação de venda.",
+    "browseProducts": "Veja os produtos",
+    "viewProduct": "Veja o produto",
+    "activeDeals": "Acordos ativos",
+    "completedDeals": "Concluído",
+    "purchases": "Acadêmicos",
+    "sales": "Vendas",
+    "fetchError": "Ocorreu um erro ao carregar os contratos.",
+    "dealStatus": {
+      "pending": "Pendente",
+      "confirmed": "Confirmado",
+      "processing": "Preparando",
+      "shipped": "Na carga",
+      "delivered": "Entregue",
+      "completed": "Concluído",
+      "cancelled": "Cancelado",
+      "disputed": "Acordo"
+    },
+    "delivery": {
+      "pickup": "Entrega em mãos",
+      "shipping": "Por carga",
+      "transport": "Por transporte"
+    },
+    "requestTransport": "Solicitação de envio"
+  },
+  "farms": {
+    "title": "Minhas fazendas",
+    "description": "Gerencie e atualize suas fazendas.",
+    "addFarm": "Adicionar Fazenda",
+    "editFarm": "Gestão Agrícola",
+    "noFarms": "Você ainda não adicionou uma fazenda.",
+    "farmName": "Nome da fazenda",
+    "registrationNumber": "Número de registro",
+    "location": "Localização",
+    "selectLocation": "Selecione um local.",
+    "addLocationFirst": "Primeiro, adicione uma localização.",
+    "farmTypeLabel": "Visita à fazenda",
+    "farmDescription": "Explicação",
+    "totalArea": "Área total",
+    "cultivatedArea": "Área cultivada",
+    "certifications": "Certificados",
+    "certificationsPlaceholder": "ISO 22000, GlobalGAP, etc.",
+    "organic": "Orgânico",
+    "verified": "Verificado",
+    "save": "Salvar",
+    "saving": "Salvando...",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "sellerRequired": "Perfil do vendedor obrigatório",
+    "sellerRequiredDesc": "Para adicionar uma fazenda, primeiro você precisa criar seu perfil de vendedor.",
+    "becomeSeller": "Torne-se um vendedor",
+    "createSuccess": "A fazenda foi adicionada com sucesso.",
+    "updateSuccess": "A fazenda foi atualizada com sucesso.",
+    "deleteSuccess": "A fazenda foi excluída com sucesso.",
+    "saveError": "Ocorreu um erro ao registrar a fazenda.",
+    "deleteError": "Ocorreu um erro ao excluir a fazenda.",
+    "fetchError": "Ocorreu um erro ao carregar as informações da fazenda.",
+    "farmType": {
+      "livestock": "Criação de gado",
+      "crop": "Agricultura",
+      "mixed": "Misturado",
+      "poultry": "Alado",
+      "dairy": "Pecuária leiteira",
+      "aquaculture": "Produtos Aquáticos"
+    }
+  },
+  "transporters": {
+    "title": "transportadores",
+    "description": "Serviços de transporte de animais e produtos",
+    "searchPlaceholder": "Encontre um transportador...",
+    "noTransporters": "Ainda não há transportadoras cadastradas.",
+    "verified": "Verificado",
+    "transports": "transporte",
+    "viewProfile": "Ver perfil",
+    "sort": {
+      "newest": "Mais recente",
+      "rating": "Pontuação mais alta",
+      "mostTransports": "Envio mais frequente"
+    },
+    "pagination": {
+      "previous": "Antigo",
+      "next": "Próximo",
+      "page": "Página {página}"
+    }
+  },
+  "transport": {
+    "title": "Meus pedidos de envio",
+    "description": "Acompanhe seus pedidos de envio.",
+    "findTransporter": "Encontre um transportador",
+    "active": "Ativo",
+    "completed": "Concluído",
+    "total": "Total",
+    "asSeller": "Como vendedor",
+    "asBuyer": "Como comprador",
+    "noSellerRequests": "Como vendedor, você não tem a obrigação de enviar o produto.",
+    "noBuyerRequests": "Como destinatário, você não tem uma solicitação de envio.",
+    "viewProduct": "Veja o produto",
+    "pickup": "Receber",
+    "delivery": "Entrega",
+    "urgent": "Urgente",
+    "fetchError": "Ocorreu um erro ao enviar os pedidos de envio.",
+    "trackShipment": "Seguir",
+    "transportStatus": {
+      "pending": "Pendente",
+      "inPool": "Na piscina",
+      "assigned": "Nomeado",
+      "pickedUp": "Recibo",
+      "inTransit": "Na estrada",
+      "delivered": "Entregue",
+      "completed": "Concluído",
+      "cancelled": "Cancelado"
+    },
+    "transportType": {
+      "standard": "Padrão",
+      "refrigerated": "Cadeia de frio",
+      "liveAnimal": "Animais vivos",
+      "hazardous": "Materiais Perigosos",
+      "oversized": "Tamanho grande"
+    }
+  },
+  "moderation": {
+    "title": "Moderação de Produtos",
+    "description": "Analisar produtos aguardando aprovação.",
+    "pending": "esperando",
+    "allClear": "Todos os produtos foram inspecionados.",
+    "noPending": "Não há produtos aguardando aprovação.",
+    "awaitingReview": "Aguardando revisão",
+    "by": "Vendedor:",
+    "stock": "Estoque",
+    "preview": "Com você",
+    "approve": "Confirmar",
+    "reject": "Rejeitar",
+    "confirmReject": "Rejeitar",
+    "cancelReject": "Desistir",
+    "rejectReasonPlaceholder": "Anote o motivo da rejeição...",
+    "rejectReasonRequired": "É obrigatória a apresentação de uma justificativa para a recusa.",
+    "approveSuccess": "O produto foi aprovado com sucesso.",
+    "rejectSuccess": "O produto foi rejeitado.",
+    "actionError": "Ocorreu um erro durante o processo.",
+    "fetchError": "Ocorreu um erro ao carregar os produtos.",
+    "unauthorized": "Você não tem permissão para acessar esta página."
+  },
+  "sellerModeration": {
+    "title": "Moderação de vendedores",
+    "description": "Analisar e gerenciar contas de vendedores.",
+    "pending": "esperando",
+    "allClear": "Todos os vendedores foram investigados.",
+    "noPending": "Sem vendedores à espera.",
+    "verify": "Verificar",
+    "suspend": "Suspender",
+    "verifySuccess": "Vendedor verificado com sucesso.",
+    "suspendSuccess": "Vendedor suspenso.",
+    "actionError": "Ocorreu um erro durante o processo.",
+    "suspendReasonRequired": "É obrigatório indicar o motivo da suspensão.",
+    "suspendReasonPlaceholder": "Escreva o motivo da suspensão...",
+    "confirmSuspend": "Suspender",
+    "cancelSuspend": "Desistir",
+    "statusLabels": {
+      "pendingVerification": "Aguardando verificação",
+      "active": "Ativo",
+      "suspended": "Pendurado",
+      "banned": "Proibido"
+    },
+    "filterAll": "Mostrar tudo",
+    "filterPending": "Aqueles que aguardam",
+    "filterActive": "Ativos",
+    "filterSuspended": "Suspenso",
+    "unauthorized": "Você não tem permissão para acessar esta página.",
+    "businessName": "Nome da empresa",
+    "businessType": "Viagem de negócios",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "status": "Situação",
+    "createdAt": "Data de inscrição"
+  },
+  "transporterModeration": {
+    "title": "Moderação de operadoras",
+    "description": "Analisar e gerenciar contas de operadoras.",
+    "pending": "esperando",
+    "allClear": "Todos os transportadores foram investigados.",
+    "noPending": "Não há nenhum veículo de transporte à espera.",
+    "verify": "Verificar",
+    "suspend": "Suspender",
+    "verifySuccess": "O transportador foi verificado com sucesso.",
+    "suspendSuccess": "O transporte foi suspenso.",
+    "actionError": "Ocorreu um erro durante o processo.",
+    "suspendReasonRequired": "É obrigatório indicar o motivo da suspensão.",
+    "suspendReasonPlaceholder": "Escreva o motivo da suspensão...",
+    "confirmSuspend": "Suspender",
+    "cancelSuspend": "Desistir",
+    "statusLabels": {
+      "pendingVerification": "Aguardando verificação",
+      "active": "Ativo",
+      "suspended": "Pendurado",
+      "banned": "Proibido"
+    },
+    "filterAll": "Mostrar tudo",
+    "filterPending": "Aqueles que aguardam",
+    "filterActive": "Ativos",
+    "filterSuspended": "Suspenso",
+    "unauthorized": "Você não tem permissão para acessar esta página.",
+    "companyName": "nome da empresa",
+    "contactPerson": "Pessoa autorizada",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "city": "Cidade",
+    "status": "Situação",
+    "createdAt": "Data de inscrição"
+  },
+  "transporterDetail": {
+    "notFound": "Não foi possível encontrar nenhum transportador.",
+    "backToList": "Don para transportadores",
+    "verified": "Verificado",
+    "totalTransports": "frete total",
+    "completed": "concluído",
+    "about": "Sobre",
+    "contact": "Informações de contato",
+    "businessInfo": "Informações comerciais",
+    "license": "Número da licença",
+    "insurance": "Informações sobre seguros",
+    "fleet": "Informações da frota",
+    "serviceRegions": "Áreas de atendimento",
+    "specializations": "Áreas de especialização",
+    "certifications": "Certificados"
+  },
+  "brands": {
+    "title": "Gestão de Marca",
+    "description": "Gerenciar marcas de produtos.",
+    "addBrand": "Adicionar marca",
+    "editBrand": "Editar marca",
+    "noBrands": "Nenhuma marca foi adicionada ainda.",
+    "brandName": "Nome da marca",
+    "brandDescription": "Explicação",
+    "website": "Site",
+    "logoUrl": "URL do logotipo",
+    "save": "Salvar",
+    "saving": "Salvando...",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "inactive": "Passiva",
+    "products": "produto",
+    "createSuccess": "Marca adicionada com sucesso",
+    "updateSuccess": "A marca foi atualizada com sucesso.",
+    "deleteSuccess": "A marca foi removida com sucesso.",
+    "saveError": "Ocorreu um erro ao registrar a marca.",
+    "deleteError": "Ocorreu um erro ao excluir a marca registrada.",
+    "fetchError": "Ocorreu um erro ao carregar as marcas.",
+    "unauthorized": "Você não tem permissão para acessar esta página."
+  },
+  "transporterReviews": {
+    "title": "Avaliações",
+    "reviewCount": "avaliação",
+    "noReviews": "Ainda não há avaliação.",
+    "timeliness": "Entrega no prazo",
+    "communication": "Comunicação",
+    "carefulHandling": "Manuseio cuidadoso",
+    "professionalism": "Profissionalismo"
+  },
+  "transportOffers": {
+    "title": "Cotações de frete",
+    "description": "Gerencie os orçamentos que você envia para solicitações de frete.",
+    "newOffer": "Nova proposta",
+    "transportRequestId": "ID da solicitação de envio",
+    "requestIdPlaceholder": "Insira o ID da solicitação de envio.",
+    "offeredPrice": "Preço da oferta",
+    "estimatedDays": "Duração estimada (dias)",
+    "days": "dia",
+    "vehicleType": "Tipo de veículo",
+    "insuranceIncluded": "Seguro incluído",
+    "message": "Mensagem",
+    "cancel": "Cancelar",
+    "sending": "Enviando...",
+    "sendOffer": "Enviar oferta",
+    "cancelOffer": "Cancelar",
+    "pendingTab": "Esperando",
+    "historyTab": "Passado",
+    "noPendingOffers": "Você não tem ofertas pendentes.",
+    "noHistory": "Nenhuma oferta anterior encontrada.",
+    "status": {
+      "pending": "Esperando",
+      "accepted": "Aceito",
+      "rejected": "Rejeitado",
+      "expired": "Seu mandato terminou.",
+      "cancelled": "Cancelado"
+    },
+    "createSuccess": "A proposta foi submetida com sucesso.",
+    "createError": "Ocorreu um erro ao enviar a oferta.",
+    "cancelSuccess": "A oferta foi cancelada.",
+    "cancelError": "Ocorreu um erro ao cancelar a oferta.",
+    "fetchError": "Ocorreu um erro ao carregar as ofertas."
+  },
+  "animalInfo": {
+    "title": "Informações sobre animais e produtos",
+    "animalTab": "Animal",
+    "healthTab": "Saúde",
+    "vaccinationsTab": "Vacinadores",
+    "veterinaryTab": "Veterinário",
+    "breed": "Corrida",
+    "genderLabel": "Gênero",
+    "gender": {
+      "male": "Macho",
+      "female": "Fêmea",
+      "unknown": "Desconhecido"
+    },
+    "age": "Idade",
+    "months": "mês",
+    "weight": "Peso",
+    "color": "Cor",
+    "tagNumber": "Número da orelha",
+    "healthStatus": "Estado de saúde",
+    "health": {
+      "healthy": "Saudável",
+      "underTreatment": "Em tratamento",
+      "recovering": "Ele/Ela está se recuperando.",
+      "quarantined": "Em quarentena",
+      "unknown": "Desconhecido"
+    },
+    "purposeLabel": "Uso pretendido",
+    "purpose": {
+      "breeding": "Garanhão",
+      "dairy": "Leite",
+      "meat": "Carne",
+      "egg": "Ovo",
+      "wool": "Lã",
+      "working": "Trabalhar",
+      "pet": "Doméstico",
+      "other": "Outro"
+    },
+    "pregnancy": "Gravidez",
+    "pregnant": "Grávida",
+    "microchip": "Microchip nº.",
+    "passport": "Número do passaporte",
+    "sireDetails": "Informações do Pai",
+    "damDetails": "Informações principais",
+    "diagnosis": "Diagnóstico",
+    "treatment": "Tratamento",
+    "medications": "Medicação",
+    "veterinarian": "Veterinário",
+    "nextDue": "A Próxima História Rebelde",
+    "prescriptionRequired": "Carece de receita médica",
+    "targetSpecies": "Excursões da Target",
+    "activeIngredients": "Ingredientes ativos",
+    "registrationNo": "Número de registro",
+    "storage": "Armazenar",
+    "chemicalTab": "Produtos químicos",
+    "feedTab": "Isca",
+    "seedTab": "Semente",
+    "machineryTab": "Máquina",
+    "organic": "Orgânico",
+    "toxicity": "Toxicidade",
+    "gmoFree": "Livre de transgênicos",
+    "protein": "Proteína",
+    "fat": "Óleo",
+    "fiber": "Fibra",
+    "hybrid": "Híbrido",
+    "germination": "Germinação",
+    "daysToMaturity": "Maturação",
+    "daysLabel": "dia",
+    "warranty": "Garantido",
+    "power": "Força",
+    "hoursUsed": "Horário de utilização",
+    "hours": "hora",
+    "powerSource": "Fonte de energia"
+  },
+  "productVariants": {
+    "title": "Variantes do produto",
+    "variantCount": "variante",
+    "inStock": "Em estoque",
+    "outOfStock": "Vendido"
+  },
+  "productPrices": {
+    "title": "Preços (em múltiplas moedas)",
+    "autoConversion": "Transformação automática",
+    "validUntil": "Validade"
+  },
+  "requestTransport": {
+    "title": "Criar uma solicitação de envio",
+    "pickupLocation": "Ponto de carregamento",
+    "deliveryLocation": "Ponto de entrega",
+    "city": "Cidade",
+    "address": "Endereço",
+    "transportType": "Passeio de transporte",
+    "types": {
+      "standard": "Padrão",
+      "refrigerated": "Cadeia de frio",
+      "liveAnimal": "Animais vivos",
+      "hazardous": "Materiais Perigosos",
+      "oversized": "Tamanho grande"
+    },
+    "weight": "Peso (kg)",
+    "weightPlaceholder": "kg",
+    "preferredPickupDate": "Data de upload preferencial",
+    "preferredDeliveryDate": "Data de entrega preferencial",
+    "urgent": "Transporte urgente",
+    "specialInstructions": "Instruções Especiais",
+    "instructionsPlaceholder": "Escreva suas instruções específicas aqui...",
+    "cancel": "Desistir",
+    "submit": "Criar uma demanda",
+    "submitting": "Em processo de criação...",
+    "success": "O pedido de envio foi criado com sucesso.",
+    "error": "Ocorreu um erro ao criar a solicitação de envio."
+  },
+  "transportTracking": {
+    "title": "Rastreamento de Envio",
+    "noTracking": "Ainda não há informações de rastreamento disponíveis.",
+    "update": "Atualizar"
+  },
+  "locations": {
+    "title": "Meus endereços",
+    "description": "Gerencie seus endereços cadastrados.",
+    "addLocation": "Adicionar endereço",
+    "editLocation": "Editar endereço",
+    "noLocations": "Você ainda não possui um endereço cadastrado.",
+    "name": "Endereço Nome",
+    "namePlaceholder": "Por exemplo: Casa, Emprego, Fazenda",
+    "address": "Endereço",
+    "addressLine2": "Linha de endereço 2",
+    "city": "Cidade",
+    "state": "Distrito/Região",
+    "postalCode": "Código postal",
+    "phone": "Telefone",
+    "email": "E-mail",
+    "cancel": "Desistir",
+    "save": "Salvar",
+    "saving": "Salvando...",
+    "typePickup": "Carregando",
+    "typeDelivery": "Entrega",
+    "typeBoth": "Em geral",
+    "createSuccess": "Endereço adicionado com sucesso.",
+    "createError": "Ocorreu um erro ao adicionar o endereço.",
+    "updateSuccess": "O endereço foi atualizado com sucesso.",
+    "updateError": "Ocorreu um erro ao atualizar o endereço.",
+    "deleteLocation": "Excluir endereço",
+    "deleteSuccess": "Endereço excluído",
+    "deleteError": "Ocorreu um erro ao excluir o endereço.",
+    "fetchError": "Ocorreu um erro ao carregar os endereços."
+  },
+  "systemSettings": {
+    "title": "Configurações do sistema",
+    "description": "Veja as configurações de moeda, idioma, métodos de pagamento, frete e impostos da plataforma.",
+    "unauthorized": "Você não tem permissão para acessar esta página.",
+    "currenciesTab": "Moedas",
+    "languagesTab": "Línguas",
+    "paymentTab": "Métodos de pagamento",
+    "shippingTab": "Carga",
+    "taxTab": "Imposto",
+    "active": "Ativo",
+    "inactive": "Passiva",
+    "default": "Padrão",
+    "noCurrencies": "A moeda ainda não foi definida.",
+    "noLanguages": "O idioma ainda não foi definido.",
+    "noPaymentMethods": "Método de pagamento ainda não definido.",
+    "noCarriers": "A empresa de transporte ainda não foi identificada.",
+    "noZones": "A área de carga ainda não foi definida.",
+    "noTaxRates": "A taxa de imposto ainda não foi definida.",
+    "carriers": "Empresas de transporte marítimo",
+    "zones": "Zonas de Carga",
+    "countries": "Países",
+    "rates": "Taxas de envio",
+    "noRates": "Os custos de envio ainda não foram definidos.",
+    "freeShipping": "Frete grátis",
+    "deliveryDays": "tempo de entrega em dias"
+  },
+  "pushPermission": {
+    "title": "Ativar notificações",
+    "description": "Receba notificações sobre novas mensagens, ofertas e atualizações de pedidos.",
+    "allow": "Permitir",
+    "dismiss": "Fechar"
+  },
+  "healthRecords": {
+    "title": "Registros de saúde",
+    "description": "Gerenciar registros de saúde e histórico médico de animais.",
+    "addRecord": "Adicionar registro",
+    "editRecord": "Editar registro",
+    "deleteRecord": "Excluir registro",
+    "noRecords": "Registro de saúde ainda não adicionado.",
+    "animalInfoId": "Identificação de animais",
+    "animalInfoIdPlaceholder": "Insira o código de identificação do animal.",
+    "recordType": "Tour de Inscrição",
+    "recordTypePlaceholder": "Exemplos: Exame, Tratamento, Cirurgia",
+    "recordDate": "Data de inscrição",
+    "followUpDate": "Verifique a data",
+    "veterinarianName": "Veterinário",
+    "veterinarianLicense": "Número da licença",
+    "clinicName": "Clínico",
+    "diagnosis": "Diagnóstico",
+    "treatment": "Tratamento",
+    "medications": "Medicação",
+    "medicationsPlaceholder": "Exemplo: Penicilina 500 mg, Ibuprofeno",
+    "notes": "Notas",
+    "documentUrl": "URL do documento",
+    "saving": "Salvando...",
+    "createSuccess": "Registro de saúde adicionado com sucesso.",
+    "updateSuccess": "Registro de saúde atualizado com sucesso.",
+    "deleteSuccess": "O registro de saúde foi excluído com sucesso.",
+    "saveError": "Ocorreu um erro ao salvar o registro.",
+    "deleteError": "Ocorreu um erro ao excluir o registro.",
+    "fetchError": "Ocorreu um erro ao carregar os registros."
+  },
+  "vaccinations": {
+    "title": "Registros de vacinação",
+    "description": "Gerenciar registros e calendários de vacinação animal.",
+    "addVaccination": "Adicione Rebel",
+    "editVaccination": "Acordo Rebelde",
+    "deleteVaccination": "Rebelde Sil",
+    "noVaccinations": "Registro de vacinação ainda não adicionado.",
+    "animalInfoId": "Identificação de animais",
+    "animalInfoIdPlaceholder": "Insira o código de identificação do animal.",
+    "vaccineName": "Asi Adi",
+    "vaccineNamePlaceholder": "Exemplo: Vacina SAT, Brucella",
+    "vaccineType": "Turnê Rebelde",
+    "vaccineTypePlaceholder": "Exemplo: Vivo, Inativo",
+    "batchNumber": "Número da festa",
+    "vaccinationDate": "História do Rebelde",
+    "nextDueDate": "A Próxima História Rebelde",
+    "veterinarianName": "Veterinário",
+    "veterinarianLicense": "Número da licença",
+    "notes": "Notas",
+    "certificateUrl": "URL do certificado",
+    "saving": "Salvando...",
+    "createSuccess": "Registro de vacinação adicionado com sucesso.",
+    "updateSuccess": "Registro de vacinação atualizado com sucesso.",
+    "deleteSuccess": "O registro de vacinação foi excluído com sucesso.",
+    "saveError": "Ocorreu um erro ao registrar a vacina.",
+    "deleteError": "Ocorreu um erro ao excluir a vacina.",
+    "fetchError": "Ocorreu um erro ao carregar as vacinas."
+  },
+  "shippingCarriers": {
+    "title": "Empresas de transporte marítimo",
+    "description": "Gerenciar informações da empresa de transporte.",
+    "addCarrier": "Adicionar empresa",
+    "editCarrier": "Editar Empresa",
+    "noCarriers": "Nenhuma transportadora foi adicionada ainda.",
+    "carrierName": "nome da empresa",
+    "carrierNamePlaceholder": "Exemplo: Aras Kargo, MNG",
+    "code": "Código",
+    "codePlaceholder": "Exemplo: ARAS",
+    "website": "Site",
+    "trackingUrlTemplate": "Siga o modelo de URL",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "Países apoiados",
+    "supportedCountriesPlaceholder": "Exemplo: TR, EUA, DE",
+    "active": "Ativo",
+    "inactive": "Passiva",
+    "saving": "Salvando...",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "createSuccess": "A empresa de transporte foi adicionada com sucesso.",
+    "updateSuccess": "A empresa de transporte foi atualizada com sucesso.",
+    "deleteSuccess": "A empresa de transporte foi excluída com sucesso.",
+    "saveError": "Ocorreu um erro ao cadastrar a transportadora.",
+    "deleteError": "Ocorreu um erro ao excluir as informações da transportadora.",
+    "fetchError": "Ocorreu um erro ao carregar as empresas de carga."
+  },
+  "shippingZones": {
+    "title": "Zonas de Carga",
+    "description": "Gerenciar zonas e áreas de carga.",
+    "addZone": "Adicionar região",
+    "editZone": "Editar região",
+    "noZones": "Nenhuma área de carga foi adicionada ainda.",
+    "zoneName": "Nome da região",
+    "zoneNamePlaceholder": "Exemplo: Europa, América do Norte",
+    "countryCodes": "Códigos de países",
+    "countryCodesPlaceholder": "Exemplo: TR, DE, FR",
+    "active": "Ativo",
+    "inactive": "Passiva",
+    "saving": "Salvando...",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "createSuccess": "A região foi adicionada com sucesso.",
+    "updateSuccess": "A região foi atualizada com sucesso.",
+    "deleteSuccess": "A área foi devidamente liberada.",
+    "saveError": "Ocorreu um erro ao salvar a região.",
+    "deleteError": "Ocorreu um erro ao excluir a região.",
+    "fetchError": "Ocorreu um erro ao carregar as regiões."
+  },
+  "shippingRates": {
+    "title": "Taxas de envio",
+    "description": "Gerencie os custos de envio e as opções de entrega.",
+    "addRate": "Taxa adicional",
+    "editRate": "Ajustar taxa",
+    "noRates": "Os custos de envio ainda não foram adicionados.",
+    "zone": "Área",
+    "carrier": "Empresa",
+    "selectZone": "Selecione uma região",
+    "selectCarrier": "Escolha uma empresa",
+    "shippingCost": "Taxa de envio",
+    "currency": "Moeda",
+    "estimatedDeliveryDays": "Prazo de entrega estimado (em dias)",
+    "minWeight": "Peso mínimo",
+    "maxWeight": "Peso máximo",
+    "minOrderAmount": "Valor mínimo do pedido",
+    "freeShipping": "Frete grátis",
+    "free": "Livre",
+    "active": "Ativo",
+    "inactive": "Passiva",
+    "cost": "Taxa",
+    "deliveryDays": "Entrega",
+    "status": "Situação",
+    "saving": "Salvando...",
+    "createSuccess": "Taxa adicionada com sucesso.",
+    "updateSuccess": "O salário foi atualizado com sucesso.",
+    "deleteSuccess": "A taxa foi cancelada com sucesso.",
+    "saveError": "Ocorreu um erro ao salvar a taxa.",
+    "deleteError": "Ocorreu um erro ao excluir a taxa.",
+    "fetchError": "Ocorreu um erro ao enviar as taxas."
+  },
+  "metadata": {
+    "title": "Comércio de Gado - Plataforma de Negociação de Animais Vivos",
+    "description": "A plataforma de compra e venda de animais vivos mais confiável do mundo. Compra e venda de animais seguras e transparentes.",
+    "pages": {
+      "about": {
+        "title": "Sobre nós",
+        "description": "Saiba mais sobre negociação de gado vivo. Uma plataforma confiável para negociação de animais vivos."
+      },
+      "contact": {
+        "title": "Comunicação",
+        "description": "Entre em contato conosco. A equipe de suporte ao cliente da Livestock Trading está pronta para ajudá-lo."
+      },
+      "terms": {
+        "title": "Termos de Uso",
+        "description": "Termos e Condições para a Negociação de Gado."
+      },
+      "privacy": {
+        "title": "política de Privacidade",
+        "description": "Política de privacidade da Livestock Trading. Saiba como seus dados pessoais são protegidos."
+      },
+      "products": {
+        "title": "Produtos",
+        "description": "Veja anúncios de animais vivos. Anúncios confiáveis de gado, ovelhas e muito mais."
+      },
+      "sellers": {
+        "title": "Vendedores",
+        "description": "Descubra vendedores de animais confiáveis. Perfis e avaliações de vendedores verificados."
+      },
+      "transporters": {
+        "title": "transportadores",
+        "description": "Descubra empresas de transporte de animais. Transporte seguro e profissional de animais vivos."
+      },
+      "search": {
+        "title": "Procurar",
+        "description": "Pesquise entre os anúncios de animais vivos. Busca fácil com opções de filtro e classificação."
+      },
+      "faq": {
+        "title": "Perguntas frequentes",
+        "description": "Perguntas frequentes e respostas sobre o comércio de gado."
+      },
+      "productDetail": {
+        "title": "{title} - À venda",
+        "description": "À venda em {title} - {city}. Clique para obter detalhes e informações de contato."
+      },
+      "sellerDetail": {
+        "title": "{name} - Perfil do Vendedor",
+        "description": "Perfil do vendedor {name}. Avaliações, anúncios e informações de contato."
+      },
+      "transporterDetail": {
+        "title": "{name} - Perfil da Operadora",
+        "description": "Perfil da transportadora {name}. Áreas de atendimento, avaliações e informações de contato."
+      }
+    }
   }
 }

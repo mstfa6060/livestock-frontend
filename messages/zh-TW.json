@@ -11,17 +11,30 @@
     "back": "后退",
     "next": "向前",
     "close": "关闭",
+    "unauthorized": "您没有权限访问此页面。",
     "emailPlaceholder": "ornek@email.com",
     "login": "登录",
-    "register": "登记"
+    "register": "登记",
+    "previous": "以前的",
+    "zoomIn": "放大",
+    "previousImage": "上一张图片",
+    "nextImage": "下一张图片",
+    "closeLightbox": "关闭画廊",
+    "imageLightbox": "图片库",
+    "slideN": "幻灯片 {n}",
+    "viewMore": "查看更多"
   },
   "header": {
     "products": "产品",
     "sellers": "卖家",
+    "transporters": "运输者",
     "about": "关于我们",
+    "search": "搜索",
     "dashboard": "控制板",
     "settings": "设置",
-    "logout": "退出登录"
+    "logout": "退出登录",
+    "menu": "菜单",
+    "language": "语言选择"
   },
   "auth": {
     "login": {
@@ -33,7 +46,14 @@
       "forgotPassword": "我忘记密码了。",
       "noAccount": "你没有账号吗？",
       "register": "登记",
-      "errorDefault": "登录失败。请检查您的信息。"
+      "errorDefault": "登录失败。请检查您的信息。",
+      "orContinueWith": "或继续",
+      "continueWithGoogle": "继续使用 Google",
+      "continueWithApple": "继续使用苹果产品。",
+      "socialLoginError": "社交账号登录失败，请重试。",
+      "appleComingSoon": "很快",
+      "showPassword": "显示密码",
+      "hidePassword": "隐藏密码"
     },
     "register": {
       "title": "登记",
@@ -51,7 +71,17 @@
       "login": "登录",
       "passwordMismatch": "密码不匹配。",
       "passwordTooShort": "密码长度必须至少为 6 个字符。",
-      "errorDefault": "注册失败，请重试。"
+      "errorDefault": "注册失败，请重试。",
+      "showPassword": "显示密码",
+      "hidePassword": "隐藏密码",
+      "passwordStrength": {
+        "minLength": "至少 8 个字符",
+        "uppercase": "大写字母（A-Z）",
+        "lowercase": "小写字母（a-z）",
+        "number": "数字（0-9）",
+        "special": "特殊字符 (!@#$%)"
+      },
+      "registerSuccess": "您的账户已成功创建！您将被重定向到登录页面……"
     },
     "forgotPassword": {
       "title": "我忘记密码了。",
@@ -78,7 +108,9 @@
       "requestNewLink": "请求新连接",
       "passwordMismatch": "密码不匹配。",
       "passwordTooShort": "密码长度必须至少为 6 个字符。",
-      "errorDefault": "密码重置失败。连接可能无效或已过期。"
+      "errorDefault": "密码重置失败。连接可能无效或已过期。",
+      "showPassword": "显示密码",
+      "hidePassword": "隐藏密码"
     }
   },
   "dashboard": {
@@ -94,18 +126,37 @@
       "active": "积极的",
       "totalViews": "总浏览量",
       "thisWeek": "本星期",
+      "allTime": "始终",
       "favorites": "最喜欢的",
       "onYourListings": "在你的广告中",
+      "savedItems": "注册产品",
       "messages": "信息",
-      "unread": "未读"
+      "notifications": "通知",
+      "unread": "未读",
+      "views": "浏览",
+      "draft": "草稿",
+      "sold": "卖",
+      "pending": "待办的",
+      "awaitingApproval": "等待批准",
+      "totalSales": "总销售额",
+      "completedSales": "已完成销售",
+      "revenue": "收入",
+      "totalRevenue": "总收入"
     },
     "recentListings": "您的最新房源",
+    "recentActivity": "近期活动",
     "recentMessages": "最新消息",
+    "quickLinks": "快速访问",
     "noListings": "您尚未添加任何广告。",
+    "noActivity": "暂无活动。",
     "noMessages": "您尚未收到任何消息。",
     "noNotifications": "您尚未收到任何通知。",
     "viewAllListings": "查看所有房源",
-    "viewAllMessages": "查看所有消息"
+    "viewAllMessages": "查看所有消息",
+    "viewNotifications": "查看通知",
+    "viewFavorites": "最爱",
+    "recentlyViewed": "最近浏览过",
+    "fetchError": "加载面板数据时发生错误。"
   },
   "dashboardNav": {
     "overview": "概述",
@@ -115,7 +166,61 @@
     "notifications": "通知",
     "profile": "轮廓",
     "settings": "设置",
-    "newListing": "添加新列表"
+    "newListing": "添加新列表",
+    "becomeSeller": "成为卖家",
+    "categories": "类别",
+    "offers": "提案",
+    "deals": "协议",
+    "farms": "我的农场",
+    "transport": "运输",
+    "moderation": "适度",
+    "sellerModeration": "卖家审核",
+    "transporterModeration": "承运商调节",
+    "brands": "品牌",
+    "transportOffers": "运费报价",
+    "healthRecords": "健康记录",
+    "vaccinations": "疫苗接种者",
+    "shippingCarriers": "航运公司",
+    "shippingZones": "货物区",
+    "shippingRates": "运费",
+    "systemSettings": "系统设置",
+    "locations": "我的地址"
+  },
+  "profile": {
+    "title": "个人资料",
+    "description": "您可以在这里更新您的个人信息。",
+    "personalInfo": "个人信息",
+    "contactInfo": "联系信息",
+    "preferences": "偏好",
+    "firstName": "姓名",
+    "firstNamePlaceholder": "请输入您的姓名",
+    "surname": "姓",
+    "surnamePlaceholder": "请输入您的姓氏。",
+    "displayName": "显示名称",
+    "phone": "电话号码",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneVerified": "已验证",
+    "phoneNotVerified": "未经证实",
+    "verifyPhone": "验证电话号码",
+    "country": "国家",
+    "selectCountry": "选择国家/地区",
+    "language": "语言偏好",
+    "selectLanguage": "选择一种语言",
+    "currency": "货币",
+    "selectCurrency": "选择货币。",
+    "saveChanges": "保存更改",
+    "saving": "保存...",
+    "saveSuccess": "您的个人资料已更新。",
+    "saveError": "更新个人资料时发生错误。",
+    "avatar": "个人资料照片",
+    "changeAvatar": "更换照片",
+    "removeAvatar": "移除照片",
+    "currencies": {
+      "try": "土耳其里拉",
+      "usd": "美元",
+      "eur": "欧元",
+      "gbp": "英镑"
+    }
   },
   "myListings": {
     "title": "我的广告",
@@ -125,35 +230,94 @@
     "fetchError": "加载广告时发生错误。",
     "deleteSuccess": "广告已成功删除。",
     "deleteError": "删除广告时发生错误。",
-    "activateSuccess": "广告已上线。",
-    "deactivateSuccess": "该房源已下架。",
+    "publishSuccess": "广告稿已提交审核。",
+    "unpublishSuccess": "广告稿已拟定。",
     "statusError": "更改状态时发生错误。",
     "filters": {
       "all": "他们所有人",
-      "active": "积极的",
       "draft": "草稿",
       "pending": "等待批准",
+      "active": "积极的",
+      "rejected": "已拒绝",
       "sold": "卖"
     },
     "actions": {
       "edit": "编辑",
       "delete": "删除",
-      "activate": "激活",
-      "deactivate": "被动结构"
+      "publish": "提交审批",
+      "unpublish": "草稿",
+      "menu": "交易"
     },
     "deleteDialog": {
       "title": "删除广告",
       "description": "您确定要删除此商品信息吗？此操作不可逆。",
       "cancel": "取消",
       "confirm": "删除"
-    }
+    },
+    "loadMore": "下载更多",
+    "loadingMore": "加载中..."
   },
   "favorites": {
     "title": "我的最爱",
     "description": "关注你喜欢的产品。",
     "noFavorites": "您还没有添加任何收藏商品。",
     "browseProducts": "浏览产品",
-    "fetchError": "加载收藏夹时出错。"
+    "fetchError": "加载收藏夹时出错。",
+    "loadMore": "下载更多",
+    "loadingMore": "加载中..."
+  },
+  "messages": {
+    "title": "消息",
+    "description": "联系买家和卖家。",
+    "noConversations": "您尚未收到任何消息。",
+    "startConversation": "要询问有关广告的问题，请前往该广告页面。",
+    "fetchError": "加载消息时出错",
+    "sendError": "发送消息时发生错误。",
+    "connectionError": "连接失败，正在重试……",
+    "connected": "它连接了",
+    "connecting": "正在连接...",
+    "searchPlaceholder": "仔细查看这些信息……",
+    "typeMessage": "请写下您的留言……",
+    "send": "发送",
+    "sending": "正在发送...",
+    "typing": "上面写着……",
+    "read": "读",
+    "delivered": "发送",
+    "today": "今天",
+    "yesterday": "昨天",
+    "noMessages": "暂无消息。开始对话吧！",
+    "loadMore": "上传更多",
+    "loadingMessages": "消息正在加载……",
+    "about": "关于",
+    "product": "产品",
+    "startNewConversation": "开启新的对话",
+    "selectConversation": "选择一个对话或发起一个新对话。",
+    "online": "在线的",
+    "offline": "离线",
+    "lastSeen": "最后一次出现",
+    "deleteConversation": "删除对话",
+    "deleteConfirm": "您确定要删除此对话吗？",
+    "deleted": "对话已被删除。",
+    "defaultUser": "用户",
+    "noResults": "未找到结果。",
+    "newConversation": "新对话"
+  },
+  "notifications": {
+    "title": "通知",
+    "description": "查看和管理您的通知。",
+    "markAllAsRead": "全部标记为已读",
+    "noNotifications": "您尚未收到任何通知。",
+    "viewAll": "查看所有通知",
+    "today": "今天",
+    "yesterday": "昨天",
+    "older": "老年人",
+    "types": {
+      "system": "系统",
+      "message": "信息",
+      "offer": "提供",
+      "order": "命令",
+      "listing": "广告"
+    }
   },
   "settings": {
     "title": "设置",
@@ -169,7 +333,28 @@
       "passwordMismatch": "新密码不匹配。",
       "passwordTooShort": "新密码长度必须至少为 6 个字符。",
       "sessionError": "未找到会话信息。",
-      "errorDefault": "密码更新失败。请检查您当前的密码。"
+      "errorDefault": "密码更新失败。请检查您当前的密码。",
+      "showPassword": "显示密码",
+      "hidePassword": "隐藏密码"
+    },
+    "preferences": {
+      "title": "通知和查看偏好设置",
+      "description": "管理您的通知渠道和显示偏好设置。",
+      "notifications": "通知",
+      "emailNotifications": "电子邮件通知",
+      "emailNotificationsDesc": "接收新消息和广告更新的电子邮件通知。",
+      "smsNotifications": "短信通知",
+      "smsNotificationsDesc": "接收重要通知短信。",
+      "pushNotifications": "推送通知",
+      "pushNotificationsDesc": "接收推送通知，获取即时更新。",
+      "appearance": "外貌",
+      "darkMode": "深色模式",
+      "darkModeDesc": "切换到深色主题。",
+      "saveChanges": "保存偏好设置",
+      "saving": "保存...",
+      "saveSuccess": "您的偏好设置已更新。",
+      "saveError": "更新偏好设置时发生错误。",
+      "loadError": "偏好设置无法加载。"
     }
   },
   "navigation": {
@@ -188,7 +373,8 @@
       "title": "活体动物交易平台",
       "subtitle": "最可靠的活畜交易平台。安全买卖牛羊。",
       "cta": "立即开始",
-      "viewListings": "查看广告"
+      "viewListings": "查看广告",
+      "searchPlaceholder": "寻找动物……（牛、羊、山羊……）"
     },
     "features": {
       "secure": {
@@ -214,6 +400,11 @@
     "featured": {
       "title": "精选广告",
       "viewAll": "查看全部"
+    },
+    "cta": {
+      "title": "立即开始",
+      "subtitle": "加入这个汇聚成千上万卖家和买家的平台。",
+      "button": "免费注册"
     }
   },
   "footer": {
@@ -221,7 +412,151 @@
     "about": "关于我们",
     "contact": "沟通",
     "terms": "使用条款",
-    "privacy": "隐私政策"
+    "privacy": "隐私政策",
+    "company": "公司",
+    "support": "支持",
+    "legal": "合法的",
+    "followUs": "跟着我们",
+    "newsletter": "公告",
+    "newsletterDescription": "不要错过最新的房源信息和促销活动。",
+    "subscribe": "订阅",
+    "emailPlaceholder": "您的电子邮件地址",
+    "tagline": "土耳其最可靠的活体动物交易平台。",
+    "sellers": "卖家",
+    "products": "产品",
+    "map": "地图",
+    "appleLoginComingSoon": "使用 Apple 帐户登录的功能很快就会开通。",
+    "supportEmail": "info@livestock-trading.com",
+    "faq": "常问问题"
+  },
+  "faq": {
+    "title": "常见问题解答",
+    "description": "关于我们平台的常见问题解答。",
+    "noFaqs": "目前还没有添加任何问题。"
+  },
+  "about": {
+    "title": "关于我们",
+    "subtitle": "土耳其最可靠的活体动物交易平台。",
+    "mission": {
+      "title": "我们的使命",
+      "description": "通过实现活体动物贸易的数字化，我们旨在建立生产者和买家之间安全、透明、高效的联系。"
+    },
+    "vision": {
+      "title": "我们的愿景",
+      "description": "成为农业领域数字化转型的先驱，并成为全球活体动物交易平台。"
+    },
+    "values": {
+      "title": "我们的价值观",
+      "trust": {
+        "title": "相信",
+        "description": "透明度和可靠性在所有交易中都至关重要。"
+      },
+      "quality": {
+        "title": "质量",
+        "description": "持续改进，提供最佳服务。"
+      },
+      "innovation": {
+        "title": "创新",
+        "description": "利用科技变革行业。"
+      }
+    },
+    "stats": {
+      "users": "注册用户",
+      "sellers": "活跃卖家",
+      "products": "广告",
+      "transactions": "交易成功"
+    }
+  },
+  "contact": {
+    "title": "沟通",
+    "subtitle": "如有任何疑问，请与我们联系。",
+    "form": {
+      "title": "请写信给我们",
+      "name": "你的名字",
+      "namePlaceholder": "阿赫迈特·伊尔马兹",
+      "email": "电子邮件",
+      "emailPlaceholder": "ornek@email.com",
+      "subject": "主题",
+      "subjectPlaceholder": "您的邮件主题",
+      "message": "您的留言",
+      "messagePlaceholder": "请在此处输入您的留言……",
+      "submit": "发送",
+      "submitting": "正在发送...",
+      "success": "您的信息已成功发送。我们会尽快回复您。",
+      "error": "发送消息时发生错误，请重试。"
+    },
+    "info": {
+      "title": "联系信息",
+      "address": "地址",
+      "addressValue": "土耳其伊斯坦布尔",
+      "email": "电子邮件",
+      "emailValue": "info@livestock-trading.com",
+      "phone": "电话",
+      "phoneValue": "+90 (212) 123 45 67",
+      "workingHours": "工作时间",
+      "workingHoursValue": "周一至周五：9:00 - 18:00",
+      "map": "地图"
+    }
+  },
+  "terms": {
+    "title": "使用条款",
+    "lastUpdated": "最后更新：{date}",
+    "sections": {
+      "acceptance": {
+        "title": "1. 接受条款",
+        "content": "使用本网站即表示您同意以下使用条款。如果您不同意这些条款，请勿使用本网站。"
+      },
+      "services": {
+        "title": "2. 服务",
+        "content": "牲畜交易平台提供活体动物买卖服务。平台上的所有交易均由用户自行负责。"
+      },
+      "accounts": {
+        "title": "3. 用户帐户",
+        "content": "您必须提供准确且最新的信息才能创建账户。账户安全由您自行负责。"
+      },
+      "prohibited": {
+        "title": "4. 禁止的活动",
+        "content": "严禁发布误导性广告、虚假信息、欺诈和非法活动。"
+      },
+      "liability": {
+        "title": "5. 责任限制",
+        "content": "平台不直接负责用户之间的交易。所有交易均由交易双方自行完成。"
+      },
+      "changes": {
+        "title": "6. 变化",
+        "content": "这些条款和条件可能会随时更改，恕不另行通知。更改后的条款和条件一经发布即刻生效。"
+      }
+    }
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新：{date}",
+    "sections": {
+      "collection": {
+        "title": "1. 信息收集",
+        "content": "当您创建账户时，我们会收集您的姓名、电子邮件地址和电话号码等个人信息。我们还可能收集有关您使用本网站的匿名数据。"
+      },
+      "usage": {
+        "title": "2. 信息的使用",
+        "content": "我们收集的信息用于提供服务、管理您的帐户、确保安全以及为您提供个性化优惠。"
+      },
+      "sharing": {
+        "title": "3. 信息共享",
+        "content": "您的个人信息不会被出售或出租给第三方。除法律要求的情况外，我们不会共享您的信息。"
+      },
+      "security": {
+        "title": "4. 安全性",
+        "content": "我们已采取行业标准的安全措施来保护您的数据。"
+      },
+      "cookies": {
+        "title": "5. 饼干",
+        "content": "我们的网站使用 Cookie 来提升用户体验。您可以在浏览器设置中管理您的 Cookie 偏好设置。"
+      },
+      "rights": {
+        "title": "6. 你的权利",
+        "content": "根据土耳其个人数据保护法（KVKK），您有权访问、更正和删除您的个人数据。"
+      }
+    }
   },
   "products": {
     "title": "产品",
@@ -235,11 +570,19 @@
       "priceDesc": "价格（从高到低）",
       "popular": "最受欢迎"
     },
+    "pagination": {
+      "prev": "以前的",
+      "next": "下一个"
+    },
     "status": {
       "draft": "草稿",
+      "pending": "等待批准",
       "active": "积极的",
+      "inactive": "被动的",
+      "outOfStock": "缺货",
+      "expired": "他的任期已满。",
       "sold": "卖",
-      "pending": "等待批准"
+      "rejected": "已拒绝"
     },
     "condition": {
       "new": "新的",
@@ -253,9 +596,13 @@
     "loading": "产品正在加载中……",
     "perPage": "每页",
     "showing": "从 {from} 到 {to} 之间的 {total} 个产品的总数。",
+    "fetchError": "上传产品时发生错误。",
+    "loadMore": "显示更多",
+    "showingOf": "正在显示 {count} / {total} 件商品。",
     "loginToFavorite": "登录即可添加到收藏夹。",
     "addedToFavorites": "已添加到收藏夹",
-    "removedFromFavorites": "已从收藏夹中移除"
+    "removedFromFavorites": "已从收藏夹中移除",
+    "favoriteError": "收藏操作失败。"
   },
   "productDetail": {
     "addToFavorites": "添加到收藏夹",
@@ -279,16 +626,31 @@
     "maxOrder": "最大订单",
     "publishedAt": "发布日期",
     "views": "已查看",
-    "reviews": "评估",
+    "reviews": {
+      "title": "评估",
+      "reviewCount": "评估",
+      "noReviews": "尚未进行评估。",
+      "verified": "已验证买家"
+    },
     "similarProducts": "类似产品",
     "sellerProducts": "卖家其他产品",
     "contactSeller": "联系卖家",
-    "loginRequired": "登录即可添加到收藏夹。",
+    "makeOffer": "提交报价",
+    "loginRequired": "请登录以执行此操作。",
     "addedToFavorites": "已添加到收藏夹",
     "removedFromFavorites": "已从收藏夹中移除",
     "linkCopied": "链接已复制。",
     "messagingComingSoon": "消息功能即将上线。",
-    "productNotFound": "未找到产品。"
+    "productNotFound": "未找到产品。",
+    "contacting": "正在取得联系……",
+    "contactError": "通讯失败，请重试。",
+    "noImage": "暂无图片。",
+    "defaultLocation": "火鸡",
+    "inquiryMessage": "我想获取有关{title}的信息。",
+    "breadcrumb": {
+      "home": "家",
+      "products": "产品"
+    }
   },
   "seller": {
     "title": "卖家信息",
@@ -300,6 +662,70 @@
     "call": "搜索",
     "viewProfile": "查看个人资料"
   },
+  "sellers": {
+    "title": "卖家",
+    "description": "寻找可靠的卖家。",
+    "search": "寻找卖家……",
+    "sort": "种类",
+    "sortOptions": {
+      "newest": "最新的",
+      "mostSales": "畅销书",
+      "topRated": "最高分",
+      "mostProducts": "大多数广告"
+    },
+    "noResults": "未找到卖家。",
+    "loading": "卖家正在加载……",
+    "showing": "找到 {count} 个卖家",
+    "verified": "已验证",
+    "sales": "销售量",
+    "products": "广告",
+    "reviews": "评估",
+    "rating": "观点",
+    "viewProducts": "查看产品",
+    "contactSeller": "发送消息",
+    "memberSince": "会员自{year}年起",
+    "fetchError": "加载供应商信息时出错",
+    "detail": {
+      "title": "卖家简介",
+      "about": "关于",
+      "businessInfo": "商业信息",
+      "businessName": "公司名称",
+      "businessType": "商务考察",
+      "email": "电子邮件",
+      "phone": "电话",
+      "website": "网站",
+      "description": "解释",
+      "policies": "政策",
+      "returnPolicy": "退货政策",
+      "shippingPolicy": "配送政策",
+      "businessHours": "工作时间",
+      "paymentMethods": "支付方式",
+      "allProducts": "所有产品",
+      "stats": {
+        "totalSales": "总销售额",
+        "totalProducts": "总产品",
+        "totalReviews": "评估",
+        "rating": "观点"
+      },
+      "notFound": "未找到卖家。",
+      "backToList": "唐对卖家",
+      "contactInfo": "沟通",
+      "noProducts": "该卖家目前还没有任何商品上架。",
+      "noPolicies": "卖家尚未制定相关政策。",
+      "fetchError": "上传卖家信息时出错。",
+      "productsLoadError": "上传卖家产品时发生错误。",
+      "reviewsTab": "评估",
+      "reviews": {
+        "summary": "评估总结",
+        "reviewCount": "评估",
+        "communication": "沟通",
+        "shippingSpeed": "运输速度",
+        "productQuality": "产品质量",
+        "noReviews": "尚未进行评估。",
+        "verified": "已验证买家"
+      }
+    }
+  },
   "editListing": {
     "title": "编辑广告",
     "saveChanges": "保存更改",
@@ -307,6 +733,10 @@
     "updateSuccess": "广告已成功更新。",
     "updateFailed": "更新列表时发生错误。",
     "loadError": "广告加载时出错。",
+    "sellerNotFound": "未找到卖家资料。",
+    "sellerLoadError": "卖家资料加载失败。",
+    "userNotFound": "未找到用户信息。请重新登录。",
+    "locationNotFound": "无法找到位置信息。请刷新页面。",
     "basicInfo": "基本信息",
     "categoryAndCondition": "类别和状态",
     "pricing": "定价",
@@ -314,6 +744,8 @@
     "images": "图片",
     "existingImages": "可用图片",
     "addImage": "添加图片",
+    "maxImages": "您最多可以上传 10 张图片。",
+    "imageHint": "最少1张，最多10张图片。格式为PNG、JPG或WEBP。",
     "uploadingImages": "图片正在加载……",
     "uploadingImage": "图片正在加载。",
     "imageUploadFailed": "图片加载失败。",
@@ -358,6 +790,7 @@
     "addImage": "添加图片",
     "maxImages": "您最多可以上传 10 张图片。",
     "imageHint": "最少1张，最多10张图片。格式为PNG、JPG或WEBP。",
+    "location": "位置信息",
     "fields": {
       "title": "广告标题",
       "shortDescription": "简要描述",
@@ -370,13 +803,29 @@
       "shippingAvailable": "提供配送服务。",
       "shippingCost": "运费",
       "weight": "重量",
-      "weightUnit": "重量单位"
+      "weightUnit": "重量单位",
+      "city": "城市",
+      "address": "地址",
+      "postalCode": "邮政编码"
     },
     "placeholders": {
       "title": "例如：2岁荷斯坦奶牛",
       "shortDescription": "产品描述（最多 200 个字符）",
       "description": "请提供产品详细信息……",
-      "category": "请选择类别。"
+      "category": "请选择类别。",
+      "city": "进入城市",
+      "address": "请输入完整地址。",
+      "postalCode": "邮政编码"
+    },
+    "errors": {
+      "titleRequired": "广告标题为必填项。",
+      "shortDescriptionRequired": "请提供简要描述。",
+      "descriptionRequired": "需要详细解释。",
+      "categoryRequired": "类别选择为必填项。",
+      "priceRequired": "价格是必须的。",
+      "cityRequired": "需要提供城市信息。",
+      "addressRequired": "必须提供地址信息。",
+      "locationError": "创建位置时发生错误。"
     },
     "success": "广告制作成功。",
     "error": "创建广告时发生错误。",
@@ -388,25 +837,54 @@
     "draftSaved": "草稿已保存",
     "productCreated": "产品已成功制造完成。",
     "creationFailed": "产品创建失败，请重试。",
-    "errors": {
-      "titleRequired": "广告标题为必填项。",
-      "shortDescriptionRequired": "请提供简要描述。",
-      "descriptionRequired": "需要详细解释。",
-      "categoryRequired": "类别选择为必填项。",
-      "priceRequired": "请输入有效价格。"
-    }
+    "userNotFound": "未找到用户信息。请重新登录。",
+    "defaultBusinessName": "我的生意"
+  },
+  "becomeSeller": {
+    "title": "成为卖家",
+    "description": "公司声明",
+    "alreadySeller": "您已经拥有卖家资料。",
+    "goToListings": "前往我的商品列表",
+    "businessInfo": "商业信息",
+    "contactInfo": "联系信息",
+    "businessName": "公司名称",
+    "businessNamePlaceholder": "例如：伊尔马兹农场",
+    "businessType": "商务考察",
+    "businessTypePlaceholder": "选择您的业务类型。",
+    "businessTypes": {
+      "individual": "个人",
+      "company": "公司",
+      "cooperative": "合作社",
+      "farm": "农场"
+    },
+    "taxNumber": "税务编号",
+    "taxNumberPlaceholder": "请输入您的税务识别号码（可选）",
+    "descriptionPlaceholder": "请简要介绍一下您的业务……",
+    "phone": "电话",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "website": "网站",
+    "websitePlaceholder": "https://www.examplesite.com（可选）",
+    "submit": "创建卖家资料",
+    "submitting": "创建个人资料……",
+    "success": "您的卖家资料已成功创建！",
+    "error": "创建卖家资料时发生错误。",
+    "taxNumberHelp": "请输入您的10位或11位税号（可选）",
+    "phoneHelp": "例如：+90 555 123 45 67 或 0555 123 45 67",
+    "websiteHelp": "例如：www.isletmem.com 或 https://isletmem.com",
+    "alreadySellerDescription": "您可以使用下面的按钮来管理您的列表。",
+    "newListing": "添加新列表"
   },
   "fileUpload": {
     "dragDrop": "上传照片或视频。",
     "dragDropHint": "拖放或点击选择。",
     "dropHere": "算了……",
     "imageLimit": "照片：最大 10MB",
-    "videoLimit": "Video: max 100MB",
+    "videoLimit": "视频：最大 100MB",
     "uploadCount": "当前 / 最大已加载",
     "maxFilesError": "您最多可以上传 {max} 个媒体文件。",
     "imageTooLarge": "照片大小必须小于10MB。",
-    "videoTooLarge": "The video must be smaller than 100MB.",
-    "optimizing": "正在优化……",
+    "videoTooLarge": "视频文件大小必须小于100MB。",
+    "optimizing": "优化中……",
     "uploading": "加载中...",
     "queued": "排队等候……",
     "uploadSuccess": "上传媒体文件数量：{count}",
@@ -419,9 +897,833 @@
     "videoBadge": "视频",
     "coverUpdated": "封面照片已成功调整。",
     "optimizationInfo": "照片已优化以符合网络标准",
-    "videoProcessing": "Processing video...",
-    "videoProcessingFailed": "Processing failed",
-    "reorderError": "Failed to reorder files",
-    "coverUpdateError": "Failed to update cover photo"
+    "selectImage": "视觉选择",
+    "changeImage": "改变",
+    "removeImage": "消除",
+    "videoProcessing": "视频正在处理中……",
+    "videoProcessingFailed": "操作失败。",
+    "videoProcessingPollError": "无法获取视频处理状态，请刷新页面。",
+    "reorderError": "文件无法排序。",
+    "coverUpdateError": "封面照片无法更新。"
+  },
+  "error": {
+    "title": "发生错误。",
+    "description": "发生意外错误。请刷新页面或稍后再试。",
+    "retry": "再试一次",
+    "goBack": "不要回去",
+    "goHome": "家",
+    "notFound": {
+      "title": "页面未找到",
+      "description": "您要查找的页面不可用或已移动。",
+      "goHome": "返回首页"
+    }
+  },
+  "search": {
+    "title": "搜索",
+    "placeholder": "搜索产品、类别或卖家……",
+    "searchButton": "搜索",
+    "searchingFor": "通缉",
+    "loading": "通缉...",
+    "resultsCount": "找到 {count} 个结果。",
+    "noResults": "未找到结果。",
+    "tryDifferentSearch": "尝试不同的关键词或更改筛选条件。",
+    "filters": {
+      "title": "过滤器",
+      "category": "类别",
+      "allCategories": "所有类别",
+      "condition": "情况",
+      "allConditions": "所有案例",
+      "priceRange": "价格范围",
+      "price": "价格",
+      "min": "敏",
+      "max": "最大限度",
+      "apply": "申请",
+      "clear": "干净的",
+      "clearAll": "全部清除"
+    },
+    "fetchError": "加载搜索结果时出错",
+    "recentSearches": "最近搜索",
+    "clearHistory": "清除历史记录",
+    "noSearchHistory": "您目前还没有搜索历史记录。",
+    "deleteHistoryError": "删除搜索历史记录时发生错误。"
+  },
+  "categories": {
+    "title": "类别管理",
+    "description": "从这里管理类别。",
+    "noCategories": "尚未添加任何类别。",
+    "createFirst": "创建第一个类别。",
+    "fetchError": "加载类别时发生错误。",
+    "createSuccess": "类别创建成功",
+    "createError": "创建类别时发生错误。",
+    "updateSuccess": "类别已成功更新",
+    "updateError": "更新类别时发生错误。",
+    "deleteSuccess": "该类别已成功删除。",
+    "deleteError": "删除类别时发生错误。",
+    "activateSuccess": "该类别已启用。",
+    "deactivateSuccess": "该类别已停用。",
+    "statusError": "更改状态时发生错误。",
+    "loadError": "加载类别时发生错误",
+    "filters": {
+      "all": "他们所有人",
+      "active": "积极的",
+      "inactive": "非活跃状态"
+    },
+    "table": {
+      "name": "类别名称",
+      "slug": "蛞蝓",
+      "sortOrder": "序列号",
+      "subCategories": "子类别",
+      "status": "情况",
+      "actions": "交易"
+    },
+    "actions": {
+      "edit": "编辑",
+      "delete": "删除",
+      "activate": "激活",
+      "deactivate": "被动结构"
+    },
+    "deleteDialog": {
+      "title": "删除类别",
+      "description": "您确定要删除此类别吗？此操作不可逆。",
+      "cancel": "取消",
+      "confirm": "删除"
+    },
+    "addNew": "添加新类别",
+    "loadMore": "下载更多",
+    "loadingMore": "加载中...",
+    "form": {
+      "newTitle": "创建新类别",
+      "editTitle": "编辑类别",
+      "name": "类别名称",
+      "namePlaceholder": "例如：牛",
+      "slug": "蛞蝓",
+      "slugPlaceholder": "例如：大型牲畜",
+      "description": "解释",
+      "descriptionPlaceholder": "类别简介……",
+      "parentCategory": "上级类别",
+      "parentCategoryPlaceholder": "选择一个顶级类别（可选）",
+      "noParent": "没有顶级类别（主类别）",
+      "sortOrder": "序列号",
+      "isActive": "积极的",
+      "iconUrl": "图标网址",
+      "iconUrlPlaceholder": "https://ornek.com/ikon.png",
+      "submit": "节省",
+      "submitting": "保存...",
+      "updating": "正在更新……",
+      "errors": {
+        "nameRequired": "类别名称为必填项。",
+        "slugRequired": "蛞蝓是必需的。"
+      }
+    }
+  },
+  "offers": {
+    "title": "提案",
+    "description": "管理您的收发货信息。",
+    "received": "收到的报价",
+    "sent": "已提交报价",
+    "noReceivedOffers": "目前尚未收到任何报价。",
+    "noSentOffers": "您尚未提交报价。",
+    "browseProducts": "浏览产品",
+    "viewProduct": "查看产品",
+    "accept": "接受",
+    "reject": "拒绝",
+    "withdraw": "提取",
+    "makeOffer": "提交报价",
+    "sendOffer": "发送报价",
+    "sending": "正在发送...",
+    "cancel": "取消",
+    "listingPrice": "广告价格",
+    "yourOffer": "您的报价",
+    "quantity": "数量",
+    "messageOptional": "留言（可选）",
+    "messagePlaceholder": "您想对卖家说的话……",
+    "expiresAt": "最后有效日期",
+    "offerSent": "您的报价已成功发送。",
+    "offerError": "发送报价时发生错误。",
+    "acceptSuccess": "提议已被接受。",
+    "rejectSuccess": "该提议被拒绝了。",
+    "withdrawSuccess": "该提议已被撤回。",
+    "actionError": "处理过程中发生错误。",
+    "fetchError": "加载优惠信息时出错。",
+    "loginRequired": "登录后即可提交报价。",
+    "invalidPrice": "请输入有效价格。",
+    "invalidQuantity": "请输入有效金额。",
+    "status": {
+      "pending": "待办的",
+      "accepted": "公认",
+      "rejected": "已拒绝",
+      "countered": "还价",
+      "expired": "它的任期结束了。",
+      "withdrawn": "退出"
+    }
+  },
+  "deals": {
+    "title": "协议",
+    "description": "请遵守采购协议。",
+    "buying": "学者",
+    "selling": "销售量",
+    "noBuyingDeals": "你们目前还没有学生注册流程。",
+    "noSellingDeals": "您目前还没有任何销售交易记录。",
+    "browseProducts": "浏览产品",
+    "viewProduct": "查看产品",
+    "activeDeals": "有效协议",
+    "completedDeals": "完全的",
+    "purchases": "学者",
+    "sales": "销售量",
+    "fetchError": "加载协议时发生错误",
+    "dealStatus": {
+      "pending": "待办的",
+      "confirmed": "确认的",
+      "processing": "准备中",
+      "shipped": "在货物中",
+      "delivered": "发表",
+      "completed": "完全的",
+      "cancelled": "取消",
+      "disputed": "协议"
+    },
+    "delivery": {
+      "pickup": "专人递送",
+      "shipping": "货物运输",
+      "transport": "交通工具"
+    },
+    "requestTransport": "发货请求"
+  },
+  "farms": {
+    "title": "我的农场",
+    "description": "管理和更新您的农场。",
+    "addFarm": "添加农场",
+    "editFarm": "农场管理",
+    "noFarms": "您尚未添加农场。",
+    "farmName": "农场名称",
+    "registrationNumber": "注册号码",
+    "location": "地点",
+    "selectLocation": "选择一个地点。",
+    "addLocationFirst": "首先，添加地点。",
+    "farmTypeLabel": "农场之旅",
+    "farmDescription": "解释",
+    "totalArea": "总面积",
+    "cultivatedArea": "耕地",
+    "certifications": "证书",
+    "certificationsPlaceholder": "ISO 22000、GlobalGAP 等。",
+    "organic": "有机的",
+    "verified": "已验证",
+    "save": "节省",
+    "saving": "保存...",
+    "cancel": "取消",
+    "edit": "编辑",
+    "delete": "删除",
+    "sellerRequired": "卖家资料必填",
+    "sellerRequiredDesc": "要添加农场，您首先需要创建卖家资料。",
+    "becomeSeller": "成为卖家",
+    "createSuccess": "农场已成功添加。",
+    "updateSuccess": "农场已成功完成改造。",
+    "deleteSuccess": "农场已成功删除。",
+    "saveError": "注册农场时发生错误。",
+    "deleteError": "删除农场时发生错误。",
+    "fetchError": "上传农场信息时出错。",
+    "farmType": {
+      "livestock": "畜牧业",
+      "crop": "农业",
+      "mixed": "混合",
+      "poultry": "有翼的",
+      "dairy": "奶牛养殖",
+      "aquaculture": "水产品"
+    }
+  },
+  "transporters": {
+    "title": "运输者",
+    "description": "动物和产品运输服务",
+    "searchPlaceholder": "找个运输公司……",
+    "noTransporters": "目前还没有注册承运商。",
+    "verified": "已验证",
+    "transports": "运输",
+    "viewProfile": "查看个人资料",
+    "sort": {
+      "newest": "最新的",
+      "rating": "最高分",
+      "mostTransports": "最频繁的运输"
+    },
+    "pagination": {
+      "previous": "以前的",
+      "next": "下一个",
+      "page": "页 {page}"
+    }
+  },
+  "transport": {
+    "title": "我的发货请求",
+    "description": "追踪您的发货请求。",
+    "findTransporter": "寻找运输员",
+    "active": "积极的",
+    "completed": "完全的",
+    "total": "全部的",
+    "asSeller": "作为卖家",
+    "asBuyer": "作为买方",
+    "noSellerRequests": "作为卖家，您没有运送要求。",
+    "noBuyerRequests": "作为收件人，您没有发货请求。",
+    "viewProduct": "查看产品",
+    "pickup": "收到",
+    "delivery": "送货",
+    "urgent": "紧迫的",
+    "fetchError": "上传发货请求时发生错误。",
+    "trackShipment": "跟随",
+    "transportStatus": {
+      "pending": "待办的",
+      "inPool": "在游泳池里",
+      "assigned": "已任命",
+      "pickedUp": "收据",
+      "inTransit": "在路上",
+      "delivered": "发表",
+      "completed": "完全的",
+      "cancelled": "取消"
+    },
+    "transportType": {
+      "standard": "标准",
+      "refrigerated": "冷链",
+      "liveAnimal": "活体动物",
+      "hazardous": "危险材料",
+      "oversized": "大号"
+    }
+  },
+  "moderation": {
+    "title": "产品审核",
+    "description": "审核待批准产品。",
+    "pending": "等待",
+    "allClear": "所有产品均已检验。",
+    "noPending": "目前没有产品等待审批。",
+    "awaitingReview": "待审核",
+    "by": "销售人员：",
+    "stock": "库存",
+    "preview": "与你",
+    "approve": "确认",
+    "reject": "拒绝",
+    "confirmReject": "拒绝",
+    "cancelReject": "放弃",
+    "rejectReasonPlaceholder": "写下拒绝的理由……",
+    "rejectReasonRequired": "必须提供拒绝理由。",
+    "approveSuccess": "产品已成功获批。",
+    "rejectSuccess": "产品被拒收了。",
+    "actionError": "处理过程中发生错误。",
+    "fetchError": "上传产品时发生错误。",
+    "unauthorized": "您没有权限访问此页面。"
+  },
+  "sellerModeration": {
+    "title": "卖家审核",
+    "description": "审核和管理卖家账户。",
+    "pending": "等待",
+    "allClear": "所有卖家都接受了调查。",
+    "noPending": "没有卖家在等。",
+    "verify": "核实",
+    "suspend": "暂停",
+    "verifySuccess": "卖家验证成功。",
+    "suspendSuccess": "卖家已被暂停交易。",
+    "actionError": "处理过程中发生错误。",
+    "suspendReasonRequired": "停职理由必须说明。",
+    "suspendReasonPlaceholder": "请写明停职原因……",
+    "confirmSuspend": "暂停",
+    "cancelSuspend": "放弃",
+    "statusLabels": {
+      "pendingVerification": "待核实",
+      "active": "积极的",
+      "suspended": "绞刑",
+      "banned": "禁忌"
+    },
+    "filterAll": "显示全部",
+    "filterPending": "等待中",
+    "filterActive": "资产",
+    "filterSuspended": "暂停",
+    "unauthorized": "您没有权限访问此页面。",
+    "businessName": "公司名称",
+    "businessType": "商务考察",
+    "email": "电子邮件",
+    "phone": "电话",
+    "status": "情况",
+    "createdAt": "注册日期"
+  },
+  "transporterModeration": {
+    "title": "承运商调节",
+    "description": "审核和管理运营商账户。",
+    "pending": "等待",
+    "allClear": "所有转运蛋白均进行了研究。",
+    "noPending": "没有运输车在等候。",
+    "verify": "核实",
+    "suspend": "暂停",
+    "verifySuccess": "运输工具已成功验证。",
+    "suspendSuccess": "运输车辆被停运。",
+    "actionError": "处理过程中发生错误。",
+    "suspendReasonRequired": "停职理由必须说明。",
+    "suspendReasonPlaceholder": "请写明停职原因……",
+    "confirmSuspend": "暂停",
+    "cancelSuspend": "放弃",
+    "statusLabels": {
+      "pendingVerification": "待核实",
+      "active": "积极的",
+      "suspended": "绞刑",
+      "banned": "禁忌"
+    },
+    "filterAll": "显示全部",
+    "filterPending": "等待中",
+    "filterActive": "资产",
+    "filterSuspended": "暂停",
+    "unauthorized": "您没有权限访问此页面。",
+    "companyName": "公司名称",
+    "contactPerson": "授权人员",
+    "email": "电子邮件",
+    "phone": "电话",
+    "city": "城市",
+    "status": "情况",
+    "createdAt": "注册日期"
+  },
+  "transporterDetail": {
+    "notFound": "找不到运输工具。",
+    "backToList": "唐对运输者",
+    "verified": "已验证",
+    "totalTransports": "总运费",
+    "completed": "完全的",
+    "about": "关于",
+    "contact": "联系信息",
+    "businessInfo": "商业信息",
+    "license": "许可证号码",
+    "insurance": "保险信息",
+    "fleet": "舰队信息",
+    "serviceRegions": "服务区域",
+    "specializations": "专业领域",
+    "certifications": "证书"
+  },
+  "brands": {
+    "title": "品牌管理",
+    "description": "管理产品品牌。",
+    "addBrand": "添加品牌",
+    "editBrand": "编辑品牌",
+    "noBrands": "目前尚未添加任何品牌。",
+    "brandName": "品牌名称",
+    "brandDescription": "解释",
+    "website": "网站",
+    "logoUrl": "Logo URL",
+    "save": "节省",
+    "saving": "保存...",
+    "cancel": "取消",
+    "edit": "编辑",
+    "delete": "删除",
+    "inactive": "被动的",
+    "products": "产品",
+    "createSuccess": "品牌添加成功",
+    "updateSuccess": "品牌已成功更新。",
+    "deleteSuccess": "该品牌已成功删除。",
+    "saveError": "注册商标时发生错误。",
+    "deleteError": "删除商标时发生错误。",
+    "fetchError": "加载品牌时出错",
+    "unauthorized": "您没有权限访问此页面。"
+  },
+  "transporterReviews": {
+    "title": "评估",
+    "reviewCount": "评估",
+    "noReviews": "尚未进行评估。",
+    "timeliness": "准时交付",
+    "communication": "沟通",
+    "carefulHandling": "小心处理",
+    "professionalism": "专业精神"
+  },
+  "transportOffers": {
+    "title": "运费报价",
+    "description": "管理您提交的运输请求报价。",
+    "newOffer": "新提案",
+    "transportRequestId": "发货请求 ID",
+    "requestIdPlaceholder": "请输入发货请求编号。",
+    "offeredPrice": "优惠价",
+    "estimatedDays": "预计持续时间（天）",
+    "days": "天",
+    "vehicleType": "车辆类型",
+    "insuranceIncluded": "已包含保险",
+    "message": "信息",
+    "cancel": "取消",
+    "sending": "正在发送...",
+    "sendOffer": "提交报价",
+    "cancelOffer": "取消",
+    "pendingTab": "等待",
+    "historyTab": "过去的",
+    "noPendingOffers": "您目前没有待处理的订单。",
+    "noHistory": "未找到过往报价。",
+    "status": {
+      "pending": "等待",
+      "accepted": "公认",
+      "rejected": "已拒绝",
+      "expired": "它的任期结束了。",
+      "cancelled": "取消"
+    },
+    "createSuccess": "报价已成功提交。",
+    "createError": "发送报价时发生错误。",
+    "cancelSuccess": "该优惠已被取消。",
+    "cancelError": "取消优惠时发生错误。",
+    "fetchError": "加载优惠信息时出错。"
+  },
+  "animalInfo": {
+    "title": "动物及产品信息",
+    "animalTab": "动物",
+    "healthTab": "健康",
+    "vaccinationsTab": "疫苗接种者",
+    "veterinaryTab": "兽医",
+    "breed": "种族",
+    "genderLabel": "性别",
+    "gender": {
+      "male": "男性",
+      "female": "女性",
+      "unknown": "未知"
+    },
+    "age": "年龄",
+    "months": "月",
+    "weight": "重量",
+    "color": "颜色",
+    "tagNumber": "耳号",
+    "healthStatus": "健康状况",
+    "health": {
+      "healthy": "健康",
+      "underTreatment": "接受治疗",
+      "recovering": "他/她正在康复中。",
+      "quarantined": "隔离中",
+      "unknown": "未知"
+    },
+    "purposeLabel": "预期用途",
+    "purpose": {
+      "breeding": "种马",
+      "dairy": "牛奶",
+      "meat": "肉",
+      "egg": "蛋",
+      "wool": "羊毛",
+      "working": "工作",
+      "pet": "国内的",
+      "other": "其他"
+    },
+    "pregnancy": "怀孕",
+    "pregnant": "孕",
+    "microchip": "微芯片编号",
+    "passport": "护照号码",
+    "sireDetails": "父亲信息",
+    "damDetails": "主要信息",
+    "diagnosis": "诊断",
+    "treatment": "治疗",
+    "medications": "药物",
+    "veterinarian": "兽医",
+    "nextDue": "下一部叛逆史",
+    "prescriptionRequired": "需要医生开处方",
+    "targetSpecies": "目标旅游",
+    "activeIngredients": "活性成分",
+    "registrationNo": "注册号码",
+    "storage": "贮存",
+    "chemicalTab": "化学",
+    "feedTab": "饵",
+    "seedTab": "种子",
+    "machineryTab": "机器",
+    "organic": "有机的",
+    "toxicity": "毒性",
+    "gmoFree": "非转基因",
+    "protein": "蛋白质",
+    "fat": "油",
+    "fiber": "纤维",
+    "hybrid": "杂交种",
+    "germination": "发芽",
+    "daysToMaturity": "成熟",
+    "daysLabel": "天",
+    "warranty": "保证",
+    "power": "力量",
+    "hoursUsed": "使用时间",
+    "hours": "小时",
+    "powerSource": "电源"
+  },
+  "productVariants": {
+    "title": "产品变体",
+    "variantCount": "变体",
+    "inStock": "有存货",
+    "outOfStock": "售罄"
+  },
+  "productPrices": {
+    "title": "价格（多种货币）",
+    "autoConversion": "自动变换",
+    "validUntil": "有效性"
+  },
+  "requestTransport": {
+    "title": "创建发货请求",
+    "pickupLocation": "装载点",
+    "deliveryLocation": "提货点",
+    "city": "城市",
+    "address": "地址",
+    "transportType": "交通旅游",
+    "types": {
+      "standard": "标准",
+      "refrigerated": "冷链",
+      "liveAnimal": "活体动物",
+      "hazardous": "危险材料",
+      "oversized": "大号"
+    },
+    "weight": "重量（公斤）",
+    "weightPlaceholder": "公斤",
+    "preferredPickupDate": "首选上传日期",
+    "preferredDeliveryDate": "首选交货日期",
+    "urgent": "紧急运输",
+    "specialInstructions": "特殊说明",
+    "instructionsPlaceholder": "请在此处填写您的具体指示……",
+    "cancel": "放弃",
+    "submit": "创造需求",
+    "submitting": "在创造的过程中……",
+    "success": "发货请求已成功创建。",
+    "error": "创建发货请求时发生错误。"
+  },
+  "transportTracking": {
+    "title": "货物追踪",
+    "noTracking": "目前尚无追踪信息。",
+    "update": "更新"
+  },
+  "locations": {
+    "title": "我的地址",
+    "description": "管理您的注册地址。",
+    "addLocation": "添加地址",
+    "editLocation": "编辑地址",
+    "noLocations": "您还没有注册地址。",
+    "name": "地址名称",
+    "namePlaceholder": "例如：房子、工作、农场",
+    "address": "地址",
+    "addressLine2": "地址行 2",
+    "city": "城市",
+    "state": "区/地区",
+    "postalCode": "邮政编码",
+    "phone": "电话",
+    "email": "电子邮件",
+    "cancel": "放弃",
+    "save": "节省",
+    "saving": "保存...",
+    "typePickup": "加载中",
+    "typeDelivery": "送货",
+    "typeBoth": "一般的",
+    "createSuccess": "地址添加成功。",
+    "createError": "添加地址时出错。",
+    "updateSuccess": "地址已成功更新。",
+    "updateError": "更新地址时发生错误。",
+    "deleteLocation": "删除地址",
+    "deleteSuccess": "地址已删除",
+    "deleteError": "删除地址时发生错误。",
+    "fetchError": "加载地址时出错。"
+  },
+  "systemSettings": {
+    "title": "系统设置",
+    "description": "查看平台货币、语言、支付方式、运费和税费设置。",
+    "unauthorized": "您没有权限访问此页面。",
+    "currenciesTab": "货币",
+    "languagesTab": "语言",
+    "paymentTab": "支付方式",
+    "shippingTab": "货物",
+    "taxTab": "税",
+    "active": "积极的",
+    "inactive": "被动的",
+    "default": "默认",
+    "noCurrencies": "货币尚未确定。",
+    "noLanguages": "该语言尚未定义。",
+    "noPaymentMethods": "尚未定义支付方式。",
+    "noCarriers": "目前尚未确定承运公司。",
+    "noZones": "货舱区域尚未确定。",
+    "noTaxRates": "税率尚未确定。",
+    "carriers": "航运公司",
+    "zones": "货物区",
+    "countries": "国家",
+    "rates": "运费",
+    "noRates": "运费尚未确定。",
+    "freeShipping": "免运费",
+    "deliveryDays": "当日送达时间"
+  },
+  "pushPermission": {
+    "title": "启用通知",
+    "description": "接收有关新消息、优惠和订单更新的通知。",
+    "allow": "允许",
+    "dismiss": "关闭"
+  },
+  "healthRecords": {
+    "title": "健康记录",
+    "description": "管理动物健康记录和医疗史。",
+    "addRecord": "添加记录",
+    "editRecord": "编辑记录",
+    "deleteRecord": "删除记录",
+    "noRecords": "尚未添加健康记录。",
+    "animalInfoId": "动物识别",
+    "animalInfoIdPlaceholder": "请输入动物信息ID。",
+    "recordType": "注册参观",
+    "recordTypePlaceholder": "例如：检查、治疗、手术",
+    "recordDate": "注册日期",
+    "followUpDate": "检查日期",
+    "veterinarianName": "兽医",
+    "veterinarianLicense": "许可证编号",
+    "clinicName": "临床",
+    "diagnosis": "诊断",
+    "treatment": "治疗",
+    "medications": "药物",
+    "medicationsPlaceholder": "例如：青霉素 500 毫克，布洛芬",
+    "notes": "笔记",
+    "documentUrl": "文档 URL",
+    "saving": "保存...",
+    "createSuccess": "健康记录已成功添加。",
+    "updateSuccess": "健康记录已成功更新。",
+    "deleteSuccess": "健康记录已成功删除。",
+    "saveError": "保存记录时发生错误。",
+    "deleteError": "删除记录时发生错误。",
+    "fetchError": "加载记录时发生错误"
+  },
+  "vaccinations": {
+    "title": "疫苗记录",
+    "description": "管理动物疫苗接种记录和日程安排。",
+    "addVaccination": "添加叛军",
+    "editVaccination": "叛逆安排",
+    "deleteVaccination": "叛逆者希尔",
+    "noVaccinations": "疫苗接种记录尚未添加。",
+    "animalInfoId": "动物识别",
+    "animalInfoIdPlaceholder": "请输入动物信息ID。",
+    "vaccineName": "阿西·阿迪",
+    "vaccineNamePlaceholder": "例如：SAT疫苗、布鲁氏菌",
+    "vaccineType": "叛逆之旅",
+    "vaccineTypePlaceholder": "例如：活跃，不活跃",
+    "batchNumber": "派对号码",
+    "vaccinationDate": "叛军的历史",
+    "nextDueDate": "下一部叛逆史",
+    "veterinarianName": "兽医",
+    "veterinarianLicense": "许可证编号",
+    "notes": "笔记",
+    "certificateUrl": "证书 URL",
+    "saving": "保存...",
+    "createSuccess": "疫苗接种记录已成功添加。",
+    "updateSuccess": "疫苗接种记录已成功更新。",
+    "deleteSuccess": "疫苗接种记录已成功删除。",
+    "saveError": "注册疫苗时发生错误。",
+    "deleteError": "删除疫苗时发生错误。",
+    "fetchError": "加载疫苗时发生错误。"
+  },
+  "shippingCarriers": {
+    "title": "航运公司",
+    "description": "管理货运公司信息。",
+    "addCarrier": "添加公司",
+    "editCarrier": "编辑公司",
+    "noCarriers": "目前尚未添加任何货运公司。",
+    "carrierName": "公司名称",
+    "carrierNamePlaceholder": "例如：Aras Kargo，MNG",
+    "code": "代码",
+    "codePlaceholder": "例如：ARAS",
+    "website": "网站",
+    "trackingUrlTemplate": "关注 URL 模板",
+    "trackingUrlPlaceholder": "https://takip.ornek.com/{takipNo}",
+    "supportedCountries": "支持的国家",
+    "supportedCountriesPlaceholder": "例如：TR、US、DE",
+    "active": "积极的",
+    "inactive": "被动的",
+    "saving": "保存...",
+    "edit": "编辑",
+    "delete": "删除",
+    "createSuccess": "已成功添加该航运公司。",
+    "updateSuccess": "航运公司系统已成功更新。",
+    "deleteSuccess": "该货运公司已被成功删除。",
+    "saveError": "注册货运公司时发生错误。",
+    "deleteError": "删除货运公司信息时出错。",
+    "fetchError": "加载货运公司信息时发生错误。"
+  },
+  "shippingZones": {
+    "title": "货物区",
+    "description": "管理货物区域。",
+    "addZone": "添加区域",
+    "editZone": "编辑区域",
+    "noZones": "目前尚未添加货舱区域。",
+    "zoneName": "区域名称",
+    "zoneNamePlaceholder": "例如：欧洲、北美",
+    "countryCodes": "国家代码",
+    "countryCodesPlaceholder": "例如：TR、DE、FR",
+    "active": "积极的",
+    "inactive": "被动的",
+    "saving": "保存...",
+    "edit": "编辑",
+    "delete": "删除",
+    "createSuccess": "该地区已成功添加。",
+    "updateSuccess": "该地区已成功更新。",
+    "deleteSuccess": "该区域已成功清理完毕。",
+    "saveError": "保存区域时发生错误。",
+    "deleteError": "删除区域时发生错误。",
+    "fetchError": "加载区域时发生错误"
+  },
+  "shippingRates": {
+    "title": "运费",
+    "description": "管理运输成本和配送方式。",
+    "addRate": "附加费",
+    "editRate": "调整费用",
+    "noRates": "运费尚未计入。",
+    "zone": "区域",
+    "carrier": "公司",
+    "selectZone": "选择区域",
+    "selectCarrier": "选择一家公司",
+    "shippingCost": "运费",
+    "currency": "货币",
+    "estimatedDeliveryDays": "预计送达时间（天）",
+    "minWeight": "最低重量",
+    "maxWeight": "最大重量",
+    "minOrderAmount": "最低订购金额",
+    "freeShipping": "免运费",
+    "free": "自由的",
+    "active": "积极的",
+    "inactive": "被动的",
+    "cost": "费用",
+    "deliveryDays": "送货",
+    "status": "情况",
+    "saving": "保存...",
+    "createSuccess": "费用添加成功。",
+    "updateSuccess": "薪资已成功更新。",
+    "deleteSuccess": "费用已成功删除。",
+    "saveError": "保存费用时发生错误。",
+    "deleteError": "删除费用时发生错误。",
+    "fetchError": "上传费用时发生错误。"
+  },
+  "metadata": {
+    "title": "牲畜交易 - 活体动物交易平台",
+    "description": "全球最值得信赖的活体动物交易平台。安全透明的动物买卖。",
+    "pages": {
+      "about": {
+        "title": "关于我们",
+        "description": "了解牲畜交易。一个可靠的活体动物交易平台。"
+      },
+      "contact": {
+        "title": "沟通",
+        "description": "联系我们。牲畜交易客户支持团队随时准备为您提供帮助。"
+      },
+      "terms": {
+        "title": "使用条款",
+        "description": "牲畜交易条款及细则。"
+      },
+      "privacy": {
+        "title": "隐私政策",
+        "description": "牲畜交易隐私政策。了解您的个人数据如何受到保护。"
+      },
+      "products": {
+        "title": "产品",
+        "description": "浏览活体动物信息。提供可靠的牛、羊等动物广告。"
+      },
+      "sellers": {
+        "title": "卖家",
+        "description": "寻找可靠的动物卖家。查看经过验证的卖家资料和评价。"
+      },
+      "transporters": {
+        "title": "运输者",
+        "description": "寻找动物运输公司。安全专业的活体动物运输服务。"
+      },
+      "search": {
+        "title": "搜索",
+        "description": "搜索活体动物列表。轻松搜索，并提供筛选和排序选项。"
+      },
+      "faq": {
+        "title": "常见问题解答",
+        "description": "关于牲畜交易的常见问题及解答。"
+      },
+      "productDetail": {
+        "title": "{title} - 出售",
+        "description": "位于{title} - {city}的待售房产。点击查看详情及联系方式。"
+      },
+      "sellerDetail": {
+        "title": "{name} - 卖家简介",
+        "description": "{name} 卖家简介。评论、商品列表和联系方式。"
+      },
+      "transporterDetail": {
+        "title": "{name} - 运营商简介",
+        "description": "{name} 运输商简介。服务区域、评价和联系方式。"
+      }
+    }
   }
 }
