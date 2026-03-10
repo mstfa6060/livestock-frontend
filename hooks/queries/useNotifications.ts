@@ -45,18 +45,21 @@ export function useNotifications(userId: string) {
       });
 
       return response.map(
-        (n): Notification => ({
-          id: n.id,
-          userId: n.userId,
-          title: n.title,
-          message: n.message,
-          type: n.type,
-          actionUrl: n.actionUrl,
-          actionData: n.actionData,
-          isRead: n.isRead,
-          sentAt: n.sentAt.toString(),
-          createdAt: n.createdAt.toString(),
-        })
+        (n): Notification => {
+          const raw = n as Record<string, unknown>;
+          return {
+            id: n.id,
+            userId: n.userId,
+            title: n.title,
+            message: n.message,
+            type: n.type,
+            actionUrl: (raw.actionUrl as string) ?? undefined,
+            actionData: (raw.actionData as string) ?? undefined,
+            isRead: n.isRead,
+            sentAt: n.sentAt.toString(),
+            createdAt: n.createdAt.toString(),
+          };
+        }
       );
     },
     enabled: !!userId,
