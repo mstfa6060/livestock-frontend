@@ -46,7 +46,7 @@ export function useNotifications(userId: string) {
 
       return response.map(
         (n): Notification => {
-          const raw = n as Record<string, unknown>;
+          const raw = n as unknown as Record<string, unknown>;
           return {
             id: n.id,
             userId: n.userId,
