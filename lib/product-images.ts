@@ -4,50 +4,32 @@ import { AppConfig } from "@/config/livestock-config";
 
 const EMPTY_GUID = "00000000-0000-0000-0000-000000000000";
 
+export interface ProductMediaInfo {
+  productId: string;
+  mediaBucketId?: string | null;
+  coverImageFileId?: string | null;
+}
+
 /**
- * Fetches cover image URLs for a list of products by calling
- * Products.MediaDetail + FileProvider.Buckets.Detail in parallel.
+ * Fetches cover image URLs for products using their mediaBucketId + coverImageFileId
+ * (already available from Products.All response).
+ * Calls FileProvider.Buckets.Detail to resolve actual file URLs.
  * Returns a map of productId -> imageUrl.
  */
-export async function getProductCoverImages(
-  productIds: string[]
+export async function getProductCoverImagesDirect(
+  products: ProductMediaInfo[]
 ): Promise<Record<string, string>> {
-  if (productIds.length === 0) return {};
-
-  // Step 1: Fetch MediaDetail for all products in parallel
-  const mediaResults = await Promise.allSettled(
-    productIds.map((id) =>
-      LivestockTradingAPI.Products.MediaDetail.Request({ productId: id })
-    )
+  // Filter products that have valid media bucket IDs
+  const withMedia = products.filter(
+    (p) => p.mediaBucketId && p.mediaBucketId !== EMPTY_GUID
   );
 
-  // Collect products with valid media buckets
-  const productMedia: {
-    productId: string;
-    mediaBucketId: string;
-    coverImageFileId: string;
-  }[] = [];
+  if (withMedia.length === 0) return {};
 
-  mediaResults.forEach((result, index) => {
-    if (
-      result.status === "fulfilled" &&
-      result.value.mediaBucketId &&
-      result.value.mediaBucketId !== EMPTY_GUID
-    ) {
-      productMedia.push({
-        productId: productIds[index],
-        mediaBucketId: result.value.mediaBucketId,
-        coverImageFileId: result.value.coverImageFileId,
-      });
-    }
-  });
+  // Collect unique bucket IDs to minimize API calls
+  const uniqueBucketIds = [...new Set(withMedia.map((m) => m.mediaBucketId!))];
 
-  if (productMedia.length === 0) return {};
-
-  // Step 2: Collect unique bucket IDs to minimize API calls
-  const uniqueBucketIds = [...new Set(productMedia.map((m) => m.mediaBucketId))];
-
-  // Step 3: Fetch bucket details for all unique buckets in parallel
+  // Fetch bucket details for all unique buckets in parallel
   const bucketResults = await Promise.allSettled(
     uniqueBucketIds.map((bucketId) =>
       FileProviderAPI.Buckets.Detail.Request({
@@ -66,11 +48,11 @@ export async function getProductCoverImages(
     }
   });
 
-  // Step 4: Match each product's coverImageFileId to a file and build URL
+  // Match each product's coverImageFileId to a file and build URL
   const imageMap: Record<string, string> = {};
 
-  for (const pm of productMedia) {
-    const files = bucketFilesMap[pm.mediaBucketId];
+  for (const pm of withMedia) {
+    const files = bucketFilesMap[pm.mediaBucketId!];
     if (!files) continue;
 
     // Find the cover image file
@@ -88,7 +70,6 @@ export async function getProductCoverImages(
     }
 
     if (targetFile) {
-      // Prefer variant URL if available, otherwise construct from path
       if (targetFile.variants?.length > 0) {
         imageMap[pm.productId] = `${AppConfig.FileStorageBaseUrl}${targetFile.variants[0].url}`;
       } else if (targetFile.path) {
@@ -98,4 +79,39 @@ export async function getProductCoverImages(
   }
 
   return imageMap;
+}
+
+/**
+ * Legacy: Fetches cover images by calling Products.MediaDetail first.
+ * Use getProductCoverImagesDirect when you already have mediaBucketId from Products.All.
+ */
+export async function getProductCoverImages(
+  productIds: string[]
+): Promise<Record<string, string>> {
+  if (productIds.length === 0) return {};
+
+  // Step 1: Fetch MediaDetail for all products in parallel
+  const mediaResults = await Promise.allSettled(
+    productIds.map((id) =>
+      LivestockTradingAPI.Products.MediaDetail.Request({ productId: id })
+    )
+  );
+
+  const productMedia: ProductMediaInfo[] = [];
+
+  mediaResults.forEach((result, index) => {
+    if (
+      result.status === "fulfilled" &&
+      result.value.mediaBucketId &&
+      result.value.mediaBucketId !== EMPTY_GUID
+    ) {
+      productMedia.push({
+        productId: productIds[index],
+        mediaBucketId: result.value.mediaBucketId,
+        coverImageFileId: result.value.coverImageFileId,
+      });
+    }
+  });
+
+  return getProductCoverImagesDirect(productMedia);
 }

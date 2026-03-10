@@ -11,7 +11,7 @@ import { ProductCard, ProductCardSkeleton, Product } from "@/components/features
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
-import { AppConfig } from "@/config/livestock-config";
+import { getProductCoverImagesDirect } from "@/lib/product-images";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
 import {
@@ -84,7 +84,7 @@ export default function MyListingsPage() {
         pageRequest: { currentPage: 1, perPageCount: PAGE_SIZE, listAll: false },
       });
 
-      return response.map((item) => ({
+      const products = response.map((item) => ({
         id: item.id,
         title: item.title,
         slug: item.slug,
@@ -106,8 +106,24 @@ export default function MyListingsPage() {
         averageRating: item.averageRating as number | undefined,
         reviewCount: item.reviewCount,
         createdAt: item.createdAt,
-        imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
+        imageUrl: undefined as string | undefined,
       })) as Product[];
+
+      // Fetch cover images using mediaBucketId + coverImageFileId from response
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const mediaInfo = (response as any[])
+        .filter((item) => item.mediaBucketId)
+        .map((item) => ({
+          productId: item.id,
+          mediaBucketId: item.mediaBucketId as string,
+          coverImageFileId: item.coverImageFileId as string,
+        }));
+      const imageMap = await getProductCoverImagesDirect(mediaInfo);
+      for (const p of products) {
+        if (imageMap[p.id]) p.imageUrl = imageMap[p.id];
+      }
+
+      return products;
     },
     enabled: !!sellerId,
   });
