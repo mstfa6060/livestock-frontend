@@ -12,11 +12,21 @@ import { Skeleton } from "@/components/ui/skeleton";
 import {
   Bell,
   MessageSquare,
-  Tag,
   Package,
   Info,
   CheckCheck,
   Check,
+  ShoppingCart,
+  Truck,
+  PackageCheck,
+  XCircle,
+  CreditCard,
+  AlertCircle,
+  TrendingDown,
+  Star,
+  ShieldCheck,
+  CheckCircle,
+  ClipboardList,
 } from "lucide-react";
 import {
   useNotifications,
@@ -26,26 +36,46 @@ import {
   type Notification,
 } from "@/hooks/queries/useNotifications";
 import { useAuth } from "@/contexts/AuthContext";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-// Map notification types to icons and labels
+// Map backend NotificationType enum to icons and labels
 const notificationConfig: Record<number, { icon: React.ReactNode; labelKey: string }> = {
-  0: { icon: <Info className="h-5 w-5" />, labelKey: "system" },
-  1: { icon: <MessageSquare className="h-5 w-5" />, labelKey: "message" },
-  2: { icon: <Tag className="h-5 w-5" />, labelKey: "offer" },
-  3: { icon: <Package className="h-5 w-5" />, labelKey: "order" },
-  4: { icon: <Package className="h-5 w-5" />, labelKey: "listing" },
+  0: { icon: <ShoppingCart className="h-5 w-5" />, labelKey: "orderPlaced" },
+  1: { icon: <Truck className="h-5 w-5" />, labelKey: "orderShipped" },
+  2: { icon: <PackageCheck className="h-5 w-5" />, labelKey: "orderDelivered" },
+  3: { icon: <XCircle className="h-5 w-5" />, labelKey: "orderCancelled" },
+  4: { icon: <CreditCard className="h-5 w-5" />, labelKey: "paymentReceived" },
+  5: { icon: <AlertCircle className="h-5 w-5" />, labelKey: "paymentFailed" },
+  6: { icon: <MessageSquare className="h-5 w-5" />, labelKey: "message" },
+  7: { icon: <Package className="h-5 w-5" />, labelKey: "productBackInStock" },
+  8: { icon: <TrendingDown className="h-5 w-5" />, labelKey: "priceDropAlert" },
+  9: { icon: <Star className="h-5 w-5" />, labelKey: "newReview" },
+  10: { icon: <ShieldCheck className="h-5 w-5" />, labelKey: "sellerVerified" },
+  11: { icon: <CheckCircle className="h-5 w-5" />, labelKey: "productApproved" },
+  12: { icon: <XCircle className="h-5 w-5" />, labelKey: "productRejected" },
+  13: { icon: <ClipboardList className="h-5 w-5" />, labelKey: "productPendingApproval" },
+  99: { icon: <Info className="h-5 w-5" />, labelKey: "system" },
 };
 
 export default function NotificationsPage() {
   const t = useTranslations("notifications");
   const locale = useLocale();
+  const router = useRouter();
   const { user } = useAuth();
   const userId = user?.id ?? "";
   const { data: notifications = [], isLoading, refetch } = useNotifications(userId);
   const unreadCount = useUnreadCount(userId);
   const markAsReadMutation = useMarkAsReadMutation(userId);
   const markAllAsReadMutation = useMarkAllAsReadMutation(userId);
+
+  // Handle notification click - mark as read and navigate
+  const handleNotificationClick = (notification: Notification) => {
+    markAsReadMutation.mutate(notification.id);
+    if (notification.actionUrl) {
+      router.push(notification.actionUrl);
+    }
+  };
 
   // Force refresh on page visit
   useEffect(() => {
@@ -162,11 +192,11 @@ export default function NotificationsPage() {
                         "cursor-pointer transition-colors hover:bg-muted/50",
                         !notification.isRead && "border-primary/50 bg-primary/5"
                       )}
-                      onClick={() => markAsReadMutation.mutate(notification.id)}
+                      onClick={() => handleNotificationClick(notification)}
                       onKeyDown={(e) => {
                         if (e.key === "Enter" || e.key === " ") {
                           e.preventDefault();
-                          markAsReadMutation.mutate(notification.id);
+                          handleNotificationClick(notification);
                         }
                       }}
                     >

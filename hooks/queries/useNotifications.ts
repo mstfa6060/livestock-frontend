@@ -51,6 +51,8 @@ export function useNotifications(userId: string) {
           title: n.title,
           message: n.message,
           type: n.type,
+          actionUrl: n.actionUrl,
+          actionData: n.actionData,
           isRead: n.isRead,
           sentAt: n.sentAt.toString(),
           createdAt: n.createdAt.toString(),

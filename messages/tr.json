@@ -316,7 +316,20 @@
       "message": "Mesaj",
       "offer": "Teklif",
       "order": "Siparis",
-      "listing": "Ilan"
+      "listing": "Ilan",
+      "orderPlaced": "Siparis Verildi",
+      "orderShipped": "Kargoya Verildi",
+      "orderDelivered": "Teslim Edildi",
+      "orderCancelled": "Siparis Iptal",
+      "paymentReceived": "Odeme Alindi",
+      "paymentFailed": "Odeme Basarisiz",
+      "productBackInStock": "Tekrar Stokta",
+      "priceDropAlert": "Fiyat Dususu",
+      "newReview": "Yeni Degerlendirme",
+      "sellerVerified": "Satici Dogrulandi",
+      "productApproved": "Ilan Onaylandi",
+      "productRejected": "Ilan Reddedildi",
+      "productPendingApproval": "Onay Bekliyor"
     }
   },
   "settings": {

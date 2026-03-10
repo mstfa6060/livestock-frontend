@@ -16,18 +16,29 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Bell, MessageSquare, Tag, Package, Info, CheckCheck } from "lucide-react";
+import { Bell, MessageSquare, Tag, Package, Info, CheckCheck, ShoppingCart, Truck, PackageCheck, XCircle, CreditCard, AlertCircle, TrendingDown, Star, ShieldCheck, CheckCircle, ClipboardList } from "lucide-react";
 import { useNotifications, useUnreadCount, useMarkAsReadMutation, useMarkAllAsReadMutation } from "@/hooks/queries/useNotifications";
 import { useAuth } from "@/contexts/AuthContext";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-// Map notification types to icons
+// Map backend NotificationType enum to icons
 const notificationIcons: Record<number, React.ReactNode> = {
-  0: <Info className="h-4 w-4" />, // System
-  1: <MessageSquare className="h-4 w-4" />, // Message
-  2: <Tag className="h-4 w-4" />, // Offer
-  3: <Package className="h-4 w-4" />, // Order
-  4: <Package className="h-4 w-4" />, // Listing
+  0: <ShoppingCart className="h-4 w-4" />,   // OrderPlaced
+  1: <Truck className="h-4 w-4" />,           // OrderShipped
+  2: <PackageCheck className="h-4 w-4" />,    // OrderDelivered
+  3: <XCircle className="h-4 w-4" />,         // OrderCancelled
+  4: <CreditCard className="h-4 w-4" />,      // PaymentReceived
+  5: <AlertCircle className="h-4 w-4" />,     // PaymentFailed
+  6: <MessageSquare className="h-4 w-4" />,   // NewMessage
+  7: <Package className="h-4 w-4" />,         // ProductBackInStock
+  8: <TrendingDown className="h-4 w-4" />,    // PriceDropAlert
+  9: <Star className="h-4 w-4" />,            // NewReview
+  10: <ShieldCheck className="h-4 w-4" />,    // SellerVerified
+  11: <CheckCircle className="h-4 w-4" />,    // ProductApproved
+  12: <XCircle className="h-4 w-4" />,        // ProductRejected
+  13: <ClipboardList className="h-4 w-4" />,  // ProductPendingApproval
+  99: <Info className="h-4 w-4" />,           // System
 };
 
 export function NotificationBell() {
@@ -40,6 +51,7 @@ export function NotificationBell() {
   const markAsReadMutation = useMarkAsReadMutation(userId);
   const markAllAsReadMutation = useMarkAllAsReadMutation(userId);
 
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   // Format notification time
@@ -51,10 +63,13 @@ export function NotificationBell() {
     });
   };
 
-  // Handle notification click
-  const handleNotificationClick = (notificationId: string) => {
+  // Handle notification click - mark as read and navigate if actionUrl exists
+  const handleNotificationClick = (notificationId: string, actionUrl?: string) => {
     markAsReadMutation.mutate(notificationId);
     setIsOpen(false);
+    if (actionUrl) {
+      router.push(actionUrl);
+    }
   };
 
   // Handle mark all as read
@@ -123,7 +138,7 @@ export function NotificationBell() {
                   "flex items-start gap-3 p-3 cursor-pointer",
                   !notification.isRead && "bg-primary/5"
                 )}
-                onClick={() => handleNotificationClick(notification.id)}
+                onClick={() => handleNotificationClick(notification.id, notification.actionUrl)}
               >
                 <div className="flex-shrink-0 mt-0.5 text-muted-foreground">
                   {notificationIcons[notification.type] || <Info className="h-4 w-4" />}

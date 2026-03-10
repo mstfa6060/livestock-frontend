@@ -316,7 +316,20 @@
       "message": "Message",
       "offer": "Offer",
       "order": "Order",
-      "listing": "Advert"
+      "listing": "Advert",
+      "orderPlaced": "Order Placed",
+      "orderShipped": "Order Shipped",
+      "orderDelivered": "Order Delivered",
+      "orderCancelled": "Order Cancelled",
+      "paymentReceived": "Payment Received",
+      "paymentFailed": "Payment Failed",
+      "productBackInStock": "Back in Stock",
+      "priceDropAlert": "Price Drop",
+      "newReview": "New Review",
+      "sellerVerified": "Seller Verified",
+      "productApproved": "Product Approved",
+      "productRejected": "Product Rejected",
+      "productPendingApproval": "Pending Approval"
     }
   },
   "settings": {
