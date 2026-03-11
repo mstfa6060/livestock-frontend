@@ -199,4 +199,4 @@ export default {
       RESOURCE_NOT_ACCESSIBLE: "Non es auctoritate hac accessurus resource.",
     }
   }
-};};
+};
