@@ -62,8 +62,8 @@ export default function FavoritesPage() {
         averageRating: p.averageRating as number | undefined,
         reviewCount: p.reviewCount,
         createdAt: new Date(p.createdAt),
-        imageUrl: p.coverImageUrl
-          ? `${AppConfig.FileStorageBaseUrl}${p.coverImageUrl}`
+        imageUrl: (p as unknown as Record<string, unknown>).coverImageUrl
+          ? `${AppConfig.FileStorageBaseUrl}${(p as unknown as Record<string, unknown>).coverImageUrl as string}`
           : undefined,
       })) as Product[];
 
