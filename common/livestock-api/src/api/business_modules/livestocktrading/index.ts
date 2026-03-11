@@ -3320,8 +3320,6 @@ export namespace LivestockTradingAPI {
 				countryCode: string;
 				city: string;
 				sellerId?: Guid;
-				currency: string;
-				sortBy: string;
 				sorting: IXSorting;
 				pageRequest: IXPageRequest;
 			}
@@ -3347,8 +3345,6 @@ export namespace LivestockTradingAPI {
 				stockQuantity: number;
 				isInStock: boolean;
 				sellerId: Guid;
-				categoryName: string;
-				sellerName: string;
 				locationId: Guid;
 				locationCountryCode: string;
 				locationCity: string;
@@ -3359,7 +3355,6 @@ export namespace LivestockTradingAPI {
 				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
 				reviewCount: number;
 				coverImageFileId: string;
-				coverImageUrl: string;
 				mediaBucketId: string;
 				createdAt: Date;
 			}
@@ -3436,31 +3431,12 @@ export namespace LivestockTradingAPI {
 				favoriteCount: number;
 				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
 				reviewCount: number;
-				coverImageFileId: string;
-				coverImageUrl: string;
-				mediaBucketId: string;
-				mediaFiles: IMediaFileModel[];
 				publishedAt?: Date;
 				expiresAt?: Date;
 				createdAt: Date;
 				updatedAt?: Date;
-			}
-			export interface IMediaFileModel {
-				id: Guid;
-				name: string;
-				path: string;
-				contentType: string;
-				extention: string;
-				isDefault: boolean;
-				index: number;
-				width?: number;
-				height?: number;
-				sizeBytes?: number;
-				variants: IMediaFileVariantModel[];
-			}
-			export interface IMediaFileVariantModel {
-				key: string;
-				url: string;
+				mediaBucketId: string;
+				coverImageFileId: string;
 			}
 		}
 
@@ -3507,31 +3483,12 @@ export namespace LivestockTradingAPI {
 				favoriteCount: number;
 				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
 				reviewCount: number;
-				coverImageFileId: string;
-				coverImageUrl: string;
-				mediaBucketId: string;
-				mediaFiles: IMediaFileModel[];
 				publishedAt?: Date;
 				expiresAt?: Date;
+				mediaBucketId: string;
+				coverImageFileId: string;
 				createdAt: Date;
 				updatedAt?: Date;
-			}
-			export interface IMediaFileModel {
-				id: Guid;
-				name: string;
-				path: string;
-				contentType: string;
-				extention: string;
-				isDefault: boolean;
-				index: number;
-				width?: number;
-				height?: number;
-				sizeBytes?: number;
-				variants: IMediaFileVariantModel[];
-			}
-			export interface IMediaFileVariantModel {
-				key: string;
-				url: string;
 			}
 		}
 
@@ -3585,14 +3542,9 @@ export namespace LivestockTradingAPI {
 				viewCount: number;
 				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
 				reviewCount: number;
-				coverImageFileId: string;
-				coverImageUrl: string;
-				coverImageVariants: ICoverImageVariantModel[];
 				createdAt: Date;
-			}
-			export interface ICoverImageVariantModel {
-				key: string;
-				url: string;
+				mediaBucketId: string;
+				coverImageFileId: string;
 			}
 		}
 
@@ -4096,75 +4048,6 @@ export namespace LivestockTradingAPI {
 
 	}
 
-	export namespace Preferences {
-
-		export namespace My {
-			export const RequestPath = AppConfig.LivestockTradingUrl + '/Preferences/My';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
-			export interface IRequestModel {
-				userId: Guid;
-			}
-			export interface IResponseModel {
-				id: Guid;
-				userId: Guid;
-				preferredCurrency: string;
-				preferredLanguage: string;
-				countryCode: string;
-				timeZone: string;
-				weightSystem: number;
-				distanceSystem: number;
-				areaSystem: number;
-				emailNotificationsEnabled: boolean;
-				smsNotificationsEnabled: boolean;
-				pushNotificationsEnabled: boolean;
-				darkModeEnabled: boolean;
-				productsPerPage: number;
-				defaultViewMode: number;
-				updatedAt?: Date;
-			}
-		}
-
-		export namespace Update {
-			export const RequestPath = AppConfig.LivestockTradingUrl + '/Preferences/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
-			export interface IRequestModel {
-				userId: Guid;
-				preferredCurrency: string;
-				preferredLanguage: string;
-				countryCode: string;
-				timeZone: string;
-				weightSystem: number;
-				distanceSystem: number;
-				areaSystem: number;
-				emailNotificationsEnabled: boolean;
-				smsNotificationsEnabled: boolean;
-				pushNotificationsEnabled: boolean;
-				darkModeEnabled: boolean;
-				productsPerPage: number;
-				defaultViewMode: number;
-			}
-			export interface IResponseModel {
-				id: Guid;
-				userId: Guid;
-				preferredCurrency: string;
-				preferredLanguage: string;
-				countryCode: string;
-				timeZone: string;
-				weightSystem: number;
-				distanceSystem: number;
-				areaSystem: number;
-				emailNotificationsEnabled: boolean;
-				smsNotificationsEnabled: boolean;
-				pushNotificationsEnabled: boolean;
-				darkModeEnabled: boolean;
-				productsPerPage: number;
-				defaultViewMode: number;
-				updatedAt?: Date;
-			}
-		}
-
-	}
-
 	export namespace PaymentMethods {
 
 		export namespace Pick {
@@ -4565,6 +4448,8 @@ export namespace LivestockTradingAPI {
 				title: string;
 				message: string;
 				type: number;
+				actionUrl: string;
+				actionData: string;
 				isRead: boolean;
 				sentAt: Date;
 				createdAt: Date;
@@ -4650,10 +4535,7 @@ export namespace LivestockTradingAPI {
 			export interface IConversationUnreadItem {
 				conversationId: Guid;
 				unreadCount: number;
-				lastMessage: string;
 				lastMessageAt?: Date;
-				senderUserId: Guid;
-				senderDisplayName: string;
 			}
 		}
 
@@ -6416,36 +6298,6 @@ export namespace LivestockTradingAPI {
 			}
 		}
 
-		export namespace MyStats {
-			export const RequestPath = AppConfig.LivestockTradingUrl + '/Dashboard/MyStats';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
-			export interface IRequestModel {
-				userId: Guid;
-				period: string;
-			}
-			export interface IResponseModel {
-				totalListings: number;
-				activeListings: number;
-				draftListings: number;
-				pendingListings: number;
-				soldListings: number;
-				totalViews: number;
-				totalFavorites: number;
-				totalMessages: number;
-				unreadMessages: number;
-				totalReviews: number;
-				averageRating: __ERROR_TYPE_NOT_HANDLED__;
-				recentActivity: IActivityItem[];
-			}
-			export interface IActivityItem {
-				type: string;
-				entityId: Guid;
-				entityTitle: string;
-				actorName: string;
-				createdAt: Date;
-			}
-		}
-
 	}
 
 	export namespace Currencies {
@@ -6681,23 +6533,6 @@ export namespace LivestockTradingAPI {
 				subject: string;
 				status: number;
 				updatedAt?: Date;
-			}
-		}
-
-		export namespace StartWithProduct {
-			export const RequestPath = AppConfig.LivestockTradingUrl + '/Conversations/StartWithProduct';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
-			export interface IRequestModel {
-				productId: Guid;
-				sellerId: Guid;
-				buyerUserId: Guid;
-				initialMessage: string;
-			}
-			export interface IResponseModel {
-				conversationId: Guid;
-				isNewConversation: boolean;
-				messageId: Guid;
-				createdAt: Date;
 			}
 		}
 

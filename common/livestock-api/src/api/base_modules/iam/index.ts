@@ -176,9 +176,7 @@ export namespace IAMAPI {
 				email: string;
 				firstName: string;
 				surname: string;
-				fullName: string;
 				phoneNumber: string;
-				isPhoneVerified: boolean;
 				isActive: boolean;
 				countryId: number;
 				countryCode: string;
@@ -408,24 +406,6 @@ export namespace IAMAPI {
 
 	}
 
-	export namespace Geo {
-
-		export namespace Detect {
-			export const RequestPath = AppConfig.IAMUrl + '/Geo/Detect';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
-			export interface IRequestModel {
-			}
-			export interface IResponseModel {
-				countryCode: string;
-				countryName: string;
-				currency: string;
-				language: string;
-				timezone: string;
-			}
-		}
-
-	}
-
 	export namespace Districts {
 
 		export namespace ByProvince {
@@ -445,32 +425,6 @@ export namespace IAMAPI {
 	}
 
 	export namespace Countries {
-
-		export namespace GetByCode {
-			export const RequestPath = AppConfig.IAMUrl + '/Countries/GetByCode';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
-			export interface IRequestModel {
-				code: string;
-			}
-			export interface IResponseModel {
-				id: number;
-				code: string;
-				code3: string;
-				numericCode: number;
-				name: string;
-				nativeName: string;
-				capital: string;
-				continent: string;
-				region: string;
-				phoneCode: string;
-				defaultCurrencyCode: string;
-				defaultCurrencySymbol: string;
-				flag: string;
-				timezone: string;
-				defaultLanguage: string;
-				isActive: boolean;
-			}
-		}
 
 		export namespace All {
 			export const RequestPath = AppConfig.IAMUrl + '/Countries/All';
@@ -584,7 +538,7 @@ export namespace IAMAPI {
 				phoneNumber: string;
 				birthDate?: Date;
 				externalProviderUserId: string;
-				email?: string;
+				email: string;
 			}
 			export interface IResponseModel {
 				jwt: string;
