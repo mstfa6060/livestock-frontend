@@ -52,6 +52,7 @@ interface Category {
   id: string;
   name: string;
   productCount: number;
+  parentCategoryId?: string;
 }
 
 interface FilterContentProps {
@@ -92,43 +93,83 @@ function FilterContent({
       {/* Category */}
       <div className="space-y-1">
         <Label className="text-base font-semibold">{tf("category")}</Label>
-        <ul className="border-l border-border ml-1">
-          <li>
-            <button
-              type="button"
-              onClick={() => onCategorySelect("all")}
-              className={cn(
-                "block w-full text-left py-1.5 pl-3 text-sm border-l-2 -ml-px transition-colors",
-                localCategory === "all"
-                  ? "border-primary text-foreground font-bold bg-primary/5"
-                  : "border-transparent text-muted-foreground hover:text-foreground hover:border-muted-foreground"
-              )}
-            >
-              {tf("allCategories")}
-            </button>
-          </li>
-          {categories.map((cat) => (
-            <li key={cat.id}>
-              <button
-                type="button"
-                onClick={() => onCategorySelect(cat.id)}
-                className={cn(
-                  "flex w-full items-center justify-between py-1.5 pl-3 pr-2 text-sm border-l-2 -ml-px transition-colors",
-                  localCategory === cat.id
-                    ? "border-primary text-foreground font-bold bg-primary/5"
-                    : "border-transparent text-muted-foreground hover:text-foreground hover:border-muted-foreground"
+        {(() => {
+          const roots = categories.filter((c) => !c.parentCategoryId);
+          const childrenOf = (parentId: string) => categories.filter((c) => c.parentCategoryId === parentId);
+
+          const totalCount = (cat: Category): number => {
+            const children = childrenOf(cat.id);
+            return cat.productCount + children.reduce((sum, child) => sum + totalCount(child), 0);
+          };
+
+          const renderCat = (cat: Category, depth = 0) => {
+            const children = childrenOf(cat.id);
+            const isLeaf = children.length === 0;
+            const isActive = localCategory === cat.id;
+            const count = totalCount(cat);
+            return (
+              <li key={cat.id}>
+                {isLeaf ? (
+                  <button
+                    type="button"
+                    onClick={() => onCategorySelect(cat.id)}
+                    style={{ paddingLeft: `${0.75 + depth * 1}rem` }}
+                    className={cn(
+                      "flex w-full items-center justify-between py-1.5 pr-2 text-sm border-l-2 -ml-px transition-colors",
+                      isActive
+                        ? "border-primary text-foreground font-semibold bg-primary/5"
+                        : "border-transparent text-muted-foreground hover:text-foreground hover:border-muted-foreground"
+                    )}
+                  >
+                    <span className="text-left">{cat.name}</span>
+                    {count > 0 && (
+                      <span className="ml-2 text-xs tabular-nums text-muted-foreground/60 shrink-0">
+                        {count}
+                      </span>
+                    )}
+                  </button>
+                ) : (
+                  <div
+                    style={{ paddingLeft: `${0.75 + depth * 1}rem` }}
+                    className="flex items-center justify-between py-1.5 pr-2 text-sm -ml-px border-l-2 border-transparent"
+                  >
+                    <span className="font-medium text-foreground/80">{cat.name}</span>
+                    {count > 0 && (
+                      <span className="ml-2 text-xs tabular-nums text-muted-foreground/50 shrink-0">
+                        {count}
+                      </span>
+                    )}
+                  </div>
                 )}
-              >
-                <span className="text-left">{cat.name}</span>
-                {cat.productCount > 0 && (
-                  <span className="ml-2 text-xs tabular-nums text-muted-foreground/70 shrink-0">
-                    {cat.productCount}
-                  </span>
+                {children.length > 0 && (
+                  <ul className="border-l border-border/50 ml-3">
+                    {children.map((child) => renderCat(child, depth + 1))}
+                  </ul>
                 )}
-              </button>
-            </li>
-          ))}
-        </ul>
+              </li>
+            );
+          };
+
+          return (
+            <ul className="border-l border-border ml-1">
+              <li>
+                <button
+                  type="button"
+                  onClick={() => onCategorySelect("all")}
+                  className={cn(
+                    "block w-full text-left py-1.5 pl-3 text-sm border-l-2 -ml-px transition-colors",
+                    localCategory === "all"
+                      ? "border-primary text-foreground font-semibold bg-primary/5"
+                      : "border-transparent text-muted-foreground hover:text-foreground hover:border-muted-foreground"
+                  )}
+                >
+                  {tf("allCategories")}
+                </button>
+              </li>
+              {roots.map((cat) => renderCat(cat))}
+            </ul>
+          );
+        })()}
       </div>
 
       {/* Condition */}
@@ -236,7 +277,12 @@ export default function ProductsPage() {
 
   // Fetch categories via React Query
   const { data: categoriesRaw = [] } = useCategories(locale);
-  const categories: Category[] = categoriesRaw.map((c) => ({ id: c.id, name: c.name, productCount: c.productCount }));
+  const categories: Category[] = categoriesRaw.map((c) => ({
+    id: c.id,
+    name: c.name,
+    productCount: c.productCount,
+    parentCategoryId: c.parentCategoryId ?? undefined,
+  }));
 
   // Resolve category param: URL might contain slug or ID
   const resolvedCategoryId = useMemo(() => {
