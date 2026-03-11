@@ -263,7 +263,7 @@ export default function DashboardPage() {
               </div>
             ) : (
               <div className="space-y-4">
-                {stats.recentActivity.slice(0, 5).map((activity, i) => (
+                {stats.recentActivity.slice(0, 5).map((activity: Record<string, unknown>, i: number) => (
                   <div
                     key={`${activity.entityId}-${i}`}
                     className="flex items-start gap-3 p-2 rounded-lg"
