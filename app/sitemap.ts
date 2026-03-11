@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { locales, defaultLocale } from "@/i18n/config";
+import { defaultLocale } from "@/i18n/config";
 
 const BASE_URL = "https://livestock-trading.com";
 const isDevelopment = process.env.NEXT_PUBLIC_ENVIRONMENT === "development";
@@ -7,9 +7,16 @@ const API_BASE = isDevelopment
   ? "https://dev-api.livestock-trading.com"
   : "https://api.livestock-trading.com";
 
+// Only include major languages in sitemap to conserve crawl budget.
+// Full 106-language support still works in the app — sitemap just hints priority locales.
+const SITEMAP_LOCALES = [
+  "en", "tr", "ar", "de", "es", "fr", "pt", "ru", "zh", "ja",
+  "ko", "hi", "it", "nl", "pl", "uk", "vi", "id", "fa", "ms",
+] as const;
+
 function buildAlternates(path: string): Record<string, string> {
   const alternates: Record<string, string> = {};
-  for (const locale of locales) {
+  for (const locale of SITEMAP_LOCALES) {
     const prefix = locale === defaultLocale ? "" : `/${locale}`;
     alternates[locale] = `${BASE_URL}${prefix}${path}`;
   }

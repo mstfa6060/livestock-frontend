@@ -60,6 +60,39 @@ export async function generateMetadata({
   };
 }
 
-export default function TransporterDetailLayout({ children }: { children: React.ReactNode }) {
-  return children;
+export default async function TransporterDetailLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const transporter = await fetchTransporter(id);
+
+  const jsonLd = transporter
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: transporter.companyName || transporter.businessName || "Transporter",
+        url: `${BASE_URL}/transporters/${id}`,
+        ...(transporter.logoUrl && { logo: transporter.logoUrl }),
+        ...(transporter.description && { description: transporter.description }),
+        ...(transporter.email && {
+          contactPoint: { "@type": "ContactPoint", email: transporter.email, contactType: "customer service" },
+        }),
+      }
+    : null;
+
+  return (
+    <>
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
+      {children}
+    </>
+  );
 }
