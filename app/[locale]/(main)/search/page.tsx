@@ -346,13 +346,6 @@ export default function SearchPage() {
       } else {
         const filters: LivestockTradingAPI.Products.All.IXFilterItem[] = [];
 
-        if (categoryParam) {
-          filters.push({
-            key: "categoryId", type: "guid", isUsed: true,
-            values: [categoryParam], min: {}, max: {}, conditionType: "equals",
-          });
-        }
-
         if (conditionParam && conditionParam !== "all") {
           filters.push({
             key: "condition", type: "int", isUsed: true,
@@ -369,8 +362,10 @@ export default function SearchPage() {
           });
         }
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const response = await LivestockTradingAPI.Products.All.Request({
           countryCode: selectedCountry?.code || "TR",
+          categoryId: categoryParam || undefined,
           sorting,
           filters,
           pageRequest: {
@@ -378,7 +373,7 @@ export default function SearchPage() {
             perPageCount: ITEMS_PER_PAGE,
             listAll: false,
           },
-        });
+        } as any);
 
         const products = response.map((item): Product => ({
           id: item.id,

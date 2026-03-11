@@ -114,18 +114,6 @@ export function useProductList(
     queryFn: async () => {
       const filters: LivestockTradingAPI.Products.All.IXFilterItem[] = [];
 
-      if (params.categoryId) {
-        filters.push({
-          key: "categoryId",
-          type: "guid",
-          isUsed: true,
-          values: [params.categoryId],
-          min: {},
-          max: {},
-          conditionType: "equals",
-        });
-      }
-
       if (params.condition !== undefined) {
         filters.push({
           key: "condition",
@@ -150,8 +138,10 @@ export function useProductList(
         });
       }
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const response = await LivestockTradingAPI.Products.All.Request({
         countryCode: params.countryCode ?? "TR",
+        categoryId: params.categoryId || undefined,
         sorting: {
           key: params.sortBy ?? "createdAt",
           direction:
@@ -164,7 +154,7 @@ export function useProductList(
           perPageCount: params.perPageCount ?? 12,
           listAll: false,
         },
-      });
+      } as any);
 
       const products = response.map(mapProductResponse);
       return attachCoverImages(products, response as any[]);
