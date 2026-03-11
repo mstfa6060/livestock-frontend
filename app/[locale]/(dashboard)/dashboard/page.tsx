@@ -41,6 +41,8 @@ export default function DashboardPage() {
   );
 
   const isLoading = isMyStatsLoading || isStatsLoading;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const statsData = stats as any;
 
   if (isLoading) {
     return (
@@ -111,11 +113,11 @@ export default function DashboardPage() {
             <Package className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats?.totalListings ?? 0}</div>
+            <div className="text-2xl font-bold">{statsData?.totalListings ?? 0}</div>
             <p className="text-xs text-muted-foreground">
-              {stats?.activeListings ?? 0} {t("stats.active")}
-              {(stats?.draftListings ?? 0) > 0 && (
-                <> · {stats?.draftListings} {t("stats.draft")}</>
+              {statsData?.activeListings ?? 0} {t("stats.active")}
+              {(statsData?.draftListings ?? 0) > 0 && (
+                <> · {statsData?.draftListings} {t("stats.draft")}</>
               )}
             </p>
           </CardContent>
@@ -129,7 +131,7 @@ export default function DashboardPage() {
             <Eye className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats?.totalViews ?? 0}</div>
+            <div className="text-2xl font-bold">{statsData?.totalViews ?? 0}</div>
             <p className="text-xs text-muted-foreground">
               {t("stats.allTime")}
             </p>
@@ -144,7 +146,7 @@ export default function DashboardPage() {
             <Heart className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats?.totalFavorites ?? 0}</div>
+            <div className="text-2xl font-bold">{statsData?.totalFavorites ?? 0}</div>
             <p className="text-xs text-muted-foreground">
               {t("stats.savedItems")}
             </p>
@@ -175,9 +177,9 @@ export default function DashboardPage() {
             <MessageSquare className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats?.totalMessages ?? 0}</div>
+            <div className="text-2xl font-bold">{statsData?.totalMessages ?? 0}</div>
             <p className="text-xs text-muted-foreground">
-              {stats?.unreadMessages ?? 0} {t("stats.unread")}
+              {statsData?.unreadMessages ?? 0} {t("stats.unread")}
             </p>
           </CardContent>
         </Card>
@@ -190,7 +192,7 @@ export default function DashboardPage() {
             <ShoppingCart className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats?.soldListings ?? 0}</div>
+            <div className="text-2xl font-bold">{statsData?.soldListings ?? 0}</div>
             <p className="text-xs text-muted-foreground">
               {t("stats.allTime")}
             </p>
@@ -205,7 +207,7 @@ export default function DashboardPage() {
             <Clock className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats?.pendingListings ?? 0}</div>
+            <div className="text-2xl font-bold">{statsData?.pendingListings ?? 0}</div>
             <p className="text-xs text-muted-foreground">
               {t("stats.awaitingApproval")}
             </p>
@@ -257,24 +259,24 @@ export default function DashboardPage() {
             <CardTitle className="text-lg">{t("recentActivity")}</CardTitle>
           </CardHeader>
           <CardContent>
-            {!stats?.recentActivity || stats.recentActivity.length === 0 ? (
+            {!statsData?.recentActivity || statsData.recentActivity.length === 0 ? (
               <div className="text-sm text-muted-foreground text-center py-8">
                 {t("noActivity")}
               </div>
             ) : (
               <div className="space-y-4">
-                {stats.recentActivity.slice(0, 5).map((activity: Record<string, unknown>, i: number) => (
+                {statsData.recentActivity.slice(0, 5).map((activity: Record<string, unknown>, i: number) => (
                   <div
                     key={`${activity.entityId}-${i}`}
                     className="flex items-start gap-3 p-2 rounded-lg"
                   >
-                    <ActivityIcon type={activity.type} />
+                    <ActivityIcon type={activity.type as string} />
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium truncate">
-                        {activity.entityTitle}
+                        {activity.entityTitle as string}
                       </p>
                       <p className="text-xs text-muted-foreground">
-                        {activity.actorName}
+                        {activity.actorName as string}
                       </p>
                     </div>
                   </div>

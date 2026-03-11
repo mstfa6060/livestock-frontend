@@ -7,7 +7,7 @@ export default {
       PAGE_SIZE_NOT_VALID: "Magnitudo pagina invalidum est.",
       UNAUTHORIZED_ACCESS: "Aditum alienum.",
       INVALID_ENUM: "In valorem enum invalidum est.",
-      ACTOR_REQUIRED: "Actor notitia requiritur.",
+      ACTOR_REQUIRED: "Actor notitia requiritur.",  
       INVALID_NUMBER: "Valor numerorum invalidus est.",
       VALUE_TOO_LONG: "Valor nimis longum est.",
       CATEGORY_NOT_FOUND: "Genus non invenitur.",

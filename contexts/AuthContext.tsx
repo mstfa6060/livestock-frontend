@@ -180,6 +180,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const response = await IAMAPI.Auth.Login.Request({
         provider: "native",
         userName: email,
+        email: email,
         password: password,
         token: "",
         platform: IAMAPI.Enums.ClientPlatforms.Web,

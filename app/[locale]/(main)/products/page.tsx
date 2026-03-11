@@ -51,6 +51,7 @@ const CONDITION_MAP: Record<string, number> = {
 interface Category {
   id: string;
   name: string;
+  productCount: number;
 }
 
 interface FilterContentProps {
@@ -112,13 +113,18 @@ function FilterContent({
                 type="button"
                 onClick={() => onCategorySelect(cat.id)}
                 className={cn(
-                  "block w-full text-left py-1.5 pl-3 text-sm border-l-2 -ml-px transition-colors",
+                  "flex w-full items-center justify-between py-1.5 pl-3 pr-2 text-sm border-l-2 -ml-px transition-colors",
                   localCategory === cat.id
                     ? "border-primary text-foreground font-bold bg-primary/5"
                     : "border-transparent text-muted-foreground hover:text-foreground hover:border-muted-foreground"
                 )}
               >
-                {cat.name}
+                <span className="text-left">{cat.name}</span>
+                {cat.productCount > 0 && (
+                  <span className="ml-2 text-xs tabular-nums text-muted-foreground/70 shrink-0">
+                    {cat.productCount}
+                  </span>
+                )}
               </button>
             </li>
           ))}
@@ -230,7 +236,7 @@ export default function ProductsPage() {
 
   // Fetch categories via React Query
   const { data: categoriesRaw = [] } = useCategories(locale);
-  const categories: Category[] = categoriesRaw.map((c) => ({ id: c.id, name: c.name }));
+  const categories: Category[] = categoriesRaw.map((c) => ({ id: c.id, name: c.name, productCount: c.productCount }));
 
   // Resolve category param: URL might contain slug or ID
   const resolvedCategoryId = useMemo(() => {
@@ -279,7 +285,7 @@ export default function ProductsPage() {
     averageRating: item.averageRating,
     reviewCount: item.reviewCount,
     createdAt: item.createdAt,
-    imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
+    imageUrl: (item as unknown as Record<string, unknown>).coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${(item as unknown as Record<string, unknown>).coverImageUrl as string}` : undefined,
   });
 
   // Fetch products via React Query
@@ -304,8 +310,6 @@ export default function ProductsPage() {
         condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
         minPrice: minPriceParam ? parseFloat(minPriceParam) : undefined,
         maxPrice: maxPriceParam ? parseFloat(maxPriceParam) : undefined,
-        currency: selectedCountry?.defaultCurrencyCode || "TRY",
-        sortBy: sorting.key,
         sorting,
         pageRequest: {
           currentPage: pageParam,

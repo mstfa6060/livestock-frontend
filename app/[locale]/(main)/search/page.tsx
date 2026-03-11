@@ -298,8 +298,6 @@ export default function SearchPage() {
           minPrice: minPriceParam ? parseFloat(minPriceParam) : undefined,
           maxPrice: maxPriceParam ? parseFloat(maxPriceParam) : undefined,
           condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
-          currency: selectedCountry?.defaultCurrencyCode || "TRY",
-          sortBy: sorting.key,
           sorting,
           pageRequest: {
             currentPage: pageParam,
@@ -327,7 +325,7 @@ export default function SearchPage() {
           averageRating: item.averageRating,
           reviewCount: item.reviewCount,
           createdAt: item.createdAt,
-          imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
+          imageUrl: (item as unknown as Record<string, unknown>).coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${(item as unknown as Record<string, unknown>).coverImageUrl as string}` : undefined,
         }));
 
         // Fetch cover images
@@ -402,7 +400,7 @@ export default function SearchPage() {
           averageRating: item.averageRating as number | undefined,
           reviewCount: item.reviewCount,
           createdAt: item.createdAt,
-          imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
+          imageUrl: (item as unknown as Record<string, unknown>).coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${(item as unknown as Record<string, unknown>).coverImageUrl as string}` : undefined,
         }));
 
         // eslint-disable-next-line @typescript-eslint/no-explicit-any

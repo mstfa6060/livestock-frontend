@@ -81,7 +81,8 @@ export default function SettingsPage() {
   const { data: prefs = defaultPrefs, isLoading: prefsLoading } = useQuery({
     queryKey: queryKeys.preferences.my(user?.id ?? ""),
     queryFn: async () => {
-      const response = await LivestockTradingAPI.Preferences.My.Request({
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const response = await (LivestockTradingAPI as any).Preferences.My.Request({
         userId: user!.id,
       });
 
@@ -158,7 +159,8 @@ export default function SettingsPage() {
 
     setPrefsSaving(true);
     try {
-      await LivestockTradingAPI.Preferences.Update.Request({
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      await (LivestockTradingAPI as any).Preferences.Update.Request({
         userId: user.id,
         ...editablePrefs,
       });

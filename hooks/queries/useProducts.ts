@@ -42,8 +42,8 @@ function mapProductResponse(p: any): Product {
     averageRating: p.averageRating as number | null,
     reviewCount: p.reviewCount,
     createdAt: p.createdAt,
-    imageUrl: p.coverImageUrl
-      ? `${AppConfig.FileStorageBaseUrl}${p.coverImageUrl}`
+    imageUrl: (p as unknown as Record<string, unknown>).coverImageUrl
+      ? `${AppConfig.FileStorageBaseUrl}${(p as unknown as Record<string, unknown>).coverImageUrl as string}`
       : undefined,
   };
 }
@@ -73,8 +73,6 @@ export function useProductSearch(params: ProductSearchParams) {
         query: params.query ?? "",
         countryCode: params.countryCode ?? "TR",
         city: params.city ?? "",
-        currency: params.currency ?? "TRY",
-        sortBy: params.sortBy ?? "createdAt",
         sorting: {
           key: params.sortBy ?? "createdAt",
           direction:

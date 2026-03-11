@@ -10,7 +10,7 @@ import { ApiService } from "@services/ApiService";
 import axios from "axios";
 
 // Custom Types 
-type Guid = string; 
+type Guid = string;
 type Double = number;
 type Decimal = number;
 type Int64 = number;
@@ -36,7 +36,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/VeterinaryInfos/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -51,7 +51,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/VeterinaryInfos/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -85,7 +85,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/VeterinaryInfos/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -140,7 +140,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/VeterinaryInfos/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				productId: Guid;
@@ -194,7 +194,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/VeterinaryInfos/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -205,7 +205,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/VeterinaryInfos/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				productId: Guid;
 				type: number;
@@ -262,7 +262,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Vaccinations/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -277,7 +277,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Vaccinations/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -300,7 +300,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Vaccinations/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -340,7 +340,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Vaccinations/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				animalInfoId: Guid;
@@ -372,7 +372,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Vaccinations/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -383,7 +383,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Vaccinations/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				animalInfoId: Guid;
 				vaccineName: string;
@@ -418,7 +418,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/UserPreferences/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -433,7 +433,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/UserPreferences/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -460,7 +460,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/UserPreferences/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -508,7 +508,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/UserPreferences/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				userId: Guid;
@@ -548,7 +548,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/UserPreferences/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -559,7 +559,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/UserPreferences/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				userId: Guid;
 				preferredCurrency: string;
@@ -602,7 +602,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportTrackings/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -617,7 +617,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportTrackings/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -638,7 +638,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportTrackings/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -681,7 +681,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportTrackings/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				transportRequestId: Guid;
@@ -712,7 +712,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportTrackings/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -723,7 +723,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportTrackings/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				transportRequestId: Guid;
 				latitude?: __ERROR_TYPE_NOT_HANDLED__;
@@ -756,7 +756,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportRequests/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -771,7 +771,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportRequests/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -809,7 +809,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportRequests/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -853,7 +853,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportRequests/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				productId: Guid;
@@ -899,7 +899,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportRequests/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -910,7 +910,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportRequests/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				productId: Guid;
 				sellerId: Guid;
@@ -959,7 +959,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportOffers/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -974,7 +974,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportOffers/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -1004,7 +1004,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportOffers/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -1046,7 +1046,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportOffers/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				transportRequestId: Guid;
@@ -1088,7 +1088,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportOffers/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -1099,7 +1099,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransportOffers/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				transportRequestId: Guid;
 				transporterId: Guid;
@@ -1143,7 +1143,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -1158,7 +1158,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -1196,7 +1196,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -1241,7 +1241,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Verify {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/Verify';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -1254,7 +1254,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				userId: Guid;
@@ -1306,7 +1306,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Suspend {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/Suspend';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				reason: string;
@@ -1320,7 +1320,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -1331,7 +1331,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				userId: Guid;
 				companyName: string;
@@ -1386,7 +1386,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransporterReviews/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -1401,7 +1401,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransporterReviews/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -1424,7 +1424,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransporterReviews/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -1466,7 +1466,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransporterReviews/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				transporterId: Guid;
@@ -1496,7 +1496,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransporterReviews/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -1507,7 +1507,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TransporterReviews/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				transporterId: Guid;
 				userId: Guid;
@@ -1540,7 +1540,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TaxRates/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -1556,7 +1556,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TaxRates/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -1578,7 +1578,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TaxRates/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -1621,7 +1621,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TaxRates/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				countryCode: string;
@@ -1651,7 +1651,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TaxRates/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -1662,7 +1662,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/TaxRates/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				countryCode: string;
 				stateCode: string;
@@ -1695,7 +1695,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingZones/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -1709,7 +1709,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingZones/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -1726,7 +1726,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingZones/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -1765,7 +1765,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingZones/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				sellerId?: Guid;
@@ -1786,7 +1786,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingZones/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -1797,7 +1797,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingZones/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sellerId?: Guid;
 				name: string;
@@ -1820,7 +1820,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingRates/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -1835,7 +1835,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingRates/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -1858,7 +1858,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingRates/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -1903,7 +1903,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingRates/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				shippingZoneId: Guid;
@@ -1936,7 +1936,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingRates/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -1947,7 +1947,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingRates/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				shippingZoneId: Guid;
 				shippingCarrierId?: Guid;
@@ -1982,7 +1982,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingCarriers/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -1997,7 +1997,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingCarriers/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -2016,7 +2016,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingCarriers/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -2056,7 +2056,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingCarriers/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				name: string;
@@ -2080,7 +2080,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingCarriers/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -2091,7 +2091,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ShippingCarriers/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				name: string;
 				code: string;
@@ -2118,7 +2118,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -2133,7 +2133,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace GetByUserId {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/GetByUserId';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				userId: Guid;
 			}
@@ -2170,7 +2170,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -2207,7 +2207,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace DetailByUserId {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/DetailByUserId';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				userId: Guid;
 			}
@@ -2244,7 +2244,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -2289,7 +2289,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Verify {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/Verify';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -2302,7 +2302,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				userId: Guid;
@@ -2352,7 +2352,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Suspend {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/Suspend';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				reason: string;
@@ -2366,7 +2366,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -2377,7 +2377,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Sellers/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				userId: Guid;
 				businessName: string;
@@ -2429,7 +2429,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SellerReviews/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -2444,7 +2444,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SellerReviews/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -2473,7 +2473,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SellerReviews/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -2516,7 +2516,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SellerReviews/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				sellerId: Guid;
@@ -2548,7 +2548,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SellerReviews/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -2559,7 +2559,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SellerReviews/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sellerId: Guid;
 				userId: Guid;
@@ -2594,7 +2594,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SeedInfos/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -2609,7 +2609,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SeedInfos/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -2661,7 +2661,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SeedInfos/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -2703,7 +2703,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SeedInfos/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				productId: Guid;
@@ -2793,7 +2793,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SeedInfos/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -2804,7 +2804,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SeedInfos/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				productId: Guid;
 				type: number;
@@ -2897,7 +2897,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SearchHistories/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -2912,7 +2912,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SearchHistories/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -2929,7 +2929,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SearchHistories/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -2968,7 +2968,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SearchHistories/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				searchQuery: string;
@@ -2986,7 +2986,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SearchHistories/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -2997,7 +2997,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/SearchHistories/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				userId: Guid;
 				searchQuery: string;
@@ -3021,7 +3021,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductViewHistories/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -3036,7 +3036,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductViewHistories/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -3053,7 +3053,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductViewHistories/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -3091,7 +3091,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductViewHistories/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				userId: Guid;
@@ -3110,7 +3110,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductViewHistories/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -3121,7 +3121,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductViewHistories/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				userId: Guid;
 				productId: Guid;
@@ -3143,7 +3143,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductVariants/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -3158,7 +3158,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductVariants/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -3182,7 +3182,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductVariants/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -3227,7 +3227,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductVariants/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				productId: Guid;
@@ -3261,7 +3261,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductVariants/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -3272,7 +3272,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductVariants/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				productId: Guid;
 				name: string;
@@ -3309,7 +3309,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Search {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/Search';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				query: string;
 				categoryId?: Guid;
@@ -3362,7 +3362,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -3377,7 +3377,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace MediaDetail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/MediaDetail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				productId: Guid;
 			}
@@ -3390,7 +3390,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -3442,7 +3442,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace DetailBySlug {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/DetailBySlug';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				slug: string;
 			}
@@ -3494,7 +3494,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				countryCode: string;
 				sorting: IXSorting;
@@ -3550,7 +3550,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				title: string;
@@ -3622,7 +3622,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Reject {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/Reject';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				reason: string;
@@ -3638,7 +3638,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -3649,7 +3649,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				title: string;
 				slug: string;
@@ -3720,7 +3720,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Approve {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Products/Approve';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -3738,7 +3738,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductReviews/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -3753,7 +3753,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductReviews/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -3782,7 +3782,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductReviews/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -3824,7 +3824,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductReviews/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				productId: Guid;
@@ -3854,7 +3854,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductReviews/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -3865,7 +3865,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductReviews/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				productId: Guid;
 				userId: Guid;
@@ -3898,7 +3898,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductPrices/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -3913,7 +3913,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductPrices/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -3935,7 +3935,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductPrices/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -3978,7 +3978,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductPrices/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				productId: Guid;
@@ -4008,7 +4008,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductPrices/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -4019,7 +4019,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductPrices/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				productId: Guid;
 				currencyCode: string;
@@ -4052,7 +4052,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/PaymentMethods/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -4067,7 +4067,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/PaymentMethods/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -4090,7 +4090,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/PaymentMethods/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -4134,7 +4134,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/PaymentMethods/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				name: string;
@@ -4166,7 +4166,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/PaymentMethods/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -4177,7 +4177,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/PaymentMethods/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				name: string;
 				code: string;
@@ -4212,7 +4212,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Offers/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -4227,7 +4227,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Offers/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -4253,7 +4253,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Offers/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -4296,7 +4296,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Offers/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				productId: Guid;
@@ -4333,7 +4333,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Offers/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -4344,7 +4344,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Offers/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				productId: Guid;
 				buyerUserId: Guid;
@@ -4380,7 +4380,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Notifications/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -4395,7 +4395,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Notifications/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -4416,7 +4416,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Notifications/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -4458,7 +4458,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Notifications/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				title: string;
@@ -4484,7 +4484,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Notifications/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -4495,7 +4495,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Notifications/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				userId: Guid;
 				title: string;
@@ -4524,7 +4524,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace UnreadCount {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Messages/UnreadCount';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				userId: Guid;
 			}
@@ -4541,7 +4541,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Messages/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -4556,7 +4556,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Messages/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -4576,7 +4576,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Messages/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -4616,7 +4616,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Messages/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				content: string;
@@ -4639,7 +4639,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace SendTypingIndicator {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Messages/SendTypingIndicator';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				conversationId: Guid;
 				isTyping: boolean;
@@ -4651,7 +4651,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Messages/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -4662,7 +4662,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Messages/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				conversationId: Guid;
 				senderUserId: Guid;
@@ -4688,7 +4688,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/MachineryInfos/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -4703,7 +4703,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/MachineryInfos/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -4743,7 +4743,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/MachineryInfos/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -4784,7 +4784,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/MachineryInfos/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				productId: Guid;
@@ -4850,7 +4850,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/MachineryInfos/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -4861,7 +4861,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/MachineryInfos/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				productId: Guid;
 				type: number;
@@ -4930,7 +4930,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Locations/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -4946,7 +4946,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Locations/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -4973,7 +4973,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Locations/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -5021,7 +5021,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Locations/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				name: string;
@@ -5061,7 +5061,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Locations/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -5072,7 +5072,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Locations/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				name: string;
 				addressLine1: string;
@@ -5115,7 +5115,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Languages/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -5131,7 +5131,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Languages/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -5152,7 +5152,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Languages/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -5194,7 +5194,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Languages/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				code: string;
@@ -5222,7 +5222,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Languages/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -5233,7 +5233,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Languages/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				code: string;
 				name: string;
@@ -5264,7 +5264,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/HealthRecords/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -5279,7 +5279,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/HealthRecords/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -5304,7 +5304,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/HealthRecords/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -5350,7 +5350,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/HealthRecords/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				animalInfoId: Guid;
@@ -5386,7 +5386,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/HealthRecords/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -5397,7 +5397,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/HealthRecords/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				animalInfoId: Guid;
 				recordDate: Date;
@@ -5436,7 +5436,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FeedInfos/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -5451,7 +5451,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FeedInfos/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -5482,7 +5482,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FeedInfos/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -5534,7 +5534,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FeedInfos/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				productId: Guid;
@@ -5582,7 +5582,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FeedInfos/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -5593,7 +5593,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FeedInfos/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				productId: Guid;
 				type: number;
@@ -5644,7 +5644,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FavoriteProducts/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -5659,7 +5659,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FavoriteProducts/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -5674,7 +5674,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FavoriteProducts/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -5711,7 +5711,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FavoriteProducts/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				userId: Guid;
@@ -5728,7 +5728,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FavoriteProducts/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -5739,7 +5739,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FavoriteProducts/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				userId: Guid;
 				productId: Guid;
@@ -5759,7 +5759,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Farms/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -5774,7 +5774,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Farms/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -5803,7 +5803,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Farms/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -5845,7 +5845,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Farms/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				name: string;
@@ -5885,7 +5885,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Farms/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -5896,7 +5896,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Farms/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				name: string;
 				description: string;
@@ -5938,7 +5938,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FAQs/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -5953,7 +5953,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FAQs/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -5974,7 +5974,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FAQs/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -6016,7 +6016,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FAQs/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				question: string;
@@ -6044,7 +6044,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FAQs/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -6055,7 +6055,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/FAQs/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				question: string;
 				answer: string;
@@ -6086,7 +6086,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Deals/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -6101,7 +6101,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Deals/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -6135,7 +6135,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Deals/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -6181,7 +6181,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Deals/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				dealNumber: string;
@@ -6221,7 +6221,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Deals/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -6232,7 +6232,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Deals/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				dealNumber: string;
 				productId: Guid;
@@ -6275,7 +6275,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Stats {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Dashboard/Stats';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				userId: Guid;
 			}
@@ -6304,7 +6304,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Currencies/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -6320,7 +6320,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Currencies/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -6339,7 +6339,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Currencies/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -6379,7 +6379,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Currencies/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				code: string;
@@ -6402,7 +6402,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Currencies/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -6413,7 +6413,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Currencies/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				code: string;
 				symbol: string;
@@ -6439,7 +6439,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Conversations/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -6454,7 +6454,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Conversations/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -6474,7 +6474,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Conversations/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -6514,7 +6514,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Conversations/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				participantUserId1: Guid;
@@ -6538,7 +6538,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Conversations/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -6549,7 +6549,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Conversations/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				participantUserId1: Guid;
 				participantUserId2: Guid;
@@ -6576,7 +6576,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ChemicalInfos/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -6591,7 +6591,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ChemicalInfos/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -6630,7 +6630,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ChemicalInfos/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -6671,7 +6671,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ChemicalInfos/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				productId: Guid;
@@ -6735,7 +6735,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ChemicalInfos/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -6746,7 +6746,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/ChemicalInfos/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				productId: Guid;
 				type: number;
@@ -6813,7 +6813,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Categories/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -6829,7 +6829,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Categories/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				languageCode: string;
@@ -6863,7 +6863,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Categories/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				languageCode: string;
 				sorting: IXSorting;
@@ -6902,6 +6902,7 @@ export namespace LivestockTradingAPI {
 				nameTranslations: string;
 				descriptionTranslations: string;
 				attributesTemplate: string;
+				productCount: number;
 				subCategoryCount: number;
 				createdAt: Date;
 			}
@@ -6909,7 +6910,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Categories/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				name: string;
@@ -6941,7 +6942,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Categories/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -6952,7 +6953,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Categories/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				name: string;
 				slug: string;
@@ -6987,7 +6988,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Brands/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -7002,7 +7003,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Brands/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -7026,7 +7027,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Brands/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -7071,7 +7072,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Brands/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				name: string;
@@ -7103,7 +7104,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Brands/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -7114,7 +7115,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Brands/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				name: string;
 				slug: string;
@@ -7148,7 +7149,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Banners/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -7163,7 +7164,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Banners/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -7187,7 +7188,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Banners/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -7232,7 +7233,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Banners/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				title: string;
@@ -7262,7 +7263,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Banners/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -7273,7 +7274,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Banners/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				title: string;
 				description: string;
@@ -7306,7 +7307,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Pick {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/AnimalInfos/Pick';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				selectedIds: Guid[];
 				keyword: string;
@@ -7321,7 +7322,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Detail {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/AnimalInfos/Detail';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -7357,7 +7358,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace All {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/AnimalInfos/All';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				sorting: IXSorting;
 				filters: IXFilterItem[];
@@ -7400,7 +7401,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Update {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/AnimalInfos/Update';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 				productId: Guid;
@@ -7458,7 +7459,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Delete {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/AnimalInfos/Delete';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				id: Guid;
 			}
@@ -7469,7 +7470,7 @@ export namespace LivestockTradingAPI {
 
 		export namespace Create {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/AnimalInfos/Create';
-			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath, { ...data }));
 			export interface IRequestModel {
 				productId: Guid;
 				breedName: string;

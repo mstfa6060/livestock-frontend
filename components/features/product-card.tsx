@@ -135,7 +135,7 @@ export const ProductCard = memo(function ProductCard({ product, onFavorite, isFa
           <Button
             variant="ghost"
             size="icon"
-            className="absolute top-2 right-2 bg-white/90 hover:bg-white shadow-sm rounded-full h-9 w-9"
+            className="absolute top-2 right-2 z-10 bg-white/90 hover:bg-white shadow-sm rounded-full h-9 w-9"
             onClick={handleFavorite}
             disabled={isTogglingFavorite}
             aria-label={favorite ? t("removedFromFavorites") : t("addedToFavorites")}

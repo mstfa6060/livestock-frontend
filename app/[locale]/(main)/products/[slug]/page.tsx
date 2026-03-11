@@ -271,15 +271,16 @@ export default function ProductDetailPage() {
 
     setIsContacting(true);
     try {
-      const response = await LivestockTradingAPI.Conversations.StartWithProduct.Request({
+      const response = await LivestockTradingAPI.Conversations.Create.Request({
+        participantUserId1: user.id,
+        participantUserId2: product.sellerId,
         productId: product.id,
-        sellerId: product.sellerId,
-        buyerUserId: user.id,
-        initialMessage: t("inquiryMessage", { title: product.title }),
+        subject: product.title,
+        status: 0,
       });
 
       // Navigate to the conversation
-      router.push(`/dashboard/messages?conversation=${response.conversationId}`);
+      router.push(`/dashboard/messages?conversation=${response.id}`);
     } catch (error) {
       toast.error(error instanceof Error ? error.message : t("contactError"));
     } finally {

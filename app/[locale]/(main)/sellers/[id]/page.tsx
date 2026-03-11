@@ -135,7 +135,7 @@ export default function SellerDetailPage() {
         averageRating: item.averageRating as number | undefined,
         reviewCount: item.reviewCount,
         createdAt: item.createdAt,
-        imageUrl: item.coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${item.coverImageUrl}` : undefined,
+        imageUrl: (item as unknown as Record<string, unknown>).coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${(item as unknown as Record<string, unknown>).coverImageUrl as string}` : undefined,
       }));
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any

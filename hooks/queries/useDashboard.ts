@@ -9,9 +9,8 @@ export function useDashboardMyStats(
   return useQuery({
     queryKey: queryKeys.dashboard.myStats(),
     queryFn: () =>
-      LivestockTradingAPI.Dashboard.MyStats.Request({
+      LivestockTradingAPI.Dashboard.Stats.Request({
         userId,
-        period: "all",
       }),
     enabled: (options?.enabled ?? true) && !!userId,
   });

@@ -103,17 +103,18 @@ export default function ProfilePage() {
       });
 
       // Use the Update response to sync all user fields
+      const r = response as unknown as Record<string, unknown>;
       updateUserData({
-        username: response.userName,
-        displayName: response.fullName,
-        email: response.email,
-        isPhoneVerified: response.isPhoneVerified,
-        countryId: response.countryId,
-        countryCode: response.countryCode,
-        countryName: response.countryName,
-        language: response.language,
-        currencyCode: response.currencyCode,
-        currencySymbol: response.currencySymbol,
+        username: r.userName as string,
+        displayName: r.fullName as string,
+        email: r.email as string,
+        isPhoneVerified: r.isPhoneVerified as boolean,
+        countryId: r.countryId as number,
+        countryCode: r.countryCode as string,
+        countryName: r.countryName as string,
+        language: r.language as string,
+        currencyCode: r.currencyCode as string,
+        currencySymbol: r.currencySymbol as string,
       });
       toast.success(t("saveSuccess"));
     } catch (error) {
