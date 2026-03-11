@@ -129,17 +129,24 @@ function FilterContent({
                     )}
                   </button>
                 ) : (
-                  <div
+                  <button
+                    type="button"
+                    onClick={() => onCategorySelect(cat.id)}
                     style={{ paddingLeft: `${0.75 + depth * 1}rem` }}
-                    className="flex items-center justify-between py-1.5 pr-2 text-sm -ml-px border-l-2 border-transparent"
+                    className={cn(
+                      "flex w-full items-center justify-between py-1.5 pr-2 text-sm -ml-px border-l-2 transition-colors",
+                      isActive
+                        ? "border-primary text-foreground font-semibold bg-primary/5"
+                        : "border-transparent text-foreground/80 hover:text-foreground hover:border-muted-foreground font-medium"
+                    )}
                   >
-                    <span className="font-medium text-foreground/80">{cat.name}</span>
+                    <span className="text-left">{cat.name}</span>
                     {count > 0 && (
                       <span className="ml-2 text-xs tabular-nums text-muted-foreground/50 shrink-0">
                         {count}
                       </span>
                     )}
-                  </div>
+                  </button>
                 )}
                 {children.length > 0 && (
                   <ul className="border-l border-border/50 ml-3">
