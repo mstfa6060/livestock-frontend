@@ -26,7 +26,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Search, SlidersHorizontal, X, Loader2 } from "lucide-react";
+import { Search, SlidersHorizontal, X, Loader2, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { AppConfig } from "@/config/livestock-config";
@@ -70,6 +70,8 @@ interface FilterContentProps {
   clearFilters: () => void;
   tf: (key: string) => string;
   t: (key: string) => string;
+  expandedCategories: Set<string>;
+  toggleExpanded: (id: string) => void;
 }
 
 function FilterContent({
@@ -87,6 +89,8 @@ function FilterContent({
   clearFilters,
   tf,
   t,
+  expandedCategories,
+  toggleExpanded,
 }: FilterContentProps) {
   return (
     <div className="space-y-6">
@@ -104,51 +108,45 @@ function FilterContent({
 
           const renderCat = (cat: Category, depth = 0) => {
             const children = childrenOf(cat.id);
-            const isLeaf = children.length === 0;
+            const hasChildren = children.length > 0;
             const isActive = localCategory === cat.id;
+            const isExpanded = expandedCategories.has(cat.id);
             const count = totalCount(cat);
             return (
               <li key={cat.id}>
-                {isLeaf ? (
+                <div className="flex items-center -ml-px">
                   <button
                     type="button"
                     onClick={() => onCategorySelect(cat.id)}
                     style={{ paddingLeft: `${0.75 + depth * 1}rem` }}
                     className={cn(
-                      "flex w-full items-center justify-between py-1.5 pr-2 text-sm border-l-2 -ml-px transition-colors",
+                      "flex-1 flex items-center justify-between py-1.5 pr-1 text-sm border-l-2 transition-colors text-left",
                       isActive
                         ? "border-primary text-foreground font-semibold bg-primary/5"
-                        : "border-transparent text-muted-foreground hover:text-foreground hover:border-muted-foreground"
+                        : hasChildren
+                          ? "border-transparent text-foreground/80 hover:text-foreground hover:border-muted-foreground font-medium"
+                          : "border-transparent text-muted-foreground hover:text-foreground hover:border-muted-foreground"
                     )}
                   >
-                    <span className="text-left">{cat.name}</span>
+                    <span>{cat.name}</span>
                     {count > 0 && (
                       <span className="ml-2 text-xs tabular-nums text-muted-foreground/60 shrink-0">
                         {count}
                       </span>
                     )}
                   </button>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => onCategorySelect(cat.id)}
-                    style={{ paddingLeft: `${0.75 + depth * 1}rem` }}
-                    className={cn(
-                      "flex w-full items-center justify-between py-1.5 pr-2 text-sm -ml-px border-l-2 transition-colors",
-                      isActive
-                        ? "border-primary text-foreground font-semibold bg-primary/5"
-                        : "border-transparent text-foreground/80 hover:text-foreground hover:border-muted-foreground font-medium"
-                    )}
-                  >
-                    <span className="text-left">{cat.name}</span>
-                    {count > 0 && (
-                      <span className="ml-2 text-xs tabular-nums text-muted-foreground/50 shrink-0">
-                        {count}
-                      </span>
-                    )}
-                  </button>
-                )}
-                {children.length > 0 && (
+                  {hasChildren && (
+                    <button
+                      type="button"
+                      onClick={() => toggleExpanded(cat.id)}
+                      className="p-1.5 text-muted-foreground hover:text-foreground transition-colors shrink-0"
+                      aria-label={isExpanded ? "Kapat" : "Aç"}
+                    >
+                      <ChevronRight className={cn("h-3.5 w-3.5 transition-transform", isExpanded && "rotate-90")} />
+                    </button>
+                  )}
+                </div>
+                {hasChildren && isExpanded && (
                   <ul className="border-l border-border/50 ml-3">
                     {children.map((child) => renderCat(child, depth + 1))}
                   </ul>
@@ -258,6 +256,17 @@ export default function ProductsPage() {
   const [localCondition, setLocalCondition] = useState(conditionParam);
   const [localMinPrice, setLocalMinPrice] = useState(minPriceParam);
   const [localMaxPrice, setLocalMaxPrice] = useState(maxPriceParam);
+
+  // Accordion state for category tree
+  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
+  const toggleExpanded = useCallback((id: string) => {
+    setExpandedCategories((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }, []);
 
   // Update URL params
   const updateParams = useCallback(
@@ -534,6 +543,8 @@ export default function ProductsPage() {
                   clearFilters={clearFilters}
                   tf={tf}
                   t={t}
+                  expandedCategories={expandedCategories}
+                  toggleExpanded={toggleExpanded}
                 />
               </div>
             </SheetContent>
@@ -599,6 +610,8 @@ export default function ProductsPage() {
                   clearFilters={clearFilters}
                   tf={tf}
                   t={t}
+                  expandedCategories={expandedCategories}
+                  toggleExpanded={toggleExpanded}
                 />
               </CardContent>
             </Card>
