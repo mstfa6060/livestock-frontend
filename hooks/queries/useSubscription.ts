@@ -136,6 +136,8 @@ export function useUpdateSubscriptionPlan() {
       id: string;
       name: string;
       description: string;
+      nameTranslations: string;
+      descriptionTranslations: string;
       targetType: number;
       tier: number;
       priceMonthly: number;
@@ -154,7 +156,7 @@ export function useUpdateSubscriptionPlan() {
       sortOrder: number;
       isActive: boolean;
     }) => {
-      return await LivestockTradingAPI.SubscriptionPlans.Update.Request(data);
+      return await LivestockTradingAPI.SubscriptionPlans.Update.Request(data as any);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({

@@ -47,6 +47,8 @@ export function useUpdateBoostPackage() {
       id: string;
       name: string;
       description: string;
+      nameTranslations: string;
+      descriptionTranslations: string;
       durationHours: number;
       price: number;
       currency: string;
@@ -57,7 +59,7 @@ export function useUpdateBoostPackage() {
       sortOrder: number;
       isActive: boolean;
     }) => {
-      return await LivestockTradingAPI.BoostPackages.Update.Request(data);
+      return await LivestockTradingAPI.BoostPackages.Update.Request(data as any);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["boostPackages"] });
