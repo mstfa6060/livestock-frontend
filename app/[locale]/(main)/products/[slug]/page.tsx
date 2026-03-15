@@ -248,13 +248,18 @@ export default function ProductDetailPage() {
   };
 
   const handleShare = () => {
+    const shareUrl = new URL(window.location.href);
+    shareUrl.searchParams.set("utm_source", "share");
+    shareUrl.searchParams.set("utm_medium", "web");
+    const shareUrlStr = shareUrl.toString();
+
     if (navigator.share) {
       navigator.share({
         title: product?.title,
-        url: window.location.href,
+        url: shareUrlStr,
       });
     } else {
-      navigator.clipboard.writeText(window.location.href);
+      navigator.clipboard.writeText(shareUrlStr);
       toast.success(t("linkCopied"));
     }
   };

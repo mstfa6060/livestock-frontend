@@ -734,6 +734,9 @@
       "fetchError": "An error occurred while uploading seller information.",
       "productsLoadError": "An error occurred while uploading the seller's products.",
       "reviewsTab": "Assessments",
+      "share": "Share",
+      "shareText": "Check out {name} on Livestock Trading",
+      "linkCopied": "Link copied to clipboard.",
       "reviews": {
         "summary": "Evaluation Summary",
         "reviewCount": "evaluation",
@@ -1306,7 +1309,10 @@
     "fleet": "Fleet Information",
     "serviceRegions": "Service Areas",
     "specializations": "Areas of Expertise",
-    "certifications": "Certificates"
+    "certifications": "Certificates",
+    "share": "Share",
+    "shareText": "Check out {name} on Livestock Trading",
+    "linkCopied": "Link copied to clipboard."
   },
   "brands": {
     "title": "Brand Management",

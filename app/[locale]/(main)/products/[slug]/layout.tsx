@@ -60,6 +60,11 @@ export async function generateMetadata({
       description,
       ...(image && { images: [image] }),
     },
+    // Smart App Banner - uncomment when mobile app is published to stores:
+    // other: {
+    //   "apple-itunes-app": "app-id=APP_STORE_ID, app-argument=" + url,
+    //   "google-play-app": "app-id=com.livestocktrading.app",
+    // },
   };
 }
 

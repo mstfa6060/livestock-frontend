@@ -5,7 +5,7 @@ import { queryKeys } from "@/lib/query-keys";
 import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { MainHeader } from "@/components/layout/main-header";
 import { SimpleFooter } from "@/components/layout/footer";
 import { ProductCard, ProductCardSkeleton, Product } from "@/components/features/product-card";
@@ -29,12 +29,14 @@ import {
   CreditCard,
   Truck,
   RotateCcw,
+  Share2,
 } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { AppConfig } from "@/config/livestock-config";
 import { getProductCoverImagesDirect } from "@/lib/product-images";
 import { SellerReviews } from "@/components/features/seller-reviews";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
+import { toast } from "sonner";
 
 interface SellerDetail {
   id: string;
@@ -71,6 +73,7 @@ export default function SellerDetailPage() {
   const params = useParams();
   const sellerId = params.id as string;
 
+  const locale = useLocale();
   const selectedCountry = useSelectedCountry();
 
   // Fetch seller details via React Query
@@ -167,6 +170,24 @@ export default function SellerDetailPage() {
   // Get member year
   const getMemberYear = (date: Date) => {
     return new Date(date).getFullYear();
+  };
+
+  const handleShare = () => {
+    const shareUrl = new URL(window.location.href);
+    shareUrl.searchParams.set("utm_source", "share");
+    shareUrl.searchParams.set("utm_medium", "web");
+    const shareUrlStr = shareUrl.toString();
+
+    if (navigator.share) {
+      navigator.share({
+        title: seller?.businessName,
+        text: t("shareText", { name: seller?.businessName || "" }),
+        url: shareUrlStr,
+      });
+    } else {
+      navigator.clipboard.writeText(shareUrlStr);
+      toast.success(t("linkCopied"));
+    }
   };
 
   if (isLoading) {
@@ -283,6 +304,10 @@ export default function SellerDetailPage() {
                 <Calendar className="h-4 w-4 inline mr-1" />
                 {t("memberSince", { year: getMemberYear(seller.createdAt) })}
               </p>
+              <Button variant="outline" size="sm" onClick={handleShare} className="mt-2 gap-2">
+                <Share2 className="h-4 w-4" />
+                {t("share")}
+              </Button>
             </div>
           </div>
 

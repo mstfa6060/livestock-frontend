@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAM_ID.com.livestocktrading.app",
+        "paths": [
+          "/*/products/*",
+          "/*/sellers/*",
+          "/*/transporters/*"
+        ]
+      }
+    ]
+  }
+}

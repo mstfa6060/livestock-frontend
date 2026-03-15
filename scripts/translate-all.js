@@ -126,15 +126,16 @@ const languages = {
 
 // Dosya yollari
 const messagesDir = path.join(__dirname, '../messages');
-const sourceFile = path.join(messagesDir, 'tr.json');
+const sourceFile = path.join(messagesDir, 'en.json');
+const sourceLang = 'en';
 
-// Turkce kaynak dosyayi oku
+// Kaynak dosyayi oku (en.json)
 function readSourceFile() {
     try {
         const content = fs.readFileSync(sourceFile, 'utf8');
         return JSON.parse(content);
     } catch (error) {
-        console.error('tr.json dosyasi okunamadi:', error.message);
+        console.error('en.json dosyasi okunamadi:', error.message);
         process.exit(1);
     }
 }
@@ -177,7 +178,7 @@ async function translateTexts(texts, targetLang, batchSize = 100) {
 
         try {
             const [translated] = await translate.translate(chunk, {
-                from: 'tr',
+                from: sourceLang,
                 to: targetLang,
             });
 
@@ -245,7 +246,7 @@ async function translateMissing() {
         .map(f => f.replace('.json', ''));
 
     const missingLanguages = Object.entries(languages)
-        .filter(([code]) => !existingFiles.includes(code) && code !== 'tr');
+        .filter(([code]) => !existingFiles.includes(code) && code !== sourceLang);
 
     if (missingLanguages.length === 0) {
         console.log('Tum dil dosyalari mevcut!');
@@ -265,11 +266,11 @@ async function translateMissing() {
 // Tum dilleri cevir (tr haric)
 async function translateAll() {
     console.log('Tum dillere ceviri baslatiliyor...\n');
-    console.log(`Kaynak: tr.json`);
+    console.log(`Kaynak: ${sourceLang}.json`);
     console.log(`Hedef: ${Object.keys(languages).length - 1} dil\n`);
 
     for (const [langCode, langName] of Object.entries(languages)) {
-        if (langCode === 'tr') continue; // Turkce kaynaktir, atla
+        if (langCode === sourceLang) continue; // Kaynak dili atla
 
         await translateToLanguage(langCode, langName);
         await new Promise(r => setTimeout(r, 500));
@@ -297,7 +298,7 @@ async function syncMissingKeys(targetLangCode) {
 
     const targetLangs = targetLangCode
         ? [[targetLangCode, languages[targetLangCode]]]
-        : Object.entries(languages).filter(([code]) => code !== 'tr');
+        : Object.entries(languages).filter(([code]) => code !== sourceLang);
 
     let totalNewKeys = 0;
 

@@ -26,7 +26,9 @@ import {
   Calendar,
   Package,
   CheckCircle,
+  Share2,
 } from "lucide-react";
+import { toast } from "sonner";
 
 interface TransporterDetail {
   id: string;
@@ -94,6 +96,24 @@ export default function TransporterDetailPage() {
     },
     enabled: !!id,
   });
+
+  const handleShare = () => {
+    const shareUrl = new URL(window.location.href);
+    shareUrl.searchParams.set("utm_source", "share");
+    shareUrl.searchParams.set("utm_medium", "web");
+    const shareUrlStr = shareUrl.toString();
+
+    if (navigator.share) {
+      navigator.share({
+        title: transporter?.companyName,
+        text: t("shareText", { name: transporter?.companyName || "" }),
+        url: shareUrlStr,
+      });
+    } else {
+      navigator.clipboard.writeText(shareUrlStr);
+      toast.success(t("linkCopied"));
+    }
+  };
 
   if (isLoading) {
     return (
@@ -214,6 +234,11 @@ export default function TransporterDetailPage() {
                       {new Date(transporter.createdAt).toLocaleDateString(locale)}
                     </div>
                   </div>
+
+                  <Button variant="outline" size="sm" onClick={handleShare} className="mt-3 gap-2">
+                    <Share2 className="h-4 w-4" />
+                    {t("share")}
+                  </Button>
                 </div>
               </div>
             </CardContent>
