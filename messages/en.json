@@ -189,7 +189,8 @@
     "boosts": "My Boosts",
     "subscription": "Subscription",
     "subscriptionPlansAdmin": "Subscription Plans",
-    "boostPackagesAdmin": "Boost Packages"
+    "boostPackagesAdmin": "Boost Packages",
+    "exchangeRates": "Exchange Rates"
   },
   "profile": {
     "title": "Profile Information",
@@ -1882,6 +1883,24 @@
     "googleProductId": "Google Product ID",
     "sortOrder": "Sort Order",
     "updateSuccess": "Updated successfully.",
-    "updateError": "An error occurred while updating."
+    "updateError": "An error occurred while updating.",
+    "exchangeRates": "Exchange Rates",
+    "exchangeRatesDescription": "View all currency exchange rates and their update status.",
+    "exchangeRateInfo": "Exchange rates are automatically updated every 6 hours via Hangfire job.",
+    "currencyCode": "Code",
+    "currencyName": "Currency",
+    "symbol": "Symbol",
+    "exchangeRate": "Rate (to USD)",
+    "lastUpdated": "Last Updated",
+    "activeCurrencies": "active currencies",
+    "searchCurrency": "Search by code or name...",
+    "noCurrencies": "No currencies found.",
+    "recentlyUpdated": "Recent",
+    "stale": "Stale",
+    "veryStale": "Outdated",
+    "justNow": "Just now",
+    "minutesAgo": "{count} min ago",
+    "hoursAgo": "{count}h ago",
+    "daysAgo": "{count}d ago"
   }
 }

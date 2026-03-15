@@ -19,3 +19,4 @@ export * from "./useShipping";
 export * from "./useVeterinary";
 export * from "./useSubscription";
 export * from "./useBoost";
+export * from "./useCurrencies";

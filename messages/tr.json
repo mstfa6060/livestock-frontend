@@ -189,7 +189,8 @@
     "boosts": "Boost'larim",
     "subscription": "Abonelik",
     "subscriptionPlansAdmin": "Abonelik Planlari",
-    "boostPackagesAdmin": "Boost Paketleri"
+    "boostPackagesAdmin": "Boost Paketleri",
+    "exchangeRates": "Doviz Kurlari"
   },
   "profile": {
     "title": "Profil Bilgileri",
@@ -1882,6 +1883,24 @@
     "googleProductId": "Google Urun ID",
     "sortOrder": "Siralama",
     "updateSuccess": "Basariyla guncellendi.",
-    "updateError": "Guncelleme sirasinda bir hata olustu."
+    "updateError": "Guncelleme sirasinda bir hata olustu.",
+    "exchangeRates": "Doviz Kurlari",
+    "exchangeRatesDescription": "Tum doviz kurlarini ve guncelleme durumlarini goruntuleyin.",
+    "exchangeRateInfo": "Doviz kurlari Hangfire goreviyle her 6 saatte bir otomatik olarak guncellenir.",
+    "currencyCode": "Kod",
+    "currencyName": "Para Birimi",
+    "symbol": "Sembol",
+    "exchangeRate": "Kur (USD'ye)",
+    "lastUpdated": "Son Guncelleme",
+    "activeCurrencies": "aktif para birimi",
+    "searchCurrency": "Kod veya isme gore ara...",
+    "noCurrencies": "Para birimi bulunamadi.",
+    "recentlyUpdated": "Guncel",
+    "stale": "Eski",
+    "veryStale": "Cok Eski",
+    "justNow": "Az once",
+    "minutesAgo": "{count} dk once",
+    "hoursAgo": "{count} saat once",
+    "daysAgo": "{count} gun once"
   }
 }

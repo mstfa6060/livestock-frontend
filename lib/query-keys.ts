@@ -233,4 +233,11 @@ export const queryKeys = {
     list: (transportRequestId: string) =>
       [...queryKeys.transportTrackings.all, "list", transportRequestId] as const,
   },
+
+  currencies: {
+    all: ["currencies"] as const,
+    lists: () => [...queryKeys.currencies.all, "list"] as const,
+    list: (params?: Params) =>
+      [...queryKeys.currencies.lists(), params] as const,
+  },
 } as const;
