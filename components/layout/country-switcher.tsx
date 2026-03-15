@@ -8,7 +8,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { MapPin, ChevronDown } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { MapPin, ChevronDown, Search, Check } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useCountries } from "@/hooks/queries";
 
@@ -29,6 +30,8 @@ export function CountrySwitcher() {
   const { user } = useAuth();
   const { data: countries = [], isLoading } = useCountries();
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
+  const [search, setSearch] = useState("");
+  const [open, setOpen] = useState(false);
 
   // Select country based on saved preference, user profile, or default to Turkey
   useEffect(() => {
@@ -70,43 +73,75 @@ export function CountrySwitcher() {
   const handleCountryChange = (country: Country) => {
     setSelectedCountry(country);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(country));
-    // Dispatch event for other components to listen
     window.dispatchEvent(
       new CustomEvent("countryChange", { detail: country })
     );
+    setOpen(false);
+    setSearch("");
   };
 
   if (isLoading) {
     return (
-      <Button variant="outline" size="sm" disabled>
-        <MapPin className="h-4 w-4 mr-2" />
+      <Button variant="ghost" size="sm" disabled className="h-7 text-xs">
+        <MapPin className="h-3.5 w-3.5 mr-1.5" />
         ...
       </Button>
     );
   }
 
+  const lowerSearch = search.toLowerCase();
+  const filteredCountries = countries.filter(
+    (c: Country) =>
+      c.name.toLowerCase().includes(lowerSearch) ||
+      c.nativeName.toLowerCase().includes(lowerSearch) ||
+      c.code.toLowerCase().includes(lowerSearch) ||
+      c.defaultCurrencyCode.toLowerCase().includes(lowerSearch)
+  );
+
   return (
-    <DropdownMenu>
+    <DropdownMenu open={open} onOpenChange={(v) => { setOpen(v); if (!v) setSearch(""); }}>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm">
-          <MapPin className="h-4 w-4 mr-2" />
-          {selectedCountry?.nativeName || selectedCountry?.name || "Select"}
-          <ChevronDown className="h-4 w-4 ml-2" />
+        <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground h-7 text-xs gap-1.5">
+          <MapPin className="h-3.5 w-3.5" />
+          <span>{selectedCountry?.nativeName || selectedCountry?.name || "Select"}</span>
+          <ChevronDown className="h-3 w-3 opacity-50" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="max-h-80 overflow-y-auto w-56">
-        {countries.map((country) => (
-          <DropdownMenuItem
-            key={country.id}
-            onClick={() => handleCountryChange(country)}
-            className={selectedCountry?.id === country.id ? "bg-accent" : ""}
-          >
-            <span className="flex-1">{country.nativeName || country.name}</span>
-            <span className="text-muted-foreground text-xs ml-2">
-              {country.defaultCurrencySymbol}
-            </span>
-          </DropdownMenuItem>
-        ))}
+      <DropdownMenuContent align="start" className="w-64">
+        <div className="px-2 py-1.5">
+          <div className="relative">
+            <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
+            <Input
+              placeholder="Search country..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="h-8 pl-7 text-xs"
+              autoFocus
+            />
+          </div>
+        </div>
+        <div className="max-h-64 overflow-y-auto">
+          {filteredCountries.map((country: Country) => (
+            <DropdownMenuItem
+              key={country.id}
+              onClick={() => handleCountryChange(country)}
+              className={selectedCountry?.id === country.id ? "bg-accent" : ""}
+            >
+              <span className="flex-1 truncate">{country.nativeName || country.name}</span>
+              <span className="text-muted-foreground text-xs ml-2 shrink-0">
+                {country.defaultCurrencySymbol} {country.code}
+              </span>
+              {selectedCountry?.id === country.id && (
+                <Check className="h-3.5 w-3.5 text-primary ml-1 shrink-0" />
+              )}
+            </DropdownMenuItem>
+          ))}
+          {filteredCountries.length === 0 && (
+            <div className="px-2 py-4 text-center text-xs text-muted-foreground">
+              No results
+            </div>
+          )}
+        </div>
       </DropdownMenuContent>
     </DropdownMenu>
   );
@@ -115,7 +150,6 @@ export function CountrySwitcher() {
 // Hook to get selected country
 export function useSelectedCountry() {
   const [country, setCountry] = useState<Country | null>(() => {
-    // Load from storage during initialization
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
@@ -130,7 +164,6 @@ export function useSelectedCountry() {
   });
 
   useEffect(() => {
-    // Listen for changes only
     const handleChange = (e: CustomEvent<Country>) => {
       setCountry(e.detail);
     };
