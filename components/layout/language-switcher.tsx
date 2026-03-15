@@ -33,8 +33,9 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon" aria-label={t("language")}>
-          <Globe className="h-4 w-4" />
+        <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground h-7 text-xs gap-1.5" aria-label={t("language")}>
+          <Globe className="h-3.5 w-3.5" />
+          <span>{languageNames[locale as Locale] || locale.toUpperCase()}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="max-h-80 overflow-y-auto">
