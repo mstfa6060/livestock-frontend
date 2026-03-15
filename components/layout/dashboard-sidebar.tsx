@@ -68,6 +68,8 @@ const menuItems: MenuItem[] = [
   { key: "shippingCarriers", href: "/dashboard/shipping-carriers", icon: Truck, adminOnly: true },
   { key: "shippingZones", href: "/dashboard/shipping-zones", icon: MapPin, adminOnly: true },
   { key: "shippingRates", href: "/dashboard/shipping-rates", icon: DollarSign, adminOnly: true },
+  { key: "subscriptionPlansAdmin", href: "/dashboard/admin/subscription-plans", icon: CreditCard, adminOnly: true },
+  { key: "boostPackagesAdmin", href: "/dashboard/admin/boost-packages", icon: Zap, adminOnly: true },
   { key: "systemSettings", href: "/dashboard/system-settings", icon: Settings, adminOnly: true },
   { key: "favorites", href: "/dashboard/favorites", icon: Heart },
   { key: "messages", href: "/dashboard/messages", icon: MessageSquare, badgeKey: "messages" },

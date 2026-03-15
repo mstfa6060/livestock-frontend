@@ -1781,6 +1781,59 @@ export namespace LivestockTradingAPI {
 			}
 		}
 
+		export namespace Update {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/SubscriptionPlans/Update';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				id: Guid;
+				name: string;
+				description: string;
+				nameTranslations: string;
+				descriptionTranslations: string;
+				priceMonthly: __ERROR_TYPE_NOT_HANDLED__;
+				priceYearly: __ERROR_TYPE_NOT_HANDLED__;
+				currency: string;
+				maxActiveListings: number;
+				maxPhotosPerListing: number;
+				monthlyBoostCredits: number;
+				hasDetailedAnalytics: boolean;
+				hasPrioritySupport: boolean;
+				hasFeaturedBadge: boolean;
+				isActive: boolean;
+				appleProductIdMonthly: string;
+				appleProductIdYearly: string;
+				googleProductIdMonthly: string;
+				googleProductIdYearly: string;
+				sortOrder: number;
+			}
+			export interface IResponseModel {
+				id: Guid;
+				name: string;
+				description: string;
+				nameTranslations: string;
+				descriptionTranslations: string;
+				targetType: number;
+				tier: number;
+				priceMonthly: __ERROR_TYPE_NOT_HANDLED__;
+				priceYearly: __ERROR_TYPE_NOT_HANDLED__;
+				currency: string;
+				appleProductIdMonthly: string;
+				appleProductIdYearly: string;
+				googleProductIdMonthly: string;
+				googleProductIdYearly: string;
+				maxActiveListings: number;
+				maxPhotosPerListing: number;
+				monthlyBoostCredits: number;
+				hasDetailedAnalytics: boolean;
+				hasPrioritySupport: boolean;
+				hasFeaturedBadge: boolean;
+				sortOrder: number;
+				isActive: boolean;
+				createdAt: Date;
+				updatedAt?: Date;
+			}
+		}
+
 	}
 
 	export namespace ShippingZones {
@@ -7490,6 +7543,45 @@ export namespace LivestockTradingAPI {
 				sortOrder: number;
 				isActive: boolean;
 				createdAt: Date;
+			}
+		}
+
+		export namespace Update {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/BoostPackages/Update';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				id: Guid;
+				name: string;
+				description: string;
+				nameTranslations: string;
+				descriptionTranslations: string;
+				durationHours: number;
+				price: __ERROR_TYPE_NOT_HANDLED__;
+				currency: string;
+				boostType: number;
+				boostScore: number;
+				appleProductId: string;
+				googleProductId: string;
+				isActive: boolean;
+				sortOrder: number;
+			}
+			export interface IResponseModel {
+				id: Guid;
+				name: string;
+				description: string;
+				nameTranslations: string;
+				descriptionTranslations: string;
+				durationHours: number;
+				price: __ERROR_TYPE_NOT_HANDLED__;
+				currency: string;
+				boostType: number;
+				boostScore: number;
+				appleProductId: string;
+				googleProductId: string;
+				isActive: boolean;
+				sortOrder: number;
+				createdAt: Date;
+				updatedAt?: Date;
 			}
 		}
 

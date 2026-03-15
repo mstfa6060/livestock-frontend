@@ -39,6 +39,32 @@ export function useProductBoosts(sellerId: string, page = 1) {
   });
 }
 
+// Hook: Update boost package (admin)
+export function useUpdateBoostPackage() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: async (data: {
+      id: string;
+      name: string;
+      description: string;
+      durationHours: number;
+      price: number;
+      currency: string;
+      appleProductId: string;
+      googleProductId: string;
+      boostType: number;
+      boostScore: number;
+      sortOrder: number;
+      isActive: boolean;
+    }) => {
+      return await LivestockTradingAPI.BoostPackages.Update.Request(data);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["boostPackages"] });
+    },
+  });
+}
+
 // Hook: Create product boost
 export function useCreateProductBoost() {
   const queryClient = useQueryClient();

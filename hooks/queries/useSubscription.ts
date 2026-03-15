@@ -128,4 +128,40 @@ export function useUpdateSubscription() {
   });
 }
 
+// Hook: Update subscription plan (admin)
+export function useUpdateSubscriptionPlan() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: async (data: {
+      id: string;
+      name: string;
+      description: string;
+      targetType: number;
+      tier: number;
+      priceMonthly: number;
+      priceYearly: number;
+      currency: string;
+      appleProductIdMonthly: string;
+      appleProductIdYearly: string;
+      googleProductIdMonthly: string;
+      googleProductIdYearly: string;
+      maxActiveListings: number;
+      maxPhotosPerListing: number;
+      monthlyBoostCredits: number;
+      hasDetailedAnalytics: boolean;
+      hasPrioritySupport: boolean;
+      hasFeaturedBadge: boolean;
+      sortOrder: number;
+      isActive: boolean;
+    }) => {
+      return await LivestockTradingAPI.SubscriptionPlans.Update.Request(data);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["subscriptionPlans"],
+      });
+    },
+  });
+}
+
 // useBoostPackages, useProductBoosts, useCreateProductBoost moved to useBoost.ts to avoid duplicate exports
