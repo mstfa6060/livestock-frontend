@@ -56,6 +56,18 @@ export namespace IAMAPI {
 
 	export namespace Push {
 
+		export namespace RevokeToken {
+			export const RequestPath = AppConfig.IAMUrl + '/Push/RevokeToken';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				userId: Guid;
+				deviceId: string;
+			}
+			export interface IResponseModel {
+				success: boolean;
+			}
+		}
+
 		export namespace RegisterToken {
 			export const RequestPath = AppConfig.IAMUrl + '/Push/RegisterToken';
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));

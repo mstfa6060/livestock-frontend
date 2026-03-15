@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:sellmylivestock.com)"
+      "WebFetch(domain:sellmylivestock.com)",
+      "Read(//d/Projects/GlobalLivestock/mobil/**)"
+    ],
+    "additionalDirectories": [
+      "D:\\Projects\\GlobalLivestock\\mobil",
+      "\\tmp",
+      "d:\\tmp"
     ]
   }
 }
