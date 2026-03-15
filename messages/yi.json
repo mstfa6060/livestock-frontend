@@ -35,7 +35,9 @@
     "settings": "סעטטינגס",
     "logout": "אויסלאָגירן",
     "menu": "מעניו",
-    "language": "שפּראַך אויסוואַל"
+    "language": "שפּראַך אויסוואַל",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

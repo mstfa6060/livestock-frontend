@@ -35,7 +35,9 @@
     "settings": "Issettjar",
     "logout": "Oħroġ",
     "menu": "Menù",
-    "language": "L-għażla tal-lingwa"
+    "language": "L-għażla tal-lingwa",
+    "createListing": "Oħloq lista",
+    "sellNow": "Biegħ issa"
   },
   "auth": {
     "login": {

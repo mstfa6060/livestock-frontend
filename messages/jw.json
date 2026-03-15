@@ -35,7 +35,9 @@
     "settings": "Setelan",
     "logout": "Metu",
     "menu": "Menu",
-    "language": "Pilihan basa"
+    "language": "Pilihan basa",
+    "createListing": "Gawe iklan",
+    "sellNow": "Dol saiki"
   },
   "auth": {
     "login": {

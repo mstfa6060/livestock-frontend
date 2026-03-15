@@ -35,7 +35,9 @@
     "settings": "ဆက်တင်များ",
     "logout": "ထွက်ရန်",
     "menu": "မီနူး",
-    "language": "ဘာသာစကားရွေးချယ်မှု"
+    "language": "ဘာသာစကားရွေးချယ်မှု",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

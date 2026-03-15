@@ -35,7 +35,9 @@
     "settings": "Optiones",
     "logout": "Exire",
     "menu": "Index",
-    "language": "Selectio linguae"
+    "language": "Selectio linguae",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

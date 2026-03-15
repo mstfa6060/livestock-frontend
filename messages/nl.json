@@ -35,7 +35,9 @@
     "settings": "Instellingen",
     "logout": "Uitloggen",
     "menu": "Menu",
-    "language": "Taalselectie"
+    "language": "Taalselectie",
+    "createListing": "Advertentie maken",
+    "sellNow": "Nu verkopen"
   },
   "auth": {
     "login": {

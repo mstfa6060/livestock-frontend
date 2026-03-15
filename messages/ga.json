@@ -35,7 +35,9 @@
     "settings": "Socruithe",
     "logout": "Logáil Amach",
     "menu": "Roghchlár",
-    "language": "Rogha teanga"
+    "language": "Rogha teanga",
+    "createListing": "Cruthaigh liostáil",
+    "sellNow": "Díol anois"
   },
   "auth": {
     "login": {

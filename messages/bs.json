@@ -35,7 +35,9 @@
     "settings": "Postavke",
     "logout": "Odjava",
     "menu": "Meni",
-    "language": "Odabir jezika"
+    "language": "Odabir jezika",
+    "createListing": "Kreiraj oglas",
+    "sellNow": "Prodaj sada"
   },
   "auth": {
     "login": {

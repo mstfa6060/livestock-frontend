@@ -35,7 +35,9 @@
     "settings": "Mipangilio",
     "logout": "Toka",
     "menu": "Menyu",
-    "language": "Uteuzi wa lugha"
+    "language": "Uteuzi wa lugha",
+    "createListing": "Unda orodha",
+    "sellNow": "Uza sasa"
   },
   "auth": {
     "login": {

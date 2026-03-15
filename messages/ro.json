@@ -35,7 +35,9 @@
     "settings": "Setări",
     "logout": "Deconectare",
     "menu": "Meniu",
-    "language": "Selectarea limbii"
+    "language": "Selectarea limbii",
+    "createListing": "Creează anunț",
+    "sellNow": "Vinde acum"
   },
   "auth": {
     "login": {

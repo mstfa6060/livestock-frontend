@@ -35,7 +35,9 @@
     "settings": "Litlhophiso",
     "logout": "Tsoa",
     "menu": "Lenane la lijo",
-    "language": "Khetho ea puo"
+    "language": "Khetho ea puo",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

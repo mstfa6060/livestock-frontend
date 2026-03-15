@@ -35,7 +35,9 @@
     "settings": "Astellungen",
     "logout": "Ausloggen",
     "menu": "Menü",
-    "language": "Sproochauswiel"
+    "language": "Sproochauswiel",
+    "createListing": "Annonce erstellen",
+    "sellNow": "Elo verkafen"
   },
   "auth": {
     "login": {

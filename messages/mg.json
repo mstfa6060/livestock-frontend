@@ -35,7 +35,9 @@
     "settings": "Fikirana",
     "logout": "Hivoaka",
     "menu": "sakafo",
-    "language": "Fifidianana fiteny"
+    "language": "Fifidianana fiteny",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

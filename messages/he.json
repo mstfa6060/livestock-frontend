@@ -35,7 +35,9 @@
     "settings": "הגדרות",
     "logout": "התנתק",
     "menu": "תַפרִיט",
-    "language": "בחירת שפה"
+    "language": "בחירת שפה",
+    "createListing": "צור מודעה",
+    "sellNow": "מכור עכשיו"
   },
   "auth": {
     "login": {

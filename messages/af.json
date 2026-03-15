@@ -35,7 +35,9 @@
     "settings": "Instellings",
     "logout": "Meld af",
     "menu": "Kieslys",
-    "language": "Taalkeuse"
+    "language": "Taalkeuse",
+    "createListing": "Skep advertensie",
+    "sellNow": "Verkoop nou"
   },
   "auth": {
     "login": {

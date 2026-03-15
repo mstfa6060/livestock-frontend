@@ -35,7 +35,9 @@
     "settings": "Налады",
     "logout": "Выйсці",
     "menu": "Меню",
-    "language": "Выбар мовы"
+    "language": "Выбар мовы",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

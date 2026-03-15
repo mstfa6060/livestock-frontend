@@ -35,7 +35,9 @@
     "settings": "ਸੈਟਿੰਗਾਂ",
     "logout": "ਲਾਗ ਆਊਟ ਕਰੋ",
     "menu": "ਮੀਨੂ",
-    "language": "ਭਾਸ਼ਾ ਚੋਣ"
+    "language": "ਭਾਸ਼ਾ ਚੋਣ",
+    "createListing": "ਲਿਸਟਿੰਗ ਬਣਾਓ",
+    "sellNow": "ਹੁਣੇ ਵੇਚੋ"
   },
   "auth": {
     "login": {

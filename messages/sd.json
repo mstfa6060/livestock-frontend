@@ -35,7 +35,9 @@
     "settings": "سيٽنگون",
     "logout": "لاگ آئوٽ ڪريو",
     "menu": "مينيو",
-    "language": "ٻولي جي چونڊ"
+    "language": "ٻولي جي چونڊ",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

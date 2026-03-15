@@ -35,7 +35,9 @@
     "settings": "Zokonda",
     "logout": "Tulukani",
     "menu": "Menyu",
-    "language": "Kusankha zinenero"
+    "language": "Kusankha zinenero",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

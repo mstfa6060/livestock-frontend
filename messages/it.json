@@ -35,7 +35,9 @@
     "settings": "Impostazioni",
     "logout": "Disconnettiti",
     "menu": "Menu",
-    "language": "Selezione della lingua"
+    "language": "Selezione della lingua",
+    "createListing": "Crea annuncio",
+    "sellNow": "Vendi ora"
   },
   "auth": {
     "login": {

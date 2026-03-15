@@ -35,7 +35,9 @@
     "settings": "Setélan",
     "logout": "Kaluar",
     "menu": "Menu",
-    "language": "Pilihan basa"
+    "language": "Pilihan basa",
+    "createListing": "Jieun iklan",
+    "sellNow": "Jual ayeuna"
   },
   "auth": {
     "login": {

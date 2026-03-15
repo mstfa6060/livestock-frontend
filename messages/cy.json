@@ -35,7 +35,9 @@
     "settings": "Gosodiadau",
     "logout": "Allgofnodi",
     "menu": "Dewislen",
-    "language": "Dewis iaith"
+    "language": "Dewis iaith",
+    "createListing": "Creu hysbyseb",
+    "sellNow": "Gwerthu nawr"
   },
   "auth": {
     "login": {

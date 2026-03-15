@@ -35,7 +35,9 @@
     "settings": "설정",
     "logout": "로그아웃",
     "menu": "메뉴",
-    "language": "언어 선택"
+    "language": "언어 선택",
+    "createListing": "리스팅 만들기",
+    "sellNow": "지금 판매"
   },
   "auth": {
     "login": {

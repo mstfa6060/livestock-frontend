@@ -35,7 +35,9 @@
     "settings": "Beállítások",
     "logout": "Kijelentkezés",
     "menu": "Menü",
-    "language": "Nyelvválasztás"
+    "language": "Nyelvválasztás",
+    "createListing": "Hirdetés létrehozása",
+    "sellNow": "Eladni most"
   },
   "auth": {
     "login": {

@@ -35,7 +35,9 @@
     "settings": "Nustatymai",
     "logout": "Atsijungti",
     "menu": "Meniu",
-    "language": "Kalbos pasirinkimas"
+    "language": "Kalbos pasirinkimas",
+    "createListing": "Sukurti skelbimą",
+    "sellNow": "Parduoti dabar"
   },
   "auth": {
     "login": {

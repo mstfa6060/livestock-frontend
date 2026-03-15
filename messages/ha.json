@@ -35,7 +35,9 @@
     "settings": "Saituna",
     "logout": "Fita daga",
     "menu": "Menu",
-    "language": "Zaɓin harshe"
+    "language": "Zaɓin harshe",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

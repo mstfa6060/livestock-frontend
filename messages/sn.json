@@ -35,7 +35,9 @@
     "settings": "Zvirongwa",
     "logout": "Buda",
     "menu": "Menyu",
-    "language": "Kusarudzwa kwemitauro"
+    "language": "Kusarudzwa kwemitauro",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

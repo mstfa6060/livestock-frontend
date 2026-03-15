@@ -35,7 +35,9 @@
     "settings": "Pengaturan",
     "logout": "Keluar",
     "menu": "Menu",
-    "language": "Pemilihan bahasa"
+    "language": "Pemilihan bahasa",
+    "createListing": "Buat iklan",
+    "sellNow": "Jual sekarang"
   },
   "auth": {
     "login": {

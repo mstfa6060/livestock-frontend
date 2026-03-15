@@ -35,7 +35,9 @@
     "settings": "Sazlamalar",
     "logout": "Çykyş",
     "menu": "Menýu",
-    "language": "Dil saýlamak"
+    "language": "Dil saýlamak",
+    "createListing": "Bildiriş döret",
+    "sellNow": "Häzir sat"
   },
   "auth": {
     "login": {

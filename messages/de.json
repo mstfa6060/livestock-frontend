@@ -35,7 +35,9 @@
     "settings": "Einstellungen",
     "logout": "Abmelden",
     "menu": "Speisekarte",
-    "language": "Sprachauswahl"
+    "language": "Sprachauswahl",
+    "createListing": "Inserat erstellen",
+    "sellNow": "Jetzt verkaufen"
   },
   "auth": {
     "login": {

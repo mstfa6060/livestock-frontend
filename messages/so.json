@@ -35,7 +35,9 @@
     "settings": "Dejinta",
     "logout": "Ka bax",
     "menu": "Liiska",
-    "language": "Xulashada luqadda"
+    "language": "Xulashada luqadda",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

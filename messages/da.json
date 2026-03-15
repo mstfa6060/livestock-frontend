@@ -35,7 +35,9 @@
     "settings": "Indstillinger",
     "logout": "Log ud",
     "menu": "Menu",
-    "language": "Valg af sprog"
+    "language": "Valg af sprog",
+    "createListing": "Opret annonce",
+    "sellNow": "Sælg nu"
   },
   "auth": {
     "login": {

@@ -35,7 +35,9 @@
     "settings": "Izilungiselelo",
     "logout": "Phuma",
     "menu": "Imenyu",
-    "language": "Ukukhetha ulimi"
+    "language": "Ukukhetha ulimi",
+    "createListing": "Dala uhlu",
+    "sellNow": "Thengisa manje"
   },
   "auth": {
     "login": {

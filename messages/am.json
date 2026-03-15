@@ -35,7 +35,9 @@
     "settings": "ቅንብሮች",
     "logout": "ውጣ",
     "menu": "ምናሌ",
-    "language": "የቋንቋ ምርጫ"
+    "language": "የቋንቋ ምርጫ",
+    "createListing": "ዘርዝር ይፍጠሩ",
+    "sellNow": "አሁን ይሽጡ"
   },
   "auth": {
     "login": {

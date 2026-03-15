@@ -35,7 +35,9 @@
     "settings": "Ustawienia",
     "logout": "Wyloguj się",
     "menu": "Menu",
-    "language": "Wybór języka"
+    "language": "Wybór języka",
+    "createListing": "Utwórz ogłoszenie",
+    "sellNow": "Sprzedaj teraz"
   },
   "auth": {
     "login": {

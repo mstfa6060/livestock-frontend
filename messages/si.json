@@ -35,7 +35,9 @@
     "settings": "සැකසුම්",
     "logout": "ඉවත් වන්න",
     "menu": "මෙනුව",
-    "language": "භාෂා තේරීම"
+    "language": "භාෂා තේරීම",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

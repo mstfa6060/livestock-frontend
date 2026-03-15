@@ -35,7 +35,9 @@
     "settings": "ترتیبات",
     "logout": "لاگ آؤٹ کریں۔",
     "menu": "مینو",
-    "language": "زبان کا انتخاب"
+    "language": "زبان کا انتخاب",
+    "createListing": "اشتہار بنائیں",
+    "sellNow": "ابھی فروخت کریں"
   },
   "auth": {
     "login": {

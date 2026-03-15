@@ -35,7 +35,9 @@
     "settings": "Agordoj",
     "logout": "Elsaluti",
     "menu": "Menuo",
-    "language": "Lingvoselektado"
+    "language": "Lingvoselektado",
+    "createListing": "Krei anoncon",
+    "sellNow": "Vendu nun"
   },
   "auth": {
     "login": {

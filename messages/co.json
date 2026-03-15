@@ -35,7 +35,9 @@
     "settings": "Impostazioni",
     "logout": "Scunnettà si",
     "menu": "Menù",
-    "language": "Selezzione di a lingua"
+    "language": "Selezzione di a lingua",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

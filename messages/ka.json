@@ -35,7 +35,9 @@
     "settings": "პარამეტრები",
     "logout": "გასვლა",
     "menu": "მენიუ",
-    "language": "ენის შერჩევა"
+    "language": "ენის შერჩევა",
+    "createListing": "განცხადების შექმნა",
+    "sellNow": "გაყიდე ახლა"
   },
   "auth": {
     "login": {

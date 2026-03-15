@@ -35,7 +35,9 @@
     "settings": "Параметрлер",
     "logout": "Шығу",
     "menu": "Мәзір",
-    "language": "Тілді таңдау"
+    "language": "Тілді таңдау",
+    "createListing": "Жарнама жасау",
+    "sellNow": "Қазір сату"
   },
   "auth": {
     "login": {

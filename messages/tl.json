@@ -35,7 +35,9 @@
     "settings": "Mga Setting",
     "logout": "Mag-log out",
     "menu": "Menu",
-    "language": "Pagpili ng wika"
+    "language": "Pagpili ng wika",
+    "createListing": "Gumawa ng listahan",
+    "sellNow": "Ibenta na"
   },
   "auth": {
     "login": {

@@ -35,7 +35,9 @@
     "settings": "إعدادات",
     "logout": "تسجيل الخروج",
     "menu": "قائمة طعام",
-    "language": "اختيار اللغة"
+    "language": "اختيار اللغة",
+    "createListing": "إنشاء إعلان",
+    "sellNow": "بيع الآن"
   },
   "auth": {
     "login": {

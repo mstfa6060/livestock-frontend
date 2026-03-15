@@ -35,7 +35,9 @@
     "settings": "सेटिङहरू",
     "logout": "बाहिर निस्कनुहोस्",
     "menu": "मेनु",
-    "language": "भाषा चयन"
+    "language": "भाषा चयन",
+    "createListing": "सूची सिर्जना गर्नुहोस्",
+    "sellNow": "अहिले बेच्नुहोस्"
   },
   "auth": {
     "login": {

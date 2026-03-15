@@ -35,7 +35,9 @@
     "settings": "Cài đặt",
     "logout": "Đăng xuất",
     "menu": "Thực đơn",
-    "language": "Lựa chọn ngôn ngữ"
+    "language": "Lựa chọn ngôn ngữ",
+    "createListing": "Tạo tin đăng",
+    "sellNow": "Bán ngay"
   },
   "auth": {
     "login": {

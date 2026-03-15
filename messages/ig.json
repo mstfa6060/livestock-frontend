@@ -35,7 +35,9 @@
     "settings": "Ntọala",
     "logout": "Pụọ",
     "menu": "Ndepụta nri",
-    "language": "Nhọrọ asụsụ"
+    "language": "Nhọrọ asụsụ",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

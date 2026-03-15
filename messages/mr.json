@@ -35,7 +35,9 @@
     "settings": "सेटिंग्ज",
     "logout": "बाहेर पडा",
     "menu": "मेनू",
-    "language": "भाषा निवड"
+    "language": "भाषा निवड",
+    "createListing": "जाहिरात तयार करा",
+    "sellNow": "आता विका"
   },
   "auth": {
     "login": {

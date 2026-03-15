@@ -35,7 +35,9 @@
     "settings": "Asetukset",
     "logout": "Kirjaudu ulos",
     "menu": "Valikko",
-    "language": "Kielen valinta"
+    "language": "Kielen valinta",
+    "createListing": "Luo ilmoitus",
+    "sellNow": "Myy nyt"
   },
   "auth": {
     "login": {

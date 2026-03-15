@@ -35,7 +35,9 @@
     "settings": "Mîheng",
     "logout": "Derkeve",
     "menu": "Qerta xûrekê",
-    "language": "Hilbijartina ziman"
+    "language": "Hilbijartina ziman",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

@@ -35,7 +35,9 @@
     "settings": "Inställningar",
     "logout": "Logga ut",
     "menu": "Meny",
-    "language": "Språkval"
+    "language": "Språkval",
+    "createListing": "Skapa annons",
+    "sellNow": "Sälj nu"
   },
   "auth": {
     "login": {

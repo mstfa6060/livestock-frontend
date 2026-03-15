@@ -35,7 +35,9 @@
     "settings": "設定",
     "logout": "ログアウト",
     "menu": "メニュー",
-    "language": "言語選択"
+    "language": "言語選択",
+    "createListing": "出品する",
+    "sellNow": "今すぐ売る"
   },
   "auth": {
     "login": {

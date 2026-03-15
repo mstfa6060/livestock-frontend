@@ -35,7 +35,9 @@
     "settings": "ការកំណត់",
     "logout": "ចាកចេញ",
     "menu": "ម៉ឺនុយ",
-    "language": "ការជ្រើសរើសភាសា"
+    "language": "ការជ្រើសរើសភាសា",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

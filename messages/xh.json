@@ -35,7 +35,9 @@
     "settings": "Useto",
     "logout": "Phuma",
     "menu": "Imenyu",
-    "language": "Ukukhetha ulwimi"
+    "language": "Ukukhetha ulwimi",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

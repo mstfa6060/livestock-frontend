@@ -35,7 +35,9 @@
     "settings": "Cilësimet",
     "logout": "Dilni",
     "menu": "Menu",
-    "language": "Përzgjedhja e gjuhës"
+    "language": "Përzgjedhja e gjuhës",
+    "createListing": "Krijo një njoftim",
+    "sellNow": "Shit tani"
   },
   "auth": {
     "login": {

@@ -35,7 +35,9 @@
     "settings": "Mga Setting",
     "logout": "Pag-log out",
     "menu": "Menu",
-    "language": "Pagpili sa pinulongan"
+    "language": "Pagpili sa pinulongan",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

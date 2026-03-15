@@ -35,7 +35,9 @@
     "settings": "Parametrlər",
     "logout": "Çıxış",
     "menu": "Menyu",
-    "language": "Dil seçimi"
+    "language": "Dil seçimi",
+    "createListing": "Elan yarat",
+    "sellNow": "İndi sat"
   },
   "auth": {
     "login": {

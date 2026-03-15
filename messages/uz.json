@@ -35,7 +35,9 @@
     "settings": "Sozlamalar",
     "logout": "Chiqish",
     "menu": "Menyu",
-    "language": "Til tanlash"
+    "language": "Til tanlash",
+    "createListing": "E'lon yaratish",
+    "sellNow": "Hozir sotish"
   },
   "auth": {
     "login": {

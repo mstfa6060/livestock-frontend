@@ -35,7 +35,9 @@
     "settings": "การตั้งค่า",
     "logout": "ออกจากระบบ",
     "menu": "เมนู",
-    "language": "การเลือกภาษา"
+    "language": "การเลือกภาษา",
+    "createListing": "สร้างรายการ",
+    "sellNow": "ขายตอนนี้"
   },
   "auth": {
     "login": {

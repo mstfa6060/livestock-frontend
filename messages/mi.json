@@ -35,7 +35,9 @@
     "settings": "Ngā Tautuhinga",
     "logout": "Takiuru",
     "menu": "Tahua",
-    "language": "Kōwhiringa reo"
+    "language": "Kōwhiringa reo",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

@@ -35,7 +35,9 @@
     "settings": "امستنې",
     "logout": "وتل",
     "menu": "مینو",
-    "language": "د ژبې انتخاب"
+    "language": "د ژبې انتخاب",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

@@ -35,7 +35,9 @@
     "settings": "Тохиргоо",
     "logout": "Гарах",
     "menu": "Цэс",
-    "language": "Хэлний сонголт"
+    "language": "Хэлний сонголт",
+    "createListing": "Зар үүсгэх",
+    "sellNow": "Одоо зарах"
   },
   "auth": {
     "login": {

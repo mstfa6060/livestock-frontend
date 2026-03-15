@@ -35,7 +35,9 @@
     "settings": "Орнотуулар",
     "logout": "Чыгуу",
     "menu": "Меню",
-    "language": "Тил тандоо"
+    "language": "Тил тандоо",
+    "createListing": "Жарнама түзүү",
+    "sellNow": "Азыр сатуу"
   },
   "auth": {
     "login": {

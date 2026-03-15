@@ -35,7 +35,9 @@
     "settings": "Настройки",
     "logout": "Изход",
     "menu": "Меню",
-    "language": "Избор на език"
+    "language": "Избор на език",
+    "createListing": "Създай обява",
+    "sellNow": "Продай сега"
   },
   "auth": {
     "login": {

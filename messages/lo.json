@@ -35,7 +35,9 @@
     "settings": "ການຕັ້ງຄ່າ",
     "logout": "ອອກຈາກລະບົບ",
     "menu": "ເມນູ",
-    "language": "ການເລືອກພາສາ"
+    "language": "ການເລືອກພາສາ",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

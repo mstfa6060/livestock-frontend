@@ -35,7 +35,9 @@
     "settings": "Seaded",
     "logout": "Logi välja",
     "menu": "Menüü",
-    "language": "Keele valik"
+    "language": "Keele valik",
+    "createListing": "Loo kuulutus",
+    "sellNow": "Müü kohe"
   },
   "auth": {
     "login": {

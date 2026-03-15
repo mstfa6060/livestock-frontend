@@ -35,7 +35,9 @@
     "settings": "Configuración",
     "logout": "Pechar sesión",
     "menu": "Menú",
-    "language": "selección de idioma"
+    "language": "selección de idioma",
+    "createListing": "Crear anuncio",
+    "sellNow": "Vender agora"
   },
   "auth": {
     "login": {

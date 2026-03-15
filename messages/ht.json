@@ -35,7 +35,9 @@
     "settings": "Anviwònman",
     "logout": "Dekonekte",
     "menu": "Meni",
-    "language": "Seleksyon lang"
+    "language": "Seleksyon lang",
+    "createListing": "Kreye lis",
+    "sellNow": "Vann kounye a"
   },
   "auth": {
     "login": {

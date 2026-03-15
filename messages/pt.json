@@ -35,7 +35,9 @@
     "settings": "Configurações",
     "logout": "Sair",
     "menu": "Menu",
-    "language": "Seleção de idioma"
+    "language": "Seleção de idioma",
+    "createListing": "Criar anúncio",
+    "sellNow": "Vender agora"
   },
   "auth": {
     "login": {

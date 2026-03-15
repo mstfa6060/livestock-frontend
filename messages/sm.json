@@ -35,7 +35,9 @@
     "settings": "Fa'atulagaga",
     "logout": "Saini ese j",
     "menu": "Lisi o Mea'ai",
-    "language": "Filifiliga o gagana"
+    "language": "Filifiliga o gagana",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

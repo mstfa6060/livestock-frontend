@@ -35,7 +35,9 @@
     "settings": "Ezarpenak",
     "logout": "Saioa itxi",
     "menu": "Menua",
-    "language": "Hizkuntza hautatzea"
+    "language": "Hizkuntza hautatzea",
+    "createListing": "Iragarkia sortu",
+    "sellNow": "Saldu orain"
   },
   "auth": {
     "login": {

@@ -35,7 +35,9 @@
     "settings": "Roghainnean",
     "logout": "Log a-mach",
     "menu": "Clàr-taice",
-    "language": "Taghadh cànain"
+    "language": "Taghadh cànain",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

@@ -35,7 +35,9 @@
     "settings": "Nastavení",
     "logout": "Odhlásit se",
     "menu": "Menu",
-    "language": "Výběr jazyka"
+    "language": "Výběr jazyka",
+    "createListing": "Vytvořit inzerát",
+    "sellNow": "Prodat nyní"
   },
   "auth": {
     "login": {

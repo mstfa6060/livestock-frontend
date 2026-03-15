@@ -35,7 +35,9 @@
     "settings": "Iestatījumi",
     "logout": "Izrakstīties",
     "menu": "Izvēlne",
-    "language": "Valodas izvēle"
+    "language": "Valodas izvēle",
+    "createListing": "Izveidot sludinājumu",
+    "sellNow": "Pārdot tagad"
   },
   "auth": {
     "login": {

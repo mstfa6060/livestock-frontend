@@ -35,7 +35,9 @@
     "settings": "সেটিংস",
     "logout": "লগ আউট",
     "menu": "মেনু",
-    "language": "ভাষা নির্বাচন"
+    "language": "ভাষা নির্বাচন",
+    "createListing": "তালিকা তৈরি করুন",
+    "sellNow": "এখনই বিক্রি করুন"
   },
   "auth": {
     "login": {

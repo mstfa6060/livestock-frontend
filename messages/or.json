@@ -35,7 +35,9 @@
     "settings": "ସେଟିଂସ୍",
     "logout": "ଲଗ ଆଉଟ୍",
     "menu": "ମେନୁ",
-    "language": "ଭାଷା ଚୟନ"
+    "language": "ଭାଷା ଚୟନ",
+    "createListing": "Create Listing",
+    "sellNow": "Sell Now"
   },
   "auth": {
     "login": {

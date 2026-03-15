@@ -35,7 +35,9 @@
     "settings": "Ynstellings",
     "logout": "Útlogge",
     "menu": "Menu",
-    "language": "Taalseleksje"
+    "language": "Taalseleksje",
+    "createListing": "Advertinsje meitsje",
+    "sellNow": "No ferkeapje"
   },
   "auth": {
     "login": {

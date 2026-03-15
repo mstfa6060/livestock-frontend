@@ -35,7 +35,9 @@
     "settings": "Stillingar",
     "logout": "Útskráning",
     "menu": "Matseðill",
-    "language": "Tungumálaval"
+    "language": "Tungumálaval",
+    "createListing": "Búa til auðglýsingu",
+    "sellNow": "Selja núna"
   },
   "auth": {
     "login": {

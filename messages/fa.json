@@ -35,7 +35,9 @@
     "settings": "تنظیمات",
     "logout": "خروج",
     "menu": "منو",
-    "language": "انتخاب زبان"
+    "language": "انتخاب زبان",
+    "createListing": "ایجاد آگهی",
+    "sellNow": "الان بفروشید"
   },
   "auth": {
     "login": {
