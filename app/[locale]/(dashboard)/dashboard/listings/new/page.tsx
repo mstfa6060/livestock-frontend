@@ -25,7 +25,7 @@ import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { toast } from "sonner";
-import { useCategories } from "@/hooks/queries";
+import { useCategories, useCurrencies } from "@/hooks/queries";
 import { queryKeys } from "@/lib/query-keys";
 import { listingFormSchema, type ListingFormData } from "@/lib/validations";
 import dynamic from "next/dynamic";
@@ -53,6 +53,9 @@ export default function NewListingPage() {
 
   const { data: categoriesData } = useCategories(locale);
   const categories = (categoriesData ?? []).map((c) => ({ id: c.id, name: c.name, slug: c.slug }));
+
+  const { data: currenciesData } = useCurrencies();
+  const currencies = (currenciesData ?? []).filter((c: any) => c.isActive).sort((a: any, b: any) => a.code.localeCompare(b.code));
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -406,13 +409,15 @@ export default function NewListingPage() {
                       control={control}
                       render={({ field }) => (
                         <Select value={field.value} onValueChange={field.onChange}>
-                          <SelectTrigger className="w-24">
+                          <SelectTrigger className="w-28">
                             <SelectValue />
                           </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="TRY">TRY</SelectItem>
-                            <SelectItem value="USD">USD</SelectItem>
-                            <SelectItem value="EUR">EUR</SelectItem>
+                          <SelectContent className="max-h-60">
+                            {currencies.map((c: any) => (
+                              <SelectItem key={c.code} value={c.code}>
+                                {c.symbol} {c.code}
+                              </SelectItem>
+                            ))}
                           </SelectContent>
                         </Select>
                       )}

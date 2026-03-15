@@ -27,7 +27,7 @@ import { AppConfig } from "@/config/livestock-config";
 import { useAuth } from "@/contexts/AuthContext";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
 import { toast } from "sonner";
-import { useCategories, useProductDetail, useSellerByUserId } from "@/hooks/queries";
+import { useCategories, useCurrencies, useProductDetail, useSellerByUserId } from "@/hooks/queries";
 import { queryKeys } from "@/lib/query-keys";
 import { editListingFormSchema, type EditListingFormData } from "@/lib/validations";
 import dynamic from "next/dynamic";
@@ -65,6 +65,9 @@ export default function EditListingPage() {
   // Data fetching via React Query
   const { data: categoriesData } = useCategories(locale);
   const categories = (categoriesData ?? []).map((c) => ({ id: c.id, name: c.name, slug: c.slug }));
+
+  const { data: currenciesData } = useCurrencies();
+  const currencies = (currenciesData ?? []).filter((c: any) => c.isActive).sort((a: any, b: any) => a.code.localeCompare(b.code));
 
   const { data: product, isLoading: isProductLoading, isError: isProductError } = useProductDetail(productId);
 
@@ -454,9 +457,11 @@ export default function EditListingPage() {
                             <SelectValue />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="TRY">TRY</SelectItem>
-                            <SelectItem value="USD">USD</SelectItem>
-                            <SelectItem value="EUR">EUR</SelectItem>
+                            {currencies.map((c: any) => (
+                              <SelectItem key={c.code} value={c.code}>
+                                {c.symbol} {c.code}
+                              </SelectItem>
+                            ))}
                           </SelectContent>
                         </Select>
                       )}
