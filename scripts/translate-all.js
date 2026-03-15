@@ -289,6 +289,73 @@ async function translateSingle(langCode) {
     await translateToLanguage(langCode, languages[langCode]);
 }
 
+// Sadece eksik KEY'leri cevir (mevcut cevirilere dokunmaz)
+async function syncMissingKeys(targetLangCode) {
+    const sourceData = readSourceFile();
+    const flatSource = flattenObject(sourceData);
+    const sourceKeys = Object.keys(flatSource);
+
+    const targetLangs = targetLangCode
+        ? [[targetLangCode, languages[targetLangCode]]]
+        : Object.entries(languages).filter(([code]) => code !== 'tr');
+
+    let totalNewKeys = 0;
+
+    for (const [langCode, langName] of targetLangs) {
+        const targetFile = path.join(messagesDir, `${langCode}.json`);
+
+        // Hedef dosya yoksa komple cevir
+        if (!fs.existsSync(targetFile)) {
+            console.log(`\n${langCode.toUpperCase()} (${langName}) — dosya yok, komple cevriliyor...`);
+            await translateToLanguage(langCode, langName);
+            totalNewKeys += sourceKeys.length;
+            await new Promise(r => setTimeout(r, 500));
+            continue;
+        }
+
+        // Hedef dosyayi oku ve eksik key'leri bul
+        const targetData = JSON.parse(fs.readFileSync(targetFile, 'utf8'));
+        const flatTarget = flattenObject(targetData);
+
+        const missingKeys = sourceKeys.filter(k => !(k in flatTarget));
+
+        if (missingKeys.length === 0) {
+            console.log(`  ${langCode.toUpperCase()} (${langName}) — eksik key yok ✓`);
+            continue;
+        }
+
+        console.log(`\n${langCode.toUpperCase()} (${langName}) — ${missingKeys.length} eksik key cevriliyor...`);
+
+        // Sadece eksik key'lerin degerlerini cevir
+        const missingValues = missingKeys.map(k => flatSource[k]);
+        const translatedValues = await translateTexts(missingValues, langCode);
+
+        // Mevcut flat target'a eksik key'leri ekle
+        missingKeys.forEach((key, i) => {
+            flatTarget[key] = translatedValues[i];
+        });
+
+        // Kaynak dosyadaki key sirasini koru
+        const orderedFlat = {};
+        for (const key of sourceKeys) {
+            if (key in flatTarget) {
+                orderedFlat[key] = flatTarget[key];
+            }
+        }
+
+        // Nested yapiya donustur ve kaydet
+        const nested = unflattenObject(orderedFlat);
+        fs.writeFileSync(targetFile, JSON.stringify(nested, null, 2), 'utf8');
+
+        console.log(`  ${langCode}.json guncellendi (+${missingKeys.length} key)`);
+        totalNewKeys += missingKeys.length;
+
+        await new Promise(r => setTimeout(r, 300));
+    }
+
+    console.log(`\nToplam ${totalNewKeys} yeni key cevirildi.`);
+}
+
 // CLI
 const args = process.argv.slice(2);
 const command = args[0];
@@ -297,6 +364,8 @@ if (command === '--all') {
     translateAll().catch(console.error);
 } else if (command === '--missing') {
     translateMissing().catch(console.error);
+} else if (command === '--sync') {
+    syncMissingKeys(args[1]).catch(console.error);
 } else if (command && languages[command]) {
     translateSingle(command).catch(console.error);
 } else {
@@ -305,9 +374,11 @@ Livestock Trading - Ceviri Araci
 
 Kullanim:
   node translate-all.js --all       Tum dillere cevir (${Object.keys(languages).length - 1} dil)
-  node translate-all.js --missing   Sadece eksik dilleri cevir
-  node translate-all.js en          Sadece Ingilizce'ye cevir
-  node translate-all.js de          Sadece Almanca'ya cevir
+  node translate-all.js --missing   Sadece eksik dil DOSYALARINI cevir
+  node translate-all.js --sync      Tum dillerde eksik KEY'leri cevir (mevcut cevirilere dokunmaz)
+  node translate-all.js --sync en   Sadece Ingilizce'de eksik key'leri cevir
+  node translate-all.js en          Sadece Ingilizce'ye cevir (komple)
+  node translate-all.js de          Sadece Almanca'ya cevir (komple)
 
 Desteklenen diller:
   ${Object.entries(languages).map(([c, n]) => `${c}: ${n}`).join('\n  ')}

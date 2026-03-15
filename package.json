@@ -11,6 +11,7 @@
     "translate": "node scripts/translate-all.js",
     "translate:all": "node scripts/translate-all.js --all",
     "translate:missing": "node scripts/translate-all.js --missing",
+    "translate:sync": "node scripts/translate-all.js --sync",
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage"
