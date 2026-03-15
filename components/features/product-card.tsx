@@ -36,6 +36,9 @@ export interface Product {
   reviewCount: number;
   createdAt: Date;
   imageUrl?: string;
+  isFeatured?: boolean;
+  featuredUntil?: string;
+  boostScore?: number;
 }
 
 interface ProductCardProps {
@@ -66,6 +69,7 @@ const CONDITION_MAP: Record<number, string> = {
 
 export const ProductCard = memo(function ProductCard({ product, onFavorite, isFavorite = false }: ProductCardProps) {
   const t = useTranslations("products");
+  const tb = useTranslations("boost");
   const tpd = useTranslations("productDetail");
   const { user } = useAuth();
   const { isFavorite: isFavoriteCheck, toggleFavorite } = useFavoriteActions(user?.id ?? "");
@@ -110,12 +114,22 @@ export const ProductCard = memo(function ProductCard({ product, onFavorite, isFa
 
   // Check if we have a valid image URL
   const hasImage = product.imageUrl && product.imageUrl.length > 0;
+  const isFeaturedProduct = product.isFeatured || (product.boostScore != null && product.boostScore > 0);
 
   return (
     <Link href={`/products/${product.slug}`}>
-      <Card className="group overflow-hidden border hover:shadow-xl transition-all duration-300 h-full bg-card">
+      <Card className={`group overflow-hidden border hover:shadow-xl transition-all duration-300 h-full bg-card ${isFeaturedProduct ? "ring-1 ring-amber-300 dark:ring-amber-600 shadow-[0_0_8px_rgba(245,158,11,0.15)]" : ""}`}>
         {/* Image Container */}
         <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+          {/* Featured Badge */}
+          {isFeaturedProduct && (
+            <div className="absolute top-2 left-2 z-10">
+              <Badge className="bg-gradient-to-r from-amber-500 to-yellow-400 text-white border-0 shadow-md text-xs">
+                <Star className="w-3 h-3 mr-1 fill-current" />
+                {tb("featured")}
+              </Badge>
+            </div>
+          )}
           {hasImage ? (
             <Image
               src={product.imageUrl!}

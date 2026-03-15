@@ -141,6 +141,7 @@ export function useProductList(
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const response = await LivestockTradingAPI.Products.All.Request({
         countryCode: params.countryCode ?? "TR",
+        targetCurrencyCode: "",
         categoryId: params.categoryId || undefined,
         sorting: {
           key: params.sortBy ?? "createdAt",

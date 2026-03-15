@@ -60,6 +60,7 @@ export default function ModerationPage() {
     queryFn: async () => {
       const response = await LivestockTradingAPI.Products.All.Request({
         countryCode: "",
+        targetCurrencyCode: "",
         sorting: {
           key: "createdAt",
           direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,

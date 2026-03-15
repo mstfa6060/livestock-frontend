@@ -91,6 +91,7 @@ export default function SellerDetailPage() {
     queryFn: async () => {
       const response = await LivestockTradingAPI.Products.All.Request({
         countryCode: selectedCountry?.code || "",
+        targetCurrencyCode: "",
         sorting: {
           key: "createdAt",
           direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,

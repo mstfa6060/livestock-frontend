@@ -365,6 +365,7 @@ export default function SearchPage() {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const response = await LivestockTradingAPI.Products.All.Request({
           countryCode: selectedCountry?.code || "TR",
+          targetCurrencyCode: "",
           categoryId: categoryParam || undefined,
           sorting,
           filters,

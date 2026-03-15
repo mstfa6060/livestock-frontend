@@ -33,6 +33,7 @@ export default function FavoritesPage() {
       // Single batch request instead of N individual Detail calls
       const products = await LivestockTradingAPI.Products.All.Request({
         countryCode: "",
+        targetCurrencyCode: "",
         sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
         filters: [
           { key: "id", type: "guid", isUsed: true, values: productIds, min: {}, max: {}, conditionType: "equals" },

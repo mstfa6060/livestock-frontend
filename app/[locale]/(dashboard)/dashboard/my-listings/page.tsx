@@ -14,6 +14,7 @@ import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { getProductCoverImagesDirect } from "@/lib/product-images";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
+import { BoostPackageDialog } from "@/components/features/boost-package-dialog";
 import {
   Select,
   SelectContent,
@@ -37,7 +38,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { PlusCircle, MoreVertical, Pencil, Trash2, Eye, EyeOff } from "lucide-react";
+import { PlusCircle, MoreVertical, Pencil, Trash2, Eye, EyeOff, Zap, AlertTriangle, Info } from "lucide-react";
 
 const PAGE_SIZE = 20;
 
@@ -48,18 +49,35 @@ export default function MyListingsPage() {
   const t = useTranslations("myListings");
   const tn = useTranslations("dashboardNav");
   const tp = useTranslations("products");
+  const tb = useTranslations("boost");
   const { user } = useAuth();
   const queryClient = useQueryClient();
 
   const [statusFilter, setStatusFilter] = useState<ListingStatus>("all");
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [productToDelete, setProductToDelete] = useState<string | null>(null);
+  const [boostDialogOpen, setBoostDialogOpen] = useState(false);
+  const [boostProductId, setBoostProductId] = useState<string>("");
 
   // Fetch seller profile
   const { data: sellerData } = useSellerByUserId(user?.id ?? "", {
     enabled: !!user?.id,
   });
   const sellerId = sellerData?.id ?? null;
+
+  // Fetch seller subscription data
+  const { data: subscriptionData } = useQuery({
+    queryKey: ["sellerSubscription", sellerId],
+    queryFn: () => LivestockTradingAPI.SellerSubscriptions.Detail.Request({ sellerId: sellerId! }),
+    enabled: !!sellerId,
+  });
+
+  const remainingListings = subscriptionData?.remainingListings ?? -1;
+  const maxActiveListings = subscriptionData?.maxActiveListings ?? 0;
+  const currentActiveListings = subscriptionData?.currentActiveListings ?? 0;
+  const isLimitReached = remainingListings === 0;
+  const isLimitWarning = remainingListings > 0 && remainingListings <= 2;
+  const isUnlimited = remainingListings === -1;
 
   // Fetch listings for this seller
   const { data: listingsRaw = [], isLoading } = useQuery({
@@ -69,6 +87,7 @@ export default function MyListingsPage() {
 
       const response = await LivestockTradingAPI.Products.All.Request({
         countryCode: "",
+        targetCurrencyCode: "",
         sorting: { key: "createdAt", direction: 1 },
         filters: [
           {
@@ -220,11 +239,41 @@ export default function MyListingsPage() {
     }
   };
 
+  const handleBoostClick = (productId: string) => {
+    setBoostProductId(productId);
+    setBoostDialogOpen(true);
+  };
+
   return (
     <DashboardLayout title={t("title")} description={t("description")}>
+      {/* Listing Limit Warning Banners */}
+      {isLimitReached && (
+        <div className="flex items-center gap-3 p-4 mb-6 rounded-lg border border-red-200 bg-red-50 dark:border-red-800 dark:bg-red-950/30 text-red-800 dark:text-red-200">
+          <AlertTriangle className="h-5 w-5 shrink-0" />
+          <div className="flex-1">
+            <p className="text-sm font-medium">{tb("listingLimitReached")}</p>
+          </div>
+          <Button variant="destructive" size="sm" asChild>
+            <Link href="/dashboard/subscription">{tb("upgradePlan")}</Link>
+          </Button>
+        </div>
+      )}
+
+      {isLimitWarning && (
+        <div className="flex items-center gap-3 p-4 mb-6 rounded-lg border border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/30 text-amber-800 dark:text-amber-200">
+          <AlertTriangle className="h-5 w-5 shrink-0" />
+          <div className="flex-1">
+            <p className="text-sm font-medium">{tb("listingLimitWarning", { count: remainingListings })}</p>
+          </div>
+          <Button variant="outline" size="sm" asChild>
+            <Link href="/dashboard/subscription">{tb("upgradePlan")}</Link>
+          </Button>
+        </div>
+      )}
+
       {/* Actions Bar */}
       <div className="flex flex-col sm:flex-row justify-between gap-4 mb-6">
-        <div className="flex gap-2">
+        <div className="flex items-center gap-3">
           <Select
             value={statusFilter}
             onValueChange={(v) => setStatusFilter(v as ListingStatus)}
@@ -241,10 +290,18 @@ export default function MyListingsPage() {
               <SelectItem value="sold">{t("filters.sold")}</SelectItem>
             </SelectContent>
           </Select>
+
+          {/* Listing usage info */}
+          {!isUnlimited && subscriptionData && (
+            <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+              <Info className="h-3.5 w-3.5" />
+              <span>{tb("listingsUsed", { used: currentActiveListings, total: maxActiveListings })}</span>
+            </div>
+          )}
         </div>
 
-        <Button asChild>
-          <Link href="/dashboard/listings/new">
+        <Button asChild disabled={isLimitReached}>
+          <Link href={isLimitReached ? "#" : "/dashboard/listings/new"}>
             <PlusCircle className="h-4 w-4 mr-2" />
             {tn("newListing")}
           </Link>
@@ -261,8 +318,8 @@ export default function MyListingsPage() {
       ) : filteredListings.length === 0 ? (
         <div className="text-center py-16">
           <p className="text-muted-foreground text-lg mb-4">{t("noListings")}</p>
-          <Button asChild>
-            <Link href="/dashboard/listings/new">
+          <Button asChild disabled={isLimitReached}>
+            <Link href={isLimitReached ? "#" : "/dashboard/listings/new"}>
               <PlusCircle className="h-4 w-4 mr-2" />
               {t("createFirst")}
             </Link>
@@ -316,6 +373,13 @@ export default function MyListingsPage() {
                       {t("actions.edit")}
                     </Link>
                   </DropdownMenuItem>
+                  {/* Boost option for active listings */}
+                  {listing.status === 2 && (
+                    <DropdownMenuItem onClick={() => handleBoostClick(listing.id)}>
+                      <Zap className="h-4 w-4 mr-2 text-amber-500" />
+                      {tb("boostProduct")}
+                    </DropdownMenuItem>
+                  )}
                   {listing.status === 0 && (
                     <DropdownMenuItem onClick={() => handleToggleStatus(listing.id)}>
                       <Eye className="h-4 w-4 mr-2" />
@@ -362,6 +426,16 @@ export default function MyListingsPage() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      {/* Boost Package Dialog */}
+      {boostProductId && sellerId && (
+        <BoostPackageDialog
+          productId={boostProductId}
+          sellerId={sellerId}
+          open={boostDialogOpen}
+          onOpenChange={setBoostDialogOpen}
+        />
+      )}
     </DashboardLayout>
   );
 }

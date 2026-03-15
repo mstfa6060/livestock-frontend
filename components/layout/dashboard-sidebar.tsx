@@ -28,6 +28,8 @@ import {
   DollarSign,
   ClipboardPlus,
   Syringe,
+  CreditCard,
+  Zap,
 } from "lucide-react";
 import { useRoles } from "@/hooks/useRoles";
 import { Roles } from "@/constants/roles";
@@ -55,6 +57,8 @@ const menuItems: MenuItem[] = [
   { key: "locations", href: "/dashboard/locations", icon: MapPin },
   { key: "healthRecords", href: "/dashboard/health-records", icon: ClipboardPlus, requiredRoles: [Roles.Seller, Roles.Veterinarian] },
   { key: "vaccinations", href: "/dashboard/vaccinations", icon: Syringe, requiredRoles: [Roles.Seller, Roles.Veterinarian] },
+  { key: "subscription", href: "/dashboard/subscription", icon: CreditCard },
+  { key: "boosts", href: "/dashboard/boosts", icon: Zap, requiredRoles: [Roles.Seller] },
   { key: "becomeSeller", href: "/dashboard/become-seller", icon: Store },
   { key: "moderation", href: "/dashboard/moderation", icon: ShieldCheck, adminOnly: true },
   { key: "sellerModeration", href: "/dashboard/seller-moderation", icon: Store, adminOnly: true },

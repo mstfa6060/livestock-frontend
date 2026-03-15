@@ -126,6 +126,12 @@ export function MainHeader() {
             >
               {t("about")}
             </Link>
+            <Link
+              href="/pricing"
+              className="px-4 py-2 text-sm font-medium text-foreground/65 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+            >
+              {t("pricing")}
+            </Link>
           </nav>
 
           {/* Search + Mobile Menu */}
@@ -181,6 +187,13 @@ export function MainHeader() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {t("about")}
+                  </Link>
+                  <Link
+                    href="/pricing"
+                    className="text-lg font-medium"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {t("pricing")}
                   </Link>
 
                   <div className="border-t pt-4 mt-4">
