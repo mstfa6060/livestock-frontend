@@ -51,6 +51,8 @@ interface PlanFormData {
   id: string;
   name: string;
   description: string;
+  nameTranslations: string;
+  descriptionTranslations: string;
   targetType: number;
   tier: number;
   priceMonthly: number;
@@ -85,6 +87,8 @@ export default function SubscriptionPlansAdminPage() {
       id: plan.id,
       name: plan.name,
       description: plan.description || "",
+      nameTranslations: (plan as any).nameTranslations || "",
+      descriptionTranslations: (plan as any).descriptionTranslations || "",
       targetType: plan.targetType,
       tier: plan.tier,
       priceMonthly: Number(plan.priceMonthly) || 0,

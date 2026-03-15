@@ -50,6 +50,8 @@ interface PackageFormData {
   id: string;
   name: string;
   description: string;
+  nameTranslations: string;
+  descriptionTranslations: string;
   durationHours: number;
   price: number;
   currency: string;
@@ -76,6 +78,8 @@ export default function BoostPackagesAdminPage() {
       id: pkg.id,
       name: pkg.name,
       description: pkg.description || "",
+      nameTranslations: (pkg as any).nameTranslations || "",
+      descriptionTranslations: (pkg as any).descriptionTranslations || "",
       durationHours: pkg.durationHours,
       price: Number(pkg.price) || 0,
       currency: pkg.currency || "USD",
