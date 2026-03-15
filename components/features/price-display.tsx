@@ -2,6 +2,7 @@
 
 import { useLocale } from "next-intl";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
+import { useCurrencies } from "@/hooks/queries";
 
 interface PriceDisplayProps {
   price: number;
@@ -11,17 +12,6 @@ interface PriceDisplayProps {
   size?: "sm" | "md" | "lg";
   className?: string;
 }
-
-// TODO: Replace with live exchange rates from backend API when available.
-// These static rates are placeholder approximations only.
-const EXCHANGE_RATES: Record<string, number> = {
-  TRY: 1,
-  USD: 0.029,
-  EUR: 0.027,
-  GBP: 0.023,
-  AED: 0.11,
-  SAR: 0.11,
-};
 
 // Locale mapping for Intl.NumberFormat
 const LOCALE_MAP: Record<string, string> = {
@@ -56,35 +46,9 @@ function getFormatter(locale: string): Intl.NumberFormat {
   return formatter;
 }
 
-function formatPrice(amount: number, currency: string, locale: string = "tr"): string {
-  const symbols: Record<string, string> = {
-    TRY: "₺",
-    USD: "$",
-    EUR: "€",
-    GBP: "£",
-    AED: "د.إ",
-    SAR: "﷼",
-  };
-
-  const symbol = symbols[currency] || currency;
-  const formatted = getFormatter(locale).format(amount);
-
+function formatPrice(amount: number, symbol: string, locale: string = "tr"): string {
+  const formatted = getFormatter(locale).format(Math.round(amount));
   return `${symbol}${formatted}`;
-}
-
-function convertPrice(
-  amount: number,
-  fromCurrency: string,
-  toCurrency: string
-): number {
-  if (fromCurrency === toCurrency) return amount;
-
-  const fromRate = EXCHANGE_RATES[fromCurrency] || 1;
-  const toRate = EXCHANGE_RATES[toCurrency] || 1;
-
-  // Convert to TRY first, then to target currency
-  const inTRY = amount / fromRate;
-  return inTRY * toRate;
 }
 
 export function PriceDisplay({
@@ -97,16 +61,32 @@ export function PriceDisplay({
 }: PriceDisplayProps) {
   const locale = useLocale();
   const selectedCountry = useSelectedCountry();
-  const targetCurrency = selectedCountry?.defaultCurrencyCode || "TRY";
+  const { data: currenciesData } = useCurrencies();
+  const targetCurrency = selectedCountry?.defaultCurrencyCode || "USD";
+
+  const currencies = currenciesData ?? [];
+  const currencyMap = new Map(currencies.map((c: any) => [c.code, c]));
+
+  const sourceCurrencyInfo = currencyMap.get(currency);
+  const targetCurrencyInfo = currencyMap.get(targetCurrency);
+
+  const sourceSymbol = sourceCurrencyInfo?.symbol || currency;
+  const targetSymbol = targetCurrencyInfo?.symbol || targetCurrency;
 
   const displayPrice = discountedPrice ?? price;
   const hasDiscount = discountedPrice != null && discountedPrice < price;
 
-  // Convert to user's preferred currency if different
-  const convertedPrice =
-    currency !== targetCurrency
-      ? convertPrice(displayPrice, currency, targetCurrency)
-      : null;
+  // Convert to user's preferred currency using backend exchange rates
+  let convertedPrice: number | null = null;
+  if (
+    currency !== targetCurrency &&
+    sourceCurrencyInfo &&
+    targetCurrencyInfo &&
+    sourceCurrencyInfo.exchangeRateToUSD > 0
+  ) {
+    const amountInUSD = displayPrice / sourceCurrencyInfo.exchangeRateToUSD;
+    convertedPrice = amountInUSD * targetCurrencyInfo.exchangeRateToUSD;
+  }
 
   const sizeClasses = {
     sm: "text-sm",
@@ -125,7 +105,7 @@ export function PriceDisplay({
       <div className="flex items-baseline gap-2">
         {/* Main price */}
         <span className={`font-bold ${sizeClasses[size]}`}>
-          {formatPrice(displayPrice, currency, locale)}
+          {formatPrice(displayPrice, sourceSymbol, locale)}
         </span>
 
         {/* Original price if discounted */}
@@ -133,7 +113,7 @@ export function PriceDisplay({
           <span
             className={`text-muted-foreground line-through ${originalSizeClasses[size]}`}
           >
-            {formatPrice(price, currency, locale)}
+            {formatPrice(price, sourceSymbol, locale)}
           </span>
         )}
 
@@ -145,10 +125,10 @@ export function PriceDisplay({
         )}
       </div>
 
-      {/* Converted price */}
+      {/* Converted price in user's currency */}
       {convertedPrice !== null && (
         <span className="text-xs text-muted-foreground">
-          ≈ {formatPrice(convertedPrice, targetCurrency, locale)}
+          ≈ {formatPrice(convertedPrice, targetSymbol, locale)}
         </span>
       )}
     </div>
