@@ -37,7 +37,10 @@
     "menu": "Izvēlne",
     "language": "Valodas izvēle",
     "createListing": "Izveidot sludinājumu",
-    "sellNow": "Pārdot tagad"
+    "sellNow": "Pārdot tagad",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

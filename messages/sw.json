@@ -37,7 +37,10 @@
     "menu": "Menyu",
     "language": "Uteuzi wa lugha",
     "createListing": "Unda orodha",
-    "sellNow": "Uza sasa"
+    "sellNow": "Uza sasa",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

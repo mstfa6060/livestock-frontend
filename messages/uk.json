@@ -37,7 +37,10 @@
     "menu": "Меню",
     "language": "Вибір мови",
     "createListing": "Створити оголошення",
-    "sellNow": "Продати зараз"
+    "sellNow": "Продати зараз",
+    "searchLanguage": "Шукати мову...",
+    "searchCountry": "Шукати країну...",
+    "noResults": "Немає результатів"
   },
   "auth": {
     "login": {

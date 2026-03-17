@@ -37,7 +37,10 @@
     "menu": "Menü",
     "language": "Dil seçimi",
     "createListing": "İlan Oluştur",
-    "sellNow": "Hemen Sat"
+    "sellNow": "Hemen Sat",
+    "searchLanguage": "Dil ara...",
+    "searchCountry": "Ülke ara...",
+    "noResults": "Sonuç bulunamadı"
   },
   "auth": {
     "login": {

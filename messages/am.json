@@ -37,7 +37,10 @@
     "menu": "ምናሌ",
     "language": "የቋንቋ ምርጫ",
     "createListing": "ዘርዝር ይፍጠሩ",
-    "sellNow": "አሁን ይሽጡ"
+    "sellNow": "አሁን ይሽጡ",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

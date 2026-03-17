@@ -37,7 +37,10 @@
     "menu": "菜单",
     "language": "语言选择",
     "createListing": "创建列表",
-    "sellNow": "立即出售"
+    "sellNow": "立即出售",
+    "searchLanguage": "搜索语言...",
+    "searchCountry": "搜索国家...",
+    "noResults": "没有结果"
   },
   "auth": {
     "login": {

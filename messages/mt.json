@@ -37,7 +37,10 @@
     "menu": "Menù",
     "language": "L-għażla tal-lingwa",
     "createListing": "Oħloq lista",
-    "sellNow": "Biegħ issa"
+    "sellNow": "Biegħ issa",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

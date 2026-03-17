@@ -37,7 +37,10 @@
     "menu": "Menu",
     "language": "Përzgjedhja e gjuhës",
     "createListing": "Krijo një njoftim",
-    "sellNow": "Shit tani"
+    "sellNow": "Shit tani",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

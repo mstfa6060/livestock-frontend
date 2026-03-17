@@ -37,7 +37,10 @@
     "menu": "ಮೆನು",
     "language": "ಭಾಷೆಯ ಆಯ್ಕೆ",
     "createListing": "ಪಟ್ಟಿ ರಚಿಸಿ",
-    "sellNow": "ಈಗ ಮಾರಿ"
+    "sellNow": "ಈಗ ಮಾರಿ",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

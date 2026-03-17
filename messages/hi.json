@@ -37,7 +37,10 @@
     "menu": "मेनू",
     "language": "भाषा चयन",
     "createListing": "लिस्टिंग बनाएं",
-    "sellNow": "अभी बेचें"
+    "sellNow": "अभी बेचें",
+    "searchLanguage": "भाषा खोजें...",
+    "searchCountry": "देश खोजें...",
+    "noResults": "कोई परिणाम नहीं"
   },
   "auth": {
     "login": {

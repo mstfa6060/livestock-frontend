@@ -37,7 +37,10 @@
     "menu": "เมนู",
     "language": "การเลือกภาษา",
     "createListing": "สร้างรายการ",
-    "sellNow": "ขายตอนนี้"
+    "sellNow": "ขายตอนนี้",
+    "searchLanguage": "ค้นหาภาษา...",
+    "searchCountry": "ค้นหาประเทศ...",
+    "noResults": "ไม่พบผลลัพธ์"
   },
   "auth": {
     "login": {

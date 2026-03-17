@@ -37,7 +37,10 @@
     "menu": "Մենյու",
     "language": "Լեզվի ընտրություն",
     "createListing": "Ստեղծեմ հայտարարություն",
-    "sellNow": "Վաճառեմ հիմա"
+    "sellNow": "Վաճառեմ հիմա",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

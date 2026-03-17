@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,6 +28,7 @@ interface Country {
 const STORAGE_KEY = "selectedCountry";
 
 export function CountrySwitcher() {
+  const t = useTranslations("header");
   const { user } = useAuth();
   const { data: countries = [], isLoading } = useCountries();
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
@@ -112,7 +114,7 @@ export function CountrySwitcher() {
           <div className="relative">
             <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
             <Input
-              placeholder="Search country..."
+              placeholder={t("searchCountry")}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="h-8 pl-7 text-xs"
@@ -138,7 +140,7 @@ export function CountrySwitcher() {
           ))}
           {filteredCountries.length === 0 && (
             <div className="px-2 py-4 text-center text-xs text-muted-foreground">
-              No results
+              {t("noResults")}
             </div>
           )}
         </div>

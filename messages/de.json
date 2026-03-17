@@ -37,7 +37,10 @@
     "menu": "Speisekarte",
     "language": "Sprachauswahl",
     "createListing": "Inserat erstellen",
-    "sellNow": "Jetzt verkaufen"
+    "sellNow": "Jetzt verkaufen",
+    "searchLanguage": "Sprache suchen...",
+    "searchCountry": "Land suchen...",
+    "noResults": "Keine Ergebnisse"
   },
   "auth": {
     "login": {

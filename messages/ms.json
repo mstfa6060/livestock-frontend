@@ -37,7 +37,10 @@
     "menu": "Menu",
     "language": "Pemilihan bahasa",
     "createListing": "Buat iklan",
-    "sellNow": "Jual sekarang"
+    "sellNow": "Jual sekarang",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

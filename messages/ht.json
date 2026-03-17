@@ -37,7 +37,10 @@
     "menu": "Meni",
     "language": "Seleksyon lang",
     "createListing": "Kreye lis",
-    "sellNow": "Vann kounye a"
+    "sellNow": "Vann kounye a",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

@@ -37,7 +37,10 @@
     "menu": "Menüü",
     "language": "Keele valik",
     "createListing": "Loo kuulutus",
-    "sellNow": "Müü kohe"
+    "sellNow": "Müü kohe",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

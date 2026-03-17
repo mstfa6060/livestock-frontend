@@ -37,7 +37,10 @@
     "menu": "Valikko",
     "language": "Kielen valinta",
     "createListing": "Luo ilmoitus",
-    "sellNow": "Myy nyt"
+    "sellNow": "Myy nyt",
+    "searchLanguage": "Hae kieltä...",
+    "searchCountry": "Hae maata...",
+    "noResults": "Ei tuloksia"
   },
   "auth": {
     "login": {

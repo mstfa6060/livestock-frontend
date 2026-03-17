@@ -37,7 +37,10 @@
     "menu": "Roghchlár",
     "language": "Rogha teanga",
     "createListing": "Cruthaigh liostáil",
-    "sellNow": "Díol anois"
+    "sellNow": "Díol anois",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

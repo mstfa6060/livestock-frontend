@@ -37,7 +37,10 @@
     "menu": "Меню",
     "language": "Тил тандоо",
     "createListing": "Жарнама түзүү",
-    "sellNow": "Азыр сатуу"
+    "sellNow": "Азыр сатуу",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

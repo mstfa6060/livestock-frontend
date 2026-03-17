@@ -37,7 +37,10 @@
     "menu": "メニュー",
     "language": "言語選択",
     "createListing": "出品する",
-    "sellNow": "今すぐ売る"
+    "sellNow": "今すぐ売る",
+    "searchLanguage": "言語を検索...",
+    "searchCountry": "国を検索...",
+    "noResults": "結果なし"
   },
   "auth": {
     "login": {

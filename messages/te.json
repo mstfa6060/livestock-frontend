@@ -37,7 +37,10 @@
     "menu": "మెనూ",
     "language": "భాషా ఎంపిక",
     "createListing": "జాబితా సృష్టించండి",
-    "sellNow": "ఇప్పుడే అమ్మండి"
+    "sellNow": "ఇప్పుడే అమ్మండి",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

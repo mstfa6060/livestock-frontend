@@ -37,7 +37,10 @@
     "menu": "תַפרִיט",
     "language": "בחירת שפה",
     "createListing": "צור מודעה",
-    "sellNow": "מכור עכשיו"
+    "sellNow": "מכור עכשיו",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

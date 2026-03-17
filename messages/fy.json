@@ -37,7 +37,10 @@
     "menu": "Menu",
     "language": "Taalseleksje",
     "createListing": "Advertinsje meitsje",
-    "sellNow": "No ferkeapje"
+    "sellNow": "No ferkeapje",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

@@ -37,7 +37,10 @@
     "menu": "Menü",
     "language": "Nyelvválasztás",
     "createListing": "Hirdetés létrehozása",
-    "sellNow": "Eladni most"
+    "sellNow": "Eladni most",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

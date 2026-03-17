@@ -37,7 +37,10 @@
     "menu": "Dewislen",
     "language": "Dewis iaith",
     "createListing": "Creu hysbyseb",
-    "sellNow": "Gwerthu nawr"
+    "sellNow": "Gwerthu nawr",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

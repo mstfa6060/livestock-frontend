@@ -37,7 +37,10 @@
     "menu": "Menü",
     "language": "Sproochauswiel",
     "createListing": "Annonce erstellen",
-    "sellNow": "Elo verkafen"
+    "sellNow": "Elo verkafen",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

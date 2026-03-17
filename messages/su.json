@@ -37,7 +37,10 @@
     "menu": "Menu",
     "language": "Pilihan basa",
     "createListing": "Jieun iklan",
-    "sellNow": "Jual ayeuna"
+    "sellNow": "Jual ayeuna",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

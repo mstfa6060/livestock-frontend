@@ -37,7 +37,10 @@
     "menu": "मेनू",
     "language": "भाषा निवड",
     "createListing": "जाहिरात तयार करा",
-    "sellNow": "आता विका"
+    "sellNow": "आता विका",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

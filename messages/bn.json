@@ -37,7 +37,10 @@
     "menu": "মেনু",
     "language": "ভাষা নির্বাচন",
     "createListing": "তালিকা তৈরি করুন",
-    "sellNow": "এখনই বিক্রি করুন"
+    "sellNow": "এখনই বিক্রি করুন",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

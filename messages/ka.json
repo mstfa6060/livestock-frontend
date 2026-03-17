@@ -37,7 +37,10 @@
     "menu": "მენიუ",
     "language": "ენის შერჩევა",
     "createListing": "განცხადების შექმნა",
-    "sellNow": "გაყიდე ახლა"
+    "sellNow": "გაყიდე ახლა",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

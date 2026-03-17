@@ -37,7 +37,10 @@
     "menu": "Menýu",
     "language": "Dil saýlamak",
     "createListing": "Bildiriş döret",
-    "sellNow": "Häzir sat"
+    "sellNow": "Häzir sat",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

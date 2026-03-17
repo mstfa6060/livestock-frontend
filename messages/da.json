@@ -37,7 +37,10 @@
     "menu": "Menu",
     "language": "Valg af sprog",
     "createListing": "Opret annonce",
-    "sellNow": "Sælg nu"
+    "sellNow": "Sælg nu",
+    "searchLanguage": "Søg sprog...",
+    "searchCountry": "Søg land...",
+    "noResults": "Ingen resultater"
   },
   "auth": {
     "login": {

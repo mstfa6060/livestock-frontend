@@ -37,7 +37,10 @@
     "menu": "Menyu",
     "language": "Til tanlash",
     "createListing": "E'lon yaratish",
-    "sellNow": "Hozir sotish"
+    "sellNow": "Hozir sotish",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

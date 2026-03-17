@@ -37,7 +37,10 @@
     "menu": "Meni",
     "language": "Odabir jezika",
     "createListing": "Kreiraj oglas",
-    "sellNow": "Prodaj sada"
+    "sellNow": "Prodaj sada",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

@@ -37,7 +37,10 @@
     "menu": "ਮੀਨੂ",
     "language": "ਭਾਸ਼ਾ ਚੋਣ",
     "createListing": "ਲਿਸਟਿੰਗ ਬਣਾਓ",
-    "sellNow": "ਹੁਣੇ ਵੇਚੋ"
+    "sellNow": "ਹੁਣੇ ਵੇਚੋ",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

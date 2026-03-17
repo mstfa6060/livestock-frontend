@@ -37,7 +37,10 @@
     "menu": "Мени",
     "language": "Избор језика",
     "createListing": "Креирај оглас",
-    "sellNow": "Продај сада"
+    "sellNow": "Продај сада",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

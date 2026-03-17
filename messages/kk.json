@@ -37,7 +37,10 @@
     "menu": "Мәзір",
     "language": "Тілді таңдау",
     "createListing": "Жарнама жасау",
-    "sellNow": "Қазір сату"
+    "sellNow": "Қазір сату",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

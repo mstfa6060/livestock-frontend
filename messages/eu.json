@@ -37,7 +37,10 @@
     "menu": "Menua",
     "language": "Hizkuntza hautatzea",
     "createListing": "Iragarkia sortu",
-    "sellNow": "Saldu orain"
+    "sellNow": "Saldu orain",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

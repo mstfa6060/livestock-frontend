@@ -37,7 +37,10 @@
     "menu": "மெனு",
     "language": "மொழி தேர்வு",
     "createListing": "பட்டியலை உருவாக்கு",
-    "sellNow": "இப்போதே விற்கு"
+    "sellNow": "இப்போதே விற்கு",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

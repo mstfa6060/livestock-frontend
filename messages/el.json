@@ -37,7 +37,10 @@
     "menu": "Μενού",
     "language": "Επιλογή γλώσσας",
     "createListing": "Δημιουργία αγγελίας",
-    "sellNow": "Πώλησε τώρα"
+    "sellNow": "Πώλησε τώρα",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

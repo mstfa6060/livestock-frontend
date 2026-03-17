@@ -37,7 +37,10 @@
     "menu": "메뉴",
     "language": "언어 선택",
     "createListing": "리스팅 만들기",
-    "sellNow": "지금 판매"
+    "sellNow": "지금 판매",
+    "searchLanguage": "언어 검색...",
+    "searchCountry": "국가 검색...",
+    "noResults": "결과 없음"
   },
   "auth": {
     "login": {

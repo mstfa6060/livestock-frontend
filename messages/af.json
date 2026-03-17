@@ -37,7 +37,10 @@
     "menu": "Kieslys",
     "language": "Taalkeuse",
     "createListing": "Skep advertensie",
-    "sellNow": "Verkoop nou"
+    "sellNow": "Verkoop nou",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

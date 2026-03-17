@@ -37,7 +37,10 @@
     "menu": "മെനു",
     "language": "ഭാഷാ തിരഞ്ഞെടുപ്പ്",
     "createListing": "ലിസ്റ്റിംഗ് സൃഷ്ടിക്കുക",
-    "sellNow": "ഇപ്പോള്‍ വില്‍ക്കുക"
+    "sellNow": "ഇപ്പോള്‍ വില്‍ക്കുക",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

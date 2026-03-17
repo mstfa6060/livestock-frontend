@@ -37,7 +37,10 @@
     "menu": "Цэс",
     "language": "Хэлний сонголт",
     "createListing": "Зар үүсгэх",
-    "sellNow": "Одоо зарах"
+    "sellNow": "Одоо зарах",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

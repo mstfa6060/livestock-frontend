@@ -37,7 +37,10 @@
     "menu": "Meny",
     "language": "Språkval",
     "createListing": "Skapa annons",
-    "sellNow": "Sälj nu"
+    "sellNow": "Sälj nu",
+    "searchLanguage": "Sök språk...",
+    "searchCountry": "Sök land...",
+    "noResults": "Inga resultat"
   },
   "auth": {
     "login": {

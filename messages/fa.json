@@ -37,7 +37,10 @@
     "menu": "منو",
     "language": "انتخاب زبان",
     "createListing": "ایجاد آگهی",
-    "sellNow": "الان بفروشید"
+    "sellNow": "الان بفروشید",
+    "searchLanguage": "جستجوی زبان...",
+    "searchCountry": "جستجوی کشور...",
+    "noResults": "نتیجه‌ای یافت نشد"
   },
   "auth": {
     "login": {

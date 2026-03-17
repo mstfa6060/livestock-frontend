@@ -37,7 +37,10 @@
     "menu": "Menú",
     "language": "Selecció d'idioma",
     "createListing": "Crear anunci",
-    "sellNow": "Vendre ara"
+    "sellNow": "Vendre ara",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

@@ -37,7 +37,10 @@
     "menu": "මෙනුව",
     "language": "භාෂා තේරීම",
     "createListing": "Create Listing",
-    "sellNow": "Sell Now"
+    "sellNow": "Sell Now",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

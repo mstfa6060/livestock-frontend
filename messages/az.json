@@ -37,7 +37,10 @@
     "menu": "Menyu",
     "language": "Dil seçimi",
     "createListing": "Elan yarat",
-    "sellNow": "İndi sat"
+    "sellNow": "İndi sat",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

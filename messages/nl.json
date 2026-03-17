@@ -37,7 +37,10 @@
     "menu": "Menu",
     "language": "Taalselectie",
     "createListing": "Advertentie maken",
-    "sellNow": "Nu verkopen"
+    "sellNow": "Nu verkopen",
+    "searchLanguage": "Taal zoeken...",
+    "searchCountry": "Land zoeken...",
+    "noResults": "Geen resultaten"
   },
   "auth": {
     "login": {

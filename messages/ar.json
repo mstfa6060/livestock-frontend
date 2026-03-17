@@ -37,7 +37,10 @@
     "menu": "قائمة طعام",
     "language": "اختيار اللغة",
     "createListing": "إنشاء إعلان",
-    "sellNow": "بيع الآن"
+    "sellNow": "بيع الآن",
+    "searchLanguage": "البحث عن لغة...",
+    "searchCountry": "البحث عن بلد...",
+    "noResults": "لا توجد نتائج"
   },
   "auth": {
     "login": {

@@ -37,7 +37,10 @@
     "menu": "Menu",
     "language": "Pagpili ng wika",
     "createListing": "Gumawa ng listahan",
-    "sellNow": "Ibenta na"
+    "sellNow": "Ibenta na",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

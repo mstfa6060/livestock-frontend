@@ -37,7 +37,10 @@
     "menu": "Matseðill",
     "language": "Tungumálaval",
     "createListing": "Búa til auðglýsingu",
-    "sellNow": "Selja núna"
+    "sellNow": "Selja núna",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

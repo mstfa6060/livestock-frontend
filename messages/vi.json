@@ -37,7 +37,10 @@
     "menu": "Thực đơn",
     "language": "Lựa chọn ngôn ngữ",
     "createListing": "Tạo tin đăng",
-    "sellNow": "Bán ngay"
+    "sellNow": "Bán ngay",
+    "searchLanguage": "Tìm ngôn ngữ...",
+    "searchCountry": "Tìm quốc gia...",
+    "noResults": "Không có kết quả"
   },
   "auth": {
     "login": {

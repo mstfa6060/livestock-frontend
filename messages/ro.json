@@ -37,7 +37,10 @@
     "menu": "Meniu",
     "language": "Selectarea limbii",
     "createListing": "Creează anunț",
-    "sellNow": "Vinde acum"
+    "sellNow": "Vinde acum",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

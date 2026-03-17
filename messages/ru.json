@@ -37,7 +37,10 @@
     "menu": "Меню",
     "language": "Выбор языка",
     "createListing": "Создать объявление",
-    "sellNow": "Продать сейчас"
+    "sellNow": "Продать сейчас",
+    "searchLanguage": "Поиск языка...",
+    "searchCountry": "Поиск страны...",
+    "noResults": "Нет результатов"
   },
   "auth": {
     "login": {

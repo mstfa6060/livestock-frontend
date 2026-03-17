@@ -37,7 +37,10 @@
     "menu": "Imenyu",
     "language": "Ukukhetha ulimi",
     "createListing": "Dala uhlu",
-    "sellNow": "Thengisa manje"
+    "sellNow": "Thengisa manje",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

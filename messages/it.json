@@ -37,7 +37,10 @@
     "menu": "Menu",
     "language": "Selezione della lingua",
     "createListing": "Crea annuncio",
-    "sellNow": "Vendi ora"
+    "sellNow": "Vendi ora",
+    "searchLanguage": "Cerca lingua...",
+    "searchCountry": "Cerca paese...",
+    "noResults": "Nessun risultato"
   },
   "auth": {
     "login": {

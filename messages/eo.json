@@ -37,7 +37,10 @@
     "menu": "Menuo",
     "language": "Lingvoselektado",
     "createListing": "Krei anoncon",
-    "sellNow": "Vendu nun"
+    "sellNow": "Vendu nun",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

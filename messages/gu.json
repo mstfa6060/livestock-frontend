@@ -37,7 +37,10 @@
     "menu": "મેનુ",
     "language": "ભાષા પસંદગી",
     "createListing": "યાદી બનાવો",
-    "sellNow": "હવે વેચો"
+    "sellNow": "હવે વેચો",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

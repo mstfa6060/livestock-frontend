@@ -37,7 +37,10 @@
     "menu": "مینو",
     "language": "زبان کا انتخاب",
     "createListing": "اشتہار بنائیں",
-    "sellNow": "ابھی فروخت کریں"
+    "sellNow": "ابھی فروخت کریں",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {

@@ -37,7 +37,10 @@
     "menu": "Menu",
     "language": "Výběr jazyka",
     "createListing": "Vytvořit inzerát",
-    "sellNow": "Prodat nyní"
+    "sellNow": "Prodat nyní",
+    "searchLanguage": "Search language...",
+    "searchCountry": "Search country...",
+    "noResults": "No results"
   },
   "auth": {
     "login": {
