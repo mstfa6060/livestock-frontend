@@ -32,7 +32,7 @@ async function fetchCoverImageUrl(mediaBucketId?: string, coverImageFileId?: str
     });
     if (!res.ok) return undefined;
     const data = await res.json();
-    const files = data?.data?.files ?? data?.files ?? [];
+    const files = data?.payload?.files ?? data?.data?.files ?? data?.files ?? [];
     const coverFile = coverImageFileId
       ? files.find((f: Record<string, unknown>) => f.id === coverImageFileId)
       : files[0];
@@ -87,7 +87,7 @@ export async function generateMetadata({
     },
     other: {
       "product:price:amount": String(product.basePrice ?? ""),
-      "product:price:currency": product.currency || "TRY",
+      "product:price:currency": product.currency || "USD",
       ...(product.isInStock != null && {
         "product:availability": product.isInStock ? "in stock" : "out of stock",
       }),
@@ -113,10 +113,8 @@ export default async function ProductDetailLayout({
 
   if (!product) return children;
 
-  const url =
-    locale === "en"
-      ? `${BASE_URL}/products/${slug}`
-      : `${BASE_URL}/${locale}/products/${slug}`;
+  const prefix = locale === defaultLocale ? "" : `/${locale}`;
+  const url = `${BASE_URL}${prefix}/products/${slug}`;
 
   const coverImage = await fetchCoverImageUrl(product.mediaBucketId, product.coverImageFileId);
 
@@ -140,7 +138,7 @@ export default async function ProductDetailLayout({
         description={product.shortDescription || product.description?.slice(0, 300) || ""}
         image={coverImage}
         price={product.basePrice}
-        currency={product.currency || "TRY"}
+        currency={product.currency || "USD"}
         availability={availability as "InStock" | "OutOfStock" | "SoldOut"}
         url={url}
         seller={product.sellerName ? { name: product.sellerName } : undefined}
