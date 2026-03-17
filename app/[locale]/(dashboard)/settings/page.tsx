@@ -221,8 +221,8 @@ export default function SettingsPage() {
 
     try {
       await IAMAPI.Users.Delete.Request({
-        userId: user.id,
-        isDeleted: true,
+        password: deletePassword,
+        reason: deleteReason || "",
       });
 
       toast.success(td("success"));
