@@ -371,6 +371,7 @@ export default function ProductsPage() {
         query: "",
         countryCode: selectedCountry?.code || "TR",
         city: "",
+        viewerCurrencyCode: selectedCountry?.defaultCurrencyCode || "",
         categoryId: resolvedCategoryId || undefined,
         condition: conditionParam !== "all" ? CONDITION_MAP[conditionParam] : undefined,
         minPrice: minPriceParam ? parseFloat(minPriceParam) : undefined,

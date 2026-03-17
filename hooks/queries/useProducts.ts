@@ -10,6 +10,7 @@ interface ProductSearchParams {
   countryCode?: string;
   city?: string;
   currency?: string;
+  targetCurrencyCode?: string;
   sortBy?: string;
   sortDirection?: number;
   categoryId?: string;
@@ -83,6 +84,7 @@ export function useProductSearch(params: ProductSearchParams) {
         query: params.query ?? "",
         countryCode: params.countryCode ?? "TR",
         city: params.city ?? "",
+        viewerCurrencyCode: params.targetCurrencyCode ?? "",
         sorting: {
           key: params.sortBy ?? "createdAt",
           direction:
@@ -184,7 +186,7 @@ export function useProductDetail(
     queryFn: () =>
       LivestockTradingAPI.Products.Detail.Request({
         id: productId,
-        viewerCurrencyCode: options?.viewerCurrencyCode,
+        viewerCurrencyCode: options?.viewerCurrencyCode ?? "",
       }),
     enabled: (options?.enabled ?? true) && !!productId,
   });
