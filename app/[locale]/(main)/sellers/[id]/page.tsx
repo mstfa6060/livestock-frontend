@@ -94,7 +94,7 @@ export default function SellerDetailPage() {
     queryFn: async () => {
       const response = await LivestockTradingAPI.Products.All.Request({
         countryCode: selectedCountry?.code || "",
-        targetCurrencyCode: "",
+        targetCurrencyCode: selectedCountry?.defaultCurrencyCode || "",
         sorting: {
           key: "createdAt",
           direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
@@ -140,6 +140,10 @@ export default function SellerDetailPage() {
         reviewCount: item.reviewCount,
         createdAt: item.createdAt,
         imageUrl: (item as unknown as Record<string, unknown>).coverImageUrl ? `${AppConfig.FileStorageBaseUrl}${(item as unknown as Record<string, unknown>).coverImageUrl as string}` : undefined,
+        convertedPrice: item.convertedPrice as number | undefined,
+        convertedDiscountedPrice: item.convertedDiscountedPrice as number | undefined,
+        convertedCurrencyCode: item.convertedCurrencyCode || undefined,
+        convertedCurrencySymbol: item.convertedCurrencySymbol || undefined,
       }));
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any

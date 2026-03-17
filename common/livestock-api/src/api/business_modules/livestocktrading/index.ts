@@ -3620,6 +3620,7 @@ export namespace LivestockTradingAPI {
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
 				id: Guid;
+				viewerCurrencyCode?: string;
 			}
 			export interface IResponseModel {
 				id: Guid;
@@ -3664,6 +3665,10 @@ export namespace LivestockTradingAPI {
 				updatedAt?: Date;
 				mediaBucketId: string;
 				coverImageFileId: string;
+				viewerPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				viewerDiscountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				viewerCurrencyCode: string;
+				viewerCurrencySymbol: string;
 			}
 		}
 
@@ -3726,6 +3731,7 @@ export namespace LivestockTradingAPI {
 				countryCode: string;
 				categoryId?: Guid;
 				targetCurrencyCode: string;
+				viewerCurrencyCode?: string;
 				sorting: IXSorting;
 				filters: IXFilterItem[];
 				pageRequest: IXPageRequest;
@@ -3778,6 +3784,10 @@ export namespace LivestockTradingAPI {
 				convertedDiscountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
 				convertedCurrencyCode: string;
 				convertedCurrencySymbol: string;
+				viewerPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				viewerDiscountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				viewerCurrencyCode: string;
+				viewerCurrencySymbol: string;
 			}
 		}
 

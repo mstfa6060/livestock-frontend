@@ -39,6 +39,16 @@ export interface Product {
   isFeatured?: boolean;
   featuredUntil?: string;
   boostScore?: number;
+  // Converted price from backend (exchange-rate based)
+  convertedPrice?: number | null;
+  convertedDiscountedPrice?: number | null;
+  convertedCurrencyCode?: string;
+  convertedCurrencySymbol?: string;
+  // Viewer price from backend (pre-computed ProductPrice based)
+  viewerPrice?: number | null;
+  viewerDiscountedPrice?: number | null;
+  viewerCurrencyCode?: string;
+  viewerCurrencySymbol?: string;
 }
 
 interface ProductCardProps {
@@ -196,6 +206,10 @@ export const ProductCard = memo(function ProductCard({ product, onFavorite, isFa
             price={product.basePrice}
             currency={product.currency}
             discountedPrice={product.discountedPrice}
+            convertedPrice={product.convertedPrice}
+            convertedDiscountedPrice={product.convertedDiscountedPrice}
+            convertedCurrencyCode={product.convertedCurrencyCode}
+            convertedCurrencySymbol={product.convertedCurrencySymbol}
             size="md"
             className="mb-3"
           />

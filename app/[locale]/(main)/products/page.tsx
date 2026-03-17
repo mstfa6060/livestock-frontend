@@ -327,6 +327,9 @@ export default function ProductsPage() {
     return map[sort];
   };
 
+  // Viewer's target currency from selected country
+  const viewerCurrencyCode = selectedCountry?.defaultCurrencyCode || "";
+
   // Transform search result to Product
   const transformResult = (item: LivestockTradingAPI.Products.Search.IResponseModel): Product => ({
     id: item.id,

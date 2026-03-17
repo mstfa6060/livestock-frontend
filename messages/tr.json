@@ -1916,5 +1916,11 @@
     "minutesAgo": "{count} dakika önce",
     "hoursAgo": "{count} saat önce",
     "daysAgo": "{count} gün önce"
+  },
+  "pricing": {
+    "originalPrice": "Orijinal fiyat",
+    "convertedPrice": "Dönüştürülmüş fiyat",
+    "approximatePrice": "Güncel döviz kuruna göre yaklaşık dönüşüm",
+    "approximate": "≈"
   }
 }

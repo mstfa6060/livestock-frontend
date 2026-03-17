@@ -46,6 +46,7 @@ import { queryKeys } from "@/lib/query-keys";
 import { useProductList } from "@/hooks/queries/useProducts";
 import { useSellerDetail } from "@/hooks/queries/useSellers";
 import { useMediaBucket } from "@/hooks/queries/useProductSubresources";
+import { useSelectedCountry } from "@/components/layout/country-switcher";
 
 interface ProductDetail {
   id: string;
@@ -84,6 +85,11 @@ interface ProductDetail {
   publishedAt?: Date;
   createdAt: Date;
   mediaBucketId?: string;
+  // Viewer currency price from backend
+  viewerPrice?: number;
+  viewerDiscountedPrice?: number;
+  viewerCurrencyCode?: string;
+  viewerCurrencySymbol?: string;
 }
 
 const CONDITION_MAP: Record<number, string> = {
@@ -102,6 +108,8 @@ export default function ProductDetailPage() {
   const locale = useLocale();
   const router = useRouter();
   const { user } = useAuth();
+  const selectedCountry = useSelectedCountry();
+  const viewerCurrencyCode = selectedCountry?.defaultCurrencyCode || "";
   const { toggleFavorite, isFavorite: checkIsFavorite } = useFavoriteActions(user?.id ?? "");
 
   const isGuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(slug);
@@ -119,10 +127,11 @@ export default function ProductDetailPage() {
     isLoading: isProductLoading,
     error: productError,
   } = useQuery({
-    queryKey: queryKeys.products.detail(resolvedId ?? ""),
+    queryKey: [...queryKeys.products.detail(resolvedId ?? ""), viewerCurrencyCode],
     queryFn: async () => {
       const response = await LivestockTradingAPI.Products.Detail.Request({
         id: resolvedId!,
+        viewerCurrencyCode: viewerCurrencyCode || undefined,
       });
 
       return {
@@ -162,6 +171,10 @@ export default function ProductDetailPage() {
         publishedAt: response.publishedAt,
         createdAt: response.createdAt,
         mediaBucketId: (response as unknown as Record<string, unknown>).mediaBucketId as string | undefined,
+        viewerPrice: response.viewerPrice as number | undefined,
+        viewerDiscountedPrice: response.viewerDiscountedPrice as number | undefined,
+        viewerCurrencyCode: response.viewerCurrencyCode || undefined,
+        viewerCurrencySymbol: response.viewerCurrencySymbol || undefined,
       } satisfies ProductDetail;
     },
     enabled: !!resolvedId,
@@ -396,6 +409,10 @@ export default function ProductDetailPage() {
                 price={product.basePrice}
                 currency={product.currency}
                 discountedPrice={product.discountedPrice}
+                convertedPrice={product.viewerPrice}
+                convertedDiscountedPrice={product.viewerDiscountedPrice}
+                convertedCurrencyCode={product.viewerCurrencyCode}
+                convertedCurrencySymbol={product.viewerCurrencySymbol}
                 size="lg"
                 className="mb-4"
               />
@@ -486,6 +503,10 @@ export default function ProductDetailPage() {
                   price={product.basePrice}
                   currency={product.currency}
                   discountedPrice={product.discountedPrice}
+                  convertedPrice={product.viewerPrice}
+                  convertedDiscountedPrice={product.viewerDiscountedPrice}
+                  convertedCurrencyCode={product.viewerCurrencyCode}
+                  convertedCurrencySymbol={product.viewerCurrencySymbol}
                   size="lg"
                   className="mb-4"
                 />

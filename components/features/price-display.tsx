@@ -11,6 +11,11 @@ interface PriceDisplayProps {
   showOriginal?: boolean;
   size?: "sm" | "md" | "lg";
   className?: string;
+  /** Backend-provided converted price (exchange-rate based or viewer price) */
+  convertedPrice?: number | null;
+  convertedDiscountedPrice?: number | null;
+  convertedCurrencyCode?: string;
+  convertedCurrencySymbol?: string;
 }
 
 // Locale mapping for Intl.NumberFormat
@@ -58,6 +63,10 @@ export function PriceDisplay({
   showOriginal = true,
   size = "md",
   className = "",
+  convertedPrice: backendConvertedPrice,
+  convertedDiscountedPrice: backendConvertedDiscountedPrice,
+  convertedCurrencyCode: backendConvertedCurrencyCode,
+  convertedCurrencySymbol: backendConvertedCurrencySymbol,
 }: PriceDisplayProps) {
   const locale = useLocale();
   const selectedCountry = useSelectedCountry();
@@ -65,6 +74,7 @@ export function PriceDisplay({
   const targetCurrency = selectedCountry?.defaultCurrencyCode || "USD";
 
   const currencies = currenciesData ?? [];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const currencyMap = new Map(currencies.map((c: any) => [c.code, c]));
 
   const sourceCurrencyInfo = currencyMap.get(currency);
@@ -76,16 +86,30 @@ export function PriceDisplay({
   const displayPrice = discountedPrice ?? price;
   const hasDiscount = discountedPrice != null && discountedPrice < price;
 
-  // Convert to user's preferred currency using backend exchange rates
-  let convertedPrice: number | null = null;
+  // Determine converted price: prefer backend-provided, fallback to client-side calculation
+  let finalConvertedPrice: number | null = null;
+  let finalConvertedSymbol: string = targetSymbol;
+
   if (
+    backendConvertedPrice != null &&
+    backendConvertedCurrencyCode &&
+    backendConvertedCurrencyCode !== currency
+  ) {
+    // Use backend-provided converted price
+    finalConvertedPrice = hasDiscount && backendConvertedDiscountedPrice != null
+      ? backendConvertedDiscountedPrice
+      : backendConvertedPrice;
+    finalConvertedSymbol = backendConvertedCurrencySymbol || backendConvertedCurrencyCode;
+  } else if (
     currency !== targetCurrency &&
     sourceCurrencyInfo &&
     targetCurrencyInfo &&
     sourceCurrencyInfo.exchangeRateToUSD > 0
   ) {
+    // Fallback: client-side conversion using exchange rates
     const amountInUSD = displayPrice / sourceCurrencyInfo.exchangeRateToUSD;
-    convertedPrice = amountInUSD * targetCurrencyInfo.exchangeRateToUSD;
+    finalConvertedPrice = amountInUSD * targetCurrencyInfo.exchangeRateToUSD;
+    finalConvertedSymbol = targetSymbol;
   }
 
   const sizeClasses = {
@@ -125,10 +149,10 @@ export function PriceDisplay({
         )}
       </div>
 
-      {/* Converted price in user's currency */}
-      {convertedPrice !== null && (
+      {/* Converted price in viewer's currency */}
+      {finalConvertedPrice !== null && (
         <span className="text-xs text-muted-foreground">
-          ≈ {formatPrice(convertedPrice, targetSymbol, locale)}
+          {"≈ "}{formatPrice(finalConvertedPrice, finalConvertedSymbol, locale)}
         </span>
       )}
     </div>

@@ -45,6 +45,16 @@ function mapProductResponse(p: any): Product {
     imageUrl: (p as unknown as Record<string, unknown>).coverImageUrl
       ? `${AppConfig.FileStorageBaseUrl}${(p as unknown as Record<string, unknown>).coverImageUrl as string}`
       : undefined,
+    // Converted price fields from backend
+    convertedPrice: p.convertedPrice as number | null,
+    convertedDiscountedPrice: p.convertedDiscountedPrice as number | null,
+    convertedCurrencyCode: p.convertedCurrencyCode || undefined,
+    convertedCurrencySymbol: p.convertedCurrencySymbol || undefined,
+    // Viewer price fields from backend
+    viewerPrice: p.viewerPrice as number | null,
+    viewerDiscountedPrice: p.viewerDiscountedPrice as number | null,
+    viewerCurrencyCode: p.viewerCurrencyCode || undefined,
+    viewerCurrencySymbol: p.viewerCurrencySymbol || undefined,
   };
 }
 
@@ -103,6 +113,7 @@ interface ProductListParams {
   perPageCount?: number;
   slug?: string;
   countryCode?: string;
+  targetCurrencyCode?: string;
 }
 
 export function useProductList(
@@ -141,7 +152,7 @@ export function useProductList(
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const response = await LivestockTradingAPI.Products.All.Request({
         countryCode: params.countryCode ?? "TR",
-        targetCurrencyCode: "",
+        targetCurrencyCode: params.targetCurrencyCode ?? "",
         categoryId: params.categoryId || undefined,
         sorting: {
           key: params.sortBy ?? "createdAt",
@@ -166,12 +177,15 @@ export function useProductList(
 
 export function useProductDetail(
   productId: string,
-  options?: { enabled?: boolean }
+  options?: { enabled?: boolean; viewerCurrencyCode?: string }
 ) {
   return useQuery({
-    queryKey: queryKeys.products.detail(productId),
+    queryKey: [...queryKeys.products.detail(productId), options?.viewerCurrencyCode ?? ""],
     queryFn: () =>
-      LivestockTradingAPI.Products.Detail.Request({ id: productId }),
+      LivestockTradingAPI.Products.Detail.Request({
+        id: productId,
+        viewerCurrencyCode: options?.viewerCurrencyCode,
+      }),
     enabled: (options?.enabled ?? true) && !!productId,
   });
 }

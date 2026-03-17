@@ -1916,5 +1916,11 @@
     "minutesAgo": "{count} min ago",
     "hoursAgo": "{count}h ago",
     "daysAgo": "{count}d ago"
+  },
+  "pricing": {
+    "originalPrice": "Original price",
+    "convertedPrice": "Converted price",
+    "approximatePrice": "Approximate conversion based on current exchange rates",
+    "approximate": "≈"
   }
 }
