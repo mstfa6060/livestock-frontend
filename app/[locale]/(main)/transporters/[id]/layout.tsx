@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AppConfig } from "@/config/livestock-config";
+import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
 
 const BASE_URL = "https://livestock-trading.com";
 
@@ -89,8 +90,15 @@ export default async function TransporterDetailLayout({
       }
     : null;
 
+  const transporterName = transporter?.companyName || transporter?.businessName || "Transporter";
+
   return (
     <>
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: BASE_URL },
+        { name: "Transporters", url: `${BASE_URL}/transporters` },
+        { name: transporterName, url: `${BASE_URL}/transporters/${id}` },
+      ]} />
       {jsonLd && (
         <script
           type="application/ld+json"

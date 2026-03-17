@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AppConfig } from "@/config/livestock-config";
+import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
 
 const BASE_URL = "https://livestock-trading.com";
 
@@ -64,6 +65,25 @@ export async function generateMetadata({
   };
 }
 
-export default function SellerDetailLayout({ children }: { children: React.ReactNode }) {
-  return children;
+export default async function SellerDetailLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const seller = await fetchSeller(id);
+  const sellerName = seller?.businessName || "Seller";
+
+  return (
+    <>
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: BASE_URL },
+        { name: "Sellers", url: `${BASE_URL}/sellers` },
+        { name: sellerName, url: `${BASE_URL}/sellers/${id}` },
+      ]} />
+      {children}
+    </>
+  );
 }

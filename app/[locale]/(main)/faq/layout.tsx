@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { FaqJsonLd } from "@/components/seo/json-ld";
+import { FaqJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import { generatePageMetadata } from "@/lib/seo";
+
+const BASE_URL = "https://livestock-trading.com";
 
 const isDevelopment = process.env.NEXT_PUBLIC_ENVIRONMENT === "development";
 const API_BASE = isDevelopment
@@ -58,6 +60,10 @@ export default async function FaqLayout({
 
   return (
     <>
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: BASE_URL },
+        { name: "FAQ", url: `${BASE_URL}/faq` },
+      ]} />
       {faqs.length > 0 && <FaqJsonLd items={faqs} />}
       {children}
     </>
