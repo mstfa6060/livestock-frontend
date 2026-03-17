@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Dit e-mailadres is al yn gebrûk.",
       USER_USER_NAME_ALREADY_EXISTS: "Dizze brûkersnamme is al yn gebrûk.",
       USER_COUNTRY_ID_REQUIRED: "Lân seleksje is ferplichte.",
+      USER_DELETE_PASSWORD_REQUIRED: "Wachtwurdbefêstiging is ferplicht foar it wiskjen fan akkount.",
+      USER_DELETE_PASSWORD_INCORRECT: "Wachtwurdferifikaasje mislearre. It akkount koe net wiske wurde.",
+      USER_DELETE_ALREADY_DELETED: "Dit akkount is al wiske.",
+      USER_DELETE_NOT_AUTHENTICATED: "Jo moatte oanmeld wêze om jo akkount te wiskjen.",
     }
   }
 };

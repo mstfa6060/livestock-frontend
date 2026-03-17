@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Mae'r cyfeiriad e-bost hwn eisoes yn cael ei ddefnyddio.",
       USER_USER_NAME_ALREADY_EXISTS: "Mae'r enw defnyddiwr hwn eisoes yn cael ei ddefnyddio.",
       USER_COUNTRY_ID_REQUIRED: "Mae dewis gwlad yn orfodol.",
+      USER_DELETE_PASSWORD_REQUIRED: "Mae angen cadarnhad cyfrinair ar gyfer dileu cyfrif.",
+      USER_DELETE_PASSWORD_INCORRECT: "Methodd dilysu cyfrinair. Nid oedd modd dileu'r cyfrif.",
+      USER_DELETE_ALREADY_DELETED: "Mae'r cyfrif hwn eisoes wedi'i ddileu.",
+      USER_DELETE_NOT_AUTHENTICATED: "Rhaid i chi fod wedi mewngofnodi i ddileu eich cyfrif.",
     }
   }
 };

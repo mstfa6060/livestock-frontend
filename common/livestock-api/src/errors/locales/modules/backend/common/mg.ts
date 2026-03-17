@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Ity adiresy mailaka ity dia efa ampiasaina.",
       USER_USER_NAME_ALREADY_EXISTS: "Ity solonanarana ity dia efa ampiasaina.",
       USER_COUNTRY_ID_REQUIRED: "Tsy maintsy misafidy ny firenena.",
+      USER_DELETE_PASSWORD_REQUIRED: "Ilaina ny fanamafisana ny tenimiafina amin'ny famafana ny kaonty.",
+      USER_DELETE_PASSWORD_INCORRECT: "Tsy nahomby ny fanamarinana tenimiafina. Tsy voafafa ilay kaonty.",
+      USER_DELETE_ALREADY_DELETED: "Efa voafafa ity kaonty ity.",
+      USER_DELETE_NOT_AUTHENTICATED: "Tsy maintsy miditra ianao raha te hamafa ny kaontinao.",
     }
   }
 };

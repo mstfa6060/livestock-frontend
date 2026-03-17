@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Este enderezo de correo electrónico xa está en uso.",
       USER_USER_NAME_ALREADY_EXISTS: "Este nome de usuario xa está en uso.",
       USER_COUNTRY_ID_REQUIRED: "A selección do país é obrigatoria.",
+      USER_DELETE_PASSWORD_REQUIRED: "É necesaria a confirmación do contrasinal para eliminar a conta.",
+      USER_DELETE_PASSWORD_INCORRECT: "Fallou a verificación do contrasinal. Non se puido eliminar a conta.",
+      USER_DELETE_ALREADY_DELETED: "Esta conta xa se eliminou.",
+      USER_DELETE_NOT_AUTHENTICATED: "Debes iniciar sesión para eliminar a túa conta.",
     }
   }
 };

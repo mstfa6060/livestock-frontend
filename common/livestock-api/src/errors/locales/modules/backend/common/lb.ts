@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Dës E-Mailadress ass scho benotzt.",
       USER_USER_NAME_ALREADY_EXISTS: "Dëse Benotzernumm ass scho benotzt.",
       USER_COUNTRY_ID_REQUIRED: "Land Auswiel ass obligatoresch.",
+      USER_DELETE_PASSWORD_REQUIRED: "Passwuert Bestätegung ass néideg fir Kont Läschen.",
+      USER_DELETE_PASSWORD_INCORRECT: "Passwuertverifizéierung ass gescheitert. De Kont konnt net geläscht ginn.",
+      USER_DELETE_ALREADY_DELETED: "Dëse Kont gouf scho geläscht.",
+      USER_DELETE_NOT_AUTHENTICATED: "Dir musst ageloggt sinn Äre Kont ze läschen.",
     }
   }
 };

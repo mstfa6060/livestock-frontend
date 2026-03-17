@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Tha an seòladh puist-d seo ga chleachdadh mu thràth.",
       USER_USER_NAME_ALREADY_EXISTS: "Tha an t-ainm-cleachdaiche seo ga chleachdadh mu thràth.",
       USER_COUNTRY_ID_REQUIRED: "Tha taghadh dùthcha riatanach.",
+      USER_DELETE_PASSWORD_REQUIRED: "Tha feum air dearbhadh facal-faire airson cuir às do chunntas.",
+      USER_DELETE_PASSWORD_INCORRECT: "Dh'fhàillig dearbhadh facal-faire. Cha b' urrainn dhuinn an cunntas a sguabadh às.",
+      USER_DELETE_ALREADY_DELETED: "Chaidh an cunntas seo a sguabadh às mu thràth.",
+      USER_DELETE_NOT_AUTHENTICATED: "Feumaidh tu a bhith air do logadh a-steach gus do chunntas a dhubhadh às.",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "આ ઈમેલ એડ્રેસ પહેલેથી ઉપયોગમાં છે.",
       USER_USER_NAME_ALREADY_EXISTS: "આ વપરાશકર્તા નામ પહેલેથી ઉપયોગમાં છે.",
       USER_COUNTRY_ID_REQUIRED: "દેશની પસંદગી ફરજિયાત છે.",
+      USER_DELETE_PASSWORD_REQUIRED: "એકાઉન્ટ ડિલીટ કરવા માટે પાસવર્ડ કન્ફર્મેશન જરૂરી છે.",
+      USER_DELETE_PASSWORD_INCORRECT: "પાસવર્ડ ચકાસણી નિષ્ફળ. એકાઉન્ટ ડિલીટ કરી શકાયું નથી.",
+      USER_DELETE_ALREADY_DELETED: "આ એકાઉન્ટ પહેલેથી જ કાઢી નાખવામાં આવ્યું છે.",
+      USER_DELETE_NOT_AUTHENTICATED: "તમારું એકાઉન્ટ કાઢી નાખવા માટે તમારે લૉગ ઇન કરવું આવશ્યક છે.",
     }
   }
 };

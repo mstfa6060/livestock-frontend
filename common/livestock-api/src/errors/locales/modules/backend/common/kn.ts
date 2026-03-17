@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "ಈ ಇಮೇಲ್ ವಿಳಾಸವು ಈಗಾಗಲೇ ಬಳಕೆಯಲ್ಲಿದೆ.",
       USER_USER_NAME_ALREADY_EXISTS: "ಈ ಬಳಕೆದಾರ ಹೆಸರು ಈಗಾಗಲೇ ಬಳಕೆಯಲ್ಲಿದೆ.",
       USER_COUNTRY_ID_REQUIRED: "ದೇಶದ ಆಯ್ಕೆ ಕಡ್ಡಾಯವಾಗಿದೆ.",
+      USER_DELETE_PASSWORD_REQUIRED: "ಖಾತೆಯನ್ನು ಅಳಿಸಲು ಪಾಸ್‌ವರ್ಡ್ ದೃಢೀಕರಣದ ಅಗತ್ಯವಿದೆ.",
+      USER_DELETE_PASSWORD_INCORRECT: "ಪಾಸ್‌ವರ್ಡ್ ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ. ಖಾತೆಯನ್ನು ಅಳಿಸಲಾಗಲಿಲ್ಲ.",
+      USER_DELETE_ALREADY_DELETED: "ಈ ಖಾತೆಯನ್ನು ಈಗಾಗಲೇ ಅಳಿಸಲಾಗಿದೆ.",
+      USER_DELETE_NOT_AUTHENTICATED: "ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅಳಿಸಲು ನೀವು ಲಾಗ್ ಇನ್ ಆಗಿರಬೇಕು.",
     }
   }
 };

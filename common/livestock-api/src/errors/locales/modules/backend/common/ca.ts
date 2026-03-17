@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Aquesta adreça de correu electrònic ja està en ús.",
       USER_USER_NAME_ALREADY_EXISTS: "Aquest nom d'usuari ja està en ús.",
       USER_COUNTRY_ID_REQUIRED: "La selecció del país és obligatòria.",
+      USER_DELETE_PASSWORD_REQUIRED: "La confirmació de la contrasenya és obligatòria per suprimir el compte.",
+      USER_DELETE_PASSWORD_INCORRECT: "La verificació de la contrasenya ha fallat. No s'ha pogut suprimir el compte.",
+      USER_DELETE_ALREADY_DELETED: "Aquest compte ja s'ha suprimit.",
+      USER_DELETE_NOT_AUTHENTICATED: "Heu d'iniciar sessió per eliminar el vostre compte.",
     }
   }
 };

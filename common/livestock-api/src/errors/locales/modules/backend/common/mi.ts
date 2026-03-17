@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Kei te whakamahia kētia tēnei wāhitau īmēra.",
       USER_USER_NAME_ALREADY_EXISTS: "Kei te whakamahia kētia tēnei ingoa kaiwhakamahi.",
       USER_COUNTRY_ID_REQUIRED: "Ko te kowhiringa whenua he mea whakahau.",
+      USER_DELETE_PASSWORD_REQUIRED: "Ko te whakaū kupuhipa e hiahiatia ana mo te mukunga kaute.",
+      USER_DELETE_PASSWORD_INCORRECT: "I rahua te manatoko kupuhipa. Kāore i taea te muku te pūkete.",
+      USER_DELETE_ALREADY_DELETED: "Kua mukua kē tēnei pūkete.",
+      USER_DELETE_NOT_AUTHENTICATED: "Me takiuru koe ki te muku i to putea.",
     }
   }
 };

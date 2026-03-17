@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "ਇਹ ਈਮੇਲ ਪਤਾ ਪਹਿਲਾਂ ਹੀ ਵਰਤੋਂ ਵਿੱਚ ਹੈ।",
       USER_USER_NAME_ALREADY_EXISTS: "ਇਹ ਵਰਤੋਂਕਾਰ ਨਾਮ ਪਹਿਲਾਂ ਹੀ ਵਰਤੋਂ ਵਿੱਚ ਹੈ।",
       USER_COUNTRY_ID_REQUIRED: "ਦੇਸ਼ ਦੀ ਚੋਣ ਲਾਜ਼ਮੀ ਹੈ।",
+      USER_DELETE_PASSWORD_REQUIRED: "ਖਾਤਾ ਮਿਟਾਉਣ ਲਈ ਪਾਸਵਰਡ ਪੁਸ਼ਟੀ ਦੀ ਲੋੜ ਹੈ।",
+      USER_DELETE_PASSWORD_INCORRECT: "ਪਾਸਵਰਡ ਪੁਸ਼ਟੀਕਰਨ ਅਸਫਲ ਰਿਹਾ। ਖਾਤਾ ਮਿਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।",
+      USER_DELETE_ALREADY_DELETED: "ਇਹ ਖਾਤਾ ਪਹਿਲਾਂ ਹੀ ਮਿਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ।",
+      USER_DELETE_NOT_AUTHENTICATED: "ਤੁਹਾਨੂੰ ਆਪਣੇ ਖਾਤੇ ਨੂੰ ਮਿਟਾਉਣ ਲਈ ਲੌਗ ਇਨ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।",
     }
   }
 };

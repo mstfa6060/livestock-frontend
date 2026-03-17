@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Helbide elektroniko hau dagoeneko erabiltzen ari da.",
       USER_USER_NAME_ALREADY_EXISTS: "Erabiltzaile-izen hau dagoeneko erabiltzen ari da.",
       USER_COUNTRY_ID_REQUIRED: "Herrialdea hautatzea derrigorrezkoa da.",
+      USER_DELETE_PASSWORD_REQUIRED: "Pasahitza berrestea beharrezkoa da kontua ezabatzeko.",
+      USER_DELETE_PASSWORD_INCORRECT: "Pasahitza egiaztatzeak huts egin du. Ezin izan da kontua ezabatu.",
+      USER_DELETE_ALREADY_DELETED: "Kontu hau dagoeneko ezabatu da.",
+      USER_DELETE_NOT_AUTHENTICATED: "Saioa hasi behar duzu zure kontua ezabatzeko.",
     }
   }
 };
