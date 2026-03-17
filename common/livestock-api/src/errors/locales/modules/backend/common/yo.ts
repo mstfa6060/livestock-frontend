@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Adirẹsi imeeli yii ti wa ni lilo tẹlẹ.",
       USER_USER_NAME_ALREADY_EXISTS: "Orukọ olumulo yi ti wa ni lilo tẹlẹ.",
       USER_COUNTRY_ID_REQUIRED: "Aṣayan orilẹ-ede jẹ dandan.",
+      USER_DELETE_PASSWORD_REQUIRED: "Ijẹrisi ọrọ igbaniwọle ni a nilo fun piparẹ akọọlẹ.",
+      USER_DELETE_PASSWORD_INCORRECT: "Ijeri ọrọ igbaniwọle kuna. Akọọlẹ naa ko le paarẹ.",
+      USER_DELETE_ALREADY_DELETED: "A ti paarẹ akọọlẹ yii tẹlẹ.",
+      USER_DELETE_NOT_AUTHENTICATED: "O gbọdọ wọle lati pa akọọlẹ rẹ rẹ.",
     }
   }
 };

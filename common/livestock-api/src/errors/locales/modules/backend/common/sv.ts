@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Den här e-postadressen används redan.",
       USER_USER_NAME_ALREADY_EXISTS: "Detta användarnamn används redan.",
       USER_COUNTRY_ID_REQUIRED: "Val av land är obligatoriskt.",
+      USER_DELETE_PASSWORD_REQUIRED: "Lösenordsbekräftelse är obligatorisk för att kontot ska raderas.",
+      USER_DELETE_PASSWORD_INCORRECT: "Lösenordsverifiering misslyckades. Kontot kunde inte raderas.",
+      USER_DELETE_ALREADY_DELETED: "Detta konto har redan tagits bort.",
+      USER_DELETE_NOT_AUTHENTICATED: "Du måste vara inloggad för att radera ditt konto.",
     }
   }
 };

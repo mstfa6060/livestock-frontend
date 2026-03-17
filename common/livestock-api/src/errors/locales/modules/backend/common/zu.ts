@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Leli kheli le-imeyili selivele liyasetshenziswa.",
       USER_USER_NAME_ALREADY_EXISTS: "Leli gama lomsebenzisi selivele liyasetshenziswa.",
       USER_COUNTRY_ID_REQUIRED: "Ukukhetha izwe kuyimpoqo.",
+      USER_DELETE_PASSWORD_REQUIRED: "Ukuqinisekiswa kwephasiwedi kuyadingeka ukuze kususwe i-akhawunti.",
+      USER_DELETE_PASSWORD_INCORRECT: "Ukuqinisekisa iphasiwedi kuhlulekile. I-akhawunti ayikwazanga ukususwa.",
+      USER_DELETE_ALREADY_DELETED: "Le akhawunti isivele isuliwe.",
+      USER_DELETE_NOT_AUTHENTICATED: "Kufanele ungene ngemvume ukuze ususe i-akhawunti yakho.",
     }
   }
 };

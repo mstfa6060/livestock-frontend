@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "یہ ای میل پتہ پہلے سے ہی استعمال میں ہے۔",
       USER_USER_NAME_ALREADY_EXISTS: "یہ صارف نام پہلے ہی استعمال میں ہے۔",
       USER_COUNTRY_ID_REQUIRED: "ملک کا انتخاب لازمی ہے۔",
+      USER_DELETE_PASSWORD_REQUIRED: "اکاؤنٹ ڈیلیٹ کرنے کے لیے پاس ورڈ کی تصدیق لازمی ہے۔",
+      USER_DELETE_PASSWORD_INCORRECT: "پاس ورڈ کی تصدیق ناکام ہو گئی۔ اکاؤنٹ حذف نہیں کیا جا سکا۔",
+      USER_DELETE_ALREADY_DELETED: "یہ اکاؤنٹ پہلے ہی حذف کر دیا گیا ہے۔",
+      USER_DELETE_NOT_AUTHENTICATED: "اپنا اکاؤنٹ حذف کرنے کے لیے آپ کا لاگ ان ہونا ضروری ہے۔",
     }
   }
 };

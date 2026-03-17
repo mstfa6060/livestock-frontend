@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Iyi kero yeemail yave kutoshandiswa.",
       USER_USER_NAME_ALREADY_EXISTS: "Zita rekushandisa iri rave kutoshandiswa.",
       USER_COUNTRY_ID_REQUIRED: "Kusarudzwa kwenyika kunosungirwa.",
+      USER_DELETE_PASSWORD_REQUIRED: "Kusimbisa pasiwedhi kunodiwa pakudzimwa account.",
+      USER_DELETE_PASSWORD_INCORRECT: "Kuongorora pasiwedhi kwatadza. Akaunti yatadza kudzimwa.",
+      USER_DELETE_ALREADY_DELETED: "Akaundi iyi yakatodzimwa.",
+      USER_DELETE_NOT_AUTHENTICATED: "Iwe unofanirwa kupinda mukati kuti udzime account yako.",
     }
   }
 };

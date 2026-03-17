@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Бұл электрондық пошта мекенжайы бұрыннан қолданыста.",
       USER_USER_NAME_ALREADY_EXISTS: "Бұл пайдаланушы аты бұрыннан қолданыста.",
       USER_COUNTRY_ID_REQUIRED: "Елді таңдау міндетті болып табылады.",
+      USER_DELETE_PASSWORD_REQUIRED: "Есептік жазбаны жою үшін құпия сөзді растау қажет.",
+      USER_DELETE_PASSWORD_INCORRECT: "Құпия сөзді растау сәтсіз аяқталды. Есептік жазбаны жою мүмкін болмады.",
+      USER_DELETE_ALREADY_DELETED: "Бұл есептік жазба әлдеқашан жойылған.",
+      USER_DELETE_NOT_AUTHENTICATED: "Есептік жазбаңызды жою үшін жүйеге кіруіңіз керек.",
     }
   }
 };

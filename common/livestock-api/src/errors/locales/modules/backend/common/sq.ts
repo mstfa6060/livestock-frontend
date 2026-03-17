@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Kjo adresë emaili është tashmë në përdorim.",
       USER_USER_NAME_ALREADY_EXISTS: "Ky emër përdoruesi është tashmë në përdorim.",
       USER_COUNTRY_ID_REQUIRED: "Zgjedhja e shtetit është e detyrueshme.",
+      USER_DELETE_PASSWORD_REQUIRED: "Konfirmimi i fjalëkalimit është i detyrueshëm për fshirjen e llogarisë.",
+      USER_DELETE_PASSWORD_INCORRECT: "Verifikimi i fjalëkalimit dështoi. Llogaria nuk mund të fshihej.",
+      USER_DELETE_ALREADY_DELETED: "Kjo llogari tashmë është fshirë.",
+      USER_DELETE_NOT_AUTHENTICATED: "Duhet të identifikoheni për të fshirë llogarinë tuaj.",
     }
   }
 };

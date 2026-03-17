@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "ที่อยู่อีเมลนี้มีการใช้งานแล้ว",
       USER_USER_NAME_ALREADY_EXISTS: "ชื่อผู้ใช้นี้มีการใช้งานแล้ว",
       USER_COUNTRY_ID_REQUIRED: "จำเป็นต้องเลือกประเทศ",
+      USER_DELETE_PASSWORD_REQUIRED: "ต้องมีการยืนยันรหัสผ่านเพื่อลบบัญชี",
+      USER_DELETE_PASSWORD_INCORRECT: "การยืนยันรหัสผ่านล้มเหลว ไม่สามารถลบบัญชีได้",
+      USER_DELETE_ALREADY_DELETED: "บัญชีนี้ถูกลบไปแล้ว",
+      USER_DELETE_NOT_AUTHENTICATED: "คุณต้องเข้าสู่ระบบเพื่อลบบัญชีของคุณ",
     }
   }
 };

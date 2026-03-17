@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "यो इमेल ठेगाना पहिले नै प्रयोगमा छ।",
       USER_USER_NAME_ALREADY_EXISTS: "यो प्रयोगकर्ता नाम पहिले नै प्रयोगमा छ।",
       USER_COUNTRY_ID_REQUIRED: "देश चयन अनिवार्य छ।",
+      USER_DELETE_PASSWORD_REQUIRED: "खाता मेटाउनको लागि पासवर्ड पुष्टिकरण आवश्यक छ।",
+      USER_DELETE_PASSWORD_INCORRECT: "पासवर्ड प्रमाणीकरण असफल भयो। खाता मेटाउन सकिएन।",
+      USER_DELETE_ALREADY_DELETED: "यो खाता पहिले नै मेटाइएको छ।",
+      USER_DELETE_NOT_AUTHENTICATED: "तपाइँ तपाइँको खाता मेटाउन लग इन हुनु पर्छ।",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Hierdie e-posadres is reeds in gebruik.",
       USER_USER_NAME_ALREADY_EXISTS: "Hierdie gebruikernaam is reeds in gebruik.",
       USER_COUNTRY_ID_REQUIRED: "Landkeuse is verpligtend.",
+      USER_DELETE_PASSWORD_REQUIRED: "Wagwoordbevestiging is verpligtend vir rekeningskrap.",
+      USER_DELETE_PASSWORD_INCORRECT: "Wagwoordverifikasie het misluk. Die rekening kon nie uitgevee word nie.",
+      USER_DELETE_ALREADY_DELETED: "Hierdie rekening is reeds uitgevee.",
+      USER_DELETE_NOT_AUTHENTICATED: "Jy moet aangemeld wees om jou rekening uit te vee.",
     }
   }
 };

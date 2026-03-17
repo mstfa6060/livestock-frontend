@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Šī e-pasta adrese jau tiek izmantota.",
       USER_USER_NAME_ALREADY_EXISTS: "Šis lietotājvārds jau tiek izmantots.",
       USER_COUNTRY_ID_REQUIRED: "Valsts izvēle ir obligāta.",
+      USER_DELETE_PASSWORD_REQUIRED: "Lai dzēstu kontu, ir nepieciešams paroles apstiprinājums.",
+      USER_DELETE_PASSWORD_INCORRECT: "Paroles pārbaude neizdevās. Kontu nevarēja izdzēst.",
+      USER_DELETE_ALREADY_DELETED: "Šis konts jau ir dzēsts.",
+      USER_DELETE_NOT_AUTHENTICATED: "Lai dzēstu savu kontu, jums ir jāpiesakās.",
     }
   }
 };

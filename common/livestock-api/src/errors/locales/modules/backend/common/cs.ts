@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Tato e-mailová adresa se již používá.",
       USER_USER_NAME_ALREADY_EXISTS: "Toto uživatelské jméno se již používá.",
       USER_COUNTRY_ID_REQUIRED: "Výběr země je povinný.",
+      USER_DELETE_PASSWORD_REQUIRED: "Pro smazání účtu je povinné potvrzení hesla.",
+      USER_DELETE_PASSWORD_INCORRECT: "Ověření hesla se nezdařilo. Účet se nepodařilo smazat.",
+      USER_DELETE_ALREADY_DELETED: "Tento účet již byl smazán.",
+      USER_DELETE_NOT_AUTHENTICATED: "Pro smazání účtu musíte být přihlášeni.",
     }
   }
 };

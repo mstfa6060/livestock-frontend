@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Ця електронна адреса вже використовується.",
       USER_USER_NAME_ALREADY_EXISTS: "Це ім'я користувача вже використовується.",
       USER_COUNTRY_ID_REQUIRED: "Вибір країни обов'язковий.",
+      USER_DELETE_PASSWORD_REQUIRED: "Для видалення облікового запису потрібне підтвердження пароля.",
+      USER_DELETE_PASSWORD_INCORRECT: "Не вдалося перевірити пароль. Не вдалося видалити обліковий запис.",
+      USER_DELETE_ALREADY_DELETED: "Цей обліковий запис уже видалено.",
+      USER_DELETE_NOT_AUTHENTICATED: "Ви повинні увійти, щоб видалити свій обліковий запис.",
     }
   }
 };

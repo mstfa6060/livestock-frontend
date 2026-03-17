@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "ეს ელფოსტის მისამართი უკვე გამოიყენება.",
       USER_USER_NAME_ALREADY_EXISTS: "ეს მომხმარებლის სახელი უკვე გამოიყენება.",
       USER_COUNTRY_ID_REQUIRED: "ქვეყნის შერჩევა სავალდებულოა.",
+      USER_DELETE_PASSWORD_REQUIRED: "ანგარიშის წაშლისთვის საჭიროა პაროლის დადასტურება.",
+      USER_DELETE_PASSWORD_INCORRECT: "პაროლის დადასტურება ვერ მოხერხდა. ანგარიშის წაშლა ვერ მოხერხდა.",
+      USER_DELETE_ALREADY_DELETED: "ეს ანგარიში უკვე წაშლილია.",
+      USER_DELETE_NOT_AUTHENTICATED: "თქვენი ანგარიშის წასაშლელად უნდა იყოთ შესული.",
     }
   }
 };

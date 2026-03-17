@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Ez az e-mail cím már használatban van.",
       USER_USER_NAME_ALREADY_EXISTS: "Ez a felhasználónév már használatban van.",
       USER_COUNTRY_ID_REQUIRED: "Az ország kiválasztása kötelező.",
+      USER_DELETE_PASSWORD_REQUIRED: "A fiók törléséhez jelszó megerősítése szükséges.",
+      USER_DELETE_PASSWORD_INCORRECT: "A jelszó ellenőrzése sikertelen. A fiókot nem sikerült törölni.",
+      USER_DELETE_ALREADY_DELETED: "Ezt a fiókot már törölték.",
+      USER_DELETE_NOT_AUTHENTICATED: "Fiókja törléséhez be kell jelentkeznie.",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Bu e-posta adresi zaten kullanılıyor.",
       USER_USER_NAME_ALREADY_EXISTS: "Bu kullanıcı adı zaten kullanılıyor.",
       USER_COUNTRY_ID_REQUIRED: "Ülke seçimi zorunludur.",
+      USER_DELETE_PASSWORD_REQUIRED: "Hesap silme için şifre onayı zorunludur.",
+      USER_DELETE_PASSWORD_INCORRECT: "Şifre doğrulaması başarısız. Hesap silinemedi.",
+      USER_DELETE_ALREADY_DELETED: "Bu hesap zaten silinmiş.",
+      USER_DELETE_NOT_AUTHENTICATED: "Hesap silme için giriş yapılmış olmalıdır.",
     }
   }
 };

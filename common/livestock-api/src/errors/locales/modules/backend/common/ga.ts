@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Tá an seoladh ríomhphoist seo in úsáid cheana féin.",
       USER_USER_NAME_ALREADY_EXISTS: "Tá an t-ainm úsáideora seo in úsáid cheana féin.",
       USER_COUNTRY_ID_REQUIRED: "Tá roghnú na tíre éigeantach.",
+      USER_DELETE_PASSWORD_REQUIRED: "Teastaíonn deimhniú pasfhocail chun cuntas a scriosadh.",
+      USER_DELETE_PASSWORD_INCORRECT: "Theip ar fhíorú pasfhocail. Níorbh fhéidir an cuntas a scriosadh.",
+      USER_DELETE_ALREADY_DELETED: "Scriosadh an cuntas seo cheana.",
+      USER_DELETE_NOT_AUTHENTICATED: "Ní mór duit a bheith logáilte isteach chun do chuntas a scriosadh.",
     }
   }
 };

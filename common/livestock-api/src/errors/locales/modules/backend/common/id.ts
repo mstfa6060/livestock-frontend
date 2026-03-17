@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Alamat email ini sudah digunakan.",
       USER_USER_NAME_ALREADY_EXISTS: "Nama pengguna ini sudah digunakan.",
       USER_COUNTRY_ID_REQUIRED: "Pemilihan negara adalah wajib.",
+      USER_DELETE_PASSWORD_REQUIRED: "Konfirmasi kata sandi diperlukan untuk penghapusan akun.",
+      USER_DELETE_PASSWORD_INCORRECT: "Verifikasi kata sandi gagal. Akun tidak dapat dihapus.",
+      USER_DELETE_ALREADY_DELETED: "Akun ini telah dihapus.",
+      USER_DELETE_NOT_AUTHENTICATED: "Anda harus masuk untuk menghapus akun Anda.",
     }
   }
 };

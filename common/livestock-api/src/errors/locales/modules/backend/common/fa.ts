@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "این آدرس ایمیل در حال حاضر در حال استفاده است.",
       USER_USER_NAME_ALREADY_EXISTS: "این نام کاربری در حال حاضر در حال استفاده است.",
       USER_COUNTRY_ID_REQUIRED: "انتخاب کشور الزامی است.",
+      USER_DELETE_PASSWORD_REQUIRED: "تایید رمز عبور برای حذف حساب مورد نیاز است.",
+      USER_DELETE_PASSWORD_INCORRECT: "تأیید رمز عبور ناموفق بود. اکانت را نمی توان حذف کرد.",
+      USER_DELETE_ALREADY_DELETED: "این حساب قبلاً حذف شده است.",
+      USER_DELETE_NOT_AUTHENTICATED: "برای حذف حساب خود باید وارد شوید.",
     }
   }
 };

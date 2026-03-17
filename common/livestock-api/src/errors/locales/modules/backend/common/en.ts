@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "This email address is already in use.",
       USER_USER_NAME_ALREADY_EXISTS: "This username is already in use.",
       USER_COUNTRY_ID_REQUIRED: "Country selection is mandatory.",
+      USER_DELETE_PASSWORD_REQUIRED: "Password confirmation is required for account deletion.",
+      USER_DELETE_PASSWORD_INCORRECT: "Password verification failed. The account could not be deleted.",
+      USER_DELETE_ALREADY_DELETED: "This account has already been deleted.",
+      USER_DELETE_NOT_AUTHENTICATED: "You must be logged in to delete your account.",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Barua pepe hii tayari inatumika.",
       USER_USER_NAME_ALREADY_EXISTS: "Jina hili la mtumiaji tayari linatumika.",
       USER_COUNTRY_ID_REQUIRED: "Uchaguzi wa nchi ni lazima.",
+      USER_DELETE_PASSWORD_REQUIRED: "Uthibitishaji wa nenosiri unahitajika ili kufuta akaunti.",
+      USER_DELETE_PASSWORD_INCORRECT: "Uthibitishaji wa nenosiri umeshindwa. Akaunti haikuweza kufutwa.",
+      USER_DELETE_ALREADY_DELETED: "Akaunti hii tayari imefutwa.",
+      USER_DELETE_NOT_AUTHENTICATED: "Lazima uwe umeingia ili kufuta akaunti yako.",
     }
   }
 };

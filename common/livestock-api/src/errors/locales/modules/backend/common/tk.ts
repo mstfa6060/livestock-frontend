@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Bu e-poçta salgysy eýýäm ulanylýar.",
       USER_USER_NAME_ALREADY_EXISTS: "Bu ulanyjy ady eýýäm ulanylýar.",
       USER_COUNTRY_ID_REQUIRED: "Selecturt saýlamak hökmany.",
+      USER_DELETE_PASSWORD_REQUIRED: "Hasaby pozmak üçin paroly tassyklamak talap edilýär.",
+      USER_DELETE_PASSWORD_INCORRECT: "Paroly barlamak şowsuz Hasaby pozup bolmady",
+      USER_DELETE_ALREADY_DELETED: "Bu hasap eýýäm öçürildi.",
+      USER_DELETE_NOT_AUTHENTICATED: "Hasabyňyzy pozmak üçin sessiýa açmaly.",
     }
   }
 };

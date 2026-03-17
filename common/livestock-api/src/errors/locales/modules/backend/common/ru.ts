@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Этот адрес электронной почты уже используется.",
       USER_USER_NAME_ALREADY_EXISTS: "Это имя пользователя уже используется.",
       USER_COUNTRY_ID_REQUIRED: "Выбор страны обязателен.",
+      USER_DELETE_PASSWORD_REQUIRED: "Для удаления учетной записи требуется подтверждение пароля.",
+      USER_DELETE_PASSWORD_INCORRECT: "Проверка пароля не удалась. Аккаунт не удалось удалить.",
+      USER_DELETE_ALREADY_DELETED: "Этот аккаунт уже удален.",
+      USER_DELETE_NOT_AUTHENTICATED: "Вы должны войти в систему, чтобы удалить свою учетную запись.",
     }
   }
 };

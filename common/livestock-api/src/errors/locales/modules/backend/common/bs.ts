@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Ova adresa e-pošte je već u upotrebi.",
       USER_USER_NAME_ALREADY_EXISTS: "Ovo korisničko ime je već u upotrebi.",
       USER_COUNTRY_ID_REQUIRED: "Izbor zemlje je obavezan.",
+      USER_DELETE_PASSWORD_REQUIRED: "Potvrda lozinke je obavezna za brisanje naloga.",
+      USER_DELETE_PASSWORD_INCORRECT: "Provjera lozinke nije uspjela. Račun nije moguće izbrisati.",
+      USER_DELETE_ALREADY_DELETED: "Ovaj račun je već izbrisan.",
+      USER_DELETE_NOT_AUTHENTICATED: "Morate biti prijavljeni da biste izbrisali svoj račun.",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Bu elektron pochta manzili allaqachon ishlatilmoqda.",
       USER_USER_NAME_ALREADY_EXISTS: "Bu foydalanuvchi nomi allaqachon ishlatilmoqda.",
       USER_COUNTRY_ID_REQUIRED: "Mamlakatni tanlash majburiydir.",
+      USER_DELETE_PASSWORD_REQUIRED: "Hisobni o'chirish uchun parolni tasdiqlash talab qilinadi.",
+      USER_DELETE_PASSWORD_INCORRECT: "Parolni tekshirish amalga oshmadi. Hisobni oʻchirib boʻlmadi.",
+      USER_DELETE_ALREADY_DELETED: "Bu hisob allaqachon oʻchirib tashlangan.",
+      USER_DELETE_NOT_AUTHENTICATED: "Hisobingizni o'chirish uchun tizimga kirgan bo'lishingiz kerak.",
     }
   }
 };

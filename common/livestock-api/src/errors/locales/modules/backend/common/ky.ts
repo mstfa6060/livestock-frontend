@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Бул электрондук почта дареги мурунтан эле колдонулууда.",
       USER_USER_NAME_ALREADY_EXISTS: "Бул колдонуучу аты мурунтан эле колдонулууда.",
       USER_COUNTRY_ID_REQUIRED: "Өлкөнү тандоо милдеттүү болуп саналат.",
+      USER_DELETE_PASSWORD_REQUIRED: "Каттоо эсебин жок кылуу үчүн сырсөздү ырастоо талап кылынат.",
+      USER_DELETE_PASSWORD_INCORRECT: "Сырсөздү текшерүү ишке ашкан жок. Каттоо эсеби жок кылынган жок.",
+      USER_DELETE_ALREADY_DELETED: "Бул аккаунт мурунтан эле жок кылынган.",
+      USER_DELETE_NOT_AUTHENTICATED: "Каттоо эсебиңизди жок кылуу үчүн киришиңиз керек.",
     }
   }
 };

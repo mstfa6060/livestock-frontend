@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "हा ईमेल पत्ता आधीच वापरात आहे.",
       USER_USER_NAME_ALREADY_EXISTS: "हे वापरकर्ता नाव आधीपासून वापरात आहे.",
       USER_COUNTRY_ID_REQUIRED: "देश निवड अनिवार्य आहे.",
+      USER_DELETE_PASSWORD_REQUIRED: "खाते हटवण्यासाठी पासवर्ड पुष्टीकरण आवश्यक आहे.",
+      USER_DELETE_PASSWORD_INCORRECT: "पासवर्ड पडताळणी अयशस्वी. खाते हटवता आले नाही.",
+      USER_DELETE_ALREADY_DELETED: "हे खाते आधीच हटवले गेले आहे.",
+      USER_DELETE_NOT_AUTHENTICATED: "तुमचे खाते हटवण्यासाठी तुम्ही लॉग इन केले पाहिजे.",
     }
   }
 };

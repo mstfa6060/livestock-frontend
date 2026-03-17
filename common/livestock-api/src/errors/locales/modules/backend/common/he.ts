@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "כתובת האימייל הזו כבר בשימוש.",
       USER_USER_NAME_ALREADY_EXISTS: "שם המשתמש הזה כבר בשימוש.",
       USER_COUNTRY_ID_REQUIRED: "בחירת מדינה היא חובה.",
+      USER_DELETE_PASSWORD_REQUIRED: "נדרש אישור סיסמה למחיקת החשבון.",
+      USER_DELETE_PASSWORD_INCORRECT: "אימות הסיסמה נכשל. לא ניתן היה למחוק את החשבון.",
+      USER_DELETE_ALREADY_DELETED: "חשבון זה כבר נמחק.",
+      USER_DELETE_NOT_AUTHENTICATED: "עליך להיות מחובר כדי למחוק את חשבונך.",
     }
   }
 };

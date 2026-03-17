@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Dan l-indirizz elettroniku diġà qed jintuża.",
       USER_USER_NAME_ALREADY_EXISTS: "Dan l-isem tal-utent diġà qed jintuża.",
       USER_COUNTRY_ID_REQUIRED: "L-għażla tal-pajjiż hija obbligatorja.",
+      USER_DELETE_PASSWORD_REQUIRED: "Il-konferma tal-password hija meħtieġa għat-tħassir tal-kont.",
+      USER_DELETE_PASSWORD_INCORRECT: "Il-verifika tal-password falliet. Il-kont ma setax jitħassar.",
+      USER_DELETE_ALREADY_DELETED: "Dan il-kont diġà tħassar.",
+      USER_DELETE_NOT_AUTHENTICATED: "Trid tkun illoggjat biex tħassar il-kont tiegħek.",
     }
   }
 };

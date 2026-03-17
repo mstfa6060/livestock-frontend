@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "See e-posti aadress on juba kasutusel.",
       USER_USER_NAME_ALREADY_EXISTS: "See kasutajanimi on juba kasutusel.",
       USER_COUNTRY_ID_REQUIRED: "Riigi valik on kohustuslik.",
+      USER_DELETE_PASSWORD_REQUIRED: "Konto kustutamiseks on vaja parooli kinnitamist.",
+      USER_DELETE_PASSWORD_INCORRECT: "Parooli kinnitamine ebaõnnestus. Kontot ei saanud kustutada.",
+      USER_DELETE_ALREADY_DELETED: "See konto on juba kustutatud.",
+      USER_DELETE_NOT_AUTHENTICATED: "Oma konto kustutamiseks peate olema sisse logitud.",
     }
   }
 };

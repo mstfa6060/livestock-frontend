@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Denne e-mailadresse er allerede i brug.",
       USER_USER_NAME_ALREADY_EXISTS: "Dette brugernavn er allerede i brug.",
       USER_COUNTRY_ID_REQUIRED: "Landevalg er obligatorisk.",
+      USER_DELETE_PASSWORD_REQUIRED: "Adgangskodebekræftelse er påkrævet for sletning af konto.",
+      USER_DELETE_PASSWORD_INCORRECT: "Adgangskodebekræftelse mislykkedes. Kontoen kunne ikke slettes.",
+      USER_DELETE_ALREADY_DELETED: "Denne konto er allerede blevet slettet.",
+      USER_DELETE_NOT_AUTHENTICATED: "Du skal være logget ind for at slette din konto.",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "ይህ ኢሜይል አድራሻ አስቀድሞ ጥቅም ላይ ውሏል።",
       USER_USER_NAME_ALREADY_EXISTS: "ይህ የተጠቃሚ ስም አስቀድሞ ጥቅም ላይ ውሏል።",
       USER_COUNTRY_ID_REQUIRED: "የአገር ምርጫ ግዴታ ነው።",
+      USER_DELETE_PASSWORD_REQUIRED: "ለመለያ ስረዛ የይለፍ ቃል ማረጋገጫ ያስፈልጋል።",
+      USER_DELETE_PASSWORD_INCORRECT: "የይለፍ ቃል ማረጋገጥ አልተሳካም። መለያው ሊሰረዝ አልቻለም።",
+      USER_DELETE_ALREADY_DELETED: "ይህ መለያ አስቀድሞ ተሰርዟል።",
+      USER_DELETE_NOT_AUTHENTICATED: "መለያህን ለመሰረዝ መግባት አለብህ።",
     }
   }
 };

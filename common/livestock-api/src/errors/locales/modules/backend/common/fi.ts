@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Tämä sähköpostiosoite on jo käytössä.",
       USER_USER_NAME_ALREADY_EXISTS: "Tämä käyttäjätunnus on jo käytössä.",
       USER_COUNTRY_ID_REQUIRED: "Maan valinta on pakollinen.",
+      USER_DELETE_PASSWORD_REQUIRED: "Tilin poistaminen vaatii salasanan vahvistuksen.",
+      USER_DELETE_PASSWORD_INCORRECT: "Salasanan vahvistus epäonnistui. Tiliä ei voitu poistaa.",
+      USER_DELETE_ALREADY_DELETED: "Tämä tili on jo poistettu.",
+      USER_DELETE_NOT_AUTHENTICATED: "Sinun on kirjauduttava sisään, jotta voit poistaa tilisi.",
     }
   }
 };

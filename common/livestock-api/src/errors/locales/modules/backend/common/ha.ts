@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "An riga an fara amfani da wannan adireshin imel.",
       USER_USER_NAME_ALREADY_EXISTS: "An riga an fara amfani da wannan sunan mai amfani.",
       USER_COUNTRY_ID_REQUIRED: "Zaɓin ƙasa ya zama dole.",
+      USER_DELETE_PASSWORD_REQUIRED: "Ana buƙatar tabbatar da kalmar wucewa don share asusu.",
+      USER_DELETE_PASSWORD_INCORRECT: "Tabbatar da kalmar wucewa ta kasa. An kasa share asusun.",
+      USER_DELETE_ALREADY_DELETED: "An riga an goge wannan asusun.",
+      USER_DELETE_NOT_AUTHENTICATED: "Dole ne a shiga don share asusunku.",
     }
   }
 };

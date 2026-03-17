@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Această adresă de e-mail este deja utilizată.",
       USER_USER_NAME_ALREADY_EXISTS: "Acest nume de utilizator este deja utilizat.",
       USER_COUNTRY_ID_REQUIRED: "Selectarea țării este obligatorie.",
+      USER_DELETE_PASSWORD_REQUIRED: "Confirmarea parolei este necesară pentru ștergerea contului.",
+      USER_DELETE_PASSWORD_INCORRECT: "Verificarea parolei a eșuat. Contul nu a putut fi șters.",
+      USER_DELETE_ALREADY_DELETED: "Acest cont a fost deja șters.",
+      USER_DELETE_NOT_AUTHENTICATED: "Trebuie să fiți autentificat pentru a vă șterge contul.",
     }
   }
 };

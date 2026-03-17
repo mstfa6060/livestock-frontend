@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "ທີ່ຢູ່ອີເມວນີ້ຖືກໃຊ້ແລ້ວ.",
       USER_USER_NAME_ALREADY_EXISTS: "ຊື່ຜູ້ໃຊ້ນີ້ຖືກໃຊ້ແລ້ວ.",
       USER_COUNTRY_ID_REQUIRED: "ການເລືອກປະເທດແມ່ນບັງຄັບ.",
+      USER_DELETE_PASSWORD_REQUIRED: "ການຢືນຢັນລະຫັດຜ່ານແມ່ນຈໍາເປັນສໍາລັບການລຶບບັນຊີ.",
+      USER_DELETE_PASSWORD_INCORRECT: "ການຢັ້ງຢືນລະຫັດຜ່ານລົ້ມເຫລວ. ບັນຊີດັ່ງກ່າວບໍ່ສາມາດຖືກລຶບໄດ້.",
+      USER_DELETE_ALREADY_DELETED: "ບັນຊີນີ້ໄດ້ຖືກລຶບໄປແລ້ວ.",
+      USER_DELETE_NOT_AUTHENTICATED: "ທ່ານຕ້ອງເຂົ້າສູ່ລະບົບເພື່ອລຶບບັນຊີຂອງທ່ານ.",
     }
   }
 };

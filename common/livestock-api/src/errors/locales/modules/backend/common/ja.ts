@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "このメールアドレスはすでに使用されています。",
       USER_USER_NAME_ALREADY_EXISTS: "このユーザー名はすでに使用されています。",
       USER_COUNTRY_ID_REQUIRED: "国の選択は必須です。",
+      USER_DELETE_PASSWORD_REQUIRED: "アカウント削除にはパスワードの確認が必要です。",
+      USER_DELETE_PASSWORD_INCORRECT: "パスワードの検証に失敗しました。 アカウントを削除できませんでした。",
+      USER_DELETE_ALREADY_DELETED: "このアカウントはすでに削除されています。",
+      USER_DELETE_NOT_AUTHENTICATED: "アカウントを削除するにはログインする必要があります。",
     }
   }
 };

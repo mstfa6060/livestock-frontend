@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Este endereço de e-mail já está em uso.",
       USER_USER_NAME_ALREADY_EXISTS: "Este nome de usuário já está em uso.",
       USER_COUNTRY_ID_REQUIRED: "A seleção do país é obrigatória.",
+      USER_DELETE_PASSWORD_REQUIRED: "A confirmação da senha é necessária para exclusão da conta.",
+      USER_DELETE_PASSWORD_INCORRECT: "A verificação da senha falhou. A conta não pôde ser excluída.",
+      USER_DELETE_ALREADY_DELETED: "Esta conta já foi excluída.",
+      USER_DELETE_NOT_AUTHENTICATED: "Você deve estar logado para excluir sua conta.",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Този имейл адрес вече се използва.",
       USER_USER_NAME_ALREADY_EXISTS: "Това потребителско име вече се използва.",
       USER_COUNTRY_ID_REQUIRED: "Изборът на държава е задължителен.",
+      USER_DELETE_PASSWORD_REQUIRED: "За изтриване на акаунт е необходимо потвърждение на паролата.",
+      USER_DELETE_PASSWORD_INCORRECT: "Неуспешна проверка на паролата. Акаунтът не можа да бъде изтрит.",
+      USER_DELETE_ALREADY_DELETED: "Този акаунт вече е изтрит.",
+      USER_DELETE_NOT_AUTHENTICATED: "Трябва да сте влезли, за да изтриете акаунта си.",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "ఈ ఇమెయిల్ చిరునామా ఇప్పటికే వాడుకలో ఉంది.",
       USER_USER_NAME_ALREADY_EXISTS: "ఈ వినియోగదారు పేరు ఇప్పటికే వాడుకలో ఉంది.",
       USER_COUNTRY_ID_REQUIRED: "దేశం ఎంపిక తప్పనిసరి.",
+      USER_DELETE_PASSWORD_REQUIRED: "ఖాతా తొలగింపు కోసం పాస్‌వర్డ్ నిర్ధారణ అవసరం.",
+      USER_DELETE_PASSWORD_INCORRECT: "పాస్‌వర్డ్ ధృవీకరణ విఫలమైంది. ఖాతాను తొలగించడం సాధ్యం కాలేదు.",
+      USER_DELETE_ALREADY_DELETED: "ఈ ఖాతా ఇప్పటికే తొలగించబడింది.",
+      USER_DELETE_NOT_AUTHENTICATED: "మీ ఖాతాను తొలగించడానికి మీరు తప్పనిసరిగా లాగిన్ అయి ఉండాలి.",
     }
   }
 };

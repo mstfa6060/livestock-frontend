@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Šis el. pašto adresas jau naudojamas.",
       USER_USER_NAME_ALREADY_EXISTS: "Šis vartotojo vardas jau naudojamas.",
       USER_COUNTRY_ID_REQUIRED: "Šalies pasirinkimas yra privalomas.",
+      USER_DELETE_PASSWORD_REQUIRED: "Norint ištrinti paskyrą, būtinas slaptažodžio patvirtinimas.",
+      USER_DELETE_PASSWORD_INCORRECT: "Nepavyko patvirtinti slaptažodžio. Paskyros nepavyko ištrinti.",
+      USER_DELETE_ALREADY_DELETED: "Ši paskyra jau buvo ištrinta.",
+      USER_DELETE_NOT_AUTHENTICATED: "Norėdami ištrinti paskyrą, turite būti prisijungę.",
     }
   }
 };

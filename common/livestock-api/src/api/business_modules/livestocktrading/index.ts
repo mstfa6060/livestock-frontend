@@ -3547,6 +3547,7 @@ export namespace LivestockTradingAPI {
 				countryCode: string;
 				city: string;
 				sellerId?: Guid;
+				viewerCurrencyCode: string;
 				sorting: IXSorting;
 				pageRequest: IXPageRequest;
 			}
@@ -3584,6 +3585,10 @@ export namespace LivestockTradingAPI {
 				coverImageFileId: string;
 				mediaBucketId: string;
 				createdAt: Date;
+				viewerPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				viewerDiscountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				viewerCurrencyCode: string;
+				viewerCurrencySymbol: string;
 			}
 		}
 
@@ -3620,7 +3625,7 @@ export namespace LivestockTradingAPI {
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
 				id: Guid;
-				viewerCurrencyCode?: string;
+				viewerCurrencyCode: string;
 			}
 			export interface IResponseModel {
 				id: Guid;
@@ -3677,6 +3682,7 @@ export namespace LivestockTradingAPI {
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
 				slug: string;
+				viewerCurrencyCode: string;
 			}
 			export interface IResponseModel {
 				id: Guid;
@@ -3721,6 +3727,10 @@ export namespace LivestockTradingAPI {
 				coverImageFileId: string;
 				createdAt: Date;
 				updatedAt?: Date;
+				viewerPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				viewerDiscountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				viewerCurrencyCode: string;
+				viewerCurrencySymbol: string;
 			}
 		}
 
@@ -3731,7 +3741,7 @@ export namespace LivestockTradingAPI {
 				countryCode: string;
 				categoryId?: Guid;
 				targetCurrencyCode: string;
-				viewerCurrencyCode?: string;
+				viewerCurrencyCode: string;
 				sorting: IXSorting;
 				filters: IXFilterItem[];
 				pageRequest: IXPageRequest;
@@ -4285,6 +4295,85 @@ export namespace LivestockTradingAPI {
 				validFrom?: Date;
 				validUntil?: Date;
 				isAutomaticConversion: boolean;
+				createdAt: Date;
+			}
+		}
+
+	}
+
+	export namespace ProductImages {
+
+		export namespace All {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductImages/All';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				productId: Guid;
+				sorting: IXSorting;
+				filters: IXFilterItem[];
+				pageRequest: IXPageRequest;
+			}
+			export interface IXSorting {
+				key: string;
+				direction: Enums.XSortingDirection;
+			}
+			export interface IObject {
+			}
+			export interface IXFilterItem {
+				key: string;
+				type: string;
+				isUsed: boolean;
+				values: IObject[];
+				min: IObject;
+				max: IObject;
+				conditionType: string;
+			}
+			export interface IXPageRequest {
+				currentPage: number;
+				perPageCount: number;
+				listAll: boolean;
+			}
+			export interface IResponseModel {
+				id: Guid;
+				productId: Guid;
+				imageUrl: string;
+				thumbnailUrl: string;
+				altText: string;
+				sortOrder: number;
+				isPrimary: boolean;
+				createdAt: Date;
+			}
+		}
+
+		export namespace Delete {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductImages/Delete';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				id: Guid;
+			}
+			export interface IResponseModel {
+				success: boolean;
+			}
+		}
+
+		export namespace Create {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductImages/Create';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				productId: Guid;
+				imageUrl: string;
+				thumbnailUrl: string;
+				altText: string;
+				sortOrder: number;
+				isPrimary: boolean;
+			}
+			export interface IResponseModel {
+				id: Guid;
+				productId: Guid;
+				imageUrl: string;
+				thumbnailUrl: string;
+				altText: string;
+				sortOrder: number;
+				isPrimary: boolean;
 				createdAt: Date;
 			}
 		}

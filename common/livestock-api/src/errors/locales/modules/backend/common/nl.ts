@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Dit e-mailadres is al in gebruik.",
       USER_USER_NAME_ALREADY_EXISTS: "Deze gebruikersnaam is al in gebruik.",
       USER_COUNTRY_ID_REQUIRED: "Landselectie is verplicht.",
+      USER_DELETE_PASSWORD_REQUIRED: "Wachtwoordbevestiging is vereist voor het verwijderen van een account.",
+      USER_DELETE_PASSWORD_INCORRECT: "Wachtwoordverificatie mislukt. Het account kon niet worden verwijderd.",
+      USER_DELETE_ALREADY_DELETED: "Dit account is al verwijderd.",
+      USER_DELETE_NOT_AUTHENTICATED: "U moet ingelogd zijn om uw account te verwijderen.",
     }
   }
 };

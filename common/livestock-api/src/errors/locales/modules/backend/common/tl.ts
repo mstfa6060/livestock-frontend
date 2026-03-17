@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Ginagamit na ang email address na ito.",
       USER_USER_NAME_ALREADY_EXISTS: "Ginagamit na ang username na ito.",
       USER_COUNTRY_ID_REQUIRED: "Ang pagpili ng bansa ay sapilitan.",
+      USER_DELETE_PASSWORD_REQUIRED: "Kinakailangan ang pagkumpirma ng password para sa pagtanggal ng account.",
+      USER_DELETE_PASSWORD_INCORRECT: "Nabigo ang pag-verify ng password. Hindi matanggal ang account.",
+      USER_DELETE_ALREADY_DELETED: "Ang account na ito ay tinanggal na.",
+      USER_DELETE_NOT_AUTHENTICATED: "Dapat kang naka-log in upang tanggalin ang iyong account.",
     }
   }
 };

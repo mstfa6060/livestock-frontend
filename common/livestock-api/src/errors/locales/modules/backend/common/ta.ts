@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "இந்த மின்னஞ்சல் முகவரி ஏற்கனவே பயன்பாட்டில் உள்ளது.",
       USER_USER_NAME_ALREADY_EXISTS: "இந்த பயனர் பெயர் ஏற்கனவே பயன்பாட்டில் உள்ளது.",
       USER_COUNTRY_ID_REQUIRED: "நாடு தேர்வு கட்டாயம்.",
+      USER_DELETE_PASSWORD_REQUIRED: "கணக்கை நீக்க கடவுச்சொல் உறுதிப்படுத்தல் தேவை.",
+      USER_DELETE_PASSWORD_INCORRECT: "கடவுச்சொல் சரிபார்ப்பு தோல்வியடைந்தது. கணக்கை நீக்க முடியவில்லை.",
+      USER_DELETE_ALREADY_DELETED: "இந்தக் கணக்கு ஏற்கனவே நீக்கப்பட்டது.",
+      USER_DELETE_NOT_AUTHENTICATED: "உங்கள் கணக்கை நீக்க நீங்கள் உள்நுழைந்திருக்க வேண்டும்.",
     }
   }
 };

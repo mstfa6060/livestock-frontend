@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Imelo ikugwiritsidwa ntchito kale.",
       USER_USER_NAME_ALREADY_EXISTS: "Dzinali likugwiritsidwa ntchito kale.",
       USER_COUNTRY_ID_REQUIRED: "Kusankha dziko ndikofunikira.",
+      USER_DELETE_PASSWORD_REQUIRED: "Kutsimikizira mawu achinsinsi ndikofunikira pakuchotsa akaunti.",
+      USER_DELETE_PASSWORD_INCORRECT: "Kutsimikizira mawu achinsinsi kwalephera. Akaunti sinathe kuchotsedwa.",
+      USER_DELETE_ALREADY_DELETED: "Akaunti iyi yachotsedwa kale.",
+      USER_DELETE_NOT_AUTHENTICATED: "Muyenera kulowa kuti muchotse akaunti yanu.",
     }
   }
 };

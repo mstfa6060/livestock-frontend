@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Այս էլփոստի հասցեն արդեն օգտագործվում է:",
       USER_USER_NAME_ALREADY_EXISTS: "Այս օգտանունն արդեն օգտագործվում է:",
       USER_COUNTRY_ID_REQUIRED: "Երկրի ընտրությունը պարտադիր է։",
+      USER_DELETE_PASSWORD_REQUIRED: "Հաշիվը ջնջելու համար անհրաժեշտ է գաղտնաբառի հաստատում:",
+      USER_DELETE_PASSWORD_INCORRECT: "Գաղտնաբառի ստուգումը ձախողվեց: Հաշիվը չհաջողվեց ջնջել:",
+      USER_DELETE_ALREADY_DELETED: "Այս հաշիվն արդեն ջնջվել է:",
+      USER_DELETE_NOT_AUTHENTICATED: "Ձեր հաշիվը ջնջելու համար դուք պետք է մուտք գործեք:",
     }
   }
 };

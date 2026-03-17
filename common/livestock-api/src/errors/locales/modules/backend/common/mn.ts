@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Энэ имэйл хаяг аль хэдийн ашиглагдаж байна.",
       USER_USER_NAME_ALREADY_EXISTS: "Энэ хэрэглэгчийн нэрийг аль хэдийн ашиглаж байна.",
       USER_COUNTRY_ID_REQUIRED: "Улсыг сонгох нь заавал байх ёстой.",
+      USER_DELETE_PASSWORD_REQUIRED: "Бүртгэлийг устгахын тулд нууц үгээ баталгаажуулах шаардлагатай.",
+      USER_DELETE_PASSWORD_INCORRECT: "Нууц үг баталгаажуулалт амжилтгүй боллоо. Бүртгэлийг устгаж чадсангүй.",
+      USER_DELETE_ALREADY_DELETED: "Энэ бүртгэл аль хэдийн устгагдсан байна.",
+      USER_DELETE_NOT_AUTHENTICATED: "Та бүртгэлээ устгахын тулд нэвтэрсэн байх ёстой.",
     }
   }
 };

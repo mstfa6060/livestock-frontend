@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Questo indirizzo email è già in uso.",
       USER_USER_NAME_ALREADY_EXISTS: "Questo nome utente è già in uso.",
       USER_COUNTRY_ID_REQUIRED: "La selezione del paese è obbligatoria.",
+      USER_DELETE_PASSWORD_REQUIRED: "Per la cancellazione dell'account è necessaria la conferma della password.",
+      USER_DELETE_PASSWORD_INCORRECT: "Verifica della password non riuscita. Impossibile eliminare l'account.",
+      USER_DELETE_ALREADY_DELETED: "Questo account è già stato eliminato.",
+      USER_DELETE_NOT_AUTHENTICATED: "Devi aver effettuato l'accesso per eliminare il tuo account.",
     }
   }
 };

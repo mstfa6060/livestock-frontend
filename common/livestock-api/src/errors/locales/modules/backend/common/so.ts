@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Ciwaanka iimaylkan horeba waa loo isticmaalay",
       USER_USER_NAME_ALREADY_EXISTS: "Magaca isticmaalaha horeba waa loo isticmaalay",
       USER_COUNTRY_ID_REQUIRED: "Xulashada dalka waa qasab.",
+      USER_DELETE_PASSWORD_REQUIRED: "Xaqiijinta erayga sirta ah waa qasab in xisaabta la tirtiro.",
+      USER_DELETE_PASSWORD_INCORRECT: "Xaqiijinta erayga sirta ah waa guuldareystay. Koontada waa la tirtiri waayay",
+      USER_DELETE_ALREADY_DELETED: "Koontadan mar hore waa la tirtiray",
+      USER_DELETE_NOT_AUTHENTICATED: "Waa in aad gasho si aad u tirtirto akoonkaaga",
     }
   }
 };

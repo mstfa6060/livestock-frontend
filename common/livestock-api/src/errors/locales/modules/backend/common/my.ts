@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "ဤအီးမေးလ်လိပ်စာကို အသုံးပြုပြီးဖြစ်သည်။",
       USER_USER_NAME_ALREADY_EXISTS: "ဤအသုံးပြုသူအမည်ကို အသုံးပြုပြီးဖြစ်သည်။",
       USER_COUNTRY_ID_REQUIRED: "နိုင်ငံရွေးချယ်မှုသည် မဖြစ်မနေလိုအပ်ပါသည်။",
+      USER_DELETE_PASSWORD_REQUIRED: "အကောင့်ဖျက်ခြင်းအတွက် စကားဝှက်အတည်ပြုရန် လိုအပ်ပါသည်။",
+      USER_DELETE_PASSWORD_INCORRECT: "စကားဝှက် အတည်ပြုခြင်း မအောင်မြင်ပါ။ အကောင့်ကို ဖျက်၍မရပါ။",
+      USER_DELETE_ALREADY_DELETED: "ဤအကောင့်ကို ဖျက်ပြီးဖြစ်သည်။",
+      USER_DELETE_NOT_AUTHENTICATED: "သင့်အကောင့်ကိုဖျက်ရန် သင်သည် လော့ဂ်အင်ဝင်ရပါမည်။",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "এই ইমেল ঠিকানাটি ইতিমধ্যেই ব্যবহার করা হচ্ছে৷",
       USER_USER_NAME_ALREADY_EXISTS: "এই ব্যবহারকারীর নাম ইতিমধ্যে ব্যবহার করা হয়.",
       USER_COUNTRY_ID_REQUIRED: "দেশ নির্বাচন বাধ্যতামূলক।",
+      USER_DELETE_PASSWORD_REQUIRED: "অ্যাকাউন্ট মুছে ফেলার জন্য পাসওয়ার্ড নিশ্চিতকরণ প্রয়োজন।",
+      USER_DELETE_PASSWORD_INCORRECT: "পাসওয়ার্ড যাচাই ব্যর্থ হয়েছে. অ্যাকাউন্ট মুছে ফেলা যাবে না.",
+      USER_DELETE_ALREADY_DELETED: "এই অ্যাকাউন্ট ইতিমধ্যে মুছে ফেলা হয়েছে.",
+      USER_DELETE_NOT_AUTHENTICATED: "আপনার অ্যাকাউন্ট মুছে ফেলতে আপনাকে অবশ্যই লগ ইন করতে হবে।",
     }
   }
 };

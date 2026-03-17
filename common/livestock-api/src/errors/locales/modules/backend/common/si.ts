@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "මෙම ඊමේල් ලිපිනය දැනටමත් භාවිතයේ ඇත.",
       USER_USER_NAME_ALREADY_EXISTS: "මෙම පරිශීලක නාමය දැනටමත් භාවිතයේ ඇත.",
       USER_COUNTRY_ID_REQUIRED: "රට තෝරා ගැනීම අනිවාර්ය වේ.",
+      USER_DELETE_PASSWORD_REQUIRED: "ගිණුම මකා දැමීම සඳහා මුරපදය තහවුරු කිරීම අවශ්‍ය වේ.",
+      USER_DELETE_PASSWORD_INCORRECT: "මුරපද සත්‍යාපනය අසාර්ථක විය. ගිණුම මැකීමට නොහැකි විය.",
+      USER_DELETE_ALREADY_DELETED: "මෙම ගිණුම දැනටමත් මකා ඇත.",
+      USER_DELETE_NOT_AUTHENTICATED: "ඔබගේ ගිණුම මකා දැමීමට ඔබ පුරනය වී සිටිය යුතුය.",
     }
   }
 };

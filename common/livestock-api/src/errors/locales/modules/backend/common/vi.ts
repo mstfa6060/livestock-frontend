@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Địa chỉ email này đã được sử dụng.",
       USER_USER_NAME_ALREADY_EXISTS: "Tên người dùng này đã được sử dụng.",
       USER_COUNTRY_ID_REQUIRED: "Lựa chọn quốc gia là bắt buộc.",
+      USER_DELETE_PASSWORD_REQUIRED: "Cần phải xác nhận mật khẩu để xóa tài khoản.",
+      USER_DELETE_PASSWORD_INCORRECT: "Xác minh mật khẩu không thành công. Không thể xóa tài khoản.",
+      USER_DELETE_ALREADY_DELETED: "Tài khoản này đã bị xóa.",
+      USER_DELETE_NOT_AUTHENTICATED: "Bạn phải đăng nhập để xóa tài khoản của bạn.",
     }
   }
 };

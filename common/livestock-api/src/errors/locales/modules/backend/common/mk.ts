@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Оваа адреса на е-пошта веќе се користи.",
       USER_USER_NAME_ALREADY_EXISTS: "Ова корисничко име веќе се користи.",
       USER_COUNTRY_ID_REQUIRED: "Изборот на земја е задолжителен.",
+      USER_DELETE_PASSWORD_REQUIRED: "Потребна е потврда на лозинката за бришење на сметката.",
+      USER_DELETE_PASSWORD_INCORRECT: "Проверката на лозинката не успеа. Сметката не може да се избрише.",
+      USER_DELETE_ALREADY_DELETED: "Оваа сметка е веќе избришана.",
+      USER_DELETE_NOT_AUTHENTICATED: "Мора да бидете најавени за да ја избришете вашата сметка.",
     }
   }
 };

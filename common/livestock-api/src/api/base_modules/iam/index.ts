@@ -242,12 +242,12 @@ export namespace IAMAPI {
 			export const RequestPath = AppConfig.IAMUrl + '/Users/Delete';
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
-				userId: Guid;
-				isDeleted: boolean;
+				password: string;
+				reason: string;
 			}
 			export interface IResponseModel {
-				id: Guid;
-				isDeleted: boolean;
+				success: boolean;
+				message: string;
 			}
 		}
 

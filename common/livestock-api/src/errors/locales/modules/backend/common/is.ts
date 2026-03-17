@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Þetta netfang er þegar í notkun.",
       USER_USER_NAME_ALREADY_EXISTS: "Þetta notendanafn er þegar í notkun.",
       USER_COUNTRY_ID_REQUIRED: "Landsval er skylda.",
+      USER_DELETE_PASSWORD_REQUIRED: "Staðfestingu lykilorðs er krafist til að eyða reikningi.",
+      USER_DELETE_PASSWORD_INCORRECT: "Staðfesting lykilorðs mistókst. Ekki var hægt að eyða reikningnum.",
+      USER_DELETE_ALREADY_DELETED: "Þessum reikningi hefur þegar verið eytt.",
+      USER_DELETE_NOT_AUTHENTICATED: "Þú verður að vera skráður inn til að eyða reikningnum þínum.",
     }
   }
 };

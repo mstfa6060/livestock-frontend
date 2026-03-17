@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Adịlarị adreesị ozi-e a.",
       USER_USER_NAME_ALREADY_EXISTS: "Ejila aha njirimara a.",
       USER_COUNTRY_ID_REQUIRED: "Nhọrọ obodo bụ iwu.",
+      USER_DELETE_PASSWORD_REQUIRED: "Achọrọ nkwenye paswọọdụ maka ihichapụ akaụntụ.",
+      USER_DELETE_PASSWORD_INCORRECT: "Nnwale okwuntughe dara. Enweghị ike ihichapụ akaụntụ ahụ.",
+      USER_DELETE_ALREADY_DELETED: "E ehichapụla akaụntụ a.",
+      USER_DELETE_NOT_AUTHENTICATED: "Ị ga-abanyerịrị ka ihichapụ akaụntụ gị.",
     }
   }
 };

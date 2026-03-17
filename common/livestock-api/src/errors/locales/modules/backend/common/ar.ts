@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "عنوان البريد الإلكتروني هذا قيد الاستخدام بالفعل.",
       USER_USER_NAME_ALREADY_EXISTS: "اسم المستخدم هذا قيد الاستخدام بالفعل.",
       USER_COUNTRY_ID_REQUIRED: "اختيار البلد إلزامي.",
+      USER_DELETE_PASSWORD_REQUIRED: "مطلوب تأكيد كلمة المرور لحذف الحساب.",
+      USER_DELETE_PASSWORD_INCORRECT: "فشل التحقق من كلمة المرور. لا يمكن حذف الحساب.",
+      USER_DELETE_ALREADY_DELETED: "لقد تم حذف هذا الحساب بالفعل.",
+      USER_DELETE_NOT_AUTHENTICATED: "يجب عليك تسجيل الدخول لحذف حسابك.",
     }
   }
 };

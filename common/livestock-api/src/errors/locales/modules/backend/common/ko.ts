@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "이 이메일 주소는 이미 사용 중입니다.",
       USER_USER_NAME_ALREADY_EXISTS: "이 사용자 이름은 이미 사용 중입니다.",
       USER_COUNTRY_ID_REQUIRED: "국가 선택은 필수입니다.",
+      USER_DELETE_PASSWORD_REQUIRED: "계정 삭제를 위해서는 비밀번호 확인이 필요합니다.",
+      USER_DELETE_PASSWORD_INCORRECT: "비밀번호 확인에 실패했습니다. 계정을 삭제할 수 없습니다.",
+      USER_DELETE_ALREADY_DELETED: "이 계정은 이미 삭제되었습니다.",
+      USER_DELETE_NOT_AUTHENTICATED: "계정을 삭제하려면 로그인해야 합니다.",
     }
   }
 };

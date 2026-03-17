@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Alamat e-mel ini sudah digunakan.",
       USER_USER_NAME_ALREADY_EXISTS: "Nama pengguna ini sudah digunakan.",
       USER_COUNTRY_ID_REQUIRED: "Pemilihan negara adalah wajib.",
+      USER_DELETE_PASSWORD_REQUIRED: "Pengesahan kata laluan adalah wajib untuk pemadaman akaun.",
+      USER_DELETE_PASSWORD_INCORRECT: "Pengesahan kata laluan gagal. Akaun tidak dapat dipadamkan.",
+      USER_DELETE_ALREADY_DELETED: "Akaun ini telah dipadamkan.",
+      USER_DELETE_NOT_AUTHENTICATED: "Anda mesti log masuk untuk memadam akaun anda.",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Bu e-poçt ünvanı artıq istifadə olunur.",
       USER_USER_NAME_ALREADY_EXISTS: "Bu istifadəçi adı artıq istifadə olunur.",
       USER_COUNTRY_ID_REQUIRED: "Ölkə seçimi məcburidir.",
+      USER_DELETE_PASSWORD_REQUIRED: "Hesabın silinməsi üçün parolun təsdiqi tələb olunur.",
+      USER_DELETE_PASSWORD_INCORRECT: "Parolun doğrulanması uğursuz oldu. Hesabı silmək mümkün olmadı.",
+      USER_DELETE_ALREADY_DELETED: "Bu hesab artıq silinib.",
+      USER_DELETE_NOT_AUTHENTICATED: "Hesabınızı silmək üçün daxil olmalısınız.",
     }
   }
 };
