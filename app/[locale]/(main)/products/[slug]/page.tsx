@@ -115,11 +115,11 @@ export default function ProductDetailPage() {
   const isGuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(slug);
 
   // Step 1: Resolve slug → product ID via DetailBySlug (only if slug is not a GUID)
-  const { data: slugProduct, isLoading: isSlugLoading } = useQuery({
+  const { data: slugProduct, isLoading: isSlugLoading, error: slugError } = useQuery({
     queryKey: queryKeys.products.detail(`slug:${slug}`),
     queryFn: () => LivestockTradingAPI.Products.DetailBySlug.Request({ slug }),
     enabled: !isGuid && !!slug,
-    retry: 1,
+    retry: false,
   });
   const resolvedId = isGuid ? slug : slugProduct?.id;
 
@@ -353,7 +353,7 @@ export default function ProductDetailPage() {
     );
   }
 
-  if (productError || !product) {
+  if (slugError || productError || !product) {
     return (
       <div className="min-h-screen bg-background">
         <MainHeader />
