@@ -7,27 +7,15 @@ const BASE_URL = "https://livestock-trading.com";
 
 async function fetchProductBySlug(slug: string) {
   try {
-    const res = await fetch(`${AppConfig.LivestockTradingUrl}/Products/All`, {
+    const res = await fetch(`${AppConfig.LivestockTradingUrl}/Products/DetailBySlug`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ slug, countryCode: "", pageRequest: { pageNumber: 0, perPageCount: 1 } }),
+      body: JSON.stringify({ slug, viewerCurrencyCode: "" }),
       next: { revalidate: 3600 },
     });
     if (!res.ok) return null;
     const data = await res.json();
-    const items = data?.data?.items ?? data?.items ?? [];
-    if (items.length === 0) return null;
-    // Fetch full detail for the found product
-    const productId = items[0].id;
-    const detailRes = await fetch(`${AppConfig.LivestockTradingUrl}/Products/Detail`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id: productId }),
-      next: { revalidate: 3600 },
-    });
-    if (!detailRes.ok) return null;
-    const detailData = await detailRes.json();
-    return detailData?.data ?? detailData;
+    return data?.payload ?? data?.data ?? null;
   } catch {
     return null;
   }
