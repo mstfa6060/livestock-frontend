@@ -379,6 +379,34 @@
       "saveSuccess": "Är Preferenzen goufen aktualiséiert.",
       "saveError": "Beim Aktualiséierung vun de Virléiften ass e Feeler opgetrueden.",
       "loadError": "D'Astellungen konnten net geluede ginn."
+    },
+    "deleteAccount": {
+      "dangerZone": "Geforzon",
+      "title": "Kont läschen",
+      "description": "Wann Dir Äre Kont geläscht hutt, gëtt et kee Wee méi zeréck. All Är Donnéeën, Annoncen a Gespréicher ginn permanent geläscht.",
+      "irreversible": "Dës Aktioun ass irreversibel.",
+      "button": "Mäi Kont läschen",
+      "confirmTitle": "Bass du sécher, datt du däi Kont läschen wëlls?",
+      "warning": "Déi folgend Donnéeë ginn permanent geläscht:",
+      "warningProfile": "Äre Profil an Är perséinlech Informatiounen",
+      "warningListings": "All Är Inseraten a Produkter",
+      "warningConversations": "Är Gespréicher a Messagen",
+      "warningReviews": "Är Bewäertungen a Favoritten",
+      "passwordLabel": "Gitt Äert Passwuert an fir ze bestätegen",
+      "passwordPlaceholder": "Äert aktuellt Passwuert",
+      "reasonLabel": "Firwat gitt Dir fort? (optional)",
+      "reasonPlaceholder": "Wielt e Grond",
+      "reasonNotSatisfied": "Net zefridden mam Service",
+      "reasonPrivacy": "Bedenken iwwer d'Privatsphär",
+      "reasonAlternative": "Eng alternativ Plattform fonnt",
+      "reasonOther": "Aner",
+      "feedbackLabel": "Zousätzlech Feedback (optional)",
+      "feedbackPlaceholder": "Sot eis wéi mir eis verbessere kënnen...",
+      "cancel": "Ofbriechen",
+      "confirmButton": "Kont läschen",
+      "deleting": "Läschen...",
+      "success": "Äre Kont gouf erfollegräich geläscht.",
+      "error": "De Kont konnt net geläscht ginn. Iwwerpréift w.e.g. Äert Passwuert a probéiert et nach eng Kéier."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Wielt eng Kategorie.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Den Titel vun der Reklam ass obligatoresch.",
       "shortDescriptionRequired": "Eng kuerz Beschreiwung ass erfuerderlech.",
       "descriptionRequired": "Eng detailléiert Erklärung ass néideg.",
       "categoryRequired": "D'Auswiel vun der Kategorie ass obligatoresch.",
       "priceRequired": "Gitt e gültege Präis an."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Nei Annonce erstellen",
@@ -834,21 +862,22 @@
       "shippingCost": "Versandkäschten",
       "weight": "Gewiicht",
       "weightUnit": "Eenheet vum Gewiicht",
+      "currency": "Currency",
       "city": "Stad",
       "address": "Adress",
-      "postalCode": "Postleitzuel",
-      "currency": "Currency"
+      "postalCode": "Postleitzuel"
     },
     "placeholders": {
       "title": "Beispill: 2 Joer al Holstein Kou",
       "shortDescription": "Produktbeschreiwung (maximal 200 Zeechen)",
       "description": "Gitt detailléiert Informatiounen iwwer de Produit ...",
       "category": "Wielt eng Kategorie.",
+      "searchCurrency": "Search currency...",
       "city": "Gitt an d'Stad eran",
       "address": "Gitt déi komplett Adress an.",
-      "postalCode": "Postleitzuel",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Postleitzuel"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Den Titel vun der Reklam ass obligatoresch.",
       "shortDescriptionRequired": "Eng kuerz Beschreiwung ass erfuerderlech.",
@@ -870,8 +899,7 @@
     "productCreated": "D'Produkt gouf erfollegräich erstallt.",
     "creationFailed": "D'Produkt konnt net erstallt ginn. Probéiert et nach eng Kéier.",
     "userNotFound": "D'Benotzerinformatioune konnten net fonnt ginn. Mellt Iech w.e.g. nach eng Kéier un.",
-    "defaultBusinessName": "Mäi Geschäft",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Mäi Geschäft"
   },
   "becomeSeller": {
     "title": "Gitt e Verkeefer",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "virun {count} Minutten",
     "hoursAgo": "virun {count} Stonnen",
     "daysAgo": "virun {count} Deeg"
+  },
+  "pricing": {
+    "originalPrice": "Originalpräis",
+    "convertedPrice": "Ëmgerechent Präis",
+    "approximatePrice": "Ongeféier Ëmrechnung baséiert op aktuellen Wechselkursen",
+    "approximate": "≈"
   }
 }

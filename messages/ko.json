@@ -379,6 +379,34 @@
       "saveSuccess": "설정 내용이 업데이트되었습니다.",
       "saveError": "환경설정을 업데이트하는 동안 오류가 발생했습니다.",
       "loadError": "환경설정을 불러올 수 없습니다."
+    },
+    "deleteAccount": {
+      "dangerZone": "위험 지역",
+      "title": "계정 삭제",
+      "description": "계정을 삭제하면 되돌릴 수 없습니다. 모든 데이터, 게시물, 대화 내용이 영구적으로 삭제됩니다.",
+      "irreversible": "이 조치는 되돌릴 수 없습니다.",
+      "button": "내 계정을 삭제해 주세요",
+      "confirmTitle": "계정을 삭제하시겠습니까?",
+      "warning": "다음 데이터는 영구적으로 삭제됩니다.",
+      "warningProfile": "프로필 및 개인 정보",
+      "warningListings": "모든 상품 목록 및 제품",
+      "warningConversations": "여러분의 대화와 메시지",
+      "warningReviews": "여러분의 리뷰와 즐겨찾기",
+      "passwordLabel": "비밀번호를 입력하여 확인하세요.",
+      "passwordPlaceholder": "현재 비밀번호",
+      "reasonLabel": "떠나시는 이유가 무엇인가요? (선택 사항)",
+      "reasonPlaceholder": "이유를 선택하세요",
+      "reasonNotSatisfied": "서비스에 만족하지 못했습니다",
+      "reasonPrivacy": "개인정보 보호 문제",
+      "reasonAlternative": "대안 플랫폼을 찾았습니다.",
+      "reasonOther": "다른",
+      "feedbackLabel": "추가 의견 (선택 사항)",
+      "feedbackPlaceholder": "어떻게 개선할 수 있을지 알려주세요...",
+      "cancel": "취소",
+      "confirmButton": "계정 삭제",
+      "deleting": "삭제 중...",
+      "success": "계정이 성공적으로 삭제되었습니다.",
+      "error": "계정 삭제에 실패했습니다. 비밀번호를 확인하고 다시 시도해 주세요."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "판매자 정보를 업로드하는 동안 오류가 발생했습니다.",
       "productsLoadError": "판매자의 상품을 업로드하는 동안 오류가 발생했습니다.",
       "reviewsTab": "평가",
+      "share": "공유하다",
+      "shareText": "Livestock Trading에서 {name}을 확인해 보세요.",
+      "linkCopied": "링크가 클립보드에 복사되었습니다.",
       "reviews": {
         "summary": "평가 요약",
         "reviewCount": "평가",
@@ -796,14 +827,14 @@
       "category": "카테고리를 선택하세요.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "광고 제목은 필수 입력 사항입니다.",
       "shortDescriptionRequired": "간략한 설명이 필요합니다.",
       "descriptionRequired": "자세한 설명이 필요합니다.",
       "categoryRequired": "카테고리 선택은 필수입니다.",
       "priceRequired": "유효한 가격을 입력하세요."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "새 상품 등록하기",
@@ -831,21 +862,22 @@
       "shippingCost": "배송비",
       "weight": "무게",
       "weightUnit": "무게 단위",
+      "currency": "Currency",
       "city": "도시",
       "address": "주소",
-      "postalCode": "우편번호",
-      "currency": "Currency"
+      "postalCode": "우편번호"
     },
     "placeholders": {
       "title": "예시: 2살 홀스타인 암소",
       "shortDescription": "제품 설명 (최대 200자)",
       "description": "제품에 대한 자세한 정보를 제공해 주세요...",
       "category": "카테고리를 선택하세요.",
+      "searchCurrency": "Search currency...",
       "city": "도시로 들어가세요",
       "address": "전체 주소를 입력하세요.",
-      "postalCode": "우편번호",
-      "searchCurrency": "Search currency..."
+      "postalCode": "우편번호"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "광고 제목은 필수 입력 사항입니다.",
       "shortDescriptionRequired": "간략한 설명이 필요합니다.",
@@ -867,8 +899,7 @@
     "productCreated": "제품이 성공적으로 제작되었습니다.",
     "creationFailed": "제품을 만들 수 없습니다. 다시 시도해 주세요.",
     "userNotFound": "사용자 정보를 찾을 수 없습니다. 다시 로그인해 주세요.",
-    "defaultBusinessName": "내 사업",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "내 사업"
   },
   "becomeSeller": {
     "title": "판매자가 되세요",
@@ -1317,7 +1348,10 @@
     "fleet": "함대 정보",
     "serviceRegions": "서비스 지역",
     "specializations": "전문 분야",
-    "certifications": "인증서"
+    "certifications": "인증서",
+    "share": "공유하다",
+    "shareText": "Livestock Trading에서 {name}을 확인해 보세요.",
+    "linkCopied": "링크가 클립보드에 복사되었습니다."
   },
   "brands": {
     "title": "브랜드 관리",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "{count}분 전",
     "hoursAgo": "{count}시간 전",
     "daysAgo": "{count}일 전"
+  },
+  "pricing": {
+    "originalPrice": "원래 가격",
+    "convertedPrice": "환산 가격",
+    "approximatePrice": "현재 환율을 기준으로 한 대략적인 환산 금액입니다.",
+    "approximate": "≈"
   }
 }

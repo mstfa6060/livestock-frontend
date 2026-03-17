@@ -379,6 +379,34 @@
       "saveSuccess": "Ua fa'afouina au mea e te fiafia i ai.",
       "saveError": "Sa tupu se fa'aletonu a'o fa'afouina mea e te fiafia i ai.",
       "loadError": "E le mafai ona utaina mea e te fiafia i ai."
+    },
+    "deleteAccount": {
+      "dangerZone": "Sone Lamatia",
+      "title": "Tape le Akauni",
+      "description": "O le taimi lava e te tapeina ai lau teugatupe, e leai se toe foʻi i tua. O au faʻamatalaga uma, lisi, ma talanoaga o le a aveesea tumau.",
+      "irreversible": "E lē mafai ona toe suia lenei gaioiga.",
+      "button": "Tape La'u Teugatupe",
+      "confirmTitle": "E te mautinoa e te manaʻo e tape lau teugatupe?",
+      "warning": "O faʻamatalaga nei o le a tapeina tumau:",
+      "warningProfile": "Lou talaaga ma faʻamatalaga patino",
+      "warningListings": "O au lisi uma ma oloa",
+      "warningConversations": "Au talanoaga ma savali",
+      "warningReviews": "Au iloiloga ma mea e te fiafia i ai",
+      "passwordLabel": "Ulufale i lau upu faataga e faamaonia ai",
+      "passwordPlaceholder": "Lau upu faataga o lo'o iai nei",
+      "reasonLabel": "Aiseā ua e alu ese ai? (filifiliga)",
+      "reasonPlaceholder": "Filifili se mafuaʻaga",
+      "reasonNotSatisfied": "E le'i fa'amalieina i le tautua",
+      "reasonPrivacy": "Popolega i le le faalauaiteleina",
+      "reasonAlternative": "Ua maua se isi fausaga",
+      "reasonOther": "Isi",
+      "feedbackLabel": "Fa'amatalaga fa'aopoopo (filifiliga)",
+      "feedbackPlaceholder": "Ta'u mai pe fa'apefea ona matou fa'aleleia atili...",
+      "cancel": "Faaleaoga",
+      "confirmButton": "Tape le Akauni",
+      "deleting": "O lo'o tapeina...",
+      "success": "Ua soloia ma le manuia lau teugatupe.",
+      "error": "Ua le manuia le tapeina o le teugatupe. Fa'amolemole siaki lau upu fa'alilolilo ma toe taumafai."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Filifili se vaega.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "E mana'omia le tusia o le ulutala o le fa'asalalauga.",
       "shortDescriptionRequired": "E manaʻomia se faʻamatalaga puupuu.",
       "descriptionRequired": "E manaʻomia se faʻamatalaga auiliili.",
       "categoryRequired": "E mana'omia le filifilia o le vaega.",
       "priceRequired": "Ulufale i se tau talafeagai."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Fausia se Lisi Fou",
@@ -834,21 +862,22 @@
       "shippingCost": "Totogifuapauina o Felauaiga",
       "weight": "Mamafa",
       "weightUnit": "Iunite o le Mamafa",
+      "currency": "Currency",
       "city": "Aai",
       "address": "Tuatusi",
-      "postalCode": "Numera o le itu malo",
-      "currency": "Currency"
+      "postalCode": "Numera o le itu malo"
     },
     "placeholders": {
       "title": "Faataitaiga: Povi Holstein e 2 Tausaga le Matua",
       "shortDescription": "Fa'amatalaga o le oloa (e le silia ma le 200 mata'itusi)",
       "description": "Tu'uina atu fa'amatalaga auiliili e uiga i le oloa...",
       "category": "Filifili se vaega.",
+      "searchCurrency": "Search currency...",
       "city": "Ulu atu i le aai",
       "address": "Tuu le tuatusi atoa.",
-      "postalCode": "Numera o le itu malo",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Numera o le itu malo"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "E mana'omia le tusia o le ulutala o le fa'asalalauga.",
       "shortDescriptionRequired": "E manaʻomia se faʻamatalaga puupuu.",
@@ -870,8 +899,7 @@
     "productCreated": "Sa manuia le fausiaina o le oloa.",
     "creationFailed": "E le mafai ona fatuina le oloa. Fa'amolemole toe taumafai.",
     "userNotFound": "E le'i maua fa'amatalaga a le tagata fa'aoga. Fa'amolemole toe ulufale.",
-    "defaultBusinessName": "La'u pisinisi",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "La'u pisinisi"
   },
   "becomeSeller": {
     "title": "Avea ma se Fa'atau'oloa",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} minute talu ai",
     "hoursAgo": "{count}h talu ai",
     "daysAgo": "{count}d talu ai"
+  },
+  "pricing": {
+    "originalPrice": "Tau muamua",
+    "convertedPrice": "Tau ua liua",
+    "approximatePrice": "Fa'atusatusaga o le liua e fa'atatau i fua fa'atatau o fesuiaiga o tupe i le taimi nei",
+    "approximate": "≈"
   }
 }

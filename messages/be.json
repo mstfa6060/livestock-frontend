@@ -379,6 +379,34 @@
       "saveSuccess": "Вашы налады былі абноўлены.",
       "saveError": "Падчас абнаўлення налад узнікла памылка.",
       "loadError": "Не ўдалося загрузіць налады."
+    },
+    "deleteAccount": {
+      "dangerZone": "Небяспечная зона",
+      "title": "Выдаліць уліковы запіс",
+      "description": "Пасля выдалення ўліковага запісу шляху назад ужо няма. Усе вашы даныя, аб'явы і размовы будуць выдалены назаўсёды.",
+      "irreversible": "Гэта дзеянне незваротнае.",
+      "button": "Выдаліць мой уліковы запіс",
+      "confirmTitle": "Вы ўпэўненыя, што хочаце выдаліць свой уліковы запіс?",
+      "warning": "Наступныя даныя будуць выдалены назаўсёды:",
+      "warningProfile": "Ваш профіль і асабістая інфармацыя",
+      "warningListings": "Усе вашы аб'явы і тавары",
+      "warningConversations": "Вашы размовы і паведамленні",
+      "warningReviews": "Вашы водгукі і ўпадабанні",
+      "passwordLabel": "Увядзіце пароль для пацверджання",
+      "passwordPlaceholder": "Ваш бягучы пароль",
+      "reasonLabel": "Чаму вы сыходзіце? (неабавязкова)",
+      "reasonPlaceholder": "Выберыце прычыну",
+      "reasonNotSatisfied": "Не задаволены абслугоўваннем",
+      "reasonPrivacy": "Праблемы прыватнасці",
+      "reasonAlternative": "Знайшлі альтэрнатыўную платформу",
+      "reasonOther": "Іншае",
+      "feedbackLabel": "Дадатковы водгук (неабавязкова)",
+      "feedbackPlaceholder": "Раскажыце нам, як мы можам палепшыць...",
+      "cancel": "Адмена",
+      "confirmButton": "Выдаліць уліковы запіс",
+      "deleting": "Выдаленне...",
+      "success": "Ваш уліковы запіс паспяхова выдалены.",
+      "error": "Не атрымалася выдаліць уліковы запіс. Праверце пароль і паспрабуйце яшчэ раз."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Выберыце катэгорыю.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Назва рэкламы абавязковая.",
       "shortDescriptionRequired": "Патрабуецца кароткае апісанне.",
       "descriptionRequired": "Патрабуецца падрабязнае тлумачэнне.",
       "categoryRequired": "Выбар катэгорыі абавязковы.",
       "priceRequired": "Увядзіце сапраўдную цану."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Стварыць новую аб'яву",
@@ -834,21 +862,22 @@
       "shippingCost": "Кошт дастаўкі",
       "weight": "Вага",
       "weightUnit": "Адзінка вагі",
+      "currency": "Currency",
       "city": "Горад",
       "address": "Адрас",
-      "postalCode": "Паштовы індэкс",
-      "currency": "Currency"
+      "postalCode": "Паштовы індэкс"
     },
     "placeholders": {
       "title": "Прыклад: 2-гадовая карова галштынскай пароды",
       "shortDescription": "Апісанне прадукту (максімум 200 сімвалаў)",
       "description": "Дайце падрабязную інфармацыю пра прадукт...",
       "category": "Выберыце катэгорыю.",
+      "searchCurrency": "Search currency...",
       "city": "Увайдзіце ў горад",
       "address": "Увядзіце поўны адрас.",
-      "postalCode": "Паштовы індэкс",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Паштовы індэкс"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Назва рэкламы абавязковая.",
       "shortDescriptionRequired": "Патрабуецца кароткае апісанне.",
@@ -870,8 +899,7 @@
     "productCreated": "Прадукт быў паспяхова створаны.",
     "creationFailed": "Не ўдалося стварыць прадукт. Паўтарыце спробу.",
     "userNotFound": "Інфармацыя пра карыстальніка не знойдзена. Калі ласка, увайдзіце зноў.",
-    "defaultBusinessName": "Мой бізнес",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Мой бізнес"
   },
   "becomeSeller": {
     "title": "Стаць прадаўцом",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} хвілін таму",
     "hoursAgo": "{count}г таму",
     "daysAgo": "{count} дзён таму"
+  },
+  "pricing": {
+    "originalPrice": "Першапачатковая цана",
+    "convertedPrice": "Канвертаваная цана",
+    "approximatePrice": "Прыблізны пералік на аснове бягучых абменных курсаў",
+    "approximate": "≈"
   }
 }

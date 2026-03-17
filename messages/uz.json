@@ -379,6 +379,34 @@
       "saveSuccess": "Sozlamalaringiz yangilandi.",
       "saveError": "Sozlamalarni yangilashda xatolik yuz berdi.",
       "loadError": "Sozlamalar yuklanmadi."
+    },
+    "deleteAccount": {
+      "dangerZone": "Xavfli hudud",
+      "title": "Hisobni o'chirish",
+      "description": "Hisobingizni o'chirib tashlaganingizdan so'ng, orqaga qaytish imkoni yo'q. Barcha ma'lumotlaringiz, ro'yxatlaringiz va suhbatlaringiz butunlay o'chirib tashlanadi.",
+      "irreversible": "Bu harakat qaytarib bo'lmaydigan.",
+      "button": "Hisobimni o'chirish",
+      "confirmTitle": "Haqiqatan ham hisobingizni o'chirmoqchimisiz?",
+      "warning": "Quyidagi ma'lumotlar butunlay o'chiriladi:",
+      "warningProfile": "Profilingiz va shaxsiy ma'lumotlaringiz",
+      "warningListings": "Barcha e'lonlaringiz va mahsulotlaringiz",
+      "warningConversations": "Sizning suhbatlaringiz va xabarlaringiz",
+      "warningReviews": "Sharhlaringiz va sevimlilaringiz",
+      "passwordLabel": "Tasdiqlash uchun parolingizni kiriting",
+      "passwordPlaceholder": "Joriy parolingiz",
+      "reasonLabel": "Nima uchun ketyapsiz? (ixtiyoriy)",
+      "reasonPlaceholder": "Sababni tanlang",
+      "reasonNotSatisfied": "Xizmatdan qoniqmadim",
+      "reasonPrivacy": "Maxfiylik bilan bog'liq muammolar",
+      "reasonAlternative": "Muqobil platforma topildi",
+      "reasonOther": "Boshqa",
+      "feedbackLabel": "Qo'shimcha fikr-mulohaza (ixtiyoriy)",
+      "feedbackPlaceholder": "Qanday qilib yaxshilashimiz mumkinligini ayting...",
+      "cancel": "Bekor qilish",
+      "confirmButton": "Hisobni o'chirish",
+      "deleting": "O'chirilmoqda...",
+      "success": "Hisobingiz muvaffaqiyatli o'chirildi.",
+      "error": "Hisobni o'chirib bo'lmadi. Parolingizni tekshiring va qaytadan urinib ko'ring."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Toifani tanlang.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Reklama sarlavhasi majburiy.",
       "shortDescriptionRequired": "Qisqacha tavsif talab qilinadi.",
       "descriptionRequired": "Batafsil tushuntirish talab qilinadi.",
       "categoryRequired": "Kategoriyani tanlash majburiydir.",
       "priceRequired": "Haqiqiy narxni kiriting."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Yangi ro'yxat yaratish",
@@ -834,21 +862,22 @@
       "shippingCost": "Yetkazib berish narxi",
       "weight": "Og'irligi",
       "weightUnit": "Og'irlik birligi",
+      "currency": "Currency",
       "city": "Shahar",
       "address": "Manzil",
-      "postalCode": "Pochta kodi",
-      "currency": "Currency"
+      "postalCode": "Pochta kodi"
     },
     "placeholders": {
       "title": "Misol: 2 yoshli Golshteyn sigiri",
       "shortDescription": "Mahsulot tavsifi (maksimal 200 belgi)",
       "description": "Mahsulot haqida batafsil ma'lumot bering...",
       "category": "Toifani tanlang.",
+      "searchCurrency": "Search currency...",
       "city": "Shaharga kiring",
       "address": "To'liq manzilni kiriting.",
-      "postalCode": "Pochta kodi",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Pochta kodi"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Reklama sarlavhasi majburiy.",
       "shortDescriptionRequired": "Qisqacha tavsif talab qilinadi.",
@@ -870,8 +899,7 @@
     "productCreated": "Mahsulot muvaffaqiyatli yaratildi.",
     "creationFailed": "Mahsulot yaratib bo'lmadi. Qaytadan urinib ko'ring.",
     "userNotFound": "Foydalanuvchi ma'lumotlari topilmadi. Iltimos, qaytadan tizimga kiring.",
-    "defaultBusinessName": "Mening biznesim",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Mening biznesim"
   },
   "becomeSeller": {
     "title": "Sotuvchi bo'ling",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} daqiqa oldin",
     "hoursAgo": "{count} soat oldin",
     "daysAgo": "{count} kun oldin"
+  },
+  "pricing": {
+    "originalPrice": "Asl narx",
+    "convertedPrice": "Konvertatsiya qilingan narx",
+    "approximatePrice": "Joriy valyuta kurslari asosida taxminiy konversiya",
+    "approximate": "≈"
   }
 }

@@ -379,6 +379,34 @@
       "saveSuccess": "നിങ്ങളുടെ മുൻഗണനകൾ അപ്ഡേറ്റ് ചെയ്തിട്ടുണ്ട്.",
       "saveError": "മുൻഗണനകൾ അപ്‌ഡേറ്റ് ചെയ്യുമ്പോൾ ഒരു പിശക് സംഭവിച്ചു.",
       "loadError": "മുൻഗണനകൾ ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല."
+    },
+    "deleteAccount": {
+      "dangerZone": "അപകട മേഖല",
+      "title": "അക്കൗണ്ട് ഇല്ലാതാക്കുക",
+      "description": "നിങ്ങളുടെ അക്കൗണ്ട് ഇല്ലാതാക്കിക്കഴിഞ്ഞാൽ, ഇനി ഒരു തിരിച്ചുപോക്കില്ല. നിങ്ങളുടെ എല്ലാ ഡാറ്റയും ലിസ്റ്റിംഗുകളും സംഭാഷണങ്ങളും ശാശ്വതമായി ഇല്ലാതാക്കപ്പെടും.",
+      "irreversible": "ഈ പ്രവർത്തനം പഴയപടിയാക്കാനാവില്ല.",
+      "button": "എന്റെ അക്കൗണ്ട് ഇല്ലാതാക്കുക",
+      "confirmTitle": "നിങ്ങളുടെ അക്കൗണ്ട് ഇല്ലാതാക്കണമെന്ന് ഉറപ്പാണോ?",
+      "warning": "ഇനിപ്പറയുന്ന ഡാറ്റ ശാശ്വതമായി ഇല്ലാതാക്കപ്പെടും:",
+      "warningProfile": "നിങ്ങളുടെ പ്രൊഫൈലും വ്യക്തിഗത വിവരങ്ങളും",
+      "warningListings": "നിങ്ങളുടെ എല്ലാ ലിസ്റ്റിംഗുകളും ഉൽപ്പന്നങ്ങളും",
+      "warningConversations": "നിങ്ങളുടെ സംഭാഷണങ്ങളും സന്ദേശങ്ങളും",
+      "warningReviews": "നിങ്ങളുടെ അവലോകനങ്ങളും പ്രിയപ്പെട്ടവയും",
+      "passwordLabel": "സ്ഥിരീകരിക്കാൻ നിങ്ങളുടെ പാസ്‌വേഡ് നൽകുക",
+      "passwordPlaceholder": "നിങ്ങളുടെ നിലവിലെ പാസ്‌വേഡ്",
+      "reasonLabel": "എന്തിനാണ് നിങ്ങൾ പോകുന്നത്? (ഓപ്ഷണൽ)",
+      "reasonPlaceholder": "ഒരു കാരണം തിരഞ്ഞെടുക്കുക",
+      "reasonNotSatisfied": "സേവനത്തിൽ തൃപ്തനല്ല.",
+      "reasonPrivacy": "സ്വകാര്യതാ ആശങ്കകൾ",
+      "reasonAlternative": "ഒരു ബദൽ പ്ലാറ്റ്‌ഫോം കണ്ടെത്തി",
+      "reasonOther": "മറ്റുള്ളവ",
+      "feedbackLabel": "അധിക ഫീഡ്‌ബാക്ക് (ഓപ്ഷണൽ)",
+      "feedbackPlaceholder": "എങ്ങനെ മെച്ചപ്പെടുത്താമെന്ന് ഞങ്ങളോട് പറയൂ...",
+      "cancel": "റദ്ദാക്കുക",
+      "confirmButton": "അക്കൗണ്ട് ഇല്ലാതാക്കുക",
+      "deleting": "ഇല്ലാതാക്കുന്നു...",
+      "success": "നിങ്ങളുടെ അക്കൗണ്ട് വിജയകരമായി ഇല്ലാതാക്കി.",
+      "error": "അക്കൗണ്ട് ഇല്ലാതാക്കാനായില്ല. നിങ്ങളുടെ പാസ്‌വേഡ് പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "ഒരു വിഭാഗം തിരഞ്ഞെടുക്കുക.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "പരസ്യ ശീർഷകം നിർബന്ധമാണ്.",
       "shortDescriptionRequired": "ഒരു ചെറിയ വിവരണം ആവശ്യമാണ്.",
       "descriptionRequired": "വിശദമായ ഒരു വിശദീകരണം ആവശ്യമാണ്.",
       "categoryRequired": "വിഭാഗം തിരഞ്ഞെടുക്കൽ നിർബന്ധമാണ്.",
       "priceRequired": "സാധുവായ ഒരു വില നൽകുക."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "പുതിയ ലിസ്റ്റിംഗ് സൃഷ്ടിക്കുക",
@@ -834,21 +862,22 @@
       "shippingCost": "ഷിപ്പിംഗ് ഫീസ്",
       "weight": "ഭാരം",
       "weightUnit": "ഭാരത്തിന്റെ യൂണിറ്റ്",
+      "currency": "Currency",
       "city": "നഗരം",
       "address": "വിലാസം",
-      "postalCode": "തപാൽ കോഡ്",
-      "currency": "Currency"
+      "postalCode": "തപാൽ കോഡ്"
     },
     "placeholders": {
       "title": "ഉദാഹരണം: 2 വയസ്സുള്ള ഹോൾസ്റ്റീൻ പശു",
       "shortDescription": "ഉൽപ്പന്ന വിവരണം (പരമാവധി 200 പ്രതീകങ്ങൾ)",
       "description": "ഉൽപ്പന്നത്തെക്കുറിച്ചുള്ള വിശദമായ വിവരങ്ങൾ നൽകുക...",
       "category": "ഒരു വിഭാഗം തിരഞ്ഞെടുക്കുക.",
+      "searchCurrency": "Search currency...",
       "city": "നഗരത്തിലേക്ക് പ്രവേശിക്കുക",
       "address": "പൂർണ്ണ വിലാസം നൽകുക.",
-      "postalCode": "തപാൽ കോഡ്",
-      "searchCurrency": "Search currency..."
+      "postalCode": "തപാൽ കോഡ്"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "പരസ്യ ശീർഷകം നിർബന്ധമാണ്.",
       "shortDescriptionRequired": "ഒരു ചെറിയ വിവരണം ആവശ്യമാണ്.",
@@ -870,8 +899,7 @@
     "productCreated": "ഉൽപ്പന്നം വിജയകരമായി സൃഷ്ടിച്ചു.",
     "creationFailed": "ഉൽപ്പന്നം സൃഷ്ടിക്കാൻ കഴിഞ്ഞില്ല. വീണ്ടും ശ്രമിക്കുക.",
     "userNotFound": "ഉപയോക്തൃ വിവരങ്ങൾ കണ്ടെത്താൻ കഴിഞ്ഞില്ല. വീണ്ടും ലോഗിൻ ചെയ്യുക.",
-    "defaultBusinessName": "എന്റെ ബിസിനസ്സ്",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "എന്റെ ബിസിനസ്സ്"
   },
   "becomeSeller": {
     "title": "ഒരു വിൽപ്പനക്കാരനാകുക",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} മിനിറ്റ് മുമ്പ്",
     "hoursAgo": "{എണ്ണം} മണിക്കൂർ മുമ്പ്",
     "daysAgo": "{എണ്ണം}ദിവസം മുമ്പ്"
+  },
+  "pricing": {
+    "originalPrice": "യഥാർത്ഥ വില",
+    "convertedPrice": "പരിവർത്തനം ചെയ്ത വില",
+    "approximatePrice": "നിലവിലെ വിനിമയ നിരക്കുകളെ അടിസ്ഥാനമാക്കിയുള്ള ഏകദേശ പരിവർത്തനം",
+    "approximate": "≈"
   }
 }

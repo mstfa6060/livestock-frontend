@@ -379,6 +379,34 @@
       "saveSuccess": "ອັບເດດຄວາມມັກຂອງທ່ານແລ້ວ.",
       "saveError": "ເກີດຄວາມຜິດພາດຂຶ້ນໃນຂະນະທີ່ອັບເດດການຕັ້ງຄ່າ.",
       "loadError": "ບໍ່ສາມາດໂຫຼດການຕັ້ງຄ່າໄດ້."
+    },
+    "deleteAccount": {
+      "dangerZone": "ເຂດອັນຕະລາຍ",
+      "title": "ລຶບບັນຊີ",
+      "description": "ເມື່ອທ່ານລຶບບັນຊີຂອງທ່ານແລ້ວ, ຈະບໍ່ມີການກັບຄືນ. ຂໍ້ມູນ, ລາຍຊື່ ແລະ ການສົນທະນາທັງໝົດຂອງທ່ານຈະຖືກລຶບອອກຢ່າງຖາວອນ.",
+      "irreversible": "ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.",
+      "button": "ລຶບບັນຊີຂອງຂ້ອຍ",
+      "confirmTitle": "ທ່ານແນ່ໃຈບໍ່ວ່າທ່ານຕ້ອງການລຶບບັນຊີຂອງທ່ານ?",
+      "warning": "ຂໍ້ມູນຕໍ່ໄປນີ້ຈະຖືກລຶບອອກຢ່າງຖາວອນ:",
+      "warningProfile": "ໂປຣໄຟລ໌ ແລະ ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ",
+      "warningListings": "ລາຍຊື່ ແລະ ຜະລິດຕະພັນທັງໝົດຂອງທ່ານ",
+      "warningConversations": "ການສົນທະນາ ແລະ ຂໍ້ຄວາມຂອງທ່ານ",
+      "warningReviews": "ການທົບທວນ ແລະ ລາຍການທີ່ທ່ານມັກ",
+      "passwordLabel": "ໃສ່ລະຫັດຜ່ານຂອງທ່ານເພື່ອຢືນຢັນ",
+      "passwordPlaceholder": "ລະຫັດຜ່ານປັດຈຸບັນຂອງທ່ານ",
+      "reasonLabel": "ເປັນຫຍັງເຈົ້າຈຶ່ງອອກໄປ? (ບໍ່ຈຳເປັນ)",
+      "reasonPlaceholder": "ເລືອກເຫດຜົນ",
+      "reasonNotSatisfied": "ບໍ່ພໍໃຈກັບການບໍລິການ",
+      "reasonPrivacy": "ຄວາມກັງວົນກ່ຽວກັບຄວາມເປັນສ່ວນຕົວ",
+      "reasonAlternative": "ພົບເວທີທາງເລືອກອື່ນ",
+      "reasonOther": "ອື່ນໆ",
+      "feedbackLabel": "ຄຳຕິຊົມເພີ່ມເຕີມ (ບໍ່ບັງຄັບ)",
+      "feedbackPlaceholder": "ບອກພວກເຮົາວ່າພວກເຮົາສາມາດປັບປຸງໄດ້ແນວໃດ...",
+      "cancel": "ຍົກເລີກ",
+      "confirmButton": "ລຶບບັນຊີ",
+      "deleting": "ກຳລັງລຶບ...",
+      "success": "ບັນຊີຂອງທ່ານຖືກລຶບອອກສຳເລັດແລ້ວ.",
+      "error": "ລຶບບັນຊີບໍ່ສຳເລັດ. ກະລຸນາກວດສອບລະຫັດຜ່ານຂອງທ່ານ ແລະ ລອງໃໝ່ອີກຄັ້ງ."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "ເລືອກໝວດໝູ່.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "ຫົວຂໍ້ໂຄສະນາແມ່ນບັງຄັບ.",
       "shortDescriptionRequired": "ຕ້ອງການຄຳອະທິບາຍສັ້ນໆ.",
       "descriptionRequired": "ຕ້ອງການຄຳອະທິບາຍລະອຽດ.",
       "categoryRequired": "ການເລືອກໝວດໝູ່ແມ່ນເປັນສິ່ງຈຳເປັນ.",
       "priceRequired": "ໃສ່ລາຄາທີ່ຖືກຕ້ອງ."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "ສ້າງລາຍຊື່ໃໝ່",
@@ -834,21 +862,22 @@
       "shippingCost": "ຄ່າຂົນສົ່ງ",
       "weight": "ນ້ຳໜັກ",
       "weightUnit": "ຫົວໜ່ວຍນ້ຳໜັກ",
+      "currency": "Currency",
       "city": "ເມືອງ",
       "address": "ທີ່ຢູ່",
-      "postalCode": "ລະຫັດໄປສະນີ",
-      "currency": "Currency"
+      "postalCode": "ລະຫັດໄປສະນີ"
     },
     "placeholders": {
       "title": "ຕົວຢ່າງ: ງົວ Holstein ອາຍຸ 2 ປີ",
       "shortDescription": "ລາຍລະອຽດຜະລິດຕະພັນ (ສູງສຸດ 200 ຕົວອັກສອນ)",
       "description": "ໃຫ້ຂໍ້ມູນລະອຽດກ່ຽວກັບຜະລິດຕະພັນ...",
       "category": "ເລືອກໝວດໝູ່.",
+      "searchCurrency": "Search currency...",
       "city": "ເຂົ້າໄປໃນເມືອງ",
       "address": "ໃສ່ທີ່ຢູ່ເຕັມ.",
-      "postalCode": "ລະຫັດໄປສະນີ",
-      "searchCurrency": "Search currency..."
+      "postalCode": "ລະຫັດໄປສະນີ"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "ຫົວຂໍ້ໂຄສະນາແມ່ນບັງຄັບ.",
       "shortDescriptionRequired": "ຕ້ອງການຄຳອະທິບາຍສັ້ນໆ.",
@@ -870,8 +899,7 @@
     "productCreated": "ຜະລິດຕະພັນໄດ້ຖືກສ້າງຂຶ້ນສຳເລັດແລ້ວ.",
     "creationFailed": "ບໍ່ສາມາດສ້າງຜະລິດຕະພັນໄດ້. ກະລຸນາລອງໃໝ່.",
     "userNotFound": "ບໍ່ພົບຂໍ້ມູນຜູ້ໃຊ້. ກະລຸນາເຂົ້າສູ່ລະບົບອີກຄັ້ງ.",
-    "defaultBusinessName": "ທຸລະກິດຂອງຂ້ອຍ",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "ທຸລະກິດຂອງຂ້ອຍ"
   },
   "becomeSeller": {
     "title": "ກາຍເປັນຜູ້ຂາຍ",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} ນາທີກ່ອນ",
     "hoursAgo": "{count} ຊົ່ວໂມງກ່ອນ",
     "daysAgo": "{count} ມື້ກ່ອນ"
+  },
+  "pricing": {
+    "originalPrice": "ລາຄາເດີມ",
+    "convertedPrice": "ລາຄາທີ່ແປງແລ້ວ",
+    "approximatePrice": "ການປ່ຽນແປງປະມານໂດຍອີງໃສ່ອັດຕາແລກປ່ຽນໃນປະຈຸບັນ",
+    "approximate": "≈"
   }
 }

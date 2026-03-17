@@ -379,6 +379,34 @@
       "saveSuccess": "ההעדפות שלך עודכנו.",
       "saveError": "אירעה שגיאה בעת עדכון ההעדפות.",
       "loadError": "לא ניתן היה לטעון את ההעדפות."
+    },
+    "deleteAccount": {
+      "dangerZone": "אזור סכנה",
+      "title": "מחיקת חשבון",
+      "description": "לאחר מחיקת החשבון, אין דרך חזרה. כל הנתונים, הרשימות והשיחות שלך יוסרו לצמיתות.",
+      "irreversible": "פעולה זו בלתי הפיכה.",
+      "button": "מחק את החשבון שלי",
+      "confirmTitle": "האם אתה בטוח שאתה רוצה למחוק את החשבון שלך?",
+      "warning": "הנתונים הבאים יימחקו לצמיתות:",
+      "warningProfile": "הפרופיל והמידע האישי שלך",
+      "warningListings": "כל הרישומים והמוצרים שלך",
+      "warningConversations": "השיחות וההודעות שלך",
+      "warningReviews": "הביקורות והמועדפים שלך",
+      "passwordLabel": "הזן את הסיסמה שלך כדי לאשר",
+      "passwordPlaceholder": "הסיסמה הנוכחית שלך",
+      "reasonLabel": "למה אתה עוזב? (אופציונלי)",
+      "reasonPlaceholder": "בחר סיבה",
+      "reasonNotSatisfied": "לא מרוצה מהשירות",
+      "reasonPrivacy": "חששות בנוגע לפרטיות",
+      "reasonAlternative": "מצאתי פלטפורמה חלופית",
+      "reasonOther": "אַחֵר",
+      "feedbackLabel": "משוב נוסף (אופציונלי)",
+      "feedbackPlaceholder": "ספרו לנו איך נוכל להשתפר...",
+      "cancel": "לְבַטֵל",
+      "confirmButton": "מחיקת חשבון",
+      "deleting": "מוחק...",
+      "success": "החשבון שלך נמחק בהצלחה.",
+      "error": "מחיקת החשבון נכשלה. אנא בדוק את הסיסמה שלך ונסה שוב."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "בחר קטגוריה.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "כותרת המודעה היא חובה.",
       "shortDescriptionRequired": "נדרש תיאור קצר.",
       "descriptionRequired": "נדרש הסבר מפורט.",
       "categoryRequired": "בחירת קטגוריה היא חובה.",
       "priceRequired": "הזן מחיר תקין."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "צור רישום חדש",
@@ -834,21 +862,22 @@
       "shippingCost": "דמי משלוח",
       "weight": "מִשׁקָל",
       "weightUnit": "יחידת משקל",
+      "currency": "Currency",
       "city": "עִיר",
       "address": "כְּתוֹבֶת",
-      "postalCode": "מיקוד",
-      "currency": "Currency"
+      "postalCode": "מיקוד"
     },
     "placeholders": {
       "title": "דוגמה: פרה הולשטיין בת שנתיים",
       "shortDescription": "תיאור מוצר (מקסימום 200 תווים)",
       "description": "ספק מידע מפורט על המוצר...",
       "category": "בחר קטגוריה.",
+      "searchCurrency": "Search currency...",
       "city": "היכנסו לעיר",
       "address": "הזן את הכתובת המלאה.",
-      "postalCode": "מיקוד",
-      "searchCurrency": "Search currency..."
+      "postalCode": "מיקוד"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "כותרת המודעה היא חובה.",
       "shortDescriptionRequired": "נדרש תיאור קצר.",
@@ -870,8 +899,7 @@
     "productCreated": "המוצר נוצר בהצלחה.",
     "creationFailed": "לא ניתן היה ליצור את המוצר. אנא נסה שוב.",
     "userNotFound": "לא ניתן היה למצוא את פרטי המשתמש. אנא התחבר שוב.",
-    "defaultBusinessName": "העסק שלי",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "העסק שלי"
   },
   "becomeSeller": {
     "title": "הפוך למוכר",
@@ -1320,7 +1348,10 @@
     "fleet": "מידע על הצי",
     "serviceRegions": "אזורי שירות",
     "specializations": "תחומי התמחות",
-    "certifications": "תעודות"
+    "certifications": "תעודות",
+    "share": "לַחֲלוֹק",
+    "shareText": "בדקו את {name} במסחר בבעלי חיים",
+    "linkCopied": "קישור הועתק ללוח."
   },
   "brands": {
     "title": "ניהול מותג",
@@ -1916,5 +1947,11 @@
     "minutesAgo": "לפני {count} דקות",
     "hoursAgo": "לפני שעה",
     "daysAgo": "לפני {count} ימים"
+  },
+  "pricing": {
+    "originalPrice": "מחיר מקורי",
+    "convertedPrice": "מחיר שהומר",
+    "approximatePrice": "המרה משוערת בהתבסס על שערי החליפין הנוכחיים",
+    "approximate": "≈"
   }
 }

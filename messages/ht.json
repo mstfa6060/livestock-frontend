@@ -379,6 +379,34 @@
       "saveSuccess": "Yo mete ajou preferans ou yo.",
       "saveError": "Yon erè rive pandan y ap mete ajou preferans yo.",
       "loadError": "Pa t kapab chaje preferans yo."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zòn Danje",
+      "title": "Efase Kont",
+      "description": "Yon fwa ou efase kont ou a, pa gen okenn fason pou retounen dèyè. Tout done ou yo, lis ou yo, ak konvèsasyon ou yo ap efase nèt.",
+      "irreversible": "Aksyon sa a irevokab.",
+      "button": "Efase Kont Mwen an",
+      "confirmTitle": "Èske ou sèten ou vle efase kont ou a?",
+      "warning": "Done sa yo pral efase nèt:",
+      "warningProfile": "Pwofil ou ak enfòmasyon pèsonèl ou",
+      "warningListings": "Tout lis ak pwodwi ou yo",
+      "warningConversations": "Konvèsasyon ak mesaj ou yo",
+      "warningReviews": "Revi ak sa ou renmen yo",
+      "passwordLabel": "Antre modpas ou pou konfime",
+      "passwordPlaceholder": "Modpas ou ye kounye a",
+      "reasonLabel": "Poukisa w ap ale? (opsyonèl)",
+      "reasonPlaceholder": "Chwazi yon rezon",
+      "reasonNotSatisfied": "Pa satisfè ak sèvis la",
+      "reasonPrivacy": "Enkyetid sou vi prive",
+      "reasonAlternative": "Jwenn yon platfòm altènatif",
+      "reasonOther": "Lòt",
+      "feedbackLabel": "Lòt fidbak (opsyonèl)",
+      "feedbackPlaceholder": "Di nou kijan nou ka amelyore...",
+      "cancel": "Anile",
+      "confirmButton": "Efase Kont",
+      "deleting": "Ap efase...",
+      "success": "Kont ou an efase avèk siksè.",
+      "error": "Echèk pou efase kont lan. Tanpri verifye modpas ou epi eseye ankò."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Chwazi yon kategori.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tit piblisite a obligatwa.",
       "shortDescriptionRequired": "Yon ti deskripsyon obligatwa.",
       "descriptionRequired": "Yon eksplikasyon detaye nesesè.",
       "categoryRequired": "Seleksyon kategori a obligatwa.",
       "priceRequired": "Antre yon pri ki valab."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Kreye yon nouvo lis",
@@ -834,21 +862,22 @@
       "shippingCost": "Frè anbake",
       "weight": "Pwa",
       "weightUnit": "Inite Pwa",
+      "currency": "Currency",
       "city": "Vil",
       "address": "Adrès",
-      "postalCode": "Kòd postal",
-      "currency": "Currency"
+      "postalCode": "Kòd postal"
     },
     "placeholders": {
       "title": "Egzanp: Bèf Holstein 2 zan",
       "shortDescription": "Deskripsyon pwodwi a (maksimòm 200 karaktè)",
       "description": "Bay enfòmasyon detaye sou pwodwi a...",
       "category": "Chwazi yon kategori.",
+      "searchCurrency": "Search currency...",
       "city": "Antre nan vil la",
       "address": "Antre adrès konplè a.",
-      "postalCode": "Kòd postal",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Kòd postal"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tit piblisite a obligatwa.",
       "shortDescriptionRequired": "Yon ti deskripsyon obligatwa.",
@@ -870,8 +899,7 @@
     "productCreated": "Pwodwi a te kreye avèk siksè.",
     "creationFailed": "Pa t kapab kreye pwodwi a. Tanpri eseye ankò.",
     "userNotFound": "Pa gen enfòmasyon sou itilizatè a. Tanpri konekte ankò.",
-    "defaultBusinessName": "Biznis mwen an",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Biznis mwen an"
   },
   "becomeSeller": {
     "title": "Vin yon Vandè",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} minit de sa",
     "hoursAgo": "{count} èdtan de sa",
     "daysAgo": "{count} jou de sa"
+  },
+  "pricing": {
+    "originalPrice": "Pri orijinal la",
+    "convertedPrice": "Pri konvèti",
+    "approximatePrice": "Konvèsyon apwoksimatif ki baze sou to echanj aktyèl yo",
+    "approximate": "≈"
   }
 }

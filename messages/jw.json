@@ -379,6 +379,34 @@
       "saveSuccess": "Preferensi sampeyan wis dianyari.",
       "saveError": "Ana kesalahan nalika nganyari preferensi.",
       "loadError": "Preferensi ora bisa dimuat."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zona Bahaya",
+      "title": "Busak Akun",
+      "description": "Sawise sampeyan mbusak akun, ora ana dalan bali. Kabeh data, dhaptar, lan obrolan sampeyan bakal dibusak permanen.",
+      "irreversible": "Tindakan iki ora bisa dibalekake.",
+      "button": "Busak Akunku",
+      "confirmTitle": "Apa panjenengan yakin pengin mbusak akun panjenengan?",
+      "warning": "Data ing ngisor iki bakal dibusak permanen:",
+      "warningProfile": "Profil lan informasi pribadi sampeyan",
+      "warningListings": "Kabeh dhaptar lan produk sampeyan",
+      "warningConversations": "Obrolan lan pesen sampeyan",
+      "warningReviews": "Ulasan lan favoritmu",
+      "passwordLabel": "Lebokna sandhi sampeyan kanggo ngonfirmasi",
+      "passwordPlaceholder": "Sandi sampeyan saiki",
+      "reasonLabel": "Kok kowe arep lunga? (opsional)",
+      "reasonPlaceholder": "Pilih alesan",
+      "reasonNotSatisfied": "Ora marem karo layanane",
+      "reasonPrivacy": "Masalah privasi",
+      "reasonAlternative": "Nemokake platform alternatif",
+      "reasonOther": "Liyane",
+      "feedbackLabel": "Umpan balik tambahan (opsional)",
+      "feedbackPlaceholder": "Marang kita kepiye carane supaya kita bisa nambah...",
+      "cancel": "Batal",
+      "confirmButton": "Busak Akun",
+      "deleting": "Mbusak...",
+      "success": "Akun sampeyan wis kasil dibusak.",
+      "error": "Gagal mbusak akun. Mangga priksa sandhi sampeyan lan coba maneh."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Pilih kategori.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Judhul iklan iku wajib.",
       "shortDescriptionRequired": "Katrangan cekak dibutuhake.",
       "descriptionRequired": "Dibutuhake panjelasan sing rinci.",
       "categoryRequired": "Pemilihan kategori iku wajib.",
       "priceRequired": "Lebokna rega sing valid."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Gawe Dhaptar Anyar",
@@ -834,21 +862,22 @@
       "shippingCost": "Biaya Pengiriman",
       "weight": "Bobot",
       "weightUnit": "Unit Bobot",
+      "currency": "Currency",
       "city": "Kutha",
       "address": "Alamat",
-      "postalCode": "Kode pos",
-      "currency": "Currency"
+      "postalCode": "Kode pos"
     },
     "placeholders": {
       "title": "Tuladha: Sapi Holstein Umur 2 Taun",
       "shortDescription": "Katrangan produk (maksimal 200 karakter)",
       "description": "Nyedhiyakake informasi rinci babagan produk kasebut...",
       "category": "Pilih kategori.",
+      "searchCurrency": "Search currency...",
       "city": "Mlebu kutha",
       "address": "Lebokna alamat lengkap.",
-      "postalCode": "Kode pos",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Kode pos"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Judhul iklan iku wajib.",
       "shortDescriptionRequired": "Katrangan cekak dibutuhake.",
@@ -870,8 +899,7 @@
     "productCreated": "Produk kasebut kasil digawe.",
     "creationFailed": "Produk iki ora bisa digawe. Coba maneh.",
     "userNotFound": "Informasi panganggo ora ditemokake. Mangga mlebu maneh.",
-    "defaultBusinessName": "Bisnisku",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Bisnisku"
   },
   "becomeSeller": {
     "title": "Dadi Penjual",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} menit kepungkur",
     "hoursAgo": "{count}h kepungkur",
     "daysAgo": "{count}d kepungkur"
+  },
+  "pricing": {
+    "originalPrice": "Rega asli",
+    "convertedPrice": "Rega sing diowahi",
+    "approximatePrice": "Perkiraan konversi adhedhasar kurs saiki",
+    "approximate": "≈"
   }
 }

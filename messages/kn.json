@@ -379,6 +379,34 @@
       "saveSuccess": "ನಿಮ್ಮ ಆದ್ಯತೆಗಳನ್ನು ನವೀಕರಿಸಲಾಗಿದೆ.",
       "saveError": "ಆದ್ಯತೆಗಳನ್ನು ನವೀಕರಿಸುವಾಗ ದೋಷ ಸಂಭವಿಸಿದೆ.",
       "loadError": "ಆದ್ಯತೆಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ."
+    },
+    "deleteAccount": {
+      "dangerZone": "ಅಪಾಯ ವಲಯ",
+      "title": "ಖಾತೆಯನ್ನು ಅಳಿಸಿ",
+      "description": "ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಒಮ್ಮೆ ಅಳಿಸಿದರೆ, ಅದನ್ನು ಮತ್ತೆ ಬಳಸಲಾಗುವುದಿಲ್ಲ. ನಿಮ್ಮ ಎಲ್ಲಾ ಡೇಟಾ, ಪಟ್ಟಿಗಳು ಮತ್ತು ಸಂಭಾಷಣೆಗಳನ್ನು ಶಾಶ್ವತವಾಗಿ ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ.",
+      "irreversible": "ಈ ಕ್ರಿಯೆಯನ್ನು ಬದಲಾಯಿಸಲಾಗದು.",
+      "button": "ನನ್ನ ಖಾತೆಯನ್ನು ಅಳಿಸಿ",
+      "confirmTitle": "ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ?",
+      "warning": "ಕೆಳಗಿನ ಡೇಟಾವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ:",
+      "warningProfile": "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ",
+      "warningListings": "ನಿಮ್ಮ ಎಲ್ಲಾ ಪಟ್ಟಿಗಳು ಮತ್ತು ಉತ್ಪನ್ನಗಳು",
+      "warningConversations": "ನಿಮ್ಮ ಸಂಭಾಷಣೆಗಳು ಮತ್ತು ಸಂದೇಶಗಳು",
+      "warningReviews": "ನಿಮ್ಮ ವಿಮರ್ಶೆಗಳು ಮತ್ತು ಮೆಚ್ಚಿನವುಗಳು",
+      "passwordLabel": "ಖಚಿತಪಡಿಸಲು ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸಿ",
+      "passwordPlaceholder": "ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಪಾಸ್‌ವರ್ಡ್",
+      "reasonLabel": "ನೀವು ಯಾಕೆ ಹೊರಡುತ್ತಿದ್ದೀರಿ? (ಐಚ್ಛಿಕ)",
+      "reasonPlaceholder": "ಕಾರಣವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+      "reasonNotSatisfied": "ಸೇವೆಯಿಂದ ತೃಪ್ತರಾಗಿಲ್ಲ.",
+      "reasonPrivacy": "ಗೌಪ್ಯತಾ ಕಾಳಜಿಗಳು",
+      "reasonAlternative": "ಪರ್ಯಾಯ ವೇದಿಕೆಯನ್ನು ಕಂಡುಕೊಂಡೆ",
+      "reasonOther": "ಇತರೆ",
+      "feedbackLabel": "ಹೆಚ್ಚುವರಿ ಪ್ರತಿಕ್ರಿಯೆ (ಐಚ್ಛಿಕ)",
+      "feedbackPlaceholder": "ನಾವು ಹೇಗೆ ಸುಧಾರಿಸಬಹುದು ಎಂದು ಹೇಳಿ...",
+      "cancel": "ರದ್ದುಮಾಡಿ",
+      "confirmButton": "ಖಾತೆಯನ್ನು ಅಳಿಸಿ",
+      "deleting": "ಅಳಿಸಲಾಗುತ್ತಿದೆ...",
+      "success": "ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಅಳಿಸಲಾಗಿದೆ.",
+      "error": "ಖಾತೆಯನ್ನು ಅಳಿಸಲು ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ಪರಿಶೀಲಿಸಿ ಹಾಗೂ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "ಒಂದು ವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "ಜಾಹೀರಾತು ಶೀರ್ಷಿಕೆ ಕಡ್ಡಾಯವಾಗಿದೆ.",
       "shortDescriptionRequired": "ಸಂಕ್ಷಿಪ್ತ ವಿವರಣೆ ಅಗತ್ಯವಿದೆ.",
       "descriptionRequired": "ವಿವರವಾದ ವಿವರಣೆಯ ಅಗತ್ಯವಿದೆ.",
       "categoryRequired": "ವರ್ಗ ಆಯ್ಕೆ ಕಡ್ಡಾಯವಾಗಿದೆ.",
       "priceRequired": "ಮಾನ್ಯ ಬೆಲೆಯನ್ನು ನಮೂದಿಸಿ."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "ಹೊಸ ಪಟ್ಟಿಯನ್ನು ರಚಿಸಿ",
@@ -834,21 +862,22 @@
       "shippingCost": "ಸಾಗಣೆ ಶುಲ್ಕ",
       "weight": "ತೂಕ",
       "weightUnit": "ತೂಕದ ಘಟಕ",
+      "currency": "Currency",
       "city": "ನಗರ",
       "address": "ವಿಳಾಸ",
-      "postalCode": "ಅಂಚೆ ಕೋಡ್",
-      "currency": "Currency"
+      "postalCode": "ಅಂಚೆ ಕೋಡ್"
     },
     "placeholders": {
       "title": "ಉದಾಹರಣೆ: 2 ವರ್ಷದ ಹೋಲ್‌ಸ್ಟೈನ್ ಹಸು",
       "shortDescription": "ಉತ್ಪನ್ನ ವಿವರಣೆ (ಗರಿಷ್ಠ 200 ಅಕ್ಷರಗಳು)",
       "description": "ಉತ್ಪನ್ನದ ಬಗ್ಗೆ ವಿವರವಾದ ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸಿ...",
       "category": "ಒಂದು ವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
+      "searchCurrency": "Search currency...",
       "city": "ನಗರವನ್ನು ನಮೂದಿಸಿ",
       "address": "ಪೂರ್ಣ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ.",
-      "postalCode": "ಅಂಚೆ ಕೋಡ್",
-      "searchCurrency": "Search currency..."
+      "postalCode": "ಅಂಚೆ ಕೋಡ್"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "ಜಾಹೀರಾತು ಶೀರ್ಷಿಕೆ ಕಡ್ಡಾಯವಾಗಿದೆ.",
       "shortDescriptionRequired": "ಸಂಕ್ಷಿಪ್ತ ವಿವರಣೆ ಅಗತ್ಯವಿದೆ.",
@@ -870,8 +899,7 @@
     "productCreated": "ಉತ್ಪನ್ನವನ್ನು ಯಶಸ್ವಿಯಾಗಿ ರಚಿಸಲಾಗಿದೆ.",
     "creationFailed": "ಉತ್ಪನ್ನವನ್ನು ರಚಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
     "userNotFound": "ಬಳಕೆದಾರರ ಮಾಹಿತಿ ಸಿಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಲಾಗಿನ್ ಮಾಡಿ.",
-    "defaultBusinessName": "ನನ್ನ ವ್ಯವಹಾರ",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "ನನ್ನ ವ್ಯವಹಾರ"
   },
   "becomeSeller": {
     "title": "ಮಾರಾಟಗಾರರಾಗಿ",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} ನಿಮಿಷ ಹಿಂದೆ",
     "hoursAgo": "{ಎಣಿಕೆ}ಗಂ ಹಿಂದೆ",
     "daysAgo": "{ಎಣಿಕೆ}ದಿನಗಳ ಹಿಂದೆ"
+  },
+  "pricing": {
+    "originalPrice": "ಮೂಲ ಬೆಲೆ",
+    "convertedPrice": "ಪರಿವರ್ತಿತ ಬೆಲೆ",
+    "approximatePrice": "ಪ್ರಸ್ತುತ ವಿನಿಮಯ ದರಗಳ ಆಧಾರದ ಮೇಲೆ ಅಂದಾಜು ಪರಿವರ್ತನೆ",
+    "approximate": "≈"
   }
 }

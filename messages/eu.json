@@ -379,6 +379,34 @@
       "saveSuccess": "Zure lehentasunak eguneratu dira.",
       "saveError": "Errore bat gertatu da hobespenak eguneratzean.",
       "loadError": "Ezin izan dira hobespenak kargatu."
+    },
+    "deleteAccount": {
+      "dangerZone": "Arrisku-eremua",
+      "title": "Ezabatu kontua",
+      "description": "Kontua ezabatu ondoren, ez dago atzera bueltarik. Zure datu, zerrenda eta elkarrizketa guztiak betiko ezabatuko dira.",
+      "irreversible": "Ekintza hau itzulezina da.",
+      "button": "Ezabatu Nire Kontua",
+      "confirmTitle": "Ziur zaude zure kontua ezabatu nahi duzula?",
+      "warning": "Datu hauek behin betiko ezabatuko dira:",
+      "warningProfile": "Zure profila eta informazio pertsonala",
+      "warningListings": "Zure zerrenda eta produktu guztiak",
+      "warningConversations": "Zure elkarrizketak eta mezuak",
+      "warningReviews": "Zure iritziak eta gogokoenak",
+      "passwordLabel": "Sartu zure pasahitza berresteko",
+      "passwordPlaceholder": "Zure uneko pasahitza",
+      "reasonLabel": "Zergatik zoaz alde egiten? (aukerakoa)",
+      "reasonPlaceholder": "Aukeratu arrazoi bat",
+      "reasonNotSatisfied": "Zerbitzuarekin pozik ez",
+      "reasonPrivacy": "Pribatutasun kezkak",
+      "reasonAlternative": "Plataforma alternatibo bat aurkitu dut",
+      "reasonOther": "Beste",
+      "feedbackLabel": "Iritzi gehigarria (aukerakoa)",
+      "feedbackPlaceholder": "Esan iezaguzu nola hobetu dezakegun...",
+      "cancel": "Utzi",
+      "confirmButton": "Ezabatu kontua",
+      "deleting": "Ezabatzen...",
+      "success": "Zure kontua behar bezala ezabatu da.",
+      "error": "Kontua ezabatzea huts egin da. Mesedez, egiaztatu pasahitza eta saiatu berriro."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Hautatu kategoria bat.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Iragarkiaren izenburua derrigorrezkoa da.",
       "shortDescriptionRequired": "Deskribapen labur bat beharrezkoa da.",
       "descriptionRequired": "Azalpen zehatza behar da.",
       "categoryRequired": "Kategoria hautatzea derrigorrezkoa da.",
       "priceRequired": "Sartu baliozko prezio bat."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Sortu zerrenda berria",
@@ -834,21 +862,22 @@
       "shippingCost": "Bidalketa-tasa",
       "weight": "Pisua",
       "weightUnit": "Pisu unitatea",
+      "currency": "Currency",
       "city": "Hiria",
       "address": "Helbidea",
-      "postalCode": "Posta kodea",
-      "currency": "Currency"
+      "postalCode": "Posta kodea"
     },
     "placeholders": {
       "title": "Adibidea: 2 urteko Holstein behia",
       "shortDescription": "Produktuaren deskribapena (gehienez 200 karaktere)",
       "description": "Produktuari buruzko informazio zehatza eman...",
       "category": "Hautatu kategoria bat.",
+      "searchCurrency": "Search currency...",
       "city": "Sartu hirian.",
       "address": "Sartu helbide osoa.",
-      "postalCode": "Posta kodea",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Posta kodea"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Iragarkiaren izenburua derrigorrezkoa da.",
       "shortDescriptionRequired": "Deskribapen labur bat beharrezkoa da.",
@@ -870,8 +899,7 @@
     "productCreated": "Produktua arrakastaz sortu da.",
     "creationFailed": "Produktua ezin izan da sortu. Saiatu berriro.",
     "userNotFound": "Erabiltzailearen informazioa ezin izan da aurkitu. Mesedez, hasi saioa berriro.",
-    "defaultBusinessName": "Nire negozioa",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Nire negozioa"
   },
   "becomeSeller": {
     "title": "Saltzaile bihurtu",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "Duela {count} minutu",
     "hoursAgo": "Duela {count} ordu",
     "daysAgo": "Duela {count} egun"
+  },
+  "pricing": {
+    "originalPrice": "Jatorrizko prezioa",
+    "convertedPrice": "Bihurtutako prezioa",
+    "approximatePrice": "Gutxi gorabeherako bihurketa uneko truke-tasen arabera",
+    "approximate": "≈"
   }
 }

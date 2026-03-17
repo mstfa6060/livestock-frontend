@@ -379,6 +379,34 @@
       "saveSuccess": "ستاسو غوره توبونه تازه شوي دي.",
       "saveError": "د غوره توبونو تازه کولو پر مهال یوه تېروتنه رامنځته شوه.",
       "loadError": "غوره توبونه نشي پورته کېدای."
+    },
+    "deleteAccount": {
+      "dangerZone": "د خطر زون",
+      "title": "حساب ړنګ کړئ",
+      "description": "یوځل چې تاسو خپل حساب حذف کړئ، بیرته نه ځي. ستاسو ټول معلومات، لیستونه، او خبرې اترې به د تل لپاره حذف شي.",
+      "irreversible": "دا عمل نه بدلیدونکی دی.",
+      "button": "زما حساب ړنګ کړئ",
+      "confirmTitle": "ایا تاسو ډاډه یاست چې غواړئ خپل حساب حذف کړئ؟",
+      "warning": "لاندې معلومات به د تل لپاره حذف شي:",
+      "warningProfile": "ستاسو پروفایل او شخصي معلومات",
+      "warningListings": "ستاسو ټول لیستونه او محصولات",
+      "warningConversations": "ستاسو خبرې اترې او پیغامونه",
+      "warningReviews": "ستاسو نظرونه او خوښې",
+      "passwordLabel": "د تایید لپاره خپل پټنوم دننه کړئ",
+      "passwordPlaceholder": "ستاسو اوسنی پټنوم",
+      "reasonLabel": "ولې ځې؟ (اختیاري)",
+      "reasonPlaceholder": "یو دلیل غوره کړئ",
+      "reasonNotSatisfied": "له خدمت څخه راضي نه یم",
+      "reasonPrivacy": "د محرمیت اندیښنې",
+      "reasonAlternative": "یو بدیل پلیټ فارم وموند",
+      "reasonOther": "نور",
+      "feedbackLabel": "اضافي نظرونه (اختیاري)",
+      "feedbackPlaceholder": "موږ ته ووایاست چې څنګه ښه والی راولو...",
+      "cancel": "لغوه کول",
+      "confirmButton": "حساب ړنګ کړئ",
+      "deleting": "ړنګول...",
+      "success": "ستاسو حساب په بریالیتوب سره حذف شوی دی.",
+      "error": "د حساب حذف کول ناکام شول. مهرباني وکړئ خپل پټنوم وګورئ او بیا هڅه وکړئ."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "یوه کټګوري غوره کړئ.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "د اعلان سرلیک لازمي دی.",
       "shortDescriptionRequired": "لنډ وضاحت ته اړتیا ده.",
       "descriptionRequired": "تفصيلي وضاحت ته اړتيا ده.",
       "categoryRequired": "د کټګورۍ انتخاب لازمي دی.",
       "priceRequired": "یو باوري قیمت دننه کړئ."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "نوی لیست جوړ کړئ",
@@ -834,21 +862,22 @@
       "shippingCost": "د بار وړلو فیس",
       "weight": "وزن",
       "weightUnit": "د وزن واحد",
+      "currency": "Currency",
       "city": "ښار",
       "address": "پته",
-      "postalCode": "پوستي کوډ",
-      "currency": "Currency"
+      "postalCode": "پوستي کوډ"
     },
     "placeholders": {
       "title": "مثال: دوه کلنه هولسټین غوا",
       "shortDescription": "د محصول توضیحات (اعظمي ۲۰۰ حروف)",
       "description": "د محصول په اړه مفصل معلومات ورکړئ...",
       "category": "یوه کټګوري غوره کړئ.",
+      "searchCurrency": "Search currency...",
       "city": "ښار ته ننوځئ",
       "address": "بشپړ پته ولیکئ.",
-      "postalCode": "پوستي کوډ",
-      "searchCurrency": "Search currency..."
+      "postalCode": "پوستي کوډ"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "د اعلان سرلیک لازمي دی.",
       "shortDescriptionRequired": "لنډ وضاحت ته اړتیا ده.",
@@ -870,8 +899,7 @@
     "productCreated": "محصول په بریالیتوب سره جوړ شو.",
     "creationFailed": "محصول جوړ نشو. مهرباني وکړئ بیا هڅه وکړئ.",
     "userNotFound": "د کارونکي معلومات ونه موندل شول. مهرباني وکړئ بیا ننوتل وکړئ.",
-    "defaultBusinessName": "زما کاروبار",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "زما کاروبار"
   },
   "becomeSeller": {
     "title": "پلورونکی شئ",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{شمیره} دقیقې دمخه",
     "hoursAgo": "{شمیر} ساعته دمخه",
     "daysAgo": "{شمېرل} ورځې وړاندې"
+  },
+  "pricing": {
+    "originalPrice": "اصلي بيه",
+    "convertedPrice": "بدل شوی قیمت",
+    "approximatePrice": "د اوسني تبادلې نرخونو پر بنسټ نږدې تبادله",
+    "approximate": "≈"
   }
 }

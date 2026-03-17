@@ -379,6 +379,34 @@
       "saveSuccess": "Zvaunofarira zvakagadziridzwa.",
       "saveError": "Pane chikanganiso chakaitika panguva yekuvandudza zvaunofarira.",
       "loadError": "Zvaunoda hazvina kukwanisa kuiswa."
+    },
+    "deleteAccount": {
+      "dangerZone": "Nzvimbo yeNjodzi",
+      "title": "Bvisa Akaunti",
+      "description": "Kana wangodzima account yako, hapana kudzokera shure. Ruzivo rwako rwese, zvinyorwa, uye hurukuro zvichabviswa zvachose.",
+      "irreversible": "Chiito ichi hachidzoreki.",
+      "button": "Dzima Akaunti Yangu",
+      "confirmTitle": "Une chokwadi chekuti unoda kudzima account yako here?",
+      "warning": "Data rinotevera richadzimwa zvachose:",
+      "warningProfile": "Mbiri yako neruzivo rwako pachako",
+      "warningListings": "Zvese zvawakanyora uye zvigadzirwa zvako",
+      "warningConversations": "Hurukuro dzako nemashoko ako",
+      "warningReviews": "Wongororo dzako uye zvaunofarira",
+      "passwordLabel": "Isa password yako kuti usimbise",
+      "passwordPlaceholder": "Password yako yazvino",
+      "reasonLabel": "Sei uri kuenda? (sarudzo)",
+      "reasonPlaceholder": "Sarudza chikonzero",
+      "reasonNotSatisfied": "Handina kugutsikana nebasa iri",
+      "reasonPrivacy": "Zvinonetsa nezvekuchengetedzwa kwezvakavanzika",
+      "reasonAlternative": "Ndakawana imwe puratifomu",
+      "reasonOther": "Zvimwe",
+      "feedbackLabel": "Mamwe mashoko (sarudzo)",
+      "feedbackPlaceholder": "Tiudzei kuti tingavandudza sei...",
+      "cancel": "Dzima",
+      "confirmButton": "Bvisa Akaunti",
+      "deleting": "Kudzima...",
+      "success": "Akaunti yako yabviswa zvinobudirira.",
+      "error": "Takundikana kudzima account. Ndapota tarisa password yako woedza zvakare."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Sarudza chikamu.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Zita rekushambadzira rinosungirwa.",
       "shortDescriptionRequired": "Tsananguro pfupi inodiwa.",
       "descriptionRequired": "Tsananguro yakadzama inodiwa.",
       "categoryRequired": "Kusarudza chikamu kunosungirwa.",
       "priceRequired": "Isa mutengo unoshanda."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Gadzira Rondedzero Itsva",
@@ -834,21 +862,22 @@
       "shippingCost": "Mari yekutumira",
       "weight": "Huremu",
       "weightUnit": "Chikamu cheHuremu",
+      "currency": "Currency",
       "city": "Guta",
       "address": "Kero",
-      "postalCode": "Kodhi yepositi",
-      "currency": "Currency"
+      "postalCode": "Kodhi yepositi"
     },
     "placeholders": {
       "title": "Muenzaniso: Mombe yeHolstein ine makore maviri",
       "shortDescription": "Tsananguro yechigadzirwa (mavara asingapfuure 200)",
       "description": "Ipa ruzivo rwakadzama nezvechigadzirwa...",
       "category": "Sarudza chikamu.",
+      "searchCurrency": "Search currency...",
       "city": "Pinda muguta",
       "address": "Isa kero yakazara.",
-      "postalCode": "Kodhi yepositi",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Kodhi yepositi"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Zita rekushambadzira rinosungirwa.",
       "shortDescriptionRequired": "Tsananguro pfupi inodiwa.",
@@ -870,8 +899,7 @@
     "productCreated": "Chigadzirwa chacho chakagadzirwa zvinobudirira.",
     "creationFailed": "Chigadzirwa chacho hachina kugadzirwa. Ndapota edza zvakare.",
     "userNotFound": "Ruzivo rwemushandisi haruna kuwanikwa. Ndapota pindai zvakare.",
-    "defaultBusinessName": "Bhizinesi rangu",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Bhizinesi rangu"
   },
   "becomeSeller": {
     "title": "Iva Mutengesi",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "maminitsi {count} apfuura",
     "hoursAgo": "maawa makumi maviri apfuura",
     "daysAgo": "mazuva {anopfuura} apfuura"
+  },
+  "pricing": {
+    "originalPrice": "Mutengo wekutanga",
+    "convertedPrice": "Mutengo wakashandurwa",
+    "approximatePrice": "Kushandurwa kunofungidzirwa kwakavakirwa pamitengo yekutsinhana iripo",
+    "approximate": "≈"
   }
 }

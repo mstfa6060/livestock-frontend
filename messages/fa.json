@@ -379,6 +379,34 @@
       "saveSuccess": "تنظیمات برگزیده شما به‌روزرسانی شد.",
       "saveError": "هنگام به‌روزرسانی تنظیمات برگزیده، خطایی روی داد.",
       "loadError": "تنظیمات برگزیده قابل بارگیری نبودند."
+    },
+    "deleteAccount": {
+      "dangerZone": "منطقه خطر",
+      "title": "حذف حساب کاربری",
+      "description": "وقتی حساب کاربری خود را حذف کنید، دیگر راه برگشتی وجود ندارد. تمام داده‌ها، فهرست‌ها و مکالمات شما برای همیشه حذف خواهند شد.",
+      "irreversible": "این عمل برگشت‌ناپذیر است.",
+      "button": "حساب کاربری من را حذف کنید",
+      "confirmTitle": "آیا مطمئن هستید که می‌خواهید حساب کاربری خود را حذف کنید؟",
+      "warning": "داده‌های زیر به طور دائم حذف خواهند شد:",
+      "warningProfile": "پروفایل و اطلاعات شخصی شما",
+      "warningListings": "تمام آگهی‌ها و محصولات شما",
+      "warningConversations": "مکالمات و پیام‌های شما",
+      "warningReviews": "نظرات و موارد دلخواه شما",
+      "passwordLabel": "رمز عبور خود را برای تأیید وارد کنید",
+      "passwordPlaceholder": "رمز عبور فعلی شما",
+      "reasonLabel": "چرا می‌روی؟ (اختیاری)",
+      "reasonPlaceholder": "یک دلیل انتخاب کنید",
+      "reasonNotSatisfied": "از خدمات راضی نیستم",
+      "reasonPrivacy": "نگرانی‌های مربوط به حریم خصوصی",
+      "reasonAlternative": "یک پلتفرم جایگزین پیدا کرد",
+      "reasonOther": "دیگر",
+      "feedbackLabel": "بازخورد اضافی (اختیاری)",
+      "feedbackPlaceholder": "به ما بگویید چگونه می‌توانیم پیشرفت کنیم...",
+      "cancel": "لغو",
+      "confirmButton": "حذف حساب کاربری",
+      "deleting": "در حال حذف...",
+      "success": "حساب کاربری شما با موفقیت حذف شد.",
+      "error": "حذف حساب کاربری ناموفق بود. لطفاً رمز عبور خود را بررسی کرده و دوباره امتحان کنید."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "یک دسته بندی انتخاب کنید.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "عنوان آگهی الزامی است.",
       "shortDescriptionRequired": "شرح مختصری لازم است.",
       "descriptionRequired": "توضیح مفصلی لازم است.",
       "categoryRequired": "انتخاب دسته بندی الزامی است.",
       "priceRequired": "قیمت معتبر وارد کنید."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "ایجاد آگهی جدید",
@@ -834,21 +862,22 @@
       "shippingCost": "هزینه ارسال",
       "weight": "وزن",
       "weightUnit": "واحد وزن",
+      "currency": "Currency",
       "city": "شهر",
       "address": "آدرس",
-      "postalCode": "کد پستی",
-      "currency": "Currency"
+      "postalCode": "کد پستی"
     },
     "placeholders": {
       "title": "مثال: گاو هلشتاین ۲ ساله",
       "shortDescription": "توضیحات محصول (حداکثر ۲۰۰ کاراکتر)",
       "description": "ارائه اطلاعات دقیق در مورد محصول ...",
       "category": "یک دسته بندی انتخاب کنید.",
+      "searchCurrency": "Search currency...",
       "city": "وارد شهر شوید",
       "address": "آدرس کامل را وارد کنید.",
-      "postalCode": "کد پستی",
-      "searchCurrency": "Search currency..."
+      "postalCode": "کد پستی"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "عنوان آگهی الزامی است.",
       "shortDescriptionRequired": "شرح مختصری لازم است.",
@@ -870,8 +899,7 @@
     "productCreated": "محصول با موفقیت ایجاد شد.",
     "creationFailed": "محصول ایجاد نشد. لطفا دوباره امتحان کنید.",
     "userNotFound": "اطلاعات کاربر یافت نشد. لطفا دوباره وارد شوید.",
-    "defaultBusinessName": "کسب و کار من",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "کسب و کار من"
   },
   "becomeSeller": {
     "title": "فروشنده شوید",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} دقیقه پیش",
     "hoursAgo": "{تعداد} ساعت پیش",
     "daysAgo": "{تعداد}d پیش"
+  },
+  "pricing": {
+    "originalPrice": "قیمت اصلی",
+    "convertedPrice": "قیمت تبدیل شده",
+    "approximatePrice": "تبدیل تقریبی بر اساس نرخ ارز فعلی",
+    "approximate": "≈"
   }
 }

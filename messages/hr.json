@@ -379,6 +379,34 @@
       "saveSuccess": "Vaše su postavke ažurirane.",
       "saveError": "Došlo je do pogreške prilikom ažuriranja postavki.",
       "loadError": "Postavke se nisu mogle učitati."
+    },
+    "deleteAccount": {
+      "dangerZone": "Opasna zona",
+      "title": "Izbriši račun",
+      "description": "Nakon što izbrišete svoj račun, nema povratka. Svi vaši podaci, oglasi i razgovori bit će trajno uklonjeni.",
+      "irreversible": "Ova radnja je nepovratna.",
+      "button": "Izbriši moj račun",
+      "confirmTitle": "Jeste li sigurni da želite izbrisati svoj račun?",
+      "warning": "Sljedeći podaci bit će trajno izbrisani:",
+      "warningProfile": "Vaš profil i osobni podaci",
+      "warningListings": "Svi vaši oglasi i proizvodi",
+      "warningConversations": "Vaši razgovori i poruke",
+      "warningReviews": "Vaše recenzije i favoriti",
+      "passwordLabel": "Unesite svoju lozinku za potvrdu",
+      "passwordPlaceholder": "Vaša trenutna lozinka",
+      "reasonLabel": "Zašto odlaziš? (nije obavezno)",
+      "reasonPlaceholder": "Odaberite razlog",
+      "reasonNotSatisfied": "Nisam zadovoljan/na uslugom",
+      "reasonPrivacy": "Zabrinutost zbog privatnosti",
+      "reasonAlternative": "Pronađena je alternativna platforma",
+      "reasonOther": "Ostalo",
+      "feedbackLabel": "Dodatne povratne informacije (nije obavezno)",
+      "feedbackPlaceholder": "Recite nam kako možemo poboljšati...",
+      "cancel": "Otkazati",
+      "confirmButton": "Izbriši račun",
+      "deleting": "Brisanje...",
+      "success": "Vaš je račun uspješno izbrisan.",
+      "error": "Brisanje računa nije uspjelo. Provjerite lozinku i pokušajte ponovno."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Odaberite kategoriju.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Naslov oglasa je obavezan.",
       "shortDescriptionRequired": "Potreban je kratak opis.",
       "descriptionRequired": "Potrebno je detaljno objašnjenje.",
       "categoryRequired": "Odabir kategorije je obavezan.",
       "priceRequired": "Unesite valjanu cijenu."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Izradi novi oglas",
@@ -834,21 +862,22 @@
       "shippingCost": "Troškovi dostave",
       "weight": "Težina",
       "weightUnit": "Jedinica težine",
+      "currency": "Currency",
       "city": "Grad",
       "address": "Adresa",
-      "postalCode": "Poštanski broj",
-      "currency": "Currency"
+      "postalCode": "Poštanski broj"
     },
     "placeholders": {
       "title": "Primjer: Dvogodišnja krava Holstein pasmine",
       "shortDescription": "Opis proizvoda (maksimalno 200 znakova)",
       "description": "Navedite detaljne informacije o proizvodu...",
       "category": "Odaberite kategoriju.",
+      "searchCurrency": "Search currency...",
       "city": "Uđite u grad",
       "address": "Unesite punu adresu.",
-      "postalCode": "Poštanski broj",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Poštanski broj"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Naslov oglasa je obavezan.",
       "shortDescriptionRequired": "Potreban je kratak opis.",
@@ -870,8 +899,7 @@
     "productCreated": "Proizvod je uspješno kreiran.",
     "creationFailed": "Proizvod nije moguće kreirati. Pokušajte ponovno.",
     "userNotFound": "Podaci o korisniku nisu pronađeni. Molimo vas da se ponovno prijavite.",
-    "defaultBusinessName": "Moj posao",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Moj posao"
   },
   "becomeSeller": {
     "title": "Postanite prodavač",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "prije {count} min",
     "hoursAgo": "prije {count} h",
     "daysAgo": "prije {count} dana"
+  },
+  "pricing": {
+    "originalPrice": "Izvorna cijena",
+    "convertedPrice": "Preračunata cijena",
+    "approximatePrice": "Približna konverzija na temelju trenutnih tečajeva",
+    "approximate": "≈"
   }
 }

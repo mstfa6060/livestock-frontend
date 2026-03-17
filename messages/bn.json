@@ -379,6 +379,34 @@
       "saveSuccess": "আপনার পছন্দগুলি আপডেট করা হয়েছে।",
       "saveError": "পছন্দগুলি আপডেট করার সময় একটি ত্রুটি ঘটেছে।",
       "loadError": "পছন্দগুলি লোড করা যায়নি।"
+    },
+    "deleteAccount": {
+      "dangerZone": "বিপদজনক এলাকা",
+      "title": "অ্যাকাউন্ট মুছুন",
+      "description": "একবার আপনার অ্যাকাউন্ট মুছে ফেললে, আর ফিরে আসার কোনো উপায় থাকবে না। আপনার সমস্ত ডেটা, তালিকা এবং কথোপকথন স্থায়ীভাবে মুছে ফেলা হবে।",
+      "irreversible": "এই পদক্ষেপটি অপরিবর্তনীয়।",
+      "button": "আমার অ্যাকাউন্ট মুছে ফেলুন",
+      "confirmTitle": "আপনি কি আপনার অ্যাকাউন্টটি মুছে ফেলতে নিশ্চিত?",
+      "warning": "নিম্নলিখিত তথ্য স্থায়ীভাবে মুছে ফেলা হবে:",
+      "warningProfile": "আপনার প্রোফাইল এবং ব্যক্তিগত তথ্য",
+      "warningListings": "আপনার সমস্ত তালিকা এবং পণ্য",
+      "warningConversations": "আপনার কথোপকথন এবং বার্তা",
+      "warningReviews": "আপনার পর্যালোচনা এবং পছন্দের তালিকা",
+      "passwordLabel": "নিশ্চিত করতে আপনার পাসওয়ার্ড লিখুন",
+      "passwordPlaceholder": "আপনার বর্তমান পাসওয়ার্ড",
+      "reasonLabel": "তুমি কেন চলে যাচ্ছো? (ঐচ্ছিক)",
+      "reasonPlaceholder": "একটি কারণ নির্বাচন করুন",
+      "reasonNotSatisfied": "সেবা নিয়ে সন্তুষ্ট নই",
+      "reasonPrivacy": "গোপনীয়তা সংক্রান্ত উদ্বেগ",
+      "reasonAlternative": "একটি বিকল্প প্ল্যাটফর্ম খুঁজে পাওয়া গেছে",
+      "reasonOther": "অন্যান্য",
+      "feedbackLabel": "অতিরিক্ত মতামত (ঐচ্ছিক)",
+      "feedbackPlaceholder": "আমাদের জানান আমরা কীভাবে আরও উন্নতি করতে পারি...",
+      "cancel": "বাতিল করুন",
+      "confirmButton": "অ্যাকাউন্ট মুছুন",
+      "deleting": "মুছে ফেলা হচ্ছে...",
+      "success": "আপনার অ্যাকাউন্টটি সফলভাবে মুছে ফেলা হয়েছে।",
+      "error": "অ্যাকাউন্টটি মুছে ফেলা সম্ভব হয়নি। অনুগ্রহ করে আপনার পাসওয়ার্ড যাচাই করে আবার চেষ্টা করুন।"
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "একটি বিভাগ নির্বাচন করুন।",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "বিজ্ঞাপনের শিরোনাম বাধ্যতামূলক।",
       "shortDescriptionRequired": "একটি সংক্ষিপ্ত বিবরণ প্রয়োজন।",
       "descriptionRequired": "একটি বিস্তারিত ব্যাখ্যা প্রয়োজন।",
       "categoryRequired": "বিভাগ নির্বাচন বাধ্যতামূলক।",
       "priceRequired": "একটি বৈধ মূল্য লিখুন।"
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "নতুন তালিকা তৈরি করুন",
@@ -834,21 +862,22 @@
       "shippingCost": "শিপিং ফি",
       "weight": "ওজন",
       "weightUnit": "ওজনের একক",
+      "currency": "Currency",
       "city": "শহর",
       "address": "জানুন",
-      "postalCode": "পোস্টাল কোড",
-      "currency": "Currency"
+      "postalCode": "পোস্টাল কোড"
     },
     "placeholders": {
       "title": "উদাহরণ: ২ বছর বয়সী হোলস্টাইন গরু",
       "shortDescription": "পণ্যের বিবরণ (সর্বোচ্চ ২০০ অক্ষর)",
       "description": "পণ্য সম্পর্কে বিস্তারিত তথ্য প্রদান করুন...",
       "category": "একটি বিভাগ নির্বাচন করুন।",
+      "searchCurrency": "Search currency...",
       "city": "শহরে প্রবেশ করুন",
       "address": "সম্পূর্ণ ঠিকানা লিখুন।",
-      "postalCode": "পোস্টাল কোড",
-      "searchCurrency": "Search currency..."
+      "postalCode": "পোস্টাল কোড"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "বিজ্ঞাপনের শিরোনাম বাধ্যতামূলক।",
       "shortDescriptionRequired": "একটি সংক্ষিপ্ত বিবরণ প্রয়োজন।",
@@ -870,8 +899,7 @@
     "productCreated": "পণ্যটি সফলভাবে তৈরি করা হয়েছে।",
     "creationFailed": "পণ্যটি তৈরি করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।",
     "userNotFound": "ব্যবহারকারীর তথ্য পাওয়া যায়নি। অনুগ্রহ করে আবার লগ ইন করুন।",
-    "defaultBusinessName": "আমার ব্যবসা",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "আমার ব্যবসা"
   },
   "becomeSeller": {
     "title": "বিক্রেতা হন",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{গণনা} মিনিট আগে",
     "hoursAgo": "{গণনা} ঘন্টা আগে",
     "daysAgo": "{গণনা} দিন আগে"
+  },
+  "pricing": {
+    "originalPrice": "আসল দাম",
+    "convertedPrice": "রূপান্তরিত মূল্য",
+    "approximatePrice": "বর্তমান বিনিময় হারের উপর ভিত্তি করে আনুমানিক রূপান্তর",
+    "approximate": "≈"
   }
 }

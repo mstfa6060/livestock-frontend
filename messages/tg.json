@@ -379,6 +379,34 @@
       "saveSuccess": "Танзимоти шумо навсозӣ шуданд.",
       "saveError": "Ҳангоми навсозии танзимот хатогӣ рух дод.",
       "loadError": "Танзимот бор карда нашуданд."
+    },
+    "deleteAccount": {
+      "dangerZone": "Минтақаи хатарнок",
+      "title": "Ҳисобро нест кунед",
+      "description": "Пас аз нест кардани ҳисоби худ, роҳи бозгашт нест. Ҳама маълумот, рӯйхатҳо ва сӯҳбатҳои шумо ба таври доимӣ нест карда мешаванд.",
+      "irreversible": "Ин амал бебозгашт аст.",
+      "button": "Ҳисоби маро нест кунед",
+      "confirmTitle": "Шумо мутмаин ҳастед, ки мехоҳед ҳисоби худро нест кунед?",
+      "warning": "Маълумоти зерин ба таври доимӣ нест карда мешавад:",
+      "warningProfile": "Профил ва маълумоти шахсии шумо",
+      "warningListings": "Ҳамаи рӯйхатҳо ва маҳсулоти шумо",
+      "warningConversations": "Сӯҳбатҳо ва паёмҳои шумо",
+      "warningReviews": "Шарҳҳо ва дӯстдоштаҳои шумо",
+      "passwordLabel": "Барои тасдиқ пароли худро ворид кунед",
+      "passwordPlaceholder": "Пароли ҷории шумо",
+      "reasonLabel": "Чаро шумо меравед? (ихтиёрӣ)",
+      "reasonPlaceholder": "Сабаберо интихоб кунед",
+      "reasonNotSatisfied": "Аз хизматрасонӣ қаноатманд нестам",
+      "reasonPrivacy": "Нигарониҳои махфият",
+      "reasonAlternative": "Платформаи алтернативӣ ёфт шуд",
+      "reasonOther": "Дигар",
+      "feedbackLabel": "Фикру мулоҳизаҳои иловагӣ (ихтиёрӣ)",
+      "feedbackPlaceholder": "Ба мо бигӯед, ки чӣ гуна мо метавонем беҳтар кунем...",
+      "cancel": "Бекор кардан",
+      "confirmButton": "Ҳисобро нест кунед",
+      "deleting": "Нест кардан...",
+      "success": "Ҳисоби шумо бомуваффақият нест карда шуд.",
+      "error": "Нест кардани ҳисоб ноком шуд. Лутфан, пароли худро тафтиш кунед ва дубора кӯшиш кунед."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Як категорияро интихоб кунед.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Унвони таблиғотӣ ҳатмист.",
       "shortDescriptionRequired": "Тавсифи мухтасар лозим аст.",
       "descriptionRequired": "Шарҳи муфассал лозим аст.",
       "categoryRequired": "Интихоби категория ҳатмӣ аст.",
       "priceRequired": "Нархи дурустро ворид кунед."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Эҷоди рӯйхати нав",
@@ -834,21 +862,22 @@
       "shippingCost": "Пардохти интиқол",
       "weight": "Вазн",
       "weightUnit": "Воҳиди вазн",
+      "currency": "Currency",
       "city": "Шаҳр",
       "address": "Суроға",
-      "postalCode": "Рамзи почта",
-      "currency": "Currency"
+      "postalCode": "Рамзи почта"
     },
     "placeholders": {
       "title": "Мисол: Говҳои 2-солаи зоти Ҳолштейн",
       "shortDescription": "Тавсифи маҳсулот (ҳадди аксар 200 аломат)",
       "description": "Маълумоти муфассалро дар бораи маҳсулот пешниҳод кунед...",
       "category": "Як категорияро интихоб кунед.",
+      "searchCurrency": "Search currency...",
       "city": "Ба шаҳр ворид шавед",
       "address": "Суроғаи пурраро ворид кунед.",
-      "postalCode": "Рамзи почта",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Рамзи почта"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Унвони таблиғотӣ ҳатмист.",
       "shortDescriptionRequired": "Тавсифи мухтасар лозим аст.",
@@ -870,8 +899,7 @@
     "productCreated": "Маҳсулот бомуваффақият сохта шуд.",
     "creationFailed": "Маҳсулот эҷод карда нашуд. Лутфан, дубора кӯшиш кунед.",
     "userNotFound": "Маълумоти корбар пайдо нашуд. Лутфан, дубора ворид шавед.",
-    "defaultBusinessName": "Тиҷорати ман",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Тиҷорати ман"
   },
   "becomeSeller": {
     "title": "Фурӯшанда шавед",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} дақиқа пеш",
     "hoursAgo": "{count} соат пеш",
     "daysAgo": "{count} рӯз пеш"
+  },
+  "pricing": {
+    "originalPrice": "Нархи аслӣ",
+    "convertedPrice": "Нархи табдилшуда",
+    "approximatePrice": "Табдили тахминӣ дар асоси қурбҳои ҷории асъор",
+    "approximate": "≈"
   }
 }

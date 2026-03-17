@@ -379,6 +379,34 @@
       "saveSuccess": "Preferencat tuaja janë përditësuar.",
       "saveError": "Ndodhi një gabim gjatë përditësimit të preferencave.",
       "loadError": "Preferencat nuk mund të ngarkoheshin."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zona e Rrezikut",
+      "title": "Fshij llogarinë",
+      "description": "Pasi ta fshini llogarinë tuaj, nuk ka më kthim pas. Të gjitha të dhënat, listat dhe bisedat tuaja do të hiqen përgjithmonë.",
+      "irreversible": "Ky veprim është i pakthyeshëm.",
+      "button": "Fshij llogarinë time",
+      "confirmTitle": "Je i sigurt që dëshiron ta fshish llogarinë tënde?",
+      "warning": "Të dhënat e mëposhtme do të fshihen përgjithmonë:",
+      "warningProfile": "Profili juaj dhe të dhënat personale",
+      "warningListings": "Të gjitha listat dhe produktet tuaja",
+      "warningConversations": "Bisedat dhe mesazhet tuaja",
+      "warningReviews": "Vlerësimet dhe të preferuarat tuaja",
+      "passwordLabel": "Fut fjalëkalimin tënd për të konfirmuar",
+      "passwordPlaceholder": "Fjalëkalimi juaj aktual",
+      "reasonLabel": "Pse po largohesh? (opsionale)",
+      "reasonPlaceholder": "Zgjidh një arsye",
+      "reasonNotSatisfied": "I pakënaqur me shërbimin",
+      "reasonPrivacy": "Shqetësime për privatësinë",
+      "reasonAlternative": "Gjeta një platformë alternative",
+      "reasonOther": "Të tjera",
+      "feedbackLabel": "Reagime shtesë (opsionale)",
+      "feedbackPlaceholder": "Na tregoni si mund ta përmirësojmë...",
+      "cancel": "Anulo",
+      "confirmButton": "Fshij llogarinë",
+      "deleting": "Duke fshirë...",
+      "success": "Llogaria juaj është fshirë me sukses.",
+      "error": "Fshirja e llogarisë dështoi. Kontrolloni fjalëkalimin tuaj dhe provoni përsëri."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Zgjidhni një kategori.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Titulli i reklamës është i detyrueshëm.",
       "shortDescriptionRequired": "Kërkohet një përshkrim i shkurtër.",
       "descriptionRequired": "Kërkohet një shpjegim i hollësishëm.",
       "categoryRequired": "Zgjedhja e kategorisë është e detyrueshme.",
       "priceRequired": "Jepni një çmim të vlefshëm."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Krijo Listë të Re",
@@ -834,21 +862,22 @@
       "shippingCost": "Tarifa e transportit",
       "weight": "Pesha",
       "weightUnit": "Njësia e Peshës",
+      "currency": "Currency",
       "city": "Qyteti",
       "address": "Adresa",
-      "postalCode": "Kodi postar",
-      "currency": "Currency"
+      "postalCode": "Kodi postar"
     },
     "placeholders": {
       "title": "Shembull: Lopë Holstein 2-vjeçare",
       "shortDescription": "Përshkrimi i produktit (maksimumi 200 karaktere)",
       "description": "Jepni informacion të detajuar rreth produktit...",
       "category": "Zgjidhni një kategori.",
+      "searchCurrency": "Search currency...",
       "city": "Hyr në qytet",
       "address": "Shkruani adresën e plotë.",
-      "postalCode": "Kodi postar",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Kodi postar"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Titulli i reklamës është i detyrueshëm.",
       "shortDescriptionRequired": "Kërkohet një përshkrim i shkurtër.",
@@ -870,8 +899,7 @@
     "productCreated": "Produkti u krijua me sukses.",
     "creationFailed": "Produkti nuk mund të krijohej. Ju lutemi provoni përsëri.",
     "userNotFound": "Informacioni i përdoruesit nuk mund të gjendej. Ju lutemi, hyni përsëri.",
-    "defaultBusinessName": "Biznesi im",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Biznesi im"
   },
   "becomeSeller": {
     "title": "Bëhu një shitës",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} minuta më parë",
     "hoursAgo": "{count} orë më parë",
     "daysAgo": "{count} ditë më parë"
+  },
+  "pricing": {
+    "originalPrice": "Çmimi origjinal",
+    "convertedPrice": "Çmimi i konvertuar",
+    "approximatePrice": "Konvertimi i përafërt bazuar në kurset aktuale të këmbimit",
+    "approximate": "≈"
   }
 }

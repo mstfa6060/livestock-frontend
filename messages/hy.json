@@ -379,6 +379,34 @@
       "saveSuccess": "Ձեր նախընտրությունները թարմացվել են։",
       "saveError": "Կարգավորումները թարմացնելիս սխալ տեղի ունեցավ։",
       "loadError": "Նախընտրությունները չհաջողվեց բեռնել։"
+    },
+    "deleteAccount": {
+      "dangerZone": "Վտանգավոր գոտի",
+      "title": "Ջնջել հաշիվը",
+      "description": "Հաշիվը ջնջելուց հետո այլևս հետդարձի ճանապարհ չկա։ Ձեր բոլոր տվյալները, ցուցակները և զրույցները ընդմիշտ կջնջվեն։",
+      "irreversible": "Այս գործողությունը անշրջելի է։",
+      "button": "Ջնջել իմ հաշիվը",
+      "confirmTitle": "Վստա՞հ եք, որ ուզում եք ջնջել ձեր հաշիվը։",
+      "warning": "Հետևյալ տվյալները ընդմիշտ կջնջվեն՝",
+      "warningProfile": "Ձեր պրոֆիլը և անձնական տեղեկությունները",
+      "warningListings": "Ձեր բոլոր ցուցակները և ապրանքները",
+      "warningConversations": "Ձեր զրույցներն ու հաղորդագրությունները",
+      "warningReviews": "Ձեր կարծիքներն ու նախընտրածները",
+      "passwordLabel": "Մուտքագրեք ձեր գաղտնաբառը՝ հաստատելու համար",
+      "passwordPlaceholder": "Ձեր ներկայիս գաղտնաբառը",
+      "reasonLabel": "Ինչո՞ւ եք հեռանում (կամավոր)",
+      "reasonPlaceholder": "Ընտրեք պատճառ",
+      "reasonNotSatisfied": "Ծառայությունից գոհ չեմ",
+      "reasonPrivacy": "Գաղտնիության հետ կապված մտահոգություններ",
+      "reasonAlternative": "Գտա այլընտրանքային հարթակ",
+      "reasonOther": "Այլ",
+      "feedbackLabel": "Լրացուցիչ արձագանք (ըստ ցանկության)",
+      "feedbackPlaceholder": "Ասեք մեզ, թե ինչպես կարող ենք բարելավել...",
+      "cancel": "Չեղարկել",
+      "confirmButton": "Ջնջել հաշիվը",
+      "deleting": "Ջնջվում է...",
+      "success": "Ձեր հաշիվը հաջողությամբ ջնջվել է։",
+      "error": "Հաշիվը չհաջողվեց ջնջել։ Ստուգեք ձեր գաղտնաբառը և կրկին փորձեք։"
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Ընտրեք կատեգորիա։",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Գովազդի վերնագիրը պարտադիր է։",
       "shortDescriptionRequired": "Կարճ նկարագրություն է պահանջվում։",
       "descriptionRequired": "Անհրաժեշտ է մանրամասն բացատրություն։",
       "categoryRequired": "Կատեգորիայի ընտրությունը պարտադիր է։",
       "priceRequired": "Մուտքագրեք վավեր գին։"
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Ստեղծել նոր ցուցակ",
@@ -834,21 +862,22 @@
       "shippingCost": "Առաքման վճար",
       "weight": "Քաշը",
       "weightUnit": "Քաշի միավոր",
+      "currency": "Currency",
       "city": "Քաղաք",
       "address": "Հասցե",
-      "postalCode": "Փոստային ինդեքս",
-      "currency": "Currency"
+      "postalCode": "Փոստային ինդեքս"
     },
     "placeholders": {
       "title": "Օրինակ՝ 2 տարեկան Հոլշտեյն ցեղատեսակի կով",
       "shortDescription": "Ապրանքի նկարագրություն (առավելագույնը 200 նիշ)",
       "description": "Տրամադրեք ապրանքի մասին մանրամասն տեղեկություններ...",
       "category": "Ընտրեք կատեգորիա։",
+      "searchCurrency": "Search currency...",
       "city": "Մտեք քաղաք",
       "address": "Մուտքագրեք ամբողջական հասցեն։",
-      "postalCode": "Փոստային ինդեքս",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Փոստային ինդեքս"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Գովազդի վերնագիրը պարտադիր է։",
       "shortDescriptionRequired": "Կարճ նկարագրություն է պահանջվում։",
@@ -870,8 +899,7 @@
     "productCreated": "Ապրանքը հաջողությամբ ստեղծվել է։",
     "creationFailed": "Արտադրանքը չհաջողվեց ստեղծել։ Խնդրում ենք կրկին փորձել։",
     "userNotFound": "Օգտատիրոջ տեղեկությունները չգտնվեցին։ Խնդրում ենք կրկին մուտք գործել։",
-    "defaultBusinessName": "Իմ բիզնեսը",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Իմ բիզնեսը"
   },
   "becomeSeller": {
     "title": "Դարձեք վաճառող",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{քանակ} րոպե առաջ",
     "hoursAgo": "{count} ժամ առաջ",
     "daysAgo": "{count} օր առաջ"
+  },
+  "pricing": {
+    "originalPrice": "Սկզբնական գինը",
+    "convertedPrice": "Փոխարկված գին",
+    "approximatePrice": "Մոտավոր փոխակերպում՝ հիմնված ընթացիկ փոխարժեքների վրա",
+    "approximate": "≈"
   }
 }

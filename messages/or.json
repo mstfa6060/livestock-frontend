@@ -379,6 +379,34 @@
       "saveSuccess": "ଆପଣଙ୍କର ପସନ୍ଦଗୁଡ଼ିକୁ ଅପଡେଟ୍ କରାଯାଇଛି।",
       "saveError": "ପସନ୍ଦଗୁଡ଼ିକୁ ଅପଡେଟ୍ କରିବା ସମୟରେ ଏକ ତ୍ରୁଟି ଦେଖାଦେଲା।",
       "loadError": "ପସନ୍ଦଗୁଡ଼ିକୁ ଲୋଡ୍ କରାଯାଇପାରିଲା ନାହିଁ।"
+    },
+    "deleteAccount": {
+      "dangerZone": "ବିପଦ ଅଞ୍ଚଳ",
+      "title": "ଆକାଉଣ୍ଟ ଡିଲିଟ୍ କରନ୍ତୁ",
+      "description": "ଥରେ ଆପଣ ଆପଣଙ୍କର ଆକାଉଣ୍ଟ ଡିଲିଟ୍ କରିଦେଲେ, ଆଉ ପଛକୁ ଫେରିବାର ନାହିଁ। ଆପଣଙ୍କର ସମସ୍ତ ଡାଟା, ତାଲିକା ଏବଂ ବାର୍ତ୍ତାଳାପ ସ୍ଥାୟୀ ଭାବରେ ଅପସାରିତ ହୋଇଯିବ।",
+      "irreversible": "ଏହି କାର୍ଯ୍ୟଟି ଅପରିବର୍ତ୍ତନୀୟ।",
+      "button": "ମୋ ଆକାଉଣ୍ଟ ବିଲୋପ କରନ୍ତୁ",
+      "confirmTitle": "ଆପଣ କ’ଣ ନିଶ୍ଚିତ ଯେ ଆପଣ ଆପଣଙ୍କର ଆକାଉଣ୍ଟ ଡିଲିଟ୍ କରିବାକୁ ଚାହୁଁଛନ୍ତି?",
+      "warning": "ନିମ୍ନଲିଖିତ ଡାଟା ସ୍ଥାୟୀ ଭାବରେ ବିଲୋପ ହୋଇଯିବ:",
+      "warningProfile": "ଆପଣଙ୍କର ପ୍ରୋଫାଇଲ୍ ଏବଂ ବ୍ୟକ୍ତିଗତ ସୂଚନା",
+      "warningListings": "ଆପଣଙ୍କର ସମସ୍ତ ତାଲିକା ଏବଂ ଉତ୍ପାଦଗୁଡ଼ିକ",
+      "warningConversations": "ଆପଣଙ୍କର ବାର୍ତ୍ତାଳାପ ଏବଂ ମେସେଜଗୁଡ଼ିକ",
+      "warningReviews": "ଆପଣଙ୍କ ସମୀକ୍ଷା ଏବଂ ପସନ୍ଦଗୁଡ଼ିକ",
+      "passwordLabel": "ସୁନିଶ୍ଚିତ କରିବାକୁ ଆପଣଙ୍କର ପାସୱାର୍ଡ ଲେଖନ୍ତୁ",
+      "passwordPlaceholder": "ଆପଣଙ୍କ ବର୍ତ୍ତମାନର ପାସୱାର୍ଡ",
+      "reasonLabel": "ତୁମେ କାହିଁକି ଯାଉଛ? (ଇଚ୍ଛାଧୀନ)",
+      "reasonPlaceholder": "ଗୋଟିଏ କାରଣ ଚୟନ କରନ୍ତୁ",
+      "reasonNotSatisfied": "ସେବାରେ ସନ୍ତୁଷ୍ଟ ନୁହଁନ୍ତି",
+      "reasonPrivacy": "ଗୋପନୀୟତା ସମ୍ବନ୍ଧୀୟ ଚିନ୍ତା",
+      "reasonAlternative": "ଏକ ବିକଳ୍ପ ପ୍ଲାଟଫର୍ମ ମିଳିଲା",
+      "reasonOther": "ଅନ୍ୟାନ୍ୟ",
+      "feedbackLabel": "ଅତିରିକ୍ତ ମତାମତ (ଇଚ୍ଛାଧୀନ)",
+      "feedbackPlaceholder": "ଆମେ କିପରି ଉନ୍ନତି କରିପାରିବା ତାହା ଆମକୁ କୁହନ୍ତୁ...",
+      "cancel": "ବାତିଲ କରନ୍ତୁ",
+      "confirmButton": "ଆକାଉଣ୍ଟ ଡିଲିଟ୍ କରନ୍ତୁ",
+      "deleting": "ଡିଲିଟ୍ କରାଯାଉଛି...",
+      "success": "ଆପଣଙ୍କର ଆକାଉଣ୍ଟ ସଫଳତାର ସହ ଡିଲିଟ୍ କରିଦିଆଯାଇଛି।",
+      "error": "ଆକାଉଣ୍ଟ ଡିଲିଟ୍ କରିବାରେ ବିଫଳ ହେଲା। ଦୟାକରି ଆପଣଙ୍କ ପାସୱାର୍ଡ ଯାଞ୍ଚ କରନ୍ତୁ ଏବଂ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।"
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "ଗୋଟିଏ ବର୍ଗ ଚୟନ କରନ୍ତୁ।",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "ବିଜ୍ଞାପନର ଶୀର୍ଷକ ବାଧ୍ୟତାମୂଳକ।",
       "shortDescriptionRequired": "ଏକ ସଂକ୍ଷିପ୍ତ ବର୍ଣ୍ଣନା ଆବଶ୍ୟକ।",
       "descriptionRequired": "ଏକ ବିସ୍ତୃତ ବ୍ୟାଖ୍ୟା ଆବଶ୍ୟକ।",
       "categoryRequired": "ବର୍ଗ ଚୟନ ବାଧ୍ୟତାମୂଳକ।",
       "priceRequired": "ଏକ ବୈଧ ମୂଲ୍ୟ ଲେଖନ୍ତୁ।"
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "ନୂତନ ତାଲିକା ତିଆରି କରନ୍ତୁ",
@@ -834,21 +862,22 @@
       "shippingCost": "ପରିବହନ ଦେୟ",
       "weight": "ଓଜନ",
       "weightUnit": "ଓଜନର ଏକକ",
+      "currency": "Currency",
       "city": "ସହର",
       "address": "ଠିକଣା",
-      "postalCode": "ପୋଷ୍ଟାଲ୍ କୋଡ୍",
-      "currency": "Currency"
+      "postalCode": "ପୋଷ୍ଟାଲ୍ କୋଡ୍"
     },
     "placeholders": {
       "title": "ଉଦାହରଣ: ୨ ବର୍ଷର ହୋଲଷ୍ଟାଇନ୍ ଗାଈ",
       "shortDescription": "ଉତ୍ପାଦ ବର୍ଣ୍ଣନା (ସର୍ବାଧିକ 200 ଅକ୍ଷର)",
       "description": "ଉତ୍ପାଦ ବିଷୟରେ ବିସ୍ତୃତ ସୂଚନା ପ୍ରଦାନ କରନ୍ତୁ...",
       "category": "ଗୋଟିଏ ବର୍ଗ ଚୟନ କରନ୍ତୁ।",
+      "searchCurrency": "Search currency...",
       "city": "ସହର ପ୍ରବେଶ କରନ୍ତୁ",
       "address": "ସମ୍ପୂର୍ଣ୍ଣ ଠିକଣା ଲେଖନ୍ତୁ।",
-      "postalCode": "ପୋଷ୍ଟାଲ୍ କୋଡ୍",
-      "searchCurrency": "Search currency..."
+      "postalCode": "ପୋଷ୍ଟାଲ୍ କୋଡ୍"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "ବିଜ୍ଞାପନର ଶୀର୍ଷକ ବାଧ୍ୟତାମୂଳକ।",
       "shortDescriptionRequired": "ଏକ ସଂକ୍ଷିପ୍ତ ବର୍ଣ୍ଣନା ଆବଶ୍ୟକ।",
@@ -870,8 +899,7 @@
     "productCreated": "ଉତ୍ପାଦଟି ସଫଳତାର ସହ ତିଆରି ହୋଇଥିଲା।",
     "creationFailed": "ଉତ୍ପାଦଟି ତିଆରି ହୋଇପାରିଲା ନାହିଁ। ଦୟାକରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।",
     "userNotFound": "ଉପଭୋକ୍ତା ସୂଚନା ମିଳିଲା ନାହିଁ। ଦୟାକରି ପୁଣି ଲଗ୍ ଇନ୍ କରନ୍ତୁ।",
-    "defaultBusinessName": "ମୋର ବ୍ୟବସାୟ",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "ମୋର ବ୍ୟବସାୟ"
   },
   "becomeSeller": {
     "title": "ଜଣେ ବିକ୍ରେତା ହୁଅନ୍ତୁ",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} ମିନିଟ୍ ପୂର୍ବେ",
     "hoursAgo": "{ଗଣନା} ଘଣ୍ଟା ପୂର୍ବେ",
     "daysAgo": "{ଗଣନା} ଦିନ ପୂର୍ବେ"
+  },
+  "pricing": {
+    "originalPrice": "ମୂଳ ମୂଲ୍ୟ",
+    "convertedPrice": "ପରିବର୍ତ୍ତିତ ମୂଲ୍ୟ",
+    "approximatePrice": "ବର୍ତ୍ତମାନର ବିନିମୟ ଦର ଉପରେ ଆଧାରିତ ଆନୁମାନିକ ରୂପାନ୍ତର",
+    "approximate": "≈"
   }
 }

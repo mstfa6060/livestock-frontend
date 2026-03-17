@@ -379,6 +379,34 @@
       "saveSuccess": "Dina inställningar har uppdaterats.",
       "saveError": "Ett fel uppstod när inställningarna uppdaterades.",
       "loadError": "Inställningarna kunde inte läsas in."
+    },
+    "deleteAccount": {
+      "dangerZone": "Riskzon",
+      "title": "Ta bort konto",
+      "description": "När du har raderat ditt konto finns det ingen återvändo. All din data, alla dina listningar och konversationer tas bort permanent.",
+      "irreversible": "Denna åtgärd är oåterkallelig.",
+      "button": "Ta bort mitt konto",
+      "confirmTitle": "Är du säker på att du vill radera ditt konto?",
+      "warning": "Följande data kommer att raderas permanent:",
+      "warningProfile": "Din profil och dina personuppgifter",
+      "warningListings": "Alla dina listningar och produkter",
+      "warningConversations": "Dina konversationer och meddelanden",
+      "warningReviews": "Dina recensioner och favoriter",
+      "passwordLabel": "Ange ditt lösenord för att bekräfta",
+      "passwordPlaceholder": "Ditt nuvarande lösenord",
+      "reasonLabel": "Varför åker du? (valfritt)",
+      "reasonPlaceholder": "Välj en anledning",
+      "reasonNotSatisfied": "Inte nöjd med tjänsten",
+      "reasonPrivacy": "Integritetsfrågor",
+      "reasonAlternative": "Hittade en alternativ plattform",
+      "reasonOther": "Andra",
+      "feedbackLabel": "Ytterligare feedback (valfritt)",
+      "feedbackPlaceholder": "Berätta för oss hur vi kan förbättra oss...",
+      "cancel": "Avboka",
+      "confirmButton": "Ta bort konto",
+      "deleting": "Tar bort...",
+      "success": "Ditt konto har raderats.",
+      "error": "Det gick inte att ta bort kontot. Kontrollera ditt lösenord och försök igen."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "Ett fel uppstod när säljarinformationen laddades upp.",
       "productsLoadError": "Ett fel uppstod när säljarens produkter skulle laddas upp.",
       "reviewsTab": "Bedömningar",
+      "share": "Dela",
+      "shareText": "Kolla in {name} på boskapshandel",
+      "linkCopied": "Länk kopierad till urklipp.",
       "reviews": {
         "summary": "Utvärderingssammanfattning",
         "reviewCount": "utvärdering",
@@ -796,14 +827,14 @@
       "category": "Välj en kategori.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Annonstitel är obligatorisk.",
       "shortDescriptionRequired": "En kort beskrivning krävs.",
       "descriptionRequired": "En detaljerad förklaring krävs.",
       "categoryRequired": "Val av kategori är obligatoriskt.",
       "priceRequired": "Ange ett giltigt pris."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Skapa ny annons",
@@ -831,21 +862,22 @@
       "shippingCost": "Fraktavgift",
       "weight": "Vikt",
       "weightUnit": "Viktenhet",
+      "currency": "Currency",
       "city": "Stad",
       "address": "Adress",
-      "postalCode": "Postnummer",
-      "currency": "Currency"
+      "postalCode": "Postnummer"
     },
     "placeholders": {
       "title": "Exempel: 2-årig Holsteinko",
       "shortDescription": "Produktbeskrivning (max 200 tecken)",
       "description": "Ge detaljerad information om produkten...",
       "category": "Välj en kategori.",
+      "searchCurrency": "Search currency...",
       "city": "Ange staden",
       "address": "Ange den fullständiga adressen.",
-      "postalCode": "Postnummer",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Postnummer"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Annonstitel är obligatorisk.",
       "shortDescriptionRequired": "En kort beskrivning krävs.",
@@ -867,8 +899,7 @@
     "productCreated": "Produkten skapades.",
     "creationFailed": "Produkten kunde inte skapas. Försök igen.",
     "userNotFound": "Användarinformationen kunde inte hittas. Vänligen logga in igen.",
-    "defaultBusinessName": "Mitt företag",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Mitt företag"
   },
   "becomeSeller": {
     "title": "Bli säljare",
@@ -1317,7 +1348,10 @@
     "fleet": "Flottinformation",
     "serviceRegions": "Serviceområden",
     "specializations": "Expertområden",
-    "certifications": "Certifikat"
+    "certifications": "Certifikat",
+    "share": "Dela",
+    "shareText": "Kolla in {name} på Livestock Trading",
+    "linkCopied": "Länk kopierad till urklipp."
   },
   "brands": {
     "title": "Varumärkeshantering",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "för {count} minuter sedan",
     "hoursAgo": "för {count} timmar sedan",
     "daysAgo": "för {count} dagar sedan"
+  },
+  "pricing": {
+    "originalPrice": "Ursprungligt pris",
+    "convertedPrice": "Konverterat pris",
+    "approximatePrice": "Ungefärlig omräkning baserad på aktuella växelkurser",
+    "approximate": "≈"
   }
 }

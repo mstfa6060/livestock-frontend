@@ -379,6 +379,34 @@
       "saveSuccess": "ඔබගේ මනාපයන් යාවත්කාලීන කර ඇත.",
       "saveError": "මනාප යාවත්කාලීන කිරීමේදී දෝෂයක් ඇති විය.",
       "loadError": "මනාප පූරණය කළ නොහැකි විය."
+    },
+    "deleteAccount": {
+      "dangerZone": "අනතුරුදායක කලාපය",
+      "title": "ගිණුම මකන්න",
+      "description": "ඔබ ඔබේ ගිණුම මකා දැමූ පසු, ආපසු යාමක් නැත. ඔබේ සියලු දත්ත, ලැයිස්තුගත කිරීම් සහ සංවාද ස්ථිරවම ඉවත් කරනු ලැබේ.",
+      "irreversible": "මෙම ක්‍රියාව ආපසු හැරවිය නොහැක.",
+      "button": "මගේ ගිණුම මකන්න",
+      "confirmTitle": "ඔබට ඔබේ ගිණුම මැකීමට අවශ්‍ය බව ඔබට විශ්වාසද?",
+      "warning": "පහත දත්ත ස්ථිරවම මකා දැමෙනු ඇත:",
+      "warningProfile": "ඔබගේ පැතිකඩ සහ පුද්ගලික තොරතුරු",
+      "warningListings": "ඔබගේ සියලුම ලැයිස්තුගත කිරීම් සහ නිෂ්පාදන",
+      "warningConversations": "ඔබේ සංවාද සහ පණිවිඩ",
+      "warningReviews": "ඔබේ සමාලෝචන සහ ප්‍රියතමයන්",
+      "passwordLabel": "තහවුරු කිරීමට ඔබගේ මුරපදය ඇතුළත් කරන්න",
+      "passwordPlaceholder": "ඔබගේ වත්මන් මුරපදය",
+      "reasonLabel": "ඔබ යන්නේ ඇයි? (විකල්ප)",
+      "reasonPlaceholder": "හේතුවක් තෝරන්න",
+      "reasonNotSatisfied": "සේවාව ගැන සෑහීමකට පත් නොවේ",
+      "reasonPrivacy": "පෞද්ගලිකත්ව ගැටළු",
+      "reasonAlternative": "විකල්ප වේදිකාවක් සොයා ගත්තා",
+      "reasonOther": "වෙනත්",
+      "feedbackLabel": "අමතර ප්‍රතිපෝෂණ (විකල්ප)",
+      "feedbackPlaceholder": "අපට දියුණු විය හැකි ආකාරය අපට කියන්න...",
+      "cancel": "අවලංගු කරන්න",
+      "confirmButton": "ගිණුම මකන්න",
+      "deleting": "මකමින්...",
+      "success": "ඔබගේ ගිණුම සාර්ථකව මකා දමා ඇත.",
+      "error": "ගිණුම මැකීමට අසමත් විය. කරුණාකර ඔබගේ මුරපදය පරීක්ෂා කර නැවත උත්සාහ කරන්න."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "කාණ්ඩයක් තෝරන්න.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "දැන්වීම් මාතෘකාව අනිවාර්ය වේ.",
       "shortDescriptionRequired": "කෙටි විස්තරයක් අවශ්‍යයි.",
       "descriptionRequired": "සවිස්තරාත්මක පැහැදිලි කිරීමක් අවශ්‍යයි.",
       "categoryRequired": "ප්‍රවර්ග තේරීම අනිවාර්ය වේ.",
       "priceRequired": "වලංගු මිලක් ඇතුළත් කරන්න."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "නව ලැයිස්තුගත කිරීමක් සාදන්න",
@@ -834,21 +862,22 @@
       "shippingCost": "නැව්ගත කිරීමේ ගාස්තුව",
       "weight": "බර",
       "weightUnit": "බර ඒකකය",
+      "currency": "Currency",
       "city": "නගරය",
       "address": "ලිපිනය",
-      "postalCode": "තැපැල් කේතය",
-      "currency": "Currency"
+      "postalCode": "තැපැල් කේතය"
     },
     "placeholders": {
       "title": "උදාහරණය: අවුරුදු 2 ක් වයසැති හොල්ස්ටයින් එළදෙන",
       "shortDescription": "නිෂ්පාදන විස්තරය (උපරිම අක්ෂර 200)",
       "description": "නිෂ්පාදනය පිළිබඳ සවිස්තර තොරතුරු සපයන්න...",
       "category": "කාණ්ඩයක් තෝරන්න.",
+      "searchCurrency": "Search currency...",
       "city": "නගරයට ඇතුළු වන්න",
       "address": "සම්පූර්ණ ලිපිනය ඇතුළත් කරන්න.",
-      "postalCode": "තැපැල් කේතය",
-      "searchCurrency": "Search currency..."
+      "postalCode": "තැපැල් කේතය"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "දැන්වීම් මාතෘකාව අනිවාර්ය වේ.",
       "shortDescriptionRequired": "කෙටි විස්තරයක් අවශ්‍යයි.",
@@ -870,8 +899,7 @@
     "productCreated": "නිෂ්පාදනය සාර්ථකව නිර්මාණය කරන ලදී.",
     "creationFailed": "නිෂ්පාදනය නිර්මාණය කළ නොහැකි විය. කරුණාකර නැවත උත්සාහ කරන්න.",
     "userNotFound": "පරිශීලක තොරතුරු සොයාගත නොහැකි විය. කරුණාකර නැවත පුරනය වන්න.",
-    "defaultBusinessName": "මගේ ව්‍යාපාරය",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "මගේ ව්‍යාපාරය"
   },
   "becomeSeller": {
     "title": "විකුණුම්කරුවෙකු වන්න",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "මිනිත්තු {count}කට පෙර",
     "hoursAgo": "පැය {count}කට පෙර",
     "daysAgo": "දින {count}කට පෙර"
+  },
+  "pricing": {
+    "originalPrice": "මුල් මිල",
+    "convertedPrice": "පරිවර්තනය කළ මිල",
+    "approximatePrice": "වත්මන් විනිමය අනුපාත මත පදනම්ව ආසන්න පරිවර්තනය",
+    "approximate": "≈"
   }
 }

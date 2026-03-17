@@ -379,6 +379,34 @@
       "saveSuccess": "تم تحديث تفضيلاتك.",
       "saveError": "حدث خطأ أثناء تحديث الإعدادات.",
       "loadError": "تعذر تحميل الإعدادات المفضلة."
+    },
+    "deleteAccount": {
+      "dangerZone": "منطقة الخطر",
+      "title": "حذف الحساب",
+      "description": "بمجرد حذف حسابك، لا يمكن التراجع. سيتم حذف جميع بياناتك وقوائمك ومحادثاتك نهائياً.",
+      "irreversible": "هذا الإجراء لا رجعة فيه.",
+      "button": "حذف حسابي",
+      "confirmTitle": "هل أنت متأكد من رغبتك في حذف حسابك؟",
+      "warning": "سيتم حذف البيانات التالية نهائياً:",
+      "warningProfile": "ملفك الشخصي ومعلوماتك الشخصية",
+      "warningListings": "جميع قوائم منتجاتك",
+      "warningConversations": "محادثاتك ورسائلك",
+      "warningReviews": "تقييماتك ومفضلاتك",
+      "passwordLabel": "أدخل كلمة المرور الخاصة بك للتأكيد",
+      "passwordPlaceholder": "كلمة مرورك الحالية",
+      "reasonLabel": "لماذا تغادر؟ (اختياري)",
+      "reasonPlaceholder": "اختر سببًا",
+      "reasonNotSatisfied": "غير راضٍ عن الخدمة",
+      "reasonPrivacy": "مخاوف الخصوصية",
+      "reasonAlternative": "وجدت منصة بديلة",
+      "reasonOther": "آخر",
+      "feedbackLabel": "ملاحظات إضافية (اختياري)",
+      "feedbackPlaceholder": "أخبرنا كيف يمكننا التحسين...",
+      "cancel": "يلغي",
+      "confirmButton": "حذف الحساب",
+      "deleting": "جارٍ الحذف...",
+      "success": "تم حذف حسابك بنجاح.",
+      "error": "فشلت عملية حذف الحساب. يرجى التحقق من كلمة المرور والمحاولة مرة أخرى."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "حدث خطأ أثناء تحميل معلومات البائع.",
       "productsLoadError": "حدث خطأ أثناء تحميل منتجات البائع.",
       "reviewsTab": "التقييمات",
+      "share": "يشارك",
+      "shareText": "اطلع على {name} في مجال تجارة المواشي",
+      "linkCopied": "تم نسخ الرابط إلى الحافظة.",
       "reviews": {
         "summary": "ملخص التقييم",
         "reviewCount": "تقييم",
@@ -796,14 +827,14 @@
       "category": "اختر فئة.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "عنوان الإعلان إلزامي.",
       "shortDescriptionRequired": "مطلوب وصف موجز.",
       "descriptionRequired": "يلزم تقديم شرح مفصل.",
       "categoryRequired": "اختيار الفئة إلزامي.",
       "priceRequired": "أدخل سعراً صحيحاً."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "إنشاء قائمة جديدة",
@@ -831,21 +862,22 @@
       "shippingCost": "رسوم الشحن",
       "weight": "وزن",
       "weightUnit": "وحدة الوزن",
+      "currency": "Currency",
       "city": "مدينة",
       "address": "عنوان",
-      "postalCode": "رمز بريدي",
-      "currency": "Currency"
+      "postalCode": "رمز بريدي"
     },
     "placeholders": {
       "title": "مثال: بقرة هولشتاين عمرها سنتان",
       "shortDescription": "وصف المنتج (بحد أقصى 200 حرف)",
       "description": "قدّم معلومات مفصلة عن المنتج...",
       "category": "اختر فئة.",
+      "searchCurrency": "Search currency...",
       "city": "ادخل المدينة",
       "address": "أدخل العنوان كاملاً.",
-      "postalCode": "رمز بريدي",
-      "searchCurrency": "Search currency..."
+      "postalCode": "رمز بريدي"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "عنوان الإعلان إلزامي.",
       "shortDescriptionRequired": "مطلوب وصف موجز.",
@@ -867,8 +899,7 @@
     "productCreated": "تم إنشاء المنتج بنجاح.",
     "creationFailed": "تعذر إنشاء المنتج. يرجى المحاولة مرة أخرى.",
     "userNotFound": "لم يتم العثور على معلومات المستخدم. يرجى تسجيل الدخول مرة أخرى.",
-    "defaultBusinessName": "عملي",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "عملي"
   },
   "becomeSeller": {
     "title": "كن بائعًا",
@@ -1317,7 +1348,10 @@
     "fleet": "معلومات الأسطول",
     "serviceRegions": "مناطق الخدمة",
     "specializations": "مجالات الخبرة",
-    "certifications": "الشهادات"
+    "certifications": "الشهادات",
+    "share": "يشارك",
+    "shareText": "اطلع على {name} في مجال تجارة المواشي",
+    "linkCopied": "تم نسخ الرابط إلى الحافظة."
   },
   "brands": {
     "title": "إدارة العلامة التجارية",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "{count} دقيقة مضت",
     "hoursAgo": "{count} ساعة مضت",
     "daysAgo": "منذ {count} يومًا"
+  },
+  "pricing": {
+    "originalPrice": "السعر الأصلي",
+    "convertedPrice": "السعر المحول",
+    "approximatePrice": "التحويل تقريبي بناءً على أسعار الصرف الحالية",
+    "approximate": "≈"
   }
 }

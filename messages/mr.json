@@ -379,6 +379,34 @@
       "saveSuccess": "तुमची प्राधान्ये अपडेट केली गेली आहेत.",
       "saveError": "प्राधान्ये अपडेट करताना एक त्रुटी आली.",
       "loadError": "प्राधान्ये लोड करता आली नाहीत."
+    },
+    "deleteAccount": {
+      "dangerZone": "धोकादायक क्षेत्र",
+      "title": "खाते हटवा",
+      "description": "एकदा तुम्ही तुमचे खाते हटवले की, ते परत मिळवता येणार नाही. तुमचा सर्व डेटा, नोंदी आणि संभाषणे कायमची काढून टाकली जातील.",
+      "irreversible": "ही क्रिया अपरिवर्तनीय आहे.",
+      "button": "माझे खाते हटवा",
+      "confirmTitle": "तुम्हाला तुमचे खाते हटवायचे आहे याची खात्री आहे का?",
+      "warning": "खालील डेटा कायमस्वरूपी हटवला जाईल:",
+      "warningProfile": "तुमचे प्रोफाइल आणि वैयक्तिक माहिती",
+      "warningListings": "तुमची सर्व सूची आणि उत्पादने",
+      "warningConversations": "तुमचे संभाषण आणि संदेश",
+      "warningReviews": "तुमची मते आणि पसंती",
+      "passwordLabel": "पुष्टी करण्यासाठी तुमचा पासवर्ड टाका.",
+      "passwordPlaceholder": "तुमचा सध्याचा पासवर्ड",
+      "reasonLabel": "तुम्ही का जात आहात? (ऐच्छिक)",
+      "reasonPlaceholder": "कारण निवडा",
+      "reasonNotSatisfied": "सेवेबद्दल समाधानी नाही",
+      "reasonPrivacy": "गोपनीयतेची चिंता",
+      "reasonAlternative": "पर्यायी प्लॅटफॉर्म सापडला",
+      "reasonOther": "इतर",
+      "feedbackLabel": "अतिरिक्त अभिप्राय (ऐच्छिक)",
+      "feedbackPlaceholder": "आम्ही कशी सुधारणा करू शकतो ते सांगा...",
+      "cancel": "रद्द करा",
+      "confirmButton": "खाते हटवा",
+      "deleting": "हटवत आहे...",
+      "success": "तुमचे खाते यशस्वीरित्या हटवण्यात आले आहे.",
+      "error": "खाते हटवण्यात अयशस्वी झाले. कृपया तुमचा पासवर्ड तपासा आणि पुन्हा प्रयत्न करा."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "एक श्रेणी निवडा.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "जाहिरातीचे शीर्षक अनिवार्य आहे.",
       "shortDescriptionRequired": "थोडक्यात वर्णन आवश्यक आहे.",
       "descriptionRequired": "सविस्तर स्पष्टीकरण आवश्यक आहे.",
       "categoryRequired": "श्रेणी निवड अनिवार्य आहे.",
       "priceRequired": "वैध किंमत एंटर करा."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "नवीन सूची तयार करा",
@@ -834,21 +862,22 @@
       "shippingCost": "शिपिंग शुल्क",
       "weight": "वजन",
       "weightUnit": "वजनाचे एकक",
+      "currency": "Currency",
       "city": "शहर",
       "address": "पत्ता",
-      "postalCode": "पोस्टल कोड",
-      "currency": "Currency"
+      "postalCode": "पोस्टल कोड"
     },
     "placeholders": {
       "title": "उदाहरण: २ वर्षांची होल्स्टीन गाय",
       "shortDescription": "उत्पादनाचे वर्णन (कमाल २०० वर्ण)",
       "description": "उत्पादनाबद्दल सविस्तर माहिती द्या...",
       "category": "एक श्रेणी निवडा.",
+      "searchCurrency": "Search currency...",
       "city": "शहरात प्रवेश करा.",
       "address": "पूर्ण पत्ता एंटर करा.",
-      "postalCode": "पोस्टल कोड",
-      "searchCurrency": "Search currency..."
+      "postalCode": "पोस्टल कोड"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "जाहिरातीचे शीर्षक अनिवार्य आहे.",
       "shortDescriptionRequired": "थोडक्यात वर्णन आवश्यक आहे.",
@@ -870,8 +899,7 @@
     "productCreated": "उत्पादन यशस्वीरित्या तयार केले गेले.",
     "creationFailed": "उत्पादन तयार करता आले नाही. कृपया पुन्हा प्रयत्न करा.",
     "userNotFound": "वापरकर्ता माहिती सापडली नाही. कृपया पुन्हा लॉग इन करा.",
-    "defaultBusinessName": "माझा व्यवसाय",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "माझा व्यवसाय"
   },
   "becomeSeller": {
     "title": "विक्रेता बना",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} मिनिटांपूर्वी",
     "hoursAgo": "{गणती} तासांपूर्वी",
     "daysAgo": "{गणती} दिवसांपूर्वी"
+  },
+  "pricing": {
+    "originalPrice": "मूळ किंमत",
+    "convertedPrice": "रूपांतरित किंमत",
+    "approximatePrice": "सध्याच्या विनिमय दरांवर आधारित अंदाजित रूपांतरण",
+    "approximate": "≈"
   }
 }

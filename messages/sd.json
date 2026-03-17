@@ -379,6 +379,34 @@
       "saveSuccess": "توهان جون ترجيحون اپڊيٽ ڪيون ويون آهن.",
       "saveError": "ترجيحات کي اپڊيٽ ڪرڻ دوران هڪ غلطي ٿي وئي.",
       "loadError": "ترجيحات لوڊ نه ٿي سگهيون."
+    },
+    "deleteAccount": {
+      "dangerZone": "خطري وارو علائقو",
+      "title": "اڪائونٽ ختم ڪريو",
+      "description": "هڪ دفعو توهان پنهنجو اڪائونٽ ڊليٽ ڪري ڇڏيو، پوءِ واپس وڃڻ جو ڪو به امڪان ناهي. توهان جو سڀ ڊيٽا، لسٽنگون، ۽ ڳالهيون مستقل طور تي ختم ٿي وينديون.",
+      "irreversible": "هي عمل ناقابلِ واپسي آهي.",
+      "button": "منهنجو اڪائونٽ ختم ڪريو",
+      "confirmTitle": "ڇا توهان کي پڪ آهي ته توهان پنهنجو اڪائونٽ ختم ڪرڻ چاهيو ٿا؟",
+      "warning": "هيٺ ڏنل ڊيٽا مستقل طور تي ختم ٿي ويندي:",
+      "warningProfile": "توهان جي پروفائل ۽ ذاتي معلومات",
+      "warningListings": "توهان جون سڀئي لسٽون ۽ پراڊڪٽس",
+      "warningConversations": "توهان جون ڳالهيون ۽ پيغام",
+      "warningReviews": "توهان جا جائزو ۽ پسنديده",
+      "passwordLabel": "تصديق ڪرڻ لاءِ پنهنجو پاسورڊ داخل ڪريو",
+      "passwordPlaceholder": "توهان جو موجوده پاسورڊ",
+      "reasonLabel": "توهان ڇو وڃي رهيا آهيو؟ (اختياري)",
+      "reasonPlaceholder": "هڪ سبب چونڊيو",
+      "reasonNotSatisfied": "سروس سان مطمئن نه آهيان.",
+      "reasonPrivacy": "رازداري جا خدشا",
+      "reasonAlternative": "هڪ متبادل پليٽ فارم مليو",
+      "reasonOther": "ٻيا",
+      "feedbackLabel": "اضافي موٽ (اختياري)",
+      "feedbackPlaceholder": "اسان کي ٻڌايو ته اسان ڪيئن بهتر ٿي سگهون ٿا...",
+      "cancel": "منسوخ ڪريو",
+      "confirmButton": "اڪائونٽ ختم ڪريو",
+      "deleting": "ختم ڪيو پيو وڃي...",
+      "success": "توهان جو اڪائونٽ ڪاميابي سان ڊهي ويو آهي.",
+      "error": "اڪائونٽ ختم ڪرڻ ۾ ناڪام ٿيو. مھرباني ڪري پنھنجو پاسورڊ چيڪ ڪريو ۽ ٻيهر ڪوشش ڪريو."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "ڪيٽيگري چونڊيو.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "اشتهار جو عنوان لازمي آهي.",
       "shortDescriptionRequired": "مختصر وضاحت گهربل آهي.",
       "descriptionRequired": "تفصيلي وضاحت گهربل آهي.",
       "categoryRequired": "ڪيٽيگري جي چونڊ لازمي آهي.",
       "priceRequired": "صحيح قيمت داخل ڪريو."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "نئين لسٽ ٺاهيو",
@@ -834,21 +862,22 @@
       "shippingCost": "شپنگ فيس",
       "weight": "وزن",
       "weightUnit": "وزن جو يونٽ",
+      "currency": "Currency",
       "city": "شهر",
       "address": "پتو",
-      "postalCode": "ٽپال ڪوڊ",
-      "currency": "Currency"
+      "postalCode": "ٽپال ڪوڊ"
     },
     "placeholders": {
       "title": "مثال: 2 سالن جي هولسٽين ڳئون",
       "shortDescription": "پراڊڪٽ جي وضاحت (وڌ ۾ وڌ 200 اکر)",
       "description": "پراڊڪٽ بابت تفصيلي ڄاڻ ڏيو...",
       "category": "ڪيٽيگري چونڊيو.",
+      "searchCurrency": "Search currency...",
       "city": "شهر ۾ داخل ٿيو",
       "address": "پورو پتو داخل ڪريو.",
-      "postalCode": "ٽپال ڪوڊ",
-      "searchCurrency": "Search currency..."
+      "postalCode": "ٽپال ڪوڊ"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "اشتهار جو عنوان لازمي آهي.",
       "shortDescriptionRequired": "مختصر وضاحت گهربل آهي.",
@@ -870,8 +899,7 @@
     "productCreated": "پراڊڪٽ ڪاميابي سان ٺاهي وئي.",
     "creationFailed": "پراڊڪٽ ٺاهي نه سگهيو. مهرباني ڪري ٻيهر ڪوشش ڪريو.",
     "userNotFound": "استعمال ڪندڙ جي معلومات نه ملي سگهي. مهرباني ڪري ٻيهر لاگ ان ٿيو.",
-    "defaultBusinessName": "منهنجو ڪاروبار",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "منهنجو ڪاروبار"
   },
   "becomeSeller": {
     "title": "وڪرو ڪندڙ بڻجو",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{ڳڻپ} منٽ اڳ",
     "hoursAgo": "{ڳڻپ} ڪلاڪ اڳ",
     "daysAgo": "{ڳڻپ} ڏينهن اڳ"
+  },
+  "pricing": {
+    "originalPrice": "اصلي قيمت",
+    "convertedPrice": "تبديل ٿيل قيمت",
+    "approximatePrice": "موجوده مٽا سٽا جي شرحن جي بنياد تي تقريبن تبديلي",
+    "approximate": "≈"
   }
 }

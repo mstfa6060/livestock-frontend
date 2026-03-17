@@ -379,6 +379,34 @@
       "saveSuccess": "Tercîhên te hatine nûvekirin.",
       "saveError": "Dema nûvekirina tercîhan çewtiyek çêbû.",
       "loadError": "Tercîh nehatin barkirin."
+    },
+    "deleteAccount": {
+      "dangerZone": "Herêma Xetereyê",
+      "title": "Hesabê Jê Bibe",
+      "description": "Dema ku hûn hesabê xwe jê bibin, êdî veger tune. Hemû daneyên we, navnîş û axaftinên we dê bi awayekî mayînde werin jêbirin.",
+      "irreversible": "Ev çalakî nayê vegerandin.",
+      "button": "Hesabê Min Jê Bibe",
+      "confirmTitle": "Ma tu piştrast î ku dixwazî hesabê xwe jê bibî?",
+      "warning": "Daneyên jêrîn dê bi awayekî mayînde werin jêbirin:",
+      "warningProfile": "Profîla te û agahiyên te yên kesane",
+      "warningListings": "Hemû lîste û berhemên we",
+      "warningConversations": "Peyam û axaftinên we",
+      "warningReviews": "Nirxandin û bijareyên we",
+      "passwordLabel": "Şîfreya xwe binivîse ji bo piştrastkirinê",
+      "passwordPlaceholder": "Şîfreya te ya niha",
+      "reasonLabel": "Çima tu diçî? (vebijarkî)",
+      "reasonPlaceholder": "Sedemekê hilbijêre",
+      "reasonNotSatisfied": "Ji xizmetê ne razî me",
+      "reasonPrivacy": "Nîgeraniyên nepenîtiyê",
+      "reasonAlternative": "Platformek alternatîf hat dîtin",
+      "reasonOther": "Yên din",
+      "feedbackLabel": "Nirxandinên zêde (vebijarkî)",
+      "feedbackPlaceholder": "Ji me re bêje ka em çawa dikarin baştir bikin...",
+      "cancel": "Bişûndekirin",
+      "confirmButton": "Hesabê Jê Bibe",
+      "deleting": "Jêbirin...",
+      "success": "Hesabê te bi serkeftî hat jêbirin.",
+      "error": "Jêbirina hesabê bi ser neket. Ji kerema xwe şîfreya xwe kontrol bikin û dîsa biceribînin."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Kategoriyek hilbijêre.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Sernavê reklamê mecbûrî ye.",
       "shortDescriptionRequired": "Danasînek kurt pêwîst e.",
       "descriptionRequired": "Şirovekirineke berfireh pêwîst e.",
       "categoryRequired": "Hilbijartina kategoriyê mecbûrî ye.",
       "priceRequired": "Bihayekî derbasdar binivîse."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Lîsteya Nû Biafirîne",
@@ -834,21 +862,22 @@
       "shippingCost": "Xerca Şandinê",
       "weight": "Pîvan",
       "weightUnit": "Yekîneya Giraniyê",
+      "currency": "Currency",
       "city": "Bajar",
       "address": "Navnîşan",
-      "postalCode": "Koda postê",
-      "currency": "Currency"
+      "postalCode": "Koda postê"
     },
     "placeholders": {
       "title": "Mînak: Gayekî Holstein ê 2 salî",
       "shortDescription": "Danasîna Berhemê (herî zêde 200 tîp)",
       "description": "Agahiyên berfireh li ser hilberê bidin...",
       "category": "Kategoriyek hilbijêre.",
+      "searchCurrency": "Search currency...",
       "city": "Bikevin bajêr",
       "address": "Navnîşana tevahî binivîse.",
-      "postalCode": "Koda postê",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Koda postê"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Sernavê reklamê mecbûrî ye.",
       "shortDescriptionRequired": "Danasînek kurt pêwîst e.",
@@ -870,8 +899,7 @@
     "productCreated": "Berhem bi serkeftî hate afirandin.",
     "creationFailed": "Berhem nehat afirandin. Ji kerema xwe dîsa biceribînin.",
     "userNotFound": "Agahiyên bikarhêner nehatin dîtin. Ji kerema xwe dîsa têkevinê.",
-    "defaultBusinessName": "Karê min",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Karê min"
   },
   "becomeSeller": {
     "title": "Bibe Firoşkar",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} deqe berê",
     "hoursAgo": "{count} saet berê",
     "daysAgo": "{count} roj berê"
+  },
+  "pricing": {
+    "originalPrice": "Bihayê orîjînal",
+    "convertedPrice": "Bihayê veguherandî",
+    "approximatePrice": "Veguherîna texmînî li gorî rêjeyên danûstandina heyî",
+    "approximate": "≈"
   }
 }

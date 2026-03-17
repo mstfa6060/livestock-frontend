@@ -379,6 +379,34 @@
       "saveSuccess": "Таны тохиргоог шинэчилсэн.",
       "saveError": "Тохиргоог шинэчлэх явцад алдаа гарлаа.",
       "loadError": "Тохиргоог ачаалж чадсангүй."
+    },
+    "deleteAccount": {
+      "dangerZone": "Аюултай бүс",
+      "title": "Бүртгэл устгах",
+      "description": "Та бүртгэлээ устгасны дараа буцах зам байхгүй. Таны бүх өгөгдөл, жагсаалт болон харилцан яриа бүрмөсөн устах болно.",
+      "irreversible": "Энэ үйлдэл эргэлт буцалтгүй юм.",
+      "button": "Миний бүртгэлийг устгах",
+      "confirmTitle": "Та бүртгэлээ устгахдаа итгэлтэй байна уу?",
+      "warning": "Дараах өгөгдлийг бүрмөсөн устгах болно:",
+      "warningProfile": "Таны профайл болон хувийн мэдээлэл",
+      "warningListings": "Таны бүх жагсаалт болон бүтээгдэхүүнүүд",
+      "warningConversations": "Таны харилцан яриа болон мессежүүд",
+      "warningReviews": "Таны сэтгэгдэл болон дуртай зүйлс",
+      "passwordLabel": "Баталгаажуулахын тулд нууц үгээ оруулна уу",
+      "passwordPlaceholder": "Таны одоогийн нууц үг",
+      "reasonLabel": "Чи яагаад явах гэж байгаа юм бэ? (заавал биш)",
+      "reasonPlaceholder": "Шалтгаан сонгоно уу",
+      "reasonNotSatisfied": "Үйлчилгээнд сэтгэл хангалуун бус байна",
+      "reasonPrivacy": "Нууцлалын асуудал",
+      "reasonAlternative": "Өөр платформ оллоо",
+      "reasonOther": "Бусад",
+      "feedbackLabel": "Нэмэлт санал хүсэлт (заавал биш)",
+      "feedbackPlaceholder": "Бидэнд хэрхэн сайжруулах талаар саналаа хэлээрэй...",
+      "cancel": "Цуцлах",
+      "confirmButton": "Бүртгэл устгах",
+      "deleting": "Устгаж байна...",
+      "success": "Таны бүртгэлийг амжилттай устгалаа.",
+      "error": "Бүртгэлийг устгаж чадсангүй. Нууц үгээ шалгаад дахин оролдоно уу."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Ангилал сонгоно уу.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Зар сурталчилгааны гарчиг заавал байх ёстой.",
       "shortDescriptionRequired": "Товч тайлбар шаардлагатай.",
       "descriptionRequired": "Нарийвчилсан тайлбар шаардлагатай.",
       "categoryRequired": "Ангилал сонгох нь заавал байх ёстой.",
       "priceRequired": "Хүчинтэй үнэ оруулна уу."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Шинэ жагсаалт үүсгэх",
@@ -834,21 +862,22 @@
       "shippingCost": "Тээврийн хураамж",
       "weight": "Жин",
       "weightUnit": "Жингийн нэгж",
+      "currency": "Currency",
       "city": "Хот",
       "address": "Хаяг",
-      "postalCode": "Шуудангийн код",
-      "currency": "Currency"
+      "postalCode": "Шуудангийн код"
     },
     "placeholders": {
       "title": "Жишээ: 2 настай Холштейн үнээ",
       "shortDescription": "Бүтээгдэхүүний тодорхойлолт (хамгийн ихдээ 200 тэмдэгт)",
       "description": "Бүтээгдэхүүний талаар дэлгэрэнгүй мэдээлэл өгөх...",
       "category": "Ангилал сонгоно уу.",
+      "searchCurrency": "Search currency...",
       "city": "Хот руу ороорой",
       "address": "Бүтэн хаягийг оруулна уу.",
-      "postalCode": "Шуудангийн код",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Шуудангийн код"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Зар сурталчилгааны гарчиг заавал байх ёстой.",
       "shortDescriptionRequired": "Товч тайлбар шаардлагатай.",
@@ -870,8 +899,7 @@
     "productCreated": "Бүтээгдэхүүнийг амжилттай бүтээсэн.",
     "creationFailed": "Бүтээгдэхүүнийг үүсгэж чадсангүй. Дахин оролдоно уу.",
     "userNotFound": "Хэрэглэгчийн мэдээлэл олдсонгүй. Дахин нэвтэрнэ үү.",
-    "defaultBusinessName": "Миний бизнес",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Миний бизнес"
   },
   "becomeSeller": {
     "title": "Худалдагч болох",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} минутын өмнө",
     "hoursAgo": "{count}цаг өмнө",
     "daysAgo": "{тоо}өдрийн өмнө"
+  },
+  "pricing": {
+    "originalPrice": "Анхны үнэ",
+    "convertedPrice": "Хөрвүүлсэн үнэ",
+    "approximatePrice": "Одоогийн ханш дээр үндэслэсэн ойролцоо хөрвүүлэлт",
+    "approximate": "≈"
   }
 }

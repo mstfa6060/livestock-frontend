@@ -379,6 +379,34 @@
       "saveSuccess": "Likhetho tsa hau li ntlafalitsoe.",
       "saveError": "Phoso e hlahile ha ho ntse ho ntlafatsoa dikgetho.",
       "loadError": "Likhetho ha lia ka tsa kenngoa."
+    },
+    "deleteAccount": {
+      "dangerZone": "Sebaka sa Kotsi",
+      "title": "Hlakola Ak'haonte",
+      "description": "Hang ha o hlakola ak'haonte ea hau, ha ho sa tla hlola ho kgutlela morao. Lintlha tsohle tsa hau, manane le meqoqo li tla tlosoa ka ho sa feleng.",
+      "irreversible": "Ketso ena e ke ke ea fetoloa.",
+      "button": "Hlakola Ak'haonte ea Ka",
+      "confirmTitle": "Na u na le bonnete ba hore u batla ho hlakola ak'haonte ea hau?",
+      "warning": "Lintlha tse latelang li tla hlakoloa ka ho sa feleng:",
+      "warningProfile": "Boemo ba hau le tlhahisoleseling ea hau ea botho",
+      "warningListings": "Litlhahlobo tsohle tsa hau le lihlahisoa",
+      "warningConversations": "Meqoqo le melaetsa ea hau",
+      "warningReviews": "Litlhahlobo le lintho tseo u li ratang",
+      "passwordLabel": "Kenya phasewete ea hau ho netefatsa",
+      "passwordPlaceholder": "Phasewete ea hau ea hona joale",
+      "reasonLabel": "Hobaneng o tsamaya? (ha ho hlokahale)",
+      "reasonPlaceholder": "Khetha lebaka",
+      "reasonNotSatisfied": "Ha ke khotsofalle tšebeletso",
+      "reasonPrivacy": "Matšoenyeho a lekunutu",
+      "reasonAlternative": "Ke fumane sethala se seng",
+      "reasonOther": "Tse ling",
+      "feedbackLabel": "Maikutlo a mang (ha ho hlokahale)",
+      "feedbackPlaceholder": "Re bolelle hore na re ka ntlafatsa joang...",
+      "cancel": "Hlakola",
+      "confirmButton": "Hlakola Ak'haonte",
+      "deleting": "E hlakola...",
+      "success": "Ak'haonte ea hau e hlakotsoe ka katleho.",
+      "error": "E hlolehile ho hlakola ak'haonte. Ka kopo hlahloba phasewete ea hau 'me u leke hape."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Khetha sehlopha.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Sehlooho sa papatso sea tlameha.",
       "shortDescriptionRequired": "Tlhaloso e khutšoanyane ea hlokahala.",
       "descriptionRequired": "Tlhaloso e qaqileng ea hlokahala.",
       "categoryRequired": "Khetho ea sehlopha e tlameha.",
       "priceRequired": "Kenya theko e nepahetseng."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Theha Lenane le Lecha",
@@ -834,21 +862,22 @@
       "shippingCost": "Tefiso ea ho Romela",
       "weight": "Boima ba 'mele",
       "weightUnit": "Yuniti ea Boima",
+      "currency": "Currency",
       "city": "Motse",
       "address": "Aterese",
-      "postalCode": "Nomoro ea poso",
-      "currency": "Currency"
+      "postalCode": "Nomoro ea poso"
     },
     "placeholders": {
       "title": "Mohlala: Khomo ea Holstein ea Lilemo tse 2",
       "shortDescription": "Tlhaloso ea sehlahisoa (maqhubu a 200)",
       "description": "Fana ka tlhahisoleseding e qaqileng ka sehlahisoa...",
       "category": "Khetha sehlopha.",
+      "searchCurrency": "Search currency...",
       "city": "Kena motseng",
       "address": "Kenya aterese e felletseng.",
-      "postalCode": "Nomoro ea poso",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Nomoro ea poso"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Sehlooho sa papatso sea tlameha.",
       "shortDescriptionRequired": "Tlhaloso e khutšoanyane ea hlokahala.",
@@ -870,8 +899,7 @@
     "productCreated": "Sehlahisoa se entsoe ka katleho.",
     "creationFailed": "Sehlahisoa ha sea ka sa etsoa. Ka kopo leka hape.",
     "userNotFound": "Tlhahisoleseding ea mosebelisi ha ea ka ea fumanoa. Ka kopo kena hape.",
-    "defaultBusinessName": "Khoebo ea ka",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Khoebo ea ka"
   },
   "becomeSeller": {
     "title": "Eba Morekisi",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "Metsotso e {bala} e fetileng",
     "hoursAgo": "{count} lihora tse fetileng",
     "daysAgo": "Matsatsi a {bala} a fetileng"
+  },
+  "pricing": {
+    "originalPrice": "Theko ea mantlha",
+    "convertedPrice": "Theko e fetotsoeng",
+    "approximatePrice": "Phetoho e hakanyetsoang e ipapisitse le sekhahla sa phapanyetsano ea hona joale",
+    "approximate": "≈"
   }
 }

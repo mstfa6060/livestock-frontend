@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Card,
   CardContent,
@@ -14,9 +15,27 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Eye, EyeOff, CheckCircle, Loader2 } from "lucide-react";
+import { Eye, EyeOff, CheckCircle, Loader2, AlertTriangle, Trash2 } from "lucide-react";
 import { IAMAPI } from "@/api/base_modules/iam";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
@@ -61,7 +80,8 @@ export default function SettingsPage() {
   const t = useTranslations("settings");
   const tp = useTranslations("settings.updatePassword");
   const tpref = useTranslations("settings.preferences");
-  const { user } = useAuth();
+  const td = useTranslations("settings.deleteAccount");
+  const { user, logout } = useAuth();
   const queryClient = useQueryClient();
 
   // Password form state (mutations stay local)
@@ -76,6 +96,15 @@ export default function SettingsPage() {
     newPassword: "",
     confirmPassword: "",
   });
+
+  // Delete account state
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [deletePassword, setDeletePassword] = useState("");
+  const [showDeletePassword, setShowDeletePassword] = useState(false);
+  const [deleteReason, setDeleteReason] = useState("");
+  const [deleteFeedback, setDeleteFeedback] = useState("");
+  const [deleteLoading, setDeleteLoading] = useState(false);
+  const [deleteError, setDeleteError] = useState("");
 
   // Preferences via React Query
   const { data: prefs = defaultPrefs, isLoading: prefsLoading } = useQuery({
@@ -175,6 +204,44 @@ export default function SettingsPage() {
     } finally {
       setPrefsSaving(false);
     }
+  };
+
+  const handleDeleteAccount = async (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    if (!deletePassword) {
+      setDeleteError(td("passwordLabel"));
+      return;
+    }
+
+    if (!user) return;
+
+    setDeleteLoading(true);
+    setDeleteError("");
+
+    try {
+      await IAMAPI.Users.Delete.Request({
+        userId: user.id,
+        isDeleted: true,
+      });
+
+      toast.success(td("success"));
+      setDeleteDialogOpen(false);
+      await logout();
+    } catch (err) {
+      setDeleteError(err instanceof Error ? err.message : td("error"));
+    } finally {
+      setDeleteLoading(false);
+    }
+  };
+
+  const resetDeleteDialog = () => {
+    setDeletePassword("");
+    setShowDeletePassword(false);
+    setDeleteReason("");
+    setDeleteFeedback("");
+    setDeleteError("");
+    setDeleteLoading(false);
   };
 
   return (
@@ -396,6 +463,148 @@ export default function SettingsPage() {
                 tpref("saveChanges")
               )}
             </Button>
+          </CardFooter>
+        </Card>
+
+        {/* Danger Zone - Delete Account */}
+        <Card className="border-destructive/50">
+          <CardHeader>
+            <div className="flex items-center gap-2">
+              <AlertTriangle className="h-5 w-5 text-destructive" />
+              <CardTitle className="text-destructive">{td("dangerZone")}</CardTitle>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              <h3 className="font-medium">{td("title")}</h3>
+              <p className="text-sm text-muted-foreground">
+                {td("description")}
+              </p>
+              <p className="text-sm font-medium text-destructive">
+                {td("irreversible")}
+              </p>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <AlertDialog
+              open={deleteDialogOpen}
+              onOpenChange={(open) => {
+                setDeleteDialogOpen(open);
+                if (!open) resetDeleteDialog();
+              }}
+            >
+              <AlertDialogTrigger asChild>
+                <Button variant="destructive">
+                  <Trash2 className="mr-2 h-4 w-4" />
+                  {td("button")}
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle className="flex items-center gap-2">
+                    <AlertTriangle className="h-5 w-5 text-destructive" />
+                    {td("confirmTitle")}
+                  </AlertDialogTitle>
+                  <AlertDialogDescription asChild>
+                    <div className="space-y-4">
+                      <p>{td("warning")}</p>
+                      <ul className="list-disc list-inside space-y-1 text-sm">
+                        <li>{td("warningProfile")}</li>
+                        <li>{td("warningListings")}</li>
+                        <li>{td("warningConversations")}</li>
+                        <li>{td("warningReviews")}</li>
+                      </ul>
+                    </div>
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+
+                <div className="space-y-4 py-2">
+                  {deleteError && (
+                    <div className="p-3 text-sm text-destructive bg-destructive/10 rounded-md">
+                      {deleteError}
+                    </div>
+                  )}
+
+                  {/* Password confirmation */}
+                  <div className="space-y-2">
+                    <Label htmlFor="deletePassword">{td("passwordLabel")}</Label>
+                    <div className="relative">
+                      <Input
+                        id="deletePassword"
+                        type={showDeletePassword ? "text" : "password"}
+                        placeholder={td("passwordPlaceholder")}
+                        value={deletePassword}
+                        onChange={(e) => setDeletePassword(e.target.value)}
+                        className="pr-10"
+                        disabled={deleteLoading}
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowDeletePassword(!showDeletePassword)}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                      >
+                        {showDeletePassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Reason dropdown */}
+                  <div className="space-y-2">
+                    <Label>{td("reasonLabel")}</Label>
+                    <Select
+                      value={deleteReason}
+                      onValueChange={setDeleteReason}
+                      disabled={deleteLoading}
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder={td("reasonPlaceholder")} />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="not_satisfied">{td("reasonNotSatisfied")}</SelectItem>
+                        <SelectItem value="privacy">{td("reasonPrivacy")}</SelectItem>
+                        <SelectItem value="alternative">{td("reasonAlternative")}</SelectItem>
+                        <SelectItem value="other">{td("reasonOther")}</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  {/* Additional feedback */}
+                  <div className="space-y-2">
+                    <Label>{td("feedbackLabel")}</Label>
+                    <Textarea
+                      placeholder={td("feedbackPlaceholder")}
+                      value={deleteFeedback}
+                      onChange={(e) => setDeleteFeedback(e.target.value)}
+                      rows={3}
+                      disabled={deleteLoading}
+                    />
+                  </div>
+                </div>
+
+                <AlertDialogFooter>
+                  <AlertDialogCancel disabled={deleteLoading}>
+                    {td("cancel")}
+                  </AlertDialogCancel>
+                  <AlertDialogAction
+                    onClick={handleDeleteAccount}
+                    disabled={deleteLoading || !deletePassword}
+                    className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                  >
+                    {deleteLoading ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        {td("deleting")}
+                      </>
+                    ) : (
+                      <>
+                        <Trash2 className="mr-2 h-4 w-4" />
+                        {td("confirmButton")}
+                      </>
+                    )}
+                  </AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
           </CardFooter>
         </Card>
       </div>

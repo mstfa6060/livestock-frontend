@@ -379,6 +379,34 @@
       "saveSuccess": "Jūsų nuostatos buvo atnaujintos.",
       "saveError": "Atnaujinant nuostatas įvyko klaida.",
       "loadError": "Nepavyko įkelti nuostatų."
+    },
+    "deleteAccount": {
+      "dangerZone": "Pavojinga zona",
+      "title": "Ištrinti paskyrą",
+      "description": "Ištrynus paskyrą, kelio atgal nebėra. Visi jūsų duomenys, skelbimai ir pokalbiai bus visam laikui pašalinti.",
+      "irreversible": "Šis veiksmas yra negrįžtamas.",
+      "button": "Ištrinti mano paskyrą",
+      "confirmTitle": "Ar tikrai norite ištrinti savo paskyrą?",
+      "warning": "Šie duomenys bus visam laikui ištrinti:",
+      "warningProfile": "Jūsų profilis ir asmeninė informacija",
+      "warningListings": "Visi jūsų skelbimai ir produktai",
+      "warningConversations": "Jūsų pokalbiai ir žinutės",
+      "warningReviews": "Jūsų atsiliepimai ir mėgstamiausi",
+      "passwordLabel": "Įveskite slaptažodį, kad patvirtintumėte",
+      "passwordPlaceholder": "Jūsų dabartinis slaptažodis",
+      "reasonLabel": "Kodėl išeinate? (nebūtina)",
+      "reasonPlaceholder": "Pasirinkite priežastį",
+      "reasonNotSatisfied": "Nesu patenkintas paslauga",
+      "reasonPrivacy": "Privatumo problemos",
+      "reasonAlternative": "Radau alternatyvią platformą",
+      "reasonOther": "Kita",
+      "feedbackLabel": "Papildomas atsiliepimas (nebūtina)",
+      "feedbackPlaceholder": "Papasakokite, kaip galėtume patobulinti...",
+      "cancel": "Atšaukti",
+      "confirmButton": "Ištrinti paskyrą",
+      "deleting": "Ištrinama...",
+      "success": "Jūsų paskyra sėkmingai ištrinta.",
+      "error": "Nepavyko ištrinti paskyros. Patikrinkite slaptažodį ir bandykite dar kartą."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Pasirinkite kategoriją.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Reklamos pavadinimas yra privalomas.",
       "shortDescriptionRequired": "Reikalingas trumpas aprašymas.",
       "descriptionRequired": "Reikalingas išsamus paaiškinimas.",
       "categoryRequired": "Kategorijos pasirinkimas yra privalomas.",
       "priceRequired": "Įveskite galiojančią kainą."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Sukurti naują skelbimą",
@@ -834,21 +862,22 @@
       "shippingCost": "Siuntimo mokestis",
       "weight": "Svoris",
       "weightUnit": "Svorio vienetas",
+      "currency": "Currency",
       "city": "Miestas",
       "address": "Adresas",
-      "postalCode": "Pašto kodas",
-      "currency": "Currency"
+      "postalCode": "Pašto kodas"
     },
     "placeholders": {
       "title": "Pavyzdys: 2 metų Holšteino veislės karvė",
       "shortDescription": "Produkto aprašymas (daugiausia 200 simbolių)",
       "description": "Pateikite išsamią informaciją apie produktą...",
       "category": "Pasirinkite kategoriją.",
+      "searchCurrency": "Search currency...",
       "city": "Įeikite į miestą",
       "address": "Įveskite visą adresą.",
-      "postalCode": "Pašto kodas",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Pašto kodas"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Reklamos pavadinimas yra privalomas.",
       "shortDescriptionRequired": "Reikalingas trumpas aprašymas.",
@@ -870,8 +899,7 @@
     "productCreated": "Produktas buvo sėkmingai sukurtas.",
     "creationFailed": "Nepavyko sukurti produkto. Bandykite dar kartą.",
     "userNotFound": "Nepavyko rasti naudotojo informacijos. Prisijunkite dar kartą.",
-    "defaultBusinessName": "Mano verslas",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Mano verslas"
   },
   "becomeSeller": {
     "title": "Tapkite pardavėju",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "prieš {count} min.",
     "hoursAgo": "prieš {count} val.",
     "daysAgo": "prieš {count} d."
+  },
+  "pricing": {
+    "originalPrice": "Pradinė kaina",
+    "convertedPrice": "Konvertuota kaina",
+    "approximatePrice": "Apytikslis konvertavimas pagal dabartinius valiutų kursus",
+    "approximate": "≈"
   }
 }

@@ -379,6 +379,34 @@
       "saveSuccess": "Nohavaozina ny safidinao.",
       "saveError": "Nisy hadisoana nitranga nandritra ny fanavaozana ny safidinao.",
       "loadError": "Tsy azo nampidirina ny safidinao."
+    },
+    "deleteAccount": {
+      "dangerZone": "Faritra Mampidi-doza",
+      "title": "Fafao ny kaonty",
+      "description": "Raha vao mamafa ny kaontinao ianao dia tsy misy fiverenana intsony. Ho voafafa tanteraka ny angon-drakitrao, ny lisitrao ary ny resakao rehetra.",
+      "irreversible": "Tsy azo ivalozana intsony ity hetsika ity.",
+      "button": "Fafao ny kaontiko",
+      "confirmTitle": "Azonao antoka ve fa te-hamafa ny kaontinao ianao?",
+      "warning": "Ho voafafa tanteraka ireto angona manaraka ireto:",
+      "warningProfile": "Ny mombamomba anao sy ny mombamomba anao manokana",
+      "warningListings": "Ny lisitrao sy ny vokatrao rehetra",
+      "warningConversations": "Ny resakao sy ny hafatrao",
+      "warningReviews": "Ny hevitrao sy ny ankafizinao",
+      "passwordLabel": "Ampidiro ny tenimiafinao mba hanamafisana",
+      "passwordPlaceholder": "Ny tenimiafinao ankehitriny",
+      "reasonLabel": "Fa maninona ianao no miala? (tsy voatery)",
+      "reasonPlaceholder": "Misafidiana antony iray",
+      "reasonNotSatisfied": "Tsy afa-po amin'ny serivisy",
+      "reasonPrivacy": "Olana momba ny fiainana manokana",
+      "reasonAlternative": "Nahita sehatra hafa",
+      "reasonOther": "Hafa",
+      "feedbackLabel": "Hevitra fanampiny (tsy voatery)",
+      "feedbackPlaceholder": "Lazao anay ny fomba ahafahanay manatsara...",
+      "cancel": "hanafoana",
+      "confirmButton": "Fafao ny kaonty",
+      "deleting": "Mamafa...",
+      "success": "Voafafa soa aman-tsara ny kaontinao.",
+      "error": "Tsy nahomby ny famafana ny kaonty. Azafady mba jereo ny tenimiafinao ary andramo indray."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Misafidiana sokajy iray.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tsy maintsy soratana ny lohatenin'ny dokam-barotra.",
       "shortDescriptionRequired": "Ilaina ny famaritana fohy.",
       "descriptionRequired": "Ilaina ny fanazavana amin'ny antsipiriany.",
       "categoryRequired": "Tsy maintsy atao ny misafidy sokajy.",
       "priceRequired": "Ampidiro ny vidiny manan-kery."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Mamoròna lisitra vaovao",
@@ -834,21 +862,22 @@
       "shippingCost": "Saram-pandefasana",
       "weight": "Lanja",
       "weightUnit": "Singa lanja",
+      "currency": "Currency",
       "city": "Tanàna",
       "address": "Adiresy",
-      "postalCode": "Kaody postaly",
-      "currency": "Currency"
+      "postalCode": "Kaody postaly"
     },
     "placeholders": {
       "title": "Ohatra: Ombivavy Holstein 2 taona",
       "shortDescription": "Famaritana ny vokatra (tsy mihoatra ny 200 litera)",
       "description": "Omeo fampahalalana amin'ny antsipiriany momba ny vokatra...",
       "category": "Misafidiana sokajy iray.",
+      "searchCurrency": "Search currency...",
       "city": "Midira ao an-tanàna",
       "address": "Ampidiro ny adiresy feno.",
-      "postalCode": "Kaody postaly",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Kaody postaly"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tsy maintsy soratana ny lohatenin'ny dokam-barotra.",
       "shortDescriptionRequired": "Ilaina ny famaritana fohy.",
@@ -870,8 +899,7 @@
     "productCreated": "Voaforona soa aman-tsara ny vokatra.",
     "creationFailed": "Tsy azo noforonina ilay vokatra. Andramo indray azafady.",
     "userNotFound": "Tsy hita ny mombamomba ny mpampiasa. Midira indray azafady.",
-    "defaultBusinessName": "Ny orinasako",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Ny orinasako"
   },
   "becomeSeller": {
     "title": "Tonga mpivarotra",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} minitra lasa izay",
     "hoursAgo": "{count}h lasa izay",
     "daysAgo": "{count}d lasa izay"
+  },
+  "pricing": {
+    "originalPrice": "Vidiny tany am-boalohany",
+    "convertedPrice": "Vidiny niova",
+    "approximatePrice": "Tombanana ny fiovam-po mifototra amin'ny tahan'ny fifanakalozana ankehitriny",
+    "approximate": "≈"
   }
 }

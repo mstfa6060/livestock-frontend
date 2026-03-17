@@ -379,6 +379,34 @@
       "saveSuccess": "Vaše preferencie boli aktualizované.",
       "saveError": "Pri aktualizácii predvolieb sa vyskytla chyba.",
       "loadError": "Predvoľby sa nepodarilo načítať."
+    },
+    "deleteAccount": {
+      "dangerZone": "Nebezpečná zóna",
+      "title": "Odstrániť účet",
+      "description": "Po odstránení účtu už niet cesty späť. Všetky vaše údaje, záznamy a konverzácie budú natrvalo odstránené.",
+      "irreversible": "Táto akcia je nezvratná.",
+      "button": "Odstrániť môj účet",
+      "confirmTitle": "Naozaj chcete odstrániť svoj účet?",
+      "warning": "Nasledujúce údaje budú natrvalo vymazané:",
+      "warningProfile": "Váš profil a osobné údaje",
+      "warningListings": "Všetky vaše ponuky a produkty",
+      "warningConversations": "Vaše konverzácie a správy",
+      "warningReviews": "Vaše recenzie a obľúbené položky",
+      "passwordLabel": "Zadajte svoje heslo pre potvrdenie",
+      "passwordPlaceholder": "Vaše aktuálne heslo",
+      "reasonLabel": "Prečo odchádzaš? (nepovinné)",
+      "reasonPlaceholder": "Vyberte dôvod",
+      "reasonNotSatisfied": "Nie som spokojný so službou",
+      "reasonPrivacy": "Obavy o súkromie",
+      "reasonAlternative": "Našli alternatívnu platformu",
+      "reasonOther": "Iné",
+      "feedbackLabel": "Doplňujúca spätná väzba (voliteľné)",
+      "feedbackPlaceholder": "Povedzte nám, ako sa môžeme zlepšiť...",
+      "cancel": "Zrušiť",
+      "confirmButton": "Odstrániť účet",
+      "deleting": "Odstraňuje sa...",
+      "success": "Váš účet bol úspešne odstránený.",
+      "error": "Účet sa nepodarilo odstrániť. Skontrolujte si heslo a skúste to znova."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Vyberte kategóriu.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Názov reklamy je povinný.",
       "shortDescriptionRequired": "Vyžaduje sa stručný popis.",
       "descriptionRequired": "Vyžaduje sa podrobné vysvetlenie.",
       "categoryRequired": "Výber kategórie je povinný.",
       "priceRequired": "Zadajte platnú cenu."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Vytvoriť nový záznam",
@@ -834,21 +862,22 @@
       "shippingCost": "Poplatok za dopravu",
       "weight": "Hmotnosť",
       "weightUnit": "Jednotka hmotnosti",
+      "currency": "Currency",
       "city": "Mesto",
       "address": "Adresa",
-      "postalCode": "Poštové smerovacie číslo",
-      "currency": "Currency"
+      "postalCode": "Poštové smerovacie číslo"
     },
     "placeholders": {
       "title": "Príklad: 2-ročná holštajnská krava",
       "shortDescription": "Popis produktu (max. 200 znakov)",
       "description": "Poskytnite podrobné informácie o produkte...",
       "category": "Vyberte kategóriu.",
+      "searchCurrency": "Search currency...",
       "city": "Vstúpte do mesta",
       "address": "Zadajte celú adresu.",
-      "postalCode": "Poštové smerovacie číslo",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Poštové smerovacie číslo"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Názov reklamy je povinný.",
       "shortDescriptionRequired": "Vyžaduje sa stručný popis.",
@@ -870,8 +899,7 @@
     "productCreated": "Produkt bol úspešne vytvorený.",
     "creationFailed": "Produkt sa nepodarilo vytvoriť. Skúste to znova.",
     "userNotFound": "Informácie o používateľovi sa nenašli. Prihláste sa znova.",
-    "defaultBusinessName": "Moja firma",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Moja firma"
   },
   "becomeSeller": {
     "title": "Staňte sa predajcom",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "pred {count} minútami",
     "hoursAgo": "pred {count}h",
     "daysAgo": "pred {count} dňami"
+  },
+  "pricing": {
+    "originalPrice": "Pôvodná cena",
+    "convertedPrice": "Prepočítaná cena",
+    "approximatePrice": "Približný prepočet na základe aktuálnych výmenných kurzov",
+    "approximate": "≈"
   }
 }

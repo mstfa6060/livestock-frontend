@@ -379,6 +379,34 @@
       "saveSuccess": "ምርጫዎችዎ ተዘምነዋል።",
       "saveError": "ምርጫዎችን በማዘመን ላይ ስህተት ተከስቷል።",
       "loadError": "ምርጫዎች ሊጫኑ አልቻሉም።"
+    },
+    "deleteAccount": {
+      "dangerZone": "የአደጋ ቀጠና",
+      "title": "መለያ ሰርዝ",
+      "description": "መለያዎን አንዴ ከሰረዙት በኋላ ወደ ኋላ መመለስ አይቻልም። ሁሉም ውሂብዎ፣ ዝርዝሮችዎ እና ውይይቶችዎ እስከመጨረሻው ይወገዳሉ።",
+      "irreversible": "ይህ እርምጃ የማይቀለበስ ነው።",
+      "button": "መለያዬን ሰርዝ",
+      "confirmTitle": "መለያዎን መሰረዝ እንደሚፈልጉ እርግጠኛ ነዎት?",
+      "warning": "የሚከተለው ውሂብ እስከመጨረሻው ይሰረዛል፦",
+      "warningProfile": "የእርስዎ መገለጫ እና የግል መረጃ",
+      "warningListings": "ሁሉም የእርስዎ ዝርዝሮች እና ምርቶች",
+      "warningConversations": "የእርስዎ ውይይቶች እና መልዕክቶች",
+      "warningReviews": "የእርስዎ ግምገማዎች እና ተወዳጆች",
+      "passwordLabel": "ለማረጋገጥ የይለፍ ቃልዎን ያስገቡ",
+      "passwordPlaceholder": "የአሁኑ የይለፍ ቃልዎ",
+      "reasonLabel": "ለምን ትሄዳለህ? (አማራጭ)",
+      "reasonPlaceholder": "ምክንያት ይምረጡ",
+      "reasonNotSatisfied": "በአገልግሎቱ አልረካሁም",
+      "reasonPrivacy": "የግላዊነት ስጋቶች",
+      "reasonAlternative": "አማራጭ መድረክ አገኘሁ",
+      "reasonOther": "ሌላ",
+      "feedbackLabel": "ተጨማሪ ግብረመልስ (አማራጭ)",
+      "feedbackPlaceholder": "እንዴት ማሻሻል እንደምንችል ይንገሩን...",
+      "cancel": "ሰርዝ",
+      "confirmButton": "መለያ ሰርዝ",
+      "deleting": "በመሰረዝ ላይ...",
+      "success": "መለያዎ በተሳካ ሁኔታ ተሰርዟል።",
+      "error": "መለያውን መሰረዝ አልተሳካም። እባክዎ የይለፍ ቃልዎን ያረጋግጡና እንደገና ይሞክሩ።"
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "ምድብ ይምረጡ።",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "የማስታወቂያ ርዕስ ግዴታ ነው።",
       "shortDescriptionRequired": "አጭር መግለጫ ያስፈልጋል።",
       "descriptionRequired": "ዝርዝር ማብራሪያ ያስፈልጋል።",
       "categoryRequired": "የምድብ ምርጫ ግዴታ ነው።",
       "priceRequired": "ትክክለኛ ዋጋ ያስገቡ።"
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "አዲስ ዝርዝር ይፍጠሩ",
@@ -834,21 +862,22 @@
       "shippingCost": "የማጓጓዣ ክፍያ",
       "weight": "ክብደት",
       "weightUnit": "የክብደት አሃድ",
+      "currency": "Currency",
       "city": "ከተማ",
       "address": "አድራሻ",
-      "postalCode": "የፖስታ መላኪያ ኮድ",
-      "currency": "Currency"
+      "postalCode": "የፖስታ መላኪያ ኮድ"
     },
     "placeholders": {
       "title": "ምሳሌ፡ የ2 ዓመት ሆልስቴይን ላም",
       "shortDescription": "የምርት መግለጫ (ቢበዛ 200 ቁምፊዎች)",
       "description": "ስለ ምርቱ ዝርዝር መረጃ ያቅርቡ…",
       "category": "ምድብ ይምረጡ።",
+      "searchCurrency": "Search currency...",
       "city": "ወደ ከተማው ግባ",
       "address": "ሙሉ አድራሻውን ያስገቡ።",
-      "postalCode": "የፖስታ መላኪያ ኮድ",
-      "searchCurrency": "Search currency..."
+      "postalCode": "የፖስታ መላኪያ ኮድ"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "የማስታወቂያ ርዕስ ግዴታ ነው።",
       "shortDescriptionRequired": "አጭር መግለጫ ያስፈልጋል።",
@@ -870,8 +899,7 @@
     "productCreated": "ምርቱ በተሳካ ሁኔታ ተፈጥሯል።",
     "creationFailed": "ምርቱ ሊፈጠር አልቻለም። እባክዎ እንደገና ይሞክሩ።",
     "userNotFound": "የተጠቃሚ መረጃ ማግኘት አልተቻለም። እባክዎ እንደገና ይግቡ።",
-    "defaultBusinessName": "የእኔ ንግድ",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "የእኔ ንግድ"
   },
   "becomeSeller": {
     "title": "ሻጭ ይሁኑ",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "ከደቂቃ በፊት {count}",
     "hoursAgo": "ከ {count}h በፊት",
     "daysAgo": "ከ {count}d በፊት"
+  },
+  "pricing": {
+    "originalPrice": "የመጀመሪያው ዋጋ",
+    "convertedPrice": "የተቀየረ ዋጋ",
+    "approximatePrice": "በአሁኑ የምንዛሪ ተመኖች ላይ የተመሠረተ ግምታዊ ልወጣ",
+    "approximate": "≈"
   }
 }

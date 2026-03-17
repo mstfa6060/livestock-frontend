@@ -379,6 +379,34 @@
       "saveSuccess": "Preferensi anjeun parantos diénggalan.",
       "saveError": "Aya kasalahan nalika ngapdet preferensi.",
       "loadError": "Preferensi teu tiasa dimuat."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zona Bahaya",
+      "title": "Hapus Akun",
+      "description": "Sakali anjeun ngahapus akun anjeun, moal aya jalan deui pikeun balik deui. Sadaya data, daptar, sareng paguneman anjeun bakal dihapus sacara permanén.",
+      "irreversible": "Peta ieu teu tiasa dibalikkeun deui.",
+      "button": "Hapus Akun Kuring",
+      "confirmTitle": "Naha anjeun yakin hoyong ngahapus akun anjeun?",
+      "warning": "Data ieu bakal dihapus sacara permanén:",
+      "warningProfile": "Profil sareng inpormasi pribadi anjeun",
+      "warningListings": "Sadaya daptar sareng produk anjeun",
+      "warningConversations": "Paguneman sareng pesen anjeun",
+      "warningReviews": "Ulasan sareng karesep anjeun",
+      "passwordLabel": "Lebetkeun kecap akses anjeun pikeun mastikeun",
+      "passwordPlaceholder": "Sandi anjeun ayeuna",
+      "reasonLabel": "Naha anjeun bade angkat? (opsional)",
+      "reasonPlaceholder": "Pilih alesan",
+      "reasonNotSatisfied": "Teu sugema kana palayananana",
+      "reasonPrivacy": "Masalah privasi",
+      "reasonAlternative": "Nemu platform alternatif",
+      "reasonOther": "Anu sanésna",
+      "feedbackLabel": "Eupan balik tambahan (opsional)",
+      "feedbackPlaceholder": "Wartosan kami kumaha kami tiasa ningkatkeun...",
+      "cancel": "Batalkeun",
+      "confirmButton": "Hapus Akun",
+      "deleting": "Ngahapus...",
+      "success": "Akun anjeun parantos dihapus kalayan suksés.",
+      "error": "Gagal ngahapus akun. Mangga parios kecap akses anjeun teras cobian deui."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Pilih hiji kategori.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Judul iklan wajib ditulis.",
       "shortDescriptionRequired": "Pedaran singget diperyogikeun.",
       "descriptionRequired": "Diperlukeun katerangan anu lengkep.",
       "categoryRequired": "Pilihan kategori wajib.",
       "priceRequired": "Lebetkeun harga anu valid."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Jieun Daptar Anyar",
@@ -834,21 +862,22 @@
       "shippingCost": "Biaya Pangiriman",
       "weight": "Beurat",
       "weightUnit": "Unit Beurat",
+      "currency": "Currency",
       "city": "Kota",
       "address": "Alamat",
-      "postalCode": "Kodeu Pos",
-      "currency": "Currency"
+      "postalCode": "Kodeu Pos"
     },
     "placeholders": {
       "title": "Conto: Sapi Holstein Umur 2 Taun",
       "shortDescription": "Pedaran produk (maksimal 200 karakter)",
       "description": "Nyuhunkeun inpormasi lengkep ngeunaan produkna...",
       "category": "Pilih hiji kategori.",
+      "searchCurrency": "Search currency...",
       "city": "Lebet ka kota",
       "address": "Lebetkeun alamat lengkepna.",
-      "postalCode": "Kodeu Pos",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Kodeu Pos"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Judul iklan wajib ditulis.",
       "shortDescriptionRequired": "Pedaran singget diperyogikeun.",
@@ -870,8 +899,7 @@
     "productCreated": "Produkna parantos hasil dijieun.",
     "creationFailed": "Produkna teu tiasa didamel. Mangga cobian deui.",
     "userNotFound": "Inpormasi pangguna teu kapendak. Mangga lebet deui.",
-    "defaultBusinessName": "Usaha kuring",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Usaha kuring"
   },
   "becomeSeller": {
     "title": "Janten Penjual",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{itung} menit ka tukang",
     "hoursAgo": "{count}h ka tukang",
     "daysAgo": "{count}d ka tukang"
+  },
+  "pricing": {
+    "originalPrice": "Harga aslina",
+    "convertedPrice": "Harga anu dirobah",
+    "approximatePrice": "Perkiraan konvérsi dumasar kana nilai tukeur ayeuna",
+    "approximate": "≈"
   }
 }

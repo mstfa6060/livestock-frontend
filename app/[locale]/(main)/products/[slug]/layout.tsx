@@ -20,6 +20,30 @@ async function fetchProductBySlug(slug: string) {
   }
 }
 
+async function fetchCoverImageUrl(mediaBucketId?: string, coverImageFileId?: string): Promise<string | undefined> {
+  if (!mediaBucketId) return undefined;
+  try {
+    const res = await fetch(`${AppConfig.FileProviderUrl}/Buckets/Detail`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ bucketId: mediaBucketId, changeId: "00000000-0000-0000-0000-000000000000" }),
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return undefined;
+    const data = await res.json();
+    const files = data?.data?.files ?? data?.files ?? [];
+    // Find cover image or fall back to first image
+    const coverFile = coverImageFileId
+      ? files.find((f: Record<string, unknown>) => f.id === coverImageFileId)
+      : files[0];
+    if (!coverFile) return undefined;
+    const path = coverFile.variants?.[0]?.url || coverFile.path;
+    return path ? `${AppConfig.FileStorageBaseUrl}${path}` : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -36,7 +60,7 @@ export async function generateMetadata({
   const description =
     product.metaDescription || product.shortDescription || product.description?.slice(0, 160);
   const keywords = product.metaKeywords || undefined;
-  const image = product.coverImageUrl || undefined;
+  const image = await fetchCoverImageUrl(product.mediaBucketId, product.coverImageFileId);
   const url =
     locale === "en"
       ? `${BASE_URL}/products/${slug}`
@@ -54,17 +78,19 @@ export async function generateMetadata({
       type: "website",
       ...(image && { images: [{ url: image, alt: title }] }),
     },
+    other: {
+      "product:price:amount": String(product.basePrice ?? ""),
+      "product:price:currency": product.currency || "TRY",
+      ...(product.isInStock != null && {
+        "product:availability": product.isInStock ? "in stock" : "out of stock",
+      }),
+    },
     twitter: {
       card: image ? "summary_large_image" : "summary",
       title,
       description,
       ...(image && { images: [image] }),
     },
-    // Smart App Banner - uncomment when mobile app is published to stores:
-    // other: {
-    //   "apple-itunes-app": "app-id=APP_STORE_ID, app-argument=" + url,
-    //   "google-play-app": "app-id=com.livestocktrading.app",
-    // },
   };
 }
 
@@ -85,9 +111,11 @@ export default async function ProductDetailLayout({
       ? `${BASE_URL}/products/${slug}`
       : `${BASE_URL}/${locale}/products/${slug}`;
 
+  const coverImage = await fetchCoverImageUrl(product.mediaBucketId, product.coverImageFileId);
+
   const availability = !product.isInStock
     ? "OutOfStock"
-    : product.status === 2
+    : product.status !== 2
       ? "SoldOut"
       : "InStock";
 
@@ -103,7 +131,7 @@ export default async function ProductDetailLayout({
       <ProductJsonLd
         name={product.title}
         description={product.shortDescription || product.description?.slice(0, 300) || ""}
-        image={product.coverImageUrl}
+        image={coverImage}
         price={product.basePrice}
         currency={product.currency || "TRY"}
         availability={availability as "InStock" | "OutOfStock" | "SoldOut"}

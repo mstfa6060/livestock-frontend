@@ -379,6 +379,34 @@
       "saveSuccess": "Emelitela mmasị gị.",
       "saveError": "Nsogbu mere mgbe a na-emelite mmasị.",
       "loadError": "Enweghị ike ibu ihe ndị ị chọrọ."
+    },
+    "deleteAccount": {
+      "dangerZone": "Mpaghara Ihe Ize Ndụ",
+      "title": "Hichapụ Akaụntụ",
+      "description": "Ozugbo i hichapụrụ akaụntụ gị, ọ dịghị ihe ga-eme ka ị laghachi azụ. A ga-ewepụ data gị niile, ndepụta gị, na mkparịta ụka gị kpamkpam.",
+      "irreversible": "Ihe a agaghị agbanwe agbanwe.",
+      "button": "Hichapụ Akaụntụ M",
+      "confirmTitle": "Ị ji n'aka na ịchọrọ ihichapụ akaụntụ gị?",
+      "warning": "A ga-ehichapụ data ndị a kpamkpam:",
+      "warningProfile": "Profaịlụ na ozi nkeonwe gị",
+      "warningListings": "Ndepụta na ngwaahịa gị niile",
+      "warningConversations": "Mkparịta ụka na ozi gị",
+      "warningReviews": "Nyocha na ihe ndị ị kacha amasị",
+      "passwordLabel": "Tinye paswọọdụ gị iji gosi",
+      "passwordPlaceholder": "Paswọọdụ gị ugbu a",
+      "reasonLabel": "Gịnị mere ị ji apụ? (nhọrọ)",
+      "reasonPlaceholder": "Họrọ ihe kpatara ya",
+      "reasonNotSatisfied": "Afọ ejughị m na ọrụ ahụ",
+      "reasonPrivacy": "Nchegbu Nzuzo",
+      "reasonAlternative": "Achọtara m ikpo okwu ọzọ",
+      "reasonOther": "Ndị ọzọ",
+      "feedbackLabel": "Nzaghachi ndị ọzọ (nhọrọ)",
+      "feedbackPlaceholder": "Gwa anyị otu anyị ga-esi melite...",
+      "cancel": "Kagbuo",
+      "confirmButton": "Hichapụ Akaụntụ",
+      "deleting": "Na-ehichapụ...",
+      "success": "E hichapụrụ akaụntụ gị nke ọma.",
+      "error": "Agaghị ehichapụ akaụntụ ahụ. Biko lelee paswọọdụ gị wee nwaa ọzọ."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Họrọ otu ụdị.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Aha mgbasa ozi dị mkpa.",
       "shortDescriptionRequired": "A chọrọ nkọwa dị mkpirikpi.",
       "descriptionRequired": "A chọrọ nkọwa zuru ezu.",
       "categoryRequired": "Nhọrọ nke otu dị mkpa.",
       "priceRequired": "Tinye ọnụahịa ziri ezi."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Mepụta Ndepụta Ọhụrụ",
@@ -834,21 +862,22 @@
       "shippingCost": "Ụgwọ Mbupu",
       "weight": "Ibu",
       "weightUnit": "Nkeji nke Ibu",
+      "currency": "Currency",
       "city": "Obodo",
       "address": "Adreesị",
-      "postalCode": "Koodu Nzipu ozi",
-      "currency": "Currency"
+      "postalCode": "Koodu Nzipu ozi"
     },
     "placeholders": {
       "title": "Ihe atụ: Ehi Holstein dị afọ abụọ",
       "shortDescription": "Nkọwa ngwaahịa (mkpụrụedemede 200 kachasị)",
       "description": "Nye ozi zuru ezu gbasara ngwaahịa a...",
       "category": "Họrọ otu ụdị.",
+      "searchCurrency": "Search currency...",
       "city": "Banye n'obodo ahụ",
       "address": "Tinye adreesị zuru oke.",
-      "postalCode": "Koodu Nzipu ozi",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Koodu Nzipu ozi"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Aha mgbasa ozi dị mkpa.",
       "shortDescriptionRequired": "A chọrọ nkọwa dị mkpirikpi.",
@@ -870,8 +899,7 @@
     "productCreated": "E mepụtara ngwaahịa ahụ nke ọma.",
     "creationFailed": "Enweghị ike ịmepụta ngwaahịa a. Biko nwaa ọzọ.",
     "userNotFound": "Enweghị ike ịchọta ozi onye ọrụ. Biko banye ọzọ.",
-    "defaultBusinessName": "Azụmahịa m",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Azụmahịa m"
   },
   "becomeSeller": {
     "title": "Bụrụ onye na-ere ahịa",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{gụọ} nkeji gara aga",
     "hoursAgo": "{gụọ}h gara aga",
     "daysAgo": "{gụọ} gara aga"
+  },
+  "pricing": {
+    "originalPrice": "Ọnụahịa mbụ",
+    "convertedPrice": "Ọnụahịa agbanwere",
+    "approximatePrice": "Mgbanwe dịka atụmatụ dabere na ọnụego mgbanwe ugbu a",
+    "approximate": "≈"
   }
 }

@@ -379,6 +379,34 @@
       "saveSuccess": "Preferensi Anda telah diperbarui.",
       "saveError": "Terjadi kesalahan saat memperbarui preferensi.",
       "loadError": "Pengaturan tidak dapat dimuat."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zona Bahaya",
+      "title": "Hapus Akun",
+      "description": "Setelah Anda menghapus akun, tidak ada jalan kembali. Semua data, daftar barang, dan percakapan Anda akan dihapus secara permanen.",
+      "irreversible": "Tindakan ini tidak dapat dibatalkan.",
+      "button": "Hapus Akun Saya",
+      "confirmTitle": "Apakah Anda yakin ingin menghapus akun Anda?",
+      "warning": "Data berikut akan dihapus secara permanen:",
+      "warningProfile": "Profil dan informasi pribadi Anda",
+      "warningListings": "Semua daftar dan produk Anda",
+      "warningConversations": "Percakapan dan pesan Anda",
+      "warningReviews": "Ulasan dan favorit Anda",
+      "passwordLabel": "Masukkan kata sandi Anda untuk konfirmasi.",
+      "passwordPlaceholder": "Kata sandi Anda saat ini",
+      "reasonLabel": "Mengapa kamu pergi? (opsional)",
+      "reasonPlaceholder": "Pilih alasan",
+      "reasonNotSatisfied": "Tidak puas dengan pelayanannya",
+      "reasonPrivacy": "Kekhawatiran tentang privasi",
+      "reasonAlternative": "Menemukan platform alternatif",
+      "reasonOther": "Lainnya",
+      "feedbackLabel": "Umpan balik tambahan (opsional)",
+      "feedbackPlaceholder": "Beri tahu kami bagaimana kami dapat meningkatkan...",
+      "cancel": "Membatalkan",
+      "confirmButton": "Hapus Akun",
+      "deleting": "Menghapus...",
+      "success": "Akun Anda telah berhasil dihapus.",
+      "error": "Penghapusan akun gagal. Silakan periksa kata sandi Anda dan coba lagi."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Pilih kategori.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Judul iklan wajib diisi.",
       "shortDescriptionRequired": "Deskripsi singkat diperlukan.",
       "descriptionRequired": "Penjelasan rinci diperlukan.",
       "categoryRequired": "Pemilihan kategori bersifat wajib.",
       "priceRequired": "Masukkan harga yang valid."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Buat Daftar Baru",
@@ -834,21 +862,22 @@
       "shippingCost": "Biaya Pengiriman",
       "weight": "Berat",
       "weightUnit": "Satuan Berat",
+      "currency": "Currency",
       "city": "Kota",
       "address": "Alamat",
-      "postalCode": "kode Pos",
-      "currency": "Currency"
+      "postalCode": "kode Pos"
     },
     "placeholders": {
       "title": "Contoh: Sapi Holstein Berumur 2 Tahun",
       "shortDescription": "Deskripsi produk (maksimal 200 karakter)",
       "description": "Berikan informasi detail tentang produk tersebut...",
       "category": "Pilih kategori.",
+      "searchCurrency": "Search currency...",
       "city": "Masuk ke kota",
       "address": "Masukkan alamat lengkap.",
-      "postalCode": "kode Pos",
-      "searchCurrency": "Search currency..."
+      "postalCode": "kode Pos"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Judul iklan wajib diisi.",
       "shortDescriptionRequired": "Deskripsi singkat diperlukan.",
@@ -870,8 +899,7 @@
     "productCreated": "Produk tersebut berhasil dibuat.",
     "creationFailed": "Produk tidak dapat dibuat. Silakan coba lagi.",
     "userNotFound": "Informasi pengguna tidak dapat ditemukan. Silakan masuk kembali.",
-    "defaultBusinessName": "Bisnis saya",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Bisnis saya"
   },
   "becomeSeller": {
     "title": "Menjadi Penjual",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} menit yang lalu",
     "hoursAgo": "{count}h yang lalu",
     "daysAgo": "{hitungan} lalu"
+  },
+  "pricing": {
+    "originalPrice": "Harga asli",
+    "convertedPrice": "Harga yang dikonversi",
+    "approximatePrice": "Konversi perkiraan berdasarkan nilai tukar saat ini",
+    "approximate": "≈"
   }
 }

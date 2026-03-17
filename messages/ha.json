@@ -379,6 +379,34 @@
       "saveSuccess": "An sabunta abubuwan da ka fi so.",
       "saveError": "An sami kuskure yayin sabunta abubuwan da aka fi so.",
       "loadError": "Ba za a iya loda abubuwan da ake so ba."
+    },
+    "deleteAccount": {
+      "dangerZone": "Yankin Hadari",
+      "title": "Share Asusu",
+      "description": "Da zarar ka goge asusunka, babu komawa baya. Duk bayananka, jerinka, da tattaunawarka za a cire su har abada.",
+      "irreversible": "Wannan aikin ba zai iya jurewa ba.",
+      "button": "Share Asusu Na",
+      "confirmTitle": "Shin ka tabbata kana son goge asusunka?",
+      "warning": "Za a share waɗannan bayanai har abada:",
+      "warningProfile": "Bayanan martaba da bayanan sirrinku",
+      "warningListings": "Duk samfuran ku da jerin ku",
+      "warningConversations": "Tattaunawarku da saƙonninku",
+      "warningReviews": "Sharhinka da abubuwan da ka fi so",
+      "passwordLabel": "Shigar da kalmar sirri don tabbatarwa",
+      "passwordPlaceholder": "Kalmar sirrinka ta yanzu",
+      "reasonLabel": "Me yasa za ku tafi? (zaɓi ne)",
+      "reasonPlaceholder": "Zaɓi dalili",
+      "reasonNotSatisfied": "Ban gamsu da sabis ɗin ba",
+      "reasonPrivacy": "Damuwar sirri",
+      "reasonAlternative": "Na sami wani dandamali daban",
+      "reasonOther": "Wani",
+      "feedbackLabel": "Ƙarin ra'ayi (zaɓi ne)",
+      "feedbackPlaceholder": "Faɗa mana yadda za mu iya inganta...",
+      "cancel": "Soke",
+      "confirmButton": "Share Asusu",
+      "deleting": "Ana gogewa...",
+      "success": "An yi nasarar goge asusunka.",
+      "error": "An kasa goge asusu. Da fatan za a duba kalmar sirrinka kuma a sake gwadawa."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Zaɓi rukuni.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Taken talla wajibi ne.",
       "shortDescriptionRequired": "Ana buƙatar taƙaitaccen bayani.",
       "descriptionRequired": "Ana buƙatar cikakken bayani.",
       "categoryRequired": "Zaɓin rukuni wajibi ne.",
       "priceRequired": "Shigar da ingantaccen farashi."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Ƙirƙiri Sabon Jeri",
@@ -834,21 +862,22 @@
       "shippingCost": "Kudin jigilar kaya",
       "weight": "Nauyi",
       "weightUnit": "Nauyin Nauyi",
+      "currency": "Currency",
       "city": "Birni",
       "address": "Adireshi",
-      "postalCode": "Lambar akwatin gidan waya",
-      "currency": "Currency"
+      "postalCode": "Lambar akwatin gidan waya"
     },
     "placeholders": {
       "title": "Misali: Sanyi Holstein Mai Shekaru 2",
       "shortDescription": "Bayanin Samfurin (matsakaicin haruffa 200)",
       "description": "Ƙara bayani game da samfurin...",
       "category": "Zaɓi rukuni.",
+      "searchCurrency": "Search currency...",
       "city": "Shiga birnin",
       "address": "Shigar da cikakken adireshin.",
-      "postalCode": "Lambar akwatin gidan waya",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Lambar akwatin gidan waya"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Taken talla wajibi ne.",
       "shortDescriptionRequired": "Ana buƙatar taƙaitaccen bayani.",
@@ -870,8 +899,7 @@
     "productCreated": "An yi nasarar ƙirƙirar samfurin.",
     "creationFailed": "Ba za a iya ƙirƙirar samfurin ba. Da fatan za a sake gwadawa.",
     "userNotFound": "Ba a sami bayanin mai amfani ba. Da fatan za a sake shiga.",
-    "defaultBusinessName": "Kasuwancina",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Kasuwancina"
   },
   "becomeSeller": {
     "title": "Zama Mai Sayarwa",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{ƙida} mintuna da suka wuce",
     "hoursAgo": "{ƙida}h da ta wuce",
     "daysAgo": "{ƙida}d da suka wuce"
+  },
+  "pricing": {
+    "originalPrice": "Farashin asali",
+    "convertedPrice": "Farashin da aka canza",
+    "approximatePrice": "Kimanin canzawa bisa ga ƙimar musayar kuɗi na yanzu",
+    "approximate": "≈"
   }
 }

@@ -379,6 +379,34 @@
       "saveSuccess": "Сіздің параметрлеріңіз жаңартылды.",
       "saveError": "Параметрлерді жаңарту кезінде қате орын алды.",
       "loadError": "Параметрлерді жүктеу мүмкін болмады."
+    },
+    "deleteAccount": {
+      "dangerZone": "Қауіпті аймақ",
+      "title": "Тіркелгіні жою",
+      "description": "Тіркелгіңізді жойғаннан кейін, кері қайту мүмкін емес. Барлық деректеріңіз, тізімдеріңіз және әңгімелеріңіз біржола жойылады.",
+      "irreversible": "Бұл әрекет қайтымсыз.",
+      "button": "Менің тіркелгімді жою",
+      "confirmTitle": "Тіркелгіңізді жойғыңыз келетініне сенімдісіз бе?",
+      "warning": "Келесі деректер біржола жойылады:",
+      "warningProfile": "Сіздің профиліңіз және жеке ақпаратыңыз",
+      "warningListings": "Барлық тізімдеріңіз бен өнімдеріңіз",
+      "warningConversations": "Сіздің әңгімелеріңіз бен хабарламаларыңыз",
+      "warningReviews": "Пікірлеріңіз бен сүйіктілеріңіз",
+      "passwordLabel": "Растау үшін құпия сөзіңізді енгізіңіз",
+      "passwordPlaceholder": "Ағымдағы құпия сөзіңіз",
+      "reasonLabel": "Неге кетіп бара жатырсыз? (міндетті емес)",
+      "reasonPlaceholder": "Себебін таңдаңыз",
+      "reasonNotSatisfied": "Қызметке қанағаттанбадым",
+      "reasonPrivacy": "Құпиялылық мәселелері",
+      "reasonAlternative": "Балама платформа табылды",
+      "reasonOther": "Басқа",
+      "feedbackLabel": "Қосымша кері байланыс (міндетті емес)",
+      "feedbackPlaceholder": "Бізге қалай жақсартуға болатынын айтыңызшы...",
+      "cancel": "Бас тарту",
+      "confirmButton": "Тіркелгіні жою",
+      "deleting": "Жойылуда...",
+      "success": "Тіркелгіңіз сәтті жойылды.",
+      "error": "Тіркелгіні жою сәтсіз аяқталды. Құпия сөзіңізді тексеріп, қайталап көріңіз."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Санатты таңдаңыз.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Жарнама тақырыбы міндетті түрде көрсетілуі керек.",
       "shortDescriptionRequired": "Қысқаша сипаттама қажет.",
       "descriptionRequired": "Егжей-тегжейлі түсініктеме қажет.",
       "categoryRequired": "Санатты таңдау міндетті.",
       "priceRequired": "Жарамды бағаны енгізіңіз."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Жаңа тізім жасау",
@@ -834,21 +862,22 @@
       "shippingCost": "Жеткізу ақысы",
       "weight": "Салмақ",
       "weightUnit": "Салмақ бірлігі",
+      "currency": "Currency",
       "city": "Қала",
       "address": "Мекенжай",
-      "postalCode": "Пошта Индексі",
-      "currency": "Currency"
+      "postalCode": "Пошта Индексі"
     },
     "placeholders": {
       "title": "Мысал: 2 жасар гольштейн сиыры",
       "shortDescription": "Өнім сипаттамасы (ең көбі 200 таңба)",
       "description": "Өнім туралы толық ақпарат беріңіз...",
       "category": "Санатты таңдаңыз.",
+      "searchCurrency": "Search currency...",
       "city": "Қалаға кіріңіз",
       "address": "Толық мекенжайды енгізіңіз.",
-      "postalCode": "Пошта Индексі",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Пошта Индексі"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Жарнама тақырыбы міндетті түрде көрсетілуі керек.",
       "shortDescriptionRequired": "Қысқаша сипаттама қажет.",
@@ -870,8 +899,7 @@
     "productCreated": "Өнім сәтті жасалды.",
     "creationFailed": "Өнімді жасау мүмкін болмады. Қайталап көріңіз.",
     "userNotFound": "Пайдаланушы ақпараты табылмады. Қайтадан кіріңіз.",
-    "defaultBusinessName": "Менің бизнесім",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Менің бизнесім"
   },
   "becomeSeller": {
     "title": "Сатушы болыңыз",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} мин бұрын",
     "hoursAgo": "{count}сағ бұрын",
     "daysAgo": "{count}күн бұрын"
+  },
+  "pricing": {
+    "originalPrice": "Бастапқы баға",
+    "convertedPrice": "Конвертацияланған баға",
+    "approximatePrice": "Ағымдағы айырбас бағамдарына негізделген шамамен конверсия",
+    "approximate": "≈"
   }
 }

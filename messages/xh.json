@@ -379,6 +379,34 @@
       "saveSuccess": "Izinto ozikhethileyo zihlaziyiwe.",
       "saveError": "Kwenzeke impazamo ngelixa kuhlaziywa izinto ozikhethayo.",
       "loadError": "Izinto ozikhethayo azikwazanga ukulayishwa."
+    },
+    "deleteAccount": {
+      "dangerZone": "Indawo Eyingozi",
+      "title": "Cima iAkhawunti",
+      "description": "Wakuba uyicimile iakhawunti yakho, akukho kubuyela umva. Yonke idatha yakho, uluhlu, kunye neencoko ziya kususwa ngonaphakade.",
+      "irreversible": "Esi senzo asinakuguqulwa.",
+      "button": "Cima iAkhawunti yam",
+      "confirmTitle": "Uqinisekile ukuba ufuna ukucima iakhawunti yakho?",
+      "warning": "Idatha elandelayo iya kucinywa ngonaphakade:",
+      "warningProfile": "Iprofayili yakho kunye nolwazi lwakho lomntu",
+      "warningListings": "Zonke izintlu zakho kunye neemveliso",
+      "warningConversations": "Iincoko zakho kunye nemiyalezo",
+      "warningReviews": "Uphononongo lwakho kunye nezinto ozithandayo",
+      "passwordLabel": "Faka igama lakho lokugqitha ukuqinisekisa",
+      "passwordPlaceholder": "Iphasiwedi yakho yangoku",
+      "reasonLabel": "Kutheni uhamba? (ukhetho)",
+      "reasonPlaceholder": "Khetha isizathu",
+      "reasonNotSatisfied": "Andonelisekanga yinkonzo",
+      "reasonPrivacy": "Iinkxalabo zabucala",
+      "reasonAlternative": "Ndifumene iqonga elihlukile",
+      "reasonOther": "Okunye",
+      "feedbackLabel": "Ingxelo eyongezelelweyo (ukhetho)",
+      "feedbackPlaceholder": "Sixelele indlela esinokuphucula ngayo...",
+      "cancel": "Rhoxisa",
+      "confirmButton": "Cima iAkhawunti",
+      "deleting": "Iyacima...",
+      "success": "Iakhawunti yakho icinyiwe ngempumelelo.",
+      "error": "Ayiphumelelanga ukucima iakhawunti. Nceda ujonge igama lakho lokugqitha uze uzame kwakhona."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Khetha udidi.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Isihloko sentengiso siyimfuneko.",
       "shortDescriptionRequired": "Inkcazo emfutshane iyafuneka.",
       "descriptionRequired": "Ingcaciso eneenkcukacha iyafuneka.",
       "categoryRequired": "Ukukhetha udidi kuyimfuneko.",
       "priceRequired": "Faka ixabiso elisebenzayo."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Yenza Uluhlu Olutsha",
@@ -834,21 +862,22 @@
       "shippingCost": "Intlawulo yokuthumela",
       "weight": "Ubunzima",
       "weightUnit": "Iyunithi yoBunzima",
+      "currency": "Currency",
       "city": "Isixeko",
       "address": "Idilesi",
-      "postalCode": "Ikhowudi yePosi",
-      "currency": "Currency"
+      "postalCode": "Ikhowudi yePosi"
     },
     "placeholders": {
       "title": "Umzekelo: Inkomo yaseHolstein eneminyaka emi-2 ubudala",
       "shortDescription": "Inkcazo yemveliso (ubuninzi beempawu ezingama-200)",
       "description": "Nika ulwazi oluneenkcukacha malunga nemveliso...",
       "category": "Khetha udidi.",
+      "searchCurrency": "Search currency...",
       "city": "Ngena kwisixeko",
       "address": "Faka idilesi epheleleyo.",
-      "postalCode": "Ikhowudi yePosi",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Ikhowudi yePosi"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Isihloko sentengiso siyimfuneko.",
       "shortDescriptionRequired": "Inkcazo emfutshane iyafuneka.",
@@ -870,8 +899,7 @@
     "productCreated": "Imveliso yenziwe ngempumelelo.",
     "creationFailed": "Imveliso ayikwazanga ukwenziwa. Nceda uzame kwakhona.",
     "userNotFound": "Ulwazi lomsebenzisi alufumanekanga. Nceda ungene kwakhona.",
-    "defaultBusinessName": "Ishishini lam",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Ishishini lam"
   },
   "becomeSeller": {
     "title": "Yiba ngumthengisi",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} imizuzu edlulileyo",
     "hoursAgo": "{count}h ezidlulileyo",
     "daysAgo": "{count}s ezidlulileyo"
+  },
+  "pricing": {
+    "originalPrice": "Ixabiso lokuqala",
+    "convertedPrice": "Ixabiso eliguquliweyo",
+    "approximatePrice": "Utshintsho oluqikelelweyo olusekelwe kumazinga okutshintshiselana ngoku",
+    "approximate": "≈"
   }
 }

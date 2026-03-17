@@ -379,6 +379,34 @@
       "saveSuccess": "Actualizáronse as túas preferencias.",
       "saveError": "Produciuse un erro ao actualizar as preferencias.",
       "loadError": "Non se puideron cargar as preferencias."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zona de perigo",
+      "title": "Eliminar conta",
+      "description": "Unha vez que elimines a túa conta, non hai volta atrás. Todos os teus datos, anuncios e conversas eliminaranse permanentemente.",
+      "irreversible": "Esta acción é irreversible.",
+      "button": "Eliminar a miña conta",
+      "confirmTitle": "Seguro que queres eliminar a túa conta?",
+      "warning": "Os seguintes datos eliminaranse permanentemente:",
+      "warningProfile": "O teu perfil e información persoal",
+      "warningListings": "Todos os teus anuncios e produtos",
+      "warningConversations": "As túas conversas e mensaxes",
+      "warningReviews": "As túas reseñas e favoritos",
+      "passwordLabel": "Introduza o seu contrasinal para confirmar",
+      "passwordPlaceholder": "O teu contrasinal actual",
+      "reasonLabel": "Por que te vas? (opcional)",
+      "reasonPlaceholder": "Selecciona un motivo",
+      "reasonNotSatisfied": "Non satisfeito co servizo",
+      "reasonPrivacy": "Preocupacións pola privacidade",
+      "reasonAlternative": "Atopei unha plataforma alternativa",
+      "reasonOther": "Outros",
+      "feedbackLabel": "Comentarios adicionais (opcional)",
+      "feedbackPlaceholder": "Dinos como podemos mellorar...",
+      "cancel": "Cancelar",
+      "confirmButton": "Eliminar conta",
+      "deleting": "Eliminando...",
+      "success": "A túa conta foi eliminada correctamente.",
+      "error": "Non se puido eliminar a conta. Comproba o teu contrasinal e téntao de novo."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Selecciona unha categoría.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "O título do anuncio é obrigatorio.",
       "shortDescriptionRequired": "É necesaria unha breve descrición.",
       "descriptionRequired": "É necesaria unha explicación detallada.",
       "categoryRequired": "A selección de categoría é obrigatoria.",
       "priceRequired": "Introduza un prezo válido."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Crear novo anuncio",
@@ -834,21 +862,22 @@
       "shippingCost": "Gastos de envío",
       "weight": "Peso",
       "weightUnit": "Unidade de peso",
+      "currency": "Currency",
       "city": "Cidade",
       "address": "Enderezo",
-      "postalCode": "Código postal",
-      "currency": "Currency"
+      "postalCode": "Código postal"
     },
     "placeholders": {
       "title": "Exemplo: vaca Holstein de 2 anos",
       "shortDescription": "Descrición do produto (máximo 200 caracteres)",
       "description": "Proporcione información detallada sobre o produto...",
       "category": "Selecciona unha categoría.",
+      "searchCurrency": "Search currency...",
       "city": "Entra na cidade",
       "address": "Introduza o enderezo completo.",
-      "postalCode": "Código postal",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Código postal"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "O título do anuncio é obrigatorio.",
       "shortDescriptionRequired": "É necesaria unha breve descrición.",
@@ -870,8 +899,7 @@
     "productCreated": "O produto foi creado correctamente.",
     "creationFailed": "Non se puido crear o produto. Téntao de novo.",
     "userNotFound": "Non se puido atopar a información do usuario. Volva iniciar sesión.",
-    "defaultBusinessName": "O meu negocio",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "O meu negocio"
   },
   "becomeSeller": {
     "title": "Converterse en vendedor",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "hai {count} minutos",
     "hoursAgo": "hai {count} h",
     "daysAgo": "hai {count} días"
+  },
+  "pricing": {
+    "originalPrice": "Prezo orixinal",
+    "convertedPrice": "Prezo convertido",
+    "approximatePrice": "Conversión aproximada baseada nos tipos de cambio actuais",
+    "approximate": "≈"
   }
 }

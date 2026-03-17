@@ -379,6 +379,34 @@
       "saveSuccess": "Vaše nastavitve so bile posodobljene.",
       "saveError": "Pri posodabljanju nastavitev je prišlo do napake.",
       "loadError": "Nastavitev ni bilo mogoče naložiti."
+    },
+    "deleteAccount": {
+      "dangerZone": "Nevarno območje",
+      "title": "Izbriši račun",
+      "description": "Ko izbrišete svoj račun, ni več poti nazaj. Vsi vaši podatki, oglasi in pogovori bodo trajno odstranjeni.",
+      "irreversible": "To dejanje je nepreklicno.",
+      "button": "Izbriši moj račun",
+      "confirmTitle": "Ali ste prepričani, da želite izbrisati svoj račun?",
+      "warning": "Naslednji podatki bodo trajno izbrisani:",
+      "warningProfile": "Vaš profil in osebni podatki",
+      "warningListings": "Vsi vaši oglasi in izdelki",
+      "warningConversations": "Vaši pogovori in sporočila",
+      "warningReviews": "Vaše ocene in priljubljene",
+      "passwordLabel": "Vnesite geslo za potrditev",
+      "passwordPlaceholder": "Vaše trenutno geslo",
+      "reasonLabel": "Zakaj odhajate? (neobvezno)",
+      "reasonPlaceholder": "Izberite razlog",
+      "reasonNotSatisfied": "Nisem zadovoljen/a s storitvijo",
+      "reasonPrivacy": "Pomisleki glede zasebnosti",
+      "reasonAlternative": "Našli so alternativno platformo",
+      "reasonOther": "Drugo",
+      "feedbackLabel": "Dodatne povratne informacije (neobvezno)",
+      "feedbackPlaceholder": "Povejte nam, kako lahko izboljšamo ...",
+      "cancel": "Prekliči",
+      "confirmButton": "Izbriši račun",
+      "deleting": "Brisanje ...",
+      "success": "Vaš račun je bil uspešno izbrisan.",
+      "error": "Brisanje računa ni uspelo. Preverite geslo in poskusite znova."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Izberite kategorijo.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Naslov oglasa je obvezen.",
       "shortDescriptionRequired": "Potreben je kratek opis.",
       "descriptionRequired": "Potrebna je podrobna razlaga.",
       "categoryRequired": "Izbira kategorije je obvezna.",
       "priceRequired": "Vnesite veljavno ceno."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Ustvari nov oglas",
@@ -834,21 +862,22 @@
       "shippingCost": "Stroški pošiljanja",
       "weight": "Teža",
       "weightUnit": "Enota teže",
+      "currency": "Currency",
       "city": "Mesto",
       "address": "Naslov",
-      "postalCode": "Poštna številka",
-      "currency": "Currency"
+      "postalCode": "Poštna številka"
     },
     "placeholders": {
       "title": "Primer: 2-letna holštajnska krava",
       "shortDescription": "Opis izdelka (največ 200 znakov)",
       "description": "Navedite podrobne informacije o izdelku ...",
       "category": "Izberite kategorijo.",
+      "searchCurrency": "Search currency...",
       "city": "Vstopite v mesto",
       "address": "Vnesite celoten naslov.",
-      "postalCode": "Poštna številka",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Poštna številka"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Naslov oglasa je obvezen.",
       "shortDescriptionRequired": "Potreben je kratek opis.",
@@ -870,8 +899,7 @@
     "productCreated": "Izdelek je bil uspešno ustvarjen.",
     "creationFailed": "Izdelka ni bilo mogoče ustvariti. Poskusite znova.",
     "userNotFound": "Podatkov o uporabniku ni bilo mogoče najti. Prosimo, prijavite se znova.",
-    "defaultBusinessName": "Moje podjetje",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Moje podjetje"
   },
   "becomeSeller": {
     "title": "Postanite prodajalec",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "pred {count} minutami",
     "hoursAgo": "pred {count} h",
     "daysAgo": "pred {count} dnevi"
+  },
+  "pricing": {
+    "originalPrice": "Prvotna cena",
+    "convertedPrice": "Pretvorjena cena",
+    "approximatePrice": "Približna pretvorba na podlagi trenutnih menjalnih tečajev",
+    "approximate": "≈"
   }
 }

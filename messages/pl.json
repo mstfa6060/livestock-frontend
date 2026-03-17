@@ -379,6 +379,34 @@
       "saveSuccess": "Twoje preferencje zostały zaktualizowane.",
       "saveError": "Wystąpił błąd podczas aktualizacji preferencji.",
       "loadError": "Nie udało się załadować preferencji."
+    },
+    "deleteAccount": {
+      "dangerZone": "Strefa zagrożenia",
+      "title": "Usuń konto",
+      "description": "Po usunięciu konta nie ma już odwrotu. Wszystkie Twoje dane, wpisy i konwersacje zostaną trwale usunięte.",
+      "irreversible": "Ta czynność jest nieodwracalna.",
+      "button": "Usuń moje konto",
+      "confirmTitle": "Czy na pewno chcesz usunąć swoje konto?",
+      "warning": "Następujące dane zostaną trwale usunięte:",
+      "warningProfile": "Twój profil i dane osobowe",
+      "warningListings": "Wszystkie Twoje oferty i produkty",
+      "warningConversations": "Twoje rozmowy i wiadomości",
+      "warningReviews": "Twoje recenzje i ulubione",
+      "passwordLabel": "Wprowadź hasło, aby potwierdzić",
+      "passwordPlaceholder": "Twoje aktualne hasło",
+      "reasonLabel": "Dlaczego odchodzisz? (opcjonalnie)",
+      "reasonPlaceholder": "Wybierz powód",
+      "reasonNotSatisfied": "Niezadowolony z usługi",
+      "reasonPrivacy": "Obawy dotyczące prywatności",
+      "reasonAlternative": "Znaleziono alternatywną platformę",
+      "reasonOther": "Inny",
+      "feedbackLabel": "Dodatkowa informacja zwrotna (opcjonalna)",
+      "feedbackPlaceholder": "Powiedz nam, jak możemy się poprawić...",
+      "cancel": "Anulować",
+      "confirmButton": "Usuń konto",
+      "deleting": "Usuwanie...",
+      "success": "Twoje konto zostało pomyślnie usunięte.",
+      "error": "Nie udało się usunąć konta. Sprawdź hasło i spróbuj ponownie."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "Wystąpił błąd podczas przesyłania informacji o sprzedawcy.",
       "productsLoadError": "Wystąpił błąd podczas przesyłania produktów sprzedawcy.",
       "reviewsTab": "Oceny",
+      "share": "Udział",
+      "shareText": "Sprawdź {name} w serwisie Livestock Trading",
+      "linkCopied": "Link skopiowany do schowka.",
       "reviews": {
         "summary": "Podsumowanie oceny",
         "reviewCount": "ocena",
@@ -796,14 +827,14 @@
       "category": "Wybierz kategorię.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tytuł reklamy jest obowiązkowy.",
       "shortDescriptionRequired": "Wymagany jest krótki opis.",
       "descriptionRequired": "Wymagane jest szczegółowe wyjaśnienie.",
       "categoryRequired": "Wybór kategorii jest obowiązkowy.",
       "priceRequired": "Wprowadź prawidłową cenę."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Utwórz nową ofertę",
@@ -831,21 +862,22 @@
       "shippingCost": "Opłata za wysyłkę",
       "weight": "Waga",
       "weightUnit": "Jednostka wagi",
+      "currency": "Currency",
       "city": "Miasto",
       "address": "Adres",
-      "postalCode": "Kod pocztowy",
-      "currency": "Currency"
+      "postalCode": "Kod pocztowy"
     },
     "placeholders": {
       "title": "Przykład: 2-letnia krowa rasy holsztyńskiej",
       "shortDescription": "Opis produktu (maks. 200 znaków)",
       "description": "Podaj szczegółowe informacje o produkcie...",
       "category": "Wybierz kategorię.",
+      "searchCurrency": "Search currency...",
       "city": "Wejdź do miasta",
       "address": "Wprowadź pełny adres.",
-      "postalCode": "Kod pocztowy",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Kod pocztowy"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tytuł reklamy jest obowiązkowy.",
       "shortDescriptionRequired": "Wymagany jest krótki opis.",
@@ -867,8 +899,7 @@
     "productCreated": "Produkt został pomyślnie utworzony.",
     "creationFailed": "Nie udało się utworzyć produktu. Spróbuj ponownie.",
     "userNotFound": "Nie znaleziono informacji o użytkowniku. Zaloguj się ponownie.",
-    "defaultBusinessName": "Mój biznes",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Mój biznes"
   },
   "becomeSeller": {
     "title": "Zostań sprzedawcą",
@@ -1317,7 +1348,10 @@
     "fleet": "Informacje o flocie",
     "serviceRegions": "Obszary usług",
     "specializations": "Obszary specjalizacji",
-    "certifications": "Certyfikaty"
+    "certifications": "Certyfikaty",
+    "share": "Udział",
+    "shareText": "Sprawdź {name} w serwisie Livestock Trading",
+    "linkCopied": "Link skopiowany do schowka."
   },
   "brands": {
     "title": "Zarządzanie marką",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "{count} min temu",
     "hoursAgo": "{count}h temu",
     "daysAgo": "{count} dni temu"
+  },
+  "pricing": {
+    "originalPrice": "Cena oryginalna",
+    "convertedPrice": "Cena przeliczona",
+    "approximatePrice": "Przybliżone przeliczenie na podstawie aktualnych kursów walut",
+    "approximate": "≈"
   }
 }

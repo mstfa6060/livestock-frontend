@@ -379,6 +379,34 @@
       "saveSuccess": "Ihre Einstellungen wurden aktualisiert.",
       "saveError": "Beim Aktualisieren der Einstellungen ist ein Fehler aufgetreten.",
       "loadError": "Die Einstellungen konnten nicht geladen werden."
+    },
+    "deleteAccount": {
+      "dangerZone": "Gefahrenzone",
+      "title": "Konto löschen",
+      "description": "Sobald Sie Ihr Konto löschen, gibt es kein Zurück mehr. Alle Ihre Daten, Angebote und Konversationen werden endgültig entfernt.",
+      "irreversible": "Diese Handlung ist unumkehrbar.",
+      "button": "Mein Konto löschen",
+      "confirmTitle": "Sind Sie sicher, dass Sie Ihr Konto löschen möchten?",
+      "warning": "Folgende Daten werden endgültig gelöscht:",
+      "warningProfile": "Ihr Profil und Ihre persönlichen Daten",
+      "warningListings": "Alle Ihre Angebote und Produkte",
+      "warningConversations": "Ihre Unterhaltungen und Nachrichten",
+      "warningReviews": "Ihre Rezensionen und Favoriten",
+      "passwordLabel": "Geben Sie Ihr Passwort zur Bestätigung ein.",
+      "passwordPlaceholder": "Ihr aktuelles Passwort",
+      "reasonLabel": "Warum gehst du? (optional)",
+      "reasonPlaceholder": "Wählen Sie einen Grund aus",
+      "reasonNotSatisfied": "Ich bin mit dem Service nicht zufrieden.",
+      "reasonPrivacy": "Datenschutzbedenken",
+      "reasonAlternative": "Ich habe eine alternative Plattform gefunden.",
+      "reasonOther": "Andere",
+      "feedbackLabel": "Zusätzliches Feedback (optional)",
+      "feedbackPlaceholder": "Sagen Sie uns, wie wir uns verbessern können...",
+      "cancel": "Stornieren",
+      "confirmButton": "Konto löschen",
+      "deleting": "Löschen...",
+      "success": "Ihr Konto wurde erfolgreich gelöscht.",
+      "error": "Das Konto konnte nicht gelöscht werden. Bitte überprüfen Sie Ihr Passwort und versuchen Sie es erneut."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "Beim Hochladen der Verkäuferinformationen ist ein Fehler aufgetreten.",
       "productsLoadError": "Beim Hochladen der Produkte des Verkäufers ist ein Fehler aufgetreten.",
       "reviewsTab": "Beurteilungen",
+      "share": "Aktie",
+      "shareText": "Schau dir {name} im Bereich Viehhandel an.",
+      "linkCopied": "Link in die Zwischenablage kopiert.",
       "reviews": {
         "summary": "Zusammenfassung der Auswertung",
         "reviewCount": "Auswertung",
@@ -796,14 +827,14 @@
       "category": "Wählen Sie eine Kategorie.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Der Anzeigentitel ist obligatorisch.",
       "shortDescriptionRequired": "Eine kurze Beschreibung ist erforderlich.",
       "descriptionRequired": "Eine detaillierte Erklärung ist erforderlich.",
       "categoryRequired": "Die Auswahl einer Kategorie ist obligatorisch.",
       "priceRequired": "Geben Sie einen gültigen Preis ein."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Neuen Eintrag erstellen",
@@ -831,21 +862,22 @@
       "shippingCost": "Versandkosten",
       "weight": "Gewicht",
       "weightUnit": "Gewichtseinheit",
+      "currency": "Currency",
       "city": "Stadt",
       "address": "Adresse",
-      "postalCode": "Postleitzahl",
-      "currency": "Currency"
+      "postalCode": "Postleitzahl"
     },
     "placeholders": {
       "title": "Beispiel: 2-jährige Holstein-Kuh",
       "shortDescription": "Produktbeschreibung (max. 200 Zeichen)",
       "description": "Geben Sie detaillierte Informationen zum Produkt an...",
       "category": "Wählen Sie eine Kategorie.",
+      "searchCurrency": "Search currency...",
       "city": "Betreten Sie die Stadt",
       "address": "Geben Sie die vollständige Adresse ein.",
-      "postalCode": "Postleitzahl",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Postleitzahl"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Der Anzeigentitel ist obligatorisch.",
       "shortDescriptionRequired": "Eine kurze Beschreibung ist erforderlich.",
@@ -867,8 +899,7 @@
     "productCreated": "Das Produkt wurde erfolgreich entwickelt.",
     "creationFailed": "Das Produkt konnte nicht erstellt werden. Bitte versuchen Sie es erneut.",
     "userNotFound": "Benutzerinformationen konnten nicht gefunden werden. Bitte melden Sie sich erneut an.",
-    "defaultBusinessName": "Mein Geschäft",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Mein Geschäft"
   },
   "becomeSeller": {
     "title": "Werden Sie Verkäufer",
@@ -1317,7 +1348,10 @@
     "fleet": "Flotteninformationen",
     "serviceRegions": "Servicegebiete",
     "specializations": "Fachgebiete",
-    "certifications": "Zertifikate"
+    "certifications": "Zertifikate",
+    "share": "Aktie",
+    "shareText": "Schau dir {name} im Bereich Viehhandel an.",
+    "linkCopied": "Link in die Zwischenablage kopiert."
   },
   "brands": {
     "title": "Markenmanagement",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "{count} Minuten zuvor",
     "hoursAgo": "{count}h ago",
     "daysAgo": "{count}d ago"
+  },
+  "pricing": {
+    "originalPrice": "Originalpreis",
+    "convertedPrice": "Umgerechneter Preis",
+    "approximatePrice": "Ungefähre Umrechnung basierend auf den aktuellen Wechselkursen",
+    "approximate": "≈"
   }
 }

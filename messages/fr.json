@@ -379,6 +379,34 @@
       "saveSuccess": "Vos préférences ont été mises à jour.",
       "saveError": "Une erreur s'est produite lors de la mise à jour des préférences.",
       "loadError": "Impossible de charger les préférences."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zone de danger",
+      "title": "Supprimer le compte",
+      "description": "Une fois votre compte supprimé, il est impossible de revenir en arrière. Toutes vos données, annonces et conversations seront définitivement effacées.",
+      "irreversible": "Cette action est irréversible.",
+      "button": "Supprimer mon compte",
+      "confirmTitle": "Êtes-vous sûr de vouloir supprimer votre compte ?",
+      "warning": "Les données suivantes seront définitivement supprimées :",
+      "warningProfile": "Votre profil et vos informations personnelles",
+      "warningListings": "Toutes vos annonces et tous vos produits",
+      "warningConversations": "Vos conversations et messages",
+      "warningReviews": "Vos avis et favoris",
+      "passwordLabel": "Saisissez votre mot de passe pour confirmer",
+      "passwordPlaceholder": "Votre mot de passe actuel",
+      "reasonLabel": "Pourquoi partez-vous ? (facultatif)",
+      "reasonPlaceholder": "Sélectionnez une raison",
+      "reasonNotSatisfied": "Insatisfait du service",
+      "reasonPrivacy": "préoccupations relatives à la confidentialité",
+      "reasonAlternative": "J'ai trouvé une plateforme alternative",
+      "reasonOther": "Autre",
+      "feedbackLabel": "Commentaires supplémentaires (facultatifs)",
+      "feedbackPlaceholder": "Dites-nous comment nous pouvons nous améliorer...",
+      "cancel": "Annuler",
+      "confirmButton": "Supprimer le compte",
+      "deleting": "Suppression en cours...",
+      "success": "Votre compte a été supprimé avec succès.",
+      "error": "Impossible de supprimer le compte. Veuillez vérifier votre mot de passe et réessayer."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "Une erreur s'est produite lors du chargement des informations du vendeur.",
       "productsLoadError": "Une erreur s'est produite lors du chargement des produits du vendeur.",
       "reviewsTab": "Évaluations",
+      "share": "Partager",
+      "shareText": "Découvrez {name} sur Livestock Trading",
+      "linkCopied": "Lien copié dans le presse-papiers.",
       "reviews": {
         "summary": "Résumé de l'évaluation",
         "reviewCount": "évaluation",
@@ -796,14 +827,14 @@
       "category": "Sélectionnez une catégorie.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Le titre de l'annonce est obligatoire.",
       "shortDescriptionRequired": "Une brève description est requise.",
       "descriptionRequired": "Une explication détaillée est nécessaire.",
       "categoryRequired": "La sélection de la catégorie est obligatoire.",
       "priceRequired": "Saisissez un prix valide."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Créer une nouvelle annonce",
@@ -831,21 +862,22 @@
       "shippingCost": "Frais d'expédition",
       "weight": "Poids",
       "weightUnit": "Unité de poids",
+      "currency": "Currency",
       "city": "Ville",
       "address": "Adresse",
-      "postalCode": "Code Postal",
-      "currency": "Currency"
+      "postalCode": "Code Postal"
     },
     "placeholders": {
       "title": "Exemple : Vache Holstein de 2 ans",
       "shortDescription": "Description du produit (200 caractères maximum)",
       "description": "Fournissez des informations détaillées sur le produit...",
       "category": "Sélectionnez une catégorie.",
+      "searchCurrency": "Search currency...",
       "city": "Entrez dans la ville",
       "address": "Veuillez saisir l'adresse complète.",
-      "postalCode": "Code Postal",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Code Postal"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Le titre de l'annonce est obligatoire.",
       "shortDescriptionRequired": "Une brève description est requise.",
@@ -867,8 +899,7 @@
     "productCreated": "Le produit a été créé avec succès.",
     "creationFailed": "Le produit n'a pas pu être créé. Veuillez réessayer.",
     "userNotFound": "Impossible de trouver vos informations. Veuillez vous reconnecter.",
-    "defaultBusinessName": "Mon entreprise",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Mon entreprise"
   },
   "becomeSeller": {
     "title": "Devenez vendeur",
@@ -1317,7 +1348,10 @@
     "fleet": "Informations sur la flotte",
     "serviceRegions": "Zones de service",
     "specializations": "Domaines d'expertise",
-    "certifications": "Certificats"
+    "certifications": "Certificats",
+    "share": "Partager",
+    "shareText": "Découvrez {name} sur Livestock Trading",
+    "linkCopied": "Lien copié dans le presse-papiers."
   },
   "brands": {
     "title": "Gestion de marque",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "{count} minutes auparavant",
     "hoursAgo": "il y a {count} heures",
     "daysAgo": "il y a {count} jours"
+  },
+  "pricing": {
+    "originalPrice": "Prix d'origine",
+    "convertedPrice": "prix converti",
+    "approximatePrice": "Conversion approximative basée sur les taux de change actuels",
+    "approximate": "≈"
   }
 }

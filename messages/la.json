@@ -379,6 +379,34 @@
       "saveSuccess": "Praeferentiae tuae renovatae sunt.",
       "saveError": "Error accidit dum praeferentiae renovantur.",
       "loadError": "Praeferentiae onerari non potuerunt."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zona Periculi",
+      "title": "Rationem Dele",
+      "description": "Cum rationem tuam deleveris, non est regressus. Omnia tua data, indices, et sermones perpetuo removebuntur.",
+      "irreversible": "Haec actio est irrevocabilis.",
+      "button": "Rationem Meam Delere",
+      "confirmTitle": "Certe rationem tuam delere vis?",
+      "warning": "Haec data perpetuo delebuntur:",
+      "warningProfile": "Profilum tuum et notitiae personales",
+      "warningListings": "Omnia tua inscriptiones et merces",
+      "warningConversations": "Sermones et nuntia tua",
+      "warningReviews": "Tuae opiniones et favoritae",
+      "passwordLabel": "Tessera tua inscribe ut confirmes",
+      "passwordPlaceholder": "Tessera tua praesens",
+      "reasonLabel": "Cur abis? (libet)",
+      "reasonPlaceholder": "Causam elige",
+      "reasonNotSatisfied": "Servitio non contentus",
+      "reasonPrivacy": "Curae de secreto",
+      "reasonAlternative": "Invenī suggestum alternativum",
+      "reasonOther": "Alia",
+      "feedbackLabel": "Responsio addita (facultativa)",
+      "feedbackPlaceholder": "Dic nobis quomodo emendare possimus...",
+      "cancel": "Abrogare",
+      "confirmButton": "Rationem Dele",
+      "deleting": "Delendo...",
+      "success": "Ratio tua feliciter deleta est.",
+      "error": "Ratio delenda non potuit. Tessera tua inspice et iterum conare."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Categoriam elige.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Titulus nuntii necessarius est.",
       "shortDescriptionRequired": "Brevis descriptio requiritur.",
       "descriptionRequired": "Explicatio accurata requiritur.",
       "categoryRequired": "Categoriae selectio necessaria est.",
       "priceRequired": "Pretium validum inscribe."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Crea Novum Indicem",
@@ -834,21 +862,22 @@
       "shippingCost": "Pretium vecturae",
       "weight": "Pondus",
       "weightUnit": "Unitas Ponderis",
+      "currency": "Currency",
       "city": "Urbs",
       "address": "Inscriptio",
-      "postalCode": "Index postalis",
-      "currency": "Currency"
+      "postalCode": "Index postalis"
     },
     "placeholders": {
       "title": "Exemplum: Vacca Holsteiniana Biennis",
       "shortDescription": "Descriptio producti (maxime 200 characteres)",
       "description": "Informationem accuratam de producto praebe...",
       "category": "Categoriam elige.",
+      "searchCurrency": "Search currency...",
       "city": "Urbem ingredi",
       "address": "Inscriptionem plenam inscribe.",
-      "postalCode": "Index postalis",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Index postalis"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Titulus nuntii necessarius est.",
       "shortDescriptionRequired": "Brevis descriptio requiritur.",
@@ -870,8 +899,7 @@
     "productCreated": "Productum feliciter creatum est.",
     "creationFailed": "Productum creari non potuit. Iterum conare, quaeso.",
     "userNotFound": "Notitia usoris non inventa est. Quaeso, iterum ini sessionem.",
-    "defaultBusinessName": "Negotium meum",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Negotium meum"
   },
   "becomeSeller": {
     "title": "Venditor Fi",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} minuta ante",
     "hoursAgo": "ante horas {count}",
     "daysAgo": "ante dies {count}"
+  },
+  "pricing": {
+    "originalPrice": "Pretium originale",
+    "convertedPrice": "Pretium conversum",
+    "approximatePrice": "Conversio approximata secundum taxas cambii hodiernas",
+    "approximate": "≈"
   }
 }

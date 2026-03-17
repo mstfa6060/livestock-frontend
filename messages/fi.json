@@ -379,6 +379,34 @@
       "saveSuccess": "Asetuksesi on päivitetty.",
       "saveError": "Asetusten päivittämisessä tapahtui virhe.",
       "loadError": "Asetuksia ei voitu ladata."
+    },
+    "deleteAccount": {
+      "dangerZone": "Vaara-alue",
+      "title": "Poista tili",
+      "description": "Kun olet poistanut tilisi, paluuta ei ole. Kaikki tietosi, ilmoituksesi ja keskustelusi poistetaan pysyvästi.",
+      "irreversible": "Tämä toimenpide on peruuttamaton.",
+      "button": "Poista tilini",
+      "confirmTitle": "Oletko varma, että haluat poistaa tilisi?",
+      "warning": "Seuraavat tiedot poistetaan pysyvästi:",
+      "warningProfile": "Profiilisi ja henkilötietosi",
+      "warningListings": "Kaikki listauksesi ja tuotteesi",
+      "warningConversations": "Keskustelusi ja viestisi",
+      "warningReviews": "Arvostelusi ja suosikkisi",
+      "passwordLabel": "Vahvista antamalla salasanasi",
+      "passwordPlaceholder": "Nykyinen salasanasi",
+      "reasonLabel": "Miksi lähdit? (valinnainen)",
+      "reasonPlaceholder": "Valitse syy",
+      "reasonNotSatisfied": "En ole tyytyväinen palveluun",
+      "reasonPrivacy": "Tietosuojaongelmat",
+      "reasonAlternative": "Löysin vaihtoehtoisen alustan",
+      "reasonOther": "Muut",
+      "feedbackLabel": "Lisäpalaute (valinnainen)",
+      "feedbackPlaceholder": "Kerro meille, miten voimme parantaa...",
+      "cancel": "Peruuttaa",
+      "confirmButton": "Poista tili",
+      "deleting": "Poistetaan...",
+      "success": "Tilisi on poistettu onnistuneesti.",
+      "error": "Tilin poistaminen epäonnistui. Tarkista salasanasi ja yritä uudelleen."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "Myyjän tietojen latauksessa tapahtui virhe.",
       "productsLoadError": "Myyjän tuotteiden latauksessa tapahtui virhe.",
       "reviewsTab": "Arvioinnit",
+      "share": "Jakaa",
+      "shareText": "Katso {name} karjakaupankäynnistä",
+      "linkCopied": "Linkki kopioitu leikepöydälle.",
       "reviews": {
         "summary": "Arvioinnin yhteenveto",
         "reviewCount": "arviointi",
@@ -796,14 +827,14 @@
       "category": "Valitse kategoria.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Mainoksen otsikko on pakollinen.",
       "shortDescriptionRequired": "Lyhyt kuvaus vaaditaan.",
       "descriptionRequired": "Yksityiskohtainen selvitys vaaditaan.",
       "categoryRequired": "Kategorian valinta on pakollinen.",
       "priceRequired": "Anna kelvollinen hinta."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Luo uusi ilmoitus",
@@ -831,21 +862,22 @@
       "shippingCost": "Toimitusmaksu",
       "weight": "Paino",
       "weightUnit": "Painoyksikkö",
+      "currency": "Currency",
       "city": "Kaupunki",
       "address": "Osoite",
-      "postalCode": "Postinumero",
-      "currency": "Currency"
+      "postalCode": "Postinumero"
     },
     "placeholders": {
       "title": "Esimerkki: 2-vuotias holsteinlehmä",
       "shortDescription": "Tuotekuvaus (enintään 200 merkkiä)",
       "description": "Anna tarkempia tietoja tuotteesta...",
       "category": "Valitse kategoria.",
+      "searchCurrency": "Search currency...",
       "city": "Astu kaupunkiin",
       "address": "Anna koko osoite.",
-      "postalCode": "Postinumero",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Postinumero"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Mainoksen otsikko on pakollinen.",
       "shortDescriptionRequired": "Lyhyt kuvaus vaaditaan.",
@@ -867,8 +899,7 @@
     "productCreated": "Tuote luotiin onnistuneesti.",
     "creationFailed": "Tuotetta ei voitu luoda. Yritä uudelleen.",
     "userNotFound": "Käyttäjätietoja ei löytynyt. Kirjaudu uudelleen sisään.",
-    "defaultBusinessName": "Yritykseni",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Yritykseni"
   },
   "becomeSeller": {
     "title": "Ryhdy myyjäksi",
@@ -1317,7 +1348,10 @@
     "fleet": "Kalustotiedot",
     "serviceRegions": "Palvelualueet",
     "specializations": "Asiantuntemusalueet",
-    "certifications": "Todisteet"
+    "certifications": "Todisteet",
+    "share": "Jakaa",
+    "shareText": "Katso {name} karjakaupankäynnistä",
+    "linkCopied": "Linkki kopioitu leikepöydälle."
   },
   "brands": {
     "title": "Brändinhallinta",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "{count} minuuttia sitten",
     "hoursAgo": "{count} tuntia sitten",
     "daysAgo": "{count} päivää sitten"
+  },
+  "pricing": {
+    "originalPrice": "Alkuperäinen hinta",
+    "convertedPrice": "Muunnettu hinta",
+    "approximatePrice": "Arvioitu muuntokurssi perustuu nykyisiin valuuttakursseihin",
+    "approximate": "≈"
   }
 }

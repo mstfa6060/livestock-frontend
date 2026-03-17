@@ -379,6 +379,34 @@
       "saveSuccess": "तपाईंका प्राथमिकताहरू अद्यावधिक गरिएका छन्।",
       "saveError": "प्राथमिकताहरू अद्यावधिक गर्दा एउटा त्रुटि भयो।",
       "loadError": "प्राथमिकताहरू लोड गर्न सकिएन।"
+    },
+    "deleteAccount": {
+      "dangerZone": "खतरा क्षेत्र",
+      "title": "खाता मेटाउनुहोस्",
+      "description": "एकचोटि तपाईंले आफ्नो खाता मेटाएपछि, फेरि फर्कने सम्भावना छैन। तपाईंको सबै डेटा, सूचीहरू, र कुराकानीहरू स्थायी रूपमा हटाइनेछन्।",
+      "irreversible": "यो कार्य अपरिवर्तनीय छ।",
+      "button": "मेरो खाता मेटाउनुहोस्",
+      "confirmTitle": "के तपाईं आफ्नो खाता मेटाउन निश्चित हुनुहुन्छ?",
+      "warning": "निम्न डेटा स्थायी रूपमा मेटाइनेछ:",
+      "warningProfile": "तपाईंको प्रोफाइल र व्यक्तिगत जानकारी",
+      "warningListings": "तपाईंका सबै सूची र उत्पादनहरू",
+      "warningConversations": "तपाईंका कुराकानी र सन्देशहरू",
+      "warningReviews": "तपाईंका समीक्षा र मनपर्नेहरू",
+      "passwordLabel": "पुष्टि गर्न आफ्नो पासवर्ड प्रविष्ट गर्नुहोस्",
+      "passwordPlaceholder": "तपाईंको हालको पासवर्ड",
+      "reasonLabel": "तपाईं किन जाँदै हुनुहुन्छ? (वैकल्पिक)",
+      "reasonPlaceholder": "कारण छान्नुहोस्",
+      "reasonNotSatisfied": "सेवाबाट सन्तुष्ट छैन।",
+      "reasonPrivacy": "गोपनीयता सम्बन्धी सरोकारहरू",
+      "reasonAlternative": "वैकल्पिक प्लेटफर्म फेला पर्यो",
+      "reasonOther": "अन्य",
+      "feedbackLabel": "थप प्रतिक्रिया (वैकल्पिक)",
+      "feedbackPlaceholder": "हामी कसरी सुधार गर्न सक्छौं भन्नुहोस्...",
+      "cancel": "रद्द गर्नुहोस्",
+      "confirmButton": "खाता मेटाउनुहोस्",
+      "deleting": "मेटाउँदै...",
+      "success": "तपाईंको खाता सफलतापूर्वक मेटाइएको छ।",
+      "error": "खाता मेटाउन असफल भयो। कृपया आफ्नो पासवर्ड जाँच गर्नुहोस् र फेरि प्रयास गर्नुहोस्।"
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "एउटा कोटी चयन गर्नुहोस्।",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "विज्ञापनको शीर्षक अनिवार्य छ।",
       "shortDescriptionRequired": "छोटो विवरण आवश्यक छ।",
       "descriptionRequired": "विस्तृत व्याख्या आवश्यक छ।",
       "categoryRequired": "श्रेणी छनोट अनिवार्य छ।",
       "priceRequired": "मान्य मूल्य प्रविष्ट गर्नुहोस्।"
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "नयाँ सूची सिर्जना गर्नुहोस्",
@@ -834,21 +862,22 @@
       "shippingCost": "ढुवानी शुल्क",
       "weight": "तौल",
       "weightUnit": "तौलको एकाइ",
+      "currency": "Currency",
       "city": "शहर",
       "address": "ठेगाना",
-      "postalCode": "हुलाक कोड",
-      "currency": "Currency"
+      "postalCode": "हुलाक कोड"
     },
     "placeholders": {
       "title": "उदाहरण: २ वर्ष पुरानो होल्स्टेन गाई",
       "shortDescription": "उत्पादन विवरण (अधिकतम २०० वर्णहरू)",
       "description": "उत्पादनको बारेमा विस्तृत जानकारी प्रदान गर्नुहोस्...",
       "category": "एउटा कोटी चयन गर्नुहोस्।",
+      "searchCurrency": "Search currency...",
       "city": "शहरमा प्रवेश गर्नुहोस्",
       "address": "पूरा ठेगाना प्रविष्ट गर्नुहोस्।",
-      "postalCode": "हुलाक कोड",
-      "searchCurrency": "Search currency..."
+      "postalCode": "हुलाक कोड"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "विज्ञापनको शीर्षक अनिवार्य छ।",
       "shortDescriptionRequired": "छोटो विवरण आवश्यक छ।",
@@ -870,8 +899,7 @@
     "productCreated": "उत्पादन सफलतापूर्वक सिर्जना गरियो।",
     "creationFailed": "उत्पादन सिर्जना गर्न सकिएन। कृपया फेरि प्रयास गर्नुहोस्।",
     "userNotFound": "प्रयोगकर्ता जानकारी फेला पार्न सकिएन। कृपया फेरि लग इन गर्नुहोस्।",
-    "defaultBusinessName": "मेरो व्यवसाय",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "मेरो व्यवसाय"
   },
   "becomeSeller": {
     "title": "बिक्रेता बन्नुहोस्",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} मिनेट अगाडि",
     "hoursAgo": "{गणना} घण्टा अघि",
     "daysAgo": "{गणना} दिन अघि"
+  },
+  "pricing": {
+    "originalPrice": "मूल मूल्य",
+    "convertedPrice": "रूपान्तरित मूल्य",
+    "approximatePrice": "हालको विनिमय दरमा आधारित अनुमानित रूपान्तरण",
+    "approximate": "≈"
   }
 }

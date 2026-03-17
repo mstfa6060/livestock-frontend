@@ -379,6 +379,34 @@
       "saveSuccess": "Pilihan anda telah dikemas kini.",
       "saveError": "Ralat berlaku semasa mengemas kini pilihan.",
       "loadError": "Keutamaan tidak dapat dimuatkan."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zon Bahaya",
+      "title": "Padam Akaun",
+      "description": "Sebaik sahaja anda memadamkan akaun anda, tiada jalan untuk berpatah balik. Semua data, penyenaraian dan perbualan anda akan dialih keluar secara kekal.",
+      "irreversible": "Tindakan ini tidak boleh dipulihkan.",
+      "button": "Padam Akaun Saya",
+      "confirmTitle": "Adakah anda pasti mahu memadamkan akaun anda?",
+      "warning": "Data berikut akan dipadamkan secara kekal:",
+      "warningProfile": "Profil dan maklumat peribadi anda",
+      "warningListings": "Semua penyenaraian dan produk anda",
+      "warningConversations": "Perbualan dan mesej anda",
+      "warningReviews": "Ulasan dan kegemaran anda",
+      "passwordLabel": "Masukkan kata laluan anda untuk mengesahkan",
+      "passwordPlaceholder": "Kata laluan semasa anda",
+      "reasonLabel": "Mengapa awak pergi? (pilihan)",
+      "reasonPlaceholder": "Pilih sebab",
+      "reasonNotSatisfied": "Tidak berpuas hati dengan perkhidmatan",
+      "reasonPrivacy": "Kebimbangan privasi",
+      "reasonAlternative": "Menemui platform alternatif",
+      "reasonOther": "Lain-lain",
+      "feedbackLabel": "Maklum balas tambahan (pilihan)",
+      "feedbackPlaceholder": "Beritahu kami bagaimana kami boleh menambah baik...",
+      "cancel": "Batal",
+      "confirmButton": "Padam Akaun",
+      "deleting": "Memadam...",
+      "success": "Akaun anda telah berjaya dipadamkan.",
+      "error": "Gagal memadam akaun. Sila semak kata laluan anda dan cuba lagi."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Pilih kategori.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tajuk iklan adalah wajib.",
       "shortDescriptionRequired": "Penerangan ringkas diperlukan.",
       "descriptionRequired": "Penjelasan terperinci diperlukan.",
       "categoryRequired": "Pemilihan kategori adalah wajib.",
       "priceRequired": "Masukkan harga yang sah."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Cipta Penyenaraian Baharu",
@@ -834,21 +862,22 @@
       "shippingCost": "Yuran Penghantaran",
       "weight": "Berat",
       "weightUnit": "Unit Berat",
+      "currency": "Currency",
       "city": "Bandar",
       "address": "Alamat",
-      "postalCode": "Poskod",
-      "currency": "Currency"
+      "postalCode": "Poskod"
     },
     "placeholders": {
       "title": "Contoh: Lembu Holstein Berusia 2 Tahun",
       "shortDescription": "Penerangan produk (maksimum 200 aksara)",
       "description": "Berikan maklumat terperinci tentang produk...",
       "category": "Pilih kategori.",
+      "searchCurrency": "Search currency...",
       "city": "Masuk ke bandar",
       "address": "Masukkan alamat penuh.",
-      "postalCode": "Poskod",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Poskod"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tajuk iklan adalah wajib.",
       "shortDescriptionRequired": "Penerangan ringkas diperlukan.",
@@ -870,8 +899,7 @@
     "productCreated": "Produk tersebut berjaya dihasilkan.",
     "creationFailed": "Produk tidak dapat dicipta. Sila cuba lagi.",
     "userNotFound": "Maklumat pengguna tidak dapat ditemui. Sila log masuk sekali lagi.",
-    "defaultBusinessName": "Perniagaan saya",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Perniagaan saya"
   },
   "becomeSeller": {
     "title": "Jadilah Penjual",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} minit yang lalu",
     "hoursAgo": "{count}j yang lalu",
     "daysAgo": "{count}d yang lalu"
+  },
+  "pricing": {
+    "originalPrice": "Harga asal",
+    "convertedPrice": "Harga yang ditukar",
+    "approximatePrice": "Anggaran penukaran berdasarkan kadar pertukaran semasa",
+    "approximate": "≈"
   }
 }

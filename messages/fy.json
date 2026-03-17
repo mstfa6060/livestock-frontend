@@ -379,6 +379,34 @@
       "saveSuccess": "Dyn foarkarren binne bywurke.",
       "saveError": "Der is in flater bard by it bywurkjen fan foarkarren.",
       "loadError": "Foarkarren koene net laden wurde."
+    },
+    "deleteAccount": {
+      "dangerZone": "Gefaargebiet",
+      "title": "Akkoant wiskje",
+      "description": "As jo jo akkount ienris wiskje, is der gjin wei werom. Al jo gegevens, listings en petearen wurde permanint fuortsmiten.",
+      "irreversible": "Dizze aksje is ûnomkearber.",
+      "button": "Myn akkount wiskje",
+      "confirmTitle": "Binne jo wis dat jo jo akkount wiskje wolle?",
+      "warning": "De folgjende gegevens wurde permanint wiske:",
+      "warningProfile": "Dyn profyl en persoanlike ynformaasje",
+      "warningListings": "Al jo advertinsjes en produkten",
+      "warningConversations": "Dyn petearen en berjochten",
+      "warningReviews": "Dyn resinsjes en favoriten",
+      "passwordLabel": "Fier jo wachtwurd yn om te befêstigjen",
+      "passwordPlaceholder": "Dyn hjoeddeiske wachtwurd",
+      "reasonLabel": "Wêrom geane jo fuort? (opsjoneel)",
+      "reasonPlaceholder": "Selektearje in reden",
+      "reasonNotSatisfied": "Net tefreden mei de tsjinst",
+      "reasonPrivacy": "Privacy soargen",
+      "reasonAlternative": "In alternatyf platfoarm fûn",
+      "reasonOther": "Oar",
+      "feedbackLabel": "Ekstra feedback (opsjoneel)",
+      "feedbackPlaceholder": "Fertel ús hoe't wy ús ferbetterje kinne...",
+      "cancel": "Annulearje",
+      "confirmButton": "Akkoant wiskje",
+      "deleting": "Wiskje...",
+      "success": "Dyn akkount is mei súkses wiske.",
+      "error": "Koe akkount net wiskje. Kontrolearje jo wachtwurd en besykje it opnij."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Selektearje in kategory.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "De titel fan 'e advertinsje is ferplicht.",
       "shortDescriptionRequired": "In koarte beskriuwing is fereaske.",
       "descriptionRequired": "In detaillearre útlis is nedich.",
       "categoryRequired": "Kategoryseleksje is ferplicht.",
       "priceRequired": "Fier in jildige priis yn."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Nije listing oanmeitsje",
@@ -834,21 +862,22 @@
       "shippingCost": "Ferstjoerkosten",
       "weight": "Gewicht",
       "weightUnit": "Ienheid fan gewicht",
+      "currency": "Currency",
       "city": "Stêd",
       "address": "Adres",
-      "postalCode": "Postkoade",
-      "currency": "Currency"
+      "postalCode": "Postkoade"
     },
     "placeholders": {
       "title": "Foarbyld: 2-jierrige Holsteinkoe",
       "shortDescription": "Produktbeskriuwing (maks. 200 tekens)",
       "description": "Jou detaillearre ynformaasje oer it produkt ...",
       "category": "Selektearje in kategory.",
+      "searchCurrency": "Search currency...",
       "city": "Fier de stêd yn",
       "address": "Fier it folsleine adres yn.",
-      "postalCode": "Postkoade",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Postkoade"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "De titel fan 'e advertinsje is ferplicht.",
       "shortDescriptionRequired": "In koarte beskriuwing is fereaske.",
@@ -870,8 +899,7 @@
     "productCreated": "It produkt is mei súkses oanmakke.",
     "creationFailed": "It produkt koe net oanmakke wurde. Besykje it nochris.",
     "userNotFound": "Brûkersynformaasje koe net fûn wurde. Meld jo opnij oan.",
-    "defaultBusinessName": "Myn bedriuw",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Myn bedriuw"
   },
   "becomeSeller": {
     "title": "Wurd in ferkeaper",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} min lyn",
     "hoursAgo": "{count}o lyn",
     "daysAgo": "{count} dagen lyn"
+  },
+  "pricing": {
+    "originalPrice": "Oarspronklike priis",
+    "convertedPrice": "Konvertearre priis",
+    "approximatePrice": "Ungefeare konverzje basearre op aktuele wikselkoersen",
+    "approximate": "≈"
   }
 }

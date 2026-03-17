@@ -379,6 +379,34 @@
       "saveSuccess": "Ваши настройки обновлены.",
       "saveError": "Произошла ошибка при обновлении настроек.",
       "loadError": "Не удалось загрузить настройки."
+    },
+    "deleteAccount": {
+      "dangerZone": "Опасная зона",
+      "title": "Удалить аккаунт",
+      "description": "После удаления аккаунта пути назад нет. Все ваши данные, объявления и переписки будут безвозвратно удалены.",
+      "irreversible": "Это действие необратимо.",
+      "button": "Удалить мой аккаунт",
+      "confirmTitle": "Вы уверены, что хотите удалить свой аккаунт?",
+      "warning": "Следующие данные будут безвозвратно удалены:",
+      "warningProfile": "Ваш профиль и личная информация",
+      "warningListings": "Все ваши объявления и товары",
+      "warningConversations": "Ваши разговоры и сообщения",
+      "warningReviews": "Ваши отзывы и избранное",
+      "passwordLabel": "Введите свой пароль для подтверждения.",
+      "passwordPlaceholder": "Ваш текущий пароль",
+      "reasonLabel": "Почему вы уходите? (необязательно)",
+      "reasonPlaceholder": "Выберите причину",
+      "reasonNotSatisfied": "Недоволен обслуживанием",
+      "reasonPrivacy": "вопросы конфиденциальности",
+      "reasonAlternative": "Нашёл альтернативную платформу",
+      "reasonOther": "Другой",
+      "feedbackLabel": "Дополнительные отзывы (по желанию)",
+      "feedbackPlaceholder": "Расскажите, как мы можем улучшить нашу работу...",
+      "cancel": "Отмена",
+      "confirmButton": "Удалить аккаунт",
+      "deleting": "Удаление...",
+      "success": "Ваш аккаунт успешно удалён.",
+      "error": "Не удалось удалить учетную запись. Пожалуйста, проверьте свой пароль и попробуйте снова."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "Произошла ошибка при загрузке информации о продавце.",
       "productsLoadError": "Произошла ошибка при загрузке товаров продавца.",
       "reviewsTab": "Оценки",
+      "share": "Делиться",
+      "shareText": "Посмотрите информацию о {имя} на сайте Livestock Trading.",
+      "linkCopied": "Ссылка скопирована в буфер обмена.",
       "reviews": {
         "summary": "Краткий обзор оценки",
         "reviewCount": "оценка",
@@ -796,14 +827,14 @@
       "category": "Выберите категорию.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Заголовок объявления обязателен.",
       "shortDescriptionRequired": "Требуется краткое описание.",
       "descriptionRequired": "Требуется подробное объяснение.",
       "categoryRequired": "Выбор категории обязателен.",
       "priceRequired": "Введите действительную цену."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Создать новое объявление",
@@ -831,21 +862,22 @@
       "shippingCost": "Стоимость доставки",
       "weight": "Масса",
       "weightUnit": "Единица веса",
+      "currency": "Currency",
       "city": "Город",
       "address": "Адрес",
-      "postalCode": "Почтовый индекс",
-      "currency": "Currency"
+      "postalCode": "Почтовый индекс"
     },
     "placeholders": {
       "title": "Пример: 2-летняя голштинская корова",
       "shortDescription": "Описание товара (максимум 200 символов)",
       "description": "Предоставьте подробную информацию о продукте...",
       "category": "Выберите категорию.",
+      "searchCurrency": "Search currency...",
       "city": "Въезжайте в город",
       "address": "Введите полный адрес.",
-      "postalCode": "Почтовый индекс",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Почтовый индекс"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Заголовок объявления обязателен.",
       "shortDescriptionRequired": "Требуется краткое описание.",
@@ -867,8 +899,7 @@
     "productCreated": "Продукт успешно создан.",
     "creationFailed": "Не удалось создать товар. Пожалуйста, попробуйте еще раз.",
     "userNotFound": "Информация о пользователе не найдена. Пожалуйста, войдите в систему еще раз.",
-    "defaultBusinessName": "Мой бизнес",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Мой бизнес"
   },
   "becomeSeller": {
     "title": "Станьте продавцом",
@@ -1317,7 +1348,10 @@
     "fleet": "Информация о флоте",
     "serviceRegions": "Зоны обслуживания",
     "specializations": "Области специализации",
-    "certifications": "Сертификаты"
+    "certifications": "Сертификаты",
+    "share": "Делиться",
+    "shareText": "Посмотрите информацию о {имя} на сайте Livestock Trading.",
+    "linkCopied": "Ссылка скопирована в буфер обмена."
   },
   "brands": {
     "title": "Управление брендом",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "{count} мин назад",
     "hoursAgo": "{count} ч назад",
     "daysAgo": "{count}d назад"
+  },
+  "pricing": {
+    "originalPrice": "Первоначальная цена",
+    "convertedPrice": "Цена в конвертированном виде",
+    "approximatePrice": "Приблизительный пересчет на основе текущих обменных курсов.",
+    "approximate": "≈"
   }
 }

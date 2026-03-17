@@ -379,6 +379,34 @@
       "saveSuccess": "Dine præferencer er blevet opdateret.",
       "saveError": "Der opstod en fejl under opdatering af præferencer.",
       "loadError": "Præferencerne kunne ikke indlæses."
+    },
+    "deleteAccount": {
+      "dangerZone": "Farezone",
+      "title": "Slet konto",
+      "description": "Når du har slettet din konto, er der ingen vej tilbage. Alle dine data, annoncer og samtaler vil blive fjernet permanent.",
+      "irreversible": "Denne handling er uigenkaldelig.",
+      "button": "Slet min konto",
+      "confirmTitle": "Er du sikker på, at du vil slette din konto?",
+      "warning": "Følgende data vil blive slettet permanent:",
+      "warningProfile": "Din profil og personlige oplysninger",
+      "warningListings": "Alle dine annoncer og produkter",
+      "warningConversations": "Dine samtaler og beskeder",
+      "warningReviews": "Dine anmeldelser og favoritter",
+      "passwordLabel": "Indtast din adgangskode for at bekræfte",
+      "passwordPlaceholder": "Din nuværende adgangskode",
+      "reasonLabel": "Hvorfor tager du afsted? (valgfrit)",
+      "reasonPlaceholder": "Vælg en årsag",
+      "reasonNotSatisfied": "Ikke tilfreds med tjenesten",
+      "reasonPrivacy": "Bekymringer om privatlivets fred",
+      "reasonAlternative": "Fandt en alternativ platform",
+      "reasonOther": "Andre",
+      "feedbackLabel": "Yderligere feedback (valgfrit)",
+      "feedbackPlaceholder": "Fortæl os, hvordan vi kan forbedre os...",
+      "cancel": "Ophæve",
+      "confirmButton": "Slet konto",
+      "deleting": "Sletter...",
+      "success": "Din konto er blevet slettet.",
+      "error": "Kontoen kunne ikke slettes. Tjek din adgangskode, og prøv igen."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "Der opstod en fejl under upload af sælgeroplysninger.",
       "productsLoadError": "Der opstod en fejl under upload af sælgerens produkter.",
       "reviewsTab": "Vurderinger",
+      "share": "Dele",
+      "shareText": "Tjek {name} ud på Livestock Trading",
+      "linkCopied": "Link kopieret til udklipsholder.",
       "reviews": {
         "summary": "Evalueringsoversigt",
         "reviewCount": "evaluering",
@@ -796,14 +827,14 @@
       "category": "Vælg en kategori.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Annoncetitel er obligatorisk.",
       "shortDescriptionRequired": "En kort beskrivelse er påkrævet.",
       "descriptionRequired": "En detaljeret forklaring er påkrævet.",
       "categoryRequired": "Valg af kategori er obligatorisk.",
       "priceRequired": "Indtast en gyldig pris."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Opret ny fortegnelse",
@@ -831,21 +862,22 @@
       "shippingCost": "Forsendelsesgebyr",
       "weight": "Vægt",
       "weightUnit": "Vægtenhed",
+      "currency": "Currency",
       "city": "By",
       "address": "Adresse",
-      "postalCode": "Postnummer",
-      "currency": "Currency"
+      "postalCode": "Postnummer"
     },
     "placeholders": {
       "title": "Eksempel: 2-årig Holstein-ko",
       "shortDescription": "Produktbeskrivelse (maks. 200 tegn)",
       "description": "Giv detaljerede oplysninger om produktet...",
       "category": "Vælg en kategori.",
+      "searchCurrency": "Search currency...",
       "city": "Indtast byen",
       "address": "Indtast den fulde adresse.",
-      "postalCode": "Postnummer",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Postnummer"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Annoncetitel er obligatorisk.",
       "shortDescriptionRequired": "En kort beskrivelse er påkrævet.",
@@ -867,8 +899,7 @@
     "productCreated": "Produktet blev oprettet.",
     "creationFailed": "Produktet kunne ikke oprettes. Prøv igen.",
     "userNotFound": "Brugeroplysningerne kunne ikke findes. Log venligst ind igen.",
-    "defaultBusinessName": "Min virksomhed",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Min virksomhed"
   },
   "becomeSeller": {
     "title": "Bliv sælger",
@@ -1317,7 +1348,10 @@
     "fleet": "Flådeinformation",
     "serviceRegions": "Serviceområder",
     "specializations": "Ekspertiseområder",
-    "certifications": "Certifikater"
+    "certifications": "Certifikater",
+    "share": "Dele",
+    "shareText": "Tjek {name} ud på Livestock Trading",
+    "linkCopied": "Link kopieret til udklipsholder."
   },
   "brands": {
     "title": "Brandhåndtering",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "for {count} minutter siden",
     "hoursAgo": "for {count} timer siden",
     "daysAgo": "for {count} dage siden"
+  },
+  "pricing": {
+    "originalPrice": "Oprindelig pris",
+    "convertedPrice": "Konverteret pris",
+    "approximatePrice": "Omtrentlig omregning baseret på aktuelle valutakurser",
+    "approximate": "≈"
   }
 }

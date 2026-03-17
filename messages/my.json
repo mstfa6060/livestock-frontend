@@ -379,6 +379,34 @@
       "saveSuccess": "သင့်ဦးစားပေးများကို အပ်ဒိတ်လုပ်ပြီးပါပြီ။",
       "saveError": "ဦးစားပေးမှုများကို အပ်ဒိတ်လုပ်နေစဉ် အမှားအယွင်းတစ်ခု ဖြစ်ပွားခဲ့သည်။",
       "loadError": "ဦးစားပေးမှုများကို တင်၍မရပါ။"
+    },
+    "deleteAccount": {
+      "dangerZone": "အန္တရာယ်ဇုန်",
+      "title": "အကောင့်ကို ဖျက်ပါ",
+      "description": "သင့်အကောင့်ကို ဖျက်လိုက်သည်နှင့် နောက်ပြန်လှည့်၍မရတော့ပါ။ သင့်ဒေတာ၊ စာရင်းများနှင့် စကားဝိုင်းများအားလုံးကို အပြီးအပိုင်ဖယ်ရှားပါမည်။",
+      "irreversible": "ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍မရပါ။",
+      "button": "ကျွန်ုပ်၏အကောင့်ကို ဖျက်ပါ",
+      "confirmTitle": "သင့်အကောင့်ကို ဖျက်ချင်တာ သေချာလား။",
+      "warning": "အောက်ပါဒေတာများကို အပြီးအပိုင်ဖျက်ပစ်ပါမည်-",
+      "warningProfile": "သင့်ပရိုဖိုင်နှင့် ကိုယ်ရေးကိုယ်တာအချက်အလက်များ",
+      "warningListings": "သင့်စာရင်းများနှင့် ထုတ်ကုန်များအားလုံး",
+      "warningConversations": "သင့်ရဲ့ စကားပြောဆိုမှုတွေနဲ့ မက်ဆေ့ချ်တွေ",
+      "warningReviews": "သင့်သုံးသပ်ချက်များနှင့် အကြိုက်ဆုံးများ",
+      "passwordLabel": "အတည်ပြုရန် သင့်စကားဝှက်ကို ရိုက်ထည့်ပါ",
+      "passwordPlaceholder": "သင့်လက်ရှိစကားဝှက်",
+      "reasonLabel": "ဘာကြောင့် ထွက်သွားတာလဲ။ (ရွေးချယ်နိုင်သည်)",
+      "reasonPlaceholder": "အကြောင်းပြချက်တစ်ခု ရွေးချယ်ပါ",
+      "reasonNotSatisfied": "ဝန်ဆောင်မှုနဲ့ ကျေနပ်မှုမရှိဘူး",
+      "reasonPrivacy": "ကိုယ်ရေးကိုယ်တာဆိုင်ရာ စိုးရိမ်မှုများ",
+      "reasonAlternative": "အခြားရွေးချယ်စရာပလက်ဖောင်းတစ်ခုကို ရှာတွေ့ခဲ့သည်",
+      "reasonOther": "အခြား",
+      "feedbackLabel": "နောက်ထပ် တုံ့ပြန်ချက် (ရွေးချယ်နိုင်သည်)",
+      "feedbackPlaceholder": "ဘယ်လိုတိုးတက်အောင်လုပ်ရမလဲ ပြောပြပါ...",
+      "cancel": "ပယ်ဖျက်ရန်",
+      "confirmButton": "အကောင့်ကို ဖျက်ပါ",
+      "deleting": "ဖျက်နေသည်...",
+      "success": "သင့်အကောင့်ကို အောင်မြင်စွာ ဖျက်လိုက်ပါပြီ။",
+      "error": "အကောင့်ကို ဖျက်၍မရပါ။ သင့်စကားဝှက်ကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။"
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "အမျိုးအစားတစ်ခု ရွေးချယ်ပါ။",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "ကြော်ငြာခေါင်းစဉ်ကို မဖြစ်မနေထည့်သွင်းရမည်။",
       "shortDescriptionRequired": "အကျဉ်းချုပ်ဖော်ပြချက် လိုအပ်ပါသည်။",
       "descriptionRequired": "အသေးစိတ်ရှင်းလင်းချက်တစ်ခု လိုအပ်ပါသည်။",
       "categoryRequired": "အမျိုးအစားရွေးချယ်မှုသည် မဖြစ်မနေလိုအပ်ပါသည်။",
       "priceRequired": "မှန်ကန်သော ဈေးနှုန်းထည့်ပါ။"
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "စာရင်းအသစ် ဖန်တီးပါ",
@@ -834,21 +862,22 @@
       "shippingCost": "ပို့ဆောင်ခ",
       "weight": "အလေးချိန်",
       "weightUnit": "အလေးချိန်ယူနစ်",
+      "currency": "Currency",
       "city": "မြို့",
       "address": "လိပ်စာ",
-      "postalCode": "စာတိုက်သင်္ကေတ",
-      "currency": "Currency"
+      "postalCode": "စာတိုက်သင်္ကေတ"
     },
     "placeholders": {
       "title": "ဥပမာ- ၂ နှစ်အရွယ် Holstein နွား",
       "shortDescription": "ထုတ်ကုန်ဖော်ပြချက် (အများဆုံး စာလုံး ၂၀၀)",
       "description": "ထုတ်ကုန်အကြောင်း အသေးစိတ်အချက်အလက်တွေ ပေးပါ...",
       "category": "အမျိုးအစားတစ်ခု ရွေးချယ်ပါ။",
+      "searchCurrency": "Search currency...",
       "city": "မြို့ထဲဝင်ပါ",
       "address": "လိပ်စာအပြည့်အစုံကို ရိုက်ထည့်ပါ။",
-      "postalCode": "စာတိုက်သင်္ကေတ",
-      "searchCurrency": "Search currency..."
+      "postalCode": "စာတိုက်သင်္ကေတ"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "ကြော်ငြာခေါင်းစဉ်ကို မဖြစ်မနေထည့်သွင်းရမည်။",
       "shortDescriptionRequired": "အကျဉ်းချုပ်ဖော်ပြချက် လိုအပ်ပါသည်။",
@@ -870,8 +899,7 @@
     "productCreated": "ထုတ်ကုန်ကို အောင်မြင်စွာ ဖန်တီးနိုင်ခဲ့ပါပြီ။",
     "creationFailed": "ထုတ်ကုန်ကို ဖန်တီး၍မရပါ။ ထပ်မံကြိုးစားပါ။",
     "userNotFound": "အသုံးပြုသူအချက်အလက်ကို ရှာမတွေ့ပါ။ ကျေးဇူးပြု၍ ပြန်လည်ဝင်ရောက်ပါ။",
-    "defaultBusinessName": "ကျွန်တော့်လုပ်ငန်း",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "ကျွန်တော့်လုပ်ငန်း"
   },
   "becomeSeller": {
     "title": "ရောင်းသူဖြစ်လာပါ",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "မိနစ် {count} ကြာပြီ",
     "hoursAgo": "{count} နာရီ ကြာပြီ",
     "daysAgo": "လွန်ခဲ့သော {count} ရက်"
+  },
+  "pricing": {
+    "originalPrice": "မူရင်းဈေးနှုန်း",
+    "convertedPrice": "ပြောင်းလဲထားသော ဈေးနှုန်း",
+    "approximatePrice": "လက်ရှိငွေလဲနှုန်းအပေါ် အခြေခံ၍ ခန့်မှန်းခြေပြောင်းလဲမှု",
+    "approximate": "≈"
   }
 }

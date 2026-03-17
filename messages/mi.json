@@ -379,6 +379,34 @@
       "saveSuccess": "Kua whakahōutia ō manakohanga.",
       "saveError": "I puta he hapa i te wā e whakahōu ana i ngā manakohanga.",
       "loadError": "Kāore i taea te uta i ngā manakohanga."
+    },
+    "deleteAccount": {
+      "dangerZone": "Rohe Mōrearea",
+      "title": "Mukua te Pūkete",
+      "description": "Kia mukua tō pūkete, kāore he hokinga whakamuri. Ka mukua katoatia ō raraunga, ō rārangi me ō kōrerorero.",
+      "irreversible": "Kāore e taea te whakakore i tēnei mahi.",
+      "button": "Mukua taku Pūkete",
+      "confirmTitle": "Kei te tino hiahia koe ki te muku i tō pūkete?",
+      "warning": "Ka mukua rawatia ngā raraunga e whai ake nei:",
+      "warningProfile": "Tō kōtaha me ō mōhiohio whaiaro",
+      "warningListings": "Ō rārangi me ō hua katoa",
+      "warningConversations": "Ō kōrerorero me ō karere",
+      "warningReviews": "Ō arotake me ō tino pai",
+      "passwordLabel": "Tāuruhia tō kupuhipa hei whakaū",
+      "passwordPlaceholder": "Tō kupuhipa o nāianei",
+      "reasonLabel": "He aha koe i wehe atu ai? (kāore he kōwhiringa)",
+      "reasonPlaceholder": "Tīpakohia he take",
+      "reasonNotSatisfied": "Kāore i te makona ki te ratonga",
+      "reasonPrivacy": "Ngā āwangawanga tūmataiti",
+      "reasonAlternative": "I kitea he tūāpapa rerekē",
+      "reasonOther": "Ētahi atu",
+      "feedbackLabel": "Urupare tāpiri (whiringa kore)",
+      "feedbackPlaceholder": "Kōrero mai me pēhea mātou e whakapai ake ai...",
+      "cancel": "Whakakore",
+      "confirmButton": "Mukua te Pūkete",
+      "deleting": "Mukua ana...",
+      "success": "Kua mukua angitu tō pūkete.",
+      "error": "Kāore i taea te muku i te pūkete. Tirohia tō kupuhipa, ka ngana anō."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Tīpakohia tētahi kāwai.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Me tuhi te taitara pānuitanga.",
       "shortDescriptionRequired": "Me whai whakamārama poto.",
       "descriptionRequired": "Me whai whakamārama taipitopito.",
       "categoryRequired": "He mea whakahau kia tīpakohia te kāwai.",
       "priceRequired": "Tāuruhia he utu tika."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Waihangahia he Rārangi Hou",
@@ -834,21 +862,22 @@
       "shippingCost": "Utu Tukunga",
       "weight": "Taumaha",
       "weightUnit": "Taumaha",
+      "currency": "Currency",
       "city": "Tāone",
       "address": "Wāhitau",
-      "postalCode": "Waehere poutapeta",
-      "currency": "Currency"
+      "postalCode": "Waehere poutapeta"
     },
     "placeholders": {
       "title": "Tauira: Kau Holstein 2-Tau te Pakeke",
       "shortDescription": "Whakaahuatanga hua (mōrahi 200 ngā pūāhua)",
       "description": "Tukuna mai ngā kōrero taipitopito mō te hua...",
       "category": "Tīpakohia tētahi kāwai.",
+      "searchCurrency": "Search currency...",
       "city": "Tomo ki te tāone",
       "address": "Tāuruhia te wāhitau katoa.",
-      "postalCode": "Waehere poutapeta",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Waehere poutapeta"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Me tuhi te taitara pānuitanga.",
       "shortDescriptionRequired": "Me whai whakamārama poto.",
@@ -870,8 +899,7 @@
     "productCreated": "I angitu te hanga o te hua.",
     "creationFailed": "Kāore i taea te hanga i te hua. Ngāna anō.",
     "userNotFound": "Kāore i kitea ngā mōhiohio kaiwhakamahi. Tēnā takiuru anō.",
-    "defaultBusinessName": "Taku pakihi",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Taku pakihi"
   },
   "becomeSeller": {
     "title": "Hoko hei Kaihoko",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} meneti ki muri",
     "hoursAgo": "{count}h ki muri",
     "daysAgo": "{count}d ki muri"
+  },
+  "pricing": {
+    "originalPrice": "Utu taketake",
+    "convertedPrice": "Utu kua hurihia",
+    "approximatePrice": "Te tahuritanga tata i runga i ngā reiti whakawhiti o nāianei",
+    "approximate": "≈"
   }
 }

@@ -379,6 +379,34 @@
       "saveSuccess": "તમારી પસંદગીઓ અપડેટ કરવામાં આવી છે.",
       "saveError": "પસંદગીઓ અપડેટ કરતી વખતે એક ભૂલ આવી.",
       "loadError": "પસંદગીઓ લોડ કરી શકાઈ નથી."
+    },
+    "deleteAccount": {
+      "dangerZone": "જોખમ ક્ષેત્ર",
+      "title": "એકાઉન્ટ કાઢી નાખો",
+      "description": "એકવાર તમે તમારું એકાઉન્ટ કાઢી નાખો, પછી પાછા ફરવાનું નથી. તમારો બધો ડેટા, સૂચિઓ અને વાતચીતો કાયમ માટે દૂર કરવામાં આવશે.",
+      "irreversible": "આ ક્રિયા ઉલટાવી શકાય તેવી નથી.",
+      "button": "મારું એકાઉન્ટ કાઢી નાખો",
+      "confirmTitle": "શું તમે ખરેખર તમારું એકાઉન્ટ કાઢી નાખવા માંગો છો?",
+      "warning": "નીચેનો ડેટા કાયમી ધોરણે કાઢી નાખવામાં આવશે:",
+      "warningProfile": "તમારી પ્રોફાઇલ અને વ્યક્તિગત માહિતી",
+      "warningListings": "તમારી બધી સૂચિઓ અને ઉત્પાદનો",
+      "warningConversations": "તમારી વાતચીતો અને સંદેશાઓ",
+      "warningReviews": "તમારા રિવ્યૂ અને મનપસંદ",
+      "passwordLabel": "પુષ્ટિ કરવા માટે તમારો પાસવર્ડ દાખલ કરો",
+      "passwordPlaceholder": "તમારો હાલનો પાસવર્ડ",
+      "reasonLabel": "તમે કેમ જઈ રહ્યા છો? (વૈકલ્પિક)",
+      "reasonPlaceholder": "કારણ પસંદ કરો",
+      "reasonNotSatisfied": "સેવાથી સંતુષ્ટ નથી.",
+      "reasonPrivacy": "ગોપનીયતાની ચિંતાઓ",
+      "reasonAlternative": "વૈકલ્પિક પ્લેટફોર્મ મળ્યું",
+      "reasonOther": "અન્ય",
+      "feedbackLabel": "વધારાના પ્રતિસાદ (વૈકલ્પિક)",
+      "feedbackPlaceholder": "અમને કહો કે અમે કેવી રીતે સુધારો કરી શકીએ...",
+      "cancel": "રદ કરો",
+      "confirmButton": "એકાઉન્ટ કાઢી નાખો",
+      "deleting": "કાઢી નાખી રહ્યું છે...",
+      "success": "તમારું એકાઉન્ટ સફળતાપૂર્વક કાઢી નાખવામાં આવ્યું છે.",
+      "error": "એકાઉન્ટ કાઢી નાખવામાં નિષ્ફળ. કૃપા કરીને તમારો પાસવર્ડ તપાસો અને ફરી પ્રયાસ કરો."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "શ્રેણી પસંદ કરો.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "જાહેરાતનું શીર્ષક ફરજિયાત છે.",
       "shortDescriptionRequired": "ટૂંકું વર્ણન જરૂરી છે.",
       "descriptionRequired": "વિગતવાર સમજૂતી જરૂરી છે.",
       "categoryRequired": "શ્રેણી પસંદગી ફરજિયાત છે.",
       "priceRequired": "માન્ય કિંમત દાખલ કરો."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "નવી સૂચિ બનાવો",
@@ -834,21 +862,22 @@
       "shippingCost": "શિપિંગ ફી",
       "weight": "વજન",
       "weightUnit": "વજનનું એકમ",
+      "currency": "Currency",
       "city": "શહેર",
       "address": "સરનામું",
-      "postalCode": "પોસ્ટલ કોડ",
-      "currency": "Currency"
+      "postalCode": "પોસ્ટલ કોડ"
     },
     "placeholders": {
       "title": "ઉદાહરણ: 2 વર્ષની હોલ્સ્ટાઇન ગાય",
       "shortDescription": "ઉત્પાદન વર્ણન (મહત્તમ 200 અક્ષરો)",
       "description": "ઉત્પાદન વિશે વિગતવાર માહિતી આપો...",
       "category": "શ્રેણી પસંદ કરો.",
+      "searchCurrency": "Search currency...",
       "city": "શહેરમાં પ્રવેશ કરો",
       "address": "પૂરું સરનામું દાખલ કરો.",
-      "postalCode": "પોસ્ટલ કોડ",
-      "searchCurrency": "Search currency..."
+      "postalCode": "પોસ્ટલ કોડ"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "જાહેરાતનું શીર્ષક ફરજિયાત છે.",
       "shortDescriptionRequired": "ટૂંકું વર્ણન જરૂરી છે.",
@@ -870,8 +899,7 @@
     "productCreated": "ઉત્પાદન સફળતાપૂર્વક બનાવવામાં આવ્યું હતું.",
     "creationFailed": "ઉત્પાદન બનાવી શકાયું નથી. કૃપા કરીને ફરી પ્રયાસ કરો.",
     "userNotFound": "વપરાશકર્તા માહિતી મળી શકી નથી. કૃપા કરીને ફરીથી લોગ ઇન કરો.",
-    "defaultBusinessName": "મારો વ્યવસાય",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "મારો વ્યવસાય"
   },
   "becomeSeller": {
     "title": "વિક્રેતા બનો",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} મિનિટ પહેલા",
     "hoursAgo": "{ગણતરી} કલાક પહેલા",
     "daysAgo": "{ગણતરી} દિવસ પહેલા"
+  },
+  "pricing": {
+    "originalPrice": "મૂળ કિંમત",
+    "convertedPrice": "રૂપાંતરિત કિંમત",
+    "approximatePrice": "વર્તમાન વિનિમય દરોના આધારે અંદાજિત રૂપાંતરણ",
+    "approximate": "≈"
   }
 }

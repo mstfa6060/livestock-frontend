@@ -379,6 +379,34 @@
       "saveSuccess": "אייערע פּרעפֿערענצן זענען געוואָרן אַפּדייטעד.",
       "saveError": "אַ טעות איז געשען בשעתן דערהייַנטיקן די פּרעפֿערענצן.",
       "loadError": "די פּרעפֿערענצן האָבן נישט געקענט געלאָדן ווערן."
+    },
+    "deleteAccount": {
+      "dangerZone": "געפאַר זאָנע",
+      "title": "אויסמעקן אקאונט",
+      "description": "אַמאָל איר ויסמעקט אייער חשבון, איז נישטאָ קיין צוריקגיין. אַלע אייערע דאַטן, ליסטינגס און שמועסן וועלן ווערן אַוועקגענומען אויף אייביק.",
+      "irreversible": "די אַקציע איז אומקערלעך.",
+      "button": "אויסמעקן מיין קאנטע",
+      "confirmTitle": "ביסטו זיכער אז דו ווילסט אויסמעקן דיין אקאונט?",
+      "warning": "די פאלגענדע דאַטן וועלן ווערן פּערמאַנענט אויסגעמעקט:",
+      "warningProfile": "דיין פּראָפיל און פערזענלעכע אינפֿאָרמאַציע",
+      "warningListings": "אַלע אייערע ליסטינגס און פּראָדוקטן",
+      "warningConversations": "אייערע שמועסן און מעסעדזשעס",
+      "warningReviews": "אייערע רעצענזיעס און באַליבטסטע",
+      "passwordLabel": "אַרייַן דיין פּאַראָל צו באַשטעטיקן",
+      "passwordPlaceholder": "דיין איצטיקע פּאַראָל",
+      "reasonLabel": "פארוואס גייסטו אוועק? (אויב איר ווילט)",
+      "reasonPlaceholder": "אויסקלייבן אַ סיבה",
+      "reasonNotSatisfied": "נישט צופֿרידן מיטן סערוויס",
+      "reasonPrivacy": "פּריוואַטקייט זאָרגן",
+      "reasonAlternative": "געפֿונען אַן אַלטערנאַטיווע פּלאַטפאָרמע",
+      "reasonOther": "אַנדערע",
+      "feedbackLabel": "נאָך באַמערקונגען (אויב איר ווילט)",
+      "feedbackPlaceholder": "זאגט אונדז ווי מיר קענען זיך פארבעסערן...",
+      "cancel": "אָפּרופן",
+      "confirmButton": "אויסמעקן אקאונט",
+      "deleting": "אויסמעקן...",
+      "success": "אייער אקאונט איז געווארן ערפאלגרייך אויסגעמעקט.",
+      "error": "נישט געקענט אויסמעקן דעם אקאונט. ביטע טשעק אייער פאסווארט און פרוביר נאכאמאל."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "אויסקלייבן אַ קאַטעגאָריע.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "דער טיטל פון דער אַדווערטייזמענט איז פארלאנגט.",
       "shortDescriptionRequired": "א קורצע באַשרייַבונג איז פארלאנגט.",
       "descriptionRequired": "א דעטאלירטע דערקלערונג איז נויטיג.",
       "categoryRequired": "קאַטעגאָריע אויסוואַל איז פארלאנגט.",
       "priceRequired": "אַרייַן אַ גילטיקן פּרייַז."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "שאַפֿן אַ נײַע ליסטינג",
@@ -834,21 +862,22 @@
       "shippingCost": "שיפּינג אָפּצאָל",
       "weight": "וואָג",
       "weightUnit": "איינהייט פון וואָג",
+      "currency": "Currency",
       "city": "שטאָט",
       "address": "אַדרעס",
-      "postalCode": "פּאָסטאַל קאָד",
-      "currency": "Currency"
+      "postalCode": "פּאָסטאַל קאָד"
     },
     "placeholders": {
       "title": "בייַשפּיל: 2-יאָר-אַלט האָלשטיין קו",
       "shortDescription": "פּראָדוקט באַשרייַבונג (מאַקסימום 200 אותיות)",
       "description": "געבן דעטאַלירטע אינפֿאָרמאַציע וועגן דעם פּראָדוקט...",
       "category": "אויסקלייבן אַ קאַטעגאָריע.",
+      "searchCurrency": "Search currency...",
       "city": "אַרייַן אין שטאָט",
       "address": "אַרייַן די פולע אַדרעס.",
-      "postalCode": "פּאָסטאַל קאָד",
-      "searchCurrency": "Search currency..."
+      "postalCode": "פּאָסטאַל קאָד"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "דער טיטל פון דער אַדווערטייזמענט איז פארלאנגט.",
       "shortDescriptionRequired": "א קורצע באַשרייַבונג איז פארלאנגט.",
@@ -870,8 +899,7 @@
     "productCreated": "דער פּראָדוקט איז געראָטן געשאַפֿן געוואָרן.",
     "creationFailed": "דער פּראָדוקט קען נישט געשאַפֿן ווערן. ביטע פּרוּווט ווידער.",
     "userNotFound": "באַניצער אינפֿאָרמאַציע קען נישט געפֿונען ווערן. ביטע לאָגין ווידער איין.",
-    "defaultBusinessName": "מײַן געשעפט",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "מײַן געשעפט"
   },
   "becomeSeller": {
     "title": "ווערן אַ פֿאַרקויפֿער",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} מינוט צוריק",
     "hoursAgo": "שעה צוריק",
     "daysAgo": "{count} טעג צוריק"
+  },
+  "pricing": {
+    "originalPrice": "אריגינעלער פרייז",
+    "convertedPrice": "קאָנווערטירטע פרייז",
+    "approximatePrice": "אומגעפערע קאנווערזיע באזירט אויף היינטיקע וועקסל קורסן",
+    "approximate": "≈"
   }
 }

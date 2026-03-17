@@ -379,6 +379,34 @@
       "saveSuccess": "Na-update na ang iyong mga kagustuhan.",
       "saveError": "Nagkaroon ng error habang ina-update ang mga kagustuhan.",
       "loadError": "Hindi ma-load ang mga kagustuhan."
+    },
+    "deleteAccount": {
+      "dangerZone": "Sona ng Panganib",
+      "title": "Burahin ang Account",
+      "description": "Kapag nabura mo na ang iyong account, wala nang balikan. Lahat ng iyong data, listahan, at mga pag-uusap ay permanenteng maaalis.",
+      "irreversible": "Hindi na mababawi ang aksyon na ito.",
+      "button": "Burahin ang Aking Account",
+      "confirmTitle": "Sigurado ka bang gusto mong burahin ang account mo?",
+      "warning": "Ang mga sumusunod na datos ay permanenteng mabubura:",
+      "warningProfile": "Ang iyong profile at personal na impormasyon",
+      "warningListings": "Lahat ng iyong mga listahan at produkto",
+      "warningConversations": "Ang iyong mga pag-uusap at mensahe",
+      "warningReviews": "Ang iyong mga review at paborito",
+      "passwordLabel": "Ilagay ang iyong password para kumpirmahin",
+      "passwordPlaceholder": "Ang iyong kasalukuyang password",
+      "reasonLabel": "Bakit ka aalis? (opsyonal)",
+      "reasonPlaceholder": "Pumili ng dahilan",
+      "reasonNotSatisfied": "Hindi nasiyahan sa serbisyo",
+      "reasonPrivacy": "Mga alalahanin sa privacy",
+      "reasonAlternative": "Nakahanap ng alternatibong plataporma",
+      "reasonOther": "Iba pa",
+      "feedbackLabel": "Karagdagang feedback (opsyonal)",
+      "feedbackPlaceholder": "Sabihin sa amin kung paano namin mapapabuti...",
+      "cancel": "Kanselahin",
+      "confirmButton": "Burahin ang Account",
+      "deleting": "Tinatanggal...",
+      "success": "Matagumpay na nabura ang iyong account.",
+      "error": "Nabigong burahin ang account. Pakisuri ang iyong password at subukang muli."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Pumili ng kategorya.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Kinakailangan ang pamagat ng patalastas.",
       "shortDescriptionRequired": "Kinakailangan ang isang maikling paglalarawan.",
       "descriptionRequired": "Kinakailangan ang isang detalyadong paliwanag.",
       "categoryRequired": "Ang pagpili ng kategorya ay sapilitan.",
       "priceRequired": "Maglagay ng wastong presyo."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Gumawa ng Bagong Listahan",
@@ -834,21 +862,22 @@
       "shippingCost": "Bayad sa Pagpapadala",
       "weight": "Timbang",
       "weightUnit": "Yunit ng Timbang",
+      "currency": "Currency",
       "city": "Lungsod",
       "address": "Tirahan",
-      "postalCode": "Kodigo ng koreo",
-      "currency": "Currency"
+      "postalCode": "Kodigo ng koreo"
     },
     "placeholders": {
       "title": "Halimbawa: 2-Taong Gulang na Bakang Holstein",
       "shortDescription": "Paglalarawan ng produkto (maximum na 200 karakter)",
       "description": "Magbigay ng detalyadong impormasyon tungkol sa produkto...",
       "category": "Pumili ng kategorya.",
+      "searchCurrency": "Search currency...",
       "city": "Pumasok sa lungsod",
       "address": "Ilagay ang buong address.",
-      "postalCode": "Kodigo ng koreo",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Kodigo ng koreo"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Kinakailangan ang pamagat ng patalastas.",
       "shortDescriptionRequired": "Kinakailangan ang isang maikling paglalarawan.",
@@ -870,8 +899,7 @@
     "productCreated": "Matagumpay na nalikha ang produkto.",
     "creationFailed": "Hindi malikha ang produkto. Pakisubukang muli.",
     "userNotFound": "Hindi mahanap ang impormasyon ng user. Mangyaring mag-log in muli.",
-    "defaultBusinessName": "Ang negosyo ko",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Ang negosyo ko"
   },
   "becomeSeller": {
     "title": "Maging isang Nagbebenta",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} minuto ang nakalipas",
     "hoursAgo": "{count}h ang nakalipas",
     "daysAgo": "{count}d ang nakalipas"
+  },
+  "pricing": {
+    "originalPrice": "Orihinal na presyo",
+    "convertedPrice": "Na-convert na presyo",
+    "approximatePrice": "Tinatayang conversion batay sa kasalukuyang mga halaga ng palitan",
+    "approximate": "≈"
   }
 }

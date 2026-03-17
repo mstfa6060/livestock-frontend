@@ -379,6 +379,34 @@
       "saveSuccess": "Vaše postavke su ažurirane.",
       "saveError": "Došlo je do greške prilikom ažuriranja postavki.",
       "loadError": "Postavke se nisu mogle učitati."
+    },
+    "deleteAccount": {
+      "dangerZone": "Opasna zona",
+      "title": "Izbriši račun",
+      "description": "Nakon što izbrišete svoj račun, nema povratka. Svi vaši podaci, oglasi i razgovori bit će trajno uklonjeni.",
+      "irreversible": "Ova akcija je nepovratna.",
+      "button": "Izbriši moj račun",
+      "confirmTitle": "Jeste li sigurni da želite izbrisati svoj račun?",
+      "warning": "Sljedeći podaci će biti trajno izbrisani:",
+      "warningProfile": "Vaš profil i lični podaci",
+      "warningListings": "Svi vaši oglasi i proizvodi",
+      "warningConversations": "Vaši razgovori i poruke",
+      "warningReviews": "Vaše recenzije i favoriti",
+      "passwordLabel": "Unesite lozinku za potvrdu",
+      "passwordPlaceholder": "Vaša trenutna lozinka",
+      "reasonLabel": "Zašto odlaziš? (opciono)",
+      "reasonPlaceholder": "Odaberite razlog",
+      "reasonNotSatisfied": "Nisam zadovoljan/na uslugom",
+      "reasonPrivacy": "Zabrinutost zbog privatnosti",
+      "reasonAlternative": "Pronađena alternativna platforma",
+      "reasonOther": "Ostalo",
+      "feedbackLabel": "Dodatne povratne informacije (neobavezno)",
+      "feedbackPlaceholder": "Recite nam kako možemo poboljšati...",
+      "cancel": "Otkaži",
+      "confirmButton": "Izbriši račun",
+      "deleting": "Brisanje...",
+      "success": "Vaš račun je uspješno izbrisan.",
+      "error": "Brisanje računa nije uspjelo. Molimo provjerite lozinku i pokušajte ponovo."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Odaberite kategoriju.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Naslov oglasa je obavezan.",
       "shortDescriptionRequired": "Potreban je kratak opis.",
       "descriptionRequired": "Potrebno je detaljno objašnjenje.",
       "categoryRequired": "Odabir kategorije je obavezan.",
       "priceRequired": "Unesite važeću cijenu."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Kreiraj novi oglas",
@@ -834,21 +862,22 @@
       "shippingCost": "Troškovi dostave",
       "weight": "Težina",
       "weightUnit": "Jedinica težine",
+      "currency": "Currency",
       "city": "Grad",
       "address": "Adresa",
-      "postalCode": "Poštanski broj",
-      "currency": "Currency"
+      "postalCode": "Poštanski broj"
     },
     "placeholders": {
       "title": "Primjer: Dvogodišnja krava Holstein rase",
       "shortDescription": "Opis proizvoda (maksimalno 200 znakova)",
       "description": "Pružite detaljne informacije o proizvodu...",
       "category": "Odaberite kategoriju.",
+      "searchCurrency": "Search currency...",
       "city": "Uđite u grad",
       "address": "Unesite punu adresu.",
-      "postalCode": "Poštanski broj",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Poštanski broj"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Naslov oglasa je obavezan.",
       "shortDescriptionRequired": "Potreban je kratak opis.",
@@ -870,8 +899,7 @@
     "productCreated": "Proizvod je uspješno kreiran.",
     "creationFailed": "Proizvod nije mogao biti kreiran. Molimo pokušajte ponovo.",
     "userNotFound": "Podaci o korisniku nisu pronađeni. Molimo vas da se ponovo prijavite.",
-    "defaultBusinessName": "Moj posao",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Moj posao"
   },
   "becomeSeller": {
     "title": "Postanite prodavač",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "prije {count} min",
     "hoursAgo": "prije {count}h",
     "daysAgo": "prije {count}d"
+  },
+  "pricing": {
+    "originalPrice": "Originalna cijena",
+    "convertedPrice": "Konvertovana cijena",
+    "approximatePrice": "Približna konverzija na osnovu trenutnih deviznih kurseva",
+    "approximate": "≈"
   }
 }

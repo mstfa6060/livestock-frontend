@@ -379,6 +379,34 @@
       "saveSuccess": "A beállításaid frissültek.",
       "saveError": "Hiba történt a beállítások frissítésekor.",
       "loadError": "A beállításokat nem sikerült betölteni."
+    },
+    "deleteAccount": {
+      "dangerZone": "Veszélyes zóna",
+      "title": "Fiók törlése",
+      "description": "Fiókod törlése után nincs visszaút. Minden adatod, hirdetésed és beszélgetésed véglegesen eltávolításra kerül.",
+      "irreversible": "Ez a művelet visszafordíthatatlan.",
+      "button": "Fiókom törlése",
+      "confirmTitle": "Biztosan törölni szeretnéd a fiókodat?",
+      "warning": "A következő adatok véglegesen törlésre kerülnek:",
+      "warningProfile": "Profilod és személyes adataid",
+      "warningListings": "Minden hirdetésed és terméked",
+      "warningConversations": "Beszélgetéseid és üzeneteid",
+      "warningReviews": "Az Ön értékelései és kedvencei",
+      "passwordLabel": "Írja be jelszavát a megerősítéshez",
+      "passwordPlaceholder": "A jelenlegi jelszavad",
+      "reasonLabel": "Miért mész el? (opcionális)",
+      "reasonPlaceholder": "Válasszon egy okot",
+      "reasonNotSatisfied": "Nem vagyok elégedett a szolgáltatással",
+      "reasonPrivacy": "Adatvédelmi aggályok",
+      "reasonAlternative": "Találtam egy alternatív platformot",
+      "reasonOther": "Más",
+      "feedbackLabel": "További visszajelzés (opcionális)",
+      "feedbackPlaceholder": "Mondja el, hogyan javíthatunk...",
+      "cancel": "Mégsem",
+      "confirmButton": "Fiók törlése",
+      "deleting": "Törlés...",
+      "success": "Fiókját sikeresen töröltük.",
+      "error": "Nem sikerült törölni a fiókot. Kérjük, ellenőrizze a jelszavát, és próbálja újra."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Válasszon egy kategóriát.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "A hirdetés címe kötelező.",
       "shortDescriptionRequired": "Rövid leírás szükséges.",
       "descriptionRequired": "Részletes magyarázat szükséges.",
       "categoryRequired": "A kategória kiválasztása kötelező.",
       "priceRequired": "Adjon meg egy érvényes árat."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Új hirdetés létrehozása",
@@ -834,21 +862,22 @@
       "shippingCost": "Szállítási díj",
       "weight": "Súly",
       "weightUnit": "Súlyegység",
+      "currency": "Currency",
       "city": "Város",
       "address": "Cím",
-      "postalCode": "Irányítószám",
-      "currency": "Currency"
+      "postalCode": "Irányítószám"
     },
     "placeholders": {
       "title": "Példa: 2 éves holstein tehén",
       "shortDescription": "Termékleírás (maximum 200 karakter)",
       "description": "Adjon meg részletes információkat a termékről...",
       "category": "Válasszon egy kategóriát.",
+      "searchCurrency": "Search currency...",
       "city": "Belépés a városba",
       "address": "Írja be a teljes címet.",
-      "postalCode": "Irányítószám",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Irányítószám"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "A hirdetés címe kötelező.",
       "shortDescriptionRequired": "Rövid leírás szükséges.",
@@ -870,8 +899,7 @@
     "productCreated": "A termék sikeresen létrejött.",
     "creationFailed": "A termék nem hozható létre. Kérjük, próbálja újra.",
     "userNotFound": "A felhasználói adatok nem találhatók. Kérjük, jelentkezzen be újra.",
-    "defaultBusinessName": "Az én vállalkozásom",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Az én vállalkozásom"
   },
   "becomeSeller": {
     "title": "Legyen eladó",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} perccel ezelőtt",
     "hoursAgo": "{count} órával ezelőtt",
     "daysAgo": "{count} nappal ezelőtt"
+  },
+  "pricing": {
+    "originalPrice": "Eredeti ár",
+    "convertedPrice": "Átváltott ár",
+    "approximatePrice": "Hozzávetőleges átváltás a jelenlegi árfolyamok alapján",
+    "approximate": "≈"
   }
 }

@@ -379,6 +379,34 @@
       "saveSuccess": "Vaše preference byly aktualizovány.",
       "saveError": "Při aktualizaci předvoleb došlo k chybě.",
       "loadError": "Předvolby se nepodařilo načíst."
+    },
+    "deleteAccount": {
+      "dangerZone": "Nebezpečná zóna",
+      "title": "Smazat účet",
+      "description": "Jakmile smažete svůj účet, není cesty zpět. Všechna vaše data, záznamy a konverzace budou trvale odstraněny.",
+      "irreversible": "Tato akce je nevratná.",
+      "button": "Smazat můj účet",
+      "confirmTitle": "Jste si jisti, že chcete smazat svůj účet?",
+      "warning": "Následující data budou trvale smazána:",
+      "warningProfile": "Váš profil a osobní údaje",
+      "warningListings": "Všechny vaše nabídky a produkty",
+      "warningConversations": "Vaše konverzace a zprávy",
+      "warningReviews": "Vaše recenze a oblíbené položky",
+      "passwordLabel": "Zadejte heslo pro potvrzení",
+      "passwordPlaceholder": "Vaše aktuální heslo",
+      "reasonLabel": "Proč odcházíš? (nepovinné)",
+      "reasonPlaceholder": "Vyberte důvod",
+      "reasonNotSatisfied": "Nejsem spokojen/a se službou",
+      "reasonPrivacy": "Obavy o soukromí",
+      "reasonAlternative": "Nalezena alternativní platforma",
+      "reasonOther": "Ostatní",
+      "feedbackLabel": "Další zpětná vazba (volitelné)",
+      "feedbackPlaceholder": "Řekněte nám, jak se můžeme zlepšit...",
+      "cancel": "Zrušit",
+      "confirmButton": "Smazat účet",
+      "deleting": "Mazání...",
+      "success": "Váš účet byl úspěšně smazán.",
+      "error": "Účet se nepodařilo smazat. Zkontrolujte si heslo a zkuste to znovu."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "Při nahrávání informací o prodejci došlo k chybě.",
       "productsLoadError": "Při nahrávání produktů prodejce došlo k chybě.",
       "reviewsTab": "Hodnocení",
+      "share": "Podíl",
+      "shareText": "Podívejte se na {name} na Livestock Trading",
+      "linkCopied": "Odkaz byl zkopírován do schránky.",
       "reviews": {
         "summary": "Shrnutí hodnocení",
         "reviewCount": "hodnocení",
@@ -796,14 +827,14 @@
       "category": "Vyberte kategorii.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Název inzerátu je povinný.",
       "shortDescriptionRequired": "Je vyžadován stručný popis.",
       "descriptionRequired": "Je nutné podrobné vysvětlení.",
       "categoryRequired": "Výběr kategorie je povinný.",
       "priceRequired": "Zadejte platnou cenu."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Vytvořit nový inzerát",
@@ -831,21 +862,22 @@
       "shippingCost": "Poplatek za dopravu",
       "weight": "Hmotnost",
       "weightUnit": "Jednotka hmotnosti",
+      "currency": "Currency",
       "city": "Město",
       "address": "Adresa",
-      "postalCode": "Poštovní směrovací číslo",
-      "currency": "Currency"
+      "postalCode": "Poštovní směrovací číslo"
     },
     "placeholders": {
       "title": "Příklad: Dvouletá kráva holštýnského plemene",
       "shortDescription": "Popis produktu (max. 200 znaků)",
       "description": "Poskytněte podrobné informace o produktu...",
       "category": "Vyberte kategorii.",
+      "searchCurrency": "Search currency...",
       "city": "Vstupte do města",
       "address": "Zadejte celou adresu.",
-      "postalCode": "Poštovní směrovací číslo",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Poštovní směrovací číslo"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Název inzerátu je povinný.",
       "shortDescriptionRequired": "Je vyžadován stručný popis.",
@@ -867,8 +899,7 @@
     "productCreated": "Produkt byl úspěšně vytvořen.",
     "creationFailed": "Produkt se nepodařilo vytvořit. Zkuste to prosím znovu.",
     "userNotFound": "Informace o uživateli se nepodařilo nalézt. Přihlaste se prosím znovu.",
-    "defaultBusinessName": "Moje firma",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Moje firma"
   },
   "becomeSeller": {
     "title": "Staňte se prodejcem",
@@ -1317,7 +1348,10 @@
     "fleet": "Informace o vozovém parku",
     "serviceRegions": "Oblasti služeb",
     "specializations": "Oblasti odbornosti",
-    "certifications": "Certifikáty"
+    "certifications": "Certifikáty",
+    "share": "Podíl",
+    "shareText": "Podívejte se na {name} na Livestock Trading",
+    "linkCopied": "Odkaz byl zkopírován do schránky."
   },
   "brands": {
     "title": "Správa značky",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "před {count} minutami",
     "hoursAgo": "před {count}h",
     "daysAgo": "před {count} dny"
+  },
+  "pricing": {
+    "originalPrice": "Původní cena",
+    "convertedPrice": "Přepočtená cena",
+    "approximatePrice": "Přibližný přepočet na základě aktuálních směnných kurzů",
+    "approximate": "≈"
   }
 }

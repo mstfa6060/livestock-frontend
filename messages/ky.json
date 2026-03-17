@@ -379,6 +379,34 @@
       "saveSuccess": "Сиздин жөндөөлөрүңүз жаңыртылды.",
       "saveError": "Параметрлерди жаңыртуу учурунда ката кетти.",
       "loadError": "Параметрлер жүктөлбөй койду."
+    },
+    "deleteAccount": {
+      "dangerZone": "Коркунучтуу аймак",
+      "title": "Аккаунтту жок кылуу",
+      "description": "Аккаунтуңузду жок кылгандан кийин, артка кайтуу жок. Бардык маалыматтарыңыз, тизмелериңиз жана баарлашууларыңыз биротоло өчүрүлөт.",
+      "irreversible": "Бул аракет кайтарылгыс.",
+      "button": "Менин аккаунтумду жок кылуу",
+      "confirmTitle": "Аккаунтуңузду чын эле жок кылгыңыз келеби?",
+      "warning": "Төмөнкү маалыматтар биротоло жок кылынат:",
+      "warningProfile": "Сиздин профилиңиз жана жеке маалыматыңыз",
+      "warningListings": "Бардык тизмелериңиз жана өнүмдөрүңүз",
+      "warningConversations": "Сиздин сүйлөшүүлөрүңүз жана билдирүүлөрүңүз",
+      "warningReviews": "Сиздин сын-пикирлериңиз жана сүйүктүүлөрүңүз",
+      "passwordLabel": "Ырастоо үчүн сырсөзүңүздү киргизиңиз",
+      "passwordPlaceholder": "Учурдагы сырсөзүңүз",
+      "reasonLabel": "Эмнеге кетип жатасыз? (милдеттүү эмес)",
+      "reasonPlaceholder": "Себебин тандаңыз",
+      "reasonNotSatisfied": "Кызмат көрсөтүүгө канааттанган жокмун",
+      "reasonPrivacy": "Купуялык маселелери",
+      "reasonAlternative": "Альтернативдүү платформа табылды",
+      "reasonOther": "Башка",
+      "feedbackLabel": "Кошумча пикир (милдеттүү эмес)",
+      "feedbackPlaceholder": "Кантип жакшырта аларыбызды айтып бериңиз...",
+      "cancel": "Жокко чыгаруу",
+      "confirmButton": "Аккаунтту жок кылуу",
+      "deleting": "Жок кылынууда...",
+      "success": "Аккаунтуңуз ийгиликтүү өчүрүлдү.",
+      "error": "Аккаунт өчүрүлгөн жок. Сырсөзүңүздү текшерип, кайра аракет кылыңыз."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Категорияны тандаңыз.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Жарнаманын аталышы милдеттүү түрдө көрсөтүлүшү керек.",
       "shortDescriptionRequired": "Кыскача сүрөттөмө талап кылынат.",
       "descriptionRequired": "Толук түшүндүрмө талап кылынат.",
       "categoryRequired": "Категорияны тандоо милдеттүү болуп саналат.",
       "priceRequired": "Жарактуу бааны киргизиңиз."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Жаңы тизме түзүү",
@@ -834,21 +862,22 @@
       "shippingCost": "Жеткирүү акысы",
       "weight": "Салмак",
       "weightUnit": "Салмак бирдиги",
+      "currency": "Currency",
       "city": "Шаар",
       "address": "Дарек",
-      "postalCode": "Почта индекси",
-      "currency": "Currency"
+      "postalCode": "Почта индекси"
     },
     "placeholders": {
       "title": "Мисал: 2 жаштагы гольштейн тукумундагы уй",
       "shortDescription": "Продукциянын сүрөттөмөсү (максимум 200 белги)",
       "description": "Продукция жөнүндө толук маалымат бериңиз...",
       "category": "Категорияны тандаңыз.",
+      "searchCurrency": "Search currency...",
       "city": "Шаарга кириңиз",
       "address": "Толук даректи киргизиңиз.",
-      "postalCode": "Почта индекси",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Почта индекси"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Жарнаманын аталышы милдеттүү түрдө көрсөтүлүшү керек.",
       "shortDescriptionRequired": "Кыскача сүрөттөмө талап кылынат.",
@@ -870,8 +899,7 @@
     "productCreated": "Продукт ийгиликтүү түзүлдү.",
     "creationFailed": "Продукцияны түзүү мүмкүн болгон жок. Кайра аракет кылып көрүңүз.",
     "userNotFound": "Колдонуучунун маалыматы табылган жок. Кайрадан кириңиз.",
-    "defaultBusinessName": "Менин бизнесим",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Менин бизнесим"
   },
   "becomeSeller": {
     "title": "Сатуучу болуңуз",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} мүнөт мурун",
     "hoursAgo": "{count} саат мурун",
     "daysAgo": "{count}к мурун"
+  },
+  "pricing": {
+    "originalPrice": "Баштапкы баасы",
+    "convertedPrice": "Конвертацияланган баа",
+    "approximatePrice": "Учурдагы алмашуу курстарына негизделген болжолдуу конвертация",
+    "approximate": "≈"
   }
 }

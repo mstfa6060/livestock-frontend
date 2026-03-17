@@ -379,6 +379,34 @@
       "saveSuccess": "Tùy chọn của bạn đã được cập nhật.",
       "saveError": "Đã xảy ra lỗi trong quá trình cập nhật tùy chọn.",
       "loadError": "Không thể tải tùy chọn."
+    },
+    "deleteAccount": {
+      "dangerZone": "Khu vực nguy hiểm",
+      "title": "Xóa tài khoản",
+      "description": "Một khi bạn xóa tài khoản, sẽ không thể khôi phục lại được. Tất cả dữ liệu, tin đăng và cuộc trò chuyện của bạn sẽ bị xóa vĩnh viễn.",
+      "irreversible": "Hành động này không thể đảo ngược.",
+      "button": "Xóa tài khoản của tôi",
+      "confirmTitle": "Bạn có chắc chắn muốn xóa tài khoản của mình không?",
+      "warning": "Các dữ liệu sau đây sẽ bị xóa vĩnh viễn:",
+      "warningProfile": "Thông tin cá nhân và hồ sơ của bạn",
+      "warningListings": "Tất cả danh sách và sản phẩm của bạn",
+      "warningConversations": "Các cuộc trò chuyện và tin nhắn của bạn",
+      "warningReviews": "Đánh giá và mục yêu thích của bạn",
+      "passwordLabel": "Nhập mật khẩu của bạn để xác nhận",
+      "passwordPlaceholder": "Mật khẩu hiện tại của bạn",
+      "reasonLabel": "Tại sao bạn lại rời đi? (tùy chọn)",
+      "reasonPlaceholder": "Chọn một lý do",
+      "reasonNotSatisfied": "Không hài lòng với dịch vụ.",
+      "reasonPrivacy": "Mối quan ngại về quyền riêng tư",
+      "reasonAlternative": "Đã tìm thấy một nền tảng thay thế",
+      "reasonOther": "Khác",
+      "feedbackLabel": "Phản hồi bổ sung (tùy chọn)",
+      "feedbackPlaceholder": "Hãy cho chúng tôi biết làm thế nào để cải thiện...",
+      "cancel": "Hủy bỏ",
+      "confirmButton": "Xóa tài khoản",
+      "deleting": "Đang xóa...",
+      "success": "Tài khoản của bạn đã được xóa thành công.",
+      "error": "Không thể xóa tài khoản. Vui lòng kiểm tra lại mật khẩu và thử lại."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Chọn một danh mục.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tiêu đề quảng cáo là bắt buộc.",
       "shortDescriptionRequired": "Cần có một mô tả ngắn gọn.",
       "descriptionRequired": "Cần có lời giải thích chi tiết.",
       "categoryRequired": "Việc chọn danh mục là bắt buộc.",
       "priceRequired": "Nhập giá hợp lệ."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Tạo tin đăng mới",
@@ -834,21 +862,22 @@
       "shippingCost": "Phí vận chuyển",
       "weight": "Cân nặng",
       "weightUnit": "Đơn vị trọng lượng",
+      "currency": "Currency",
       "city": "Thành phố",
       "address": "Địa chỉ",
-      "postalCode": "Mã bưu chính",
-      "currency": "Currency"
+      "postalCode": "Mã bưu chính"
     },
     "placeholders": {
       "title": "Ví dụ: Bò Holstein 2 tuổi",
       "shortDescription": "Mô tả sản phẩm (tối đa 200 ký tự)",
       "description": "Cung cấp thông tin chi tiết về sản phẩm...",
       "category": "Chọn một danh mục.",
+      "searchCurrency": "Search currency...",
       "city": "Vào thành phố",
       "address": "Nhập đầy đủ địa chỉ.",
-      "postalCode": "Mã bưu chính",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Mã bưu chính"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tiêu đề quảng cáo là bắt buộc.",
       "shortDescriptionRequired": "Cần có một mô tả ngắn gọn.",
@@ -870,8 +899,7 @@
     "productCreated": "Sản phẩm đã được tạo ra thành công.",
     "creationFailed": "Không thể tạo sản phẩm. Vui lòng thử lại.",
     "userNotFound": "Không tìm thấy thông tin người dùng. Vui lòng đăng nhập lại.",
-    "defaultBusinessName": "Doanh nghiệp của tôi",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Doanh nghiệp của tôi"
   },
   "becomeSeller": {
     "title": "Trở thành người bán",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} phút trước",
     "hoursAgo": "{count} giờ trước",
     "daysAgo": "{count}d trước"
+  },
+  "pricing": {
+    "originalPrice": "Giá gốc",
+    "convertedPrice": "Giá quy đổi",
+    "approximatePrice": "Tỷ giá quy đổi ước tính dựa trên tỷ giá hối đoái hiện hành.",
+    "approximate": "≈"
   }
 }

@@ -379,6 +379,34 @@
       "saveSuccess": "Mae eich dewisiadau wedi cael eu diweddaru.",
       "saveError": "Digwyddodd gwall wrth ddiweddaru'r dewisiadau.",
       "loadError": "Ni ellid llwytho'r dewisiadau."
+    },
+    "deleteAccount": {
+      "dangerZone": "Parth Perygl",
+      "title": "Dileu Cyfrif",
+      "description": "Unwaith i chi ddileu eich cyfrif, does dim modd mynd yn ôl. Bydd eich holl ddata, rhestrau a sgyrsiau yn cael eu dileu'n barhaol.",
+      "irreversible": "Mae'r weithred hon yn anghildroadwy.",
+      "button": "Dileu Fy Nghyfrif",
+      "confirmTitle": "Ydych chi'n siŵr eich bod chi eisiau dileu eich cyfrif?",
+      "warning": "Bydd y data canlynol yn cael ei ddileu'n barhaol:",
+      "warningProfile": "Eich proffil a'ch gwybodaeth bersonol",
+      "warningListings": "Eich holl restrau a chynhyrchion",
+      "warningConversations": "Eich sgyrsiau a'ch negeseuon",
+      "warningReviews": "Eich adolygiadau a'ch ffefrynnau",
+      "passwordLabel": "Rhowch eich cyfrinair i gadarnhau",
+      "passwordPlaceholder": "Eich cyfrinair cyfredol",
+      "reasonLabel": "Pam wyt ti'n gadael? (dewisol)",
+      "reasonPlaceholder": "Dewiswch reswm",
+      "reasonNotSatisfied": "Ddim yn fodlon â'r gwasanaeth",
+      "reasonPrivacy": "Pryderon preifatrwydd",
+      "reasonAlternative": "Wedi dod o hyd i blatfform amgen",
+      "reasonOther": "Arall",
+      "feedbackLabel": "Adborth ychwanegol (dewisol)",
+      "feedbackPlaceholder": "Dywedwch wrthym sut allwn ni wella...",
+      "cancel": "Canslo",
+      "confirmButton": "Dileu Cyfrif",
+      "deleting": "Yn dileu...",
+      "success": "Mae eich cyfrif wedi cael ei ddileu'n llwyddiannus.",
+      "error": "Methwyd dileu cyfrif. Gwiriwch eich cyfrinair a cheisiwch eto."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Dewiswch gategori.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Mae teitl yr hysbyseb yn orfodol.",
       "shortDescriptionRequired": "Mae angen disgrifiad byr.",
       "descriptionRequired": "Mae angen esboniad manwl.",
       "categoryRequired": "Mae dewis categori yn orfodol.",
       "priceRequired": "Rhowch bris dilys."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Creu Rhestr Newydd",
@@ -834,21 +862,22 @@
       "shippingCost": "Ffi Llongau",
       "weight": "Pwysau",
       "weightUnit": "Uned Pwysau",
+      "currency": "Currency",
       "city": "Dinas",
       "address": "Cyfeiriad",
-      "postalCode": "Cod post",
-      "currency": "Currency"
+      "postalCode": "Cod post"
     },
     "placeholders": {
       "title": "Enghraifft: Buwch Holstein 2 Oed",
       "shortDescription": "Disgrifiad o'r cynnyrch (uchafswm o 200 nod)",
       "description": "Rhowch wybodaeth fanwl am y cynnyrch...",
       "category": "Dewiswch gategori.",
+      "searchCurrency": "Search currency...",
       "city": "Ewch i mewn i'r ddinas",
       "address": "Rhowch y cyfeiriad llawn.",
-      "postalCode": "Cod post",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Cod post"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Mae teitl yr hysbyseb yn orfodol.",
       "shortDescriptionRequired": "Mae angen disgrifiad byr.",
@@ -870,8 +899,7 @@
     "productCreated": "Crëwyd y cynnyrch yn llwyddiannus.",
     "creationFailed": "Ni ellid creu'r cynnyrch. Rhowch gynnig arall arni.",
     "userNotFound": "Ni ellid dod o hyd i wybodaeth y defnyddiwr. Mewngofnodwch eto.",
-    "defaultBusinessName": "Fy musnes",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Fy musnes"
   },
   "becomeSeller": {
     "title": "Dod yn Werthwr",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} munud yn ôl",
     "hoursAgo": "{cyfrif} awr yn ôl",
     "daysAgo": "{cyfrif}d yn ôl"
+  },
+  "pricing": {
+    "originalPrice": "Pris gwreiddiol",
+    "convertedPrice": "Pris wedi'i drosi",
+    "approximatePrice": "Trosi bras yn seiliedig ar gyfraddau cyfnewid cyfredol",
+    "approximate": "≈"
   }
 }

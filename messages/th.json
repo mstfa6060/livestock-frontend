@@ -379,6 +379,34 @@
       "saveSuccess": "การตั้งค่าของคุณได้รับการอัปเดตแล้ว",
       "saveError": "เกิดข้อผิดพลาดขณะอัปเดตการตั้งค่า",
       "loadError": "ไม่สามารถโหลดการตั้งค่าได้"
+    },
+    "deleteAccount": {
+      "dangerZone": "เขตอันตราย",
+      "title": "ลบบัญชีผู้ใช้",
+      "description": "เมื่อคุณลบบัญชีของคุณแล้ว จะไม่สามารถกู้คืนได้ ข้อมูล รายการประกาศ และบทสนทนาทั้งหมดของคุณจะถูกลบออกอย่างถาวร",
+      "irreversible": "การกระทำนี้ไม่สามารถย้อนกลับได้",
+      "button": "ลบบัญชีของฉัน",
+      "confirmTitle": "คุณแน่ใจหรือไม่ว่าต้องการลบบัญชีของคุณ?",
+      "warning": "ข้อมูลต่อไปนี้จะถูกลบอย่างถาวร:",
+      "warningProfile": "ข้อมูลส่วนตัวและโปรไฟล์ของคุณ",
+      "warningListings": "รายการสินค้าและผลิตภัณฑ์ทั้งหมดของคุณ",
+      "warningConversations": "การสนทนาและข้อความของคุณ",
+      "warningReviews": "รีวิวและรายการโปรดของคุณ",
+      "passwordLabel": "ป้อนรหัสผ่านของคุณเพื่อยืนยัน",
+      "passwordPlaceholder": "รหัสผ่านปัจจุบันของคุณ",
+      "reasonLabel": "ทำไมคุณถึงลาออก? (ไม่บังคับ)",
+      "reasonPlaceholder": "เลือกเหตุผล",
+      "reasonNotSatisfied": "ไม่พอใจกับบริการ",
+      "reasonPrivacy": "ข้อกังวลด้านความเป็นส่วนตัว",
+      "reasonAlternative": "พบแพลตฟอร์มทางเลือก",
+      "reasonOther": "อื่น",
+      "feedbackLabel": "ข้อเสนอแนะเพิ่มเติม (ไม่บังคับ)",
+      "feedbackPlaceholder": "โปรดบอกเราว่าเราจะปรับปรุงได้อย่างไร...",
+      "cancel": "ยกเลิก",
+      "confirmButton": "ลบบัญชีผู้ใช้",
+      "deleting": "กำลังลบ...",
+      "success": "บัญชีของคุณถูกลบเรียบร้อยแล้ว",
+      "error": "ไม่สามารถลบบัญชีได้ โปรดตรวจสอบรหัสผ่านของคุณแล้วลองใหม่อีกครั้ง"
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "เลือกหมวดหมู่",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "หัวข้อโฆษณาเป็นสิ่งที่จำเป็น",
       "shortDescriptionRequired": "จำเป็นต้องมีคำอธิบายโดยย่อ",
       "descriptionRequired": "จำเป็นต้องมีคำอธิบายโดยละเอียด",
       "categoryRequired": "การเลือกหมวดหมู่เป็นสิ่งจำเป็น",
       "priceRequired": "ป้อนราคาที่ถูกต้อง"
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "สร้างรายการใหม่",
@@ -834,21 +862,22 @@
       "shippingCost": "ค่าธรรมเนียมการจัดส่ง",
       "weight": "น้ำหนัก",
       "weightUnit": "หน่วยน้ำหนัก",
+      "currency": "Currency",
       "city": "เมือง",
       "address": "ที่อยู่",
-      "postalCode": "รหัสไปรษณีย์",
-      "currency": "Currency"
+      "postalCode": "รหัสไปรษณีย์"
     },
     "placeholders": {
       "title": "ตัวอย่าง: วัวโฮลสไตน์อายุ 2 ปี",
       "shortDescription": "รายละเอียดสินค้า (ไม่เกิน 200 ตัวอักษร)",
       "description": "โปรดให้ข้อมูลโดยละเอียดเกี่ยวกับผลิตภัณฑ์...",
       "category": "เลือกหมวดหมู่",
+      "searchCurrency": "Search currency...",
       "city": "เข้าสู่เมือง",
       "address": "กรุณาป้อนที่อยู่แบบเต็ม",
-      "postalCode": "รหัสไปรษณีย์",
-      "searchCurrency": "Search currency..."
+      "postalCode": "รหัสไปรษณีย์"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "หัวข้อโฆษณาเป็นสิ่งที่จำเป็น",
       "shortDescriptionRequired": "จำเป็นต้องมีคำอธิบายโดยย่อ",
@@ -870,8 +899,7 @@
     "productCreated": "ผลิตภัณฑ์ถูกสร้างขึ้นสำเร็จแล้ว",
     "creationFailed": "ไม่สามารถสร้างผลิตภัณฑ์ได้ โปรดลองอีกครั้ง",
     "userNotFound": "ไม่พบข้อมูลผู้ใช้ โปรดเข้าสู่ระบบอีกครั้ง",
-    "defaultBusinessName": "ธุรกิจของฉัน",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "ธุรกิจของฉัน"
   },
   "becomeSeller": {
     "title": "สมัครเป็นผู้ขาย",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "เมื่อ {count} นาทีที่แล้ว",
     "hoursAgo": "เมื่อ {count} ชั่วโมงที่แล้ว",
     "daysAgo": "เมื่อ {count}วันก่อน"
+  },
+  "pricing": {
+    "originalPrice": "ราคาเดิม",
+    "convertedPrice": "ราคาที่แปลงแล้ว",
+    "approximatePrice": "การแปลงโดยประมาณตามอัตราแลกเปลี่ยนปัจจุบัน",
+    "approximate": "≈"
   }
 }

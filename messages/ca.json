@@ -379,6 +379,34 @@
       "saveSuccess": "Les teves preferències s'han actualitzat.",
       "saveError": "S'ha produït un error en actualitzar les preferències.",
       "loadError": "No s'han pogut carregar les preferències."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zona de perill",
+      "title": "Suprimeix el compte",
+      "description": "Un cop hagis eliminat el teu compte, no hi ha marxa enrere. Totes les teves dades, anuncis i converses s'eliminaran permanentment.",
+      "irreversible": "Aquesta acció és irreversible.",
+      "button": "Suprimeix el meu compte",
+      "confirmTitle": "Esteu segur que voleu eliminar el vostre compte?",
+      "warning": "Les dades següents s'eliminaran permanentment:",
+      "warningProfile": "El vostre perfil i informació personal",
+      "warningListings": "Tots els teus anuncis i productes",
+      "warningConversations": "Les teves converses i missatges",
+      "warningReviews": "Les teves ressenyes i preferits",
+      "passwordLabel": "Introdueix la teva contrasenya per confirmar",
+      "passwordPlaceholder": "La teva contrasenya actual",
+      "reasonLabel": "Per què te'n vas? (opcional)",
+      "reasonPlaceholder": "Selecciona un motiu",
+      "reasonNotSatisfied": "No satisfet amb el servei",
+      "reasonPrivacy": "Preocupacions de privadesa",
+      "reasonAlternative": "He trobat una plataforma alternativa",
+      "reasonOther": "Altres",
+      "feedbackLabel": "Comentaris addicionals (opcional)",
+      "feedbackPlaceholder": "Digue'ns com podem millorar...",
+      "cancel": "Cancel·la",
+      "confirmButton": "Suprimeix el compte",
+      "deleting": "S'està suprimint...",
+      "success": "El vostre compte s'ha eliminat correctament.",
+      "error": "No s'ha pogut eliminar el compte. Si us plau, comproveu la vostra contrasenya i torneu-ho a intentar."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Seleccioneu una categoria.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "El títol de l'anunci és obligatori.",
       "shortDescriptionRequired": "Cal una breu descripció.",
       "descriptionRequired": "Cal una explicació detallada.",
       "categoryRequired": "La selecció de categoria és obligatòria.",
       "priceRequired": "Introdueix un preu vàlid."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Crea un anunci nou",
@@ -834,21 +862,22 @@
       "shippingCost": "Tarifa d'enviament",
       "weight": "Pes",
       "weightUnit": "Unitat de pes",
+      "currency": "Currency",
       "city": "Ciutat",
       "address": "Adreça",
-      "postalCode": "Codi postal",
-      "currency": "Currency"
+      "postalCode": "Codi postal"
     },
     "placeholders": {
       "title": "Exemple: Vaca Holstein de 2 anys",
       "shortDescription": "Descripció del producte (màxim 200 caràcters)",
       "description": "Proporcioneu informació detallada sobre el producte...",
       "category": "Seleccioneu una categoria.",
+      "searchCurrency": "Search currency...",
       "city": "Entra a la ciutat",
       "address": "Introduïu l'adreça completa.",
-      "postalCode": "Codi postal",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Codi postal"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "El títol de l'anunci és obligatori.",
       "shortDescriptionRequired": "Cal una breu descripció.",
@@ -870,8 +899,7 @@
     "productCreated": "El producte s'ha creat correctament.",
     "creationFailed": "No s'ha pogut crear el producte. Si us plau, torneu-ho a intentar.",
     "userNotFound": "No s'ha trobat la informació de l'usuari. Si us plau, torneu a iniciar la sessió.",
-    "defaultBusinessName": "El meu negoci",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "El meu negoci"
   },
   "becomeSeller": {
     "title": "Converteix-te en venedor",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "fa {count} minuts",
     "hoursAgo": "fa {count} h",
     "daysAgo": "fa {count}d"
+  },
+  "pricing": {
+    "originalPrice": "Preu original",
+    "convertedPrice": "Preu convertit",
+    "approximatePrice": "Conversió aproximada basada en els tipus de canvi actuals",
+    "approximate": "≈"
   }
 }

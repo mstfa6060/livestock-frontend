@@ -379,6 +379,34 @@
       "saveSuccess": "آپ کی ترجیحات کو اپ ڈیٹ کر دیا گیا ہے۔",
       "saveError": "ترجیحات کو اپ ڈیٹ کرتے وقت ایک خرابی پیش آگئی۔",
       "loadError": "ترجیحات کو لوڈ نہیں کیا جا سکا۔"
+    },
+    "deleteAccount": {
+      "dangerZone": "خطرہ زون",
+      "title": "اکاؤنٹ حذف کریں۔",
+      "description": "ایک بار جب آپ اپنا اکاؤنٹ حذف کر دیتے ہیں، تو واپس جانے کی کوئی صورت نہیں ہے۔ آپ کا تمام ڈیٹا، فہرستیں اور گفتگو کو مستقل طور پر ہٹا دیا جائے گا۔",
+      "irreversible": "یہ عمل ناقابل واپسی ہے۔",
+      "button": "میرا اکاؤنٹ حذف کریں۔",
+      "confirmTitle": "کیا آپ واقعی اپنا اکاؤنٹ حذف کرنا چاہتے ہیں؟",
+      "warning": "درج ذیل ڈیٹا کو مستقل طور پر حذف کر دیا جائے گا۔",
+      "warningProfile": "آپ کا پروفائل اور ذاتی معلومات",
+      "warningListings": "آپ کی تمام فہرستیں اور مصنوعات",
+      "warningConversations": "آپ کی گفتگو اور پیغامات",
+      "warningReviews": "آپ کے جائزے اور پسندیدہ",
+      "passwordLabel": "تصدیق کے لیے اپنا پاس ورڈ درج کریں۔",
+      "passwordPlaceholder": "آپ کا موجودہ پاس ورڈ",
+      "reasonLabel": "کیوں جا رہے ہو؟ (اختیاری)",
+      "reasonPlaceholder": "ایک وجہ منتخب کریں۔",
+      "reasonNotSatisfied": "سروس سے مطمئن نہیں۔",
+      "reasonPrivacy": "رازداری کے خدشات",
+      "reasonAlternative": "ایک متبادل پلیٹ فارم ملا",
+      "reasonOther": "دیگر",
+      "feedbackLabel": "اضافی تاثرات (اختیاری)",
+      "feedbackPlaceholder": "ہمیں بتائیں کہ ہم کس طرح بہتر کر سکتے ہیں...",
+      "cancel": "منسوخ کریں۔",
+      "confirmButton": "اکاؤنٹ حذف کریں۔",
+      "deleting": "حذف کر رہا ہے...",
+      "success": "آپ کا اکاؤنٹ کامیابی کے ساتھ حذف کر دیا گیا ہے۔",
+      "error": "اکاؤنٹ حذف کرنے میں ناکام۔ براہ کرم اپنا پاس ورڈ چیک کریں اور دوبارہ کوشش کریں۔"
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "ایک زمرہ منتخب کریں۔",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "اشتہار کا عنوان لازمی ہے۔",
       "shortDescriptionRequired": "ایک مختصر تفصیل درکار ہے۔",
       "descriptionRequired": "تفصیلی وضاحت درکار ہے۔",
       "categoryRequired": "زمرہ کا انتخاب لازمی ہے۔",
       "priceRequired": "ایک درست قیمت درج کریں۔"
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "نئی فہرست بنائیں",
@@ -834,21 +862,22 @@
       "shippingCost": "شپنگ فیس",
       "weight": "وزن",
       "weightUnit": "وزن کی اکائی",
+      "currency": "Currency",
       "city": "شہر",
       "address": "پتہ",
-      "postalCode": "پوسٹل کوڈ",
-      "currency": "Currency"
+      "postalCode": "پوسٹل کوڈ"
     },
     "placeholders": {
       "title": "مثال: 2 سالہ ہولسٹین گائے",
       "shortDescription": "پروڈکٹ کی تفصیل (زیادہ سے زیادہ 200 حروف)",
       "description": "مصنوعات کے بارے میں تفصیلی معلومات فراہم کریں...",
       "category": "ایک زمرہ منتخب کریں۔",
+      "searchCurrency": "Search currency...",
       "city": "شہر میں داخل ہوں۔",
       "address": "مکمل پتہ درج کریں۔",
-      "postalCode": "پوسٹل کوڈ",
-      "searchCurrency": "Search currency..."
+      "postalCode": "پوسٹل کوڈ"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "اشتہار کا عنوان لازمی ہے۔",
       "shortDescriptionRequired": "ایک مختصر تفصیل درکار ہے۔",
@@ -870,8 +899,7 @@
     "productCreated": "پروڈکٹ کو کامیابی سے بنایا گیا تھا۔",
     "creationFailed": "پروڈکٹ نہیں بن سکی۔ براہ کرم دوبارہ کوشش کریں۔",
     "userNotFound": "صارف کی معلومات نہیں مل سکی۔ براہ کرم دوبارہ لاگ ان کریں۔",
-    "defaultBusinessName": "میرا کاروبار",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "میرا کاروبار"
   },
   "becomeSeller": {
     "title": "بیچنے والے بنیں۔",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} منٹ پہلے",
     "hoursAgo": "{count} گھنٹے پہلے",
     "daysAgo": "{count} دن پہلے"
+  },
+  "pricing": {
+    "originalPrice": "اصل قیمت",
+    "convertedPrice": "تبدیل شدہ قیمت",
+    "approximatePrice": "موجودہ شرح مبادلہ کی بنیاد پر تخمینی تبدیلی",
+    "approximate": "≈"
   }
 }

@@ -379,6 +379,34 @@
       "saveSuccess": "உங்கள் விருப்பத்தேர்வுகள் புதுப்பிக்கப்பட்டுள்ளன.",
       "saveError": "விருப்பத்தேர்வுகளைப் புதுப்பிக்கும்போது பிழை ஏற்பட்டது.",
       "loadError": "விருப்பங்களை ஏற்ற முடியவில்லை."
+    },
+    "deleteAccount": {
+      "dangerZone": "அபாய மண்டலம்",
+      "title": "கணக்கை நீக்கு",
+      "description": "உங்கள் கணக்கை நீக்கிவிட்டால், மீண்டும் பழைய நிலைக்குத் திரும்ப முடியாது. உங்களின் அனைத்துத் தரவுகள், பட்டியல்கள் மற்றும் உரையாடல்கள் நிரந்தரமாக அகற்றப்படும்.",
+      "irreversible": "இந்தச் செயல் மீள முடியாதது.",
+      "button": "எனது கணக்கை நீக்கு",
+      "confirmTitle": "உங்கள் கணக்கை நீக்குவது உறுதிதானா?",
+      "warning": "பின்வரும் தரவுகள் நிரந்தரமாக நீக்கப்படும்:",
+      "warningProfile": "உங்கள் சுயவிவரம் மற்றும் தனிப்பட்ட தகவல்கள்",
+      "warningListings": "உங்கள் அனைத்துப் பட்டியல்களும் தயாரிப்புகளும்",
+      "warningConversations": "உங்கள் உரையாடல்கள் மற்றும் செய்திகள்",
+      "warningReviews": "உங்கள் மதிப்புரைகள் மற்றும் விருப்பங்கள்",
+      "passwordLabel": "உறுதிப்படுத்த உங்கள் கடவுச்சொல்லை உள்ளிடவும்.",
+      "passwordPlaceholder": "உங்கள் தற்போதைய கடவுச்சொல்",
+      "reasonLabel": "நீங்கள் ஏன் செல்கிறீர்கள்? (விருப்பப்பட்டால்)",
+      "reasonPlaceholder": "ஒரு காரணத்தைத் தேர்ந்தெடுக்கவும்",
+      "reasonNotSatisfied": "சேவையில் திருப்தி இல்லை",
+      "reasonPrivacy": "தனியுரிமை கவலைகள்",
+      "reasonAlternative": "மாற்று தளம் கண்டறியப்பட்டது",
+      "reasonOther": "மற்றவை",
+      "feedbackLabel": "கூடுதல் கருத்து (விருப்பத்திற்குரியது)",
+      "feedbackPlaceholder": "நாங்கள் எவ்வாறு மேம்படுத்தலாம் என்று சொல்லுங்கள்...",
+      "cancel": "ரத்துசெய்",
+      "confirmButton": "கணக்கை நீக்கு",
+      "deleting": "நீக்குகிறது...",
+      "success": "உங்கள் கணக்கு வெற்றிகரமாக நீக்கப்பட்டுவிட்டது.",
+      "error": "கணக்கை நீக்க முடியவில்லை. உங்கள் கடவுச்சொல்லைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "ஒரு வகையைத் தேர்ந்தெடுக்கவும்.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "விளம்பரத் தலைப்பு கட்டாயமாகும்.",
       "shortDescriptionRequired": "ஒரு சுருக்கமான விளக்கம் தேவை.",
       "descriptionRequired": "விரிவான விளக்கம் தேவை.",
       "categoryRequired": "வகைத் தேர்வு கட்டாயமாகும்.",
       "priceRequired": "செல்லுபடியாகும் விலையை உள்ளிடவும்."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "புதிய பட்டியலை உருவாக்கு",
@@ -834,21 +862,22 @@
       "shippingCost": "கப்பல் கட்டணம்",
       "weight": "எடை",
       "weightUnit": "எடையின் அலகு",
+      "currency": "Currency",
       "city": "நகரம்",
       "address": "முகவரி",
-      "postalCode": "அஞ்சல் குறியீடு",
-      "currency": "Currency"
+      "postalCode": "அஞ்சல் குறியீடு"
     },
     "placeholders": {
       "title": "உதாரணம்: 2 வயது ஹோல்ஸ்டீன் பசு",
       "shortDescription": "தயாரிப்பு விளக்கம் (அதிகபட்சம் 200 எழுத்துகள்)",
       "description": "தயாரிப்பு பற்றிய விரிவான தகவல்களை வழங்கவும்...",
       "category": "ஒரு வகையைத் தேர்ந்தெடுக்கவும்.",
+      "searchCurrency": "Search currency...",
       "city": "நகரத்திற்குள் நுழையுங்கள்",
       "address": "முழு முகவரியையும் உள்ளிடவும்.",
-      "postalCode": "அஞ்சல் குறியீடு",
-      "searchCurrency": "Search currency..."
+      "postalCode": "அஞ்சல் குறியீடு"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "விளம்பரத் தலைப்பு கட்டாயமாகும்.",
       "shortDescriptionRequired": "ஒரு சுருக்கமான விளக்கம் தேவை.",
@@ -870,8 +899,7 @@
     "productCreated": "தயாரிப்பு வெற்றிகரமாக உருவாக்கப்பட்டது.",
     "creationFailed": "தயாரிப்பை உருவாக்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.",
     "userNotFound": "பயனர் தகவலைக் கண்டறிய முடியவில்லை. மீண்டும் உள்நுழையவும்.",
-    "defaultBusinessName": "என் தொழில்",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "என் தொழில்"
   },
   "becomeSeller": {
     "title": "விற்பனையாளராகுங்கள்",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} நிமிடத்திற்கு முன்பு",
     "hoursAgo": "{எண்ணிக்கை}மணி நேரத்திற்கு முன்பு",
     "daysAgo": "{எண்ணிக்கை} நாட்களுக்கு முன்பு"
+  },
+  "pricing": {
+    "originalPrice": "அசல் விலை",
+    "convertedPrice": "மாற்றப்பட்ட விலை",
+    "approximatePrice": "தற்போதைய மாற்று விகிதங்களின் அடிப்படையிலான தோராயமான மாற்றம்",
+    "approximate": "≈"
   }
 }

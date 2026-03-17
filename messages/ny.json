@@ -379,6 +379,34 @@
       "saveSuccess": "Zokonda zanu zasinthidwa.",
       "saveError": "Pakhala cholakwika posintha zomwe mukufuna.",
       "loadError": "Zokonda sizinathe kutsegulidwa."
+    },
+    "deleteAccount": {
+      "dangerZone": "Malo Oopsa",
+      "title": "Chotsani Akaunti",
+      "description": "Mukachotsa akaunti yanu, palibe kubwerera m'mbuyo. Deta yanu yonse, mndandanda, ndi zokambirana zanu zidzachotsedwa kwamuyaya.",
+      "irreversible": "Chochita ichi sichingasinthe.",
+      "button": "Chotsani Akaunti Yanga",
+      "confirmTitle": "Mukutsimikiza kuti mukufuna kuchotsa akaunti yanu?",
+      "warning": "Deta yotsatirayi idzachotsedwa kwamuyaya:",
+      "warningProfile": "Mbiri yanu ndi zambiri zanu",
+      "warningListings": "Zolemba zanu zonse ndi zinthu zanu",
+      "warningConversations": "Macheza ndi mauthenga anu",
+      "warningReviews": "Ndemanga zanu ndi zomwe mumakonda",
+      "passwordLabel": "Lowetsani mawu achinsinsi anu kuti mutsimikizire",
+      "passwordPlaceholder": "Mawu achinsinsi anu apano",
+      "reasonLabel": "N’chifukwa chiyani mukuchoka? (ngati mukufuna)",
+      "reasonPlaceholder": "Sankhani chifukwa",
+      "reasonNotSatisfied": "Sindikukhutira ndi ntchitoyo",
+      "reasonPrivacy": "Zovuta zachinsinsi",
+      "reasonAlternative": "Ndapeza nsanja ina",
+      "reasonOther": "Zina",
+      "feedbackLabel": "Ndemanga zina (ngati mukufuna)",
+      "feedbackPlaceholder": "Tiuzeni momwe tingasinthire...",
+      "cancel": "Letsani",
+      "confirmButton": "Chotsani Akaunti",
+      "deleting": "Kuchotsa...",
+      "success": "Akaunti yanu yachotsedwa bwino.",
+      "error": "Zalephera kuchotsa akaunti. Chonde onani mawu anu achinsinsi ndikuyesanso."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Sankhani gulu.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Dzina la malonda ndi lofunikira.",
       "shortDescriptionRequired": "Kufotokozera mwachidule kukufunika.",
       "descriptionRequired": "Kufotokozera mwatsatanetsatane kukufunika.",
       "categoryRequired": "Kusankha gulu n'kofunikira.",
       "priceRequired": "Lowetsani mtengo wolondola."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Pangani Mndandanda Watsopano",
@@ -834,21 +862,22 @@
       "shippingCost": "Ndalama Zotumizira",
       "weight": "Kulemera",
       "weightUnit": "Chigawo cha Kulemera",
+      "currency": "Currency",
       "city": "Mzinda",
       "address": "Adilesi",
-      "postalCode": "Khodi Yapositi",
-      "currency": "Currency"
+      "postalCode": "Khodi Yapositi"
     },
     "placeholders": {
       "title": "Chitsanzo: Ng'ombe ya Holstein ya zaka ziwiri",
       "shortDescription": "Kufotokozera kwa malonda (zilembo zosapitirira 200)",
       "description": "Perekani zambiri zokhudza malonda...",
       "category": "Sankhani gulu.",
+      "searchCurrency": "Search currency...",
       "city": "Lowani mumzinda",
       "address": "Lowetsani adilesi yonse.",
-      "postalCode": "Khodi Yapositi",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Khodi Yapositi"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Dzina la malonda ndi lofunikira.",
       "shortDescriptionRequired": "Kufotokozera mwachidule kukufunika.",
@@ -870,8 +899,7 @@
     "productCreated": "Chogulitsacho chapangidwa bwino.",
     "creationFailed": "Chogulitsacho sichinapangidwe. Yesaninso.",
     "userNotFound": "Zambiri za ogwiritsa ntchito sizinapezeke. Chonde lowaninso.",
-    "defaultBusinessName": "Bizinesi yanga",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Bizinesi yanga"
   },
   "becomeSeller": {
     "title": "Khalani Wogulitsa",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "mphindi {count} zapitazo",
     "hoursAgo": "{count}h yapitayo",
     "daysAgo": "masiku {owerengeka} apitawo"
+  },
+  "pricing": {
+    "originalPrice": "Mtengo woyambirira",
+    "convertedPrice": "Mtengo wosinthidwa",
+    "approximatePrice": "Kutembenuka koyerekeza kutengera mitengo yosinthira ndalama yomwe ilipo",
+    "approximate": "≈"
   }
 }

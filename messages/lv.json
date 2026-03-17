@@ -379,6 +379,34 @@
       "saveSuccess": "Jūsu preferences ir atjauninātas.",
       "saveError": "Atjauninot preferences, radās kļūda.",
       "loadError": "Nevarēja ielādēt preferences."
+    },
+    "deleteAccount": {
+      "dangerZone": "Bīstamā zona",
+      "title": "Dzēst kontu",
+      "description": "Kad esat izdzēsis savu kontu, atpakaļceļa vairs nav. Visi jūsu dati, ieraksti un sarunas tiks neatgriezeniski noņemtas.",
+      "irreversible": "Šī darbība ir neatgriezeniska.",
+      "button": "Dzēst manu kontu",
+      "confirmTitle": "Vai tiešām vēlaties dzēst savu kontu?",
+      "warning": "Šādi dati tiks neatgriezeniski dzēsti:",
+      "warningProfile": "Jūsu profils un personiskā informācija",
+      "warningListings": "Visi jūsu sludinājumi un produkti",
+      "warningConversations": "Jūsu sarunas un ziņojumi",
+      "warningReviews": "Jūsu atsauksmes un favorīti",
+      "passwordLabel": "Ievadiet paroli, lai apstiprinātu",
+      "passwordPlaceholder": "Jūsu pašreizējā parole",
+      "reasonLabel": "Kāpēc jūs aizejat? (pēc izvēles)",
+      "reasonPlaceholder": "Izvēlieties iemeslu",
+      "reasonNotSatisfied": "Neesmu apmierināts ar pakalpojumu",
+      "reasonPrivacy": "Bažas par privātumu",
+      "reasonAlternative": "Atradu alternatīvu platformu",
+      "reasonOther": "Citi",
+      "feedbackLabel": "Papildu atsauksmes (pēc izvēles)",
+      "feedbackPlaceholder": "Pastāstiet mums, kā mēs varam uzlabot...",
+      "cancel": "Atcelt",
+      "confirmButton": "Dzēst kontu",
+      "deleting": "Dzēš...",
+      "success": "Jūsu konts ir veiksmīgi izdzēsts.",
+      "error": "Neizdevās dzēst kontu. Lūdzu, pārbaudiet paroli un mēģiniet vēlreiz."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Izvēlieties kategoriju.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Sludinājuma nosaukums ir obligāts.",
       "shortDescriptionRequired": "Nepieciešams īss apraksts.",
       "descriptionRequired": "Nepieciešams detalizēts skaidrojums.",
       "categoryRequired": "Kategorijas izvēle ir obligāta.",
       "priceRequired": "Ievadiet derīgu cenu."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Izveidot jaunu ierakstu",
@@ -834,21 +862,22 @@
       "shippingCost": "Piegādes maksa",
       "weight": "Svars",
       "weightUnit": "Svara mērvienība",
+      "currency": "Currency",
       "city": "Pilsēta",
       "address": "Adrese",
-      "postalCode": "Pasta indekss",
-      "currency": "Currency"
+      "postalCode": "Pasta indekss"
     },
     "placeholders": {
       "title": "Piemērs: 2 gadus veca Holšteinas šķirnes govs",
       "shortDescription": "Produkta apraksts (maksimums 200 rakstzīmes)",
       "description": "Sniedziet detalizētu informāciju par produktu...",
       "category": "Izvēlieties kategoriju.",
+      "searchCurrency": "Search currency...",
       "city": "Iebrauciet pilsētā",
       "address": "Ievadiet pilnu adresi.",
-      "postalCode": "Pasta indekss",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Pasta indekss"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Sludinājuma nosaukums ir obligāts.",
       "shortDescriptionRequired": "Nepieciešams īss apraksts.",
@@ -870,8 +899,7 @@
     "productCreated": "Produkts tika veiksmīgi izveidots.",
     "creationFailed": "Produktu nevarēja izveidot. Lūdzu, mēģiniet vēlreiz.",
     "userNotFound": "Lietotāja informāciju nevarēja atrast. Lūdzu, piesakieties vēlreiz.",
-    "defaultBusinessName": "Mans bizness",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Mans bizness"
   },
   "becomeSeller": {
     "title": "Kļūsti par pārdevēju",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "pirms {count} minūtes",
     "hoursAgo": "pirms {count} h",
     "daysAgo": "pirms {count} dienām"
+  },
+  "pricing": {
+    "originalPrice": "Sākotnējā cena",
+    "convertedPrice": "Konvertētā cena",
+    "approximatePrice": "Aptuvenā konvertācija, pamatojoties uz pašreizējiem valūtas kursiem",
+    "approximate": "≈"
   }
 }

@@ -379,6 +379,34 @@
       "saveSuccess": "Preferințele dumneavoastră au fost actualizate.",
       "saveError": "A apărut o eroare la actualizarea preferințelor.",
       "loadError": "Preferințele nu au putut fi încărcate."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zonă periculoasă",
+      "title": "Șterge contul",
+      "description": "După ce ștergi contul, nu mai există cale de întoarcere. Toate datele, listările și conversațiile tale vor fi eliminate definitiv.",
+      "irreversible": "Această acțiune este ireversibilă.",
+      "button": "Ștergeți contul meu",
+      "confirmTitle": "Sigur vrei să-ți ștergi contul?",
+      "warning": "Următoarele date vor fi șterse definitiv:",
+      "warningProfile": "Profilul și informațiile dumneavoastră personale",
+      "warningListings": "Toate anunțurile și produsele dvs.",
+      "warningConversations": "Conversațiile și mesajele tale",
+      "warningReviews": "Recenziile și favoritele tale",
+      "passwordLabel": "Introduceți parola pentru a confirma",
+      "passwordPlaceholder": "Parola dvs. actuală",
+      "reasonLabel": "De ce pleci? (opțional)",
+      "reasonPlaceholder": "Selectați un motiv",
+      "reasonNotSatisfied": "Nemulțumit de serviciu",
+      "reasonPrivacy": "Preocupări legate de confidențialitate",
+      "reasonAlternative": "Am găsit o platformă alternativă",
+      "reasonOther": "Alte",
+      "feedbackLabel": "Feedback suplimentar (opțional)",
+      "feedbackPlaceholder": "Spuneți-ne cum putem îmbunătăți...",
+      "cancel": "Anula",
+      "confirmButton": "Șterge contul",
+      "deleting": "Se șterge...",
+      "success": "Contul dumneavoastră a fost șters cu succes.",
+      "error": "Ștergerea contului a eșuat. Verificați parola și încercați din nou."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Selectați o categorie.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Titlul anunțului este obligatoriu.",
       "shortDescriptionRequired": "Este necesară o scurtă descriere.",
       "descriptionRequired": "Este necesară o explicație detaliată.",
       "categoryRequired": "Selectarea categoriei este obligatorie.",
       "priceRequired": "Introduceți un preț valid."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Creați o listă nouă",
@@ -834,21 +862,22 @@
       "shippingCost": "Taxă de livrare",
       "weight": "Greutate",
       "weightUnit": "Unitate de greutate",
+      "currency": "Currency",
       "city": "Oraş",
       "address": "Adresa",
-      "postalCode": "Cod poștal",
-      "currency": "Currency"
+      "postalCode": "Cod poștal"
     },
     "placeholders": {
       "title": "Exemplu: Vacă Holstein de 2 ani",
       "shortDescription": "Descrierea produsului (maxim 200 de caractere)",
       "description": "Furnizați informații detaliate despre produs...",
       "category": "Selectați o categorie.",
+      "searchCurrency": "Search currency...",
       "city": "Intrați în oraș",
       "address": "Introduceți adresa completă.",
-      "postalCode": "Cod poștal",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Cod poștal"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Titlul anunțului este obligatoriu.",
       "shortDescriptionRequired": "Este necesară o scurtă descriere.",
@@ -870,8 +899,7 @@
     "productCreated": "Produsul a fost creat cu succes.",
     "creationFailed": "Produsul nu a putut fi creat. Vă rugăm să încercați din nou.",
     "userNotFound": "Informațiile despre utilizator nu au putut fi găsite. Vă rugăm să vă conectați din nou.",
-    "defaultBusinessName": "Afacerea mea",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Afacerea mea"
   },
   "becomeSeller": {
     "title": "Devino vânzător",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "Acum {count} minut",
     "hoursAgo": "Acum {count} ore",
     "daysAgo": "acum {count} zile"
+  },
+  "pricing": {
+    "originalPrice": "Preț inițial",
+    "convertedPrice": "Preț convertit",
+    "approximatePrice": "Conversie aproximativă bazată pe cursurile de schimb actuale",
+    "approximate": "≈"
   }
 }

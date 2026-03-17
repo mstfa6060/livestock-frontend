@@ -379,6 +379,34 @@
       "saveSuccess": "Suas preferências foram atualizadas.",
       "saveError": "Ocorreu um erro ao atualizar as preferências.",
       "loadError": "Não foi possível carregar as preferências."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zona de Perigo",
+      "title": "Excluir conta",
+      "description": "Depois de excluir sua conta, não há como voltar atrás. Todos os seus dados, anúncios e conversas serão removidos permanentemente.",
+      "irreversible": "Essa ação é irreversível.",
+      "button": "Excluir minha conta",
+      "confirmTitle": "Tem certeza de que deseja excluir sua conta?",
+      "warning": "Os seguintes dados serão excluídos permanentemente:",
+      "warningProfile": "Seu perfil e informações pessoais",
+      "warningListings": "Todos os seus anúncios e produtos",
+      "warningConversations": "Suas conversas e mensagens",
+      "warningReviews": "Suas avaliações e favoritos",
+      "passwordLabel": "Digite sua senha para confirmar.",
+      "passwordPlaceholder": "Sua senha atual",
+      "reasonLabel": "Por que você está indo embora? (opcional)",
+      "reasonPlaceholder": "Selecione um motivo",
+      "reasonNotSatisfied": "Não estou satisfeito com o serviço.",
+      "reasonPrivacy": "preocupações com a privacidade",
+      "reasonAlternative": "Encontrei uma plataforma alternativa.",
+      "reasonOther": "Outro",
+      "feedbackLabel": "Feedback adicional (opcional)",
+      "feedbackPlaceholder": "Diga-nos como podemos melhorar...",
+      "cancel": "Cancelar",
+      "confirmButton": "Excluir conta",
+      "deleting": "Excluindo...",
+      "success": "Sua conta foi excluída com sucesso.",
+      "error": "Não foi possível excluir a conta. Verifique sua senha e tente novamente."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "Ocorreu um erro ao carregar as informações do vendedor.",
       "productsLoadError": "Ocorreu um erro ao carregar os produtos do vendedor.",
       "reviewsTab": "Avaliações",
+      "share": "Compartilhar",
+      "shareText": "Confira {name} no Livestock Trading",
+      "linkCopied": "Link copiado para a área de transferência.",
       "reviews": {
         "summary": "Resumo da avaliação",
         "reviewCount": "avaliação",
@@ -796,14 +827,14 @@
       "category": "Selecione uma categoria.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "O título do anúncio é obrigatório.",
       "shortDescriptionRequired": "É necessária uma breve descrição.",
       "descriptionRequired": "É necessária uma explicação detalhada.",
       "categoryRequired": "A seleção da categoria é obrigatória.",
       "priceRequired": "Insira um preço válido."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Criar novo anúncio",
@@ -831,21 +862,22 @@
       "shippingCost": "Taxa de envio",
       "weight": "Peso",
       "weightUnit": "Unidade de Peso",
+      "currency": "Currency",
       "city": "Cidade",
       "address": "Endereço",
-      "postalCode": "Código postal",
-      "currency": "Currency"
+      "postalCode": "Código postal"
     },
     "placeholders": {
       "title": "Exemplo: Vaca Holstein de 2 anos",
       "shortDescription": "Descrição do produto (máximo de 200 caracteres)",
       "description": "Forneça informações detalhadas sobre o produto...",
       "category": "Selecione uma categoria.",
+      "searchCurrency": "Search currency...",
       "city": "Entre na cidade",
       "address": "Insira o endereço completo.",
-      "postalCode": "Código postal",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Código postal"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "O título do anúncio é obrigatório.",
       "shortDescriptionRequired": "É necessária uma breve descrição.",
@@ -867,8 +899,7 @@
     "productCreated": "O produto foi criado com sucesso.",
     "creationFailed": "Não foi possível criar o produto. Tente novamente.",
     "userNotFound": "Não foi possível encontrar as informações do usuário. Por favor, faça login novamente.",
-    "defaultBusinessName": "Meu negócio",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Meu negócio"
   },
   "becomeSeller": {
     "title": "Torne-se um vendedor",
@@ -1317,7 +1348,10 @@
     "fleet": "Informações da frota",
     "serviceRegions": "Áreas de atendimento",
     "specializations": "Áreas de especialização",
-    "certifications": "Certificados"
+    "certifications": "Certificados",
+    "share": "Compartilhar",
+    "shareText": "Confira {name} no Livestock Trading",
+    "linkCopied": "Link copiado para a área de transferência."
   },
   "brands": {
     "title": "Gestão de Marca",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "{count} min atrás",
     "hoursAgo": "há {count}h",
     "daysAgo": "{count} dias atrás"
+  },
+  "pricing": {
+    "originalPrice": "Preço original",
+    "convertedPrice": "Preço convertido",
+    "approximatePrice": "Conversão aproximada com base nas taxas de câmbio atuais.",
+    "approximate": "≈"
   }
 }

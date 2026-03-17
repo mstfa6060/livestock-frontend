@@ -379,6 +379,34 @@
       "saveSuccess": "您的偏好设置已更新。",
       "saveError": "更新偏好设置时发生错误。",
       "loadError": "偏好设置无法加载。"
+    },
+    "deleteAccount": {
+      "dangerZone": "危险区域",
+      "title": "删除帐户",
+      "description": "一旦您删除帐户，就无法恢复。您的所有数据、列表和对话都将被永久删除。",
+      "irreversible": "此举不可逆转。",
+      "button": "删除我的帐户",
+      "confirmTitle": "您确定要删除您的帐户吗？",
+      "warning": "以下数据将被永久删除：",
+      "warningProfile": "您的个人资料和个人信息",
+      "warningListings": "您所有的商品列表和产品",
+      "warningConversations": "您的对话和消息",
+      "warningReviews": "您的评论和收藏",
+      "passwordLabel": "请输入密码以确认",
+      "passwordPlaceholder": "您当前的密码",
+      "reasonLabel": "你为什么要离开？（可选）",
+      "reasonPlaceholder": "请选择原因",
+      "reasonNotSatisfied": "对服务不满意",
+      "reasonPrivacy": "隐私问题",
+      "reasonAlternative": "找到了一个替代平台",
+      "reasonOther": "其他",
+      "feedbackLabel": "其他反馈（可选）",
+      "feedbackPlaceholder": "请告诉我们如何改进……",
+      "cancel": "取消",
+      "confirmButton": "删除帐户",
+      "deleting": "正在删除……",
+      "success": "您的账户已成功删除。",
+      "error": "删除账户失败。请检查您的密码并重试。"
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "上传卖家信息时出错。",
       "productsLoadError": "上传卖家产品时发生错误。",
       "reviewsTab": "评估",
+      "share": "分享",
+      "shareText": "查看 {name} 在牲畜交易方面的信息",
+      "linkCopied": "链接已复制到剪贴板。",
       "reviews": {
         "summary": "评估总结",
         "reviewCount": "评估",
@@ -796,14 +827,14 @@
       "category": "请选择类别。",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "广告标题为必填项。",
       "shortDescriptionRequired": "请提供简要描述。",
       "descriptionRequired": "需要详细解释。",
       "categoryRequired": "类别选择为必填项。",
       "priceRequired": "请输入有效价格。"
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "创建新列表",
@@ -831,21 +862,22 @@
       "shippingCost": "运费",
       "weight": "重量",
       "weightUnit": "重量单位",
+      "currency": "Currency",
       "city": "城市",
       "address": "地址",
-      "postalCode": "邮政编码",
-      "currency": "Currency"
+      "postalCode": "邮政编码"
     },
     "placeholders": {
       "title": "例如：2岁荷斯坦奶牛",
       "shortDescription": "产品描述（最多 200 个字符）",
       "description": "请提供产品详细信息……",
       "category": "请选择类别。",
+      "searchCurrency": "Search currency...",
       "city": "进入城市",
       "address": "请输入完整地址。",
-      "postalCode": "邮政编码",
-      "searchCurrency": "Search currency..."
+      "postalCode": "邮政编码"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "广告标题为必填项。",
       "shortDescriptionRequired": "请提供简要描述。",
@@ -867,8 +899,7 @@
     "productCreated": "产品已成功制造完成。",
     "creationFailed": "产品创建失败，请重试。",
     "userNotFound": "未找到用户信息。请重新登录。",
-    "defaultBusinessName": "我的生意",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "我的生意"
   },
   "becomeSeller": {
     "title": "成为卖家",
@@ -1317,7 +1348,10 @@
     "fleet": "舰队信息",
     "serviceRegions": "服务区域",
     "specializations": "专业领域",
-    "certifications": "证书"
+    "certifications": "证书",
+    "share": "分享",
+    "shareText": "查看 {name} 在牲畜交易方面的信息",
+    "linkCopied": "链接已复制到剪贴板。"
   },
   "brands": {
     "title": "品牌管理",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "{count} 分钟前",
     "hoursAgo": "一小时前",
     "daysAgo": "数天前"
+  },
+  "pricing": {
+    "originalPrice": "原价",
+    "convertedPrice": "转换后的价格",
+    "approximatePrice": "根据当前汇率的近似换算",
+    "approximate": "≈"
   }
 }

@@ -379,6 +379,34 @@
       "saveSuccess": "Le tue preferenze sono state aggiornate.",
       "saveError": "Si è verificato un errore durante l'aggiornamento delle preferenze.",
       "loadError": "Impossibile caricare le preferenze."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zona di pericolo",
+      "title": "Elimina account",
+      "description": "Una volta eliminato l'account, non sarà più possibile tornare indietro. Tutti i dati, gli annunci e le conversazioni verranno rimossi definitivamente.",
+      "irreversible": "Questa azione è irreversibile.",
+      "button": "Elimina il mio account",
+      "confirmTitle": "Sei sicuro di voler eliminare il tuo account?",
+      "warning": "I seguenti dati verranno eliminati definitivamente:",
+      "warningProfile": "Il tuo profilo e le tue informazioni personali",
+      "warningListings": "Tutti i tuoi annunci e prodotti",
+      "warningConversations": "Le tue conversazioni e i tuoi messaggi",
+      "warningReviews": "Le tue recensioni e i tuoi preferiti",
+      "passwordLabel": "Inserisci la tua password per confermare",
+      "passwordPlaceholder": "La tua password attuale",
+      "reasonLabel": "Perché te ne vai? (facoltativo)",
+      "reasonPlaceholder": "Seleziona un motivo",
+      "reasonNotSatisfied": "Non soddisfatto del servizio",
+      "reasonPrivacy": "Preoccupazioni relative alla privacy",
+      "reasonAlternative": "Ho trovato una piattaforma alternativa",
+      "reasonOther": "Altro",
+      "feedbackLabel": "Feedback aggiuntivo (facoltativo)",
+      "feedbackPlaceholder": "Dicci come possiamo migliorare...",
+      "cancel": "Cancellare",
+      "confirmButton": "Elimina account",
+      "deleting": "Eliminazione in corso...",
+      "success": "Il tuo account è stato eliminato con successo.",
+      "error": "Impossibile eliminare l'account. Verifica la password e riprova."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "Si è verificato un errore durante il caricamento delle informazioni del venditore.",
       "productsLoadError": "Si è verificato un errore durante il caricamento dei prodotti del venditore.",
       "reviewsTab": "Valutazioni",
+      "share": "Condividere",
+      "shareText": "Scopri {name} sul commercio di bestiame.",
+      "linkCopied": "Link copiato negli appunti.",
       "reviews": {
         "summary": "Sintesi della valutazione",
         "reviewCount": "valutazione",
@@ -796,14 +827,14 @@
       "category": "Seleziona una categoria.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Il titolo dell'annuncio è obbligatorio.",
       "shortDescriptionRequired": "È richiesta una breve descrizione.",
       "descriptionRequired": "È necessaria una spiegazione dettagliata.",
       "categoryRequired": "La selezione della categoria è obbligatoria.",
       "priceRequired": "Inserisci un prezzo valido."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Crea una nuova inserzione",
@@ -831,21 +862,22 @@
       "shippingCost": "Spese di spedizione",
       "weight": "Peso",
       "weightUnit": "Unità di peso",
+      "currency": "Currency",
       "city": "Città",
       "address": "Indirizzo",
-      "postalCode": "Codice Postale",
-      "currency": "Currency"
+      "postalCode": "Codice Postale"
     },
     "placeholders": {
       "title": "Esempio: mucca Holstein di 2 anni",
       "shortDescription": "Descrizione del prodotto (max 200 caratteri)",
       "description": "Fornire informazioni dettagliate sul prodotto...",
       "category": "Seleziona una categoria.",
+      "searchCurrency": "Search currency...",
       "city": "Entra in città",
       "address": "Inserisci l'indirizzo completo.",
-      "postalCode": "Codice Postale",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Codice Postale"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Il titolo dell'annuncio è obbligatorio.",
       "shortDescriptionRequired": "È richiesta una breve descrizione.",
@@ -867,8 +899,7 @@
     "productCreated": "Il prodotto è stato creato con successo.",
     "creationFailed": "Impossibile creare il prodotto. Riprova.",
     "userNotFound": "Impossibile trovare le informazioni dell'utente. Effettua nuovamente l'accesso.",
-    "defaultBusinessName": "La mia attività",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "La mia attività"
   },
   "becomeSeller": {
     "title": "Diventa un venditore",
@@ -1317,7 +1348,10 @@
     "fleet": "Informazioni sulla flotta",
     "serviceRegions": "Aree di servizio",
     "specializations": "Aree di competenza",
-    "certifications": "Certificati"
+    "certifications": "Certificati",
+    "share": "Condividere",
+    "shareText": "Scopri {name} sul commercio di bestiame.",
+    "linkCopied": "Link copiato negli appunti."
   },
   "brands": {
     "title": "Gestione del marchio",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "{count} minuti fa",
     "hoursAgo": "{count} ore fa",
     "daysAgo": "{count}d fa"
+  },
+  "pricing": {
+    "originalPrice": "Prezzo originale",
+    "convertedPrice": "Prezzo convertito",
+    "approximatePrice": "Conversione approssimativa basata sui tassi di cambio attuali",
+    "approximate": "≈"
   }
 }

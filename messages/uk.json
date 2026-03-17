@@ -379,6 +379,34 @@
       "saveSuccess": "Ваші налаштування оновлено.",
       "saveError": "Під час оновлення налаштувань сталася помилка.",
       "loadError": "Не вдалося завантажити налаштування."
+    },
+    "deleteAccount": {
+      "dangerZone": "НЕБЕЗПЕЧНА ЗОНА",
+      "title": "Видалити обліковий запис",
+      "description": "Після видалення облікового запису шляху назад не буде. Усі ваші дані, оголошення та розмови будуть видалені назавжди.",
+      "irreversible": "Ця дія є незворотною.",
+      "button": "Видалити мій обліковий запис",
+      "confirmTitle": "Ви впевнені, що хочете видалити свій обліковий запис?",
+      "warning": "Наступні дані будуть видалені назавжди:",
+      "warningProfile": "Ваш профіль та особиста інформація",
+      "warningListings": "Усі ваші оголошення та товари",
+      "warningConversations": "Ваші розмови та повідомлення",
+      "warningReviews": "Ваші відгуки та улюблені",
+      "passwordLabel": "Введіть свій пароль для підтвердження",
+      "passwordPlaceholder": "Ваш поточний пароль",
+      "reasonLabel": "Чому ви йдете? (необов'язково)",
+      "reasonPlaceholder": "Виберіть причину",
+      "reasonNotSatisfied": "Не задоволений послугою",
+      "reasonPrivacy": "Питання конфіденційності",
+      "reasonAlternative": "Знайшли альтернативну платформу",
+      "reasonOther": "Інше",
+      "feedbackLabel": "Додатковий відгук (необов'язково)",
+      "feedbackPlaceholder": "Розкажіть нам, як ми можемо покращити...",
+      "cancel": "Скасувати",
+      "confirmButton": "Видалити обліковий запис",
+      "deleting": "Видалення...",
+      "success": "Ваш обліковий запис успішно видалено.",
+      "error": "Не вдалося видалити обліковий запис. Перевірте свій пароль і спробуйте ще раз."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Виберіть категорію.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Назва оголошення обов'язкова.",
       "shortDescriptionRequired": "Потрібен короткий опис.",
       "descriptionRequired": "Потрібне детальне пояснення.",
       "categoryRequired": "Вибір категорії є обов'язковим.",
       "priceRequired": "Введіть дійсну ціну."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Створити новий список",
@@ -834,21 +862,22 @@
       "shippingCost": "Вартість доставки",
       "weight": "Вага",
       "weightUnit": "Одиниця ваги",
+      "currency": "Currency",
       "city": "Місто",
       "address": "Адреса",
-      "postalCode": "Поштовий індекс",
-      "currency": "Currency"
+      "postalCode": "Поштовий індекс"
     },
     "placeholders": {
       "title": "Приклад: 2-річна корова голштинської породи",
       "shortDescription": "Опис товару (максимум 200 символів)",
       "description": "Надайте детальну інформацію про товар...",
       "category": "Виберіть категорію.",
+      "searchCurrency": "Search currency...",
       "city": "В'їжджайте в місто",
       "address": "Введіть повну адресу.",
-      "postalCode": "Поштовий індекс",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Поштовий індекс"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Назва оголошення обов'язкова.",
       "shortDescriptionRequired": "Потрібен короткий опис.",
@@ -870,8 +899,7 @@
     "productCreated": "Продукт успішно створено.",
     "creationFailed": "Не вдалося створити продукт. Спробуйте ще раз.",
     "userNotFound": "Інформацію про користувача не знайдено. Будь ласка, увійдіть ще раз.",
-    "defaultBusinessName": "Мій бізнес",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Мій бізнес"
   },
   "becomeSeller": {
     "title": "Стати продавцем",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} хв. тому",
     "hoursAgo": "{count} год тому",
     "daysAgo": "{count} днів тому"
+  },
+  "pricing": {
+    "originalPrice": "Початкова ціна",
+    "convertedPrice": "Конвертована ціна",
+    "approximatePrice": "Приблизний перерахунок на основі поточних обмінних курсів",
+    "approximate": "≈"
   }
 }

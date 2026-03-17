@@ -379,6 +379,34 @@
       "saveSuccess": "A ti ṣe àtúnṣe sí àwọn ohun tí o fẹ́.",
       "saveError": "Àṣìṣe kan ṣẹlẹ̀ nígbà tí a ń ṣe àtúnṣe àwọn ohun tí a fẹ́.",
       "loadError": "A ko le fi awọn ayanfẹ kun."
+    },
+    "deleteAccount": {
+      "dangerZone": "Agbègbè Ewu",
+      "title": "Pa Àkọọ́lẹ̀ rẹ́",
+      "description": "Nígbà tí o bá ti pa àkọọ́lẹ̀ rẹ rẹ́, kò sí ìpadàsẹ̀yìn. Gbogbo dátà rẹ, àwọn àkójọ rẹ àti ìjíròrò rẹ ni a ó yọ kúrò pátápátá.",
+      "irreversible": "Iṣe yii ko le yipada.",
+      "button": "Pa Àkọọ́lẹ̀ Mi Rẹ́",
+      "confirmTitle": "Ṣé ó dá ọ lójú pé o fẹ́ pa àkọọ́lẹ̀ rẹ rẹ́?",
+      "warning": "Àwọn dátà wọ̀nyí ni a ó parẹ́ pátápátá:",
+      "warningProfile": "Profaili rẹ ati alaye ti ara ẹni rẹ",
+      "warningListings": "Gbogbo awọn akojọ rẹ ati awọn ọja",
+      "warningConversations": "Àwọn ìjíròrò àti àwọn ìránṣẹ́ rẹ",
+      "warningReviews": "Àwọn àtúnyẹ̀wò àti àwọn ayanfẹ́ rẹ",
+      "passwordLabel": "Tẹ ọrọ igbaniwọle rẹ sii lati jẹrisi",
+      "passwordPlaceholder": "Ọ̀rọ̀ ìpamọ́ rẹ lọ́wọ́lọ́wọ́",
+      "reasonLabel": "Kí ló dé tí o fi ń lọ? (àṣàyàn)",
+      "reasonPlaceholder": "Yan ìdí kan",
+      "reasonNotSatisfied": "Mi ò ní ìtẹ́lọ́rùn pẹ̀lú iṣẹ́ náà",
+      "reasonPrivacy": "Àwọn àníyàn ìpamọ́",
+      "reasonAlternative": "Ri iru ẹrọ miiran",
+      "reasonOther": "Òmíràn",
+      "feedbackLabel": "Àfikún ìjábọ̀ (àṣàyàn)",
+      "feedbackPlaceholder": "Sọ fun wa bi a ṣe le ṣe ilọsiwaju...",
+      "cancel": "Fagilee",
+      "confirmButton": "Pa Àkọọ́lẹ̀ rẹ́",
+      "deleting": "N pa...",
+      "success": "A ti paarẹ àkọọ́lẹ̀ rẹ ní àṣeyọrí.",
+      "error": "Kò ṣeé ṣe láti pa àkọọ́lẹ̀ rẹ rẹ́. Jọ̀wọ́ ṣàyẹ̀wò ọ̀rọ̀ìpamọ́ rẹ kí o sì tún gbìyànjú lẹ́ẹ̀kan síi."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Yan ẹ̀ka kan.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Oyè ìpolówó jẹ́ dandan.",
       "shortDescriptionRequired": "Àpèjúwe kúkúrú ni a nílò.",
       "descriptionRequired": "A nilo alaye kikun.",
       "categoryRequired": "Yíyan ẹ̀ka jẹ́ dandan.",
       "priceRequired": "Tẹ iye owo to wulo sii."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Ṣẹ̀dá Àkójọ Tuntun",
@@ -834,21 +862,22 @@
       "shippingCost": "Owo Gbigbe",
       "weight": "Ìwúwo",
       "weightUnit": "Ẹyọ Ìwúwo",
+      "currency": "Currency",
       "city": "Ìlú",
       "address": "Àdírẹ́sì",
-      "postalCode": "Kóòdù ìfìwéránṣẹ́",
-      "currency": "Currency"
+      "postalCode": "Kóòdù ìfìwéránṣẹ́"
     },
     "placeholders": {
       "title": "Àpẹẹrẹ: Màlúù Holstein ọmọ ọdún méjì",
       "shortDescription": "Àpèjúwe ọjà (tó pọ̀jù àwọn ohun kikọ 200)",
       "description": "Pese alaye kikun nipa ọja naa...",
       "category": "Yan ẹ̀ka kan.",
+      "searchCurrency": "Search currency...",
       "city": "Wọ ìlú náà",
       "address": "Tẹ gbogbo àdírẹ́sì náà.",
-      "postalCode": "Kóòdù ìfìwéránṣẹ́",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Kóòdù ìfìwéránṣẹ́"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Oyè ìpolówó jẹ́ dandan.",
       "shortDescriptionRequired": "Àpèjúwe kúkúrú ni a nílò.",
@@ -870,8 +899,7 @@
     "productCreated": "A ṣẹ̀dá ọjà náà dáadáa.",
     "creationFailed": "A ko le ṣẹda ọja naa. Jọwọ gbiyanju lẹẹkansi.",
     "userNotFound": "A ko le ri alaye olumulo. Jọwọ wọle lẹẹkansi.",
-    "defaultBusinessName": "Iṣẹ́ mi",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Iṣẹ́ mi"
   },
   "becomeSeller": {
     "title": "Di Olùtajà",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{ka} iṣẹ́jú sẹ́yìn",
     "hoursAgo": "{ka}h sẹ́yìn",
     "daysAgo": "{ka}d sẹ́yìn"
+  },
+  "pricing": {
+    "originalPrice": "Iye atilẹba",
+    "convertedPrice": "Iye owo ti a yipada",
+    "approximatePrice": "Ìyípadà tó súnmọ́ dá lórí iye owó pàṣípààrọ̀ lọ́wọ́lọ́wọ́",
+    "approximate": "≈"
   }
 }

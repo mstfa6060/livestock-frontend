@@ -379,6 +379,34 @@
       "saveSuccess": "設定が更新されました。",
       "saveError": "設定の更新中にエラーが発生しました。",
       "loadError": "設定を読み込めませんでした。"
+    },
+    "deleteAccount": {
+      "dangerZone": "危険地帯",
+      "title": "アカウントを削除",
+      "description": "アカウントを削除すると、元に戻すことはできません。すべてのデータ、出品情報、会話履歴は完全に削除されます。",
+      "irreversible": "この行為は取り返しがつかない。",
+      "button": "アカウントを削除する",
+      "confirmTitle": "本当にアカウントを削除しますか？",
+      "warning": "以下のデータは完全に削除されます。",
+      "warningProfile": "あなたのプロフィールと個人情報",
+      "warningListings": "すべての出品と商品",
+      "warningConversations": "あなたの会話とメッセージ",
+      "warningReviews": "あなたのレビューとお気に入り",
+      "passwordLabel": "確認のためパスワードを入力してください",
+      "passwordPlaceholder": "現在のパスワード",
+      "reasonLabel": "なぜ辞めるのですか？（任意）",
+      "reasonPlaceholder": "理由を選択してください",
+      "reasonNotSatisfied": "サービスに満足していません",
+      "reasonPrivacy": "プライバシーに関する懸念",
+      "reasonAlternative": "代替プラットフォームを見つけました",
+      "reasonOther": "他の",
+      "feedbackLabel": "追加のフィードバック（任意）",
+      "feedbackPlaceholder": "改善点についてお聞かせください。",
+      "cancel": "キャンセル",
+      "confirmButton": "アカウントを削除",
+      "deleting": "削除中...",
+      "success": "アカウントは正常に削除されました。",
+      "error": "アカウントの削除に失敗しました。パスワードを確認して、もう一度お試しください。"
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "販売者情報のアップロード中にエラーが発生しました。",
       "productsLoadError": "出品者の商品をアップロード中にエラーが発生しました。",
       "reviewsTab": "評価",
+      "share": "共有",
+      "shareText": "家畜取引に関する{name}のレポートをチェックしてみてください。",
+      "linkCopied": "リンクがクリップボードにコピーされました。",
       "reviews": {
         "summary": "評価概要",
         "reviewCount": "評価",
@@ -796,14 +827,14 @@
       "category": "カテゴリを選択してください。",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "広告タイトルは必須です。",
       "shortDescriptionRequired": "簡単な説明が必要です。",
       "descriptionRequired": "詳細な説明が必要です。",
       "categoryRequired": "カテゴリー選択は必須です。",
       "priceRequired": "有効な価格を入力してください。"
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "新規出品を作成する",
@@ -831,21 +862,22 @@
       "shippingCost": "送料",
       "weight": "重さ",
       "weightUnit": "重量単位",
+      "currency": "Currency",
       "city": "市",
       "address": "住所",
-      "postalCode": "郵便番号",
-      "currency": "Currency"
+      "postalCode": "郵便番号"
     },
     "placeholders": {
       "title": "例：2歳のホルスタイン牛",
       "shortDescription": "製品説明（最大200文字）",
       "description": "製品に関する詳細情報を提供してください。",
       "category": "カテゴリを選択してください。",
+      "searchCurrency": "Search currency...",
       "city": "街に入る",
       "address": "住所をすべて入力してください。",
-      "postalCode": "郵便番号",
-      "searchCurrency": "Search currency..."
+      "postalCode": "郵便番号"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "広告タイトルは必須です。",
       "shortDescriptionRequired": "簡単な説明が必要です。",
@@ -867,8 +899,7 @@
     "productCreated": "製品の開発に成功しました。",
     "creationFailed": "製品を作成できませんでした。もう一度お試しください。",
     "userNotFound": "ユーザー情報が見つかりませんでした。再度ログインしてください。",
-    "defaultBusinessName": "私のビジネス",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "私のビジネス"
   },
   "becomeSeller": {
     "title": "販売者になる",
@@ -1317,7 +1348,10 @@
     "fleet": "車両情報",
     "serviceRegions": "サービス提供地域",
     "specializations": "専門分野",
-    "certifications": "証明書"
+    "certifications": "証明書",
+    "share": "共有",
+    "shareText": "家畜取引に関する{name}のレポートをチェックしてみてください。",
+    "linkCopied": "リンクがクリップボードにコピーされました。"
   },
   "brands": {
     "title": "ブランドマネジメント",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "{count}分前",
     "hoursAgo": "{count}時間前",
     "daysAgo": "{count}日前"
+  },
+  "pricing": {
+    "originalPrice": "元の価格",
+    "convertedPrice": "換算価格",
+    "approximatePrice": "現在の為替レートに基づく概算換算値",
+    "approximate": "≈"
   }
 }

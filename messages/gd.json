@@ -379,6 +379,34 @@
       "saveSuccess": "Chaidh na roghainnean agad ùrachadh.",
       "saveError": "Thachair mearachd nuair a bha na roghainnean air an ùrachadh.",
       "loadError": "Cha b’ urrainnear na roghainnean a luchdachadh."
+    },
+    "deleteAccount": {
+      "dangerZone": "Sòn Cunnart",
+      "title": "Sguab às Cunntas",
+      "description": "Cho luath ‘s a sguabas tu às do chunntas, chan eil dòigh air ais ann. Thèid an dàta, na liostaichean agus na còmhraidhean agad uile a thoirt air falbh gu buan.",
+      "irreversible": "Chan urrainnear an gnìomh seo a thionndadh air ais.",
+      "button": "Sguab às mo Chunntas",
+      "confirmTitle": "A bheil thu cinnteach gu bheil thu airson do chunntas a dhubhadh às?",
+      "warning": "Thèid an dàta a leanas a dhubhadh às gu buan:",
+      "warningProfile": "Do phròifil agus fiosrachadh pearsanta",
+      "warningListings": "Na liostaichean agus na toraidhean agad uile",
+      "warningConversations": "Na còmhraidhean agus na teachdaireachdan agad",
+      "warningReviews": "Na lèirmheasan agus na rudan as fheàrr leat",
+      "passwordLabel": "Cuir a-steach am facal-faire agad gus dearbhadh",
+      "passwordPlaceholder": "Am facal-faire làithreach agad",
+      "reasonLabel": "Carson a tha thu a’ falbh? (roghainneil)",
+      "reasonPlaceholder": "Tagh adhbhar",
+      "reasonNotSatisfied": "Chan eil mi riaraichte leis an t-seirbheis",
+      "reasonPrivacy": "Draghan prìobhaideachd",
+      "reasonAlternative": "Lorg àrd-ùrlar eile",
+      "reasonOther": "Eile",
+      "feedbackLabel": "Beachdan a bharrachd (roghainneil)",
+      "feedbackPlaceholder": "Innis dhuinn ciamar as urrainn dhuinn leasachadh...",
+      "cancel": "Sguir dheth",
+      "confirmButton": "Sguab às Cunntas",
+      "deleting": "A’ sguabadh às…",
+      "success": "Chaidh do chunntas a dhubhadh às gu soirbheachail.",
+      "error": "Dh’fhàillig sguabadh às a’ chunntais. Thoir sùil air am facal-faire agad agus feuch ris a-rithist."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Tagh roinn-seòrsa.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tha tiotal an t-sanasachd èigneachail.",
       "shortDescriptionRequired": "Tha feum air tuairisgeul goirid.",
       "descriptionRequired": "Tha feum air mìneachadh mionaideach.",
       "categoryRequired": "Tha taghadh roinn-seòrsa èigneachail.",
       "priceRequired": "Cuir a-steach prìs dligheach."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Cruthaich Liosta Ùr",
@@ -834,21 +862,22 @@
       "shippingCost": "Cìs Luingeis",
       "weight": "Cuideam",
       "weightUnit": "Aonad Cuideam",
+      "currency": "Currency",
       "city": "Baile-mòr",
       "address": "Seòladh",
-      "postalCode": "Còd puist",
-      "currency": "Currency"
+      "postalCode": "Còd puist"
     },
     "placeholders": {
       "title": "Eisimpleir: Bò Holstein 2 bhliadhna a dh'aois",
       "shortDescription": "Tuairisgeul toraidh (200 caractar aig a’ char as àirde)",
       "description": "Thoir seachad fiosrachadh mionaideach mun toradh...",
       "category": "Tagh roinn-seòrsa.",
+      "searchCurrency": "Search currency...",
       "city": "Cuir a-steach don bhaile",
       "address": "Cuir a-steach an seòladh slàn.",
-      "postalCode": "Còd puist",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Còd puist"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tha tiotal an t-sanasachd èigneachail.",
       "shortDescriptionRequired": "Tha feum air tuairisgeul goirid.",
@@ -870,8 +899,7 @@
     "productCreated": "Chaidh an toradh a chruthachadh gu soirbheachail.",
     "creationFailed": "Cha b’ urrainnear an toradh a chruthachadh. Feuch ris a-rithist.",
     "userNotFound": "Cha b’ urrainnear fiosrachadh an neach-cleachdaidh a lorg. Log a-steach a-rithist.",
-    "defaultBusinessName": "Mo ghnìomhachas",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Mo ghnìomhachas"
   },
   "becomeSeller": {
     "title": "Bi nad neach-reic",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} mionaid air ais",
     "hoursAgo": "uair a thìde air ais",
     "daysAgo": "{cunnt} latha air ais"
+  },
+  "pricing": {
+    "originalPrice": "Prìs thùsail",
+    "convertedPrice": "Prìs air a thionndadh",
+    "approximatePrice": "Tionndadh tuairmseach stèidhichte air ìrean iomlaid gnàthach",
+    "approximate": "≈"
   }
 }

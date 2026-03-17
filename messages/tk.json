@@ -379,6 +379,34 @@
       "saveSuccess": "Saýlamalaryňyz täzelendi.",
       "saveError": "Saýlamalary täzelemekde ýalňyşlyk ýüze çykdy.",
       "loadError": "Saýlamalar ýüklenip bolmady."
+    },
+    "deleteAccount": {
+      "dangerZone": "Howply zolak",
+      "title": "Hasaby poz",
+      "description": "Hasabyňyzy pozanyňyzdan soň, yzyna gaýdyp gelmek bolmaýar. Ähli maglumatlaryňyz, sanawlaryňyz we söhbetdeşlikleriňiz hemişelik pozular.",
+      "irreversible": "Bu hereket yzyna gaýtaryp bolmaz.",
+      "button": "Hasabymy poz",
+      "confirmTitle": "Hasabyňyzy pozmak isleýändigiňize ynanýarsyňyzmy?",
+      "warning": "Aşakdaky maglumatlar hemişelik öçüriler:",
+      "warningProfile": "Profiliňiz we şahsy maglumatyňyz",
+      "warningListings": "Ähli sanawlaryňyz we önümleriňiz",
+      "warningConversations": "Siziň söhbetdeşlikleriňiz we habarlaryňyz",
+      "warningReviews": "Siziň synlaryňyz we halaýanlaryňyz",
+      "passwordLabel": "Tassyklamak üçin parolyňyzy giriziň",
+      "passwordPlaceholder": "Häzirki parolyňyz",
+      "reasonLabel": "Näme üçin gidýärsiňiz? (isleg boýunça)",
+      "reasonPlaceholder": "Sebäbini saýlaň",
+      "reasonNotSatisfied": "Hyzmatdan kanagatlanmadym",
+      "reasonPrivacy": "Gizlinlik meseleleri",
+      "reasonAlternative": "Alternatiw platforma tapdym",
+      "reasonOther": "Başga",
+      "feedbackLabel": "Goşmaça pikir (isleg boýunça)",
+      "feedbackPlaceholder": "Bize nähili gowulandyryp biljekdigimizi aýdyň...",
+      "cancel": "Ýatyr",
+      "confirmButton": "Hasaby poz",
+      "deleting": "Öçürilýär...",
+      "success": "Hasabyňyz üstünlikli pozuldy.",
+      "error": "Hasap pozulmady. Parolyňyzy barlaň we gaýtadan synanyşyň."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Bir kategoriýa saýlaň.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Reklamanyň ady hökmanydyr.",
       "shortDescriptionRequired": "Gysgaça düşündiriş talap edilýär.",
       "descriptionRequired": "Jikme-jik düşündiriş talap edilýär.",
       "categoryRequired": "Kategoriýa saýlamak hökmanydyr.",
       "priceRequired": "Dogry bahany giriziň."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Täze sanaw dörediň",
@@ -834,21 +862,22 @@
       "shippingCost": "Eltip bermek tölegi",
       "weight": "Agram",
       "weightUnit": "Agram birligi",
+      "currency": "Currency",
       "city": "Şäher",
       "address": "Salgy",
-      "postalCode": "Poçta indeksi",
-      "currency": "Currency"
+      "postalCode": "Poçta indeksi"
     },
     "placeholders": {
       "title": "Mysal: 2 ýaşly Golşteýn sygyry",
       "shortDescription": "Önümiň düşündirişi (maksimum 200 simwol)",
       "description": "Önüm barada jikme-jik maglumat beriň...",
       "category": "Bir kategoriýa saýlaň.",
+      "searchCurrency": "Search currency...",
       "city": "Şähere giriň",
       "address": "Doly salgyny giriziň.",
-      "postalCode": "Poçta indeksi",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Poçta indeksi"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Reklamanyň ady hökmanydyr.",
       "shortDescriptionRequired": "Gysgaça düşündiriş talap edilýär.",
@@ -870,8 +899,7 @@
     "productCreated": "Önüm üstünlikli döredildi.",
     "creationFailed": "Önüm döredilip bolmady. Gaýtadan synanyşyň.",
     "userNotFound": "Ulanyjy maglumaty tapylmady. Gaýtadan giriň.",
-    "defaultBusinessName": "Meniň işim",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Meniň işim"
   },
   "becomeSeller": {
     "title": "Satyjy boluň",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} minut öň",
     "hoursAgo": "{count}sagat mundan ozal",
     "daysAgo": "{count} gün öň"
+  },
+  "pricing": {
+    "originalPrice": "Asyl bahasy",
+    "convertedPrice": "Öwrülen baha",
+    "approximatePrice": "Häzirki walýuta kurslaryna esaslanýan takmynan konwersiýa",
+    "approximate": "≈"
   }
 }

@@ -379,6 +379,34 @@
       "saveSuccess": "Preferansene dine er oppdatert.",
       "saveError": "Det oppsto en feil under oppdatering av innstillingene.",
       "loadError": "Kunne ikke laste inn innstillingene."
+    },
+    "deleteAccount": {
+      "dangerZone": "Faresone",
+      "title": "Slett konto",
+      "description": "Når du har slettet kontoen din, er det ingen vei tilbake. Alle dataene, oppføringene og samtalene dine blir fjernet permanent.",
+      "irreversible": "Denne handlingen er irreversibel.",
+      "button": "Slett kontoen min",
+      "confirmTitle": "Er du sikker på at du vil slette kontoen din?",
+      "warning": "Følgende data vil bli slettet permanent:",
+      "warningProfile": "Din profil og personopplysninger",
+      "warningListings": "Alle oppføringene og produktene dine",
+      "warningConversations": "Dine samtaler og meldinger",
+      "warningReviews": "Dine anmeldelser og favoritter",
+      "passwordLabel": "Skriv inn passordet ditt for å bekrefte",
+      "passwordPlaceholder": "Ditt nåværende passord",
+      "reasonLabel": "Hvorfor drar du? (valgfritt)",
+      "reasonPlaceholder": "Velg en grunn",
+      "reasonNotSatisfied": "Ikke fornøyd med tjenesten",
+      "reasonPrivacy": "Bekymringer om personvern",
+      "reasonAlternative": "Fant en alternativ plattform",
+      "reasonOther": "Annen",
+      "feedbackLabel": "Ytterligere tilbakemeldinger (valgfritt)",
+      "feedbackPlaceholder": "Fortell oss hvordan vi kan forbedre oss...",
+      "cancel": "Kansellere",
+      "confirmButton": "Slett konto",
+      "deleting": "Sletter...",
+      "success": "Kontoen din er slettet.",
+      "error": "Kunne ikke slette kontoen. Sjekk passordet ditt og prøv på nytt."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "Det oppsto en feil under opplasting av selgerinformasjon.",
       "productsLoadError": "Det oppsto en feil under opplasting av selgerens produkter.",
       "reviewsTab": "Vurderinger",
+      "share": "Dele",
+      "shareText": "Sjekk ut {name} på husdyrhandel",
+      "linkCopied": "Lenke kopiert til utklippstavlen.",
       "reviews": {
         "summary": "Evalueringssammendrag",
         "reviewCount": "evaluering",
@@ -796,14 +827,14 @@
       "category": "Velg en kategori.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Annonsetittel er obligatorisk.",
       "shortDescriptionRequired": "En kort beskrivelse er nødvendig.",
       "descriptionRequired": "En detaljert forklaring er nødvendig.",
       "categoryRequired": "Valg av kategori er obligatorisk.",
       "priceRequired": "Skriv inn en gyldig pris."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Opprett ny oppføring",
@@ -831,21 +862,22 @@
       "shippingCost": "Fraktgebyr",
       "weight": "Vekt",
       "weightUnit": "Vektenhet",
+      "currency": "Currency",
       "city": "By",
       "address": "Adresse",
-      "postalCode": "Postnummer",
-      "currency": "Currency"
+      "postalCode": "Postnummer"
     },
     "placeholders": {
       "title": "Eksempel: 2 år gammel Holstein-ku",
       "shortDescription": "Produktbeskrivelse (maks 200 tegn)",
       "description": "Gi detaljert informasjon om produktet...",
       "category": "Velg en kategori.",
+      "searchCurrency": "Search currency...",
       "city": "Gå inn i byen",
       "address": "Skriv inn hele adressen.",
-      "postalCode": "Postnummer",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Postnummer"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Annonsetittel er obligatorisk.",
       "shortDescriptionRequired": "En kort beskrivelse er nødvendig.",
@@ -867,8 +899,7 @@
     "productCreated": "Produktet ble opprettet.",
     "creationFailed": "Produktet kunne ikke opprettes. Prøv på nytt.",
     "userNotFound": "Brukerinformasjonen ble ikke funnet. Vennligst logg inn på nytt.",
-    "defaultBusinessName": "Min virksomhet",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Min virksomhet"
   },
   "becomeSeller": {
     "title": "Bli en selger",
@@ -1317,7 +1348,10 @@
     "fleet": "Flåteinformasjon",
     "serviceRegions": "Serviceområder",
     "specializations": "Ekspertiseområder",
-    "certifications": "Sertifikater"
+    "certifications": "Sertifikater",
+    "share": "Dele",
+    "shareText": "Sjekk ut {name} på husdyrhandel",
+    "linkCopied": "Lenke kopiert til utklippstavlen."
   },
   "brands": {
     "title": "Merkevarehåndtering",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "for {count} minutter siden",
     "hoursAgo": "for {count} timer siden",
     "daysAgo": "for {count} dager siden"
+  },
+  "pricing": {
+    "originalPrice": "Opprinnelig pris",
+    "convertedPrice": "Konvertert pris",
+    "approximatePrice": "Omtrentlig konvertering basert på gjeldende valutakurser",
+    "approximate": "≈"
   }
 }

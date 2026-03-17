@@ -379,6 +379,34 @@
       "saveSuccess": "Вашите предпочитания са актуализирани.",
       "saveError": "Възникна грешка при актуализирането на предпочитанията.",
       "loadError": "Предпочитанията не можаха да бъдат заредени."
+    },
+    "deleteAccount": {
+      "dangerZone": "Опасна зона",
+      "title": "Изтриване на акаунт",
+      "description": "След като изтриете акаунта си, няма връщане назад. Всички ваши данни, обяви и разговори ще бъдат премахнати завинаги.",
+      "irreversible": "Това действие е необратимо.",
+      "button": "Изтриване на моя акаунт",
+      "confirmTitle": "Сигурни ли сте, че искате да изтриете акаунта си?",
+      "warning": "Следните данни ще бъдат изтрити за постоянно:",
+      "warningProfile": "Вашият профил и лична информация",
+      "warningListings": "Всички ваши обяви и продукти",
+      "warningConversations": "Вашите разговори и съобщения",
+      "warningReviews": "Вашите отзиви и любими",
+      "passwordLabel": "Въведете паролата си за потвърждение",
+      "passwordPlaceholder": "Вашата текуща парола",
+      "reasonLabel": "Защо си тръгваш? (по избор)",
+      "reasonPlaceholder": "Изберете причина",
+      "reasonNotSatisfied": "Не съм доволен от услугата",
+      "reasonPrivacy": "Загриженост за поверителността",
+      "reasonAlternative": "Намерих алтернативна платформа",
+      "reasonOther": "Друго",
+      "feedbackLabel": "Допълнителна обратна връзка (по избор)",
+      "feedbackPlaceholder": "Кажете ни как можем да подобрим...",
+      "cancel": "Отказ",
+      "confirmButton": "Изтриване на акаунт",
+      "deleting": "Изтриване...",
+      "success": "Вашият акаунт е успешно изтрит.",
+      "error": "Изтриването на акаунта не бе успешно. Моля, проверете паролата си и опитайте отново."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Изберете категория.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Заглавието на рекламата е задължително.",
       "shortDescriptionRequired": "Изисква се кратко описание.",
       "descriptionRequired": "Необходимо е подробно обяснение.",
       "categoryRequired": "Изборът на категория е задължителен.",
       "priceRequired": "Въведете валидна цена."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Създаване на нова обява",
@@ -834,21 +862,22 @@
       "shippingCost": "Такса за доставка",
       "weight": "Тегло",
       "weightUnit": "Единица за тегло",
+      "currency": "Currency",
       "city": "Град",
       "address": "Адрес",
-      "postalCode": "Пощенски код",
-      "currency": "Currency"
+      "postalCode": "Пощенски код"
     },
     "placeholders": {
       "title": "Пример: 2-годишна крава от породата Холщайн",
       "shortDescription": "Описание на продукта (максимум 200 знака)",
       "description": "Предоставете подробна информация за продукта...",
       "category": "Изберете категория.",
+      "searchCurrency": "Search currency...",
       "city": "Влезте в града",
       "address": "Въведете пълния адрес.",
-      "postalCode": "Пощенски код",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Пощенски код"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Заглавието на рекламата е задължително.",
       "shortDescriptionRequired": "Изисква се кратко описание.",
@@ -870,8 +899,7 @@
     "productCreated": "Продуктът е създаден успешно.",
     "creationFailed": "Продуктът не можа да бъде създаден. Моля, опитайте отново.",
     "userNotFound": "Информацията за потребителя не можа да бъде намерена. Моля, влезте отново.",
-    "defaultBusinessName": "Моят бизнес",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Моят бизнес"
   },
   "becomeSeller": {
     "title": "Станете продавач",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "преди {count} мин.",
     "hoursAgo": "преди {count} ч.",
     "daysAgo": "преди {count} дни"
+  },
+  "pricing": {
+    "originalPrice": "Първоначална цена",
+    "convertedPrice": "Конвертирана цена",
+    "approximatePrice": "Приблизително преобразуване въз основа на текущите валутни курсове",
+    "approximate": "≈"
   }
 }

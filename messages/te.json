@@ -379,6 +379,34 @@
       "saveSuccess": "మీ ప్రాధాన్యతలు నవీకరించబడ్డాయి.",
       "saveError": "ప్రాధాన్యతలను నవీకరిస్తున్నప్పుడు లోపం సంభవించింది.",
       "loadError": "ప్రాధాన్యతలను లోడ్ చేయడం సాధ్యం కాలేదు."
+    },
+    "deleteAccount": {
+      "dangerZone": "ప్రమాదకర ప్రాంతం",
+      "title": "ఖాతాను తొలగించండి",
+      "description": "మీరు మీ ఖాతాను ఒకసారి తొలగిస్తే, తిరిగి వెనక్కి వెళ్ళలేరు. మీ డేటా, జాబితాలు మరియు సంభాషణలన్నీ శాశ్వతంగా తొలగించబడతాయి.",
+      "irreversible": "ఈ చర్యను వెనక్కి మార్చలేము.",
+      "button": "నా ఖాతాను తొలగించండి",
+      "confirmTitle": "మీరు మీ ఖాతాను తొలగించాలనుకుంటున్నారని ఖచ్చితంగా అనుకుంటున్నారా?",
+      "warning": "కింది డేటా శాశ్వతంగా తొలగించబడుతుంది:",
+      "warningProfile": "మీ ప్రొఫైల్ మరియు వ్యక్తిగత సమాచారం",
+      "warningListings": "మీ అన్ని జాబితాలు మరియు ఉత్పత్తులు",
+      "warningConversations": "మీ సంభాషణలు మరియు సందేశాలు",
+      "warningReviews": "మీ సమీక్షలు మరియు ఇష్టమైనవి",
+      "passwordLabel": "నిర్ధారించడానికి మీ పాస్‌వర్డ్‌ను నమోదు చేయండి",
+      "passwordPlaceholder": "మీ ప్రస్తుత పాస్‌వర్డ్",
+      "reasonLabel": "మీరు ఎందుకు వెళ్ళిపోతున్నారు? (ఐచ్ఛికం)",
+      "reasonPlaceholder": "కారణాన్ని ఎంచుకోండి",
+      "reasonNotSatisfied": "సేవతో సంతృప్తిగా లేను",
+      "reasonPrivacy": "గోప్యతా ఆందోళనలు",
+      "reasonAlternative": "ప్రత్యామ్నాయ ప్లాట్‌ఫారమ్‌ను కనుగొన్నారు",
+      "reasonOther": "ఇతర",
+      "feedbackLabel": "అదనపు అభిప్రాయం (ఐచ్ఛికం)",
+      "feedbackPlaceholder": "మేము ఎలా మెరుగుపడగలమో మాకు చెప్పండి...",
+      "cancel": "రద్దు చేయి",
+      "confirmButton": "ఖాతాను తొలగించండి",
+      "deleting": "తొలగిస్తోంది...",
+      "success": "మీ ఖాతా విజయవంతంగా తొలగించబడింది.",
+      "error": "ఖాతాను తొలగించడంలో విఫలమయ్యాము. దయచేసి మీ పాస్‌వర్డ్‌ను తనిఖీ చేసి, మళ్లీ ప్రయత్నించండి."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "ఒక వర్గాన్ని ఎంచుకోండి.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "ప్రకటన శీర్షిక తప్పనిసరి.",
       "shortDescriptionRequired": "సంక్షిప్త వివరణ అవసరం.",
       "descriptionRequired": "వివరణాత్మక వివరణ అవసరం.",
       "categoryRequired": "కేటగిరీ ఎంపిక తప్పనిసరి.",
       "priceRequired": "చెల్లుబాటు అయ్యే ధరను నమోదు చేయండి."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "కొత్త జాబితాను సృష్టించండి",
@@ -834,21 +862,22 @@
       "shippingCost": "షిప్పింగ్ రుసుము",
       "weight": "బరువు",
       "weightUnit": "బరువు యూనిట్",
+      "currency": "Currency",
       "city": "నగరం",
       "address": "చిరునామా",
-      "postalCode": "పోస్టల్ కోడ్",
-      "currency": "Currency"
+      "postalCode": "పోస్టల్ కోడ్"
     },
     "placeholders": {
       "title": "ఉదాహరణ: 2 ఏళ్ల హోల్‌స్టెయిన్ ఆవు",
       "shortDescription": "ఉత్పత్తి వివరణ (గరిష్టంగా 200 అక్షరాలు)",
       "description": "ఉత్పత్తి గురించి వివరణాత్మక సమాచారాన్ని అందించండి...",
       "category": "ఒక వర్గాన్ని ఎంచుకోండి.",
+      "searchCurrency": "Search currency...",
       "city": "నగరంలోకి ప్రవేశించండి",
       "address": "పూర్తి చిరునామాను నమోదు చేయండి.",
-      "postalCode": "పోస్టల్ కోడ్",
-      "searchCurrency": "Search currency..."
+      "postalCode": "పోస్టల్ కోడ్"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "ప్రకటన శీర్షిక తప్పనిసరి.",
       "shortDescriptionRequired": "సంక్షిప్త వివరణ అవసరం.",
@@ -870,8 +899,7 @@
     "productCreated": "ఉత్పత్తి విజయవంతంగా సృష్టించబడింది.",
     "creationFailed": "ఉత్పత్తిని సృష్టించడం సాధ్యం కాలేదు. దయచేసి మళ్ళీ ప్రయత్నించండి.",
     "userNotFound": "యూజర్ సమాచారం కనుగొనబడలేదు. దయచేసి మళ్ళీ లాగిన్ అవ్వండి.",
-    "defaultBusinessName": "నా వ్యాపారం",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "నా వ్యాపారం"
   },
   "becomeSeller": {
     "title": "విక్రేత అవ్వండి",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} నిమిషాల క్రితం",
     "hoursAgo": "{count}గం క్రితం",
     "daysAgo": "{count}రో క్రితం"
+  },
+  "pricing": {
+    "originalPrice": "అసలు ధర",
+    "convertedPrice": "మార్పిడి ధర",
+    "approximatePrice": "ప్రస్తుత మారకపు రేట్ల ఆధారంగా సుమారుగా మార్పిడి",
+    "approximate": "≈"
   }
 }

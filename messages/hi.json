@@ -379,6 +379,34 @@
       "saveSuccess": "आपकी प्राथमिकताएं अपडेट कर दी गई हैं।",
       "saveError": "वरीयताओं को अपडेट करते समय एक त्रुटि उत्पन्न हुई।",
       "loadError": "प्राथमिकताएं लोड नहीं हो सकीं।"
+    },
+    "deleteAccount": {
+      "dangerZone": "खतरा क्षेत्र",
+      "title": "खाता हटा दो",
+      "description": "एक बार अपना खाता हटा देने के बाद, वापस लौटना संभव नहीं है। आपका सारा डेटा, लिस्टिंग और बातचीत स्थायी रूप से हटा दी जाएगी।",
+      "irreversible": "यह क्रिया अपरिवर्तनीय है।",
+      "button": "मेरा एकाउंट हटा दो",
+      "confirmTitle": "क्या आप इस खाते को हटाने के लिए सुनिश्चित हैं?",
+      "warning": "निम्नलिखित डेटा स्थायी रूप से हटा दिया जाएगा:",
+      "warningProfile": "आपकी प्रोफ़ाइल और व्यक्तिगत जानकारी",
+      "warningListings": "आपकी सभी लिस्टिंग और उत्पाद",
+      "warningConversations": "आपकी बातचीत और संदेश",
+      "warningReviews": "आपकी समीक्षाएँ और पसंदीदा चीज़ें",
+      "passwordLabel": "पुष्टि करने के लिए अपना पासवर्ड दर्ज करें",
+      "passwordPlaceholder": "आपका वर्तमान पासवर्ड",
+      "reasonLabel": "आप क्यों जा रहे हैं? (वैकल्पिक)",
+      "reasonPlaceholder": "कोई कारण चुनें",
+      "reasonNotSatisfied": "सेवा से संतुष्ट नहीं हूँ",
+      "reasonPrivacy": "सुरक्षा की सोच",
+      "reasonAlternative": "एक वैकल्पिक मंच मिल गया",
+      "reasonOther": "अन्य",
+      "feedbackLabel": "अतिरिक्त प्रतिक्रिया (वैकल्पिक)",
+      "feedbackPlaceholder": "हम कैसे सुधर सकते हैं हमें बताओ...",
+      "cancel": "रद्द करना",
+      "confirmButton": "खाता हटा दो",
+      "deleting": "हटा रहा हूँ...",
+      "success": "आपका खाता सफलतापूर्वक हटा दिया गया है।",
+      "error": "खाता हटाने में विफलता। कृपया अपना पासवर्ड जांचें और पुनः प्रयास करें।"
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "विक्रेता की जानकारी अपलोड करते समय एक त्रुटि उत्पन्न हुई।",
       "productsLoadError": "विक्रेता के उत्पादों को अपलोड करते समय एक त्रुटि उत्पन्न हुई।",
       "reviewsTab": "आकलन",
+      "share": "शेयर करना",
+      "shareText": "पशुधन व्यापार पर {name} देखें",
+      "linkCopied": "लिंक क्लिपबोर्ड पर कॉपी हो गया है।",
       "reviews": {
         "summary": "मूल्यांकन सारांश",
         "reviewCount": "मूल्यांकन",
@@ -796,14 +827,14 @@
       "category": "एक श्रेणी चुनें।",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "विज्ञापन का शीर्षक अनिवार्य है।",
       "shortDescriptionRequired": "संक्षिप्त विवरण आवश्यक है।",
       "descriptionRequired": "विस्तृत स्पष्टीकरण आवश्यक है।",
       "categoryRequired": "श्रेणी का चयन अनिवार्य है।",
       "priceRequired": "मान्य मूल्य दर्ज करें।"
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "नई लिस्टिंग बनाएं",
@@ -831,21 +862,22 @@
       "shippingCost": "शिपिंग शुल्क",
       "weight": "वज़न",
       "weightUnit": "वजन की इकाई",
+      "currency": "Currency",
       "city": "शहर",
       "address": "पता",
-      "postalCode": "डाक कोड",
-      "currency": "Currency"
+      "postalCode": "डाक कोड"
     },
     "placeholders": {
       "title": "उदाहरण: 2 साल की होल्स्टीन गाय",
       "shortDescription": "उत्पाद का विवरण (अधिकतम 200 अक्षर)",
       "description": "उत्पाद के बारे में विस्तृत जानकारी प्रदान करें...",
       "category": "एक श्रेणी चुनें।",
+      "searchCurrency": "Search currency...",
       "city": "शहर में प्रवेश करें",
       "address": "पूरा पता दर्ज करें।",
-      "postalCode": "डाक कोड",
-      "searchCurrency": "Search currency..."
+      "postalCode": "डाक कोड"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "विज्ञापन का शीर्षक अनिवार्य है।",
       "shortDescriptionRequired": "संक्षिप्त विवरण आवश्यक है।",
@@ -867,8 +899,7 @@
     "productCreated": "उत्पाद का निर्माण सफलतापूर्वक हो गया।",
     "creationFailed": "उत्पाद बनाया नहीं जा सका। कृपया पुनः प्रयास करें।",
     "userNotFound": "उपयोगकर्ता की जानकारी नहीं मिल पाई। कृपया दोबारा लॉग इन करें।",
-    "defaultBusinessName": "मेरा व्यापार",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "मेरा व्यापार"
   },
   "becomeSeller": {
     "title": "विक्रेता बनें",
@@ -1317,7 +1348,10 @@
     "fleet": "बेड़े की जानकारी",
     "serviceRegions": "सेवा क्षेत्र",
     "specializations": "विशेषज्ञता के क्षेत्र",
-    "certifications": "प्रमाण पत्र"
+    "certifications": "प्रमाण पत्र",
+    "share": "शेयर करना",
+    "shareText": "पशुधन व्यापार पर {name} देखें",
+    "linkCopied": "लिंक क्लिपबोर्ड पर कॉपी हो गया है।"
   },
   "brands": {
     "title": "ब्रांड प्रबंधन",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "{count} मिनट पहले",
     "hoursAgo": "{count} घंटे पहले",
     "daysAgo": "{count}d पहले"
+  },
+  "pricing": {
+    "originalPrice": "असली कीमत",
+    "convertedPrice": "परिवर्तित मूल्य",
+    "approximatePrice": "वर्तमान विनिमय दरों के आधार पर अनुमानित रूपांतरण",
+    "approximate": "≈"
   }
 }

@@ -379,6 +379,34 @@
       "saveSuccess": "Mapendeleo yako yamesasishwa.",
       "saveError": "Hitilafu imetokea wakati wa kusasisha mapendeleo.",
       "loadError": "Mapendeleo hayakuweza kupakiwa."
+    },
+    "deleteAccount": {
+      "dangerZone": "Eneo la Hatari",
+      "title": "Futa Akaunti",
+      "description": "Ukishafuta akaunti yako, hakuna kurudi nyuma. Data yako yote, orodha, na mazungumzo yataondolewa kabisa.",
+      "irreversible": "Kitendo hiki hakiwezi kutenduliwa.",
+      "button": "Futa Akaunti Yangu",
+      "confirmTitle": "Una uhakika unataka kufuta akaunti yako?",
+      "warning": "Data ifuatayo itafutwa kabisa:",
+      "warningProfile": "Wasifu wako na taarifa binafsi",
+      "warningListings": "Orodha na bidhaa zako zote",
+      "warningConversations": "Mazungumzo na ujumbe wako",
+      "warningReviews": "Maoni na vipendwa vyako",
+      "passwordLabel": "Ingiza nenosiri lako ili kuthibitisha",
+      "passwordPlaceholder": "Nenosiri lako la sasa",
+      "reasonLabel": "Kwa nini unaondoka? (si lazima)",
+      "reasonPlaceholder": "Chagua sababu",
+      "reasonNotSatisfied": "Sijaridhika na huduma",
+      "reasonPrivacy": "Masuala ya faragha",
+      "reasonAlternative": "Nimepata jukwaa mbadala",
+      "reasonOther": "Nyingine",
+      "feedbackLabel": "Maoni ya ziada (si lazima)",
+      "feedbackPlaceholder": "Tuambie jinsi tunavyoweza kuboresha...",
+      "cancel": "Ghairi",
+      "confirmButton": "Futa Akaunti",
+      "deleting": "Inafuta...",
+      "success": "Akaunti yako imefutwa kwa mafanikio.",
+      "error": "Imeshindwa kufuta akaunti. Tafadhali angalia nenosiri lako na ujaribu tena."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Chagua kategoria.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Jina la tangazo ni lazima.",
       "shortDescriptionRequired": "Maelezo mafupi yanahitajika.",
       "descriptionRequired": "Maelezo ya kina yanahitajika.",
       "categoryRequired": "Uteuzi wa kategoria ni lazima.",
       "priceRequired": "Weka bei halali."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Unda Orodha Mpya",
@@ -834,21 +862,22 @@
       "shippingCost": "Ada ya Usafirishaji",
       "weight": "Uzito",
       "weightUnit": "Kipimo cha Uzito",
+      "currency": "Currency",
       "city": "Jiji",
       "address": "Anwani",
-      "postalCode": "Nambari ya posta",
-      "currency": "Currency"
+      "postalCode": "Nambari ya posta"
     },
     "placeholders": {
       "title": "Mfano: Ng'ombe wa Holstein wa Miaka 2",
       "shortDescription": "Maelezo ya bidhaa (isizidi herufi 200)",
       "description": "Toa maelezo ya kina kuhusu bidhaa...",
       "category": "Chagua kategoria.",
+      "searchCurrency": "Search currency...",
       "city": "Ingia mjini",
       "address": "Ingiza anwani kamili.",
-      "postalCode": "Nambari ya posta",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Nambari ya posta"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Jina la tangazo ni lazima.",
       "shortDescriptionRequired": "Maelezo mafupi yanahitajika.",
@@ -870,8 +899,7 @@
     "productCreated": "Bidhaa hiyo iliundwa kwa mafanikio.",
     "creationFailed": "Bidhaa haikuweza kuundwa. Tafadhali jaribu tena.",
     "userNotFound": "Taarifa za mtumiaji hazikupatikana. Tafadhali ingia tena.",
-    "defaultBusinessName": "Biashara yangu",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Biashara yangu"
   },
   "becomeSeller": {
     "title": "Kuwa Muuzaji",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "Dakika {count} zilizopita",
     "hoursAgo": "saa {hesabu} zilizopita",
     "daysAgo": "Siku {hesabu} zilizopita"
+  },
+  "pricing": {
+    "originalPrice": "Bei asili",
+    "convertedPrice": "Bei iliyobadilishwa",
+    "approximatePrice": "Makadirio ya ubadilishaji kulingana na viwango vya sasa vya ubadilishaji wa fedha",
+    "approximate": "≈"
   }
 }

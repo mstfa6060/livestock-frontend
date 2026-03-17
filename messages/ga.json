@@ -379,6 +379,34 @@
       "saveSuccess": "Tá do chuid roghanna nuashonraithe.",
       "saveError": "Tharla earráid agus na roghanna á nuashonrú.",
       "loadError": "Níorbh fhéidir na roghanna a lódáil."
+    },
+    "deleteAccount": {
+      "dangerZone": "Crios Contúirte",
+      "title": "Scrios Cuntas",
+      "description": "Nuair a scriosann tú do chuntas, níl aon dul siar ann. Bainfear do chuid sonraí, liostaí agus comhráite go léir go buan.",
+      "irreversible": "Ní féidir an gníomh seo a aisiompú.",
+      "button": "Scrios Mo Chuntas",
+      "confirmTitle": "An bhfuil tú cinnte gur mian leat do chuntas a scriosadh?",
+      "warning": "Scriosfar na sonraí seo a leanas go buan:",
+      "warningProfile": "Do phróifíl agus d'fhaisnéis phearsanta",
+      "warningListings": "Do liostaí agus do tháirgí go léir",
+      "warningConversations": "Do chomhráite agus do theachtaireachtaí",
+      "warningReviews": "Do léirmheasanna agus do rogha pearsanta",
+      "passwordLabel": "Cuir isteach do phasfhocal le deimhniú",
+      "passwordPlaceholder": "Do phasfhocal reatha",
+      "reasonLabel": "Cén fáth a bhfuil tú ag imeacht? (roghnach)",
+      "reasonPlaceholder": "Roghnaigh cúis",
+      "reasonNotSatisfied": "Ní raibh mé sásta leis an tseirbhís",
+      "reasonPrivacy": "Imní príobháideachta",
+      "reasonAlternative": "Fuarthas ardán malartach",
+      "reasonOther": "Eile",
+      "feedbackLabel": "Aiseolas breise (roghnach)",
+      "feedbackPlaceholder": "Inis dúinn conas is féidir linn feabhas a chur...",
+      "cancel": "Cealaigh",
+      "confirmButton": "Scrios Cuntas",
+      "deleting": "Ag scriosadh...",
+      "success": "Scriosadh do chuntas go rathúil.",
+      "error": "Theip ar an gcuntas a scriosadh. Seiceáil do phasfhocal agus déan iarracht arís."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Roghnaigh catagóir.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tá teideal an fhógra éigeantach.",
       "shortDescriptionRequired": "Tá cur síos gairid ag teastáil.",
       "descriptionRequired": "Tá míniú mionsonraithe ag teastáil.",
       "categoryRequired": "Tá roghnú catagóire éigeantach.",
       "priceRequired": "Cuir isteach praghas bailí."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Cruthaigh Liostú Nua",
@@ -834,21 +862,22 @@
       "shippingCost": "Táille Loingseoireachta",
       "weight": "Meáchan",
       "weightUnit": "Aonad Meáchain",
+      "currency": "Currency",
       "city": "Cathair",
       "address": "Seoladh",
-      "postalCode": "Cód poist",
-      "currency": "Currency"
+      "postalCode": "Cód poist"
     },
     "placeholders": {
       "title": "Sampla: Bó Holstein 2 Bhliain d'Aois",
       "shortDescription": "Cur síos ar an táirge (uasmhéid 200 carachtar)",
       "description": "Tabhair faisnéis mhionsonraithe faoin táirge...",
       "category": "Roghnaigh catagóir.",
+      "searchCurrency": "Search currency...",
       "city": "Téigh isteach sa chathair",
       "address": "Cuir isteach an seoladh iomlán.",
-      "postalCode": "Cód poist",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Cód poist"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Tá teideal an fhógra éigeantach.",
       "shortDescriptionRequired": "Tá cur síos gairid ag teastáil.",
@@ -870,8 +899,7 @@
     "productCreated": "Cruthaíodh an táirge go rathúil.",
     "creationFailed": "Níorbh fhéidir an táirge a chruthú. Déan iarracht arís.",
     "userNotFound": "Níorbh fhéidir faisnéis úsáideora a aimsiú. Logáil isteach arís le do thoil.",
-    "defaultBusinessName": "Mo ghnó",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Mo ghnó"
   },
   "becomeSeller": {
     "title": "Bí i do Dhíoltóir",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} nóiméad ó shin",
     "hoursAgo": "uair an chloig ó shin",
     "daysAgo": "{count} lá ó shin"
+  },
+  "pricing": {
+    "originalPrice": "Praghas bunaidh",
+    "convertedPrice": "Praghas tiontaithe",
+    "approximatePrice": "Comhshó garbh bunaithe ar rátaí malairte reatha",
+    "approximate": "≈"
   }
 }

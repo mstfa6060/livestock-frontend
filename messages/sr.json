@@ -379,6 +379,34 @@
       "saveSuccess": "Ваше поставке су ажуриране.",
       "saveError": "Дошло је до грешке приликом ажурирања подешавања.",
       "loadError": "Подешавања нису могла бити учитана."
+    },
+    "deleteAccount": {
+      "dangerZone": "Опасна зона",
+      "title": "Обриши налог",
+      "description": "Када једном обришете свој налог, нема повратка. Сви ваши подаци, огласи и разговори биће трајно уклоњени.",
+      "irreversible": "Ова акција је неповратна.",
+      "button": "Обриши мој налог",
+      "confirmTitle": "Да ли сте сигурни да желите да обришете свој налог?",
+      "warning": "Следећи подаци ће бити трајно избрисани:",
+      "warningProfile": "Ваш профил и лични подаци",
+      "warningListings": "Сви ваши огласи и производи",
+      "warningConversations": "Ваши разговори и поруке",
+      "warningReviews": "Ваше рецензије и омиљени садржаји",
+      "passwordLabel": "Унесите лозинку да бисте потврдили",
+      "passwordPlaceholder": "Ваша тренутна лозинка",
+      "reasonLabel": "Зашто одлазите? (опционо)",
+      "reasonPlaceholder": "Изаберите разлог",
+      "reasonNotSatisfied": "Нисам задовољан услугом",
+      "reasonPrivacy": "Забринутости у вези са приватношћу",
+      "reasonAlternative": "Пронашли су алтернативну платформу",
+      "reasonOther": "Друго",
+      "feedbackLabel": "Додатне повратне информације (опционо)",
+      "feedbackPlaceholder": "Реците нам како можемо да побољшамо...",
+      "cancel": "Откажи",
+      "confirmButton": "Обриши налог",
+      "deleting": "Брисање...",
+      "success": "Ваш налог је успешно обрисан.",
+      "error": "Брисање налога није успело. Проверите лозинку и покушајте поново."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Изаберите категорију.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Наслов огласа је обавезан.",
       "shortDescriptionRequired": "Потребан је кратак опис.",
       "descriptionRequired": "Потребно је детаљно објашњење.",
       "categoryRequired": "Избор категорије је обавезан.",
       "priceRequired": "Унесите важећу цену."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Направи нови оглас",
@@ -834,21 +862,22 @@
       "shippingCost": "Трошкови доставе",
       "weight": "Тежина",
       "weightUnit": "Јединица тежине",
+      "currency": "Currency",
       "city": "Град",
       "address": "Адреса",
-      "postalCode": "Поштански број",
-      "currency": "Currency"
+      "postalCode": "Поштански број"
     },
     "placeholders": {
       "title": "Пример: Двогодишња крава холштајнске расе",
       "shortDescription": "Опис производа (максимално 200 карактера)",
       "description": "Наведите детаљне информације о производу...",
       "category": "Изаберите категорију.",
+      "searchCurrency": "Search currency...",
       "city": "Уђите у град",
       "address": "Унесите пуну адресу.",
-      "postalCode": "Поштански број",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Поштански број"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Наслов огласа је обавезан.",
       "shortDescriptionRequired": "Потребан је кратак опис.",
@@ -870,8 +899,7 @@
     "productCreated": "Производ је успешно креиран.",
     "creationFailed": "Производ није могао бити креиран. Молимо покушајте поново.",
     "userNotFound": "Подаци о кориснику нису пронађени. Молимо вас да се поново пријавите.",
-    "defaultBusinessName": "Мој посао",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Мој посао"
   },
   "becomeSeller": {
     "title": "Постаните продавац",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "пре {count} мин",
     "hoursAgo": "пре {count} сати",
     "daysAgo": "пре {count} дана"
+  },
+  "pricing": {
+    "originalPrice": "Оригинална цена",
+    "convertedPrice": "Конвертована цена",
+    "approximatePrice": "Приближна конверзија на основу тренутних девизних курсева",
+    "approximate": "≈"
   }
 }

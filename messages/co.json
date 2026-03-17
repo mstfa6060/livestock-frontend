@@ -379,6 +379,34 @@
       "saveSuccess": "E vostre preferenze sò state aggiornate.",
       "saveError": "Un errore hè accadutu durante l'aghjurnamentu di e preferenze.",
       "loadError": "Ùn hè statu pussibule di caricà e preferenze."
+    },
+    "deleteAccount": {
+      "dangerZone": "Zona di Periculu",
+      "title": "Sguassà u contu",
+      "description": "Una volta chì avete sguassatu u vostru contu, ùn ci hè più ritornu. Tutti i vostri dati, elenchi è conversazioni seranu eliminati permanentemente.",
+      "irreversible": "Questa azzione hè irreversibile.",
+      "button": "Sguassà u mo contu",
+      "confirmTitle": "Sì sicuru chì vulete sguassà u vostru contu?",
+      "warning": "I seguenti dati saranu sguassati definitivamente:",
+      "warningProfile": "U vostru prufilu è l'infurmazioni persunali",
+      "warningListings": "Tutti i vostri annunci è prudutti",
+      "warningConversations": "E vostre conversazioni è i vostri missaghji",
+      "warningReviews": "I vostri recensioni è preferiti",
+      "passwordLabel": "Inserite a vostra password per cunfirmà",
+      "passwordPlaceholder": "A vostra password attuale",
+      "reasonLabel": "Perchè partite ? (opzionale)",
+      "reasonPlaceholder": "Selezziunate una ragione",
+      "reasonNotSatisfied": "Micca suddisfattu di u serviziu",
+      "reasonPrivacy": "Preoccupazioni di privacy",
+      "reasonAlternative": "Truvatu una piattaforma alternativa",
+      "reasonOther": "Altru",
+      "feedbackLabel": "Feedback supplementari (opzionale)",
+      "feedbackPlaceholder": "Diteci cumu pudemu migliurà...",
+      "cancel": "Annulà",
+      "confirmButton": "Sguassà u contu",
+      "deleting": "Sguassà...",
+      "success": "U vostru contu hè statu sguassatu cù successu.",
+      "error": "Ùn hè statu pussibule di sguassà u contu. Verificate a vostra password è pruvate torna."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Selezziunate una categuria.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "U tìtulu di l'annunziu hè ubligatoriu.",
       "shortDescriptionRequired": "Una breve descrizzione hè necessaria.",
       "descriptionRequired": "Ci vole una spiegazione dettagliata.",
       "categoryRequired": "A selezzione di a categuria hè ubligatoria.",
       "priceRequired": "Inserite un prezzu validu."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Creà una nova lista",
@@ -834,21 +862,22 @@
       "shippingCost": "Tariffa di spedizione",
       "weight": "Pesu",
       "weightUnit": "Unità di pesu",
+      "currency": "Currency",
       "city": "Cità",
       "address": "Indirizzu",
-      "postalCode": "Codice postale",
-      "currency": "Currency"
+      "postalCode": "Codice postale"
     },
     "placeholders": {
       "title": "Esempiu: Vacca Holstein di 2 anni",
       "shortDescription": "Descrizzione di u pruduttu (massimu 200 caratteri)",
       "description": "Dà infurmazioni dettagliate nantu à u pruduttu...",
       "category": "Selezziunate una categuria.",
+      "searchCurrency": "Search currency...",
       "city": "Entre in a cità",
       "address": "Inserite l'indirizzu cumpletu.",
-      "postalCode": "Codice postale",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Codice postale"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "U tìtulu di l'annunziu hè ubligatoriu.",
       "shortDescriptionRequired": "Una breve descrizzione hè necessaria.",
@@ -870,8 +899,7 @@
     "productCreated": "U pruduttu hè statu creatu cù successu.",
     "creationFailed": "U pruduttu ùn hà pussutu esse creatu. Per piacè pruvate torna.",
     "userNotFound": "L'infurmazione di l'utilizatore ùn hè stata truvata. Per piacè cunnettatevi torna.",
-    "defaultBusinessName": "A mo attività",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "A mo attività"
   },
   "becomeSeller": {
     "title": "Diventate un Venditore",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} minuti fà",
     "hoursAgo": "{count} ore fà",
     "daysAgo": "{count} ghjorni fà"
+  },
+  "pricing": {
+    "originalPrice": "Prezzu originale",
+    "convertedPrice": "Prezzu cunvertitu",
+    "approximatePrice": "Cunversione apprussimativa basata annantu à i tassi di cambiu attuali",
+    "approximate": "≈"
   }
 }

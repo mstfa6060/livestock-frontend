@@ -379,6 +379,34 @@
       "saveSuccess": "Teie eelistused on uuendatud.",
       "saveError": "Eelistuste värskendamisel ilmnes viga.",
       "loadError": "Eelistusi ei saanud laadida."
+    },
+    "deleteAccount": {
+      "dangerZone": "Ohutsoon",
+      "title": "Kustuta konto",
+      "description": "Kui olete oma konto kustutanud, pole tagasiteed. Kõik teie andmed, kuulutused ja vestlused eemaldatakse jäädavalt.",
+      "irreversible": "See toiming on pöördumatu.",
+      "button": "Kustuta minu konto",
+      "confirmTitle": "Kas oled kindel, et soovid oma konto kustutada?",
+      "warning": "Järgmised andmed kustutatakse jäädavalt:",
+      "warningProfile": "Teie profiil ja isikuandmed",
+      "warningListings": "Kõik teie kuulutused ja tooted",
+      "warningConversations": "Teie vestlused ja sõnumid",
+      "warningReviews": "Teie arvustused ja lemmikud",
+      "passwordLabel": "Kinnitamiseks sisestage oma parool",
+      "passwordPlaceholder": "Teie praegune parool",
+      "reasonLabel": "Miks sa lahkud? (valikuline)",
+      "reasonPlaceholder": "Valige põhjus",
+      "reasonNotSatisfied": "Pole teenusega rahul",
+      "reasonPrivacy": "Privaatsusprobleemid",
+      "reasonAlternative": "Leidsin alternatiivse platvormi",
+      "reasonOther": "Muu",
+      "feedbackLabel": "Lisatagasiside (valikuline)",
+      "feedbackPlaceholder": "Andke meile teada, kuidas saaksime paremaks muuta...",
+      "cancel": "Tühista",
+      "confirmButton": "Kustuta konto",
+      "deleting": "Kustutatakse...",
+      "success": "Teie konto on edukalt kustutatud.",
+      "error": "Konto kustutamine ebaõnnestus. Palun kontrollige oma parooli ja proovige uuesti."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Valige kategooria.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Kuulutuse pealkiri on kohustuslik.",
       "shortDescriptionRequired": "Lühike kirjeldus on vajalik.",
       "descriptionRequired": "Vaja on üksikasjalikku selgitust.",
       "categoryRequired": "Kategooria valimine on kohustuslik.",
       "priceRequired": "Sisestage kehtiv hind."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Loo uus kuulutus",
@@ -834,21 +862,22 @@
       "shippingCost": "Saatmistasu",
       "weight": "Kaal",
       "weightUnit": "Kaaluühik",
+      "currency": "Currency",
       "city": "Linn",
       "address": "Aadress",
-      "postalCode": "Postiindeks",
-      "currency": "Currency"
+      "postalCode": "Postiindeks"
     },
     "placeholders": {
       "title": "Näide: 2-aastane holsteini lehm",
       "shortDescription": "Tootekirjeldus (maksimaalselt 200 tähemärki)",
       "description": "Esitage toote kohta üksikasjalikku teavet...",
       "category": "Valige kategooria.",
+      "searchCurrency": "Search currency...",
       "city": "Sisene linna",
       "address": "Sisestage täielik aadress.",
-      "postalCode": "Postiindeks",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Postiindeks"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Kuulutuse pealkiri on kohustuslik.",
       "shortDescriptionRequired": "Lühike kirjeldus on vajalik.",
@@ -870,8 +899,7 @@
     "productCreated": "Toode on edukalt loodud.",
     "creationFailed": "Toodet ei õnnestunud luua. Palun proovige uuesti.",
     "userNotFound": "Kasutajateavet ei leitud. Palun logige uuesti sisse.",
-    "defaultBusinessName": "Minu ettevõte",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Minu ettevõte"
   },
   "becomeSeller": {
     "title": "Hakka müüjaks",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} minutit tagasi",
     "hoursAgo": "{count} tundi tagasi",
     "daysAgo": "{count} päeva tagasi"
+  },
+  "pricing": {
+    "originalPrice": "Algne hind",
+    "convertedPrice": "Konverteeritud hind",
+    "approximatePrice": "Ligikaudne konverteerimine praeguste vahetuskursside põhjal",
+    "approximate": "≈"
   }
 }

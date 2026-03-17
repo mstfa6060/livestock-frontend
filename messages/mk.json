@@ -379,6 +379,34 @@
       "saveSuccess": "Вашите преференции се ажурирани.",
       "saveError": "Се појави грешка при ажурирањето на поставките.",
       "loadError": "Поставките не можеа да се вчитаат."
+    },
+    "deleteAccount": {
+      "dangerZone": "Опасна зона",
+      "title": "Избриши сметка",
+      "description": "Откако ќе ја избришете вашата сметка, нема враќање назад. Сите ваши податоци, огласи и разговори ќе бидат трајно отстранети.",
+      "irreversible": "Оваа акција е неповратна.",
+      "button": "Избриши ја мојата сметка",
+      "confirmTitle": "Дали сте сигурни дека сакате да ја избришете вашата сметка?",
+      "warning": "Следните податоци ќе бидат трајно избришани:",
+      "warningProfile": "Вашиот профил и лични информации",
+      "warningListings": "Сите ваши огласи и производи",
+      "warningConversations": "Вашите разговори и пораки",
+      "warningReviews": "Вашите рецензии и омилени",
+      "passwordLabel": "Внесете ја вашата лозинка за да потврдите",
+      "passwordPlaceholder": "Вашата тековна лозинка",
+      "reasonLabel": "Зошто си заминуваш? (опционално)",
+      "reasonPlaceholder": "Изберете причина",
+      "reasonNotSatisfied": "Не сум задоволен од услугата",
+      "reasonPrivacy": "Загриженост за приватноста",
+      "reasonAlternative": "Пронајдов алтернативна платформа",
+      "reasonOther": "Друго",
+      "feedbackLabel": "Дополнителни повратни информации (опционално)",
+      "feedbackPlaceholder": "Кажете ни како можеме да го подобриме...",
+      "cancel": "Откажи",
+      "confirmButton": "Избриши сметка",
+      "deleting": "Бришење...",
+      "success": "Вашата сметка е успешно избришана.",
+      "error": "Бришењето на сметката не успеа. Проверете ја вашата лозинка и обидете се повторно."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Изберете категорија.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Насловот на огласот е задолжителен.",
       "shortDescriptionRequired": "Потребен е краток опис.",
       "descriptionRequired": "Потребно е детално објаснување.",
       "categoryRequired": "Изборот на категорија е задолжителен.",
       "priceRequired": "Внесете важечка цена."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Креирај нов оглас",
@@ -834,21 +862,22 @@
       "shippingCost": "Надомест за испорака",
       "weight": "Тежина",
       "weightUnit": "Единица за тежина",
+      "currency": "Currency",
       "city": "Град",
       "address": "Адреса",
-      "postalCode": "Поштенски код",
-      "currency": "Currency"
+      "postalCode": "Поштенски код"
     },
     "placeholders": {
       "title": "Пример: 2-годишна холштајнска крава",
       "shortDescription": "Опис на производот (максимум 200 знаци)",
       "description": "Обезбедете детални информации за производот...",
       "category": "Изберете категорија.",
+      "searchCurrency": "Search currency...",
       "city": "Влезете во градот",
       "address": "Внесете ја целосната адреса.",
-      "postalCode": "Поштенски код",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Поштенски код"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Насловот на огласот е задолжителен.",
       "shortDescriptionRequired": "Потребен е краток опис.",
@@ -870,8 +899,7 @@
     "productCreated": "Производот е успешно креиран.",
     "creationFailed": "Производот не можеше да се креира. Обидете се повторно.",
     "userNotFound": "Не може да се пронајдат кориснички информации. Најавете се повторно.",
-    "defaultBusinessName": "Мојот бизнис",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Мојот бизнис"
   },
   "becomeSeller": {
     "title": "Станете продавач",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "пред {count} минути",
     "hoursAgo": "пред {count} часа",
     "daysAgo": "пред {count} дена"
+  },
+  "pricing": {
+    "originalPrice": "Оригинална цена",
+    "convertedPrice": "Конвертирана цена",
+    "approximatePrice": "Приближна конверзија врз основа на тековните девизни курсеви",
+    "approximate": "≈"
   }
 }

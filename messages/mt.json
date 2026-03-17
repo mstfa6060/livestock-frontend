@@ -379,6 +379,34 @@
       "saveSuccess": "Il-preferenzi tiegħek ġew aġġornati.",
       "saveError": "Seħħ żball waqt l-aġġornament tal-preferenzi.",
       "loadError": "Il-preferenzi ma setgħux jiġu mgħobbija."
+    },
+    "deleteAccount": {
+      "dangerZone": "Żona ta' Periklu",
+      "title": "Ħassar il-Kont",
+      "description": "Ladarba tħassar il-kont tiegħek, ma tistax tmur lura. Id-dejta, il-listi u l-konversazzjonijiet kollha tiegħek se jitneħħew b'mod permanenti.",
+      "irreversible": "Din l-azzjoni hija irriversibbli.",
+      "button": "Ħassar il-Kont Tiegħi",
+      "confirmTitle": "Żgur li trid tħassar il-kont tiegħek?",
+      "warning": "Id-dejta li ġejja se titħassar b'mod permanenti:",
+      "warningProfile": "Il-profil u l-informazzjoni personali tiegħek",
+      "warningListings": "Il-listi u l-prodotti kollha tiegħek",
+      "warningConversations": "Il-konversazzjonijiet u l-messaġġi tiegħek",
+      "warningReviews": "Ir-reviżjonijiet u l-favoriti tiegħek",
+      "passwordLabel": "Daħħal il-password tiegħek biex tikkonferma",
+      "passwordPlaceholder": "Il-password attwali tiegħek",
+      "reasonLabel": "Għaliex qed titlaq? (mhux obbligatorju)",
+      "reasonPlaceholder": "Agħżel raġuni",
+      "reasonNotSatisfied": "Mhux sodisfatt bis-servizz",
+      "reasonPrivacy": "Tħassib dwar il-privatezza",
+      "reasonAlternative": "Sibt pjattaforma alternattiva",
+      "reasonOther": "Oħrajn",
+      "feedbackLabel": "Feedback addizzjonali (mhux obbligatorju)",
+      "feedbackPlaceholder": "Għidilna kif nistgħu ntejbu...",
+      "cancel": "Ikkanċella",
+      "confirmButton": "Ħassar il-Kont",
+      "deleting": "Qed tħassar...",
+      "success": "Il-kont tiegħek ġie mħassar b'suċċess.",
+      "error": "Ma rnexxiex tħassar il-kont. Jekk jogħġbok iċċekkja l-password tiegħek u erġa' pprova."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Agħżel kategorija.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "It-titlu tar-reklamar huwa obbligatorju.",
       "shortDescriptionRequired": "Deskrizzjoni qasira hija meħtieġa.",
       "descriptionRequired": "Hija meħtieġa spjegazzjoni dettaljata.",
       "categoryRequired": "L-għażla tal-kategorija hija obbligatorja.",
       "priceRequired": "Daħħal prezz validu."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Oħloq Lista Ġdida",
@@ -834,21 +862,22 @@
       "shippingCost": "Ħlas tat-Tbaħħir",
       "weight": "Piż",
       "weightUnit": "Unità tal-Piż",
+      "currency": "Currency",
       "city": "Belt",
       "address": "Indirizz",
-      "postalCode": "Kodiċi postali",
-      "currency": "Currency"
+      "postalCode": "Kodiċi postali"
     },
     "placeholders": {
       "title": "Eżempju: Baqra Holstein ta' sentejn",
       "shortDescription": "Deskrizzjoni tal-prodott (massimu ta' 200 karattru)",
       "description": "Agħti informazzjoni dettaljata dwar il-prodott...",
       "category": "Agħżel kategorija.",
+      "searchCurrency": "Search currency...",
       "city": "Idħol fil-belt",
       "address": "Daħħal l-indirizz sħiħ.",
-      "postalCode": "Kodiċi postali",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Kodiċi postali"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "It-titlu tar-reklamar huwa obbligatorju.",
       "shortDescriptionRequired": "Deskrizzjoni qasira hija meħtieġa.",
@@ -870,8 +899,7 @@
     "productCreated": "Il-prodott inħoloq b'suċċess.",
     "creationFailed": "Il-prodott ma setax jinħoloq. Jekk jogħġbok erġa' pprova.",
     "userNotFound": "L-informazzjoni tal-utent ma setgħetx tinstab. Jekk jogħġbok erġa' idħol.",
-    "defaultBusinessName": "In-negozju tiegħi",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "In-negozju tiegħi"
   },
   "becomeSeller": {
     "title": "Issir Bejjiegħ",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} minuta ilu",
     "hoursAgo": "{count} siegħa ilu",
     "daysAgo": "{count}d ilu"
+  },
+  "pricing": {
+    "originalPrice": "Prezz oriġinali",
+    "convertedPrice": "Prezz konvertit",
+    "approximatePrice": "Konverżjoni approssimattiva bbażata fuq ir-rati tal-kambju attwali",
+    "approximate": "≈"
   }
 }

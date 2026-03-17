@@ -379,6 +379,34 @@
       "saveSuccess": "თქვენი პარამეტრები განახლდა.",
       "saveError": "პარამეტრების განახლებისას შეცდომა მოხდა.",
       "loadError": "პარამეტრების ჩატვირთვა ვერ მოხერხდა."
+    },
+    "deleteAccount": {
+      "dangerZone": "საფრთხის ზონა",
+      "title": "ანგარიშის წაშლა",
+      "description": "ანგარიშის წაშლის შემდეგ უკან დასახევი გზა აღარ იქნება. თქვენი ყველა მონაცემი, სია და საუბარი სამუდამოდ წაიშლება.",
+      "irreversible": "ეს მოქმედება შეუქცევადია.",
+      "button": "ჩემი ანგარიშის წაშლა",
+      "confirmTitle": "დარწმუნებული ხართ, რომ გსურთ თქვენი ანგარიშის წაშლა?",
+      "warning": "შემდეგი მონაცემები სამუდამოდ წაიშლება:",
+      "warningProfile": "თქვენი პროფილი და პირადი ინფორმაცია",
+      "warningListings": "თქვენი ყველა ჩამონათვალი და პროდუქტი",
+      "warningConversations": "თქვენი საუბრები და შეტყობინებები",
+      "warningReviews": "თქვენი მიმოხილვები და რჩეულები",
+      "passwordLabel": "დასადასტურებლად შეიყვანეთ თქვენი პაროლი",
+      "passwordPlaceholder": "თქვენი მიმდინარე პაროლი",
+      "reasonLabel": "რატომ მიდიხართ? (არასავალდებულო)",
+      "reasonPlaceholder": "აირჩიეთ მიზეზი",
+      "reasonNotSatisfied": "მომსახურებით უკმაყოფილო ვარ",
+      "reasonPrivacy": "კონფიდენციალურობის საკითხები",
+      "reasonAlternative": "ალტერნატიული პლატფორმა ვიპოვე",
+      "reasonOther": "სხვა",
+      "feedbackLabel": "დამატებითი გამოხმაურება (არასავალდებულო)",
+      "feedbackPlaceholder": "გვითხარით, როგორ შეგვიძლია გაუმჯობესება...",
+      "cancel": "გაუქმება",
+      "confirmButton": "ანგარიშის წაშლა",
+      "deleting": "წაშლა...",
+      "success": "თქვენი ანგარიში წარმატებით წაიშალა.",
+      "error": "ანგარიშის წაშლა ვერ მოხერხდა. გთხოვთ, შეამოწმოთ თქვენი პაროლი და ხელახლა სცადოთ."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "აირჩიეთ კატეგორია.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "რეკლამის სათაური სავალდებულოა.",
       "shortDescriptionRequired": "მოკლე აღწერაა საჭირო.",
       "descriptionRequired": "საჭიროა დეტალური ახსნა.",
       "categoryRequired": "კატეგორიის შერჩევა სავალდებულოა.",
       "priceRequired": "შეიყვანეთ სწორი ფასი."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "ახალი სიის შექმნა",
@@ -834,21 +862,22 @@
       "shippingCost": "მიწოდების საფასური",
       "weight": "წონა",
       "weightUnit": "წონის ერთეული",
+      "currency": "Currency",
       "city": "ქალაქი",
       "address": "მისამართი",
-      "postalCode": "საფოსტო ინდექსი",
-      "currency": "Currency"
+      "postalCode": "საფოსტო ინდექსი"
     },
     "placeholders": {
       "title": "მაგალითი: 2 წლის ჰოლშტაინის ჯიშის ძროხა",
       "shortDescription": "პროდუქტის აღწერა (მაქსიმუმ 200 სიმბოლო)",
       "description": "მოგვაწოდეთ დეტალური ინფორმაცია პროდუქტის შესახებ...",
       "category": "აირჩიეთ კატეგორია.",
+      "searchCurrency": "Search currency...",
       "city": "შედით ქალაქში",
       "address": "შეიყვანეთ სრული მისამართი.",
-      "postalCode": "საფოსტო ინდექსი",
-      "searchCurrency": "Search currency..."
+      "postalCode": "საფოსტო ინდექსი"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "რეკლამის სათაური სავალდებულოა.",
       "shortDescriptionRequired": "მოკლე აღწერაა საჭირო.",
@@ -870,8 +899,7 @@
     "productCreated": "პროდუქტი წარმატებით შეიქმნა.",
     "creationFailed": "პროდუქტის შექმნა ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა.",
     "userNotFound": "მომხმარებლის ინფორმაცია ვერ მოიძებნა. გთხოვთ, ხელახლა შეხვიდეთ სისტემაში.",
-    "defaultBusinessName": "ჩემი ბიზნესი",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "ჩემი ბიზნესი"
   },
   "becomeSeller": {
     "title": "გახდი გამყიდველი",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} წუთის წინ",
     "hoursAgo": "{count} საათის წინ",
     "daysAgo": "{count} დღის წინ"
+  },
+  "pricing": {
+    "originalPrice": "საწყისი ფასი",
+    "convertedPrice": "კონვერტირებული ფასი",
+    "approximatePrice": "მიახლოებითი კონვერტაცია მიმდინარე გაცვლითი კურსების მიხედვით",
+    "approximate": "≈"
   }
 }

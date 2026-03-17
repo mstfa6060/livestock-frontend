@@ -379,6 +379,34 @@
       "saveSuccess": "Je voorkeuren zijn bijgewerkt.",
       "saveError": "Er is een fout opgetreden tijdens het bijwerken van de voorkeuren.",
       "loadError": "Voorkeuren konden niet worden geladen."
+    },
+    "deleteAccount": {
+      "dangerZone": "Gevarenzone",
+      "title": "Account verwijderen",
+      "description": "Als je je account eenmaal hebt verwijderd, is er geen weg terug. Al je gegevens, advertenties en gesprekken worden permanent verwijderd.",
+      "irreversible": "Deze actie is onomkeerbaar.",
+      "button": "Mijn account verwijderen",
+      "confirmTitle": "Weet je zeker dat je je account wilt verwijderen?",
+      "warning": "De volgende gegevens worden permanent verwijderd:",
+      "warningProfile": "Je profiel en persoonlijke gegevens",
+      "warningListings": "Al uw advertenties en producten",
+      "warningConversations": "Jouw gesprekken en berichten",
+      "warningReviews": "Jouw recensies en favorieten",
+      "passwordLabel": "Voer uw wachtwoord in om te bevestigen",
+      "passwordPlaceholder": "Uw huidige wachtwoord",
+      "reasonLabel": "Waarom vertrek je? (optioneel)",
+      "reasonPlaceholder": "Selecteer een reden",
+      "reasonNotSatisfied": "Niet tevreden over de service.",
+      "reasonPrivacy": "privacykwesties",
+      "reasonAlternative": "Een alternatief platform gevonden",
+      "reasonOther": "Ander",
+      "feedbackLabel": "Aanvullende feedback (optioneel)",
+      "feedbackPlaceholder": "Vertel ons hoe we kunnen verbeteren...",
+      "cancel": "Annuleren",
+      "confirmButton": "Account verwijderen",
+      "deleting": "Verwijderen...",
+      "success": "Je account is succesvol verwijderd.",
+      "error": "Het verwijderen van het account is mislukt. Controleer uw wachtwoord en probeer het opnieuw."
     }
   },
   "navigation": {
@@ -739,6 +767,9 @@
       "fetchError": "Er is een fout opgetreden tijdens het uploaden van de verkopersgegevens.",
       "productsLoadError": "Er is een fout opgetreden tijdens het uploaden van de producten van de verkoper.",
       "reviewsTab": "Beoordelingen",
+      "share": "Deel",
+      "shareText": "Bekijk {naam} op Livestock Trading",
+      "linkCopied": "Link gekopieerd naar het klembord.",
       "reviews": {
         "summary": "Evaluatieoverzicht",
         "reviewCount": "evaluatie",
@@ -796,14 +827,14 @@
       "category": "Selecteer een categorie.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "De titel van de advertentie is verplicht.",
       "shortDescriptionRequired": "Een korte beschrijving is vereist.",
       "descriptionRequired": "Een gedetailleerde uitleg is vereist.",
       "categoryRequired": "Het selecteren van een categorie is verplicht.",
       "priceRequired": "Voer een geldige prijs in."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Nieuwe advertentie aanmaken",
@@ -831,21 +862,22 @@
       "shippingCost": "Verzendkosten",
       "weight": "Gewicht",
       "weightUnit": "Gewichtseenheid",
+      "currency": "Currency",
       "city": "Stad",
       "address": "Adres",
-      "postalCode": "Postcode",
-      "currency": "Currency"
+      "postalCode": "Postcode"
     },
     "placeholders": {
       "title": "Voorbeeld: een 2-jarige Holstein-koe",
       "shortDescription": "Productomschrijving (max. 200 tekens)",
       "description": "Geef gedetailleerde informatie over het product...",
       "category": "Selecteer een categorie.",
+      "searchCurrency": "Search currency...",
       "city": "Betreed de stad",
       "address": "Voer het volledige adres in.",
-      "postalCode": "Postcode",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Postcode"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "De titel van de advertentie is verplicht.",
       "shortDescriptionRequired": "Een korte beschrijving is vereist.",
@@ -867,8 +899,7 @@
     "productCreated": "Het product is succesvol ontwikkeld.",
     "creationFailed": "Het product kon niet worden aangemaakt. Probeer het opnieuw.",
     "userNotFound": "Gebruikersgegevens konden niet worden gevonden. Log alstublieft opnieuw in.",
-    "defaultBusinessName": "Mijn bedrijf",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Mijn bedrijf"
   },
   "becomeSeller": {
     "title": "Word verkoper",
@@ -1317,7 +1348,10 @@
     "fleet": "Vlootinformatie",
     "serviceRegions": "Servicegebieden",
     "specializations": "Expertisegebieden",
-    "certifications": "Certificaten"
+    "certifications": "Certificaten",
+    "share": "Deel",
+    "shareText": "Bekijk {naam} op Livestock Trading",
+    "linkCopied": "Link gekopieerd naar het klembord."
   },
   "brands": {
     "title": "Merkmanagement",
@@ -1913,5 +1947,11 @@
     "minutesAgo": "{count} minuten geleden",
     "hoursAgo": "{count} uur geleden",
     "daysAgo": "{count} dagen geleden"
+  },
+  "pricing": {
+    "originalPrice": "Oorspronkelijke prijs",
+    "convertedPrice": "Omgerekende prijs",
+    "approximatePrice": "Geschatte omrekening op basis van de huidige wisselkoersen.",
+    "approximate": "≈"
   }
 }

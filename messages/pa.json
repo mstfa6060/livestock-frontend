@@ -379,6 +379,34 @@
       "saveSuccess": "ਤੁਹਾਡੀਆਂ ਤਰਜੀਹਾਂ ਨੂੰ ਅੱਪਡੇਟ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ।",
       "saveError": "ਤਰਜੀਹਾਂ ਨੂੰ ਅੱਪਡੇਟ ਕਰਨ ਦੌਰਾਨ ਇੱਕ ਗਲਤੀ ਆਈ।",
       "loadError": "ਤਰਜੀਹਾਂ ਲੋਡ ਨਹੀਂ ਕੀਤੀਆਂ ਜਾ ਸਕੀਆਂ।"
+    },
+    "deleteAccount": {
+      "dangerZone": "ਖ਼ਤਰੇ ਵਾਲਾ ਖੇਤਰ",
+      "title": "ਖਾਤਾ ਮਿਟਾਓ",
+      "description": "ਇੱਕ ਵਾਰ ਜਦੋਂ ਤੁਸੀਂ ਆਪਣਾ ਖਾਤਾ ਮਿਟਾ ਦਿੰਦੇ ਹੋ, ਤਾਂ ਵਾਪਸ ਨਹੀਂ ਜਾਣਾ ਪੈਂਦਾ। ਤੁਹਾਡਾ ਸਾਰਾ ਡਾਟਾ, ਸੂਚੀਆਂ ਅਤੇ ਗੱਲਬਾਤਾਂ ਨੂੰ ਸਥਾਈ ਤੌਰ 'ਤੇ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ।",
+      "irreversible": "ਇਹ ਕਾਰਵਾਈ ਵਾਪਸੀਯੋਗ ਹੈ।",
+      "button": "ਮੇਰਾ ਖਾਤਾ ਮਿਟਾਓ",
+      "confirmTitle": "ਕੀ ਤੁਸੀਂ ਪੱਕਾ ਆਪਣਾ ਖਾਤਾ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+      "warning": "ਹੇਠ ਦਿੱਤਾ ਡਾਟਾ ਸਥਾਈ ਤੌਰ 'ਤੇ ਮਿਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ:",
+      "warningProfile": "ਤੁਹਾਡੀ ਪ੍ਰੋਫਾਈਲ ਅਤੇ ਨਿੱਜੀ ਜਾਣਕਾਰੀ",
+      "warningListings": "ਤੁਹਾਡੀਆਂ ਸਾਰੀਆਂ ਸੂਚੀਆਂ ਅਤੇ ਉਤਪਾਦ",
+      "warningConversations": "ਤੁਹਾਡੀਆਂ ਗੱਲਾਂਬਾਤਾਂ ਅਤੇ ਸੁਨੇਹੇ",
+      "warningReviews": "ਤੁਹਾਡੀਆਂ ਸਮੀਖਿਆਵਾਂ ਅਤੇ ਮਨਪਸੰਦ",
+      "passwordLabel": "ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਆਪਣਾ ਪਾਸਵਰਡ ਦਰਜ ਕਰੋ",
+      "passwordPlaceholder": "ਤੁਹਾਡਾ ਮੌਜੂਦਾ ਪਾਸਵਰਡ",
+      "reasonLabel": "ਤੁਸੀਂ ਕਿਉਂ ਜਾ ਰਹੇ ਹੋ? (ਵਿਕਲਪਿਕ)",
+      "reasonPlaceholder": "ਕੋਈ ਕਾਰਨ ਚੁਣੋ",
+      "reasonNotSatisfied": "ਸੇਵਾ ਤੋਂ ਸੰਤੁਸ਼ਟ ਨਹੀਂ ਹਾਂ।",
+      "reasonPrivacy": "ਗੋਪਨੀਯਤਾ ਸੰਬੰਧੀ ਚਿੰਤਾਵਾਂ",
+      "reasonAlternative": "ਇੱਕ ਵਿਕਲਪਿਕ ਪਲੇਟਫਾਰਮ ਮਿਲਿਆ",
+      "reasonOther": "ਹੋਰ",
+      "feedbackLabel": "ਵਾਧੂ ਫੀਡਬੈਕ (ਵਿਕਲਪਿਕ)",
+      "feedbackPlaceholder": "ਸਾਨੂੰ ਦੱਸੋ ਕਿ ਅਸੀਂ ਕਿਵੇਂ ਸੁਧਾਰ ਕਰ ਸਕਦੇ ਹਾਂ...",
+      "cancel": "ਰੱਦ ਕਰੋ",
+      "confirmButton": "ਖਾਤਾ ਮਿਟਾਓ",
+      "deleting": "ਮਿਟਾਇਆ ਜਾ ਰਿਹਾ ਹੈ...",
+      "success": "ਤੁਹਾਡਾ ਖਾਤਾ ਸਫਲਤਾਪੂਰਵਕ ਮਿਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ।",
+      "error": "ਖਾਤਾ ਮਿਟਾਉਣਾ ਅਸਫਲ ਰਿਹਾ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਪਾਸਵਰਡ ਦੀ ਜਾਂਚ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "ਇੱਕ ਸ਼੍ਰੇਣੀ ਚੁਣੋ।",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "ਇਸ਼ਤਿਹਾਰ ਦਾ ਸਿਰਲੇਖ ਲਾਜ਼ਮੀ ਹੈ।",
       "shortDescriptionRequired": "ਇੱਕ ਸੰਖੇਪ ਵਰਣਨ ਲੋੜੀਂਦਾ ਹੈ।",
       "descriptionRequired": "ਇੱਕ ਵਿਸਤ੍ਰਿਤ ਵਿਆਖਿਆ ਦੀ ਲੋੜ ਹੈ।",
       "categoryRequired": "ਸ਼੍ਰੇਣੀ ਦੀ ਚੋਣ ਲਾਜ਼ਮੀ ਹੈ।",
       "priceRequired": "ਇੱਕ ਵੈਧ ਕੀਮਤ ਦਾਖਲ ਕਰੋ।"
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "ਨਵੀਂ ਸੂਚੀ ਬਣਾਓ",
@@ -834,21 +862,22 @@
       "shippingCost": "ਸ਼ਿਪਿੰਗ ਫੀਸ",
       "weight": "ਭਾਰ",
       "weightUnit": "ਭਾਰ ਦੀ ਇਕਾਈ",
+      "currency": "Currency",
       "city": "ਸ਼ਹਿਰ",
       "address": "ਪਤਾ",
-      "postalCode": "ਡਾਕ ਕੋਡ",
-      "currency": "Currency"
+      "postalCode": "ਡਾਕ ਕੋਡ"
     },
     "placeholders": {
       "title": "ਉਦਾਹਰਨ: 2 ਸਾਲ ਦੀ ਹੋਲਸਟਾਈਨ ਗਾਂ",
       "shortDescription": "ਉਤਪਾਦ ਵੇਰਵਾ (ਵੱਧ ਤੋਂ ਵੱਧ 200 ਅੱਖਰ)",
       "description": "ਉਤਪਾਦ ਬਾਰੇ ਵਿਸਤ੍ਰਿਤ ਜਾਣਕਾਰੀ ਪ੍ਰਦਾਨ ਕਰੋ...",
       "category": "ਇੱਕ ਸ਼੍ਰੇਣੀ ਚੁਣੋ।",
+      "searchCurrency": "Search currency...",
       "city": "ਸ਼ਹਿਰ ਵਿੱਚ ਦਾਖਲ ਹੋਵੋ",
       "address": "ਪੂਰਾ ਪਤਾ ਦਰਜ ਕਰੋ।",
-      "postalCode": "ਡਾਕ ਕੋਡ",
-      "searchCurrency": "Search currency..."
+      "postalCode": "ਡਾਕ ਕੋਡ"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "ਇਸ਼ਤਿਹਾਰ ਦਾ ਸਿਰਲੇਖ ਲਾਜ਼ਮੀ ਹੈ।",
       "shortDescriptionRequired": "ਇੱਕ ਸੰਖੇਪ ਵਰਣਨ ਲੋੜੀਂਦਾ ਹੈ।",
@@ -870,8 +899,7 @@
     "productCreated": "ਉਤਪਾਦ ਸਫਲਤਾਪੂਰਵਕ ਬਣਾਇਆ ਗਿਆ ਸੀ।",
     "creationFailed": "ਉਤਪਾਦ ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
     "userNotFound": "ਵਰਤੋਂਕਾਰ ਜਾਣਕਾਰੀ ਨਹੀਂ ਮਿਲ ਸਕੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਲੌਗਇਨ ਕਰੋ।",
-    "defaultBusinessName": "ਮੇਰਾ ਕਾਰੋਬਾਰ",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "ਮੇਰਾ ਕਾਰੋਬਾਰ"
   },
   "becomeSeller": {
     "title": "ਵਿਕਰੇਤਾ ਬਣੋ",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} ਮਿੰਟ ਪਹਿਲਾਂ",
     "hoursAgo": "{count} ਘੰਟੇ ਪਹਿਲਾਂ",
     "daysAgo": "{ਗਿਣਤੀ} ਦਿਨ ਪਹਿਲਾਂ"
+  },
+  "pricing": {
+    "originalPrice": "ਅਸਲ ਕੀਮਤ",
+    "convertedPrice": "ਬਦਲੀ ਗਈ ਕੀਮਤ",
+    "approximatePrice": "ਮੌਜੂਦਾ ਵਟਾਂਦਰਾ ਦਰਾਂ ਦੇ ਆਧਾਰ 'ਤੇ ਅੰਦਾਜ਼ਨ ਰੂਪਾਂਤਰਨ",
+    "approximate": "≈"
   }
 }

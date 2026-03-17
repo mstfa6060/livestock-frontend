@@ -379,6 +379,34 @@
       "saveSuccess": "Viaj preferoj estis ĝisdatigitaj.",
       "saveError": "Eraro okazis dum ĝisdatigo de preferoj.",
       "loadError": "Ne eblis ŝargi preferojn."
+    },
+    "deleteAccount": {
+      "dangerZone": "Danĝera Zono",
+      "title": "Forigi Konton",
+      "description": "Post kiam vi forigos vian konton, ne plu eblas reiri. Ĉiuj viaj datumoj, listoj kaj konversacioj estos permanente forigitaj.",
+      "irreversible": "Ĉi tiu ago estas nemaligebla.",
+      "button": "Forigi Mian Konton",
+      "confirmTitle": "Ĉu vi certas, ke vi volas forigi vian konton?",
+      "warning": "La jenaj datumoj estos permanente forigitaj:",
+      "warningProfile": "Via profilo kaj personaj informoj",
+      "warningListings": "Ĉiuj viaj listoj kaj produktoj",
+      "warningConversations": "Viaj konversacioj kaj mesaĝoj",
+      "warningReviews": "Viaj recenzoj kaj ŝatatoj",
+      "passwordLabel": "Enigu vian pasvorton por konfirmi",
+      "passwordPlaceholder": "Via nuna pasvorto",
+      "reasonLabel": "Kial vi foriras? (nedeviga)",
+      "reasonPlaceholder": "Elektu kialon",
+      "reasonNotSatisfied": "Ne kontenta pri la servo",
+      "reasonPrivacy": "Zorgoj pri privateco",
+      "reasonAlternative": "Trovis alternativan platformon",
+      "reasonOther": "Aliaj",
+      "feedbackLabel": "Plia retrosciigo (nedeviga)",
+      "feedbackPlaceholder": "Diru al ni kiel ni povas plibonigi...",
+      "cancel": "Nuligi",
+      "confirmButton": "Forigi Konton",
+      "deleting": "Forigante...",
+      "success": "Via konto estis sukcese forigita.",
+      "error": "Malsukcesis forigi konton. Bonvolu kontroli vian pasvorton kaj provi denove."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Elektu kategorion.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Anonca titolo estas deviga.",
       "shortDescriptionRequired": "Mallonga priskribo estas necesa.",
       "descriptionRequired": "Detala klarigo estas necesa.",
       "categoryRequired": "Kategoria elekto estas deviga.",
       "priceRequired": "Enigu validan prezon."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Krei Novan Liston",
@@ -834,21 +862,22 @@
       "shippingCost": "Sendkosto",
       "weight": "Pezo",
       "weightUnit": "Unuo de pezo",
+      "currency": "Currency",
       "city": "Urbo",
       "address": "Adreso",
-      "postalCode": "Poŝtkodo",
-      "currency": "Currency"
+      "postalCode": "Poŝtkodo"
     },
     "placeholders": {
       "title": "Ekzemplo: 2-jaraĝa Holstein-bovino",
       "shortDescription": "Produkta priskribo (maksimumo 200 signoj)",
       "description": "Donu detalajn informojn pri la produkto...",
       "category": "Elektu kategorion.",
+      "searchCurrency": "Search currency...",
       "city": "Eniru la urbon",
       "address": "Enigu la plenan adreson.",
-      "postalCode": "Poŝtkodo",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Poŝtkodo"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Anonca titolo estas deviga.",
       "shortDescriptionRequired": "Mallonga priskribo estas necesa.",
@@ -870,8 +899,7 @@
     "productCreated": "La produkto estis sukcese kreita.",
     "creationFailed": "La produkto ne povis esti kreita. Bonvolu reprovi.",
     "userNotFound": "Uzantinformoj ne troveblas. Bonvolu ensaluti denove.",
-    "defaultBusinessName": "Mia komerco",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Mia komerco"
   },
   "becomeSeller": {
     "title": "Fariĝu Vendisto",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "antaŭ {count} minutoj",
     "hoursAgo": "antaŭ {count} horoj",
     "daysAgo": "antaŭ {count} tagoj"
+  },
+  "pricing": {
+    "originalPrice": "Origina prezo",
+    "convertedPrice": "Konvertita prezo",
+    "approximatePrice": "Proksimuma konverto bazita sur nunaj kurzoj",
+    "approximate": "≈"
   }
 }

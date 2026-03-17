@@ -379,6 +379,34 @@
       "saveSuccess": "Stillingarnar þínar hafa verið uppfærðar.",
       "saveError": "Villa kom upp við að uppfæra stillingar.",
       "loadError": "Ekki var hægt að hlaða stillingunum."
+    },
+    "deleteAccount": {
+      "dangerZone": "Hættusvæði",
+      "title": "Eyða reikningi",
+      "description": "Þegar þú hefur eytt aðganginum þínum er engin leið aftur. Öllum gögnum þínum, skráningum og samtölum verður eytt fyrir fullt og allt.",
+      "irreversible": "Þessi aðgerð er óafturkræf.",
+      "button": "Eyða reikningnum mínum",
+      "confirmTitle": "Ertu viss um að þú viljir eyða aðganginum þínum?",
+      "warning": "Eftirfarandi gögnum verður eytt varanlega:",
+      "warningProfile": "Prófíll þinn og persónuupplýsingar",
+      "warningListings": "Allar skráningar þínar og vörur",
+      "warningConversations": "Samtöl þín og skilaboð",
+      "warningReviews": "Umsagnir þínar og uppáhalds",
+      "passwordLabel": "Sláðu inn lykilorðið þitt til að staðfesta",
+      "passwordPlaceholder": "Núverandi lykilorð þitt",
+      "reasonLabel": "Af hverju ertu að fara? (valfrjálst)",
+      "reasonPlaceholder": "Veldu ástæðu",
+      "reasonNotSatisfied": "Ekki ánægður með þjónustuna",
+      "reasonPrivacy": "Áhyggjur af friðhelgi einkalífsins",
+      "reasonAlternative": "Fann annan vettvang",
+      "reasonOther": "Annað",
+      "feedbackLabel": "Viðbótarupplýsingar (valfrjálst)",
+      "feedbackPlaceholder": "Segðu okkur hvernig við getum bætt okkur...",
+      "cancel": "Hætta við",
+      "confirmButton": "Eyða reikningi",
+      "deleting": "Eyðir...",
+      "success": "Reikningnum þínum hefur verið eytt.",
+      "error": "Mistókst að eyða reikningnum. Athugaðu lykilorðið þitt og reyndu aftur."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Veldu flokk.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Titill auglýsingar er skylda.",
       "shortDescriptionRequired": "Stutt lýsing er nauðsynleg.",
       "descriptionRequired": "Ítarleg útskýring er nauðsynleg.",
       "categoryRequired": "Val á flokki er skylda.",
       "priceRequired": "Sláðu inn gilt verð."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Búa til nýja skráningu",
@@ -834,21 +862,22 @@
       "shippingCost": "Sendingargjald",
       "weight": "Þyngd",
       "weightUnit": "Þyngdareining",
+      "currency": "Currency",
       "city": "Borg",
       "address": "Heimilisfang",
-      "postalCode": "Póstnúmer",
-      "currency": "Currency"
+      "postalCode": "Póstnúmer"
     },
     "placeholders": {
       "title": "Dæmi: Tveggja ára Holstein kýr",
       "shortDescription": "Vörulýsing (hámark 200 stafir)",
       "description": "Gefðu ítarlegar upplýsingar um vöruna...",
       "category": "Veldu flokk.",
+      "searchCurrency": "Search currency...",
       "city": "Sláðu inn borgina",
       "address": "Sláðu inn allt heimilisfangið.",
-      "postalCode": "Póstnúmer",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Póstnúmer"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Titill auglýsingar er skylda.",
       "shortDescriptionRequired": "Stutt lýsing er nauðsynleg.",
@@ -870,8 +899,7 @@
     "productCreated": "Varan var búin til með góðum árangri.",
     "creationFailed": "Ekki var hægt að búa til vöruna. Reyndu aftur.",
     "userNotFound": "Notandaupplýsingar fundust ekki. Vinsamlegast skráðu þig inn aftur.",
-    "defaultBusinessName": "Fyrirtækið mitt",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Fyrirtækið mitt"
   },
   "becomeSeller": {
     "title": "Vertu seljandi",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "Fyrir {count} mínútum",
     "hoursAgo": "Fyrir {count} klst.",
     "daysAgo": "Fyrir {count} dögum"
+  },
+  "pricing": {
+    "originalPrice": "Upprunalegt verð",
+    "convertedPrice": "Umreiknað verð",
+    "approximatePrice": "Áætlaður umreikningur miðað við núverandi gengi",
+    "approximate": "≈"
   }
 }

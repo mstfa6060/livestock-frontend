@@ -379,6 +379,34 @@
       "saveSuccess": "Jou voorkeure is opgedateer.",
       "saveError": "'n Fout het voorgekom tydens die opdatering van voorkeure.",
       "loadError": "Voorkeure kon nie gelaai word nie."
+    },
+    "deleteAccount": {
+      "dangerZone": "Gevaarsone",
+      "title": "Vee rekening uit",
+      "description": "Sodra jy jou rekening uitgevee het, is daar geen terugdraai nie. Al jou data, lyste en gesprekke sal permanent verwyder word.",
+      "irreversible": "Hierdie aksie is onomkeerbaar.",
+      "button": "Vee my rekening uit",
+      "confirmTitle": "Is jy seker jy wil jou rekening verwyder?",
+      "warning": "Die volgende data sal permanent verwyder word:",
+      "warningProfile": "Jou profiel en persoonlike inligting",
+      "warningListings": "Al jou lyste en produkte",
+      "warningConversations": "Jou gesprekke en boodskappe",
+      "warningReviews": "Jou resensies en gunstelinge",
+      "passwordLabel": "Voer jou wagwoord in om te bevestig",
+      "passwordPlaceholder": "Jou huidige wagwoord",
+      "reasonLabel": "Hoekom gaan jy weg? (opsioneel)",
+      "reasonPlaceholder": "Kies 'n rede",
+      "reasonNotSatisfied": "Nie tevrede met die diens nie",
+      "reasonPrivacy": "Privaatheidskwessies",
+      "reasonAlternative": "'n Alternatiewe platform gevind",
+      "reasonOther": "Ander",
+      "feedbackLabel": "Bykomende terugvoer (opsioneel)",
+      "feedbackPlaceholder": "Vertel ons hoe ons kan verbeter...",
+      "cancel": "Kanselleer",
+      "confirmButton": "Vee rekening uit",
+      "deleting": "Vee tans uit...",
+      "success": "Jou rekening is suksesvol verwyder.",
+      "error": "Kon nie rekening uitvee nie. Kontroleer asseblief jou wagwoord en probeer weer."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Kies 'n kategorie.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Advertensietitel is verpligtend.",
       "shortDescriptionRequired": "'n Kort beskrywing word vereis.",
       "descriptionRequired": "'n Gedetailleerde verduideliking word benodig.",
       "categoryRequired": "Kategoriekeuse is verpligtend.",
       "priceRequired": "Voer 'n geldige prys in."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Skep Nuwe Lys",
@@ -834,21 +862,22 @@
       "shippingCost": "Versendingsfooi",
       "weight": "Gewig",
       "weightUnit": "Eenheid van Gewig",
+      "currency": "Currency",
       "city": "Stad",
       "address": "Adres",
-      "postalCode": "Poskode",
-      "currency": "Currency"
+      "postalCode": "Poskode"
     },
     "placeholders": {
       "title": "Voorbeeld: 2-jarige Holstein-koei",
       "shortDescription": "Produkbeskrywing (maks. 200 karakters)",
       "description": "Verskaf gedetailleerde inligting oor die produk...",
       "category": "Kies 'n kategorie.",
+      "searchCurrency": "Search currency...",
       "city": "Betree die stad",
       "address": "Voer die volledige adres in.",
-      "postalCode": "Poskode",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Poskode"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Advertensietitel is verpligtend.",
       "shortDescriptionRequired": "'n Kort beskrywing word vereis.",
@@ -870,8 +899,7 @@
     "productCreated": "Die produk is suksesvol geskep.",
     "creationFailed": "Die produk kon nie geskep word nie. Probeer asseblief weer.",
     "userNotFound": "Gebruikersinligting kon nie gevind word nie. Meld asseblief weer aan.",
-    "defaultBusinessName": "My besigheid",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "My besigheid"
   },
   "becomeSeller": {
     "title": "Word 'n Verkoper",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{count} min gelede",
     "hoursAgo": "{telling} uur gelede",
     "daysAgo": "{telling}d gelede"
+  },
+  "pricing": {
+    "originalPrice": "Oorspronklike prys",
+    "convertedPrice": "Omgeskakelde prys",
+    "approximatePrice": "Benaderde omskakeling gebaseer op huidige wisselkoerse",
+    "approximate": "≈"
   }
 }

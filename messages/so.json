@@ -379,6 +379,34 @@
       "saveSuccess": "Dookhyadaada waa la cusbooneysiiyay.",
       "saveError": "Khalad ayaa dhacay markii la cusbooneysiinayay doorbidyada.",
       "loadError": "Doorbidyada lama soo rari karin."
+    },
+    "deleteAccount": {
+      "dangerZone": "Aagga Khatarta ah",
+      "title": "Tirtir Akoonka",
+      "description": "Marka aad tirtirto akoonkaaga, dib uma noqonayso. Dhammaan xogtaada, liisaska, iyo wadahadalladaada si joogto ah ayaa looga saari doonaa.",
+      "irreversible": "Ficilkan waa mid aan laga noqon karin.",
+      "button": "Tirtir Akoonkayga",
+      "confirmTitle": "Ma hubtaa inaad rabto inaad tirtirto akoonkaaga?",
+      "warning": "Xogta soo socota si joogto ah ayaa loo tirtiri doonaa:",
+      "warningProfile": "Boggaaga iyo macluumaadkaaga shakhsi ahaaneed",
+      "warningListings": "Dhammaan liisaskaaga iyo alaabadaada",
+      "warningConversations": "Wadahadalladaada iyo fariimahaaga",
+      "warningReviews": "Faallooyinkaaga iyo kuwa aad ugu jeceshahay",
+      "passwordLabel": "Geli eraygaaga sirta ah si aad u xaqiijiso",
+      "passwordPlaceholder": "Furahaaga sirta ah ee hadda jira",
+      "reasonLabel": "Maxaad u baxaysaa? (ikhtiyaar)",
+      "reasonPlaceholder": "Dooro sabab",
+      "reasonNotSatisfied": "Kuma qanacsana adeegga",
+      "reasonPrivacy": "Walaacyada asturnaanta",
+      "reasonAlternative": "Waxaan helay goob kale oo lagu ciyaaro",
+      "reasonOther": "Kale",
+      "feedbackLabel": "Jawaab celin dheeraad ah (ikhtiyaar ah)",
+      "feedbackPlaceholder": "Noo sheeg sida aan u horumarin karno...",
+      "cancel": "Jooji",
+      "confirmButton": "Tirtir Akoonka",
+      "deleting": "Tirtirid...",
+      "success": "Akoonkaaga si guul leh ayaa loo tirtiray.",
+      "error": "Ku guuldareystay in la tirtiro akoonka. Fadlan hubi eraygaaga sirta ah oo isku day mar kale."
     }
   },
   "navigation": {
@@ -799,14 +827,14 @@
       "category": "Dooro qayb.",
       "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Cinwaanka xayaysiisku waa qasab.",
       "shortDescriptionRequired": "Sharaxaad kooban ayaa loo baahan yahay.",
       "descriptionRequired": "Sharaxaad faahfaahsan ayaa loo baahan yahay.",
       "categoryRequired": "Xulashada qaybta waa qasab.",
       "priceRequired": "Geli qiimo sax ah."
-    },
-    "noCurrencyFound": "No currency found."
+    }
   },
   "newListing": {
     "title": "Samee Liis Cusub",
@@ -834,21 +862,22 @@
       "shippingCost": "Kharashka Rarista",
       "weight": "Miisaanka",
       "weightUnit": "Halbeegga Miisaanka",
+      "currency": "Currency",
       "city": "Magaalada",
       "address": "Cinwaanka",
-      "postalCode": "Koodhka boostada",
-      "currency": "Currency"
+      "postalCode": "Koodhka boostada"
     },
     "placeholders": {
       "title": "Tusaale: Lo'da Holstein ee 2-jirka ah",
       "shortDescription": "Sharaxaadda badeecada (ugu badnaan 200 xaraf)",
       "description": "Bixi macluumaad faahfaahsan oo ku saabsan badeecada...",
       "category": "Dooro qayb.",
+      "searchCurrency": "Search currency...",
       "city": "Soo gal magaalada",
       "address": "Geli cinwaanka oo dhan.",
-      "postalCode": "Koodhka boostada",
-      "searchCurrency": "Search currency..."
+      "postalCode": "Koodhka boostada"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Cinwaanka xayaysiisku waa qasab.",
       "shortDescriptionRequired": "Sharaxaad kooban ayaa loo baahan yahay.",
@@ -870,8 +899,7 @@
     "productCreated": "Badeecada si guul leh ayaa loo sameeyay.",
     "creationFailed": "Badeecada lama abuuri karin. Fadlan isku day mar kale.",
     "userNotFound": "Macluumaadka isticmaalaha lama heli karin. Fadlan mar kale soo gal.",
-    "defaultBusinessName": "Ganacsigayga",
-    "noCurrencyFound": "No currency found."
+    "defaultBusinessName": "Ganacsigayga"
   },
   "becomeSeller": {
     "title": "Noqo Iibiye",
@@ -1919,5 +1947,11 @@
     "minutesAgo": "{tiro} daqiiqo ka hor",
     "hoursAgo": "{tiro}h ka hor",
     "daysAgo": "{tirin} ka hor"
+  },
+  "pricing": {
+    "originalPrice": "Qiimaha asalka ah",
+    "convertedPrice": "Qiimaha la beddelay",
+    "approximatePrice": "Beddelka qiyaasta ah oo ku salaysan qiimaha sarrifka hadda jira",
+    "approximate": "≈"
   }
 }
