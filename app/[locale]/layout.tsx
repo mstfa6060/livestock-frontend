@@ -1,3 +1,4 @@
+import { AppConfig } from "@/config/livestock-config";
 import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -21,7 +22,7 @@ const plusJakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const BASE_URL = "https://livestock-trading.com";
+const BASE_URL = AppConfig.SiteUrl;
 
 // RTL languages
 const RTL_LOCALES = new Set(["ar", "he", "fa", "ur"]);

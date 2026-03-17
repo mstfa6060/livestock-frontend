@@ -1,7 +1,8 @@
+import { AppConfig } from "@/config/livestock-config";
 import type { MetadataRoute } from "next";
 import { defaultLocale } from "@/i18n/config";
 
-const BASE_URL = "https://livestock-trading.com";
+const BASE_URL = AppConfig.SiteUrl;
 const isDevelopment = process.env.NEXT_PUBLIC_ENVIRONMENT === "development";
 const API_BASE = isDevelopment
   ? "https://dev-api.livestock-trading.com"

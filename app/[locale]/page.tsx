@@ -1,3 +1,4 @@
+import { AppConfig } from "@/config/livestock-config";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
@@ -11,7 +12,7 @@ import { FeaturedProducts } from "@/components/features/featured-products";
 import { HomepageCategories } from "@/components/features/homepage-categories";
 import { defaultLocale, locales } from "@/i18n/config";
 
-const BASE_URL = "https://livestock-trading.com";
+const BASE_URL = AppConfig.SiteUrl;
 
 export async function generateMetadata({
   params,

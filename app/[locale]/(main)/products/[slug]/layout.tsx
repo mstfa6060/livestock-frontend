@@ -3,7 +3,7 @@ import { AppConfig } from "@/config/livestock-config";
 import { ProductJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import { defaultLocale, locales } from "@/i18n/config";
 
-const BASE_URL = "https://livestock-trading.com";
+const BASE_URL = AppConfig.SiteUrl;
 
 async function fetchProductBySlug(slug: string) {
   try {

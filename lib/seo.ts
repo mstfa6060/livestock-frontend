@@ -1,8 +1,9 @@
+import { AppConfig } from "@/config/livestock-config";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { defaultLocale, locales } from "@/i18n/config";
 
-const BASE_URL = "https://livestock-trading.com";
+const BASE_URL = AppConfig.SiteUrl;
 
 /**
  * Generate consistent SEO metadata for a page.

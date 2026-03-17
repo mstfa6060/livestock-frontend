@@ -1,8 +1,9 @@
+import { AppConfig } from "@/config/livestock-config";
 import type { Metadata } from "next";
 import { FaqJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import { generatePageMetadata } from "@/lib/seo";
 
-const BASE_URL = "https://livestock-trading.com";
+const BASE_URL = AppConfig.SiteUrl;
 
 const isDevelopment = process.env.NEXT_PUBLIC_ENVIRONMENT === "development";
 const API_BASE = isDevelopment

@@ -1,9 +1,10 @@
+import { AppConfig } from "@/config/livestock-config";
 /**
  * JSON-LD Structured Data Components for SEO
  * @see https://schema.org
  */
 
-const BASE_URL = "https://livestock-trading.com";
+const BASE_URL = AppConfig.SiteUrl;
 
 // Organization schema - used on homepage/root layout
 export function OrganizationJsonLd() {

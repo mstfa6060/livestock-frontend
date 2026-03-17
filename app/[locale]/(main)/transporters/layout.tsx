@@ -1,8 +1,9 @@
+import { AppConfig } from "@/config/livestock-config";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
 
-const BASE_URL = "https://livestock-trading.com";
+const BASE_URL = AppConfig.SiteUrl;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;

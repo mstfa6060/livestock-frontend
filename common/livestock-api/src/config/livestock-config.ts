@@ -10,10 +10,18 @@ const baseURL = isDevelopment
   ? 'https://dev-api.livestock-trading.com'
   : 'https://api.livestock-trading.com';
 
+// Site URL (for SEO, canonical links, share URLs)
+const siteURL = isDevelopment
+  ? 'https://dev.livestock-trading.com'
+  : 'https://livestock-trading.com';
+
 export const AppConfig = {
   // Base API URL
   BaseApi: baseURL + '/',
   apiUrl: baseURL,
+
+  // Site URL (web frontend)
+  SiteUrl: siteURL,
 
   // LivestockTrading için URL
   LivestockTradingUrl: `${baseURL}/livestocktrading`,
