@@ -786,13 +786,15 @@
       "shippingAvailable": "มีบริการจัดส่งสินค้า",
       "shippingCost": "ค่าธรรมเนียมการจัดส่ง",
       "weight": "น้ำหนัก",
-      "weightUnit": "หน่วยน้ำหนัก"
+      "weightUnit": "หน่วยน้ำหนัก",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ตัวอย่าง: วัวโฮลสไตน์อายุ 2 ปี",
       "shortDescription": "รายละเอียดสินค้า (ไม่เกิน 200 ตัวอักษร)",
       "description": "โปรดให้ข้อมูลโดยละเอียดเกี่ยวกับผลิตภัณฑ์...",
-      "category": "เลือกหมวดหมู่"
+      "category": "เลือกหมวดหมู่",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "หัวข้อโฆษณาเป็นสิ่งที่จำเป็น",
@@ -800,7 +802,8 @@
       "descriptionRequired": "จำเป็นต้องมีคำอธิบายโดยละเอียด",
       "categoryRequired": "การเลือกหมวดหมู่เป็นสิ่งจำเป็น",
       "priceRequired": "ป้อนราคาที่ถูกต้อง"
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "สร้างรายการใหม่",
@@ -830,7 +833,8 @@
       "weightUnit": "หน่วยน้ำหนัก",
       "city": "เมือง",
       "address": "ที่อยู่",
-      "postalCode": "รหัสไปรษณีย์"
+      "postalCode": "รหัสไปรษณีย์",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ตัวอย่าง: วัวโฮลสไตน์อายุ 2 ปี",
@@ -839,7 +843,8 @@
       "category": "เลือกหมวดหมู่",
       "city": "เข้าสู่เมือง",
       "address": "กรุณาป้อนที่อยู่แบบเต็ม",
-      "postalCode": "รหัสไปรษณีย์"
+      "postalCode": "รหัสไปรษณีย์",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "หัวข้อโฆษณาเป็นสิ่งที่จำเป็น",
@@ -862,7 +867,8 @@
     "productCreated": "ผลิตภัณฑ์ถูกสร้างขึ้นสำเร็จแล้ว",
     "creationFailed": "ไม่สามารถสร้างผลิตภัณฑ์ได้ โปรดลองอีกครั้ง",
     "userNotFound": "ไม่พบข้อมูลผู้ใช้ โปรดเข้าสู่ระบบอีกครั้ง",
-    "defaultBusinessName": "ธุรกิจของฉัน"
+    "defaultBusinessName": "ธุรกิจของฉัน",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "สมัครเป็นผู้ขาย",

@@ -786,13 +786,15 @@
       "shippingAvailable": "Mae cludo ar gael.",
       "shippingCost": "Ffi Llongau",
       "weight": "Pwysau",
-      "weightUnit": "Uned Pwysau"
+      "weightUnit": "Uned Pwysau",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Enghraifft: Buwch Holstein 2 Oed",
       "shortDescription": "Disgrifiad o'r cynnyrch (uchafswm o 200 nod)",
       "description": "Rhowch wybodaeth fanwl am y cynnyrch...",
-      "category": "Dewiswch gategori."
+      "category": "Dewiswch gategori.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Mae teitl yr hysbyseb yn orfodol.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Mae angen esboniad manwl.",
       "categoryRequired": "Mae dewis categori yn orfodol.",
       "priceRequired": "Rhowch bris dilys."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Creu Rhestr Newydd",
@@ -830,7 +833,8 @@
       "weightUnit": "Uned Pwysau",
       "city": "Dinas",
       "address": "Cyfeiriad",
-      "postalCode": "Cod post"
+      "postalCode": "Cod post",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Enghraifft: Buwch Holstein 2 Oed",
@@ -839,7 +843,8 @@
       "category": "Dewiswch gategori.",
       "city": "Ewch i mewn i'r ddinas",
       "address": "Rhowch y cyfeiriad llawn.",
-      "postalCode": "Cod post"
+      "postalCode": "Cod post",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Mae teitl yr hysbyseb yn orfodol.",
@@ -862,7 +867,8 @@
     "productCreated": "Crëwyd y cynnyrch yn llwyddiannus.",
     "creationFailed": "Ni ellid creu'r cynnyrch. Rhowch gynnig arall arni.",
     "userNotFound": "Ni ellid dod o hyd i wybodaeth y defnyddiwr. Mewngofnodwch eto.",
-    "defaultBusinessName": "Fy musnes"
+    "defaultBusinessName": "Fy musnes",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Dod yn Werthwr",

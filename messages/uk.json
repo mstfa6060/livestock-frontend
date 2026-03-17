@@ -786,13 +786,15 @@
       "shippingAvailable": "Доставка доступна.",
       "shippingCost": "Вартість доставки",
       "weight": "Вага",
-      "weightUnit": "Одиниця ваги"
+      "weightUnit": "Одиниця ваги",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Приклад: 2-річна корова голштинської породи",
       "shortDescription": "Опис товару (максимум 200 символів)",
       "description": "Надайте детальну інформацію про товар...",
-      "category": "Виберіть категорію."
+      "category": "Виберіть категорію.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Назва оголошення обов'язкова.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Потрібне детальне пояснення.",
       "categoryRequired": "Вибір категорії є обов'язковим.",
       "priceRequired": "Введіть дійсну ціну."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Створити новий список",
@@ -830,7 +833,8 @@
       "weightUnit": "Одиниця ваги",
       "city": "Місто",
       "address": "Адреса",
-      "postalCode": "Поштовий індекс"
+      "postalCode": "Поштовий індекс",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Приклад: 2-річна корова голштинської породи",
@@ -839,7 +843,8 @@
       "category": "Виберіть категорію.",
       "city": "В'їжджайте в місто",
       "address": "Введіть повну адресу.",
-      "postalCode": "Поштовий індекс"
+      "postalCode": "Поштовий індекс",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Назва оголошення обов'язкова.",
@@ -862,7 +867,8 @@
     "productCreated": "Продукт успішно створено.",
     "creationFailed": "Не вдалося створити продукт. Спробуйте ще раз.",
     "userNotFound": "Інформацію про користувача не знайдено. Будь ласка, увійдіть ще раз.",
-    "defaultBusinessName": "Мій бізнес"
+    "defaultBusinessName": "Мій бізнес",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Стати продавцем",

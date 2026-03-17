@@ -783,13 +783,15 @@
       "shippingAvailable": "Frakt er tilgjengelig.",
       "shippingCost": "Fraktgebyr",
       "weight": "Vekt",
-      "weightUnit": "Vektenhet"
+      "weightUnit": "Vektenhet",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Eksempel: 2 år gammel Holstein-ku",
       "shortDescription": "Produktbeskrivelse (maks 200 tegn)",
       "description": "Gi detaljert informasjon om produktet...",
-      "category": "Velg en kategori."
+      "category": "Velg en kategori.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Annonsetittel er obligatorisk.",
@@ -797,7 +799,8 @@
       "descriptionRequired": "En detaljert forklaring er nødvendig.",
       "categoryRequired": "Valg av kategori er obligatorisk.",
       "priceRequired": "Skriv inn en gyldig pris."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Opprett ny oppføring",
@@ -827,7 +830,8 @@
       "weightUnit": "Vektenhet",
       "city": "By",
       "address": "Adresse",
-      "postalCode": "Postnummer"
+      "postalCode": "Postnummer",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Eksempel: 2 år gammel Holstein-ku",
@@ -836,7 +840,8 @@
       "category": "Velg en kategori.",
       "city": "Gå inn i byen",
       "address": "Skriv inn hele adressen.",
-      "postalCode": "Postnummer"
+      "postalCode": "Postnummer",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Annonsetittel er obligatorisk.",
@@ -859,7 +864,8 @@
     "productCreated": "Produktet ble opprettet.",
     "creationFailed": "Produktet kunne ikke opprettes. Prøv på nytt.",
     "userNotFound": "Brukerinformasjonen ble ikke funnet. Vennligst logg inn på nytt.",
-    "defaultBusinessName": "Min virksomhet"
+    "defaultBusinessName": "Min virksomhet",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Bli en selger",

@@ -786,13 +786,15 @@
       "shippingAvailable": "E maua le felauaiga.",
       "shippingCost": "Totogifuapauina o Felauaiga",
       "weight": "Mamafa",
-      "weightUnit": "Iunite o le Mamafa"
+      "weightUnit": "Iunite o le Mamafa",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Faataitaiga: Povi Holstein e 2 Tausaga le Matua",
       "shortDescription": "Fa'amatalaga o le oloa (e le silia ma le 200 mata'itusi)",
       "description": "Tu'uina atu fa'amatalaga auiliili e uiga i le oloa...",
-      "category": "Filifili se vaega."
+      "category": "Filifili se vaega.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "E mana'omia le tusia o le ulutala o le fa'asalalauga.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "E manaʻomia se faʻamatalaga auiliili.",
       "categoryRequired": "E mana'omia le filifilia o le vaega.",
       "priceRequired": "Ulufale i se tau talafeagai."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Fausia se Lisi Fou",
@@ -830,7 +833,8 @@
       "weightUnit": "Iunite o le Mamafa",
       "city": "Aai",
       "address": "Tuatusi",
-      "postalCode": "Numera o le itu malo"
+      "postalCode": "Numera o le itu malo",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Faataitaiga: Povi Holstein e 2 Tausaga le Matua",
@@ -839,7 +843,8 @@
       "category": "Filifili se vaega.",
       "city": "Ulu atu i le aai",
       "address": "Tuu le tuatusi atoa.",
-      "postalCode": "Numera o le itu malo"
+      "postalCode": "Numera o le itu malo",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "E mana'omia le tusia o le ulutala o le fa'asalalauga.",
@@ -862,7 +867,8 @@
     "productCreated": "Sa manuia le fausiaina o le oloa.",
     "creationFailed": "E le mafai ona fatuina le oloa. Fa'amolemole toe taumafai.",
     "userNotFound": "E le'i maua fa'amatalaga a le tagata fa'aoga. Fa'amolemole toe ulufale.",
-    "defaultBusinessName": "La'u pisinisi"
+    "defaultBusinessName": "La'u pisinisi",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Avea ma se Fa'atau'oloa",

@@ -786,13 +786,15 @@
       "shippingAvailable": "شپنگ موجود آهي.",
       "shippingCost": "شپنگ فيس",
       "weight": "وزن",
-      "weightUnit": "وزن جو يونٽ"
+      "weightUnit": "وزن جو يونٽ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "مثال: 2 سالن جي هولسٽين ڳئون",
       "shortDescription": "پراڊڪٽ جي وضاحت (وڌ ۾ وڌ 200 اکر)",
       "description": "پراڊڪٽ بابت تفصيلي ڄاڻ ڏيو...",
-      "category": "ڪيٽيگري چونڊيو."
+      "category": "ڪيٽيگري چونڊيو.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "اشتهار جو عنوان لازمي آهي.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "تفصيلي وضاحت گهربل آهي.",
       "categoryRequired": "ڪيٽيگري جي چونڊ لازمي آهي.",
       "priceRequired": "صحيح قيمت داخل ڪريو."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "نئين لسٽ ٺاهيو",
@@ -830,7 +833,8 @@
       "weightUnit": "وزن جو يونٽ",
       "city": "شهر",
       "address": "پتو",
-      "postalCode": "ٽپال ڪوڊ"
+      "postalCode": "ٽپال ڪوڊ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "مثال: 2 سالن جي هولسٽين ڳئون",
@@ -839,7 +843,8 @@
       "category": "ڪيٽيگري چونڊيو.",
       "city": "شهر ۾ داخل ٿيو",
       "address": "پورو پتو داخل ڪريو.",
-      "postalCode": "ٽپال ڪوڊ"
+      "postalCode": "ٽپال ڪوڊ",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "اشتهار جو عنوان لازمي آهي.",
@@ -862,7 +867,8 @@
     "productCreated": "پراڊڪٽ ڪاميابي سان ٺاهي وئي.",
     "creationFailed": "پراڊڪٽ ٺاهي نه سگهيو. مهرباني ڪري ٻيهر ڪوشش ڪريو.",
     "userNotFound": "استعمال ڪندڙ جي معلومات نه ملي سگهي. مهرباني ڪري ٻيهر لاگ ان ٿيو.",
-    "defaultBusinessName": "منهنجو ڪاروبار"
+    "defaultBusinessName": "منهنجو ڪاروبار",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "وڪرو ڪندڙ بڻجو",

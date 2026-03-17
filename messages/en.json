@@ -786,14 +786,17 @@
       "shippingAvailable": "Shipping is available.",
       "shippingCost": "Shipping Fee",
       "weight": "Weight",
-      "weightUnit": "Unit of Weight"
+      "weightUnit": "Unit of Weight",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Example: 2-Year-Old Holstein Cow",
       "shortDescription": "Product description (max 200 characters)",
       "description": "Provide detailed information about the product...",
-      "category": "Select a category."
+      "category": "Select a category.",
+      "searchCurrency": "Search currency..."
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Advertisement title is mandatory.",
       "shortDescriptionRequired": "A brief description is required.",
@@ -828,6 +831,7 @@
       "shippingCost": "Shipping Fee",
       "weight": "Weight",
       "weightUnit": "Unit of Weight",
+      "currency": "Currency",
       "city": "City",
       "address": "Address",
       "postalCode": "Postal code"
@@ -837,10 +841,12 @@
       "shortDescription": "Product description (max 200 characters)",
       "description": "Provide detailed information about the product...",
       "category": "Select a category.",
+      "searchCurrency": "Search currency...",
       "city": "Enter the city",
       "address": "Enter the full address.",
       "postalCode": "Postal code"
     },
+    "noCurrencyFound": "No currency found.",
     "errors": {
       "titleRequired": "Advertisement title is mandatory.",
       "shortDescriptionRequired": "A brief description is required.",

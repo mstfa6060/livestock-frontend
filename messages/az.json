@@ -786,13 +786,15 @@
       "shippingAvailable": "Çatdırılma mövcuddur.",
       "shippingCost": "Göndərmə haqqı",
       "weight": "Çəki",
-      "weightUnit": "Çəki vahidi"
+      "weightUnit": "Çəki vahidi",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Misal: 2 Yaşlı Holşteyn İnəyi",
       "shortDescription": "Məhsul təsviri (maksimum 200 simvol)",
       "description": "Məhsul haqqında ətraflı məlumat verin...",
-      "category": "Kateqoriya seçin."
+      "category": "Kateqoriya seçin.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Reklam başlığı məcburidir.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Ətraflı izahat tələb olunur.",
       "categoryRequired": "Kateqoriya seçimi məcburidir.",
       "priceRequired": "Düzgün qiymət daxil edin."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Yeni Siyahı Yaradın",
@@ -830,7 +833,8 @@
       "weightUnit": "Çəki vahidi",
       "city": "Şəhər",
       "address": "Ünvan",
-      "postalCode": "Poçt kodu"
+      "postalCode": "Poçt kodu",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Misal: 2 Yaşlı Holşteyn İnəyi",
@@ -839,7 +843,8 @@
       "category": "Kateqoriya seçin.",
       "city": "Şəhərə daxil olun",
       "address": "Tam ünvanı daxil edin.",
-      "postalCode": "Poçt kodu"
+      "postalCode": "Poçt kodu",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Reklam başlığı məcburidir.",
@@ -862,7 +867,8 @@
     "productCreated": "Məhsul uğurla yaradıldı.",
     "creationFailed": "Məhsul yaradıla bilmədi. Zəhmət olmasa, yenidən cəhd edin.",
     "userNotFound": "İstifadəçi məlumatı tapılmadı. Zəhmət olmasa, yenidən daxil olun.",
-    "defaultBusinessName": "Mənim biznesim"
+    "defaultBusinessName": "Mənim biznesim",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Satıcı olun",

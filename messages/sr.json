@@ -786,13 +786,15 @@
       "shippingAvailable": "Достава је доступна.",
       "shippingCost": "Трошкови доставе",
       "weight": "Тежина",
-      "weightUnit": "Јединица тежине"
+      "weightUnit": "Јединица тежине",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Пример: Двогодишња крава холштајнске расе",
       "shortDescription": "Опис производа (максимално 200 карактера)",
       "description": "Наведите детаљне информације о производу...",
-      "category": "Изаберите категорију."
+      "category": "Изаберите категорију.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Наслов огласа је обавезан.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Потребно је детаљно објашњење.",
       "categoryRequired": "Избор категорије је обавезан.",
       "priceRequired": "Унесите важећу цену."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Направи нови оглас",
@@ -830,7 +833,8 @@
       "weightUnit": "Јединица тежине",
       "city": "Град",
       "address": "Адреса",
-      "postalCode": "Поштански број"
+      "postalCode": "Поштански број",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Пример: Двогодишња крава холштајнске расе",
@@ -839,7 +843,8 @@
       "category": "Изаберите категорију.",
       "city": "Уђите у град",
       "address": "Унесите пуну адресу.",
-      "postalCode": "Поштански број"
+      "postalCode": "Поштански број",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Наслов огласа је обавезан.",
@@ -862,7 +867,8 @@
     "productCreated": "Производ је успешно креиран.",
     "creationFailed": "Производ није могао бити креиран. Молимо покушајте поново.",
     "userNotFound": "Подаци о кориснику нису пронађени. Молимо вас да се поново пријавите.",
-    "defaultBusinessName": "Мој посао"
+    "defaultBusinessName": "Мој посао",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Постаните продавац",

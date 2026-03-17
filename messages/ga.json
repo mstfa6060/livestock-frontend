@@ -786,13 +786,15 @@
       "shippingAvailable": "Tá loingseoireacht ar fáil.",
       "shippingCost": "Táille Loingseoireachta",
       "weight": "Meáchan",
-      "weightUnit": "Aonad Meáchain"
+      "weightUnit": "Aonad Meáchain",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Sampla: Bó Holstein 2 Bhliain d'Aois",
       "shortDescription": "Cur síos ar an táirge (uasmhéid 200 carachtar)",
       "description": "Tabhair faisnéis mhionsonraithe faoin táirge...",
-      "category": "Roghnaigh catagóir."
+      "category": "Roghnaigh catagóir.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tá teideal an fhógra éigeantach.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Tá míniú mionsonraithe ag teastáil.",
       "categoryRequired": "Tá roghnú catagóire éigeantach.",
       "priceRequired": "Cuir isteach praghas bailí."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Cruthaigh Liostú Nua",
@@ -830,7 +833,8 @@
       "weightUnit": "Aonad Meáchain",
       "city": "Cathair",
       "address": "Seoladh",
-      "postalCode": "Cód poist"
+      "postalCode": "Cód poist",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Sampla: Bó Holstein 2 Bhliain d'Aois",
@@ -839,7 +843,8 @@
       "category": "Roghnaigh catagóir.",
       "city": "Téigh isteach sa chathair",
       "address": "Cuir isteach an seoladh iomlán.",
-      "postalCode": "Cód poist"
+      "postalCode": "Cód poist",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tá teideal an fhógra éigeantach.",
@@ -862,7 +867,8 @@
     "productCreated": "Cruthaíodh an táirge go rathúil.",
     "creationFailed": "Níorbh fhéidir an táirge a chruthú. Déan iarracht arís.",
     "userNotFound": "Níorbh fhéidir faisnéis úsáideora a aimsiú. Logáil isteach arís le do thoil.",
-    "defaultBusinessName": "Mo ghnó"
+    "defaultBusinessName": "Mo ghnó",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Bí i do Dhíoltóir",

@@ -786,13 +786,15 @@
       "shippingAvailable": "መላኪያ ይገኛል።",
       "shippingCost": "የማጓጓዣ ክፍያ",
       "weight": "ክብደት",
-      "weightUnit": "የክብደት አሃድ"
+      "weightUnit": "የክብደት አሃድ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ምሳሌ፡ የ2 ዓመት ሆልስቴይን ላም",
       "shortDescription": "የምርት መግለጫ (ቢበዛ 200 ቁምፊዎች)",
       "description": "ስለ ምርቱ ዝርዝር መረጃ ያቅርቡ…",
-      "category": "ምድብ ይምረጡ።"
+      "category": "ምድብ ይምረጡ።",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "የማስታወቂያ ርዕስ ግዴታ ነው።",
@@ -800,7 +802,8 @@
       "descriptionRequired": "ዝርዝር ማብራሪያ ያስፈልጋል።",
       "categoryRequired": "የምድብ ምርጫ ግዴታ ነው።",
       "priceRequired": "ትክክለኛ ዋጋ ያስገቡ።"
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "አዲስ ዝርዝር ይፍጠሩ",
@@ -830,7 +833,8 @@
       "weightUnit": "የክብደት አሃድ",
       "city": "ከተማ",
       "address": "አድራሻ",
-      "postalCode": "የፖስታ መላኪያ ኮድ"
+      "postalCode": "የፖስታ መላኪያ ኮድ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ምሳሌ፡ የ2 ዓመት ሆልስቴይን ላም",
@@ -839,7 +843,8 @@
       "category": "ምድብ ይምረጡ።",
       "city": "ወደ ከተማው ግባ",
       "address": "ሙሉ አድራሻውን ያስገቡ።",
-      "postalCode": "የፖስታ መላኪያ ኮድ"
+      "postalCode": "የፖስታ መላኪያ ኮድ",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "የማስታወቂያ ርዕስ ግዴታ ነው።",
@@ -862,7 +867,8 @@
     "productCreated": "ምርቱ በተሳካ ሁኔታ ተፈጥሯል።",
     "creationFailed": "ምርቱ ሊፈጠር አልቻለም። እባክዎ እንደገና ይሞክሩ።",
     "userNotFound": "የተጠቃሚ መረጃ ማግኘት አልተቻለም። እባክዎ እንደገና ይግቡ።",
-    "defaultBusinessName": "የእኔ ንግድ"
+    "defaultBusinessName": "የእኔ ንግድ",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "ሻጭ ይሁኑ",

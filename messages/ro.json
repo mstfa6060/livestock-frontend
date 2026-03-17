@@ -786,13 +786,15 @@
       "shippingAvailable": "Livrarea este disponibilă.",
       "shippingCost": "Taxă de livrare",
       "weight": "Greutate",
-      "weightUnit": "Unitate de greutate"
+      "weightUnit": "Unitate de greutate",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Exemplu: Vacă Holstein de 2 ani",
       "shortDescription": "Descrierea produsului (maxim 200 de caractere)",
       "description": "Furnizați informații detaliate despre produs...",
-      "category": "Selectați o categorie."
+      "category": "Selectați o categorie.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Titlul anunțului este obligatoriu.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Este necesară o explicație detaliată.",
       "categoryRequired": "Selectarea categoriei este obligatorie.",
       "priceRequired": "Introduceți un preț valid."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Creați o listă nouă",
@@ -830,7 +833,8 @@
       "weightUnit": "Unitate de greutate",
       "city": "Oraş",
       "address": "Adresa",
-      "postalCode": "Cod poștal"
+      "postalCode": "Cod poștal",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Exemplu: Vacă Holstein de 2 ani",
@@ -839,7 +843,8 @@
       "category": "Selectați o categorie.",
       "city": "Intrați în oraș",
       "address": "Introduceți adresa completă.",
-      "postalCode": "Cod poștal"
+      "postalCode": "Cod poștal",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Titlul anunțului este obligatoriu.",
@@ -862,7 +867,8 @@
     "productCreated": "Produsul a fost creat cu succes.",
     "creationFailed": "Produsul nu a putut fi creat. Vă rugăm să încercați din nou.",
     "userNotFound": "Informațiile despre utilizator nu au putut fi găsite. Vă rugăm să vă conectați din nou.",
-    "defaultBusinessName": "Afacerea mea"
+    "defaultBusinessName": "Afacerea mea",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Devino vânzător",

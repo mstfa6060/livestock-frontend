@@ -786,13 +786,15 @@
       "shippingAvailable": "It-tbaħħir huwa disponibbli.",
       "shippingCost": "Ħlas tat-Tbaħħir",
       "weight": "Piż",
-      "weightUnit": "Unità tal-Piż"
+      "weightUnit": "Unità tal-Piż",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Eżempju: Baqra Holstein ta' sentejn",
       "shortDescription": "Deskrizzjoni tal-prodott (massimu ta' 200 karattru)",
       "description": "Agħti informazzjoni dettaljata dwar il-prodott...",
-      "category": "Agħżel kategorija."
+      "category": "Agħżel kategorija.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "It-titlu tar-reklamar huwa obbligatorju.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Hija meħtieġa spjegazzjoni dettaljata.",
       "categoryRequired": "L-għażla tal-kategorija hija obbligatorja.",
       "priceRequired": "Daħħal prezz validu."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Oħloq Lista Ġdida",
@@ -830,7 +833,8 @@
       "weightUnit": "Unità tal-Piż",
       "city": "Belt",
       "address": "Indirizz",
-      "postalCode": "Kodiċi postali"
+      "postalCode": "Kodiċi postali",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Eżempju: Baqra Holstein ta' sentejn",
@@ -839,7 +843,8 @@
       "category": "Agħżel kategorija.",
       "city": "Idħol fil-belt",
       "address": "Daħħal l-indirizz sħiħ.",
-      "postalCode": "Kodiċi postali"
+      "postalCode": "Kodiċi postali",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "It-titlu tar-reklamar huwa obbligatorju.",
@@ -862,7 +867,8 @@
     "productCreated": "Il-prodott inħoloq b'suċċess.",
     "creationFailed": "Il-prodott ma setax jinħoloq. Jekk jogħġbok erġa' pprova.",
     "userNotFound": "L-informazzjoni tal-utent ma setgħetx tinstab. Jekk jogħġbok erġa' idħol.",
-    "defaultBusinessName": "In-negozju tiegħi"
+    "defaultBusinessName": "In-negozju tiegħi",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Issir Bejjiegħ",

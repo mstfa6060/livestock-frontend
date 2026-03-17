@@ -786,13 +786,15 @@
       "shippingAvailable": "Thomello e fumaneha.",
       "shippingCost": "Tefiso ea ho Romela",
       "weight": "Boima ba 'mele",
-      "weightUnit": "Yuniti ea Boima"
+      "weightUnit": "Yuniti ea Boima",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Mohlala: Khomo ea Holstein ea Lilemo tse 2",
       "shortDescription": "Tlhaloso ea sehlahisoa (maqhubu a 200)",
       "description": "Fana ka tlhahisoleseding e qaqileng ka sehlahisoa...",
-      "category": "Khetha sehlopha."
+      "category": "Khetha sehlopha.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Sehlooho sa papatso sea tlameha.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Tlhaloso e qaqileng ea hlokahala.",
       "categoryRequired": "Khetho ea sehlopha e tlameha.",
       "priceRequired": "Kenya theko e nepahetseng."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Theha Lenane le Lecha",
@@ -830,7 +833,8 @@
       "weightUnit": "Yuniti ea Boima",
       "city": "Motse",
       "address": "Aterese",
-      "postalCode": "Nomoro ea poso"
+      "postalCode": "Nomoro ea poso",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Mohlala: Khomo ea Holstein ea Lilemo tse 2",
@@ -839,7 +843,8 @@
       "category": "Khetha sehlopha.",
       "city": "Kena motseng",
       "address": "Kenya aterese e felletseng.",
-      "postalCode": "Nomoro ea poso"
+      "postalCode": "Nomoro ea poso",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Sehlooho sa papatso sea tlameha.",
@@ -862,7 +867,8 @@
     "productCreated": "Sehlahisoa se entsoe ka katleho.",
     "creationFailed": "Sehlahisoa ha sea ka sa etsoa. Ka kopo leka hape.",
     "userNotFound": "Tlhahisoleseding ea mosebelisi ha ea ka ea fumanoa. Ka kopo kena hape.",
-    "defaultBusinessName": "Khoebo ea ka"
+    "defaultBusinessName": "Khoebo ea ka",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Eba Morekisi",

@@ -786,13 +786,15 @@
       "shippingAvailable": "Misy ny fandefasana.",
       "shippingCost": "Saram-pandefasana",
       "weight": "Lanja",
-      "weightUnit": "Singa lanja"
+      "weightUnit": "Singa lanja",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Ohatra: Ombivavy Holstein 2 taona",
       "shortDescription": "Famaritana ny vokatra (tsy mihoatra ny 200 litera)",
       "description": "Omeo fampahalalana amin'ny antsipiriany momba ny vokatra...",
-      "category": "Misafidiana sokajy iray."
+      "category": "Misafidiana sokajy iray.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tsy maintsy soratana ny lohatenin'ny dokam-barotra.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Ilaina ny fanazavana amin'ny antsipiriany.",
       "categoryRequired": "Tsy maintsy atao ny misafidy sokajy.",
       "priceRequired": "Ampidiro ny vidiny manan-kery."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Mamoròna lisitra vaovao",
@@ -830,7 +833,8 @@
       "weightUnit": "Singa lanja",
       "city": "Tanàna",
       "address": "Adiresy",
-      "postalCode": "Kaody postaly"
+      "postalCode": "Kaody postaly",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Ohatra: Ombivavy Holstein 2 taona",
@@ -839,7 +843,8 @@
       "category": "Misafidiana sokajy iray.",
       "city": "Midira ao an-tanàna",
       "address": "Ampidiro ny adiresy feno.",
-      "postalCode": "Kaody postaly"
+      "postalCode": "Kaody postaly",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tsy maintsy soratana ny lohatenin'ny dokam-barotra.",
@@ -862,7 +867,8 @@
     "productCreated": "Voaforona soa aman-tsara ny vokatra.",
     "creationFailed": "Tsy azo noforonina ilay vokatra. Andramo indray azafady.",
     "userNotFound": "Tsy hita ny mombamomba ny mpampiasa. Midira indray azafady.",
-    "defaultBusinessName": "Ny orinasako"
+    "defaultBusinessName": "Ny orinasako",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Tonga mpivarotra",

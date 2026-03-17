@@ -783,13 +783,15 @@
       "shippingAvailable": "Verzending is mogelijk.",
       "shippingCost": "Verzendkosten",
       "weight": "Gewicht",
-      "weightUnit": "Gewichtseenheid"
+      "weightUnit": "Gewichtseenheid",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Voorbeeld: een 2-jarige Holstein-koe",
       "shortDescription": "Productomschrijving (max. 200 tekens)",
       "description": "Geef gedetailleerde informatie over het product...",
-      "category": "Selecteer een categorie."
+      "category": "Selecteer een categorie.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "De titel van de advertentie is verplicht.",
@@ -797,7 +799,8 @@
       "descriptionRequired": "Een gedetailleerde uitleg is vereist.",
       "categoryRequired": "Het selecteren van een categorie is verplicht.",
       "priceRequired": "Voer een geldige prijs in."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Nieuwe advertentie aanmaken",
@@ -827,7 +830,8 @@
       "weightUnit": "Gewichtseenheid",
       "city": "Stad",
       "address": "Adres",
-      "postalCode": "Postcode"
+      "postalCode": "Postcode",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Voorbeeld: een 2-jarige Holstein-koe",
@@ -836,7 +840,8 @@
       "category": "Selecteer een categorie.",
       "city": "Betreed de stad",
       "address": "Voer het volledige adres in.",
-      "postalCode": "Postcode"
+      "postalCode": "Postcode",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "De titel van de advertentie is verplicht.",
@@ -859,7 +864,8 @@
     "productCreated": "Het product is succesvol ontwikkeld.",
     "creationFailed": "Het product kon niet worden aangemaakt. Probeer het opnieuw.",
     "userNotFound": "Gebruikersgegevens konden niet worden gevonden. Log alstublieft opnieuw in.",
-    "defaultBusinessName": "Mijn bedrijf"
+    "defaultBusinessName": "Mijn bedrijf",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Word verkoper",

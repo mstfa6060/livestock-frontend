@@ -786,13 +786,15 @@
       "shippingAvailable": "Дастаўка даступная.",
       "shippingCost": "Кошт дастаўкі",
       "weight": "Вага",
-      "weightUnit": "Адзінка вагі"
+      "weightUnit": "Адзінка вагі",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Прыклад: 2-гадовая карова галштынскай пароды",
       "shortDescription": "Апісанне прадукту (максімум 200 сімвалаў)",
       "description": "Дайце падрабязную інфармацыю пра прадукт...",
-      "category": "Выберыце катэгорыю."
+      "category": "Выберыце катэгорыю.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Назва рэкламы абавязковая.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Патрабуецца падрабязнае тлумачэнне.",
       "categoryRequired": "Выбар катэгорыі абавязковы.",
       "priceRequired": "Увядзіце сапраўдную цану."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Стварыць новую аб'яву",
@@ -830,7 +833,8 @@
       "weightUnit": "Адзінка вагі",
       "city": "Горад",
       "address": "Адрас",
-      "postalCode": "Паштовы індэкс"
+      "postalCode": "Паштовы індэкс",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Прыклад: 2-гадовая карова галштынскай пароды",
@@ -839,7 +843,8 @@
       "category": "Выберыце катэгорыю.",
       "city": "Увайдзіце ў горад",
       "address": "Увядзіце поўны адрас.",
-      "postalCode": "Паштовы індэкс"
+      "postalCode": "Паштовы індэкс",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Назва рэкламы абавязковая.",
@@ -862,7 +867,8 @@
     "productCreated": "Прадукт быў паспяхова створаны.",
     "creationFailed": "Не ўдалося стварыць прадукт. Паўтарыце спробу.",
     "userNotFound": "Інфармацыя пра карыстальніка не знойдзена. Калі ласка, увайдзіце зноў.",
-    "defaultBusinessName": "Мой бізнес"
+    "defaultBusinessName": "Мой бізнес",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Стаць прадаўцом",

@@ -786,13 +786,15 @@
       "shippingAvailable": "Gbigbe ọkọ wa.",
       "shippingCost": "Owo Gbigbe",
       "weight": "Ìwúwo",
-      "weightUnit": "Ẹyọ Ìwúwo"
+      "weightUnit": "Ẹyọ Ìwúwo",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Àpẹẹrẹ: Màlúù Holstein ọmọ ọdún méjì",
       "shortDescription": "Àpèjúwe ọjà (tó pọ̀jù àwọn ohun kikọ 200)",
       "description": "Pese alaye kikun nipa ọja naa...",
-      "category": "Yan ẹ̀ka kan."
+      "category": "Yan ẹ̀ka kan.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Oyè ìpolówó jẹ́ dandan.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "A nilo alaye kikun.",
       "categoryRequired": "Yíyan ẹ̀ka jẹ́ dandan.",
       "priceRequired": "Tẹ iye owo to wulo sii."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Ṣẹ̀dá Àkójọ Tuntun",
@@ -830,7 +833,8 @@
       "weightUnit": "Ẹyọ Ìwúwo",
       "city": "Ìlú",
       "address": "Àdírẹ́sì",
-      "postalCode": "Kóòdù ìfìwéránṣẹ́"
+      "postalCode": "Kóòdù ìfìwéránṣẹ́",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Àpẹẹrẹ: Màlúù Holstein ọmọ ọdún méjì",
@@ -839,7 +843,8 @@
       "category": "Yan ẹ̀ka kan.",
       "city": "Wọ ìlú náà",
       "address": "Tẹ gbogbo àdírẹ́sì náà.",
-      "postalCode": "Kóòdù ìfìwéránṣẹ́"
+      "postalCode": "Kóòdù ìfìwéránṣẹ́",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Oyè ìpolówó jẹ́ dandan.",
@@ -862,7 +867,8 @@
     "productCreated": "A ṣẹ̀dá ọjà náà dáadáa.",
     "creationFailed": "A ko le ṣẹda ọja naa. Jọwọ gbiyanju lẹẹkansi.",
     "userNotFound": "A ko le ri alaye olumulo. Jọwọ wọle lẹẹkansi.",
-    "defaultBusinessName": "Iṣẹ́ mi"
+    "defaultBusinessName": "Iṣẹ́ mi",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Di Olùtajà",

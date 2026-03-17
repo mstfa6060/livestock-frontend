@@ -786,13 +786,15 @@
       "shippingAvailable": "Жеткізу қызметі бар.",
       "shippingCost": "Жеткізу ақысы",
       "weight": "Салмақ",
-      "weightUnit": "Салмақ бірлігі"
+      "weightUnit": "Салмақ бірлігі",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Мысал: 2 жасар гольштейн сиыры",
       "shortDescription": "Өнім сипаттамасы (ең көбі 200 таңба)",
       "description": "Өнім туралы толық ақпарат беріңіз...",
-      "category": "Санатты таңдаңыз."
+      "category": "Санатты таңдаңыз.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Жарнама тақырыбы міндетті түрде көрсетілуі керек.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Егжей-тегжейлі түсініктеме қажет.",
       "categoryRequired": "Санатты таңдау міндетті.",
       "priceRequired": "Жарамды бағаны енгізіңіз."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Жаңа тізім жасау",
@@ -830,7 +833,8 @@
       "weightUnit": "Салмақ бірлігі",
       "city": "Қала",
       "address": "Мекенжай",
-      "postalCode": "Пошта Индексі"
+      "postalCode": "Пошта Индексі",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Мысал: 2 жасар гольштейн сиыры",
@@ -839,7 +843,8 @@
       "category": "Санатты таңдаңыз.",
       "city": "Қалаға кіріңіз",
       "address": "Толық мекенжайды енгізіңіз.",
-      "postalCode": "Пошта Индексі"
+      "postalCode": "Пошта Индексі",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Жарнама тақырыбы міндетті түрде көрсетілуі керек.",
@@ -862,7 +867,8 @@
     "productCreated": "Өнім сәтті жасалды.",
     "creationFailed": "Өнімді жасау мүмкін болмады. Қайталап көріңіз.",
     "userNotFound": "Пайдаланушы ақпараты табылмады. Қайтадан кіріңіз.",
-    "defaultBusinessName": "Менің бизнесім"
+    "defaultBusinessName": "Менің бизнесім",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Сатушы болыңыз",

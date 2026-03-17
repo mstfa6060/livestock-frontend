@@ -786,13 +786,15 @@
       "shippingAvailable": "Ukuthunyelwa kuyatholakala.",
       "shippingCost": "Imali Yokuthumela",
       "weight": "Isisindo",
-      "weightUnit": "Iyunithi Yesisindo"
+      "weightUnit": "Iyunithi Yesisindo",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Isibonelo: Inkomo yaseHolstein eneminyaka emibili ubudala",
       "shortDescription": "Incazelo yomkhiqizo (izinhlamvu ezingu-200 ubuningi)",
       "description": "Nikeza ulwazi oluningiliziwe mayelana nomkhiqizo...",
-      "category": "Khetha isigaba."
+      "category": "Khetha isigaba.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Isihloko sesikhangiso siyimpoqo.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Kudingeka incazelo eningiliziwe.",
       "categoryRequired": "Ukukhetha isigaba kuyimpoqo.",
       "priceRequired": "Faka intengo evumelekile."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Dala Uhlu Olusha",
@@ -830,7 +833,8 @@
       "weightUnit": "Iyunithi Yesisindo",
       "city": "Idolobha",
       "address": "Ikheli",
-      "postalCode": "I-Postal Code"
+      "postalCode": "I-Postal Code",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Isibonelo: Inkomo yaseHolstein eneminyaka emibili ubudala",
@@ -839,7 +843,8 @@
       "category": "Khetha isigaba.",
       "city": "Ngena edolobheni",
       "address": "Faka ikheli eliphelele.",
-      "postalCode": "I-Postal Code"
+      "postalCode": "I-Postal Code",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Isihloko sesikhangiso siyimpoqo.",
@@ -862,7 +867,8 @@
     "productCreated": "Umkhiqizo udalwe ngempumelelo.",
     "creationFailed": "Umkhiqizo awukwazanga ukudalwa. Sicela uzame futhi.",
     "userNotFound": "Ulwazi lomsebenzisi alutholakalanga. Sicela ungene ngemvume futhi.",
-    "defaultBusinessName": "Ibhizinisi lami"
+    "defaultBusinessName": "Ibhizinisi lami",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Yiba Umthengisi",

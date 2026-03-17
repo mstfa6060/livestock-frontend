@@ -786,13 +786,15 @@
       "shippingAvailable": "Mbupu dị.",
       "shippingCost": "Ụgwọ Mbupu",
       "weight": "Ibu",
-      "weightUnit": "Nkeji nke Ibu"
+      "weightUnit": "Nkeji nke Ibu",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Ihe atụ: Ehi Holstein dị afọ abụọ",
       "shortDescription": "Nkọwa ngwaahịa (mkpụrụedemede 200 kachasị)",
       "description": "Nye ozi zuru ezu gbasara ngwaahịa a...",
-      "category": "Họrọ otu ụdị."
+      "category": "Họrọ otu ụdị.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Aha mgbasa ozi dị mkpa.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "A chọrọ nkọwa zuru ezu.",
       "categoryRequired": "Nhọrọ nke otu dị mkpa.",
       "priceRequired": "Tinye ọnụahịa ziri ezi."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Mepụta Ndepụta Ọhụrụ",
@@ -830,7 +833,8 @@
       "weightUnit": "Nkeji nke Ibu",
       "city": "Obodo",
       "address": "Adreesị",
-      "postalCode": "Koodu Nzipu ozi"
+      "postalCode": "Koodu Nzipu ozi",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Ihe atụ: Ehi Holstein dị afọ abụọ",
@@ -839,7 +843,8 @@
       "category": "Họrọ otu ụdị.",
       "city": "Banye n'obodo ahụ",
       "address": "Tinye adreesị zuru oke.",
-      "postalCode": "Koodu Nzipu ozi"
+      "postalCode": "Koodu Nzipu ozi",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Aha mgbasa ozi dị mkpa.",
@@ -862,7 +867,8 @@
     "productCreated": "E mepụtara ngwaahịa ahụ nke ọma.",
     "creationFailed": "Enweghị ike ịmepụta ngwaahịa a. Biko nwaa ọzọ.",
     "userNotFound": "Enweghị ike ịchọta ozi onye ọrụ. Biko banye ọzọ.",
-    "defaultBusinessName": "Azụmahịa m"
+    "defaultBusinessName": "Azụmahịa m",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Bụrụ onye na-ere ahịa",

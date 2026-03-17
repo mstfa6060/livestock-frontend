@@ -28,6 +28,7 @@ import { toast } from "sonner";
 import { useCategories, useCurrencies } from "@/hooks/queries";
 import { queryKeys } from "@/lib/query-keys";
 import { listingFormSchema, type ListingFormData } from "@/lib/validations";
+import { CurrencyCombobox, type CurrencyOption } from "@/components/features/currency-combobox";
 import dynamic from "next/dynamic";
 const MediaUpload = dynamic(() => import("@/components/features/media-upload").then(mod => ({ default: mod.MediaUpload })), { ssr: false });
 
@@ -56,6 +57,7 @@ export default function NewListingPage() {
 
   const { data: currenciesData } = useCurrencies();
   const currencies = (currenciesData ?? []).filter((c: any) => c.isActive).sort((a: any, b: any) => a.code.localeCompare(b.code));
+  const currencyOptions: CurrencyOption[] = currencies.map((c: any) => ({ code: c.code, symbol: c.symbol, name: c.name }));
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -80,7 +82,7 @@ export default function NewListingPage() {
       description: "",
       categoryId: "",
       basePrice: "",
-      currency: selectedCountry?.defaultCurrencyCode || "TRY",
+      currency: user?.currencyCode || selectedCountry?.defaultCurrencyCode || "USD",
       priceUnit: "adet",
       stockQuantity: "1",
       stockUnit: "adet",
@@ -97,12 +99,14 @@ export default function NewListingPage() {
 
   const isShippingAvailable = watch("isShippingAvailable");
 
-  // Update currency when country changes
+  // Set default currency: user's preferred currency > country currency > USD
   useEffect(() => {
-    if (selectedCountry?.defaultCurrencyCode) {
+    if (user?.currencyCode) {
+      setValue("currency", user.currencyCode);
+    } else if (selectedCountry?.defaultCurrencyCode) {
       setValue("currency", selectedCountry.defaultCurrencyCode);
     }
-  }, [selectedCountry, setValue]);
+  }, [user?.currencyCode, selectedCountry, setValue]);
 
   const generateSlug = (title: string) => {
     return title
@@ -408,18 +412,15 @@ export default function NewListingPage() {
                       name="currency"
                       control={control}
                       render={({ field }) => (
-                        <Select value={field.value} onValueChange={field.onChange}>
-                          <SelectTrigger className="w-28">
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent className="max-h-60">
-                            {currencies.map((c: any) => (
-                              <SelectItem key={c.code} value={c.code}>
-                                {c.symbol} {c.code}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
+                        <CurrencyCombobox
+                          currencies={currencyOptions}
+                          value={field.value}
+                          onValueChange={field.onChange}
+                          placeholder={t("fields.currency")}
+                          searchPlaceholder={t("placeholders.searchCurrency")}
+                          emptyText={t("noCurrencyFound")}
+                          className="w-36"
+                        />
                       )}
                     />
                   </div>

@@ -786,13 +786,15 @@
       "shippingAvailable": "Usafirishaji unapatikana.",
       "shippingCost": "Ada ya Usafirishaji",
       "weight": "Uzito",
-      "weightUnit": "Kipimo cha Uzito"
+      "weightUnit": "Kipimo cha Uzito",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Mfano: Ng'ombe wa Holstein wa Miaka 2",
       "shortDescription": "Maelezo ya bidhaa (isizidi herufi 200)",
       "description": "Toa maelezo ya kina kuhusu bidhaa...",
-      "category": "Chagua kategoria."
+      "category": "Chagua kategoria.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Jina la tangazo ni lazima.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Maelezo ya kina yanahitajika.",
       "categoryRequired": "Uteuzi wa kategoria ni lazima.",
       "priceRequired": "Weka bei halali."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Unda Orodha Mpya",
@@ -830,7 +833,8 @@
       "weightUnit": "Kipimo cha Uzito",
       "city": "Jiji",
       "address": "Anwani",
-      "postalCode": "Nambari ya posta"
+      "postalCode": "Nambari ya posta",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Mfano: Ng'ombe wa Holstein wa Miaka 2",
@@ -839,7 +843,8 @@
       "category": "Chagua kategoria.",
       "city": "Ingia mjini",
       "address": "Ingiza anwani kamili.",
-      "postalCode": "Nambari ya posta"
+      "postalCode": "Nambari ya posta",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Jina la tangazo ni lazima.",
@@ -862,7 +867,8 @@
     "productCreated": "Bidhaa hiyo iliundwa kwa mafanikio.",
     "creationFailed": "Bidhaa haikuweza kuundwa. Tafadhali jaribu tena.",
     "userNotFound": "Taarifa za mtumiaji hazikupatikana. Tafadhali ingia tena.",
-    "defaultBusinessName": "Biashara yangu"
+    "defaultBusinessName": "Biashara yangu",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Kuwa Muuzaji",

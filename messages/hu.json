@@ -786,13 +786,15 @@
       "shippingAvailable": "Szállítás elérhető.",
       "shippingCost": "Szállítási díj",
       "weight": "Súly",
-      "weightUnit": "Súlyegység"
+      "weightUnit": "Súlyegység",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Példa: 2 éves holstein tehén",
       "shortDescription": "Termékleírás (maximum 200 karakter)",
       "description": "Adjon meg részletes információkat a termékről...",
-      "category": "Válasszon egy kategóriát."
+      "category": "Válasszon egy kategóriát.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "A hirdetés címe kötelező.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Részletes magyarázat szükséges.",
       "categoryRequired": "A kategória kiválasztása kötelező.",
       "priceRequired": "Adjon meg egy érvényes árat."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Új hirdetés létrehozása",
@@ -830,7 +833,8 @@
       "weightUnit": "Súlyegység",
       "city": "Város",
       "address": "Cím",
-      "postalCode": "Irányítószám"
+      "postalCode": "Irányítószám",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Példa: 2 éves holstein tehén",
@@ -839,7 +843,8 @@
       "category": "Válasszon egy kategóriát.",
       "city": "Belépés a városba",
       "address": "Írja be a teljes címet.",
-      "postalCode": "Irányítószám"
+      "postalCode": "Irányítószám",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "A hirdetés címe kötelező.",
@@ -862,7 +867,8 @@
     "productCreated": "A termék sikeresen létrejött.",
     "creationFailed": "A termék nem hozható létre. Kérjük, próbálja újra.",
     "userNotFound": "A felhasználói adatok nem találhatók. Kérjük, jelentkezzen be újra.",
-    "defaultBusinessName": "Az én vállalkozásom"
+    "defaultBusinessName": "Az én vállalkozásom",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Legyen eladó",

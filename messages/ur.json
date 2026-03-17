@@ -786,13 +786,15 @@
       "shippingAvailable": "شپنگ دستیاب ہے۔",
       "shippingCost": "شپنگ فیس",
       "weight": "وزن",
-      "weightUnit": "وزن کی اکائی"
+      "weightUnit": "وزن کی اکائی",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "مثال: 2 سالہ ہولسٹین گائے",
       "shortDescription": "پروڈکٹ کی تفصیل (زیادہ سے زیادہ 200 حروف)",
       "description": "مصنوعات کے بارے میں تفصیلی معلومات فراہم کریں...",
-      "category": "ایک زمرہ منتخب کریں۔"
+      "category": "ایک زمرہ منتخب کریں۔",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "اشتہار کا عنوان لازمی ہے۔",
@@ -800,7 +802,8 @@
       "descriptionRequired": "تفصیلی وضاحت درکار ہے۔",
       "categoryRequired": "زمرہ کا انتخاب لازمی ہے۔",
       "priceRequired": "ایک درست قیمت درج کریں۔"
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "نئی فہرست بنائیں",
@@ -830,7 +833,8 @@
       "weightUnit": "وزن کی اکائی",
       "city": "شہر",
       "address": "پتہ",
-      "postalCode": "پوسٹل کوڈ"
+      "postalCode": "پوسٹل کوڈ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "مثال: 2 سالہ ہولسٹین گائے",
@@ -839,7 +843,8 @@
       "category": "ایک زمرہ منتخب کریں۔",
       "city": "شہر میں داخل ہوں۔",
       "address": "مکمل پتہ درج کریں۔",
-      "postalCode": "پوسٹل کوڈ"
+      "postalCode": "پوسٹل کوڈ",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "اشتہار کا عنوان لازمی ہے۔",
@@ -862,7 +867,8 @@
     "productCreated": "پروڈکٹ کو کامیابی سے بنایا گیا تھا۔",
     "creationFailed": "پروڈکٹ نہیں بن سکی۔ براہ کرم دوبارہ کوشش کریں۔",
     "userNotFound": "صارف کی معلومات نہیں مل سکی۔ براہ کرم دوبارہ لاگ ان کریں۔",
-    "defaultBusinessName": "میرا کاروبار"
+    "defaultBusinessName": "میرا کاروبار",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "بیچنے والے بنیں۔",

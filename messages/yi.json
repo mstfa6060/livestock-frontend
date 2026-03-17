@@ -786,13 +786,15 @@
       "shippingAvailable": "שיפּינג איז בנימצא.",
       "shippingCost": "שיפּינג אָפּצאָל",
       "weight": "וואָג",
-      "weightUnit": "איינהייט פון וואָג"
+      "weightUnit": "איינהייט פון וואָג",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "בייַשפּיל: 2-יאָר-אַלט האָלשטיין קו",
       "shortDescription": "פּראָדוקט באַשרייַבונג (מאַקסימום 200 אותיות)",
       "description": "געבן דעטאַלירטע אינפֿאָרמאַציע וועגן דעם פּראָדוקט...",
-      "category": "אויסקלייבן אַ קאַטעגאָריע."
+      "category": "אויסקלייבן אַ קאַטעגאָריע.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "דער טיטל פון דער אַדווערטייזמענט איז פארלאנגט.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "א דעטאלירטע דערקלערונג איז נויטיג.",
       "categoryRequired": "קאַטעגאָריע אויסוואַל איז פארלאנגט.",
       "priceRequired": "אַרייַן אַ גילטיקן פּרייַז."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "שאַפֿן אַ נײַע ליסטינג",
@@ -830,7 +833,8 @@
       "weightUnit": "איינהייט פון וואָג",
       "city": "שטאָט",
       "address": "אַדרעס",
-      "postalCode": "פּאָסטאַל קאָד"
+      "postalCode": "פּאָסטאַל קאָד",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "בייַשפּיל: 2-יאָר-אַלט האָלשטיין קו",
@@ -839,7 +843,8 @@
       "category": "אויסקלייבן אַ קאַטעגאָריע.",
       "city": "אַרייַן אין שטאָט",
       "address": "אַרייַן די פולע אַדרעס.",
-      "postalCode": "פּאָסטאַל קאָד"
+      "postalCode": "פּאָסטאַל קאָד",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "דער טיטל פון דער אַדווערטייזמענט איז פארלאנגט.",
@@ -862,7 +867,8 @@
     "productCreated": "דער פּראָדוקט איז געראָטן געשאַפֿן געוואָרן.",
     "creationFailed": "דער פּראָדוקט קען נישט געשאַפֿן ווערן. ביטע פּרוּווט ווידער.",
     "userNotFound": "באַניצער אינפֿאָרמאַציע קען נישט געפֿונען ווערן. ביטע לאָגין ווידער איין.",
-    "defaultBusinessName": "מײַן געשעפט"
+    "defaultBusinessName": "מײַן געשעפט",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "ווערן אַ פֿאַרקויפֿער",

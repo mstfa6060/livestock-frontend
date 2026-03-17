@@ -783,13 +783,15 @@
       "shippingAvailable": "Frakt är tillgänglig.",
       "shippingCost": "Fraktavgift",
       "weight": "Vikt",
-      "weightUnit": "Viktenhet"
+      "weightUnit": "Viktenhet",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Exempel: 2-årig Holsteinko",
       "shortDescription": "Produktbeskrivning (max 200 tecken)",
       "description": "Ge detaljerad information om produkten...",
-      "category": "Välj en kategori."
+      "category": "Välj en kategori.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Annonstitel är obligatorisk.",
@@ -797,7 +799,8 @@
       "descriptionRequired": "En detaljerad förklaring krävs.",
       "categoryRequired": "Val av kategori är obligatoriskt.",
       "priceRequired": "Ange ett giltigt pris."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Skapa ny annons",
@@ -827,7 +830,8 @@
       "weightUnit": "Viktenhet",
       "city": "Stad",
       "address": "Adress",
-      "postalCode": "Postnummer"
+      "postalCode": "Postnummer",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Exempel: 2-årig Holsteinko",
@@ -836,7 +840,8 @@
       "category": "Välj en kategori.",
       "city": "Ange staden",
       "address": "Ange den fullständiga adressen.",
-      "postalCode": "Postnummer"
+      "postalCode": "Postnummer",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Annonstitel är obligatorisk.",
@@ -859,7 +864,8 @@
     "productCreated": "Produkten skapades.",
     "creationFailed": "Produkten kunde inte skapas. Försök igen.",
     "userNotFound": "Användarinformationen kunde inte hittas. Vänligen logga in igen.",
-    "defaultBusinessName": "Mitt företag"
+    "defaultBusinessName": "Mitt företag",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Bli säljare",

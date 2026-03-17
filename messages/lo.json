@@ -786,13 +786,15 @@
       "shippingAvailable": "ມີບໍລິການສົ່ງ.",
       "shippingCost": "ຄ່າຂົນສົ່ງ",
       "weight": "ນ້ຳໜັກ",
-      "weightUnit": "ຫົວໜ່ວຍນ້ຳໜັກ"
+      "weightUnit": "ຫົວໜ່ວຍນ້ຳໜັກ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ຕົວຢ່າງ: ງົວ Holstein ອາຍຸ 2 ປີ",
       "shortDescription": "ລາຍລະອຽດຜະລິດຕະພັນ (ສູງສຸດ 200 ຕົວອັກສອນ)",
       "description": "ໃຫ້ຂໍ້ມູນລະອຽດກ່ຽວກັບຜະລິດຕະພັນ...",
-      "category": "ເລືອກໝວດໝູ່."
+      "category": "ເລືອກໝວດໝູ່.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ຫົວຂໍ້ໂຄສະນາແມ່ນບັງຄັບ.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "ຕ້ອງການຄຳອະທິບາຍລະອຽດ.",
       "categoryRequired": "ການເລືອກໝວດໝູ່ແມ່ນເປັນສິ່ງຈຳເປັນ.",
       "priceRequired": "ໃສ່ລາຄາທີ່ຖືກຕ້ອງ."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "ສ້າງລາຍຊື່ໃໝ່",
@@ -830,7 +833,8 @@
       "weightUnit": "ຫົວໜ່ວຍນ້ຳໜັກ",
       "city": "ເມືອງ",
       "address": "ທີ່ຢູ່",
-      "postalCode": "ລະຫັດໄປສະນີ"
+      "postalCode": "ລະຫັດໄປສະນີ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ຕົວຢ່າງ: ງົວ Holstein ອາຍຸ 2 ປີ",
@@ -839,7 +843,8 @@
       "category": "ເລືອກໝວດໝູ່.",
       "city": "ເຂົ້າໄປໃນເມືອງ",
       "address": "ໃສ່ທີ່ຢູ່ເຕັມ.",
-      "postalCode": "ລະຫັດໄປສະນີ"
+      "postalCode": "ລະຫັດໄປສະນີ",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ຫົວຂໍ້ໂຄສະນາແມ່ນບັງຄັບ.",
@@ -862,7 +867,8 @@
     "productCreated": "ຜະລິດຕະພັນໄດ້ຖືກສ້າງຂຶ້ນສຳເລັດແລ້ວ.",
     "creationFailed": "ບໍ່ສາມາດສ້າງຜະລິດຕະພັນໄດ້. ກະລຸນາລອງໃໝ່.",
     "userNotFound": "ບໍ່ພົບຂໍ້ມູນຜູ້ໃຊ້. ກະລຸນາເຂົ້າສູ່ລະບົບອີກຄັ້ງ.",
-    "defaultBusinessName": "ທຸລະກິດຂອງຂ້ອຍ"
+    "defaultBusinessName": "ທຸລະກິດຂອງຂ້ອຍ",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "ກາຍເປັນຜູ້ຂາຍ",

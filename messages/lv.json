@@ -786,13 +786,15 @@
       "shippingAvailable": "Piegāde ir pieejama.",
       "shippingCost": "Piegādes maksa",
       "weight": "Svars",
-      "weightUnit": "Svara mērvienība"
+      "weightUnit": "Svara mērvienība",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Piemērs: 2 gadus veca Holšteinas šķirnes govs",
       "shortDescription": "Produkta apraksts (maksimums 200 rakstzīmes)",
       "description": "Sniedziet detalizētu informāciju par produktu...",
-      "category": "Izvēlieties kategoriju."
+      "category": "Izvēlieties kategoriju.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Sludinājuma nosaukums ir obligāts.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Nepieciešams detalizēts skaidrojums.",
       "categoryRequired": "Kategorijas izvēle ir obligāta.",
       "priceRequired": "Ievadiet derīgu cenu."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Izveidot jaunu ierakstu",
@@ -830,7 +833,8 @@
       "weightUnit": "Svara mērvienība",
       "city": "Pilsēta",
       "address": "Adrese",
-      "postalCode": "Pasta indekss"
+      "postalCode": "Pasta indekss",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Piemērs: 2 gadus veca Holšteinas šķirnes govs",
@@ -839,7 +843,8 @@
       "category": "Izvēlieties kategoriju.",
       "city": "Iebrauciet pilsētā",
       "address": "Ievadiet pilnu adresi.",
-      "postalCode": "Pasta indekss"
+      "postalCode": "Pasta indekss",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Sludinājuma nosaukums ir obligāts.",
@@ -862,7 +867,8 @@
     "productCreated": "Produkts tika veiksmīgi izveidots.",
     "creationFailed": "Produktu nevarēja izveidot. Lūdzu, mēģiniet vēlreiz.",
     "userNotFound": "Lietotāja informāciju nevarēja atrast. Lūdzu, piesakieties vēlreiz.",
-    "defaultBusinessName": "Mans bizness"
+    "defaultBusinessName": "Mans bizness",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Kļūsti par pārdevēju",

@@ -786,13 +786,15 @@
       "shippingAvailable": "Tha luingearachd ri fhaighinn.",
       "shippingCost": "Cìs Luingeis",
       "weight": "Cuideam",
-      "weightUnit": "Aonad Cuideam"
+      "weightUnit": "Aonad Cuideam",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Eisimpleir: Bò Holstein 2 bhliadhna a dh'aois",
       "shortDescription": "Tuairisgeul toraidh (200 caractar aig a’ char as àirde)",
       "description": "Thoir seachad fiosrachadh mionaideach mun toradh...",
-      "category": "Tagh roinn-seòrsa."
+      "category": "Tagh roinn-seòrsa.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tha tiotal an t-sanasachd èigneachail.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Tha feum air mìneachadh mionaideach.",
       "categoryRequired": "Tha taghadh roinn-seòrsa èigneachail.",
       "priceRequired": "Cuir a-steach prìs dligheach."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Cruthaich Liosta Ùr",
@@ -830,7 +833,8 @@
       "weightUnit": "Aonad Cuideam",
       "city": "Baile-mòr",
       "address": "Seòladh",
-      "postalCode": "Còd puist"
+      "postalCode": "Còd puist",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Eisimpleir: Bò Holstein 2 bhliadhna a dh'aois",
@@ -839,7 +843,8 @@
       "category": "Tagh roinn-seòrsa.",
       "city": "Cuir a-steach don bhaile",
       "address": "Cuir a-steach an seòladh slàn.",
-      "postalCode": "Còd puist"
+      "postalCode": "Còd puist",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tha tiotal an t-sanasachd èigneachail.",
@@ -862,7 +867,8 @@
     "productCreated": "Chaidh an toradh a chruthachadh gu soirbheachail.",
     "creationFailed": "Cha b’ urrainnear an toradh a chruthachadh. Feuch ris a-rithist.",
     "userNotFound": "Cha b’ urrainnear fiosrachadh an neach-cleachdaidh a lorg. Log a-steach a-rithist.",
-    "defaultBusinessName": "Mo ghnìomhachas"
+    "defaultBusinessName": "Mo ghnìomhachas",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Bi nad neach-reic",

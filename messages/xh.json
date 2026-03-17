@@ -786,13 +786,15 @@
       "shippingAvailable": "Ukuthunyelwa kuyafumaneka.",
       "shippingCost": "Intlawulo yokuthumela",
       "weight": "Ubunzima",
-      "weightUnit": "Iyunithi yoBunzima"
+      "weightUnit": "Iyunithi yoBunzima",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Umzekelo: Inkomo yaseHolstein eneminyaka emi-2 ubudala",
       "shortDescription": "Inkcazo yemveliso (ubuninzi beempawu ezingama-200)",
       "description": "Nika ulwazi oluneenkcukacha malunga nemveliso...",
-      "category": "Khetha udidi."
+      "category": "Khetha udidi.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Isihloko sentengiso siyimfuneko.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Ingcaciso eneenkcukacha iyafuneka.",
       "categoryRequired": "Ukukhetha udidi kuyimfuneko.",
       "priceRequired": "Faka ixabiso elisebenzayo."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Yenza Uluhlu Olutsha",
@@ -830,7 +833,8 @@
       "weightUnit": "Iyunithi yoBunzima",
       "city": "Isixeko",
       "address": "Idilesi",
-      "postalCode": "Ikhowudi yePosi"
+      "postalCode": "Ikhowudi yePosi",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Umzekelo: Inkomo yaseHolstein eneminyaka emi-2 ubudala",
@@ -839,7 +843,8 @@
       "category": "Khetha udidi.",
       "city": "Ngena kwisixeko",
       "address": "Faka idilesi epheleleyo.",
-      "postalCode": "Ikhowudi yePosi"
+      "postalCode": "Ikhowudi yePosi",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Isihloko sentengiso siyimfuneko.",
@@ -862,7 +867,8 @@
     "productCreated": "Imveliso yenziwe ngempumelelo.",
     "creationFailed": "Imveliso ayikwazanga ukwenziwa. Nceda uzame kwakhona.",
     "userNotFound": "Ulwazi lomsebenzisi alufumanekanga. Nceda ungene kwakhona.",
-    "defaultBusinessName": "Ishishini lam"
+    "defaultBusinessName": "Ishishini lam",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Yiba ngumthengisi",

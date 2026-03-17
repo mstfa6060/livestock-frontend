@@ -783,13 +783,15 @@
       "shippingAvailable": "È disponibile la spedizione.",
       "shippingCost": "Spese di spedizione",
       "weight": "Peso",
-      "weightUnit": "Unità di peso"
+      "weightUnit": "Unità di peso",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Esempio: mucca Holstein di 2 anni",
       "shortDescription": "Descrizione del prodotto (max 200 caratteri)",
       "description": "Fornire informazioni dettagliate sul prodotto...",
-      "category": "Seleziona una categoria."
+      "category": "Seleziona una categoria.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Il titolo dell'annuncio è obbligatorio.",
@@ -797,7 +799,8 @@
       "descriptionRequired": "È necessaria una spiegazione dettagliata.",
       "categoryRequired": "La selezione della categoria è obbligatoria.",
       "priceRequired": "Inserisci un prezzo valido."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Crea una nuova inserzione",
@@ -827,7 +830,8 @@
       "weightUnit": "Unità di peso",
       "city": "Città",
       "address": "Indirizzo",
-      "postalCode": "Codice Postale"
+      "postalCode": "Codice Postale",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Esempio: mucca Holstein di 2 anni",
@@ -836,7 +840,8 @@
       "category": "Seleziona una categoria.",
       "city": "Entra in città",
       "address": "Inserisci l'indirizzo completo.",
-      "postalCode": "Codice Postale"
+      "postalCode": "Codice Postale",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Il titolo dell'annuncio è obbligatorio.",
@@ -859,7 +864,8 @@
     "productCreated": "Il prodotto è stato creato con successo.",
     "creationFailed": "Impossibile creare il prodotto. Riprova.",
     "userNotFound": "Impossibile trovare le informazioni dell'utente. Effettua nuovamente l'accesso.",
-    "defaultBusinessName": "La mia attività"
+    "defaultBusinessName": "La mia attività",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Diventa un venditore",

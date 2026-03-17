@@ -786,13 +786,15 @@
       "shippingAvailable": "Bidalketa eskuragarri dago.",
       "shippingCost": "Bidalketa-tasa",
       "weight": "Pisua",
-      "weightUnit": "Pisu unitatea"
+      "weightUnit": "Pisu unitatea",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Adibidea: 2 urteko Holstein behia",
       "shortDescription": "Produktuaren deskribapena (gehienez 200 karaktere)",
       "description": "Produktuari buruzko informazio zehatza eman...",
-      "category": "Hautatu kategoria bat."
+      "category": "Hautatu kategoria bat.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Iragarkiaren izenburua derrigorrezkoa da.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Azalpen zehatza behar da.",
       "categoryRequired": "Kategoria hautatzea derrigorrezkoa da.",
       "priceRequired": "Sartu baliozko prezio bat."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Sortu zerrenda berria",
@@ -830,7 +833,8 @@
       "weightUnit": "Pisu unitatea",
       "city": "Hiria",
       "address": "Helbidea",
-      "postalCode": "Posta kodea"
+      "postalCode": "Posta kodea",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Adibidea: 2 urteko Holstein behia",
@@ -839,7 +843,8 @@
       "category": "Hautatu kategoria bat.",
       "city": "Sartu hirian.",
       "address": "Sartu helbide osoa.",
-      "postalCode": "Posta kodea"
+      "postalCode": "Posta kodea",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Iragarkiaren izenburua derrigorrezkoa da.",
@@ -862,7 +867,8 @@
     "productCreated": "Produktua arrakastaz sortu da.",
     "creationFailed": "Produktua ezin izan da sortu. Saiatu berriro.",
     "userNotFound": "Erabiltzailearen informazioa ezin izan da aurkitu. Mesedez, hasi saioa berriro.",
-    "defaultBusinessName": "Nire negozioa"
+    "defaultBusinessName": "Nire negozioa",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Saltzaile bihurtu",

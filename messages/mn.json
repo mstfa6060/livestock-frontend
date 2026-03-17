@@ -786,13 +786,15 @@
       "shippingAvailable": "Хүргэлт боломжтой.",
       "shippingCost": "Тээврийн хураамж",
       "weight": "Жин",
-      "weightUnit": "Жингийн нэгж"
+      "weightUnit": "Жингийн нэгж",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Жишээ: 2 настай Холштейн үнээ",
       "shortDescription": "Бүтээгдэхүүний тодорхойлолт (хамгийн ихдээ 200 тэмдэгт)",
       "description": "Бүтээгдэхүүний талаар дэлгэрэнгүй мэдээлэл өгөх...",
-      "category": "Ангилал сонгоно уу."
+      "category": "Ангилал сонгоно уу.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Зар сурталчилгааны гарчиг заавал байх ёстой.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Нарийвчилсан тайлбар шаардлагатай.",
       "categoryRequired": "Ангилал сонгох нь заавал байх ёстой.",
       "priceRequired": "Хүчинтэй үнэ оруулна уу."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Шинэ жагсаалт үүсгэх",
@@ -830,7 +833,8 @@
       "weightUnit": "Жингийн нэгж",
       "city": "Хот",
       "address": "Хаяг",
-      "postalCode": "Шуудангийн код"
+      "postalCode": "Шуудангийн код",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Жишээ: 2 настай Холштейн үнээ",
@@ -839,7 +843,8 @@
       "category": "Ангилал сонгоно уу.",
       "city": "Хот руу ороорой",
       "address": "Бүтэн хаягийг оруулна уу.",
-      "postalCode": "Шуудангийн код"
+      "postalCode": "Шуудангийн код",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Зар сурталчилгааны гарчиг заавал байх ёстой.",
@@ -862,7 +867,8 @@
     "productCreated": "Бүтээгдэхүүнийг амжилттай бүтээсэн.",
     "creationFailed": "Бүтээгдэхүүнийг үүсгэж чадсангүй. Дахин оролдоно уу.",
     "userNotFound": "Хэрэглэгчийн мэдээлэл олдсонгүй. Дахин нэвтэрнэ үү.",
-    "defaultBusinessName": "Миний бизнес"
+    "defaultBusinessName": "Миний бизнес",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Худалдагч болох",

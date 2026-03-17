@@ -786,13 +786,15 @@
       "shippingAvailable": "ପଠାଇବା ଉପଲବ୍ଧ।",
       "shippingCost": "ପରିବହନ ଦେୟ",
       "weight": "ଓଜନ",
-      "weightUnit": "ଓଜନର ଏକକ"
+      "weightUnit": "ଓଜନର ଏକକ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ଉଦାହରଣ: ୨ ବର୍ଷର ହୋଲଷ୍ଟାଇନ୍ ଗାଈ",
       "shortDescription": "ଉତ୍ପାଦ ବର୍ଣ୍ଣନା (ସର୍ବାଧିକ 200 ଅକ୍ଷର)",
       "description": "ଉତ୍ପାଦ ବିଷୟରେ ବିସ୍ତୃତ ସୂଚନା ପ୍ରଦାନ କରନ୍ତୁ...",
-      "category": "ଗୋଟିଏ ବର୍ଗ ଚୟନ କରନ୍ତୁ।"
+      "category": "ଗୋଟିଏ ବର୍ଗ ଚୟନ କରନ୍ତୁ।",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ବିଜ୍ଞାପନର ଶୀର୍ଷକ ବାଧ୍ୟତାମୂଳକ।",
@@ -800,7 +802,8 @@
       "descriptionRequired": "ଏକ ବିସ୍ତୃତ ବ୍ୟାଖ୍ୟା ଆବଶ୍ୟକ।",
       "categoryRequired": "ବର୍ଗ ଚୟନ ବାଧ୍ୟତାମୂଳକ।",
       "priceRequired": "ଏକ ବୈଧ ମୂଲ୍ୟ ଲେଖନ୍ତୁ।"
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "ନୂତନ ତାଲିକା ତିଆରି କରନ୍ତୁ",
@@ -830,7 +833,8 @@
       "weightUnit": "ଓଜନର ଏକକ",
       "city": "ସହର",
       "address": "ଠିକଣା",
-      "postalCode": "ପୋଷ୍ଟାଲ୍ କୋଡ୍"
+      "postalCode": "ପୋଷ୍ଟାଲ୍ କୋଡ୍",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ଉଦାହରଣ: ୨ ବର୍ଷର ହୋଲଷ୍ଟାଇନ୍ ଗାଈ",
@@ -839,7 +843,8 @@
       "category": "ଗୋଟିଏ ବର୍ଗ ଚୟନ କରନ୍ତୁ।",
       "city": "ସହର ପ୍ରବେଶ କରନ୍ତୁ",
       "address": "ସମ୍ପୂର୍ଣ୍ଣ ଠିକଣା ଲେଖନ୍ତୁ।",
-      "postalCode": "ପୋଷ୍ଟାଲ୍ କୋଡ୍"
+      "postalCode": "ପୋଷ୍ଟାଲ୍ କୋଡ୍",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ବିଜ୍ଞାପନର ଶୀର୍ଷକ ବାଧ୍ୟତାମୂଳକ।",
@@ -862,7 +867,8 @@
     "productCreated": "ଉତ୍ପାଦଟି ସଫଳତାର ସହ ତିଆରି ହୋଇଥିଲା।",
     "creationFailed": "ଉତ୍ପାଦଟି ତିଆରି ହୋଇପାରିଲା ନାହିଁ। ଦୟାକରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।",
     "userNotFound": "ଉପଭୋକ୍ତା ସୂଚନା ମିଳିଲା ନାହିଁ। ଦୟାକରି ପୁଣି ଲଗ୍ ଇନ୍ କରନ୍ତୁ।",
-    "defaultBusinessName": "ମୋର ବ୍ୟବସାୟ"
+    "defaultBusinessName": "ମୋର ବ୍ୟବସାୟ",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "ଜଣେ ବିକ୍ରେତା ହୁଅନ୍ତୁ",

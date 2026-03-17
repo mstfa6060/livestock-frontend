@@ -786,13 +786,15 @@
       "shippingAvailable": "Sendo haveblas.",
       "shippingCost": "Sendkosto",
       "weight": "Pezo",
-      "weightUnit": "Unuo de pezo"
+      "weightUnit": "Unuo de pezo",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Ekzemplo: 2-jaraĝa Holstein-bovino",
       "shortDescription": "Produkta priskribo (maksimumo 200 signoj)",
       "description": "Donu detalajn informojn pri la produkto...",
-      "category": "Elektu kategorion."
+      "category": "Elektu kategorion.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Anonca titolo estas deviga.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Detala klarigo estas necesa.",
       "categoryRequired": "Kategoria elekto estas deviga.",
       "priceRequired": "Enigu validan prezon."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Krei Novan Liston",
@@ -830,7 +833,8 @@
       "weightUnit": "Unuo de pezo",
       "city": "Urbo",
       "address": "Adreso",
-      "postalCode": "Poŝtkodo"
+      "postalCode": "Poŝtkodo",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Ekzemplo: 2-jaraĝa Holstein-bovino",
@@ -839,7 +843,8 @@
       "category": "Elektu kategorion.",
       "city": "Eniru la urbon",
       "address": "Enigu la plenan adreson.",
-      "postalCode": "Poŝtkodo"
+      "postalCode": "Poŝtkodo",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Anonca titolo estas deviga.",
@@ -862,7 +867,8 @@
     "productCreated": "La produkto estis sukcese kreita.",
     "creationFailed": "La produkto ne povis esti kreita. Bonvolu reprovi.",
     "userNotFound": "Uzantinformoj ne troveblas. Bonvolu ensaluti denove.",
-    "defaultBusinessName": "Mia komerco"
+    "defaultBusinessName": "Mia komerco",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Fariĝu Vendisto",

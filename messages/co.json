@@ -786,13 +786,15 @@
       "shippingAvailable": "A spedizione hè dispunibile.",
       "shippingCost": "Tariffa di spedizione",
       "weight": "Pesu",
-      "weightUnit": "Unità di pesu"
+      "weightUnit": "Unità di pesu",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Esempiu: Vacca Holstein di 2 anni",
       "shortDescription": "Descrizzione di u pruduttu (massimu 200 caratteri)",
       "description": "Dà infurmazioni dettagliate nantu à u pruduttu...",
-      "category": "Selezziunate una categuria."
+      "category": "Selezziunate una categuria.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "U tìtulu di l'annunziu hè ubligatoriu.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Ci vole una spiegazione dettagliata.",
       "categoryRequired": "A selezzione di a categuria hè ubligatoria.",
       "priceRequired": "Inserite un prezzu validu."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Creà una nova lista",
@@ -830,7 +833,8 @@
       "weightUnit": "Unità di pesu",
       "city": "Cità",
       "address": "Indirizzu",
-      "postalCode": "Codice postale"
+      "postalCode": "Codice postale",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Esempiu: Vacca Holstein di 2 anni",
@@ -839,7 +843,8 @@
       "category": "Selezziunate una categuria.",
       "city": "Entre in a cità",
       "address": "Inserite l'indirizzu cumpletu.",
-      "postalCode": "Codice postale"
+      "postalCode": "Codice postale",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "U tìtulu di l'annunziu hè ubligatoriu.",
@@ -862,7 +867,8 @@
     "productCreated": "U pruduttu hè statu creatu cù successu.",
     "creationFailed": "U pruduttu ùn hà pussutu esse creatu. Per piacè pruvate torna.",
     "userNotFound": "L'infurmazione di l'utilizatore ùn hè stata truvata. Per piacè cunnettatevi torna.",
-    "defaultBusinessName": "A mo attività"
+    "defaultBusinessName": "A mo attività",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Diventate un Venditore",

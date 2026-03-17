@@ -786,13 +786,15 @@
       "shippingAvailable": "Kutumira kuripo.",
       "shippingCost": "Mari yekutumira",
       "weight": "Huremu",
-      "weightUnit": "Chikamu cheHuremu"
+      "weightUnit": "Chikamu cheHuremu",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Muenzaniso: Mombe yeHolstein ine makore maviri",
       "shortDescription": "Tsananguro yechigadzirwa (mavara asingapfuure 200)",
       "description": "Ipa ruzivo rwakadzama nezvechigadzirwa...",
-      "category": "Sarudza chikamu."
+      "category": "Sarudza chikamu.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Zita rekushambadzira rinosungirwa.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Tsananguro yakadzama inodiwa.",
       "categoryRequired": "Kusarudza chikamu kunosungirwa.",
       "priceRequired": "Isa mutengo unoshanda."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Gadzira Rondedzero Itsva",
@@ -830,7 +833,8 @@
       "weightUnit": "Chikamu cheHuremu",
       "city": "Guta",
       "address": "Kero",
-      "postalCode": "Kodhi yepositi"
+      "postalCode": "Kodhi yepositi",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Muenzaniso: Mombe yeHolstein ine makore maviri",
@@ -839,7 +843,8 @@
       "category": "Sarudza chikamu.",
       "city": "Pinda muguta",
       "address": "Isa kero yakazara.",
-      "postalCode": "Kodhi yepositi"
+      "postalCode": "Kodhi yepositi",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Zita rekushambadzira rinosungirwa.",
@@ -862,7 +867,8 @@
     "productCreated": "Chigadzirwa chacho chakagadzirwa zvinobudirira.",
     "creationFailed": "Chigadzirwa chacho hachina kugadzirwa. Ndapota edza zvakare.",
     "userNotFound": "Ruzivo rwemushandisi haruna kuwanikwa. Ndapota pindai zvakare.",
-    "defaultBusinessName": "Bhizinesi rangu"
+    "defaultBusinessName": "Bhizinesi rangu",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Iva Mutengesi",

@@ -786,13 +786,15 @@
       "shippingAvailable": "Có dịch vụ giao hàng.",
       "shippingCost": "Phí vận chuyển",
       "weight": "Cân nặng",
-      "weightUnit": "Đơn vị trọng lượng"
+      "weightUnit": "Đơn vị trọng lượng",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Ví dụ: Bò Holstein 2 tuổi",
       "shortDescription": "Mô tả sản phẩm (tối đa 200 ký tự)",
       "description": "Cung cấp thông tin chi tiết về sản phẩm...",
-      "category": "Chọn một danh mục."
+      "category": "Chọn một danh mục.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tiêu đề quảng cáo là bắt buộc.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Cần có lời giải thích chi tiết.",
       "categoryRequired": "Việc chọn danh mục là bắt buộc.",
       "priceRequired": "Nhập giá hợp lệ."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Tạo tin đăng mới",
@@ -830,7 +833,8 @@
       "weightUnit": "Đơn vị trọng lượng",
       "city": "Thành phố",
       "address": "Địa chỉ",
-      "postalCode": "Mã bưu chính"
+      "postalCode": "Mã bưu chính",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Ví dụ: Bò Holstein 2 tuổi",
@@ -839,7 +843,8 @@
       "category": "Chọn một danh mục.",
       "city": "Vào thành phố",
       "address": "Nhập đầy đủ địa chỉ.",
-      "postalCode": "Mã bưu chính"
+      "postalCode": "Mã bưu chính",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tiêu đề quảng cáo là bắt buộc.",
@@ -862,7 +867,8 @@
     "productCreated": "Sản phẩm đã được tạo ra thành công.",
     "creationFailed": "Không thể tạo sản phẩm. Vui lòng thử lại.",
     "userNotFound": "Không tìm thấy thông tin người dùng. Vui lòng đăng nhập lại.",
-    "defaultBusinessName": "Doanh nghiệp của tôi"
+    "defaultBusinessName": "Doanh nghiệp của tôi",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Trở thành người bán",

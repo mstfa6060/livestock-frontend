@@ -783,13 +783,15 @@
       "shippingAvailable": "Toimitus on saatavilla.",
       "shippingCost": "Toimitusmaksu",
       "weight": "Paino",
-      "weightUnit": "Painoyksikkö"
+      "weightUnit": "Painoyksikkö",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Esimerkki: 2-vuotias holsteinlehmä",
       "shortDescription": "Tuotekuvaus (enintään 200 merkkiä)",
       "description": "Anna tarkempia tietoja tuotteesta...",
-      "category": "Valitse kategoria."
+      "category": "Valitse kategoria.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Mainoksen otsikko on pakollinen.",
@@ -797,7 +799,8 @@
       "descriptionRequired": "Yksityiskohtainen selvitys vaaditaan.",
       "categoryRequired": "Kategorian valinta on pakollinen.",
       "priceRequired": "Anna kelvollinen hinta."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Luo uusi ilmoitus",
@@ -827,7 +830,8 @@
       "weightUnit": "Painoyksikkö",
       "city": "Kaupunki",
       "address": "Osoite",
-      "postalCode": "Postinumero"
+      "postalCode": "Postinumero",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Esimerkki: 2-vuotias holsteinlehmä",
@@ -836,7 +840,8 @@
       "category": "Valitse kategoria.",
       "city": "Astu kaupunkiin",
       "address": "Anna koko osoite.",
-      "postalCode": "Postinumero"
+      "postalCode": "Postinumero",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Mainoksen otsikko on pakollinen.",
@@ -859,7 +864,8 @@
     "productCreated": "Tuote luotiin onnistuneesti.",
     "creationFailed": "Tuotetta ei voitu luoda. Yritä uudelleen.",
     "userNotFound": "Käyttäjätietoja ei löytynyt. Kirjaudu uudelleen sisään.",
-    "defaultBusinessName": "Yritykseni"
+    "defaultBusinessName": "Yritykseni",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Ryhdy myyjäksi",

@@ -786,13 +786,15 @@
       "shippingAvailable": "Saatmine on saadaval.",
       "shippingCost": "Saatmistasu",
       "weight": "Kaal",
-      "weightUnit": "Kaaluühik"
+      "weightUnit": "Kaaluühik",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Näide: 2-aastane holsteini lehm",
       "shortDescription": "Tootekirjeldus (maksimaalselt 200 tähemärki)",
       "description": "Esitage toote kohta üksikasjalikku teavet...",
-      "category": "Valige kategooria."
+      "category": "Valige kategooria.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Kuulutuse pealkiri on kohustuslik.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Vaja on üksikasjalikku selgitust.",
       "categoryRequired": "Kategooria valimine on kohustuslik.",
       "priceRequired": "Sisestage kehtiv hind."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Loo uus kuulutus",
@@ -830,7 +833,8 @@
       "weightUnit": "Kaaluühik",
       "city": "Linn",
       "address": "Aadress",
-      "postalCode": "Postiindeks"
+      "postalCode": "Postiindeks",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Näide: 2-aastane holsteini lehm",
@@ -839,7 +843,8 @@
       "category": "Valige kategooria.",
       "city": "Sisene linna",
       "address": "Sisestage täielik aadress.",
-      "postalCode": "Postiindeks"
+      "postalCode": "Postiindeks",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Kuulutuse pealkiri on kohustuslik.",
@@ -862,7 +867,8 @@
     "productCreated": "Toode on edukalt loodud.",
     "creationFailed": "Toodet ei õnnestunud luua. Palun proovige uuesti.",
     "userNotFound": "Kasutajateavet ei leitud. Palun logige uuesti sisse.",
-    "defaultBusinessName": "Minu ettevõte"
+    "defaultBusinessName": "Minu ettevõte",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Hakka müüjaks",

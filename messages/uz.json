@@ -786,13 +786,15 @@
       "shippingAvailable": "Yetkazib berish xizmati mavjud.",
       "shippingCost": "Yetkazib berish narxi",
       "weight": "Og'irligi",
-      "weightUnit": "Og'irlik birligi"
+      "weightUnit": "Og'irlik birligi",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Misol: 2 yoshli Golshteyn sigiri",
       "shortDescription": "Mahsulot tavsifi (maksimal 200 belgi)",
       "description": "Mahsulot haqida batafsil ma'lumot bering...",
-      "category": "Toifani tanlang."
+      "category": "Toifani tanlang.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Reklama sarlavhasi majburiy.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Batafsil tushuntirish talab qilinadi.",
       "categoryRequired": "Kategoriyani tanlash majburiydir.",
       "priceRequired": "Haqiqiy narxni kiriting."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Yangi ro'yxat yaratish",
@@ -830,7 +833,8 @@
       "weightUnit": "Og'irlik birligi",
       "city": "Shahar",
       "address": "Manzil",
-      "postalCode": "Pochta kodi"
+      "postalCode": "Pochta kodi",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Misol: 2 yoshli Golshteyn sigiri",
@@ -839,7 +843,8 @@
       "category": "Toifani tanlang.",
       "city": "Shaharga kiring",
       "address": "To'liq manzilni kiriting.",
-      "postalCode": "Pochta kodi"
+      "postalCode": "Pochta kodi",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Reklama sarlavhasi majburiy.",
@@ -862,7 +867,8 @@
     "productCreated": "Mahsulot muvaffaqiyatli yaratildi.",
     "creationFailed": "Mahsulot yaratib bo'lmadi. Qaytadan urinib ko'ring.",
     "userNotFound": "Foydalanuvchi ma'lumotlari topilmadi. Iltimos, qaytadan tizimga kiring.",
-    "defaultBusinessName": "Mening biznesim"
+    "defaultBusinessName": "Mening biznesim",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Sotuvchi bo'ling",

@@ -786,13 +786,15 @@
       "shippingAvailable": "Doprava je k dispozícii.",
       "shippingCost": "Poplatok za dopravu",
       "weight": "Hmotnosť",
-      "weightUnit": "Jednotka hmotnosti"
+      "weightUnit": "Jednotka hmotnosti",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Príklad: 2-ročná holštajnská krava",
       "shortDescription": "Popis produktu (max. 200 znakov)",
       "description": "Poskytnite podrobné informácie o produkte...",
-      "category": "Vyberte kategóriu."
+      "category": "Vyberte kategóriu.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Názov reklamy je povinný.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Vyžaduje sa podrobné vysvetlenie.",
       "categoryRequired": "Výber kategórie je povinný.",
       "priceRequired": "Zadajte platnú cenu."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Vytvoriť nový záznam",
@@ -830,7 +833,8 @@
       "weightUnit": "Jednotka hmotnosti",
       "city": "Mesto",
       "address": "Adresa",
-      "postalCode": "Poštové smerovacie číslo"
+      "postalCode": "Poštové smerovacie číslo",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Príklad: 2-ročná holštajnská krava",
@@ -839,7 +843,8 @@
       "category": "Vyberte kategóriu.",
       "city": "Vstúpte do mesta",
       "address": "Zadajte celú adresu.",
-      "postalCode": "Poštové smerovacie číslo"
+      "postalCode": "Poštové smerovacie číslo",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Názov reklamy je povinný.",
@@ -862,7 +867,8 @@
     "productCreated": "Produkt bol úspešne vytvorený.",
     "creationFailed": "Produkt sa nepodarilo vytvoriť. Skúste to znova.",
     "userNotFound": "Informácie o používateľovi sa nenašli. Prihláste sa znova.",
-    "defaultBusinessName": "Moja firma"
+    "defaultBusinessName": "Moja firma",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Staňte sa predajcom",

@@ -783,13 +783,15 @@
       "shippingAvailable": "Dostępna jest wysyłka.",
       "shippingCost": "Opłata za wysyłkę",
       "weight": "Waga",
-      "weightUnit": "Jednostka wagi"
+      "weightUnit": "Jednostka wagi",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Przykład: 2-letnia krowa rasy holsztyńskiej",
       "shortDescription": "Opis produktu (maks. 200 znaków)",
       "description": "Podaj szczegółowe informacje o produkcie...",
-      "category": "Wybierz kategorię."
+      "category": "Wybierz kategorię.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tytuł reklamy jest obowiązkowy.",
@@ -797,7 +799,8 @@
       "descriptionRequired": "Wymagane jest szczegółowe wyjaśnienie.",
       "categoryRequired": "Wybór kategorii jest obowiązkowy.",
       "priceRequired": "Wprowadź prawidłową cenę."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Utwórz nową ofertę",
@@ -827,7 +830,8 @@
       "weightUnit": "Jednostka wagi",
       "city": "Miasto",
       "address": "Adres",
-      "postalCode": "Kod pocztowy"
+      "postalCode": "Kod pocztowy",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Przykład: 2-letnia krowa rasy holsztyńskiej",
@@ -836,7 +840,8 @@
       "category": "Wybierz kategorię.",
       "city": "Wejdź do miasta",
       "address": "Wprowadź pełny adres.",
-      "postalCode": "Kod pocztowy"
+      "postalCode": "Kod pocztowy",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tytuł reklamy jest obowiązkowy.",
@@ -859,7 +864,8 @@
     "productCreated": "Produkt został pomyślnie utworzony.",
     "creationFailed": "Nie udało się utworzyć produktu. Spróbuj ponownie.",
     "userNotFound": "Nie znaleziono informacji o użytkowniku. Zaloguj się ponownie.",
-    "defaultBusinessName": "Mój biznes"
+    "defaultBusinessName": "Mój biznes",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Zostań sprzedawcą",

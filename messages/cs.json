@@ -783,13 +783,15 @@
       "shippingAvailable": "Doprava je k dispozici.",
       "shippingCost": "Poplatek za dopravu",
       "weight": "Hmotnost",
-      "weightUnit": "Jednotka hmotnosti"
+      "weightUnit": "Jednotka hmotnosti",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Příklad: Dvouletá kráva holštýnského plemene",
       "shortDescription": "Popis produktu (max. 200 znaků)",
       "description": "Poskytněte podrobné informace o produktu...",
-      "category": "Vyberte kategorii."
+      "category": "Vyberte kategorii.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Název inzerátu je povinný.",
@@ -797,7 +799,8 @@
       "descriptionRequired": "Je nutné podrobné vysvětlení.",
       "categoryRequired": "Výběr kategorie je povinný.",
       "priceRequired": "Zadejte platnou cenu."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Vytvořit nový inzerát",
@@ -827,7 +830,8 @@
       "weightUnit": "Jednotka hmotnosti",
       "city": "Město",
       "address": "Adresa",
-      "postalCode": "Poštovní směrovací číslo"
+      "postalCode": "Poštovní směrovací číslo",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Příklad: Dvouletá kráva holštýnského plemene",
@@ -836,7 +840,8 @@
       "category": "Vyberte kategorii.",
       "city": "Vstupte do města",
       "address": "Zadejte celou adresu.",
-      "postalCode": "Poštovní směrovací číslo"
+      "postalCode": "Poštovní směrovací číslo",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Název inzerátu je povinný.",
@@ -859,7 +864,8 @@
     "productCreated": "Produkt byl úspěšně vytvořen.",
     "creationFailed": "Produkt se nepodařilo vytvořit. Zkuste to prosím znovu.",
     "userNotFound": "Informace o uživateli se nepodařilo nalézt. Přihlaste se prosím znovu.",
-    "defaultBusinessName": "Moje firma"
+    "defaultBusinessName": "Moje firma",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Staňte se prodejcem",

@@ -786,13 +786,15 @@
       "shippingAvailable": "მიწოდება შესაძლებელია.",
       "shippingCost": "მიწოდების საფასური",
       "weight": "წონა",
-      "weightUnit": "წონის ერთეული"
+      "weightUnit": "წონის ერთეული",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "მაგალითი: 2 წლის ჰოლშტაინის ჯიშის ძროხა",
       "shortDescription": "პროდუქტის აღწერა (მაქსიმუმ 200 სიმბოლო)",
       "description": "მოგვაწოდეთ დეტალური ინფორმაცია პროდუქტის შესახებ...",
-      "category": "აირჩიეთ კატეგორია."
+      "category": "აირჩიეთ კატეგორია.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "რეკლამის სათაური სავალდებულოა.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "საჭიროა დეტალური ახსნა.",
       "categoryRequired": "კატეგორიის შერჩევა სავალდებულოა.",
       "priceRequired": "შეიყვანეთ სწორი ფასი."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "ახალი სიის შექმნა",
@@ -830,7 +833,8 @@
       "weightUnit": "წონის ერთეული",
       "city": "ქალაქი",
       "address": "მისამართი",
-      "postalCode": "საფოსტო ინდექსი"
+      "postalCode": "საფოსტო ინდექსი",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "მაგალითი: 2 წლის ჰოლშტაინის ჯიშის ძროხა",
@@ -839,7 +843,8 @@
       "category": "აირჩიეთ კატეგორია.",
       "city": "შედით ქალაქში",
       "address": "შეიყვანეთ სრული მისამართი.",
-      "postalCode": "საფოსტო ინდექსი"
+      "postalCode": "საფოსტო ინდექსი",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "რეკლამის სათაური სავალდებულოა.",
@@ -862,7 +867,8 @@
     "productCreated": "პროდუქტი წარმატებით შეიქმნა.",
     "creationFailed": "პროდუქტის შექმნა ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა.",
     "userNotFound": "მომხმარებლის ინფორმაცია ვერ მოიძებნა. გთხოვთ, ხელახლა შეხვიდეთ სისტემაში.",
-    "defaultBusinessName": "ჩემი ბიზნესი"
+    "defaultBusinessName": "ჩემი ბიზნესი",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "გახდი გამყიდველი",

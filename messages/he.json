@@ -786,13 +786,15 @@
       "shippingAvailable": "משלוח זמין.",
       "shippingCost": "דמי משלוח",
       "weight": "מִשׁקָל",
-      "weightUnit": "יחידת משקל"
+      "weightUnit": "יחידת משקל",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "דוגמה: פרה הולשטיין בת שנתיים",
       "shortDescription": "תיאור מוצר (מקסימום 200 תווים)",
       "description": "ספק מידע מפורט על המוצר...",
-      "category": "בחר קטגוריה."
+      "category": "בחר קטגוריה.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "כותרת המודעה היא חובה.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "נדרש הסבר מפורט.",
       "categoryRequired": "בחירת קטגוריה היא חובה.",
       "priceRequired": "הזן מחיר תקין."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "צור רישום חדש",
@@ -830,7 +833,8 @@
       "weightUnit": "יחידת משקל",
       "city": "עִיר",
       "address": "כְּתוֹבֶת",
-      "postalCode": "מיקוד"
+      "postalCode": "מיקוד",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "דוגמה: פרה הולשטיין בת שנתיים",
@@ -839,7 +843,8 @@
       "category": "בחר קטגוריה.",
       "city": "היכנסו לעיר",
       "address": "הזן את הכתובת המלאה.",
-      "postalCode": "מיקוד"
+      "postalCode": "מיקוד",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "כותרת המודעה היא חובה.",
@@ -862,7 +867,8 @@
     "productCreated": "המוצר נוצר בהצלחה.",
     "creationFailed": "לא ניתן היה ליצור את המוצר. אנא נסה שוב.",
     "userNotFound": "לא ניתן היה למצוא את פרטי המשתמש. אנא התחבר שוב.",
-    "defaultBusinessName": "העסק שלי"
+    "defaultBusinessName": "העסק שלי",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "הפוך למוכר",

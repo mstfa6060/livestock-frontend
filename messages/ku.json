@@ -786,13 +786,15 @@
       "shippingAvailable": "Şandin heye.",
       "shippingCost": "Xerca Şandinê",
       "weight": "Pîvan",
-      "weightUnit": "Yekîneya Giraniyê"
+      "weightUnit": "Yekîneya Giraniyê",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Mînak: Gayekî Holstein ê 2 salî",
       "shortDescription": "Danasîna Berhemê (herî zêde 200 tîp)",
       "description": "Agahiyên berfireh li ser hilberê bidin...",
-      "category": "Kategoriyek hilbijêre."
+      "category": "Kategoriyek hilbijêre.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Sernavê reklamê mecbûrî ye.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Şirovekirineke berfireh pêwîst e.",
       "categoryRequired": "Hilbijartina kategoriyê mecbûrî ye.",
       "priceRequired": "Bihayekî derbasdar binivîse."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Lîsteya Nû Biafirîne",
@@ -830,7 +833,8 @@
       "weightUnit": "Yekîneya Giraniyê",
       "city": "Bajar",
       "address": "Navnîşan",
-      "postalCode": "Koda postê"
+      "postalCode": "Koda postê",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Mînak: Gayekî Holstein ê 2 salî",
@@ -839,7 +843,8 @@
       "category": "Kategoriyek hilbijêre.",
       "city": "Bikevin bajêr",
       "address": "Navnîşana tevahî binivîse.",
-      "postalCode": "Koda postê"
+      "postalCode": "Koda postê",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Sernavê reklamê mecbûrî ye.",
@@ -862,7 +867,8 @@
     "productCreated": "Berhem bi serkeftî hate afirandin.",
     "creationFailed": "Berhem nehat afirandin. Ji kerema xwe dîsa biceribînin.",
     "userNotFound": "Agahiyên bikarhêner nehatin dîtin. Ji kerema xwe dîsa têkevinê.",
-    "defaultBusinessName": "Karê min"
+    "defaultBusinessName": "Karê min",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Bibe Firoşkar",

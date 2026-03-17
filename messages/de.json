@@ -783,13 +783,15 @@
       "shippingAvailable": "Versand ist möglich.",
       "shippingCost": "Versandkosten",
       "weight": "Gewicht",
-      "weightUnit": "Gewichtseinheit"
+      "weightUnit": "Gewichtseinheit",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Beispiel: 2-jährige Holstein-Kuh",
       "shortDescription": "Produktbeschreibung (max. 200 Zeichen)",
       "description": "Geben Sie detaillierte Informationen zum Produkt an...",
-      "category": "Wählen Sie eine Kategorie."
+      "category": "Wählen Sie eine Kategorie.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Der Anzeigentitel ist obligatorisch.",
@@ -797,7 +799,8 @@
       "descriptionRequired": "Eine detaillierte Erklärung ist erforderlich.",
       "categoryRequired": "Die Auswahl einer Kategorie ist obligatorisch.",
       "priceRequired": "Geben Sie einen gültigen Preis ein."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Neuen Eintrag erstellen",
@@ -827,7 +830,8 @@
       "weightUnit": "Gewichtseinheit",
       "city": "Stadt",
       "address": "Adresse",
-      "postalCode": "Postleitzahl"
+      "postalCode": "Postleitzahl",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Beispiel: 2-jährige Holstein-Kuh",
@@ -836,7 +840,8 @@
       "category": "Wählen Sie eine Kategorie.",
       "city": "Betreten Sie die Stadt",
       "address": "Geben Sie die vollständige Adresse ein.",
-      "postalCode": "Postleitzahl"
+      "postalCode": "Postleitzahl",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Der Anzeigentitel ist obligatorisch.",
@@ -859,7 +864,8 @@
     "productCreated": "Das Produkt wurde erfolgreich entwickelt.",
     "creationFailed": "Das Produkt konnte nicht erstellt werden. Bitte versuchen Sie es erneut.",
     "userNotFound": "Benutzerinformationen konnten nicht gefunden werden. Bitte melden Sie sich erneut an.",
-    "defaultBusinessName": "Mein Geschäft"
+    "defaultBusinessName": "Mein Geschäft",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Werden Sie Verkäufer",

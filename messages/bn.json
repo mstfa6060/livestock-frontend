@@ -786,13 +786,15 @@
       "shippingAvailable": "শিপিং পাওয়া যায়।",
       "shippingCost": "শিপিং ফি",
       "weight": "ওজন",
-      "weightUnit": "ওজনের একক"
+      "weightUnit": "ওজনের একক",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "উদাহরণ: ২ বছর বয়সী হোলস্টাইন গরু",
       "shortDescription": "পণ্যের বিবরণ (সর্বোচ্চ ২০০ অক্ষর)",
       "description": "পণ্য সম্পর্কে বিস্তারিত তথ্য প্রদান করুন...",
-      "category": "একটি বিভাগ নির্বাচন করুন।"
+      "category": "একটি বিভাগ নির্বাচন করুন।",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "বিজ্ঞাপনের শিরোনাম বাধ্যতামূলক।",
@@ -800,7 +802,8 @@
       "descriptionRequired": "একটি বিস্তারিত ব্যাখ্যা প্রয়োজন।",
       "categoryRequired": "বিভাগ নির্বাচন বাধ্যতামূলক।",
       "priceRequired": "একটি বৈধ মূল্য লিখুন।"
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "নতুন তালিকা তৈরি করুন",
@@ -830,7 +833,8 @@
       "weightUnit": "ওজনের একক",
       "city": "শহর",
       "address": "জানুন",
-      "postalCode": "পোস্টাল কোড"
+      "postalCode": "পোস্টাল কোড",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "উদাহরণ: ২ বছর বয়সী হোলস্টাইন গরু",
@@ -839,7 +843,8 @@
       "category": "একটি বিভাগ নির্বাচন করুন।",
       "city": "শহরে প্রবেশ করুন",
       "address": "সম্পূর্ণ ঠিকানা লিখুন।",
-      "postalCode": "পোস্টাল কোড"
+      "postalCode": "পোস্টাল কোড",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "বিজ্ঞাপনের শিরোনাম বাধ্যতামূলক।",
@@ -862,7 +867,8 @@
     "productCreated": "পণ্যটি সফলভাবে তৈরি করা হয়েছে।",
     "creationFailed": "পণ্যটি তৈরি করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।",
     "userNotFound": "ব্যবহারকারীর তথ্য পাওয়া যায়নি। অনুগ্রহ করে আবার লগ ইন করুন।",
-    "defaultBusinessName": "আমার ব্যবসা"
+    "defaultBusinessName": "আমার ব্যবসা",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "বিক্রেতা হন",

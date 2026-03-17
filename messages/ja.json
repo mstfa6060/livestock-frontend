@@ -783,13 +783,15 @@
       "shippingAvailable": "配送可能です。",
       "shippingCost": "送料",
       "weight": "重さ",
-      "weightUnit": "重量単位"
+      "weightUnit": "重量単位",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "例：2歳のホルスタイン牛",
       "shortDescription": "製品説明（最大200文字）",
       "description": "製品に関する詳細情報を提供してください。",
-      "category": "カテゴリを選択してください。"
+      "category": "カテゴリを選択してください。",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "広告タイトルは必須です。",
@@ -797,7 +799,8 @@
       "descriptionRequired": "詳細な説明が必要です。",
       "categoryRequired": "カテゴリー選択は必須です。",
       "priceRequired": "有効な価格を入力してください。"
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "新規出品を作成する",
@@ -827,7 +830,8 @@
       "weightUnit": "重量単位",
       "city": "市",
       "address": "住所",
-      "postalCode": "郵便番号"
+      "postalCode": "郵便番号",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "例：2歳のホルスタイン牛",
@@ -836,7 +840,8 @@
       "category": "カテゴリを選択してください。",
       "city": "街に入る",
       "address": "住所をすべて入力してください。",
-      "postalCode": "郵便番号"
+      "postalCode": "郵便番号",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "広告タイトルは必須です。",
@@ -859,7 +864,8 @@
     "productCreated": "製品の開発に成功しました。",
     "creationFailed": "製品を作成できませんでした。もう一度お試しください。",
     "userNotFound": "ユーザー情報が見つかりませんでした。再度ログインしてください。",
-    "defaultBusinessName": "私のビジネス"
+    "defaultBusinessName": "私のビジネス",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "販売者になる",

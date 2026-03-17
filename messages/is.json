@@ -786,13 +786,15 @@
       "shippingAvailable": "Sending er í boði.",
       "shippingCost": "Sendingargjald",
       "weight": "Þyngd",
-      "weightUnit": "Þyngdareining"
+      "weightUnit": "Þyngdareining",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Dæmi: Tveggja ára Holstein kýr",
       "shortDescription": "Vörulýsing (hámark 200 stafir)",
       "description": "Gefðu ítarlegar upplýsingar um vöruna...",
-      "category": "Veldu flokk."
+      "category": "Veldu flokk.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Titill auglýsingar er skylda.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Ítarleg útskýring er nauðsynleg.",
       "categoryRequired": "Val á flokki er skylda.",
       "priceRequired": "Sláðu inn gilt verð."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Búa til nýja skráningu",
@@ -830,7 +833,8 @@
       "weightUnit": "Þyngdareining",
       "city": "Borg",
       "address": "Heimilisfang",
-      "postalCode": "Póstnúmer"
+      "postalCode": "Póstnúmer",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Dæmi: Tveggja ára Holstein kýr",
@@ -839,7 +843,8 @@
       "category": "Veldu flokk.",
       "city": "Sláðu inn borgina",
       "address": "Sláðu inn allt heimilisfangið.",
-      "postalCode": "Póstnúmer"
+      "postalCode": "Póstnúmer",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Titill auglýsingar er skylda.",
@@ -862,7 +867,8 @@
     "productCreated": "Varan var búin til með góðum árangri.",
     "creationFailed": "Ekki var hægt að búa til vöruna. Reyndu aftur.",
     "userNotFound": "Notandaupplýsingar fundust ekki. Vinsamlegast skráðu þig inn aftur.",
-    "defaultBusinessName": "Fyrirtækið mitt"
+    "defaultBusinessName": "Fyrirtækið mitt",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Vertu seljandi",

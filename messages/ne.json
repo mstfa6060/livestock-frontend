@@ -786,13 +786,15 @@
       "shippingAvailable": "ढुवानी उपलब्ध छ।",
       "shippingCost": "ढुवानी शुल्क",
       "weight": "तौल",
-      "weightUnit": "तौलको एकाइ"
+      "weightUnit": "तौलको एकाइ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "उदाहरण: २ वर्ष पुरानो होल्स्टेन गाई",
       "shortDescription": "उत्पादन विवरण (अधिकतम २०० वर्णहरू)",
       "description": "उत्पादनको बारेमा विस्तृत जानकारी प्रदान गर्नुहोस्...",
-      "category": "एउटा कोटी चयन गर्नुहोस्।"
+      "category": "एउटा कोटी चयन गर्नुहोस्।",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "विज्ञापनको शीर्षक अनिवार्य छ।",
@@ -800,7 +802,8 @@
       "descriptionRequired": "विस्तृत व्याख्या आवश्यक छ।",
       "categoryRequired": "श्रेणी छनोट अनिवार्य छ।",
       "priceRequired": "मान्य मूल्य प्रविष्ट गर्नुहोस्।"
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "नयाँ सूची सिर्जना गर्नुहोस्",
@@ -830,7 +833,8 @@
       "weightUnit": "तौलको एकाइ",
       "city": "शहर",
       "address": "ठेगाना",
-      "postalCode": "हुलाक कोड"
+      "postalCode": "हुलाक कोड",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "उदाहरण: २ वर्ष पुरानो होल्स्टेन गाई",
@@ -839,7 +843,8 @@
       "category": "एउटा कोटी चयन गर्नुहोस्।",
       "city": "शहरमा प्रवेश गर्नुहोस्",
       "address": "पूरा ठेगाना प्रविष्ट गर्नुहोस्।",
-      "postalCode": "हुलाक कोड"
+      "postalCode": "हुलाक कोड",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "विज्ञापनको शीर्षक अनिवार्य छ।",
@@ -862,7 +867,8 @@
     "productCreated": "उत्पादन सफलतापूर्वक सिर्जना गरियो।",
     "creationFailed": "उत्पादन सिर्जना गर्न सकिएन। कृपया फेरि प्रयास गर्नुहोस्।",
     "userNotFound": "प्रयोगकर्ता जानकारी फेला पार्न सकिएन। कृपया फेरि लग इन गर्नुहोस्।",
-    "defaultBusinessName": "मेरो व्यवसाय"
+    "defaultBusinessName": "मेरो व्यवसाय",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "बिक्रेता बन्नुहोस्",

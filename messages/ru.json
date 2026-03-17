@@ -783,13 +783,15 @@
       "shippingAvailable": "Возможна доставка.",
       "shippingCost": "Стоимость доставки",
       "weight": "Масса",
-      "weightUnit": "Единица веса"
+      "weightUnit": "Единица веса",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Пример: 2-летняя голштинская корова",
       "shortDescription": "Описание товара (максимум 200 символов)",
       "description": "Предоставьте подробную информацию о продукте...",
-      "category": "Выберите категорию."
+      "category": "Выберите категорию.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Заголовок объявления обязателен.",
@@ -797,7 +799,8 @@
       "descriptionRequired": "Требуется подробное объяснение.",
       "categoryRequired": "Выбор категории обязателен.",
       "priceRequired": "Введите действительную цену."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Создать новое объявление",
@@ -827,7 +830,8 @@
       "weightUnit": "Единица веса",
       "city": "Город",
       "address": "Адрес",
-      "postalCode": "Почтовый индекс"
+      "postalCode": "Почтовый индекс",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Пример: 2-летняя голштинская корова",
@@ -836,7 +840,8 @@
       "category": "Выберите категорию.",
       "city": "Въезжайте в город",
       "address": "Введите полный адрес.",
-      "postalCode": "Почтовый индекс"
+      "postalCode": "Почтовый индекс",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Заголовок объявления обязателен.",
@@ -859,7 +864,8 @@
     "productCreated": "Продукт успешно создан.",
     "creationFailed": "Не удалось создать товар. Пожалуйста, попробуйте еще раз.",
     "userNotFound": "Информация о пользователе не найдена. Пожалуйста, войдите в систему еще раз.",
-    "defaultBusinessName": "Мой бизнес"
+    "defaultBusinessName": "Мой бизнес",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Станьте продавцом",

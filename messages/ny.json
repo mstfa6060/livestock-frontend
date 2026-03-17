@@ -786,13 +786,15 @@
       "shippingAvailable": "Kutumiza kulipo.",
       "shippingCost": "Ndalama Zotumizira",
       "weight": "Kulemera",
-      "weightUnit": "Chigawo cha Kulemera"
+      "weightUnit": "Chigawo cha Kulemera",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Chitsanzo: Ng'ombe ya Holstein ya zaka ziwiri",
       "shortDescription": "Kufotokozera kwa malonda (zilembo zosapitirira 200)",
       "description": "Perekani zambiri zokhudza malonda...",
-      "category": "Sankhani gulu."
+      "category": "Sankhani gulu.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Dzina la malonda ndi lofunikira.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Kufotokozera mwatsatanetsatane kukufunika.",
       "categoryRequired": "Kusankha gulu n'kofunikira.",
       "priceRequired": "Lowetsani mtengo wolondola."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Pangani Mndandanda Watsopano",
@@ -830,7 +833,8 @@
       "weightUnit": "Chigawo cha Kulemera",
       "city": "Mzinda",
       "address": "Adilesi",
-      "postalCode": "Khodi Yapositi"
+      "postalCode": "Khodi Yapositi",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Chitsanzo: Ng'ombe ya Holstein ya zaka ziwiri",
@@ -839,7 +843,8 @@
       "category": "Sankhani gulu.",
       "city": "Lowani mumzinda",
       "address": "Lowetsani adilesi yonse.",
-      "postalCode": "Khodi Yapositi"
+      "postalCode": "Khodi Yapositi",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Dzina la malonda ndi lofunikira.",
@@ -862,7 +867,8 @@
     "productCreated": "Chogulitsacho chapangidwa bwino.",
     "creationFailed": "Chogulitsacho sichinapangidwe. Yesaninso.",
     "userNotFound": "Zambiri za ogwiritsa ntchito sizinapezeke. Chonde lowaninso.",
-    "defaultBusinessName": "Bizinesi yanga"
+    "defaultBusinessName": "Bizinesi yanga",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Khalani Wogulitsa",

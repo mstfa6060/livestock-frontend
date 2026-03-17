@@ -783,13 +783,15 @@
       "shippingAvailable": "تتوفر خدمة الشحن.",
       "shippingCost": "رسوم الشحن",
       "weight": "وزن",
-      "weightUnit": "وحدة الوزن"
+      "weightUnit": "وحدة الوزن",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "مثال: بقرة هولشتاين عمرها سنتان",
       "shortDescription": "وصف المنتج (بحد أقصى 200 حرف)",
       "description": "قدّم معلومات مفصلة عن المنتج...",
-      "category": "اختر فئة."
+      "category": "اختر فئة.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "عنوان الإعلان إلزامي.",
@@ -797,7 +799,8 @@
       "descriptionRequired": "يلزم تقديم شرح مفصل.",
       "categoryRequired": "اختيار الفئة إلزامي.",
       "priceRequired": "أدخل سعراً صحيحاً."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "إنشاء قائمة جديدة",
@@ -827,7 +830,8 @@
       "weightUnit": "وحدة الوزن",
       "city": "مدينة",
       "address": "عنوان",
-      "postalCode": "رمز بريدي"
+      "postalCode": "رمز بريدي",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "مثال: بقرة هولشتاين عمرها سنتان",
@@ -836,7 +840,8 @@
       "category": "اختر فئة.",
       "city": "ادخل المدينة",
       "address": "أدخل العنوان كاملاً.",
-      "postalCode": "رمز بريدي"
+      "postalCode": "رمز بريدي",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "عنوان الإعلان إلزامي.",
@@ -859,7 +864,8 @@
     "productCreated": "تم إنشاء المنتج بنجاح.",
     "creationFailed": "تعذر إنشاء المنتج. يرجى المحاولة مرة أخرى.",
     "userNotFound": "لم يتم العثور على معلومات المستخدم. يرجى تسجيل الدخول مرة أخرى.",
-    "defaultBusinessName": "عملي"
+    "defaultBusinessName": "عملي",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "كن بائعًا",

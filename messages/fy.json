@@ -786,13 +786,15 @@
       "shippingAvailable": "Ferstjoering is beskikber.",
       "shippingCost": "Ferstjoerkosten",
       "weight": "Gewicht",
-      "weightUnit": "Ienheid fan gewicht"
+      "weightUnit": "Ienheid fan gewicht",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Foarbyld: 2-jierrige Holsteinkoe",
       "shortDescription": "Produktbeskriuwing (maks. 200 tekens)",
       "description": "Jou detaillearre ynformaasje oer it produkt ...",
-      "category": "Selektearje in kategory."
+      "category": "Selektearje in kategory.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "De titel fan 'e advertinsje is ferplicht.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "In detaillearre útlis is nedich.",
       "categoryRequired": "Kategoryseleksje is ferplicht.",
       "priceRequired": "Fier in jildige priis yn."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Nije listing oanmeitsje",
@@ -830,7 +833,8 @@
       "weightUnit": "Ienheid fan gewicht",
       "city": "Stêd",
       "address": "Adres",
-      "postalCode": "Postkoade"
+      "postalCode": "Postkoade",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Foarbyld: 2-jierrige Holsteinkoe",
@@ -839,7 +843,8 @@
       "category": "Selektearje in kategory.",
       "city": "Fier de stêd yn",
       "address": "Fier it folsleine adres yn.",
-      "postalCode": "Postkoade"
+      "postalCode": "Postkoade",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "De titel fan 'e advertinsje is ferplicht.",
@@ -862,7 +867,8 @@
     "productCreated": "It produkt is mei súkses oanmakke.",
     "creationFailed": "It produkt koe net oanmakke wurde. Besykje it nochris.",
     "userNotFound": "Brûkersynformaasje koe net fûn wurde. Meld jo opnij oan.",
-    "defaultBusinessName": "Myn bedriuw"
+    "defaultBusinessName": "Myn bedriuw",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Wurd in ferkeaper",

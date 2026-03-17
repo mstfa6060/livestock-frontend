@@ -786,13 +786,15 @@
       "shippingAvailable": "Достапна е испорака.",
       "shippingCost": "Надомест за испорака",
       "weight": "Тежина",
-      "weightUnit": "Единица за тежина"
+      "weightUnit": "Единица за тежина",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Пример: 2-годишна холштајнска крава",
       "shortDescription": "Опис на производот (максимум 200 знаци)",
       "description": "Обезбедете детални информации за производот...",
-      "category": "Изберете категорија."
+      "category": "Изберете категорија.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Насловот на огласот е задолжителен.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Потребно е детално објаснување.",
       "categoryRequired": "Изборот на категорија е задолжителен.",
       "priceRequired": "Внесете важечка цена."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Креирај нов оглас",
@@ -830,7 +833,8 @@
       "weightUnit": "Единица за тежина",
       "city": "Град",
       "address": "Адреса",
-      "postalCode": "Поштенски код"
+      "postalCode": "Поштенски код",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Пример: 2-годишна холштајнска крава",
@@ -839,7 +843,8 @@
       "category": "Изберете категорија.",
       "city": "Влезете во градот",
       "address": "Внесете ја целосната адреса.",
-      "postalCode": "Поштенски код"
+      "postalCode": "Поштенски код",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Насловот на огласот е задолжителен.",
@@ -862,7 +867,8 @@
     "productCreated": "Производот е успешно креиран.",
     "creationFailed": "Производот не можеше да се креира. Обидете се повторно.",
     "userNotFound": "Не може да се пронајдат кориснички информации. Најавете се повторно.",
-    "defaultBusinessName": "Мојот бизнис"
+    "defaultBusinessName": "Мојот бизнис",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Станете продавач",

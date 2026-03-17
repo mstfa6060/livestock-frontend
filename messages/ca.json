@@ -786,13 +786,15 @@
       "shippingAvailable": "L'enviament està disponible.",
       "shippingCost": "Tarifa d'enviament",
       "weight": "Pes",
-      "weightUnit": "Unitat de pes"
+      "weightUnit": "Unitat de pes",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Exemple: Vaca Holstein de 2 anys",
       "shortDescription": "Descripció del producte (màxim 200 caràcters)",
       "description": "Proporcioneu informació detallada sobre el producte...",
-      "category": "Seleccioneu una categoria."
+      "category": "Seleccioneu una categoria.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "El títol de l'anunci és obligatori.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Cal una explicació detallada.",
       "categoryRequired": "La selecció de categoria és obligatòria.",
       "priceRequired": "Introdueix un preu vàlid."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Crea un anunci nou",
@@ -830,7 +833,8 @@
       "weightUnit": "Unitat de pes",
       "city": "Ciutat",
       "address": "Adreça",
-      "postalCode": "Codi postal"
+      "postalCode": "Codi postal",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Exemple: Vaca Holstein de 2 anys",
@@ -839,7 +843,8 @@
       "category": "Seleccioneu una categoria.",
       "city": "Entra a la ciutat",
       "address": "Introduïu l'adreça completa.",
-      "postalCode": "Codi postal"
+      "postalCode": "Codi postal",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "El títol de l'anunci és obligatori.",
@@ -862,7 +867,8 @@
     "productCreated": "El producte s'ha creat correctament.",
     "creationFailed": "No s'ha pogut crear el producte. Si us plau, torneu-ho a intentar.",
     "userNotFound": "No s'ha trobat la informació de l'usuari. Si us plau, torneu a iniciar la sessió.",
-    "defaultBusinessName": "El meu negoci"
+    "defaultBusinessName": "El meu negoci",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Converteix-te en venedor",

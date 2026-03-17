@@ -786,13 +786,15 @@
       "shippingAvailable": "بار وړل شتون لري.",
       "shippingCost": "د بار وړلو فیس",
       "weight": "وزن",
-      "weightUnit": "د وزن واحد"
+      "weightUnit": "د وزن واحد",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "مثال: دوه کلنه هولسټین غوا",
       "shortDescription": "د محصول توضیحات (اعظمي ۲۰۰ حروف)",
       "description": "د محصول په اړه مفصل معلومات ورکړئ...",
-      "category": "یوه کټګوري غوره کړئ."
+      "category": "یوه کټګوري غوره کړئ.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "د اعلان سرلیک لازمي دی.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "تفصيلي وضاحت ته اړتيا ده.",
       "categoryRequired": "د کټګورۍ انتخاب لازمي دی.",
       "priceRequired": "یو باوري قیمت دننه کړئ."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "نوی لیست جوړ کړئ",
@@ -830,7 +833,8 @@
       "weightUnit": "د وزن واحد",
       "city": "ښار",
       "address": "پته",
-      "postalCode": "پوستي کوډ"
+      "postalCode": "پوستي کوډ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "مثال: دوه کلنه هولسټین غوا",
@@ -839,7 +843,8 @@
       "category": "یوه کټګوري غوره کړئ.",
       "city": "ښار ته ننوځئ",
       "address": "بشپړ پته ولیکئ.",
-      "postalCode": "پوستي کوډ"
+      "postalCode": "پوستي کوډ",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "د اعلان سرلیک لازمي دی.",
@@ -862,7 +867,8 @@
     "productCreated": "محصول په بریالیتوب سره جوړ شو.",
     "creationFailed": "محصول جوړ نشو. مهرباني وکړئ بیا هڅه وکړئ.",
     "userNotFound": "د کارونکي معلومات ونه موندل شول. مهرباني وکړئ بیا ننوتل وکړئ.",
-    "defaultBusinessName": "زما کاروبار"
+    "defaultBusinessName": "زما کاروبار",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "پلورونکی شئ",

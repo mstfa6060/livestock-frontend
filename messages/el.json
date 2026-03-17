@@ -783,13 +783,15 @@
       "shippingAvailable": "Η αποστολή είναι διαθέσιμη.",
       "shippingCost": "Χρέωση αποστολής",
       "weight": "Βάρος",
-      "weightUnit": "Μονάδα βάρους"
+      "weightUnit": "Μονάδα βάρους",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Παράδειγμα: Αγελάδα Χολστάιν 2 ετών",
       "shortDescription": "Περιγραφή προϊόντος (μέγιστο 200 χαρακτήρες)",
       "description": "Παρέχετε λεπτομερείς πληροφορίες για το προϊόν...",
-      "category": "Επιλέξτε μια κατηγορία."
+      "category": "Επιλέξτε μια κατηγορία.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Ο τίτλος της διαφήμισης είναι υποχρεωτικός.",
@@ -797,7 +799,8 @@
       "descriptionRequired": "Απαιτείται λεπτομερής εξήγηση.",
       "categoryRequired": "Η επιλογή κατηγορίας είναι υποχρεωτική.",
       "priceRequired": "Εισαγάγετε μια έγκυρη τιμή."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Δημιουργία Νέας Καταχώρισης",
@@ -827,7 +830,8 @@
       "weightUnit": "Μονάδα βάρους",
       "city": "Πόλη",
       "address": "Διεύθυνση",
-      "postalCode": "Ταχυδρομικός κώδικας"
+      "postalCode": "Ταχυδρομικός κώδικας",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Παράδειγμα: Αγελάδα Χολστάιν 2 ετών",
@@ -836,7 +840,8 @@
       "category": "Επιλέξτε μια κατηγορία.",
       "city": "Μπείτε στην πόλη",
       "address": "Εισαγάγετε την πλήρη διεύθυνση.",
-      "postalCode": "Ταχυδρομικός κώδικας"
+      "postalCode": "Ταχυδρομικός κώδικας",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Ο τίτλος της διαφήμισης είναι υποχρεωτικός.",
@@ -859,7 +864,8 @@
     "productCreated": "Το προϊόν δημιουργήθηκε με επιτυχία.",
     "creationFailed": "Δεν ήταν δυνατή η δημιουργία του προϊόντος. Δοκιμάστε ξανά.",
     "userNotFound": "Δεν ήταν δυνατή η εύρεση των στοιχείων χρήστη. Συνδεθείτε ξανά.",
-    "defaultBusinessName": "Η επιχείρησή μου"
+    "defaultBusinessName": "Η επιχείρησή μου",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Γίνετε Πωλητής",

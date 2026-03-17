@@ -786,13 +786,15 @@
       "shippingAvailable": "Eltip bermek hyzmaty bar.",
       "shippingCost": "Eltip bermek tölegi",
       "weight": "Agram",
-      "weightUnit": "Agram birligi"
+      "weightUnit": "Agram birligi",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Mysal: 2 ýaşly Golşteýn sygyry",
       "shortDescription": "Önümiň düşündirişi (maksimum 200 simwol)",
       "description": "Önüm barada jikme-jik maglumat beriň...",
-      "category": "Bir kategoriýa saýlaň."
+      "category": "Bir kategoriýa saýlaň.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Reklamanyň ady hökmanydyr.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Jikme-jik düşündiriş talap edilýär.",
       "categoryRequired": "Kategoriýa saýlamak hökmanydyr.",
       "priceRequired": "Dogry bahany giriziň."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Täze sanaw dörediň",
@@ -830,7 +833,8 @@
       "weightUnit": "Agram birligi",
       "city": "Şäher",
       "address": "Salgy",
-      "postalCode": "Poçta indeksi"
+      "postalCode": "Poçta indeksi",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Mysal: 2 ýaşly Golşteýn sygyry",
@@ -839,7 +843,8 @@
       "category": "Bir kategoriýa saýlaň.",
       "city": "Şähere giriň",
       "address": "Doly salgyny giriziň.",
-      "postalCode": "Poçta indeksi"
+      "postalCode": "Poçta indeksi",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Reklamanyň ady hökmanydyr.",
@@ -862,7 +867,8 @@
     "productCreated": "Önüm üstünlikli döredildi.",
     "creationFailed": "Önüm döredilip bolmady. Gaýtadan synanyşyň.",
     "userNotFound": "Ulanyjy maglumaty tapylmady. Gaýtadan giriň.",
-    "defaultBusinessName": "Meniň işim"
+    "defaultBusinessName": "Meniň işim",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Satyjy boluň",

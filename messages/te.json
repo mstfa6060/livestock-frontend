@@ -786,13 +786,15 @@
       "shippingAvailable": "షిప్పింగ్ అందుబాటులో ఉంది.",
       "shippingCost": "షిప్పింగ్ రుసుము",
       "weight": "బరువు",
-      "weightUnit": "బరువు యూనిట్"
+      "weightUnit": "బరువు యూనిట్",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ఉదాహరణ: 2 ఏళ్ల హోల్‌స్టెయిన్ ఆవు",
       "shortDescription": "ఉత్పత్తి వివరణ (గరిష్టంగా 200 అక్షరాలు)",
       "description": "ఉత్పత్తి గురించి వివరణాత్మక సమాచారాన్ని అందించండి...",
-      "category": "ఒక వర్గాన్ని ఎంచుకోండి."
+      "category": "ఒక వర్గాన్ని ఎంచుకోండి.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ప్రకటన శీర్షిక తప్పనిసరి.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "వివరణాత్మక వివరణ అవసరం.",
       "categoryRequired": "కేటగిరీ ఎంపిక తప్పనిసరి.",
       "priceRequired": "చెల్లుబాటు అయ్యే ధరను నమోదు చేయండి."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "కొత్త జాబితాను సృష్టించండి",
@@ -830,7 +833,8 @@
       "weightUnit": "బరువు యూనిట్",
       "city": "నగరం",
       "address": "చిరునామా",
-      "postalCode": "పోస్టల్ కోడ్"
+      "postalCode": "పోస్టల్ కోడ్",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ఉదాహరణ: 2 ఏళ్ల హోల్‌స్టెయిన్ ఆవు",
@@ -839,7 +843,8 @@
       "category": "ఒక వర్గాన్ని ఎంచుకోండి.",
       "city": "నగరంలోకి ప్రవేశించండి",
       "address": "పూర్తి చిరునామాను నమోదు చేయండి.",
-      "postalCode": "పోస్టల్ కోడ్"
+      "postalCode": "పోస్టల్ కోడ్",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ప్రకటన శీర్షిక తప్పనిసరి.",
@@ -862,7 +867,8 @@
     "productCreated": "ఉత్పత్తి విజయవంతంగా సృష్టించబడింది.",
     "creationFailed": "ఉత్పత్తిని సృష్టించడం సాధ్యం కాలేదు. దయచేసి మళ్ళీ ప్రయత్నించండి.",
     "userNotFound": "యూజర్ సమాచారం కనుగొనబడలేదు. దయచేసి మళ్ళీ లాగిన్ అవ్వండి.",
-    "defaultBusinessName": "నా వ్యాపారం"
+    "defaultBusinessName": "నా వ్యాపారం",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "విక్రేత అవ్వండి",

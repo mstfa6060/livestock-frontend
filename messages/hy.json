@@ -786,13 +786,15 @@
       "shippingAvailable": "Առաքումը հասանելի է։",
       "shippingCost": "Առաքման վճար",
       "weight": "Քաշը",
-      "weightUnit": "Քաշի միավոր"
+      "weightUnit": "Քաշի միավոր",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Օրինակ՝ 2 տարեկան Հոլշտեյն ցեղատեսակի կով",
       "shortDescription": "Ապրանքի նկարագրություն (առավելագույնը 200 նիշ)",
       "description": "Տրամադրեք ապրանքի մասին մանրամասն տեղեկություններ...",
-      "category": "Ընտրեք կատեգորիա։"
+      "category": "Ընտրեք կատեգորիա։",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Գովազդի վերնագիրը պարտադիր է։",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Անհրաժեշտ է մանրամասն բացատրություն։",
       "categoryRequired": "Կատեգորիայի ընտրությունը պարտադիր է։",
       "priceRequired": "Մուտքագրեք վավեր գին։"
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Ստեղծել նոր ցուցակ",
@@ -830,7 +833,8 @@
       "weightUnit": "Քաշի միավոր",
       "city": "Քաղաք",
       "address": "Հասցե",
-      "postalCode": "Փոստային ինդեքս"
+      "postalCode": "Փոստային ինդեքս",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Օրինակ՝ 2 տարեկան Հոլշտեյն ցեղատեսակի կով",
@@ -839,7 +843,8 @@
       "category": "Ընտրեք կատեգորիա։",
       "city": "Մտեք քաղաք",
       "address": "Մուտքագրեք ամբողջական հասցեն։",
-      "postalCode": "Փոստային ինդեքս"
+      "postalCode": "Փոստային ինդեքս",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Գովազդի վերնագիրը պարտադիր է։",
@@ -862,7 +867,8 @@
     "productCreated": "Ապրանքը հաջողությամբ ստեղծվել է։",
     "creationFailed": "Արտադրանքը չհաջողվեց ստեղծել։ Խնդրում ենք կրկին փորձել։",
     "userNotFound": "Օգտատիրոջ տեղեկությունները չգտնվեցին։ Խնդրում ենք կրկին մուտք գործել։",
-    "defaultBusinessName": "Իմ բիզնեսը"
+    "defaultBusinessName": "Իմ բիզնեսը",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Դարձեք վաճառող",

@@ -786,13 +786,15 @@
       "shippingAvailable": "Vectura praesto est.",
       "shippingCost": "Pretium vecturae",
       "weight": "Pondus",
-      "weightUnit": "Unitas Ponderis"
+      "weightUnit": "Unitas Ponderis",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Exemplum: Vacca Holsteiniana Biennis",
       "shortDescription": "Descriptio producti (maxime 200 characteres)",
       "description": "Informationem accuratam de producto praebe...",
-      "category": "Categoriam elige."
+      "category": "Categoriam elige.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Titulus nuntii necessarius est.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Explicatio accurata requiritur.",
       "categoryRequired": "Categoriae selectio necessaria est.",
       "priceRequired": "Pretium validum inscribe."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Crea Novum Indicem",
@@ -830,7 +833,8 @@
       "weightUnit": "Unitas Ponderis",
       "city": "Urbs",
       "address": "Inscriptio",
-      "postalCode": "Index postalis"
+      "postalCode": "Index postalis",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Exemplum: Vacca Holsteiniana Biennis",
@@ -839,7 +843,8 @@
       "category": "Categoriam elige.",
       "city": "Urbem ingredi",
       "address": "Inscriptionem plenam inscribe.",
-      "postalCode": "Index postalis"
+      "postalCode": "Index postalis",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Titulus nuntii necessarius est.",
@@ -862,7 +867,8 @@
     "productCreated": "Productum feliciter creatum est.",
     "creationFailed": "Productum creari non potuit. Iterum conare, quaeso.",
     "userNotFound": "Notitia usoris non inventa est. Quaeso, iterum ini sessionem.",
-    "defaultBusinessName": "Negotium meum"
+    "defaultBusinessName": "Negotium meum",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Venditor Fi",

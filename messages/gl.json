@@ -786,13 +786,15 @@
       "shippingAvailable": "O envío está dispoñible.",
       "shippingCost": "Gastos de envío",
       "weight": "Peso",
-      "weightUnit": "Unidade de peso"
+      "weightUnit": "Unidade de peso",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Exemplo: vaca Holstein de 2 anos",
       "shortDescription": "Descrición do produto (máximo 200 caracteres)",
       "description": "Proporcione información detallada sobre o produto...",
-      "category": "Selecciona unha categoría."
+      "category": "Selecciona unha categoría.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "O título do anuncio é obrigatorio.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "É necesaria unha explicación detallada.",
       "categoryRequired": "A selección de categoría é obrigatoria.",
       "priceRequired": "Introduza un prezo válido."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Crear novo anuncio",
@@ -830,7 +833,8 @@
       "weightUnit": "Unidade de peso",
       "city": "Cidade",
       "address": "Enderezo",
-      "postalCode": "Código postal"
+      "postalCode": "Código postal",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Exemplo: vaca Holstein de 2 anos",
@@ -839,7 +843,8 @@
       "category": "Selecciona unha categoría.",
       "city": "Entra na cidade",
       "address": "Introduza o enderezo completo.",
-      "postalCode": "Código postal"
+      "postalCode": "Código postal",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "O título do anuncio é obrigatorio.",
@@ -862,7 +867,8 @@
     "productCreated": "O produto foi creado correctamente.",
     "creationFailed": "Non se puido crear o produto. Téntao de novo.",
     "userNotFound": "Non se puido atopar a información do usuario. Volva iniciar sesión.",
-    "defaultBusinessName": "O meu negocio"
+    "defaultBusinessName": "O meu negocio",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Converterse en vendedor",

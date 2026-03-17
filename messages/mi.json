@@ -786,13 +786,15 @@
       "shippingAvailable": "Kei te wātea te tuku.",
       "shippingCost": "Utu Tukunga",
       "weight": "Taumaha",
-      "weightUnit": "Taumaha"
+      "weightUnit": "Taumaha",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Tauira: Kau Holstein 2-Tau te Pakeke",
       "shortDescription": "Whakaahuatanga hua (mōrahi 200 ngā pūāhua)",
       "description": "Tukuna mai ngā kōrero taipitopito mō te hua...",
-      "category": "Tīpakohia tētahi kāwai."
+      "category": "Tīpakohia tētahi kāwai.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Me tuhi te taitara pānuitanga.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Me whai whakamārama taipitopito.",
       "categoryRequired": "He mea whakahau kia tīpakohia te kāwai.",
       "priceRequired": "Tāuruhia he utu tika."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Waihangahia he Rārangi Hou",
@@ -830,7 +833,8 @@
       "weightUnit": "Taumaha",
       "city": "Tāone",
       "address": "Wāhitau",
-      "postalCode": "Waehere poutapeta"
+      "postalCode": "Waehere poutapeta",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Tauira: Kau Holstein 2-Tau te Pakeke",
@@ -839,7 +843,8 @@
       "category": "Tīpakohia tētahi kāwai.",
       "city": "Tomo ki te tāone",
       "address": "Tāuruhia te wāhitau katoa.",
-      "postalCode": "Waehere poutapeta"
+      "postalCode": "Waehere poutapeta",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Me tuhi te taitara pānuitanga.",
@@ -862,7 +867,8 @@
     "productCreated": "I angitu te hanga o te hua.",
     "creationFailed": "Kāore i taea te hanga i te hua. Ngāna anō.",
     "userNotFound": "Kāore i kitea ngā mōhiohio kaiwhakamahi. Tēnā takiuru anō.",
-    "defaultBusinessName": "Taku pakihi"
+    "defaultBusinessName": "Taku pakihi",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Hoko hei Kaihoko",

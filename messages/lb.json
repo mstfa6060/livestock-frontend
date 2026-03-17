@@ -786,13 +786,15 @@
       "shippingAvailable": "Versand ass méiglech.",
       "shippingCost": "Versandkäschten",
       "weight": "Gewiicht",
-      "weightUnit": "Eenheet vum Gewiicht"
+      "weightUnit": "Eenheet vum Gewiicht",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Beispill: 2 Joer al Holstein Kou",
       "shortDescription": "Produktbeschreiwung (maximal 200 Zeechen)",
       "description": "Gitt detailléiert Informatiounen iwwer de Produit ...",
-      "category": "Wielt eng Kategorie."
+      "category": "Wielt eng Kategorie.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Den Titel vun der Reklam ass obligatoresch.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Eng detailléiert Erklärung ass néideg.",
       "categoryRequired": "D'Auswiel vun der Kategorie ass obligatoresch.",
       "priceRequired": "Gitt e gültege Präis an."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Nei Annonce erstellen",
@@ -830,7 +833,8 @@
       "weightUnit": "Eenheet vum Gewiicht",
       "city": "Stad",
       "address": "Adress",
-      "postalCode": "Postleitzuel"
+      "postalCode": "Postleitzuel",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Beispill: 2 Joer al Holstein Kou",
@@ -839,7 +843,8 @@
       "category": "Wielt eng Kategorie.",
       "city": "Gitt an d'Stad eran",
       "address": "Gitt déi komplett Adress an.",
-      "postalCode": "Postleitzuel"
+      "postalCode": "Postleitzuel",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Den Titel vun der Reklam ass obligatoresch.",
@@ -862,7 +867,8 @@
     "productCreated": "D'Produkt gouf erfollegräich erstallt.",
     "creationFailed": "D'Produkt konnt net erstallt ginn. Probéiert et nach eng Kéier.",
     "userNotFound": "D'Benotzerinformatioune konnten net fonnt ginn. Mellt Iech w.e.g. nach eng Kéier un.",
-    "defaultBusinessName": "Mäi Geschäft"
+    "defaultBusinessName": "Mäi Geschäft",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Gitt e Verkeefer",

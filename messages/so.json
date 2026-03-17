@@ -786,13 +786,15 @@
       "shippingAvailable": "Maraakiibtu waa diyaar.",
       "shippingCost": "Kharashka Rarista",
       "weight": "Miisaanka",
-      "weightUnit": "Halbeegga Miisaanka"
+      "weightUnit": "Halbeegga Miisaanka",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Tusaale: Lo'da Holstein ee 2-jirka ah",
       "shortDescription": "Sharaxaadda badeecada (ugu badnaan 200 xaraf)",
       "description": "Bixi macluumaad faahfaahsan oo ku saabsan badeecada...",
-      "category": "Dooro qayb."
+      "category": "Dooro qayb.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Cinwaanka xayaysiisku waa qasab.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Sharaxaad faahfaahsan ayaa loo baahan yahay.",
       "categoryRequired": "Xulashada qaybta waa qasab.",
       "priceRequired": "Geli qiimo sax ah."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Samee Liis Cusub",
@@ -830,7 +833,8 @@
       "weightUnit": "Halbeegga Miisaanka",
       "city": "Magaalada",
       "address": "Cinwaanka",
-      "postalCode": "Koodhka boostada"
+      "postalCode": "Koodhka boostada",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Tusaale: Lo'da Holstein ee 2-jirka ah",
@@ -839,7 +843,8 @@
       "category": "Dooro qayb.",
       "city": "Soo gal magaalada",
       "address": "Geli cinwaanka oo dhan.",
-      "postalCode": "Koodhka boostada"
+      "postalCode": "Koodhka boostada",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Cinwaanka xayaysiisku waa qasab.",
@@ -862,7 +867,8 @@
     "productCreated": "Badeecada si guul leh ayaa loo sameeyay.",
     "creationFailed": "Badeecada lama abuuri karin. Fadlan isku day mar kale.",
     "userNotFound": "Macluumaadka isticmaalaha lama heli karin. Fadlan mar kale soo gal.",
-    "defaultBusinessName": "Ganacsigayga"
+    "defaultBusinessName": "Ganacsigayga",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Noqo Iibiye",

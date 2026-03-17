@@ -786,13 +786,15 @@
       "shippingAvailable": "Penghantaran disediakan.",
       "shippingCost": "Yuran Penghantaran",
       "weight": "Berat",
-      "weightUnit": "Unit Berat"
+      "weightUnit": "Unit Berat",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Contoh: Lembu Holstein Berusia 2 Tahun",
       "shortDescription": "Penerangan produk (maksimum 200 aksara)",
       "description": "Berikan maklumat terperinci tentang produk...",
-      "category": "Pilih kategori."
+      "category": "Pilih kategori.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tajuk iklan adalah wajib.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Penjelasan terperinci diperlukan.",
       "categoryRequired": "Pemilihan kategori adalah wajib.",
       "priceRequired": "Masukkan harga yang sah."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Cipta Penyenaraian Baharu",
@@ -830,7 +833,8 @@
       "weightUnit": "Unit Berat",
       "city": "Bandar",
       "address": "Alamat",
-      "postalCode": "Poskod"
+      "postalCode": "Poskod",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Contoh: Lembu Holstein Berusia 2 Tahun",
@@ -839,7 +843,8 @@
       "category": "Pilih kategori.",
       "city": "Masuk ke bandar",
       "address": "Masukkan alamat penuh.",
-      "postalCode": "Poskod"
+      "postalCode": "Poskod",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tajuk iklan adalah wajib.",
@@ -862,7 +867,8 @@
     "productCreated": "Produk tersebut berjaya dihasilkan.",
     "creationFailed": "Produk tidak dapat dicipta. Sila cuba lagi.",
     "userNotFound": "Maklumat pengguna tidak dapat ditemui. Sila log masuk sekali lagi.",
-    "defaultBusinessName": "Perniagaan saya"
+    "defaultBusinessName": "Perniagaan saya",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Jadilah Penjual",

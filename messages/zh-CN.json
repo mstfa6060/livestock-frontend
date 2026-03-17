@@ -764,13 +764,15 @@
       "shippingAvailable": "提供配送服务。",
       "shippingCost": "运费",
       "weight": "重量",
-      "weightUnit": "重量单位"
+      "weightUnit": "重量单位",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "例如：2岁荷斯坦奶牛",
       "shortDescription": "产品描述（最多 200 个字符）",
       "description": "请提供产品详细信息……",
-      "category": "请选择类别。"
+      "category": "请选择类别。",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "广告标题为必填项。",
@@ -778,7 +780,8 @@
       "descriptionRequired": "需要详细解释。",
       "categoryRequired": "类别选择为必填项。",
       "priceRequired": "请输入有效价格。"
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "创建新列表",
@@ -808,7 +811,8 @@
       "weightUnit": "重量单位",
       "city": "城市",
       "address": "地址",
-      "postalCode": "邮政编码"
+      "postalCode": "邮政编码",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "例如：2岁荷斯坦奶牛",
@@ -817,7 +821,8 @@
       "category": "请选择类别。",
       "city": "进入城市",
       "address": "请输入完整地址。",
-      "postalCode": "邮政编码"
+      "postalCode": "邮政编码",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "广告标题为必填项。",
@@ -840,7 +845,8 @@
     "productCreated": "产品已成功制造完成。",
     "creationFailed": "产品创建失败，请重试。",
     "userNotFound": "未找到用户信息。请重新登录。",
-    "defaultBusinessName": "我的生意"
+    "defaultBusinessName": "我的生意",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "成为卖家",

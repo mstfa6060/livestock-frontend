@@ -786,13 +786,15 @@
       "shippingAvailable": "Dostava je dostupna.",
       "shippingCost": "Troškovi dostave",
       "weight": "Težina",
-      "weightUnit": "Jedinica težine"
+      "weightUnit": "Jedinica težine",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Primjer: Dvogodišnja krava Holstein pasmine",
       "shortDescription": "Opis proizvoda (maksimalno 200 znakova)",
       "description": "Navedite detaljne informacije o proizvodu...",
-      "category": "Odaberite kategoriju."
+      "category": "Odaberite kategoriju.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Naslov oglasa je obavezan.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Potrebno je detaljno objašnjenje.",
       "categoryRequired": "Odabir kategorije je obavezan.",
       "priceRequired": "Unesite valjanu cijenu."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Izradi novi oglas",
@@ -830,7 +833,8 @@
       "weightUnit": "Jedinica težine",
       "city": "Grad",
       "address": "Adresa",
-      "postalCode": "Poštanski broj"
+      "postalCode": "Poštanski broj",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Primjer: Dvogodišnja krava Holstein pasmine",
@@ -839,7 +843,8 @@
       "category": "Odaberite kategoriju.",
       "city": "Uđite u grad",
       "address": "Unesite punu adresu.",
-      "postalCode": "Poštanski broj"
+      "postalCode": "Poštanski broj",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Naslov oglasa je obavezan.",
@@ -862,7 +867,8 @@
     "productCreated": "Proizvod je uspješno kreiran.",
     "creationFailed": "Proizvod nije moguće kreirati. Pokušajte ponovno.",
     "userNotFound": "Podaci o korisniku nisu pronađeni. Molimo vas da se ponovno prijavite.",
-    "defaultBusinessName": "Moj posao"
+    "defaultBusinessName": "Moj posao",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Postanite prodavač",

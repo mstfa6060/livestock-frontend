@@ -786,13 +786,15 @@
       "shippingAvailable": "Livrezon disponib.",
       "shippingCost": "Frè anbake",
       "weight": "Pwa",
-      "weightUnit": "Inite Pwa"
+      "weightUnit": "Inite Pwa",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Egzanp: Bèf Holstein 2 zan",
       "shortDescription": "Deskripsyon pwodwi a (maksimòm 200 karaktè)",
       "description": "Bay enfòmasyon detaye sou pwodwi a...",
-      "category": "Chwazi yon kategori."
+      "category": "Chwazi yon kategori.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tit piblisite a obligatwa.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Yon eksplikasyon detaye nesesè.",
       "categoryRequired": "Seleksyon kategori a obligatwa.",
       "priceRequired": "Antre yon pri ki valab."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Kreye yon nouvo lis",
@@ -830,7 +833,8 @@
       "weightUnit": "Inite Pwa",
       "city": "Vil",
       "address": "Adrès",
-      "postalCode": "Kòd postal"
+      "postalCode": "Kòd postal",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Egzanp: Bèf Holstein 2 zan",
@@ -839,7 +843,8 @@
       "category": "Chwazi yon kategori.",
       "city": "Antre nan vil la",
       "address": "Antre adrès konplè a.",
-      "postalCode": "Kòd postal"
+      "postalCode": "Kòd postal",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Tit piblisite a obligatwa.",
@@ -862,7 +867,8 @@
     "productCreated": "Pwodwi a te kreye avèk siksè.",
     "creationFailed": "Pa t kapab kreye pwodwi a. Tanpri eseye ankò.",
     "userNotFound": "Pa gen enfòmasyon sou itilizatè a. Tanpri konekte ankò.",
-    "defaultBusinessName": "Biznis mwen an"
+    "defaultBusinessName": "Biznis mwen an",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Vin yon Vandè",

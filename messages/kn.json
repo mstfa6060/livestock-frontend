@@ -786,13 +786,15 @@
       "shippingAvailable": "ಶಿಪ್ಪಿಂಗ್ ಲಭ್ಯವಿದೆ.",
       "shippingCost": "ಸಾಗಣೆ ಶುಲ್ಕ",
       "weight": "ತೂಕ",
-      "weightUnit": "ತೂಕದ ಘಟಕ"
+      "weightUnit": "ತೂಕದ ಘಟಕ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ಉದಾಹರಣೆ: 2 ವರ್ಷದ ಹೋಲ್‌ಸ್ಟೈನ್ ಹಸು",
       "shortDescription": "ಉತ್ಪನ್ನ ವಿವರಣೆ (ಗರಿಷ್ಠ 200 ಅಕ್ಷರಗಳು)",
       "description": "ಉತ್ಪನ್ನದ ಬಗ್ಗೆ ವಿವರವಾದ ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸಿ...",
-      "category": "ಒಂದು ವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ."
+      "category": "ಒಂದು ವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ಜಾಹೀರಾತು ಶೀರ್ಷಿಕೆ ಕಡ್ಡಾಯವಾಗಿದೆ.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "ವಿವರವಾದ ವಿವರಣೆಯ ಅಗತ್ಯವಿದೆ.",
       "categoryRequired": "ವರ್ಗ ಆಯ್ಕೆ ಕಡ್ಡಾಯವಾಗಿದೆ.",
       "priceRequired": "ಮಾನ್ಯ ಬೆಲೆಯನ್ನು ನಮೂದಿಸಿ."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "ಹೊಸ ಪಟ್ಟಿಯನ್ನು ರಚಿಸಿ",
@@ -830,7 +833,8 @@
       "weightUnit": "ತೂಕದ ಘಟಕ",
       "city": "ನಗರ",
       "address": "ವಿಳಾಸ",
-      "postalCode": "ಅಂಚೆ ಕೋಡ್"
+      "postalCode": "ಅಂಚೆ ಕೋಡ್",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ಉದಾಹರಣೆ: 2 ವರ್ಷದ ಹೋಲ್‌ಸ್ಟೈನ್ ಹಸು",
@@ -839,7 +843,8 @@
       "category": "ಒಂದು ವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
       "city": "ನಗರವನ್ನು ನಮೂದಿಸಿ",
       "address": "ಪೂರ್ಣ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ.",
-      "postalCode": "ಅಂಚೆ ಕೋಡ್"
+      "postalCode": "ಅಂಚೆ ಕೋಡ್",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ಜಾಹೀರಾತು ಶೀರ್ಷಿಕೆ ಕಡ್ಡಾಯವಾಗಿದೆ.",
@@ -862,7 +867,8 @@
     "productCreated": "ಉತ್ಪನ್ನವನ್ನು ಯಶಸ್ವಿಯಾಗಿ ರಚಿಸಲಾಗಿದೆ.",
     "creationFailed": "ಉತ್ಪನ್ನವನ್ನು ರಚಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
     "userNotFound": "ಬಳಕೆದಾರರ ಮಾಹಿತಿ ಸಿಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಲಾಗಿನ್ ಮಾಡಿ.",
-    "defaultBusinessName": "ನನ್ನ ವ್ಯವಹಾರ"
+    "defaultBusinessName": "ನನ್ನ ವ್ಯವಹಾರ",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "ಮಾರಾಟಗಾರರಾಗಿ",

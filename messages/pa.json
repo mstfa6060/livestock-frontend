@@ -786,13 +786,15 @@
       "shippingAvailable": "ਸ਼ਿਪਿੰਗ ਉਪਲਬਧ ਹੈ।",
       "shippingCost": "ਸ਼ਿਪਿੰਗ ਫੀਸ",
       "weight": "ਭਾਰ",
-      "weightUnit": "ਭਾਰ ਦੀ ਇਕਾਈ"
+      "weightUnit": "ਭਾਰ ਦੀ ਇਕਾਈ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ਉਦਾਹਰਨ: 2 ਸਾਲ ਦੀ ਹੋਲਸਟਾਈਨ ਗਾਂ",
       "shortDescription": "ਉਤਪਾਦ ਵੇਰਵਾ (ਵੱਧ ਤੋਂ ਵੱਧ 200 ਅੱਖਰ)",
       "description": "ਉਤਪਾਦ ਬਾਰੇ ਵਿਸਤ੍ਰਿਤ ਜਾਣਕਾਰੀ ਪ੍ਰਦਾਨ ਕਰੋ...",
-      "category": "ਇੱਕ ਸ਼੍ਰੇਣੀ ਚੁਣੋ।"
+      "category": "ਇੱਕ ਸ਼੍ਰੇਣੀ ਚੁਣੋ।",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ਇਸ਼ਤਿਹਾਰ ਦਾ ਸਿਰਲੇਖ ਲਾਜ਼ਮੀ ਹੈ।",
@@ -800,7 +802,8 @@
       "descriptionRequired": "ਇੱਕ ਵਿਸਤ੍ਰਿਤ ਵਿਆਖਿਆ ਦੀ ਲੋੜ ਹੈ।",
       "categoryRequired": "ਸ਼੍ਰੇਣੀ ਦੀ ਚੋਣ ਲਾਜ਼ਮੀ ਹੈ।",
       "priceRequired": "ਇੱਕ ਵੈਧ ਕੀਮਤ ਦਾਖਲ ਕਰੋ।"
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "ਨਵੀਂ ਸੂਚੀ ਬਣਾਓ",
@@ -830,7 +833,8 @@
       "weightUnit": "ਭਾਰ ਦੀ ਇਕਾਈ",
       "city": "ਸ਼ਹਿਰ",
       "address": "ਪਤਾ",
-      "postalCode": "ਡਾਕ ਕੋਡ"
+      "postalCode": "ਡਾਕ ਕੋਡ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ਉਦਾਹਰਨ: 2 ਸਾਲ ਦੀ ਹੋਲਸਟਾਈਨ ਗਾਂ",
@@ -839,7 +843,8 @@
       "category": "ਇੱਕ ਸ਼੍ਰੇਣੀ ਚੁਣੋ।",
       "city": "ਸ਼ਹਿਰ ਵਿੱਚ ਦਾਖਲ ਹੋਵੋ",
       "address": "ਪੂਰਾ ਪਤਾ ਦਰਜ ਕਰੋ।",
-      "postalCode": "ਡਾਕ ਕੋਡ"
+      "postalCode": "ਡਾਕ ਕੋਡ",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ਇਸ਼ਤਿਹਾਰ ਦਾ ਸਿਰਲੇਖ ਲਾਜ਼ਮੀ ਹੈ।",
@@ -862,7 +867,8 @@
     "productCreated": "ਉਤਪਾਦ ਸਫਲਤਾਪੂਰਵਕ ਬਣਾਇਆ ਗਿਆ ਸੀ।",
     "creationFailed": "ਉਤਪਾਦ ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
     "userNotFound": "ਵਰਤੋਂਕਾਰ ਜਾਣਕਾਰੀ ਨਹੀਂ ਮਿਲ ਸਕੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਲੌਗਇਨ ਕਰੋ।",
-    "defaultBusinessName": "ਮੇਰਾ ਕਾਰੋਬਾਰ"
+    "defaultBusinessName": "ਮੇਰਾ ਕਾਰੋਬਾਰ",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "ਵਿਕਰੇਤਾ ਬਣੋ",

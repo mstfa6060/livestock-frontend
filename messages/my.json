@@ -786,13 +786,15 @@
       "shippingAvailable": "ပို့ဆောင်မှု ရရှိနိုင်ပါသည်။",
       "shippingCost": "ပို့ဆောင်ခ",
       "weight": "အလေးချိန်",
-      "weightUnit": "အလေးချိန်ယူနစ်"
+      "weightUnit": "အလေးချိန်ယူနစ်",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ဥပမာ- ၂ နှစ်အရွယ် Holstein နွား",
       "shortDescription": "ထုတ်ကုန်ဖော်ပြချက် (အများဆုံး စာလုံး ၂၀၀)",
       "description": "ထုတ်ကုန်အကြောင်း အသေးစိတ်အချက်အလက်တွေ ပေးပါ...",
-      "category": "အမျိုးအစားတစ်ခု ရွေးချယ်ပါ။"
+      "category": "အမျိုးအစားတစ်ခု ရွေးချယ်ပါ။",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ကြော်ငြာခေါင်းစဉ်ကို မဖြစ်မနေထည့်သွင်းရမည်။",
@@ -800,7 +802,8 @@
       "descriptionRequired": "အသေးစိတ်ရှင်းလင်းချက်တစ်ခု လိုအပ်ပါသည်။",
       "categoryRequired": "အမျိုးအစားရွေးချယ်မှုသည် မဖြစ်မနေလိုအပ်ပါသည်။",
       "priceRequired": "မှန်ကန်သော ဈေးနှုန်းထည့်ပါ။"
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "စာရင်းအသစ် ဖန်တီးပါ",
@@ -830,7 +833,8 @@
       "weightUnit": "အလေးချိန်ယူနစ်",
       "city": "မြို့",
       "address": "လိပ်စာ",
-      "postalCode": "စာတိုက်သင်္ကေတ"
+      "postalCode": "စာတိုက်သင်္ကေတ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ဥပမာ- ၂ နှစ်အရွယ် Holstein နွား",
@@ -839,7 +843,8 @@
       "category": "အမျိုးအစားတစ်ခု ရွေးချယ်ပါ။",
       "city": "မြို့ထဲဝင်ပါ",
       "address": "လိပ်စာအပြည့်အစုံကို ရိုက်ထည့်ပါ။",
-      "postalCode": "စာတိုက်သင်္ကေတ"
+      "postalCode": "စာတိုက်သင်္ကေတ",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ကြော်ငြာခေါင်းစဉ်ကို မဖြစ်မနေထည့်သွင်းရမည်။",
@@ -862,7 +867,8 @@
     "productCreated": "ထုတ်ကုန်ကို အောင်မြင်စွာ ဖန်တီးနိုင်ခဲ့ပါပြီ။",
     "creationFailed": "ထုတ်ကုန်ကို ဖန်တီး၍မရပါ။ ထပ်မံကြိုးစားပါ။",
     "userNotFound": "အသုံးပြုသူအချက်အလက်ကို ရှာမတွေ့ပါ။ ကျေးဇူးပြု၍ ပြန်လည်ဝင်ရောက်ပါ။",
-    "defaultBusinessName": "ကျွန်တော့်လုပ်ငန်း"
+    "defaultBusinessName": "ကျွန်တော့်လုပ်ငန်း",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "ရောင်းသူဖြစ်လာပါ",

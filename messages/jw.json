@@ -786,13 +786,15 @@
       "shippingAvailable": "Pangiriman kasedhiya.",
       "shippingCost": "Biaya Pengiriman",
       "weight": "Bobot",
-      "weightUnit": "Unit Bobot"
+      "weightUnit": "Unit Bobot",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Tuladha: Sapi Holstein Umur 2 Taun",
       "shortDescription": "Katrangan produk (maksimal 200 karakter)",
       "description": "Nyedhiyakake informasi rinci babagan produk kasebut...",
-      "category": "Pilih kategori."
+      "category": "Pilih kategori.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Judhul iklan iku wajib.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Dibutuhake panjelasan sing rinci.",
       "categoryRequired": "Pemilihan kategori iku wajib.",
       "priceRequired": "Lebokna rega sing valid."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Gawe Dhaptar Anyar",
@@ -830,7 +833,8 @@
       "weightUnit": "Unit Bobot",
       "city": "Kutha",
       "address": "Alamat",
-      "postalCode": "Kode pos"
+      "postalCode": "Kode pos",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Tuladha: Sapi Holstein Umur 2 Taun",
@@ -839,7 +843,8 @@
       "category": "Pilih kategori.",
       "city": "Mlebu kutha",
       "address": "Lebokna alamat lengkap.",
-      "postalCode": "Kode pos"
+      "postalCode": "Kode pos",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Judhul iklan iku wajib.",
@@ -862,7 +867,8 @@
     "productCreated": "Produk kasebut kasil digawe.",
     "creationFailed": "Produk iki ora bisa digawe. Coba maneh.",
     "userNotFound": "Informasi panganggo ora ditemokake. Mangga mlebu maneh.",
-    "defaultBusinessName": "Bisnisku"
+    "defaultBusinessName": "Bisnisku",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Dadi Penjual",

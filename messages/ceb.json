@@ -786,13 +786,15 @@
       "shippingAvailable": "Anaa ang pagpadala.",
       "shippingCost": "Bayad sa Pagpadala",
       "weight": "Timbang",
-      "weightUnit": "Yunit sa Timbang"
+      "weightUnit": "Yunit sa Timbang",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Pananglitan: 2-ka-Tuig nga Baka nga Holstein",
       "shortDescription": "Deskripsyon sa produkto (maximum nga 200 ka karakter)",
       "description": "Paghatag ug detalyadong impormasyon bahin sa produkto...",
-      "category": "Pagpili og kategorya."
+      "category": "Pagpili og kategorya.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Gikinahanglan ang titulo sa advertisement.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Kinahanglan ang detalyadong pagpasabot.",
       "categoryRequired": "Ang pagpili sa kategorya gikinahanglan.",
       "priceRequired": "Pagsulod og balido nga presyo."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Paghimo og Bag-ong Listahan",
@@ -830,7 +833,8 @@
       "weightUnit": "Yunit sa Timbang",
       "city": "Siyudad",
       "address": "Adres",
-      "postalCode": "Kodigo sa koreyo"
+      "postalCode": "Kodigo sa koreyo",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Pananglitan: 2-ka-Tuig nga Baka nga Holstein",
@@ -839,7 +843,8 @@
       "category": "Pagpili og kategorya.",
       "city": "Sulod sa siyudad",
       "address": "Isulod ang kompletong adres.",
-      "postalCode": "Kodigo sa koreyo"
+      "postalCode": "Kodigo sa koreyo",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Gikinahanglan ang titulo sa advertisement.",
@@ -862,7 +867,8 @@
     "productCreated": "Malampuson nga nahimo ang produkto.",
     "creationFailed": "Dili mahimo ang produkto. Palihug sulayi pag-usab.",
     "userNotFound": "Dili makit-an ang impormasyon sa tiggamit. Palihug pag-log in pag-usab.",
-    "defaultBusinessName": "Akong negosyo"
+    "defaultBusinessName": "Akong negosyo",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Mahimong usa ka Magbabaligya",

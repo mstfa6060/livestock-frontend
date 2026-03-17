@@ -783,13 +783,15 @@
       "shippingAvailable": "शिपिंग की सुविधा उपलब्ध है।",
       "shippingCost": "शिपिंग शुल्क",
       "weight": "वज़न",
-      "weightUnit": "वजन की इकाई"
+      "weightUnit": "वजन की इकाई",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "उदाहरण: 2 साल की होल्स्टीन गाय",
       "shortDescription": "उत्पाद का विवरण (अधिकतम 200 अक्षर)",
       "description": "उत्पाद के बारे में विस्तृत जानकारी प्रदान करें...",
-      "category": "एक श्रेणी चुनें।"
+      "category": "एक श्रेणी चुनें।",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "विज्ञापन का शीर्षक अनिवार्य है।",
@@ -797,7 +799,8 @@
       "descriptionRequired": "विस्तृत स्पष्टीकरण आवश्यक है।",
       "categoryRequired": "श्रेणी का चयन अनिवार्य है।",
       "priceRequired": "मान्य मूल्य दर्ज करें।"
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "नई लिस्टिंग बनाएं",
@@ -827,7 +830,8 @@
       "weightUnit": "वजन की इकाई",
       "city": "शहर",
       "address": "पता",
-      "postalCode": "डाक कोड"
+      "postalCode": "डाक कोड",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "उदाहरण: 2 साल की होल्स्टीन गाय",
@@ -836,7 +840,8 @@
       "category": "एक श्रेणी चुनें।",
       "city": "शहर में प्रवेश करें",
       "address": "पूरा पता दर्ज करें।",
-      "postalCode": "डाक कोड"
+      "postalCode": "डाक कोड",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "विज्ञापन का शीर्षक अनिवार्य है।",
@@ -859,7 +864,8 @@
     "productCreated": "उत्पाद का निर्माण सफलतापूर्वक हो गया।",
     "creationFailed": "उत्पाद बनाया नहीं जा सका। कृपया पुनः प्रयास करें।",
     "userNotFound": "उपयोगकर्ता की जानकारी नहीं मिल पाई। कृपया दोबारा लॉग इन करें।",
-    "defaultBusinessName": "मेरा व्यापार"
+    "defaultBusinessName": "मेरा व्यापार",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "विक्रेता बनें",

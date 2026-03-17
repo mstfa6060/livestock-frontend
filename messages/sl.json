@@ -786,13 +786,15 @@
       "shippingAvailable": "Dostava je na voljo.",
       "shippingCost": "Stroški pošiljanja",
       "weight": "Teža",
-      "weightUnit": "Enota teže"
+      "weightUnit": "Enota teže",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Primer: 2-letna krava holštajnske pasme",
       "shortDescription": "Opis izdelka (največ 200 znakov)",
       "description": "Navedite podrobne informacije o izdelku ...",
-      "category": "Izberite kategorijo."
+      "category": "Izberite kategorijo.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Naslov oglasa je obvezen.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Potrebna je podrobna razlaga.",
       "categoryRequired": "Izbira kategorije je obvezna.",
       "priceRequired": "Vnesite veljavno ceno."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Ustvari nov oglas",
@@ -830,7 +833,8 @@
       "weightUnit": "Enota teže",
       "city": "Mesto",
       "address": "Naslov",
-      "postalCode": "Poštna številka"
+      "postalCode": "Poštna številka",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Primer: 2-letna holštajnska krava",
@@ -839,7 +843,8 @@
       "category": "Izberite kategorijo.",
       "city": "Vstopite v mesto",
       "address": "Vnesite celoten naslov.",
-      "postalCode": "Poštna številka"
+      "postalCode": "Poštna številka",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Naslov oglasa je obvezen.",
@@ -862,7 +867,8 @@
     "productCreated": "Izdelek je bil uspešno ustvarjen.",
     "creationFailed": "Izdelka ni bilo mogoče ustvariti. Poskusite znova.",
     "userNotFound": "Podatkov o uporabniku ni bilo mogoče najti. Prosimo, prijavite se znova.",
-    "defaultBusinessName": "Moje podjetje"
+    "defaultBusinessName": "Moje podjetje",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Postanite prodajalec",

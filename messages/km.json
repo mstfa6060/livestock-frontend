@@ -786,13 +786,15 @@
       "shippingAvailable": "មានសេវាដឹកជញ្ជូន។",
       "shippingCost": "ថ្លៃដឹកជញ្ជូន",
       "weight": "ទម្ងន់",
-      "weightUnit": "ឯកតាទម្ងន់"
+      "weightUnit": "ឯកតាទម្ងន់",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ឧទាហរណ៍៖ គោ Holstein អាយុ 2 ឆ្នាំ",
       "shortDescription": "ការពិពណ៌នាអំពីផលិតផល (អតិបរមា 200 តួអក្សរ)",
       "description": "ផ្តល់ព័ត៌មានលម្អិតអំពីផលិតផល...",
-      "category": "ជ្រើសរើសប្រភេទមួយ។"
+      "category": "ជ្រើសរើសប្រភេទមួយ។",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ចំណងជើងផ្សាយពាណិជ្ជកម្មគឺចាំបាច់។",
@@ -800,7 +802,8 @@
       "descriptionRequired": "តម្រូវឱ្យមានការពន្យល់លម្អិត។",
       "categoryRequired": "ការជ្រើសរើសប្រភេទគឺចាំបាច់។",
       "priceRequired": "បញ្ចូលតម្លៃដែលត្រឹមត្រូវ។"
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "បង្កើតបញ្ជីថ្មី",
@@ -830,7 +833,8 @@
       "weightUnit": "ឯកតាទម្ងន់",
       "city": "ទីក្រុង",
       "address": "អាសយដ្ឋាន",
-      "postalCode": "លេខកូដប្រៃសណីយ៍"
+      "postalCode": "លេខកូដប្រៃសណីយ៍",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ឧទាហរណ៍៖ គោ Holstein អាយុ 2 ឆ្នាំ",
@@ -839,7 +843,8 @@
       "category": "ជ្រើសរើសប្រភេទមួយ។",
       "city": "ចូលក្រុង",
       "address": "បញ្ចូលអាសយដ្ឋានពេញលេញ។",
-      "postalCode": "លេខកូដប្រៃសណីយ៍"
+      "postalCode": "លេខកូដប្រៃសណីយ៍",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "ចំណងជើងផ្សាយពាណិជ្ជកម្មគឺចាំបាច់។",
@@ -862,7 +867,8 @@
     "productCreated": "ផលិតផលត្រូវបានបង្កើតឡើងដោយជោគជ័យ។",
     "creationFailed": "មិនអាចបង្កើតផលិតផលនេះបានទេ។ សូមព្យាយាមម្តងទៀត។",
     "userNotFound": "រកមិនឃើញព័ត៌មានអ្នកប្រើប្រាស់ទេ។ សូមចូលម្តងទៀត។",
-    "defaultBusinessName": "អាជីវកម្មរបស់ខ្ញុំ"
+    "defaultBusinessName": "អាជីវកម្មរបស់ខ្ញុំ",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "ក្លាយជាអ្នកលក់",

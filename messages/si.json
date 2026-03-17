@@ -786,13 +786,15 @@
       "shippingAvailable": "නැව්ගත කිරීමේ පහසුකම් ඇත.",
       "shippingCost": "නැව්ගත කිරීමේ ගාස්තුව",
       "weight": "බර",
-      "weightUnit": "බර ඒකකය"
+      "weightUnit": "බර ඒකකය",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "උදාහරණය: අවුරුදු 2 ක් වයසැති හොල්ස්ටයින් එළදෙන",
       "shortDescription": "නිෂ්පාදන විස්තරය (උපරිම අක්ෂර 200)",
       "description": "නිෂ්පාදනය පිළිබඳ සවිස්තර තොරතුරු සපයන්න...",
-      "category": "කාණ්ඩයක් තෝරන්න."
+      "category": "කාණ්ඩයක් තෝරන්න.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "දැන්වීම් මාතෘකාව අනිවාර්ය වේ.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "සවිස්තරාත්මක පැහැදිලි කිරීමක් අවශ්‍යයි.",
       "categoryRequired": "ප්‍රවර්ග තේරීම අනිවාර්ය වේ.",
       "priceRequired": "වලංගු මිලක් ඇතුළත් කරන්න."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "නව ලැයිස්තුගත කිරීමක් සාදන්න",
@@ -830,7 +833,8 @@
       "weightUnit": "බර ඒකකය",
       "city": "නගරය",
       "address": "ලිපිනය",
-      "postalCode": "තැපැල් කේතය"
+      "postalCode": "තැපැල් කේතය",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "උදාහරණය: අවුරුදු 2 ක් වයසැති හොල්ස්ටයින් එළදෙන",
@@ -839,7 +843,8 @@
       "category": "කාණ්ඩයක් තෝරන්න.",
       "city": "නගරයට ඇතුළු වන්න",
       "address": "සම්පූර්ණ ලිපිනය ඇතුළත් කරන්න.",
-      "postalCode": "තැපැල් කේතය"
+      "postalCode": "තැපැල් කේතය",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "දැන්වීම් මාතෘකාව අනිවාර්ය වේ.",
@@ -862,7 +867,8 @@
     "productCreated": "නිෂ්පාදනය සාර්ථකව නිර්මාණය කරන ලදී.",
     "creationFailed": "නිෂ්පාදනය නිර්මාණය කළ නොහැකි විය. කරුණාකර නැවත උත්සාහ කරන්න.",
     "userNotFound": "පරිශීලක තොරතුරු සොයාගත නොහැකි විය. කරුණාකර නැවත පුරනය වන්න.",
-    "defaultBusinessName": "මගේ ව්‍යාපාරය"
+    "defaultBusinessName": "මගේ ව්‍යාපාරය",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "විකුණුම්කරුවෙකු වන්න",

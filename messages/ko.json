@@ -783,13 +783,15 @@
       "shippingAvailable": "배송 가능합니다.",
       "shippingCost": "배송비",
       "weight": "무게",
-      "weightUnit": "무게 단위"
+      "weightUnit": "무게 단위",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "예시: 2살 홀스타인 암소",
       "shortDescription": "제품 설명 (최대 200자)",
       "description": "제품에 대한 자세한 정보를 제공해 주세요...",
-      "category": "카테고리를 선택하세요."
+      "category": "카테고리를 선택하세요.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "광고 제목은 필수 입력 사항입니다.",
@@ -797,7 +799,8 @@
       "descriptionRequired": "자세한 설명이 필요합니다.",
       "categoryRequired": "카테고리 선택은 필수입니다.",
       "priceRequired": "유효한 가격을 입력하세요."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "새 상품 등록하기",
@@ -827,7 +830,8 @@
       "weightUnit": "무게 단위",
       "city": "도시",
       "address": "주소",
-      "postalCode": "우편번호"
+      "postalCode": "우편번호",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "예시: 2살 홀스타인 암소",
@@ -836,7 +840,8 @@
       "category": "카테고리를 선택하세요.",
       "city": "도시로 들어가세요",
       "address": "전체 주소를 입력하세요.",
-      "postalCode": "우편번호"
+      "postalCode": "우편번호",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "광고 제목은 필수 입력 사항입니다.",
@@ -859,7 +864,8 @@
     "productCreated": "제품이 성공적으로 제작되었습니다.",
     "creationFailed": "제품을 만들 수 없습니다. 다시 시도해 주세요.",
     "userNotFound": "사용자 정보를 찾을 수 없습니다. 다시 로그인해 주세요.",
-    "defaultBusinessName": "내 사업"
+    "defaultBusinessName": "내 사업",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "판매자가 되세요",

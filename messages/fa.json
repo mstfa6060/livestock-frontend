@@ -786,13 +786,15 @@
       "shippingAvailable": "ارسال موجود است.",
       "shippingCost": "هزینه ارسال",
       "weight": "وزن",
-      "weightUnit": "واحد وزن"
+      "weightUnit": "واحد وزن",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "مثال: گاو هلشتاین ۲ ساله",
       "shortDescription": "توضیحات محصول (حداکثر ۲۰۰ کاراکتر)",
       "description": "ارائه اطلاعات دقیق در مورد محصول ...",
-      "category": "یک دسته بندی انتخاب کنید."
+      "category": "یک دسته بندی انتخاب کنید.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "عنوان آگهی الزامی است.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "توضیح مفصلی لازم است.",
       "categoryRequired": "انتخاب دسته بندی الزامی است.",
       "priceRequired": "قیمت معتبر وارد کنید."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "ایجاد آگهی جدید",
@@ -830,7 +833,8 @@
       "weightUnit": "واحد وزن",
       "city": "شهر",
       "address": "آدرس",
-      "postalCode": "کد پستی"
+      "postalCode": "کد پستی",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "مثال: گاو هلشتاین ۲ ساله",
@@ -839,7 +843,8 @@
       "category": "یک دسته بندی انتخاب کنید.",
       "city": "وارد شهر شوید",
       "address": "آدرس کامل را وارد کنید.",
-      "postalCode": "کد پستی"
+      "postalCode": "کد پستی",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "عنوان آگهی الزامی است.",
@@ -862,7 +867,8 @@
     "productCreated": "محصول با موفقیت ایجاد شد.",
     "creationFailed": "محصول ایجاد نشد. لطفا دوباره امتحان کنید.",
     "userNotFound": "اطلاعات کاربر یافت نشد. لطفا دوباره وارد شوید.",
-    "defaultBusinessName": "کسب و کار من"
+    "defaultBusinessName": "کسب و کار من",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "فروشنده شوید",

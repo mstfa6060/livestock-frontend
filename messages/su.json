@@ -786,13 +786,15 @@
       "shippingAvailable": "Pangiriman sayogi.",
       "shippingCost": "Biaya Pangiriman",
       "weight": "Beurat",
-      "weightUnit": "Unit Beurat"
+      "weightUnit": "Unit Beurat",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Conto: Sapi Holstein Umur 2 Taun",
       "shortDescription": "Pedaran produk (maksimal 200 karakter)",
       "description": "Nyuhunkeun inpormasi lengkep ngeunaan produkna...",
-      "category": "Pilih hiji kategori."
+      "category": "Pilih hiji kategori.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Judul iklan wajib ditulis.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Diperlukeun katerangan anu lengkep.",
       "categoryRequired": "Pilihan kategori wajib.",
       "priceRequired": "Lebetkeun harga anu valid."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Jieun Daptar Anyar",
@@ -830,7 +833,8 @@
       "weightUnit": "Unit Beurat",
       "city": "Kota",
       "address": "Alamat",
-      "postalCode": "Kodeu Pos"
+      "postalCode": "Kodeu Pos",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Conto: Sapi Holstein Umur 2 Taun",
@@ -839,7 +843,8 @@
       "category": "Pilih hiji kategori.",
       "city": "Lebet ka kota",
       "address": "Lebetkeun alamat lengkepna.",
-      "postalCode": "Kodeu Pos"
+      "postalCode": "Kodeu Pos",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Judul iklan wajib ditulis.",
@@ -862,7 +867,8 @@
     "productCreated": "Produkna parantos hasil dijieun.",
     "creationFailed": "Produkna teu tiasa didamel. Mangga cobian deui.",
     "userNotFound": "Inpormasi pangguna teu kapendak. Mangga lebet deui.",
-    "defaultBusinessName": "Usaha kuring"
+    "defaultBusinessName": "Usaha kuring",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Janten Penjual",

@@ -30,6 +30,7 @@ import { toast } from "sonner";
 import { useCategories, useCurrencies, useProductDetail, useSellerByUserId } from "@/hooks/queries";
 import { queryKeys } from "@/lib/query-keys";
 import { editListingFormSchema, type EditListingFormData } from "@/lib/validations";
+import { CurrencyCombobox, type CurrencyOption } from "@/components/features/currency-combobox";
 import dynamic from "next/dynamic";
 const MediaUpload = dynamic(() => import("@/components/features/media-upload").then(mod => ({ default: mod.MediaUpload })), { ssr: false });
 
@@ -68,6 +69,7 @@ export default function EditListingPage() {
 
   const { data: currenciesData } = useCurrencies();
   const currencies = (currenciesData ?? []).filter((c: any) => c.isActive).sort((a: any, b: any) => a.code.localeCompare(b.code));
+  const currencyOptions: CurrencyOption[] = currencies.map((c: any) => ({ code: c.code, symbol: c.symbol, name: c.name }));
 
   const { data: product, isLoading: isProductLoading, isError: isProductError } = useProductDetail(productId);
 
@@ -119,7 +121,7 @@ export default function EditListingPage() {
       description: "",
       categoryId: "",
       basePrice: "",
-      currency: selectedCountry?.defaultCurrencyCode || "TRY",
+      currency: user?.currencyCode || selectedCountry?.defaultCurrencyCode || "USD",
       priceUnit: "adet",
       stockQuantity: "1",
       stockUnit: "adet",
@@ -452,18 +454,15 @@ export default function EditListingPage() {
                       name="currency"
                       control={control}
                       render={({ field }) => (
-                        <Select value={field.value} onValueChange={field.onChange}>
-                          <SelectTrigger className="w-24">
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {currencies.map((c: any) => (
-                              <SelectItem key={c.code} value={c.code}>
-                                {c.symbol} {c.code}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
+                        <CurrencyCombobox
+                          currencies={currencyOptions}
+                          value={field.value}
+                          onValueChange={field.onChange}
+                          placeholder={t("fields.currency")}
+                          searchPlaceholder={t("placeholders.searchCurrency")}
+                          emptyText={t("noCurrencyFound")}
+                          className="w-36"
+                        />
                       )}
                     />
                   </div>

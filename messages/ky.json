@@ -786,13 +786,15 @@
       "shippingAvailable": "Жеткирүү кызматы бар.",
       "shippingCost": "Жеткирүү акысы",
       "weight": "Салмак",
-      "weightUnit": "Салмак бирдиги"
+      "weightUnit": "Салмак бирдиги",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Мисал: 2 жаштагы гольштейн тукумундагы уй",
       "shortDescription": "Продукциянын сүрөттөмөсү (максимум 200 белги)",
       "description": "Продукция жөнүндө толук маалымат бериңиз...",
-      "category": "Категорияны тандаңыз."
+      "category": "Категорияны тандаңыз.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Жарнаманын аталышы милдеттүү түрдө көрсөтүлүшү керек.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Толук түшүндүрмө талап кылынат.",
       "categoryRequired": "Категорияны тандоо милдеттүү болуп саналат.",
       "priceRequired": "Жарактуу бааны киргизиңиз."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Жаңы тизме түзүү",
@@ -830,7 +833,8 @@
       "weightUnit": "Салмак бирдиги",
       "city": "Шаар",
       "address": "Дарек",
-      "postalCode": "Почта индекси"
+      "postalCode": "Почта индекси",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Мисал: 2 жаштагы гольштейн тукумундагы уй",
@@ -839,7 +843,8 @@
       "category": "Категорияны тандаңыз.",
       "city": "Шаарга кириңиз",
       "address": "Толук даректи киргизиңиз.",
-      "postalCode": "Почта индекси"
+      "postalCode": "Почта индекси",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Жарнаманын аталышы милдеттүү түрдө көрсөтүлүшү керек.",
@@ -862,7 +867,8 @@
     "productCreated": "Продукт ийгиликтүү түзүлдү.",
     "creationFailed": "Продукцияны түзүү мүмкүн болгон жок. Кайра аракет кылып көрүңүз.",
     "userNotFound": "Колдонуучунун маалыматы табылган жок. Кайрадан кириңиз.",
-    "defaultBusinessName": "Менин бизнесим"
+    "defaultBusinessName": "Менин бизнесим",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Сатуучу болуңуз",

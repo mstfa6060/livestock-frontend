@@ -786,13 +786,15 @@
       "shippingAvailable": "Versending is beskikbaar.",
       "shippingCost": "Versendingsfooi",
       "weight": "Gewig",
-      "weightUnit": "Eenheid van Gewig"
+      "weightUnit": "Eenheid van Gewig",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Voorbeeld: 2-jarige Holstein-koei",
       "shortDescription": "Produkbeskrywing (maks. 200 karakters)",
       "description": "Verskaf gedetailleerde inligting oor die produk...",
-      "category": "Kies 'n kategorie."
+      "category": "Kies 'n kategorie.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Advertensietitel is verpligtend.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "'n Gedetailleerde verduideliking word benodig.",
       "categoryRequired": "Kategoriekeuse is verpligtend.",
       "priceRequired": "Voer 'n geldige prys in."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Skep Nuwe Lys",
@@ -830,7 +833,8 @@
       "weightUnit": "Eenheid van Gewig",
       "city": "Stad",
       "address": "Adres",
-      "postalCode": "Poskode"
+      "postalCode": "Poskode",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Voorbeeld: 2-jarige Holstein-koei",
@@ -839,7 +843,8 @@
       "category": "Kies 'n kategorie.",
       "city": "Betree die stad",
       "address": "Voer die volledige adres in.",
-      "postalCode": "Poskode"
+      "postalCode": "Poskode",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Advertensietitel is verpligtend.",
@@ -862,7 +867,8 @@
     "productCreated": "Die produk is suksesvol geskep.",
     "creationFailed": "Die produk kon nie geskep word nie. Probeer asseblief weer.",
     "userNotFound": "Gebruikersinligting kon nie gevind word nie. Meld asseblief weer aan.",
-    "defaultBusinessName": "My besigheid"
+    "defaultBusinessName": "My besigheid",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Word 'n Verkoper",

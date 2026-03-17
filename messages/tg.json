@@ -786,13 +786,15 @@
       "shippingAvailable": "Интиқол дастрас аст.",
       "shippingCost": "Пардохти интиқол",
       "weight": "Вазн",
-      "weightUnit": "Воҳиди вазн"
+      "weightUnit": "Воҳиди вазн",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Мисол: Говҳои 2-солаи зоти Ҳолштейн",
       "shortDescription": "Тавсифи маҳсулот (ҳадди аксар 200 аломат)",
       "description": "Маълумоти муфассалро дар бораи маҳсулот пешниҳод кунед...",
-      "category": "Як категорияро интихоб кунед."
+      "category": "Як категорияро интихоб кунед.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Унвони таблиғотӣ ҳатмист.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Шарҳи муфассал лозим аст.",
       "categoryRequired": "Интихоби категория ҳатмӣ аст.",
       "priceRequired": "Нархи дурустро ворид кунед."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Эҷоди рӯйхати нав",
@@ -830,7 +833,8 @@
       "weightUnit": "Воҳиди вазн",
       "city": "Шаҳр",
       "address": "Суроға",
-      "postalCode": "Рамзи почта"
+      "postalCode": "Рамзи почта",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Мисол: Говҳои 2-солаи зоти Ҳолштейн",
@@ -839,7 +843,8 @@
       "category": "Як категорияро интихоб кунед.",
       "city": "Ба шаҳр ворид шавед",
       "address": "Суроғаи пурраро ворид кунед.",
-      "postalCode": "Рамзи почта"
+      "postalCode": "Рамзи почта",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Унвони таблиғотӣ ҳатмист.",
@@ -862,7 +867,8 @@
     "productCreated": "Маҳсулот бомуваффақият сохта шуд.",
     "creationFailed": "Маҳсулот эҷод карда нашуд. Лутфан, дубора кӯшиш кунед.",
     "userNotFound": "Маълумоти корбар пайдо нашуд. Лутфан, дубора ворид шавед.",
-    "defaultBusinessName": "Тиҷорати ман"
+    "defaultBusinessName": "Тиҷорати ман",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Фурӯшанда шавед",

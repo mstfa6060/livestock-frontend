@@ -786,13 +786,15 @@
       "shippingAvailable": "May shipping na available.",
       "shippingCost": "Bayad sa Pagpapadala",
       "weight": "Timbang",
-      "weightUnit": "Yunit ng Timbang"
+      "weightUnit": "Yunit ng Timbang",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Halimbawa: 2-Taong Gulang na Bakang Holstein",
       "shortDescription": "Paglalarawan ng produkto (maximum na 200 karakter)",
       "description": "Magbigay ng detalyadong impormasyon tungkol sa produkto...",
-      "category": "Pumili ng kategorya."
+      "category": "Pumili ng kategorya.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Kinakailangan ang pamagat ng patalastas.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Kinakailangan ang isang detalyadong paliwanag.",
       "categoryRequired": "Ang pagpili ng kategorya ay sapilitan.",
       "priceRequired": "Maglagay ng wastong presyo."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Gumawa ng Bagong Listahan",
@@ -830,7 +833,8 @@
       "weightUnit": "Yunit ng Timbang",
       "city": "Lungsod",
       "address": "Tirahan",
-      "postalCode": "Kodigo ng koreo"
+      "postalCode": "Kodigo ng koreo",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Halimbawa: 2-Taong Gulang na Bakang Holstein",
@@ -839,7 +843,8 @@
       "category": "Pumili ng kategorya.",
       "city": "Pumasok sa lungsod",
       "address": "Ilagay ang buong address.",
-      "postalCode": "Kodigo ng koreo"
+      "postalCode": "Kodigo ng koreo",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Kinakailangan ang pamagat ng patalastas.",
@@ -862,7 +867,8 @@
     "productCreated": "Matagumpay na nalikha ang produkto.",
     "creationFailed": "Hindi malikha ang produkto. Pakisubukang muli.",
     "userNotFound": "Hindi mahanap ang impormasyon ng user. Mangyaring mag-log in muli.",
-    "defaultBusinessName": "Ang negosyo ko"
+    "defaultBusinessName": "Ang negosyo ko",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Maging isang Nagbebenta",

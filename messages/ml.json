@@ -786,13 +786,15 @@
       "shippingAvailable": "ഷിപ്പിംഗ് ലഭ്യമാണ്.",
       "shippingCost": "ഷിപ്പിംഗ് ഫീസ്",
       "weight": "ഭാരം",
-      "weightUnit": "ഭാരത്തിന്റെ യൂണിറ്റ്"
+      "weightUnit": "ഭാരത്തിന്റെ യൂണിറ്റ്",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ഉദാഹരണം: 2 വയസ്സുള്ള ഹോൾസ്റ്റീൻ പശു",
       "shortDescription": "ഉൽപ്പന്ന വിവരണം (പരമാവധി 200 പ്രതീകങ്ങൾ)",
       "description": "ഉൽപ്പന്നത്തെക്കുറിച്ചുള്ള വിശദമായ വിവരങ്ങൾ നൽകുക...",
-      "category": "ഒരു വിഭാഗം തിരഞ്ഞെടുക്കുക."
+      "category": "ഒരു വിഭാഗം തിരഞ്ഞെടുക്കുക.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "പരസ്യ ശീർഷകം നിർബന്ധമാണ്.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "വിശദമായ ഒരു വിശദീകരണം ആവശ്യമാണ്.",
       "categoryRequired": "വിഭാഗം തിരഞ്ഞെടുക്കൽ നിർബന്ധമാണ്.",
       "priceRequired": "സാധുവായ ഒരു വില നൽകുക."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "പുതിയ ലിസ്റ്റിംഗ് സൃഷ്ടിക്കുക",
@@ -830,7 +833,8 @@
       "weightUnit": "ഭാരത്തിന്റെ യൂണിറ്റ്",
       "city": "നഗരം",
       "address": "വിലാസം",
-      "postalCode": "തപാൽ കോഡ്"
+      "postalCode": "തപാൽ കോഡ്",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ഉദാഹരണം: 2 വയസ്സുള്ള ഹോൾസ്റ്റീൻ പശു",
@@ -839,7 +843,8 @@
       "category": "ഒരു വിഭാഗം തിരഞ്ഞെടുക്കുക.",
       "city": "നഗരത്തിലേക്ക് പ്രവേശിക്കുക",
       "address": "പൂർണ്ണ വിലാസം നൽകുക.",
-      "postalCode": "തപാൽ കോഡ്"
+      "postalCode": "തപാൽ കോഡ്",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "പരസ്യ ശീർഷകം നിർബന്ധമാണ്.",
@@ -862,7 +867,8 @@
     "productCreated": "ഉൽപ്പന്നം വിജയകരമായി സൃഷ്ടിച്ചു.",
     "creationFailed": "ഉൽപ്പന്നം സൃഷ്ടിക്കാൻ കഴിഞ്ഞില്ല. വീണ്ടും ശ്രമിക്കുക.",
     "userNotFound": "ഉപയോക്തൃ വിവരങ്ങൾ കണ്ടെത്താൻ കഴിഞ്ഞില്ല. വീണ്ടും ലോഗിൻ ചെയ്യുക.",
-    "defaultBusinessName": "എന്റെ ബിസിനസ്സ്"
+    "defaultBusinessName": "എന്റെ ബിസിനസ്സ്",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "ഒരു വിൽപ്പനക്കാരനാകുക",

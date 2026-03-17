@@ -786,13 +786,15 @@
       "shippingAvailable": "அனுப்பும் வசதி உண்டு.",
       "shippingCost": "கப்பல் கட்டணம்",
       "weight": "எடை",
-      "weightUnit": "எடையின் அலகு"
+      "weightUnit": "எடையின் அலகு",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "உதாரணம்: 2 வயது ஹோல்ஸ்டீன் பசு",
       "shortDescription": "தயாரிப்பு விளக்கம் (அதிகபட்சம் 200 எழுத்துகள்)",
       "description": "தயாரிப்பு பற்றிய விரிவான தகவல்களை வழங்கவும்...",
-      "category": "ஒரு வகையைத் தேர்ந்தெடுக்கவும்."
+      "category": "ஒரு வகையைத் தேர்ந்தெடுக்கவும்.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "விளம்பரத் தலைப்பு கட்டாயமாகும்.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "விரிவான விளக்கம் தேவை.",
       "categoryRequired": "வகைத் தேர்வு கட்டாயமாகும்.",
       "priceRequired": "செல்லுபடியாகும் விலையை உள்ளிடவும்."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "புதிய பட்டியலை உருவாக்கு",
@@ -830,7 +833,8 @@
       "weightUnit": "எடையின் அலகு",
       "city": "நகரம்",
       "address": "முகவரி",
-      "postalCode": "அஞ்சல் குறியீடு"
+      "postalCode": "அஞ்சல் குறியீடு",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "உதாரணம்: 2 வயது ஹோல்ஸ்டீன் பசு",
@@ -839,7 +843,8 @@
       "category": "ஒரு வகையைத் தேர்ந்தெடுக்கவும்.",
       "city": "நகரத்திற்குள் நுழையுங்கள்",
       "address": "முழு முகவரியையும் உள்ளிடவும்.",
-      "postalCode": "அஞ்சல் குறியீடு"
+      "postalCode": "அஞ்சல் குறியீடு",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "விளம்பரத் தலைப்பு கட்டாயமாகும்.",
@@ -862,7 +867,8 @@
     "productCreated": "தயாரிப்பு வெற்றிகரமாக உருவாக்கப்பட்டது.",
     "creationFailed": "தயாரிப்பை உருவாக்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.",
     "userNotFound": "பயனர் தகவலைக் கண்டறிய முடியவில்லை. மீண்டும் உள்நுழையவும்.",
-    "defaultBusinessName": "என் தொழில்"
+    "defaultBusinessName": "என் தொழில்",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "விற்பனையாளராகுங்கள்",

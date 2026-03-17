@@ -786,13 +786,15 @@
       "shippingAvailable": "Pengiriman tersedia.",
       "shippingCost": "Biaya Pengiriman",
       "weight": "Berat",
-      "weightUnit": "Satuan Berat"
+      "weightUnit": "Satuan Berat",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Contoh: Sapi Holstein Berumur 2 Tahun",
       "shortDescription": "Deskripsi produk (maksimal 200 karakter)",
       "description": "Berikan informasi detail tentang produk tersebut...",
-      "category": "Pilih kategori."
+      "category": "Pilih kategori.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Judul iklan wajib diisi.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Penjelasan rinci diperlukan.",
       "categoryRequired": "Pemilihan kategori bersifat wajib.",
       "priceRequired": "Masukkan harga yang valid."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Buat Daftar Baru",
@@ -830,7 +833,8 @@
       "weightUnit": "Satuan Berat",
       "city": "Kota",
       "address": "Alamat",
-      "postalCode": "kode Pos"
+      "postalCode": "kode Pos",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Contoh: Sapi Holstein Berumur 2 Tahun",
@@ -839,7 +843,8 @@
       "category": "Pilih kategori.",
       "city": "Masuk ke kota",
       "address": "Masukkan alamat lengkap.",
-      "postalCode": "kode Pos"
+      "postalCode": "kode Pos",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Judul iklan wajib diisi.",
@@ -862,7 +867,8 @@
     "productCreated": "Produk tersebut berhasil dibuat.",
     "creationFailed": "Produk tidak dapat dibuat. Silakan coba lagi.",
     "userNotFound": "Informasi pengguna tidak dapat ditemukan. Silakan masuk kembali.",
-    "defaultBusinessName": "Bisnis saya"
+    "defaultBusinessName": "Bisnis saya",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Menjadi Penjual",

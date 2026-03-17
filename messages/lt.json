@@ -786,13 +786,15 @@
       "shippingAvailable": "Siuntimas galimas.",
       "shippingCost": "Siuntimo mokestis",
       "weight": "Svoris",
-      "weightUnit": "Svorio vienetas"
+      "weightUnit": "Svorio vienetas",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Pavyzdys: 2 metų Holšteino veislės karvė",
       "shortDescription": "Produkto aprašymas (daugiausia 200 simbolių)",
       "description": "Pateikite išsamią informaciją apie produktą...",
-      "category": "Pasirinkite kategoriją."
+      "category": "Pasirinkite kategoriją.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Reklamos pavadinimas yra privalomas.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Reikalingas išsamus paaiškinimas.",
       "categoryRequired": "Kategorijos pasirinkimas yra privalomas.",
       "priceRequired": "Įveskite galiojančią kainą."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Sukurti naują skelbimą",
@@ -830,7 +833,8 @@
       "weightUnit": "Svorio vienetas",
       "city": "Miestas",
       "address": "Adresas",
-      "postalCode": "Pašto kodas"
+      "postalCode": "Pašto kodas",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Pavyzdys: 2 metų Holšteino veislės karvė",
@@ -839,7 +843,8 @@
       "category": "Pasirinkite kategoriją.",
       "city": "Įeikite į miestą",
       "address": "Įveskite visą adresą.",
-      "postalCode": "Pašto kodas"
+      "postalCode": "Pašto kodas",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Reklamos pavadinimas yra privalomas.",
@@ -862,7 +867,8 @@
     "productCreated": "Produktas buvo sėkmingai sukurtas.",
     "creationFailed": "Nepavyko sukurti produkto. Bandykite dar kartą.",
     "userNotFound": "Nepavyko rasti naudotojo informacijos. Prisijunkite dar kartą.",
-    "defaultBusinessName": "Mano verslas"
+    "defaultBusinessName": "Mano verslas",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Tapkite pardavėju",

@@ -786,13 +786,15 @@
       "shippingAvailable": "Transporti është i disponueshëm.",
       "shippingCost": "Tarifa e transportit",
       "weight": "Pesha",
-      "weightUnit": "Njësia e Peshës"
+      "weightUnit": "Njësia e Peshës",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Shembull: Lopë Holstein 2-vjeçare",
       "shortDescription": "Përshkrimi i produktit (maksimumi 200 karaktere)",
       "description": "Jepni informacion të detajuar rreth produktit...",
-      "category": "Zgjidhni një kategori."
+      "category": "Zgjidhni një kategori.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Titulli i reklamës është i detyrueshëm.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "Kërkohet një shpjegim i hollësishëm.",
       "categoryRequired": "Zgjedhja e kategorisë është e detyrueshme.",
       "priceRequired": "Jepni një çmim të vlefshëm."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "Krijo Listë të Re",
@@ -830,7 +833,8 @@
       "weightUnit": "Njësia e Peshës",
       "city": "Qyteti",
       "address": "Adresa",
-      "postalCode": "Kodi postar"
+      "postalCode": "Kodi postar",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "Shembull: Lopë Holstein 2-vjeçare",
@@ -839,7 +843,8 @@
       "category": "Zgjidhni një kategori.",
       "city": "Hyr në qytet",
       "address": "Shkruani adresën e plotë.",
-      "postalCode": "Kodi postar"
+      "postalCode": "Kodi postar",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "Titulli i reklamës është i detyrueshëm.",
@@ -862,7 +867,8 @@
     "productCreated": "Produkti u krijua me sukses.",
     "creationFailed": "Produkti nuk mund të krijohej. Ju lutemi provoni përsëri.",
     "userNotFound": "Informacioni i përdoruesit nuk mund të gjendej. Ju lutemi, hyni përsëri.",
-    "defaultBusinessName": "Biznesi im"
+    "defaultBusinessName": "Biznesi im",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "Bëhu një shitës",

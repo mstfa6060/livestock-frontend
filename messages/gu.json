@@ -786,13 +786,15 @@
       "shippingAvailable": "શિપિંગ ઉપલબ્ધ છે.",
       "shippingCost": "શિપિંગ ફી",
       "weight": "વજન",
-      "weightUnit": "વજનનું એકમ"
+      "weightUnit": "વજનનું એકમ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ઉદાહરણ: 2 વર્ષની હોલ્સ્ટાઇન ગાય",
       "shortDescription": "ઉત્પાદન વર્ણન (મહત્તમ 200 અક્ષરો)",
       "description": "ઉત્પાદન વિશે વિગતવાર માહિતી આપો...",
-      "category": "શ્રેણી પસંદ કરો."
+      "category": "શ્રેણી પસંદ કરો.",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "જાહેરાતનું શીર્ષક ફરજિયાત છે.",
@@ -800,7 +802,8 @@
       "descriptionRequired": "વિગતવાર સમજૂતી જરૂરી છે.",
       "categoryRequired": "શ્રેણી પસંદગી ફરજિયાત છે.",
       "priceRequired": "માન્ય કિંમત દાખલ કરો."
-    }
+    },
+    "noCurrencyFound": "No currency found."
   },
   "newListing": {
     "title": "નવી સૂચિ બનાવો",
@@ -830,7 +833,8 @@
       "weightUnit": "વજનનું એકમ",
       "city": "શહેર",
       "address": "સરનામું",
-      "postalCode": "પોસ્ટલ કોડ"
+      "postalCode": "પોસ્ટલ કોડ",
+      "currency": "Currency"
     },
     "placeholders": {
       "title": "ઉદાહરણ: 2 વર્ષની હોલ્સ્ટાઇન ગાય",
@@ -839,7 +843,8 @@
       "category": "શ્રેણી પસંદ કરો.",
       "city": "શહેરમાં પ્રવેશ કરો",
       "address": "પૂરું સરનામું દાખલ કરો.",
-      "postalCode": "પોસ્ટલ કોડ"
+      "postalCode": "પોસ્ટલ કોડ",
+      "searchCurrency": "Search currency..."
     },
     "errors": {
       "titleRequired": "જાહેરાતનું શીર્ષક ફરજિયાત છે.",
@@ -862,7 +867,8 @@
     "productCreated": "ઉત્પાદન સફળતાપૂર્વક બનાવવામાં આવ્યું હતું.",
     "creationFailed": "ઉત્પાદન બનાવી શકાયું નથી. કૃપા કરીને ફરી પ્રયાસ કરો.",
     "userNotFound": "વપરાશકર્તા માહિતી મળી શકી નથી. કૃપા કરીને ફરીથી લોગ ઇન કરો.",
-    "defaultBusinessName": "મારો વ્યવસાય"
+    "defaultBusinessName": "મારો વ્યવસાય",
+    "noCurrencyFound": "No currency found."
   },
   "becomeSeller": {
     "title": "વિક્રેતા બનો",

@@ -786,14 +786,17 @@
       "shippingAvailable": "Kargo ile gönderim mevcuttur.",
       "shippingCost": "Kargo Ücreti",
       "weight": "Ağırlık",
-      "weightUnit": "Ağırlık Birimi"
+      "weightUnit": "Ağırlık Birimi",
+      "currency": "Para Birimi"
     },
     "placeholders": {
       "title": "Örnek: 2 Yaşındaki Holstein İneği",
       "shortDescription": "Ürün açıklaması (en fazla 200 karakter)",
       "description": "Ürün hakkında detaylı bilgi verin...",
-      "category": "Bir kategori seçin."
+      "category": "Bir kategori seçin.",
+      "searchCurrency": "Para birimi ara..."
     },
+    "noCurrencyFound": "Para birimi bulunamadı.",
     "errors": {
       "titleRequired": "İlan başlığı zorunludur.",
       "shortDescriptionRequired": "Kısa bir açıklama gereklidir.",
@@ -828,6 +831,7 @@
       "shippingCost": "Kargo Ücreti",
       "weight": "Ağırlık",
       "weightUnit": "Ağırlık Birimi",
+      "currency": "Para Birimi",
       "city": "Şehir",
       "address": "Adres",
       "postalCode": "Posta Kodu"
@@ -837,10 +841,12 @@
       "shortDescription": "Ürün açıklaması (en fazla 200 karakter)",
       "description": "Ürün hakkında detaylı bilgi verin...",
       "category": "Bir kategori seçin.",
+      "searchCurrency": "Para birimi ara...",
       "city": "Şehre girin",
       "address": "Lütfen adresin tamamını girin.",
       "postalCode": "Posta Kodu"
     },
+    "noCurrencyFound": "Para birimi bulunamadı.",
     "errors": {
       "titleRequired": "İlan başlığı zorunludur.",
       "shortDescriptionRequired": "Kısa bir açıklama gereklidir.",
