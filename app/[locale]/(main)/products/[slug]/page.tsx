@@ -114,14 +114,12 @@ export default function ProductDetailPage() {
 
   const isGuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(slug);
 
-  // Step 1: Resolve slug → product ID via DetailBySlug (only if slug is not a GUID)
-  const { data: slugProduct, isLoading: isSlugLoading, error: slugError } = useQuery({
-    queryKey: queryKeys.products.detail(`slug:${slug}`),
-    queryFn: () => LivestockTradingAPI.Products.DetailBySlug.Request({ slug }),
-    enabled: !isGuid && !!slug,
-    retry: false,
-  });
-  const resolvedId = isGuid ? slug : slugProduct?.id;
+  // Step 1: Resolve slug → product ID via Products/All (only if slug is not a GUID)
+  const { data: slugResults, isLoading: isSlugLoading, error: slugError } = useProductList(
+    { slug, perPageCount: 1 },
+    { enabled: !isGuid && !!slug }
+  );
+  const resolvedId = isGuid ? slug : slugResults?.[0]?.id;
 
   // Step 2: Fetch full product detail with viewer currency (enabled when we have an ID)
   const {

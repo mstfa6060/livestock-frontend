@@ -1,25 +1,33 @@
 import type { Metadata } from "next";
+import { AppConfig } from "@/config/livestock-config";
 import { ProductJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import { defaultLocale, locales } from "@/i18n/config";
 
 const BASE_URL = "https://livestock-trading.com";
-const isDevelopment = process.env.NEXT_PUBLIC_ENVIRONMENT === "development";
-const API_BASE = isDevelopment
-  ? "https://dev-api.livestock-trading.com"
-  : "https://api.livestock-trading.com";
-const FILE_STORAGE_BASE = `${API_BASE}/file-storage/`;
 
 async function fetchProductBySlug(slug: string) {
   try {
-    const res = await fetch(`${API_BASE}/livestocktrading/Products/DetailBySlug`, {
+    const res = await fetch(`${AppConfig.LivestockTradingUrl}/Products/All`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ slug }),
+      body: JSON.stringify({ slug, countryCode: "", pageRequest: { pageNumber: 0, perPageCount: 1 } }),
       next: { revalidate: 3600 },
     });
     if (!res.ok) return null;
     const data = await res.json();
-    return data?.data ?? data;
+    const items = data?.data?.items ?? data?.items ?? [];
+    if (items.length === 0) return null;
+    // Fetch full detail for the found product
+    const productId = items[0].id;
+    const detailRes = await fetch(`${AppConfig.LivestockTradingUrl}/Products/Detail`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: productId }),
+      next: { revalidate: 3600 },
+    });
+    if (!detailRes.ok) return null;
+    const detailData = await detailRes.json();
+    return detailData?.data ?? detailData;
   } catch {
     return null;
   }
@@ -28,7 +36,7 @@ async function fetchProductBySlug(slug: string) {
 async function fetchCoverImageUrl(mediaBucketId?: string, coverImageFileId?: string): Promise<string | undefined> {
   if (!mediaBucketId) return undefined;
   try {
-    const res = await fetch(`${API_BASE}/fileprovider/Buckets/Detail`, {
+    const res = await fetch(`${AppConfig.FileProviderUrl}/Buckets/Detail`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ bucketId: mediaBucketId, changeId: "00000000-0000-0000-0000-000000000000" }),
@@ -42,7 +50,7 @@ async function fetchCoverImageUrl(mediaBucketId?: string, coverImageFileId?: str
       : files[0];
     if (!coverFile) return undefined;
     const path = coverFile.variants?.[0]?.url || coverFile.path;
-    return path ? `${FILE_STORAGE_BASE}${path}` : undefined;
+    return path ? `${AppConfig.FileStorageBaseUrl}${path}` : undefined;
   } catch {
     return undefined;
   }
