@@ -218,6 +218,56 @@ Sadece 9 test dosyasi var. Eksik testler:
 
 ---
 
+## 7.5 SEO IYILESTIRMESI (BEKLEMEDE — MERGE EDILMEDI)
+
+> **Branch:** `claude/seo-analysis-BSj4S`
+> **Tarih:** 2026-03-17
+> **Durum:** Kod yazildi, test edildi ama main'e merge edilmedi. Asagidaki degisikliklerin review edilip merge edilmesi gerekiyor.
+
+### Neden Yapildi?
+Google ve sosyal medya platformlari (Facebook, Twitter, WhatsApp) icin SEO altyapisi eksikti. Urunler paylasildiginda onizleme goruntuleri cikmiyordu, arama motorlari icin structured data (JSON-LD) yoktu.
+
+### Yapilan Degisiklikler (20 dosya, ~587 satir ekleme)
+
+**1. Open Graph & Twitter Card Gorsel Uretimi**
+- `app/[locale]/opengraph-image.tsx` — OG gorsel ureteci (1200x630px, dinamik logo + text)
+- `app/[locale]/twitter-image.tsx` — Twitter card gorsel ureteci (1200x600px)
+- Sosyal medyada link paylasildiginda otomatik onizleme gorseli olusturur
+
+**2. SEO Metadata (Tum Public Sayfalar)**
+- `app/[locale]/page.tsx` — Homepage metadata + JSON-LD (Organization + WebSite schema)
+- `app/[locale]/layout.tsx` — Root layout'a global SEO meta tag'leri eklendi
+- `app/[locale]/(main)/products/layout.tsx` — Urun katalogu metadata
+- `app/[locale]/(main)/products/[slug]/layout.tsx` — Urun detay dinamik metadata (baslik, aciklama, resim)
+- `app/[locale]/(main)/sellers/layout.tsx` — Satici listesi metadata
+- `app/[locale]/(main)/transporters/layout.tsx` — Tasiyici listesi metadata
+- `app/[locale]/(main)/about/page.tsx`, `contact/page.tsx`, `faq/layout.tsx`, `privacy/page.tsx`, `terms/page.tsx`, `search/layout.tsx` — Statik sayfa metadata'lari
+
+**3. JSON-LD Structured Data**
+- `components/seo/json-ld.tsx` — Organization, WebSite, Product, BreadcrumbList schema component'leri
+- Google arama sonuclarinda zengin snippet (urun fiyati, stok durumu, breadcrumb) gosterir
+
+**4. Yardimci Dosyalar**
+- `lib/seo.ts` — SEO utility fonksiyonlari (URL builder, default metadata, locale mapping)
+- `app/robots.ts` — robots.txt guncellemesi (sitemap URL, crawl kurallari)
+- `messages/tr.json` — SEO ile ilgili yeni ceviri key'leri (~40 key)
+
+### Dikkat Edilmesi Gerekenler
+- **Urun detay SEO'su** backend'den `Products/DetailBySlug` endpoint'ini kullaniyor. Bu endpoint'in CORS ve public erisim ayarlari kontrol edilmeli.
+- **OG Image generation** Next.js `ImageResponse` API'si kullaniyor — production'da edge runtime gerektiriyor.
+- **`messages/tr.json`** icerisine yeni SEO key'leri eklendi. Diger dillere ceviri icin `npm run translate:missing` calistirilmali.
+- **`app/robots.ts`** production domain'i `livestock-trading.com` olarak hardcoded. Farkli domain kullanilacaksa guncellenmeli.
+
+### Merge Icin Yapilmasi Gerekenler
+1. `claude/seo-analysis-BSj4S` branch'ini review et
+2. `npm run build` ile production build'in basarili oldugunu dogrula
+3. OG image endpoint'lerini test et: `/en/opengraph-image` ve `/en/twitter-image`
+4. Urun detay sayfasinda `DetailBySlug` API cagrisinin dogru calistigini dogrula
+5. Main'e merge et
+6. `npm run translate:missing` calistir (50 dil icin yeni key'ler)
+
+---
+
 ## 8. ONCELIK MATRISI
 
 | # | Is | Oncelik | Etki | Efor |
@@ -234,3 +284,4 @@ Sadece 9 test dosyasi var. Eksik testler:
 | 10 | ~~Test coverage artirma~~ | ~~DUSUK~~ | ~~Yuksek~~ | KALDIRILDI (MVP asamasinda oncelik degil) |
 | 11 | ~~Infinite scroll / pagination~~ | ~~DUSUK~~ | ~~Orta~~ | ATLANDI (backend totalCount donmuyor) |
 | 12 | ~~Storybook~~ | ~~DUSUK~~ | ~~Orta~~ | KALDIRILDI (kucuk ekip icin gereksiz) |
+| 13 | SEO iyilestirmesi (OG, JSON-LD, metadata) | YUKSEK | Yuksek | BEKLEMEDE — branch review gerekiyor (bkz. Bolum 7.5) |
