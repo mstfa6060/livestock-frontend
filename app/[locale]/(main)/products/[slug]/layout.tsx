@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
-import { AppConfig } from "@/config/livestock-config";
 import { ProductJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import { defaultLocale, locales } from "@/i18n/config";
 
 const BASE_URL = "https://livestock-trading.com";
+const isDevelopment = process.env.NEXT_PUBLIC_ENVIRONMENT === "development";
+const API_BASE = isDevelopment
+  ? "https://dev-api.livestock-trading.com"
+  : "https://api.livestock-trading.com";
+const FILE_STORAGE_BASE = `${API_BASE}/file-storage/`;
 
 async function fetchProductBySlug(slug: string) {
   try {
-    const res = await fetch(`${AppConfig.LivestockTradingUrl}/Products/DetailBySlug`, {
+    const res = await fetch(`${API_BASE}/livestocktrading/Products/DetailBySlug`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ slug }),
@@ -24,7 +28,7 @@ async function fetchProductBySlug(slug: string) {
 async function fetchCoverImageUrl(mediaBucketId?: string, coverImageFileId?: string): Promise<string | undefined> {
   if (!mediaBucketId) return undefined;
   try {
-    const res = await fetch(`${AppConfig.FileProviderUrl}/Buckets/Detail`, {
+    const res = await fetch(`${API_BASE}/fileprovider/Buckets/Detail`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ bucketId: mediaBucketId, changeId: "00000000-0000-0000-0000-000000000000" }),
@@ -33,13 +37,12 @@ async function fetchCoverImageUrl(mediaBucketId?: string, coverImageFileId?: str
     if (!res.ok) return undefined;
     const data = await res.json();
     const files = data?.data?.files ?? data?.files ?? [];
-    // Find cover image or fall back to first image
     const coverFile = coverImageFileId
       ? files.find((f: Record<string, unknown>) => f.id === coverImageFileId)
       : files[0];
     if (!coverFile) return undefined;
     const path = coverFile.variants?.[0]?.url || coverFile.path;
-    return path ? `${AppConfig.FileStorageBaseUrl}${path}` : undefined;
+    return path ? `${FILE_STORAGE_BASE}${path}` : undefined;
   } catch {
     return undefined;
   }
