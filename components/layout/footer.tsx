@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 
@@ -14,13 +15,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">LT</span>
-              </div>
-              <span className="text-xl font-bold text-background">
-                Livestock<span className="text-primary">Trading</span>
-              </span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo.png"
+                alt="Livestock Trading"
+                width={180}
+                height={45}
+                className="h-9 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-sm text-background/60 leading-relaxed">
               {t("tagline")}

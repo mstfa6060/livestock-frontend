@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
@@ -92,17 +93,18 @@ export function MainHeader() {
 
       {/* Main Navigation Bar */}
       <div className="bg-muted/40 backdrop-blur-xl border-b shadow-sm">
-        <div className="container flex h-14 items-center justify-between">
+        <div className="container flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="h-9 w-9 rounded-xl bg-primary flex items-center justify-center shadow-sm">
-              <span className="text-primary-foreground font-bold text-sm">LT</span>
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className="text-lg font-bold tracking-tight text-foreground">
-                Livestock<span className="text-primary">Trading</span>
-              </span>
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Livestock Trading"
+              width={300}
+              height={100}
+              className="h-12 w-auto object-contain"
+              priority
+              unoptimized
+            />
           </Link>
 
           {/* Desktop Navigation */}
