@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Гэты адрас электроннай пошты ўжо выкарыстоўваецца.",
       USER_USER_NAME_ALREADY_EXISTS: "Гэта імя карыстальніка ўжо выкарыстоўваецца.",
       USER_COUNTRY_ID_REQUIRED: "Выбар краіны абавязковы.",
+      USER_DELETE_PASSWORD_REQUIRED: "Для выдалення ўліковага запісу патрабуецца пацвярджэнне пароля.",
+      USER_DELETE_PASSWORD_INCORRECT: "Збой праверкі пароля. Уліковы запіс не можа быць выдалены.",
+      USER_DELETE_ALREADY_DELETED: "Гэты ўліковы запіс ужо выдалены.",
+      USER_DELETE_NOT_AUTHENTICATED: "Вы павінны ўвайсці ў сістэму, каб выдаліць свой уліковы запіс.",
     }
   }
 };

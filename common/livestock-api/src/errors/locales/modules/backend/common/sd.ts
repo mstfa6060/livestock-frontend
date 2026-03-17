@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "هي اي ميل پتو اڳ ۾ ئي استعمال ۾ آهي.",
       USER_USER_NAME_ALREADY_EXISTS: "هي يوزر نالو اڳ ۾ ئي استعمال ۾ آهي.",
       USER_COUNTRY_ID_REQUIRED: "ملڪ جي چونڊ لازمي آهي.",
+      USER_DELETE_PASSWORD_REQUIRED: "اڪائونٽ ڊليٽ ڪرڻ لاءِ پاسورڊ جي تصديق لازمي آهي.",
+      USER_DELETE_PASSWORD_INCORRECT: "پاسورڊ جي تصديق ناڪام ٿي. اڪائونٽ ختم نه ٿي سگهيو.",
+      USER_DELETE_ALREADY_DELETED: "هي اڪائونٽ اڳ ۾ ئي ڊهي چڪو آهي.",
+      USER_DELETE_NOT_AUTHENTICATED: "توھان کي لاگ ان ٿيڻ گھرجي توھان جو اڪائونٽ ختم ڪرڻ لاءِ.",
     }
   }
 };

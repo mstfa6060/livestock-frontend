@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "alamat surélék ieu geus dipaké.",
       USER_USER_NAME_ALREADY_EXISTS: "Ngaran pamaké ieu geus dipaké.",
       USER_COUNTRY_ID_REQUIRED: "Pilihan nagara wajib.",
+      USER_DELETE_PASSWORD_REQUIRED: "Konfirmasi sandi diperlukeun pikeun ngahapus akun.",
+      USER_DELETE_PASSWORD_INCORRECT: "Verifikasi kecap akses gagal. Rekening teu bisa dihapus.",
+      USER_DELETE_ALREADY_DELETED: "Akun ieu parantos dipupus.",
+      USER_DELETE_NOT_AUTHENTICATED: "Anjeun kudu asup pikeun mupus akun anjeun.",
     }
   }
 };

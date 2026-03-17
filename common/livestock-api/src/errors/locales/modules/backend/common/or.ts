@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "ଏହି ଇମେଲ୍ ଠିକଣା ବ୍ୟବହାରରେ ଅଛି |",
       USER_USER_NAME_ALREADY_EXISTS: "ଏହି ଉପଯୋଗକର୍ତ୍ତା ନାମ ପୂର୍ବରୁ ବ୍ୟବହାରରେ ଅଛି |",
       USER_COUNTRY_ID_REQUIRED: "ଦେଶ ଚୟନ ବାଧ୍ୟତାମୂଳକ |",
+      USER_DELETE_PASSWORD_REQUIRED: "ଖାତା ବିଲୋପ ପାଇଁ ପାସୱାର୍ଡ ନିଶ୍ଚିତକରଣ ବାଧ୍ୟତାମୂଳକ |",
+      USER_DELETE_PASSWORD_INCORRECT: "ପାସୱାର୍ଡ ଯାଞ୍ଚ ବିଫଳ ହେଲା | ଖାତା ବିଲୋପ ହୋଇପାରିଲା ନାହିଁ |",
+      USER_DELETE_ALREADY_DELETED: "ଏହି ଆକାଉଣ୍ଟ୍ ଡିଲିଟ୍ ହୋଇସାରିଛି |",
+      USER_DELETE_NOT_AUTHENTICATED: "ତୁମର ଖାତା ବିଲୋପ କରିବାକୁ ତୁମକୁ ଲଗ୍ ଇନ୍ କରିବାକୁ ପଡିବ |",
     }
   }
 };

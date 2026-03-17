@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Haec inscriptio iam est.",
       USER_USER_NAME_ALREADY_EXISTS: "Hoc usoris iam est.",
       USER_COUNTRY_ID_REQUIRED: "Patriae lectio facienda est.",
+      USER_DELETE_PASSWORD_REQUIRED: "Password confirmatio requiritur ad rationem deletionis.",
+      USER_DELETE_PASSWORD_INCORRECT: "Password verificationem defuit. Ratio deleri non potuit.",
+      USER_DELETE_ALREADY_DELETED: "Haec ratio iam deleta est.",
+      USER_DELETE_NOT_AUTHENTICATED: "Initium debes delere rationem vestram.",
     }
   }
 };

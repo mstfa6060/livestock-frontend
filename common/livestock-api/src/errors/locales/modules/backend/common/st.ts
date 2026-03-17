@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Aterese ena ea lengolo-tsoibila e se e ntse e sebelisoa.",
       USER_USER_NAME_ALREADY_EXISTS: "Lebitso lena la mosebelisi le se le ntse le sebelisoa.",
       USER_COUNTRY_ID_REQUIRED: "Khetho ea naha e tlamaha.",
+      USER_DELETE_PASSWORD_REQUIRED: "Netefatso ea phasewete ea hlokahala bakeng sa ho hlakola ak'haonte.",
+      USER_DELETE_PASSWORD_INCORRECT: "Netefatso ea phasewete e hlolehile. Ak'haonte ha e khone ho hlakoloa.",
+      USER_DELETE_ALREADY_DELETED: "Ak'haonte ena e se e hlakotsoe.",
+      USER_DELETE_NOT_AUTHENTICATED: "U tlameha ho kena ho hlakola akhaonto ea hau.",
     }
   }
 };

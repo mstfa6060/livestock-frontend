@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "ഈ ഇമെയിൽ വിലാസം ഇതിനകം ഉപയോഗത്തിലുണ്ട്.",
       USER_USER_NAME_ALREADY_EXISTS: "ഈ ഉപയോക്തൃനാമം ഇതിനകം ഉപയോഗത്തിലുണ്ട്.",
       USER_COUNTRY_ID_REQUIRED: "രാജ്യം തിരഞ്ഞെടുക്കൽ നിർബന്ധമാണ്.",
+      USER_DELETE_PASSWORD_REQUIRED: "അക്കൗണ്ട് ഇല്ലാതാക്കുന്നതിന് പാസ്‌വേഡ് സ്ഥിരീകരണം ആവശ്യമാണ്.",
+      USER_DELETE_PASSWORD_INCORRECT: "പാസ്‌വേഡ് പരിശോധന പരാജയപ്പെട്ടു. അക്കൗണ്ട് ഇല്ലാതാക്കാൻ കഴിഞ്ഞില്ല.",
+      USER_DELETE_ALREADY_DELETED: "ഈ അക്കൗണ്ട് ഇതിനകം ഇല്ലാതാക്കി.",
+      USER_DELETE_NOT_AUTHENTICATED: "നിങ്ങളുടെ അക്കൗണ്ട് ഇല്ലാതാക്കാൻ നിങ്ങൾ ലോഗിൻ ചെയ്തിരിക്കണം.",
     }
   }
 };

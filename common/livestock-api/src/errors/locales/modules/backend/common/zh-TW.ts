@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "該電子郵件地址已被使用。",
       USER_USER_NAME_ALREADY_EXISTS: "該用戶名已被使用。",
       USER_COUNTRY_ID_REQUIRED: "國家/地區選擇是強制性的。",
+      USER_DELETE_PASSWORD_REQUIRED: "刪除帳戶時需要確認密碼。",
+      USER_DELETE_PASSWORD_INCORRECT: "密碼驗證失敗。 該帳戶無法刪除。",
+      USER_DELETE_ALREADY_DELETED: "該帳戶已被刪除。",
+      USER_DELETE_NOT_AUTHENTICATED: "您必須登入才能刪除您的帳戶。",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Kini nga email address gigamit na.",
       USER_USER_NAME_ALREADY_EXISTS: "Kini nga username kay gigamit na.",
       USER_COUNTRY_ID_REQUIRED: "Ang pagpili sa nasud mao ang mandatory.",
+      USER_DELETE_PASSWORD_REQUIRED: "Ang pagkumpirma sa password gikinahanglan alang sa pagtangtang sa account.",
+      USER_DELETE_PASSWORD_INCORRECT: "Napakyas ang pag-verify sa password. Ang account dili mapapas.",
+      USER_DELETE_ALREADY_DELETED: "Kini nga account natangtang na.",
+      USER_DELETE_NOT_AUTHENTICATED: "Kinahanglan nga naka-log in ka aron mapapas ang imong account.",
     }
   }
 };

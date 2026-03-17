@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "دا بریښنالیک آدرس لا دمخه کارول کیږي.",
       USER_USER_NAME_ALREADY_EXISTS: "دا کارن نوم لا دمخه په کار دی.",
       USER_COUNTRY_ID_REQUIRED: "د هیواد انتخاب لازمي دی.",
+      USER_DELETE_PASSWORD_REQUIRED: "د حساب ړنګولو لپاره د پټنوم تایید اړین دی.",
+      USER_DELETE_PASSWORD_INCORRECT: "د پټنوم تایید ناکام شو. حساب ړنګ نه شو.",
+      USER_DELETE_ALREADY_DELETED: "دا حساب لا دمخه حذف شوی دی.",
+      USER_DELETE_NOT_AUTHENTICATED: "تاسو باید د خپل حساب ړنګولو لپاره لاګ ان شئ.",
     }
   }
 };

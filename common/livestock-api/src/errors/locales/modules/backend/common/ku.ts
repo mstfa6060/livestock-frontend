@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Ev navnîşana e-nameyê jixwe tê bikaranîn.",
       USER_USER_NAME_ALREADY_EXISTS: "Ev navê bikarhêner jixwe tê bikaranîn.",
       USER_COUNTRY_ID_REQUIRED: "Hilbijartina welat mecbûrî ye.",
+      USER_DELETE_PASSWORD_REQUIRED: "Ji bo jêbirina hesabê pejirandina şîfreyê hewce ye.",
+      USER_DELETE_PASSWORD_INCORRECT: "Verastkirina şîfreyê têk çû. Hesab nehat jêbirin.",
+      USER_DELETE_ALREADY_DELETED: "Ev hesab berê hatiye jêbirin.",
+      USER_DELETE_NOT_AUTHENTICATED: "Ji bo jêbirina hesabê xwe divê hûn têkevinê.",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Stu indirizzu email hè digià in usu.",
       USER_USER_NAME_ALREADY_EXISTS: "Stu nome d'utilizatore hè digià in usu.",
       USER_COUNTRY_ID_REQUIRED: "A selezzione di u paese hè obbligatoria.",
+      USER_DELETE_PASSWORD_REQUIRED: "A cunferma di a password hè necessaria per a cancellazione di u contu.",
+      USER_DELETE_PASSWORD_INCORRECT: "A verificazione di a password hà fiascatu. U contu ùn pudia esse sguassatu.",
+      USER_DELETE_ALREADY_DELETED: "Stu contu hè digià statu sguassatu.",
+      USER_DELETE_NOT_AUTHENTICATED: "Duvete esse login per sguassà u vostru contu.",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "די בליצפּאָסט אַדרעס איז שוין אין נוצן.",
       USER_USER_NAME_ALREADY_EXISTS: "דער נאמען איז שוין אין באנוץ.",
       USER_COUNTRY_ID_REQUIRED: "לאַנד סעלעקציע איז מאַנדאַטאָרי.",
+      USER_DELETE_PASSWORD_REQUIRED: "שפּריכוואָרט באַשטעטיקונג איז פארלאנגט פֿאַר ויסמעקן חשבון.",
+      USER_DELETE_PASSWORD_INCORRECT: "שפּריכוואָרט וועראַפאַקיישאַן ניט אַנדערש. דער אקאונט קען נישט ווערן אויסגעמעקט.",
+      USER_DELETE_ALREADY_DELETED: "דער אקאונט איז שוין אויסגעמעקט געווארן.",
+      USER_DELETE_NOT_AUTHENTICATED: "איר מוזן זיין לאָגד אין צו ויסמעקן דיין חשבון.",
     }
   }
 };

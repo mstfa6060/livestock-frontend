@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "该电子邮件地址已被使用。",
       USER_USER_NAME_ALREADY_EXISTS: "该用户名已被使用。",
       USER_COUNTRY_ID_REQUIRED: "国家/地区选择是强制性的。",
+      USER_DELETE_PASSWORD_REQUIRED: "删除账户时需要确认密码。",
+      USER_DELETE_PASSWORD_INCORRECT: "密码验证失败。 该帐户无法删除。",
+      USER_DELETE_ALREADY_DELETED: "该帐户已被删除。",
+      USER_DELETE_NOT_AUTHENTICATED: "您必须登录才能删除您的帐户。",
     }
   }
 };

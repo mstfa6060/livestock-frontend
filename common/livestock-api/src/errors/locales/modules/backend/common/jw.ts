@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Alamat email iki wis digunakake.",
       USER_USER_NAME_ALREADY_EXISTS: "Jeneng pangguna iki wis digunakake.",
       USER_COUNTRY_ID_REQUIRED: "Pilihan negara wajib.",
+      USER_DELETE_PASSWORD_REQUIRED: "Konfirmasi sandhi dibutuhake kanggo mbusak akun.",
+      USER_DELETE_PASSWORD_INCORRECT: "Verifikasi tembung sandhi gagal. Akun kasebut ora bisa dibusak.",
+      USER_DELETE_ALREADY_DELETED: "Akun iki wis dibusak.",
+      USER_DELETE_NOT_AUTHENTICATED: "Sampeyan kudu mlebu log kanggo mbusak akun.",
     }
   }
 };

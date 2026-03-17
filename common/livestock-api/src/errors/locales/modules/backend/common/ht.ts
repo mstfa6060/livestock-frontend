@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Adrès imel sa a deja itilize.",
       USER_USER_NAME_ALREADY_EXISTS: "Non itilizatè sa a deja itilize.",
       USER_COUNTRY_ID_REQUIRED: "Seleksyon peyi obligatwa.",
+      USER_DELETE_PASSWORD_REQUIRED: "Konfimasyon modpas obligatwa pou efase kont.",
+      USER_DELETE_PASSWORD_INCORRECT: "Verifikasyon modpas echwe. Kont lan pa t 'kapab efase.",
+      USER_DELETE_ALREADY_DELETED: "Kont sa a deja efase.",
+      USER_DELETE_NOT_AUTHENTICATED: "Ou dwe konekte pou w efase kont ou.",
     }
   }
 };

@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Ин суроғаи почтаи электронӣ аллакай дар истифода аст.",
       USER_USER_NAME_ALREADY_EXISTS: "Ин номи корбарӣ аллакай дар истифода аст.",
       USER_COUNTRY_ID_REQUIRED: "Интихоби кишвар ҳатмист.",
+      USER_DELETE_PASSWORD_REQUIRED: "Барои нест кардани ҳисоб тасдиқи парол лозим аст.",
+      USER_DELETE_PASSWORD_INCORRECT: "Тасдиқи парол ноком шуд. Ҳисобро нест кардан мумкин нест.",
+      USER_DELETE_ALREADY_DELETED: "Ин ҳисоб аллакай нест карда шудааст.",
+      USER_DELETE_NOT_AUTHENTICATED: "Шумо бояд барои нест кардани ҳисоби худ ворид шавед.",
     }
   }
 };

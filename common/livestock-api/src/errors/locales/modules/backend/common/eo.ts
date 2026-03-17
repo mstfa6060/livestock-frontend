@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Ĉi tiu retadreso jam estas uzata.",
       USER_USER_NAME_ALREADY_EXISTS: "Ĉi tiu uzantnomo jam estas uzata.",
       USER_COUNTRY_ID_REQUIRED: "Elekto de lando estas deviga.",
+      USER_DELETE_PASSWORD_REQUIRED: "Pasvortkonfirmo estas deviga por forigo de konto.",
+      USER_DELETE_PASSWORD_INCORRECT: "Pasvortkontrolo malsukcesis. La konto ne povis esti forigita.",
+      USER_DELETE_ALREADY_DELETED: "Ĉi tiu konto jam estis forigita.",
+      USER_DELETE_NOT_AUTHENTICATED: "Vi devas esti ensalutinta por forigi vian konton.",
     }
   }
 };

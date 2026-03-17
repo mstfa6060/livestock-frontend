@@ -133,6 +133,10 @@ export default {
       USER_EMAIL_ALREADY_EXISTS: "Lenei tuatusi imeli ua uma ona fa'aoga.",
       USER_USER_NAME_ALREADY_EXISTS: "O lo'o fa'aogaina lenei igoa.",
       USER_COUNTRY_ID_REQUIRED: "E fa'amalosia le filifilia o le atunu'u.",
+      USER_DELETE_PASSWORD_REQUIRED: "E fa'atulafonoina le fa'amaoniaina o upu fa'amaonia mo le tapeina o tala.",
+      USER_DELETE_PASSWORD_INCORRECT: "Ua le mafai ona fa'amaonia upu fa'aigoa. E le mafai ona tapeina le tala.",
+      USER_DELETE_ALREADY_DELETED: "Ua uma ona tape lenei tala.",
+      USER_DELETE_NOT_AUTHENTICATED: "E tatau ona e saini e tape lau tala.",
     }
   }
 };
