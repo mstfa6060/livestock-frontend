@@ -131,7 +131,7 @@ export default function ProductDetailPage() {
     queryFn: async () => {
       const response = await LivestockTradingAPI.Products.Detail.Request({
         id: resolvedId!,
-        viewerCurrencyCode: viewerCurrencyCode || undefined,
+        viewerCurrencyCode: viewerCurrencyCode || "",
       });
 
       return {
