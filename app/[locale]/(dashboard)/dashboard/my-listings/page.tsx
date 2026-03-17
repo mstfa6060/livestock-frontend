@@ -88,6 +88,7 @@ export default function MyListingsPage() {
       const response = await LivestockTradingAPI.Products.All.Request({
         countryCode: "",
         targetCurrencyCode: "",
+        viewerCurrencyCode: "",
         sorting: { key: "createdAt", direction: 1 },
         filters: [
           {
@@ -196,7 +197,7 @@ export default function MyListingsPage() {
 
     try {
       // Fetch full product details for update (API requires all fields)
-      const fullProduct = await LivestockTradingAPI.Products.Detail.Request({ id: productId });
+      const fullProduct = await LivestockTradingAPI.Products.Detail.Request({ id: productId, viewerCurrencyCode: "" });
 
       await LivestockTradingAPI.Products.Update.Request({
         id: productId,

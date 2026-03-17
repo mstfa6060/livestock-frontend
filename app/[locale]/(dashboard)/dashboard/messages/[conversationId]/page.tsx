@@ -155,6 +155,7 @@ export default function ConversationPage() {
         try {
           const productResponse = await LivestockTradingAPI.Products.Detail.Request({
             id: convResponse.productId,
+            viewerCurrencyCode: "",
           });
           product = {
             id: productResponse.id,

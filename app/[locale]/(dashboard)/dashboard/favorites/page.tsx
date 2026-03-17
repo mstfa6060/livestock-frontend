@@ -34,6 +34,7 @@ export default function FavoritesPage() {
       const products = await LivestockTradingAPI.Products.All.Request({
         countryCode: "",
         targetCurrencyCode: "",
+        viewerCurrencyCode: "",
         sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Descending },
         filters: [
           { key: "id", type: "guid", isUsed: true, values: productIds, min: {}, max: {}, conditionType: "equals" },

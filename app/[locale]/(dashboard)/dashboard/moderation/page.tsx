@@ -61,6 +61,7 @@ export default function ModerationPage() {
       const response = await LivestockTradingAPI.Products.All.Request({
         countryCode: "",
         targetCurrencyCode: "",
+        viewerCurrencyCode: "",
         sorting: {
           key: "createdAt",
           direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,

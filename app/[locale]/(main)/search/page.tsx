@@ -293,6 +293,7 @@ export default function SearchPage() {
         const searchResponse = await LivestockTradingAPI.Products.Search.Request({
           query: queryParam,
           countryCode: selectedCountry?.code || "TR",
+          viewerCurrencyCode: "",
           city: "",
           categoryId: categoryParam || undefined,
           minPrice: minPriceParam ? parseFloat(minPriceParam) : undefined,
@@ -366,6 +367,7 @@ export default function SearchPage() {
         const response = await LivestockTradingAPI.Products.All.Request({
           countryCode: selectedCountry?.code || "TR",
           targetCurrencyCode: selectedCountry?.defaultCurrencyCode || "",
+          viewerCurrencyCode: "",
           categoryId: categoryParam || undefined,
           sorting,
           filters,
