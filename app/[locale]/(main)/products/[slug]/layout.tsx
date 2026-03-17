@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AppConfig } from "@/config/livestock-config";
 import { ProductJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
+import { defaultLocale, locales } from "@/i18n/config";
 
 const BASE_URL = "https://livestock-trading.com";
 
@@ -61,16 +62,23 @@ export async function generateMetadata({
     product.metaDescription || product.shortDescription || product.description?.slice(0, 160);
   const keywords = product.metaKeywords || undefined;
   const image = await fetchCoverImageUrl(product.mediaBucketId, product.coverImageFileId);
-  const url =
-    locale === "en"
-      ? `${BASE_URL}/products/${slug}`
-      : `${BASE_URL}/${locale}/products/${slug}`;
+  const prefix = locale === defaultLocale ? "" : `/${locale}`;
+  const url = `${BASE_URL}${prefix}/products/${slug}`;
+
+  const alternateLanguages: Record<string, string> = {};
+  for (const loc of locales) {
+    const locPrefix = loc === defaultLocale ? "" : `/${loc}`;
+    alternateLanguages[loc] = `${BASE_URL}${locPrefix}/products/${slug}`;
+  }
 
   return {
     title,
     description,
     keywords,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: alternateLanguages,
+    },
     openGraph: {
       title,
       description,

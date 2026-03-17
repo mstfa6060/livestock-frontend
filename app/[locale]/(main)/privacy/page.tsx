@@ -3,15 +3,11 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { MainHeader } from "@/components/layout/main-header";
 import { SimpleFooter } from "@/components/layout/footer";
 import { Card, CardContent } from "@/components/ui/card";
+import { generatePageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata.pages.privacy" });
-  return {
-    title: t("title"),
-    description: t("description"),
-    robots: { index: true, follow: true },
-  };
+  return generatePageMetadata({ locale, pageName: "privacy", path: "/privacy" });
 }
 
 export default async function PrivacyPage() {

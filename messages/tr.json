@@ -1801,40 +1801,54 @@
         "keywords": "canlı hayvan satış, hayvan alım satım platformu, sığır satış, koyun satış, keçi satış, büyükbaş hayvan, küçükbaş hayvan, online hayvan pazarı, güvenli hayvan ticareti, hayvan ilanları"
       },
       "about": {
-        "title": "Hakkımızda",
-        "description": "Canlı Hayvan Ticareti hakkında bilgi edinin. Güvenilir bir canlı hayvan ticaret platformu."
+        "title": "Hakkımızda | Livestock Trading",
+        "description": "Canlı Hayvan Ticareti hakkında bilgi edinin. Güvenilir bir canlı hayvan ticaret platformu. Misyonumuz, vizyonumuz ve değerlerimiz.",
+        "keywords": "livestock trading hakkında, canlı hayvan platformu, hayvan ticareti şirketi, güvenilir hayvan pazarı"
       },
       "contact": {
-        "title": "İletişim",
-        "description": "Bizimle iletişime geçin. Hayvan Ticareti müşteri destek ekibi size yardımcı olmaya hazır."
+        "title": "İletişim | Livestock Trading",
+        "description": "Bizimle iletişime geçin. Hayvan Ticareti müşteri destek ekibi size yardımcı olmaya hazır.",
+        "keywords": "livestock trading iletişim, hayvan ticareti destek, müşteri hizmetleri"
       },
       "terms": {
-        "title": "Kullanım Şartları",
-        "description": "Hayvan Ticareti Şartları ve Koşulları."
+        "title": "Kullanım Şartları | Livestock Trading",
+        "description": "Hayvan Ticareti Şartları ve Koşulları. Platform kullanım kuralları ve yasal bilgiler.",
+        "keywords": "kullanım şartları, hayvan ticareti kuralları, platform koşulları"
       },
       "privacy": {
-        "title": "Gizlilik Politikası",
-        "description": "Hayvan Ticareti Gizlilik Politikası. Kişisel verilerinizin nasıl korunduğunu öğrenin."
+        "title": "Gizlilik Politikası | Livestock Trading",
+        "description": "Hayvan Ticareti Gizlilik Politikası. Kişisel verilerinizin nasıl korunduğunu öğrenin.",
+        "keywords": "gizlilik politikası, kişisel veri koruma, KVKK, hayvan ticareti gizlilik"
       },
       "products": {
-        "title": "Ürünler",
-        "description": "Canlı hayvan ilanlarına göz atın. Sığır, koyun ve daha fazlası için güvenilir ilanlar."
+        "title": "Canlı Hayvan İlanları | Sığır, Koyun, Keçi Satılık",
+        "description": "Canlı hayvan ilanlarına göz atın. Sığır, koyun, keçi ve daha fazlası için güvenilir ilanlar. Doğrulanmış satıcılardan uygun fiyatlarla.",
+        "keywords": "canlı hayvan ilanları, satılık sığır, satılık koyun, satılık keçi, büyükbaş hayvan ilanları, küçükbaş hayvan ilanları, hayvan pazarı"
       },
       "sellers": {
-        "title": "Satıcılar",
-        "description": "Güvenilir hayvan satıcılarını keşfedin. Doğrulanmış satıcı profilleri ve yorumları."
+        "title": "Güvenilir Hayvan Satıcıları | Doğrulanmış Profiller",
+        "description": "Güvenilir hayvan satıcılarını keşfedin. Doğrulanmış satıcı profilleri, yorumları ve ilanları.",
+        "keywords": "hayvan satıcıları, güvenilir satıcılar, doğrulanmış satıcı profilleri, canlı hayvan satıcıları"
       },
       "transporters": {
-        "title": "nakliyeciler",
-        "description": "Hayvan taşıma şirketlerini keşfedin. Güvenli ve profesyonel canlı hayvan taşımacılığı."
+        "title": "Hayvan Nakliye Firmaları | Güvenli Taşımacılık",
+        "description": "Hayvan taşıma şirketlerini keşfedin. Güvenli ve profesyonel canlı hayvan taşımacılığı hizmetleri.",
+        "keywords": "hayvan nakliye, canlı hayvan taşımacılığı, hayvan taşıma firmaları, güvenli hayvan nakliyesi"
       },
       "search": {
-        "title": "Aramak",
-        "description": "Canlı hayvan ilanları arasında arama yapın. Filtreleme ve sıralama seçenekleriyle kolay arama."
+        "title": "Hayvan İlanı Ara | Livestock Trading",
+        "description": "Canlı hayvan ilanları arasında arama yapın. Filtreleme ve sıralama seçenekleriyle kolay arama.",
+        "keywords": "hayvan ara, hayvan ilanı bul, canlı hayvan arama, ilan ara"
       },
       "faq": {
-        "title": "Sıkça Sorulan Sorular",
-        "description": "Hayvan ticaretiyle ilgili sıkça sorulan sorular ve cevapları."
+        "title": "Sıkça Sorulan Sorular | Livestock Trading",
+        "description": "Hayvan ticaretiyle ilgili sıkça sorulan sorular ve cevapları. Nasıl ilan verilir, güvenli alışveriş nasıl yapılır.",
+        "keywords": "sıkça sorulan sorular, hayvan ticareti SSS, nasıl ilan verilir, güvenli alışveriş"
+      },
+      "pricing": {
+        "title": "Fiyatlandırma | Üyelik Planları",
+        "description": "Livestock Trading üyelik planları ve fiyatlandırma. Ücretsiz ve premium paketler ile hayvan ilanlarınızı öne çıkarın.",
+        "keywords": "fiyatlandırma, üyelik planları, premium üyelik, hayvan ilanı fiyat, boost paketi"
       },
       "productDetail": {
         "title": "{başlık} - Satılık",

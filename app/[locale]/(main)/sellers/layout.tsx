@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { generatePageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata.pages.sellers" });
-  return {
-    title: t("title"),
-    description: t("description"),
-    openGraph: { title: t("title"), description: t("description") },
-  };
+  return generatePageMetadata({ locale, pageName: "sellers", path: "/sellers" });
 }
 
 export default function SellersLayout({ children }: { children: React.ReactNode }) {

@@ -3,15 +3,11 @@ import { getTranslations } from "next-intl/server";
 import { MainHeader } from "@/components/layout/main-header";
 import { SimpleFooter } from "@/components/layout/footer";
 import { Mail } from "lucide-react";
+import { generatePageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata.pages.contact" });
-  return {
-    title: t("title"),
-    description: t("description"),
-    openGraph: { title: t("title"), description: t("description") },
-  };
+  return generatePageMetadata({ locale, pageName: "contact", path: "/contact" });
 }
 
 export default async function ContactPage() {

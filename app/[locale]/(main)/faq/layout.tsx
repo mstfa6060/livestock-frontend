@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 import { FaqJsonLd } from "@/components/seo/json-ld";
+import { generatePageMetadata } from "@/lib/seo";
 
 const isDevelopment = process.env.NEXT_PUBLIC_ENVIRONMENT === "development";
 const API_BASE = isDevelopment
@@ -43,11 +43,7 @@ async function fetchFaqs(locale: string) {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata.pages.faq" });
-  return {
-    title: t("title"),
-    description: t("description"),
-  };
+  return generatePageMetadata({ locale, pageName: "faq", path: "/faq" });
 }
 
 export default async function FaqLayout({

@@ -3,9 +3,9 @@ import { generatePageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  return generatePageMetadata({ locale, pageName: "transporters", path: "/transporters" });
+  return generatePageMetadata({ locale, pageName: "pricing", path: "/pricing" });
 }
 
-export default function TransportersLayout({ children }: { children: React.ReactNode }) {
+export default function PricingLayout({ children }: { children: React.ReactNode }) {
   return children;
 }
