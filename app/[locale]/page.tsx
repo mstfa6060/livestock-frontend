@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,61 @@ import { ShieldCheck, Layers, Headphones, ArrowRight, Search } from "lucide-reac
 import { HomepageBanners } from "@/components/features/homepage-banners";
 import { FeaturedProducts } from "@/components/features/featured-products";
 import { HomepageCategories } from "@/components/features/homepage-categories";
+import { defaultLocale, locales } from "@/i18n/config";
+
+const BASE_URL = "https://livestock-trading.com";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  const title = t("pages.home.title");
+  const description = t("pages.home.description");
+  const keywords = t("pages.home.keywords");
+  const canonicalUrl = locale === defaultLocale ? BASE_URL : `${BASE_URL}/${locale}`;
+
+  const alternateLanguages: Record<string, string> = {};
+  for (const loc of locales) {
+    const prefix = loc === defaultLocale ? "" : `/${loc}`;
+    alternateLanguages[loc] = `${BASE_URL}${prefix}`;
+  }
+
+  return {
+    title,
+    description,
+    keywords,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: alternateLanguages,
+    },
+    openGraph: {
+      type: "website",
+      locale,
+      siteName: "Livestock Trading",
+      title,
+      description,
+      url: canonicalUrl,
+      images: [
+        {
+          url: `${BASE_URL}/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${BASE_URL}/og-image.png`],
+    },
+  };
+}
 
 export default async function Home() {
   const t = await getTranslations("home");

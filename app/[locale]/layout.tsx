@@ -36,6 +36,7 @@ export async function generateMetadata({
 
   const title = t("title");
   const description = t("description");
+  const keywords = t("keywords");
 
   const alternateLanguages: Record<string, string> = {};
   for (const loc of locales) {
@@ -49,6 +50,7 @@ export async function generateMetadata({
       template: `%s | Livestock Trading`,
     },
     description,
+    keywords,
     metadataBase: new URL(BASE_URL),
     manifest: "/manifest.json",
     appleWebApp: {
@@ -67,11 +69,20 @@ export async function generateMetadata({
       title,
       description,
       url: BASE_URL,
+      images: [
+        {
+          url: `${BASE_URL}/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [`${BASE_URL}/og-image.png`],
     },
     robots: {
       index: true,
@@ -110,7 +121,7 @@ export default async function LocaleLayout({
     <html lang={locale} dir={dir} suppressHydrationWarning>
       <head>
         <OrganizationJsonLd />
-        <WebSiteJsonLd />
+        <WebSiteJsonLd locale={locale} />
       </head>
       <body className={`${inter.variable} ${plusJakarta.variable} antialiased`}>
         <a

@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://livestock-trading.com";
+const isDevelopment = process.env.NEXT_PUBLIC_ENVIRONMENT === "development";
+const BASE_URL = isDevelopment
+  ? "https://dev.livestock-trading.com"
+  : "https://livestock-trading.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,8 +11,16 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/dashboard/", "/auth/"],
+        disallow: ["/dashboard/", "/auth/", "/api/"],
       },
+      ...(isDevelopment
+        ? [
+            {
+              userAgent: "*",
+              disallow: ["/"],
+            },
+          ]
+        : []),
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,
   };

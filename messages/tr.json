@@ -1793,7 +1793,13 @@
   "metadata": {
     "title": "Hayvan Ticareti - Canlı Hayvan Alım Satım Platformu",
     "description": "Dünyanın en güvenilir canlı hayvan alım satım platformu. Güvenli ve şeffaf hayvan alım satımı.",
+    "keywords": "canlı hayvan, hayvan ticareti, hayvan alım satım, sığır satış, koyun satış, keçi satış, büyükbaş hayvan, küçükbaş hayvan, çiftlik hayvanları, hayvan pazarı, online hayvan satış",
     "pages": {
+      "home": {
+        "title": "Canlı Hayvan Alım Satım Platformu | Güvenli Hayvan Ticareti",
+        "description": "Türkiye ve dünyanın en güvenilir canlı hayvan alım satım platformu. Sığır, koyun, keçi ve daha fazlasını güvenle alıp satın. Doğrulanmış satıcılar, şeffaf fiyatlar.",
+        "keywords": "canlı hayvan satış, hayvan alım satım platformu, sığır satış, koyun satış, keçi satış, büyükbaş hayvan, küçükbaş hayvan, online hayvan pazarı, güvenli hayvan ticareti, hayvan ilanları"
+      },
       "about": {
         "title": "Hakkımızda",
         "description": "Canlı Hayvan Ticareti hakkında bilgi edinin. Güvenilir bir canlı hayvan ticaret platformu."
