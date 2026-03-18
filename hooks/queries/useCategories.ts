@@ -13,7 +13,7 @@ export function useCategories(locale: string) {
           direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending,
         },
         filters: [],
-        pageRequest: { currentPage: 1, perPageCount: 100, listAll: false },
+        pageRequest: { currentPage: 1, perPageCount: 500, listAll: false },
       }),
     staleTime: 30 * 60 * 1000, // 30 minutes - semi-static data
   });

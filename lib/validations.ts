@@ -172,11 +172,12 @@ export const becomeSellerFormSchema = z.object({
 });
 
 // Ilan olusturma formu (HTML input type="number" string dondurur)
+// categoryId: en alt seviye (leaf) kategori ID'si - UI tarafinda cascade ile belirlenir
 export const listingFormSchema = z.object({
   title: requiredStringSchema(5, 200),
   shortDescription: requiredStringSchema(10, 500),
   description: requiredStringSchema(20, 5000),
-  categoryId: z.string({ message: messages.required }).min(1, { message: messages.required }),
+  categoryId: z.string({ message: "Kategori seçimi tamamlanmalıdır" }).min(1, { message: "Kategori seçimi tamamlanmalıdır" }),
   basePrice: z.string({ message: messages.required })
     .min(1, { message: messages.required })
     .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) > 0, {
@@ -201,11 +202,12 @@ export const listingFormSchema = z.object({
 });
 
 // Edit formu - location alanlari olmadan
+// categoryId: en alt seviye (leaf) kategori ID'si - UI tarafinda cascade ile belirlenir
 export const editListingFormSchema = z.object({
   title: requiredStringSchema(5, 200),
   shortDescription: requiredStringSchema(10, 500),
   description: requiredStringSchema(20, 5000),
-  categoryId: z.string({ message: messages.required }).min(1, { message: messages.required }),
+  categoryId: z.string({ message: "Kategori seçimi tamamlanmalıdır" }).min(1, { message: "Kategori seçimi tamamlanmalıdır" }),
   basePrice: z.string({ message: messages.required })
     .min(1, { message: messages.required })
     .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) > 0, {

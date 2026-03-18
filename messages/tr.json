@@ -818,14 +818,16 @@
       "shippingCost": "Kargo Ücreti",
       "weight": "Ağırlık",
       "weightUnit": "Ağırlık Birimi",
-      "currency": "Para Birimi"
+      "currency": "Para Birimi",
+      "subCategory": "Alt Kategori"
     },
     "placeholders": {
       "title": "Örnek: 2 Yaşındaki Holstein İneği",
       "shortDescription": "Ürün açıklaması (en fazla 200 karakter)",
       "description": "Ürün hakkında detaylı bilgi verin...",
       "category": "Bir kategori seçin.",
-      "searchCurrency": "Para birimi ara..."
+      "searchCurrency": "Para birimi ara...",
+      "subCategory": "Alt kategori seçin"
     },
     "noCurrencyFound": "Para birimi bulunamadı.",
     "errors": {
@@ -865,7 +867,8 @@
       "currency": "Para Birimi",
       "city": "Şehir",
       "address": "Adres",
-      "postalCode": "Posta Kodu"
+      "postalCode": "Posta Kodu",
+      "subCategory": "Alt Kategori"
     },
     "placeholders": {
       "title": "Örnek: 2 Yaşındaki Holstein İneği",
@@ -875,7 +878,8 @@
       "searchCurrency": "Para birimi ara...",
       "city": "Şehre girin",
       "address": "Lütfen adresin tamamını girin.",
-      "postalCode": "Posta Kodu"
+      "postalCode": "Posta Kodu",
+      "subCategory": "Alt kategori seçin"
     },
     "noCurrencyFound": "Para birimi bulunamadı.",
     "errors": {
@@ -886,7 +890,8 @@
       "priceRequired": "Fiyat zorunludur.",
       "cityRequired": "Şehir bilgisi gereklidir.",
       "addressRequired": "Adres bilgisi zorunludur.",
-      "locationError": "Konum oluşturulurken bir hata oluştu."
+      "locationError": "Konum oluşturulurken bir hata oluştu.",
+      "subCategoryRequired": "Alt kategori seçimi zorunludur."
     },
     "success": "Reklam başarıyla oluşturuldu.",
     "error": "Reklam oluşturulurken bir hata oluştu.",
@@ -1035,19 +1040,22 @@
       "sortOrder": "Seri numarası",
       "subCategories": "Alt kategori",
       "status": "Durum",
-      "actions": "İşlemler"
+      "actions": "İşlemler",
+      "products": "Ürünler"
     },
     "actions": {
       "edit": "Düzenlemek",
       "delete": "Silmek",
       "activate": "Etkinleştir",
-      "deactivate": "Pasif Yapı"
+      "deactivate": "Pasif Yapı",
+      "addChild": "Alt Kategori Ekle"
     },
     "deleteDialog": {
       "title": "Kategoriyi Sil",
       "description": "Bu kategoriyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
       "cancel": "İptal etmek",
-      "confirm": "Silmek"
+      "confirm": "Silmek",
+      "hasChildren": "Bu kategorinin alt kategorileri var. Silmek, alt kategorileri de etkileyebilir. Devam etmek istediğinizden emin misiniz?"
     },
     "addNew": "Yeni Kategori Ekle",
     "loadMore": "Daha Fazlasını İndir",
@@ -1075,7 +1083,10 @@
         "nameRequired": "Kategori adı zorunludur.",
         "slugRequired": "Salyangozlar zorunludur."
       }
-    }
+    },
+    "expandAll": "Tümünü Aç",
+    "collapseAll": "Tümünü Kapat",
+    "totalCount": "Toplam {count} kategori"
   },
   "offers": {
     "title": "Teklifler",

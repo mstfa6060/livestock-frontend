@@ -65,7 +65,28 @@ export default function EditListingPage() {
 
   // Data fetching via React Query
   const { data: categoriesData } = useCategories(locale);
-  const categories = (categoriesData ?? []).map((c) => ({ id: c.id, name: c.name, slug: c.slug }));
+  const allCategories = (categoriesData ?? []).map((c: any) => ({ id: c.id, name: c.name, slug: c.slug, parentCategoryId: c.parentCategoryId }));
+
+  // Multi-level cascading category selection
+  const [categoryPath, setCategoryPath] = useState<string[]>([]);
+
+  const getChildren = (parentId: string | null) =>
+    allCategories.filter((c) => parentId ? c.parentCategoryId === parentId : !c.parentCategoryId);
+
+  const categoryLevels: { parentId: string | null; options: typeof allCategories }[] = [];
+  categoryLevels.push({ parentId: null, options: getChildren(null) });
+  for (const selectedId of categoryPath) {
+    const children = getChildren(selectedId);
+    if (children.length === 0) break;
+    categoryLevels.push({ parentId: selectedId, options: children });
+  }
+
+  const handleCategoryChange = (level: number, value: string) => {
+    const newPath = [...categoryPath.slice(0, level), value];
+    setCategoryPath(newPath);
+    const hasChildren = allCategories.some((c) => c.parentCategoryId === value);
+    setValue("categoryId", hasChildren ? "" : value, { shouldValidate: true });
+  };
 
   const { data: currenciesData } = useCurrencies();
   const currencies = (currenciesData ?? []).filter((c: any) => c.isActive).sort((a: any, b: any) => a.code.localeCompare(b.code));
@@ -112,6 +133,7 @@ export default function EditListingPage() {
     control,
     watch,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<EditListingFormData>({
     resolver: zodResolver(editListingFormSchema),
@@ -137,16 +159,36 @@ export default function EditListingPage() {
 
   // Populate form when product data loads
   useEffect(() => {
-    if (!product || formPopulated) return;
+    if (!product || formPopulated || allCategories.length === 0) return;
 
     setMediaBucketId((product as unknown as ProductWithMedia).mediaBucketId || "");
     setCoverImageFileId((product as unknown as ProductWithMedia).coverImageFileId || "");
+
+    // Build categoryPath by walking up from product's categoryId to root
+    const buildPath = (catId: string): string[] => {
+      const path: string[] = [];
+      let current = allCategories.find((c) => c.id === catId);
+      while (current) {
+        path.unshift(current.id);
+        current = current.parentCategoryId
+          ? allCategories.find((c) => c.id === current!.parentCategoryId)
+          : undefined;
+      }
+      return path;
+    };
+
+    const path = buildPath(product.categoryId);
+    setCategoryPath(path);
+
+    // categoryId in form = the leaf (most specific) category
+    const leafId = path[path.length - 1] || product.categoryId;
+    const hasChildren = allCategories.some((c) => c.parentCategoryId === leafId);
 
     reset({
       title: product.title,
       shortDescription: product.shortDescription,
       description: product.description,
-      categoryId: product.categoryId,
+      categoryId: hasChildren ? "" : leafId,
       basePrice: String(product.basePrice),
       currency: product.currency,
       priceUnit: product.priceUnit,
@@ -159,7 +201,7 @@ export default function EditListingPage() {
       weightUnit: product.weightUnit,
     });
     setFormPopulated(true);
-  }, [product, formPopulated, reset]);
+  }, [product, formPopulated, allCategories, reset]);
 
   // Populate media files from bucket query
   useEffect(() => {
@@ -381,30 +423,33 @@ export default function EditListingPage() {
                 <CardTitle>{t("categoryAndCondition")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="space-y-2">
-                  <Label>{t("fields.category")} *</Label>
-                  <Controller
-                    name="categoryId"
-                    control={control}
-                    render={({ field }) => (
-                      <Select value={field.value} onValueChange={field.onChange}>
-                        <SelectTrigger>
-                          <SelectValue placeholder={t("placeholders.category")} />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {categories.map((cat) => (
-                            <SelectItem key={cat.id} value={cat.id}>
-                              {cat.name}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    )}
-                  />
-                  {errors.categoryId && (
-                    <p className="text-sm text-destructive">{errors.categoryId.message}</p>
-                  )}
-                </div>
+                {categoryLevels.map((level, index) => (
+                  <div key={level.parentId ?? "root"} className="space-y-2">
+                    <Label>
+                      {index === 0 ? t("fields.category") : t("fields.subCategory")} *
+                    </Label>
+                    <Select
+                      value={categoryPath[index] ?? ""}
+                      onValueChange={(value) => handleCategoryChange(index, value)}
+                    >
+                      <SelectTrigger>
+                        <SelectValue
+                          placeholder={index === 0 ? t("placeholders.category") : t("placeholders.subCategory")}
+                        />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {level.options.map((cat) => (
+                          <SelectItem key={cat.id} value={cat.id}>
+                            {cat.name}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                ))}
+                {errors.categoryId && (
+                  <p className="text-sm text-destructive">{errors.categoryId.message}</p>
+                )}
 
                 <div className="space-y-2">
                   <Label>{t("fields.condition")} *</Label>

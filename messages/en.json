@@ -818,14 +818,16 @@
       "shippingCost": "Shipping Fee",
       "weight": "Weight",
       "weightUnit": "Unit of Weight",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Example: 2-Year-Old Holstein Cow",
       "shortDescription": "Product description (max 200 characters)",
       "description": "Provide detailed information about the product...",
       "category": "Select a category.",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +867,8 @@
       "currency": "Currency",
       "city": "City",
       "address": "Address",
-      "postalCode": "Postal code"
+      "postalCode": "Postal code",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Example: 2-Year-Old Holstein Cow",
@@ -875,7 +878,8 @@
       "searchCurrency": "Search currency...",
       "city": "Enter the city",
       "address": "Enter the full address.",
-      "postalCode": "Postal code"
+      "postalCode": "Postal code",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +890,8 @@
       "priceRequired": "Price is mandatory.",
       "cityRequired": "City information is required.",
       "addressRequired": "Address information is required.",
-      "locationError": "An error occurred while creating the location."
+      "locationError": "An error occurred while creating the location.",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "The advertisement was successfully created.",
     "error": "An error occurred while creating the advertisement.",
@@ -1035,19 +1040,22 @@
       "sortOrder": "Serial Number",
       "subCategories": "Subcategory",
       "status": "Situation",
-      "actions": "Transactions"
+      "actions": "Transactions",
+      "products": "Products"
     },
     "actions": {
       "edit": "Edit",
       "delete": "Delete",
       "activate": "Activate",
-      "deactivate": "Passive Structure"
+      "deactivate": "Passive Structure",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "Delete Category",
       "description": "Are you sure you want to delete this category? This action is irreversible.",
       "cancel": "Cancel",
-      "confirm": "Delete"
+      "confirm": "Delete",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "Add New Category",
     "loadMore": "Download More",
@@ -1075,7 +1083,10 @@
         "nameRequired": "Category name is required.",
         "slugRequired": "Slugs are mandatory."
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "Proposals",
