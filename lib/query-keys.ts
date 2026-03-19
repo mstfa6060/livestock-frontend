@@ -84,6 +84,8 @@ export const queryKeys = {
     details: () => [...queryKeys.transporters.all, "detail"] as const,
     detail: (id: string) =>
       [...queryKeys.transporters.details(), id] as const,
+    byUserId: (userId: string) =>
+      [...queryKeys.transporters.all, "byUser", userId] as const,
     requests: (params?: Params) =>
       [...queryKeys.transporters.all, "requests", params] as const,
     transportOffers: (params?: Params) =>

@@ -60,6 +60,7 @@ const menuItems: MenuItem[] = [
   { key: "subscription", href: "/dashboard/subscription", icon: CreditCard },
   { key: "boosts", href: "/dashboard/boosts", icon: Zap, requiredRoles: [Roles.Seller] },
   { key: "becomeSeller", href: "/dashboard/become-seller", icon: Store },
+  { key: "becomeTransporter", href: "/dashboard/become-transporter", icon: Truck },
   { key: "moderation", href: "/dashboard/moderation", icon: ShieldCheck, adminOnly: true },
   { key: "sellerModeration", href: "/dashboard/seller-moderation", icon: Store, adminOnly: true },
   { key: "transporterModeration", href: "/dashboard/transporter-moderation", icon: Truck, adminOnly: true },

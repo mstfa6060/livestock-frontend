@@ -171,6 +171,19 @@ export const becomeSellerFormSchema = z.object({
   ),
 });
 
+// Tasiyici ol formu
+export const becomeTransporterFormSchema = z.object({
+  companyName: requiredStringSchema(2, 100),
+  contactPerson: z.string().max(100, { message: messages.maxLength(100) }).optional(),
+  email: emailSchema,
+  phone: phoneSchema,
+  city: requiredStringSchema(1, 100),
+  countryCode: requiredStringSchema(2, 2),
+  description: z.string().max(1000, { message: messages.maxLength(1000) }).optional(),
+  serviceRegions: z.string().max(500, { message: messages.maxLength(500) }).optional(),
+  specializations: z.string().max(500, { message: messages.maxLength(500) }).optional(),
+});
+
 // Ilan olusturma formu (HTML input type="number" string dondurur)
 // categoryId: en alt seviye (leaf) kategori ID'si - UI tarafinda cascade ile belirlenir
 export const listingFormSchema = z.object({
@@ -267,6 +280,7 @@ export type ResetPasswordFormData = z.infer<typeof resetPasswordSchema>;
 export type ChangePasswordFormData = z.infer<typeof changePasswordSchema>;
 export type ProfileFormData = z.infer<typeof profileFormSchema>;
 export type BecomeSellerFormData = z.infer<typeof becomeSellerFormSchema>;
+export type BecomeTransporterFormData = z.infer<typeof becomeTransporterFormSchema>;
 export type ListingFormData = z.infer<typeof listingFormSchema>;
 export type EditListingFormData = z.infer<typeof editListingFormSchema>;
 export type FarmFormData = z.infer<typeof farmFormSchema>;
