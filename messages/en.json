@@ -984,6 +984,14 @@
       "goHome": "Return to Homepage"
     }
   },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
   "search": {
     "title": "Search",
     "placeholder": "Search for products, categories, or sellers...",

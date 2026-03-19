@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offline - Livestock Trading</title>
+  <meta name="theme-color" content="#16a34a" />
+  <link rel="manifest" href="/manifest.json" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fafafa;
+      color: #171717;
+      padding: 1rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body { background-color: #0a0a0a; color: #fafafa; }
+      .card { background-color: #171717; border-color: #262626; }
+      .description { color: #a3a3a3; }
+      .retry-btn { background-color: #16a34a; }
+      .retry-btn:hover { background-color: #15803d; }
+      .home-btn { border-color: #404040; color: #fafafa; }
+      .home-btn:hover { background-color: #262626; }
+    }
+
+    .card {
+      max-width: 28rem;
+      width: 100%;
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon-wrapper {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background-color: #fef3c7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+
+    .icon-wrapper svg {
+      width: 2rem;
+      height: 2rem;
+      color: #d97706;
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .description {
+      font-size: 0.875rem;
+      color: #737373;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    @media (min-width: 480px) {
+      .buttons { flex-direction: row; }
+    }
+
+    .btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.625rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: background-color 0.15s, border-color 0.15s;
+    }
+
+    .btn svg { width: 1rem; height: 1rem; }
+
+    .retry-btn {
+      background-color: #16a34a;
+      color: #fff;
+    }
+    .retry-btn:hover { background-color: #15803d; }
+
+    .home-btn {
+      background-color: transparent;
+      border-color: #e5e5e5;
+      color: #171717;
+    }
+    .home-btn:hover { background-color: #f5f5f5; }
+
+    .online-banner {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #16a34a;
+      color: #fff;
+      text-align: center;
+      padding: 0.75rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      z-index: 50;
+      animation: slideDown 0.3s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div id="online-banner" class="online-banner">
+    You're back online! Redirecting...
+  </div>
+
+  <div class="card">
+    <div class="icon-wrapper">
+      <!-- Wi-Fi off icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3l18 18M8.288 8.288A9.959 9.959 0 0012 7.5c3.037 0 5.789 1.232 7.778 3.222M5.106 11.606A9.953 9.953 0 003.222 10.722M8.464 14.464A5.976 5.976 0 0112 13.5c1.326 0 2.548.43 3.536 1.157M10.586 16.586A2.988 2.988 0 0112 16.5c.53 0 1.023.137 1.454.377M12 19.5h.008v.008H12V19.5z" />
+      </svg>
+    </div>
+
+    <h1 id="title">You're Offline</h1>
+    <p class="description" id="description">
+      It looks like you've lost your internet connection. Please check your connection and try again.
+    </p>
+
+    <div class="buttons">
+      <button class="btn retry-btn" onclick="window.location.reload()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.992 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182" />
+        </svg>
+        <span id="retryText">Try Again</span>
+      </button>
+
+      <a href="/" class="btn home-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+        <span id="homeText">Home</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Auto-detect language from URL or browser and update text
+    (function () {
+      var translations = {
+        tr: { title: "Cevrimdisi", description: "Internet baglantiniz yok gibi gorunuyor. Lutfen baglantinizi kontrol edip tekrar deneyin.", retry: "Tekrar Dene", home: "Ana Sayfa", online: "Tekrar cevrimicisiniz! Yonlendiriliyor..." },
+        de: { title: "Offline", description: "Es sieht so aus, als haetten Sie Ihre Internetverbindung verloren. Bitte ueberpruefen Sie Ihre Verbindung und versuchen Sie es erneut.", retry: "Erneut versuchen", home: "Startseite", online: "Sie sind wieder online! Weiterleitung..." },
+        es: { title: "Sin conexion", description: "Parece que has perdido tu conexion a internet. Por favor, comprueba tu conexion e intentalo de nuevo.", retry: "Reintentar", home: "Inicio", online: "Estas de vuelta en linea! Redirigiendo..." },
+        fr: { title: "Hors ligne", description: "Il semble que vous ayez perdu votre connexion internet. Veuillez verifier votre connexion et reessayer.", retry: "Reessayer", home: "Accueil", online: "Vous etes de retour en ligne ! Redirection..." },
+        ar: { title: "\u063A\u064A\u0631 \u0645\u062A\u0635\u0644", description: "\u064A\u0628\u062F\u0648 \u0623\u0646\u0643 \u0641\u0642\u062F\u062A \u0627\u062A\u0635\u0627\u0644\u0643 \u0628\u0627\u0644\u0625\u0646\u062A\u0631\u0646\u062A. \u064A\u0631\u062C\u0649 \u0627\u0644\u062A\u062D\u0642\u0642 \u0645\u0646 \u0627\u062A\u0635\u0627\u0644\u0643 \u0648\u0627\u0644\u0645\u062D\u0627\u0648\u0644\u0629 \u0645\u0631\u0629 \u0623\u062E\u0631\u0649.", retry: "\u062D\u0627\u0648\u0644 \u0645\u0631\u0629 \u0623\u062E\u0631\u0649", home: "\u0627\u0644\u0631\u0626\u064A\u0633\u064A\u0629", online: "\u0639\u062F\u062A \u0645\u062A\u0635\u0644\u0627\u064B! \u062C\u0627\u0631\u064D \u0627\u0644\u062A\u0648\u062C\u064A\u0647..." },
+        pt: { title: "Offline", description: "Parece que voce perdeu a conexao com a internet. Verifique sua conexao e tente novamente.", retry: "Tentar novamente", home: "Inicio", online: "Voce esta de volta online! Redirecionando..." },
+        ru: { title: "\u041D\u0435\u0442 \u0441\u0435\u0442\u0438", description: "\u041F\u043E\u0445\u043E\u0436\u0435, \u0432\u044B \u043F\u043E\u0442\u0435\u0440\u044F\u043B\u0438 \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 \u043A \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0443. \u041F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 \u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430.", retry: "\u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u044C", home: "\u0413\u043B\u0430\u0432\u043D\u0430\u044F", online: "\u0412\u044B \u0441\u043D\u043E\u0432\u0430 \u0432 \u0441\u0435\u0442\u0438! \u041F\u0435\u0440\u0435\u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435..." },
+        zh: { title: "\u79BB\u7EBF", description: "\u770B\u8D77\u6765\u60A8\u5DF2\u65AD\u5F00\u7F51\u7EDC\u8FDE\u63A5\u3002\u8BF7\u68C0\u67E5\u60A8\u7684\u8FDE\u63A5\u5E76\u91CD\u8BD5\u3002", retry: "\u91CD\u8BD5", home: "\u9996\u9875", online: "\u60A8\u5DF2\u91CD\u65B0\u4E0A\u7EBF\uFF01\u6B63\u5728\u8DF3\u8F6C..." },
+        ja: { title: "\u30AA\u30D5\u30E9\u30A4\u30F3", description: "\u30A4\u30F3\u30BF\u30FC\u30CD\u30C3\u30C8\u63A5\u7D9A\u304C\u5931\u308F\u308C\u305F\u3088\u3046\u3067\u3059\u3002\u63A5\u7D9A\u3092\u78BA\u8A8D\u3057\u3066\u3001\u3082\u3046\u4E00\u5EA6\u304A\u8A66\u3057\u304F\u3060\u3055\u3044\u3002", retry: "\u518D\u8A66\u884C", home: "\u30DB\u30FC\u30E0", online: "\u30AA\u30F3\u30E9\u30A4\u30F3\u306B\u623B\u308A\u307E\u3057\u305F\uFF01\u30EA\u30C0\u30A4\u30EC\u30AF\u30C8\u4E2D..." },
+        ko: { title: "\uC624\uD504\uB77C\uC778", description: "\uC778\uD130\uB137 \uC5F0\uACB0\uC774 \uB04A\uAE34 \uAC83 \uAC19\uC2B5\uB2C8\uB2E4. \uC5F0\uACB0\uC744 \uD655\uC778\uD558\uACE0 \uB2E4\uC2DC \uC2DC\uB3C4\uD574 \uC8FC\uC138\uC694.", retry: "\uB2E4\uC2DC \uC2DC\uB3C4", home: "\uD648", online: "\uB2E4\uC2DC \uC628\uB77C\uC778\uC785\uB2C8\uB2E4! \uB9AC\uB514\uB809\uC158 \uC911..." },
+        hi: { title: "\u0911\u092B\u093C\u0932\u093E\u0907\u0928", description: "\u0932\u0917\u0924\u093E \u0939\u0948 \u0906\u092A\u0915\u093E \u0907\u0902\u091F\u0930\u0928\u0947\u091F \u0915\u0928\u0947\u0915\u094D\u0936\u0928 \u091F\u0942\u091F \u0917\u092F\u093E \u0939\u0948\u0964 \u0915\u0943\u092A\u092F\u093E \u0905\u092A\u0928\u093E \u0915\u0928\u0947\u0915\u094D\u0936\u0928 \u091C\u093E\u0901\u091A\u0947\u0902 \u0914\u0930 \u092A\u0941\u0928\u0903 \u092A\u094D\u0930\u092F\u093E\u0938 \u0915\u0930\u0947\u0902\u0964", retry: "\u092A\u0941\u0928\u0903 \u092A\u094D\u0930\u092F\u093E\u0938 \u0915\u0930\u0947\u0902", home: "\u0939\u094B\u092E", online: "\u0906\u092A \u0935\u093E\u092A\u0938 \u0911\u0928\u0932\u093E\u0907\u0928 \u0939\u0948\u0902! \u0930\u0940\u0921\u093E\u092F\u0930\u0947\u0915\u094D\u091F \u0939\u094B \u0930\u0939\u093E \u0939\u0948..." },
+      };
+
+      // Try to detect locale from URL path (e.g. /tr/some-page)
+      var pathLang = window.location.pathname.split("/")[1];
+      var lang = translations[pathLang] ? pathLang : (navigator.language || "en").split("-")[0];
+      var t = translations[lang];
+
+      if (t) {
+        document.getElementById("title").textContent = t.title;
+        document.getElementById("description").textContent = t.description;
+        document.getElementById("retryText").textContent = t.retry;
+        document.getElementById("homeText").textContent = t.home;
+        document.getElementById("online-banner").textContent = t.online;
+        document.documentElement.lang = lang;
+      }
+
+      // RTL support
+      if (["ar", "he", "fa", "ur"].indexOf(lang) !== -1) {
+        document.documentElement.dir = "rtl";
+      }
+    })();
+
+    // Auto-reload when connection is restored
+    window.addEventListener("online", function () {
+      var banner = document.getElementById("online-banner");
+      banner.style.display = "block";
+      setTimeout(function () {
+        window.location.reload();
+      }, 1500);
+    });
+  </script>
+</body>
+</html>

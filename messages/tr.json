@@ -984,6 +984,14 @@
       "goHome": "Ana sayfaya dön"
     }
   },
+  "offline": {
+    "title": "Çevrimdışısınız",
+    "description": "İnternet bağlantınız kesilmiş gibi görünüyor. Lütfen bağlantınızı kontrol edip tekrar deneyin.",
+    "retry": "Tekrar Dene",
+    "home": "Ana Sayfa",
+    "backOnline": "Tekrar Çevrimiçisiniz!",
+    "redirecting": "Ana sayfaya yönlendiriliyorsunuz..."
+  },
   "search": {
     "title": "Aramak",
     "placeholder": "Ürünleri, kategorileri veya satıcıları arayın...",
