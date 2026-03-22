@@ -36,7 +36,7 @@ import {
   type Notification,
 } from "@/hooks/queries/useNotifications";
 import { useAuth } from "@/contexts/AuthContext";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 // Map backend NotificationType enum to icons and labels

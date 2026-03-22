@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { MainHeader } from "@/components/layout/main-header";
 import { SimpleFooter } from "@/components/layout/footer";
 import dynamic from "next/dynamic";
@@ -30,7 +30,7 @@ import {
   MessageSquare,
   HandCoins,
 } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { AppConfig } from "@/config/livestock-config";
 import { useFavoriteActions } from "@/hooks/queries/useFavorites";

@@ -2,7 +2,8 @@
 
 import { useState, useCallback } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { useSearchParams, useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname } from "@/i18n/navigation";
+import { useSearchParams } from "next/navigation";
 import { MainHeader } from "@/components/layout/main-header";
 import { SimpleFooter } from "@/components/layout/footer";
 import { ProductCard, ProductCardSkeleton, Product } from "@/components/features/product-card";

@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -106,8 +105,7 @@ export function DashboardSidebar() {
     }
   }, [user?.id, fetchUnreadCount]);
 
-  // Remove locale prefix from pathname for comparison
-  const currentPath = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, "");
+  const currentPath = pathname;
 
   const visibleItems = menuItems.filter((item) => {
     if (item.adminOnly && !isAdmin && !isStaff) return false;
@@ -178,7 +176,7 @@ export function DashboardMobileNav() {
     }
   }, [user?.id, fetchUnreadCount]);
 
-  const currentPath = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, "");
+  const currentPath = pathname;
 
   const mobileItems = [
     { key: "overview", href: "/dashboard", icon: LayoutDashboard },

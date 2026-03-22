@@ -1,7 +1,7 @@
 "use client";
 
 import { useListPage } from "@/hooks/useListPage";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { MainHeader } from "@/components/layout/main-header";
 import { SimpleFooter } from "@/components/layout/footer";

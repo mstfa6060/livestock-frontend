@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useParams } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { MainHeader } from "@/components/layout/main-header";

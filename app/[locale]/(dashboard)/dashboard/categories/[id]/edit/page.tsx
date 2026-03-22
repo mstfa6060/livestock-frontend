@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
+import { useParams } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { queryKeys } from "@/lib/query-keys";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { formatDistanceToNow } from "date-fns";
 import { getDateLocale } from "@/lib/date-locale";
@@ -19,7 +19,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Bell, MessageSquare, Tag, Package, Info, CheckCheck, ShoppingCart, Truck, PackageCheck, XCircle, CreditCard, AlertCircle, TrendingDown, Star, ShieldCheck, CheckCircle, ClipboardList } from "lucide-react";
 import { useNotifications, useUnreadCount, useMarkAsReadMutation, useMarkAllAsReadMutation } from "@/hooks/queries/useNotifications";
 import { useAuth } from "@/contexts/AuthContext";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 // Map backend NotificationType enum to icons

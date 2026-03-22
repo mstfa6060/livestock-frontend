@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useDeferredValue } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { formatDistanceToNow } from "date-fns";
 import { getDateLocale } from "@/lib/date-locale";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -23,7 +23,7 @@ import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useTransporterByUserId, useCountries } from "@/hooks/queries";
 import { toast } from "sonner";
 import { Loader2, Truck, CheckCircle, AlertCircle } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { becomeTransporterFormSchema, type BecomeTransporterFormData } from "@/lib/validations";
 
 export default function BecomeTransporterPage() {

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname } from "@/i18n/navigation";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -25,13 +25,7 @@ export function LanguageSwitcher() {
   const [open, setOpen] = useState(false);
 
   const handleLocaleChange = (newLocale: Locale) => {
-    const segments = pathname.split("/");
-    if (locales.includes(segments[1] as Locale)) {
-      segments[1] = newLocale;
-    } else {
-      segments.splice(1, 0, newLocale);
-    }
-    router.push(segments.join("/") || "/");
+    router.replace(pathname, { locale: newLocale });
     setOpen(false);
     setSearch("");
   };
