@@ -176,9 +176,10 @@ export default function SellersPage() {
             <p className="text-muted-foreground text-lg">{t("noResults")}</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <ul role="list" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredSellers.map((seller) => (
-              <Link key={seller.id} href={`/sellers/${seller.id}`}>
+              <li key={seller.id}>
+              <Link href={`/sellers/${seller.id}`}>
                 <Card className="h-full hover:shadow-md transition-shadow cursor-pointer">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
@@ -240,8 +241,9 @@ export default function SellersPage() {
                   </CardContent>
                 </Card>
               </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
 
         {/* Pagination */}

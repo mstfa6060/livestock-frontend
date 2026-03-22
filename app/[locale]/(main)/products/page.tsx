@@ -640,11 +640,13 @@ export default function ProductsPage() {
                 )}
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+              <ul role="list" className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                 {filteredProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <li key={product.id}>
+                    <ProductCard product={product} />
+                  </li>
                 ))}
-              </div>
+              </ul>
             )}
 
             {/* Load More */}

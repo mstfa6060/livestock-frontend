@@ -222,10 +222,12 @@ function LoginForm() {
                 type="email"
                 placeholder={tc("emailPlaceholder")}
                 {...register("email")}
+                aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? "email-error" : undefined}
                 className={errors.email ? "border-red-500" : ""}
               />
               {errors.email && (
-                <p className="text-sm text-destructive">{errors.email.message}</p>
+                <p id="email-error" className="text-sm text-destructive">{errors.email.message}</p>
               )}
             </div>
             <div className="space-y-2">
@@ -236,6 +238,8 @@ function LoginForm() {
                   type={showPassword ? "text" : "password"}
                   placeholder="••••••••"
                   {...register("password")}
+                  aria-invalid={!!errors.password}
+                  aria-describedby={errors.password ? "password-error" : undefined}
                   className={`pr-10 ${errors.password ? "border-red-500" : ""}`}
                 />
                 <button
@@ -248,7 +252,7 @@ function LoginForm() {
                 </button>
               </div>
               {errors.password && (
-                <p className="text-sm text-destructive">{errors.password.message}</p>
+                <p id="password-error" className="text-sm text-destructive">{errors.password.message}</p>
               )}
             </div>
             <div className="flex items-center justify-between">

@@ -205,10 +205,10 @@ export default function MessagesPage() {
           </p>
         </div>
       ) : (
-        <div className="space-y-3">
+        <ul role="list" className="space-y-3">
           {filteredConversations.map((conversation) => (
+            <li key={conversation.id}>
             <Link
-              key={conversation.id}
               href={`/dashboard/messages/${conversation.id}`}
             >
               <Card
@@ -273,8 +273,9 @@ export default function MessagesPage() {
                 </CardContent>
               </Card>
             </Link>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </DashboardLayout>
   );

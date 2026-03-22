@@ -153,10 +153,12 @@ export default function RegisterPage() {
                   type="text"
                   placeholder={t("firstNamePlaceholder")}
                   {...register("firstName")}
+                  aria-invalid={!!errors.firstName}
+                  aria-describedby={errors.firstName ? "firstName-error" : undefined}
                   className={errors.firstName ? "border-red-500" : ""}
                 />
                 {errors.firstName && (
-                  <p className="text-xs text-destructive">{errors.firstName.message}</p>
+                  <p id="firstName-error" className="text-xs text-destructive">{errors.firstName.message}</p>
                 )}
               </div>
               <div className="space-y-2">
@@ -166,10 +168,12 @@ export default function RegisterPage() {
                   type="text"
                   placeholder={t("surnamePlaceholder")}
                   {...register("surname")}
+                  aria-invalid={!!errors.surname}
+                  aria-describedby={errors.surname ? "surname-error" : undefined}
                   className={errors.surname ? "border-red-500" : ""}
                 />
                 {errors.surname && (
-                  <p className="text-xs text-destructive">{errors.surname.message}</p>
+                  <p id="surname-error" className="text-xs text-destructive">{errors.surname.message}</p>
                 )}
               </div>
             </div>
@@ -182,10 +186,12 @@ export default function RegisterPage() {
                 type="text"
                 placeholder={t("usernamePlaceholder")}
                 {...register("username")}
+                aria-invalid={!!errors.username}
+                aria-describedby={errors.username ? "username-error" : undefined}
                 className={errors.username ? "border-red-500" : ""}
               />
               {errors.username && (
-                <p className="text-xs text-destructive">{errors.username.message}</p>
+                <p id="username-error" className="text-xs text-destructive">{errors.username.message}</p>
               )}
             </div>
 
@@ -197,10 +203,12 @@ export default function RegisterPage() {
                 type="email"
                 placeholder={tc("emailPlaceholder")}
                 {...register("email")}
+                aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? "email-error" : undefined}
                 className={errors.email ? "border-red-500" : ""}
               />
               {errors.email && (
-                <p className="text-xs text-destructive">{errors.email.message}</p>
+                <p id="email-error" className="text-xs text-destructive">{errors.email.message}</p>
               )}
             </div>
 
@@ -213,6 +221,8 @@ export default function RegisterPage() {
                   type={showPassword ? "text" : "password"}
                   placeholder="••••••••"
                   {...register("password")}
+                  aria-invalid={!!errors.password}
+                  aria-describedby={errors.password ? "password-error" : undefined}
                   className={`pr-10 ${errors.password ? "border-red-500" : ""}`}
                 />
                 <button
@@ -226,7 +236,7 @@ export default function RegisterPage() {
               </div>
               <PasswordStrength password={password || ""} />
               {errors.password && (
-                <p className="text-xs text-destructive">{errors.password.message}</p>
+                <p id="password-error" className="text-xs text-destructive">{errors.password.message}</p>
               )}
             </div>
 
@@ -239,6 +249,8 @@ export default function RegisterPage() {
                   type={showConfirmPassword ? "text" : "password"}
                   placeholder="••••••••"
                   {...register("confirmPassword")}
+                  aria-invalid={!!errors.confirmPassword}
+                  aria-describedby={errors.confirmPassword ? "confirmPassword-error" : undefined}
                   className={`pr-10 ${errors.confirmPassword ? "border-red-500" : ""}`}
                 />
                 <button
@@ -251,7 +263,7 @@ export default function RegisterPage() {
                 </button>
               </div>
               {errors.confirmPassword && (
-                <p className="text-xs text-destructive">{errors.confirmPassword.message}</p>
+                <p id="confirmPassword-error" className="text-xs text-destructive">{errors.confirmPassword.message}</p>
               )}
             </div>
           </CardContent>

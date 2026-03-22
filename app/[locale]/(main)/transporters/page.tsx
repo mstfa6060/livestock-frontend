@@ -200,10 +200,10 @@ export default function TransportersPage() {
           </div>
         ) : (
           <>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ul role="list" className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filtered.map((transporter) => (
+                <li key={transporter.id}>
                 <Card
-                  key={transporter.id}
                   className="hover:border-primary transition-colors"
                 >
                   <CardContent className="p-6">
@@ -267,8 +267,9 @@ export default function TransportersPage() {
                     </div>
                   </CardContent>
                 </Card>
+              </li>
               ))}
-            </div>
+            </ul>
 
             {/* Pagination */}
             <div className="flex items-center justify-center gap-4 mt-8">

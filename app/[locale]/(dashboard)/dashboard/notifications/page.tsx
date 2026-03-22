@@ -176,7 +176,7 @@ export default function NotificationsPage() {
               </h3>
 
               {/* Group notifications */}
-              <div className="space-y-3">
+              <ul role="list" className="space-y-3">
                 {group.notifications.map((notification) => {
                   const config = notificationConfig[notification.type] || {
                     icon: <Info className="h-5 w-5" />,
@@ -184,8 +184,8 @@ export default function NotificationsPage() {
                   };
 
                   return (
+                    <li key={notification.id}>
                     <Card
-                      key={notification.id}
                       role="button"
                       tabIndex={0}
                       className={cn(
@@ -249,9 +249,10 @@ export default function NotificationsPage() {
                         </div>
                       </CardContent>
                     </Card>
+                    </li>
                   );
                 })}
-              </div>
+              </ul>
             </div>
           ))}
         </div>

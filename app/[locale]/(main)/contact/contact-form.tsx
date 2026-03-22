@@ -74,6 +74,8 @@ export function ContactForm() {
           value={form.name}
           onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
           placeholder={t("form.namePlaceholder")}
+          aria-invalid={status === "error"}
+          aria-describedby={status === "error" ? "contact-form-error" : undefined}
           className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
         />
       </div>
@@ -87,6 +89,8 @@ export function ContactForm() {
           value={form.email}
           onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
           placeholder={t("form.emailPlaceholder")}
+          aria-invalid={status === "error"}
+          aria-describedby={status === "error" ? "contact-form-error" : undefined}
           className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
         />
       </div>
@@ -100,6 +104,8 @@ export function ContactForm() {
           value={form.subject}
           onChange={e => setForm(f => ({ ...f, subject: e.target.value }))}
           placeholder={t("form.subjectPlaceholder")}
+          aria-invalid={status === "error"}
+          aria-describedby={status === "error" ? "contact-form-error" : undefined}
           className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
         />
       </div>
@@ -113,12 +119,14 @@ export function ContactForm() {
           value={form.message}
           onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
           placeholder={t("form.messagePlaceholder")}
+          aria-invalid={status === "error"}
+          aria-describedby={status === "error" ? "contact-form-error" : undefined}
           className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary resize-none"
         />
       </div>
 
       {status === "error" && (
-        <p className="text-sm text-red-600">{t("form.error")}</p>
+        <p id="contact-form-error" className="text-sm text-red-600">{t("form.error")}</p>
       )}
 
       <button

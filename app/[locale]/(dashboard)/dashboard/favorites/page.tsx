@@ -106,16 +106,17 @@ export default function FavoritesPage() {
           </Button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ul role="list" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {favorites.map((product) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              isFavorite={true}
-              onFavorite={handleRemoveFavorite}
-            />
+            <li key={product.id}>
+              <ProductCard
+                product={product}
+                isFavorite={true}
+                onFavorite={handleRemoveFavorite}
+              />
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </DashboardLayout>
   );

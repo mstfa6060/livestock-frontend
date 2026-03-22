@@ -327,9 +327,9 @@ export default function MyListingsPage() {
           </Button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ul role="list" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredListings.map((listing) => (
-            <div key={listing.id} className="relative group">
+            <li key={listing.id} className="relative group">
               <ProductCard product={listing} />
 
               {/* Status Badge Overlay */}
@@ -402,9 +402,9 @@ export default function MyListingsPage() {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
 
       {/* Delete Confirmation Dialog */}
