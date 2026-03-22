@@ -902,6 +902,7 @@
     "imageUploadFailed": "Resim yüklenemedi.",
     "imagesUploaded": "Tüm resimler başarıyla yüklendi.",
     "draftSaved": "Taslak kaydedildi",
+    "autoSaved": "Otomatik kaydedildi",
     "productCreated": "Ürün başarıyla üretildi.",
     "creationFailed": "Ürün oluşturulamadı. Lütfen tekrar deneyin.",
     "userNotFound": "Kullanıcı bilgileri bulunamadı. Lütfen tekrar giriş yapın.",

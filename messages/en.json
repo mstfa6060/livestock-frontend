@@ -902,6 +902,7 @@
     "imageUploadFailed": "Image could not be loaded.",
     "imagesUploaded": "All images have been uploaded successfully",
     "draftSaved": "Draft saved",
+    "autoSaved": "Auto-saved",
     "productCreated": "The product was successfully created.",
     "creationFailed": "The product could not be created. Please try again.",
     "userNotFound": "User information could not be found. Please log in again.",

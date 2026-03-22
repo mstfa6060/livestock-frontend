@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useRouter } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { useForm, Controller } from "react-hook-form";
@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
-import { ArrowLeft, Save, Loader2 } from "lucide-react";
+import { ArrowLeft, Save, Loader2, CloudOff, Cloud } from "lucide-react";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useAuth } from "@/contexts/AuthContext";
 import { useSelectedCountry } from "@/components/layout/country-switcher";
@@ -90,35 +90,70 @@ export default function NewListingPage() {
   const [, setMediaFiles] = useState<MediaFile[]>([]);
 
   // Form with Zod validation
+  const DRAFT_KEY = "listing-draft";
+  const [autoSaveStatus, setAutoSaveStatus] = useState<"idle" | "saving" | "saved">("idle");
+  const autoSaveTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const isRestoredRef = useRef(false);
+
+  // Restore draft from localStorage
+  const getSavedDraft = useCallback((): Partial<ListingFormData> | null => {
+    try {
+      const saved = localStorage.getItem(DRAFT_KEY);
+      return saved ? JSON.parse(saved) : null;
+    } catch { return null; }
+  }, []);
+
+  const savedDraft = getSavedDraft();
+
   const {
     register,
     handleSubmit: formSubmit,
     control,
     watch,
     setValue,
-    formState: { errors },
+    formState: { errors, isDirty },
   } = useForm<ListingFormData>({
     resolver: zodResolver(listingFormSchema),
     defaultValues: {
-      title: "",
-      shortDescription: "",
-      description: "",
-      categoryId: "",
-      basePrice: "",
-      currency: user?.currencyCode || selectedCountry?.defaultCurrencyCode || "USD",
-      priceUnit: "adet",
-      stockQuantity: "1",
-      stockUnit: "adet",
-      condition: 0,
-      isShippingAvailable: false,
-      shippingCost: "",
-      weight: "",
-      weightUnit: "kg",
-      city: "",
-      address: "",
-      postalCode: "",
+      title: savedDraft?.title || "",
+      shortDescription: savedDraft?.shortDescription || "",
+      description: savedDraft?.description || "",
+      categoryId: savedDraft?.categoryId || "",
+      basePrice: savedDraft?.basePrice || "",
+      currency: savedDraft?.currency || user?.currencyCode || selectedCountry?.defaultCurrencyCode || "USD",
+      priceUnit: savedDraft?.priceUnit || "adet",
+      stockQuantity: savedDraft?.stockQuantity || "1",
+      stockUnit: savedDraft?.stockUnit || "adet",
+      condition: savedDraft?.condition ?? 0,
+      isShippingAvailable: savedDraft?.isShippingAvailable || false,
+      shippingCost: savedDraft?.shippingCost || "",
+      weight: savedDraft?.weight || "",
+      weightUnit: savedDraft?.weightUnit || "kg",
+      city: savedDraft?.city || "",
+      address: savedDraft?.address || "",
+      postalCode: savedDraft?.postalCode || "",
     },
   });
+
+  // Auto-save form to localStorage (debounced 2s)
+  const formValues = watch();
+  useEffect(() => {
+    if (!isRestoredRef.current) {
+      isRestoredRef.current = true;
+      return;
+    }
+    if (autoSaveTimerRef.current) clearTimeout(autoSaveTimerRef.current);
+    autoSaveTimerRef.current = setTimeout(() => {
+      try {
+        localStorage.setItem(DRAFT_KEY, JSON.stringify(formValues));
+        setAutoSaveStatus("saved");
+        setTimeout(() => setAutoSaveStatus("idle"), 2000);
+      } catch {
+        // Storage full or unavailable
+      }
+    }, 2000);
+    return () => { if (autoSaveTimerRef.current) clearTimeout(autoSaveTimerRef.current); };
+  }, [JSON.stringify(formValues)]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const isShippingAvailable = watch("isShippingAvailable");
 
@@ -241,6 +276,7 @@ export default function NewListingPage() {
       });
 
       await queryClient.invalidateQueries({ queryKey: queryKeys.products.all });
+      localStorage.removeItem(DRAFT_KEY);
       toast.success(t("draftSaved"));
       router.push("/dashboard/my-listings");
     } catch (error: unknown) {
@@ -268,6 +304,12 @@ export default function NewListingPage() {
               <ArrowLeft className="h-5 w-5" />
             </Button>
             <h1 className="text-2xl font-bold">{t("title")}</h1>
+            {autoSaveStatus === "saved" && (
+              <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                <Cloud className="h-3 w-3" />
+                {t("autoSaved")}
+              </span>
+            )}
           </div>
           <div className="flex gap-2">
             <Button type="submit" disabled={isLoading || authLoading || !user?.id}>
