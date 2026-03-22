@@ -2,15 +2,13 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Current Priority: PROJECT-ANALYSIS.md
+## Current Priority: TASKS.md (Birlesik Gorev Listesi)
 
-When starting a new chat without a specific task, refer to `PROJECT-ANALYSIS.md` in the project root. This file contains:
-- Full project analysis (pages, components, API hooks)
-- UX scoring and improvement areas
-- Prioritized task list with checkboxes
-- Technical debt items
+When starting a new chat without a specific task, refer to `../TASKS.md` in the parent directory (`d:\Projects\GlobalLivestock\TASKS.md`). This is the **unified task list** across all three projects (web, mobil, backend). Work through the unchecked items in priority order.
 
-Work through the unchecked items in priority order (Section 8: Priority Matrix). Mark items as completed when done.
+Additional project-specific references:
+- `PROJECT-ANALYSIS.md` — Web project analysis (pages, components, UX scoring)
+- `TECHNICAL-DEBT.md` — Technical debt items (all completed)
 
 ## Build and Development Commands
 

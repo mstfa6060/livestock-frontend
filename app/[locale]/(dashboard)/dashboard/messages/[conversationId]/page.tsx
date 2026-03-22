@@ -76,6 +76,7 @@ export default function ConversationPage() {
 
   const [newMessage, setNewMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
+  const [otherUserId, setOtherUserId] = useState<string | undefined>();
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -87,10 +88,12 @@ export default function ConversationPage() {
     typingUsers,
     isConnected,
     isConnecting,
+    isOtherUserOnline,
     sendTypingIndicator,
     markAsRead,
   } = useChat({
     conversationId,
+    otherUserId,
     onNewMessage: (message) => {
       // Mark as read if the message is from the other user
       if (message.senderUserId !== user?.id) {
@@ -174,6 +177,11 @@ export default function ConversationPage() {
 
   const conversation = conversationData?.conversation ?? null;
   const otherUser = conversationData?.otherUser ?? null;
+
+  // Update otherUserId for online status tracking
+  useEffect(() => {
+    if (otherUser?.id) setOtherUserId(otherUser.id);
+  }, [otherUser?.id]);
   const product = conversationData?.product ?? null;
 
   // Fetch messages list
@@ -411,15 +419,22 @@ export default function ConversationPage() {
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               {isConnecting ? (
                 <span>{t("connecting")}</span>
-              ) : isConnected ? (
-                <>
-                  <Circle className="h-2 w-2 fill-green-500 text-green-500" />
-                  <span>{t("connected")}</span>
-                </>
-              ) : (
+              ) : !isConnected ? (
                 <>
                   <Circle className="h-2 w-2 fill-red-500 text-red-500" />
                   <span>{t("connectionError")}</span>
+                </>
+              ) : typingUsers.size > 0 ? (
+                <span className="text-primary italic">{t("typing")}</span>
+              ) : isOtherUserOnline ? (
+                <>
+                  <Circle className="h-2 w-2 fill-green-500 text-green-500" />
+                  <span>{t("online")}</span>
+                </>
+              ) : (
+                <>
+                  <Circle className="h-2 w-2 fill-muted-foreground text-muted-foreground" />
+                  <span>{t("offline")}</span>
                 </>
               )}
             </div>

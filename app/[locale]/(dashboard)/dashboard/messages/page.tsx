@@ -17,8 +17,9 @@ import { IAMAPI } from "@/api/base_modules/iam";
 import { useAuth } from "@/contexts/AuthContext";
 import { useQuery } from "@tanstack/react-query";
 import { queryKeys } from "@/lib/query-keys";
-import { MessageSquare, Search } from "lucide-react";
+import { MessageSquare, Search, Circle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useOnlineStatus } from "@/hooks/useOnlineStatus";
 
 interface Conversation {
   id: string;
@@ -140,6 +141,12 @@ export default function MessagesPage() {
     enabled: !!user?.id,
   });
 
+  // Track online status of conversation participants
+  const otherUserIds = conversations.map((conv) =>
+    conv.participantUserId1 === user?.id ? conv.participantUserId2 : conv.participantUserId1
+  );
+  const { isOnline } = useOnlineStatus(otherUserIds);
+
   const filteredConversations = conversations.filter(
     (conv) =>
       conv.subject?.toLowerCase().includes(deferredSearch.toLowerCase()) ||
@@ -221,7 +228,13 @@ export default function MessagesPage() {
                           {conversation.otherUserInitials}
                         </AvatarFallback>
                       </Avatar>
-                      {/* Online indicator - placeholder */}
+                      {isOnline(
+                        conversation.participantUserId1 === user?.id
+                          ? conversation.participantUserId2
+                          : conversation.participantUserId1
+                      ) && (
+                        <Circle className="absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 fill-green-500 text-green-500 ring-2 ring-background rounded-full" />
+                      )}
                     </div>
 
                     {/* Content */}

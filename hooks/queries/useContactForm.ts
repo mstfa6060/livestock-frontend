@@ -20,7 +20,7 @@ export function useContactFormMutation() {
   return useMutation({
     mutationFn: (data: ContactFormData) =>
       api.post<{ payload: ContactFormResponse }>(
-        `${AppConfig.LivestockTradingUrl}/ContactMessages/Create`,
+        `${AppConfig.LivestockTradingUrl}/ContactForms/Create`,
         data
       ).then((res) => res.data.payload),
   });

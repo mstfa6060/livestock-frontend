@@ -5,14 +5,16 @@ import { chatService, Message, TypingIndicator } from "@/lib/chat/ChatService";
 
 export interface UseChatOptions {
   conversationId: string;
+  otherUserId?: string;
   onNewMessage?: (message: Message) => void;
 }
 
-export const useChat = ({ conversationId, onNewMessage }: UseChatOptions) => {
+export const useChat = ({ conversationId, otherUserId, onNewMessage }: UseChatOptions) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [typingUsers, setTypingUsers] = useState<Map<string, string>>(new Map());
   const [isConnected, setIsConnected] = useState(false);
   const [isConnecting, setIsConnecting] = useState(false);
+  const [isOtherUserOnline, setIsOtherUserOnline] = useState(false);
   const typingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const isMountedRef = useRef(true);
   const onNewMessageRef = useRef(onNewMessage);
@@ -62,6 +64,42 @@ export const useChat = ({ conversationId, onNewMessage }: UseChatOptions) => {
       chatService.leaveConversation(conversationId).catch(() => {});
     };
   }, [conversationId]);
+
+  // Check other user's online status on connect
+  useEffect(() => {
+    if (!isConnected || !otherUserId) return;
+
+    chatService.getOnlineUsers([otherUserId]).then((result) => {
+      if (isMountedRef.current && result.length > 0) {
+        setIsOtherUserOnline(result[0].isOnline);
+      }
+    }).catch(() => {});
+  }, [isConnected, otherUserId]);
+
+  // Listen for online/offline events
+  useEffect(() => {
+    if (!isConnected || !otherUserId) return;
+
+    const handleUserOnline = (data: { userId: string }) => {
+      if (data.userId === otherUserId) {
+        setIsOtherUserOnline(true);
+      }
+    };
+
+    const handleUserOffline = (data: { userId: string }) => {
+      if (data.userId === otherUserId) {
+        setIsOtherUserOnline(false);
+      }
+    };
+
+    chatService.onUserOnline(handleUserOnline);
+    chatService.onUserOffline(handleUserOffline);
+
+    return () => {
+      chatService.offUserOnline(handleUserOnline);
+      chatService.offUserOffline(handleUserOffline);
+    };
+  }, [isConnected, otherUserId]);
 
   // Message handlers
   useEffect(() => {
@@ -154,6 +192,7 @@ export const useChat = ({ conversationId, onNewMessage }: UseChatOptions) => {
     typingUsers,
     isConnected,
     isConnecting,
+    isOtherUserOnline,
     sendTypingIndicator,
     markAsRead,
   };
