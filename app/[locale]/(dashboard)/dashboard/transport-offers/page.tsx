@@ -135,6 +135,7 @@ export default function TransportOffersPage() {
       await LivestockTradingAPI.TransportOffers.Create.Request({
         transportRequestId: selectedRequestId,
         transporterId: user.id,
+        requestOwnerUserId: "",
         offeredPrice: parseFloat(formData.offeredPrice),
         currency: formData.currency,
         estimatedDurationDays: formData.estimatedDurationDays
@@ -170,6 +171,7 @@ export default function TransportOffersPage() {
         id: offerId,
         transportRequestId: offer.transportRequestId,
         transporterId: offer.transporterId,
+        requestOwnerUserId: "",
         offeredPrice: offer.offeredPrice,
         currency: offer.currency,
         vehicleType: "",

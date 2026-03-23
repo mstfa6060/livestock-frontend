@@ -17,6 +17,8 @@ type Int64 = number;
 type Int32 = number;
 type int = number;
 type long = number;
+type float = number;
+type Single = number;
 type __ERROR_TYPE_NOT_HANDLED__ = number;
 
 // Settings...
@@ -624,8 +626,8 @@ export namespace LivestockTradingAPI {
 			export interface IResponseModel {
 				id: Guid;
 				transportRequestId: Guid;
-				latitude?: __ERROR_TYPE_NOT_HANDLED__;
-				longitude?: __ERROR_TYPE_NOT_HANDLED__;
+				latitude?: Double;
+				longitude?: Double;
 				locationDescription: string;
 				status: number;
 				statusDescription: string;
@@ -667,8 +669,8 @@ export namespace LivestockTradingAPI {
 			export interface IResponseModel {
 				id: Guid;
 				transportRequestId: Guid;
-				latitude?: __ERROR_TYPE_NOT_HANDLED__;
-				longitude?: __ERROR_TYPE_NOT_HANDLED__;
+				latitude?: Double;
+				longitude?: Double;
 				locationDescription: string;
 				status: number;
 				statusDescription: string;
@@ -685,8 +687,8 @@ export namespace LivestockTradingAPI {
 			export interface IRequestModel {
 				id: Guid;
 				transportRequestId: Guid;
-				latitude?: __ERROR_TYPE_NOT_HANDLED__;
-				longitude?: __ERROR_TYPE_NOT_HANDLED__;
+				latitude?: Double;
+				longitude?: Double;
 				locationDescription: string;
 				status: number;
 				statusDescription: string;
@@ -697,8 +699,8 @@ export namespace LivestockTradingAPI {
 			export interface IResponseModel {
 				id: Guid;
 				transportRequestId: Guid;
-				latitude?: __ERROR_TYPE_NOT_HANDLED__;
-				longitude?: __ERROR_TYPE_NOT_HANDLED__;
+				latitude?: Double;
+				longitude?: Double;
 				locationDescription: string;
 				status: number;
 				statusDescription: string;
@@ -726,8 +728,8 @@ export namespace LivestockTradingAPI {
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
 				transportRequestId: Guid;
-				latitude?: __ERROR_TYPE_NOT_HANDLED__;
-				longitude?: __ERROR_TYPE_NOT_HANDLED__;
+				latitude?: Double;
+				longitude?: Double;
 				locationDescription: string;
 				status: number;
 				statusDescription: string;
@@ -738,8 +740,8 @@ export namespace LivestockTradingAPI {
 			export interface IResponseModel {
 				id: Guid;
 				transportRequestId: Guid;
-				latitude?: __ERROR_TYPE_NOT_HANDLED__;
-				longitude?: __ERROR_TYPE_NOT_HANDLED__;
+				latitude?: Double;
+				longitude?: Double;
 				locationDescription: string;
 				status: number;
 				statusDescription: string;
@@ -780,13 +782,13 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				sellerId: Guid;
 				buyerId: Guid;
-				agreedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				agreedPrice?: Double;
 				currency: string;
 				pickupLocationId: Guid;
 				deliveryLocationId: Guid;
-				estimatedDistanceKm?: __ERROR_TYPE_NOT_HANDLED__;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				volumeCubicMeters?: __ERROR_TYPE_NOT_HANDLED__;
+				estimatedDistanceKm?: Double;
+				weightKg?: Double;
+				volumeCubicMeters?: Double;
 				specialInstructions: string;
 				preferredPickupDate?: Date;
 				preferredDeliveryDate?: Date;
@@ -859,13 +861,13 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				sellerId: Guid;
 				buyerId: Guid;
-				agreedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				agreedPrice?: Double;
 				currency: string;
 				pickupLocationId: Guid;
 				deliveryLocationId: Guid;
-				estimatedDistanceKm?: __ERROR_TYPE_NOT_HANDLED__;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				volumeCubicMeters?: __ERROR_TYPE_NOT_HANDLED__;
+				estimatedDistanceKm?: Double;
+				weightKg?: Double;
+				volumeCubicMeters?: Double;
 				specialInstructions: string;
 				preferredPickupDate?: Date;
 				preferredDeliveryDate?: Date;
@@ -879,13 +881,13 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				sellerId: Guid;
 				buyerId: Guid;
-				agreedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				agreedPrice?: Double;
 				currency: string;
 				pickupLocationId: Guid;
 				deliveryLocationId: Guid;
-				estimatedDistanceKm?: __ERROR_TYPE_NOT_HANDLED__;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				volumeCubicMeters?: __ERROR_TYPE_NOT_HANDLED__;
+				estimatedDistanceKm?: Double;
+				weightKg?: Double;
+				volumeCubicMeters?: Double;
 				specialInstructions: string;
 				preferredPickupDate?: Date;
 				preferredDeliveryDate?: Date;
@@ -915,13 +917,13 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				sellerId: Guid;
 				buyerId: Guid;
-				agreedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				agreedPrice?: Double;
 				currency: string;
 				pickupLocationId: Guid;
 				deliveryLocationId: Guid;
-				estimatedDistanceKm?: __ERROR_TYPE_NOT_HANDLED__;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				volumeCubicMeters?: __ERROR_TYPE_NOT_HANDLED__;
+				estimatedDistanceKm?: Double;
+				weightKg?: Double;
+				volumeCubicMeters?: Double;
 				specialInstructions: string;
 				preferredPickupDate?: Date;
 				preferredDeliveryDate?: Date;
@@ -935,13 +937,13 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				sellerId: Guid;
 				buyerId: Guid;
-				agreedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				agreedPrice?: Double;
 				currency: string;
 				pickupLocationId: Guid;
 				deliveryLocationId: Guid;
-				estimatedDistanceKm?: __ERROR_TYPE_NOT_HANDLED__;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				volumeCubicMeters?: __ERROR_TYPE_NOT_HANDLED__;
+				estimatedDistanceKm?: Double;
+				weightKg?: Double;
+				volumeCubicMeters?: Double;
 				specialInstructions: string;
 				preferredPickupDate?: Date;
 				preferredDeliveryDate?: Date;
@@ -968,7 +970,7 @@ export namespace LivestockTradingAPI {
 			export interface IResponseModel {
 				id: Guid;
 				transporterId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 			}
 		}
 
@@ -982,14 +984,14 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				transportRequestId: Guid;
 				transporterId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 				currency: string;
 				estimatedPickupDate?: Date;
 				estimatedDeliveryDate?: Date;
 				estimatedDurationDays?: number;
 				vehicleType: string;
 				insuranceIncluded: boolean;
-				insuranceAmount?: __ERROR_TYPE_NOT_HANDLED__;
+				insuranceAmount?: Double;
 				additionalServices: string;
 				message: string;
 				status: number;
@@ -1034,7 +1036,7 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				transportRequestId: Guid;
 				transporterId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 				currency: string;
 				status: number;
 				estimatedDurationDays?: number;
@@ -1051,31 +1053,32 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				transportRequestId: Guid;
 				transporterId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 				currency: string;
 				estimatedPickupDate?: Date;
 				estimatedDeliveryDate?: Date;
 				estimatedDurationDays?: number;
 				vehicleType: string;
 				insuranceIncluded: boolean;
-				insuranceAmount?: __ERROR_TYPE_NOT_HANDLED__;
+				insuranceAmount?: Double;
 				additionalServices: string;
 				message: string;
 				status: number;
 				expiryDate?: Date;
+				requestOwnerUserId: Guid;
 			}
 			export interface IResponseModel {
 				id: Guid;
 				transportRequestId: Guid;
 				transporterId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 				currency: string;
 				estimatedPickupDate?: Date;
 				estimatedDeliveryDate?: Date;
 				estimatedDurationDays?: number;
 				vehicleType: string;
 				insuranceIncluded: boolean;
-				insuranceAmount?: __ERROR_TYPE_NOT_HANDLED__;
+				insuranceAmount?: Double;
 				additionalServices: string;
 				message: string;
 				status: number;
@@ -1103,31 +1106,32 @@ export namespace LivestockTradingAPI {
 			export interface IRequestModel {
 				transportRequestId: Guid;
 				transporterId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 				currency: string;
 				estimatedPickupDate?: Date;
 				estimatedDeliveryDate?: Date;
 				estimatedDurationDays?: number;
 				vehicleType: string;
 				insuranceIncluded: boolean;
-				insuranceAmount?: __ERROR_TYPE_NOT_HANDLED__;
+				insuranceAmount?: Double;
 				additionalServices: string;
 				message: string;
 				status: number;
 				expiryDate?: Date;
+				requestOwnerUserId: Guid;
 			}
 			export interface IResponseModel {
 				id: Guid;
 				transportRequestId: Guid;
 				transporterId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 				currency: string;
 				estimatedPickupDate?: Date;
 				estimatedDeliveryDate?: Date;
 				estimatedDurationDays?: number;
 				vehicleType: string;
 				insuranceIncluded: boolean;
-				insuranceAmount?: __ERROR_TYPE_NOT_HANDLED__;
+				insuranceAmount?: Double;
 				additionalServices: string;
 				message: string;
 				status: number;
@@ -1153,6 +1157,37 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				companyName: string;
 				city: string;
+			}
+		}
+
+		export namespace GetByUserId {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/Transporters/GetByUserId';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				userId: Guid;
+			}
+			export interface IResponseModel {
+				id: Guid;
+				userId: Guid;
+				companyName: string;
+				contactPerson: string;
+				email: string;
+				phone: string;
+				address: string;
+				city: string;
+				countryCode: string;
+				logoUrl: string;
+				description: string;
+				serviceRegions: string;
+				specializations: string;
+				isVerified: boolean;
+				isActive: boolean;
+				status: number;
+				averageRating?: Double;
+				totalTransports: number;
+				completedTransports: number;
+				website: string;
+				createdAt: Date;
 			}
 		}
 
@@ -1183,7 +1218,7 @@ export namespace LivestockTradingAPI {
 				isVerified: boolean;
 				verifiedAt?: Date;
 				isActive: boolean;
-				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
+				averageRating?: Double;
 				totalTransports: number;
 				completedTransports: number;
 				website: string;
@@ -1233,7 +1268,7 @@ export namespace LivestockTradingAPI {
 				countryCode: string;
 				isVerified: boolean;
 				isActive: boolean;
-				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
+				averageRating?: Double;
 				totalTransports: number;
 				createdAt: Date;
 			}
@@ -1550,7 +1585,7 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				taxName: string;
 				countryCode: string;
-				rate: __ERROR_TYPE_NOT_HANDLED__;
+				rate: Double;
 			}
 		}
 
@@ -1565,7 +1600,7 @@ export namespace LivestockTradingAPI {
 				countryCode: string;
 				stateCode: string;
 				taxName: string;
-				rate: __ERROR_TYPE_NOT_HANDLED__;
+				rate: Double;
 				type: number;
 				categoryId?: Guid;
 				isActive: boolean;
@@ -1609,7 +1644,7 @@ export namespace LivestockTradingAPI {
 				countryCode: string;
 				stateCode: string;
 				taxName: string;
-				rate: __ERROR_TYPE_NOT_HANDLED__;
+				rate: Double;
 				type: number;
 				categoryId?: Guid;
 				isActive: boolean;
@@ -1627,7 +1662,7 @@ export namespace LivestockTradingAPI {
 				countryCode: string;
 				stateCode: string;
 				taxName: string;
-				rate: __ERROR_TYPE_NOT_HANDLED__;
+				rate: Double;
 				type: number;
 				categoryId?: Guid;
 				isActive: boolean;
@@ -1639,7 +1674,7 @@ export namespace LivestockTradingAPI {
 				countryCode: string;
 				stateCode: string;
 				taxName: string;
-				rate: __ERROR_TYPE_NOT_HANDLED__;
+				rate: Double;
 				type: number;
 				categoryId?: Guid;
 				isActive: boolean;
@@ -1667,7 +1702,7 @@ export namespace LivestockTradingAPI {
 				countryCode: string;
 				stateCode: string;
 				taxName: string;
-				rate: __ERROR_TYPE_NOT_HANDLED__;
+				rate: Double;
 				type: number;
 				categoryId?: Guid;
 				isActive: boolean;
@@ -1679,7 +1714,7 @@ export namespace LivestockTradingAPI {
 				countryCode: string;
 				stateCode: string;
 				taxName: string;
-				rate: __ERROR_TYPE_NOT_HANDLED__;
+				rate: Double;
 				type: number;
 				categoryId?: Guid;
 				isActive: boolean;
@@ -1706,8 +1741,8 @@ export namespace LivestockTradingAPI {
 				description: string;
 				targetType: number;
 				tier: number;
-				priceMonthly: __ERROR_TYPE_NOT_HANDLED__;
-				priceYearly: __ERROR_TYPE_NOT_HANDLED__;
+				priceMonthly: Double;
+				priceYearly: Double;
 				currency: string;
 				appleProductIdMonthly: string;
 				appleProductIdYearly: string;
@@ -1762,8 +1797,8 @@ export namespace LivestockTradingAPI {
 				description: string;
 				targetType: number;
 				tier: number;
-				priceMonthly: __ERROR_TYPE_NOT_HANDLED__;
-				priceYearly: __ERROR_TYPE_NOT_HANDLED__;
+				priceMonthly: Double;
+				priceYearly: Double;
 				currency: string;
 				appleProductIdMonthly: string;
 				appleProductIdYearly: string;
@@ -1790,8 +1825,8 @@ export namespace LivestockTradingAPI {
 				description: string;
 				nameTranslations: string;
 				descriptionTranslations: string;
-				priceMonthly: __ERROR_TYPE_NOT_HANDLED__;
-				priceYearly: __ERROR_TYPE_NOT_HANDLED__;
+				priceMonthly: Double;
+				priceYearly: Double;
 				currency: string;
 				maxActiveListings: number;
 				maxPhotosPerListing: number;
@@ -1814,8 +1849,8 @@ export namespace LivestockTradingAPI {
 				descriptionTranslations: string;
 				targetType: number;
 				tier: number;
-				priceMonthly: __ERROR_TYPE_NOT_HANDLED__;
-				priceYearly: __ERROR_TYPE_NOT_HANDLED__;
+				priceMonthly: Double;
+				priceYearly: Double;
 				currency: string;
 				appleProductIdMonthly: string;
 				appleProductIdYearly: string;
@@ -1973,7 +2008,7 @@ export namespace LivestockTradingAPI {
 			}
 			export interface IResponseModel {
 				id: Guid;
-				shippingCost: __ERROR_TYPE_NOT_HANDLED__;
+				shippingCost: Double;
 				currency: string;
 			}
 		}
@@ -1988,10 +2023,10 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				shippingZoneId: Guid;
 				shippingCarrierId?: Guid;
-				minWeight?: __ERROR_TYPE_NOT_HANDLED__;
-				maxWeight?: __ERROR_TYPE_NOT_HANDLED__;
-				minOrderAmount?: __ERROR_TYPE_NOT_HANDLED__;
-				shippingCost: __ERROR_TYPE_NOT_HANDLED__;
+				minWeight?: Double;
+				maxWeight?: Double;
+				minOrderAmount?: Double;
+				shippingCost: Double;
 				currency: string;
 				estimatedDeliveryDays?: number;
 				isFreeShipping: boolean;
@@ -2033,10 +2068,10 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				shippingZoneId: Guid;
 				shippingCarrierId?: Guid;
-				minWeight?: __ERROR_TYPE_NOT_HANDLED__;
-				maxWeight?: __ERROR_TYPE_NOT_HANDLED__;
-				minOrderAmount?: __ERROR_TYPE_NOT_HANDLED__;
-				shippingCost: __ERROR_TYPE_NOT_HANDLED__;
+				minWeight?: Double;
+				maxWeight?: Double;
+				minOrderAmount?: Double;
+				shippingCost: Double;
 				currency: string;
 				estimatedDeliveryDays?: number;
 				isFreeShipping: boolean;
@@ -2053,10 +2088,10 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				shippingZoneId: Guid;
 				shippingCarrierId?: Guid;
-				minWeight?: __ERROR_TYPE_NOT_HANDLED__;
-				maxWeight?: __ERROR_TYPE_NOT_HANDLED__;
-				minOrderAmount?: __ERROR_TYPE_NOT_HANDLED__;
-				shippingCost: __ERROR_TYPE_NOT_HANDLED__;
+				minWeight?: Double;
+				maxWeight?: Double;
+				minOrderAmount?: Double;
+				shippingCost: Double;
 				currency: string;
 				estimatedDeliveryDays?: number;
 				isFreeShipping: boolean;
@@ -2066,10 +2101,10 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				shippingZoneId: Guid;
 				shippingCarrierId?: Guid;
-				minWeight?: __ERROR_TYPE_NOT_HANDLED__;
-				maxWeight?: __ERROR_TYPE_NOT_HANDLED__;
-				minOrderAmount?: __ERROR_TYPE_NOT_HANDLED__;
-				shippingCost: __ERROR_TYPE_NOT_HANDLED__;
+				minWeight?: Double;
+				maxWeight?: Double;
+				minOrderAmount?: Double;
+				shippingCost: Double;
 				currency: string;
 				estimatedDeliveryDays?: number;
 				isFreeShipping: boolean;
@@ -2096,10 +2131,10 @@ export namespace LivestockTradingAPI {
 			export interface IRequestModel {
 				shippingZoneId: Guid;
 				shippingCarrierId?: Guid;
-				minWeight?: __ERROR_TYPE_NOT_HANDLED__;
-				maxWeight?: __ERROR_TYPE_NOT_HANDLED__;
-				minOrderAmount?: __ERROR_TYPE_NOT_HANDLED__;
-				shippingCost: __ERROR_TYPE_NOT_HANDLED__;
+				minWeight?: Double;
+				maxWeight?: Double;
+				minOrderAmount?: Double;
+				shippingCost: Double;
 				currency: string;
 				estimatedDeliveryDays?: number;
 				isFreeShipping: boolean;
@@ -2109,10 +2144,10 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				shippingZoneId: Guid;
 				shippingCarrierId?: Guid;
-				minWeight?: __ERROR_TYPE_NOT_HANDLED__;
-				maxWeight?: __ERROR_TYPE_NOT_HANDLED__;
-				minOrderAmount?: __ERROR_TYPE_NOT_HANDLED__;
-				shippingCost: __ERROR_TYPE_NOT_HANDLED__;
+				minWeight?: Double;
+				maxWeight?: Double;
+				minOrderAmount?: Double;
+				shippingCost: Double;
 				currency: string;
 				estimatedDeliveryDays?: number;
 				isFreeShipping: boolean;
@@ -2299,10 +2334,10 @@ export namespace LivestockTradingAPI {
 				verifiedAt?: Date;
 				isActive: boolean;
 				status: number;
-				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
+				averageRating?: Double;
 				totalReviews: number;
 				totalSales: number;
-				totalRevenue: __ERROR_TYPE_NOT_HANDLED__;
+				totalRevenue: Double;
 				businessHours: string;
 				acceptedPaymentMethods: string;
 				returnPolicy: string;
@@ -2336,10 +2371,10 @@ export namespace LivestockTradingAPI {
 				verifiedAt?: Date;
 				isActive: boolean;
 				status: number;
-				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
+				averageRating?: Double;
 				totalReviews: number;
 				totalSales: number;
-				totalRevenue: __ERROR_TYPE_NOT_HANDLED__;
+				totalRevenue: Double;
 				businessHours: string;
 				acceptedPaymentMethods: string;
 				returnPolicy: string;
@@ -2373,10 +2408,10 @@ export namespace LivestockTradingAPI {
 				verifiedAt?: Date;
 				isActive: boolean;
 				status: number;
-				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
+				averageRating?: Double;
 				totalReviews: number;
 				totalSales: number;
-				totalRevenue: __ERROR_TYPE_NOT_HANDLED__;
+				totalRevenue: Double;
 				businessHours: string;
 				acceptedPaymentMethods: string;
 				returnPolicy: string;
@@ -2425,7 +2460,7 @@ export namespace LivestockTradingAPI {
 				isVerified: boolean;
 				isActive: boolean;
 				status: number;
-				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
+				averageRating?: Double;
 				totalReviews: number;
 				totalSales: number;
 				createdAt: Date;
@@ -2849,7 +2884,7 @@ export namespace LivestockTradingAPI {
 				commonNames: string;
 				seedSize: string;
 				seedColor: string;
-				germinationRate?: __ERROR_TYPE_NOT_HANDLED__;
+				germinationRate?: Double;
 				germinationDays?: number;
 				climateZones: string;
 				soilType: string;
@@ -2920,7 +2955,7 @@ export namespace LivestockTradingAPI {
 				type: number;
 				variety: string;
 				scientificName: string;
-				germinationRate?: __ERROR_TYPE_NOT_HANDLED__;
+				germinationRate?: Double;
 				daysToMaturity?: number;
 				isOrganic: boolean;
 				isHybrid: boolean;
@@ -2940,7 +2975,7 @@ export namespace LivestockTradingAPI {
 				commonNames: string;
 				seedSize: string;
 				seedColor: string;
-				germinationRate?: __ERROR_TYPE_NOT_HANDLED__;
+				germinationRate?: Double;
 				germinationDays?: number;
 				climateZones: string;
 				soilType: string;
@@ -2982,7 +3017,7 @@ export namespace LivestockTradingAPI {
 				commonNames: string;
 				seedSize: string;
 				seedColor: string;
-				germinationRate?: __ERROR_TYPE_NOT_HANDLED__;
+				germinationRate?: Double;
 				germinationDays?: number;
 				climateZones: string;
 				soilType: string;
@@ -3040,7 +3075,7 @@ export namespace LivestockTradingAPI {
 				commonNames: string;
 				seedSize: string;
 				seedColor: string;
-				germinationRate?: __ERROR_TYPE_NOT_HANDLED__;
+				germinationRate?: Double;
 				germinationDays?: number;
 				climateZones: string;
 				soilType: string;
@@ -3082,7 +3117,7 @@ export namespace LivestockTradingAPI {
 				commonNames: string;
 				seedSize: string;
 				seedColor: string;
-				germinationRate?: __ERROR_TYPE_NOT_HANDLED__;
+				germinationRate?: Double;
 				germinationDays?: number;
 				climateZones: string;
 				soilType: string;
@@ -3394,8 +3429,8 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				name: string;
 				sKU: string;
-				price?: __ERROR_TYPE_NOT_HANDLED__;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				price?: Double;
+				discountedPrice?: Double;
 				stockQuantity: number;
 				isInStock: boolean;
 				attributes: string;
@@ -3440,8 +3475,8 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				name: string;
 				sKU: string;
-				price?: __ERROR_TYPE_NOT_HANDLED__;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				price?: Double;
+				discountedPrice?: Double;
 				stockQuantity: number;
 				isInStock: boolean;
 				attributes: string;
@@ -3460,8 +3495,8 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				name: string;
 				sKU: string;
-				price?: __ERROR_TYPE_NOT_HANDLED__;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				price?: Double;
+				discountedPrice?: Double;
 				stockQuantity: number;
 				isInStock: boolean;
 				attributes: string;
@@ -3474,8 +3509,8 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				name: string;
 				sKU: string;
-				price?: __ERROR_TYPE_NOT_HANDLED__;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				price?: Double;
+				discountedPrice?: Double;
 				stockQuantity: number;
 				isInStock: boolean;
 				attributes: string;
@@ -3504,8 +3539,8 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				name: string;
 				sKU: string;
-				price?: __ERROR_TYPE_NOT_HANDLED__;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				price?: Double;
+				discountedPrice?: Double;
 				stockQuantity: number;
 				isInStock: boolean;
 				attributes: string;
@@ -3518,8 +3553,8 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				name: string;
 				sKU: string;
-				price?: __ERROR_TYPE_NOT_HANDLED__;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				price?: Double;
+				discountedPrice?: Double;
 				stockQuantity: number;
 				isInStock: boolean;
 				attributes: string;
@@ -3541,8 +3576,8 @@ export namespace LivestockTradingAPI {
 				query: string;
 				categoryId?: Guid;
 				brandId?: Guid;
-				minPrice?: __ERROR_TYPE_NOT_HANDLED__;
-				maxPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				minPrice?: Double;
+				maxPrice?: Double;
 				condition?: number;
 				countryCode: string;
 				city: string;
@@ -3567,9 +3602,9 @@ export namespace LivestockTradingAPI {
 				shortDescription: string;
 				categoryId: Guid;
 				brandId?: Guid;
-				basePrice: __ERROR_TYPE_NOT_HANDLED__;
+				basePrice: Double;
 				currency: string;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				discountedPrice?: Double;
 				stockQuantity: number;
 				isInStock: boolean;
 				sellerId: Guid;
@@ -3580,13 +3615,13 @@ export namespace LivestockTradingAPI {
 				condition: number;
 				viewCount: number;
 				favoriteCount: number;
-				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
+				averageRating?: Double;
 				reviewCount: number;
 				coverImageFileId: string;
 				mediaBucketId: string;
 				createdAt: Date;
-				viewerPrice?: __ERROR_TYPE_NOT_HANDLED__;
-				viewerDiscountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				viewerPrice?: Double;
+				viewerDiscountedPrice?: Double;
 				viewerCurrencyCode: string;
 				viewerCurrencySymbol: string;
 			}
@@ -3637,9 +3672,9 @@ export namespace LivestockTradingAPI {
 				categoryName: string;
 				brandId?: Guid;
 				brandName: string;
-				basePrice: __ERROR_TYPE_NOT_HANDLED__;
+				basePrice: Double;
 				currency: string;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				discountedPrice?: Double;
 				priceUnit: string;
 				stockQuantity: number;
 				stockUnit: string;
@@ -3652,9 +3687,9 @@ export namespace LivestockTradingAPI {
 				status: number;
 				condition: number;
 				isShippingAvailable: boolean;
-				shippingCost?: __ERROR_TYPE_NOT_HANDLED__;
+				shippingCost?: Double;
 				isInternationalShipping: boolean;
-				weight?: __ERROR_TYPE_NOT_HANDLED__;
+				weight?: Double;
 				weightUnit: string;
 				attributes: string;
 				metaTitle: string;
@@ -3662,7 +3697,7 @@ export namespace LivestockTradingAPI {
 				metaKeywords: string;
 				viewCount: number;
 				favoriteCount: number;
-				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
+				averageRating?: Double;
 				reviewCount: number;
 				publishedAt?: Date;
 				expiresAt?: Date;
@@ -3670,8 +3705,8 @@ export namespace LivestockTradingAPI {
 				updatedAt?: Date;
 				mediaBucketId: string;
 				coverImageFileId: string;
-				viewerPrice?: __ERROR_TYPE_NOT_HANDLED__;
-				viewerDiscountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				viewerPrice?: Double;
+				viewerDiscountedPrice?: Double;
 				viewerCurrencyCode: string;
 				viewerCurrencySymbol: string;
 			}
@@ -3694,9 +3729,9 @@ export namespace LivestockTradingAPI {
 				categoryName: string;
 				brandId?: Guid;
 				brandName: string;
-				basePrice: __ERROR_TYPE_NOT_HANDLED__;
+				basePrice: Double;
 				currency: string;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				discountedPrice?: Double;
 				priceUnit: string;
 				stockQuantity: number;
 				stockUnit: string;
@@ -3709,9 +3744,9 @@ export namespace LivestockTradingAPI {
 				status: number;
 				condition: number;
 				isShippingAvailable: boolean;
-				shippingCost?: __ERROR_TYPE_NOT_HANDLED__;
+				shippingCost?: Double;
 				isInternationalShipping: boolean;
-				weight?: __ERROR_TYPE_NOT_HANDLED__;
+				weight?: Double;
 				weightUnit: string;
 				attributes: string;
 				metaTitle: string;
@@ -3719,7 +3754,7 @@ export namespace LivestockTradingAPI {
 				metaKeywords: string;
 				viewCount: number;
 				favoriteCount: number;
-				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
+				averageRating?: Double;
 				reviewCount: number;
 				publishedAt?: Date;
 				expiresAt?: Date;
@@ -3727,8 +3762,8 @@ export namespace LivestockTradingAPI {
 				coverImageFileId: string;
 				createdAt: Date;
 				updatedAt?: Date;
-				viewerPrice?: __ERROR_TYPE_NOT_HANDLED__;
-				viewerDiscountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				viewerPrice?: Double;
+				viewerDiscountedPrice?: Double;
 				viewerCurrencyCode: string;
 				viewerCurrencySymbol: string;
 			}
@@ -3773,9 +3808,9 @@ export namespace LivestockTradingAPI {
 				shortDescription: string;
 				categoryId: Guid;
 				brandId?: Guid;
-				basePrice: __ERROR_TYPE_NOT_HANDLED__;
+				basePrice: Double;
 				currency: string;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				discountedPrice?: Double;
 				stockQuantity: number;
 				isInStock: boolean;
 				sellerId: Guid;
@@ -3785,17 +3820,17 @@ export namespace LivestockTradingAPI {
 				status: number;
 				condition: number;
 				viewCount: number;
-				averageRating?: __ERROR_TYPE_NOT_HANDLED__;
+				averageRating?: Double;
 				reviewCount: number;
 				createdAt: Date;
 				mediaBucketId: string;
 				coverImageFileId: string;
-				convertedPrice?: __ERROR_TYPE_NOT_HANDLED__;
-				convertedDiscountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				convertedPrice?: Double;
+				convertedDiscountedPrice?: Double;
 				convertedCurrencyCode: string;
 				convertedCurrencySymbol: string;
-				viewerPrice?: __ERROR_TYPE_NOT_HANDLED__;
-				viewerDiscountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				viewerPrice?: Double;
+				viewerDiscountedPrice?: Double;
 				viewerCurrencyCode: string;
 				viewerCurrencySymbol: string;
 			}
@@ -3812,9 +3847,9 @@ export namespace LivestockTradingAPI {
 				shortDescription: string;
 				categoryId: Guid;
 				brandId?: Guid;
-				basePrice: __ERROR_TYPE_NOT_HANDLED__;
+				basePrice: Double;
 				currency: string;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				discountedPrice?: Double;
 				priceUnit: string;
 				stockQuantity: number;
 				stockUnit: string;
@@ -3826,9 +3861,9 @@ export namespace LivestockTradingAPI {
 				status: number;
 				condition: number;
 				isShippingAvailable: boolean;
-				shippingCost?: __ERROR_TYPE_NOT_HANDLED__;
+				shippingCost?: Double;
 				isInternationalShipping: boolean;
-				weight?: __ERROR_TYPE_NOT_HANDLED__;
+				weight?: Double;
 				weightUnit: string;
 				attributes: string;
 				metaTitle: string;
@@ -3845,9 +3880,9 @@ export namespace LivestockTradingAPI {
 				shortDescription: string;
 				categoryId: Guid;
 				brandId?: Guid;
-				basePrice: __ERROR_TYPE_NOT_HANDLED__;
+				basePrice: Double;
 				currency: string;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				discountedPrice?: Double;
 				priceUnit: string;
 				stockQuantity: number;
 				stockUnit: string;
@@ -3859,9 +3894,9 @@ export namespace LivestockTradingAPI {
 				status: number;
 				condition: number;
 				isShippingAvailable: boolean;
-				shippingCost?: __ERROR_TYPE_NOT_HANDLED__;
+				shippingCost?: Double;
 				isInternationalShipping: boolean;
-				weight?: __ERROR_TYPE_NOT_HANDLED__;
+				weight?: Double;
 				weightUnit: string;
 				attributes: string;
 				metaTitle: string;
@@ -3910,9 +3945,9 @@ export namespace LivestockTradingAPI {
 				shortDescription: string;
 				categoryId: Guid;
 				brandId?: Guid;
-				basePrice: __ERROR_TYPE_NOT_HANDLED__;
+				basePrice: Double;
 				currency: string;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				discountedPrice?: Double;
 				priceUnit: string;
 				stockQuantity: number;
 				stockUnit: string;
@@ -3924,9 +3959,9 @@ export namespace LivestockTradingAPI {
 				status: number;
 				condition: number;
 				isShippingAvailable: boolean;
-				shippingCost?: __ERROR_TYPE_NOT_HANDLED__;
+				shippingCost?: Double;
 				isInternationalShipping: boolean;
-				weight?: __ERROR_TYPE_NOT_HANDLED__;
+				weight?: Double;
 				weightUnit: string;
 				attributes: string;
 				metaTitle: string;
@@ -3943,9 +3978,9 @@ export namespace LivestockTradingAPI {
 				shortDescription: string;
 				categoryId: Guid;
 				brandId?: Guid;
-				basePrice: __ERROR_TYPE_NOT_HANDLED__;
+				basePrice: Double;
 				currency: string;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				discountedPrice?: Double;
 				priceUnit: string;
 				stockQuantity: number;
 				stockUnit: string;
@@ -3957,9 +3992,9 @@ export namespace LivestockTradingAPI {
 				status: number;
 				condition: number;
 				isShippingAvailable: boolean;
-				shippingCost?: __ERROR_TYPE_NOT_HANDLED__;
+				shippingCost?: Double;
 				isInternationalShipping: boolean;
-				weight?: __ERROR_TYPE_NOT_HANDLED__;
+				weight?: Double;
 				weightUnit: string;
 				attributes: string;
 				metaTitle: string;
@@ -4147,6 +4182,84 @@ export namespace LivestockTradingAPI {
 
 	}
 
+	export namespace ProductReports {
+
+		export namespace All {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductReports/All';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				sorting: IXSorting;
+				filters: IXFilterItem[];
+				pageRequest: IXPageRequest;
+			}
+			export interface IXSorting {
+				key: string;
+				direction: Enums.XSortingDirection;
+			}
+			export interface IObject {
+			}
+			export interface IXFilterItem {
+				key: string;
+				type: string;
+				isUsed: boolean;
+				values: IObject[];
+				min: IObject;
+				max: IObject;
+				conditionType: string;
+			}
+			export interface IXPageRequest {
+				currentPage: number;
+				perPageCount: number;
+				listAll: boolean;
+			}
+			export interface IResponseModel {
+				id: Guid;
+				productId: Guid;
+				reporterUserId: Guid;
+				reason: number;
+				description: string;
+				status: number;
+				adminNote: string;
+				reviewedByUserId?: Guid;
+				reviewedAt?: Date;
+				createdAt: Date;
+			}
+		}
+
+		export namespace Update {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductReports/Update';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				id: Guid;
+				status: number;
+				adminNote: string;
+			}
+			export interface IResponseModel {
+				id: Guid;
+				status: number;
+				adminNote: string;
+				reviewedByUserId?: Guid;
+				reviewedAt?: Date;
+				success: boolean;
+			}
+		}
+
+		export namespace Create {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/ProductReports/Create';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				productId: Guid;
+				reason: number;
+				description: string;
+			}
+			export interface IResponseModel {
+				id: Guid;
+				success: boolean;
+			}
+		}
+
+	}
+
 	export namespace ProductPrices {
 
 		export namespace Pick {
@@ -4160,7 +4273,7 @@ export namespace LivestockTradingAPI {
 			export interface IResponseModel {
 				id: Guid;
 				currencyCode: string;
-				price: __ERROR_TYPE_NOT_HANDLED__;
+				price: Double;
 			}
 		}
 
@@ -4174,8 +4287,8 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				productId: Guid;
 				currencyCode: string;
-				price: __ERROR_TYPE_NOT_HANDLED__;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				price: Double;
+				discountedPrice?: Double;
 				countryCodes: string;
 				isActive: boolean;
 				validFrom?: Date;
@@ -4218,8 +4331,8 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				productId: Guid;
 				currencyCode: string;
-				price: __ERROR_TYPE_NOT_HANDLED__;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				price: Double;
+				discountedPrice?: Double;
 				countryCodes: string;
 				isActive: boolean;
 				validFrom?: Date;
@@ -4236,8 +4349,8 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				productId: Guid;
 				currencyCode: string;
-				price: __ERROR_TYPE_NOT_HANDLED__;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				price: Double;
+				discountedPrice?: Double;
 				countryCodes: string;
 				isActive: boolean;
 				validFrom?: Date;
@@ -4248,8 +4361,8 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				productId: Guid;
 				currencyCode: string;
-				price: __ERROR_TYPE_NOT_HANDLED__;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				price: Double;
+				discountedPrice?: Double;
 				countryCodes: string;
 				isActive: boolean;
 				validFrom?: Date;
@@ -4276,8 +4389,8 @@ export namespace LivestockTradingAPI {
 			export interface IRequestModel {
 				productId: Guid;
 				currencyCode: string;
-				price: __ERROR_TYPE_NOT_HANDLED__;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				price: Double;
+				discountedPrice?: Double;
 				countryCodes: string;
 				isActive: boolean;
 				validFrom?: Date;
@@ -4288,8 +4401,8 @@ export namespace LivestockTradingAPI {
 				id: Guid;
 				productId: Guid;
 				currencyCode: string;
-				price: __ERROR_TYPE_NOT_HANDLED__;
-				discountedPrice?: __ERROR_TYPE_NOT_HANDLED__;
+				price: Double;
+				discountedPrice?: Double;
 				countryCodes: string;
 				isActive: boolean;
 				validFrom?: Date;
@@ -4497,8 +4610,8 @@ export namespace LivestockTradingAPI {
 				isActive: boolean;
 				supportedCountries: string;
 				supportedCurrencies: string;
-				transactionFeePercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fixedTransactionFee?: __ERROR_TYPE_NOT_HANDLED__;
+				transactionFeePercentage?: Double;
+				fixedTransactionFee?: Double;
 				createdAt: Date;
 				updatedAt?: Date;
 			}
@@ -4542,8 +4655,8 @@ export namespace LivestockTradingAPI {
 				isActive: boolean;
 				supportedCountries: string;
 				supportedCurrencies: string;
-				transactionFeePercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fixedTransactionFee?: __ERROR_TYPE_NOT_HANDLED__;
+				transactionFeePercentage?: Double;
+				fixedTransactionFee?: Double;
 				createdAt: Date;
 			}
 		}
@@ -4561,8 +4674,8 @@ export namespace LivestockTradingAPI {
 				isActive: boolean;
 				supportedCountries: string;
 				supportedCurrencies: string;
-				transactionFeePercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fixedTransactionFee?: __ERROR_TYPE_NOT_HANDLED__;
+				transactionFeePercentage?: Double;
+				fixedTransactionFee?: Double;
 			}
 			export interface IResponseModel {
 				id: Guid;
@@ -4574,8 +4687,8 @@ export namespace LivestockTradingAPI {
 				isActive: boolean;
 				supportedCountries: string;
 				supportedCurrencies: string;
-				transactionFeePercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fixedTransactionFee?: __ERROR_TYPE_NOT_HANDLED__;
+				transactionFeePercentage?: Double;
+				fixedTransactionFee?: Double;
 				updatedAt?: Date;
 			}
 		}
@@ -4603,8 +4716,8 @@ export namespace LivestockTradingAPI {
 				isActive: boolean;
 				supportedCountries: string;
 				supportedCurrencies: string;
-				transactionFeePercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fixedTransactionFee?: __ERROR_TYPE_NOT_HANDLED__;
+				transactionFeePercentage?: Double;
+				fixedTransactionFee?: Double;
 			}
 			export interface IResponseModel {
 				id: Guid;
@@ -4616,8 +4729,8 @@ export namespace LivestockTradingAPI {
 				isActive: boolean;
 				supportedCountries: string;
 				supportedCurrencies: string;
-				transactionFeePercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fixedTransactionFee?: __ERROR_TYPE_NOT_HANDLED__;
+				transactionFeePercentage?: Double;
+				fixedTransactionFee?: Double;
 				createdAt: Date;
 			}
 		}
@@ -4637,7 +4750,7 @@ export namespace LivestockTradingAPI {
 			export interface IResponseModel {
 				id: Guid;
 				productId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 			}
 		}
 
@@ -4652,7 +4765,7 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				buyerUserId: Guid;
 				sellerUserId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 				currency: string;
 				quantity: number;
 				message: string;
@@ -4700,7 +4813,7 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				buyerUserId: Guid;
 				sellerUserId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 				currency: string;
 				quantity: number;
 				status: number;
@@ -4718,7 +4831,7 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				buyerUserId: Guid;
 				sellerUserId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 				currency: string;
 				quantity: number;
 				message: string;
@@ -4733,7 +4846,7 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				buyerUserId: Guid;
 				sellerUserId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 				currency: string;
 				quantity: number;
 				message: string;
@@ -4765,7 +4878,7 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				buyerUserId: Guid;
 				sellerUserId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 				currency: string;
 				quantity: number;
 				message: string;
@@ -4778,7 +4891,7 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				buyerUserId: Guid;
 				sellerUserId: Guid;
-				offeredPrice: __ERROR_TYPE_NOT_HANDLED__;
+				offeredPrice: Double;
 				currency: string;
 				quantity: number;
 				message: string;
@@ -5131,17 +5244,17 @@ export namespace LivestockTradingAPI {
 				yearOfManufacture?: number;
 				serialNumber: string;
 				powerSource: string;
-				powerHp?: __ERROR_TYPE_NOT_HANDLED__;
-				powerKw?: __ERROR_TYPE_NOT_HANDLED__;
+				powerHp?: Double;
+				powerKw?: Double;
 				engineCapacity: string;
-				lengthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				widthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				heightCm?: __ERROR_TYPE_NOT_HANDLED__;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				workingWidthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				capacityLiters?: __ERROR_TYPE_NOT_HANDLED__;
-				loadCapacityKg?: __ERROR_TYPE_NOT_HANDLED__;
-				speedKmh?: __ERROR_TYPE_NOT_HANDLED__;
+				lengthCm?: Double;
+				widthCm?: Double;
+				heightCm?: Double;
+				weightKg?: Double;
+				workingWidthCm?: Double;
+				capacityLiters?: Double;
+				loadCapacityKg?: Double;
+				speedKmh?: Double;
 				hoursUsed?: number;
 				lastServiceDate?: Date;
 				serviceHistory: string;
@@ -5191,7 +5304,7 @@ export namespace LivestockTradingAPI {
 				type: number;
 				model: string;
 				yearOfManufacture?: number;
-				powerHp?: __ERROR_TYPE_NOT_HANDLED__;
+				powerHp?: Double;
 				hoursUsed?: number;
 				hasWarranty: boolean;
 				createdAt: Date;
@@ -5209,17 +5322,17 @@ export namespace LivestockTradingAPI {
 				yearOfManufacture?: number;
 				serialNumber: string;
 				powerSource: string;
-				powerHp?: __ERROR_TYPE_NOT_HANDLED__;
-				powerKw?: __ERROR_TYPE_NOT_HANDLED__;
+				powerHp?: Double;
+				powerKw?: Double;
 				engineCapacity: string;
-				lengthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				widthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				heightCm?: __ERROR_TYPE_NOT_HANDLED__;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				workingWidthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				capacityLiters?: __ERROR_TYPE_NOT_HANDLED__;
-				loadCapacityKg?: __ERROR_TYPE_NOT_HANDLED__;
-				speedKmh?: __ERROR_TYPE_NOT_HANDLED__;
+				lengthCm?: Double;
+				widthCm?: Double;
+				heightCm?: Double;
+				weightKg?: Double;
+				workingWidthCm?: Double;
+				capacityLiters?: Double;
+				loadCapacityKg?: Double;
+				speedKmh?: Double;
 				hoursUsed?: number;
 				lastServiceDate?: Date;
 				serviceHistory: string;
@@ -5239,17 +5352,17 @@ export namespace LivestockTradingAPI {
 				yearOfManufacture?: number;
 				serialNumber: string;
 				powerSource: string;
-				powerHp?: __ERROR_TYPE_NOT_HANDLED__;
-				powerKw?: __ERROR_TYPE_NOT_HANDLED__;
+				powerHp?: Double;
+				powerKw?: Double;
 				engineCapacity: string;
-				lengthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				widthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				heightCm?: __ERROR_TYPE_NOT_HANDLED__;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				workingWidthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				capacityLiters?: __ERROR_TYPE_NOT_HANDLED__;
-				loadCapacityKg?: __ERROR_TYPE_NOT_HANDLED__;
-				speedKmh?: __ERROR_TYPE_NOT_HANDLED__;
+				lengthCm?: Double;
+				widthCm?: Double;
+				heightCm?: Double;
+				weightKg?: Double;
+				workingWidthCm?: Double;
+				capacityLiters?: Double;
+				loadCapacityKg?: Double;
+				speedKmh?: Double;
 				hoursUsed?: number;
 				lastServiceDate?: Date;
 				serviceHistory: string;
@@ -5285,17 +5398,17 @@ export namespace LivestockTradingAPI {
 				yearOfManufacture?: number;
 				serialNumber: string;
 				powerSource: string;
-				powerHp?: __ERROR_TYPE_NOT_HANDLED__;
-				powerKw?: __ERROR_TYPE_NOT_HANDLED__;
+				powerHp?: Double;
+				powerKw?: Double;
 				engineCapacity: string;
-				lengthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				widthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				heightCm?: __ERROR_TYPE_NOT_HANDLED__;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				workingWidthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				capacityLiters?: __ERROR_TYPE_NOT_HANDLED__;
-				loadCapacityKg?: __ERROR_TYPE_NOT_HANDLED__;
-				speedKmh?: __ERROR_TYPE_NOT_HANDLED__;
+				lengthCm?: Double;
+				widthCm?: Double;
+				heightCm?: Double;
+				weightKg?: Double;
+				workingWidthCm?: Double;
+				capacityLiters?: Double;
+				loadCapacityKg?: Double;
+				speedKmh?: Double;
 				hoursUsed?: number;
 				lastServiceDate?: Date;
 				serviceHistory: string;
@@ -5315,17 +5428,17 @@ export namespace LivestockTradingAPI {
 				yearOfManufacture?: number;
 				serialNumber: string;
 				powerSource: string;
-				powerHp?: __ERROR_TYPE_NOT_HANDLED__;
-				powerKw?: __ERROR_TYPE_NOT_HANDLED__;
+				powerHp?: Double;
+				powerKw?: Double;
 				engineCapacity: string;
-				lengthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				widthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				heightCm?: __ERROR_TYPE_NOT_HANDLED__;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				workingWidthCm?: __ERROR_TYPE_NOT_HANDLED__;
-				capacityLiters?: __ERROR_TYPE_NOT_HANDLED__;
-				loadCapacityKg?: __ERROR_TYPE_NOT_HANDLED__;
-				speedKmh?: __ERROR_TYPE_NOT_HANDLED__;
+				lengthCm?: Double;
+				widthCm?: Double;
+				heightCm?: Double;
+				weightKg?: Double;
+				workingWidthCm?: Double;
+				capacityLiters?: Double;
+				loadCapacityKg?: Double;
+				speedKmh?: Double;
 				hoursUsed?: number;
 				lastServiceDate?: Date;
 				serviceHistory: string;
@@ -5375,8 +5488,8 @@ export namespace LivestockTradingAPI {
 				state: string;
 				postalCode: string;
 				countryCode: string;
-				latitude?: __ERROR_TYPE_NOT_HANDLED__;
-				longitude?: __ERROR_TYPE_NOT_HANDLED__;
+				latitude?: Double;
+				longitude?: Double;
 				phone: string;
 				email: string;
 				type: number;
@@ -5424,8 +5537,8 @@ export namespace LivestockTradingAPI {
 				state: string;
 				postalCode: string;
 				countryCode: string;
-				latitude?: __ERROR_TYPE_NOT_HANDLED__;
-				longitude?: __ERROR_TYPE_NOT_HANDLED__;
+				latitude?: Double;
+				longitude?: Double;
 				phone: string;
 				email: string;
 				type: number;
@@ -5447,8 +5560,8 @@ export namespace LivestockTradingAPI {
 				state: string;
 				postalCode: string;
 				countryCode: string;
-				latitude?: __ERROR_TYPE_NOT_HANDLED__;
-				longitude?: __ERROR_TYPE_NOT_HANDLED__;
+				latitude?: Double;
+				longitude?: Double;
 				phone: string;
 				email: string;
 				type: number;
@@ -5464,8 +5577,8 @@ export namespace LivestockTradingAPI {
 				state: string;
 				postalCode: string;
 				countryCode: string;
-				latitude?: __ERROR_TYPE_NOT_HANDLED__;
-				longitude?: __ERROR_TYPE_NOT_HANDLED__;
+				latitude?: Double;
+				longitude?: Double;
 				phone: string;
 				email: string;
 				type: number;
@@ -5497,8 +5610,8 @@ export namespace LivestockTradingAPI {
 				state: string;
 				postalCode: string;
 				countryCode: string;
-				latitude?: __ERROR_TYPE_NOT_HANDLED__;
-				longitude?: __ERROR_TYPE_NOT_HANDLED__;
+				latitude?: Double;
+				longitude?: Double;
 				phone: string;
 				email: string;
 				type: number;
@@ -5514,8 +5627,8 @@ export namespace LivestockTradingAPI {
 				state: string;
 				postalCode: string;
 				countryCode: string;
-				latitude?: __ERROR_TYPE_NOT_HANDLED__;
-				longitude?: __ERROR_TYPE_NOT_HANDLED__;
+				latitude?: Double;
+				longitude?: Double;
 				phone: string;
 				email: string;
 				type: number;
@@ -5877,10 +5990,10 @@ export namespace LivestockTradingAPI {
 				type: number;
 				targetAnimal: string;
 				targetAge: string;
-				proteinPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fatPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fiberPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				moisturePercentage?: __ERROR_TYPE_NOT_HANDLED__;
+				proteinPercentage?: Double;
+				fatPercentage?: Double;
+				fiberPercentage?: Double;
+				moisturePercentage?: Double;
 				form: number;
 				isOrganic: boolean;
 				isGMOFree: boolean;
@@ -5930,10 +6043,10 @@ export namespace LivestockTradingAPI {
 				type: number;
 				targetAnimal: string;
 				targetAge: string;
-				proteinPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fatPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fiberPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				moisturePercentage?: __ERROR_TYPE_NOT_HANDLED__;
+				proteinPercentage?: Double;
+				fatPercentage?: Double;
+				fiberPercentage?: Double;
+				moisturePercentage?: Double;
 				form: number;
 				isOrganic: boolean;
 				isGMOFree: boolean;
@@ -5957,10 +6070,10 @@ export namespace LivestockTradingAPI {
 				type: number;
 				targetAnimal: string;
 				targetAge: string;
-				proteinPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fatPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fiberPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				moisturePercentage?: __ERROR_TYPE_NOT_HANDLED__;
+				proteinPercentage?: Double;
+				fatPercentage?: Double;
+				fiberPercentage?: Double;
+				moisturePercentage?: Double;
 				form: number;
 				isOrganic: boolean;
 				isGMOFree: boolean;
@@ -5978,10 +6091,10 @@ export namespace LivestockTradingAPI {
 				type: number;
 				targetAnimal: string;
 				targetAge: string;
-				proteinPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fatPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fiberPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				moisturePercentage?: __ERROR_TYPE_NOT_HANDLED__;
+				proteinPercentage?: Double;
+				fatPercentage?: Double;
+				fiberPercentage?: Double;
+				moisturePercentage?: Double;
 				form: number;
 				isOrganic: boolean;
 				isGMOFree: boolean;
@@ -6015,10 +6128,10 @@ export namespace LivestockTradingAPI {
 				type: number;
 				targetAnimal: string;
 				targetAge: string;
-				proteinPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fatPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fiberPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				moisturePercentage?: __ERROR_TYPE_NOT_HANDLED__;
+				proteinPercentage?: Double;
+				fatPercentage?: Double;
+				fiberPercentage?: Double;
+				moisturePercentage?: Double;
 				form: number;
 				isOrganic: boolean;
 				isGMOFree: boolean;
@@ -6036,10 +6149,10 @@ export namespace LivestockTradingAPI {
 				type: number;
 				targetAnimal: string;
 				targetAge: string;
-				proteinPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fatPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				fiberPercentage?: __ERROR_TYPE_NOT_HANDLED__;
-				moisturePercentage?: __ERROR_TYPE_NOT_HANDLED__;
+				proteinPercentage?: Double;
+				fatPercentage?: Double;
+				fiberPercentage?: Double;
+				moisturePercentage?: Double;
 				form: number;
 				isOrganic: boolean;
 				isGMOFree: boolean;
@@ -6204,8 +6317,8 @@ export namespace LivestockTradingAPI {
 				locationId: Guid;
 				locationName: string;
 				type: number;
-				totalAreaHectares?: __ERROR_TYPE_NOT_HANDLED__;
-				cultivatedAreaHectares?: __ERROR_TYPE_NOT_HANDLED__;
+				totalAreaHectares?: Double;
+				cultivatedAreaHectares?: Double;
 				certifications: string;
 				isOrganic: boolean;
 				imageUrls: string;
@@ -6251,7 +6364,7 @@ export namespace LivestockTradingAPI {
 				sellerId: Guid;
 				locationId: Guid;
 				type: number;
-				totalAreaHectares?: __ERROR_TYPE_NOT_HANDLED__;
+				totalAreaHectares?: Double;
 				isOrganic: boolean;
 				isActive: boolean;
 				isVerified: boolean;
@@ -6270,8 +6383,8 @@ export namespace LivestockTradingAPI {
 				sellerId: Guid;
 				locationId: Guid;
 				type: number;
-				totalAreaHectares?: __ERROR_TYPE_NOT_HANDLED__;
-				cultivatedAreaHectares?: __ERROR_TYPE_NOT_HANDLED__;
+				totalAreaHectares?: Double;
+				cultivatedAreaHectares?: Double;
 				certifications: string;
 				isOrganic: boolean;
 				imageUrls: string;
@@ -6287,8 +6400,8 @@ export namespace LivestockTradingAPI {
 				sellerId: Guid;
 				locationId: Guid;
 				type: number;
-				totalAreaHectares?: __ERROR_TYPE_NOT_HANDLED__;
-				cultivatedAreaHectares?: __ERROR_TYPE_NOT_HANDLED__;
+				totalAreaHectares?: Double;
+				cultivatedAreaHectares?: Double;
 				certifications: string;
 				isOrganic: boolean;
 				imageUrls: string;
@@ -6320,8 +6433,8 @@ export namespace LivestockTradingAPI {
 				sellerId: Guid;
 				locationId: Guid;
 				type: number;
-				totalAreaHectares?: __ERROR_TYPE_NOT_HANDLED__;
-				cultivatedAreaHectares?: __ERROR_TYPE_NOT_HANDLED__;
+				totalAreaHectares?: Double;
+				cultivatedAreaHectares?: Double;
 				certifications: string;
 				isOrganic: boolean;
 				imageUrls: string;
@@ -6336,8 +6449,8 @@ export namespace LivestockTradingAPI {
 				sellerId: Guid;
 				locationId: Guid;
 				type: number;
-				totalAreaHectares?: __ERROR_TYPE_NOT_HANDLED__;
-				cultivatedAreaHectares?: __ERROR_TYPE_NOT_HANDLED__;
+				totalAreaHectares?: Double;
+				cultivatedAreaHectares?: Double;
 				certifications: string;
 				isOrganic: boolean;
 				imageUrls: string;
@@ -6511,7 +6624,7 @@ export namespace LivestockTradingAPI {
 			export interface IResponseModel {
 				id: Guid;
 				dealNumber: string;
-				agreedPrice: __ERROR_TYPE_NOT_HANDLED__;
+				agreedPrice: Double;
 			}
 		}
 
@@ -6527,7 +6640,7 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				sellerId: Guid;
 				buyerId: Guid;
-				agreedPrice: __ERROR_TYPE_NOT_HANDLED__;
+				agreedPrice: Double;
 				currency: string;
 				quantity: number;
 				status: number;
@@ -6583,7 +6696,7 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				sellerId: Guid;
 				buyerId: Guid;
-				agreedPrice: __ERROR_TYPE_NOT_HANDLED__;
+				agreedPrice: Double;
 				currency: string;
 				quantity: number;
 				status: number;
@@ -6604,7 +6717,7 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				sellerId: Guid;
 				buyerId: Guid;
-				agreedPrice: __ERROR_TYPE_NOT_HANDLED__;
+				agreedPrice: Double;
 				currency: string;
 				quantity: number;
 				status: number;
@@ -6621,7 +6734,7 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				sellerId: Guid;
 				buyerId: Guid;
-				agreedPrice: __ERROR_TYPE_NOT_HANDLED__;
+				agreedPrice: Double;
 				currency: string;
 				quantity: number;
 				status: number;
@@ -6654,7 +6767,7 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				sellerId: Guid;
 				buyerId: Guid;
-				agreedPrice: __ERROR_TYPE_NOT_HANDLED__;
+				agreedPrice: Double;
 				currency: string;
 				quantity: number;
 				status: number;
@@ -6671,7 +6784,7 @@ export namespace LivestockTradingAPI {
 				productId: Guid;
 				sellerId: Guid;
 				buyerId: Guid;
-				agreedPrice: __ERROR_TYPE_NOT_HANDLED__;
+				agreedPrice: Double;
 				currency: string;
 				quantity: number;
 				status: number;
@@ -6702,7 +6815,7 @@ export namespace LivestockTradingAPI {
 				totalFavorites: number;
 				totalMessages: number;
 				totalSales: number;
-				revenue: __ERROR_TYPE_NOT_HANDLED__;
+				revenue: Double;
 				recentActivity: IRecentActivityItem[];
 			}
 			export interface IRecentActivityItem {
@@ -6745,7 +6858,7 @@ export namespace LivestockTradingAPI {
 				code: string;
 				symbol: string;
 				name: string;
-				exchangeRateToUSD: __ERROR_TYPE_NOT_HANDLED__;
+				exchangeRateToUSD: Double;
 				lastUpdated: Date;
 				isActive: boolean;
 				createdAt: Date;
@@ -6757,16 +6870,16 @@ export namespace LivestockTradingAPI {
 			export const RequestPath = AppConfig.LivestockTradingUrl + '/Currencies/Convert';
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
-				amount: __ERROR_TYPE_NOT_HANDLED__;
+				amount: Double;
 				fromCurrencyCode: string;
 				toCurrencyCode: string;
 			}
 			export interface IResponseModel {
-				originalAmount: __ERROR_TYPE_NOT_HANDLED__;
-				convertedAmount: __ERROR_TYPE_NOT_HANDLED__;
+				originalAmount: Double;
+				convertedAmount: Double;
 				fromCurrencyCode: string;
 				toCurrencyCode: string;
-				exchangeRate: __ERROR_TYPE_NOT_HANDLED__;
+				exchangeRate: Double;
 				fromSymbol: string;
 				toSymbol: string;
 				lastUpdated: Date;
@@ -6806,7 +6919,7 @@ export namespace LivestockTradingAPI {
 				code: string;
 				symbol: string;
 				name: string;
-				exchangeRateToUSD: __ERROR_TYPE_NOT_HANDLED__;
+				exchangeRateToUSD: Double;
 				lastUpdated: Date;
 				isActive: boolean;
 				createdAt: Date;
@@ -6821,7 +6934,7 @@ export namespace LivestockTradingAPI {
 				code: string;
 				symbol: string;
 				name: string;
-				exchangeRateToUSD: __ERROR_TYPE_NOT_HANDLED__;
+				exchangeRateToUSD: Double;
 				isActive: boolean;
 			}
 			export interface IResponseModel {
@@ -6829,7 +6942,7 @@ export namespace LivestockTradingAPI {
 				code: string;
 				symbol: string;
 				name: string;
-				exchangeRateToUSD: __ERROR_TYPE_NOT_HANDLED__;
+				exchangeRateToUSD: Double;
 				lastUpdated: Date;
 				isActive: boolean;
 				updatedAt?: Date;
@@ -6844,7 +6957,7 @@ export namespace LivestockTradingAPI {
 			}
 			export interface ICurrencyRateItem {
 				code: string;
-				exchangeRateToUSD: __ERROR_TYPE_NOT_HANDLED__;
+				exchangeRateToUSD: Double;
 			}
 			export interface IResponseModel {
 				updatedCount: number;
@@ -6870,7 +6983,7 @@ export namespace LivestockTradingAPI {
 				code: string;
 				symbol: string;
 				name: string;
-				exchangeRateToUSD: __ERROR_TYPE_NOT_HANDLED__;
+				exchangeRateToUSD: Double;
 				isActive: boolean;
 			}
 			export interface IResponseModel {
@@ -6878,7 +6991,7 @@ export namespace LivestockTradingAPI {
 				code: string;
 				symbol: string;
 				name: string;
-				exchangeRateToUSD: __ERROR_TYPE_NOT_HANDLED__;
+				exchangeRateToUSD: Double;
 				lastUpdated: Date;
 				isActive: boolean;
 				createdAt: Date;
@@ -7019,6 +7132,25 @@ export namespace LivestockTradingAPI {
 				subject: string;
 				status: number;
 				createdAt: Date;
+			}
+		}
+
+	}
+
+	export namespace ContactForms {
+
+		export namespace Create {
+			export const RequestPath = AppConfig.LivestockTradingUrl + '/ContactForms/Create';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+				name: string;
+				email: string;
+				subject: string;
+				message: string;
+			}
+			export interface IResponseModel {
+				id: Guid;
+				success: boolean;
 			}
 		}
 
@@ -7633,7 +7765,7 @@ export namespace LivestockTradingAPI {
 				name: string;
 				description: string;
 				durationHours: number;
-				price: __ERROR_TYPE_NOT_HANDLED__;
+				price: Double;
 				currency: string;
 				appleProductId: string;
 				googleProductId: string;
@@ -7655,7 +7787,7 @@ export namespace LivestockTradingAPI {
 				nameTranslations: string;
 				descriptionTranslations: string;
 				durationHours: number;
-				price: __ERROR_TYPE_NOT_HANDLED__;
+				price: Double;
 				currency: string;
 				boostType: number;
 				boostScore: number;
@@ -7671,7 +7803,7 @@ export namespace LivestockTradingAPI {
 				nameTranslations: string;
 				descriptionTranslations: string;
 				durationHours: number;
-				price: __ERROR_TYPE_NOT_HANDLED__;
+				price: Double;
 				currency: string;
 				boostType: number;
 				boostScore: number;
@@ -7874,8 +8006,8 @@ export namespace LivestockTradingAPI {
 				gender: number;
 				dateOfBirth?: Date;
 				ageMonths?: number;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				heightCm?: __ERROR_TYPE_NOT_HANDLED__;
+				weightKg?: Double;
+				heightCm?: Double;
 				color: string;
 				markings: string;
 				tagNumber: string;
@@ -7887,8 +8019,8 @@ export namespace LivestockTradingAPI {
 				isPregnant: boolean;
 				expectedDueDate?: Date;
 				numberOfBirths?: number;
-				dailyMilkProductionLiters?: __ERROR_TYPE_NOT_HANDLED__;
-				averageDailyEggProduction?: __ERROR_TYPE_NOT_HANDLED__;
+				dailyMilkProductionLiters?: Double;
+				averageDailyEggProduction?: Double;
 				sireDetails: string;
 				damDetails: string;
 				purpose: number;
@@ -7931,7 +8063,7 @@ export namespace LivestockTradingAPI {
 				breedName: string;
 				gender: number;
 				ageMonths?: number;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
+				weightKg?: Double;
 				color: string;
 				tagNumber: string;
 				healthStatus: number;
@@ -7950,8 +8082,8 @@ export namespace LivestockTradingAPI {
 				gender: number;
 				dateOfBirth?: Date;
 				ageMonths?: number;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				heightCm?: __ERROR_TYPE_NOT_HANDLED__;
+				weightKg?: Double;
+				heightCm?: Double;
 				color: string;
 				markings: string;
 				tagNumber: string;
@@ -7963,8 +8095,8 @@ export namespace LivestockTradingAPI {
 				isPregnant: boolean;
 				expectedDueDate?: Date;
 				numberOfBirths?: number;
-				dailyMilkProductionLiters?: __ERROR_TYPE_NOT_HANDLED__;
-				averageDailyEggProduction?: __ERROR_TYPE_NOT_HANDLED__;
+				dailyMilkProductionLiters?: Double;
+				averageDailyEggProduction?: Double;
 				sireDetails: string;
 				damDetails: string;
 				purpose: number;
@@ -7976,8 +8108,8 @@ export namespace LivestockTradingAPI {
 				gender: number;
 				dateOfBirth?: Date;
 				ageMonths?: number;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				heightCm?: __ERROR_TYPE_NOT_HANDLED__;
+				weightKg?: Double;
+				heightCm?: Double;
 				color: string;
 				markings: string;
 				tagNumber: string;
@@ -7989,8 +8121,8 @@ export namespace LivestockTradingAPI {
 				isPregnant: boolean;
 				expectedDueDate?: Date;
 				numberOfBirths?: number;
-				dailyMilkProductionLiters?: __ERROR_TYPE_NOT_HANDLED__;
-				averageDailyEggProduction?: __ERROR_TYPE_NOT_HANDLED__;
+				dailyMilkProductionLiters?: Double;
+				averageDailyEggProduction?: Double;
 				sireDetails: string;
 				damDetails: string;
 				purpose: number;
@@ -8018,8 +8150,8 @@ export namespace LivestockTradingAPI {
 				gender: number;
 				dateOfBirth?: Date;
 				ageMonths?: number;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				heightCm?: __ERROR_TYPE_NOT_HANDLED__;
+				weightKg?: Double;
+				heightCm?: Double;
 				color: string;
 				markings: string;
 				tagNumber: string;
@@ -8031,8 +8163,8 @@ export namespace LivestockTradingAPI {
 				isPregnant: boolean;
 				expectedDueDate?: Date;
 				numberOfBirths?: number;
-				dailyMilkProductionLiters?: __ERROR_TYPE_NOT_HANDLED__;
-				averageDailyEggProduction?: __ERROR_TYPE_NOT_HANDLED__;
+				dailyMilkProductionLiters?: Double;
+				averageDailyEggProduction?: Double;
 				sireDetails: string;
 				damDetails: string;
 				purpose: number;
@@ -8044,8 +8176,8 @@ export namespace LivestockTradingAPI {
 				gender: number;
 				dateOfBirth?: Date;
 				ageMonths?: number;
-				weightKg?: __ERROR_TYPE_NOT_HANDLED__;
-				heightCm?: __ERROR_TYPE_NOT_HANDLED__;
+				weightKg?: Double;
+				heightCm?: Double;
 				color: string;
 				markings: string;
 				tagNumber: string;
@@ -8057,8 +8189,8 @@ export namespace LivestockTradingAPI {
 				isPregnant: boolean;
 				expectedDueDate?: Date;
 				numberOfBirths?: number;
-				dailyMilkProductionLiters?: __ERROR_TYPE_NOT_HANDLED__;
-				averageDailyEggProduction?: __ERROR_TYPE_NOT_HANDLED__;
+				dailyMilkProductionLiters?: Double;
+				averageDailyEggProduction?: Double;
 				sireDetails: string;
 				damDetails: string;
 				purpose: number;
