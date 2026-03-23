@@ -195,7 +195,9 @@
     "subscription": "சந்தா",
     "subscriptionPlansAdmin": "சந்தா திட்டங்கள்",
     "boostPackagesAdmin": "தொகுப்புகளை அதிகரிக்கவும்",
-    "exchangeRates": "மாற்று விகிதங்கள்"
+    "exchangeRates": "மாற்று விகிதங்கள்",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "சுயவிவரத் தகவல்",
@@ -682,7 +684,18 @@
       "title": "மதிப்பீடுகள்",
       "reviewCount": "மதிப்பீடு",
       "noReviews": "இன்னும் மதிப்பீடு இல்லை.",
-      "verified": "சரிபார்க்கப்பட்ட வாங்குபவர்"
+      "verified": "சரிபார்க்கப்பட்ட வாங்குபவர்",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "ஒத்த தயாரிப்புகள்",
     "sellerProducts": "விற்பனையாளரின் பிற தயாரிப்புகள்",
@@ -777,7 +790,21 @@
         "shippingSpeed": "கப்பல் வேகம்",
         "productQuality": "தயாரிப்பு தரம்",
         "noReviews": "இன்னும் மதிப்பீடு இல்லை.",
-        "verified": "சரிபார்க்கப்பட்ட வாங்குபவர்"
+        "verified": "சரிபார்க்கப்பட்ட வாங்குபவர்",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "கப்பல் கட்டணம்",
       "weight": "எடை",
       "weightUnit": "எடையின் அலகு",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "உதாரணம்: 2 வயது ஹோல்ஸ்டீன் பசு",
       "shortDescription": "தயாரிப்பு விளக்கம் (அதிகபட்சம் 200 எழுத்துகள்)",
       "description": "தயாரிப்பு பற்றிய விரிவான தகவல்களை வழங்கவும்...",
       "category": "ஒரு வகையைத் தேர்ந்தெடுக்கவும்.",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "நகரம்",
       "address": "முகவரி",
-      "postalCode": "அஞ்சல் குறியீடு"
+      "postalCode": "அஞ்சல் குறியீடு",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "உதாரணம்: 2 வயது ஹோல்ஸ்டீன் பசு",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "நகரத்திற்குள் நுழையுங்கள்",
       "address": "முழு முகவரியையும் உள்ளிடவும்.",
-      "postalCode": "அஞ்சல் குறியீடு"
+      "postalCode": "அஞ்சல் குறியீடு",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "விலை கட்டாயம்.",
       "cityRequired": "நகரத் தகவல் தேவை.",
       "addressRequired": "முகவரி தகவல் தேவை.",
-      "locationError": "இருப்பிடத்தை உருவாக்கும் போது பிழை ஏற்பட்டது."
+      "locationError": "இருப்பிடத்தை உருவாக்கும் போது பிழை ஏற்பட்டது.",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "விளம்பரம் வெற்றிகரமாக உருவாக்கப்பட்டது.",
     "error": "விளம்பரத்தை உருவாக்கும் போது பிழை ஏற்பட்டது.",
@@ -899,7 +931,8 @@
     "productCreated": "தயாரிப்பு வெற்றிகரமாக உருவாக்கப்பட்டது.",
     "creationFailed": "தயாரிப்பை உருவாக்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.",
     "userNotFound": "பயனர் தகவலைக் கண்டறிய முடியவில்லை. மீண்டும் உள்நுழையவும்.",
-    "defaultBusinessName": "என் தொழில்"
+    "defaultBusinessName": "என் தொழில்",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "விற்பனையாளராகுங்கள்",
@@ -1035,19 +1068,22 @@
       "sortOrder": "தொடர் எண்",
       "subCategories": "துணைப்பிரிவு",
       "status": "சூழ்நிலை",
-      "actions": "பரிவர்த்தனைகள்"
+      "actions": "பரிவர்த்தனைகள்",
+      "products": "Products"
     },
     "actions": {
       "edit": "திருத்து",
       "delete": "நீக்கு",
       "activate": "செயல்படுத்து",
-      "deactivate": "செயலற்ற அமைப்பு"
+      "deactivate": "செயலற்ற அமைப்பு",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "வகையை நீக்கு",
       "description": "இந்த வகையை நீக்க விரும்புகிறீர்களா? இந்த செயலை மாற்ற முடியாது.",
       "cancel": "ரத்துசெய்",
-      "confirm": "நீக்கு"
+      "confirm": "நீக்கு",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "புதிய வகையைச் சேர்",
     "loadMore": "மேலும் பதிவிறக்கவும்",
@@ -1075,7 +1111,10 @@
         "nameRequired": "வகையின் பெயர் தேவை.",
         "slugRequired": "நத்தைகள் கட்டாயம்."
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "திட்டங்கள்",
@@ -1385,7 +1424,16 @@
     "timeliness": "சரியான நேரத்தில் டெலிவரி",
     "communication": "தொடர்பு",
     "carefulHandling": "கவனமாக கையாளுதல்",
-    "professionalism": "தொழில்முறை"
+    "professionalism": "தொழில்முறை",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "கப்பல் விலைப்பட்டியல்கள்",
@@ -1590,7 +1638,26 @@
     "rates": "கப்பல் கட்டணம்",
     "noRates": "கப்பல் செலவுகள் இன்னும் வரையறுக்கப்படவில்லை.",
     "freeShipping": "இலவச ஷிப்பிங்",
-    "deliveryDays": "நாள் விநியோக நேரம்"
+    "deliveryDays": "நாள் விநியோக நேரம்",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "அறிவிப்புகளை இயக்கு",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "மாற்றப்பட்ட விலை",
     "approximatePrice": "தற்போதைய மாற்று விகிதங்களின் அடிப்படையிலான தோராயமான மாற்றம்",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

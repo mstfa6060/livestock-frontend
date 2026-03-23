@@ -195,7 +195,9 @@
     "subscription": "サブスクリプション",
     "subscriptionPlansAdmin": "サブスクリプションプラン",
     "boostPackagesAdmin": "ブーストパッケージ",
-    "exchangeRates": "為替レート"
+    "exchangeRates": "為替レート",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "プロフィール情報",
@@ -682,7 +684,18 @@
       "title": "評価",
       "reviewCount": "評価",
       "noReviews": "まだ評価は行われていません。",
-      "verified": "認証済み購入者"
+      "verified": "認証済み購入者",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "類似商品",
     "sellerProducts": "販売者のその他の商品",
@@ -777,7 +790,21 @@
         "shippingSpeed": "配送速度",
         "productQuality": "製品の品質",
         "noReviews": "まだ評価は行われていません。",
-        "verified": "認証済み購入者"
+        "verified": "認証済み購入者",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "送料",
       "weight": "重さ",
       "weightUnit": "重量単位",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "例：2歳のホルスタイン牛",
       "shortDescription": "製品説明（最大200文字）",
       "description": "製品に関する詳細情報を提供してください。",
       "category": "カテゴリを選択してください。",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "市",
       "address": "住所",
-      "postalCode": "郵便番号"
+      "postalCode": "郵便番号",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "例：2歳のホルスタイン牛",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "街に入る",
       "address": "住所をすべて入力してください。",
-      "postalCode": "郵便番号"
+      "postalCode": "郵便番号",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "価格は必須です。",
       "cityRequired": "都市情報が必要です。",
       "addressRequired": "住所情報は必須です。",
-      "locationError": "場所の作成中にエラーが発生しました。"
+      "locationError": "場所の作成中にエラーが発生しました。",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "広告の作成に成功しました。",
     "error": "広告作成中にエラーが発生しました。",
@@ -899,7 +931,8 @@
     "productCreated": "製品の開発に成功しました。",
     "creationFailed": "製品を作成できませんでした。もう一度お試しください。",
     "userNotFound": "ユーザー情報が見つかりませんでした。再度ログインしてください。",
-    "defaultBusinessName": "私のビジネス"
+    "defaultBusinessName": "私のビジネス",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "販売者になる",
@@ -1035,19 +1068,22 @@
       "sortOrder": "シリアルナンバー",
       "subCategories": "サブカテゴリ",
       "status": "状況",
-      "actions": "取引"
+      "actions": "取引",
+      "products": "Products"
     },
     "actions": {
       "edit": "編集",
       "delete": "消去",
       "activate": "活性化",
-      "deactivate": "受動構造"
+      "deactivate": "受動構造",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "カテゴリを削除",
       "description": "このカテゴリを削除してもよろしいですか？この操作は元に戻せません。",
       "cancel": "キャンセル",
-      "confirm": "消去"
+      "confirm": "消去",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "新しいカテゴリを追加",
     "loadMore": "さらにダウンロード",
@@ -1075,7 +1111,10 @@
         "nameRequired": "カテゴリ名は必須です。",
         "slugRequired": "ナメクジ弾は必須です。"
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "提案",
@@ -1385,7 +1424,16 @@
     "timeliness": "定刻通りの配達",
     "communication": "コミュニケーション",
     "carefulHandling": "慎重な取り扱い",
-    "professionalism": "プロ意識"
+    "professionalism": "プロ意識",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "配送料の見積もり",
@@ -1590,7 +1638,26 @@
     "rates": "配送料",
     "noRates": "送料はまだ確定していません。",
     "freeShipping": "送料無料",
-    "deliveryDays": "当日配達時間"
+    "deliveryDays": "当日配達時間",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "通知を有効にする",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "換算価格",
     "approximatePrice": "現在の為替レートに基づく概算換算値",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

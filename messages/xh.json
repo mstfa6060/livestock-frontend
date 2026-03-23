@@ -195,7 +195,9 @@
     "subscription": "Ubhaliso",
     "subscriptionPlansAdmin": "Izicwangciso zoBhaliso",
     "boostPackagesAdmin": "Iiphakheji zoKhuthazo",
-    "exchangeRates": "Amaxabiso otshintshiselwano"
+    "exchangeRates": "Amaxabiso otshintshiselwano",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "Ulwazi lweProfayili",
@@ -682,7 +684,18 @@
       "title": "Uvavanyo",
       "reviewCount": "uvavanyo",
       "noReviews": "Akukho vavanyo okwangoku.",
-      "verified": "Umthengi oQinisekisiweyo"
+      "verified": "Umthengi oQinisekisiweyo",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "Iimveliso ezifanayo",
     "sellerProducts": "Ezinye iimveliso zomthengisi",
@@ -777,7 +790,21 @@
         "shippingSpeed": "Isantya sokuhambisa",
         "productQuality": "Umgangatho weMveliso",
         "noReviews": "Akukho vavanyo okwangoku.",
-        "verified": "Umthengi oQinisekisiweyo"
+        "verified": "Umthengi oQinisekisiweyo",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "Intlawulo yokuthumela",
       "weight": "Ubunzima",
       "weightUnit": "Iyunithi yoBunzima",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Umzekelo: Inkomo yaseHolstein eneminyaka emi-2 ubudala",
       "shortDescription": "Inkcazo yemveliso (ubuninzi beempawu ezingama-200)",
       "description": "Nika ulwazi oluneenkcukacha malunga nemveliso...",
       "category": "Khetha udidi.",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "Isixeko",
       "address": "Idilesi",
-      "postalCode": "Ikhowudi yePosi"
+      "postalCode": "Ikhowudi yePosi",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Umzekelo: Inkomo yaseHolstein eneminyaka emi-2 ubudala",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "Ngena kwisixeko",
       "address": "Faka idilesi epheleleyo.",
-      "postalCode": "Ikhowudi yePosi"
+      "postalCode": "Ikhowudi yePosi",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "Ixabiso liyimfuneko.",
       "cityRequired": "Ulwazi lwesixeko luyafuneka.",
       "addressRequired": "Ulwazi lwedilesi luyafuneka.",
-      "locationError": "Kwenzeke impazamo xa kwakudalwa indawo."
+      "locationError": "Kwenzeke impazamo xa kwakudalwa indawo.",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "Intengiso yenziwe ngempumelelo.",
     "error": "Kwenzeke impazamo xa kwakusenziwa intengiso.",
@@ -899,7 +931,8 @@
     "productCreated": "Imveliso yenziwe ngempumelelo.",
     "creationFailed": "Imveliso ayikwazanga ukwenziwa. Nceda uzame kwakhona.",
     "userNotFound": "Ulwazi lomsebenzisi alufumanekanga. Nceda ungene kwakhona.",
-    "defaultBusinessName": "Ishishini lam"
+    "defaultBusinessName": "Ishishini lam",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "Yiba ngumthengisi",
@@ -1035,19 +1068,22 @@
       "sortOrder": "Inombolo yesiriyeli",
       "subCategories": "Udidi olungaphantsi",
       "status": "Imeko",
-      "actions": "Iintengiselwano"
+      "actions": "Iintengiselwano",
+      "products": "Products"
     },
     "actions": {
       "edit": "Hlela",
       "delete": "Cima",
       "activate": "Yenza kusebenze",
-      "deactivate": "Ulwakhiwo olungasebenziyo"
+      "deactivate": "Ulwakhiwo olungasebenziyo",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "Cima udidi",
       "description": "Uqinisekile ukuba ufuna ukucima olu didi? Esi senzo asinakuguqulwa.",
       "cancel": "Rhoxisa",
-      "confirm": "Cima"
+      "confirm": "Cima",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "Yongeza udidi olutsha",
     "loadMore": "Khuphela Okungakumbi",
@@ -1075,7 +1111,10 @@
         "nameRequired": "Igama lodidi liyafuneka.",
         "slugRequired": "Iislugs ziyimfuneko."
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "Iziphakamiso",
@@ -1385,7 +1424,16 @@
     "timeliness": "Ukuhanjiswa ngexesha elifanelekileyo",
     "communication": "Unxibelelwano",
     "carefulHandling": "Ukuphatha Ngononophelo",
-    "professionalism": "Ubuchule"
+    "professionalism": "Ubuchule",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "Iingcaphuno zokuthumela",
@@ -1590,7 +1638,26 @@
     "rates": "Iintlawulo zokuthumela",
     "noRates": "Iindleko zokuthumela azikachazwa okwangoku.",
     "freeShipping": "Ukuhanjiselwa ngenqanawe mahala",
-    "deliveryDays": "ixesha lokuhanjiswa ngosuku"
+    "deliveryDays": "ixesha lokuhanjiswa ngosuku",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "Nika amandla izaziso",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "Ixabiso eliguquliweyo",
     "approximatePrice": "Utshintsho oluqikelelweyo olusekelwe kumazinga okutshintshiselana ngoku",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

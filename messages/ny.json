@@ -195,7 +195,9 @@
     "subscription": "Kulembetsa",
     "subscriptionPlansAdmin": "Mapulani Olembetsa",
     "boostPackagesAdmin": "Maphukusi Owonjezera",
-    "exchangeRates": "Mitengo Yosinthira"
+    "exchangeRates": "Mitengo Yosinthira",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "Zambiri za Mbiri Yanu",
@@ -682,7 +684,18 @@
       "title": "Kuyesa",
       "reviewCount": "kuwunika",
       "noReviews": "Palibe kuwunika pano.",
-      "verified": "Wogula Wotsimikizika"
+      "verified": "Wogula Wotsimikizika",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "Zogulitsa Zofanana",
     "sellerProducts": "Zogulitsa Zina za Wogulitsa",
@@ -777,7 +790,21 @@
         "shippingSpeed": "Liwiro Lotumizira",
         "productQuality": "Ubwino wa Zamalonda",
         "noReviews": "Palibe kuwunika pano.",
-        "verified": "Wogula Wotsimikizika"
+        "verified": "Wogula Wotsimikizika",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "Ndalama Zotumizira",
       "weight": "Kulemera",
       "weightUnit": "Chigawo cha Kulemera",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Chitsanzo: Ng'ombe ya Holstein ya zaka ziwiri",
       "shortDescription": "Kufotokozera kwa malonda (zilembo zosapitirira 200)",
       "description": "Perekani zambiri zokhudza malonda...",
       "category": "Sankhani gulu.",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "Mzinda",
       "address": "Adilesi",
-      "postalCode": "Khodi Yapositi"
+      "postalCode": "Khodi Yapositi",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Chitsanzo: Ng'ombe ya Holstein ya zaka ziwiri",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "Lowani mumzinda",
       "address": "Lowetsani adilesi yonse.",
-      "postalCode": "Khodi Yapositi"
+      "postalCode": "Khodi Yapositi",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "Mtengo ndi wofunikira.",
       "cityRequired": "Zambiri za mzinda ndizofunikira.",
       "addressRequired": "Zambiri za adilesi ndizofunikira.",
-      "locationError": "Panali cholakwika pokonza malo."
+      "locationError": "Panali cholakwika pokonza malo.",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "Kutsatsaku kunapangidwa bwino.",
     "error": "Panali cholakwika polenga malonda.",
@@ -899,7 +931,8 @@
     "productCreated": "Chogulitsacho chapangidwa bwino.",
     "creationFailed": "Chogulitsacho sichinapangidwe. Yesaninso.",
     "userNotFound": "Zambiri za ogwiritsa ntchito sizinapezeke. Chonde lowaninso.",
-    "defaultBusinessName": "Bizinesi yanga"
+    "defaultBusinessName": "Bizinesi yanga",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "Khalani Wogulitsa",
@@ -1035,19 +1068,22 @@
       "sortOrder": "Nambala ya siriyo",
       "subCategories": "Gulu laling'ono",
       "status": "Mkhalidwe",
-      "actions": "Zochitika"
+      "actions": "Zochitika",
+      "products": "Products"
     },
     "actions": {
       "edit": "Sinthani",
       "delete": "Chotsani",
       "activate": "Yambitsani",
-      "deactivate": "Kapangidwe Kosachitapo Kanthu"
+      "deactivate": "Kapangidwe Kosachitapo Kanthu",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "Chotsani Gulu",
       "description": "Mukutsimikiza kuti mukufuna kuchotsa gulu ili? Izi sizingasinthe.",
       "cancel": "Letsani",
-      "confirm": "Chotsani"
+      "confirm": "Chotsani",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "Onjezani Gulu Latsopano",
     "loadMore": "Tsitsani Zambiri",
@@ -1075,7 +1111,10 @@
         "nameRequired": "Dzina la gulu likufunika.",
         "slugRequired": "Ma slugs ndi ofunikira."
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "Malingaliro",
@@ -1385,7 +1424,16 @@
     "timeliness": "Kutumiza pa nthawi yake",
     "communication": "Kulankhulana",
     "carefulHandling": "Kusamalira Mosamala",
-    "professionalism": "Ukatswiri"
+    "professionalism": "Ukatswiri",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "Ma Quotes Otumizira",
@@ -1590,7 +1638,26 @@
     "rates": "Ndalama Zotumizira",
     "noRates": "Ndalama zotumizira sizinatchulidwebe.",
     "freeShipping": "Kutumiza kwaulere",
-    "deliveryDays": "nthawi yobweretsera tsiku lililonse"
+    "deliveryDays": "nthawi yobweretsera tsiku lililonse",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "Yambitsani zidziwitso",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "Mtengo wosinthidwa",
     "approximatePrice": "Kutembenuka koyerekeza kutengera mitengo yosinthira ndalama yomwe ilipo",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

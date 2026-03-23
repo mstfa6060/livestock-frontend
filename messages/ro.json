@@ -195,7 +195,9 @@
     "subscription": "Abonament",
     "subscriptionPlansAdmin": "Planuri de abonament",
     "boostPackagesAdmin": "Pachete Boost",
-    "exchangeRates": "Cursuri de schimb valutar"
+    "exchangeRates": "Cursuri de schimb valutar",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "Informații despre profil",
@@ -682,7 +684,18 @@
       "title": "Evaluări",
       "reviewCount": "evaluare",
       "noReviews": "Încă nu există o evaluare.",
-      "verified": "Cumpărător verificat"
+      "verified": "Cumpărător verificat",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "Produse similare",
     "sellerProducts": "Alte produse ale vânzătorului",
@@ -777,7 +790,21 @@
         "shippingSpeed": "Viteză de livrare",
         "productQuality": "Calitatea produsului",
         "noReviews": "Încă nu există o evaluare.",
-        "verified": "Cumpărător verificat"
+        "verified": "Cumpărător verificat",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "Taxă de livrare",
       "weight": "Greutate",
       "weightUnit": "Unitate de greutate",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Exemplu: Vacă Holstein de 2 ani",
       "shortDescription": "Descrierea produsului (maxim 200 de caractere)",
       "description": "Furnizați informații detaliate despre produs...",
       "category": "Selectați o categorie.",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "Oraş",
       "address": "Adresa",
-      "postalCode": "Cod poștal"
+      "postalCode": "Cod poștal",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Exemplu: Vacă Holstein de 2 ani",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "Intrați în oraș",
       "address": "Introduceți adresa completă.",
-      "postalCode": "Cod poștal"
+      "postalCode": "Cod poștal",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "Prețul este obligatoriu.",
       "cityRequired": "Sunt necesare informații despre oraș.",
       "addressRequired": "Informațiile despre adresă sunt obligatorii.",
-      "locationError": "A apărut o eroare la crearea locației."
+      "locationError": "A apărut o eroare la crearea locației.",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "Reclama a fost creată cu succes.",
     "error": "A apărut o eroare la crearea reclamei.",
@@ -899,7 +931,8 @@
     "productCreated": "Produsul a fost creat cu succes.",
     "creationFailed": "Produsul nu a putut fi creat. Vă rugăm să încercați din nou.",
     "userNotFound": "Informațiile despre utilizator nu au putut fi găsite. Vă rugăm să vă conectați din nou.",
-    "defaultBusinessName": "Afacerea mea"
+    "defaultBusinessName": "Afacerea mea",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "Devino vânzător",
@@ -1035,19 +1068,22 @@
       "sortOrder": "Număr de serie",
       "subCategories": "Subcategorie",
       "status": "Situaţie",
-      "actions": "Tranzacții"
+      "actions": "Tranzacții",
+      "products": "Products"
     },
     "actions": {
       "edit": "Edita",
       "delete": "Şterge",
       "activate": "Activa",
-      "deactivate": "Structură pasivă"
+      "deactivate": "Structură pasivă",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "Ștergeți categoria",
       "description": "Sigur doriți să ștergeți această categorie? Această acțiune este ireversibilă.",
       "cancel": "Anula",
-      "confirm": "Şterge"
+      "confirm": "Şterge",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "Adăugați o categorie nouă",
     "loadMore": "Descarcă mai mult",
@@ -1075,7 +1111,10 @@
         "nameRequired": "Numele categoriei este obligatoriu.",
         "slugRequired": "Limacșii sunt obligatorii."
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "Propuneri",
@@ -1385,7 +1424,16 @@
     "timeliness": "Livrare la timp",
     "communication": "Comunicare",
     "carefulHandling": "Manipulare atentă",
-    "professionalism": "Profesionalism"
+    "professionalism": "Profesionalism",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "Oferte de transport",
@@ -1590,7 +1638,26 @@
     "rates": "Taxe de livrare",
     "noRates": "Costurile de livrare nu au fost încă definite.",
     "freeShipping": "Livrare gratuită",
-    "deliveryDays": "ora de livrare a zilei"
+    "deliveryDays": "ora de livrare a zilei",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "Activează notificările",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "Preț convertit",
     "approximatePrice": "Conversie aproximativă bazată pe cursurile de schimb actuale",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

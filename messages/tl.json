@@ -195,7 +195,9 @@
     "subscription": "Suskrisyon",
     "subscriptionPlansAdmin": "Mga Plano ng Subskripsyon",
     "boostPackagesAdmin": "Mga Pakete ng Boost",
-    "exchangeRates": "Mga Halaga ng Palitan"
+    "exchangeRates": "Mga Halaga ng Palitan",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "Impormasyon sa Profile",
@@ -682,7 +684,18 @@
       "title": "Mga Pagtatasa",
       "reviewCount": "pagsusuri",
       "noReviews": "Wala pang ebalwasyon.",
-      "verified": "Na-verify na Mamimili"
+      "verified": "Na-verify na Mamimili",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "Mga Katulad na Produkto",
     "sellerProducts": "Iba pang mga Produkto ng Nagbebenta",
@@ -777,7 +790,21 @@
         "shippingSpeed": "Bilis ng Pagpapadala",
         "productQuality": "Kalidad ng Produkto",
         "noReviews": "Wala pang ebalwasyon.",
-        "verified": "Na-verify na Mamimili"
+        "verified": "Na-verify na Mamimili",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "Bayad sa Pagpapadala",
       "weight": "Timbang",
       "weightUnit": "Yunit ng Timbang",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Halimbawa: 2-Taong Gulang na Bakang Holstein",
       "shortDescription": "Paglalarawan ng produkto (maximum na 200 karakter)",
       "description": "Magbigay ng detalyadong impormasyon tungkol sa produkto...",
       "category": "Pumili ng kategorya.",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "Lungsod",
       "address": "Tirahan",
-      "postalCode": "Kodigo ng koreo"
+      "postalCode": "Kodigo ng koreo",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Halimbawa: 2-Taong Gulang na Bakang Holstein",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "Pumasok sa lungsod",
       "address": "Ilagay ang buong address.",
-      "postalCode": "Kodigo ng koreo"
+      "postalCode": "Kodigo ng koreo",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "Ang presyo ay sapilitan.",
       "cityRequired": "Kinakailangan ang impormasyon ng lungsod.",
       "addressRequired": "Kinakailangan ang impormasyon ng address.",
-      "locationError": "Nagkaroon ng error habang ginagawa ang lokasyon."
+      "locationError": "Nagkaroon ng error habang ginagawa ang lokasyon.",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "Matagumpay na nagawa ang patalastas.",
     "error": "Nagkaroon ng error habang ginagawa ang patalastas.",
@@ -899,7 +931,8 @@
     "productCreated": "Matagumpay na nalikha ang produkto.",
     "creationFailed": "Hindi malikha ang produkto. Pakisubukang muli.",
     "userNotFound": "Hindi mahanap ang impormasyon ng user. Mangyaring mag-log in muli.",
-    "defaultBusinessName": "Ang negosyo ko"
+    "defaultBusinessName": "Ang negosyo ko",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "Maging isang Nagbebenta",
@@ -1035,19 +1068,22 @@
       "sortOrder": "Numero ng Serye",
       "subCategories": "Subkategorya",
       "status": "Sitwasyon",
-      "actions": "Mga Transaksyon"
+      "actions": "Mga Transaksyon",
+      "products": "Products"
     },
     "actions": {
       "edit": "I-edit",
       "delete": "Burahin",
       "activate": "I-activate",
-      "deactivate": "Istrukturang Passive"
+      "deactivate": "Istrukturang Passive",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "Burahin ang Kategorya",
       "description": "Sigurado ka bang gusto mong burahin ang kategoryang ito? Hindi na maibabalik ang aksyon na ito.",
       "cancel": "Kanselahin",
-      "confirm": "Burahin"
+      "confirm": "Burahin",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "Magdagdag ng Bagong Kategorya",
     "loadMore": "Mag-download Pa",
@@ -1075,7 +1111,10 @@
         "nameRequired": "Kinakailangan ang pangalan ng kategorya.",
         "slugRequired": "Ang mga slug ay sapilitan."
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "Mga Panukala",
@@ -1385,7 +1424,16 @@
     "timeliness": "Paghahatid sa tamang oras",
     "communication": "Komunikasyon",
     "carefulHandling": "Maingat na Paghawak",
-    "professionalism": "Propesyonalismo"
+    "professionalism": "Propesyonalismo",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "Mga Sipi sa Pagpapadala",
@@ -1590,7 +1638,26 @@
     "rates": "Mga Bayarin sa Pagpapadala",
     "noRates": "Hindi pa natutukoy ang mga gastos sa pagpapadala.",
     "freeShipping": "Libreng Pagpapadala",
-    "deliveryDays": "oras ng paghahatid sa araw"
+    "deliveryDays": "oras ng paghahatid sa araw",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "Paganahin ang mga notification",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "Na-convert na presyo",
     "approximatePrice": "Tinatayang conversion batay sa kasalukuyang mga halaga ng palitan",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

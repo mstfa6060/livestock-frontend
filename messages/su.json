@@ -195,7 +195,9 @@
     "subscription": "Langganan",
     "subscriptionPlansAdmin": "Rencana Langganan",
     "boostPackagesAdmin": "Paket Boost",
-    "exchangeRates": "Nilai Tukar"
+    "exchangeRates": "Nilai Tukar",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "Inpormasi Profil",
@@ -682,7 +684,18 @@
       "title": "Penilaian",
       "reviewCount": "évaluasi",
       "noReviews": "Teu acan aya évaluasi.",
-      "verified": "Pembeli Terverifikasi"
+      "verified": "Pembeli Terverifikasi",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "Produk anu sami",
     "sellerProducts": "Produk Lainna ti Nu Ngajual",
@@ -777,7 +790,21 @@
         "shippingSpeed": "Kagancangan Pangiriman",
         "productQuality": "Kualitas Produk",
         "noReviews": "Teu acan aya évaluasi.",
-        "verified": "Pembeli Terverifikasi"
+        "verified": "Pembeli Terverifikasi",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "Biaya Pangiriman",
       "weight": "Beurat",
       "weightUnit": "Unit Beurat",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Conto: Sapi Holstein Umur 2 Taun",
       "shortDescription": "Pedaran produk (maksimal 200 karakter)",
       "description": "Nyuhunkeun inpormasi lengkep ngeunaan produkna...",
       "category": "Pilih hiji kategori.",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "Kota",
       "address": "Alamat",
-      "postalCode": "Kodeu Pos"
+      "postalCode": "Kodeu Pos",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Conto: Sapi Holstein Umur 2 Taun",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "Lebet ka kota",
       "address": "Lebetkeun alamat lengkepna.",
-      "postalCode": "Kodeu Pos"
+      "postalCode": "Kodeu Pos",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "Hargana wajib.",
       "cityRequired": "Inpormasi kota diperyogikeun.",
       "addressRequired": "Inpormasi alamat diperyogikeun.",
-      "locationError": "Aya kasalahan nalika nyieun lokasi."
+      "locationError": "Aya kasalahan nalika nyieun lokasi.",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "Iklan éta parantos hasil dijieun.",
     "error": "Aya kasalahan nalika nyieun iklan.",
@@ -899,7 +931,8 @@
     "productCreated": "Produkna parantos hasil dijieun.",
     "creationFailed": "Produkna teu tiasa didamel. Mangga cobian deui.",
     "userNotFound": "Inpormasi pangguna teu kapendak. Mangga lebet deui.",
-    "defaultBusinessName": "Usaha kuring"
+    "defaultBusinessName": "Usaha kuring",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "Janten Penjual",
@@ -1035,19 +1068,22 @@
       "sortOrder": "Nomer séri",
       "subCategories": "Subkategori",
       "status": "Kaayaan",
-      "actions": "Transaksi"
+      "actions": "Transaksi",
+      "products": "Products"
     },
     "actions": {
       "edit": "Édit",
       "delete": "Hapus",
       "activate": "Aktipkeun",
-      "deactivate": "Struktur Pasif"
+      "deactivate": "Struktur Pasif",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "Hapus Kategori",
       "description": "Naha anjeun yakin hoyong ngahapus kategori ieu? Peta ieu teu tiasa dibalikkeun deui.",
       "cancel": "Batalkeun",
-      "confirm": "Hapus"
+      "confirm": "Hapus",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "Tambahkeun Kategori Anyar",
     "loadMore": "Unduh deui",
@@ -1075,7 +1111,10 @@
         "nameRequired": "Nami kategori diperyogikeun.",
         "slugRequired": "Siput téh wajib."
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "Usulan",
@@ -1385,7 +1424,16 @@
     "timeliness": "Pangiriman tepat waktu",
     "communication": "Komunikasi",
     "carefulHandling": "Penanganan anu ati-ati",
-    "professionalism": "Profesionalisme"
+    "professionalism": "Profesionalisme",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "Kutipan Pangiriman",
@@ -1590,7 +1638,26 @@
     "rates": "Biaya Pangiriman",
     "noRates": "Biaya pengiriman tacan ditetepkeun.",
     "freeShipping": "Pangiriman haratis",
-    "deliveryDays": "waktos pangiriman dinten"
+    "deliveryDays": "waktos pangiriman dinten",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "Aktipkeun bewara",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "Harga anu dirobah",
     "approximatePrice": "Perkiraan konvérsi dumasar kana nilai tukeur ayeuna",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

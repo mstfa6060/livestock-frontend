@@ -195,7 +195,9 @@
     "subscription": "सदस्यता",
     "subscriptionPlansAdmin": "सदस्यता योजनाएँ",
     "boostPackagesAdmin": "बूस्ट पैकेज",
-    "exchangeRates": "विनिमय दरें"
+    "exchangeRates": "विनिमय दरें",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "प्रोफाइल की जानकारी",
@@ -682,7 +684,18 @@
       "title": "आकलन",
       "reviewCount": "मूल्यांकन",
       "noReviews": "अभी तक कोई मूल्यांकन नहीं हुआ है।",
-      "verified": "सत्यापित खरीदार"
+      "verified": "सत्यापित खरीदार",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "मिलते-जुलते उत्पाद",
     "sellerProducts": "विक्रेता के अन्य उत्पाद",
@@ -777,7 +790,21 @@
         "shippingSpeed": "शिपिंग गति",
         "productQuality": "उत्पाद की गुणवत्ता",
         "noReviews": "अभी तक कोई मूल्यांकन नहीं हुआ है।",
-        "verified": "सत्यापित खरीदार"
+        "verified": "सत्यापित खरीदार",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "शिपिंग शुल्क",
       "weight": "वज़न",
       "weightUnit": "वजन की इकाई",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "उदाहरण: 2 साल की होल्स्टीन गाय",
       "shortDescription": "उत्पाद का विवरण (अधिकतम 200 अक्षर)",
       "description": "उत्पाद के बारे में विस्तृत जानकारी प्रदान करें...",
       "category": "एक श्रेणी चुनें।",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "शहर",
       "address": "पता",
-      "postalCode": "डाक कोड"
+      "postalCode": "डाक कोड",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "उदाहरण: 2 साल की होल्स्टीन गाय",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "शहर में प्रवेश करें",
       "address": "पूरा पता दर्ज करें।",
-      "postalCode": "डाक कोड"
+      "postalCode": "डाक कोड",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "कीमत अनिवार्य है।",
       "cityRequired": "शहर की जानकारी आवश्यक है।",
       "addressRequired": "पते की जानकारी आवश्यक है।",
-      "locationError": "स्थान बनाते समय एक त्रुटि उत्पन्न हुई।"
+      "locationError": "स्थान बनाते समय एक त्रुटि उत्पन्न हुई।",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "विज्ञापन सफलतापूर्वक तैयार हो गया।",
     "error": "विज्ञापन बनाते समय एक त्रुटि उत्पन्न हुई।",
@@ -899,7 +931,8 @@
     "productCreated": "उत्पाद का निर्माण सफलतापूर्वक हो गया।",
     "creationFailed": "उत्पाद बनाया नहीं जा सका। कृपया पुनः प्रयास करें।",
     "userNotFound": "उपयोगकर्ता की जानकारी नहीं मिल पाई। कृपया दोबारा लॉग इन करें।",
-    "defaultBusinessName": "मेरा व्यापार"
+    "defaultBusinessName": "मेरा व्यापार",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "विक्रेता बनें",
@@ -1035,19 +1068,22 @@
       "sortOrder": "क्रम संख्या",
       "subCategories": "उपश्रेणी",
       "status": "परिस्थिति",
-      "actions": "लेनदेन"
+      "actions": "लेनदेन",
+      "products": "Products"
     },
     "actions": {
       "edit": "संपादन करना",
       "delete": "मिटाना",
       "activate": "सक्रिय करें",
-      "deactivate": "निष्क्रिय संरचना"
+      "deactivate": "निष्क्रिय संरचना",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "श्रेणी हटाएं",
       "description": "क्या आप वाकई इस श्रेणी को हटाना चाहते हैं? यह कार्रवाई अपरिवर्तनीय है।",
       "cancel": "रद्द करना",
-      "confirm": "मिटाना"
+      "confirm": "मिटाना",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "नई श्रेणी जोड़ें",
     "loadMore": "और डाउनलोड करें",
@@ -1075,7 +1111,10 @@
         "nameRequired": "श्रेणी का नाम आवश्यक है।",
         "slugRequired": "स्लग अनिवार्य हैं।"
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "प्रस्तावों",
@@ -1385,7 +1424,16 @@
     "timeliness": "समय पर डिलीवरी",
     "communication": "संचार",
     "carefulHandling": "सावधानीपूर्वक संभालना",
-    "professionalism": "व्यावसायिकता"
+    "professionalism": "व्यावसायिकता",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "शिपिंग कोटेशन",
@@ -1590,7 +1638,26 @@
     "rates": "शिपिंग शुल्क",
     "noRates": "शिपिंग लागत अभी तक निर्धारित नहीं की गई है।",
     "freeShipping": "मुफ़्त शिपिंग",
-    "deliveryDays": "दिन में डिलीवरी का समय"
+    "deliveryDays": "दिन में डिलीवरी का समय",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "सूचनाएं चालू करें",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "परिवर्तित मूल्य",
     "approximatePrice": "वर्तमान विनिमय दरों के आधार पर अनुमानित रूपांतरण",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

@@ -195,7 +195,9 @@
     "subscription": "Prenumerata",
     "subscriptionPlansAdmin": "Prenumeratos planai",
     "boostPackagesAdmin": "„Boost“ paketai",
-    "exchangeRates": "Valiutų kursai"
+    "exchangeRates": "Valiutų kursai",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "Profilio informacija",
@@ -682,7 +684,18 @@
       "title": "Vertinimai",
       "reviewCount": "vertinimas",
       "noReviews": "Vertinimo dar nėra.",
-      "verified": "Patvirtintas pirkėjas"
+      "verified": "Patvirtintas pirkėjas",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "Panašūs produktai",
     "sellerProducts": "Pardavėjo kiti produktai",
@@ -777,7 +790,21 @@
         "shippingSpeed": "Pristatymo greitis",
         "productQuality": "Produkto kokybė",
         "noReviews": "Vertinimo dar nėra.",
-        "verified": "Patvirtintas pirkėjas"
+        "verified": "Patvirtintas pirkėjas",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "Siuntimo mokestis",
       "weight": "Svoris",
       "weightUnit": "Svorio vienetas",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Pavyzdys: 2 metų Holšteino veislės karvė",
       "shortDescription": "Produkto aprašymas (daugiausia 200 simbolių)",
       "description": "Pateikite išsamią informaciją apie produktą...",
       "category": "Pasirinkite kategoriją.",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "Miestas",
       "address": "Adresas",
-      "postalCode": "Pašto kodas"
+      "postalCode": "Pašto kodas",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Pavyzdys: 2 metų Holšteino veislės karvė",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "Įeikite į miestą",
       "address": "Įveskite visą adresą.",
-      "postalCode": "Pašto kodas"
+      "postalCode": "Pašto kodas",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "Kaina yra privaloma.",
       "cityRequired": "Būtina pateikti informaciją apie miestą.",
       "addressRequired": "Būtina nurodyti adreso informaciją.",
-      "locationError": "Kuriant vietą įvyko klaida."
+      "locationError": "Kuriant vietą įvyko klaida.",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "Reklama sėkmingai sukurta.",
     "error": "Kuriant skelbimą įvyko klaida.",
@@ -899,7 +931,8 @@
     "productCreated": "Produktas buvo sėkmingai sukurtas.",
     "creationFailed": "Nepavyko sukurti produkto. Bandykite dar kartą.",
     "userNotFound": "Nepavyko rasti naudotojo informacijos. Prisijunkite dar kartą.",
-    "defaultBusinessName": "Mano verslas"
+    "defaultBusinessName": "Mano verslas",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "Tapkite pardavėju",
@@ -1035,19 +1068,22 @@
       "sortOrder": "Serijos numeris",
       "subCategories": "Subkategorija",
       "status": "Situacija",
-      "actions": "Sandoriai"
+      "actions": "Sandoriai",
+      "products": "Products"
     },
     "actions": {
       "edit": "Redaguoti",
       "delete": "Ištrinti",
       "activate": "Aktyvuoti",
-      "deactivate": "Pasyvi struktūra"
+      "deactivate": "Pasyvi struktūra",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "Ištrinti kategoriją",
       "description": "Ar tikrai norite ištrinti šią kategoriją? Šis veiksmas yra negrįžtamas.",
       "cancel": "Atšaukti",
-      "confirm": "Ištrinti"
+      "confirm": "Ištrinti",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "Pridėti naują kategoriją",
     "loadMore": "Atsisiųsti daugiau",
@@ -1075,7 +1111,10 @@
         "nameRequired": "Būtina nurodyti kategorijos pavadinimą.",
         "slugRequired": "Šliužai yra privalomi."
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "Pasiūlymai",
@@ -1385,7 +1424,16 @@
     "timeliness": "Pristatymas laiku",
     "communication": "Bendravimas",
     "carefulHandling": "Atsargus tvarkymas",
-    "professionalism": "Profesionalumas"
+    "professionalism": "Profesionalumas",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "Pristatymo kainos",
@@ -1590,7 +1638,26 @@
     "rates": "Siuntimo mokesčiai",
     "noRates": "Siuntimo išlaidos dar nėra nustatytos.",
     "freeShipping": "Nemokamas pristatymas",
-    "deliveryDays": "dienos pristatymo laikas"
+    "deliveryDays": "dienos pristatymo laikas",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "Įjungti pranešimus",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "Konvertuota kaina",
     "approximatePrice": "Apytikslis konvertavimas pagal dabartinius valiutų kursus",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

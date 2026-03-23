@@ -195,7 +195,9 @@
     "subscription": "Abunəlik",
     "subscriptionPlansAdmin": "Abunə Planları",
     "boostPackagesAdmin": "Gücləndirici Paketlər",
-    "exchangeRates": "Valyuta məzənnələri"
+    "exchangeRates": "Valyuta məzənnələri",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "Profil Məlumatı",
@@ -682,7 +684,18 @@
       "title": "Qiymətləndirmələr",
       "reviewCount": "qiymətləndirmə",
       "noReviews": "Hələlik qiymətləndirmə yoxdur.",
-      "verified": "Təsdiqlənmiş Alıcı"
+      "verified": "Təsdiqlənmiş Alıcı",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "Oxşar Məhsullar",
     "sellerProducts": "Satıcının Digər Məhsulları",
@@ -777,7 +790,21 @@
         "shippingSpeed": "Göndərmə sürəti",
         "productQuality": "Məhsul Keyfiyyəti",
         "noReviews": "Hələlik qiymətləndirmə yoxdur.",
-        "verified": "Təsdiqlənmiş Alıcı"
+        "verified": "Təsdiqlənmiş Alıcı",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "Göndərmə haqqı",
       "weight": "Çəki",
       "weightUnit": "Çəki vahidi",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Misal: 2 Yaşlı Holşteyn İnəyi",
       "shortDescription": "Məhsul təsviri (maksimum 200 simvol)",
       "description": "Məhsul haqqında ətraflı məlumat verin...",
       "category": "Kateqoriya seçin.",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "Şəhər",
       "address": "Ünvan",
-      "postalCode": "Poçt kodu"
+      "postalCode": "Poçt kodu",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Misal: 2 Yaşlı Holşteyn İnəyi",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "Şəhərə daxil olun",
       "address": "Tam ünvanı daxil edin.",
-      "postalCode": "Poçt kodu"
+      "postalCode": "Poçt kodu",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "Qiymət məcburidir.",
       "cityRequired": "Şəhər məlumatları tələb olunur.",
       "addressRequired": "Ünvan məlumatları tələb olunur.",
-      "locationError": "Məkan yaradılarkən xəta baş verdi."
+      "locationError": "Məkan yaradılarkən xəta baş verdi.",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "Reklam uğurla yaradıldı.",
     "error": "Reklam yaradılarkən xəta baş verdi.",
@@ -899,7 +931,8 @@
     "productCreated": "Məhsul uğurla yaradıldı.",
     "creationFailed": "Məhsul yaradıla bilmədi. Zəhmət olmasa, yenidən cəhd edin.",
     "userNotFound": "İstifadəçi məlumatı tapılmadı. Zəhmət olmasa, yenidən daxil olun.",
-    "defaultBusinessName": "Mənim biznesim"
+    "defaultBusinessName": "Mənim biznesim",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "Satıcı olun",
@@ -1035,19 +1068,22 @@
       "sortOrder": "Seriya Nömrəsi",
       "subCategories": "Alt kateqoriya",
       "status": "Vəziyyət",
-      "actions": "Əməliyyatlar"
+      "actions": "Əməliyyatlar",
+      "products": "Products"
     },
     "actions": {
       "edit": "Redaktə edin",
       "delete": "Sil",
       "activate": "Aktivləşdirin",
-      "deactivate": "Passiv Struktur"
+      "deactivate": "Passiv Struktur",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "Kateqoriyanı silin",
       "description": "Bu kateqoriyanı silmək istədiyinizə əminsiniz? Bu əməliyyat geri dönməzdir.",
       "cancel": "Ləğv et",
-      "confirm": "Sil"
+      "confirm": "Sil",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "Yeni Kateqoriya Əlavə Edin",
     "loadMore": "Daha çox yükləyin",
@@ -1075,7 +1111,10 @@
         "nameRequired": "Kateqoriya adı tələb olunur.",
         "slugRequired": "Şlaklar məcburidir."
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "Təkliflər",
@@ -1385,7 +1424,16 @@
     "timeliness": "Vaxtında çatdırılma",
     "communication": "Ünsiyyət",
     "carefulHandling": "Diqqətli İstifadə",
-    "professionalism": "Peşəkarlıq"
+    "professionalism": "Peşəkarlıq",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "Göndərmə Qiymətləri",
@@ -1590,7 +1638,26 @@
     "rates": "Göndərmə haqları",
     "noRates": "Göndərmə xərcləri hələlik müəyyən edilməyib.",
     "freeShipping": "Pulsuz çatdırılma",
-    "deliveryDays": "günlük çatdırılma müddəti"
+    "deliveryDays": "günlük çatdırılma müddəti",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "Bildirişləri aktivləşdirin",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "Çevrilmiş qiymət",
     "approximatePrice": "Cari valyuta məzənnələrinə əsaslanan təxmini konversiya",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

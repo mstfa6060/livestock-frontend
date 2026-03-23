@@ -195,7 +195,9 @@
     "subscription": "Suscripción",
     "subscriptionPlansAdmin": "Planes de suscripción",
     "boostPackagesAdmin": "Paquetes de refuerzo",
-    "exchangeRates": "Tipos de cambio"
+    "exchangeRates": "Tipos de cambio",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "Información del perfil",
@@ -682,7 +684,18 @@
       "title": "Evaluaciones",
       "reviewCount": "evaluación",
       "noReviews": "Aún no hay evaluación.",
-      "verified": "Comprador verificado"
+      "verified": "Comprador verificado",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "Productos similares",
     "sellerProducts": "Otros productos del vendedor",
@@ -777,7 +790,21 @@
         "shippingSpeed": "Velocidad de envío",
         "productQuality": "Calidad del producto",
         "noReviews": "Aún no hay evaluación.",
-        "verified": "Comprador verificado"
+        "verified": "Comprador verificado",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "Costo de envío",
       "weight": "Peso",
       "weightUnit": "Unidad de peso",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Ejemplo: Vaca Holstein de 2 años",
       "shortDescription": "Descripción del producto (máximo 200 caracteres)",
       "description": "Proporcione información detallada sobre el producto...",
       "category": "Seleccione una categoría.",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "Ciudad",
       "address": "DIRECCIÓN",
-      "postalCode": "Código Postal"
+      "postalCode": "Código Postal",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Ejemplo: Vaca Holstein de 2 años",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "Entra en la ciudad",
       "address": "Introduzca la dirección completa.",
-      "postalCode": "Código Postal"
+      "postalCode": "Código Postal",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "El precio es obligatorio.",
       "cityRequired": "Se requiere información sobre la ciudad.",
       "addressRequired": "Se requiere información de dirección.",
-      "locationError": "Se produjo un error al crear la ubicación."
+      "locationError": "Se produjo un error al crear la ubicación.",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "El anuncio se creó con éxito.",
     "error": "Se produjo un error al crear el anuncio.",
@@ -899,7 +931,8 @@
     "productCreated": "El producto se creó con éxito.",
     "creationFailed": "No se pudo crear el producto. Inténtalo de nuevo.",
     "userNotFound": "No se pudo encontrar la información del usuario. Inicie sesión nuevamente.",
-    "defaultBusinessName": "Mi negocio"
+    "defaultBusinessName": "Mi negocio",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "Conviértete en vendedor",
@@ -1035,19 +1068,22 @@
       "sortOrder": "Número de serie",
       "subCategories": "Subcategoría",
       "status": "Situación",
-      "actions": "Actas"
+      "actions": "Actas",
+      "products": "Products"
     },
     "actions": {
       "edit": "Editar",
       "delete": "Borrar",
       "activate": "Activar",
-      "deactivate": "Estructura pasiva"
+      "deactivate": "Estructura pasiva",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "Eliminar categoría",
       "description": "¿Estás seguro de que quieres eliminar esta categoría? Esta acción es irreversible.",
       "cancel": "Cancelar",
-      "confirm": "Borrar"
+      "confirm": "Borrar",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "Agregar nueva categoría",
     "loadMore": "Descargar más",
@@ -1075,7 +1111,10 @@
         "nameRequired": "Se requiere el nombre de la categoría.",
         "slugRequired": "Las babosas son obligatorias."
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "Propuestas",
@@ -1385,7 +1424,16 @@
     "timeliness": "Entrega a tiempo",
     "communication": "Comunicación",
     "carefulHandling": "Manipulación cuidadosa",
-    "professionalism": "Profesionalismo"
+    "professionalism": "Profesionalismo",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "Cotizaciones de envío",
@@ -1590,7 +1638,26 @@
     "rates": "Gastos de envío",
     "noRates": "Los gastos de envío aún no se han definido.",
     "freeShipping": "Envío gratis",
-    "deliveryDays": "tiempo de entrega en el día"
+    "deliveryDays": "tiempo de entrega en el día",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "Habilitar notificaciones",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "Precio convertido",
     "approximatePrice": "Conversión aproximada basada en los tipos de cambio actuales.",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

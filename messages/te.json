@@ -195,7 +195,9 @@
     "subscription": "సభ్యత్వం",
     "subscriptionPlansAdmin": "సబ్‌స్క్రిప్షన్ ప్లాన్‌లు",
     "boostPackagesAdmin": "ప్యాకేజీలను పెంచండి",
-    "exchangeRates": "మార్పిడి రేట్లు"
+    "exchangeRates": "మార్పిడి రేట్లు",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "ప్రొఫైల్ సమాచారం",
@@ -682,7 +684,18 @@
       "title": "మూల్యాంకనాలు",
       "reviewCount": "మూల్యాంకనం",
       "noReviews": "ఇంకా మూల్యాంకనం లేదు.",
-      "verified": "ధృవీకరించబడిన కొనుగోలుదారు"
+      "verified": "ధృవీకరించబడిన కొనుగోలుదారు",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "సారూప్య ఉత్పత్తులు",
     "sellerProducts": "విక్రేత యొక్క ఇతర ఉత్పత్తులు",
@@ -777,7 +790,21 @@
         "shippingSpeed": "షిప్పింగ్ వేగం",
         "productQuality": "ఉత్పత్తి నాణ్యత",
         "noReviews": "ఇంకా మూల్యాంకనం లేదు.",
-        "verified": "ధృవీకరించబడిన కొనుగోలుదారు"
+        "verified": "ధృవీకరించబడిన కొనుగోలుదారు",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "షిప్పింగ్ రుసుము",
       "weight": "బరువు",
       "weightUnit": "బరువు యూనిట్",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "ఉదాహరణ: 2 ఏళ్ల హోల్‌స్టెయిన్ ఆవు",
       "shortDescription": "ఉత్పత్తి వివరణ (గరిష్టంగా 200 అక్షరాలు)",
       "description": "ఉత్పత్తి గురించి వివరణాత్మక సమాచారాన్ని అందించండి...",
       "category": "ఒక వర్గాన్ని ఎంచుకోండి.",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "నగరం",
       "address": "చిరునామా",
-      "postalCode": "పోస్టల్ కోడ్"
+      "postalCode": "పోస్టల్ కోడ్",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "ఉదాహరణ: 2 ఏళ్ల హోల్‌స్టెయిన్ ఆవు",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "నగరంలోకి ప్రవేశించండి",
       "address": "పూర్తి చిరునామాను నమోదు చేయండి.",
-      "postalCode": "పోస్టల్ కోడ్"
+      "postalCode": "పోస్టల్ కోడ్",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "ధర తప్పనిసరి.",
       "cityRequired": "నగరం సమాచారం అవసరం.",
       "addressRequired": "చిరునామా సమాచారం అవసరం.",
-      "locationError": "స్థానాన్ని సృష్టిస్తున్నప్పుడు లోపం సంభవించింది."
+      "locationError": "స్థానాన్ని సృష్టిస్తున్నప్పుడు లోపం సంభవించింది.",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "ప్రకటన విజయవంతంగా సృష్టించబడింది.",
     "error": "ప్రకటనను సృష్టిస్తున్నప్పుడు లోపం సంభవించింది.",
@@ -899,7 +931,8 @@
     "productCreated": "ఉత్పత్తి విజయవంతంగా సృష్టించబడింది.",
     "creationFailed": "ఉత్పత్తిని సృష్టించడం సాధ్యం కాలేదు. దయచేసి మళ్ళీ ప్రయత్నించండి.",
     "userNotFound": "యూజర్ సమాచారం కనుగొనబడలేదు. దయచేసి మళ్ళీ లాగిన్ అవ్వండి.",
-    "defaultBusinessName": "నా వ్యాపారం"
+    "defaultBusinessName": "నా వ్యాపారం",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "విక్రేత అవ్వండి",
@@ -1035,19 +1068,22 @@
       "sortOrder": "క్రమ సంఖ్య",
       "subCategories": "ఉపవర్గం",
       "status": "పరిస్థితి",
-      "actions": "లావాదేవీలు"
+      "actions": "లావాదేవీలు",
+      "products": "Products"
     },
     "actions": {
       "edit": "సవరించు",
       "delete": "తొలగించు",
       "activate": "యాక్టివేట్ చేయండి",
-      "deactivate": "నిష్క్రియాత్మక నిర్మాణం"
+      "deactivate": "నిష్క్రియాత్మక నిర్మాణం",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "వర్గాన్ని తొలగించు",
       "description": "మీరు ఈ వర్గాన్ని తొలగించాలనుకుంటున్నారా? ఈ చర్యను తిరిగి పొందలేము.",
       "cancel": "రద్దు చేయి",
-      "confirm": "తొలగించు"
+      "confirm": "తొలగించు",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "కొత్త వర్గాన్ని జోడించండి",
     "loadMore": "మరిన్ని డౌన్‌లోడ్ చేసుకోండి",
@@ -1075,7 +1111,10 @@
         "nameRequired": "వర్గం పేరు అవసరం.",
         "slugRequired": "స్లగ్స్ తప్పనిసరి."
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "ప్రతిపాదనలు",
@@ -1385,7 +1424,16 @@
     "timeliness": "సకాలంలో డెలివరీ",
     "communication": "కమ్యూనికేషన్",
     "carefulHandling": "జాగ్రత్తగా నిర్వహించడం",
-    "professionalism": "వృత్తి నైపుణ్యం"
+    "professionalism": "వృత్తి నైపుణ్యం",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "షిప్పింగ్ కోట్‌లు",
@@ -1590,7 +1638,26 @@
     "rates": "షిప్పింగ్ ఫీజులు",
     "noRates": "షిప్పింగ్ ఖర్చులు ఇంకా నిర్వచించబడలేదు.",
     "freeShipping": "ఉచిత షిప్పింగ్",
-    "deliveryDays": "రోజు డెలివరీ సమయం"
+    "deliveryDays": "రోజు డెలివరీ సమయం",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "నోటిఫికేషన్‌లను ప్రారంభించండి",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "మార్పిడి ధర",
     "approximatePrice": "ప్రస్తుత మారకపు రేట్ల ఆధారంగా సుమారుగా మార్పిడి",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

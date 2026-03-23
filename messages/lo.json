@@ -195,7 +195,9 @@
     "subscription": "ການສະໝັກໃຊ້",
     "subscriptionPlansAdmin": "ແຜນການສະໝັກໃຊ້",
     "boostPackagesAdmin": "ແພັກເກດ Boost",
-    "exchangeRates": "ອັດຕາແລກປ່ຽນ"
+    "exchangeRates": "ອັດຕາແລກປ່ຽນ",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "ຂໍ້ມູນໂປຣໄຟລ໌",
@@ -682,7 +684,18 @@
       "title": "ການປະເມີນຜົນ",
       "reviewCount": "ການປະເມີນຜົນ",
       "noReviews": "ຍັງບໍ່ມີການປະເມີນຜົນເທື່ອ.",
-      "verified": "ຜູ້ຊື້ທີ່ຢືນຢັນແລ້ວ"
+      "verified": "ຜູ້ຊື້ທີ່ຢືນຢັນແລ້ວ",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "ຜະລິດຕະພັນທີ່ຄ້າຍຄືກັນ",
     "sellerProducts": "ຜະລິດຕະພັນອື່ນໆຂອງຜູ້ຂາຍ",
@@ -777,7 +790,21 @@
         "shippingSpeed": "ຄວາມໄວໃນການຂົນສົ່ງ",
         "productQuality": "ຄຸນນະພາບຜະລິດຕະພັນ",
         "noReviews": "ຍັງບໍ່ມີການປະເມີນຜົນເທື່ອ.",
-        "verified": "ຜູ້ຊື້ທີ່ຢືນຢັນແລ້ວ"
+        "verified": "ຜູ້ຊື້ທີ່ຢືນຢັນແລ້ວ",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "ຄ່າຂົນສົ່ງ",
       "weight": "ນ້ຳໜັກ",
       "weightUnit": "ຫົວໜ່ວຍນ້ຳໜັກ",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "ຕົວຢ່າງ: ງົວ Holstein ອາຍຸ 2 ປີ",
       "shortDescription": "ລາຍລະອຽດຜະລິດຕະພັນ (ສູງສຸດ 200 ຕົວອັກສອນ)",
       "description": "ໃຫ້ຂໍ້ມູນລະອຽດກ່ຽວກັບຜະລິດຕະພັນ...",
       "category": "ເລືອກໝວດໝູ່.",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "ເມືອງ",
       "address": "ທີ່ຢູ່",
-      "postalCode": "ລະຫັດໄປສະນີ"
+      "postalCode": "ລະຫັດໄປສະນີ",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "ຕົວຢ່າງ: ງົວ Holstein ອາຍຸ 2 ປີ",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "ເຂົ້າໄປໃນເມືອງ",
       "address": "ໃສ່ທີ່ຢູ່ເຕັມ.",
-      "postalCode": "ລະຫັດໄປສະນີ"
+      "postalCode": "ລະຫັດໄປສະນີ",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "ລາຄາແມ່ນບັງຄັບ.",
       "cityRequired": "ຕ້ອງການຂໍ້ມູນຂອງເມືອງ.",
       "addressRequired": "ຕ້ອງການຂໍ້ມູນທີ່ຢູ່.",
-      "locationError": "ເກີດຄວາມຜິດພາດຂຶ້ນໃນຂະນະທີ່ສ້າງສະຖານທີ່."
+      "locationError": "ເກີດຄວາມຜິດພາດຂຶ້ນໃນຂະນະທີ່ສ້າງສະຖານທີ່.",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "ໂຄສະນາໄດ້ຖືກສ້າງຂຶ້ນສຳເລັດແລ້ວ.",
     "error": "ເກີດຄວາມຜິດພາດຂຶ້ນໃນຂະນະທີ່ສ້າງໂຄສະນາ.",
@@ -899,7 +931,8 @@
     "productCreated": "ຜະລິດຕະພັນໄດ້ຖືກສ້າງຂຶ້ນສຳເລັດແລ້ວ.",
     "creationFailed": "ບໍ່ສາມາດສ້າງຜະລິດຕະພັນໄດ້. ກະລຸນາລອງໃໝ່.",
     "userNotFound": "ບໍ່ພົບຂໍ້ມູນຜູ້ໃຊ້. ກະລຸນາເຂົ້າສູ່ລະບົບອີກຄັ້ງ.",
-    "defaultBusinessName": "ທຸລະກິດຂອງຂ້ອຍ"
+    "defaultBusinessName": "ທຸລະກິດຂອງຂ້ອຍ",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "ກາຍເປັນຜູ້ຂາຍ",
@@ -1035,19 +1068,22 @@
       "sortOrder": "ໝາຍເລກລຳດັບ",
       "subCategories": "ໝວດຍ່ອຍ",
       "status": "ສະຖານະການ",
-      "actions": "ທຸລະກຳ"
+      "actions": "ທຸລະກຳ",
+      "products": "Products"
     },
     "actions": {
       "edit": "ແກ້ໄຂ",
       "delete": "ລຶບ",
       "activate": "ເປີດໃຊ້ງານ",
-      "deactivate": "ໂຄງສ້າງແບບ passive"
+      "deactivate": "ໂຄງສ້າງແບບ passive",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "ລຶບໝວດໝູ່",
       "description": "ທ່ານແນ່ໃຈບໍ່ວ່າທ່ານຕ້ອງການລຶບໝວດໝູ່ນີ້? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.",
       "cancel": "ຍົກເລີກ",
-      "confirm": "ລຶບ"
+      "confirm": "ລຶບ",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "ເພີ່ມໝວດໝູ່ໃໝ່",
     "loadMore": "ດາວໂຫຼດເພີ່ມເຕີມ",
@@ -1075,7 +1111,10 @@
         "nameRequired": "ຕ້ອງລະບຸຊື່ໝວດໝູ່.",
         "slugRequired": "ຫອຍແຄງແມ່ນບັງຄັບ."
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "ຂໍ້ສະເໜີ",
@@ -1385,7 +1424,16 @@
     "timeliness": "ການຈັດສົ່ງຕາມເວລາ",
     "communication": "ການສື່ສານ",
     "carefulHandling": "ການຈັດການຢ່າງລະມັດລະວັງ",
-    "professionalism": "ຄວາມເປັນມືອາຊີບ"
+    "professionalism": "ຄວາມເປັນມືອາຊີບ",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "ໃບສະເໜີລາຄາການຂົນສົ່ງ",
@@ -1590,7 +1638,26 @@
     "rates": "ຄ່າຂົນສົ່ງ",
     "noRates": "ຄ່າຂົນສົ່ງຍັງບໍ່ທັນໄດ້ຖືກກຳນົດເທື່ອ.",
     "freeShipping": "ສົ່ງຟຣີ",
-    "deliveryDays": "ເວລາສົ່ງສິນຄ້າມື້"
+    "deliveryDays": "ເວລາສົ່ງສິນຄ້າມື້",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "ເປີດໃຊ້ງານການແຈ້ງເຕືອນ",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "ລາຄາທີ່ແປງແລ້ວ",
     "approximatePrice": "ການປ່ຽນແປງປະມານໂດຍອີງໃສ່ອັດຕາແລກປ່ຽນໃນປະຈຸບັນ",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

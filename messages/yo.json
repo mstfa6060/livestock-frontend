@@ -195,7 +195,9 @@
     "subscription": "Iforukọsilẹ",
     "subscriptionPlansAdmin": "Àwọn Ètò Ìforúkọsílẹ̀",
     "boostPackagesAdmin": "Àwọn Àkójọpọ̀ Ìdàgbàsókè",
-    "exchangeRates": "Oṣuwọn Paṣipaarọ"
+    "exchangeRates": "Oṣuwọn Paṣipaarọ",
+    "becomeTransporter": "Become a Transporter",
+    "reports": "Reports"
   },
   "profile": {
     "title": "Ìwífún nípa Prófáìlì",
@@ -682,7 +684,18 @@
       "title": "Àwọn ìṣirò",
       "reviewCount": "iṣayẹwo",
       "noReviews": "Ko si ayewo sibẹsibẹ.",
-      "verified": "Olùrà tí a ti fìdí rẹ̀ múlẹ̀"
+      "verified": "Olùrà tí a ti fìdí rẹ̀ múlẹ̀",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "Àwọn Ọjà Tó Jọra",
     "sellerProducts": "Àwọn Ọjà Míràn ti Olùtajà",
@@ -777,7 +790,21 @@
         "shippingSpeed": "Iyara Gbigbe Gbigbe",
         "productQuality": "Dídára Ọjà",
         "noReviews": "Ko si ayewo sibẹsibẹ.",
-        "verified": "Olùrà tí a ti fìdí rẹ̀ múlẹ̀"
+        "verified": "Olùrà tí a ti fìdí rẹ̀ múlẹ̀",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -818,14 +845,16 @@
       "shippingCost": "Owo Gbigbe",
       "weight": "Ìwúwo",
       "weightUnit": "Ẹyọ Ìwúwo",
-      "currency": "Currency"
+      "currency": "Currency",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Àpẹẹrẹ: Màlúù Holstein ọmọ ọdún méjì",
       "shortDescription": "Àpèjúwe ọjà (tó pọ̀jù àwọn ohun kikọ 200)",
       "description": "Pese alaye kikun nipa ọja naa...",
       "category": "Yan ẹ̀ka kan.",
-      "searchCurrency": "Search currency..."
+      "searchCurrency": "Search currency...",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -865,7 +894,8 @@
       "currency": "Currency",
       "city": "Ìlú",
       "address": "Àdírẹ́sì",
-      "postalCode": "Kóòdù ìfìwéránṣẹ́"
+      "postalCode": "Kóòdù ìfìwéránṣẹ́",
+      "subCategory": "Subcategory"
     },
     "placeholders": {
       "title": "Àpẹẹrẹ: Màlúù Holstein ọmọ ọdún méjì",
@@ -875,7 +905,8 @@
       "searchCurrency": "Search currency...",
       "city": "Wọ ìlú náà",
       "address": "Tẹ gbogbo àdírẹ́sì náà.",
-      "postalCode": "Kóòdù ìfìwéránṣẹ́"
+      "postalCode": "Kóòdù ìfìwéránṣẹ́",
+      "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
     "errors": {
@@ -886,7 +917,8 @@
       "priceRequired": "Iye owo jẹ dandan.",
       "cityRequired": "A nilo alaye ilu.",
       "addressRequired": "A nilo alaye adirẹsi.",
-      "locationError": "Àṣìṣe kan ṣẹlẹ̀ nígbà tí a ń ṣẹ̀dá ibi náà."
+      "locationError": "Àṣìṣe kan ṣẹlẹ̀ nígbà tí a ń ṣẹ̀dá ibi náà.",
+      "subCategoryRequired": "Subcategory selection is required."
     },
     "success": "A ṣe ìpolówó náà ní àṣeyọrí.",
     "error": "Àṣìṣe kan ṣẹlẹ̀ nígbà tí a ń ṣẹ̀dá ìpolówó náà.",
@@ -899,7 +931,8 @@
     "productCreated": "A ṣẹ̀dá ọjà náà dáadáa.",
     "creationFailed": "A ko le ṣẹda ọja naa. Jọwọ gbiyanju lẹẹkansi.",
     "userNotFound": "A ko le ri alaye olumulo. Jọwọ wọle lẹẹkansi.",
-    "defaultBusinessName": "Iṣẹ́ mi"
+    "defaultBusinessName": "Iṣẹ́ mi",
+    "autoSaved": "Auto-saved"
   },
   "becomeSeller": {
     "title": "Di Olùtajà",
@@ -1035,19 +1068,22 @@
       "sortOrder": "Nomba siriali",
       "subCategories": "Ẹ̀ka kékeré",
       "status": "Ipò",
-      "actions": "Awọn iṣowo"
+      "actions": "Awọn iṣowo",
+      "products": "Products"
     },
     "actions": {
       "edit": "Ṣe àtúnṣe",
       "delete": "Paarẹ́",
       "activate": "Mu ṣiṣẹ",
-      "deactivate": "Ìṣètò aláìlọ́wọ́"
+      "deactivate": "Ìṣètò aláìlọ́wọ́",
+      "addChild": "Add Subcategory"
     },
     "deleteDialog": {
       "title": "Pa Ẹ̀ka rẹ́",
       "description": "Ṣé ó dá ọ lójú pé o fẹ́ pa ẹ̀ka yìí rẹ́? Ìgbésẹ̀ yìí kò ṣeé yípadà.",
       "cancel": "Fagilee",
-      "confirm": "Paarẹ́"
+      "confirm": "Paarẹ́",
+      "hasChildren": "This category has subcategories. Deleting it may affect them as well. Are you sure you want to continue?"
     },
     "addNew": "Fi Ẹ̀ka Tuntun Kun",
     "loadMore": "Ṣe igbasilẹ Diẹ sii",
@@ -1075,7 +1111,10 @@
         "nameRequired": "Orúkọ ẹ̀ka ni a nílò.",
         "slugRequired": "Àwọn ọ̀gẹ̀dẹ̀ jẹ́ dandan."
       }
-    }
+    },
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "totalCount": "Total {count} categories"
   },
   "offers": {
     "title": "Àwọn Ìdámọ̀ràn",
@@ -1385,7 +1424,16 @@
     "timeliness": "Ifijiṣẹ ni akoko",
     "communication": "Ibaraẹnisọrọ",
     "carefulHandling": "Ìtọ́jú pẹ̀lú ìṣọ́ra",
-    "professionalism": "Imọ-ọjọgbọn"
+    "professionalism": "Imọ-ọjọgbọn",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "Awọn idiyele Gbigbe",
@@ -1590,7 +1638,26 @@
     "rates": "Awọn Owo Gbigbe",
     "noRates": "A ko tii ṣalaye iye owo gbigbe ọkọ oju omi.",
     "freeShipping": "Gbe lo dele",
-    "deliveryDays": "àkókò ìfiránṣẹ́ ọjọ́"
+    "deliveryDays": "àkókò ìfiránṣẹ́ ọjọ́",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "toggleSuccess": "Status updated successfully.",
+    "updateSuccess": "Updated successfully.",
+    "updateFailed": "An error occurred while updating.",
+    "exchangeRate": "Exchange Rate (USD)",
+    "carrierName": "Carrier Name",
+    "carrierCode": "Carrier Code",
+    "website": "Website",
+    "supportedCountries": "Supported Countries",
+    "zoneName": "Zone Name",
+    "countryCodes": "Country Codes",
+    "shippingCost": "Shipping Cost",
+    "estimatedDeliveryDays": "Estimated Delivery Days",
+    "taxName": "Tax Name",
+    "taxRate": "Tax Rate",
+    "countryCode": "Country Code",
+    "stateCode": "State Code"
   },
   "pushPermission": {
     "title": "Mu awọn iwifunni ṣiṣẹ",
@@ -1973,5 +2040,90 @@
     "convertedPrice": "Iye owo ti a yipada",
     "approximatePrice": "Ìyípadà tó súnmọ́ dá lórí iye owó pàṣípààrọ̀ lọ́wọ́lọ́wọ́",
     "approximate": "≈"
+  },
+  "becomeTransporter": {
+    "title": "Become a Transporter",
+    "description": "Description",
+    "alreadyTransporter": "You already have a transporter profile.",
+    "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
+    "goToTransport": "Go to Transport",
+    "companyInfo": "Company Information",
+    "contactInfo": "Contact Information",
+    "serviceInfo": "Service Information",
+    "companyName": "Company Name",
+    "companyNamePlaceholder": "Example: Express Livestock Transport",
+    "contactPerson": "Contact Person",
+    "contactPersonPlaceholder": "Full name of the contact person",
+    "email": "Email",
+    "emailPlaceholder": "company@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "phoneHelp": "Example: +90 555 123 45 67 or 0555 123 45 67",
+    "city": "City",
+    "cityPlaceholder": "Enter your city",
+    "countryCode": "Country",
+    "countryCodePlaceholder": "Select your country",
+    "descriptionPlaceholder": "Describe your transport services...",
+    "serviceRegions": "Service Regions",
+    "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
+    "serviceRegionsHelp": "List the regions you provide transport services to",
+    "specializations": "Specializations",
+    "specializationsPlaceholder": "e.g. Cattle, Sheep, Poultry",
+    "specializationsHelp": "List the types of livestock you specialize in transporting",
+    "submit": "Create Transporter Profile",
+    "submitting": "Creating profile...",
+    "success": "Your transporter profile has been successfully created!",
+    "error": "An error occurred while creating the transporter profile."
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "It looks like you've lost your internet connection. Please check your connection and try again.",
+    "retry": "Try Again",
+    "home": "Home",
+    "backOnline": "You're Back Online!",
+    "redirecting": "Redirecting you to the homepage..."
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }
