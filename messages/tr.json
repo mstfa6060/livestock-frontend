@@ -683,7 +683,18 @@
       "title": "Değerlendirmeler",
       "reviewCount": "değerlendirme",
       "noReviews": "Henüz değerlendirme yapılmadı.",
-      "verified": "Doğrulanmış Alıcı"
+      "verified": "Doğrulanmış Alıcı",
+      "writeReview": "Değerlendirme Yaz",
+      "reviewTitle": "Başlık",
+      "reviewTitlePlaceholder": "Değerlendirmeniz için bir başlık yazın",
+      "reviewComment": "Yorum",
+      "reviewCommentPlaceholder": "Deneyiminizi paylaşın...",
+      "submitReview": "Değerlendirmeyi Gönder",
+      "submitting": "Gönderiliyor...",
+      "reviewSubmitted": "Değerlendirmeniz başarıyla gönderildi.",
+      "reviewFailed": "Değerlendirme gönderilemedi. Lütfen tekrar deneyin.",
+      "rating": "Puan",
+      "loginToReview": "Değerlendirme yapmak için giriş yapın."
     },
     "similarProducts": "Benzer Ürünler",
     "sellerProducts": "Satıcının Diğer Ürünleri",
@@ -778,7 +789,21 @@
         "shippingSpeed": "Nakliye Hızı",
         "productQuality": "Ürün Kalitesi",
         "noReviews": "Henüz değerlendirme yapılmadı.",
-        "verified": "Doğrulanmış Alıcı"
+        "verified": "Doğrulanmış Alıcı",
+        "writeReview": "Değerlendirme Yaz",
+        "reviewTitle": "Başlık",
+        "reviewTitlePlaceholder": "Değerlendirmeniz için bir başlık yazın",
+        "reviewComment": "Yorum",
+        "reviewCommentPlaceholder": "Deneyiminizi paylaşın...",
+        "submitReview": "Değerlendirmeyi Gönder",
+        "submitting": "Gönderiliyor...",
+        "reviewSubmitted": "Değerlendirmeniz başarıyla gönderildi.",
+        "reviewFailed": "Değerlendirme gönderilemedi. Lütfen tekrar deneyin.",
+        "overallRating": "Genel Puan",
+        "communicationRating": "İletişim Puanı",
+        "shippingSpeedRating": "Nakliye Hızı Puanı",
+        "productQualityRating": "Ürün Kalitesi Puanı",
+        "loginToReview": "Değerlendirme yapmak için giriş yapın."
       }
     }
   },
@@ -1441,7 +1466,16 @@
     "timeliness": "Zamanında teslimat",
     "communication": "İletişim",
     "carefulHandling": "Dikkatli Kullanım",
-    "professionalism": "Profesyonellik"
+    "professionalism": "Profesyonellik",
+    "overallRating": "Genel Puan",
+    "writeReview": "Değerlendirme Yaz",
+    "loginToReview": "Değerlendirme yapmak için giriş yapın",
+    "reviewComment": "Yorum",
+    "reviewCommentPlaceholder": "Taşıma deneyiminizi paylaşın...",
+    "submitReview": "Değerlendirmeyi Gönder",
+    "submitting": "Gönderiliyor...",
+    "reviewSubmitted": "Değerlendirmeniz gönderildi!",
+    "reviewFailed": "Değerlendirme gönderilemedi"
   },
   "transportOffers": {
     "title": "Nakliye Fiyat Teklifleri",

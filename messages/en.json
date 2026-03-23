@@ -683,7 +683,18 @@
       "title": "Assessments",
       "reviewCount": "evaluation",
       "noReviews": "No evaluation yet.",
-      "verified": "Verified Buyer"
+      "verified": "Verified Buyer",
+      "writeReview": "Write a Review",
+      "reviewTitle": "Title",
+      "reviewTitlePlaceholder": "Write a title for your review",
+      "reviewComment": "Comment",
+      "reviewCommentPlaceholder": "Share your experience...",
+      "submitReview": "Submit Review",
+      "submitting": "Submitting...",
+      "reviewSubmitted": "Your review has been submitted successfully.",
+      "reviewFailed": "Failed to submit review. Please try again.",
+      "rating": "Rating",
+      "loginToReview": "Log in to write a review."
     },
     "similarProducts": "Similar Products",
     "sellerProducts": "Seller's Other Products",
@@ -778,7 +789,21 @@
         "shippingSpeed": "Shipping Speed",
         "productQuality": "Product Quality",
         "noReviews": "No evaluation yet.",
-        "verified": "Verified Buyer"
+        "verified": "Verified Buyer",
+        "writeReview": "Write a Review",
+        "reviewTitle": "Title",
+        "reviewTitlePlaceholder": "Write a title for your review",
+        "reviewComment": "Comment",
+        "reviewCommentPlaceholder": "Share your experience...",
+        "submitReview": "Submit Review",
+        "submitting": "Submitting...",
+        "reviewSubmitted": "Your review has been submitted successfully.",
+        "reviewFailed": "Failed to submit review. Please try again.",
+        "overallRating": "Overall Rating",
+        "communicationRating": "Communication Rating",
+        "shippingSpeedRating": "Shipping Speed Rating",
+        "productQualityRating": "Product Quality Rating",
+        "loginToReview": "Log in to write a review."
       }
     }
   },
@@ -1435,13 +1460,22 @@
     "unauthorized": "You do not have permission to access this page."
   },
   "transporterReviews": {
-    "title": "Assessments",
-    "reviewCount": "evaluation",
-    "noReviews": "No evaluation yet.",
+    "title": "Reviews",
+    "reviewCount": "reviews",
+    "noReviews": "No reviews yet.",
     "timeliness": "On-time delivery",
     "communication": "Communication",
     "carefulHandling": "Careful Handling",
-    "professionalism": "Professionalism"
+    "professionalism": "Professionalism",
+    "overallRating": "Overall Rating",
+    "writeReview": "Write Review",
+    "loginToReview": "Log in to write a review",
+    "reviewComment": "Comment",
+    "reviewCommentPlaceholder": "Share your transport experience...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "reviewSubmitted": "Your review has been submitted!",
+    "reviewFailed": "Failed to submit review"
   },
   "transportOffers": {
     "title": "Shipping Quotes",
