@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Apie mus",
-        "description": "Sužinokite apie prekybą gyvuliais. Patikima gyvų gyvūnų prekybos platforma."
+        "description": "Sužinokite apie prekybą gyvuliais. Patikima gyvų gyvūnų prekybos platforma.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Bendravimas",
-        "description": "Susisiekite su mumis. „Livestock Trading“ klientų aptarnavimo komanda pasiruošusi jums padėti."
+        "description": "Susisiekite su mumis. „Livestock Trading“ klientų aptarnavimo komanda pasiruošusi jums padėti.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Naudojimo sąlygos",
-        "description": "Gyvulių prekybos sąlygos ir nuostatos."
+        "description": "Gyvulių prekybos sąlygos ir nuostatos.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Privatumo politika",
-        "description": "Gyvulių prekybos privatumo politika. Sužinokite, kaip saugomi jūsų asmens duomenys."
+        "description": "Gyvulių prekybos privatumo politika. Sužinokite, kaip saugomi jūsų asmens duomenys.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Produktai",
-        "description": "Naršykite gyvų gyvūnų skelbimus. Patikimi galvijų, avių ir kitų gyvūnų skelbimai."
+        "description": "Naršykite gyvų gyvūnų skelbimus. Patikimi galvijų, avių ir kitų gyvūnų skelbimai.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Pardavėjai",
-        "description": "Atraskite patikimus gyvūnų pardavėjus. Patikrinti pardavėjų profiliai ir atsiliepimai."
+        "description": "Atraskite patikimus gyvūnų pardavėjus. Patikrinti pardavėjų profiliai ir atsiliepimai.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "vežėjai",
-        "description": "Atraskite gyvūnų gabenimo įmones. Saugus ir profesionalus gyvų gyvūnų gabenimas."
+        "description": "Atraskite gyvūnų gabenimo įmones. Saugus ir profesionalus gyvų gyvūnų gabenimas.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Paieška",
-        "description": "Ieškokite tarp gyvų gyvūnų sąrašų. Paprasta paieška su filtravimo ir rūšiavimo parinktimis."
+        "description": "Ieškokite tarp gyvų gyvūnų sąrašų. Paprasta paieška su filtravimo ir rūšiavimo parinktimis.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Dažnai užduodami klausimai",
-        "description": "Dažnai užduodami klausimai ir atsakymai apie prekybą gyvuliais."
+        "description": "Dažnai užduodami klausimai ir atsakymai apie prekybą gyvuliais.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Parduodama",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} – operatoriaus profilis",
         "description": "{name} vežėjo profilis. Aptarnavimo sritys, atsiliepimai ir kontaktinė informacija."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Padidinti",

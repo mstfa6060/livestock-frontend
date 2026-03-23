@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Um okkur",
-        "description": "Kynntu þér viðskipti með búfénað. Áreiðanlegur vettvangur fyrir viðskipti með lifandi dýr."
+        "description": "Kynntu þér viðskipti með búfénað. Áreiðanlegur vettvangur fyrir viðskipti með lifandi dýr.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Samskipti",
-        "description": "Hafðu samband við okkur. Þjónustuver búfjárviðskipta er reiðubúið að aðstoða þig."
+        "description": "Hafðu samband við okkur. Þjónustuver búfjárviðskipta er reiðubúið að aðstoða þig.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Notkunarskilmálar",
-        "description": "Skilmálar um viðskipti með búfénað."
+        "description": "Skilmálar um viðskipti með búfénað.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Persónuverndarstefna",
-        "description": "Persónuverndarstefna fyrir búfénaðarviðskipti. Kynntu þér hvernig persónuupplýsingar þínar eru verndaðar."
+        "description": "Persónuverndarstefna fyrir búfénaðarviðskipti. Kynntu þér hvernig persónuupplýsingar þínar eru verndaðar.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Vörur",
-        "description": "Skoðaðu lista yfir lifandi dýr. Áreiðanlegar auglýsingar fyrir nautgripi, sauðfé og fleira."
+        "description": "Skoðaðu lista yfir lifandi dýr. Áreiðanlegar auglýsingar fyrir nautgripi, sauðfé og fleira.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Seljendur",
-        "description": "Uppgötvaðu áreiðanlega dýraseljendur. Staðfestar upplýsingar um seljenda og umsagnir."
+        "description": "Uppgötvaðu áreiðanlega dýraseljendur. Staðfestar upplýsingar um seljenda og umsagnir.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "flutningsmenn",
-        "description": "Uppgötvaðu fyrirtæki sem flytja dýr. Öruggur og faglegur flutningur lifandi dýra."
+        "description": "Uppgötvaðu fyrirtæki sem flytja dýr. Öruggur og faglegur flutningur lifandi dýra.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Leita",
-        "description": "Leitaðu meðal lista yfir lifandi dýr. Einföld leit með síunar- og flokkunarmöguleikum."
+        "description": "Leitaðu meðal lista yfir lifandi dýr. Einföld leit með síunar- og flokkunarmöguleikum.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Algengar spurningar",
-        "description": "Algengar spurningar og svör um viðskipti með búfénað."
+        "description": "Algengar spurningar og svör um viðskipti með búfénað.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Til sölu",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - Prófíll flutningsaðila",
         "description": "Prófíll flutningsaðila {name}. Þjónustusvæði, umsagnir og tengiliðaupplýsingar."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Uppörvun",

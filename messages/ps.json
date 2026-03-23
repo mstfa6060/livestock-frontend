@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "زموږ په اړه",
-        "description": "د څارویو د سوداګرۍ په اړه زده کړه وکړئ. د ژوندیو څارویو د سوداګرۍ یو باوري پلیټ فارم."
+        "description": "د څارویو د سوداګرۍ په اړه زده کړه وکړئ. د ژوندیو څارویو د سوداګرۍ یو باوري پلیټ فارم.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "اړیکه",
-        "description": "له موږ سره اړیکه ونیسئ. د څارویو سوداګرۍ د پیرودونکو ملاتړ ټیم چمتو دی چې ستاسو سره مرسته وکړي."
+        "description": "له موږ سره اړیکه ونیسئ. د څارویو سوداګرۍ د پیرودونکو ملاتړ ټیم چمتو دی چې ستاسو سره مرسته وکړي.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "د کارولو شرایط",
-        "description": "د څارویو د سوداګرۍ شرایط او مقررات."
+        "description": "د څارویو د سوداګرۍ شرایط او مقررات.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "د محرمیت تګلاره",
-        "description": "د څارویو د سوداګرۍ د محرمیت پالیسي. زده کړئ چې ستاسو شخصي معلومات څنګه خوندي دي."
+        "description": "د څارویو د سوداګرۍ د محرمیت پالیسي. زده کړئ چې ستاسو شخصي معلومات څنګه خوندي دي.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "محصولات",
-        "description": "د ژوندیو څارویو لیستونه وګورئ. د غواګانو، پسونو او نورو لپاره د باور وړ اعلانونه."
+        "description": "د ژوندیو څارویو لیستونه وګورئ. د غواګانو، پسونو او نورو لپاره د باور وړ اعلانونه.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "پلورونکي",
-        "description": "د څارویو د باور وړ پلورونکي ومومئ. د پلورونکو تایید شوي پروفایلونه او بیاکتنې."
+        "description": "د څارویو د باور وړ پلورونکي ومومئ. د پلورونکو تایید شوي پروفایلونه او بیاکتنې.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "لېږدونکي",
-        "description": "د څارویو د ترانسپورت شرکتونه ومومئ. خوندي او مسلکي ژوندي څارویو لیږد."
+        "description": "د څارویو د ترانسپورت شرکتونه ومومئ. خوندي او مسلکي ژوندي څارویو لیږد.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "د لټون",
-        "description": "د ژوندیو څارویو لیستونو ترمنځ لټون وکړئ. د فلټر کولو او ترتیب کولو اختیارونو سره اسانه لټون."
+        "description": "د ژوندیو څارویو لیستونو ترمنځ لټون وکړئ. د فلټر کولو او ترتیب کولو اختیارونو سره اسانه لټون.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "پوښتل شوې پوښتنې",
-        "description": "د څارویو د سوداګرۍ په اړه ډیری پوښتل شوي پوښتنې او ځوابونه."
+        "description": "د څارویو د سوداګرۍ په اړه ډیری پوښتل شوي پوښتنې او ځوابونه.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{سرلیک} - د خرڅلاو لپاره",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{نوم} - د کیریر پروفایل",
         "description": "د {name} ټرانسپورټر پروفایل. د خدماتو ساحې، بیاکتنې، او د اړیکو معلومات."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "بوسټ",

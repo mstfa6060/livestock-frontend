@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Çûna nava",
-        "description": "Li ser Bazirganiya Ajalan fêr bibin. Platformek bazirganiya ajalên zindî ya pêbawer."
+        "description": "Li ser Bazirganiya Ajalan fêr bibin. Platformek bazirganiya ajalên zindî ya pêbawer.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Agahhesînî",
-        "description": "Têkilî bi me re bikin. Tîma piştgiriya xerîdar a Livestock Trading amade ye ku alîkariya we bike."
+        "description": "Têkilî bi me re bikin. Tîma piştgiriya xerîdar a Livestock Trading amade ye ku alîkariya we bike.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Mercên Bikaranînê",
-        "description": "Merc û Şertên Bazirganiya Heywanan."
+        "description": "Merc û Şertên Bazirganiya Heywanan.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Siyaseta Taybetîtiyê",
-        "description": "Siyaseta nepenîtiyê ya Bazirganiya Ajalan. Fêr bibin ka daneyên we yên kesane çawa têne parastin."
+        "description": "Siyaseta nepenîtiyê ya Bazirganiya Ajalan. Fêr bibin ka daneyên we yên kesane çawa têne parastin.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Berhem",
-        "description": "Li navnîşên heywanên zindî bigerin. Reklamên pêbawer ji bo dewar, pez û hêj bêtir."
+        "description": "Li navnîşên heywanên zindî bigerin. Reklamên pêbawer ji bo dewar, pez û hêj bêtir.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Firoşkar",
-        "description": "Firoşkarên heywanan ên pêbawer kifş bikin. Profîl û nirxandinên firoşkaran ên piştrastkirî."
+        "description": "Firoşkarên heywanan ên pêbawer kifş bikin. Profîl û nirxandinên firoşkaran ên piştrastkirî.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "veguhezkaran",
-        "description": "Şîrketên veguhestina heywanan kifş bikin. Veguhestina heywanên zindî yên ewle û profesyonel."
+        "description": "Şîrketên veguhestina heywanan kifş bikin. Veguhestina heywanên zindî yên ewle û profesyonel.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Gerr",
-        "description": "Li navnîşên heywanên zindî bigere. Lêgerîneke hêsan bi vebijarkên fîlterkirin û rêzkirinê."
+        "description": "Li navnîşên heywanên zindî bigere. Lêgerîneke hêsan bi vebijarkên fîlterkirin û rêzkirinê.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Pirsên Pir tên Pirsîn",
-        "description": "Pirs û bersivên pir caran têne pirsîn di derbarê bazirganiya heywanan de."
+        "description": "Pirs û bersivên pir caran têne pirsîn di derbarê bazirganiya heywanan de.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{sernav} - Ji bo Firotinê",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{nav} - Profîla Hilgir",
         "description": "Profîla veguhêzerê {name}. Qadên xizmetê, nirxandin û agahdariyên têkiliyê."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Zexmkirin",

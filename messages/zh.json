@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "关于我们",
-        "description": "了解牲畜交易。一个可靠的活体动物交易平台。"
+        "description": "了解牲畜交易。一个可靠的活体动物交易平台。",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "沟通",
-        "description": "联系我们。牲畜交易客户支持团队随时准备为您提供帮助。"
+        "description": "联系我们。牲畜交易客户支持团队随时准备为您提供帮助。",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "使用条款",
-        "description": "牲畜交易条款及细则。"
+        "description": "牲畜交易条款及细则。",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "隐私政策",
-        "description": "牲畜交易隐私政策。了解您的个人数据如何受到保护。"
+        "description": "牲畜交易隐私政策。了解您的个人数据如何受到保护。",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "产品",
-        "description": "浏览活体动物信息。提供可靠的牛、羊等动物广告。"
+        "description": "浏览活体动物信息。提供可靠的牛、羊等动物广告。",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "卖家",
-        "description": "寻找可靠的动物卖家。查看经过验证的卖家资料和评价。"
+        "description": "寻找可靠的动物卖家。查看经过验证的卖家资料和评价。",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "运输者",
-        "description": "寻找动物运输公司。安全专业的活体动物运输服务。"
+        "description": "寻找动物运输公司。安全专业的活体动物运输服务。",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "搜索",
-        "description": "搜索活体动物列表。轻松搜索，并提供筛选和排序选项。"
+        "description": "搜索活体动物列表。轻松搜索，并提供筛选和排序选项。",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "常见问题解答",
-        "description": "关于牲畜交易的常见问题及解答。"
+        "description": "关于牲畜交易的常见问题及解答。",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - 出售",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - 运营商简介",
         "description": "{name} 运输商简介。服务区域、评价和联系方式。"
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "促进",

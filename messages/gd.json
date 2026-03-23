@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Mu ar deidhinn",
-        "description": "Ionnsaich mu Mhalairt Sprèidh. Àrd-ùrlar malairt bheathaichean beò earbsach."
+        "description": "Ionnsaich mu Mhalairt Sprèidh. Àrd-ùrlar malairt bheathaichean beò earbsach.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Conaltradh",
-        "description": "Cuir fios thugainn. Tha sgioba taic luchd-cleachdaidh Malairt Sprèidh deiseil airson do chuideachadh."
+        "description": "Cuir fios thugainn. Tha sgioba taic luchd-cleachdaidh Malairt Sprèidh deiseil airson do chuideachadh.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Cumhachan Cleachdaidh",
-        "description": "Teirmichean is Cùmhnantan Malairt Sprèidh."
+        "description": "Teirmichean is Cùmhnantan Malairt Sprèidh.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Poileasaidh Prìobhaideachd",
-        "description": "Poileasaidh prìobhaideachd Malairt Sprèidh. Ionnsaich mar a tha an dàta pearsanta agad air a dhìon."
+        "description": "Poileasaidh prìobhaideachd Malairt Sprèidh. Ionnsaich mar a tha an dàta pearsanta agad air a dhìon.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Toraidhean",
-        "description": "Brobhs liostaichean bheathaichean beò. Sanasan earbsach airson crodh, caoraich agus barrachd."
+        "description": "Brobhs liostaichean bheathaichean beò. Sanasan earbsach airson crodh, caoraich agus barrachd.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Luchd-reic",
-        "description": "Lorg luchd-reic bheathaichean earbsach. Pròifilean luchd-reic dearbhte agus lèirmheasan."
+        "description": "Lorg luchd-reic bheathaichean earbsach. Pròifilean luchd-reic dearbhte agus lèirmheasan.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "luchd-còmhdhail",
-        "description": "Faigh a-mach companaidhean còmhdhail bheathaichean. Còmhdhail bheathaichean beò sàbhailte agus proifeasanta."
+        "description": "Faigh a-mach companaidhean còmhdhail bheathaichean. Còmhdhail bheathaichean beò sàbhailte agus proifeasanta.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Lorg",
-        "description": "Lorg am measg liostaichean bheathaichean beò. Lorg furasta le roghainnean sìolaidh is seòrsachaidh."
+        "description": "Lorg am measg liostaichean bheathaichean beò. Lorg furasta le roghainnean sìolaidh is seòrsachaidh.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Ceistean Bitheanta",
-        "description": "Ceistean is freagairtean tric mu mhalairt sprèidh."
+        "description": "Ceistean is freagairtean tric mu mhalairt sprèidh.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{tiotal} - Ri reic",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{ainm} - Pròifil an t-Siùladair",
         "description": "Pròifil neach-giùlain {name}. Raointean seirbheis, lèirmheasan, agus fiosrachadh conaltraidh."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Àrdachadh",

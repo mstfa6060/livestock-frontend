@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Nagu Saabsan",
-        "description": "Baro Ganacsiga Xoolaha. Madal ganacsi oo nool oo lagu kalsoonaan karo."
+        "description": "Baro Ganacsiga Xoolaha. Madal ganacsi oo nool oo lagu kalsoonaan karo.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Isgaarsiinta",
-        "description": "Nala soo xiriir. Kooxda taageerada macaamiisha ee Ganacsiga Xoolaha ayaa diyaar u ah inay ku caawiyaan."
+        "description": "Nala soo xiriir. Kooxda taageerada macaamiisha ee Ganacsiga Xoolaha ayaa diyaar u ah inay ku caawiyaan.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Shuruudaha Isticmaalka",
-        "description": "Shuruudaha iyo Xeerarka Ganacsiga Xoolaha."
+        "description": "Shuruudaha iyo Xeerarka Ganacsiga Xoolaha.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Siyaasadda Arrimaha Khaaska ah",
-        "description": "Siyaasadda asturnaanta Ganacsiga Xoolaha. Baro sida xogtaada shakhsi ahaaneed loo ilaaliyo."
+        "description": "Siyaasadda asturnaanta Ganacsiga Xoolaha. Baro sida xogtaada shakhsi ahaaneed loo ilaaliyo.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Badeecadaha",
-        "description": "Ka baadho liiska xayawaanka tooska ah. Xayeysiisyo lagu kalsoonaan karo oo loogu talagalay lo'da, idaha, iyo waxyaabo kaloo badan."
+        "description": "Ka baadho liiska xayawaanka tooska ah. Xayeysiisyo lagu kalsoonaan karo oo loogu talagalay lo'da, idaha, iyo waxyaabo kaloo badan.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Iibiyaasha",
-        "description": "Soo hel iibiyeyaasha xoolaha ee la isku halleyn karo. Astaamaha iyo dib u eegista iibiyaha la xaqiijiyay."
+        "description": "Soo hel iibiyeyaasha xoolaha ee la isku halleyn karo. Astaamaha iyo dib u eegista iibiyaha la xaqiijiyay.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "gaadiidleyda",
-        "description": "Soo hel shirkadaha gaadiidka xoolaha. Gaadiidka xoolaha nool oo ammaan ah oo xirfad leh."
+        "description": "Soo hel shirkadaha gaadiidka xoolaha. Gaadiidka xoolaha nool oo ammaan ah oo xirfad leh.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Raadi",
-        "description": "Ka raadi liiska xayawaanka nool. Raadin fudud oo leh ikhtiyaarro shaandhayn iyo kala soocid."
+        "description": "Ka raadi liiska xayawaanka nool. Raadin fudud oo leh ikhtiyaarro shaandhayn iyo kala soocid.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Su'aalaha Badiya La Weydiiyo",
-        "description": "Su'aalaha iyo jawaabaha badanaa la iska weydiiyo ee ku saabsan ganacsiga xoolaha."
+        "description": "Su'aalaha iyo jawaabaha badanaa la iska weydiiyo ee ku saabsan ganacsiga xoolaha.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{cinwaan} - Iib ah",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{magac} - Bogga Side-ga",
         "description": "Bogga gaadiidka {name}. Meelaha adeegga, dib u eegista, iyo macluumaadka xiriirka."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Kor u qaad",

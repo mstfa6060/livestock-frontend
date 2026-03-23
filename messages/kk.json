@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Біз туралы",
-        "description": "Мал саудасы туралы біліңіз. Тірі жануарлармен сенімді сауда платформасы."
+        "description": "Мал саудасы туралы біліңіз. Тірі жануарлармен сенімді сауда платформасы.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Байланыс",
-        "description": "Бізбен хабарласыңыз. Livestock Trading тұтынушыларды қолдау тобы сізге көмектесуге дайын."
+        "description": "Бізбен хабарласыңыз. Livestock Trading тұтынушыларды қолдау тобы сізге көмектесуге дайын.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Пайдалану шарттары",
-        "description": "Мал саудасының шарттары мен талаптары."
+        "description": "Мал саудасының шарттары мен талаптары.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Құпиялылық саясаты",
-        "description": "Мал саудасының құпиялылық саясаты. Жеке деректеріңіздің қалай қорғалатынын біліңіз."
+        "description": "Мал саудасының құпиялылық саясаты. Жеке деректеріңіздің қалай қорғалатынын біліңіз.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Өнімдер",
-        "description": "Тірі жануарлардың тізімдерін шолыңыз. Ірі қара мал, қой және т.б. туралы сенімді жарнамалар."
+        "description": "Тірі жануарлардың тізімдерін шолыңыз. Ірі қара мал, қой және т.б. туралы сенімді жарнамалар.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Сатушылар",
-        "description": "Сенімді жануарлар сатушыларды табыңыз. Расталған сатушы профильдері мен шолулары."
+        "description": "Сенімді жануарлар сатушыларды табыңыз. Расталған сатушы профильдері мен шолулары.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "тасымалдаушылар",
-        "description": "Жануарларды тасымалдау компанияларын ашыңыз. Тірі жануарларды қауіпсіз және кәсіби тасымалдау."
+        "description": "Жануарларды тасымалдау компанияларын ашыңыз. Тірі жануарларды қауіпсіз және кәсіби тасымалдау.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Іздеу",
-        "description": "Тірі жануарлар тізімдері арасында іздеу. Сүзу және сұрыптау опциялары бар оңай іздеу."
+        "description": "Тірі жануарлар тізімдері арасында іздеу. Сүзу және сұрыптау опциялары бар оңай іздеу.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Жиі қойылатын сұрақтар",
-        "description": "Мал саудасы туралы жиі қойылатын сұрақтар мен жауаптар."
+        "description": "Мал саудасы туралы жиі қойылатын сұрақтар мен жауаптар.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Сатылымға қойылған",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - Тасымалдаушы профилі",
         "description": "{name} тасымалдаушы профилі. Қызмет көрсету аймақтары, шолулар және байланыс ақпараты."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Күшейту",

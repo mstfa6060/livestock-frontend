@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Mayelana NATHI",
-        "description": "Funda ngokuhwebelana ngezilwane. Ipulatifomu yokuhweba ngezilwane eziphilayo ethembekile."
+        "description": "Funda ngokuhwebelana ngezilwane. Ipulatifomu yokuhweba ngezilwane eziphilayo ethembekile.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Ukuxhumana",
-        "description": "Xhumana nathi. Ithimba lokusekela amakhasimende le-Livestock Trading likulungele ukukusiza."
+        "description": "Xhumana nathi. Ithimba lokusekela amakhasimende le-Livestock Trading likulungele ukukusiza.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Imigomo Yokusebenzisa",
-        "description": "Imigomo Nemibandela Yokuhweba Ngezifuyo."
+        "description": "Imigomo Nemibandela Yokuhweba Ngezifuyo.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Inqubomgomo yobumfihlo",
-        "description": "Inqubomgomo yobumfihlo yokuhweba ngezilwane. Funda ukuthi idatha yakho yomuntu siqu ivikelwe kanjani."
+        "description": "Inqubomgomo yobumfihlo yokuhweba ngezilwane. Funda ukuthi idatha yakho yomuntu siqu ivikelwe kanjani.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Imikhiqizo",
-        "description": "Dlulisa amehlo ohlwini lwezilwane ezibukhoma. Izikhangiso ezithembekile zezinkomo, izimvu, nokuningi."
+        "description": "Dlulisa amehlo ohlwini lwezilwane ezibukhoma. Izikhangiso ezithembekile zezinkomo, izimvu, nokuningi.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Abathengisi",
-        "description": "Thola abathengisi bezilwane abathembekile. Amaphrofayili omthengisi aqinisekisiwe kanye nokubuyekezwa."
+        "description": "Thola abathengisi bezilwane abathembekile. Amaphrofayili omthengisi aqinisekisiwe kanye nokubuyekezwa.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "abathuthi",
-        "description": "Thola izinkampani zokuthutha izilwane. Ukuthuthwa kwezilwane eziphilayo okuphephile nobungcweti."
+        "description": "Thola izinkampani zokuthutha izilwane. Ukuthuthwa kwezilwane eziphilayo okuphephile nobungcweti.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Sesha",
-        "description": "Sesha phakathi kohlu lwezilwane ezibukhoma. Ukusesha okulula ngezinketho zokuhlunga nokuhlunga."
+        "description": "Sesha phakathi kohlu lwezilwane ezibukhoma. Ukusesha okulula ngezinketho zokuhlunga nokuhlunga.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "imibuzo ejwayelekile ukubuzwa",
-        "description": "Imibuzo nezimpendulo ezivame ukubuzwa mayelana nokuhweba ngemfuyo."
+        "description": "Imibuzo nezimpendulo ezivame ukubuzwa mayelana nokuhweba ngemfuyo.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{isihloko} - Kuthengiswa",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{igama} - Iphrofayela Yenkampani Yenethiwekhi",
         "description": "Iphrofayela yomthuthi ka-{name}. Izindawo zesevisi, ukubuyekezwa, kanye nolwazi lokuxhumana."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "I-Boost",

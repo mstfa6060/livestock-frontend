@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Mō Mātou",
-        "description": "Akohia te Hokohoko Kararehe. He tūāpapa hokohoko kararehe ora pono."
+        "description": "Akohia te Hokohoko Kararehe. He tūāpapa hokohoko kararehe ora pono.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Whakawhitiwhiti kōrero",
-        "description": "Whakapā mai. Kei te rite te tīma tautoko kiritaki a Livestock Trading ki te āwhina i a koe."
+        "description": "Whakapā mai. Kei te rite te tīma tautoko kiritaki a Livestock Trading ki te āwhina i a koe.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Ngā Ture Whakamahi",
-        "description": "Ngā Ture me ngā Here mō te Hokohoko Kararehe."
+        "description": "Ngā Ture me ngā Here mō te Hokohoko Kararehe.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Kaupapahere Tūmataiti",
-        "description": "Kaupapahere tūmataiti mō te Hokohoko Kararehe. Akohia me pēhea te tiaki i ō raraunga whaiaro."
+        "description": "Kaupapahere tūmataiti mō te Hokohoko Kararehe. Akohia me pēhea te tiaki i ō raraunga whaiaro.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Ngā Hua",
-        "description": "Tirotirohia ngā rārangi kararehe ora. Ngā pānuitanga pono mō ngā kau, ngā hipi, me ētahi atu."
+        "description": "Tirotirohia ngā rārangi kararehe ora. Ngā pānuitanga pono mō ngā kau, ngā hipi, me ētahi atu.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Ngā Kaihoko",
-        "description": "Kimihia ngā kaihoko kararehe pono. Ngā kōtaha me ngā arotake a ngā kaihoko kua manatokohia."
+        "description": "Kimihia ngā kaihoko kararehe pono. Ngā kōtaha me ngā arotake a ngā kaihoko kua manatokohia.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "ngā kaikawe",
-        "description": "Kimihia ngā kamupene kawe kararehe. He kawe kararehe ora haumaru, ngaio hoki."
+        "description": "Kimihia ngā kamupene kawe kararehe. He kawe kararehe ora haumaru, ngaio hoki.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Rapu",
-        "description": "Rapu i roto i ngā rārangi kararehe ora. Rapu māmā mā te whakamahi i ngā kōwhiringa tātari me te whakarōpū."
+        "description": "Rapu i roto i ngā rārangi kararehe ora. Rapu māmā mā te whakamahi i ngā kōwhiringa tātari me te whakarōpū.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Ngā Pātai Auau",
-        "description": "Ngā pātai me ngā whakautu e pā ana ki te hokohoko kararehe."
+        "description": "Ngā pātai me ngā whakautu e pā ana ki te hokohoko kararehe.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Kei te Hoko",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - Kōtaha Kaikawe",
         "description": "Kōtaha kawe {name}. Ngā rohe ratonga, ngā arotake, me ngā mōhiohio whakapā."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Whakarei ake",

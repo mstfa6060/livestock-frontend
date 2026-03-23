@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Дар бораи мо",
-        "description": "Дар бораи савдои чорво маълумот гиред. Платформаи боэътимоди савдои ҳайвоноти зинда."
+        "description": "Дар бораи савдои чорво маълумот гиред. Платформаи боэътимоди савдои ҳайвоноти зинда.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Муошират",
-        "description": "Бо мо тамос гиред. Гурӯҳи дастгирии муштариёни Lyborgy Trading омода аст ба шумо кумак кунад."
+        "description": "Бо мо тамос гиред. Гурӯҳи дастгирии муштариёни Lyborgy Trading омода аст ба шумо кумак кунад.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Шартҳои истифода",
-        "description": "Шартҳо ва қоидаҳои савдои чорво."
+        "description": "Шартҳо ва қоидаҳои савдои чорво.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Сиёсати Корбурди Маълумоти Шахсӣ",
-        "description": "Сиёсати махфияти тиҷорати чорво. Бифаҳмед, ки чӣ гуна маълумоти шахсии шумо ҳифз карда мешавад."
+        "description": "Сиёсати махфияти тиҷорати чорво. Бифаҳмед, ки чӣ гуна маълумоти шахсии шумо ҳифз карда мешавад.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Маҳсулот",
-        "description": "Рӯйхати ҳайвоноти зиндаро тамошо кунед. Эълонҳои боэътимод барои чорвои калон, гӯсфанд ва ғайра."
+        "description": "Рӯйхати ҳайвоноти зиндаро тамошо кунед. Эълонҳои боэътимод барои чорвои калон, гӯсфанд ва ғайра.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Фурӯшандагон",
-        "description": "Фурӯшандагони боэътимоди ҳайвонотро кашф кунед. Профилҳо ва баррасиҳои фурӯшандагони тасдиқшуда."
+        "description": "Фурӯшандагони боэътимоди ҳайвонотро кашф кунед. Профилҳо ва баррасиҳои фурӯшандагони тасдиқшуда.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "интиқолдиҳандагон",
-        "description": "Ширкатҳои интиқоли ҳайвонотро кашф кунед. Интиқоли ҳайвоноти зинда бехатар ва касбӣ."
+        "description": "Ширкатҳои интиқоли ҳайвонотро кашф кунед. Интиқоли ҳайвоноти зинда бехатар ва касбӣ.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Ҷустуҷӯ",
-        "description": "Ҷустуҷӯ дар байни рӯйхати ҳайвоноти зинда. Ҷустуҷӯи осон бо имконоти филтркунӣ ва ҷудокунӣ."
+        "description": "Ҷустуҷӯ дар байни рӯйхати ҳайвоноти зинда. Ҷустуҷӯи осон бо имконоти филтркунӣ ва ҷудокунӣ.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Саволҳои зуд-зуд додашаванда",
-        "description": "Саволҳо ва ҷавобҳои зуд-зуд додашаванда дар бораи тиҷорати чорво."
+        "description": "Саволҳо ва ҷавобҳои зуд-зуд додашаванда дар бораи тиҷорати чорво.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Барои фурӯш",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - Профили интиқолдиҳанда",
         "description": "Профили интиқолдиҳандаи {name}. Минтақаҳои хизматрасонӣ, баррасиҳо ва маълумоти тамос."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Тақвият",

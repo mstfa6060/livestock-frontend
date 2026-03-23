@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Tietoa meistä",
-        "description": "Opi lisää karjakaupasta. Luotettava elävien eläinten kauppapaikka."
+        "description": "Opi lisää karjakaupasta. Luotettava elävien eläinten kauppapaikka.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Viestintä",
-        "description": "Ota yhteyttä. Livestock Tradingin asiakastukitiimi on valmiina auttamaan sinua."
+        "description": "Ota yhteyttä. Livestock Tradingin asiakastukitiimi on valmiina auttamaan sinua.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Käyttöehdot",
-        "description": "Karjakaupan ehdot."
+        "description": "Karjakaupan ehdot.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Tietosuojakäytäntö",
-        "description": "Karjakaupan tietosuojakäytäntö. Lue lisää henkilötietojesi suojaamisesta."
+        "description": "Karjakaupan tietosuojakäytäntö. Lue lisää henkilötietojesi suojaamisesta.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Tuotteet",
-        "description": "Selaa elävien eläinten ilmoituksia. Luotettavia ilmoituksia naudoista, lampaista ja muusta."
+        "description": "Selaa elävien eläinten ilmoituksia. Luotettavia ilmoituksia naudoista, lampaista ja muusta.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Myyjät",
-        "description": "Löydä luotettavia eläintenmyyjiä. Vahvistetut myyjäprofiilit ja arvostelut."
+        "description": "Löydä luotettavia eläintenmyyjiä. Vahvistetut myyjäprofiilit ja arvostelut.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "kuljettajat",
-        "description": "Tutustu eläinkuljetusyrityksiin. Turvallinen ja ammattimainen elävien eläinten kuljetus."
+        "description": "Tutustu eläinkuljetusyrityksiin. Turvallinen ja ammattimainen elävien eläinten kuljetus.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Haku",
-        "description": "Hae elävien eläinten joukosta. Helppo haku suodatus- ja lajitteluvaihtoehtojen avulla."
+        "description": "Hae elävien eläinten joukosta. Helppo haku suodatus- ja lajitteluvaihtoehtojen avulla.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Usein kysytyt kysymykset",
-        "description": "Usein kysyttyjä kysymyksiä ja vastauksia karjakaupasta."
+        "description": "Usein kysyttyjä kysymyksiä ja vastauksia karjakaupasta.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Myytävänä",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - Operaattoriprofiili",
         "description": "{name} -kuljetusyrityksen profiili. Palvelualueet, arvostelut ja yhteystiedot."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Tehostus",

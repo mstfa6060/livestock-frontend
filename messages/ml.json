@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "ഞങ്ങളേക്കുറിച്ച്",
-        "description": "കന്നുകാലി വ്യാപാരത്തെക്കുറിച്ച് അറിയുക. വിശ്വസനീയമായ ഒരു തത്സമയ മൃഗ വ്യാപാര പ്ലാറ്റ്‌ഫോം."
+        "description": "കന്നുകാലി വ്യാപാരത്തെക്കുറിച്ച് അറിയുക. വിശ്വസനീയമായ ഒരു തത്സമയ മൃഗ വ്യാപാര പ്ലാറ്റ്‌ഫോം.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "ആശയവിനിമയം",
-        "description": "ഞങ്ങളെ ബന്ധപ്പെടുക. ലൈവ്‌സ്റ്റോക്ക് ട്രേഡിംഗ് കസ്റ്റമർ സപ്പോർട്ട് ടീം നിങ്ങളെ സഹായിക്കാൻ തയ്യാറാണ്."
+        "description": "ഞങ്ങളെ ബന്ധപ്പെടുക. ലൈവ്‌സ്റ്റോക്ക് ട്രേഡിംഗ് കസ്റ്റമർ സപ്പോർട്ട് ടീം നിങ്ങളെ സഹായിക്കാൻ തയ്യാറാണ്.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "ഉപയോഗ നിബന്ധനകൾ",
-        "description": "കന്നുകാലി വ്യാപാര നിബന്ധനകളും വ്യവസ്ഥകളും."
+        "description": "കന്നുകാലി വ്യാപാര നിബന്ധനകളും വ്യവസ്ഥകളും.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "സ്വകാര്യതാ നയം",
-        "description": "കന്നുകാലി വ്യാപാര സ്വകാര്യതാ നയം. നിങ്ങളുടെ സ്വകാര്യ ഡാറ്റ എങ്ങനെ സംരക്ഷിക്കപ്പെടുന്നുവെന്ന് അറിയുക."
+        "description": "കന്നുകാലി വ്യാപാര സ്വകാര്യതാ നയം. നിങ്ങളുടെ സ്വകാര്യ ഡാറ്റ എങ്ങനെ സംരക്ഷിക്കപ്പെടുന്നുവെന്ന് അറിയുക.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "ഉൽപ്പന്നങ്ങൾ",
-        "description": "തത്സമയ മൃഗങ്ങളുടെ ലിസ്റ്റിംഗുകൾ ബ്രൗസ് ചെയ്യുക. കന്നുകാലികൾ, ആടുകൾ എന്നിവയ്ക്കും മറ്റും വിശ്വസനീയമായ പരസ്യങ്ങൾ."
+        "description": "തത്സമയ മൃഗങ്ങളുടെ ലിസ്റ്റിംഗുകൾ ബ്രൗസ് ചെയ്യുക. കന്നുകാലികൾ, ആടുകൾ എന്നിവയ്ക്കും മറ്റും വിശ്വസനീയമായ പരസ്യങ്ങൾ.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "വിൽപ്പനക്കാർ",
-        "description": "വിശ്വസനീയരായ മൃഗ വിൽപ്പനക്കാരെ കണ്ടെത്തുക. പരിശോധിച്ചുറപ്പിച്ച വിൽപ്പനക്കാരുടെ പ്രൊഫൈലുകളും അവലോകനങ്ങളും."
+        "description": "വിശ്വസനീയരായ മൃഗ വിൽപ്പനക്കാരെ കണ്ടെത്തുക. പരിശോധിച്ചുറപ്പിച്ച വിൽപ്പനക്കാരുടെ പ്രൊഫൈലുകളും അവലോകനങ്ങളും.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "ട്രാൻസ്പോർട്ടർമാർ",
-        "description": "മൃഗ ഗതാഗത കമ്പനികളെ കണ്ടെത്തൂ. സുരക്ഷിതവും പ്രൊഫഷണലുമായ തത്സമയ മൃഗ ഗതാഗതം."
+        "description": "മൃഗ ഗതാഗത കമ്പനികളെ കണ്ടെത്തൂ. സുരക്ഷിതവും പ്രൊഫഷണലുമായ തത്സമയ മൃഗ ഗതാഗതം.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "തിരയുക",
-        "description": "ജീവനുള്ള മൃഗങ്ങളുടെ പട്ടികകളിൽ തിരയുക. ഫിൽട്ടറിംഗ്, അടുക്കൽ ഓപ്ഷനുകൾ ഉപയോഗിച്ച് എളുപ്പത്തിലുള്ള തിരയൽ."
+        "description": "ജീവനുള്ള മൃഗങ്ങളുടെ പട്ടികകളിൽ തിരയുക. ഫിൽട്ടറിംഗ്, അടുക്കൽ ഓപ്ഷനുകൾ ഉപയോഗിച്ച് എളുപ്പത്തിലുള്ള തിരയൽ.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "പതിവ് ചോദ്യങ്ങൾ",
-        "description": "കന്നുകാലി വ്യാപാരത്തെക്കുറിച്ച് പതിവായി ചോദിക്കുന്ന ചോദ്യങ്ങളും ഉത്തരങ്ങളും."
+        "description": "കന്നുകാലി വ്യാപാരത്തെക്കുറിച്ച് പതിവായി ചോദിക്കുന്ന ചോദ്യങ്ങളും ഉത്തരങ്ങളും.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - വിൽപ്പനയ്ക്ക്",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - കാരിയർ പ്രൊഫൈൽ",
         "description": "{name} ട്രാൻസ്പോർട്ടർ പ്രൊഫൈൽ. സേവന മേഖലകൾ, അവലോകനങ്ങൾ, ബന്ധപ്പെടാനുള്ള വിവരങ്ങൾ."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "ബൂസ്റ്റ് ചെയ്യുക",

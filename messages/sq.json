@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Rreth Nesh",
-        "description": "Mësoni rreth Tregtimit të Blegtorisë. Një platformë e besueshme tregtimi të kafshëve të gjalla."
+        "description": "Mësoni rreth Tregtimit të Blegtorisë. Një platformë e besueshme tregtimi të kafshëve të gjalla.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Komunikimi",
-        "description": "Na kontaktoni. Ekipi i mbështetjes së klientëve të Livestock Trading është gati t'ju ndihmojë."
+        "description": "Na kontaktoni. Ekipi i mbështetjes së klientëve të Livestock Trading është gati t'ju ndihmojë.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Kushtet e Përdorimit",
-        "description": "Kushtet dhe Rregullat e Tregtimit të Blegtorisë."
+        "description": "Kushtet dhe Rregullat e Tregtimit të Blegtorisë.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Politika e Privatësisë",
-        "description": "Politika e privatësisë për tregtimin e bagëtive. Mësoni se si mbrohen të dhënat tuaja personale."
+        "description": "Politika e privatësisë për tregtimin e bagëtive. Mësoni se si mbrohen të dhënat tuaja personale.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Produkte",
-        "description": "Shfletoni listat e kafshëve të gjalla. Reklama të besueshme për bagëti, dele dhe më shumë."
+        "description": "Shfletoni listat e kafshëve të gjalla. Reklama të besueshme për bagëti, dele dhe më shumë.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Shitësit",
-        "description": "Zbuloni shitës të besueshëm kafshësh. Profile dhe vlerësime të verifikuara të shitësve."
+        "description": "Zbuloni shitës të besueshëm kafshësh. Profile dhe vlerësime të verifikuara të shitësve.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "transportuesit",
-        "description": "Zbuloni kompanitë e transportit të kafshëve. Transport i sigurt dhe profesional i kafshëve të gjalla."
+        "description": "Zbuloni kompanitë e transportit të kafshëve. Transport i sigurt dhe profesional i kafshëve të gjalla.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Kërko",
-        "description": "Kërko midis listave të kafshëve të gjalla. Kërkim i lehtë me opsione filtrimi dhe renditjeje."
+        "description": "Kërko midis listave të kafshëve të gjalla. Kërkim i lehtë me opsione filtrimi dhe renditjeje.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Pyetje të Shpeshta",
-        "description": "Pyetje dhe përgjigje të shpeshta në lidhje me tregtinë e bagëtive."
+        "description": "Pyetje dhe përgjigje të shpeshta në lidhje me tregtinë e bagëtive.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Për Shitje",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - Profili i Operatorit",
         "description": "Profili i transportuesit {name}. Zonat e shërbimit, vlerësimet dhe informacioni i kontaktit."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Përmirësim",

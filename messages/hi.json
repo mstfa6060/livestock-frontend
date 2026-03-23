@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "हमारे बारे में",
-        "description": "पशुधन व्यापार के बारे में जानें। एक विश्वसनीय जीवित पशु व्यापार मंच।"
+        "description": "पशुधन व्यापार के बारे में जानें। एक विश्वसनीय जीवित पशु व्यापार मंच।",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "संचार",
-        "description": "हमसे संपर्क करें। लाइवस्टॉक ट्रेडिंग की ग्राहक सहायता टीम आपकी सहायता के लिए तैयार है।"
+        "description": "हमसे संपर्क करें। लाइवस्टॉक ट्रेडिंग की ग्राहक सहायता टीम आपकी सहायता के लिए तैयार है।",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "उपयोग की शर्तें",
-        "description": "पशुधन व्यापार के नियम और शर्तें।"
+        "description": "पशुधन व्यापार के नियम और शर्तें।",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "गोपनीयता नीति",
-        "description": "पशुधन व्यापार की गोपनीयता नीति। जानें कि आपकी व्यक्तिगत जानकारी कैसे सुरक्षित रखी जाती है।"
+        "description": "पशुधन व्यापार की गोपनीयता नीति। जानें कि आपकी व्यक्तिगत जानकारी कैसे सुरक्षित रखी जाती है।",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "उत्पादों",
-        "description": "जीवित पशुओं की सूची देखें। गाय, भेड़ और अन्य पशुओं के लिए विश्वसनीय विज्ञापन।"
+        "description": "जीवित पशुओं की सूची देखें। गाय, भेड़ और अन्य पशुओं के लिए विश्वसनीय विज्ञापन।",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "सेलर्स",
-        "description": "विश्वसनीय पशु विक्रेताओं को खोजें। सत्यापित विक्रेता प्रोफाइल और समीक्षाएं देखें।"
+        "description": "विश्वसनीय पशु विक्रेताओं को खोजें। सत्यापित विक्रेता प्रोफाइल और समीक्षाएं देखें।",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "ट्रांसपोर्टर",
-        "description": "पशु परिवहन कंपनियों के बारे में जानें। सुरक्षित और पेशेवर तरीके से जीवित पशुओं का परिवहन।"
+        "description": "पशु परिवहन कंपनियों के बारे में जानें। सुरक्षित और पेशेवर तरीके से जीवित पशुओं का परिवहन।",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "खोज",
-        "description": "जीवित जानवरों की सूची में खोजें। फ़िल्टरिंग और सॉर्टिंग विकल्पों के साथ आसान खोज।"
+        "description": "जीवित जानवरों की सूची में खोजें। फ़िल्टरिंग और सॉर्टिंग विकल्पों के साथ आसान खोज।",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "अक्सर पूछे जाने वाले प्रश्नों",
-        "description": "पशुधन व्यापार के बारे में अक्सर पूछे जाने वाले प्रश्न और उनके उत्तर।"
+        "description": "पशुधन व्यापार के बारे में अक्सर पूछे जाने वाले प्रश्न और उनके उत्तर।",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{शीर्षक} - बिक्री के लिए",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{नाम} - कैरियर प्रोफ़ाइल",
         "description": "{name} ट्रांसपोर्टर प्रोफ़ाइल। सेवा क्षेत्र, समीक्षाएँ और संपर्क जानकारी।"
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "बढ़ाना",

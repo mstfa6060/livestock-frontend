@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "ჩვენს შესახებ",
-        "description": "გაიგეთ მეტი მეცხოველეობით ვაჭრობის შესახებ. საიმედო ცოცხალი ცხოველებით ვაჭრობის პლატფორმა."
+        "description": "გაიგეთ მეტი მეცხოველეობით ვაჭრობის შესახებ. საიმედო ცოცხალი ცხოველებით ვაჭრობის პლატფორმა.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "კომუნიკაცია",
-        "description": "დაგვიკავშირდით. მეცხოველეობის ვაჭრობის მომხმარებელთა მხარდაჭერის გუნდი მზადაა დაგეხმაროთ."
+        "description": "დაგვიკავშირდით. მეცხოველეობის ვაჭრობის მომხმარებელთა მხარდაჭერის გუნდი მზადაა დაგეხმაროთ.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "გამოყენების პირობები",
-        "description": "მეცხოველეობით ვაჭრობის წესები და პირობები."
+        "description": "მეცხოველეობით ვაჭრობის წესები და პირობები.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "კონფიდენციალურობის პოლიტიკა",
-        "description": "მეცხოველეობით ვაჭრობის კონფიდენციალურობის პოლიტიკა. გაიგეთ, როგორ არის დაცული თქვენი პერსონალური მონაცემები."
+        "description": "მეცხოველეობით ვაჭრობის კონფიდენციალურობის პოლიტიკა. გაიგეთ, როგორ არის დაცული თქვენი პერსონალური მონაცემები.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "პროდუქტები",
-        "description": "დაათვალიერეთ ცოცხალი ცხოველების სია. სანდო განცხადებები მსხვილფეხა რქოსანი პირუტყვის, ცხვრის და სხვა ცხოველების შესახებ."
+        "description": "დაათვალიერეთ ცოცხალი ცხოველების სია. სანდო განცხადებები მსხვილფეხა რქოსანი პირუტყვის, ცხვრის და სხვა ცხოველების შესახებ.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "გამყიდველები",
-        "description": "აღმოაჩინეთ სანდო ცხოველების გამყიდველები. დადასტურებული გამყიდველების პროფილები და მიმოხილვები."
+        "description": "აღმოაჩინეთ სანდო ცხოველების გამყიდველები. დადასტურებული გამყიდველების პროფილები და მიმოხილვები.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "ტრანსპორტიორები",
-        "description": "აღმოაჩინეთ ცხოველების გადამზიდავი კომპანიები. ცოცხალი ცხოველების უსაფრთხო და პროფესიონალური გადაზიდვა."
+        "description": "აღმოაჩინეთ ცხოველების გადამზიდავი კომპანიები. ცოცხალი ცხოველების უსაფრთხო და პროფესიონალური გადაზიდვა.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "ძიება",
-        "description": "ცოცხალი ცხოველების სიაში ძიება. მარტივი ძიება ფილტრაციისა და დახარისხების ვარიანტებით."
+        "description": "ცოცხალი ცხოველების სიაში ძიება. მარტივი ძიება ფილტრაციისა და დახარისხების ვარიანტებით.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "ხშირად დასმული კითხვები",
-        "description": "ხშირად დასმული კითხვები და პასუხები პირუტყვის ვაჭრობასთან დაკავშირებით."
+        "description": "ხშირად დასმული კითხვები და პასუხები პირუტყვის ვაჭრობასთან დაკავშირებით.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{სათაური} - იყიდება",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - ოპერატორის პროფილი",
         "description": "{name}-ის გადამზიდავის პროფილი. მომსახურების ზონები, მიმოხილვები და საკონტაქტო ინფორმაცია."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "გაძლიერება",

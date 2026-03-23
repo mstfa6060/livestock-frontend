@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Gbasara anyị",
-        "description": "Mụta maka Azụmaahịa Anụmanụ. Ikpo okwu azụmaahịa anụmanụ dị ndụ a pụrụ ịtụkwasị obi."
+        "description": "Mụta maka Azụmaahịa Anụmanụ. Ikpo okwu azụmaahịa anụmanụ dị ndụ a pụrụ ịtụkwasị obi.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Nkwurịta okwu",
-        "description": "Kpọtụrụ anyị. Ndị otu nkwado ndị ahịa nke Azụmaahịa Anụmanụ dị njikere inyere gị aka."
+        "description": "Kpọtụrụ anyị. Ndị otu nkwado ndị ahịa nke Azụmaahịa Anụmanụ dị njikere inyere gị aka.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Usoro ojiji",
-        "description": "Usoro na Ọnọdụ Azụmaahịa Anụ Ụlọ."
+        "description": "Usoro na Ọnọdụ Azụmaahịa Anụ Ụlọ.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "amụma nzuzo",
-        "description": "Amụma nzuzo nke Azụmaahịa Anụ Ụlọ. Mụta otu esi echekwa data nkeonwe gị."
+        "description": "Amụma nzuzo nke Azụmaahịa Anụ Ụlọ. Mụta otu esi echekwa data nkeonwe gị.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Ngwaahịa",
-        "description": "Chọgharịa ndepụta anụmanụ dị ndụ. Mgbasa ozi a pụrụ ịtụkwasị obi maka ehi, atụrụ, na ihe ndị ọzọ."
+        "description": "Chọgharịa ndepụta anụmanụ dị ndụ. Mgbasa ozi a pụrụ ịtụkwasị obi maka ehi, atụrụ, na ihe ndị ọzọ.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Ndị na-ere ahịa",
-        "description": "Chọpụta ndị na-ere anụmanụ a pụrụ ịtụkwasị obi. Profaịlụ na nyocha nke ndị na-ere ahịa akwadoro."
+        "description": "Chọpụta ndị na-ere anụmanụ a pụrụ ịtụkwasị obi. Profaịlụ na nyocha nke ndị na-ere ahịa akwadoro.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "ndị na-ebugharị ihe",
-        "description": "Chọpụta ụlọ ọrụ njem anụmanụ. Njem anụmanụ dị ndụ dị mma ma dịkwa mma."
+        "description": "Chọpụta ụlọ ọrụ njem anụmanụ. Njem anụmanụ dị ndụ dị mma ma dịkwa mma.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Chọọ",
-        "description": "Chọọ n'etiti ndepụta anụmanụ dị ndụ. Nchọgharị dị mfe site na nhọrọ nzacha na nhazi."
+        "description": "Chọọ n'etiti ndepụta anụmanụ dị ndụ. Nchọgharị dị mfe site na nhọrọ nzacha na nhazi.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Ajụjụ Ndị A Na-ajụkarị",
-        "description": "Ajụjụ na azịza ndị a na-ajụkarị gbasara ịzụ ahịa anụ ụlọ."
+        "description": "Ajụjụ na azịza ndị a na-ajụkarị gbasara ịzụ ahịa anụ ụlọ.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Maka ọrịre",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{aha} - Profaịlụ onye na-ebuga",
         "description": "{name} profaịlụ onye na-ebuga ihe. Ebe ọrụ, nyocha, na ozi kọntaktị."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Mmalite",

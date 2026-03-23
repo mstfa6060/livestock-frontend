@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Konsènan nou",
-        "description": "Aprann plis sou komès bèt vivan. Yon platfòm serye pou komès bèt vivan."
+        "description": "Aprann plis sou komès bèt vivan. Yon platfòm serye pou komès bèt vivan.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Kominikasyon",
-        "description": "Kontakte nou. Ekip sèvis kliyan Livestock Trading la pare pou ede w."
+        "description": "Kontakte nou. Ekip sèvis kliyan Livestock Trading la pare pou ede w.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Kondisyon Itilizasyon",
-        "description": "Tèm ak Kondisyon Komès Bèt Vivan."
+        "description": "Tèm ak Kondisyon Komès Bèt Vivan.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Règleman sou enfòmasyon prive",
-        "description": "Règleman sou enfòmasyon prive pou komès bèt vivan. Aprann kijan done pèsonèl ou yo pwoteje."
+        "description": "Règleman sou enfòmasyon prive pou komès bèt vivan. Aprann kijan done pèsonèl ou yo pwoteje.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Pwodwi yo",
-        "description": "Gade anons bèt vivan yo. Anons serye pou bèf, mouton ak plis ankò."
+        "description": "Gade anons bèt vivan yo. Anons serye pou bèf, mouton ak plis ankò.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Vandè yo",
-        "description": "Dekouvri vandè bèt ki fyab. Pwofil ak revizyon vandè verifye."
+        "description": "Dekouvri vandè bèt ki fyab. Pwofil ak revizyon vandè verifye.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "transpòtè yo",
-        "description": "Dekouvri konpayi transpò bèt yo. Transpò bèt vivan an sekirite epi pwofesyonèl."
+        "description": "Dekouvri konpayi transpò bèt yo. Transpò bèt vivan an sekirite epi pwofesyonèl.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Rechèch",
-        "description": "Chèche pami lis bèt vivan yo. Rechèch fasil ak opsyon filtraj ak klasman."
+        "description": "Chèche pami lis bèt vivan yo. Rechèch fasil ak opsyon filtraj ak klasman.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Kesyon yo poze souvan",
-        "description": "Kesyon yo poze souvan ak repons sou komès bèt."
+        "description": "Kesyon yo poze souvan ak repons sou komès bèt.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{tit} - Pou vann",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - Pwofil Konpayi Ajan",
         "description": "Pwofil transpòtè {name}. Zòn sèvis, revizyon, ak enfòmasyon kontak."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Ranfòse",

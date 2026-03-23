@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Nipa re",
-        "description": "Kọ́ nípa Ìṣòwò Ẹranko. Pẹpẹ ìtajà ẹranko alààyè tó ṣeé gbẹ́kẹ̀lé."
+        "description": "Kọ́ nípa Ìṣòwò Ẹranko. Pẹpẹ ìtajà ẹranko alààyè tó ṣeé gbẹ́kẹ̀lé.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Ibaraẹnisọrọ",
-        "description": "Kan si wa. Ẹgbẹ atilẹyin alabara ti Iṣowo Ẹranko ti ṣetan lati ran ọ lọwọ."
+        "description": "Kan si wa. Ẹgbẹ atilẹyin alabara ti Iṣowo Ẹranko ti ṣetan lati ran ọ lọwọ.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Awọn ofin lilo",
-        "description": "Awọn ofin ati ipo iṣowo ẹran."
+        "description": "Awọn ofin ati ipo iṣowo ẹran.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Ìlànà Ìpamọ́",
-        "description": "Ètò ìpamọ́ Ìṣòwò Ẹranko. Kọ́ bí a ṣe ń dáàbò bo ìwífún ara ẹni rẹ."
+        "description": "Ètò ìpamọ́ Ìṣòwò Ẹranko. Kọ́ bí a ṣe ń dáàbò bo ìwífún ara ẹni rẹ.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Àwọn ọjà",
-        "description": "Ṣe àwárí àkójọ àwọn ẹranko tó wà láàyè. Àwọn ìpolówó tó ṣeé gbẹ́kẹ̀lé fún màlúù, àgùntàn, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ."
+        "description": "Ṣe àwárí àkójọ àwọn ẹranko tó wà láàyè. Àwọn ìpolówó tó ṣeé gbẹ́kẹ̀lé fún màlúù, àgùntàn, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Àwọn olùtajà",
-        "description": "Ṣawari awọn olutaja ẹranko ti o gbẹkẹle. Awọn profaili olutaja ti a ti jẹrisi ati awọn atunyẹwo."
+        "description": "Ṣawari awọn olutaja ẹranko ti o gbẹkẹle. Awọn profaili olutaja ti a ti jẹrisi ati awọn atunyẹwo.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "àwọn olùgbé ọkọ̀",
-        "description": "Ṣawari awọn ile-iṣẹ gbigbe ẹranko. Gbigbe ẹranko laaye lailewu ati ọjọgbọn."
+        "description": "Ṣawari awọn ile-iṣẹ gbigbe ẹranko. Gbigbe ẹranko laaye lailewu ati ọjọgbọn.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Ṣe àwárí",
-        "description": "Wa laarin awọn akojọ ẹranko laaye. Wiwa irọrun pẹlu awọn aṣayan sisẹ ati tito lẹsẹsẹ."
+        "description": "Wa laarin awọn akojọ ẹranko laaye. Wiwa irọrun pẹlu awọn aṣayan sisẹ ati tito lẹsẹsẹ.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Àwọn Ìbéèrè Tí A Máa Ń Béèrè",
-        "description": "Àwọn ìbéèrè àti ìdáhùn tí a sábà máa ń béèrè nípa ìṣòwò ẹran."
+        "description": "Àwọn ìbéèrè àti ìdáhùn tí a sábà máa ń béèrè nípa ìṣòwò ẹran.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{akọle} - Fún Títà",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{orukọ} - Profaili Olùgbéjáde",
         "description": "Ìwífún nípa olùgbé ọkọ̀ {name}. Àwọn agbègbè iṣẹ́, àtúnyẹ̀wò, àti ìwífún nípa ìfọwọ́sowọ́pọ̀."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Igbesoke",

@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Over ons",
-        "description": "Leer meer over de handel in levende dieren. Een betrouwbaar platform voor de handel in levende dieren."
+        "description": "Leer meer over de handel in levende dieren. Een betrouwbaar platform voor de handel in levende dieren.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Mededeling",
-        "description": "Neem contact met ons op. Het klantenserviceteam van Livestock Trading staat klaar om u te helpen."
+        "description": "Neem contact met ons op. Het klantenserviceteam van Livestock Trading staat klaar om u te helpen.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Gebruiksvoorwaarden",
-        "description": "Algemene voorwaarden voor de handel in levende dieren."
+        "description": "Algemene voorwaarden voor de handel in levende dieren.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Privacybeleid",
-        "description": "Privacybeleid van Livestock Trading. Lees hoe uw persoonlijke gegevens worden beschermd."
+        "description": "Privacybeleid van Livestock Trading. Lees hoe uw persoonlijke gegevens worden beschermd.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Producten",
-        "description": "Bekijk advertenties voor levende dieren. Betrouwbare advertenties voor runderen, schapen en meer."
+        "description": "Bekijk advertenties voor levende dieren. Betrouwbare advertenties voor runderen, schapen en meer.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Verkopers",
-        "description": "Ontdek betrouwbare verkopers van dieren. Geverifieerde verkopersprofielen en recensies."
+        "description": "Ontdek betrouwbare verkopers van dieren. Geverifieerde verkopersprofielen en recensies.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "transporteurs",
-        "description": "Ontdek bedrijven die gespecialiseerd zijn in dierentransport. Veilig en professioneel transport van levende dieren."
+        "description": "Ontdek bedrijven die gespecialiseerd zijn in dierentransport. Veilig en professioneel transport van levende dieren.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Zoekopdracht",
-        "description": "Zoek in de advertenties voor levende dieren. Eenvoudig zoeken met filter- en sorteeropties."
+        "description": "Zoek in de advertenties voor levende dieren. Eenvoudig zoeken met filter- en sorteeropties.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Veelgestelde vragen",
-        "description": "Veelgestelde vragen en antwoorden over de handel in vee."
+        "description": "Veelgestelde vragen en antwoorden over de handel in vee.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Te koop",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{naam} - Vervoerderprofiel",
         "description": "{name} transporteurprofiel. Servicegebieden, beoordelingen en contactgegevens."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Boost",

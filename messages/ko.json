@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "회사 소개",
-        "description": "가축 거래에 대해 알아보세요. 신뢰할 수 있는 생축 거래 플랫폼입니다."
+        "description": "가축 거래에 대해 알아보세요. 신뢰할 수 있는 생축 거래 플랫폼입니다.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "의사소통",
-        "description": "저희에게 연락주세요. 가축 거래 고객 지원팀이 언제든지 도와드리겠습니다."
+        "description": "저희에게 연락주세요. 가축 거래 고객 지원팀이 언제든지 도와드리겠습니다.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "이용약관",
-        "description": "가축 거래 약관."
+        "description": "가축 거래 약관.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "개인정보 보호정책",
-        "description": "가축 거래 개인정보 보호 정책. 개인정보 보호 방법을 알아보세요."
+        "description": "가축 거래 개인정보 보호 정책. 개인정보 보호 방법을 알아보세요.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "제품",
-        "description": "살아있는 동물 매물을 찾아보세요. 소, 양 등 다양한 동물의 믿을 수 있는 광고를 확인하실 수 있습니다."
+        "description": "살아있는 동물 매물을 찾아보세요. 소, 양 등 다양한 동물의 믿을 수 있는 광고를 확인하실 수 있습니다.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "판매자",
-        "description": "믿을 수 있는 동물 판매업체를 찾아보세요. 검증된 판매자 프로필과 후기를 확인하실 수 있습니다."
+        "description": "믿을 수 있는 동물 판매업체를 찾아보세요. 검증된 판매자 프로필과 후기를 확인하실 수 있습니다.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "운송업자",
-        "description": "동물 운송 업체를 알아보세요. 안전하고 전문적인 살아있는 동물 운송 서비스를 제공합니다."
+        "description": "동물 운송 업체를 알아보세요. 안전하고 전문적인 살아있는 동물 운송 서비스를 제공합니다.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "찾다",
-        "description": "살아있는 동물 목록을 검색하세요. 필터링 및 정렬 옵션을 사용하여 간편하게 검색할 수 있습니다."
+        "description": "살아있는 동물 목록을 검색하세요. 필터링 및 정렬 옵션을 사용하여 간편하게 검색할 수 있습니다.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "자주 묻는 질문",
-        "description": "가축 거래에 관한 자주 묻는 질문과 답변."
+        "description": "가축 거래에 관한 자주 묻는 질문과 답변.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - 판매합니다",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{이름} - 통신사 프로필",
         "description": "{이름} 운송업체 프로필. 서비스 지역, 고객 후기 및 연락처 정보."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "후원",

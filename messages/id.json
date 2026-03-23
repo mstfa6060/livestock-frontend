@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Tentang Kami",
-        "description": "Pelajari tentang Perdagangan Hewan Ternak. Platform perdagangan hewan hidup yang andal."
+        "description": "Pelajari tentang Perdagangan Hewan Ternak. Platform perdagangan hewan hidup yang andal.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Komunikasi",
-        "description": "Hubungi kami. Tim dukungan pelanggan Livestock Trading siap membantu Anda."
+        "description": "Hubungi kami. Tim dukungan pelanggan Livestock Trading siap membantu Anda.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Syarat Penggunaan",
-        "description": "Syarat dan Ketentuan Perdagangan Ternak."
+        "description": "Syarat dan Ketentuan Perdagangan Ternak.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Kebijakan Privasi",
-        "description": "Kebijakan privasi Livestock Trading. Pelajari bagaimana data pribadi Anda dilindungi."
+        "description": "Kebijakan privasi Livestock Trading. Pelajari bagaimana data pribadi Anda dilindungi.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Produk",
-        "description": "Telusuri daftar hewan ternak hidup. Iklan terpercaya untuk sapi, domba, dan lainnya."
+        "description": "Telusuri daftar hewan ternak hidup. Iklan terpercaya untuk sapi, domba, dan lainnya.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Penjual",
-        "description": "Temukan penjual hewan yang terpercaya. Profil dan ulasan penjual terverifikasi."
+        "description": "Temukan penjual hewan yang terpercaya. Profil dan ulasan penjual terverifikasi.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "pengangkut",
-        "description": "Temukan perusahaan transportasi hewan. Transportasi hewan hidup yang aman dan profesional."
+        "description": "Temukan perusahaan transportasi hewan. Transportasi hewan hidup yang aman dan profesional.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Mencari",
-        "description": "Cari di antara daftar hewan hidup. Pencarian mudah dengan opsi penyaringan dan pengurutan."
+        "description": "Cari di antara daftar hewan hidup. Pencarian mudah dengan opsi penyaringan dan pengurutan.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Pertanyaan yang Sering Diajukan",
-        "description": "Pertanyaan dan jawaban yang sering diajukan tentang perdagangan ternak."
+        "description": "Pertanyaan dan jawaban yang sering diajukan tentang perdagangan ternak.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Dijual",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{nama} - Profil Operator",
         "description": "Profil penyedia jasa transportasi {name}. Area layanan, ulasan, dan informasi kontak."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Mendorong",

@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Dwarna",
-        "description": "Tgħallem dwar il-Kummerċ tal-Bhejjem. Pjattaforma affidabbli għall-kummerċ tal-annimali ħajjin."
+        "description": "Tgħallem dwar il-Kummerċ tal-Bhejjem. Pjattaforma affidabbli għall-kummerċ tal-annimali ħajjin.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Komunikazzjoni",
-        "description": "Ikkuntattjana. It-tim tal-appoġġ għall-klijenti ta' Livestock Trading lest biex jgħinek."
+        "description": "Ikkuntattjana. It-tim tal-appoġġ għall-klijenti ta' Livestock Trading lest biex jgħinek.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Termini ta' Użu",
-        "description": "Termini u Kundizzjonijiet tal-Kummerċ tal-Bhejjem."
+        "description": "Termini u Kundizzjonijiet tal-Kummerċ tal-Bhejjem.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Politika tal-Privatezza",
-        "description": "Politika ta' privatezza tal-Kummerċ tal-Bhejjem. Tgħallem kif id-dejta personali tiegħek hija protetta."
+        "description": "Politika ta' privatezza tal-Kummerċ tal-Bhejjem. Tgħallem kif id-dejta personali tiegħek hija protetta.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Prodotti",
-        "description": "Fittex listi ta' annimali ħajjin. Reklami affidabbli għal baqar, nagħaġ, u aktar."
+        "description": "Fittex listi ta' annimali ħajjin. Reklami affidabbli għal baqar, nagħaġ, u aktar.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Bejjiegħa",
-        "description": "Skopri bejjiegħa tal-annimali affidabbli. Profili u reviżjonijiet tal-bejjiegħa verifikati."
+        "description": "Skopri bejjiegħa tal-annimali affidabbli. Profili u reviżjonijiet tal-bejjiegħa verifikati.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "trasportaturi",
-        "description": "Skopri kumpaniji tat-trasport tal-annimali. Trasport ta' annimali ħajjin sikur u professjonali."
+        "description": "Skopri kumpaniji tat-trasport tal-annimali. Trasport ta' annimali ħajjin sikur u professjonali.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Fittex",
-        "description": "Fittex fost listi ta' annimali ħajjin. Tiftix faċli b'għażliet ta' filtrazzjoni u klassifikazzjoni."
+        "description": "Fittex fost listi ta' annimali ħajjin. Tiftix faċli b'għażliet ta' filtrazzjoni u klassifikazzjoni.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Mistoqsijiet Frekwenti",
-        "description": "Mistoqsijiet u tweġibiet frekwenti dwar il-kummerċ tal-bhejjem."
+        "description": "Mistoqsijiet u tweġibiet frekwenti dwar il-kummerċ tal-bhejjem.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{titlu} - Għall-Bejgħ",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{isem} - Profil tat-Trasportatur",
         "description": "Profil tat-trasportatur ta' {name}. Żoni ta' servizz, reviżjonijiet, u informazzjoni ta' kuntatt."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Spinta",

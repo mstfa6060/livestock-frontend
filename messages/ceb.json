@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Mahitungod Kanamo",
-        "description": "Pagkat-on mahitungod sa Livestock Trading. Usa ka kasaligan nga plataporma sa pagbaligya og buhing hayop."
+        "description": "Pagkat-on mahitungod sa Livestock Trading. Usa ka kasaligan nga plataporma sa pagbaligya og buhing hayop.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Komunikasyon",
-        "description": "Kontaka kami. Ang customer support team sa Livestock Trading andam motabang kanimo."
+        "description": "Kontaka kami. Ang customer support team sa Livestock Trading andam motabang kanimo.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Mga Termino sa Paggamit",
-        "description": "Mga Termino ug Kondisyon sa Pagnegosyo sa mga Hayop."
+        "description": "Mga Termino ug Kondisyon sa Pagnegosyo sa mga Hayop.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Patakaran sa Pagkapribado",
-        "description": "Palisiya sa pribasiya sa Livestock Trading. Hibal-i kung giunsa pagpanalipod ang imong personal nga datos."
+        "description": "Palisiya sa pribasiya sa Livestock Trading. Hibal-i kung giunsa pagpanalipod ang imong personal nga datos.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Mga Produkto",
-        "description": "Pag-browse sa mga live nga listahan sa mga hayop. Kasaligan nga mga ad para sa mga baka, karnero, ug uban pa."
+        "description": "Pag-browse sa mga live nga listahan sa mga hayop. Kasaligan nga mga ad para sa mga baka, karnero, ug uban pa.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Mga Nagbaligya",
-        "description": "Pangitaa ang kasaligang mga tigbaligya og hayop. Mga napamatud-an nga profile ug mga review sa tigbaligya."
+        "description": "Pangitaa ang kasaligang mga tigbaligya og hayop. Mga napamatud-an nga profile ug mga review sa tigbaligya.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "mga tighatod",
-        "description": "Diskobrehi ang mga kompanya sa transportasyon sa mga hayop. Luwas ug propesyonal nga transportasyon sa buhing mga hayop."
+        "description": "Diskobrehi ang mga kompanya sa transportasyon sa mga hayop. Luwas ug propesyonal nga transportasyon sa buhing mga hayop.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Pangitaa",
-        "description": "Pangitaa taliwala sa mga listahan sa buhing mga hayop. Sayon nga pagpangita gamit ang mga kapilian sa pagsala ug pag-sort."
+        "description": "Pangitaa taliwala sa mga listahan sa buhing mga hayop. Sayon nga pagpangita gamit ang mga kapilian sa pagsala ug pag-sort.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Mga Kanunayng Gipangutana nga Pangutana",
-        "description": "Mga kanunayng gipangutana nga pangutana ug tubag bahin sa pagnegosyo og mga hayop."
+        "description": "Mga kanunayng gipangutana nga pangutana ug tubag bahin sa pagnegosyo og mga hayop.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Gibaligya",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{ngalan} - Profile sa Tigdala",
         "description": "Profile sa transporter sa {name}. Mga lugar nga giserbisyuhan, mga review, ug impormasyon sa pagkontak."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Pagpalambo",

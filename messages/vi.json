@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Về chúng tôi",
-        "description": "Tìm hiểu về giao dịch gia súc. Một nền tảng giao dịch động vật sống đáng tin cậy."
+        "description": "Tìm hiểu về giao dịch gia súc. Một nền tảng giao dịch động vật sống đáng tin cậy.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Giao tiếp",
-        "description": "Hãy liên hệ với chúng tôi. Đội ngũ hỗ trợ khách hàng của Livestock Trading luôn sẵn sàng trợ giúp bạn."
+        "description": "Hãy liên hệ với chúng tôi. Đội ngũ hỗ trợ khách hàng của Livestock Trading luôn sẵn sàng trợ giúp bạn.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Điều khoản sử dụng",
-        "description": "Điều khoản và điều kiện giao dịch gia súc."
+        "description": "Điều khoản và điều kiện giao dịch gia súc.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Chính sách bảo mật",
-        "description": "Chính sách bảo mật của Livestock Trading. Tìm hiểu cách dữ liệu cá nhân của bạn được bảo vệ."
+        "description": "Chính sách bảo mật của Livestock Trading. Tìm hiểu cách dữ liệu cá nhân của bạn được bảo vệ.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Các sản phẩm",
-        "description": "Xem danh sách động vật sống. Các quảng cáo đáng tin cậy về gia súc, cừu và nhiều loại khác."
+        "description": "Xem danh sách động vật sống. Các quảng cáo đáng tin cậy về gia súc, cừu và nhiều loại khác.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Người bán",
-        "description": "Tìm kiếm những người bán động vật đáng tin cậy. Hồ sơ và đánh giá người bán đã được xác minh."
+        "description": "Tìm kiếm những người bán động vật đáng tin cậy. Hồ sơ và đánh giá người bán đã được xác minh.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "người vận chuyển",
-        "description": "Tìm hiểu về các công ty vận chuyển động vật. Vận chuyển động vật sống an toàn và chuyên nghiệp."
+        "description": "Tìm hiểu về các công ty vận chuyển động vật. Vận chuyển động vật sống an toàn và chuyên nghiệp.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Tìm kiếm",
-        "description": "Tìm kiếm trong danh sách động vật sống. Tìm kiếm dễ dàng với các tùy chọn lọc và sắp xếp."
+        "description": "Tìm kiếm trong danh sách động vật sống. Tìm kiếm dễ dàng với các tùy chọn lọc và sắp xếp.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Câu hỏi thường gặp",
-        "description": "Những câu hỏi và câu trả lời thường gặp về giao dịch gia súc."
+        "description": "Những câu hỏi và câu trả lời thường gặp về giao dịch gia súc.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Rao bán",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{tên} - Hồ sơ nhà mạng",
         "description": "Thông tin về đơn vị vận chuyển {name}. Khu vực phục vụ, đánh giá và thông tin liên hệ."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Tăng",

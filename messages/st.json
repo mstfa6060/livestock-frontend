@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Mabapi le rona",
-        "description": "Ithute ka Khoebo ea Liphoofolo. Sethala se tšepahalang sa khoebo ea liphoofolo tse phelang."
+        "description": "Ithute ka Khoebo ea Liphoofolo. Sethala se tšepahalang sa khoebo ea liphoofolo tse phelang.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Puisano",
-        "description": "Ikopanye le rona. Sehlopha sa tšehetso ea bareki sa Livestock Trading se ikemiselitse ho u thusa."
+        "description": "Ikopanye le rona. Sehlopha sa tšehetso ea bareki sa Livestock Trading se ikemiselitse ho u thusa.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Lipehelo tsa tšebeliso",
-        "description": "Melao le Maemo a Khoebo ea Liphoofolo."
+        "description": "Melao le Maemo a Khoebo ea Liphoofolo.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "leano la lekunutu",
-        "description": "Leano la lekunutu la Khoebo ea Liphoofolo. Ithute kamoo lintlha tsa hau tsa botho li sirelelitsoeng kateng."
+        "description": "Leano la lekunutu la Khoebo ea Liphoofolo. Ithute kamoo lintlha tsa hau tsa botho li sirelelitsoeng kateng.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Lihlahisoa",
-        "description": "Sheba lenane la liphoofolo tse phelang. Lipapatso tse tšepahalang tsa likhomo, linku le tse ling."
+        "description": "Sheba lenane la liphoofolo tse phelang. Lipapatso tse tšepahalang tsa likhomo, linku le tse ling.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Barekisi",
-        "description": "Fumana barekisi ba liphoofolo ba tšepahalang. Liprofaele le litlhahlobo tse netefalitsoeng tsa barekisi."
+        "description": "Fumana barekisi ba liphoofolo ba tšepahalang. Liprofaele le litlhahlobo tse netefalitsoeng tsa barekisi.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "bajari",
-        "description": "Sibolla lik'hamphani tsa lipalangoang tsa liphoofolo. Tsamaiso ea liphoofolo tse phelang e bolokehileng le ea profeshenale."
+        "description": "Sibolla lik'hamphani tsa lipalangoang tsa liphoofolo. Tsamaiso ea liphoofolo tse phelang e bolokehileng le ea profeshenale.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Batla",
-        "description": "Batla har'a lenane la liphoofolo tse phelang. Patlo e bonolo ka likhetho tsa ho sefa le ho hlopha."
+        "description": "Batla har'a lenane la liphoofolo tse phelang. Patlo e bonolo ka likhetho tsa ho sefa le ho hlopha.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Lipotso Tse Botsoang Khafetsa",
-        "description": "Lipotso le likarabo tse botsoang khafetsa mabapi le khoebo ea liphoofolo tse ruiloeng."
+        "description": "Lipotso le likarabo tse botsoang khafetsa mabapi le khoebo ea liphoofolo tse ruiloeng.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{sehlooho} - E rekisoa",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{lebitso} - Profaele ea Mojari",
         "description": "Profaele ea mopalami oa {name}. Libaka tsa litšebeletso, litlhahlobo le tlhaiso-leseling ea puisano."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Matlafatso",

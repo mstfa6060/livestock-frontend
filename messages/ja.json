@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "私たちについて",
-        "description": "家畜取引について学びましょう。信頼できる生体動物取引プラットフォームです。"
+        "description": "家畜取引について学びましょう。信頼できる生体動物取引プラットフォームです。",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "コミュニケーション",
-        "description": "お問い合わせください。畜産取引のカスタマーサポートチームが喜んでお手伝いいたします。"
+        "description": "お問い合わせください。畜産取引のカスタマーサポートチームが喜んでお手伝いいたします。",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "利用規約",
-        "description": "家畜取引に関する利用規約"
+        "description": "家畜取引に関する利用規約",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "プライバシーポリシー",
-        "description": "家畜取引に関するプライバシーポリシー。お客様の個人データがどのように保護されているかをご確認ください。"
+        "description": "家畜取引に関するプライバシーポリシー。お客様の個人データがどのように保護されているかをご確認ください。",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "製品",
-        "description": "生きた動物の出品情報を閲覧しましょう。牛、羊など、信頼できる広告が揃っています。"
+        "description": "生きた動物の出品情報を閲覧しましょう。牛、羊など、信頼できる広告が揃っています。",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "販売者",
-        "description": "信頼できる動物販売業者を見つけましょう。認証済みの販売業者プロフィールとレビュー。"
+        "description": "信頼できる動物販売業者を見つけましょう。認証済みの販売業者プロフィールとレビュー。",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "輸送業者",
-        "description": "動物輸送会社を探しましょう。安全でプロフェッショナルな生体動物輸送サービスを提供しています。"
+        "description": "動物輸送会社を探しましょう。安全でプロフェッショナルな生体動物輸送サービスを提供しています。",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "検索",
-        "description": "生きた動物の出品リストを検索できます。絞り込みや並べ替えオプションで簡単に検索できます。"
+        "description": "生きた動物の出品リストを検索できます。絞り込みや並べ替えオプションで簡単に検索できます。",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "よくある質問",
-        "description": "家畜取引に関するよくある質問とその回答。"
+        "description": "家畜取引に関するよくある質問とその回答。",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - 販売中",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - キャリアプロファイル",
         "description": "{name} 運送業者のプロフィール。サービス提供地域、レビュー、連絡先情報。"
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "ブースト",

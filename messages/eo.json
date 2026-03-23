@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Pri Ni",
-        "description": "Lernu pri Brutkomerco. Fidinda platformo por komerci vivajn bestojn."
+        "description": "Lernu pri Brutkomerco. Fidinda platformo por komerci vivajn bestojn.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Komunikado",
-        "description": "Kontaktu nin. La klienta subtena teamo de Livestock Trading pretas helpi vin."
+        "description": "Kontaktu nin. La klienta subtena teamo de Livestock Trading pretas helpi vin.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Kondiĉoj de Uzo",
-        "description": "Kondiĉoj de Komercado de Brutaro."
+        "description": "Kondiĉoj de Komercado de Brutaro.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Regularo pri Privateco",
-        "description": "Regularo pri privateco de Livestock Trading. Lernu kiel viaj personaj datumoj estas protektataj."
+        "description": "Regularo pri privateco de Livestock Trading. Lernu kiel viaj personaj datumoj estas protektataj.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Produktoj",
-        "description": "Foliumu listojn de vivaj bestoj. Fidindaj anoncoj por bovoj, ŝafoj kaj pli."
+        "description": "Foliumu listojn de vivaj bestoj. Fidindaj anoncoj por bovoj, ŝafoj kaj pli.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Vendistoj",
-        "description": "Malkovru fidindajn bestovendistojn. Konfirmitaj vendistaj profiloj kaj recenzoj."
+        "description": "Malkovru fidindajn bestovendistojn. Konfirmitaj vendistaj profiloj kaj recenzoj.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "transportiloj",
-        "description": "Malkovru bestotransportajn kompaniojn. Sekura kaj profesia transportado de vivaj bestoj."
+        "description": "Malkovru bestotransportajn kompaniojn. Sekura kaj profesia transportado de vivaj bestoj.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Serĉi",
-        "description": "Serĉu inter listoj de vivaj bestoj. Facila serĉo per filtraj kaj ordigaj ebloj."
+        "description": "Serĉu inter listoj de vivaj bestoj. Facila serĉo per filtraj kaj ordigaj ebloj.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Oftaj Demandoj",
-        "description": "Oftaj demandoj kaj respondoj pri brutkomerco."
+        "description": "Oftaj demandoj kaj respondoj pri brutkomerco.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{titolo} - Vendebla",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{nomo} - Profilo de la portanto",
         "description": "Profilo de transportisto {name}. Servregionoj, recenzoj kaj kontaktinformoj."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Akcelo",

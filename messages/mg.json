@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Momba anay",
-        "description": "Mianara momba ny Varotra Biby Fiompy. Sehatra azo itokisana amin'ny varotra biby velona."
+        "description": "Mianara momba ny Varotra Biby Fiompy. Sehatra azo itokisana amin'ny varotra biby velona.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Communication",
-        "description": "Mifandraisa aminay. Vonona hanampy anao ny ekipa mpanohana ny mpanjifa ao amin'ny Livestock Trading."
+        "description": "Mifandraisa aminay. Vonona hanampy anao ny ekipa mpanohana ny mpanjifa ao amin'ny Livestock Trading.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Fepetra fampiasana",
-        "description": "Fepetra sy fifanarahana momba ny varotra biby fiompy."
+        "description": "Fepetra sy fifanarahana momba ny varotra biby fiompy.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "politika fiarovana fiainan'olona",
-        "description": "Politika momba ny fiainana manokana momba ny varotra biby fiompy. Fantaro ny fomba hiarovana ny angon-drakitrao manokana."
+        "description": "Politika momba ny fiainana manokana momba ny varotra biby fiompy. Fantaro ny fomba hiarovana ny angon-drakitrao manokana.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Products",
-        "description": "Jereo ireo lisitry ny biby mivantana. Dokambarotra azo itokisana ho an'ny omby, ondry, sy ny maro hafa."
+        "description": "Jereo ireo lisitry ny biby mivantana. Dokambarotra azo itokisana ho an'ny omby, ondry, sy ny maro hafa.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Mpivarotra",
-        "description": "Mitadiava mpivarotra biby azo itokisana. Mombamomba sy hevitra momba ny mpivarotra voamarina."
+        "description": "Mitadiava mpivarotra biby azo itokisana. Mombamomba sy hevitra momba ny mpivarotra voamarina.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "ny mpitatitra",
-        "description": "Mitadiava orinasa fitaterana biby. Fitaterana biby velona azo antoka sy matihanina."
+        "description": "Mitadiava orinasa fitaterana biby. Fitaterana biby velona azo antoka sy matihanina.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "karohy",
-        "description": "Fikarohana eo amin'ireo lisitry ny biby velona. Fikarohana mora miaraka amin'ny safidy fanivanana sy fanasokajiana."
+        "description": "Fikarohana eo amin'ireo lisitry ny biby velona. Fikarohana mora miaraka amin'ny safidy fanivanana sy fanasokajiana.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Fanontaniana Matetika Apetraka",
-        "description": "Fanontaniana sy valiny matetika apetraka momba ny varotra biby fiompy."
+        "description": "Fanontaniana sy valiny matetika apetraka momba ny varotra biby fiompy.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Amidy",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{anarana} - Mombamomba ny mpitatitra",
         "description": "Momba ny mpitatitra {name}. Faritra misy ny serivisy, hevitra ary fampahalalana momba ny fifandraisana."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "tosika",

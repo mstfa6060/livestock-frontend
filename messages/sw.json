@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Kuhusu Sisi",
-        "description": "Jifunze kuhusu Biashara ya Mifugo. Jukwaa la biashara ya wanyama hai linaloaminika."
+        "description": "Jifunze kuhusu Biashara ya Mifugo. Jukwaa la biashara ya wanyama hai linaloaminika.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Mawasiliano",
-        "description": "Wasiliana nasi. Timu ya usaidizi kwa wateja ya Livestock Trading iko tayari kukusaidia."
+        "description": "Wasiliana nasi. Timu ya usaidizi kwa wateja ya Livestock Trading iko tayari kukusaidia.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Masharti ya Matumizi",
-        "description": "Sheria na Masharti ya Biashara ya Mifugo."
+        "description": "Sheria na Masharti ya Biashara ya Mifugo.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Sera ya Faragha",
-        "description": "Sera ya faragha ya Biashara ya Mifugo. Jifunze jinsi data yako binafsi inavyolindwa."
+        "description": "Sera ya faragha ya Biashara ya Mifugo. Jifunze jinsi data yako binafsi inavyolindwa.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Bidhaa",
-        "description": "Vinjari orodha za wanyama hai. Matangazo ya kuaminika ya ng'ombe, kondoo, na zaidi."
+        "description": "Vinjari orodha za wanyama hai. Matangazo ya kuaminika ya ng'ombe, kondoo, na zaidi.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Wauzaji",
-        "description": "Gundua wauzaji wa wanyama wanaoaminika. Wasifu na maoni ya muuzaji yaliyothibitishwa."
+        "description": "Gundua wauzaji wa wanyama wanaoaminika. Wasifu na maoni ya muuzaji yaliyothibitishwa.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "wasafirishaji",
-        "description": "Gundua kampuni za usafiri wa wanyama. Usafiri salama na wa kitaalamu wa wanyama hai."
+        "description": "Gundua kampuni za usafiri wa wanyama. Usafiri salama na wa kitaalamu wa wanyama hai.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Tafuta",
-        "description": "Tafuta miongoni mwa orodha za wanyama hai. Utafutaji rahisi kwa chaguzi za kuchuja na kupanga."
+        "description": "Tafuta miongoni mwa orodha za wanyama hai. Utafutaji rahisi kwa chaguzi za kuchuja na kupanga.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Maswali Yanayoulizwa Mara kwa Mara",
-        "description": "Maswali na majibu yanayoulizwa mara kwa mara kuhusu biashara ya mifugo."
+        "description": "Maswali na majibu yanayoulizwa mara kwa mara kuhusu biashara ya mifugo.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Inauzwa",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{jina} - Wasifu wa Mtoa Huduma",
         "description": "Wasifu wa msafirishaji wa {name}. Maeneo ya huduma, mapitio, na maelezo ya mawasiliano."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Boost",

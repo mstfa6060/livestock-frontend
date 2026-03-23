@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Amdanom Ni",
-        "description": "Dysgwch am Fasnachu Da Byw. Platfform masnachu anifeiliaid byw dibynadwy."
+        "description": "Dysgwch am Fasnachu Da Byw. Platfform masnachu anifeiliaid byw dibynadwy.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Cyfathrebu",
-        "description": "Cysylltwch â ni. Mae tîm cymorth cwsmeriaid Masnachu Da Byw yn barod i'ch cynorthwyo."
+        "description": "Cysylltwch â ni. Mae tîm cymorth cwsmeriaid Masnachu Da Byw yn barod i'ch cynorthwyo.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Telerau Defnyddio",
-        "description": "Telerau ac Amodau Masnachu Da Byw."
+        "description": "Telerau ac Amodau Masnachu Da Byw.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Polisi Preifatrwydd",
-        "description": "Polisi preifatrwydd Masnachu Da Byw. Dysgwch sut mae eich data personol yn cael ei ddiogelu."
+        "description": "Polisi preifatrwydd Masnachu Da Byw. Dysgwch sut mae eich data personol yn cael ei ddiogelu.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Cynhyrchion",
-        "description": "Pori rhestrau anifeiliaid byw. Hysbysebion dibynadwy ar gyfer gwartheg, defaid, a mwy."
+        "description": "Pori rhestrau anifeiliaid byw. Hysbysebion dibynadwy ar gyfer gwartheg, defaid, a mwy.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Gwerthwyr",
-        "description": "Darganfyddwch werthwyr anifeiliaid dibynadwy. Proffiliau ac adolygiadau gwerthwyr wedi'u gwirio."
+        "description": "Darganfyddwch werthwyr anifeiliaid dibynadwy. Proffiliau ac adolygiadau gwerthwyr wedi'u gwirio.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "cludwyr",
-        "description": "Darganfyddwch gwmnïau cludo anifeiliaid. Cludiant anifeiliaid byw diogel a phroffesiynol."
+        "description": "Darganfyddwch gwmnïau cludo anifeiliaid. Cludiant anifeiliaid byw diogel a phroffesiynol.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Chwilio",
-        "description": "Chwiliwch ymhlith rhestrau anifeiliaid byw. Chwilio hawdd gydag opsiynau hidlo a didoli."
+        "description": "Chwiliwch ymhlith rhestrau anifeiliaid byw. Chwilio hawdd gydag opsiynau hidlo a didoli.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Cwestiynau Cyffredin",
-        "description": "Cwestiynau ac atebion cyffredin am fasnachu da byw."
+        "description": "Cwestiynau ac atebion cyffredin am fasnachu da byw.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{teitl} - Ar Werth",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - Proffil Cludwr",
         "description": "Proffil cludwr {name}. Ardaloedd gwasanaeth, adolygiadau, a gwybodaeth gyswllt."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Hwb",

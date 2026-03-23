@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Σχετικά με εμάς",
-        "description": "Μάθετε για το εμπόριο ζώων. Μια αξιόπιστη πλατφόρμα εμπορίας ζώντων ζώων."
+        "description": "Μάθετε για το εμπόριο ζώων. Μια αξιόπιστη πλατφόρμα εμπορίας ζώντων ζώων.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Ανακοίνωση",
-        "description": "Επικοινωνήστε μαζί μας. Η ομάδα υποστήριξης πελατών της Livestock Trading είναι έτοιμη να σας βοηθήσει."
+        "description": "Επικοινωνήστε μαζί μας. Η ομάδα υποστήριξης πελατών της Livestock Trading είναι έτοιμη να σας βοηθήσει.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Όροι Χρήσης",
-        "description": "Όροι και Προϋποθέσεις Εμπορίας Ζώων."
+        "description": "Όροι και Προϋποθέσεις Εμπορίας Ζώων.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Πολιτική Απορρήτου",
-        "description": "Πολιτική απορρήτου για το εμπόριο ζώων. Μάθετε πώς προστατεύονται τα προσωπικά σας δεδομένα."
+        "description": "Πολιτική απορρήτου για το εμπόριο ζώων. Μάθετε πώς προστατεύονται τα προσωπικά σας δεδομένα.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Προϊόντα",
-        "description": "Περιηγηθείτε σε καταχωρίσεις ζώντων ζώων. Αξιόπιστες διαφημίσεις για βοοειδή, πρόβατα και άλλα."
+        "description": "Περιηγηθείτε σε καταχωρίσεις ζώντων ζώων. Αξιόπιστες διαφημίσεις για βοοειδή, πρόβατα και άλλα.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Πωλητές",
-        "description": "Ανακαλύψτε αξιόπιστους πωλητές ζώων. Επαληθευμένα προφίλ πωλητών και κριτικές."
+        "description": "Ανακαλύψτε αξιόπιστους πωλητές ζώων. Επαληθευμένα προφίλ πωλητών και κριτικές.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "μεταφορείς",
-        "description": "Ανακαλύψτε εταιρείες μεταφοράς ζώων. Ασφαλής και επαγγελματική μεταφορά ζώντων ζώων."
+        "description": "Ανακαλύψτε εταιρείες μεταφοράς ζώων. Ασφαλής και επαγγελματική μεταφορά ζώντων ζώων.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Ερευνα",
-        "description": "Αναζήτηση ανάμεσα σε καταχωρίσεις ζωντανών ζώων. Εύκολη αναζήτηση με επιλογές φιλτραρίσματος και ταξινόμησης."
+        "description": "Αναζήτηση ανάμεσα σε καταχωρίσεις ζωντανών ζώων. Εύκολη αναζήτηση με επιλογές φιλτραρίσματος και ταξινόμησης.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Συχνές ερωτήσεις",
-        "description": "Συχνές ερωτήσεις και απαντήσεις σχετικά με το εμπόριο ζώων."
+        "description": "Συχνές ερωτήσεις και απαντήσεις σχετικά με το εμπόριο ζώων.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{τίτλος} - Προς πώληση",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - Προφίλ μεταφορέα",
         "description": "Προφίλ μεταφορέα {name}. Περιοχές εξυπηρέτησης, αξιολογήσεις και στοιχεία επικοινωνίας."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Ωθηση",

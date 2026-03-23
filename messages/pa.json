@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "ਸਾਡੇ ਬਾਰੇ",
-        "description": "ਪਸ਼ੂਧਨ ਵਪਾਰ ਬਾਰੇ ਜਾਣੋ। ਇੱਕ ਭਰੋਸੇਮੰਦ ਜੀਵਤ ਜਾਨਵਰ ਵਪਾਰ ਪਲੇਟਫਾਰਮ।"
+        "description": "ਪਸ਼ੂਧਨ ਵਪਾਰ ਬਾਰੇ ਜਾਣੋ। ਇੱਕ ਭਰੋਸੇਮੰਦ ਜੀਵਤ ਜਾਨਵਰ ਵਪਾਰ ਪਲੇਟਫਾਰਮ।",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "ਸੰਚਾਰ",
-        "description": "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। ਲਾਈਵਸਟਾਕ ਟ੍ਰੇਡਿੰਗ ਗਾਹਕ ਸਹਾਇਤਾ ਟੀਮ ਤੁਹਾਡੀ ਮਦਦ ਕਰਨ ਲਈ ਤਿਆਰ ਹੈ।"
+        "description": "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। ਲਾਈਵਸਟਾਕ ਟ੍ਰੇਡਿੰਗ ਗਾਹਕ ਸਹਾਇਤਾ ਟੀਮ ਤੁਹਾਡੀ ਮਦਦ ਕਰਨ ਲਈ ਤਿਆਰ ਹੈ।",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ",
-        "description": "ਪਸ਼ੂ ਧਨ ਵਪਾਰ ਦੇ ਨਿਯਮ ਅਤੇ ਸ਼ਰਤਾਂ।"
+        "description": "ਪਸ਼ੂ ਧਨ ਵਪਾਰ ਦੇ ਨਿਯਮ ਅਤੇ ਸ਼ਰਤਾਂ।",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "ਪਰਾਈਵੇਟ ਨੀਤੀ",
-        "description": "ਪਸ਼ੂਧਨ ਵਪਾਰ ਗੋਪਨੀਯਤਾ ਨੀਤੀ। ਜਾਣੋ ਕਿ ਤੁਹਾਡਾ ਨਿੱਜੀ ਡੇਟਾ ਕਿਵੇਂ ਸੁਰੱਖਿਅਤ ਹੈ।"
+        "description": "ਪਸ਼ੂਧਨ ਵਪਾਰ ਗੋਪਨੀਯਤਾ ਨੀਤੀ। ਜਾਣੋ ਕਿ ਤੁਹਾਡਾ ਨਿੱਜੀ ਡੇਟਾ ਕਿਵੇਂ ਸੁਰੱਖਿਅਤ ਹੈ।",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "ਉਤਪਾਦ",
-        "description": "ਜੀਵਤ ਜਾਨਵਰਾਂ ਦੀਆਂ ਸੂਚੀਆਂ ਬ੍ਰਾਊਜ਼ ਕਰੋ। ਪਸ਼ੂਆਂ, ਭੇਡਾਂ ਅਤੇ ਹੋਰ ਬਹੁਤ ਸਾਰੇ ਲਈ ਭਰੋਸੇਯੋਗ ਇਸ਼ਤਿਹਾਰ।"
+        "description": "ਜੀਵਤ ਜਾਨਵਰਾਂ ਦੀਆਂ ਸੂਚੀਆਂ ਬ੍ਰਾਊਜ਼ ਕਰੋ। ਪਸ਼ੂਆਂ, ਭੇਡਾਂ ਅਤੇ ਹੋਰ ਬਹੁਤ ਸਾਰੇ ਲਈ ਭਰੋਸੇਯੋਗ ਇਸ਼ਤਿਹਾਰ।",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "ਵਿਕਰੇਤਾ",
-        "description": "ਭਰੋਸੇਯੋਗ ਜਾਨਵਰ ਵੇਚਣ ਵਾਲਿਆਂ ਦੀ ਖੋਜ ਕਰੋ। ਪ੍ਰਮਾਣਿਤ ਵਿਕਰੇਤਾ ਪ੍ਰੋਫਾਈਲ ਅਤੇ ਸਮੀਖਿਆਵਾਂ।"
+        "description": "ਭਰੋਸੇਯੋਗ ਜਾਨਵਰ ਵੇਚਣ ਵਾਲਿਆਂ ਦੀ ਖੋਜ ਕਰੋ। ਪ੍ਰਮਾਣਿਤ ਵਿਕਰੇਤਾ ਪ੍ਰੋਫਾਈਲ ਅਤੇ ਸਮੀਖਿਆਵਾਂ।",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "ਟਰਾਂਸਪੋਰਟਰ",
-        "description": "ਜਾਨਵਰਾਂ ਦੀ ਆਵਾਜਾਈ ਕੰਪਨੀਆਂ ਦੀ ਖੋਜ ਕਰੋ। ਸੁਰੱਖਿਅਤ ਅਤੇ ਪੇਸ਼ੇਵਰ ਲਾਈਵ ਜਾਨਵਰਾਂ ਦੀ ਆਵਾਜਾਈ।"
+        "description": "ਜਾਨਵਰਾਂ ਦੀ ਆਵਾਜਾਈ ਕੰਪਨੀਆਂ ਦੀ ਖੋਜ ਕਰੋ। ਸੁਰੱਖਿਅਤ ਅਤੇ ਪੇਸ਼ੇਵਰ ਲਾਈਵ ਜਾਨਵਰਾਂ ਦੀ ਆਵਾਜਾਈ।",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "ਖੋਜ",
-        "description": "ਜੀਵਤ ਜਾਨਵਰਾਂ ਦੀਆਂ ਸੂਚੀਆਂ ਵਿੱਚੋਂ ਖੋਜ ਕਰੋ। ਫਿਲਟਰਿੰਗ ਅਤੇ ਛਾਂਟੀ ਦੇ ਵਿਕਲਪਾਂ ਨਾਲ ਆਸਾਨ ਖੋਜ।"
+        "description": "ਜੀਵਤ ਜਾਨਵਰਾਂ ਦੀਆਂ ਸੂਚੀਆਂ ਵਿੱਚੋਂ ਖੋਜ ਕਰੋ। ਫਿਲਟਰਿੰਗ ਅਤੇ ਛਾਂਟੀ ਦੇ ਵਿਕਲਪਾਂ ਨਾਲ ਆਸਾਨ ਖੋਜ।",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "ਅਕਸਰ ਪੁੱਛੇ ਜਾਣ ਵਾਲੇ ਸਵਾਲ",
-        "description": "ਪਸ਼ੂਆਂ ਦੇ ਵਪਾਰ ਬਾਰੇ ਅਕਸਰ ਪੁੱਛੇ ਜਾਂਦੇ ਸਵਾਲ ਅਤੇ ਜਵਾਬ।"
+        "description": "ਪਸ਼ੂਆਂ ਦੇ ਵਪਾਰ ਬਾਰੇ ਅਕਸਰ ਪੁੱਛੇ ਜਾਂਦੇ ਸਵਾਲ ਅਤੇ ਜਵਾਬ।",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - ਵਿਕਰੀ ਲਈ",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{ਨਾਮ} - ਕੈਰੀਅਰ ਪ੍ਰੋਫਾਈਲ",
         "description": "{name} ਟ੍ਰਾਂਸਪੋਰਟਰ ਪ੍ਰੋਫਾਈਲ। ਸੇਵਾ ਖੇਤਰ, ਸਮੀਖਿਆਵਾਂ, ਅਤੇ ਸੰਪਰਕ ਜਾਣਕਾਰੀ।"
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "ਬੂਸਟ",

@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Oer ús",
-        "description": "Learje oer hannel yn fee. In betrouber platfoarm foar hannel yn libbene bisten."
+        "description": "Learje oer hannel yn fee. In betrouber platfoarm foar hannel yn libbene bisten.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Kommunikaasje",
-        "description": "Nim kontakt mei ús op. It klanttsjinstteam fan Livestock Trading stiet klear om jo te helpen."
+        "description": "Nim kontakt mei ús op. It klanttsjinstteam fan Livestock Trading stiet klear om jo te helpen.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Gebrûksbetingsten",
-        "description": "Betingsten en Kondysjes foar Feehannel."
+        "description": "Betingsten en Kondysjes foar Feehannel.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Privacybelied",
-        "description": "Privacybelied foar feehannel. Learje hoe't jo persoanlike gegevens beskerme wurde."
+        "description": "Privacybelied foar feehannel. Learje hoe't jo persoanlike gegevens beskerme wurde.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Produkten",
-        "description": "Blêdzje troch advertinsjes fan libbene bisten. Betroubere advertinsjes foar fee, skiep en mear."
+        "description": "Blêdzje troch advertinsjes fan libbene bisten. Betroubere advertinsjes foar fee, skiep en mear.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Ferkeapers",
-        "description": "Untdek betroubere dierferkeapers. Ferifiearre ferkeapersprofilen en resinsjes."
+        "description": "Untdek betroubere dierferkeapers. Ferifiearre ferkeapersprofilen en resinsjes.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "ferfierders",
-        "description": "Untdek bedriuwen foar bisteferfier. Feilich en profesjoneel ferfier fan libbene bisten."
+        "description": "Untdek bedriuwen foar bisteferfier. Feilich en profesjoneel ferfier fan libbene bisten.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Sykje",
-        "description": "Sykje tusken listings fan libbene bisten. Maklik sykjen mei filter- en sortearopsjes."
+        "description": "Sykje tusken listings fan libbene bisten. Maklik sykjen mei filter- en sortearopsjes.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Faak stelde fragen",
-        "description": "Faak stelde fragen en antwurden oer feehannel."
+        "description": "Faak stelde fragen en antwurden oer feehannel.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{titel} - Te keap",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{namme} - Ferfierderprofyl",
         "description": "Profyl fan ferfierder fan {name}. Tsjinstgebieten, resinsjes en kontaktgegevens."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Fersterkje",

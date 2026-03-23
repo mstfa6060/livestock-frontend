@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Пра нас",
-        "description": "Даведайцеся пра гандаль жывёлай. Надзейная платформа для гандлю жывымі жывёламі."
+        "description": "Даведайцеся пра гандаль жывёлай. Надзейная платформа для гандлю жывымі жывёламі.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Камунікацыя",
-        "description": "Звяжыцеся з намі. Служба падтрымкі кліентаў Livestock Trading гатова дапамагчы вам."
+        "description": "Звяжыцеся з намі. Служба падтрымкі кліентаў Livestock Trading гатова дапамагчы вам.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Умовы карыстання",
-        "description": "Умовы гандлю жывёлай."
+        "description": "Умовы гандлю жывёлай.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Палітыка прыватнасці",
-        "description": "Палітыка прыватнасці гандлю жывёлай. Даведайцеся, як абаронены вашы асабістыя дадзеныя."
+        "description": "Палітыка прыватнасці гандлю жывёлай. Даведайцеся, як абаронены вашы асабістыя дадзеныя.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Прадукты",
-        "description": "Праглядзіце аб'явы аб продажы жывых жывёл. Надзейныя аб'явы аб продажы буйной рагатай жывёлы, авечак і іншага."
+        "description": "Праглядзіце аб'явы аб продажы жывых жывёл. Надзейныя аб'явы аб продажы буйной рагатай жывёлы, авечак і іншага.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Прадаўцы",
-        "description": "Знайдзіце надзейных прадаўцоў жывёл. Правераныя профілі прадаўцоў і водгукі."
+        "description": "Знайдзіце надзейных прадаўцоў жывёл. Правераныя профілі прадаўцоў і водгукі.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "транспартнікі",
-        "description": "Адкрыйце для сябе кампаніі па перавозцы жывёл. Бяспечная і прафесійная перавозка жывых жывёл."
+        "description": "Адкрыйце для сябе кампаніі па перавозцы жывёл. Бяспечная і прафесійная перавозка жывых жывёл.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Пошук",
-        "description": "Пошук сярод аб'яваў аб жывых жывёлах. Зручны пошук з опцыямі фільтрацыі і сартавання."
+        "description": "Пошук сярод аб'яваў аб жывых жывёлах. Зручны пошук з опцыямі фільтрацыі і сартавання.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Часта задаваныя пытанні",
-        "description": "Часта задаваныя пытанні і адказы аб гандлі жывёлай."
+        "description": "Часта задаваныя пытанні і адказы аб гандлі жывёлай.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - На продаж",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - Профіль аператара",
         "description": "Профіль перавозчыка {name}. Зоны абслугоўвання, водгукі і кантактная інфармацыя."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Павышэнне",

@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Nantu à noi",
-        "description": "Amparate nantu à u cummerciu di bestiame. Una piattaforma affidabile di cummerciu di animali vivi."
+        "description": "Amparate nantu à u cummerciu di bestiame. Una piattaforma affidabile di cummerciu di animali vivi.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Cumunicazione",
-        "description": "Cuntattateci. A squadra di supportu à i clienti di Livestock Trading hè pronta à aiutà vi."
+        "description": "Cuntattateci. A squadra di supportu à i clienti di Livestock Trading hè pronta à aiutà vi.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Cundizioni d'usu",
-        "description": "Termini è Cundizioni di Cummerciu di Bestiame."
+        "description": "Termini è Cundizioni di Cummerciu di Bestiame.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Pulitica di privacy",
-        "description": "Pulitica di privacy di u cummerciu di bestiame. Amparate cumu i vostri dati persunali sò prutetti."
+        "description": "Pulitica di privacy di u cummerciu di bestiame. Amparate cumu i vostri dati persunali sò prutetti.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Prodotti",
-        "description": "Sfoglia l'annunzii di l'animali vivi. Annunci affidabili per bovini, pecure è assai di più."
+        "description": "Sfoglia l'annunzii di l'animali vivi. Annunci affidabili per bovini, pecure è assai di più.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Venditori",
-        "description": "Scuprite venditori d'animali affidabili. Profili è recensioni di venditori verificati."
+        "description": "Scuprite venditori d'animali affidabili. Profili è recensioni di venditori verificati.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "trasportatori",
-        "description": "Scuprite e cumpagnie di trasportu d'animali. Trasportu d'animali vivi sicuru è prufessiunale."
+        "description": "Scuprite e cumpagnie di trasportu d'animali. Trasportu d'animali vivi sicuru è prufessiunale.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Ricerca",
-        "description": "Cerca trà l'elenchi d'animali vivi. Ricerca faciule cù opzioni di filtraggio è ordinamentu."
+        "description": "Cerca trà l'elenchi d'animali vivi. Ricerca faciule cù opzioni di filtraggio è ordinamentu.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Dumande Frequenti",
-        "description": "Dumande è risposte frequenti nantu à u cummerciu di bestiame."
+        "description": "Dumande è risposte frequenti nantu à u cummerciu di bestiame.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{titulu} - In vendita",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{nome} - Profilu di u Trasportatore",
         "description": "Prufilu di trasportatore {name}. Zone di serviziu, recensioni è informazioni di cuntattu."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Spinta",

@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Om oss",
-        "description": "Lär dig mer om boskapshandel. En pålitlig plattform för handel med levande djur."
+        "description": "Lär dig mer om boskapshandel. En pålitlig plattform för handel med levande djur.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Kommunikation",
-        "description": "Kontakta oss. Kundsupportteamet för Livestock Trading är redo att hjälpa dig."
+        "description": "Kontakta oss. Kundsupportteamet för Livestock Trading är redo att hjälpa dig.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Användarvillkor",
-        "description": "Villkor för boskapshandel."
+        "description": "Villkor för boskapshandel.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Integritetspolicy",
-        "description": "Integritetspolicy för boskapshandel. Läs mer om hur dina personuppgifter skyddas."
+        "description": "Integritetspolicy för boskapshandel. Läs mer om hur dina personuppgifter skyddas.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Produkter",
-        "description": "Bläddra bland annonser för levande djur. Pålitliga annonser för nötkreatur, får och mer."
+        "description": "Bläddra bland annonser för levande djur. Pålitliga annonser för nötkreatur, får och mer.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Säljare",
-        "description": "Upptäck pålitliga djurförsäljare. Verifierade säljarprofiler och recensioner."
+        "description": "Upptäck pålitliga djurförsäljare. Verifierade säljarprofiler och recensioner.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "transportörer",
-        "description": "Upptäck djurtransportföretag. Säker och professionell transport av levande djur."
+        "description": "Upptäck djurtransportföretag. Säker och professionell transport av levande djur.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Söka",
-        "description": "Sök bland listor över levande djur. Enkel sökning med filtrerings- och sorteringsalternativ."
+        "description": "Sök bland listor över levande djur. Enkel sökning med filtrerings- och sorteringsalternativ.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Vanliga frågor",
-        "description": "Vanliga frågor och svar om handel med boskap."
+        "description": "Vanliga frågor och svar om handel med boskap.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{titel} - Till salu",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{namn} - Operatörsprofil",
         "description": "Profil för transportören {name}. Serviceområden, recensioner och kontaktuppgifter."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Lyft",

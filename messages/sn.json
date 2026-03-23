@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Nezvedu",
-        "description": "Dzidza nezve Kutengeserana Kwezvipfuyo. Puratifomu yakavimbika yekutengesa mhuka mhenyu."
+        "description": "Dzidza nezve Kutengeserana Kwezvipfuyo. Puratifomu yakavimbika yekutengesa mhuka mhenyu.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Kutaurirana",
-        "description": "Tibatei. Chikwata chekubatsira vatengi cheLivestock Trading chakagadzirira kukubatsirai."
+        "description": "Tibatei. Chikwata chekubatsira vatengi cheLivestock Trading chakagadzirira kukubatsirai.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Mitemo Yekushandisa",
-        "description": "Mitemo Nemirau Yekutengeserana Kwezvipfuyo."
+        "description": "Mitemo Nemirau Yekutengeserana Kwezvipfuyo.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Mutemo wekuchengetedza ruzivo",
-        "description": "Mutemo wekuchengetedza ruzivo rwezvipfuyo. Dzidza kuti ruzivo rwako rwepachivande runodzivirirwa sei."
+        "description": "Mutemo wekuchengetedza ruzivo rwezvipfuyo. Dzidza kuti ruzivo rwako rwepachivande runodzivirirwa sei.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Zvigadzirwa",
-        "description": "Tarisa zvinyorwa zvemhuka dziri mhenyu. Zviziviso zvinovimbika zvemombe, makwai, nezvimwe."
+        "description": "Tarisa zvinyorwa zvemhuka dziri mhenyu. Zviziviso zvinovimbika zvemombe, makwai, nezvimwe.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Vatengesi",
-        "description": "Tsvaga vatengesi vemhuka vakavimbika. Maprofile emutengesi akasimbiswa uye wongororo."
+        "description": "Tsvaga vatengesi vemhuka vakavimbika. Maprofile emutengesi akasimbiswa uye wongororo.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "vatakuri",
-        "description": "Tsvaga makambani ekutakura mhuka. Kutakurwa kwemhuka mhenyu kwakachengeteka uye kwehunyanzvi."
+        "description": "Tsvaga makambani ekutakura mhuka. Kutakurwa kwemhuka mhenyu kwakachengeteka uye kwehunyanzvi.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Tsvaga",
-        "description": "Tsvaga pakati pemhuka dziri mhenyu. Kutsvaga kuri nyore nesarudzo dzekusefa nekusarudza."
+        "description": "Tsvaga pakati pemhuka dziri mhenyu. Kutsvaga kuri nyore nesarudzo dzekusefa nekusarudza.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Mibvunzo Inowanzo bvunzwa",
-        "description": "Mibvunzo nemhinduro zvinowanzo bvunzwa nezvekutengeserana kwezvipfuyo."
+        "description": "Mibvunzo nemhinduro zvinowanzo bvunzwa nezvekutengeserana kwezvipfuyo.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Zviri Kutengeswa",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{zita} - Profile yeMutakuri",
         "description": "{name} purofayi yemutakuri. Nzvimbo dzebasa, ongororo, uye ruzivo rwekuonana."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Wedzera",

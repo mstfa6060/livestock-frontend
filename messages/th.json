@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "เกี่ยวกับเรา",
-        "description": "เรียนรู้เกี่ยวกับการซื้อขายปศุสัตว์ แพลตฟอร์มการซื้อขายสัตว์มีชีวิตที่น่าเชื่อถือ"
+        "description": "เรียนรู้เกี่ยวกับการซื้อขายปศุสัตว์ แพลตฟอร์มการซื้อขายสัตว์มีชีวิตที่น่าเชื่อถือ",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "การสื่อสาร",
-        "description": "ติดต่อเราได้เลย ทีมงานฝ่ายบริการลูกค้าของ Livestock Trading พร้อมให้ความช่วยเหลือคุณ"
+        "description": "ติดต่อเราได้เลย ทีมงานฝ่ายบริการลูกค้าของ Livestock Trading พร้อมให้ความช่วยเหลือคุณ",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "ข้อกำหนดในการใช้งาน",
-        "description": "ข้อกำหนดและเงื่อนไขการซื้อขายปศุสัตว์"
+        "description": "ข้อกำหนดและเงื่อนไขการซื้อขายปศุสัตว์",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "นโยบายความเป็นส่วนตัว",
-        "description": "นโยบายความเป็นส่วนตัวของการซื้อขายปศุสัตว์ เรียนรู้ว่าข้อมูลส่วนบุคคลของคุณได้รับการคุ้มครองอย่างไร"
+        "description": "นโยบายความเป็นส่วนตัวของการซื้อขายปศุสัตว์ เรียนรู้ว่าข้อมูลส่วนบุคคลของคุณได้รับการคุ้มครองอย่างไร",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "สินค้า",
-        "description": "เรียกดูรายการขายสัตว์เลี้ยงมีชีวิต โฆษณาที่น่าเชื่อถือสำหรับวัว แกะ และสัตว์อื่นๆ"
+        "description": "เรียกดูรายการขายสัตว์เลี้ยงมีชีวิต โฆษณาที่น่าเชื่อถือสำหรับวัว แกะ และสัตว์อื่นๆ",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "ผู้ขาย",
-        "description": "ค้นหาผู้ขายสัตว์ที่น่าเชื่อถือ ตรวจสอบโปรไฟล์ผู้ขายและรีวิวแล้ว"
+        "description": "ค้นหาผู้ขายสัตว์ที่น่าเชื่อถือ ตรวจสอบโปรไฟล์ผู้ขายและรีวิวแล้ว",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "ผู้ขนส่ง",
-        "description": "ค้นหาบริษัทขนส่งสัตว์ บริการขนส่งสัตว์มีชีวิตที่ปลอดภัยและเป็นมืออาชีพ"
+        "description": "ค้นหาบริษัทขนส่งสัตว์ บริการขนส่งสัตว์มีชีวิตที่ปลอดภัยและเป็นมืออาชีพ",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "ค้นหา",
-        "description": "ค้นหารายชื่อสัตว์เลี้ยงที่มีชีวิตได้อย่างง่ายดาย พร้อมตัวเลือกการกรองและการจัดเรียง"
+        "description": "ค้นหารายชื่อสัตว์เลี้ยงที่มีชีวิตได้อย่างง่ายดาย พร้อมตัวเลือกการกรองและการจัดเรียง",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "คำถามที่พบบ่อย",
-        "description": "คำถามและคำตอบที่พบบ่อยเกี่ยวกับการซื้อขายปศุสัตว์"
+        "description": "คำถามและคำตอบที่พบบ่อยเกี่ยวกับการซื้อขายปศุสัตว์",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - สำหรับขาย",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - ข้อมูลผู้ให้บริการ",
         "description": "โปรไฟล์ผู้ให้บริการขนส่ง {name} พื้นที่ให้บริการ รีวิว และข้อมูลติดต่อ"
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "บูสต์",

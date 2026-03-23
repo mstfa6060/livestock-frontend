@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Մեր մասին",
-        "description": "Իմացեք անասնաբուծական առևտրի մասին։ Հուսալի կենդանի կենդանիների առևտրային հարթակ։"
+        "description": "Իմացեք անասնաբուծական առևտրի մասին։ Հուսալի կենդանի կենդանիների առևտրային հարթակ։",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Հաղորդակցություն",
-        "description": "Կապվեք մեզ հետ։ Անասնաբուծության առևտրի հաճախորդների սպասարկման թիմը պատրաստ է օգնել ձեզ։"
+        "description": "Կապվեք մեզ հետ։ Անասնաբուծության առևտրի հաճախորդների սպասարկման թիմը պատրաստ է օգնել ձեզ։",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Օգտագործման պայմաններ",
-        "description": "Անասնաբուծության առևտրի պայմաններն ու դրույթները։"
+        "description": "Անասնաբուծության առևտրի պայմաններն ու դրույթները։",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Գաղտնիության քաղաքականություն",
-        "description": "Անասնաբուծության առևտրի գաղտնիության քաղաքականություն։ Իմացեք, թե ինչպես են պաշտպանված ձեր անձնական տվյալները։"
+        "description": "Անասնաբուծության առևտրի գաղտնիության քաղաքականություն։ Իմացեք, թե ինչպես են պաշտպանված ձեր անձնական տվյալները։",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Արտադրանքներ",
-        "description": "Դիտեք կենդանի կենդանիների ցուցակները: Հուսալի գովազդներ խոշոր եղջերավոր անասունների, ոչխարների և այլնի համար:"
+        "description": "Դիտեք կենդանի կենդանիների ցուցակները: Հուսալի գովազդներ խոշոր եղջերավոր անասունների, ոչխարների և այլնի համար:",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Վաճառողներ",
-        "description": "Հայտնաբերեք կենդանիների հուսալի վաճառողներ: Հաստատված վաճառողների պրոֆիլներ և ակնարկներ:"
+        "description": "Հայտնաբերեք կենդանիների հուսալի վաճառողներ: Հաստատված վաճառողների պրոֆիլներ և ակնարկներ:",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "փոխադրողներ",
-        "description": "Բացահայտեք կենդանիների տեղափոխման ընկերությունները: Անվտանգ և պրոֆեսիոնալ կենդանի կենդանիների տեղափոխում:"
+        "description": "Բացահայտեք կենդանիների տեղափոխման ընկերությունները: Անվտանգ և պրոֆեսիոնալ կենդանի կենդանիների տեղափոխում:",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Որոնում",
-        "description": "Որոնել կենդանի կենդանիների ցանկերում: Հեշտ որոնում՝ զտման և տեսակավորման տարբերակներով:"
+        "description": "Որոնել կենդանի կենդանիների ցանկերում: Հեշտ որոնում՝ զտման և տեսակավորման տարբերակներով:",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Հաճախակի տրվող հարցեր",
-        "description": "Հաճախակի տրվող հարցեր և պատասխաններ անասնաբուծության վերաբերյալ։"
+        "description": "Հաճախակի տրվող հարցեր և պատասխաններ անասնաբուծության վերաբերյալ։",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{վերնագիր} - Վաճառվում է",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - Օպերատորի պրոֆիլ",
         "description": "{name} փոխադրողի պրոֆիլ։ Սպասարկման տարածքներ, կարծիքներ և կոնտակտային տվյալներ։"
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Խթան",

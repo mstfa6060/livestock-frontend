@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "معلومات عنا",
-        "description": "تعرّف على تجارة المواشي. منصة موثوقة لتجارة الحيوانات الحية."
+        "description": "تعرّف على تجارة المواشي. منصة موثوقة لتجارة الحيوانات الحية.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "تواصل",
-        "description": "تواصل معنا. فريق دعم عملاء تجارة المواشي جاهز لمساعدتك."
+        "description": "تواصل معنا. فريق دعم عملاء تجارة المواشي جاهز لمساعدتك.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "شروط الاستخدام",
-        "description": "شروط وأحكام تجارة المواشي."
+        "description": "شروط وأحكام تجارة المواشي.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "سياسة الخصوصية",
-        "description": "سياسة الخصوصية الخاصة بتجارة المواشي. تعرف على كيفية حماية بياناتك الشخصية."
+        "description": "سياسة الخصوصية الخاصة بتجارة المواشي. تعرف على كيفية حماية بياناتك الشخصية.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "منتجات",
-        "description": "تصفح قوائم الحيوانات الحية. إعلانات موثوقة للماشية والأغنام وغيرها."
+        "description": "تصفح قوائم الحيوانات الحية. إعلانات موثوقة للماشية والأغنام وغيرها.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "البائعون",
-        "description": "اكتشف بائعي الحيوانات الموثوق بهم. ملفات تعريف البائعين الموثقة وتقييماتهم."
+        "description": "اكتشف بائعي الحيوانات الموثوق بهم. ملفات تعريف البائعين الموثقة وتقييماتهم.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "ناقلات",
-        "description": "اكتشف شركات نقل الحيوانات. نقل آمن واحترافي للحيوانات الحية."
+        "description": "اكتشف شركات نقل الحيوانات. نقل آمن واحترافي للحيوانات الحية.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "يبحث",
-        "description": "ابحث بين قوائم الحيوانات الحية. بحث سهل مع خيارات التصفية والفرز."
+        "description": "ابحث بين قوائم الحيوانات الحية. بحث سهل مع خيارات التصفية والفرز.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "الأسئلة الشائعة",
-        "description": "أسئلة وأجوبة متكررة حول تجارة المواشي."
+        "description": "أسئلة وأجوبة متكررة حول تجارة المواشي.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - للبيع",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - ملف تعريف شركة الاتصالات",
         "description": "ملف تعريف شركة النقل {name}. مناطق الخدمة، والتقييمات، ومعلومات الاتصال."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "يعزز",

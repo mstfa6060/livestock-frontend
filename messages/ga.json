@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Fúinn",
-        "description": "Foghlaim faoi Thrádáil Beostoic. Ardán trádála ainmhithe beo iontaofa."
+        "description": "Foghlaim faoi Thrádáil Beostoic. Ardán trádála ainmhithe beo iontaofa.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Cumarsáid",
-        "description": "Déan teagmháil linn. Tá foireann tacaíochta custaiméirí Trádáil Beostoic réidh le cabhrú leat."
+        "description": "Déan teagmháil linn. Tá foireann tacaíochta custaiméirí Trádáil Beostoic réidh le cabhrú leat.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Téarmaí Úsáide",
-        "description": "Téarmaí agus Coinníollacha Trádála Beostoic."
+        "description": "Téarmaí agus Coinníollacha Trádála Beostoic.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Polasaí Príobháideachais",
-        "description": "Polasaí príobháideachta Trádála Beostoic. Foghlaim conas a chosnaítear do shonraí pearsanta."
+        "description": "Polasaí príobháideachta Trádála Beostoic. Foghlaim conas a chosnaítear do shonraí pearsanta.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Táirgí",
-        "description": "Brabhsáil liostaí ainmhithe beo. Fógraí iontaofa le haghaidh eallach, caorach agus níos mó."
+        "description": "Brabhsáil liostaí ainmhithe beo. Fógraí iontaofa le haghaidh eallach, caorach agus níos mó.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Díoltóirí",
-        "description": "Faigh amach díoltóirí ainmhithe iontaofa. Próifílí díoltóirí fíoraithe agus léirmheasanna."
+        "description": "Faigh amach díoltóirí ainmhithe iontaofa. Próifílí díoltóirí fíoraithe agus léirmheasanna.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "iompróirí",
-        "description": "Faigh amach cuideachtaí iompair ainmhithe. Iompar ainmhithe beo sábháilte agus gairmiúil."
+        "description": "Faigh amach cuideachtaí iompair ainmhithe. Iompar ainmhithe beo sábháilte agus gairmiúil.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Cuardaigh",
-        "description": "Cuardaigh i measc liostaí ainmhithe beo. Cuardach éasca le roghanna scagtha agus sórtála."
+        "description": "Cuardaigh i measc liostaí ainmhithe beo. Cuardach éasca le roghanna scagtha agus sórtála.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Ceisteanna Coitianta",
-        "description": "Ceisteanna agus freagraí coitianta faoi thrádáil beostoic."
+        "description": "Ceisteanna agus freagraí coitianta faoi thrádáil beostoic.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{teideal} - Ar Díol",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{ainm} - Próifíl Iompróra",
         "description": "Próifíl iompróra {name}. Limistéir seirbhíse, léirmheasanna agus faisnéis teagmhála."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Borradh",

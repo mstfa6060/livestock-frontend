@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "اسان جي باري ۾",
-        "description": "لائيو اسٽاڪ واپار بابت سکو. هڪ قابل اعتماد لائيو جانورن جي واپار جو پليٽ فارم."
+        "description": "لائيو اسٽاڪ واپار بابت سکو. هڪ قابل اعتماد لائيو جانورن جي واپار جو پليٽ فارم.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "ڪميونيڪيشن",
-        "description": "اسان سان رابطو ڪريو. لائيو اسٽاڪ ٽريڊنگ ڪسٽمر سپورٽ ٽيم توهان جي مدد ڪرڻ لاءِ تيار آهي."
+        "description": "اسان سان رابطو ڪريو. لائيو اسٽاڪ ٽريڊنگ ڪسٽمر سپورٽ ٽيم توهان جي مدد ڪرڻ لاءِ تيار آهي.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "استعمال جا شرط",
-        "description": "جانورن جي واپار جا شرط ۽ ضابطا."
+        "description": "جانورن جي واپار جا شرط ۽ ضابطا.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "رازداري پاليسي",
-        "description": "لائيو اسٽاڪ ٽريڊنگ رازداري پاليسي. سکو ته توهان جو ذاتي ڊيٽا ڪيئن محفوظ آهي."
+        "description": "لائيو اسٽاڪ ٽريڊنگ رازداري پاليسي. سکو ته توهان جو ذاتي ڊيٽا ڪيئن محفوظ آهي.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "مصنوعات",
-        "description": "جيئرن جانورن جي لسٽنگ ڏسو. ڍورن، رڍن، ۽ ٻين لاءِ قابل اعتماد اشتهار."
+        "description": "جيئرن جانورن جي لسٽنگ ڏسو. ڍورن، رڍن، ۽ ٻين لاءِ قابل اعتماد اشتهار.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "وڪرو ڪندڙ",
-        "description": "قابل اعتماد جانورن جي وڪڻندڙن کي ڳوليو. تصديق ٿيل وڪرو ڪندڙ پروفائل ۽ جائزو."
+        "description": "قابل اعتماد جانورن جي وڪڻندڙن کي ڳوليو. تصديق ٿيل وڪرو ڪندڙ پروفائل ۽ جائزو.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "ٽرانسپورٽر",
-        "description": "جانورن جي ٽرانسپورٽ ڪمپنين کي دريافت ڪريو. محفوظ ۽ پيشه ورانه جانورن جي ٽرانسپورٽيشن."
+        "description": "جانورن جي ٽرانسپورٽ ڪمپنين کي دريافت ڪريو. محفوظ ۽ پيشه ورانه جانورن جي ٽرانسپورٽيشن.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "ڳولا",
-        "description": "زنده جانورن جي فهرستن ۾ ڳولا ڪريو. فلٽرنگ ۽ ترتيب ڏيڻ جي اختيارن سان آسان ڳولا."
+        "description": "زنده جانورن جي فهرستن ۾ ڳولا ڪريو. فلٽرنگ ۽ ترتيب ڏيڻ جي اختيارن سان آسان ڳولا.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "وچان وچان سوال ڪرڻ",
-        "description": "جانورن جي واپار بابت اڪثر پڇيا ويندڙ سوال ۽ جواب."
+        "description": "جانورن جي واپار بابت اڪثر پڇيا ويندڙ سوال ۽ جواب.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - وڪري لاءِ",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{نالو} - ڪيريئر پروفائل",
         "description": "{name} ٽرانسپورٽر پروفائل. سروس جا علائقا، جائزو، ۽ رابطي جي معلومات."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "واڌارو",

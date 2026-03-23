@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Zambiri zaife",
-        "description": "Dziwani zambiri zokhudza malonda a ziweto. Nsanja yodalirika yogulitsa ziweto zamoyo."
+        "description": "Dziwani zambiri zokhudza malonda a ziweto. Nsanja yodalirika yogulitsa ziweto zamoyo.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Kulankhulana",
-        "description": "Lumikizanani nafe. Gulu lothandizira makasitomala la Livestock Trading lili okonzeka kukuthandizani."
+        "description": "Lumikizanani nafe. Gulu lothandizira makasitomala la Livestock Trading lili okonzeka kukuthandizani.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Mgwirizano pazakagwiritsidwe",
-        "description": "Malamulo ndi Zikhalidwe Zogulitsa Ziweto."
+        "description": "Malamulo ndi Zikhalidwe Zogulitsa Ziweto.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "mfundo zazinsinsi",
-        "description": "Ndondomeko yachinsinsi ya malonda a ziweto. Dziwani momwe deta yanu imatetezedwera."
+        "description": "Ndondomeko yachinsinsi ya malonda a ziweto. Dziwani momwe deta yanu imatetezedwera.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Zogulitsa",
-        "description": "Sakatulani mndandanda wa ziweto zamoyo. Malonda odalirika a ng'ombe, nkhosa, ndi zina zambiri."
+        "description": "Sakatulani mndandanda wa ziweto zamoyo. Malonda odalirika a ng'ombe, nkhosa, ndi zina zambiri.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Ogulitsa",
-        "description": "Pezani ogulitsa ziweto odalirika. Mbiri ndi ndemanga zotsimikizika za ogulitsa ziweto."
+        "description": "Pezani ogulitsa ziweto odalirika. Mbiri ndi ndemanga zotsimikizika za ogulitsa ziweto.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "onyamula katundu",
-        "description": "Dziwani makampani oyendetsa nyama. Mayendedwe a nyama amoyo otetezeka komanso aukadaulo."
+        "description": "Dziwani makampani oyendetsa nyama. Mayendedwe a nyama amoyo otetezeka komanso aukadaulo.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Sakani",
-        "description": "Sakani pakati pa mndandanda wa nyama zamoyo. Kusaka kosavuta ndi njira zosefera ndi kusanja."
+        "description": "Sakani pakati pa mndandanda wa nyama zamoyo. Kusaka kosavuta ndi njira zosefera ndi kusanja.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Mafunso Ofunsidwa Kawirikawiri",
-        "description": "Mafunso ndi mayankho omwe amafunsidwa kawirikawiri okhudza malonda a ziweto."
+        "description": "Mafunso ndi mayankho omwe amafunsidwa kawirikawiri okhudza malonda a ziweto.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{mutu} - Zogulitsa",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{dzina} - Mbiri ya Wonyamula",
         "description": "Mbiri ya wonyamula katundu wa {name}. Malo ogwirira ntchito, ndemanga, ndi zambiri zolumikizirana."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Limbikitsani",

@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Faatatau ia tatou",
-        "description": "Aoao e uiga i Fefaatauaiga o Manu. O se fausaga faatuatuaina mo fefaatauaiga o manu ola."
+        "description": "Aoao e uiga i Fefaatauaiga o Manu. O se fausaga faatuatuaina mo fefaatauaiga o manu ola.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Fesootaiga",
-        "description": "Fa'afeso'ota'i matou. Ua sauni le 'au lagolago a tagata fa'atau a le Livestock Trading e fesoasoani atu ia te oe."
+        "description": "Fa'afeso'ota'i matou. Ua sauni le 'au lagolago a tagata fa'atau a le Livestock Trading e fesoasoani atu ia te oe.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Tuutuuga o le Faaaogaina",
-        "description": "Tuutuuga ma Aiaiga o Fefaatauaiga o Manu Fagafao."
+        "description": "Tuutuuga ma Aiaiga o Fefaatauaiga o Manu Fagafao.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Faiga Faavae mo le Tulaga Faalilolilo",
-        "description": "Faiga fa'avae mo le le faalauaiteleina o fa'atauga o manu. Aoao pe fa'apefea ona puipuia au fa'amatalaga patino."
+        "description": "Faiga fa'avae mo le le faalauaiteleina o fa'atauga o manu. Aoao pe fa'apefea ona puipuia au fa'amatalaga patino.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Oloa",
-        "description": "Su'e lisi o manu ola. Fa'asalalauga fa'atuatuaina mo povi, mamoe, ma isi mea."
+        "description": "Su'e lisi o manu ola. Fa'asalalauga fa'atuatuaina mo povi, mamoe, ma isi mea.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Tagata Fa'atau",
-        "description": "Saili ni tagata fa'atau manu fa'atuatuaina. Fa'amatalaga ma iloiloga fa'amaonia a tagata fa'atau."
+        "description": "Saili ni tagata fa'atau manu fa'atuatuaina. Fa'amatalaga ma iloiloga fa'amaonia a tagata fa'atau.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "felauaiga",
-        "description": "Su'e kamupani felauaiga manu. Felauaiga saogalemu ma fa'apolofesa o manu ola."
+        "description": "Su'e kamupani felauaiga manu. Felauaiga saogalemu ma fa'apolofesa o manu ola.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Saili",
-        "description": "Saili i totonu o lisi o manu ola. Faigofie ona su'e i filifiliga fa'amama ma fa'avasega."
+        "description": "Saili i totonu o lisi o manu ola. Faigofie ona su'e i filifiliga fa'amama ma fa'avasega.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Fesili e Masani Ona Fesiligia",
-        "description": "Fesili ma tali e masani ona fesiligia e uiga i fefaʻatauaʻiga o lafumanu."
+        "description": "Fesili ma tali e masani ona fesiligia e uiga i fefaʻatauaʻiga o lafumanu.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Mo le Fa'atau",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{name} - Fa'amatalaga o le Aveta'avale",
         "description": "Fa'amatalaga o le felauaiga a le {name}. Nofoaga e tautua ai, iloiloga, ma fa'amatalaga fa'afeso'ota'i."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Fa'aleleia",

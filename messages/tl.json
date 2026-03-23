@@ -1796,39 +1796,48 @@
     "pages": {
       "about": {
         "title": "Tungkol sa Amin",
-        "description": "Alamin ang tungkol sa Livestock Trading. Isang maaasahang plataporma ng pangangalakal ng buhay na hayop."
+        "description": "Alamin ang tungkol sa Livestock Trading. Isang maaasahang plataporma ng pangangalakal ng buhay na hayop.",
+        "keywords": "about livestock trading, live animal platform, livestock trading company, trusted animal market"
       },
       "contact": {
         "title": "Komunikasyon",
-        "description": "Makipag-ugnayan sa amin. Ang pangkat ng suporta sa customer ng Livestock Trading ay handang tumulong sa iyo."
+        "description": "Makipag-ugnayan sa amin. Ang pangkat ng suporta sa customer ng Livestock Trading ay handang tumulong sa iyo.",
+        "keywords": "livestock trading contact, animal trading support, customer service"
       },
       "terms": {
         "title": "Mga Tuntunin ng Paggamit",
-        "description": "Mga Tuntunin at Kundisyon sa Pangangalakal ng Hayop."
+        "description": "Mga Tuntunin at Kundisyon sa Pangangalakal ng Hayop.",
+        "keywords": "terms of use, livestock trading rules, platform conditions"
       },
       "privacy": {
         "title": "Patakaran sa Pagkapribado",
-        "description": "Patakaran sa privacy ng Livestock Trading. Alamin kung paano pinoprotektahan ang iyong personal na data."
+        "description": "Patakaran sa privacy ng Livestock Trading. Alamin kung paano pinoprotektahan ang iyong personal na data.",
+        "keywords": "privacy policy, personal data protection, GDPR, livestock trading privacy"
       },
       "products": {
         "title": "Mga Produkto",
-        "description": "Mag-browse ng mga live na listahan ng hayop. Maaasahang mga ad para sa mga baka, tupa, at marami pang iba."
+        "description": "Mag-browse ng mga live na listahan ng hayop. Maaasahang mga ad para sa mga baka, tupa, at marami pang iba.",
+        "keywords": "live animal listings, cattle for sale, sheep for sale, goats for sale, livestock listings, poultry listings, animal market"
       },
       "sellers": {
         "title": "Mga Nagbebenta",
-        "description": "Tuklasin ang mga maaasahang nagtitinda ng hayop. Mga na-verify na profile at review ng nagtitinda."
+        "description": "Tuklasin ang mga maaasahang nagtitinda ng hayop. Mga na-verify na profile at review ng nagtitinda.",
+        "keywords": "animal sellers, trusted sellers, verified seller profiles, live animal sellers"
       },
       "transporters": {
         "title": "mga tagapaghatid",
-        "description": "Tuklasin ang mga kompanya ng transportasyon ng mga hayop. Ligtas at propesyonal na transportasyon ng mga buhay na hayop."
+        "description": "Tuklasin ang mga kompanya ng transportasyon ng mga hayop. Ligtas at propesyonal na transportasyon ng mga buhay na hayop.",
+        "keywords": "animal transport, livestock carriers, live animal transportation, animal shipping"
       },
       "search": {
         "title": "Maghanap",
-        "description": "Maghanap sa mga listahan ng mga buhay na hayop. Madaling paghahanap gamit ang mga opsyon sa pag-filter at pag-uuri."
+        "description": "Maghanap sa mga listahan ng mga buhay na hayop. Madaling paghahanap gamit ang mga opsyon sa pag-filter at pag-uuri.",
+        "keywords": "animal search, livestock search, find animals, animal filter"
       },
       "faq": {
         "title": "Mga Madalas Itanong",
-        "description": "Mga madalas itanong at sagot tungkol sa pangangalakal ng mga alagang hayop."
+        "description": "Mga madalas itanong at sagot tungkol sa pangangalakal ng mga alagang hayop.",
+        "keywords": "FAQ, livestock trading questions, animal trading help"
       },
       "productDetail": {
         "title": "{title} - Ipinagbibili",
@@ -1841,8 +1850,19 @@
       "transporterDetail": {
         "title": "{pangalan} - Profile ng Tagapagdala",
         "description": "Profile ng transporter na {name}. Mga lugar na may serbisyo, mga review, at impormasyon sa pakikipag-ugnayan."
+      },
+      "home": {
+        "title": "Live Animal Trading Platform | Trusted Livestock Trading",
+        "description": "The world's most trusted live animal trading platform. Buy and sell cattle, sheep, goats and more safely. Verified sellers, transparent prices.",
+        "keywords": "live animal sale, animal trading platform, cattle sale, sheep sale, goat sale, livestock, poultry, online animal market, trusted livestock trading, animal listings"
+      },
+      "pricing": {
+        "title": "Pricing | Membership Plans",
+        "description": "Livestock Trading membership plans and pricing. Highlight your animal listings with free and premium packages.",
+        "keywords": "pricing, membership plans, premium membership, animal listing price, boost package"
       }
-    }
+    },
+    "keywords": "live animal, livestock trading, animal buying selling, cattle sale, sheep sale, goat sale, livestock, poultry, farm animals, animal market, online animal sale"
   },
   "boost": {
     "title": "Boost",
