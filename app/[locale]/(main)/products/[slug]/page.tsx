@@ -41,6 +41,7 @@ const ProductAnimalInfo = dynamic(() => import("@/components/features/product-an
 import { ProductVariants } from "@/components/features/product-variants";
 import { ProductPrices } from "@/components/features/product-prices";
 const MakeOfferDialog = dynamic(() => import("@/components/features/make-offer-dialog").then(mod => ({ default: mod.MakeOfferDialog })), { ssr: false });
+const ReportProductDialog = dynamic(() => import("@/components/features/report-product-dialog").then(mod => ({ default: mod.ReportProductDialog })), { ssr: false });
 import { useQuery } from "@tanstack/react-query";
 import { queryKeys } from "@/lib/query-keys";
 import { useProductList } from "@/hooks/queries/useProducts";
@@ -107,7 +108,7 @@ export default function ProductDetailPage() {
   const tc = useTranslations("common");
   const locale = useLocale();
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, isAuthenticated } = useAuth();
   const selectedCountry = useSelectedCountry();
   const viewerCurrencyCode = selectedCountry?.defaultCurrencyCode || "";
   const { toggleFavorite, isFavorite: checkIsFavorite } = useFavoriteActions(user?.id ?? "");
@@ -279,6 +280,7 @@ export default function ProductDetailPage() {
 
   const [isContacting, setIsContacting] = useState(false);
   const [showOfferDialog, setShowOfferDialog] = useState(false);
+  const [showReportDialog, setShowReportDialog] = useState(false);
 
   const handleContact = async () => {
     if (!user) {
@@ -594,7 +596,7 @@ export default function ProductDetailPage() {
                     <Button variant="outline" size="icon" onClick={handleShare} aria-label={t("share")}>
                       <Share2 className="h-4 w-4" />
                     </Button>
-                    <Button variant="outline" size="icon" aria-label={t("report")}>
+                    <Button variant="outline" size="icon" aria-label={t("report")} onClick={() => isAuthenticated ? setShowReportDialog(true) : toast.error(t("loginRequired"))}>
                       <Flag className="h-4 w-4" />
                     </Button>
                   </div>
@@ -664,6 +666,16 @@ export default function ProductDetailPage() {
           basePrice={product.basePrice}
           currency={product.currency}
           maxQuantity={product.stockQuantity}
+        />
+      )}
+
+      {/* Report Product Dialog */}
+      {product && (
+        <ReportProductDialog
+          productId={product.id}
+          productTitle={product.title}
+          open={showReportDialog}
+          onOpenChange={setShowReportDialog}
         />
       )}
     </div>

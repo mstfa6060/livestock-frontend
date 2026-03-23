@@ -190,6 +190,7 @@
     "shippingCarriers": "Shipping Companies",
     "shippingZones": "Cargo Zones",
     "shippingRates": "Shipping Fees",
+    "reports": "Reports",
     "systemSettings": "System Settings",
     "locations": "My addresses",
     "boosts": "My Boosts",
@@ -2082,5 +2083,48 @@
     "convertedPrice": "Converted price",
     "approximatePrice": "Approximate conversion based on current exchange rates",
     "approximate": "≈"
+  },
+  "report": {
+    "title": "Report Product",
+    "subtitle": "Report \"{product}\"",
+    "reason": "Reason",
+    "selectReason": "Select a reason",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the issue in detail...",
+    "submit": "Report",
+    "cancel": "Cancel",
+    "success": "Your report has been submitted. It will be reviewed by our team.",
+    "error": "Failed to submit report. Please try again.",
+    "reasons": {
+      "fake": "Fake / Misleading Listing",
+      "wrongPrice": "Wrong Price",
+      "illegalContent": "Illegal Content",
+      "spam": "Spam / Duplicate Listing",
+      "fraud": "Suspected Fraud",
+      "other": "Other"
+    }
+  },
+  "reports": {
+    "title": "Product Reports",
+    "description": "Manage product reports submitted by users.",
+    "unauthorized": "You do not have permission to access this page.",
+    "pending": "Pending",
+    "reviewed": "Reviewed",
+    "resolved": "Resolved",
+    "dismissed": "Dismissed",
+    "all": "All",
+    "noReports": "No reports yet.",
+    "viewProduct": "View Product",
+    "adminNote": "Admin Note",
+    "adminNotePlaceholder": "Write your review note...",
+    "review": "Review",
+    "reviewReport": "Review Report",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "status": "Status",
+    "updateSuccess": "Report status updated.",
+    "updateError": "Failed to update.",
+    "cancel": "Cancel",
+    "save": "Save"
   }
 }

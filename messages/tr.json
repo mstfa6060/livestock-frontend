@@ -190,6 +190,7 @@
     "shippingCarriers": "Nakliye Şirketleri",
     "shippingZones": "Kargo Bölgeleri",
     "shippingRates": "Nakliye Ücretleri",
+    "reports": "Şikayetler",
     "systemSettings": "Sistem Ayarları",
     "locations": "Adreslerim",
     "boosts": "Benim Takviyelerim",
@@ -2082,5 +2083,48 @@
     "convertedPrice": "Dönüştürülmüş fiyat",
     "approximatePrice": "Güncel döviz kuruna göre yaklaşık dönüşüm",
     "approximate": "≈"
+  },
+  "report": {
+    "title": "Ürünü Bildir",
+    "subtitle": "\"{product}\" ürünü için şikayet bildirin",
+    "reason": "Şikayet Sebebi",
+    "selectReason": "Sebep seçin",
+    "description": "Açıklama",
+    "descriptionPlaceholder": "Şikayetinizi detaylı açıklayın...",
+    "submit": "Bildir",
+    "cancel": "İptal",
+    "success": "Şikayetiniz gönderildi. İncelendikten sonra gerekli işlem yapılacaktır.",
+    "error": "Şikayet gönderilemedi. Lütfen tekrar deneyin.",
+    "reasons": {
+      "fake": "Sahte / Yanıltıcı İlan",
+      "wrongPrice": "Yanlış Fiyat",
+      "illegalContent": "Yasadışı İçerik",
+      "spam": "Spam / Tekrarlayan İlan",
+      "fraud": "Dolandırıcılık Şüphesi",
+      "other": "Diğer"
+    }
+  },
+  "reports": {
+    "title": "Ürün Şikayetleri",
+    "description": "Kullanıcılar tarafından bildirilen ürün şikayetlerini yönetin.",
+    "unauthorized": "Bu sayfaya erişim izniniz yok.",
+    "pending": "Bekleyen",
+    "reviewed": "İncelendi",
+    "resolved": "Çözüldü",
+    "dismissed": "Reddedildi",
+    "all": "Tümü",
+    "noReports": "Henüz şikayet yok.",
+    "viewProduct": "Ürünü Görüntüle",
+    "adminNote": "Admin Notu",
+    "adminNotePlaceholder": "İnceleme notunuzu yazın...",
+    "review": "İncele",
+    "reviewReport": "Şikayeti İncele",
+    "reasonLabel": "Şikayet Sebebi",
+    "descriptionLabel": "Açıklama",
+    "status": "Durum",
+    "updateSuccess": "Şikayet durumu güncellendi.",
+    "updateError": "Güncelleme başarısız oldu.",
+    "cancel": "İptal",
+    "save": "Kaydet"
   }
 }
