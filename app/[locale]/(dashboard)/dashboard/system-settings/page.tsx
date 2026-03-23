@@ -1,15 +1,28 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { queryKeys } from "@/lib/query-keys";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Switch } from "@/components/ui/switch";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
 import { LivestockTradingAPI } from "@/api/business_modules/livestocktrading";
 import { useRoles } from "@/hooks/useRoles";
+import { toast } from "sonner";
 import {
   Coins,
   Globe2,
@@ -19,6 +32,7 @@ import {
   MapPin,
   Settings,
   DollarSign,
+  Pencil,
 } from "lucide-react";
 
 interface Currency {
@@ -46,6 +60,8 @@ interface PaymentMethod {
   name: string;
   code: string;
   description: string;
+  iconUrl: string;
+  requiresManualVerification: boolean;
   isActive: boolean;
   supportedCountries: string;
   supportedCurrencies: string;
@@ -56,6 +72,7 @@ interface ShippingCarrier {
   name: string;
   code: string;
   website: string;
+  trackingUrlTemplate: string;
   isActive: boolean;
   supportedCountries: string;
 }
@@ -88,9 +105,23 @@ interface TaxRate {
   isActive: boolean;
 }
 
+type EditDialogType =
+  | { type: "currency"; data: Currency }
+  | { type: "carrier"; data: ShippingCarrier }
+  | { type: "zone"; data: ShippingZone }
+  | { type: "rate"; data: ShippingRate }
+  | { type: "taxRate"; data: TaxRate }
+  | null;
+
 export default function SystemSettingsPage() {
   const t = useTranslations("systemSettings");
   const { isAdmin } = useRoles();
+  const queryClient = useQueryClient();
+
+  const [editDialog, setEditDialog] = useState<EditDialogType>(null);
+  const [editForm, setEditForm] = useState<Record<string, string | number | boolean>>({});
+
+  const settingsQueryKey = [...queryKeys.systemSettings.all, "all"];
 
   const defaultReq = {
     sorting: { key: "createdAt", direction: LivestockTradingAPI.Enums.XSortingDirection.Ascending },
@@ -99,7 +130,7 @@ export default function SystemSettingsPage() {
   };
 
   const { data: allSettings, isLoading } = useQuery({
-    queryKey: [...queryKeys.systemSettings.all, "all"],
+    queryKey: settingsQueryKey,
     queryFn: async () => {
       const [curRes, langRes, payRes, carrRes, zoneRes, rateRes, taxRes] = await Promise.allSettled([
         LivestockTradingAPI.Currencies.All.Request(defaultReq),
@@ -122,10 +153,12 @@ export default function SystemSettingsPage() {
         })) as Language[] : [],
         paymentMethods: payRes.status === "fulfilled" ? payRes.value.map((p) => ({
           id: p.id, name: p.name, code: p.code, description: p.description,
+          iconUrl: p.iconUrl ?? "", requiresManualVerification: p.requiresManualVerification ?? false,
           isActive: p.isActive, supportedCountries: p.supportedCountries, supportedCurrencies: p.supportedCurrencies,
         })) as PaymentMethod[] : [],
         carriers: carrRes.status === "fulfilled" ? carrRes.value.map((c) => ({
           id: c.id, name: c.name, code: c.code, website: c.website,
+          trackingUrlTemplate: c.trackingUrlTemplate ?? "",
           isActive: c.isActive, supportedCountries: c.supportedCountries,
         })) as ShippingCarrier[] : [],
         zones: zoneRes.status === "fulfilled" ? zoneRes.value.map((z) => ({
@@ -154,6 +187,193 @@ export default function SystemSettingsPage() {
   const zones = allSettings?.zones ?? [];
   const rates = allSettings?.rates ?? [];
   const taxRates = allSettings?.taxRates ?? [];
+
+  // --- Mutations ---
+
+  const invalidateSettings = () => {
+    queryClient.invalidateQueries({ queryKey: queryKeys.systemSettings.all });
+  };
+
+  const currencyMutation = useMutation({
+    mutationFn: (data: Currency) =>
+      LivestockTradingAPI.Currencies.Update.Request({
+        id: data.id, code: data.code, symbol: data.symbol, name: data.name,
+        exchangeRateToUSD: data.exchangeRateToUSD as never, isActive: data.isActive,
+      }),
+    onSuccess: () => { invalidateSettings(); toast.success(t("updateSuccess")); },
+    onError: () => { toast.error(t("updateFailed")); },
+  });
+
+  const carrierMutation = useMutation({
+    mutationFn: (data: ShippingCarrier) =>
+      LivestockTradingAPI.ShippingCarriers.Update.Request({
+        id: data.id, name: data.name, code: data.code, website: data.website,
+        trackingUrlTemplate: data.trackingUrlTemplate, isActive: data.isActive,
+        supportedCountries: data.supportedCountries,
+      }),
+    onSuccess: () => { invalidateSettings(); toast.success(t("updateSuccess")); },
+    onError: () => { toast.error(t("updateFailed")); },
+  });
+
+  const zoneMutation = useMutation({
+    mutationFn: (data: ShippingZone) =>
+      LivestockTradingAPI.ShippingZones.Update.Request({
+        id: data.id, name: data.name, countryCodes: data.countryCodes, isActive: data.isActive,
+      }),
+    onSuccess: () => { invalidateSettings(); toast.success(t("updateSuccess")); },
+    onError: () => { toast.error(t("updateFailed")); },
+  });
+
+  const rateMutation = useMutation({
+    mutationFn: (data: ShippingRate) =>
+      LivestockTradingAPI.ShippingRates.Update.Request({
+        id: data.id, shippingZoneId: data.shippingZoneId,
+        shippingCarrierId: data.shippingCarrierId ?? undefined,
+        shippingCost: data.shippingCost as never, currency: data.currency,
+        estimatedDeliveryDays: data.estimatedDeliveryDays ?? undefined,
+        isFreeShipping: data.isFreeShipping, isActive: data.isActive,
+      }),
+    onSuccess: () => { invalidateSettings(); toast.success(t("updateSuccess")); },
+    onError: () => { toast.error(t("updateFailed")); },
+  });
+
+  const taxRateMutation = useMutation({
+    mutationFn: (data: TaxRate) =>
+      LivestockTradingAPI.TaxRates.Update.Request({
+        id: data.id, countryCode: data.countryCode, stateCode: data.stateCode,
+        taxName: data.taxName, rate: data.rate as never, type: data.type, isActive: data.isActive,
+      }),
+    onSuccess: () => { invalidateSettings(); toast.success(t("updateSuccess")); },
+    onError: () => { toast.error(t("updateFailed")); },
+  });
+
+  const paymentMethodMutation = useMutation({
+    mutationFn: (data: PaymentMethod) =>
+      LivestockTradingAPI.PaymentMethods.Update.Request({
+        id: data.id, name: data.name, code: data.code, description: data.description,
+        iconUrl: data.iconUrl, requiresManualVerification: data.requiresManualVerification,
+        isActive: data.isActive, supportedCountries: data.supportedCountries,
+        supportedCurrencies: data.supportedCurrencies,
+      }),
+    onSuccess: () => { invalidateSettings(); toast.success(t("toggleSuccess")); },
+    onError: () => { toast.error(t("updateFailed")); },
+  });
+
+  // --- Toggle handlers ---
+
+  const toggleCurrency = (cur: Currency) => {
+    currencyMutation.mutate({ ...cur, isActive: !cur.isActive });
+  };
+
+  const toggleCarrier = (c: ShippingCarrier) => {
+    carrierMutation.mutate({ ...c, isActive: !c.isActive });
+  };
+
+  const toggleZone = (z: ShippingZone) => {
+    zoneMutation.mutate({ ...z, isActive: !z.isActive });
+  };
+
+  const toggleRate = (r: ShippingRate) => {
+    rateMutation.mutate({ ...r, isActive: !r.isActive });
+  };
+
+  const toggleTaxRate = (tax: TaxRate) => {
+    taxRateMutation.mutate({ ...tax, isActive: !tax.isActive });
+  };
+
+  const togglePaymentMethod = (pm: PaymentMethod) => {
+    paymentMethodMutation.mutate({ ...pm, isActive: !pm.isActive });
+  };
+
+  // --- Edit dialog handlers ---
+
+  const openEditDialog = (dialog: EditDialogType) => {
+    if (!dialog) return;
+    setEditDialog(dialog);
+    switch (dialog.type) {
+      case "currency":
+        setEditForm({ exchangeRateToUSD: dialog.data.exchangeRateToUSD });
+        break;
+      case "carrier":
+        setEditForm({
+          name: dialog.data.name, code: dialog.data.code,
+          website: dialog.data.website, supportedCountries: dialog.data.supportedCountries,
+        });
+        break;
+      case "zone":
+        setEditForm({ name: dialog.data.name, countryCodes: dialog.data.countryCodes });
+        break;
+      case "rate":
+        setEditForm({
+          shippingCost: dialog.data.shippingCost, currency: dialog.data.currency,
+          estimatedDeliveryDays: dialog.data.estimatedDeliveryDays ?? 0,
+          isFreeShipping: dialog.data.isFreeShipping,
+        });
+        break;
+      case "taxRate":
+        setEditForm({
+          taxName: dialog.data.taxName, rate: dialog.data.rate,
+          countryCode: dialog.data.countryCode, stateCode: dialog.data.stateCode,
+        });
+        break;
+    }
+  };
+
+  const closeEditDialog = () => {
+    setEditDialog(null);
+    setEditForm({});
+  };
+
+  const handleSaveEdit = () => {
+    if (!editDialog) return;
+    switch (editDialog.type) {
+      case "currency":
+        currencyMutation.mutate(
+          { ...editDialog.data, exchangeRateToUSD: Number(editForm.exchangeRateToUSD) },
+          { onSuccess: closeEditDialog },
+        );
+        break;
+      case "carrier":
+        carrierMutation.mutate(
+          {
+            ...editDialog.data,
+            name: String(editForm.name), code: String(editForm.code),
+            website: String(editForm.website), supportedCountries: String(editForm.supportedCountries),
+          },
+          { onSuccess: closeEditDialog },
+        );
+        break;
+      case "zone":
+        zoneMutation.mutate(
+          { ...editDialog.data, name: String(editForm.name), countryCodes: String(editForm.countryCodes) },
+          { onSuccess: closeEditDialog },
+        );
+        break;
+      case "rate":
+        rateMutation.mutate(
+          {
+            ...editDialog.data,
+            shippingCost: Number(editForm.shippingCost), currency: String(editForm.currency),
+            estimatedDeliveryDays: Number(editForm.estimatedDeliveryDays) || null,
+            isFreeShipping: Boolean(editForm.isFreeShipping),
+          },
+          { onSuccess: closeEditDialog },
+        );
+        break;
+      case "taxRate":
+        taxRateMutation.mutate(
+          {
+            ...editDialog.data,
+            taxName: String(editForm.taxName), rate: Number(editForm.rate),
+            countryCode: String(editForm.countryCode), stateCode: String(editForm.stateCode),
+          },
+          { onSuccess: closeEditDialog },
+        );
+        break;
+    }
+  };
+
+  const isMutating = currencyMutation.isPending || carrierMutation.isPending || zoneMutation.isPending || rateMutation.isPending || taxRateMutation.isPending || paymentMethodMutation.isPending;
 
   if (!isAdmin) {
     return (
@@ -225,9 +445,22 @@ export default function SystemSettingsPage() {
                             <p className="text-xs text-muted-foreground">{cur.name}</p>
                           </div>
                         </div>
-                        <Badge variant={cur.isActive ? "default" : "outline"}>
-                          {cur.isActive ? t("active") : t("inactive")}
-                        </Badge>
+                        <div className="flex items-center gap-2">
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-8 w-8"
+                            aria-label={t("edit")}
+                            onClick={() => openEditDialog({ type: "currency", data: cur })}
+                          >
+                            <Pencil className="h-4 w-4" />
+                          </Button>
+                          <Switch
+                            checked={cur.isActive}
+                            onCheckedChange={() => toggleCurrency(cur)}
+                            aria-label={cur.isActive ? t("active") : t("inactive")}
+                          />
+                        </div>
                       </div>
                       <p className="text-sm text-muted-foreground">
                         1 USD = {Number(cur.exchangeRateToUSD).toFixed(4)} {cur.code}
@@ -305,9 +538,11 @@ export default function SystemSettingsPage() {
                         </div>
                         <div className="flex items-center gap-2">
                           <Badge variant="outline">{pm.code}</Badge>
-                          <Badge variant={pm.isActive ? "default" : "outline"}>
-                            {pm.isActive ? t("active") : t("inactive")}
-                          </Badge>
+                          <Switch
+                            checked={pm.isActive}
+                            onCheckedChange={() => togglePaymentMethod(pm)}
+                            aria-label={pm.isActive ? t("active") : t("inactive")}
+                          />
                         </div>
                       </div>
                     </CardContent>
@@ -346,11 +581,22 @@ export default function SystemSettingsPage() {
                             </a>
                           )}
                         </div>
-                        <div className="flex gap-2">
+                        <div className="flex items-center gap-2">
                           <Badge variant="outline">{c.code}</Badge>
-                          <Badge variant={c.isActive ? "default" : "outline"}>
-                            {c.isActive ? t("active") : t("inactive")}
-                          </Badge>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-8 w-8"
+                            aria-label={t("edit")}
+                            onClick={() => openEditDialog({ type: "carrier", data: c })}
+                          >
+                            <Pencil className="h-4 w-4" />
+                          </Button>
+                          <Switch
+                            checked={c.isActive}
+                            onCheckedChange={() => toggleCarrier(c)}
+                            aria-label={c.isActive ? t("active") : t("inactive")}
+                          />
                         </div>
                       </div>
                     ))}
@@ -382,9 +628,22 @@ export default function SystemSettingsPage() {
                           <p className="font-medium text-sm">{z.name}</p>
                           <p className="text-xs text-muted-foreground">{z.countryCodes}</p>
                         </div>
-                        <Badge variant={z.isActive ? "default" : "outline"}>
-                          {z.isActive ? t("active") : t("inactive")}
-                        </Badge>
+                        <div className="flex items-center gap-2">
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-8 w-8"
+                            aria-label={t("edit")}
+                            onClick={() => openEditDialog({ type: "zone", data: z })}
+                          >
+                            <Pencil className="h-4 w-4" />
+                          </Button>
+                          <Switch
+                            checked={z.isActive}
+                            onCheckedChange={() => toggleZone(z)}
+                            aria-label={z.isActive ? t("active") : t("inactive")}
+                          />
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -421,9 +680,22 @@ export default function SystemSettingsPage() {
                             </p>
                           )}
                         </div>
-                        <Badge variant={r.isActive ? "default" : "outline"}>
-                          {r.isActive ? t("active") : t("inactive")}
-                        </Badge>
+                        <div className="flex items-center gap-2">
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-8 w-8"
+                            aria-label={t("edit")}
+                            onClick={() => openEditDialog({ type: "rate", data: r })}
+                          >
+                            <Pencil className="h-4 w-4" />
+                          </Button>
+                          <Switch
+                            checked={r.isActive}
+                            onCheckedChange={() => toggleRate(r)}
+                            aria-label={r.isActive ? t("active") : t("inactive")}
+                          />
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -457,9 +729,20 @@ export default function SystemSettingsPage() {
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-lg font-bold">{Number(tax.rate).toFixed(2)}%</span>
-                          <Badge variant={tax.isActive ? "default" : "outline"}>
-                            {tax.isActive ? t("active") : t("inactive")}
-                          </Badge>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-8 w-8"
+                            aria-label={t("edit")}
+                            onClick={() => openEditDialog({ type: "taxRate", data: tax })}
+                          >
+                            <Pencil className="h-4 w-4" />
+                          </Button>
+                          <Switch
+                            checked={tax.isActive}
+                            onCheckedChange={() => toggleTaxRate(tax)}
+                            aria-label={tax.isActive ? t("active") : t("inactive")}
+                          />
                         </div>
                       </div>
                     </CardContent>
@@ -470,6 +753,176 @@ export default function SystemSettingsPage() {
           </TabsContent>
         </Tabs>
       </div>
+
+      {/* Edit Dialog */}
+      <Dialog open={editDialog !== null} onOpenChange={(open) => { if (!open) closeEditDialog(); }}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>{t("edit")}</DialogTitle>
+          </DialogHeader>
+
+          <div className="space-y-4 py-2">
+            {editDialog?.type === "currency" && (
+              <div className="space-y-2">
+                <Label htmlFor="exchangeRateToUSD">{t("exchangeRate")}</Label>
+                <Input
+                  id="exchangeRateToUSD"
+                  type="number"
+                  step="0.0001"
+                  value={String(editForm.exchangeRateToUSD ?? "")}
+                  onChange={(e) => setEditForm({ ...editForm, exchangeRateToUSD: e.target.value })}
+                />
+              </div>
+            )}
+
+            {editDialog?.type === "carrier" && (
+              <>
+                <div className="space-y-2">
+                  <Label htmlFor="carrierName">{t("carrierName")}</Label>
+                  <Input
+                    id="carrierName"
+                    value={String(editForm.name ?? "")}
+                    onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="carrierCode">{t("carrierCode")}</Label>
+                  <Input
+                    id="carrierCode"
+                    value={String(editForm.code ?? "")}
+                    onChange={(e) => setEditForm({ ...editForm, code: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="website">{t("website")}</Label>
+                  <Input
+                    id="website"
+                    value={String(editForm.website ?? "")}
+                    onChange={(e) => setEditForm({ ...editForm, website: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="supportedCountries">{t("supportedCountries")}</Label>
+                  <Input
+                    id="supportedCountries"
+                    value={String(editForm.supportedCountries ?? "")}
+                    onChange={(e) => setEditForm({ ...editForm, supportedCountries: e.target.value })}
+                  />
+                </div>
+              </>
+            )}
+
+            {editDialog?.type === "zone" && (
+              <>
+                <div className="space-y-2">
+                  <Label htmlFor="zoneName">{t("zoneName")}</Label>
+                  <Input
+                    id="zoneName"
+                    value={String(editForm.name ?? "")}
+                    onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="countryCodes">{t("countryCodes")}</Label>
+                  <Input
+                    id="countryCodes"
+                    value={String(editForm.countryCodes ?? "")}
+                    onChange={(e) => setEditForm({ ...editForm, countryCodes: e.target.value })}
+                  />
+                </div>
+              </>
+            )}
+
+            {editDialog?.type === "rate" && (
+              <>
+                <div className="space-y-2">
+                  <Label htmlFor="shippingCost">{t("shippingCost")}</Label>
+                  <Input
+                    id="shippingCost"
+                    type="number"
+                    step="0.01"
+                    value={String(editForm.shippingCost ?? "")}
+                    onChange={(e) => setEditForm({ ...editForm, shippingCost: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="currency">{t("currenciesTab")}</Label>
+                  <Input
+                    id="currency"
+                    value={String(editForm.currency ?? "")}
+                    onChange={(e) => setEditForm({ ...editForm, currency: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="estimatedDeliveryDays">{t("estimatedDeliveryDays")}</Label>
+                  <Input
+                    id="estimatedDeliveryDays"
+                    type="number"
+                    value={String(editForm.estimatedDeliveryDays ?? "")}
+                    onChange={(e) => setEditForm({ ...editForm, estimatedDeliveryDays: e.target.value })}
+                  />
+                </div>
+                <div className="flex items-center gap-2">
+                  <Switch
+                    id="isFreeShipping"
+                    checked={Boolean(editForm.isFreeShipping)}
+                    onCheckedChange={(checked) => setEditForm({ ...editForm, isFreeShipping: checked })}
+                  />
+                  <Label htmlFor="isFreeShipping">{t("freeShipping")}</Label>
+                </div>
+              </>
+            )}
+
+            {editDialog?.type === "taxRate" && (
+              <>
+                <div className="space-y-2">
+                  <Label htmlFor="taxName">{t("taxName")}</Label>
+                  <Input
+                    id="taxName"
+                    value={String(editForm.taxName ?? "")}
+                    onChange={(e) => setEditForm({ ...editForm, taxName: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="taxRate">{t("taxRate")}</Label>
+                  <Input
+                    id="taxRate"
+                    type="number"
+                    step="0.01"
+                    value={String(editForm.rate ?? "")}
+                    onChange={(e) => setEditForm({ ...editForm, rate: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="countryCode">{t("countryCode")}</Label>
+                  <Input
+                    id="countryCode"
+                    value={String(editForm.countryCode ?? "")}
+                    onChange={(e) => setEditForm({ ...editForm, countryCode: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="stateCode">{t("stateCode")}</Label>
+                  <Input
+                    id="stateCode"
+                    value={String(editForm.stateCode ?? "")}
+                    onChange={(e) => setEditForm({ ...editForm, stateCode: e.target.value })}
+                  />
+                </div>
+              </>
+            )}
+          </div>
+
+          <DialogFooter>
+            <Button variant="outline" onClick={closeEditDialog}>
+              {t("cancel")}
+            </Button>
+            <Button onClick={handleSaveEdit} disabled={isMutating}>
+              {t("save")}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </DashboardLayout>
   );
 }
