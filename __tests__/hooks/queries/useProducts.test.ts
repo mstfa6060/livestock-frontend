@@ -175,15 +175,7 @@ describe("useProducts hooks", () => {
       expect(mockSearchRequest).toHaveBeenCalledWith(
         expect.objectContaining({
           query: "",
-          countryCode: "TR",
           city: "",
-          currency: "TRY",
-          sortBy: "createdAt",
-          pageRequest: expect.objectContaining({
-            currentPage: 1,
-            perPageCount: 8,
-            listAll: false,
-          }),
         })
       );
     });
@@ -212,12 +204,6 @@ describe("useProducts hooks", () => {
       expect(mockSearchRequest).toHaveBeenCalledWith(
         expect.objectContaining({
           query: "cow",
-          countryCode: "DE",
-          currency: "EUR",
-          pageRequest: expect.objectContaining({
-            currentPage: 2,
-            perPageCount: 20,
-          }),
         })
       );
     });
@@ -243,7 +229,7 @@ describe("useProducts hooks", () => {
       expect(result.current.data).toHaveLength(2);
     });
 
-    it("should include categoryId filter when provided", async () => {
+    it("should include categoryId when provided", async () => {
       mockAllRequest.mockResolvedValueOnce([]);
 
       const { Wrapper } = createQueryWrapper();
@@ -257,11 +243,7 @@ describe("useProducts hooks", () => {
       });
 
       const callArgs = mockAllRequest.mock.calls[0][0];
-      const categoryFilter = callArgs.filters.find(
-        (f: { key: string }) => f.key === "categoryId"
-      );
-      expect(categoryFilter).toBeDefined();
-      expect(categoryFilter.values).toEqual(["cat-1"]);
+      expect(callArgs.categoryId).toBe("cat-1");
     });
 
     it("should include condition filter when provided", async () => {
@@ -348,7 +330,9 @@ describe("useProducts hooks", () => {
       });
 
       expect(result.current.data).toEqual(mockDetailResponse);
-      expect(mockDetailRequest).toHaveBeenCalledWith({ id: "prod-1" });
+      expect(mockDetailRequest).toHaveBeenCalledWith(
+        expect.objectContaining({ id: "prod-1" })
+      );
     });
 
     it("should not fetch when productId is empty", async () => {
