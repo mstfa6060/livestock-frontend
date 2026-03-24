@@ -2,10 +2,15 @@
 
 import { ReactNode, useState } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { makeQueryClient } from "@/lib/query-client";
 import { useSWRegistration } from "@/hooks/useSWRegistration";
+import dynamic from "next/dynamic";
+
+const ReactQueryDevtools = dynamic(
+  () => import("@tanstack/react-query-devtools").then((mod) => mod.ReactQueryDevtools),
+  { ssr: false }
+);
 
 interface ProvidersProps {
   children: ReactNode;
