@@ -27,7 +27,7 @@
   "header": {
     "products": "Products",
     "sellers": "Sellers",
-    "transporters": "transporters",
+    "transporters": "Transporters",
     "about": "About Us",
     "pricing": "Pricing",
     "search": "Search",
@@ -970,7 +970,7 @@
   },
   "becomeTransporter": {
     "title": "Become a Transporter",
-    "description": "Register as a transporter to offer livestock transport services.",
+    "description": "Description",
     "alreadyTransporter": "You already have a transporter profile.",
     "alreadyTransporterDescription": "You can use the button below to manage your transport requests.",
     "goToTransport": "Go to Transport",
@@ -990,7 +990,6 @@
     "cityPlaceholder": "Enter your city",
     "countryCode": "Country",
     "countryCodePlaceholder": "Select your country",
-    "description": "Description",
     "descriptionPlaceholder": "Describe your transport services...",
     "serviceRegions": "Service Regions",
     "serviceRegionsPlaceholder": "e.g. Central Anatolia, Marmara Region",
