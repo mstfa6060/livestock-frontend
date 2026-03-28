@@ -388,12 +388,15 @@ export namespace IAMAPI {
 			export const RequestPath = AppConfig.IAMUrl + '/Provinces/All';
 			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel[]>(axios.post(RequestPath,{...data}));
 			export interface IRequestModel {
+				countryId: number;
 				keyword: string;
 			}
 			export interface IResponseModel {
 				id: number;
+				countryId: number;
 				name: string;
 				code: string;
+				nameTranslations: string;
 			}
 		}
 
@@ -418,6 +421,22 @@ export namespace IAMAPI {
 
 	}
 
+	export namespace GeoIp {
+
+		export namespace DetectCountry {
+			export const RequestPath = AppConfig.IAMUrl + '/GeoIp/DetectCountry';
+			export const Request = (data: IRequestModel) => ApiService.call<IResponseModel>(axios.post(RequestPath,{...data}));
+			export interface IRequestModel {
+			}
+			export interface IResponseModel {
+				countryCode: string;
+				countryId?: number;
+				countryName: string;
+			}
+		}
+
+	}
+
 	export namespace Districts {
 
 		export namespace ByProvince {
@@ -431,6 +450,7 @@ export namespace IAMAPI {
 				id: number;
 				name: string;
 				provinceId: number;
+				nameTranslations: string;
 			}
 		}
 

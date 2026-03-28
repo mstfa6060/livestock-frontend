@@ -52,14 +52,44 @@ export function useSellerByUserId(
   return useQuery({
     queryKey: queryKeys.sellers.byUserId(userId),
     queryFn: async () => {
+      // Try GetByUserId first
       try {
         const response = await LivestockTradingAPI.Sellers.GetByUserId.Request({
           userId,
         });
-        return response ?? null;
+        if (response) return response;
       } catch {
-        return null;
+        // GetByUserId failed, fall through to fallback
       }
+
+      // Fallback: search in Sellers.All by userId filter
+      try {
+        const allSellers = await LivestockTradingAPI.Sellers.All.Request({
+          sorting: {
+            key: "createdAt",
+            direction: LivestockTradingAPI.Enums.XSortingDirection.Descending,
+          },
+          filters: [
+            {
+              key: "userId",
+              type: "guid",
+              isUsed: true,
+              values: [userId],
+              min: {},
+              max: {},
+              conditionType: "equals",
+            },
+          ],
+          pageRequest: { currentPage: 1, perPageCount: 1, listAll: false },
+        });
+        if (Array.isArray(allSellers) && allSellers.length > 0) {
+          return allSellers[0];
+        }
+      } catch {
+        // Fallback also failed
+      }
+
+      return null;
     },
     enabled: (options?.enabled ?? true) && !!userId,
   });

@@ -17,6 +17,8 @@ type Int64 = number;
 type Int32 = number;
 type int = number;
 type long = number;
+type float = number;
+type Single = number;
 type __ERROR_TYPE_NOT_HANDLED__ = File;
 
 // Settings...
