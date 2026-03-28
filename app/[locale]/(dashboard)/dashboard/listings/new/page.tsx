@@ -233,7 +233,7 @@ export default function NewListingPage() {
         sellerId = newSeller.id;
       }
 
-      // Step 2: Create Location
+      // Step 2: Create Location (districtId gönderilirse backend koordinatları otomatik doldurur)
       const cityName = selectedDistrictName || selectedProvinceName || data.city;
       const stateName = selectedProvinceName || data.city;
       const locationResponse = await LivestockTradingAPI.Locations.Create.Request({
@@ -244,12 +244,11 @@ export default function NewListingPage() {
         state: stateName,
         postalCode: data.postalCode || "",
         countryCode: selectedCountry?.code || "TR",
-        latitude: 0,
-        longitude: 0,
         phone: "",
         email: "",
         type: 0, // ProductLocation
         isActive: true,
+        districtId: selectedDistrictId ?? undefined,
       });
 
       // Step 3: Create Product with the sellerId and locationId

@@ -5495,6 +5495,7 @@ export namespace LivestockTradingAPI {
 				type: number;
 				isActive: boolean;
 				userId?: Guid;
+				districtId?: Int32;
 				createdAt: Date;
 				updatedAt?: Date;
 			}
@@ -5544,6 +5545,7 @@ export namespace LivestockTradingAPI {
 				type: number;
 				isActive: boolean;
 				userId?: Guid;
+				districtId?: Int32;
 				createdAt: Date;
 			}
 		}
@@ -5567,6 +5569,7 @@ export namespace LivestockTradingAPI {
 				type: number;
 				isActive: boolean;
 				userId?: Guid;
+				districtId?: Int32;
 			}
 			export interface IResponseModel {
 				id: Guid;
@@ -5584,6 +5587,7 @@ export namespace LivestockTradingAPI {
 				type: number;
 				isActive: boolean;
 				userId?: Guid;
+				districtId?: Int32;
 				updatedAt?: Date;
 			}
 		}
@@ -5617,6 +5621,7 @@ export namespace LivestockTradingAPI {
 				type: number;
 				isActive: boolean;
 				userId?: Guid;
+				districtId?: Int32;
 			}
 			export interface IResponseModel {
 				id: Guid;
@@ -5634,6 +5639,7 @@ export namespace LivestockTradingAPI {
 				type: number;
 				isActive: boolean;
 				userId?: Guid;
+				districtId?: Int32;
 				createdAt: Date;
 			}
 		}
