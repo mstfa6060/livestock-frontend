@@ -33,7 +33,7 @@ export default {
       PRODUCT_LOCATION_REQUIRED: "ቦታው ግዴታ ነው.",
       PRODUCT_PRICE_REQUIRED: "ዋጋ ግዴታ ነው.",
       PRODUCT_NOT_PENDING_APPROVAL: "ምርቱ መጽደቅን በመጠባበቅ ላይ አይደለም።",
-      PRODUCT_ALREADY_APPROVED: "ምርቱ አስቀድሞ ጸድቋል።",
+      PRODUCT_ALREADY_APPROVED: "ምርቱ አስቀድሞ ጸድቋል።",  
       PRODUCT_ALREADY_REJECTED: "ምርቱ አስቀድሞ ውድቅ ተደርጓል።",
       REJECTION_REASON_REQUIRED: "ውድቅ የተደረገበት ምክንያት የግዴታ ነው.",
       PRODUCT_STATUS_MUST_BE_DRAFT_ON_CREATE: "አዲስ ምርቶች በረቂቅ ሁኔታ መፈጠር አለባቸው።",
