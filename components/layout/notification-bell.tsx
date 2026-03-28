@@ -16,7 +16,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Bell, MessageSquare, Tag, Package, Info, CheckCheck, ShoppingCart, Truck, PackageCheck, XCircle, CreditCard, AlertCircle, TrendingDown, Star, ShieldCheck, CheckCircle, ClipboardList } from "lucide-react";
+import { Bell, MessageSquare, Tag, Package, Info, CheckCheck, ShoppingCart, Truck, PackageCheck, XCircle, CreditCard, AlertCircle, TrendingDown, Star, ShieldCheck, CheckCircle, ClipboardList, UserCheck, TruckIcon } from "lucide-react";
 import { useNotifications, useUnreadCount, useMarkAsReadMutation, useMarkAllAsReadMutation } from "@/hooks/queries/useNotifications";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "@/i18n/navigation";
@@ -38,6 +38,8 @@ const notificationIcons: Record<number, React.ReactNode> = {
   11: <CheckCircle className="h-4 w-4" />,    // ProductApproved
   12: <XCircle className="h-4 w-4" />,        // ProductRejected
   13: <ClipboardList className="h-4 w-4" />,  // ProductPendingApproval
+  14: <UserCheck className="h-4 w-4" />,      // SellerPendingVerification
+  15: <TruckIcon className="h-4 w-4" />,      // TransporterPendingVerification
   99: <Info className="h-4 w-4" />,           // System
 };
 
