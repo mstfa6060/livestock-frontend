@@ -909,6 +909,16 @@
       "subCategory": "Select a subcategory"
     },
     "noCurrencyFound": "No currency found.",
+    "province": "Province / State",
+    "district": "City / District",
+    "selectProvince": "Select province...",
+    "selectDistrict": "Select city/district...",
+    "selectProvinceFirst": "Select a province first",
+    "searchProvince": "Search province...",
+    "searchDistrict": "Search city/district...",
+    "noProvince": "No province found.",
+    "noDistrict": "No city/district found.",
+    "loading": "Loading...",
     "errors": {
       "titleRequired": "Advertisement title is mandatory.",
       "shortDescriptionRequired": "A brief description is required.",

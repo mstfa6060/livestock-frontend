@@ -909,6 +909,16 @@
       "subCategory": "Alt kategori seçin"
     },
     "noCurrencyFound": "Para birimi bulunamadı.",
+    "province": "İl / Eyalet",
+    "district": "İlçe / Şehir",
+    "selectProvince": "İl seçin...",
+    "selectDistrict": "İlçe/şehir seçin...",
+    "selectProvinceFirst": "Önce bir il seçin",
+    "searchProvince": "İl ara...",
+    "searchDistrict": "İlçe/şehir ara...",
+    "noProvince": "İl bulunamadı.",
+    "noDistrict": "İlçe/şehir bulunamadı.",
+    "loading": "Yükleniyor...",
     "errors": {
       "titleRequired": "İlan başlığı zorunludur.",
       "shortDescriptionRequired": "Kısa bir açıklama gereklidir.",

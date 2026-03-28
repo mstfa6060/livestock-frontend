@@ -136,6 +136,23 @@ export const queryKeys = {
       [...queryKeys.countries.all, "byCode", code] as const,
   },
 
+  provinces: {
+    all: ["provinces"] as const,
+    byCountry: (countryId: number) =>
+      [...queryKeys.provinces.all, "byCountry", countryId] as const,
+  },
+
+  districts: {
+    all: ["districts"] as const,
+    byProvince: (provinceId: number) =>
+      [...queryKeys.districts.all, "byProvince", provinceId] as const,
+  },
+
+  geoIp: {
+    all: ["geoIp"] as const,
+    detect: () => [...queryKeys.geoIp.all, "detect"] as const,
+  },
+
   users: {
     all: ["users"] as const,
     detail: (id: string) => [...queryKeys.users.all, "detail", id] as const,

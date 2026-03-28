@@ -10,6 +10,34 @@ export function useCountries() {
   });
 }
 
+export function useProvinces(countryId: number) {
+  return useQuery({
+    queryKey: queryKeys.provinces.byCountry(countryId),
+    queryFn: () => IAMAPI.Provinces.All.Request({ countryId, keyword: "" }),
+    staleTime: 24 * 60 * 60 * 1000, // 24h - location data rarely changes
+    enabled: countryId > 0,
+  });
+}
+
+export function useDistricts(provinceId: number) {
+  return useQuery({
+    queryKey: queryKeys.districts.byProvince(provinceId),
+    queryFn: () =>
+      IAMAPI.Districts.ByProvince.Request({ provinceId, keyword: "" }),
+    staleTime: 24 * 60 * 60 * 1000,
+    enabled: provinceId > 0,
+  });
+}
+
+export function useDetectCountry() {
+  return useQuery({
+    queryKey: queryKeys.geoIp.detect(),
+    queryFn: () => IAMAPI.GeoIp.DetectCountry.Request({}),
+    staleTime: Infinity, // IP won't change in a session
+    retry: 1,
+  });
+}
+
 export function useUserDetail(
   userId: string,
   options?: { enabled?: boolean }
