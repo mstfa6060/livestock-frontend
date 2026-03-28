@@ -197,7 +197,8 @@
     "subscription": "Subscription",
     "subscriptionPlansAdmin": "Subscription Plans",
     "boostPackagesAdmin": "Boost Packages",
-    "exchangeRates": "Exchange Rates"
+    "exchangeRates": "Exchange Rates",
+    "locationsAdmin": "Locations"
   },
   "profile": {
     "title": "Profile Information",
@@ -2085,7 +2086,25 @@
     "justNow": "Just now",
     "minutesAgo": "{count} min ago",
     "hoursAgo": "{count}h ago",
-    "daysAgo": "{count}d ago"
+    "daysAgo": "{count}d ago",
+    "locationsAdmin": "Location Management",
+    "locationsAdminDescription": "Browse countries, provinces, and districts.",
+    "countriesLabel": "Countries",
+    "countriesCount": "countries",
+    "provincesCount": "provinces",
+    "districtsCount": "districts",
+    "searchCountry": "Search country...",
+    "searchProvince": "Search province...",
+    "searchDistrict": "Search district...",
+    "countryName": "Country",
+    "countryCode": "Code",
+    "currency": "Currency",
+    "phoneCode": "Phone Code",
+    "provinceName": "Province",
+    "provinceCode": "Code",
+    "districtName": "District",
+    "noResults": "No results found.",
+    "back": "Back"
   },
   "pricing": {
     "originalPrice": "Original price",

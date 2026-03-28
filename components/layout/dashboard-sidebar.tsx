@@ -30,6 +30,7 @@ import {
   Syringe,
   CreditCard,
   Zap,
+  Globe,
 } from "lucide-react";
 import { useRoles } from "@/hooks/useRoles";
 import { Roles } from "@/constants/roles";
@@ -73,6 +74,7 @@ const menuItems: MenuItem[] = [
   { key: "subscriptionPlansAdmin", href: "/dashboard/admin/subscription-plans", icon: CreditCard, adminOnly: true },
   { key: "boostPackagesAdmin", href: "/dashboard/admin/boost-packages", icon: Zap, adminOnly: true },
   { key: "exchangeRates", href: "/dashboard/admin/currencies", icon: DollarSign, adminOnly: true },
+  { key: "locationsAdmin", href: "/dashboard/admin/locations", icon: Globe, adminOnly: true },
   { key: "systemSettings", href: "/dashboard/system-settings", icon: Settings, adminOnly: true },
   { key: "favorites", href: "/dashboard/favorites", icon: Heart },
   { key: "messages", href: "/dashboard/messages", icon: MessageSquare, badgeKey: "messages" },

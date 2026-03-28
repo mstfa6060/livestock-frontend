@@ -197,7 +197,8 @@
     "subscription": "Abonelik",
     "subscriptionPlansAdmin": "Abonelik Planları",
     "boostPackagesAdmin": "Destek Paketleri",
-    "exchangeRates": "Döviz Kurları"
+    "exchangeRates": "Döviz Kurları",
+    "locationsAdmin": "Lokasyonlar"
   },
   "profile": {
     "title": "Profil Bilgileri",
@@ -2086,7 +2087,25 @@
     "justNow": "Şu anda",
     "minutesAgo": "{count} dakika önce",
     "hoursAgo": "{count} saat önce",
-    "daysAgo": "{count} gün önce"
+    "daysAgo": "{count} gün önce",
+    "locationsAdmin": "Lokasyon Yonetimi",
+    "locationsAdminDescription": "Ulkeleri, illeri ve ilceleri goruntuleyin.",
+    "countriesLabel": "Ulkeler",
+    "countriesCount": "ulke",
+    "provincesCount": "il",
+    "districtsCount": "ilce",
+    "searchCountry": "Ulke ara...",
+    "searchProvince": "Il ara...",
+    "searchDistrict": "Ilce ara...",
+    "countryName": "Ulke",
+    "countryCode": "Kod",
+    "currency": "Para Birimi",
+    "phoneCode": "Telefon Kodu",
+    "provinceName": "Il",
+    "provinceCode": "Kod",
+    "districtName": "Ilce",
+    "noResults": "Sonuc bulunamadi.",
+    "back": "Geri"
   },
   "pricing": {
     "originalPrice": "Orijinal fiyat",
