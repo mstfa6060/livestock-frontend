@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input";
 import { MapPin, ChevronDown, Search, Check } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useCountries } from "@/hooks/queries";
+import { useDetectCountry } from "@/hooks/queries/useIAM";
 
 interface Country {
   id: number;
@@ -31,15 +32,16 @@ export function CountrySwitcher() {
   const t = useTranslations("header");
   const { user } = useAuth();
   const { data: countries = [], isLoading } = useCountries();
+  const { data: detectedCountry } = useDetectCountry();
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const [search, setSearch] = useState("");
   const [open, setOpen] = useState(false);
 
-  // Select country based on saved preference, user profile, or default to Turkey
+  // Select country based on: saved > user profile > IP detection > default Turkey
   useEffect(() => {
     if (countries.length === 0) return;
 
-    // Try to restore saved country
+    // 1. Try to restore saved country
     const savedCountry = localStorage.getItem(STORAGE_KEY);
     if (savedCountry) {
       try {
@@ -54,7 +56,7 @@ export function CountrySwitcher() {
       }
     }
 
-    // Use user's country if logged in
+    // 2. Use user's country if logged in
     if (user?.countryId) {
       const userCountry = countries.find((c: Country) => c.id === user.countryId);
       if (userCountry) {
@@ -64,13 +66,23 @@ export function CountrySwitcher() {
       }
     }
 
-    // Default to Turkey
+    // 3. Use IP-detected country (MaxMind GeoLite2)
+    if (detectedCountry?.countryCode) {
+      const ipCountry = countries.find((c: Country) => c.code === detectedCountry.countryCode);
+      if (ipCountry) {
+        setSelectedCountry(ipCountry);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(ipCountry));
+        return;
+      }
+    }
+
+    // 4. Default to Turkey
     const turkey = countries.find((c: Country) => c.code === "TR");
     if (turkey) {
       setSelectedCountry(turkey);
       localStorage.setItem(STORAGE_KEY, JSON.stringify(turkey));
     }
-  }, [countries, user?.countryId]);
+  }, [countries, user?.countryId, detectedCountry]);
 
   const handleCountryChange = (country: Country) => {
     setSelectedCountry(country);
