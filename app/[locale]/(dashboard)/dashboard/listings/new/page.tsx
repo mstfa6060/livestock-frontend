@@ -29,6 +29,7 @@ import { useCategories, useCurrencies } from "@/hooks/queries";
 import { queryKeys } from "@/lib/query-keys";
 import { listingFormSchema, type ListingFormData } from "@/lib/validations";
 import { CurrencyCombobox, type CurrencyOption } from "@/components/features/currency-combobox";
+import { LocationSelector } from "@/components/features/location-selector";
 import dynamic from "next/dynamic";
 const MediaUpload = dynamic(() => import("@/components/features/media-upload").then(mod => ({ default: mod.MediaUpload })), { ssr: false });
 
@@ -83,6 +84,12 @@ export default function NewListingPage() {
   const currencyOptions: CurrencyOption[] = currencies.map((c: any) => ({ code: c.code, symbol: c.symbol, name: c.name }));
 
   const [isLoading, setIsLoading] = useState(false);
+
+  // Province/District state for LocationSelector
+  const [selectedProvinceId, setSelectedProvinceId] = useState<number | null>(null);
+  const [selectedProvinceName, setSelectedProvinceName] = useState("");
+  const [selectedDistrictId, setSelectedDistrictId] = useState<number | null>(null);
+  const [selectedDistrictName, setSelectedDistrictName] = useState("");
 
   // Media upload state
   const [mediaBucketId, setMediaBucketId] = useState<string>("");
@@ -227,12 +234,14 @@ export default function NewListingPage() {
       }
 
       // Step 2: Create Location
+      const cityName = selectedDistrictName || selectedProvinceName || data.city;
+      const stateName = selectedProvinceName || data.city;
       const locationResponse = await LivestockTradingAPI.Locations.Create.Request({
         name: data.title,
         addressLine1: data.address,
         addressLine2: "",
-        city: data.city,
-        state: data.city,
+        city: cityName,
+        state: stateName,
         postalCode: data.postalCode || "",
         countryCode: selectedCountry?.code || "TR",
         latitude: 0,
@@ -527,17 +536,20 @@ export default function NewListingPage() {
                 <CardTitle>{t("location")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="city">{t("fields.city")} *</Label>
-                  <Input
-                    id="city"
-                    {...register("city")}
-                    placeholder={t("placeholders.city")}
-                  />
-                  {errors.city && (
-                    <p className="text-sm text-destructive">{errors.city.message}</p>
-                  )}
-                </div>
+                <LocationSelector
+                  countryId={selectedCountry?.id ?? 0}
+                  provinceId={selectedProvinceId}
+                  districtId={selectedDistrictId}
+                  onProvinceChange={(id, name) => {
+                    setSelectedProvinceId(id);
+                    setSelectedProvinceName(name);
+                    setValue("city", name, { shouldValidate: true });
+                  }}
+                  onDistrictChange={(id, name) => {
+                    setSelectedDistrictId(id);
+                    setSelectedDistrictName(name);
+                  }}
+                />
 
                 <div className="space-y-2">
                   <Label htmlFor="address">{t("fields.address")} *</Label>
