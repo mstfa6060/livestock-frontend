@@ -3684,6 +3684,12 @@ export namespace LivestockTradingAPI {
 				sellerId: Guid;
 				sellerName: string;
 				locationId: Guid;
+				locationCity: string;
+				locationState: string;
+				locationCountryCode: string;
+				locationLatitude?: Double;
+				locationLongitude?: Double;
+				locationDistrictId?: Int32;
 				status: number;
 				condition: number;
 				isShippingAvailable: boolean;

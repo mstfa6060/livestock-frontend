@@ -42,6 +42,7 @@ import { ProductVariants } from "@/components/features/product-variants";
 import { ProductPrices } from "@/components/features/product-prices";
 const MakeOfferDialog = dynamic(() => import("@/components/features/make-offer-dialog").then(mod => ({ default: mod.MakeOfferDialog })), { ssr: false });
 const ReportProductDialog = dynamic(() => import("@/components/features/report-product-dialog").then(mod => ({ default: mod.ReportProductDialog })), { ssr: false });
+const LocationMap = dynamic(() => import("@/components/features/location-map").then(mod => ({ default: mod.LocationMap })), { ssr: false });
 import { useQuery } from "@tanstack/react-query";
 import { queryKeys } from "@/lib/query-keys";
 import { useProductList } from "@/hooks/queries/useProducts";
@@ -71,6 +72,12 @@ interface ProductDetail {
   sellerId: string;
   sellerName: string;
   locationId: string;
+  locationCity?: string;
+  locationState?: string;
+  locationCountryCode?: string;
+  locationLatitude?: number;
+  locationLongitude?: number;
+  locationDistrictId?: number;
   status: number;
   condition: number;
   isShippingAvailable: boolean;
@@ -157,6 +164,12 @@ export default function ProductDetailPage() {
         sellerId: response.sellerId,
         sellerName: response.sellerName,
         locationId: response.locationId,
+        locationCity: response.locationCity || undefined,
+        locationState: response.locationState || undefined,
+        locationCountryCode: response.locationCountryCode || undefined,
+        locationLatitude: response.locationLatitude as number | undefined,
+        locationLongitude: response.locationLongitude as number | undefined,
+        locationDistrictId: response.locationDistrictId || undefined,
         status: response.status,
         condition: response.condition,
         isShippingAvailable: response.isShippingAvailable,
@@ -469,6 +482,28 @@ export default function ProductDetailPage() {
               </CardContent>
             </Card>
 
+            {/* Location Map */}
+            {product.locationLatitude && product.locationLongitude && (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <MapPin className="h-5 w-5" />
+                    {t("location")}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    {[product.locationCity, product.locationState, product.locationCountryCode].filter(Boolean).join(", ")}
+                  </p>
+                  <LocationMap
+                    latitude={product.locationLatitude}
+                    longitude={product.locationLongitude}
+                    label={product.locationCity || product.title}
+                  />
+                </CardContent>
+              </Card>
+            )}
+
             {/* Variants */}
             <ProductVariants productId={product.id} currency={product.currency} />
 
@@ -558,7 +593,7 @@ export default function ProductDetailPage() {
                 {/* Location */}
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
                   <MapPin className="h-4 w-4" />
-                  {t("location")}
+                  {[product.locationCity, product.locationState, product.locationCountryCode].filter(Boolean).join(", ") || t("location")}
                 </div>
 
                 {/* Actions */}
