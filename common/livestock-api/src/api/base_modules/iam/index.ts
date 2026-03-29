@@ -397,6 +397,10 @@ export namespace IAMAPI {
 				name: string;
 				code: string;
 				nameTranslations: string;
+				latitude?: number;
+				longitude?: number;
+				population?: number;
+				timezone: string;
 			}
 		}
 
@@ -416,6 +420,8 @@ export namespace IAMAPI {
 				name: string;
 				districtId: number;
 				postalCode: string;
+				latitude?: number;
+				longitude?: number;
 			}
 		}
 
@@ -451,6 +457,10 @@ export namespace IAMAPI {
 				name: string;
 				provinceId: number;
 				nameTranslations: string;
+				latitude?: number;
+				longitude?: number;
+				population?: number;
+				timezone: string;
 			}
 		}
 
