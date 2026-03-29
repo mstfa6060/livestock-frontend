@@ -29,6 +29,16 @@ export function useDistricts(provinceId: number) {
   });
 }
 
+export function useNeighborhoods(districtId: number) {
+  return useQuery({
+    queryKey: queryKeys.neighborhoods.byDistrict(districtId),
+    queryFn: () =>
+      IAMAPI.Neighborhoods.ByDistrict.Request({ districtId, keyword: "" }),
+    staleTime: 24 * 60 * 60 * 1000,
+    enabled: districtId > 0,
+  });
+}
+
 export function useDetectCountry() {
   return useQuery({
     queryKey: queryKeys.geoIp.detect(),

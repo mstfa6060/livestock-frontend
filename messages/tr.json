@@ -919,6 +919,11 @@
     "searchDistrict": "İlçe/şehir ara...",
     "noProvince": "İl bulunamadı.",
     "noDistrict": "İlçe/şehir bulunamadı.",
+    "neighborhood": "Mahalle / Köy",
+    "selectNeighborhood": "Mahalle seçin...",
+    "selectDistrictFirst": "Önce bir ilçe seçin",
+    "searchNeighborhood": "Mahalle ara...",
+    "noNeighborhood": "Mahalle bulunamadı.",
     "loading": "Yükleniyor...",
     "errors": {
       "titleRequired": "İlan başlığı zorunludur.",

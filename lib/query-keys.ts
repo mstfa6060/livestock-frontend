@@ -148,6 +148,12 @@ export const queryKeys = {
       [...queryKeys.districts.all, "byProvince", provinceId] as const,
   },
 
+  neighborhoods: {
+    all: ["neighborhoods"] as const,
+    byDistrict: (districtId: number) =>
+      [...queryKeys.neighborhoods.all, "byDistrict", districtId] as const,
+  },
+
   geoIp: {
     all: ["geoIp"] as const,
     detect: () => [...queryKeys.geoIp.all, "detect"] as const,

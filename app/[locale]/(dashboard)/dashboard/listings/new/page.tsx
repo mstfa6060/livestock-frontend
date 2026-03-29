@@ -85,11 +85,13 @@ export default function NewListingPage() {
 
   const [isLoading, setIsLoading] = useState(false);
 
-  // Province/District state for LocationSelector
+  // Province/District/Neighborhood state for LocationSelector
   const [selectedProvinceId, setSelectedProvinceId] = useState<number | null>(null);
   const [selectedProvinceName, setSelectedProvinceName] = useState("");
   const [selectedDistrictId, setSelectedDistrictId] = useState<number | null>(null);
   const [selectedDistrictName, setSelectedDistrictName] = useState("");
+  const [selectedNeighborhoodId, setSelectedNeighborhoodId] = useState<number | null>(null);
+  const [selectedNeighborhoodName, setSelectedNeighborhoodName] = useState("");
 
   // Media upload state
   const [mediaBucketId, setMediaBucketId] = useState<string>("");
@@ -234,11 +236,12 @@ export default function NewListingPage() {
       }
 
       // Step 2: Create Location (districtId gönderilirse backend koordinatları otomatik doldurur)
-      const cityName = selectedDistrictName || selectedProvinceName || data.city;
+      const cityName = selectedNeighborhoodName || selectedDistrictName || selectedProvinceName || data.city;
       const stateName = selectedProvinceName || data.city;
+      const addressParts = [data.address, selectedNeighborhoodName].filter(Boolean);
       const locationResponse = await LivestockTradingAPI.Locations.Create.Request({
         name: data.title,
-        addressLine1: data.address,
+        addressLine1: addressParts.join(", "),
         addressLine2: "",
         city: cityName,
         state: stateName,
@@ -539,6 +542,7 @@ export default function NewListingPage() {
                   countryId={selectedCountry?.id ?? 0}
                   provinceId={selectedProvinceId}
                   districtId={selectedDistrictId}
+                  neighborhoodId={selectedNeighborhoodId}
                   onProvinceChange={(id, name) => {
                     setSelectedProvinceId(id);
                     setSelectedProvinceName(name);
@@ -547,6 +551,10 @@ export default function NewListingPage() {
                   onDistrictChange={(id, name) => {
                     setSelectedDistrictId(id);
                     setSelectedDistrictName(name);
+                  }}
+                  onNeighborhoodChange={(id, name) => {
+                    setSelectedNeighborhoodId(id);
+                    setSelectedNeighborhoodName(name);
                   }}
                 />
 

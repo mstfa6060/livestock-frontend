@@ -17,18 +17,17 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { useProvinces, useDistricts } from "@/hooks/queries/useIAM";
+import { useProvinces, useDistricts, useNeighborhoods } from "@/hooks/queries/useIAM";
 import { useLocale, useTranslations } from "next-intl";
-
-// This component uses "newListing" namespace translations.
-// Usage: wrap parent with <NextIntlClientProvider messages={messages}>
 
 interface LocationSelectorProps {
   countryId: number;
   provinceId: number | null;
   districtId: number | null;
+  neighborhoodId?: number | null;
   onProvinceChange: (provinceId: number | null, provinceName: string) => void;
   onDistrictChange: (districtId: number | null, districtName: string) => void;
+  onNeighborhoodChange?: (neighborhoodId: number | null, neighborhoodName: string) => void;
   className?: string;
 }
 
@@ -50,22 +49,27 @@ export function LocationSelector({
   countryId,
   provinceId,
   districtId,
+  neighborhoodId,
   onProvinceChange,
   onDistrictChange,
+  onNeighborhoodChange,
   className,
 }: LocationSelectorProps) {
   const t = useTranslations("newListing");
   const locale = useLocale();
   const [provinceOpen, setProvinceOpen] = useState(false);
   const [districtOpen, setDistrictOpen] = useState(false);
+  const [neighborhoodOpen, setNeighborhoodOpen] = useState(false);
 
   const { data: provinces, isLoading: provincesLoading } =
     useProvinces(countryId);
   const { data: districts, isLoading: districtsLoading } = useDistricts(
     provinceId ?? 0
   );
+  const { data: neighborhoods, isLoading: neighborhoodsLoading } = useNeighborhoods(
+    districtId ?? 0
+  );
 
-  // Translate province/district names based on locale
   const translatedProvinces = useMemo(
     () =>
       provinces?.map((p) => ({
@@ -90,6 +94,11 @@ export function LocationSelector({
   const selectedDistrict = translatedDistricts.find(
     (d) => d.id === districtId
   );
+  const selectedNeighborhood = neighborhoods?.find(
+    (n) => n.id === neighborhoodId
+  );
+
+  const hasNeighborhoods = neighborhoods && neighborhoods.length > 0;
 
   return (
     <div className={cn("flex flex-col gap-3", className)}>
@@ -134,8 +143,10 @@ export function LocationSelector({
                           isDeselect ? null : province.id,
                           isDeselect ? "" : province.displayName
                         );
-                        // Reset district when province changes
-                        if (!isDeselect) onDistrictChange(null, "");
+                        if (!isDeselect) {
+                          onDistrictChange(null, "");
+                          onNeighborhoodChange?.(null, "");
+                        }
                         setProvinceOpen(false);
                       }}
                     >
@@ -200,6 +211,7 @@ export function LocationSelector({
                           isDeselect ? null : district.id,
                           isDeselect ? "" : district.displayName
                         );
+                        if (!isDeselect) onNeighborhoodChange?.(null, "");
                         setDistrictOpen(false);
                       }}
                     >
@@ -220,6 +232,67 @@ export function LocationSelector({
           </PopoverContent>
         </Popover>
       </div>
+
+      {/* Neighborhood selector (only shown when district has neighborhoods) */}
+      {districtId && !neighborhoodsLoading && hasNeighborhoods && (
+        <div>
+          <label className="text-sm font-medium text-muted-foreground mb-1.5 block">
+            <MapPin className="inline h-3.5 w-3.5 mr-1" />
+            {t("neighborhood")}
+          </label>
+          <Popover open={neighborhoodOpen} onOpenChange={setNeighborhoodOpen}>
+            <PopoverTrigger asChild>
+              <Button
+                variant="outline"
+                role="combobox"
+                aria-expanded={neighborhoodOpen}
+                className="w-full justify-between font-normal"
+              >
+                <span className="truncate">
+                  {selectedNeighborhood
+                    ? selectedNeighborhood.name
+                    : t("selectNeighborhood")}
+                </span>
+                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-[320px] p-0" align="start">
+              <Command>
+                <CommandInput placeholder={t("searchNeighborhood")} />
+                <CommandList>
+                  <CommandEmpty>{t("noNeighborhood")}</CommandEmpty>
+                  <CommandGroup>
+                    {neighborhoods?.map((neighborhood) => (
+                      <CommandItem
+                        key={neighborhood.id}
+                        value={neighborhood.name}
+                        onSelect={() => {
+                          const isDeselect = neighborhoodId === neighborhood.id;
+                          onNeighborhoodChange?.(
+                            isDeselect ? null : neighborhood.id,
+                            isDeselect ? "" : neighborhood.name
+                          );
+                          setNeighborhoodOpen(false);
+                        }}
+                      >
+                        <Check
+                          className={cn(
+                            "mr-2 h-4 w-4",
+                            neighborhoodId === neighborhood.id
+                              ? "opacity-100"
+                              : "opacity-0"
+                          )}
+                        />
+                        <span>{neighborhood.name}</span>
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                </CommandList>
+              </Command>
+            </PopoverContent>
+          </Popover>
+        </div>
+      )}
     </div>
   );
 }

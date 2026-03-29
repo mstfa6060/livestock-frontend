@@ -919,6 +919,11 @@
     "searchDistrict": "Search city/district...",
     "noProvince": "No province found.",
     "noDistrict": "No city/district found.",
+    "neighborhood": "Neighborhood / Village",
+    "selectNeighborhood": "Select neighborhood...",
+    "selectDistrictFirst": "Select a district first",
+    "searchNeighborhood": "Search neighborhood...",
+    "noNeighborhood": "No neighborhood found.",
     "loading": "Loading...",
     "errors": {
       "titleRequired": "Advertisement title is mandatory.",
